@@ -8,6 +8,24 @@
   const VIEWS = new Set(['home','walkthrough','sidequests','dimension','bosses','alphas','maps','items','legends','berries','starters','pokedex','essentials','secrets','rewards','battles','sources']);
   const KEY = 'lumiose-atlas-reconstruction-v1';
   const checkedKinds = ['check','sideCheck','legendCheck','pickup','screw'];
+  // Open the existing static feedback page; no direct HTML Edge Function link.
+  // The page's own script uses the deployed JSON relay with no client secrets.
+  const FEEDBACK_PAGE = 'feedback.html';
+  function buildAtlasFeedbackUrl(pathname, hash) {
+    const sourcePath = String(pathname || '/');
+    const canonicalPath = sourcePath !== '/' && sourcePath.endsWith('/')
+      ? sourcePath + 'index.html' : sourcePath;
+    // Atlas uses #walkthrough:mission-27; the report service permits a
+    // section hash, not a colon suffix. Keep the section instead of losing it.
+    const sectionHash = String(hash || '').split(':', 1)[0];
+    const page = canonicalPath + sectionHash;
+    const validPage = page.length <= 160 &&
+      /^\/(?:[a-z0-9-]+(?:\.html)?(?:\/[a-z0-9-]+(?:\.html)?)*)?(?:#[a-z0-9-]+)?$/i.test(page);
+    const target = new URL(FEEDBACK_PAGE, document.baseURI);
+    target.searchParams.set('page', validPage ? page : '/lumiose-atlas-pokemon-za/index.html#walkthrough');
+    return target.toString();
+  }
+
   let state = {check:{},sideCheck:{},legendCheck:{},pickup:{},screw:{}};
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
@@ -330,7 +348,12 @@
     if(reset){if(confirm('Reset all 42 mission checkboxes in this local reconstruction?')){state.check={};write();restoreProgress();}return;}
     const dexSource=e.target.closest('[data-dex-source]');
     if(dexSource){$$('[data-dex-source]').forEach(el=>el.classList.toggle('active',el===dexSource));updateDexFilter();return;}
-    if(e.target.closest('[data-atlas-review]')){announce('Ratings and reports are not connected in this independent reconstruction. The original Supabase data remains untouched.');return;}
+    const review=e.target.closest('[data-atlas-review]');
+    if(review){
+      e.preventDefault();
+      window.location.assign(buildAtlasFeedbackUrl(location.pathname, location.hash));
+      return;
+    }
     if(e.target.closest('[data-atlas-share]')){
       const url=location.href;
       try{if(navigator.share)await navigator.share({title:document.title,url});else if(navigator.clipboard){await navigator.clipboard.writeText(url);announce('Local guide link copied.');}else announce('Copy the address from your browser to share.');}
@@ -357,6 +380,13 @@
     $('#'+id)?.addEventListener('input',fn);
   }
   $$('#dexGrid > .dex-card').forEach((node,index)=>origDexOrder.set(node,index));
+  const reviewButton=$('[data-atlas-review]');
+  if(reviewButton){
+    reviewButton.textContent='Send feedback';
+    reviewButton.setAttribute('aria-label','Send an issue report about this guide page');
+    reviewButton.setAttribute('title','Open the feedback form');
+    reviewButton.removeAttribute('aria-expanded');
+  }
   restoreProgress();
   updateMissionFilter();updateSideFilter();updateBossFilter();updateAlphaFilter();updateLegendFilter();updateItemFilter();updateBerryFilter();updateDexFilter();updateRecipes();updateScrewFilter();
   window.addEventListener('hashchange',renderRoute);
