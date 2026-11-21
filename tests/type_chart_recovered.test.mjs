@@ -68,7 +68,9 @@ assert.match(css,/position:sticky/);
 assert.doesNotMatch(html+js+css+rulesCode,/sb_secret_|service_role_key|sk-proj-|github_pat_|SUPABASE_SERVICE_ROLE_KEY/i);
 assert.doesNotMatch(js+rulesCode,/\bfetch\s*\(|localStorage|sessionStorage|XMLHttpRequest/);
 function node(value="",dataset={}){
- return {value,dataset,textContent:"",events:{},active:{},classList:{toggle(key,enabled){this.active[key]=enabled}},addEventListener(e,cb){this.events[e]=cb}};
+ const element={value,dataset,textContent:"",events:{},active:{},addEventListener(e,cb){this.events[e]=cb}};
+ element.classList={toggle(key,enabled){element.active[key]=enabled}};
+ return element;
 }
 const elements={
 typeAttack:node("Water"),typePrimary:node("Fire"),typeSecondary:node("Ground"),
