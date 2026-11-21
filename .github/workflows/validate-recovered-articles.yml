@@ -72,6 +72,7 @@ on:
       - sector-maps.css
       - sector-maps.js
       - tests/sector_map_directory.test.mjs
+      - tests/sector_photo_landmarks.test.mjs
       - tests/approx_item_map_leads.test.mjs
       - hyperspace-maps.html
       - hyperspace-maps-guide.css
@@ -159,6 +160,8 @@ jobs:
         run: node --check sector-maps.js
       - name: Verify 48 sectors, 20 source-positioned Wild Zones, 264 numbered items, 100 source Screws and read-only progress
         run: node --test tests/sector_map_directory.test.mjs
+      - name: Verify ten player-supplied screenshot district landmark anchors and no false item pins
+        run: node --test tests/sector_photo_landmarks.test.mjs
       - name: Verify 146 numbered source-saved approximate map leads without inventing confirmed pins
         run: node --test tests/approx_item_map_leads.test.mjs
       - name: Verify final Hyperspace Maps navigation without missing-map fabrication or source loss
