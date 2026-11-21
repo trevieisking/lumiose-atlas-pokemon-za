@@ -1,10 +1,19 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — Alpha Fieldbook (PDF + saved source; PR awaiting checks)
+## Stage 2 update — Shops & Mega Shards (PDF restoration PR awaiting checks)
+
+Owner-provided six-page **Lumiose shops, items and Mega Shards** PDF was transcribed to `shops.html`: **17 shop/exchange groups** and **190 listed item records** across Pokédollar vendors, Mega Shard exchanges and the Canari plush Colorful Screw desk. The original shop location, availability notes, group inventory, cost, Mega Shard target totals (540 ×4 Drives, separate 999-Shard Magearna request), permanent plush effects and postgame worker lists are preserved. An offline search and two read-only budget planners were added: one for Mega Shards and one for five Canari plush upgrades with the free Red Lv. 1 accounted for. The original guide’s 25-link navigation and Back to walkthrough are preserved; no player state or database calls.
+
+**Evidence qualification:** Bulbapedia, Serebii Pokéarth and other sources disagree on particular Poké Ball, Premier Ball and Sharpedonite prices. The PDF’s prices are retained with visible in-game verification warnings rather than silently overwritten. Some DLC shop prices were absent from the PDF and are explicitly left unspecified.
+
+**Proposed restored routes after PR merge: 8/19; 11 placeholders remaining.** Not considered live until the exact PR HEAD passes all read-only tests and GitHub Pages deploys successfully. No changes to original ChatGPT Site or Supabase.
+
+
+## Stage 2 update — Alpha Fieldbook (MERGED #22 · PAGES SUCCESS)
 
 The five-page owner Alpha Fieldbook PDF captures 20 Wild Zone cards, **38 fixed zone targets** with levels/day-night conditions and the extra Alpha methods. Its Zone 20 full 67-species pool was collapsed during PDF export. The original saved MHTML main-page section `src/sections/alphas.html` **does** preserve all 67 names and ranges, so the new standalone `alphas.html` recovers these explicitly from that independent source, not from invented or unseen PDF text. HOME Alpha starter gifts were checked against the official Pokémon HOME site, DLC Alpha Power rates against Serebii and Bulbapedia, and the Mission 40 encounters against Bulbapedia. Search, range filters, source portraits, 25-link menu, map links and a Back to walkthrough action are added without altering original progress or the feedback form.
 
-**Proposed routes after merge: 7/19 restored; 12 placeholders remain.** Not considered deployed until PR and Pages checks succeed. Original ChatGPT Site and Supabase unchanged.
+**PR #22 passed the full recovery workflow and merged as `8c1de167bc47be523b17b6635fc0dcee8c703829`; GitHub Pages deployment #44932311836 succeeded for that exact commit. At this checkpoint 7/19 standalone routes were restored, with 12 placeholders remaining.** Original ChatGPT Site and Supabase unchanged.
 
 
 ## Stage 2 update — Full Type Chart (MERGED #21 · PAGES SUCCESS)
