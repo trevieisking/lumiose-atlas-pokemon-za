@@ -1,5 +1,7 @@
 # Lumiose Atlas — The Free Online Player’s Guide for Pokémon Legends: Z-A
 
+> **Editorial audit checkpoint (21 Nov 2026):** A documented 42-mission and 17-section quality inventory is in `docs/qa/`. The Mable's Research placeholder has been replaced by a sourced levels 2–50 reward page on the audit branch. This is *not* certification of all gameplay facts. See `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md` and `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`. Original live ChatGPT Site and Supabase remain untouched.
+
 **Description:** A free, illustrated guide to Pokémon Legends: Z-A, including story walkthroughs, side missions, Wild Zone maps, Pokédex entries, items, Alpha Pokémon, rewards, shiny-hunting guidance and Mega Dimension DLC. This independently reconstructed edition is being completed and verified section by section.
 
 **Status:** Stage 1 recovery checkpoint. This is a **reconstructed, editable static site**, **not** an export of the original ChatGPT Site's source project. The original project was inaccessible; this copy was assembled from the user's own saved MHTML webpage capture from 20 November 2026. **No original live-site files were accessed for writing, and no deployment has occurred.**
