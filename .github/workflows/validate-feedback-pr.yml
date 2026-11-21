@@ -4,7 +4,12 @@ on:
   pull_request:
     paths:
       - app.js
+      - feedback.html
+      - feedback.css
+      - feedback.js
+      - supabase/functions/lumiose-atlas-feedback-github/**
       - tests/feedback_link.test.mjs
+      - tests/feedback_proxy.test.mjs
       - .github/workflows/validate-feedback-pr.yml
 
 permissions:
@@ -23,5 +28,7 @@ jobs:
         run: node --check app.js
       - name: Test feedback URL and security constraints
         run: node --test tests/feedback_link.test.mjs
+      - name: Verify restricted cross-origin relay without network writes
+        run: node --test tests/feedback_proxy.test.mjs
       - name: Verify guide source integrity
         run: python3 tests/validate_static.py
