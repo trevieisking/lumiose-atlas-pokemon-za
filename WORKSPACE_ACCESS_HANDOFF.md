@@ -49,6 +49,16 @@ When the original Workspace editor becomes available:
 
 **Workspace A-specific instruction:** Inspect the original Site's actual control and report workflow later. **Do not transplant** the GitHub relay or rewrite its working Supabase API if A already has equivalent functionality. Preserve original URL, reports, authentication, ratings (if present) and all player state. Track separately in [AT-225](ATLAS_DUAL_SITE_FIX_LEDGER.md).
 
+## Edition B standalone feedback test page — PR #10 safely merged
+
+[PR #10](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/10) was safely **merged** to GitHub `main`: reviewed head `cdec43f3abb5f5e9d065bac5822f5678651a7ea3`, merge commit `5c60906113127500a9007a138851f58c4c48e438`. It adds **only five new files**, with no modifications to any existing guide code: `feedback.html`, `feedback.css`, `feedback.js`, its offline form test and read-only CI workflow. [GitHub CI #44916083071](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44916083071) is green (HTML form controls, mocked submission, Node syntax and original static validation).
+
+**User test page:** `https://trevieisking.github.io/lumiose-atlas-pokemon-za/feedback.html`. Main contains the exact reviewed three form blobs. GitHub Pages' actual served publication SHA and live Android submit remain **unverified**; don't call this a completed form delivery until the owner sees the HTML page and privately confirms a test receipt.
+
+**Important:** PR #9 is *still draft* and has not updated the GitHub guide's old `Rate / report` control. PR #10 provides a direct working-form **page candidate for testing**, not a fix to that existing header button. After the standalone page passes mobile testing, reconcile PR #9's `app.js` change and any conflicts with the stacked PRs #3→#4→#5 separately, then test before merging.
+
+**Original Workspace A:** unchanged. Its feedback system and admin panel already exist. **Do not overwrite** A to match B. Read A's real editable source when available and apply only proven missing behaviour, tracking all status in [AT-225 and AT-226](ATLAS_DUAL_SITE_FIX_LEDGER.md). Reports #13 and #14 remain protected.
+
 ## Checklist for the next agent / editor (no automatic edits)
 
 1. **Confirm identity and source access.** The Workspace project itself is the only authoritative source for its original code. The saved MHTML is only a rendered snapshot, not equivalent source. Preserve user ownership and the existing URL.
