@@ -40,6 +40,7 @@ on:
       - items.js
       - items-data.js
       - tests/items_recovered.test.mjs
+      - tests/items_checkoff.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -99,6 +100,8 @@ jobs:
         run: node --check items.js && node --check items-data.js
       - name: Compare all 264 PDF items, 100 screws and 48 verified sector names
         run: node --test tests/items_recovered.test.mjs
+      - name: Verify 364 checkboxes share existing guide progress without resetting other data
+        run: node --test tests/items_checkoff.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
