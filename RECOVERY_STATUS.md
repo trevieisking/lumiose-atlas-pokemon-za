@@ -1,5 +1,16 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 — Mega Dimension source-derived fieldbook (MERGED #46 · CI PASS)
+
+The original separate Mega Dimension PDF or editable Workspace source was not in the 19 owner captures. The saved main section `src/sections/dimension.html` contains exactly **14** complete Hyperspace mission cards with their original names, ordered route steps and nearby optional request detours. Those source strings were inspected and matched exactly in the new standalone page. This is **not** an exact restoration of the unavailable original standalone article and not a new independent gameplay fact-check.
+
+The former `mega-dimension.html` placeholder is now a source-derived **14-mission DLC fieldbook** with each saved route expandable, matching the original 25-link overview navigation, Back to walkthrough, feedback/share, Side Mission 120 and Complete Journey deep links, and links to existing berry/donut, Pokédex and boss pages. The nine enlarged Hyperspace maps remain uncaptured; the page does not invent or replace them. No progress controls, localStorage writes or network calls were added.
+
+**Release:** [PR #46](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/46), reviewed head `e458aed56778f1cdce6f926705daaae7732a1872`, [CI #44951166608](https://github.com/trevieiskking/lumiose-atlas-pokemon-za/actions/runs/44951166608) **PASS** for 14 original titles, steps and detours, 25-link menu, all local links, responsive CSS, original static guide and feedback regressions; merged `51c5fc8f2713b8ab7165f9425a5346ed3687beb0`. [Pages #44951214639](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44951214639) is the deployment record for that SHA. Manual Android visual review remains outstanding. The original ChatGPT Site, Supabase, feedback, player progress and original main guide were not changed.
+
+**Coverage:** 14 original PDF-backed standalone pages restored, **three** useful source-derived standalone indexes (Walkthrough, Side Missions, Mega Dimension), **two** literal placeholder files remain (48 Sector Maps, nine Hyperspace Maps), and **five** exact original standalone PDF/source captures remain unavailable. The two map pages cannot be claimed complete without authentic expanded maps and verified coordinates.
+
+
 ## Stage 2 — Side Missions source-derived fieldbook (MERGED #44 · PAGES SUCCESS)
 
 The original separate Side Missions PDF/Workspace source was not in the 19 supplied PDF captures. The saved main-guide archive `src/sections/sidequests.html` (155,467 characters; preserved blob `c8ef094b88d234e54ba1f22638e69e92c933b1f7`) contains **203 original side-mission cards**: numbered #1–200 plus EX1, EX2 and EX3. Every card retains an original title, unlock condition, start location, reward text and field-note solution. This source's text has **not been independently gameplay fact-checked** as part of the recovery, and prior audit uncertainties remain open.
