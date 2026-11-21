@@ -31,6 +31,10 @@ on:
       - shops.js
       - shops-data.js
       - tests/shops_recovered.test.mjs
+      - maps.html
+      - maps.css
+      - maps.js
+      - tests/maps_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -82,6 +86,10 @@ jobs:
         run: node --check shops.js && node --check shops-data.js
       - name: Verify 190 PDF shop entries, currencies and offline calculators
         run: node --test tests/shops_recovered.test.mjs
+      - name: Check maps interaction JavaScript syntax
+        run: node --check maps.js
+      - name: Verify 20 map pins, saved item and Alpha clues, navigation and zoom
+        run: node --test tests/maps_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
