@@ -1,10 +1,17 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — Rogue Mega Boss plans (PR awaiting checks)
+## Stage 2 update — Full Type Chart (PDF restoration PR awaiting tests)
 
-The owner’s 12-page Rogue Mega Boss PDF is transcribed to `boss-guide.html`: **16 story**, **10 Mega Dimension**, and **2 finale** encounter cards. Each keeps its original counter example, move plan, weakness, danger cue and tactical advice. Responsive species portraits, a 25-link menu, Back to walkthrough and offline filters are added. Tests assert all 28 cards, menu parity, local assets, and no player-progress writes. **This is not considered live until PR checks and Pages deployment succeed.**
+The owner-provided six-page **Complete Type Chart and Weaknesses** PDF supplies the visible type-effectiveness table (its first 12 defence columns) and 18 complete quick-reference summaries. The restored `type-chart.html` adds all **324** move-vs-defender pairs and the missing six columns from the modern Gen VI-onward table (independently verified against Bulbapedia), a mobile-scrollable table and an offline dual-type calculator. Standard rules are distinguished from Rogue Mega battle-specific exceptions. The original 25-link navigation and Back to walkthrough are retained. Dedicated read-only regression tests cover every quick-reference weakness, immunities, 324 cells, 4× and ¼× examples, and existing feedback/static integrity.
 
-**Proposed restored routes: 5/19; remaining placeholders after merge: 14/19.**
+**Proposed restored routes after this PR: 6/19; 13 placeholders remaining.** Not considered deployed until the exact PR HEAD passes CI and GitHub Pages reports success. No original Site or Supabase changes.
+
+
+## Stage 2 update — Rogue Mega Boss plans (MERGED #20 · PAGES SUCCESS)
+
+The owner’s 12-page Rogue Mega Boss PDF is transcribed to `boss-guide.html`: **16 story**, **10 Mega Dimension**, and **2 finale** encounter cards. Each keeps its original counter example, move plan, weakness, danger cue and tactical advice. Responsive species portraits, a 25-link menu, Back to walkthrough and offline filters are added. Tests assert all 28 cards, menu parity, local assets, and no player-progress writes. **PR #20 passed CI and merged as `c170e5ed6979f5f26c2d028b086c45f707bcd246`; GitHub Pages deployment #44928992739 succeeded for the exact merge commit.**
+
+**At this completed step: 5/19 restored, 14/19 placeholders remained.**
 
 
 ## Stage 2 update — Story Z-A Royale promotion battles (21 November 2026)
