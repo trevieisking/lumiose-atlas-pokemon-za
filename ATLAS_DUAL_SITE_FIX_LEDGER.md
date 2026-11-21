@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 15 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 16 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -297,6 +297,10 @@
 | AT-223 | EX3 Plasma-Glazed Zeraora | Original ChatGPT Workspace Site A source unavailable. | B requirements and flavour targets 40/200/400/280/40 correct; missing item amounts, Zeraorite and Lv200 vs Lv85 distinction | Canari Bread→Vert3 Popping Candy→Ansha donut→Emma/Gare screen→Rogue Mega Lv200→catch Zeraora Lv85; Zeraorite, ₽10,000/Candy XL×5 | DLC BONUS DETAILS / LEVEL DISTINCTION — not fixed |
 | AT-224 | Future cross-linked guide and shortcuts | Original ChatGPT Workspace Site A source unavailable. | Owner wants Walkthrough/Side Quest/Items/Maps/Shop/DLC pages connected; currently B crosslinks inconsistent and original A inaccessible | [Issue #8](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/8): preserve global menu + Back to Walkthrough; contextual bidirectional links and quick links; test mobile, breadcrumbs, back-to-context, URL hashes and saved 634 key compatibility | **FUTURE NAVIGATION BACKLOG — NOT IMPLEMENTED** — not fixed |
 
+**Feedback-only development checkpoint:** [Draft PR #9](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/9) connects only Edition B's inert report button to the existing server-hosted form; original A and live Supabase settings remain untouched. Ratings remain a separate, unconnected feature.
+
+| AT-225 | **Edition B feedback button opens hosted form — not ratings** | **Original A:** working standalone Supabase form and owner admin were verified by source/screenshot, original Workspace code is unavailable. **Preserve as-is**, inspect later; do not demand unnecessary transplant. | **Edition B:** [draft PR #9](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/9), branch `fix/atlas-feedback-access-2026-11-21`, head `37f7ca05c3c20411219c79dad13355019f4e7364` (unmerged). Previously inert Rate/report button in `app.js` relabelled **Send feedback**; uses existing standalone server-origin form `?view=feedback`, with validated current guide page. `tests/feedback_link.test.mjs` added. No CORS/RLS/secret/data/rating change. | **Remaining:** run `node --check app.js` and `node --test tests/feedback_link.test.mjs` on the checked-out branch; browser and Android link/back/progress tests, owner-authorized report POST check only, conflict-check app.js with draft PRs #3/#4/#5. **A Workspace mirror:** inspect its original source; if working, mark already present instead of copying; if a gap exists, patch equivalent behaviour and verify separately. Protect reports #13/#14. | **B DRAFT / A PRESERVED — NOT BOTH VERIFIED** |
+
 ### Cross-branch dependency and no-loss rule
 
 - [PR #1](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1): Mable's Research and audit — standalone draft from `main`.
@@ -345,6 +349,8 @@
 | 21 Nov 2026 | Recorded future bidirectional quick navigation between Walkthrough, Side Quests, Maps, Items and DLC | AT-224, [GitHub issue #8](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/8). **Not implemented**. Future acceptance must preserve original overview menu and Back to Walkthrough, saved checklist IDs and both editions. |
 
 | 21 Nov 2026 | Owner confirmed original-site preservation and one-to-one change-mirroring | Added standing protocol: Edition A remains untouched; every B change or planned improvement requires a stable ledger ID, exact B PR/SHA and tested status, plus separate Workspace A patch instructions/status and independent verification. Original editable source export required before applying changes there. **Documentation only; no guide/deployment/data edits.** |
+
+| 21 Nov 2026 | Created Edition B feedback access draft PR #9 | Branch `fix/atlas-feedback-access-2026-11-21`, head `37f7ca05c3c20411219c79dad13355019f4e7364`. Inert B report button now opens existing secure server-origin feedback page; labelled Send feedback, page prefilled. Added regression test; 6 offline URL cases passed, full branch and hosted mobile/POST tests pending. Original Site/database untouched. Tracked as AT-225 with A-specific mirror instructions. |
 
 ## Workspace return and source handoff
 
