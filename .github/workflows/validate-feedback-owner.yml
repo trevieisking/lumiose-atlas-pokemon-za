@@ -1,0 +1,34 @@
+name: Validate Pokémon Atlas private feedback inbox
+on:
+  pull_request:
+    paths:
+      - feedback-owner.html
+      - feedback-owner.css
+      - feedback-owner.js
+      - supabase/functions/lumiose-atlas-owner-reports/index.ts
+      - tests/feedback_owner.test.mjs
+      - .github/workflows/validate-feedback-owner.yml
+
+permissions:
+  contents: read
+
+jobs:
+  owner-inbox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check the new owner browser script
+        run: node --check feedback-owner.js
+      - name: Check the isolated read-only Supabase relay syntax
+        run: cp supabase/functions/lumiose-atlas-owner-reports/index.ts /tmp/atlas-owner-relay.mjs && node --check /tmp/atlas-owner-relay.mjs
+      - name: Exercise denied origins, owner JWT, report rendering and no persistent credentials
+        run: node --test tests/feedback_owner.test.mjs
+      - name: Ensure working public feedback submissions still pass
+        run: node --test tests/feedback_standalone.test.mjs
+      - name: Ensure the entire original 17-section guide is still valid
+        run: python3 tests/validate_static.py
+      - name: Preserve existing Item Atlas 364-checkmark state and fieldbook
+        run: node --test tests/items_recovered.test.mjs tests/items_checkoff.test.mjs
