@@ -13,7 +13,7 @@
 | Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | **RESTORED · MERGED #21 · DEPLOYED** — 18 quick-reference cards, 324-cell chart and offline dual-type calculator; clipped columns independently checked |
 | Alphas (5) | `alphas.html` · Alpha fieldbook | **RESTORED · MERGED #22 · DEPLOYED** — 20 zones, 38 fixed targets and saved 67-entry Zone 20 pool; HOME, fossils and DLC |
 | Items (28) | `items.html` · Item atlas | **RESTORED · MERGED #27 · DEPLOYED** — 264 original records (56 random hidden outcomes), 100 numbered Screw clues, 48 verified sector names; exact map pins still pending in issue #28 |
-| Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
+| Legends (10) | `legendaries.html` · Legendary routes | **RESTORED IN PR** — 25 illustrated source-exact encounters (3 story / 2 gift / 13 DLC / 7 Special Scan), numbered PDF-backed steps, same saved Obtained IDs, random-zone caveats |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
@@ -25,6 +25,8 @@
 | Starters (3) | `index.html#starters` · Starter stats | INLINE AUDIT |
 | Secrets (3) | `index.html#secrets` · Secrets & tricks | INLINE AUDIT |
 | Bosses (6) | `index.html#bosses` · Boss battles | INLINE AUDIT |
+
+**Current one-PDF recovery slice:** Legends, 10 printed pages (the final page is only a footer). The 25 source cards are mirrored by the main guide's saved legends section and source artwork. The standalone page uses the exact same 25 progress keys, with no new storage namespace; a fresh playthrough is still needed to verify Mystery Gift availability, the sixth-scan claim and omitted access/capture details. **Proposed after merge: 11 of 19 restored routes, 8 still pending.** All 48 detailed sector maps remain an open separate requirement in issue #28.
 
 ## Standalone routes still needing a full captured source or separate, fact-checked research
 

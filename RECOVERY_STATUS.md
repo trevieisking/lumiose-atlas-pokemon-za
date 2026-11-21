@@ -1,5 +1,17 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — Legendary & Mythical Fieldbook (PDF recovery PR awaiting checks)
+
+The owner’s exact **10-page “Legends” PDF** was visually inspected from pages 1 through 10. Pages 1–9 contain **25 illustrated field cards**; page 10 is only the original footer. The cards correspond exactly to the saved `src/sections/legends.html` records and artwork: **3 Base story** (Xerneas, Yveltal, Zygarde); **2 Gift mission** (Diancie, Mewtwo); **13 Mega Dimension** (Heatran, Darkrai, Groudon, Kyogre, Rayquaza, Meltan, Melmetal, Magearna, Hoopa, Volcanion, Genesect, Marshadow, Zeraora); **7 Special Scan** (Latias, Latios, Cobalion, Terrakion, Virizion, Keldeo, Meloetta).
+
+The new standalone `legendaries.html` preserves **each original Pokémon name, national number, local artwork, source group, place, description, tip/level and PDF page reference** with the same 25-link shared menu and Back to walkthrough. Expandable 3–4-step route lists restate the saved source descriptions without adding unverified rooftop coordinates. A helpful story-order overview, 25 searchable cards, four source filters, internal links, accessibility/mobile styles and **25 obtained checkboxes sharing the existing GitHub main guide `lumiose-atlas-reconstruction-v1.legendCheck` identity keys** are included. No separate tracker or automatic progress reset. Malformed or blocked browser storage is never overwritten.
+
+**Evidence boundaries:** the PDF specifies Mystery Gift items but not whether gifts are currently available; its Special Scan sixth-scan guarantee is reproduced as a PDF claim and needs confirmation in a future playthrough; Unknown Hyperspace Zones are **not** mapped as fixed city locations. The PDF does not fully specify the Genesect after-wall sequence, Marshadow follow-on capture or Zeraora rooftop entrance. These gaps are called out instead of guessed. The original ChatGPT Site has a different browser origin and its old progress does not automatically sync with the reconstructed GitHub site.
+
+**Proposed on safe release: 11/19 standalone routes restored, 8 remaining.** Do not mark live until CI passes at exact PR HEAD and GitHub Pages deployment of the merged SHA succeeds. Existing 17-section main guide, walkthrough, side quests, items, Alphas, feedback, protected owner inbox, RLS, Supabase and original ChatGPT Site remain unchanged. Android manual visual check remains outstanding.
+
+
+
 ## UI follow-up — Item Atlas checkboxes shared with original local progress (MERGED #30 · PAGES SUCCESS)
 
 The owner requested that the newly restored, prettier `items.html` support ticking found items and Colorful Screws like the walkthrough and side missions. Before changing code, `app.js` was inspected and confirmed the existing **device-local** key `lumiose-atlas-reconstruction-v1` stores `pickup` keyed by the exact `data-pickup="ZONE-INDEX"` ID and `screw` keyed by the `data-screw="NUMBER"` ID. The 264 item and 100 Screw entries in the recovered fieldbook match those original IDs in order.
