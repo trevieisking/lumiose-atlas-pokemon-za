@@ -23,8 +23,7 @@
     "side-missions.html": "sidequests",
     "sector-maps.html": "maps",
     "hyperspace-maps.html": "dimension",
-    "mega-dimension.html": "dimension",
-    "battles.html": "battles"
+    "mega-dimension.html": "dimension"
   },
   "restored_standalone_paths": {
     "mable-research.html": {
@@ -91,6 +90,11 @@
       "label": "Online and hidden rewards",
       "source": "Owner-provided 3-page Rewards PDF (21 November 2026), checked against preserved inline src/sections/rewards.html",
       "status": "Restored and deployed: PR #38 reviewed head 22283e48b7a22866626a548e8a133d3bb6261088, merged 92f3e8cd30b886cbc53d29b0d61b7fd73e3fdd8c; CI #44947504365 and Pages #44947591562 succeeded. Six original PDF reward/event cards; 25-link menu, all source artwork and safe links. Original Site unchanged; manual Android review pending."
+    },
+    "battles.html": {
+      "label": "Ranked Battles / Season X",
+      "source": "Owner-provided exact three-page Battles PDF (21 November 2026), SHA-256 f52a3d36d7aa5c18756c1a38c55b22524e6c75155ed0323b156e43d2d1ba4df6, and preserved source src/sections/battles.html",
+      "status": "Restored, CI green and deployed: PR #40 head 3a19314753697365d2c70665fee013285cb9977b, merge 55cc1d8a9bcbc8abcae2826139b1affcdc1db586; CI #44948454815 success and Pages #44948509457 success. Seven illustrated Season X Mega Stones, four ending tiers, rules addendum and exact 25-link navigation. No original Workspace Site, Supabase or player-progress changes; Android visual check pending."
     }
   }
 }
