@@ -61,6 +61,16 @@
       const target=document.getElementById(anchor);
       if(target){
         if(target.classList.contains('mission')){
+          // Deep links should display a mission even if a prior filter hid it.
+          if(target.hidden){
+            const search=$('#missionSearch');if(search)search.value='';
+            $('#missionTabs [data-filter]').forEach(button=>{
+              const selected=button.dataset.filter==='All';
+              button.classList.toggle('active',selected);
+              button.setAttribute('aria-pressed',String(selected));
+            });
+            updateMissionFilter();
+          }
           target.classList.add('open');
           const toggler=$('.mission-toggle',target);
           if(toggler){toggler.setAttribute('aria-expanded','true');toggler.textContent='Close guide ↑';}
