@@ -1,0 +1,28 @@
+name: Standalone Atlas feedback-page checks
+
+on:
+  pull_request:
+    paths:
+      - feedback.html
+      - feedback.css
+      - feedback.js
+      - tests/feedback_standalone.test.mjs
+      - .github/workflows/validate-standalone-feedback.yml
+
+permissions:
+  contents: read
+
+jobs:
+  static-feedback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check feedback JavaScript syntax
+        run: node --check feedback.js
+      - name: Test form and mock submission (no network writes)
+        run: node --test tests/feedback_standalone.test.mjs
+      - name: Ensure existing guide static files still validate
+        run: python3 tests/validate_static.py

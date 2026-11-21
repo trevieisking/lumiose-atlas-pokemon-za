@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://xzxqfrvqdgkzwujbkdbk.supabase.co; base-uri 'none'; form-action 'none'">
+  <title>Send feedback — Lumiose Atlas</title>
+  <link rel="stylesheet" href="feedback.css">
+  <script src="feedback.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html#home" aria-label="Lumiose Atlas home">
+      <span class="brand-mark" aria-hidden="true">Z/A</span>
+      <span>LUMIOSE<br><strong>ATLAS</strong></span>
+    </a>
+    <a class="header-back" id="headerBack" href="index.html#walkthrough">Back to guide</a>
+  </header>
+  <main>
+    <p class="eyebrow">Help improve the guide</p>
+    <h1>Send feedback</h1>
+    <p class="intro">Found a missing step, incorrect item or confusing route? Tell us what happened. Reports go privately to the existing Pokémon Atlas feedback panel. No email activation is required.</p>
+    <form id="feedbackForm" class="feedback-card">
+      <label for="page">Guide page</label>
+      <input id="page" name="page" type="text" maxlength="160" required readonly aria-describedby="pageHelp">
+      <small id="pageHelp">Automatically linked to the page you were viewing.</small>
+      <label for="category">Feedback category</label>
+      <select id="category" name="category" required>
+        <option value="stuck">I'm stuck</option>
+        <option value="missing">Something's missing</option>
+        <option value="incorrect">Information is incorrect</option>
+        <option value="other">Other feedback</option>
+      </select>
+      <label for="details">What needs attention?</label>
+      <textarea id="details" name="details" minlength="10" maxlength="1500" placeholder="Tell us the mission number, item or location, and what the guide should explain..." required></textarea>
+      <small>10–1,500 characters. Please don't include passwords or account information.</small>
+      <div class="honeypot" aria-hidden="true">
+        <label for="honey">Leave this blank</label><input id="honey" name="honey" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" id="send">Send feedback</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="return"><a id="returnLink" href="index.html#walkthrough">← Return to your guide page</a></p>
+  </main>
+</body>
+</html>

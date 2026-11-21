@@ -1,0 +1,25 @@
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#191b30;background:#f7f5fb}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#111322;color:white;padding:1rem max(1.25rem,calc((100vw - 760px)/2));min-height:78px}
+.brand{color:white;text-decoration:none;display:flex;align-items:center;gap:.8rem;font-size:.76rem;letter-spacing:.14em;line-height:1.1}.brand strong{font-size:1.25rem;letter-spacing:.06em}
+.brand-mark{border:2px solid #a99af7;border-radius:15px;display:grid;place-items:center;width:48px;height:54px;font-size:1rem;letter-spacing:0}
+.header-back{color:#eee9ff;text-decoration:none;font-weight:700;border:1px solid #7c709f;border-radius:10px;padding:.7rem .85rem}
+main{max-width:760px;margin:2rem auto 4rem;padding:0 20px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:#65549b;font-size:.76rem;font-weight:750}
+h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:.5rem 0 1rem}
+.intro{line-height:1.65;font-size:1rem;max-width:62ch;color:#4f5265;margin-bottom:1.5rem}
+.feedback-card{background:white;border:1px solid #ded8f0;border-radius:22px;padding:clamp(1.15rem,4vw,2.25rem);box-shadow:0 10px 30px #2420380c}
+label{display:block;font-weight:700;margin:1.25rem 0 .5rem}
+label:first-child{margin-top:0}
+input,select,textarea{font:inherit;color:inherit;width:100%;border:1px solid #b9b2ce;border-radius:11px;padding:.85rem 1rem;background:#fff}
+input[readonly]{background:#f3f1fa;color:#52536a}
+textarea{resize:vertical;min-height:172px;line-height:1.5}
+small{display:block;color:#636477;line-height:1.5;margin-top:.35rem}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid #b6a7fc;outline-offset:2px}
+button{background:#7353bf;border:0;color:white;font:inherit;font-weight:750;padding:.95rem 1.35rem;border-radius:12px;cursor:pointer;min-height:48px;margin-top:1.3rem}
+button:disabled{cursor:wait;opacity:.65}
+.status{margin:1rem 0 0;font-weight:600;min-height:1.6rem;line-height:1.5}
+.status.success{color:#166144}.status.error{color:#ad2d45}
+.return{margin:1.5rem 0}.return a{font-weight:700;color:#6548a4}
+.honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:480px){.topbar{padding:.85rem 1rem}.header-back{font-size:.85rem;padding:.65rem .6rem}main{margin:1.4rem auto 3rem;padding:0 14px}.feedback-card{border-radius:16px}textarea{min-height:150px}}
