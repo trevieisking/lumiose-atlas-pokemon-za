@@ -13,7 +13,7 @@
 | Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | **RESTORED · MERGED #21 · DEPLOYED** — 18 quick-reference cards, 324-cell chart and offline dual-type calculator; clipped columns independently checked |
 | Alphas (5) | `alphas.html` · Alpha fieldbook | **RESTORED · MERGED #22 · DEPLOYED** — 20 zones, 38 fixed targets and saved 67-entry Zone 20 pool; HOME, fossils and DLC |
 | Items (28) | `items.html` · Item atlas | **RESTORED · MERGED #27 · DEPLOYED** — 264 original records (56 random hidden outcomes), 100 numbered Screw clues, 48 verified sector names; exact map pins still pending in issue #28 |
-| Legends (10) | `legendaries.html` · Legendary routes | **RESTORED IN PR** — 25 illustrated source-exact encounters (3 story / 2 gift / 13 DLC / 7 Special Scan), numbered PDF-backed steps, same saved Obtained IDs, random-zone caveats |
+| Legends (10) | `legendaries.html` · Legendary routes | **RESTORED · MERGED #33 · DEPLOYED** — 25 illustrated source-exact encounters (3 story / 2 gift / 13 DLC / 7 Special Scan), expandable original routes, shared obtained checkboxes; gift/scan caveats retained |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
@@ -26,7 +26,7 @@
 | Secrets (3) | `index.html#secrets` · Secrets & tricks | INLINE AUDIT |
 | Bosses (6) | `index.html#bosses` · Boss battles | INLINE AUDIT |
 
-**Current one-PDF recovery slice:** Legends, 10 printed pages (the final page is only a footer). The 25 source cards are mirrored by the main guide's saved legends section and source artwork. The standalone page uses the exact same 25 progress keys, with no new storage namespace; a fresh playthrough is still needed to verify Mystery Gift availability, the sixth-scan claim and omitted access/capture details. **Proposed after merge: 11 of 19 restored routes, 8 still pending.** All 48 detailed sector maps remain an open separate requirement in issue #28.
+**Recovery slice completed and deployed:** the 10-page Legends PDF (page 10 is footer only) now has a 25-card restored standalone fieldbook sharing the main guide’s obtained checkmarks. **PR #33** passed source/progress/static/feedback regression tests and GitHub Pages deployment succeeded. **11 of 19 restored routes are live, 8 still pending.** The next captured standalone source candidate is the 14-page Pokémon HOME guide; full 48-sector maps remain an independent open requirement in issue #28. Mystery Gift availability and Special Scan guarantee precision await the planned fresh playthrough.
 
 ## Standalone routes still needing a full captured source or separate, fact-checked research
 
