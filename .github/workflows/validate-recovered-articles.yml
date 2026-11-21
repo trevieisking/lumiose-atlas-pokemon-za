@@ -35,6 +35,11 @@ on:
       - maps.css
       - maps.js
       - tests/maps_recovered.test.mjs
+      - items.html
+      - items.css
+      - items.js
+      - items-data.js
+      - tests/items_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -90,6 +95,10 @@ jobs:
         run: node --check maps.js
       - name: Verify 20 map pins, saved item and Alpha clues, navigation and zoom
         run: node --test tests/maps_recovered.test.mjs
+      - name: Check Item Atlas interaction and source-data JavaScript syntax
+        run: node --check items.js && node --check items-data.js
+      - name: Compare all 264 PDF items, 100 screws and 48 verified sector names
+        run: node --test tests/items_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
