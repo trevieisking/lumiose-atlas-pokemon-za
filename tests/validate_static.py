@@ -32,6 +32,26 @@ else:
         if not p:continue
         file=(ROOT/p)
         if not file.exists():errors.append(f'Missing referenced file: {link}')
+    # Check contextual chapter navigation without rewriting the original guide.
+    if 'class="atlas-related"' in doc:
+        mission_navs=re.findall(r'<nav class="atlas-related" aria-label="Mission (\\d+) related guides">([\\s\\S]*?)</nav>',doc)
+        section_navs=re.findall(r'<nav class="atlas-related atlas-section-related"[^>]*>([\\s\\S]*?)</nav>',doc)
+        if len(mission_navs)!=42:
+            errors.append(f'Expected 42 linked mission cards, found {len(mission_navs)}')
+        if [int(number) for number,_ in mission_navs]!=list(range(1,43)):
+            errors.append('Linked mission cards are not in order')
+        if len(section_navs)!=8:
+            errors.append(f'Expected 8 connected topic sections, found {len(section_navs)}')
+        for content in [body for _,body in mission_navs]+section_navs:
+            for target in re.findall(r'href="index\\.html#([^"]+)"',content):
+                if ':' in target:
+                    view,anchor=target.split(':',1)
+                    if view not in VIEWS or anchor not in scan.ids:
+                        errors.append(f'Invalid contextual target: {target}')
+                elif target not in VIEWS:
+                    errors.append(f'Unknown guide section: {target}')
+        if len(re.findall(r'<b>PLAYTHROUGH CHECK</b>',doc))<10:
+            errors.append('The ten researched opening missions must retain their playthrough notes')
     for k in ['sb_publishable_','service_role_key','sk-proj-','ghp_','eyJhbGciOi']:
         if k in doc or k in (ROOT/'app.js').read_text():errors.append(f'Credential-like string in generated site: {k}')
     if 'fetch(' in (ROOT/'app.js').read_text():errors.append('Unexpected fetch() in offline controller')
