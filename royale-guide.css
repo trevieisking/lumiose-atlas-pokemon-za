@@ -1,0 +1,39 @@
+/* PDF-restored Z-A Royale battle desk. All styles scoped to .atlas-article .royale-* */
+.atlas-article .royale-ladder{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 20px}
+.atlas-article .royale-rank{font-weight:850;background:#f4edf9;color:#5a407d;border:1px solid #decfeb;border-radius:10px;padding:9px 11px;white-space:nowrap;font-size:13px}
+.atlas-article .royale-rank.special{background:#f1f8f9;border-color:#bfe0e4;color:#346a71}
+.atlas-article .royale-top{margin:22px 0 18px;border:1px solid #ddd5e8;border-radius:15px;background:#fff;padding:17px}
+.atlas-article .royale-top input{box-sizing:border-box;min-height:44px;width:100%;max-width:530px;border:1px solid #beb3ce;border-radius:9px;padding:11px;font:inherit;font-size:14px}
+.atlas-article .royale-top label{display:block;font-size:13px;font-weight:850;margin-bottom:7px}
+.atlas-article .royale-tabs{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.atlas-article .royale-tabs button{background:#fff;color:#604879;border:1px solid #d9cce8;padding:9px 12px;border-radius:10px;font:750 12px system-ui,sans-serif;min-height:42px;cursor:pointer}
+.atlas-article .royale-tabs button[aria-pressed="true"]{background:#654b93;color:#fff;border-color:#654b93}
+.atlas-article .royale-status{font-weight:800;font-size:13px;color:#5c4978;margin:11px 0 0}
+.atlas-article .royale-card{padding:23px 24px;border:1px solid #e4dcea;background:#fff;border-radius:16px;margin:15px 0;scroll-margin-top:14px;box-shadow:0 2px 14px rgba(61,42,93,.04)}
+.atlas-article .royale-card:target{outline:3px solid #af9ad1;outline-offset:2px}
+.atlas-article .royale-heading{display:flex;gap:12px;align-items:start;justify-content:space-between;flex-wrap:wrap}
+.atlas-article .royale-heading h3{margin:4px 0 9px;font-size:clamp(20px,3vw,24px)}
+.atlas-article .royale-heading small{color:#7a678c;font-size:11px;font-weight:850;letter-spacing:.1em}
+.atlas-article .royale-badge{font-size:13px;font-weight:800;color:#604187;background:#f6effb;border:1px solid #ded1ea;border-radius:10px;padding:8px 12px;white-space:nowrap}
+.atlas-article .royale-team{display:grid;grid-template-columns:repeat(auto-fit,minmax(106px,1fr));gap:9px;margin:15px 0 19px}
+.atlas-article .royale-mon{display:flex;flex-direction:column;justify-content:start;align-items:center;text-align:center;border:1px solid #e9e3f0;border-radius:11px;padding:11px 6px 10px;min-width:0;background:#fbf9fd}
+.atlas-article .royale-mon img{width:78px;height:78px;object-fit:contain;display:block}
+.atlas-article .royale-mon .mon-name{font-size:13px;font-weight:850;margin-top:4px}
+.atlas-article .royale-mon .mon-level{font-size:12px;color:#6c647a;margin-top:2px}
+.atlas-article .royale-mon .mega-mark{font-size:10px;color:#653b91;background:#efe1fb;border-radius:8px;padding:2px 6px;margin-top:5px}
+.atlas-article .royale-tactics{background:#f7f4fc;border-radius:12px;padding:13px 16px;font-size:14px}
+.atlas-article .royale-tactics p{line-height:1.73;margin:6px 0}
+.atlas-article .royale-tactics p:last-child{margin-bottom:0}
+.atlas-article .royale-tactics strong{color:#563884}
+.atlas-article .royale-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:9px;border-top:1px solid #eee7f3;margin-top:14px;padding-top:13px;font-size:13px;font-weight:800}
+.atlas-article .royale-links a{display:inline-flex;padding:5px 7px}
+.atlas-article .royale-highlight{border-left:4px solid #77a7ad;background:#f3f9fa;padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+.atlas-article .royale-quiz{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.atlas-article .royale-quiz article{border:1px solid #e6dfec;background:#fff;border-radius:11px;padding:16px}
+.atlas-article .royale-quiz .answer{font-weight:900;color:#65458e;font-size:15px}
+.atlas-article .royale-quiz article p{font-size:13px;color:#645c71;line-height:1.65}
+.atlas-article .royale-quiz ol{padding-left:18px;font-size:13px;line-height:1.75}
+.atlas-article .royale-empty{background:#fff;border:1px dashed #c2b5d0;padding:20px;border-radius:12px;text-align:center;font-size:14px}
+.atlas-article .royale-card[hidden],.atlas-article .royale-empty[hidden]{display:none!important}
+@media(max-width:740px){.atlas-article .royale-card{padding:16px 12px}.atlas-article .royale-team{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.atlas-article .royale-mon{padding:7px 3px}.atlas-article .royale-mon img{width:64px;height:64px}.atlas-article .royale-mon .mon-name{font-size:11px;overflow-wrap:anywhere}.atlas-article .royale-quiz{grid-template-columns:1fr}.atlas-article .royale-top{padding:13px}.atlas-article .royale-badge{font-size:12px}}
+@media(max-width:350px){.atlas-article .royale-team{grid-template-columns:repeat(2,minmax(0,1fr))}}
