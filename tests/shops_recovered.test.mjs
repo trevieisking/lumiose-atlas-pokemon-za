@@ -6,7 +6,7 @@ const html=read("shops.html"),dataJs=read("shops-data.js"),script=read("shops.js
 const context={window:{}};runInNewContext(dataJs,context);
 const shops=JSON.parse(JSON.stringify(context.window.ATLAS_SHOPS));
 assert.equal(shops.length,18);
-assert.equal(new Set(shops.map(s=>s.id)).size,17);
+assert.equal(new Set(shops.map(s=>s.id)).size,18);
 assert.equal(shops.flatMap(s=>s.items).length,200);
 assert.equal(shops.find(s=>s.id==="quasartico").items.length,40);
 const cafe=shops.find(s=>s.id==="cafe-drinks");
@@ -137,4 +137,4 @@ assert.equal(ui.screwGap.textContent,"Enough screws to finish your plush upgrade
 ui.screwsHeld.value="101";
 ui.screwsHeld.events.input();
 assert.equal(ui.screwGap.textContent,"Enter valid screw counts and levels");
-console.log("PASS: PDF 17 shop groups, 190 items, price flags, 25-link nav, currency budgets, no network or shared progress writes.");
+console.log("PASS: 17 PDF groups/190 entries + 10 first-hand café prices, 18 groups/200 items, price flags, 25-link nav, offline currency budgets.");
