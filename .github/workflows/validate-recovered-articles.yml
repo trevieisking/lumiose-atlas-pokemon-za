@@ -1,0 +1,29 @@
+name: Validate recovered Atlas Mable page
+on:
+  pull_request:
+    paths:
+      - mable-research.html
+      - recovered-articles.css
+      - recovered-articles.js
+      - tests/mable_recovered.test.mjs
+      - .github/workflows/validate-recovered-articles.yml
+
+permissions:
+  contents: read
+
+jobs:
+  mable-article:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify article JS syntax
+        run: node --check recovered-articles.js
+      - name: Verify original PDF reward order, menu, safe local state and navigation
+        run: node --test tests/mable_recovered.test.mjs
+      - name: Verify existing 17-section static site remains unchanged and valid
+        run: python3 tests/validate_static.py
+      - name: Guard against feedback form regression
+        run: node --test tests/feedback_standalone.test.mjs
