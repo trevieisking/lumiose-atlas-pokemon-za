@@ -12,7 +12,10 @@
   // already-permitted same-origin path without changing live database/CORS rules.
   const FEEDBACK_FORM = 'https://xzxqfrvqdgkzwujbkdbk.supabase.co/functions/v1/lumiose-atlas-feedback';
   function buildAtlasFeedbackUrl(pathname, hash) {
-    const rawPage = String(pathname || '/') + String(hash || '');
+    const pagePath = String(pathname || '/');
+    // GitHub Pages project URLs end with /repo/; normalize for backend validation.
+    const canonicalPath = pagePath !== '/' && pagePath.endsWith('/') ? pagePath + 'index.html' : pagePath;
+    const rawPage = canonicalPath + String(hash || '');
     const validPage = rawPage.length <= 160 &&
       /^\/(?:[a-z0-9-]+(?:\.html)?(?:\/[a-z0-9-]+(?:\.html)?)*)?(?:#[a-z0-9-]+)?$/i.test(rawPage);
     const url = new URL(FEEDBACK_FORM);
