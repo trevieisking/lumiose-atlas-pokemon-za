@@ -242,7 +242,7 @@
     const alpha=$$('#alphaGrid > .alpha-card')[zone-1];
     const item=$$('#itemResults > .item-zone')[zone-1];
     const names=$$('.alpha-target-list li',alpha||document).map(x=>x.textContent.trim()).slice(0,15);
-    const sample=$$('.item-pickup-grid .pickup',item||document).slice(0,12).map(x=>x.textContent.trim().replace(/\s+/g,' '));
+    const sample=$('.item-pickup-grid .pickup',item||document).slice(0,12).map(x=>{const name=$('.pickup-copy b',x)?.textContent.trim()||'';const where=$('.pickup-copy small',x)?.textContent.trim()||'';const refs=$('.atlas-check-refs',x)?.textContent.trim().replace(/(Item \d+)(Map #|Map match)/,'$1 · $2')||'';return [name,where,refs].filter(Boolean).join(' · ');});
     detail.replaceChildren();
     const wrap=document.createElement('div');wrap.className='rebuild-zone-detail';
     const title=document.createElement('h3');title.textContent=`Wild Zone ${String(zone).padStart(2,'0')}`;wrap.appendChild(title);

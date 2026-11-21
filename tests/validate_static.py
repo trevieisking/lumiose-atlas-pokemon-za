@@ -66,6 +66,44 @@ else:
         if not path.is_file():errors.append('Missing saved resource '+str(path))
         elif hashlib.sha256(path.read_bytes()).hexdigest()!=asset['sha256']:errors.append('Modified saved resource '+str(path))
     print(f'Parsed {len(scan.sections)} sections, {len(scan.href)} page links, {len(scan.src)} image/script references and {len(manifest["files"])} captured resources.')
+
+# Numbered map index must preserve the source locations and the existing ticklist IDs.
+map_index=ROOT/'map-pin-index.js'
+map_control=ROOT/'map-numbering.js'
+if not map_index.exists() or not map_control.exists():
+    errors.append('Missing numbered map controller or index')
+else:
+    import json as _json
+    text_index=map_index.read_text(encoding='utf-8')
+    match=re.search(r'window\.LUMIOSE_MAP_PINS\s*=\s*(\{[\s\S]*\});',text_index)
+    if not match:
+        errors.append('Unreadable map pin manifest')
+    else:
+        data=_json.loads(match.group(1))
+        zones=data.get('zones',{})
+        pins=[pin for key in sorted(zones,key=int) for pin in zones[key]]
+        matches=[pin for pin in pins if pin.get('pickup')]
+        keys=[pin['id'] for pin in pins]
+        if len(zones)!=20 or len(pins)!=146 or len(set(keys))!=146:
+            errors.append('Map manifest must have 20 zones and 146 distinct original pins')
+        if len(matches)!=111:
+            errors.append('Exactly 111 unambiguous checklist links expected')
+        original_keys=set(re.findall(r'data-pickup="([0-9]+-[0-9]+)"',(ROOT/'src/sections/items.html').read_text(encoding='utf-8')))
+        if len(original_keys)!=264:
+            errors.append('Must preserve 264 original checklist IDs')
+        for key,records in zones.items():
+            for position,pin in enumerate(records,1):
+                if int(pin['zone'])!=int(key) or pin['number']!=position:
+                    errors.append('Unstable or wrong Wild Zone map numbering')
+                if not(0<=pin['x']<=100 and 0<=pin['y']<=100):
+                    errors.append('Map coordinate out of approximate map bounds')
+                if pin['pickup'] and pin['pickup'] not in original_keys:
+                    errors.append('Numbered map links to missing checklist key')
+    if 'map-pin-index.js' not in (ROOT/'index.html').read_text(encoding='utf-8'):
+        errors.append('Homepage has not loaded the numbered map manifest')
+    if 'map-numbering.js' not in (ROOT/'index.html').read_text(encoding='utf-8'):
+        errors.append('Homepage has not loaded the map controller')
+
 if errors:
     print('FAILED:',*errors,sep='\n- ')
     sys.exit(1)
