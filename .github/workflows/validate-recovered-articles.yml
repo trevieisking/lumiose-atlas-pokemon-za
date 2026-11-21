@@ -72,6 +72,7 @@ on:
       - sector-maps.css
       - sector-maps.js
       - tests/sector_map_directory.test.mjs
+      - tests/approx_item_map_leads.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -155,6 +156,8 @@ jobs:
         run: node --check sector-maps.js
       - name: Verify 48 sectors, 20 source-positioned Wild Zones, 264 numbered items, 100 source Screws and read-only progress
         run: node --test tests/sector_map_directory.test.mjs
+      - name: Verify 146 numbered source-saved approximate map leads without inventing confirmed pins
+        run: node --test tests/approx_item_map_leads.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
