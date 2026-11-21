@@ -68,7 +68,7 @@
    }
    const remaining=levels.reduce((sum,lvl)=>sum+16-spent[lvl],0);
    const shortfall=Math.max(0,remaining-count);
-   screwGap.textContent=shortfall?fmt(shortfall)+" Colorful Screws still needed":"Enough screws to finish your plush upgrades";
+   screwGap.textContent=shortfall?fmt(shortfall)+(shortfall===1?" Colorful Screw still needed":" Colorful Screws still needed"):"Enough screws to finish your plush upgrades";
    screwText.textContent="Cost to max all five from these levels: "+fmt(remaining)+
      " Screws · in bag: "+fmt(count)+" · still to find for these upgrades: "+fmt(shortfall)+
      ". You must separately locate all 100 unique screws for the giant Hotel Z plush.";
