@@ -24,7 +24,7 @@ assert.match(nodes.shinyOddsResult.textContent,/2\.4% chance/,"Baseline per-spaw
 nodes.shinyCharmEnabled.checked=true;
 nodes.shinyCharmEnabled.events.change();
 assert.match(nodes.shinyOddsResult.textContent,/9\.3% chance/,"Shiny Charm calculation");
-assert.match(nodes.shinyOddsExplanation.textContent,/not a guaranteed result/);
+assert.match(nodes.shinyOddsExplanation.textContent,/(?:never|not) a guaranteed result/);
 nodes.shinySpawnCount.value="0";nodes.shinySpawnCount.events.input();
 assert.match(nodes.shinyOddsResult.textContent,/Enter 1–1,000,000 spawns/);
 nodes.shinySpawnCount.value="1000000";nodes.shinySpawnCount.events.input();
