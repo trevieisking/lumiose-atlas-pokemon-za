@@ -1,12 +1,12 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — 28-page Item Atlas and 48-sector evidence foundation (PR awaiting tests)
+## Stage 2 update — 28-page Item Atlas and 48-sector evidence foundation (MERGED #27 · PAGES SUCCESS)
 
 The owner’s complete 28-page Item Atlas PDF was examined as page text and visually: 20 Wild Zone sections, the vendor/berry/supplies route and 100-item numbered Colorful Screw notes, with 264 source item records. The preserved main-page source confirms **154 zone-only entries lacking coordinates; 56 Wild Zone 20 hidden-item chance outcomes; 10 mission/person rewards; 23 sector-area clues; and 21 landmark/access clues**. Their sum is 264, but **it does not equal 264 confirmed, fixed, independently mapped item coordinates**. We keep each record with the exact saved name, order, source ID, hint and image. The 100 screws remain a separate numbered fieldbook and the original main-page checkboxes remain the only player progress system.
 
 An independent public-source cross-check against Bulbapedia’s in-game location index established the authentic 48 sector names: Vert 1–9, Bleu 1–10, Magenta 1–9, Rouge 1–8 and Jaune 1–12. This detail is expressly distinguished from the original 28-page PDF. All 48 sectors receive evidence records; 23 item clues and 51 Screw clues explicitly name a particular sector. **No sector-specific map image or exact item coordinate exists in the owner captures**; the interface honestly marks these as pending rather than rendering approximate item markers as confirmed. The separate sector-maps.html and Hyperspace map routes remain unrecovered, and the full-city exact item placement project remains open. Tests must check exact 264/100 source parity, correct icon paths, 48 sector names, source-quality classification, no fabricated pins, 25-link navigation, offline filters, original 17 sections, feedback and progress preservation.
 
-**Proposed after merge: 10/19 restored standalone routes; 9 route placeholders remain.** This item-only PR is not live until all tests and exact GitHub Pages deployment succeed. Original ChatGPT Site, Supabase, source main guide, feedback, map image and player progress are unchanged.
+**PR #27 passed all article, item-source parity, main 17-section and feedback tests in run #44936435173; merged as `e8b8215e1816d2528c70183fefce6960a8d60821`; GitHub Pages run #44936487426 succeeded at that exact SHA.** The current count is **10/19 restored standalone routes**, **9 placeholders**. The owner’s full 48-sector maps and independently confirmed item-pin requirement remains **OPEN in [GitHub issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28)**. Android visual verification is not yet recorded. The original ChatGPT Site, Supabase, source guide, feedback, map image and player progress are unchanged.
 
 
 ## Stage 2 update — Lumiose Maps PDF (MERGED #25 · PAGES SUCCESS)
