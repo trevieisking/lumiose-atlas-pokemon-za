@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 1,
+  "revision": 2,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_plan_documented",
@@ -725,5 +725,65 @@
     "confirmed_item_pins": "Every plotted exact item with source ID, exact location, altitude and verified access",
     "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
     "evidence_scope": "Unknown entries stay explicitly unverified; issue #28 remains open until its full completeness gate"
-  }
+  },
+  "last_evidence_intake_at": "2026-11-21",
+  "research_intakes": [
+    {
+      "id": "ATLAS-RESEARCH-MAPS-2026-11-21-R1",
+      "type": "deep_research_completed_report",
+      "started_at_utc": "2026-11-21T22:34:12.388Z",
+      "completed_at_utc": "2026-11-21T22:36:56.461Z",
+      "run_status": "finished_successfully",
+      "record": "MAPS_DEEP_RESEARCH_EVIDENCE_2026-11-21.md",
+      "scope": [
+        "base_game_holovators",
+        "scaffolds_and_ladders",
+        "fixed_item_and_colorful_screw_routes"
+      ],
+      "location_data_status": "source_linked_leads_not_aligned_to_atlas_image",
+      "external_map_marker_counts": {
+        "gamerguides_holovators": 23,
+        "gamerguides_ladders": 132,
+        "gamerguides_bridges": 43,
+        "shackmaps_holovators_reported": 23,
+        "shackmaps_ladders_reported": 255
+      },
+      "holovator_unlock_mission_ids": [
+        4,
+        23,
+        40,
+        45,
+        56,
+        61,
+        71,
+        80,
+        92
+      ],
+      "scaffold_network_route_leads": 12,
+      "external_screw_checklist_entries": 100,
+      "atlas_exact_holovator_xy_confirmed": 0,
+      "atlas_exact_scaffold_networks_confirmed": 0,
+      "atlas_exact_item_xy_floor_pins_confirmed": 0,
+      "numbering_and_coordinates": "external checklist IDs and external map coordinates do not imply matches to original Atlas owner IDs or Atlas image coordinates",
+      "image_use": "source links only; no third-party map images copied",
+      "publication_status": "research_only_no_code_or_page_change",
+      "sources": [
+        "https://www.serebii.net/pokearth/lumiosecity/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+        "https://www.shackmaps.com/pokemon-legends-z-a/map",
+        "https://gamewith.jp/pokemon-za/524373",
+        "https://www.pokeos.com/plza/map",
+        "https://gamepedia.jp/pokemon-legends-z-a/archives/16594",
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations",
+        "https://www.serebii.net/legendsz-a/items.shtml"
+      ],
+      "open_evidence_gaps": [
+        "all 23 exact Atlas XY / independently verified coordinate transforms",
+        "verified full-city scaffold inventory and access node graph",
+        "game-specific rooftop end-height and mission gating for each external marker",
+        "individual fixed-item IDs reconciled against source 264/100/146 archive counts",
+        "reuse rights for external map images"
+      ]
+    }
+  ]
 }
