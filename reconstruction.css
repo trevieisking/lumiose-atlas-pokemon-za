@@ -19,3 +19,13 @@
 .unrecovered-page .button{display:inline-block;margin:9px 9px 9px 0;text-decoration:none}
 .unrecovered-note{font-size:12px;border-top:1px solid #dedce5;margin-top:32px;padding-top:19px}
 @media(max-width:780px){.rebuild-notice{padding:8px 10px}.rebuild-zone-detail{padding:10px}.unrecovered-page{margin:18px 10px;padding:18px}}
+
+/* Connected-guide links: additive to preserved site styling. */
+.atlas-related{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:13px 0 15px;padding:11px 13px;border:1px solid #dfd6ed;background:#fbfaff;border-radius:13px}
+.atlas-related>span{font-size:10px;letter-spacing:.08em;font-weight:800;color:#5b4c83;margin-right:5px}
+.atlas-related a{font-size:12px;line-height:1.45;text-decoration:none;color:#382b78;background:white;border:1px solid #dcd4ec;border-radius:20px;padding:7px 10px;font-weight:700}
+.atlas-related a:hover,.atlas-related a:focus-visible{background:#ece6fb;outline-offset:2px}
+.atlas-detail-note{padding:12px 14px;margin:11px 0;border-radius:11px;border-left:4px solid #7353ac;background:#f5f0fe;color:#3d3359}
+.atlas-detail-note b{font-size:11px;letter-spacing:.05em}.atlas-detail-note p{font-size:13px;line-height:1.65;margin:5px 0 0}
+.atlas-section-related{margin:13px 0 22px}
+@media(max-width:780px){.atlas-related{padding:9px;gap:6px}.atlas-related a{padding:8px 10px;min-height:36px}.atlas-detail-note{padding:11px}}
