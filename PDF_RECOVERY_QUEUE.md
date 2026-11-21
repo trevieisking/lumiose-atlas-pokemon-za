@@ -15,7 +15,7 @@
 | Items (28) | `items.html` · Item atlas | PDF CAPTURED |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
-| Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED IN PR** — 17 shop/exchange groups, 190 listed items, search, shard/screw planners and marked disputed prices |
+| Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
 | Maps (4) | `maps.html` · Lumiose maps; **does not capture every linked map close-up** | PDF CAPTURED |
 | Rewards (3) | `rewards.html` · Online rewards | PDF CAPTURED |
