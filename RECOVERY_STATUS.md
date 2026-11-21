@@ -1,10 +1,16 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — Story Z-A Royale promotion battles (21 November 2026)
+
+The seven-page owner's **Z-A Royale: Every Promotion Battle** PDF has been restored into `royale-guide.html`, with **10 promotion opponents and 40 Pokémon illustrations**, all local `dex-art` images, source-recorded levels, suggested counters and move plans. A full Canari entrance/quiz/Tarragon sequence and the interruptions before Ivor/Jacinthe are integrated. Offline search and chapter filters use no stored player state. The exact 25-link main menu and Back to walkthrough remain consistent. Canari's entry details were also checked against Serebii and Bulbapedia.
+
+**Restored standalone routes: 4/19; placeholders remaining: 15/19.** Original ChatGPT Site, URL, Supabase, core 17 sections and existing player progress unchanged.
+
 ## Stage 2 update — Complete Journey Route PDF (21 November 2026)
 
 The 46-page owner export of the **Complete Journey Route** has been restored as a true standalone `journey.html` article. Source coverage: **42 story/postgame missions, 14 Hyperspace missions, 20 Wild Zone circuits, 42 Practical checks sections, 133 story steps and 37 DLC steps**. Search/filter/deep links are separate, offline enhancements; they never modify the main walkthrough's local completion records. Collapsed side-request lists, map details and request answers are labelled, with links to existing inline sections rather than invented data. The 25-link navigation and Back to walkthrough are carried forward. Read-only PR checks also guard Mable, Shiny and feedback components.
 
-**Restored standalone routes: 3/19; placeholders remaining: 16/19.** The original ChatGPT Site, its URL, Supabase data/functions and all existing 17-section main guide content remain unchanged.
+**After the Journey slice there were 3 restored and 16 placeholders; the Royale slice brings this to 4 restored and 15 placeholders.** The original ChatGPT Site, its URL, Supabase data/functions and all existing 17-section main guide content remain unchanged.
 
 ## Stage 2 update — second PDF article (21 November 2026)
 
