@@ -1,0 +1,729 @@
+{
+  "id": "ATLAS-MAPS-2026-11-21-V1",
+  "revision": 1,
+  "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
+  "created_at": "2026-11-21",
+  "status": "owner_approved_plan_documented",
+  "current_phase": "SM-01 (not implemented in this docs-only release)",
+  "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+  "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
+  "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
+  "target_edition": "B: independent GitHub Pages reconstruction",
+  "protected_original_site": {
+    "edition": "A",
+    "url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/",
+    "edit_allowed_in_this_plan": false
+  },
+  "asset_inventory_unchanged": "source-assets-manifest.json",
+  "baseline": {
+    "standalone_routes_functional": 19,
+    "original_pdf_backed_routes": 14,
+    "source_derived_routes": 5,
+    "city_sectors": 48,
+    "zone_count": 20,
+    "source_item_records": 264,
+    "source_screw_clues": 100,
+    "approximate_city_map_leads": 146,
+    "photo_landmark_links": 30,
+    "exact_item_xy_floor_pins_confirmed": 0,
+    "source_game_city_image": "maps/lumiose-game-map.jpg",
+    "source_pages": [
+      "maps.html",
+      "sector-maps.html",
+      "items.html",
+      "src/sections/maps.html",
+      "src/sections/items.html"
+    ],
+    "screenshot_evidence": {
+      "count": 10,
+      "source": "owner-supplied panned in-game city map TV photos in 21 Nov 2026 conversation",
+      "committed_as_image_assets": false,
+      "covered_district_families": [
+        "Jaune",
+        "Vert",
+        "Bleu",
+        "Magenta",
+        "Rouge"
+      ],
+      "supports": [
+        "visible sector labels",
+        "visible building map footprints",
+        "roads",
+        "canals",
+        "plazas",
+        "some landmarks",
+        "relative positions"
+      ],
+      "does_not_by_itself_confirm": [
+        "exact item coordinates",
+        "exact heights or climb routes",
+        "every yellow travel icon is a Holovator",
+        "individual scaffold/ladder coordinates",
+        "all 48 sector boundary polygons"
+      ]
+    },
+    "hyperspace_original_enlarged_layout_images_confirmed": 0,
+    "hyperspace_enlarged_layout_count_claimed_by_archived_guide": 9
+  },
+  "sector_families": [
+    {
+      "district": "Vert",
+      "count": 9
+    },
+    {
+      "district": "Bleu",
+      "count": 10
+    },
+    {
+      "district": "Magenta",
+      "count": 9
+    },
+    {
+      "district": "Rouge",
+      "count": 8
+    },
+    {
+      "district": "Jaune",
+      "count": 12
+    }
+  ],
+  "map_views": {
+    "sector": {
+      "count": 48,
+      "source_map": "maps/lumiose-game-map.jpg",
+      "approach": "selectable evidence-labelled zoom/overlays on shared city image; separate image per sector not mandatory",
+      "status": "upgrade_planned"
+    },
+    "wild_zone": {
+      "count": 20,
+      "status": "existing_keep_and_regression_test",
+      "separate_ids": true
+    }
+  },
+  "layer_order": [
+    "map_base_and_sectors",
+    "interactive_zoom",
+    "buildings_landmarks_alleys",
+    "holovators",
+    "scaffolds_ladders_glide",
+    "items_and_colorful_screws"
+  ],
+  "verification_levels": [
+    "confirmed",
+    "approximate_lead",
+    "needs_verification"
+  ],
+  "coordinate_rule": "Never infer exact original-game XY or height directly from perspective photographs or approximate archived A-number city leads. Use verifiable aligned source/evidence and annotate transformations.",
+  "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
+  "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
+  "non_destructive_release_policy": {
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
+    "player_storage_changed": false,
+    "supabase_changed": false,
+    "feedback_changed": false,
+    "original_workspace_site_changed": false,
+    "protected_code_labs_writer_used": false
+  },
+  "phases": [
+    {
+      "id": "SM-01",
+      "name": "Screenshot evidence and sector topology audit",
+      "status": "planned",
+      "dependencies": [],
+      "acceptance": "48 labelled sectors and 20 Wild Zones traced to source/captures; boundary confidence assigned; no fabricated polygons"
+    },
+    {
+      "id": "SM-02",
+      "name": "Zoom/pan city map and 48 sector-specific views",
+      "status": "planned",
+      "dependencies": [
+        "SM-01"
+      ],
+      "acceptance": "Readable desktop and Android zoom; all sector selectors and all 20 Wild Zones work"
+    },
+    {
+      "id": "SM-03",
+      "name": "Buildings, street/alleys, plazas and landmark reference layers",
+      "status": "planned",
+      "dependencies": [
+        "SM-02"
+      ],
+      "acceptance": "Architecture/reference layer and written orientation, no unsupported traversable-path claim"
+    },
+    {
+      "id": "SM-04",
+      "name": "Individually evidenced Holovator layer",
+      "status": "planned",
+      "dependencies": [
+        "SM-03"
+      ],
+      "acceptance": "Confirmed pins only with observation, access point, level and nearby landmark"
+    },
+    {
+      "id": "SM-05",
+      "name": "Scaffolds, ladders, glides and rooftop access",
+      "status": "planned",
+      "dependencies": [
+        "SM-04"
+      ],
+      "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate"
+    },
+    {
+      "id": "SM-06",
+      "name": "Exact-numbered item and Colorful Screw locations",
+      "status": "planned",
+      "dependencies": [
+        "SM-05"
+      ],
+      "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs"
+    },
+    {
+      "id": "SM-07",
+      "name": "Per-sector completeness audit, regressions and mobile QA",
+      "status": "planned",
+      "dependencies": [
+        "SM-06"
+      ],
+      "acceptance": "48 sector views, 20 Wild Zones, working menus/zoom/progress, evidence-labelled data, green CI and Android QA"
+    }
+  ],
+  "sector_targets": [
+    {
+      "id": "Vert-01",
+      "district": "Vert",
+      "sector_number": 1,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-02",
+      "district": "Vert",
+      "sector_number": 2,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-03",
+      "district": "Vert",
+      "sector_number": 3,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-04",
+      "district": "Vert",
+      "sector_number": 4,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-05",
+      "district": "Vert",
+      "sector_number": 5,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-06",
+      "district": "Vert",
+      "sector_number": 6,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-07",
+      "district": "Vert",
+      "sector_number": 7,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-08",
+      "district": "Vert",
+      "sector_number": 8,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Vert-09",
+      "district": "Vert",
+      "sector_number": 9,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-01",
+      "district": "Bleu",
+      "sector_number": 1,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-02",
+      "district": "Bleu",
+      "sector_number": 2,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-03",
+      "district": "Bleu",
+      "sector_number": 3,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-04",
+      "district": "Bleu",
+      "sector_number": 4,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-05",
+      "district": "Bleu",
+      "sector_number": 5,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-06",
+      "district": "Bleu",
+      "sector_number": 6,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-07",
+      "district": "Bleu",
+      "sector_number": 7,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-08",
+      "district": "Bleu",
+      "sector_number": 8,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-09",
+      "district": "Bleu",
+      "sector_number": 9,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Bleu-10",
+      "district": "Bleu",
+      "sector_number": 10,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-01",
+      "district": "Magenta",
+      "sector_number": 1,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-02",
+      "district": "Magenta",
+      "sector_number": 2,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-03",
+      "district": "Magenta",
+      "sector_number": 3,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-04",
+      "district": "Magenta",
+      "sector_number": 4,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-05",
+      "district": "Magenta",
+      "sector_number": 5,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-06",
+      "district": "Magenta",
+      "sector_number": 6,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-07",
+      "district": "Magenta",
+      "sector_number": 7,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-08",
+      "district": "Magenta",
+      "sector_number": 8,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Magenta-09",
+      "district": "Magenta",
+      "sector_number": 9,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-01",
+      "district": "Rouge",
+      "sector_number": 1,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-02",
+      "district": "Rouge",
+      "sector_number": 2,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-03",
+      "district": "Rouge",
+      "sector_number": 3,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-04",
+      "district": "Rouge",
+      "sector_number": 4,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-05",
+      "district": "Rouge",
+      "sector_number": 5,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-06",
+      "district": "Rouge",
+      "sector_number": 6,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-07",
+      "district": "Rouge",
+      "sector_number": 7,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Rouge-08",
+      "district": "Rouge",
+      "sector_number": 8,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-01",
+      "district": "Jaune",
+      "sector_number": 1,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-02",
+      "district": "Jaune",
+      "sector_number": 2,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-03",
+      "district": "Jaune",
+      "sector_number": 3,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-04",
+      "district": "Jaune",
+      "sector_number": 4,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-05",
+      "district": "Jaune",
+      "sector_number": 5,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-06",
+      "district": "Jaune",
+      "sector_number": 6,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-07",
+      "district": "Jaune",
+      "sector_number": 7,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-08",
+      "district": "Jaune",
+      "sector_number": 8,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-09",
+      "district": "Jaune",
+      "sector_number": 9,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-10",
+      "district": "Jaune",
+      "sector_number": 10,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-11",
+      "district": "Jaune",
+      "sector_number": 11,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    },
+    {
+      "id": "Jaune-12",
+      "district": "Jaune",
+      "sector_number": 12,
+      "record": "present_in_existing_directory",
+      "geometry": "not_individually_verified",
+      "holovators": "not_yet_audited",
+      "scaffolds_and_ladders": "not_yet_audited",
+      "items": "source_text_only_unless_future_exact_evidence",
+      "capture_coverage": "requires_individual_evidence_review"
+    }
+  ],
+  "completion_requirements": {
+    "sector_navigation": "48/48 distinct sector selectors and useful zoom, not 48 fabricated images",
+    "wild_zone_navigation": "20/20 existing Wild Zone map positions preserve behavior",
+    "confirmed_access_points": "Each separately backed by type, coordinates, floor, route directions and dated evidence",
+    "confirmed_item_pins": "Every plotted exact item with source ID, exact location, altitude and verified access",
+    "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
+    "evidence_scope": "Unknown entries stay explicitly unverified; issue #28 remains open until its full completeness gate"
+  }
+}
