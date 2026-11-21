@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 22 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 23 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -369,6 +369,8 @@
 | 21 Nov 2026 | Completed and merged header feedback integration and preserved deployed proxy source | [PR #11](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/11) merge `bea484e5bdd0f23ed2d25e507f7e4b0ce65216a9`, CI [#44917058018](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44917058018) green; [PR #12](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/12) merge `8e84b41d64e7374c5a6a545287cc8ac8e43b4f07`, CI [#44917321212](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44917321212) green. Superseded PR #9 closed without merge, branch preserved. GitHub main now has header integration plus working form plus deployed relay source. Only genuine reports #13/#14 remain. Original Workspace Site and function untouched. Final Android header click/back test pending. |
 
 | 21 Nov 2026 | Hardened feedback receipt detection on Edition B only | [PR #13](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/13) merged as `1a7bdb7c63a95ab0c9cba2dabd0af38be2ab8abe`; read-only CI [#44918358000](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44918358000) green. Success requires 201/saved receipt; failed text preserved; no duplicate in-flight submissions. Current reports #13/#14 untouched. GitHub Pages deploy #44918411035 succeeded for the exact PR #13 merge SHA. Original A, domain, API and RLS unchanged; Android verification pending. AT-228. |
+
+| 21 Nov 2026 | Owner-confirmed Android feedback submission and authorized test cleanup | Owner confirmed the Edition B form displayed a successful save. Read-only SQL verified test report **#17** (`stuck`, `/lumiose-atlas-pokemon-za/index.html#walkthrough`, 16:00:51 GMT). After explicit owner authorization, deleted **only #17** using exact ID, category, page and timestamp guard; SQL returned `deleted_count=1`. Post-delete read-only query confirmed only **genuine reports #13 and #14** remain. No guide code, original Workspace Site, Supabase function, RLS, ratings or player progress changed. **Android return-link navigation is still not personally confirmed.** AT-226 / AT-228. |
 
 ## Workspace return and source handoff
 
