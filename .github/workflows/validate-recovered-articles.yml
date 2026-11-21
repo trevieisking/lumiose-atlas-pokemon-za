@@ -22,6 +22,10 @@ on:
       - type-chart.js
       - type-chart-data.js
       - tests/type_chart_recovered.test.mjs
+      - alphas.html
+      - alphas.css
+      - alphas.js
+      - tests/alphas_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -65,6 +69,10 @@ jobs:
         run: node --check type-chart.js && node --check type-chart-data.js
       - name: Test 18-type PDF fidelity, 324 matchups and offline calculator
         run: node --test tests/type_chart_recovered.test.mjs
+      - name: Check Alpha fieldbook JavaScript syntax
+        run: node --check alphas.js
+      - name: Compare 20 source zone cards, Zone 20 pool and search behaviour
+        run: node --test tests/alphas_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
