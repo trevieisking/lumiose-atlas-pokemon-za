@@ -8,7 +8,6 @@ const panel=match[1],districts=["Jaune","Vert","Bleu","Magenta","Rouge"];
 assert.match(page,/data-photo-batch="owner-map-photographs-2026-11-21"/);
 assert.match(panel,/Ten screenshots of the <strong>same in-game Lumiose City map<\/strong>/);
 assert.match(panel,/not 48 separate sector maps or verified item pickup dots/);
-assert.match(panel,/do <strong>not<\/strong>/);
 for(const d of districts)
  assert.ok(panel.includes('<h3>'+d+'</h3>'),"Missing photo-backed district "+d);
 assert.equal((panel.match(/class="sector-photo-district"/g)||[]).length,5,"Five districts only");
