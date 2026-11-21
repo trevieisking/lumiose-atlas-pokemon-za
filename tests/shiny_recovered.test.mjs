@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+import {readFileSync,existsSync} from "node:fs";
+import {runInNewContext} from "node:vm";
+
+const read=name=>readFileSync(new URL("../"+name,import.meta.url),"utf8");
+const html=read("shiny-hunting.html"),css=read("shiny-hunting.css"),js=read("shiny-hunting.js"),base=read("src/template.html");
+assert.match(html,/Shiny hunting/);
+for(const term of ["Bench cycle","Route or fast-travel reset","Wild Zone 1","Duve","Shiny Mareep","1-in-4,096","1-in-1,024.38","ten uncollected","Sparkling Power","Level 3","id=\"odds-calculator\"","id=\"hunt-checklist\"","href=\"mable-research.html\"","href=\"index.html#walkthrough\""])assert.ok(html.includes(term),"Missing recovered or verified content: "+term);
+assert.match(html,/name="robots" content="noindex,nofollow"/);
+assert.doesNotMatch(html+js,/sb_secret_|service_role_key|sk-proj-|github_pat_/i);
+assert.doesNotMatch(js,/\bfetch\s*\(|localStorage|sessionStorage/);
+assert.match(css,/@media\(max-width:760px\)/);
+const nav=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+const source=base.match(/<nav id="sideNav">([\s\S]*?)<\/nav>/)?.[1];
+assert.ok(nav&&source);
+assert.equal(nav.replace(' aria-current="page"',"").trim(),source.trim(),"Shiny menu must exactly follow homepage menu");
+assert.equal((nav.match(/<a /g)||[]).length,25);
+for(const path of ["recovered-articles.css","recovered-articles.js","shiny-hunting.css","shiny-hunting.js","feedback.html","mable-research.html","favicon.png","atlas-logo.png"])assert.ok(existsSync(new URL("../"+path,import.meta.url)),"Missing local dependency "+path);
+const nodes={};
+function node(value="",checked=false){return {value,checked,textContent:"",events:{},addEventListener(type,fn){this.events[type]=fn;}}}
+nodes.shinySpawnCount=node("100");nodes.shinyCharmEnabled=node("",false);nodes.shinyOddsResult=node();nodes.shinyOddsExplanation=node();
+runInNewContext(js,{document:{getElementById:id=>nodes[id]||null},Math,Number,String});
+assert.match(nodes.shinyOddsResult.textContent,/2\.4% chance/,"Baseline per-spawn odds");
+nodes.shinyCharmEnabled.checked=true;
+nodes.shinyCharmEnabled.events.change();
+assert.match(nodes.shinyOddsResult.textContent,/9\.3% chance/,"Shiny Charm calculation");
+assert.match(nodes.shinyOddsExplanation.textContent,/not a guaranteed result/);
+nodes.shinySpawnCount.value="0";nodes.shinySpawnCount.events.input();
+assert.match(nodes.shinyOddsResult.textContent,/Enter 1–1,000,000 spawns/);
+nodes.shinySpawnCount.value="1000000";nodes.shinySpawnCount.events.input();
+assert.ok(!nodes.shinyOddsResult.textContent.startsWith("100.0%"),"Near certainty must not be rounded to a guarantee");
+console.log("PASS: shiny PDF preservation, exact menu, all internal assets and honest no-network odds calculator.");
