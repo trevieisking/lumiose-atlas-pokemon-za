@@ -19,7 +19,7 @@
 <div class="shell"><aside aria-label="Guide navigation" class="sidebar">
 <div class="side-kicker">EXPLORE THE GUIDE</div>
 <nav id="sideNav">
-<a class="active" data-view="home" href="index.html#home"><span>◈</span> Overview</a>
+<a data-view="home" href="index.html#home"><span>◈</span> Overview</a>
 <a href="journey.html"><span>◎</span> Complete journey route</a>
 <a data-view="walkthrough" href="index.html#walkthrough"><span>01</span> Walkthrough</a>
 <a data-view="sidequests" href="index.html#sidequests"><span>+</span> Side missions</a>
@@ -31,7 +31,7 @@
 <a data-view="alphas" href="index.html#alphas"><span>03</span> Alpha fieldbook</a>
 <a data-view="maps" href="index.html#maps"><span>↗</span> Lumiose maps</a>
 <a data-view="items" href="index.html#items"><span>✦</span> Item atlas</a>
-<a href="progress-backup.html"><span>⇩</span> Backup &amp; Restore</a>
+<a class="active" aria-current="page" href="progress-backup.html"><span>⇩</span> Backup &amp; Restore</a>
 <a href="mable-research.html"><span>✧</span> Mable’s research &amp; rewards</a>
 <a href="shiny-hunting.html"><span>✳</span> Shiny hunting</a>
 <a href="shops.html"><span>₽</span> Shops &amp; Mega Shards</a>
@@ -89,8 +89,8 @@
 <p>Select the JSON file, review the number of completed records and confirm. <strong>Merge only:</strong> this never unchecks progress that is already completed in the new guide.</p>
 <label class="backup-upload"><span>Choose a Lumiose Atlas .json backup</span><input id="backupInput" type="file" accept=".json,application/json"/></label>
 <div class="backup-preview" id="importPreview" hidden><strong>Import preview — nothing changed yet</strong><p id="importPreviewText"></p><button type="button" class="backup-primary" id="confirmBackupImport" disabled>Merge completed progress safely</button></div>
-<p class="backup-note">Before importing, a local recovery snapshot of your current progress is stored. You can download the most recent one below. Any unknown checklist identifiers are retained for later reconciliation.</p>
-<button type="button" class="backup-secondary" id="downloadPreImport" disabled>Download last pre-import recovery</button>
+<p class="backup-note">Before importing, a local recovery snapshot of your current progress is stored. You can download it below for manual recovery support; the raw safety snapshot is not itself a merge-import file. Unknown checklist identifiers are retained for later reconciliation.</p>
+<button type="button" class="backup-secondary" id="downloadPreImport" disabled>Download safety snapshot (for support)</button>
 </section>
 <section class="backup-panel backup-faq" aria-labelledby="backup-faq-title"><h2 id="backup-faq-title">Your progress is yours</h2>
 <details><summary>Will the original site be changed?</summary><p>No. The original URL, database and existing progress are untouched. The old-page exporter only reads checked boxes.</p></details>
