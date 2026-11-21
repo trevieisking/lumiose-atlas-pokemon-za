@@ -166,6 +166,28 @@ The example is a schema illustration, **not actual verified Vert Sector 5 geomet
 
 **Next safe device mapping task:** take DR-H-01's clickable mission marker `234541`, inspect the **separate Holovator category** beside the same building west of WZ3, record the actual glyph's identity and X/Y; then align **three or more** independent control points from source map to `maps/lumiose-game-map.jpg`, quantify pixel registration error and verify facade / rooftop arrival in clear gameplay. If insufficient image evidence, mark DR-H-01 **awaiting device evidence** and repeat this exact gate on DR-H-02, continuing across all nine and then the remaining category markers without inventing pins. Only after confirmed Holovators start the scaffold/ladder networks and numbered pickups.
 
+## Original photo pixel mapping batch 03 — owner in-game city images (21 November 2026)
+
+The owner correctly noted that the **ten original TV-map photographs** already show potential access positions. All ten original `1152x1536` photos were recovered from the user's earlier uploaded-file library and **visually inspected** during the mapping continuation. The previous assumption that the original photographs were unavailable for review is no longer correct. The images remain **private source evidence; none have been uploaded or copied into this public repository**.
+
+**Authoritative source-only candidate register:** [`MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json`](MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json). It records 10 source photo identities and landmark inventories, plus **12 candidate yellow double-chevron icon groups observed 15 times** (some seen in two overlapping photos). Approximate pixel centres are referenced to the **entire camera JPG** including dark TV surround (origin upper-left, x right, y down, manually placed ±20 px), *not* to `maps/lumiose-game-map.jpg` or the game coordinate frame. No rectification transform, roof floor or exact Holovator category classification is yet established.
+
+| Mapping lead | Original owner-photo pixel point(s), approximate | Grounding against mission/source references | Verification status |
+| --- | --- | --- | --- |
+| **PHOTO-C01 → DR-H-01?** | **P08 (480, 1055)**, **P09 (498, 500)** | Yellow chevron W/SW of WZ3, near Rouge Sector 1/Autumnal Avenue; candidate mission #4 repaired unit west of WZ3 | Plausible *cross-photo* icon; exact device match unverified |
+| **PHOTO-C02 → DR-H-02?** | **P04 (132, 984)** | W/NW of WZ1 near Vernal Avenue / Vert Sector 9; candidate mission #23 Diggersby-blocked unit | Needs icon identity, perspective transform and same-building check |
+| **PHOTO-C03 → DR-H-03?** | **P04 (783, 779)** | By Vert Sector 7, NE of Vert Pokémon Center / SW of Racine Construction, strongly fits mission #40 neighbourhood | **Strong relative-position lead**, not confirmed Holovator entrance |
+| **PHOTO-C04 → DR-H-04?** | **P05 (638, 977)** | South Boulevard, immediately south of WZ12 / Aymis Park, in Bleu Sector 7 area; strongly fits mission #45 neighbourhood | **Strong relative-position lead**, not confirmed Holovator entrance |
+| **PHOTO-C05 → DR-H-07?** | **P09 (377, 735)** | NE of WZ7 at Magenta Sector 2 / Autumnal Avenue approach, aligns with mission #71 region | Plausible, no device identity verified |
+| **PHOTO-C06 → DR-H-08?** | **P01 (376, 532)**, **P08 (955, 797)** | W/SW of WZ15 near Rouge Sector 6 / Hibernal Avenue, candidate mission #80 area | Two possible overlapping views; distinct identity unresolved |
+| **PHOTO-C08 (unassigned)** | **P03 (523, 848)**, **P04 (563, 480)** | Café Cyclone / Coulant Waterway, Vert Sectors 3/5 | Potential repeat view to align, no mission assigned |
+
+Five further unassigned yellow-chevron location groups (PHOTO-C07/C09/C10/C11/C12) are retained in the JSON with local street/sector bearings and photo pixel centres. **A yellow circular double-chevron alone does not prove that the marker is a Holovator**, and overlap across two photos is not yet a measured homography/transform. The candidate list is a *sample* of visually identifiable symbols, **not a complete count** of all city Holovators or all visible chevrons.
+
+**Next safe action is now better constrained:** inspect **PHOTO-C03** (Vert 7 / Racine) and **PHOTO-C04** (South Boulevard / WZ12), matching each visible map icon against its mission's **individual source Holovator category marker** and in-game facade/roof evidence. Then do photo perspective rectification and align at least 3 architectural controls per photo against the existing source image with a measured error budget. Only when all mandatory gates hold set `atlas_x`/`atlas_y`; until then **all 12 leads stay provisional**, and no new public map dot is created.
+
+**Preservation checkpoint:** 48 named sectors, 20 Wild Zones, 264 source item records, 100 Screw clues, 146 A-leads, old 30 landmark associations and all saved progress IDs stay intact; source-photo files and original Site A untouched; no JS/HTML/CSS, Supabase, live site or image asset mutation. Issue #28 remains OPEN. This batch is evidence consolidation in PR #58, **not** a new functioning map-layer release.
+
 ## Release boundaries and where to resume
 
 - **Edition A:** Original ChatGPT Workspace Site `lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site` remains unchanged. No original source export, redeploy, DNS change, Supabase change, ratings/feedback/report deletion or player progress reset.
