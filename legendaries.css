@@ -1,0 +1,85 @@
+/* Original PDF-backed Legendary Fieldbook. Scoped to the standalone article only.
+   Does not alter the 17-section home guide or any shared/progress styles. */
+.atlas-article .legend-hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);align-items:center;gap:24px}
+.atlas-article .legend-hero h1{line-height:1.12}
+.atlas-article .legend-hero-em{color:#7750a3}
+.atlas-article .legend-hero-side{min-width:0;border-radius:18px;border:1px solid #e2d7ed;background:linear-gradient(145deg,#f0eafa,#f8faf7);padding:22px;display:flex;flex-direction:column;gap:4px}
+.atlas-article .legend-hero-side>strong{font-size:32px;line-height:1.15;color:#4e3a77;font-weight:900}
+.atlas-article .legend-hero-side>span:not(.kicker){font-size:13px;color:#5f5672;font-weight:750}
+.atlas-article .legend-hero-side>p{font-size:13px;color:#63566b;line-height:1.6;margin:10px 0 0}
+.atlas-article .legend-hero-figures{display:flex;align-items:center;justify-content:center;gap:1px;min-height:116px;margin:0 0 14px}
+.atlas-article .legend-hero-figures img{width:30%;max-width:115px;height:105px;object-fit:contain;filter:drop-shadow(0 5px 8px #442c6d22)}
+.atlas-article .legend-hero-figures img:nth-child(2){height:122px;width:36%;max-width:135px}
+.atlas-article .legend-progress-panel{border:1px solid #dcd0e9}
+.atlas-article .legend-progress-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:13px}
+.atlas-article .legend-progress-header h2{font-size:clamp(22px,3vw,30px);margin:6px 0 0}
+.atlas-article .legend-progress-header>strong{color:#60438a;font-size:clamp(20px,2.7vw,27px);font-weight:900;font-variant-numeric:tabular-nums}
+.atlas-article .legend-progress-meter{height:13px;border-radius:999px;background:#e8e2ed;overflow:hidden;margin:17px 0 20px}
+.atlas-article .legend-progress-meter>span{display:block;width:0;height:100%;border-radius:999px;background:linear-gradient(90deg,#8061ab,#529b73);transition:width .2s ease}
+.atlas-article .legend-progress-groups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.atlas-article .legend-progress-groups>div{border-radius:12px;background:#faf7fc;border:1px solid #e9e1f0;padding:13px}
+.atlas-article .legend-progress-groups strong{display:block;color:#614489;font-size:23px;font-weight:900;font-variant-numeric:tabular-nums}
+.atlas-article .legend-progress-groups span{display:block;margin-top:3px;color:#655b74;font-weight:750;font-size:12px;line-height:1.35}
+.atlas-article .legend-saved-note{margin:15px 0 0;font-size:12px;color:#6c6178;line-height:1.55}
+.atlas-article .legend-saved-note.saved{color:#2f7550}
+.atlas-article .legend-saved-note.error{color:#a63c50}
+.atlas-article .legend-roadmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:22px}
+.atlas-article .legend-roadmap>article{position:relative;min-width:0;border:1px solid #e6deed;background:#fff;border-radius:14px;padding:19px}
+.atlas-article .legend-roadmap-no{display:inline-grid;place-items:center;width:38px;height:38px;background:#efe7f8;color:#634789;border-radius:10px;font-weight:900;font-size:13px}
+.atlas-article .legend-roadmap h3{margin:11px 0 7px;font-size:18px}
+.atlas-article .legend-roadmap p{font-size:13px;color:#5a5067;line-height:1.75;margin:0 0 10px}
+.atlas-article .legend-roadmap-link a{font-size:12px;font-weight:800}
+.atlas-article .legend-boundary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:15px 0 4px}
+.atlas-article .legend-boundary-grid>div{padding:13px 15px;border-left:3px solid #a58ac1;background:#faf8fc;border-radius:0 10px 10px 0}
+.atlas-article .legend-boundary-grid strong{display:block;color:#624982;font-size:13px}
+.atlas-article .legend-boundary-grid p{font-size:12px;line-height:1.7;color:#5e566c;margin:7px 0 0}
+.atlas-article .legend-tools{display:flex;flex-wrap:wrap;align-items:end;gap:14px;margin:19px 0 9px}
+.atlas-article .legend-tools>label{display:flex;flex:1 1 210px;flex-direction:column;gap:8px;color:#5e5071;font-size:13px;font-weight:800}
+.atlas-article .legend-tools input{border:1px solid #d2c7e0;background:white;border-radius:10px;min-height:44px;padding:9px 12px;font:inherit;font-size:14px;color:#332a46}
+.atlas-article .legend-filter-pills{display:flex;flex-wrap:wrap;gap:6px}
+.atlas-article .legend-filter-pills button{min-height:44px;padding:8px 12px;background:#fff;border:1px solid #d8cae6;border-radius:9px;color:#5b4779;cursor:pointer;font-family:inherit;font-weight:800;font-size:12px}
+.atlas-article .legend-filter-pills button[aria-pressed="true"]{color:#fff;background:#725299;border-color:#725299}
+.atlas-article .legend-empty{font-weight:750;color:#6c527c;border:1px dashed #d7c4e9;background:#f9f5fe;border-radius:11px;padding:20px}
+.atlas-article #legendNoResults[hidden],.atlas-article .legend-route-card[hidden]{display:none}
+.atlas-article .legend-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0 26px;align-items:stretch}
+.atlas-article .legend-route-card{display:flex;flex-direction:column;border:1px solid #e5ddec;border-radius:16px;background:#fff;min-width:0;overflow:hidden;scroll-margin-top:20px;box-shadow:0 4px 16px #342b4210}
+.atlas-article .legend-route-card.is-obtained{border-color:#c2dec6;background:#f9fdf9}
+.atlas-article .legend-artwork{position:relative;display:grid;place-items:center;min-height:184px;background:radial-gradient(ellipse at 48% 45%,#f1edf8 0%,#fcfbfd 70%);padding:17px}
+.atlas-article .legend-route-card.is-obtained .legend-artwork{background:radial-gradient(ellipse at 48% 45%,#e9f5ec 0%,#f9fdf9 70%)}
+.atlas-article .legend-artwork>img{display:block;width:100%;height:154px;max-width:220px;object-fit:contain;filter:drop-shadow(0 6px 6px #2b273c1c)}
+.atlas-article .legend-artwork>span{position:absolute;bottom:10px;left:16px;letter-spacing:.08em;font-size:10px;color:#7a6d86;font-weight:900}
+.atlas-article .legend-route-body{display:flex;flex-direction:column;flex:1;padding:19px 21px 20px;min-width:0}
+.atlas-article .legend-route-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.atlas-article .legend-kind{font-size:11px;font-weight:850;padding:6px 9px;border:1px solid #e6ddec;border-radius:999px;color:#614b83;background:#f6f1fc}
+.atlas-article .legend-kind-story{background:#f4eefa}
+.atlas-article .legend-kind-gift{background:#fff5e9;border-color:#f2dfc6;color:#815e36}
+.atlas-article .legend-kind-dlc{background:#eff6f2;border-color:#d6e5dc;color:#46745a}
+.atlas-article .legend-kind-scan{background:#eef4fd;border-color:#d5e4f3;color:#4d6688}
+.atlas-article .legend-obtained-toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer;border-radius:9px;padding:4px 7px;min-height:44px;color:#554a68;font-size:12px;font-weight:850}
+.atlas-article .legend-obtained-toggle>input{appearance:auto;accent-color:#348953;width:23px;height:23px;margin:0;cursor:pointer;flex:0 0 23px}
+.atlas-article .legend-obtained-toggle:focus-within{outline:2px solid #7351a4;outline-offset:2px}
+.atlas-article .legend-route-card.is-obtained .legend-obtained-toggle{color:#287246}
+.atlas-article .legend-route-body h3{font-size:clamp(22px,2.8vw,28px);font-weight:850;margin:10px 0 5px;line-height:1.2;color:#312546}
+.atlas-article .legend-location{color:#765591!important;font-weight:800;font-size:13px;margin:0 0 13px!important}
+.atlas-article .legend-description{font-size:14px;color:#534a60;line-height:1.75;margin:0 0 17px;flex:1}
+.atlas-article .legend-note{display:flex;flex-direction:column;gap:5px;padding:13px 14px;border-radius:10px;background:#f8f3fc;border-left:3px solid #9f82c2;color:#594b6f;font-size:12px;line-height:1.55;margin-bottom:14px}
+.atlas-article .legend-note strong{color:#73579a;font-size:10px;text-transform:uppercase;letter-spacing:.09em}
+.atlas-article .legend-route-card.is-obtained .legend-note{background:#f0f8f1;border-left-color:#78b887}
+.atlas-article .legend-steps{margin:0 0 15px;border:1px solid #e6dfec;background:#fdfbff;border-radius:10px;padding:0}
+.atlas-article .legend-steps summary{padding:12px 14px;min-height:44px;cursor:pointer;font-weight:850;font-size:13px;color:#684d8b}
+.atlas-article .legend-steps[open] summary{border-bottom:1px solid #e9e1ee}
+.atlas-article .legend-steps ol{margin:10px 16px 10px 30px;padding-left:12px}
+.atlas-article .legend-steps li{font-size:13px;color:#564d62;line-height:1.7;padding:0 0 10px 3px}
+.atlas-article .legend-source-explain{font-size:11px;color:#766e82;line-height:1.65;padding:0 14px;margin:6px 0 14px}
+.atlas-article .legend-verification-gap{font-size:12px;color:#88563e;background:#fff7ec;margin:10px 14px 14px;padding:11px;border-radius:7px;border-left:3px solid #dbb18c;line-height:1.6}
+.atlas-article .legend-route-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:auto}
+.atlas-article .legend-route-link{display:inline-flex;align-items:center;min-height:39px;padding:6px 10px;border:1px solid #ded1ec;border-radius:8px;color:#684d89;font-size:12px;font-weight:850;text-decoration:none}
+.atlas-article .legend-route-link:hover{background:#f4eef9}
+.atlas-article .legend-source-page{margin-top:15px;padding-top:10px;border-top:1px solid #f0ebf4;font-size:10px;color:#888092}
+.atlas-article .legend-prep-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.atlas-article .legend-prep-grid>div{background:#fff;border:1px solid #e4ddeb;border-radius:12px;padding:15px}
+.atlas-article .legend-prep-grid strong{font-size:14px;color:#5e4786}
+.atlas-article .legend-prep-grid p{font-size:13px;color:#62596b;line-height:1.65;margin:7px 0 0}
+@media(max-width:850px){.atlas-article .legend-card-grid{grid-template-columns:1fr}.atlas-article .legend-hero{grid-template-columns:1fr}.atlas-article .legend-roadmap{grid-template-columns:1fr}.atlas-article .legend-prep-grid{grid-template-columns:1fr}}
+@media(max-width:590px){.atlas-article .legend-progress-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-article .legend-boundary-grid{grid-template-columns:1fr}.atlas-article .legend-route-body{padding:15px}.atlas-article .legend-artwork{min-height:148px}.atlas-article .legend-artwork>img{height:132px}.atlas-article .legend-hero-side{padding:17px}.atlas-article .legend-filter-pills button{padding:8px 10px}.atlas-article .legend-steps li{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.atlas-article .legend-progress-meter>span{transition:none}}
