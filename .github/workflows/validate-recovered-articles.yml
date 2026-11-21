@@ -1,8 +1,12 @@
-name: Validate recovered Atlas Mable page
+name: Validate recovered Atlas article pages
 on:
   pull_request:
     paths:
       - mable-research.html
+      - journey.html
+      - journey.css
+      - journey.js
+      - tests/journey_recovered.test.mjs
       - shiny-hunting.html
       - shiny-hunting.css
       - shiny-hunting.js
@@ -16,7 +20,7 @@ permissions:
   contents: read
 
 jobs:
-  mable-article:
+  recovered-articles:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,6 +35,10 @@ jobs:
         run: node --check shiny-hunting.js
       - name: Verify Shiny hunting article, links and odds estimator
         run: node --test tests/shiny_recovered.test.mjs
+      - name: Verify Complete Journey JavaScript syntax
+        run: node --check journey.js
+      - name: Verify full 46-page Journey route and search controls
+        run: node --test tests/journey_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
