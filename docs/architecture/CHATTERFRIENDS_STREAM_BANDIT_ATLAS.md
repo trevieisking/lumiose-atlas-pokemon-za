@@ -11,6 +11,13 @@
 - Do **not** describe Stream Bandit as the parent of Chatterfriends, and do **not** present Lumiose Atlas as an unrelated company.
 - Preserve Lumiose Atlas's existing LA compass identity and substantive user-facing description. When a footer or acknowledgement is introduced, use an accurate attribution such as **“Lumiose Atlas — a Stream Bandit gaming guide, part of Chatterfriends.”** Avoid changing the visible logo or branding without reviewing the result.
 
+## Hosting and platform choices — user confirmed
+
+- **No Render hosting** for this guide or Stream Bandit. The previous Render-backed social platform was retired because the cost was unacceptable; do not reintroduce Render as a default dependency or deployment.
+- **Supabase is preferred** for the shared Stream Bandit data platform, using the existing project and isolated Atlas tables with appropriate RLS and grants. The owner's approximate budget preference is not a guaranteed current price.
+- Use the GitHub repository for version-controlled source; IONOS-managed DNS and a separately validated static host can present the guide under Chatterfriends/Stream Bandit without disturbing the main site.
+- Keep the name **Chatterfriends**; do not confuse it with the old name **Chatternet**.
+
 ## Code and hosting: separate deployment, shared family
 
 - Editable guide source: `trevieisking/lumiose-atlas-pokemon-za` (independent repository so edits to the guide cannot accidentally modify the Stream Bandit main site or TCG).
