@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - lumiose-atlas-rebuild-stage1.zip
+      - .github/workflows/import-recovered-guide.yml
   workflow_dispatch:
 
 permissions:
@@ -62,6 +63,10 @@ jobs:
                       raise SystemExit("Unsafe ZIP path: " + info.filename)
               for info in files:
                   relative = PurePosixPath(info.filename).relative_to("lumiose-atlas-rebuild")
+                  # Preserve recovered CI source without activating a second workflow.
+                  # GitHub Actions tokens cannot push .github/workflows from ZIP imports.
+                  if relative.parts[:2] == (".github", "workflows"):
+                      relative = PurePosixPath("recovered-ci").joinpath(*relative.parts[1:])
                   output = destination.joinpath(*relative.parts)
                   output.parent.mkdir(parents=True, exist_ok=True)
                   with z.open(info) as source, output.open("wb") as target:
