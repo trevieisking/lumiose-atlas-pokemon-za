@@ -110,5 +110,5 @@ assert.equal(cards[41].scrolled,true);
 stored="{not-json";listeners.focus();
 assert.match(elements.missionIndexProgress.textContent,/could not be read/);
 assert.equal(writes,0,"Never overwrite a saved mission, report or future progress field");
-assert.ok(reads>2);
+assert.equal(reads,2,"The index only reads on initial load and focus; filtering and deep links never need extra storage access");
 console.log("PASS: 42 source-exact mission steps/tips/maps, 25-link menu, working links/images, read-only shared progress, search/filter/hash and mobile UI.");
