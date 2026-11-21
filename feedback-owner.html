@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://xzxqfrvqdgkzwujbkdbk.supabase.co; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <title>Private feedback inbox — Lumiose Atlas</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="feedback-owner.css">
+  <script src="feedback-owner.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html#home" aria-label="Lumiose Atlas home">
+      <span class="brand-mark" aria-hidden="true">Z/A</span>
+      <span>LUMIOSE<br><strong>ATLAS</strong></span>
+    </a>
+    <a class="header-back" href="index.html#walkthrough">Back to walkthrough</a>
+  </header>
+  <main>
+    <p class="eyebrow">Private owner tools</p>
+    <h1>Feedback inbox</h1>
+    <p class="intro">Read reports sent through the Pokémon Atlas guide. Only the existing Stream Bandit owner account is authorised to view submissions. The public feedback form remains unchanged.</p>
+    <section class="feedback-card" id="loginPanel" aria-label="Owner sign-in">
+      <div class="inbox-heading">
+        <span class="inbox-symbol" aria-hidden="true">🔐</span>
+        <div><h2>Owner sign-in</h2><p>Sign in with the Stream Bandit owner's email and password, not your ChatGPT account.</p></div>
+      </div>
+      <form id="ownerLogin" autocomplete="on">
+        <label for="ownerEmail">Owner email</label>
+        <input id="ownerEmail" type="email" autocomplete="username" inputmode="email" required maxlength="320">
+        <label for="ownerPassword">Password</label>
+        <input id="ownerPassword" type="password" autocomplete="current-password" required>
+        <button type="submit" id="signIn">Sign in and view reports</button>
+      </form>
+      <p class="privacy">🔒 Your password is sent directly to Supabase Auth. This viewer does not store your password or session token on the device.</p>
+    </section>
+    <section class="feedback-card" id="reportsPanel" aria-label="Saved reports" hidden>
+      <div class="inbox-heading inbox-heading-between">
+        <div><p class="eyebrow">Owner access confirmed</p><h2>Saved feedback</h2><p id="reportTotal">Private reports, newest first</p></div>
+        <button type="button" class="button-secondary" id="signOut">Sign out</button>
+      </div>
+      <div id="reportList" class="report-list" aria-label="Private feedback reports"></div>
+      <button type="button" class="button-secondary" id="loadMore" hidden>Load older reports</button>
+    </section>
+    <p class="owner-status" id="ownerStatus" role="status" aria-live="polite">Sign in to view submitted reports.</p>
+    <p class="return"><a href="feedback.html">Open the public feedback form</a> · <a href="index.html#walkthrough">Back to walkthrough</a></p>
+  </main>
+</body>
+</html>
