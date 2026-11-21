@@ -24,7 +24,6 @@
     "sector-maps.html": "maps",
     "hyperspace-maps.html": "dimension",
     "mega-dimension.html": "dimension",
-    "rewards.html": "rewards",
     "battles.html": "battles"
   },
   "restored_standalone_paths": {
@@ -87,6 +86,11 @@
       "label": "Pokémon HOME rewards, safe transfer and 364-species fieldbook",
       "source": "Owner’s complete 14-page Pokémon HOME PDF, 21 November 2026, PDF roster SHA-256 a36169f8a22e9e0d8ec1369f4da29966e5b32b4f3dad5c5396d31b2a319f7cc5",
       "status": "Recovered, tested, merged PR #35 as ee107d70dd638e46ee7d8d8a056a1e7cc38c4424 and GitHub Pages deployment #44943148212 succeeded; all 364 original PDF species, official HOME rewards and safe transfer rules, 256 local art portraits and 108 disclosed online artwork fallbacks. Manual Android visual check still pending."
+    },
+    "rewards.html": {
+      "label": "Online and hidden rewards",
+      "source": "Owner-provided 3-page Rewards PDF (21 November 2026), checked against preserved inline src/sections/rewards.html",
+      "status": "Restored on separate draft PR #38: six source reward cards, matching artwork, exact guide navigation, official deadline checks. Not merged/deployed until CI green; original Site untouched."
     }
   }
 }
