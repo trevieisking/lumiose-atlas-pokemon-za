@@ -4,6 +4,8 @@
 
 **Editorial batch (21 Nov 2026, draft):** Expanded story Missions **01–10** in our own words; added previous/next links across all 42 mission cards and contextual links in eight topic sections. Kept the recovered Pokémon data and zone maps intact. Gameplay source comparisons, contested details and QA are recorded in [docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md](docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md). **This is a draft review, not a statement that every game mechanic has been checked or that the original Site has been updated.**
 
+**Player progress protection (draft):** The guide now has a **Backup & Restore** page. Players can export their completed mission, side mission, item, legendary and screw checklists as a local JSON file, preview an import and **merge only completed entries**. A user-run, no-network browser bookmarklet is supplied for exporting checked boxes from the old ChatGPT Site, because that site's original JavaScript is unavailable. This old-site transfer remains to be tested on the live original page and is not an automatic background migration. See [progress migration documentation](docs/qa/PROGRESS_MIGRATION_2026-11-21.md).
+
 **Status:** Stage 1 recovery checkpoint. This is a **reconstructed, editable static site**, **not** an export of the original ChatGPT Site's source project. The original project was inaccessible; this copy was assembled from the user's own saved MHTML webpage capture from 20 November 2026. **No original live-site files were accessed for writing, and no deployment has occurred.**
 
 Live original (not controlled by this repository):
