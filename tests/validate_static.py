@@ -34,8 +34,8 @@ else:
         if not file.exists():errors.append(f'Missing referenced file: {link}')
     # Check contextual chapter navigation without rewriting the original guide.
     if 'class="atlas-related"' in doc:
-        mission_navs=re.findall(r'<nav class="atlas-related" aria-label="Mission (\\d+) related guides">([\\s\\S]*?)</nav>',doc)
-        section_navs=re.findall(r'<nav class="atlas-related atlas-section-related"[^>]*>([\\s\\S]*?)</nav>',doc)
+        mission_navs=re.findall(r'<nav class="atlas-related" aria-label="Mission (\d+) related guides">([\s\S]*?)</nav>',doc)
+        section_navs=re.findall(r'<nav class="atlas-related atlas-section-related"[^>]*>([\s\S]*?)</nav>',doc)
         if len(mission_navs)!=42:
             errors.append(f'Expected 42 linked mission cards, found {len(mission_navs)}')
         if [int(number) for number,_ in mission_navs]!=list(range(1,43)):
@@ -43,7 +43,7 @@ else:
         if len(section_navs)!=8:
             errors.append(f'Expected 8 connected topic sections, found {len(section_navs)}')
         for content in [body for _,body in mission_navs]+section_navs:
-            for target in re.findall(r'href="index\\.html#([^"]+)"',content):
+            for target in re.findall(r'href="index\.html#([^"]+)"',content):
                 if ':' in target:
                     view,anchor=target.split(':',1)
                     if view not in VIEWS or anchor not in scan.ids:
