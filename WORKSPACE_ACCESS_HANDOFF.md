@@ -1,0 +1,38 @@
+# Original ChatGPT Workspace Site — access and parity handoff
+
+**Prepared:** 21 November 2026
+**Canonical shared ledger:** [ATLAS_DUAL_SITE_FIX_LEDGER.md](ATLAS_DUAL_SITE_FIX_LEDGER.md)
+**Independent repository:** https://github.com/trevieisking/lumiose-atlas-pokemon-za
+**Original live Site (keep online):** https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/
+
+## Copy/paste this request into the ORIGINAL Site's Workspace editor when access returns
+
+> I am the owner of **The Free Online Player's Guide for Pokémon Legends: Z-A**. Please read the **two-site fix ledger** at https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/main/ATLAS_DUAL_SITE_FIX_LEDGER.md and this handoff document.
+>
+> I need access to, or a complete **source export of, the EXISTING original ChatGPT Site project**. Please use the actual editable Site project, **not a recreation of the published webpage**. I need every original source file, page, route, asset, map, data module, script, dependency list, and build/deployment configuration bundled in an export suitable for GitHub. **Exclude all API secrets, private environment values, database passwords, tokens and personal feedback contents.** If an exact source export is unavailable, tell me precisely what can and cannot be accessed; do not invent replacement source or silently substitute the saved rendered HTML.
+>
+> The original site must stay live at its current URL, and its existing feedback service, database rows, ratings and user progress must remain untouched. **Do not reset, rebuild, deploy, delete, transfer the domain or alter DNS merely to export its source.** I want to compare the original Site against the separate GitHub reconstruction, then apply missing corrections to each as appropriate. Do not push over `main`, merge open PRs or overwrite the new GitHub work automatically.
+>
+> Preserve the two outstanding player feedback reports: **#13 — Mission 24 Hotel Z conversation**, **#14 — Mission 25 Lida/Naveen battle guidance**. These are real and must remain visible until those details are fact-checked, corrected, published and tested in **both** the original Workspace guide and the independent GitHub/IONOS edition. Test reports #5 and #6 were already deleted from Supabase; no further report deletion is authorized.
+>
+> First, inspect and inventory the **actual source** of this existing Site. Compare it against the detailed tracking ledger, including the 19 missing standalone pages, separately loaded Hyperspace Pokédex, navigation, map/ladder/Holovator directions, numbered item pins, Mable research, shiny-hunting, feedback form, numeric mobile rating, and progress storage. Report source differences accurately before making changes. I do not want useful content from either guide lost.
+>
+> Please provide source access or a verified original-source ZIP **first**, with an evidence list of its contents and excluded secrets. After that, help me bring the two guides to verified functional and editorial parity, recording each fix in the ledger and keeping the published original working while the independent edition is tested for eventual IONOS hosting.
+
+## Checklist for the next agent / editor (no automatic edits)
+
+1. **Confirm identity and source access.** The Workspace project itself is the only authoritative source for its original code. The saved MHTML is only a rendered snapshot, not equivalent source. Preserve user ownership and the existing URL.
+2. **Export original source read-only** if supported. Verify archive structure, file list and hashes; omit credentials and protected content. If export is not supported, state the limitation and provide a safe alternative that the editor actually supports. Avoid claiming access to ChatGPT's internal Workspace from an unrelated GitHub session.
+3. **Compare before merging.** Inventory old site files, routes, 17 captured page sections, 19 missing route sources, original scripts, map and Hyperspace resources, progress mechanism, feedback and rating adapter. Compare against latest GitHub branches, not just `main`.
+4. **Check outstanding changes:** PR #1 Mable audit; #2 social/IONOS; #3 missions 01–10; #4 numbered pins; #5 merge-only progress backup. **PR #4 / #5 contain a known `app.js` `$` vs `$$` zone-preview bug**; do not ship untested.
+5. **Keep the original live database:** reports #13/#14 remain. Do not expose service-role keys or assume cross-origin progress transfer. The existing Supabase Edge Function only allows the original Site origin and its own origin until a carefully verified new-domain allowlist change is made.
+6. **Require per-edition completion evidence:** A page/version/URL and phone/desktop check, and B PR/SHA/test receipts/deployed URL. An edit only in A, only in a B draft or only on a local reconstruction is **not two-site parity**.
+7. **Only then** consider a staged independent IONOS address and controlled live migration. Never delete the original Site or force a redirect as a prerequisite.
+8. Update the ledger's status table and append-only log with every verified change. Mark both editions separately. Only after both Mission 24 and 25 are genuinely corrected on both may the owner consider explicit feedback-row cleanup.
+
+## Important boundaries
+
+- **No request in this file grants the Workspace editor access**, changes credits, authorizes automatic source extraction, or promises that the original Site source can be exported.
+- **No destructive actions**: no database delete, progress reset, domain change, old-site replacement, repository force-push, merge or deployment based solely on reading these instructions.
+- The old Site and the GitHub reconstruction are *not* guaranteed to have feature parity at present. This handoff exists precisely to make that difference visible and fixable.
+- Keep Stream Bandit TCG code and its master plan outside this Pokémon guide reconciliation task.
