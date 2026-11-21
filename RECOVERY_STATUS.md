@@ -1,5 +1,15 @@
 # Recovery status — 21 November 2026
 
+## UI follow-up — Item Atlas checkboxes shared with the original local progress (PR awaiting checks)
+
+The owner requested that the newly restored, prettier `items.html` support ticking found items and Colorful Screws like the walkthrough and side missions. Before changing code, `app.js` was inspected and confirmed the existing **device-local** key `lumiose-atlas-reconstruction-v1` stores `pickup` keyed by the exact `data-pickup="ZONE-INDEX"` ID and `screw` keyed by the `data-screw="NUMBER"` ID. The 264 item and 100 Screw entries in the recovered fieldbook match those original IDs in order.
+
+**Bounded change:** add accessible checkboxes beside each of those 364 entries, soft green collected styling, two in-page collected totals and a clear local-only save status. Changes save only the selected `pickup` or `screw` property after reading and preserving the entire current record, including `check`, `sideCheck`, `legendCheck` and unknown future fields. A malformed or blocked storage record is never overwritten; the user receives a visible unsaved warning. Storage-change, page-return and focus refreshes let the new page rehydrate the same data; the original main guide will see these values when reloaded/navigated. Hidden-item outcomes remain optional obtained-result checks, not verified physical pins. The original Site is on a **different web origin** and its checkmarks do not automatically synchronise with the GitHub edition. The 48 sector-map and numbered-coordinate requirement remains open in issue #28.
+
+**Release gate:** new exact-ID/source-parity tests must pass plus all recovered article, 17-section guide and feedback tests before safe merge; GitHub Pages deployment must succeed at the merged SHA. No edits to `app.js`, the original 17 source sections, original Site, Supabase, mission/sidequest checkboxes, sector maps, ratings or feedback.
+
+
+
 ## Stage 2 update — 28-page Item Atlas and 48-sector evidence foundation (MERGED #27 · PAGES SUCCESS)
 
 The owner’s complete 28-page Item Atlas PDF was examined as page text and visually: 20 Wild Zone sections, the vendor/berry/supplies route and 100-item numbered Colorful Screw notes, with 264 source item records. The preserved main-page source confirms **154 zone-only entries lacking coordinates; 56 Wild Zone 20 hidden-item chance outcomes; 10 mission/person rewards; 23 sector-area clues; and 21 landmark/access clues**. Their sum is 264, but **it does not equal 264 confirmed, fixed, independently mapped item coordinates**. We keep each record with the exact saved name, order, source ID, hint and image. The 100 screws remain a separate numbered fieldbook and the original main-page checkboxes remain the only player progress system.
