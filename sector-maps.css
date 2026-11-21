@@ -89,3 +89,30 @@
 @media(max-width:700px){.trust-grid{grid-template-columns:1fr}.sector-card-grid{grid-template-columns:1fr}.city-zone-marker{min-width:26px;min-height:26px;font-size:11px}.sector-city-map{border-radius:9px}.read-check{max-width:70px}.zone-map-illustration{max-width:210px}}
 @media(max-width:450px){.wildzone-content{grid-template-columns:1fr}.zone-map-illustration{max-width:280px;margin-inline:auto}.wildzone-quick-actions{grid-template-columns:1fr}.atlas-district-filters button{flex:1 1 100px}.numbered-clue-list li{flex-wrap:wrap}.read-check{max-width:none;text-align:left;flex-basis:100%}.city-zone-marker{width:26px;height:26px}}
 @media(prefers-reduced-motion:reduce){.city-zone-marker{transition:none}}
+
+/* Approximate map leads added only where saved source has city percentages.
+   Amber local numbers are distinct from source-Item-Atlas references and confirmed pins. */
+.trust-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.approx-clue-panel{border-top:1px solid #eadfec;margin-top:3px;background:#fffdf8}
+.approx-clue-panel>summary{cursor:pointer;min-height:48px;padding:13px 17px;color:#79541c;font-size:13px;font-weight:850;line-height:1.5}
+.approx-clue-panel[open]>summary{background:#fff8e8;border-bottom:1px solid #f0e0bc}
+.approx-clue-panel>summary:focus-visible{outline:3px solid #bd9551;outline-offset:-3px}
+.approx-panel-inner{padding:16px}
+.approx-caution{font-size:12px;line-height:1.68;padding:11px 14px;background:#fff7e7;border-left:3px solid #d59b36;border-radius:5px;margin:0 0 15px}
+.approx-map-surface{position:relative;aspect-ratio:1/1;width:min(100%,520px);margin:0 auto 18px;background-image:url('maps/lumiose-game-map.jpg');background-size:250% 250%;background-repeat:no-repeat;background-color:#ebe6df;border:1px solid #ccbc9f;border-radius:13px;box-shadow:0 4px 18px rgba(48,33,25,.13);overflow:visible}
+.approx-item-dot{display:grid;place-items:center;position:absolute;transform:translate(-50%,-50%);width:33px;height:33px;border-radius:50%;border:2px solid #3e2611;background:#ffc95f;color:#31210c!important;text-align:center;font-size:12px;line-height:1;font-variant-numeric:tabular-nums;font-weight:900;text-decoration:none;box-shadow:0 2px 7px rgba(43,26,3,.33);z-index:1;transition:background .12s,transform .12s}
+.approx-item-dot:hover,.approx-item-dot:focus-visible{background:#ffdf96;transform:translate(-50%,-50%) scale(1.18);z-index:3}
+.approx-item-dot:focus-visible{outline:3px solid #71449b;outline-offset:2px}
+.approx-map-list{display:grid;gap:9px;list-style:none;margin:0;padding:0}
+.approx-map-record{display:flex;align-items:flex-start;gap:11px;scroll-margin-top:18px;padding:11px;background:#fff;border:1px solid #e9dcc7;border-radius:10px;transition:background .12s}
+.approx-map-record:target{background:#fff4d9;outline:2px solid #b48c4b;outline-offset:2px}
+.approx-reference{min-height:40px;min-width:54px;display:grid;place-items:center;border-radius:9px;background:#ffe4a3;color:#664419;font-size:13px;font-weight:900;font-variant-numeric:tabular-nums;flex:0 0 54px}
+.approx-map-record>div{min-width:0}
+.approx-map-record strong,.approx-map-record span:not(.approx-reference),.approx-map-record small{display:block;overflow-wrap:anywhere}
+.approx-map-record strong{font-size:13px;line-height:1.45}
+.approx-map-record span:not(.approx-reference){color:#665d4f;font-size:12px;margin-top:5px;line-height:1.6}
+.approx-map-record small{font-size:11px;line-height:1.6;color:#786d60;margin-top:4px}
+.approx-panel-inner>p:last-child{font-size:12px;line-height:1.8;margin:16px 0 0}
+@media(max-width:1080px){.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.trust-grid{grid-template-columns:1fr}.approx-item-dot{width:30px;height:30px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.approx-item-dot,.approx-map-record{transition:none}}
