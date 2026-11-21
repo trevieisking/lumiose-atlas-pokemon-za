@@ -17,7 +17,7 @@
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
-| Maps (4) | `maps.html` · Lumiose maps; **does not capture every linked map close-up** | PDF CAPTURED |
+| Maps (4) | `maps.html` · Lumiose maps; **not the 48 sector / nine Hyperspace close-ups** | **RESTORED IN PR** — original overview image, 20 source-aligned pins, saved 264 item entries, 38 fixed Alphas, 25 nearby Screw clues and magnified overview crop; missing close-ups explicitly identified |
 | Rewards (3) | `rewards.html` · Online rewards | PDF CAPTURED |
 | Battles (3) | `battles.html` · Ranked battles | PDF CAPTURED |
 | Berries (24) | `index.html#berries` · Ultimate berry book | INLINE AUDIT (37 recipes present in Stage 1) |
@@ -43,7 +43,7 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed, deployed recovery slices:** Mable’s Research (5 pages), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6) and Alpha Fieldbook (5). All seven passed CI and GitHub Pages deployment. **Current PR slice:** Shops & Mega Shards (6 pages), with an offline catalog and currency-planning tools. **Next candidate after this PR:** the four-page Lumiose Maps PDF, then the item atlas; all map close-up limitations remain explicit. Preserve the original ChatGPT Site as read-only context.
+**Completed, deployed recovery slices:** Mable’s Research (5), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6), Alpha Fieldbook (5), and Shops & Mega Shards (6). **Current PR slice:** four-page Lumiose Maps PDF, with all 20 zone markers and saved main-page item/Alpha text, not invented close-ups. **Next recovery candidate:** 28-page Item Atlas PDF. Separate sector and Hyperspace map routes still require original images or independent verification. Preserve the original ChatGPT Site as read-only context.
 
 ## Repeatable one-PDF-at-a-time loop
 
