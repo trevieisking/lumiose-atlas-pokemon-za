@@ -263,8 +263,8 @@
       "id": "PHOTO-C01",
       "report_id": "DR-H-01",
       "bearing": "Possible yellow double-chevron west/southwest of Wild Zone 3 near Rouge Sector 1 and Magenta border, close to Autumnal Avenue",
-      "confidence": "potential_spatial_match_not_calibrated",
-      "needed": "Verify the same chevron across P08/P09 after photo rectification; check category as Holovator; see Sommi's exact building entrance and roof",
+      "confidence": "two_alternative_photo_icon_positions_not_verified_same_device",
+      "needed": "Independent approximate projection places P08 and P09 symbols ~73 native source-map pixels apart; do not count them as the same Holovator or choose a device point until icon/entrance is independently matched.",
       "observations": [
         {
           "photo_id": "P08",
@@ -286,7 +286,8 @@
       "atlas_y": null,
       "entry_floor": null,
       "exit_floor": null,
-      "confirmed_map_pin": false
+      "confirmed_map_pin": false,
+      "cross_photo_status": "not_deduplicated_different_projected_positions"
     },
     {
       "id": "PHOTO-C02",
@@ -407,7 +408,8 @@
       "atlas_y": null,
       "entry_floor": null,
       "exit_floor": null,
-      "confirmed_map_pin": false
+      "confirmed_map_pin": false,
+      "cross_photo_status": "two_source_aligned_locations_approx_17_native_px_apart_possible_same_symbol"
     },
     {
       "id": "PHOTO-C07",
@@ -459,7 +461,8 @@
       "atlas_y": null,
       "entry_floor": null,
       "exit_floor": null,
-      "confirmed_map_pin": false
+      "confirmed_map_pin": false,
+      "cross_photo_status": "two_source_aligned_locations_approx_9_native_px_apart_possible_same_symbol"
     },
     {
       "id": "PHOTO-C09",
@@ -560,7 +563,8 @@
     "photo_appearances": 15,
     "tentative_mission_links": 6,
     "verified_exact_atlas_holovator_pins": 0,
-    "confirmed_photo_to_atlas_transform": 0
+    "confirmed_photo_to_atlas_transform": 0,
+    "photo_icon_candidate_groups_semantics": "Research groups, not 12 independently confirmed physical devices; PHOTO-C01 has two likely distinct alternative photo symbols, not deduplicated."
   },
   "next_validation": [
     "Determine visual identity of yellow chevron using unambiguous in-game legend or original icon asset.",
@@ -568,5 +572,6 @@
     "Perspective-correct screenshot and register >=3 independent architectural landmarks to maps/lumiose-game-map.jpg; quantify pixel error.",
     "Confirm ground entrance/facade, rooftop exit and exact required mission gate in gameplay evidence.",
     "Only then promote photo candidate to confirmed Atlas device pin; keep unproved icons as exploratory leads."
-  ]
+  ],
+  "followup_alignment_record": "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json"
 }
