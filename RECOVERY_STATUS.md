@@ -1,5 +1,13 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 — Online and Hidden Rewards (DRAFT PR #38 · NOT DEPLOYED)
+
+The owner's exact three-page **Rewards** PDF (21 November 2026) has been visually inspected, including the continuation across printed pages 1–3. It matches the preserved inline `src/sections/rewards.html` section: six original gift/event cards (Shiny Xerneas code and deadline; Poké Ball Pattern Vivillon via Internet and deadline; Diancite/Diancie; Mewtwonite X/Y/Mewtwo; Mega Garchomp Z special distortion; conditional 100 Ultra Balls bundle code), Pokémon HOME gift links, the golden Hyperspace Bonus Ball, Alpha drops, all 100 Colorful Screws/Canari plush, and Season X ranked-reward handoff. Page 3 contains the ranked callout/footer, not a separate checklist.
+
+In **draft [PR #38](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/38)**, only the reconstructed GitHub edition's `rewards.html` placeholder is replaced. The restored standalone page reuses the source section text, its five existing local species images, the exact 25-link navigation, Back to walkthrough, shared feedback/share controls, and internal links; the two original `data-go` buttons become actual links to existing pages. `rewards-guide.css` adds scoped mobile and desktop layouts. `tests/rewards_recovered.test.mjs` verifies exact source parity, six cards, artwork, existing local links, and menu equality; the existing recovered-articles CI workflow is extended to run it.
+
+**Review gate:** PR currently draft; automated CI, deployment and Android visual review are **not yet confirmed**. Thus **12/19 are merged/deployed and six further placeholders remain on this draft branch after this candidate**, not 13 live. The independent GitHub edition does not alter the original ChatGPT Site, its URL, Supabase, feedback, ratings, report rows or any device-local progress. As always, current gift availability and season rewards must be checked in-game; Xerneas/Vivillon expiry dates and Garchomp Z gift mechanics match official 2026 notices.
+
 ## Stage 2 recovery — 14-page Pokémon HOME guide (MERGED #35 · PAGES SUCCESS)
 
 All **14 printed pages** of the exact owner-supplied “Pokémon HOME rewards and transfer guide” PDF were inspected, including full visual layouts. The PDF includes the **first-transfer three Alpha first partners**, a four-step Switch/mobile HOME workflow, the three-dex HOME **Shiny Volcanion** reward, species/form compatibility warnings and the one-way transfer warning, plus a **364-species roster** across pages 4–13 (page 14 is the closing note and footer).

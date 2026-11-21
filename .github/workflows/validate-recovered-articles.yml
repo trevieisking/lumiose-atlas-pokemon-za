@@ -51,6 +51,9 @@ on:
       - home-connection.js
       - home-dex-data.js
       - tests/home_recovered.test.mjs
+      - rewards.html
+      - rewards-guide.css
+      - tests/rewards_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -120,6 +123,8 @@ jobs:
         run: node --check home-connection.js && node --check home-dex-data.js
       - name: Verify 364 original PDF entries, 256 local artworks, 108 disclosed fallbacks and safe registration tracker
         run: node --test tests/home_recovered.test.mjs
+      - name: Verify PDF-backed Online Rewards source, images, menu and mobile navigation
+        run: node --test tests/rewards_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
