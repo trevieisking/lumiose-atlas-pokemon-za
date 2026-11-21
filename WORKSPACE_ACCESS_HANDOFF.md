@@ -17,7 +17,23 @@
 >
 > First, inspect and inventory the **actual source** of this existing Site. Compare it against the detailed tracking ledger, including the 19 missing standalone pages, separately loaded Hyperspace Pokédex, navigation, map/ladder/Holovator directions, numbered item pins, Mable research, shiny-hunting, feedback form, numeric mobile rating, and progress storage. Report source differences accurately before making changes. I do not want useful content from either guide lost.
 >
-> Please provide source access or a verified original-source ZIP **first**, with an evidence list of its contents and excluded secrets. After that, help me bring the two guides to verified functional and editorial parity, recording each fix in the ledger and keeping the published original working while the independent edition is tested for eventual IONOS hosting.
+> Please provide source access or a verified original-source ZIP **first**, with an evidence list of its contents and excluded secrets. **Do not start redesigning the original Site.** For each later fix on the separate GitHub edition, make a corresponding **Workspace A patch note** with the exact ledger AT-number, affected page, verified new behaviour and any checkboxes/map pins involved. Before changing A, first determine whether A already has that functionality. Record whether B is planned, in a PR, tested or published and whether A is still pending, already correct or independently verified. Keep the published original working while the independent edition is tested for eventual IONOS hosting.
+
+## Step one: make the existing original Site source available without changing it
+
+**Owner instruction (21 November 2026):** The original live site is **Edition A, frozen/preserved**. The separate GitHub project is **Edition B, the working and reviewable edition**. Improvements made to B must be described in [ledger revision 15 or later](ATLAS_DUAL_SITE_FIX_LEDGER.md) so the **same outcome** can be applied in A *later*, but **only after inspecting its original code**. This is a source-access and change-mirroring protocol, not permission to overwrite or republish A.
+
+The owner previously supplied a project selection reference for the original Site: `sites-project://appgprj_6afda588d5948191b4143e40a1f9c291`. Treat it as a **locator supplied by the owner**, not proof that this conversation or GitHub has permission to open/export the original project.
+
+When the original Workspace editor becomes available:
+
+1. **Open the existing original Site project**, not its published URL, a duplicated site, the independent GitHub reconstruction, or a newly prompted replacement. Confirm that the editor's project title and published URL refer to the same original Atlas guide.
+2. **Request read-only source inspection / complete source export first.** Include original pages, scripts, assets, maps, routes, data modules, package manifest/lockfile and deployment configuration; exclude all secrets, environment values, private feedback messages and service-role keys. A compiled webpage, browser Save Page or MHTML capture **is not an adequate substitute**.
+3. **Make an accessible source handoff** if the Workspace supports it: a verified ZIP uploaded to this conversation, or a source-only GitHub branch/repository that this account can read. **Do not enable auto-deployment or overwrite the independent repo's main branch.** If Workspace supports neither source extraction nor sharing, request a clear inventory of accessible files and limitations; never manufacture an 'original source' archive.
+4. **Compare before patching.** Inspect the actual A implementation and make an **A-specific instruction packet** for each new B correction. The packet must say stable `AT-NNN`, source evidence, B branch/PR/SHA/test results, precise original A page/component affected, text/logic/assets to change, item-pin/progress ID dependencies and expected user-visible result. Check whether A already has a working version; don't remove it.
+5. **Keep A untouched until its own controlled editing and tests can be done.** Original published URL, Supabase integration, owner-only reports and existing user progress must survive; the original guide cannot be treated as a staging deployment. Confirm Android and desktop independently for A and B before marking any ledger item `BOTH VERIFIED`.
+
+**No passwords or administrator tokens should be sent in chat or committed to GitHub.** A link to a public site, an invitation to view a project, or a note in this file **does not automatically grant editable source access**. The editor or export capability must actually expose the files.
 
 ## Checklist for the next agent / editor (no automatic edits)
 
