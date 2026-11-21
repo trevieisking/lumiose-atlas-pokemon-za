@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 31 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 32 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -403,6 +403,8 @@
 | 21 Nov 2026 | AT-235 — 146 original approximate item-map markers assigned A-numbers | [PR #50](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/50), CI [#44952489077](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44952489077) PASS, merge `19fec18ffa51b1ce234fb33349b1682d05d56b0f`, Pages [#44952548497](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44952548497). Original saved 155 occurrences deduped to 146 points over all 20 Wild Zones with source labels/coords. Approximate search areas only; 264 independent item ledger numbers untouched and no fabricated confirmed item dots; issue #28 open. Original site, data, feedback unchanged. |
 
 | 21 Nov 2026 | AT-236 — final standalone Hyperspace Maps route rebuilt as honest source-backed expedition guide | [PR #52](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/52), CI [#44953073548](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44953073548) SUCCESS, merge `496de672ac65362a9310028d390899314f52ba77`, Pages [#44953150622](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44953150622) SUCCESS. Independent Edition B now 19/19 functioning standalone routes (14 original PDF-backed + five source-derived), zero literal placeholder pages, 9/9 actual Hyperspace map image captures still missing. Exact five source page captures still absent. Original live A Site, Supabase data, player progress, ratings and feedback untouched. |
+
+| 21 Nov 2026 | AT-237 — Ten owner gameplay map screenshots clarify five districts and sector navigation | [PR #54](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/54) reviewed head `bbdf10f6526f89f963976838fef292af0b4d125b`, [CI #44954521553](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44954521553) PASS, merge `b94b9eaff7b326abf74ea644a1c0e341564f689e`, Pages [#44954577413](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44954577413) deployment record. Ten user-supplied TV-map photographs (not new repository image assets) show the **same city map** panned across Jaune/Vert/Bleu/Magenta/Rouge, with nearby place labels and Wild Zone shields. Added 30 approximately described landmark links in five cards and corrected inaccurate implication that 48 separate sector image assets are necessary. Still 48 sector names, 20 Wild Zones, 264 source items, 100 Screws, 146 approximate map leads and 0 verified exact item-pin coordinates. Exact floor, scaffold, ladder and Holovator access routes await user-verified detailed views. No existing interactive walkthrough/source, original ChatGPT Site, Supabase, ratings, feedback or saved progress changed. Mobile visual QA remains pending. |
 
 ## Workspace return and source handoff
 
