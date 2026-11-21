@@ -121,13 +121,13 @@ The example is a schema illustration, **not actual verified Vert Sector 5 geomet
 | --- | --- | --- | --- | --- |
 | 01 | #4 A Break Time Battle | West of WZ3, Rouge Plaza | **9143, 6904** | **Rouge 1** corroborated; inspect corresponding Holovator glyph/building face |
 | 02 | #23 Underneath the Holovator | Vernal Avenue, NW of WZ1 | **10111, 16090** | Vert 9 *reported*, confirm boundary; identify lift entrance |
-| 03 | #40 A Holovator Without Power | S Boulevard, east of WZ1 / SW of Racine Construction | **14670, 14907** | numbered sector unknown; confirm actual device location |
+| 03 | #40 A Holovator Without Power | South Boulevard / NE of Vert Pokémon Center | **14670, 14907** | **Vert Sector 7 (quest location; Bulbapedia)**, exact device position pending |
 | 04 | #45 On Maintenance Duty | S Boulevard, south of WZ12 | **7987, 16433** | Bleu 7 *reported*, verify street/sector boundary |
 | 05 | #56 We'll Just Muscle Our Way Through! | Jaune Sector 6, south of WZ8 | **13808, 10090** | **Jaune 6** corroborated; distinguish quest approach from device |
 | 06 | #61 My Favorite Holovator | Bleu Sector 3 / Bleu Plaza, north of WZ12 | **8603, 13820** | **Bleu 3** corroborated by Serebii; verify map alignment |
-| 07 | #71 The Burning Gaze of Watchog | Autumnal Avenue, NE of WZ7 | **8429, 8099** | numbered sector unknown; inspect map glyph |
-| 08 | #80 A Shocking Territorial Dispute | West/SW of WZ15 | **13520, 5172** | numbered sector unknown; inspect map glyph |
-| 09 | #92 The Beldum Blockade | Bleu Sector 8, SE of WZ10 and Café Soleil area | **5123, 14626** | **Bleu 8** corroborated; inspect map glyph |
+| 07 | #71 The Burning Gaze of Watchog | Autumnal Avenue, NE of WZ7 | **8429, 8099** | **Magenta Sector 2 (quest location; Bulbapedia)**, device point pending |
+| 08 | #80 A Shocking Territorial Dispute | Hibernal Avenue, west/SW of WZ15 | **13520, 5172** | numbered sector unknown; inspect device category marker |
+| 09 | #92 The Beldum Blockade | South Boulevard, SE of WZ10 and Café Soleil | **5123, 14626** | **Bleu 8 reported by GameWith**; verify sector/street boundary before plotting |
 
 **What has been validated:** nine source-published **mission-location coordinates**, nine relevant mission/area descriptions and unlock routes. **What has not:** placement of any of the 23 individual **Holovator-category** marker coordinates on our Atlas image, device-level GPS (the game map has no GPS), any rooftop entry/exit height or a verified entire-city scaffold inventory. The 23 Holovators is the **Gamer Guides category count**, and a nine-mission shortlist cannot be naively deducted from it without verifying one-to-one correspondence.
 
@@ -141,6 +141,30 @@ The example is a schema illustration, **not actual verified Vert Sector 5 geomet
 6. Repeat remaining Holovator-category points; **then** apply the same proof standard to scaffold/ladder access networks; **then** fixed items/Screws. Every completed small batch updates this master plan, structured manifest, cross-site ledger and issue #28 with source references and reviewed commit SHA.
 
 **Safest next source check:** DR-H-01's **Holovator-category marker** (not its mission marker) next to the building west of Wild Zone 3. Exact entrance/floor and pixel alignment require independent verification; the original live site and Edition B maps remain unchanged by this documentation batch.
+
+## Coordinate validation loop — mission marker links and quest-ground approach batch 02 (21 November 2026)
+
+**Status:** source-grounded **mission-marker navigation and Holovator unlock-route research only**. This is the next one-by-one loop after the nine mission coordinate checks. All nine mission "View on map" links have been followed to individual Gamer Guides **Side Missions layer 343** marker IDs. **They are not Holovator-category marker IDs.** No source-to-Atlas transform, precise building facade, device marker XY or rooftop height is claimed. Structured results are in [the Holovator coordinate register](MAPS_HOLOVATOR_COORDINATE_VALIDATION.json). The original owner screenshots have not been calibrated against the preserved city image.
+
+| ID | Mission marker link (source layer 343) | Refined quest locality | Ground-level approach / objective, from guides | Still needed for an Atlas **device** dot |
+| --- | --- | --- | --- | --- |
+| DR-H-01 | [234541](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=234541) | Rouge Sector 1, by Rouge Plaza, west of WZ3 | Find **Sommi** at the broken Holovator beside a building; win his battle and use the repaired lift to reach the roof | Distinct Holovator-category glyph; facade alignment, source-to-Atlas XY and pictured roof exit |
+| DR-H-02 | [238914](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238914) | Vernal Avenue, NW of WZ1; **Vert 9 is only source-reported** | Speak with Terra; inspect soil directly in front of the lift and drive off the Lv.28 Diggersby | Numbered-sector border, device glyph, entrance and floor |
+| DR-H-03 | [238212](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238212) | **Vert Sector 7 is the quest location** (Bulbapedia); South Boulevard (Serebii) | From Vert Pokémon Center go NE to Élec; activate the lift with an Electric-type attack | Distinct Holovator point, Vert 7 boundary, facade and roof |
+| DR-H-04 | [237861](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237861) | South Boulevard, south of WZ12; **Bleu 7 source-reported** | Find Durstin and give him a drink so maintenance can restore access | Confirm building/block and sector boundary |
+| DR-H-05 | [237633](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237633) | Jaune Sector 6, south of WZ8 | Activate disabled lift with a **physical Fighting-type move** | Source device point and roof elevation; main-19/20 progression boundary |
+| DR-H-06 | [235024](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235024) | Bleu Sector 3, around Bleu Plaza / north of WZ12 | Defeat the Rust Syndicate grunt blocking the unit | Device entrance, street-side map alignment and roof exit |
+| DR-H-07 | [237731](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237731) | **Magenta Sector 2 is the quest location** (Bulbapedia); Autumnal Avenue, NE of WZ7 | Clear the Alpha Watchog obstructing the unit | Actual device point and mapped sector boundary |
+| DR-H-08 | [238913](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238913) | Hibernal Avenue, west of WZ15; numbered sector unknown | Clear the Manectric/Ampharos dispute in front of the lift | Sector number, device point, street face and roof |
+| DR-H-09 | [238206](https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238206) | **South Boulevard** (Bulbapedia); Bleu Sector 8 reported by GameWith, SE of WZ10/Café Soleil | Clear four Beldum surrounding the unit | Resolve street vs numbered-sector geometry; source device glyph and floor |
+
+**Primary independent source triangulation:** [Bulbapedia Legends: Z-A side-mission table](https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)) for quest location and timing; [Serebii's mission index](https://www.serebii.net/legendsz-a/sidemissions.shtml) for mission steps; [Thonky #004](https://www.thonky.com/pokemon-legends-z-a/side-mission-004-a-break-time-battle), [#023](https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator), [#040](https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power) for approachable player directions. Gamer Guides mission pages supply the **mission** XY and clickable marker IDs. A commentator's or video's alternative spelling "Summi" is not used: the quest records identify worker **Sommi**.
+
+**Verified in this batch:** nine direct, individually identifiable **mission** marker deep links; two newly evidenced named **quest sectors** for previously unnumbered records (Vert 7 for #040, Magenta 2 for #071); source-linked ground-level objective/direction text for all nine. Source descriptions also distinguish streets from sector IDs for #023, #045, #080 and #092. An approximate mission-to-device relationship is described by the narratives, **not** measured as map XY or proven identical to an individual Holovator-category glyph.
+
+**Unchanged thresholds:** **0 exact Atlas Holovator pins**; **0 independently extracted Holovator-category marker positions** out of the reported 23; **0 measured entry/roof exit coordinate pairs**; **0 validated source-to-Atlas transform**, no copyrighted third-party maps copied, no site/JS/CSS/Supabase/checklist edits. Do **not** place these Side Mission marker points on the confirmed Holovator layer.
+
+**Next safe device mapping task:** take DR-H-01's clickable mission marker `234541`, inspect the **separate Holovator category** beside the same building west of WZ3, record the actual glyph's identity and X/Y; then align **three or more** independent control points from source map to `maps/lumiose-game-map.jpg`, quantify pixel registration error and verify facade / rooftop arrival in clear gameplay. If insufficient image evidence, mark DR-H-01 **awaiting device evidence** and repeat this exact gate on DR-H-02, continuing across all nine and then the remaining category markers without inventing pins. Only after confirmed Holovators start the scaffold/ladder networks and numbered pickups.
 
 ## Release boundaries and where to resume
 
