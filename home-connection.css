@@ -1,0 +1,90 @@
+/* Scoped, responsive Pokémon HOME fieldbook; original 17-section guide unchanged. */
+.atlas-article .home-hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:23px;align-items:center}
+.atlas-article .home-hero h1{letter-spacing:-.035em;line-height:1.12}
+.atlas-article .home-hero-em{color:#7550a2}
+.atlas-article .home-hero-side{min-width:0;background:linear-gradient(142deg,#f2eafb,#eff9f2);border:1px solid #dfd2ed;border-radius:18px;padding:22px}
+.atlas-article .home-hero-side>strong{display:block;font-size:27px;color:#563a7d;line-height:1.25}
+.atlas-article .home-hero-side>p{font-weight:850;font-size:14px;color:#3f7952;margin:7px 0}
+.atlas-article .home-hero-side>small{font-size:12px;color:#665c72;line-height:1.6;display:block}
+.atlas-article .home-hero-trio{display:flex;align-items:center;justify-content:center;gap:2px;margin-bottom:12px}
+.atlas-article .home-hero-trio img{width:31%;height:106px;object-fit:contain;filter:drop-shadow(0 4px 9px #51376d28)}
+.atlas-article .home-hero-trio img:nth-child(2){width:36%;height:120px}
+.atlas-article .home-gift-section h2,.atlas-article .home-volcanion h2{font-size:clamp(24px,3vw,33px);margin:8px 0}
+.atlas-article .home-gift-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.atlas-article .home-gift-steps article{border:1px solid #e6ddeb;border-radius:13px;background:#fff;padding:19px;min-width:0}
+.atlas-article .home-gift-steps article>span{display:grid;place-items:center;width:38px;height:38px;background:#f0e9f8;color:#674b89;font-size:13px;font-weight:900;border-radius:10px}
+.atlas-article .home-gift-steps h3{font-size:17px;color:#392a50;margin:11px 0 6px}
+.atlas-article .home-gift-steps p{font-size:13px;color:#645a6d;line-height:1.7;margin:0}
+.atlas-article .home-alpha-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0}
+.atlas-article .home-alpha-grid article{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 10px;background:#fff;border:1px solid #e5dcec;border-radius:12px;min-width:0}
+.atlas-article .home-alpha-grid img{display:block;width:110px;height:103px;object-fit:contain;margin-bottom:8px}
+.atlas-article .home-alpha-grid strong{font-size:15px;color:#4e3c6d}
+.atlas-article .home-alpha-grid span{font-size:12px;color:#528464;font-weight:850}
+.atlas-article .home-alpha-grid p{font-size:11px;color:#756a7f;margin:5px 0 0}
+.atlas-article .home-help-tip{font-size:13px;padding:13px 17px;border-left:4px solid #70a680;background:#f2faf4;border-radius:0 11px 11px 0}
+.atlas-article .home-volcanion{background:linear-gradient(140deg,#fcfaff,#fff,#f4faf6)}
+.atlas-article .home-volcanion-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(185px,.7fr);gap:24px;align-items:center}
+.atlas-article .home-volcanion-layout p{font-size:14px;color:#5d526b;line-height:1.75;margin:10px 0}
+.atlas-article .home-volcanion-layout aside{background:#f1eafa;border:1px solid #e0d3f0;border-radius:13px;padding:16px;text-align:center}
+.atlas-article .home-volcanion-symbol{position:relative;display:grid;place-items:center}
+.atlas-article .home-volcanion-symbol img{width:100%;max-width:180px;height:170px;object-fit:contain}
+.atlas-article .home-volcanion-symbol span{position:absolute;top:0;left:4px;font-size:34px;color:#ab81c9}
+.atlas-article .home-volcanion-layout aside strong{display:block;font-weight:900;letter-spacing:.1em;color:#704b99;font-size:12px}
+.atlas-article .home-volcanion-layout aside p{font-size:11px;color:#6d6079}
+.atlas-article .home-rules-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}
+.atlas-article .home-rules-grid article{background:#fff;border:1px solid #e3dce9;border-radius:13px;padding:20px;min-width:0}
+.atlas-article .home-rules-grid article.home-rule-important{background:#fffbfa;border-color:#ebdbd8}
+.atlas-article .home-rule-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:11px;background:#f0eaf8;font-size:23px;color:#754c9d}
+.atlas-article .home-rule-important .home-rule-icon{background:#fff0ed;color:#a45b52}
+.atlas-article .home-rules-grid h3{font-size:18px;margin:12px 0 6px;color:#3b2a52}
+.atlas-article .home-rules-grid p{font-size:13px;color:#615768;line-height:1.75;margin:8px 0}
+.atlas-article .home-forms-notes{border:1px solid #d5e6da;border-radius:13px;padding:17px;background:#f5fbf6}
+.atlas-article .home-forms-notes h3{font-size:17px;color:#416d50;margin:0 0 10px}
+.atlas-article .home-forms-notes p{font-size:13px;color:#526459;line-height:1.75;margin:8px 0}
+.atlas-article .home-species-section{margin-top:35px}
+.atlas-article .home-species-section>h2{font-size:clamp(24px,3vw,33px);margin:7px 0}
+.atlas-article .home-species-section>p{font-size:14px;line-height:1.75;color:#62566e}
+.atlas-article .home-check-explain{border-left:4px solid #a087bd;padding:13px 16px;border-radius:0 10px 10px 0;background:#f7f3fc}
+.atlas-article .home-registered-progress{background:#f6fbf7;border:1px solid #d8e8dd;border-radius:13px;padding:18px;margin:20px 0}
+.atlas-article .home-registered-progress>div:first-child{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px}
+.atlas-article .home-registered-progress>div:first-child strong{font-size:27px;color:#34714b;font-weight:950;font-variant-numeric:tabular-nums}
+.atlas-article .home-registered-progress>div:first-child span{color:#56705e;font-size:13px;font-weight:850}
+.atlas-article .home-registration-bar{height:11px;margin:11px 0;background:#deecdf;border-radius:99px;overflow:hidden}
+.atlas-article .home-registration-bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#785dab,#55a170);border-radius:99px;transition:width .2s ease}
+.atlas-article .home-regional-totals{display:flex;gap:17px;flex-wrap:wrap;color:#57725d;font-size:13px}
+.atlas-article .home-regional-totals strong{color:#37784d;font-variant-numeric:tabular-nums}
+.atlas-article #homeSaveStatus{font-size:12px;color:#536459;line-height:1.5;margin:10px 0 0}
+.atlas-article #homeSaveStatus.saved{color:#207448}
+.atlas-article #homeSaveStatus.error{color:#a53b51}
+.atlas-article .home-species-tools{display:grid;grid-template-columns:minmax(180px,1.15fr) minmax(260px,1.3fr) minmax(150px,.8fr);gap:11px;align-items:end;margin:16px 0 9px}
+.atlas-article .home-species-tools label{display:flex;flex-direction:column;gap:7px;font-size:12px;color:#695777;font-weight:850}
+.atlas-article .home-species-tools input,.atlas-article .home-species-tools select{width:100%;min-height:44px;font:inherit;font-size:14px;padding:8px 12px;border:1px solid #d7cbe3;border-radius:9px;background:#fff;color:#3e314e}
+.atlas-article .home-group-filters{display:flex;flex-wrap:wrap;gap:5px}
+.atlas-article .home-group-filters button{font:inherit;font-size:12px;font-weight:800;min-height:44px;background:white;color:#624881;border:1px solid #ded3ec;border-radius:9px;padding:8px 11px;cursor:pointer}
+.atlas-article .home-group-filters button[aria-pressed="true"]{background:#7555a0;border-color:#7555a0;color:white}
+.atlas-article #homeSpeciesEmpty{padding:16px;border:1px dashed #d2c1e3;border-radius:12px;background:#fcf9ff}
+.atlas-article #homeSpeciesEmpty[hidden],.atlas-article .home-species-card[hidden]{display:none!important}
+.atlas-article .home-species-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:17px 0}
+.atlas-article .home-species-card{display:grid;grid-template-columns:79px minmax(0,1fr);gap:9px;min-width:0;border:1px solid #e5dce9;border-radius:12px;padding:12px;background:#fff;min-height:122px}
+.atlas-article .home-species-card.is-registered{border-color:#a5d5b2;background:#f5fcf6}
+.atlas-article .home-species-portrait{display:grid;place-items:center;min-height:80px}
+.atlas-article .home-species-portrait img{width:76px;height:76px;object-fit:contain}
+.atlas-article .home-portrait-fallback{color:#82748f;font-size:10px;font-weight:900;text-align:center}
+.atlas-article .home-species-info{align-self:center;min-width:0}
+.atlas-article .home-species-info small{display:block;font-size:9px;line-height:1.45;color:#7d708a;font-weight:850}
+.atlas-article .home-species-info h3{font-size:14px;color:#403254;margin:5px 0 3px;line-height:1.2;overflow-wrap:anywhere}
+.atlas-article .home-species-info p{font-size:11px;color:#776785;margin:0;line-height:1.45}
+.atlas-article .home-reg-toggle{grid-column:1/-1;display:flex;align-items:center;justify-content:flex-end;gap:8px;cursor:pointer;min-height:38px;border-top:1px solid #eee6f3;padding-top:7px;color:#5c516c;font-weight:850;font-size:11px}
+.atlas-article .home-reg-toggle input{appearance:auto;width:21px;height:21px;accent-color:#348e55;margin:0;cursor:pointer}
+.atlas-article .home-reg-toggle:focus-within{outline:2px solid #8060aa;outline-offset:2px}
+.atlas-article .home-species-card.is-registered .home-reg-toggle{color:#38794f;border-top-color:#d5e9d9}
+.atlas-article .home-image-caveat{font-size:12px!important;border:1px solid #e6ddeb;background:#faf7fd;border-radius:11px;padding:12px 15px}
+.atlas-article .home-last-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.atlas-article .home-last-grid article{background:#fff;border:1px solid #e6dfea;border-radius:11px;padding:17px}
+.atlas-article .home-last-grid h3{color:#594075;font-size:16px;margin:0 0 8px}
+.atlas-article .home-last-grid p{color:#655a6f;font-size:12px;line-height:1.7;margin:0}
+.atlas-article .home-noscript{background:#fff8e8;color:#776034;border-radius:9px;padding:15px}
+@media(max-width:975px){.atlas-article .home-species-tools{grid-template-columns:1fr 1fr}.atlas-article .home-group-filters{grid-column:1/-1;grid-row:2}.atlas-article .home-species-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.atlas-article .home-hero,.atlas-article .home-volcanion-layout,.atlas-article .home-rules-grid{grid-template-columns:1fr}.atlas-article .home-last-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.atlas-article .home-gift-steps,.atlas-article .home-alpha-grid,.atlas-article .home-species-grid,.atlas-article .home-species-tools{grid-template-columns:1fr}.atlas-article .home-group-filters{grid-column:auto;grid-row:auto}.atlas-article .home-alpha-grid article{flex-direction:row;text-align:left;gap:10px;flex-wrap:wrap;justify-content:flex-start}.atlas-article .home-alpha-grid img{height:62px;width:62px;margin:0}.atlas-article .home-alpha-grid article p{flex:1 1 100%;margin:0}.atlas-article .home-species-card{grid-template-columns:76px minmax(0,1fr);min-height:105px}}
+@media(prefers-reduced-motion:reduce){.atlas-article .home-registration-bar>span{transition:none}}
