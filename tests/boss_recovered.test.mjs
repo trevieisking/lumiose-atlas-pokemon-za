@@ -41,6 +41,7 @@ filters[2].events.click();assert.equal(nodes.bossStatus.textContent,"10 of 28 bo
 nodes.bossSearch.value="darkrai";nodes.bossSearch.events.input();assert.equal(nodes.bossStatus.textContent,"1 of 28 boss cards shown");
 nodes.bossSearch.value="not-a-boss";nodes.bossSearch.events.input();assert.equal(nodes.bossNoResults.hidden,false);
 
+
 const homeHtml=read("home-connection.html");
 const homeBossPortraits=[
   ["Mega Staraptor","Staraptor"],
@@ -52,18 +53,25 @@ const homeBossPortraits=[
   ["Mega Rayquaza","Rayquaza"],
   ["Mega Zeraora","Zeraora"]
 ];
-for(const [bossName,homeSpecies] of homeBossPortraits){
-  const catalogueSrc=homeHtml.match(new RegExp('src="([^"]+)" alt="'+homeSpecies+' Pokémon portrait"'))?.[1];
-  const bossSrc=html.match(new RegExp('<h3>'+bossName+'</h3>[^\\n]*?<img src="([^"]+)"'))?.[1];
-  assert.ok(catalogueSrc&&bossSrc,"Cannot find catalogue and boss portraits for "+bossName);
-  assert.equal(bossSrc,catalogueSrc,"Boss image must reuse working HOME catalogue portrait: "+bossName);
+for(const [bossName,species] of homeBossPortraits){
+  const homeLine=homeHtml.split("\n").find(line=>line.includes('alt="'+species+' Pokémon portrait"'));
+  const bossLine=html.split("\n").find(line=>line.includes("<h3>"+bossName+"</h3>"));
+  const homeSrc=homeLine?.match(/src="([^"]+)"/)?.[1];
+  const bossSrc=bossLine?.match(/<img src="([^"]+)"/)?.[1];
+  assert.ok(homeSrc&&bossSrc,"Missing portrait reference for "+bossName);
+  assert.equal(bossSrc,homeSrc,"Boss portrait must match HOME catalogue: "+bossName);
 }
-for(const match of html.matchAll(/<img\\b[^>]*\\bsrc="([^"]+)"/g)){
-  const src=match[1];
+const permittedExternalImages=new Set([
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/398.png",
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/978.png"
+]);
+const allBossImages=[...html.matchAll(/<img[^>]*src="([^"]+)"/g)].map(match=>match[1]);
+assert.equal(allBossImages.length,28,"All 28 boss-page images must be checked");
+for(const src of allBossImages){
   if(src.startsWith("https://")){
-    assert.match(src,/^https:\\/\\/raw\\.githubusercontent\\.com\\/PokeAPI\\/sprites\\/master\\/sprites\\/pokemon\\/other\\/home\\/(?:398|978)\\.png$/);
+    assert.ok(permittedExternalImages.has(src),"Unexpected external boss image: "+src);
   }else{
-    assert.ok(existsSync(new URL("../"+src,import.meta.url)),"Missing local boss illustration: "+src);
+    assert.ok(existsSync(new URL("../"+src,import.meta.url)),"Missing local boss image: "+src);
   }
 }
 
