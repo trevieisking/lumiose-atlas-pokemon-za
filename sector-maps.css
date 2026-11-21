@@ -116,3 +116,24 @@
 @media(max-width:1080px){.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.trust-grid{grid-template-columns:1fr}.approx-item-dot{width:30px;height:30px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.approx-item-dot,.approx-map-record{transition:none}}
+
+
+/* Ten owner-supplied gameplay photos: district landmark navigation only.
+   This panel does not add pickup dots, map XY positions, or ascent claims. */
+.sector-photo-reference{scroll-margin-top:20px;margin:26px 0}
+.sector-photo-reference>p{max-width:970px;line-height:1.7}
+.sector-photo-map-key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:18px 0 21px}
+.sector-photo-map-key>span{display:block;padding:11px 13px;background:#f5f1fa;border:1px solid #e7dfee;border-radius:10px;font-size:12px;line-height:1.55}
+.sector-photo-map-key b{font-weight:850;color:#654487}
+.sector-photo-districts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;align-items:stretch}
+.sector-photo-district{padding:17px;background:#fff;border:1px solid #ddd4e8;border-radius:12px;min-width:0}
+.sector-photo-district h3{font-size:18px;margin:0 0 6px;color:#543579}
+.sector-photo-district p{font-size:12px;line-height:1.5;color:#655d6e;margin:0 0 11px}
+.sector-photo-district ul{padding:0;margin:0;list-style:none;display:grid;gap:7px}
+.sector-photo-district a{display:flex;align-items:center;min-height:44px;padding:9px 11px;border:1px solid #e4d9ef;background:#faf7fd;border-radius:9px;color:#5d397c;font-size:13px;font-weight:700;line-height:1.45;text-decoration:none}
+.sector-photo-district a:hover{background:#eee7f9}
+.sector-photo-district a:focus-visible,.sector-photo-actions a:focus-visible{outline:3px solid #926bb3;outline-offset:2px}
+.sector-photo-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.sector-photo-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;background:#eee6f7;border:1px solid #d9c8e8;border-radius:9px;text-decoration:none;font-size:13px;font-weight:850}
+@media(max-width:700px){.sector-photo-map-key,.sector-photo-districts{grid-template-columns:1fr}}
+@media(max-width:450px){.sector-photo-actions{flex-direction:column}.sector-photo-actions a{width:100%}}
