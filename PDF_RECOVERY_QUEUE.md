@@ -12,7 +12,7 @@
 | Z-A Royale: Every Promotion Battle (7) | `royale-guide.html` · Story Z-A Royale | **RESTORED · MERGED #19 · DEPLOYED** — 10 illustrated promotion teams, Canari quiz and story interruptions |
 | Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | **RESTORED · MERGED #21 · DEPLOYED** — 18 quick-reference cards, 324-cell chart and offline dual-type calculator; clipped columns independently checked |
 | Alphas (5) | `alphas.html` · Alpha fieldbook | **RESTORED · MERGED #22 · DEPLOYED** — 20 zones, 38 fixed targets and saved 67-entry Zone 20 pool; HOME, fossils and DLC |
-| Items (28) | `items.html` · Item atlas | **RESTORED IN PR** — 264 numbered source entries incl. 56 hidden outcomes, 100 original screw clues, 48 independently verified sector names; source evidence flagged, no invented exact pins |
+| Items (28) | `items.html` · Item atlas | **RESTORED · MERGED #27 · DEPLOYED** — 264 original records (56 random hidden outcomes), 100 numbered Screw clues, 48 verified sector names; exact map pins still pending in issue #28 |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
@@ -43,7 +43,7 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed, deployed recovery slices:** Mable’s Research (5), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6), Alpha Fieldbook (5), Shops & Mega Shards (6), and Lumiose Maps (4). Nine of 19 standalone routes are deployed. **Current recovery PR:** the 28-page Item Atlas, restoring the original 264 records and 100 Screws while building a 48-sector evidence index. **Next map phase:** independently establish each sector's true boundary, high-resolution map image and individual item/ladder/Holovator coordinates before applying numbered pins; nine Hyperspace close-ups also remain unverified. Preserve the original ChatGPT Site as read-only context.
+**Completed, deployed recovery slices:** Mable’s Research (5), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6), Alpha Fieldbook (5), Shops & Mega Shards (6), and Lumiose Maps (4). **Ten of 19 standalone routes are deployed.** The 28-page Item Atlas is restored and verified. **Next map phase (tracked in [issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28)):** establish each of 48 sectors’ real boundary, high-resolution map and confirmed numbered item/Screw/ladder/Holovator coordinates. Do not claim that the 264 source records are all fixed city pickups. Nine Hyperspace close-ups also remain unverified. Preserve the original ChatGPT Site as read-only context.
 
 ## Repeatable one-PDF-at-a-time loop
 
