@@ -1,0 +1,25 @@
+name: Validate existing Atlas feedback relay source
+
+on:
+  pull_request:
+    paths:
+      - supabase/functions/lumiose-atlas-feedback-github/**
+      - tests/feedback_proxy.test.mjs
+      - .github/workflows/validate-feedback-relay.yml
+
+permissions:
+  contents: read
+
+jobs:
+  feedback-relay:
+    name: Feedback relay mock checks (no deployment)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Mock existing deployed relay, no network or DB writes
+        run: node --test tests/feedback_proxy.test.mjs
+      - name: Preserve original guide source integrity
+        run: python3 tests/validate_static.py
