@@ -14,7 +14,7 @@
 | Alphas (5) | `alphas.html` · Alpha fieldbook | PDF CAPTURED |
 | Items (28) | `items.html` · Item atlas | PDF CAPTURED |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
-| Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | PDF CAPTURED |
+| Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED IN PR** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | PDF CAPTURED |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
 | Maps (4) | `maps.html` · Lumiose maps; **does not capture every linked map close-up** | PDF CAPTURED |
@@ -43,4 +43,4 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Current recovery slice:** Mable's Research & Rewards PDF only. After review and merge, pick the next **captured standalone PDF**; the original site is never the destination for these changes.
+**Completed recovery slices:** Mable's Research & Rewards (5 pages) and Shiny Hunting Routes & Tactics (3 pages), one at a time. Next captured standalone PDFs remain queued; the original site is never the destination for these changes.
