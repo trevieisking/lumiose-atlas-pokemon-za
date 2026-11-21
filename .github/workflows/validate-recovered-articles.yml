@@ -73,6 +73,9 @@ on:
       - sector-maps.js
       - tests/sector_map_directory.test.mjs
       - tests/approx_item_map_leads.test.mjs
+      - hyperspace-maps.html
+      - hyperspace-maps-guide.css
+      - tests/hyperspace_map_navigation.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -158,6 +161,8 @@ jobs:
         run: node --test tests/sector_map_directory.test.mjs
       - name: Verify 146 numbered source-saved approximate map leads without inventing confirmed pins
         run: node --test tests/approx_item_map_leads.test.mjs
+      - name: Verify final Hyperspace Maps navigation without missing-map fabrication or source loss
+        run: node --test tests/hyperspace_map_navigation.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
