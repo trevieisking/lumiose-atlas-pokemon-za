@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 14 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 15 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -13,6 +13,27 @@
 **Data connection:** Original live feedback uses the existing **Stream Bandit Supabase** project. The independent static reconstruction has **not** reconnected its ratings/reports/form. All account permissions, secrets, RLS rules, report IDs and data remain governed by the existing Supabase project. No additional Supabase project is required or authorized by this ledger.
 
 **Critical feedback retention rule:** Reports **#13 (Mission 24)** and **#14 (Mission 25)** are genuine outstanding player reports. **Do not delete either row when only one edition has been fixed.** Retain both until each correction is fact-checked, implemented, published and manually checked **on BOTH A and B**, with the verification evidence added here. Even then, removal should be an explicit owner-authorized cleanup action. Reports **#5 and #6** were confirmed as duplicate tests and deleted from `atlas_reports` on 21 Nov 2026; the later read-only check returned only #13 and #14. Do not recreate them or alter #13/#14 now.
+
+## Standing original-site preservation and change-mirroring protocol
+
+**Owner instruction — 21 November 2026:** Leave **Edition A, the original Workspace Site**, completely intact and online. Do not edit, export by rebuilding, redeploy, replace, transfer DNS, alter the Supabase connection or reset its saved player progress as a side effect of improving Edition B. **A remains a separate, pending application target** until the original editor/source is actually accessible. This is not permission for blanket fixes or automatic deployment.
+
+**Every proposed correction, improvement, or actual Edition B change must be mirrored in this ledger** so the Workspace can later receive the equivalent fact-checked improvement, **without overwriting features that A already has**. Use the existing stable AT-number when a finding is already tracked; create a new ID only for a genuinely new change. Do not mark proposals as implemented.
+
+| Mandatory per-change evidence | What to record |
+| --- | --- |
+| **Change identity** | Stable `AT-NNN`, category (**fact correction**, **feature**, **navigation**, **visual polish**, **bug/security fix**), scope, affected pages, original report/QA finding and priority |
+| **Why and evidence** | Exact observed B behaviour or source discrepancy, expected player-facing outcome, verified game references, unresolved claims and whether any existing A functionality may already satisfy it |
+| **Edition B implementation** | `PLANNED` / `DRAFT PR` / `MERGED` / `DEPLOYED + VERIFIED`, file paths, old/new content summary, GitHub branch, PR, reviewed commit SHA, build/browser/mobile test receipts and rollback point |
+| **Edition A Workspace mirror** | `NOT INSPECTED — SOURCE UNAVAILABLE` / `ALREADY PRESENT — VERIFIED` / `NEEDS EQUIVALENT CHANGE` / `APPLIED — UNPUBLISHED` / `PUBLISHED + VERIFIED`; **copy-ready instructions** identifying original page or component, exact text or behaviour to change, dependencies and linked items/map IDs. **Never claim its existing code matches B without inspecting A** |
+| **Cross-links, data and compatibility** | Checkboxes and localStorage key preservation, stable item number ↔ map pin linkage, side-quest/main-mission/navigation targets, form/rating integration, mobile and desktop regression, external assets and relevant Supabase origin restrictions |
+| **Per-site final sign-off** | Independent A URL and mobile/desktop proof, independent B URL/commit/test proof, saved progress intact, no broken links; only then set `BOTH VERIFIED` and record date. Old feedback #13/#14 stay until both fixes are proven and owner authorizes cleanup |
+
+**Operational rule:** Work on a **separate, reviewable Edition B branch** only after the relevant problem and minimal fix are understood. Record the B implementation immediately, including *what changed and what did not*; then record the **equivalent action pending in A** in plain language the Workspace editor can execute. A change done only in a GitHub draft is **not** a change to either published site. Later, compare A's real original files against B's tested changes **before** choosing which changes A needs; copy improvements rather than wholesale replacing A.
+
+**Workspace access first:** follow [WORKSPACE_ACCESS_HANDOFF.md](WORKSPACE_ACCESS_HANDOFF.md) to request a **read-only export of the actual original Site project** (source, routes, assets, scripts and build config, no credentials). A published-page/MHTML reconstruction is **not** that export. Access/exports do not authorize editing or deploying A.
+
+**Current session:** this section records a standing rule and source-access plan **only**. No guide gameplay code, original Site, Supabase functions/tables, active URLs, draft PRs or reports were modified by this documentation entry.
 
 ## Status meanings
 
@@ -322,6 +343,8 @@
 
 | 21 Nov 2026 | Completed initial source reviews of numbered #181–200 and EX1–EX3 | [Numbered batch](docs/qa/SIDE_MISSIONS_181_200_SOURCE_AUDIT_2026-11-21.md), [EX batch](docs/qa/SIDE_MISSIONS_EX1_EX3_SOURCE_AUDIT_2026-11-21.md), AT-201–AT-223. Correct M200 password confirmed; M186 false reward placeholder; 5 slugfests have full 200 shard / outfit rewards; M191 2160 shards, M193 separate Meltan and Melmetal, EX1/EX2 official base-game Mystery Gifts, EX3 donut. Original live sites/DB untouched. |
 | 21 Nov 2026 | Recorded future bidirectional quick navigation between Walkthrough, Side Quests, Maps, Items and DLC | AT-224, [GitHub issue #8](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/8). **Not implemented**. Future acceptance must preserve original overview menu and Back to Walkthrough, saved checklist IDs and both editions. |
+
+| 21 Nov 2026 | Owner confirmed original-site preservation and one-to-one change-mirroring | Added standing protocol: Edition A remains untouched; every B change or planned improvement requires a stable ledger ID, exact B PR/SHA and tested status, plus separate Workspace A patch instructions/status and independent verification. Original editable source export required before applying changes there. **Documentation only; no guide/deployment/data edits.** |
 
 ## Workspace return and source handoff
 
