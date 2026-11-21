@@ -1,0 +1,90 @@
+name: Import recovered Lumiose Atlas guide
+on:
+  push:
+    branches: [main]
+    paths:
+      - lumiose-atlas-rebuild-stage1.zip
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lumiose-atlas-source-import
+  cancel-in-progress: false
+
+jobs:
+  import-recovered-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout new repository
+        uses: actions/checkout@v4
+      - name: Validate ZIP and extract source safely
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import shutil, stat, zipfile
+
+          archive = Path("lumiose-atlas-rebuild-stage1.zip")
+          if not archive.is_file():
+              raise SystemExit("Import ZIP not found in repository root.")
+          destination = Path("guide-import-staging")
+          prefix = "lumiose-atlas-rebuild/"
+          required = {
+              prefix + "index.html",
+              prefix + "app.js",
+              prefix + "package.json",
+              prefix + "README.md",
+              prefix + "RECOVERY_STATUS.md",
+              prefix + "src/sections/walkthrough.html",
+              prefix + "scripts/build.py",
+              prefix + "tests/validate_static.py",
+          }
+          with zipfile.ZipFile(archive) as z:
+              files = [info for info in z.infolist() if not info.is_dir()]
+              names = {info.filename for info in files}
+              if not required.issubset(names):
+                  raise SystemExit("The ZIP is not the verified Stage 1 recovery package.")
+              if not 500 <= len(files) <= 800:
+                  raise SystemExit("Unexpected file count: " + str(len(files)))
+              if sum(info.file_size for info in files) > 60_000_000:
+                  raise SystemExit("Unexpected uncompressed archive size.")
+              for info in files:
+                  p = PurePosixPath(info.filename)
+                  if (not info.filename.startswith(prefix)
+                      or ".." in p.parts
+                      or "\\" in info.filename
+                      or len(p.parts) < 2
+                      or p.parts[1] == ".git"
+                      or any(s == ".env" or s.startswith(".env.") or s == ".npmrc" for s in p.parts)
+                      or stat.S_ISLNK(info.external_attr >> 16)):
+                      raise SystemExit("Unsafe ZIP path: " + info.filename)
+              for info in files:
+                  relative = PurePosixPath(info.filename).relative_to("lumiose-atlas-rebuild")
+                  output = destination.joinpath(*relative.parts)
+                  output.parent.mkdir(parents=True, exist_ok=True)
+                  with z.open(info) as source, output.open("wb") as target:
+                      shutil.copyfileobj(source, target)
+          print("Safely extracted", len(files), "recovered source files")
+          PY
+      - name: Copy source and run offline validation
+        shell: bash
+        run: |
+          cp -a guide-import-staging/. ./
+          rm -rf guide-import-staging
+          python3 scripts/build.py
+          python3 tests/validate_static.py
+      - name: Commit recovered source (no deployment)
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f -- lumiose-atlas-rebuild-stage1.zip
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No source changes to commit"
+          else
+            git commit -m "Import editable recovered Lumiose Atlas Stage 1 source"
+            git push origin HEAD:main
+          fi
