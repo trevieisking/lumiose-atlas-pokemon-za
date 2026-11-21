@@ -61,6 +61,10 @@ on:
       - walkthrough-index.css
       - walkthrough-index.js
       - tests/walkthrough_index.test.mjs
+      - side-missions.html
+      - side-missions-index.css
+      - side-missions-index.js
+      - tests/side_missions_index.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -136,6 +140,8 @@ jobs:
         run: node --test tests/battles_recovered.test.mjs
       - name: Verify 42 source mission guides, no progress writes, navigation and mobile layout
         run: node --test tests/walkthrough_index.test.mjs
+      - name: Verify all 203 saved side quests, EX links, filters, and read-only progress
+        run: node --test tests/side_missions_index.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
