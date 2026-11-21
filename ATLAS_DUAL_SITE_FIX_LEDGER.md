@@ -1,0 +1,86 @@
+# Lumiose Atlas — two-site fix and parity ledger
+
+**Revision:** 1 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
+
+## The two distinct editions
+
+| Edition | Location | What can be verified now | Editing and release boundary |
+| --- | --- | --- | --- |
+| **A — Original live ChatGPT Site** | https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/ | Live URL and user-provided mobile owner-feedback screenshot; saved MHTML capture dated 20 Nov 2026. Actual original source, scripts, configuration and Workspace project still inaccessible here. | **Do not replace, reset, unpublish, redeploy or change this URL.** Edits require the original Workspace Site editor and owner-granted access once credits allow. |
+| **B — Independent repository edition** | https://github.com/trevieisking/lumiose-atlas-pokemon-za | Editable reconstruction of the saved rendered page, not a full source export; staged enhancements in review PRs. | Preserve `main` and all draft PR work. Review, test and merge only with evidence; no IONOS DNS switch or public replacement yet. |
+
+**Data connection:** Original live feedback uses the existing **Stream Bandit Supabase** project. The independent static reconstruction has **not** reconnected its ratings/reports/form. All account permissions, secrets, RLS rules, report IDs and data remain governed by the existing Supabase project. No additional Supabase project is required or authorized by this ledger.
+
+**Critical feedback retention rule:** Reports **#13 (Mission 24)** and **#14 (Mission 25)** are genuine outstanding player reports. **Do not delete either row when only one edition has been fixed.** Retain both until each correction is fact-checked, implemented, published and manually checked **on BOTH A and B**, with the verification evidence added here. Even then, removal should be an explicit owner-authorized cleanup action. Reports **#5 and #6** were confirmed as duplicate tests and deleted from `atlas_reports` on 21 Nov 2026; the later read-only check returned only #13 and #14. Do not recreate them or alter #13/#14 now.
+
+## Status meanings
+
+- **Observed live** = seen working from screenshot or current running service; does not mean the underlying original source is accessible.
+- **Reported / source missing** = owner, prior walkthrough or capture indicates the condition, but its original source/runtime has not been independently inspected.
+- **Draft in PR** = changes exist on a named GitHub branch and are **not** merged, published or proven working on users' phones.
+- **Blocked / unverified** = do not publish or mark complete until identified checks are done.
+- **Both verified** = A and B individually tested after the fix, with recorded date, URL, evidence and branch/Workspace version where available. No row is in this state yet.
+
+## Canonical cross-site change register
+
+| ID | Area / change to reconcile | Edition A — original Workspace/live | Edition B — independent GitHub | Next evidence or action | Parity |
+| --- | --- | --- | --- | --- | --- |
+| AT-001 | Recover authentic original source, routes, scripts, assets and build config **without exposing secrets** | Original editor/source unavailable through current access. Live URL must remain. | Rebuilt from 20 Nov MHTML; **not original source**. `RECOVERY_STATUS.md` explains gaps. | When Workspace opens: export actual source, inventory and compare file-by-file with B on a review branch; never overwrite either project wholesale. | BLOCKED |
+| AT-002 | Mission 24: after Corbeau, return to Hotel Z and Lida/Naveen/Taunie-Urbaine conversation | **Real feedback #13** indicates missing detail; publication fix not verified. | Not fixed in merged code; tracked by [issue #6](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/6). | Fact-check NPC names, event order, triggers, dialogue context, location and rewards; update and QA **A and B**. **Retain #13**. | OPEN — BOTH |
+| AT-003 | Mission 25: recommended Pokémon and battle tactics for Lida and Naveen | **Real feedback #14** indicates missing team/matchup guidance; publication fix not verified. | Not fixed in merged code; tracked by [issue #6](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/6). | Verify opponent teams, encounter order, weaknesses, obtainable counters and levels; update and QA **A and B**. **Retain #14**. | OPEN — BOTH |
+| AT-004 | Number each mapped Wild Zone item pin and corresponding item/tick-list row | Whether original A contains this numbered-pin upgrade must be checked in Workspace; original published maps exist. | **Draft [PR #4](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/4)** on top of #3: 146 unique pins in 20 zones; 111 unambiguous item links, 35 deliberately unverified; 264 source item IDs preserved. | Verify map labels, tap-to-find, checklist sync, enlarged close-ups and phone rendering in B; recreate/verify equivalent behavior in A before parity claim. No guessed coords. | DRAFT / A UNKNOWN |
+| AT-005 | Fix numbered map zone-preview JavaScript crash | No assertion about original A runtime. | **Confirmed regression** inherited by PR #4 and #5 in `app.js` / `selectZone`: `$('.item-pickup-grid .pickup', ...).slice(...)` uses single-element `$` instead of array-returning `$$`. PR #4 review comment records this. | Apply smallest verified fix in dependent branches, test Wild Zones 1/2/20, confirm source and generated build; A only needs this fix if its own code has the same bug. | BLOCKED — B |
+| AT-006 | More accurate roof/ground items; ladders, Holovators, scaffolding, sector maps and written directions | Earlier guide activity reported close-ups, written routes and 11 climbs, but source and exact map precision remain unverified. | Recovered approximate map positions. PR #4 preserves them rather than inventing locations. | Compare A's complete original map resources with B; verify actual game entrances, floors and item markers; record uncertainty explicitly. | VERIFY BOTH |
+| AT-007 | Detailed story walkthrough — all 42 missions, with routes, NPCs, opponents, items and rewards | Existing 42 mission entries observed in saved page; standalone originals may contain detail not captured. | 42 original cards recovered; **draft [PR #3](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/3)** expands missions 01–10; remaining 11–42 require substantive QA. | Compare A and B mission by mission, using Canari/Ivor-level specificity; research before changes; never remove unique A content. | IN PROGRESS / NOT PUBLISHED |
+| AT-008 | Josée spelling, move mastery tutorial and Seed of Mastery reward | Owner reported missing/correction needed; current old-site status not verified. | Recorded as a known gap in `RECOVERY_STATUS.md`; implementation unverified. | Verify game footage/game text, correct in both editions, check menu and saved progress unchanged. | OPEN — BOTH |
+| AT-009 | Mission 19 sewer investigation / secret wall and route | Owner reported a missing room investigation/hidden wall step; existing site state unverified. | Known issue in recovery notes, not certified fixed. | Validate quest sequence then implement in both editions, with directions and rewards. | OPEN — BOTH |
+| AT-010 | Mable's research levels and rewards | Original site has a Mable link, but the full standalone original source was not recovered. | **Draft [PR #1](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1)** adds researched Lv2–50 page and 42-mission audit; not published. | Verify rewards and Mable milestones in B, recover A page and reconcile both. | DRAFT / A UNKNOWN |
+| AT-011 | Shiny hunting, best routes/strategies | Requested for original guide; current detailed page not accessible to audit. | Recovered navigation references a standalone route whose original content is missing; not certified complete. | Compare A's source when available, build/verify missing guidance in B, update A where necessary. | OPEN |
+| AT-012 | Same site-wide menu on every page; Back to Walkthrough | Owner previously requested this for original guide; verify current actual state instead of assuming solved. | The rebuilt navigation exists; draft PR #5 adds a matching Backup & Restore page; 19 article placeholders remain. | Inventory every page, phone menu and back destination on both sites. | VERIFY BOTH |
+| AT-013 | Complete native standalone articles and links | Source not yet exportable from original. | **19** standalone routes are explicitly incomplete placeholders. | Recover original pages and rebuild missing source accurately, preserving independent guide content; no invented information. | BLOCKED ON SOURCE |
+| AT-014 | Separate Hyperspace Pokédex / Mega Dimension DLC data | Old page snapshot advertised separately loaded **132 Hyperspace entries** but the executable dataset was not recovered. | Dataset unavailable; **232** visible Lumiose Pokédex cards captured. | Export and verify original dataset and DLC content; avoid claiming full Pokédex completion prematurely. | BLOCKED ON SOURCE |
+| AT-015 | Player progress backup and original-to-new migration | Original browser storage schema unknown. Do not clear existing site storage or change origin. | **Draft [PR #5](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5)** JSON export/import (merge checked items only), independent old-site exporter bookmarklet **not yet tested on Android or live original**; manifest covers **634** unique checkbox IDs. | Test full and empty exports, double import, malformed files, blocked storage, multi-tab sync, map IDs and Chrome/Android bookmarklet on the real A URL. | DRAFT — BLOCKED |
+| AT-016 | Feedback form, reports, ratings, private owner dashboard | The old owner dashboard was shown loading reports on a phone; Supabase feedback service active. Two real reports remain. Mobile numeric ratings need separate confirmation. | Recovered styling only; no connected form/ratings/reports backend. | After B hostname is chosen, design/test secure backend adapter without changing service keys in the browser; check mobile and desktop ratings. | A PARTLY VERIFIED / B MISSING |
+| AT-017 | Domain, logo, hosting and link previews | Existing ChatGPT Site must stay online as-is. | **Draft [PR #2](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2)** social metadata and a **proposed** IONOS subdomain plan; exact hostname and authoritative DNS not confirmed. | Verify domain ownership/availability, HTTPS, DNS, metadata, zero-break rollback and release authorization before any live switch. | DRAFT ONLY |
+| AT-018 | Reuse current Stream Bandit Supabase safely | Existing live `lumiose-atlas-feedback` function accepts only original ChatGPT Site or own Supabase origin in CORS; running service should remain intact. | B's eventual different IONOS origin is currently not allowlisted; no new backend connected. | After confirming final hostname, review allowlist / secure proxy and authorization, test against staging. Never expose a service-role key in public JavaScript. | RELEASE BLOCKER |
+| AT-019 | End-to-end release tests and full content audit | Full original source/runtime unavailable; phone evidence is limited to observed screens. | Old-source reconstruction was smoke-tested locally. **No CI runs confirmed** for draft PR #3 → #4 → #5 heads in the 21 Nov audit; exact static/browser tests required. | Run static validation, mission/card ID preservation, map pinch/tap/checkbox, progress backups, offline/privacy, accessibility, Android and desktop checks. Document both URLs separately. | NOT RELEASE READY |
+| AT-020 | Side quests, Alpha/legendary rewards, stores, HOME tricks, items, Mega Shards, DLC | The original site contains guide material but full current source not accessible; owner requested comprehensive exact gameplay review. | Recovered 203 side/EX cards and other guide sections; data not certified fully fact-checked. | Audit systematically after original source handoff, keep unique and better content from either edition, cite checked game sources. | AUDIT PENDING |
+
+### Cross-branch dependency and no-loss rule
+
+- [PR #1](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1): Mable's Research and audit — standalone draft from `main`.
+- [PR #2](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2): social share / IONOS plan — standalone draft from `main`.
+- [PR #3](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/3): missions 01–10 and crosslinks — draft from `main`.
+- [PR #4](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/4): numbered pins — **based on PR #3's branch**.
+- [PR #5](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5): safe progress import — **based on PR #4's branch**.
+- Preserve this relationship. Do not independently merge #5 onto `main` or replace staged files. Reconciling #1 and #2 requires collision review.
+- No broad refactors, main force-push, automated publishing, Supabase reset, TCG code changes or changes to original Site without verified scope and approval.
+
+## How to register a fix (use one stable ID; never silently mark both complete)
+
+1. Record **reported issue**, source (player/screenshot/guide source), mission/URL and expected behavior. Do not publish personal feedback text in a public repo.
+2. Fact-check the change and record gameplay evidence, uncertainty and source. Mark **VERIFIED FACT** only when supported.
+3. Record **Edition A:** original Workspace page/edit version, tested URL and mobile/desktop result; else explicitly **NOT ACCESSIBLE / PENDING**.
+4. Record **Edition B:** exact GitHub PR, branch and reviewed SHA, static/browser test receipts and deployed URL; else **DRAFT / PENDING**.
+5. Mark **BOTH VERIFIED** only after two independent on-site checks and saved progress regression checks.
+6. For feedback-backed items (AT-002, AT-003), leave Supabase report rows untouched while either edition is unresolved. After both verified, record results and obtain a new explicit owner instruction before deleting those rows.
+7. Add a dated entry to the append-only log below; never erase past status transitions.
+
+## Append-only activity log
+
+| Date | Change | Evidence / disposition |
+| --- | --- | --- |
+| 20 Nov 2026 | Saved old-site MHTML captured | Recovery basis, **not original code**; see `RECOVERY_STATUS.md`. |
+| 21 Nov 2026 | Reconstructed independent edition checked into GitHub | Source recovery `main`; original live Site untouched. |
+| 21 Nov 2026 | Mable/social/story/maps/progress improvements staged | Open draft PRs #1–#5; not merged, no live Atlas redeploy. |
+| 21 Nov 2026 | Pin-to-item manifest audited | 20 zones, 146 unique pins, 111 links, 35 unknown; 264 item checklist IDs preserved. |
+| 21 Nov 2026 | Import manifest audited | 634 original unique checkbox IDs; exporter actual browser compatibility still unverified. |
+| 21 Nov 2026 | Map zone preview runtime regression identified | Blocking PR #4 review note; affects dependent #5. |
+| 21 Nov 2026 | Feedback rows #5/#6 removed at owner's request | Only confirmed test rows deleted; read-only follow-up returned #13/#14. |
+| 21 Nov 2026 | Genuine Mission 24/25 reports filed | [Issue #6](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/6); **retain both until A and B corrected and verified**. |
+| 21 Nov 2026 | Two-site parity ledger initiated | This document and [Workspace handoff](WORKSPACE_ACCESS_HANDOFF.md). No gameplay/DB/hosting changes. |
+
+## Workspace return and source handoff
+
+Read **[WORKSPACE_ACCESS_HANDOFF.md](WORKSPACE_ACCESS_HANDOFF.md)** when the original editor becomes available. It supplies a ready-to-paste request to safely export original source and reconcile both versions. Keeping the documents here lets future sessions continue without relying on expiring Workspace credits or chat memory.
