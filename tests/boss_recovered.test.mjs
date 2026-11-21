@@ -40,4 +40,31 @@ filters[1].events.click();assert.equal(nodes.bossStatus.textContent,"16 of 28 bo
 filters[2].events.click();assert.equal(nodes.bossStatus.textContent,"10 of 28 boss cards shown");
 nodes.bossSearch.value="darkrai";nodes.bossSearch.events.input();assert.equal(nodes.bossStatus.textContent,"1 of 28 boss cards shown");
 nodes.bossSearch.value="not-a-boss";nodes.bossSearch.events.input();assert.equal(nodes.bossNoResults.hidden,false);
+
+const homeHtml=read("home-connection.html");
+const homeBossPortraits=[
+  ["Mega Staraptor","Staraptor"],
+  ["Mega Tatsugiri","Tatsugiri"],
+  ["Mega Heatran","Heatran"],
+  ["Mega Darkrai","Darkrai"],
+  ["Primal Groudon","Groudon"],
+  ["Primal Kyogre","Kyogre"],
+  ["Mega Rayquaza","Rayquaza"],
+  ["Mega Zeraora","Zeraora"]
+];
+for(const [bossName,homeSpecies] of homeBossPortraits){
+  const catalogueSrc=homeHtml.match(new RegExp('src="([^"]+)" alt="'+homeSpecies+' Pokémon portrait"'))?.[1];
+  const bossSrc=html.match(new RegExp('<h3>'+bossName+'</h3>[^\\n]*?<img src="([^"]+)"'))?.[1];
+  assert.ok(catalogueSrc&&bossSrc,"Cannot find catalogue and boss portraits for "+bossName);
+  assert.equal(bossSrc,catalogueSrc,"Boss image must reuse working HOME catalogue portrait: "+bossName);
+}
+for(const match of html.matchAll(/<img\\b[^>]*\\bsrc="([^"]+)"/g)){
+  const src=match[1];
+  if(src.startsWith("https://")){
+    assert.match(src,/^https:\\/\\/raw\\.githubusercontent\\.com\\/PokeAPI\\/sprites\\/master\\/sprites\\/pokemon\\/other\\/home\\/(?:398|978)\\.png$/);
+  }else{
+    assert.ok(existsSync(new URL("../"+src,import.meta.url)),"Missing local boss illustration: "+src);
+  }
+}
+
 console.log("PASS: 28 PDF boss cards, 25-link menu, internal assets, responsive cards, offline filters and unchanged player state.");
