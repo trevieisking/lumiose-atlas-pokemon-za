@@ -8,7 +8,8 @@
  const filters=Array.from(document.querySelectorAll("[data-shop-filter]"));
  const status=document.getElementById("shopResultStatus");
  const empty=document.getElementById("shopNoResults");
- if(!Array.isArray(catalog)||catalog.length!==17||cards.length!==17||!search||!status)return;
+ if(!Array.isArray(catalog)||catalog.length===0||cards.length!==catalog.length||!search||!status)return;
+ const totalItems=catalog.reduce((sum,shop)=>sum+shop.items.length,0);
  let currency="all";
  function updateStores(){
    const q=search.value.trim().toLocaleLowerCase();
@@ -20,7 +21,7 @@
      if(match&&q)card.querySelector("details.shop-inventory")?.setAttribute("open","");
    }
    for(const button of filters)button.setAttribute("aria-pressed",String(button.dataset.shopFilter===currency));
-   status.textContent=visible+" of 17 shop groups shown · 190 listed items";
+   status.textContent=visible+" of "+catalog.length+" shop groups shown · "+totalItems+" listed items";
    if(empty)empty.hidden=visible!==0;
  }
  search.addEventListener("input",updateStores);

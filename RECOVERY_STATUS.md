@@ -1,12 +1,19 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — Shops & Mega Shards (PDF restoration PR awaiting checks)
+## Player-confirmed in-game café menu and Premier Ball (21 November 2026)
+
+The owner provided four photographs of a **café truck interaction**, showing the three category menus and the item names in order, then supplied all ten prices separately in chat. Coffee: Ember Roast ₽250, Flamethrower Roast ₽250, Fire Blast Roast ₽250, Burn Up Roast ₽300. Tea: Panchamomile Tea ₽250, Wooloolong Tea ₽300, Roserade Tea ₽350. Something else: Moomoo Milk ₽200, Fresh Water ₽100, Sparkling Water ₽100. The owner also independently confirmed **Premier Ball ₽200** from the game. The photographs do **not** prove the truck's exact street or identify it as **Nouveau Café Truck No. 3**, so the ten drinks are stored as an explicitly player-verified **18th, separate catalogue group** rather than being attributed to the six-page PDF's berry truck. Their menu names/order come from photographs; prices come from the owner's firsthand report. Existing original 17 PDF groups/190 entries, Mega Shard and Screw planners, original source, feedback and player progress remain unchanged. Only the player-confirmed Premier Ball conflict flag is cleared; the Poké Ball and Sharpedonite disagreements stay visible.
+
+**This is a bounded follow-up PR**, not another standalone PDF recovery. Total restored routes remain **8 of 19**, with 11 placeholders still awaiting recovery. The main ChatGPT Site, Supabase and protected feedback system are untouched. Merge/deployment confirmation must be logged after green CI.
+
+
+## Stage 2 update — Shops & Mega Shards (MERGED #23 · PAGES SUCCESS)
 
 Owner-provided six-page **Lumiose shops, items and Mega Shards** PDF was transcribed to `shops.html`: **17 shop/exchange groups** and **190 listed item records** across Pokédollar vendors, Mega Shard exchanges and the Canari plush Colorful Screw desk. The original shop location, availability notes, group inventory, cost, Mega Shard target totals (540 ×4 Drives, separate 999-Shard Magearna request), permanent plush effects and postgame worker lists are preserved. An offline search and two read-only budget planners were added: one for Mega Shards and one for five Canari plush upgrades with the free Red Lv. 1 accounted for. The original guide’s 25-link navigation and Back to walkthrough are preserved; no player state or database calls.
 
 **Evidence qualification:** Bulbapedia, Serebii Pokéarth and other sources disagree on particular Poké Ball, Premier Ball and Sharpedonite prices. The PDF’s prices are retained with visible in-game verification warnings rather than silently overwritten. Some DLC shop prices were absent from the PDF and are explicitly left unspecified.
 
-**Proposed restored routes after PR merge: 8/19; 11 placeholders remaining.** Not considered live until the exact PR HEAD passes all read-only tests and GitHub Pages deploys successfully. No changes to original ChatGPT Site or Supabase.
+**PR #23 passed the recovery suite and merged as `7db9bbddfd2de82778e11853f8b9b35124cc60a6`; GitHub Pages deployment #44932835597 succeeded. At this checkpoint 8/19 standalone routes were restored, with 11 placeholders remaining.** No changes to original ChatGPT Site or Supabase.
 
 
 ## Stage 2 update — Alpha Fieldbook (MERGED #22 · PAGES SUCCESS)
