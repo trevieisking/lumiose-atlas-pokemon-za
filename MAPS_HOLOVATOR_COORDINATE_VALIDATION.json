@@ -4,13 +4,15 @@
   "evidence_batch": "ATLAS-HOLOVATOR-EXTERNAL-MISSION-COORDS-2026-11-21",
   "date": "2026-11-21",
   "scope": "Nine side-mission-associated Holovator approach references only; not an inventory of all 23 Holovator markers or 48 sectors",
-  "status": "research_cross_checked_not_atlas_aligned",
+  "status": "source_mission_deep_links_and_quest_locations_checked_not_atlas_aligned",
   "source_map_page": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
   "source_coordinate_type": "mission marker (not proven Holovator entrance)",
   "source_count_claims": {
     "gamerguides_holovator_markers": 23,
     "gated_side_mission_leads_cross_checked": 9,
-    "non_gated_marker_remainder_not_yet_individually_linked": "not established; requires category-marker deduplication"
+    "non_gated_marker_remainder_not_yet_individually_linked": "not established; requires category-marker deduplication",
+    "source_mission_marker_links_clicked": 9,
+    "holovator_category_marker_ids_individually_matched": 0
   },
   "coordinate_alignment": {
     "atlas_asset": "maps/lumiose-game-map.jpg",
@@ -21,7 +23,10 @@
   "count_checks": {
     "unique_ids": 9,
     "unique_side_missions": 9,
-    "unique_external_xy_pairs": 9
+    "unique_external_xy_pairs": 9,
+    "unique_clickthrough_mission_markers": 9,
+    "quest_sectors_newly_identified_for_previous_unknowns": 2,
+    "unique_device_category_marker_ids_confirmed": 0
   },
   "records": [
     {
@@ -65,7 +70,31 @@
         "https://www.serebii.net/legendsz-a/sidemissions/abreaktimebattle.shtml"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 234541,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=234541",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Rouge Sector 1",
+        "sector_status": "corroborated_quest_sector_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.thonky.com/pokemon-legends-z-a/side-mission-004-a-break-time-battle"
+      },
+      "player_navigation_lead": {
+        "directions": "From Wild Zone 3 travel west toward Rouge Plaza. Find worker Sommi beside the out-of-service Holovator against a building. Battle Sommi, then use the repaired Holovator for rooftop access.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.thonky.com/pokemon-legends-z-a/side-mission-004-a-break-time-battle",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "The worker's correct name is Sommi. Independent accounts describe the Holovator as red before repair and yellow after activation; roof is accessible after the quest. Exact building-face bearing and exit image location are not measured."
     },
     {
       "id": "DR-H-02",
@@ -110,7 +139,31 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 238914,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238914",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Vernal Avenue",
+        "sector_status": "avenue_confirmed_vert_09_sector_still_unproven",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator"
+      },
+      "player_navigation_lead": {
+        "directions": "Go to the northwest side of Wild Zone 1 on Vernal Avenue and find Terra at the Holovator. Investigate the disturbed soil directly in front of the unit and chase away the level 28 Diggersby (catching or defeating it is reported as possible); the Holovator becomes usable.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia and Serebii give Vernal Avenue, not a numbered sector; retain Vert-09 only as Gamer Guides' sector report until street boundary and device marker are aligned."
     },
     {
       "id": "DR-H-03",
@@ -119,8 +172,8 @@
       "slug": "a-holovator-without-power",
       "x": 14670,
       "y": 14907,
-      "sector": null,
-      "sector_status": "unknown",
+      "sector": "Vert-07",
+      "sector_status": "bulbapedia_quest_sector_reported_device_boundary_unverified",
       "near": "South Boulevard; east of Wild Zone 1 near Pokémon Center; southwest of Racine Construction",
       "unlock": "After Canari Quiz Whiz in Main Mission 14, strike the broken Holovator with an Electric-type move",
       "other": [
@@ -153,7 +206,31 @@
         "https://www.serebii.net/legendsz-a/sidemissions/aholovatorwithoutpower.shtml"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 238212,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238212",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Vert Sector 7",
+        "sector_status": "bulbapedia_quest_sector_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power"
+      },
+      "player_navigation_lead": {
+        "directions": "From Vert Pokémon Center in southeast Lumiose, head northeast to Élec beside the disabled Holovator. Use an Electric-type attack on the unit to restart it; then verify the roof landing and exact building facade in-game.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia specifies mission location Vert Sector 7 while Serebii locates the broken unit on South Boulevard. These are complementary locality labels, not a measured sector polygon."
     },
     {
       "id": "DR-H-04",
@@ -196,7 +273,31 @@
         "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 237861,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237861",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "South Boulevard",
+        "sector_status": "boulevard_confirmed_bleu_07_quest_sector_reported_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml"
+      },
+      "player_navigation_lead": {
+        "directions": "Travel south of Wild Zone 12 to South Boulevard and locate maintenance worker Durstin beside the inactive Holovator. Provide a drink to complete the maintenance request; the precise side of the building and roof exit require imagery.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia lists South Boulevard; Gamer Guides labels mission Bleu Sector 7. Do not turn that quest label into a precise device-sector boundary."
     },
     {
       "id": "DR-H-05",
@@ -241,7 +342,31 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 237633,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237633",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Jaune Sector 6",
+        "sector_status": "corroborated_quest_sector_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://gamewith.jp/pokemon-za/524373"
+      },
+      "player_navigation_lead": {
+        "directions": "In Jaune Sector 6, south of Wild Zone 8, find the stalled Holovator and strike it using a physical Fighting-type move. Confirm the actual building face and rooftop arrival later.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://gamewith.jp/pokemon-za/524373",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia confirms Jaune Sector 6 and an unlock after battling Gwynn in Main Mission 19; other guides report availability as Main Mission 20 begins. Retain the progression-boundary caveat."
     },
     {
       "id": "DR-H-06",
@@ -284,7 +409,31 @@
         "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 235024,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235024",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Bleu Sector 3",
+        "sector_status": "corroborated_quest_sector_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml"
+      },
+      "player_navigation_lead": {
+        "directions": "Go to Bleu Sector 3 around Bleu Plaza, near the area north of Wild Zone 12. Defeat the Rust Syndicate grunt standing at the Holovator to gain access, then check the entrance and roof separately.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia independently confirms Bleu Sector 3. Exact placement on the cross-street and roof access level remain unknown."
     },
     {
       "id": "DR-H-07",
@@ -293,8 +442,8 @@
       "slug": "the-burning-gaze-of-watchog",
       "x": 8429,
       "y": 8099,
-      "sector": null,
-      "sector_status": "unknown",
+      "sector": "Magenta-02",
+      "sector_status": "bulbapedia_quest_sector_reported_device_boundary_unverified",
       "near": "Autumnal Avenue; northeast of Wild Zone 7",
       "unlock": "Main Mission 24; defeat Alpha Watchog obstructing Holovator",
       "other": [
@@ -327,7 +476,31 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 237731,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=237731",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Magenta Sector 2",
+        "sector_status": "bulbapedia_quest_sector_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-burning-gaze-of-watchog"
+      },
+      "player_navigation_lead": {
+        "directions": "Travel northeast of Wild Zone 7 toward Autumnal Avenue. Find the Alpha Watchog obstructing the Holovator, then resolve the encounter to make access safe. Confirm the exact sector border and Holovator glyph before plotting.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-burning-gaze-of-watchog",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia lists the quest in Magenta Sector 2; Gamer Guides locates its mission marker along Autumnal Avenue. The device's own category marker and XY remain to be matched."
     },
     {
       "id": "DR-H-08",
@@ -338,7 +511,7 @@
       "y": 5172,
       "sector": null,
       "sector_status": "unknown",
-      "near": "West/southwest of Wild Zone 15",
+      "near": "Hibernal Avenue; west/southwest of Wild Zone 15",
       "unlock": "Main Mission 26; defeat the Manectric and Ampharos disputing in front of Holovator",
       "other": [
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
@@ -370,7 +543,31 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 238913,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238913",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "Hibernal Avenue",
+        "sector_status": "avenue_confirmed_sector_unknown",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-shocking-territorial-dispute"
+      },
+      "player_navigation_lead": {
+        "directions": "From Wild Zone 15 go west toward Hibernal Avenue, and find the Holovator blocked by disputing Manectric and Ampharos. Clear the obstruction before attempting to use the unit.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-shocking-territorial-dispute",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia specifies Hibernal Avenue. No reliable numbered sector or exact side of street has been established."
     },
     {
       "id": "DR-H-09",
@@ -381,7 +578,7 @@
       "y": 14626,
       "sector": "Bleu-08",
       "sector_status": "independently_corroborated",
-      "near": "Bleu Sector 8, southeast of Wild Zone 10, southeast of Café Soleil",
+      "near": "South Boulevard; southeast of Café Soleil / Wild Zone 10; Bleu Sector 8 reported by GameWith",
       "unlock": "Begin Main Mission 31; defeat four Beldum blocking the Holovator",
       "other": [
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
@@ -413,7 +610,31 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/guide/side-missions"
       ],
       "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin."
+      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "source_mission_marker": {
+        "category": "Side Missions",
+        "layer_id": 343,
+        "marker_id": 238206,
+        "deep_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238206",
+        "status": "clicked_source_mission_marker_link_not_holovator_category_marker",
+        "device_marker_identity_confirmed": false
+      },
+      "quest_location_crosscheck": {
+        "source": "Bulbapedia Legends Z-A mission table",
+        "url": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "reported_quest_location": "South Boulevard",
+        "sector_status": "boulevard_confirmed_bleu_08_reported_not_device_pixel",
+        "device_sector_confirmed": false,
+        "rechecked_on": "2026-11-21",
+        "additional_guide": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-beldum-blockade"
+      },
+      "player_navigation_lead": {
+        "directions": "On South Boulevard, southeast of Café Soleil and southeast of Wild Zone 10, locate the Holovator surrounded by four Beldum. Resolve the blockade; do not claim the precise Bleu Sector 8 boundary until aligned.",
+        "confidence": "guide_corroborated_unaligned_route_text",
+        "source": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-beldum-blockade",
+        "not_roof_or_exact_xy_verified": true
+      },
+      "additional_findings_20261121": "Bulbapedia calls this mission South Boulevard; GameWith uses Bleu Sector 8. These locality labels require a real map boundary check before claiming the device belongs to Bleu-08."
     }
   ],
   "explicit_gates": [
@@ -425,5 +646,7 @@
     "Existing owner item/checklist IDs untouched",
     "The 23 source Holovator category markers must each be inspected separately before 23 Atlas pins are claimed"
   ],
-  "next_validation": "Examine exact Gamer Guides Holovator category marker nearest DR-H-01; independently match in-game screenshot and city-map building face, then record separate entrance coordinate. Repeat DR-H-02 onward and continue to non-mission Holovators, then scaffolds then fixed items."
+  "next_validation": "Examine exact Gamer Guides Holovator category marker nearest DR-H-01; independently match in-game screenshot and city-map building face, then record separate entrance coordinate. Repeat DR-H-02 onward and continue to non-mission Holovators, then scaffolds then fixed items.",
+  "evidence_batch_2": "ATLAS-HOLOVATOR-MISSION-LINKS-AND-QUEST-LOCATIONS-2026-11-21",
+  "next_physical_mapping_gate": "Start with DR-H-01: locate its independent Holovator-category glyph; measure mission-to-device offset; calibrate using >=3 landmark points against maps/lumiose-game-map.jpg; verify entrance facade and roof exit in clear imagery before setting atlas_x/atlas_y."
 }
