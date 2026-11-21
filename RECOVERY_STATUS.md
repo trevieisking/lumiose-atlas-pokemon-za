@@ -1,10 +1,17 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — Full Type Chart (PDF restoration PR awaiting tests)
+## Stage 2 update — Alpha Fieldbook (PDF + saved source; PR awaiting checks)
+
+The five-page owner Alpha Fieldbook PDF captures 20 Wild Zone cards, **38 fixed zone targets** with levels/day-night conditions and the extra Alpha methods. Its Zone 20 full 67-species pool was collapsed during PDF export. The original saved MHTML main-page section `src/sections/alphas.html` **does** preserve all 67 names and ranges, so the new standalone `alphas.html` recovers these explicitly from that independent source, not from invented or unseen PDF text. HOME Alpha starter gifts were checked against the official Pokémon HOME site, DLC Alpha Power rates against Serebii and Bulbapedia, and the Mission 40 encounters against Bulbapedia. Search, range filters, source portraits, 25-link menu, map links and a Back to walkthrough action are added without altering original progress or the feedback form.
+
+**Proposed routes after merge: 7/19 restored; 12 placeholders remain.** Not considered deployed until PR and Pages checks succeed. Original ChatGPT Site and Supabase unchanged.
+
+
+## Stage 2 update — Full Type Chart (MERGED #21 · PAGES SUCCESS)
 
 The owner-provided six-page **Complete Type Chart and Weaknesses** PDF supplies the visible type-effectiveness table (its first 12 defence columns) and 18 complete quick-reference summaries. The restored `type-chart.html` adds all **324** move-vs-defender pairs and the missing six columns from the modern Gen VI-onward table (independently verified against Bulbapedia), a mobile-scrollable table and an offline dual-type calculator. Standard rules are distinguished from Rogue Mega battle-specific exceptions. The original 25-link navigation and Back to walkthrough are retained. Dedicated read-only regression tests cover every quick-reference weakness, immunities, 324 cells, 4× and ¼× examples, and existing feedback/static integrity.
 
-**Proposed restored routes after this PR: 6/19; 13 placeholders remaining.** Not considered deployed until the exact PR HEAD passes CI and GitHub Pages reports success. No original Site or Supabase changes.
+**PR #21 passed all read-only checks and merged as `9e6aad066c63b344a5f2b61eda429838436aa9e4`; Pages deployment #44929668532 succeeded. At this checkpoint 6/19 routes were restored, with 13 placeholders remaining.** No original Site or Supabase changes.
 
 
 ## Stage 2 update — Rogue Mega Boss plans (MERGED #20 · PAGES SUCCESS)
