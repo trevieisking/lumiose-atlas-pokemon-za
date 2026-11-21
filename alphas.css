@@ -1,0 +1,34 @@
+/* Scope: standalone PDF-recovered Alpha fieldbook; original guide CSS stays unchanged. */
+.atlas-article .alpha-toolbar{display:flex;gap:13px;align-items:end;flex-wrap:wrap;margin:20px 0 9px}
+.atlas-article .alpha-toolbar label{flex:1 1 230px;display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:850;color:#5f526f}
+.atlas-article .alpha-toolbar input{min-height:44px;padding:10px 12px;border:1px solid #cbbddc;border-radius:10px;background:#fff;font:inherit;font-size:14px;color:#3e3254}
+.atlas-article .alpha-filter-buttons{display:flex;flex-wrap:wrap;gap:7px}
+.atlas-article .alpha-filter-buttons button{border:1px solid #d8cbe8;border-radius:9px;background:#fff;color:#4e4164;font-weight:800;padding:10px 13px;min-height:44px;cursor:pointer}
+.atlas-article .alpha-filter-buttons button[aria-pressed="true"]{border-color:#654a98;background:#654a98;color:#fff}
+.atlas-article .alpha-zone-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:19px 0 32px}
+.atlas-article .alpha-zone-card{border:1px solid #e5dfeb;border-radius:15px;background:#fff;padding:20px;min-width:0;scroll-margin-top:20px}
+.atlas-article .alpha-zone-card[hidden]{display:none}
+.atlas-article .alpha-zone-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.atlas-article .alpha-zone-head .kicker{color:#6d5a93}
+.atlas-article .alpha-zone-head h3{font-size:22px;margin:6px 0}
+.atlas-article .alpha-zone-head img{width:84px;height:84px;object-fit:contain;flex:0 0 84px}
+.atlas-article .alpha-zone-card p{font-size:14px;color:#5c566a}
+.atlas-article .alpha-locations{padding:0;margin:14px 0;list-style:none}
+.atlas-article .alpha-locations li{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:9px 2px;border-top:1px solid #eeebf1;font-size:14px}
+.atlas-article .alpha-target-name{font-weight:850;color:#4a3b60}
+.atlas-article .alpha-level{font-size:12px;font-weight:650;text-align:right;white-space:normal;color:#685e78}
+.atlas-article .alpha-zone-actions{display:flex;gap:9px;flex-wrap:wrap;border-top:1px solid #efeaf3;padding-top:14px;margin-top:10px}
+.atlas-article .alpha-zone-actions a{font-weight:800;font-size:12px}
+.atlas-article .alpha-zone-actions span{font-weight:500}
+.atlas-article .alpha-zone20-pool{border:1px solid #ddd1ec;border-radius:12px;padding:12px 14px;margin-top:13px;background:#fcf9ff}
+.atlas-article .alpha-zone20-pool summary{cursor:pointer;font-weight:850;font-size:14px;color:#63459b;min-height:33px}
+.atlas-article .alpha-zone20-pool:focus-within{border-color:#8e76b7}
+.atlas-article .alpha-zone20-pool .alpha-locations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 15px;max-height:380px;overflow-y:auto;scrollbar-width:thin}
+.atlas-article .alpha-zone20-pool .alpha-locations li{display:flex;align-items:center;justify-content:space-between;padding:9px 0;min-width:0;gap:6px}
+.atlas-article .alpha-source-note{font-size:12px!important;color:#776c88!important;margin:11px 0 0}
+.atlas-article .alpha-dlc-odds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.atlas-article .alpha-dlc-odds>div{background:#f9f5ff;border:1px solid #e4d8ef;border-radius:12px;padding:15px}
+.atlas-article .alpha-dlc-odds strong{display:block;color:#624093;font-size:clamp(23px,3vw,31px);line-height:1.2}
+.atlas-article .alpha-dlc-odds span{font-size:12px;color:#625770}
+@media(max-width:850px){.atlas-article .alpha-zone-grid{grid-template-columns:1fr}.atlas-article .alpha-dlc-odds{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.atlas-article .alpha-zone-card{padding:16px}.atlas-article .alpha-zone-head img{width:66px;height:66px;flex-basis:66px}.atlas-article .alpha-zone20-pool .alpha-locations{grid-template-columns:1fr}.atlas-article .alpha-filter-buttons button{padding:9px 10px}}
