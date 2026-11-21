@@ -16,7 +16,7 @@
 | Legends (10) | `legendaries.html` · Legendary routes | **RESTORED · MERGED #33 · DEPLOYED** — 25 illustrated source-exact encounters (3 story / 2 gift / 13 DLC / 7 Special Scan), expandable original routes, shared obtained checkboxes; gift/scan caveats retained |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED · MERGED #23 · DEPLOYED** — 17 original PDF groups/190 entries + separately identified player-verified café drinks (10 items); 18 groups/200 items, Premier Ball ₽200 confirmed, both offline planners preserved |
-| Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
+| Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | **RESTORED IN PR** — first Z-A transfer → 3 Alpha first partners; 3 HOME dexes → Shiny Volcanion; safe one-way rules; **all 364 PDF-listed species** and manual local checklist; 108 disclosed remote portrait fallbacks |
 | Maps (4) | `maps.html` · Lumiose maps; **not the 48 sector / nine Hyperspace close-ups** | **RESTORED · MERGED #25 · DEPLOYED** — 20 source-aligned city pins, 264 original item entries, 38 fixed Alphas, 25 nearby Screw clues and clearly labelled overview zoom; unavailable close-ups left separate |
 | Rewards (3) | `rewards.html` · Online rewards | PDF CAPTURED |
 | Battles (3) | `battles.html` · Ranked battles | PDF CAPTURED |
@@ -27,6 +27,8 @@
 | Bosses (6) | `index.html#bosses` · Boss battles | INLINE AUDIT |
 
 **Recovery slice completed and deployed:** the 10-page Legends PDF (page 10 is footer only) now has a 25-card restored standalone fieldbook sharing the main guide’s obtained checkmarks. **PR #33** passed source/progress/static/feedback regression tests and GitHub Pages deployment succeeded. **11 of 19 restored routes are live, 8 still pending.** The next captured standalone source candidate is the 14-page Pokémon HOME guide; full 48-sector maps remain an independent open requirement in issue #28. Mystery Gift availability and Special Scan guarantee precision await the planned fresh playthrough.
+
+**Current one-PDF recovery slice:** Pokémon HOME transfer & rewards, all 14 printed pages. The independent PDF-to-text roster has **364 distinct National numbers, 232 Lumiose and 132 Hyperspace** and canonical SHA-256 **`a36169f8a22e9e0d8ec1369f4da29966e5b32b4f3dad5c5396d31b2a319f7cc5`**. Each of the original 232 Lumiose entries was matched against saved `src/sections/pokedex.html` by number, name, type and order. The first-transfer Alpha gift, 3-dex shiny reward and one-way warning were independently cross-checked with official Pokémon HOME/Pokémon notices; no Nintendo-account integration is implied. Image ownership caveat: 236 preserved local dex portraits, 20 existing archive portraits, 108 PokeAPI-hosted fallback images that may not load offline. **Current live count: 11/19; proposed after this PR passes tests and Pages deployment: 12/19 live, 7 still pending.** The 48 precise sector maps remain open in issue #28.
 
 ## Standalone routes still needing a full captured source or separate, fact-checked research
 
@@ -45,7 +47,7 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed, deployed recovery slices:** Mable’s Research (5), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6), Alpha Fieldbook (5), Shops & Mega Shards (6), and Lumiose Maps (4). **Ten of 19 standalone routes are deployed.** The 28-page Item Atlas is restored and verified. **Next map phase (tracked in [issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28)):** establish each of 48 sectors’ real boundary, high-resolution map and confirmed numbered item/Screw/ladder/Holovator coordinates. Do not claim that the 264 source records are all fixed city pickups. Nine Hyperspace close-ups also remain unverified. Preserve the original ChatGPT Site as read-only context.
+**Deployed recovery milestone:** Mable’s Research, Shiny Hunting, Complete Journey, Z-A Royale, Rogue Mega Bosses, Complete Type Chart, Alpha Fieldbook, Shops, Lumiose Maps, 28-page Item Atlas and 10-page Legendary Fieldbook are live (**11 of 19**). The 14-page Pokémon HOME page is the current recovery PR, not yet live. The Item Atlas remains independently verified. **Next map phase (tracked in [issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28)):** establish each of 48 sectors’ real boundary, high-resolution map and confirmed numbered item/Screw/ladder/Holovator coordinates. Do not claim that the 264 source records are all fixed city pickups. Nine Hyperspace close-ups also remain unverified. Preserve the original ChatGPT Site as read-only context.
 
 ## Repeatable one-PDF-at-a-time loop
 

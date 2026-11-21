@@ -1,5 +1,23 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 recovery — 14-page Pokémon HOME guide (PR awaiting tests)
+
+All **14 printed pages** of the exact owner-supplied “Pokémon HOME rewards and transfer guide” PDF were inspected, including full visual layouts. The PDF includes the **first-transfer three Alpha first partners**, a four-step Switch/mobile HOME workflow, the three-dex HOME **Shiny Volcanion** reward, species/form compatibility warnings and the one-way transfer warning, plus a **364-species roster** across pages 4–13 (page 14 is the closing note and footer).
+
+**Exact roster evidence:** the source PDF was extracted with its three-column printed order and separately SHA-256 hashed: `a36169f8a22e9e0d8ec1369f4da29966e5b32b4f3dad5c5396d31b2a319f7cc5`. The resulting **232 Lumiose** and **132 Hyperspace** entries have 364 unique National numbers; all 232 base names/numbers/types/orders agree one-for-one with the preserved `src/sections/pokedex.html`. The page reproduces all 364 names, types, region groups and local PDF context, not just a short transfer summary. All 25 shared menu links, Back to walkthrough, internal guide links, search/three region filters, completed-vs-missing filter, mobile cards and accessible checkboxes are included.
+
+**Artwork disclosure:** not every PDF Pokémon portrait was retained by the original MHTML capture. We located 236 locally saved `dex-art` portraits and 20 further `art` portraits. The remaining **108 Hyperspace species** use a precisely named public GitHub-hosted PokeAPI HOME sprite fallback; this is disclosed in the article, with a textual fallback when no image loads. It is not labelled as original locally recovered artwork, and the page's contents and species names work without those external pictures.
+
+**No game/account integration:** the optional 364 “Registered” ticks are a **manual browser-local checklist**, not evidence that Nintendo HOME contains the species. They use `lumiose-atlas-gh-pages-home-register-v1`, deliberately separate from main site `app.js`’s five-category `lumiose-atlas-reconstruction-v1` serializer so that returning to the main walkthrough cannot silently delete HOME-only marks. Invalid/blocked existing HOME storage is never overwritten. Neither key is synced across devices or to the original ChatGPT Workspace Site. No Supabase writes, Nintendo API connections, game file edits, or permission/auth modifications.
+
+**Source check:** Pokémon HOME's official movement guide verifies the first-deposit Alpha Chikorita/Tepig/Totodile; its 27 April 2026 announcement verifies Shiny Volcanion for completing Lumiose, Hyperspace and Mega Evolution HOME Pokédexes; the official Z-A notice verifies non-returnability to previous games and individual compatibility. The PDF's form notes and 364 species roster remain source-labelled; the HOME Mega Pokédex completion requirement must be checked in HOME itself, since game lists can include nonrequired event-only species.
+
+**Release gate:** exactly ten scope-limited HTML/CSS/JS/data/test/workflow/docs files, source parity digest, 364 HTML/checkmark counts, 256 local and 108 disclosed fallback art, three offline filters, isolated/failure-safe HOME storage, shared 25-link menu, original 17-section static tests, saved progress and live public feedback regression tests. Only merge when all CI passes at exact reviewed branch SHA, then verify GitHub Pages deploy at exact merge SHA. No changes to original ChatGPT Site, Supabase, feedback functions, original walkthrough, `app.js`, main Pokédex or working Item Atlas. Android manual page check remains outstanding.
+
+**Proposed after safe release: 12/19 standalone routes live, seven pending.**
+
+
+
 ## Stage 2 update — Legendary & Mythical Fieldbook (MERGED #33 · PAGES SUCCESS)
 
 The owner’s exact **10-page “Legends” PDF** was visually inspected from pages 1 through 10. Pages 1–9 contain **25 illustrated field cards**; page 10 is only the original footer. The cards correspond exactly to the saved `src/sections/legends.html` records and artwork: **3 Base story** (Xerneas, Yveltal, Zygarde); **2 Gift mission** (Diancie, Mewtwo); **13 Mega Dimension** (Heatran, Darkrai, Groudon, Kyogre, Rayquaza, Meltan, Melmetal, Magearna, Hoopa, Volcanion, Genesect, Marshadow, Zeraora); **7 Special Scan** (Latias, Latios, Cobalion, Terrakion, Virizion, Keldeo, Meloetta).

@@ -46,6 +46,11 @@ on:
       - legendaries.js
       - legendaries-data.js
       - tests/legendaries_recovered.test.mjs
+      - home-connection.html
+      - home-connection.css
+      - home-connection.js
+      - home-dex-data.js
+      - tests/home_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -111,6 +116,10 @@ jobs:
         run: node --check legendaries.js && node --check legendaries-data.js
       - name: Verify 25 exact original Legendary cards and shared progress
         run: node --test tests/legendaries_recovered.test.mjs
+      - name: Check Pokémon HOME catalogue and search JavaScript syntax
+        run: node --check home-connection.js && node --check home-dex-data.js
+      - name: Verify 364 original PDF entries, 256 local artworks, 108 disclosed fallbacks and safe registration tracker
+        run: node --test tests/home_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
