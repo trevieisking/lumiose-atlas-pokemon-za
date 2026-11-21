@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 34 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 35 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -329,6 +329,8 @@
 
 | AT-239 | **Deep Research finished: Holovators → scaffold/ladder routes → item evidence intake** | **A original Workspace Site:** no original-site edit, source modification, feedback/report/ratings deletion or Supabase change. | **B independent GitHub:** research-only [evidence report](MAPS_DEEP_RESEARCH_EVIDENCE_2026-11-21.md), and [mapping manifest](MAPS_UPGRADE_MANIFEST.json) rev 2: independent **Gamer Guides 23 Holovator markers, 132 ladders, 43 bridges**; second-source reported **23 Holovators, 255 ladders** (ladder definition mismatch); nine side-mission gated Holovator *leads*, 12 scaffold *route leads*, 100 specialist Screw checklist entries. Sources/limitations recorded. | **MAP ALIGNMENT PENDING:** 0 verified Atlas XY Holovator pins, 0 scaffold graph nodes, 0 exact item XY/floor pins added; no copied third-party images, no site code or asset changes. Next: SM-01/SM-02 source-to-Atlas marker transforms and 48-sector zoom checks; do not assume source item IDs match archive IDs. | **RESEARCH FILED, A UNTOUCHED, IMPLEMENTATION OPEN** |
 
+| AT-240 | **Step-by-step external coordinate verification: nine Holovator side-mission locations** | **A original Workspace Site:** unchanged; no source access, feedback/ratings/Supabase changes or map-pin publication. | **B research-only:** [9-record coordinate validation JSON](MAPS_HOLOVATOR_COORDINATE_VALIDATION.json) tracks map-space **mission markers** #4 9143,6904; #23 10111,16090; #40 14670,14907; #45 7987,16433; #56 13808,10090; #61 8603,13820; #71 8429,8099; #80 13520,5172; #92 5123,14626, all cross-checked against GameWith/Serebii/other specialist location descriptions. [Master Plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) and manifest rev 3 now specify loop gates and next DR-H-01 true-device alignment. | **Critical:** these are published **mission approach X,Y in Gamer Guides map space, NOT nine confirmed device coordinates, NOT Atlas XY**. Only area/mission unlock verified. External Holovator count 23 still requires individual glyph extraction and landmark-space calibration; exact Holovator/scaffold/item Atlas pins remain **0**. | **NINE MISSION POINTS CHECKED; EXACT DEVICE PINS PENDING; A UNTOUCHED** |
+
 ### Cross-branch dependency and no-loss rule
 
 - [PR #1](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1): Mable's Research and audit — standalone draft from `main`.
@@ -413,6 +415,8 @@
 | 21 Nov 2026 | AT-238 — Owner-approved sector-first map upgrade plan documented | Permanent source-of-truth plan: [MAPS_SECTOR_UPGRADE_MASTER_PLAN.md](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md); [MAPS_UPGRADE_MANIFEST.json](MAPS_UPGRADE_MANIFEST.json), all 48 sector IDs and seven ordered phases; [issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28) open. Existing 19 independent routes and photo-landmark panel preserved; no code, images, local progress, feedback or original-site changes. Next task SM-01 evidence reconciliation, then SM-02 zoom. |
 
 | 21 Nov 2026 | AT-239 — Deep Research completed and source intake recorded | Research ran 22:34:12–22:36:56 UTC, finished successfully. [Evidence report](MAPS_DEEP_RESEARCH_EVIDENCE_2026-11-21.md) and [manifest rev 2](MAPS_UPGRADE_MANIFEST.json) preserve Holovator/map and scaffold/item reference links, nine unlock leads, source ladder count discrepancy and 0 aligned exact pins. No code/assets/feedback/Supabase/Workspace edits; issue #28 stays open. |
+
+| 21 Nov 2026 | AT-240 — Sequential mission-coordinate source validation checkpoint | Nine Gamer Guides *side-mission approach* X/Y pairs cross-checked with game guides, logged with independent source URLs, sector confidence, mission triggers, and missing Holovator entrance/height gates; see [machine-readable JSON](MAPS_HOLOVATOR_COORDINATE_VALIDATION.json), master-plan batch 01 and manifest rev 3. No site code or asset change. 0 confirmed Atlas Holovator XY. |
 
 ## Workspace return and source handoff
 
