@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 4,
+  "revision": 5,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "SM-01 in progress: 9 individually navigable external mission markers and source-supported approach instructions; 2 new quest-sector labels; 0 precisely aligned Holovator entrances",
+  "current_phase": "SM-01 in progress: original ten owner game-map photographs re-inspected, 12 tentative yellow-chevron photo icon groups (15 observations), 6 possible quest-area links, 0 verified Holovator device identities/Atlas XY",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -60,7 +60,10 @@
         "every yellow travel icon is a Holovator",
         "individual scaffold/ladder coordinates",
         "all 48 sector boundary polygons"
-      ]
+      ],
+      "reinspected_original_pixel_content": true,
+      "source_photo_observation_register": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "originals_available_for_current_visual_review": true
     },
     "hyperspace_original_enlarged_layout_images_confirmed": 0,
     "hyperspace_enlarged_layout_count_claimed_by_archived_guide": 9
@@ -132,7 +135,7 @@
       "status": "in_progress",
       "dependencies": [],
       "acceptance": "48 labelled sectors and 20 Wild Zones traced to source/captures; boundary confidence assigned; no fabricated polygons",
-      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment."
+      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment. Batch 03: all ten original private photographs recovered and re-inspected; 12 provisional photo marker groups / 15 approximate photo-pixel occurrences, with 6 possible mission-area links, but zero confirmed device or source-to-Atlas point alignment."
     },
     {
       "id": "SM-02",
@@ -856,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "DR-H-01 actual Holovator-category point vs mission marker 234541; >=3 landmark registration; facade/roof evidence",
+    "next_safe_record": "PHOTO-C03 and PHOTO-C04: verify image chevron identity against actual device glyph, match building facade and roof; rectify photo with >=3 landmarks; then H-01..remaining",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -883,7 +886,26 @@
       "South Boulevard (DR-H-09)"
     ],
     "ground_approach_text_status": "9 guide-corroborated directions in register; source text only, NOT aligned building/floor coordinate routes",
-    "next_gate": "Source Side Missions layer ID 343 is not the Holovator category; never transpose quest markers or source XY into confirmed device-layer points."
+    "next_gate": "Source Side Missions layer ID 343 is not the Holovator category; never transpose quest markers or source XY into confirmed device-layer points.",
+    "owner_original_screenshot_source": {
+      "source": "Ten user-supplied original in-game TV map photos, re-inspected from previous-conversation file library",
+      "record": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "source_files_found": 10,
+      "pixel_size": "1152x1536 camera photos",
+      "candidate_icon_groups": 12,
+      "photo_icon_observations": 15,
+      "tentative_mission_area_links": 6,
+      "confirmed_holovator_device_marker_matches": 0,
+      "atlas_holovator_entry_xy_verified": 0,
+      "source_assets_embedded_in_public_repo": false,
+      "permission_provenance": "originals privately held, references only",
+      "warning": "approximate unrectified photo-pixel centres are NOT Atlas XY or proven Holovator glyphs; do not publish pins",
+      "next_priority_ids": [
+        "PHOTO-C03",
+        "PHOTO-C04",
+        "PHOTO-C01"
+      ]
+    }
   },
   "last_coordinate_source_qa_on": "2026-11-21",
   "coordinate_source_qa_checkpoints": [
@@ -899,6 +921,18 @@
         "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
         "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator"
       ]
+    },
+    {
+      "id": "ATLAS-OWNER-PHOTO-LOCATION-LEADS-2026-11-21",
+      "record": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "source_owner_images_inspected": 10,
+      "photo_marker_candidate_groups": 12,
+      "photo_icon_instances_observed": 15,
+      "possible_quest_area_links": 6,
+      "device_category_markers_verified": 0,
+      "exact_atlas_device_pins": 0,
+      "photo_copy_in_repo": false,
+      "atlas_image_registration": "not established"
     }
   ]
 }
