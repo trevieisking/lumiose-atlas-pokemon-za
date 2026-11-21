@@ -1,0 +1,13 @@
+{
+  "name": "lumiose-atlas-reconstruction",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Independent editable reconstruction of a Pokémon Legends: Z-A fan guide from user-saved browser content.",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 tests/validate_static.py",
+    "dev": "python3 -m http.server 8765"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
