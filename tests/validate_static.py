@@ -46,6 +46,29 @@ else:
         if not path.is_file():errors.append('Missing saved resource '+str(path))
         elif hashlib.sha256(path.read_bytes()).hexdigest()!=asset['sha256']:errors.append('Modified saved resource '+str(path))
     print(f'Parsed {len(scan.sections)} sections, {len(scan.href)} page links, {len(scan.src)} image/script references and {len(manifest["files"])} captured resources.')
+
+# Verify the first independently researched article; guard against regressions
+# to the recovered placeholder or accidentally incomplete level tables.
+mable_page=ROOT/'mable-research.html'
+if not mable_page.exists():
+    errors.append("Mable's Research page missing")
+else:
+    mable_text=mable_page.read_text(encoding='utf-8')
+    research_levels=re.findall(r'<tr id="research-level-(\d+)"',mable_text)
+    if research_levels != [str(n) for n in range(2,51)]:
+        errors.append("Mable research levels 2–50 must each occur once in order")
+    for marker in [
+        'Gold Bottle Cap ×3', 'Master Ball ×1', 'Shiny Charm ×1',
+        'TM102 — Focus Blast', 'href="index.html#walkthrough"',
+        '<aside aria-label="Guide navigation"',
+    ]:
+        if marker not in mable_text:
+            errors.append("Mable's Research missing verified field: "+marker)
+    if 'ARTICLE NOT YET RECOVERED' in mable_text:
+        errors.append("Mable's Research has regressed to a placeholder")
+    if 'service_role_key' in mable_text or 'sk-proj-' in mable_text:
+        errors.append("Mable's Research contains credentials")
+
 if errors:
     print('FAILED:',*errors,sep='\n- ')
     sys.exit(1)

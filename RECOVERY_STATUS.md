@@ -1,5 +1,7 @@
 # Recovery status — 21 November 2026
 
+> **Editorial audit checkpoint (21 Nov 2026):** A documented 42-mission and 17-section quality inventory is in `docs/qa/`. The Mable's Research placeholder has been replaced by a sourced levels 2–50 reward page on the audit branch. This is *not* certification of all gameplay facts. See `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md` and `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`. Original live ChatGPT Site and Supabase remain untouched.
+
 ## This is a reconstruction, not the original source
 
 The original ChatGPT Site project could not be opened through the connected tools. A saved browser MHTML capture dated 20 November 2026 contained the rendered main page, four stylesheet resources (including a Google Fonts resource), and hundreds of images. Browser MHTML **does not contain the original development source or executable JS modules** and should not be misrepresented as a full source export.
