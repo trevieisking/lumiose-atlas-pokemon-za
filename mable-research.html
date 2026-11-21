@@ -1,10 +1,166 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Mable Research — Lumiose Atlas Reconstruction</title>
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reconstruction.css"></head>
-<body class="unrecovered-route"><header class="topbar"><a class="brand" href="index.html#home"><span class="brand-mark">Z<span>↗</span>A</span><span>LUMIOSE<br><strong>ATLAS</strong></span></a><div class="top-center">THE FREE ONLINE PLAYER’S GUIDE</div></header>
-<main class="unrecovered-page"><p class="kicker">REBUILD STATUS · ARTICLE NOT YET RECOVERED</p><h1>Mable Research</h1>
-<p>This standalone article is linked from the original guide, but its source was not contained in the saved browser snapshot. This is a clear placeholder, not a replacement walkthrough or a verified route.</p>
-<p>The recovered guide already contains related information in the <strong>walkthrough</strong> section.</p>
-<p><a class="button primary" href="index.html#walkthrough">Open the recovered guide ↗</a> <a class="button ghost" href="index.html#home">Back to guide overview</a> <a class="button ghost" href="index.html#walkthrough">Back to walkthrough</a></p>
-<p class="unrecovered-note">We will replace this placeholder only when we can recover or independently verify its full contents. The original live website remains separate and unchanged.</p></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Every Mable's Research reward in Pokémon Legends: Z-A from level 2 to level 50, plus instructions for using research requests.">
+<title>Mable's Research: Levels 2–50 & Rewards | Lumiose Atlas</title>
+<link href="styles.css" rel="stylesheet"><link href="reconstruction.css" rel="stylesheet"><link href="favicon.png" rel="icon">
+<style>
+.research-article{max-width:1120px;margin:0 auto 70px}
+.research-intro{padding:34px 38px;background:linear-gradient(125deg,#eae2fb,#f3effe);border-radius:16px;margin-bottom:24px}
+.research-intro h1{font-size:clamp(30px,4vw,51px);line-height:1.14;color:#33285b;margin:10px 0 12px}
+.research-intro p{max-width:740px;line-height:1.7;color:#52466f}
+.research-actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.research-actions a{display:inline-flex;padding:11px 15px;border:1px solid #a798ce;border-radius:10px;background:#fff;color:#3b2e75;text-decoration:none;font-weight:700}
+.research-panel{margin:18px 0 26px;background:#fff;border:1px solid #e3ddee;border-radius:15px;padding:22px 25px}
+.research-panel h2{font-size:clamp(20px,3vw,30px);margin:0 0 12px;color:#30294c}
+.research-panel h3{margin:18px 0 8px;font-size:19px;color:#30294c}
+.research-panel p,.research-panel li{color:#49455c;line-height:1.7}
+.research-panel li{margin:8px 0}
+.research-tablewrap{max-width:100%;overflow-x:auto;border-radius:10px;border:1px solid #e4deec}
+.research-table{width:100%;border-collapse:collapse;background:white;min-width:490px;font-size:14px}
+.research-table th,.research-table td{padding:11px 13px;border-bottom:1px solid #e8e4ee;text-align:left}
+.research-table thead th{background:#44316f;color:#fff}
+.research-table tbody tr:nth-child(2n){background:#faf8fe}
+.research-table tbody th{font-weight:800;color:#4a327a}
+.research-table tbody tr:target{outline:2px solid #866ac2;outline-offset:-2px;background:#eee7ff}
+.research-note{font-size:13px;color:#686077!important}
+.research-shortcuts{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 17px}
+.research-shortcuts a{font-size:13px;padding:7px 11px;border-radius:8px;background:#efeaf8;color:#45336e;font-weight:700}
+@media(max-width:760px){.research-intro{padding:23px 20px}.research-panel{padding:18px 15px}.research-table{font-size:13px}.research-table th,.research-table td{padding:10px 8px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to research guide</a>
+<header class="topbar">
+<a aria-label="Lumiose Atlas home" class="brand" href="index.html#home"><span class="brand-mark">Z<span>↗</span>A</span><span>LUMIOSE<br/><strong>ATLAS</strong></span></a>
+<div class="top-center">THE FREE ONLINE PLAYER’S GUIDE <span>·</span> POKÉMON LEGENDS: Z-A</div>
+<div class="top-right"><span class="live-dot"></span> FIELD NOTES / 2026</div>
+</header>
+<div class="shell">
+<aside aria-label="Guide navigation" class="sidebar">
+<div class="side-kicker">EXPLORE THE GUIDE</div>
+<nav id="sideNav">
+<a data-view="home" href="index.html#home"><span>◈</span> Overview</a>
+<a href="journey.html"><span>◎</span> Complete journey route</a>
+<a data-view="walkthrough" href="index.html#walkthrough"><span>01</span> Walkthrough</a>
+<a data-view="sidequests" href="index.html#sidequests"><span>+</span> Side missions</a>
+<a data-view="dimension" href="index.html#dimension"><span>✧</span> Mega Dimension</a>
+<a data-view="bosses" href="index.html#bosses"><span>02</span> Boss battles</a>
+<a href="boss-guide.html"><span>✶</span> Full boss plans</a>
+<a href="royale-guide.html"><span>⚔</span> Story Z-A Royale</a>
+<a href="type-chart.html"><span>×2</span> Type matchups</a>
+<a data-view="alphas" href="index.html#alphas"><span>03</span> Alpha fieldbook</a>
+<a data-view="maps" href="index.html#maps"><span>↗</span> Lumiose maps</a>
+<a data-view="items" href="index.html#items"><span>✦</span> Item atlas</a>
+<a class="active" aria-current="page" href="mable-research.html"><span>✧</span> Mable’s research &amp; rewards</a>
+<a href="shiny-hunting.html"><span>✳</span> Shiny hunting</a>
+<a href="shops.html"><span>₽</span> Shops &amp; Mega Shards</a>
+<a data-view="legends" href="index.html#legends"><span>★</span> Legendary routes</a>
+<a data-view="secrets" href="index.html#secrets"><span>?</span> Secrets &amp; tricks</a>
+<a href="home-connection.html"><span>⌂</span> Pokémon HOME</a>
+<a data-view="rewards" href="index.html#rewards"><span>✧</span> Online rewards</a>
+<a data-view="battles" href="index.html#battles"><span>⚔</span> Ranked battles</a>
+<a data-view="berries" href="index.html#berries"><span>04</span> Ultimate berry book</a>
+<a data-view="starters" href="index.html#starters"><span>05</span> Starter stats</a>
+<a data-view="pokedex" href="index.html#pokedex"><span>06</span> Lumiose Pokédex</a>
+<a data-view="essentials" href="index.html#essentials"><span>07</span> Essentials</a>
+<a data-view="sources" href="index.html#sources"><span>↗</span> Sources &amp; credits</a>
+</nav>
+<div class="sidebar-bottom"><p>Track missions on the <a href="index.html#walkthrough">walkthrough page</a>.</p></div></aside>
+<main id="main" tabindex="-1">
+<div class="rebuild-notice" role="status">Independently researched page in the reconstructed guide · <a href="index.html#walkthrough">Back to walkthrough</a></div>
+<article class="research-article">
+<header class="research-intro">
+<span class="kicker">POKÉMON LEGENDS: Z-A · LAB RESEARCH</span>
+<h1>Mable's Research<br>and all level rewards</h1>
+<p>Earn research points by exploring Lumiose, completing field tasks and registering Pokémon. Find exactly what you earn at each research level without leaving this guide.</p>
+<div class="research-actions"><a href="index.html#walkthrough">← Back to walkthrough</a><a href="index.html#home">Guide overview</a><a href="#rewards">See every reward ↓</a></div>
+</header>
+<section class="research-panel" aria-labelledby="research-start">
+<h2 id="research-start">How to unlock and claim rewards</h2>
+<ol>
+<li><strong>Complete the early Pokédex tutorial in Main Mission 3.</strong> Catch and register at least five different species, then visit the Pokémon Research Lab as the story instructs.</li>
+<li><strong>Open your main menu with X</strong> and choose Mable's Research. This is where the available requests, progress and earned rewards appear.</li>
+<li><strong>Complete research requests to gain points.</strong> Registration, evolution, catching Pokémon of different types, surveying Wild Zones and Mega Evolution-related progress are examples of research activities. Individual tasks have their own requirements, which should be checked in the game menu.</li>
+<li><strong>Claim rewards through the Research interface.</strong> Increasing the level unlocks the next reward; revisit the menu regularly so you do not overlook TMs and useful items.</li>
+</ol>
+<p class="research-note">You do not need to finish the entire Pokédex before obtaining the Shiny Charm: the unlock is tied to Mable's Research level 50.</p>
+</section>
+<section class="research-panel" id="rewards" aria-labelledby="research-rewards">
+<h2 id="research-rewards">Complete research reward list: Level 2–50</h2>
+<p>These level milestones and quantities have been cross-checked with Serebii and Bulbapedia; the names of TMs also agree with Pokémon Database.</p>
+<nav class="research-shortcuts" aria-label="Jump to research milestone"><a href="#research-level-2">2–10</a><a href="#research-level-11">11–20</a><a href="#research-level-21">21–30</a><a href="#research-level-31">31–40</a><a href="#research-level-41">41–50</a></nav>
+<div class="research-tablewrap"><table class="research-table"><thead><tr><th scope="col">Level</th><th scope="col">Reward</th><th scope="col">Notes</th></tr></thead><tbody>
+<tr id="research-level-2"><th scope="row">2</th><td>TM004 — Rock Smash</td><td>Research level-up reward</td></tr>
+<tr id="research-level-3"><th scope="row">3</th><td>TM046 — Mud Shot</td><td>Research level-up reward</td></tr>
+<tr id="research-level-4"><th scope="row">4</th><td>TM017 — Protect</td><td>Research level-up reward</td></tr>
+<tr id="research-level-5"><th scope="row">5</th><td>TM021 — Thunder Fang</td><td>Research level-up reward</td></tr>
+<tr id="research-level-6"><th scope="row">6</th><td>TM014 — Fire Fang</td><td>Research level-up reward</td></tr>
+<tr id="research-level-7"><th scope="row">7</th><td>TM015 — Ice Fang</td><td>Research level-up reward</td></tr>
+<tr id="research-level-8"><th scope="row">8</th><td>TM070 — Whirlpool</td><td>Research level-up reward</td></tr>
+<tr id="research-level-9"><th scope="row">9</th><td>TM061 — Shadow Claw</td><td>Research level-up reward</td></tr>
+<tr id="research-level-10"><th scope="row">10</th><td>Exp. Candy S ×10</td><td>Research level-up reward</td></tr>
+<tr id="research-level-11"><th scope="row">11</th><td>TM016 — Light Screen</td><td>Research level-up reward</td></tr>
+<tr id="research-level-12"><th scope="row">12</th><td>TM042 — Giga Drain</td><td>Research level-up reward</td></tr>
+<tr id="research-level-13"><th scope="row">13</th><td>TM024 — Ice Punch</td><td>Research level-up reward</td></tr>
+<tr id="research-level-14"><th scope="row">14</th><td>TM003 — Psyshock</td><td>Research level-up reward</td></tr>
+<tr id="research-level-15"><th scope="row">15</th><td>TM023 — Thunder Punch</td><td>Research level-up reward</td></tr>
+<tr id="research-level-16"><th scope="row">16</th><td>TM032 — Double Team</td><td>Research level-up reward</td></tr>
+<tr id="research-level-17"><th scope="row">17</th><td>TM029 — Fire Punch</td><td>Research level-up reward</td></tr>
+<tr id="research-level-18"><th scope="row">18</th><td>TM078 — Bulldoze</td><td>Research level-up reward</td></tr>
+<tr id="research-level-19"><th scope="row">19</th><td>TM082 — U-turn</td><td>Research level-up reward</td></tr>
+<tr id="research-level-20"><th scope="row">20</th><td>TM059 — Zen Headbutt</td><td>Research level-up reward</td></tr>
+<tr id="research-level-21"><th scope="row">21</th><td>TM030 — Swords Dance</td><td>Research level-up reward</td></tr>
+<tr id="research-level-22"><th scope="row">22</th><td>TM084 — Flash Cannon</td><td>Research level-up reward</td></tr>
+<tr id="research-level-23"><th scope="row">23</th><td>TM012 — Rock Slide</td><td>Research level-up reward</td></tr>
+<tr id="research-level-24"><th scope="row">24</th><td>TM067 — Thunderbolt</td><td>Research level-up reward</td></tr>
+<tr id="research-level-25"><th scope="row">25</th><td>Exp. Candy M ×10</td><td>Research level-up reward</td></tr>
+<tr id="research-level-26"><th scope="row">26</th><td>TM006 — Calm Mind</td><td>Research level-up reward</td></tr>
+<tr id="research-level-27"><th scope="row">27</th><td>TM077 — Poison Jab</td><td>Research level-up reward</td></tr>
+<tr id="research-level-28"><th scope="row">28</th><td>TM068 — Heat Wave</td><td>Research level-up reward</td></tr>
+<tr id="research-level-29"><th scope="row">29</th><td>TM073 — Surf</td><td>Research level-up reward</td></tr>
+<tr id="research-level-30"><th scope="row">30</th><td>TM087 — Iron Tail</td><td>Research level-up reward</td></tr>
+<tr id="research-level-31"><th scope="row">31</th><td>TM097 — Heal Block</td><td>Research level-up reward</td></tr>
+<tr id="research-level-32"><th scope="row">32</th><td>TM053 — Sludge Bomb</td><td>Research level-up reward</td></tr>
+<tr id="research-level-33"><th scope="row">33</th><td>TM106 — Thunder</td><td>Research level-up reward</td></tr>
+<tr id="research-level-34"><th scope="row">34</th><td>TM069 — Earthquake</td><td>Research level-up reward</td></tr>
+<tr id="research-level-35"><th scope="row">35</th><td>TM055 — Giga Impact</td><td>Research level-up reward</td></tr>
+<tr id="research-level-36"><th scope="row">36</th><td>Bottle Cap ×10</td><td>Research level-up reward</td></tr>
+<tr id="research-level-37"><th scope="row">37</th><td>TM107 — Close Combat</td><td>Research level-up reward</td></tr>
+<tr id="research-level-38"><th scope="row">38</th><td>TM083 — Nasty Plot</td><td>Research level-up reward</td></tr>
+<tr id="research-level-39"><th scope="row">39</th><td>TM064 — Solar Beam</td><td>Research level-up reward</td></tr>
+<tr id="research-level-40"><th scope="row">40</th><td>TM096 — Hydro Pump</td><td>Research level-up reward</td></tr>
+<tr id="research-level-41"><th scope="row">41</th><td>TM038 — Fire Blast</td><td>Research level-up reward</td></tr>
+<tr id="research-level-42"><th scope="row">42</th><td>TM105 — Blizzard</td><td>Research level-up reward</td></tr>
+<tr id="research-level-43"><th scope="row">43</th><td>Exp. Candy L ×10</td><td>Research level-up reward</td></tr>
+<tr id="research-level-44"><th scope="row">44</th><td>TM102 — Focus Blast</td><td>Research level-up reward</td></tr>
+<tr id="research-level-45"><th scope="row">45</th><td>TM050 — Overheat</td><td>Research level-up reward</td></tr>
+<tr id="research-level-46"><th scope="row">46</th><td>TM093 — Outrage</td><td>Research level-up reward</td></tr>
+<tr id="research-level-47"><th scope="row">47</th><td>Exp. Candy XL ×10</td><td>Research level-up reward</td></tr>
+<tr id="research-level-48"><th scope="row">48</th><td>Gold Bottle Cap ×3</td><td>Late-game reward</td></tr>
+<tr id="research-level-49"><th scope="row">49</th><td>Master Ball ×1</td><td>Late-game reward</td></tr>
+<tr id="research-level-50"><th scope="row">50</th><td>Shiny Charm ×1</td><td>Ultimate research milestone</td></tr>
+</tbody></table></div>
+<p class="research-note">All 49 level-up rewards (2 through 50) are listed. Research starts at level 1, which is not a reward milestone.</p>
+</section>
+<section class="research-panel" aria-labelledby="research-aim">
+<h2 id="research-aim">What to prioritise while playing</h2>
+<ul>
+<li><strong>Early game:</strong> Register new species as you explore, then check Research after each new Wild Zone or batch of evolutions.</li>
+<li><strong>Mid-game:</strong> Use the TM rewards to improve coverage for the next promotion or Rogue Mega battle.</li>
+<li><strong>Late game:</strong> Level 48 gives <strong>three Gold Bottle Caps</strong>, level 49 gives a <strong>Master Ball</strong>, and level 50 gives the <strong>Shiny Charm</strong>.</li>
+</ul>
+<p>Research tasks can change as the story advances. This table lists the <em>level rewards</em>, not every tier of every individual request; the request-by-request task catalogue is a separate audit item.</p>
+</section>
+<section class="research-panel">
+<h2>Accuracy and sources</h2>
+<p>This page is newly researched for the reconstructed site, not restored from the unavailable original article. Reward values were checked against the official Mable character description and two independent specialist references. For evidence links and unresolved discrepancies, see the editorial audit in the repository.</p>
+<p><a href="index.html#sources">Sources and credits</a> · <a href="index.html#walkthrough">Back to walkthrough</a> · <a href="index.html#home">Guide overview</a></p>
+</section>
+</article>
+</main>
+</div>
+</body>
+</html>
