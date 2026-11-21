@@ -26,6 +26,11 @@ on:
       - alphas.css
       - alphas.js
       - tests/alphas_recovered.test.mjs
+      - shops.html
+      - shops.css
+      - shops.js
+      - shops-data.js
+      - tests/shops_recovered.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -73,6 +78,10 @@ jobs:
         run: node --check alphas.js
       - name: Compare 20 source zone cards, Zone 20 pool and search behaviour
         run: node --test tests/alphas_recovered.test.mjs
+      - name: Validate shops catalog and planner JavaScript
+        run: node --check shops.js && node --check shops-data.js
+      - name: Verify 190 PDF shop entries, currencies and offline calculators
+        run: node --test tests/shops_recovered.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression

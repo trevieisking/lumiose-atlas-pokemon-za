@@ -11,11 +11,11 @@
 | Every Rogue Mega Boss: Counters and Moves (12) | `boss-guide.html` · Full boss plans | **RESTORED · MERGED #20 · DEPLOYED** — 16 story, 10 Mega Dimension, 2 finale plans, searchable boss cards |
 | Z-A Royale: Every Promotion Battle (7) | `royale-guide.html` · Story Z-A Royale | **RESTORED · MERGED #19 · DEPLOYED** — 10 illustrated promotion teams, Canari quiz and story interruptions |
 | Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | **RESTORED · MERGED #21 · DEPLOYED** — 18 quick-reference cards, 324-cell chart and offline dual-type calculator; clipped columns independently checked |
-| Alphas (5) | `alphas.html` · Alpha fieldbook | **RESTORED IN PR** — 20 Wild Zones, 38 fixed targets; 67 Zone 20 pool entries recovered separately from saved main page; HOME, fossils and DLC |
+| Alphas (5) | `alphas.html` · Alpha fieldbook | **RESTORED · MERGED #22 · DEPLOYED** — 20 zones, 38 fixed targets and saved 67-entry Zone 20 pool; HOME, fossils and DLC |
 | Items (28) | `items.html` · Item atlas | PDF CAPTURED |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
 | Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
-| Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | PDF CAPTURED |
+| Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | **RESTORED IN PR** — 17 shop/exchange groups, 190 listed items, search, shard/screw planners and marked disputed prices |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
 | Maps (4) | `maps.html` · Lumiose maps; **does not capture every linked map close-up** | PDF CAPTURED |
 | Rewards (3) | `rewards.html` · Online rewards | PDF CAPTURED |
@@ -43,7 +43,7 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed, deployed recovery slices:** Mable’s Research & Rewards (5 pages), Shiny Hunting Routes & Tactics (3 pages), Complete Journey Route (46 pages), Z-A Royale promotion teams (7 pages), Rogue Mega Boss Plans (12 pages), and Complete Type Chart (6 pages) — each verified, merged and deployed. **Current PR slice:** Alpha Fieldbook (5 pages), combining printed fixed-zone targets with the saved main-page's otherwise collapsed Zone 20 pool. **Next candidate after merge:** Shops & Mega Shards (6 pages), then maps/items, keeping map search-area limitations explicit. Preserve the original ChatGPT Site as read-only context.
+**Completed, deployed recovery slices:** Mable’s Research (5 pages), Shiny Hunting (3), Complete Journey (46), Z-A Royale (7), Rogue Mega Bosses (12), Complete Type Chart (6) and Alpha Fieldbook (5). All seven passed CI and GitHub Pages deployment. **Current PR slice:** Shops & Mega Shards (6 pages), with an offline catalog and currency-planning tools. **Next candidate after this PR:** the four-page Lumiose Maps PDF, then the item atlas; all map close-up limitations remain explicit. Preserve the original ChatGPT Site as read-only context.
 
 ## Repeatable one-PDF-at-a-time loop
 
