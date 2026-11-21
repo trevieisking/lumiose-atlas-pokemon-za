@@ -161,6 +161,22 @@
       row.appendChild(jump);
       list.appendChild(row);
     }
+    const originalZoom = Array.from(document.querySelectorAll('.zoom-map-frame')).find((frame) => {
+      const text = frame.getAttribute('aria-label') || '';
+      return text === `Enlarged map near Wild Zone ${zone}`;
+    });
+    const closeCard = originalZoom?.closest('.zone-close-card');
+    if (closeCard) {
+      const zoom = document.createElement('details');
+      zoom.className = 'atlas-selected-zoom';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Open enlarged numbered map for this zone';
+      zoom.appendChild(summary);
+      const cloned = closeCard.cloneNode(true);
+      cloned.querySelectorAll('[id]').forEach((child) => child.removeAttribute('id'));
+      zoom.appendChild(cloned);
+      section.appendChild(zoom);
+    }
     section.appendChild(list);
     const previewHeading = Array.from(host.querySelectorAll('h4')).find((h) => h.textContent === 'Item checklist preview');
     if (previewHeading) host.insertBefore(section, previewHeading);
@@ -173,6 +189,14 @@
     currentZone = n;
     buildCityPins(n);
     buildMappedChecklist(n);
+    const info = $('#atlasMap')?.closest('.atlas-map-wrap')?.querySelector('.mapped-item-info');
+    if (info) {
+      const name = info.querySelector('b');
+      const detail = info.querySelector('small');
+      const total = (catalog.zones[String(n)] || []).length;
+      if (name) name.textContent = `Wild Zone ${pad(n)}: ${total} numbered item pins`;
+      if (detail) detail.textContent = 'Tap a pin for the item name, or open the enlarged map in the numbered tick list. Positions are approximate.';
+    }
     syncCompletion();
   }
 
@@ -208,7 +232,10 @@
     if (locate) {
       const entry = byRef.get(locate.dataset.focusMapPin);
       if (!entry) return;
-      const pin = $(`#atlasPins [data-pin-ref="${ref(entry)}"]`);
+      const zoom = $('.atlas-mapped-checklist .atlas-selected-zoom');
+      if (zoom) zoom.open = true;
+      const pin = $(`.atlas-mapped-checklist .zoom-map-frame [data-pin-ref="${ref(entry)}"]`)
+        || $(`#atlasPins [data-pin-ref="${ref(entry)}"]`);
       if (pin) {
         pin.focus({preventScroll: true});
         pin.scrollIntoView({block: 'nearest', behavior: 'smooth'});

@@ -69,3 +69,8 @@
   .atlas-pin-locate { padding: 7px; font-size: 10px; }
   .atlas-map-warning { font-size: 11px; }
 }
+
+.atlas-selected-zoom { border: 1px solid #dcd3ea; border-radius: 9px; overflow: hidden; margin: 0 0 12px; }
+.atlas-selected-zoom > summary { font-weight: 800; font-size: 12px; padding: 11px; cursor: pointer; color: #3c2e70; background: #f0ebfa; }
+.atlas-selected-zoom .zone-close-card { margin: 0; }
+.atlas-selected-zoom .zoom-map-frame { max-width: 100%; }

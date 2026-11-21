@@ -17,13 +17,14 @@
 4. When a mapped row has a unique match, ticking it updates the original stored checkbox ID. Ticking the original checkbox likewise updates the map row; repeated instances of that checkbox within mission cards stay visually synchronized.
 5. For ambiguous matches, map pins have a **separate local-only checkbox** under the storage key \`lumiose-atlas-mapped-pins-v1\`. They are clearly labelled *match unverified*, not represented as a definite existing checklist entry.
 6. Each pin retains its original title/name, source map coordinate, source ID and approximate-position warning. The map map-view overlay only shows the selected zone to avoid overcrowding; the rest of the zone centres remain selectable.
-7. Original images, map positions, 42 mission cards, 203 side/EX cards, 232 saved Pokédex cards, Supabase, domain settings and original ChatGPT Site are **unchanged**.
-8. Old source checkboxes keep their identifiers: \`data-pickup="zone-row"\`. This change is not a database migration.
+7. Where city pins overlap, the zone panel includes an **enlarged numbered close-up** cloned from the existing mission map; **Find #NN** expands it and focuses the corresponding pin without changing the recovered coordinates.
+8. Original images, map positions, 42 mission cards, 203 side/EX cards, 232 saved Pokédex cards, Supabase, domain settings and original ChatGPT Site are **unchanged**.
+9. Old source checkboxes keep their identifiers: \`data-pickup="zone-row"\`. This change is not a database migration.
 
 ## QA
 - Source-based pin coverage: 146/146 indexed, 20/20 zones, 111 confident matches, 35 explicit uncertain matches.
 - Local JavaScript syntax check passed, and a Chromium interaction test over the recovered page confirmed Zone 1 has 8 numbered map pins and rows; Zone 2 has 4; linked item checkbox sync works; Zone 20 has 4.
-- Desktop and mobile static renders show no page JavaScript errors.
+- Desktop and mobile static renders show no page JavaScript errors. Local phone interaction tests confirmed the enlarged close-up opens and focuses the correct pin, while item preview text clearly separates the item, location description and both numbering systems.
 - **Still required:** branch-specific full browser/device checks, visual collision review for crowded zones, verify floor/roof coordinates in actual gameplay and confirm integration with draft PR #3 before publication.
 
 ## Maintenance rule
