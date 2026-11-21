@@ -1,6 +1,6 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 recovery — 14-page Pokémon HOME guide (PR awaiting tests)
+## Stage 2 recovery — 14-page Pokémon HOME guide (MERGED #35 · PAGES SUCCESS)
 
 All **14 printed pages** of the exact owner-supplied “Pokémon HOME rewards and transfer guide” PDF were inspected, including full visual layouts. The PDF includes the **first-transfer three Alpha first partners**, a four-step Switch/mobile HOME workflow, the three-dex HOME **Shiny Volcanion** reward, species/form compatibility warnings and the one-way transfer warning, plus a **364-species roster** across pages 4–13 (page 14 is the closing note and footer).
 
@@ -12,9 +12,9 @@ All **14 printed pages** of the exact owner-supplied “Pokémon HOME rewards an
 
 **Source check:** Pokémon HOME's official movement guide verifies the first-deposit Alpha Chikorita/Tepig/Totodile; its 27 April 2026 announcement verifies Shiny Volcanion for completing Lumiose, Hyperspace and Mega Evolution HOME Pokédexes; the official Z-A notice verifies non-returnability to previous games and individual compatibility. The PDF's form notes and 364 species roster remain source-labelled; the HOME Mega Pokédex completion requirement must be checked in HOME itself, since game lists can include nonrequired event-only species.
 
-**Release gate:** exactly ten scope-limited HTML/CSS/JS/data/test/workflow/docs files, source parity digest, 364 HTML/checkmark counts, 256 local and 108 disclosed fallback art, three offline filters, isolated/failure-safe HOME storage, shared 25-link menu, original 17-section static tests, saved progress and live public feedback regression tests. Only merge when all CI passes at exact reviewed branch SHA, then verify GitHub Pages deploy at exact merge SHA. No changes to original ChatGPT Site, Supabase, feedback functions, original walkthrough, `app.js`, main Pokédex or working Item Atlas. Android manual page check remains outstanding.
+**Verified release:** [PR #35](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/35) passed exact 364-record PDF SHA-256 source parity, 232 preserved-base checks, 256 locally available portraits, 108 clearly disclosed fallbacks, search, independent manual storage, main 17-section guide and feedback tests in Actions **#44943076452**. It merged at **`ee107d70dd638e46ee7d8d8a056a1e7cc38c4424`**; Pages **#44943148212 succeeded** on that exact SHA. No original ChatGPT Site, Supabase, feedback functions, original walkthrough, `app.js`, original main Pokédex or Item Atlas changes. Android visual check remains outstanding.
 
-**Proposed after safe release: 12/19 standalone routes live, seven pending.**
+**12/19 standalone routes now live; 7 pending.**
 
 
 
