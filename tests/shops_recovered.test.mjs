@@ -27,10 +27,8 @@ assert.ok(cafeHtml,"The player café must appear as a static, searchable shop ca
 assert.match(cafeHtml,/1\. Coffee menu[\s\S]*2\. Tea menu[\s\S]*3\. Something else/);
 assert.match(cafeHtml,/location and truck number not yet confirmed/i);
 for(const [,name,price] of expectedDrinks){
- const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,"\\assert.equal(shops.find(s=>s.id==="quasartico").items.length,40);
-");
- assert.match(cafeHtml,new RegExp(escaped+'<\\/span><strong class="shop-item-price">₽'+price+'<\\/strong>'),
- "Static café price mismatch for "+name);
+ const exactMarkup='<span class="shop-item-name">'+name+'</span><strong class="shop-item-price">₽'+price+'</strong>';
+ assert.ok(cafeHtml.includes(exactMarkup),"Static café price mismatch for "+name);
 }
 const premier=shops.find(s=>s.id==="boutique").items.find(x=>x.name==="Premier Ball");
 assert.equal(premier.price,200);
