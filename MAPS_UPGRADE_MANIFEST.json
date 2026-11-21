@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 3,
+  "revision": 4,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "SM-01 in progress: 9 mission-marker references checked, 0 precise Holovator entrance points aligned to Atlas",
+  "current_phase": "SM-01 in progress: 9 individually navigable external mission markers and source-supported approach instructions; 2 new quest-sector labels; 0 precisely aligned Holovator entrances",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -132,7 +132,7 @@
       "status": "in_progress",
       "dependencies": [],
       "acceptance": "48 labelled sectors and 20 Wild Zones traced to source/captures; boundary confidence assigned; no fabricated polygons",
-      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open."
+      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment."
     },
     {
       "id": "SM-02",
@@ -265,7 +265,13 @@
       "holovators": "not_yet_audited",
       "scaffolds_and_ladders": "not_yet_audited",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "holovator_approach_evidence": {
+        "research_id": "DR-H-03",
+        "status": "bulbapedia_quest_sector_reported_holovator_device_boundary_unverified",
+        "source": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+        "exact_location_point": null
+      }
     },
     {
       "id": "Vert-08",
@@ -443,7 +449,13 @@
       "holovators": "not_yet_audited",
       "scaffolds_and_ladders": "not_yet_audited",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "holovator_approach_evidence": {
+        "research_id": "DR-H-07",
+        "status": "bulbapedia_quest_sector_reported_holovator_device_boundary_unverified",
+        "source": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+        "exact_location_point": null
+      }
     },
     {
       "id": "Magenta-03",
@@ -844,8 +856,49 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "DR-H-01 Holovator-category marker and building entrance (not mission point)",
-    "status": "source_mission_coordinates_reviewed_unaligned_no_confirmed_map_pins",
-    "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying."
-  }
+    "next_safe_record": "DR-H-01 actual Holovator-category point vs mission marker 234541; >=3 landmark registration; facade/roof evidence",
+    "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
+    "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
+    "source_mission_marker_deep_links_verified": 9,
+    "source_mission_marker_deep_link_layer": 343,
+    "source_mission_marker_link_ids": [
+      234541,
+      238914,
+      238212,
+      237861,
+      237633,
+      235024,
+      237731,
+      238913,
+      238206
+    ],
+    "bulbapedia_quest_sector_additions": [
+      "Vert-07 (DR-H-03)",
+      "Magenta-02 (DR-H-07)"
+    ],
+    "bulbapedia_street_clarifications": [
+      "Vernal Avenue (DR-H-02)",
+      "South Boulevard (DR-H-04)",
+      "Hibernal Avenue (DR-H-08)",
+      "South Boulevard (DR-H-09)"
+    ],
+    "ground_approach_text_status": "9 guide-corroborated directions in register; source text only, NOT aligned building/floor coordinate routes",
+    "next_gate": "Source Side Missions layer ID 343 is not the Holovator category; never transpose quest markers or source XY into confirmed device-layer points."
+  },
+  "last_coordinate_source_qa_on": "2026-11-21",
+  "coordinate_source_qa_checkpoints": [
+    {
+      "id": "ATLAS-HOLOVATOR-MISSION-LINKS-AND-QUEST-LOCATIONS-2026-11-21",
+      "record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "mission_marker_deep_links": 9,
+      "new_quest_sector_labels": 2,
+      "device_category_marker_ids_extracted": 0,
+      "exact_atlas_device_pins": 0,
+      "source_urls": [
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator"
+      ]
+    }
+  ]
 }
