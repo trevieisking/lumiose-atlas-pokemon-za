@@ -1,12 +1,12 @@
 # Recovery status — 21 November 2026
 
-## UI follow-up — Item Atlas checkboxes shared with the original local progress (PR awaiting checks)
+## UI follow-up — Item Atlas checkboxes shared with original local progress (MERGED #30 · PAGES SUCCESS)
 
 The owner requested that the newly restored, prettier `items.html` support ticking found items and Colorful Screws like the walkthrough and side missions. Before changing code, `app.js` was inspected and confirmed the existing **device-local** key `lumiose-atlas-reconstruction-v1` stores `pickup` keyed by the exact `data-pickup="ZONE-INDEX"` ID and `screw` keyed by the `data-screw="NUMBER"` ID. The 264 item and 100 Screw entries in the recovered fieldbook match those original IDs in order.
 
 **Bounded change:** add accessible checkboxes beside each of those 364 entries, soft green collected styling, two in-page collected totals and a clear local-only save status. Changes save only the selected `pickup` or `screw` property after reading and preserving the entire current record, including `check`, `sideCheck`, `legendCheck` and unknown future fields. A malformed or blocked storage record is never overwritten; the user receives a visible unsaved warning. Storage-change, page-return and focus refreshes let the new page rehydrate the same data; the original main guide will see these values when reloaded/navigated. Hidden-item outcomes remain optional obtained-result checks, not verified physical pins. The original Site is on a **different web origin** and its checkmarks do not automatically synchronise with the GitHub edition. The 48 sector-map and numbered-coordinate requirement remains open in issue #28.
 
-**Release gate:** new exact-ID/source-parity tests must pass plus all recovered article, 17-section guide and feedback tests before safe merge; GitHub Pages deployment must succeed at the merged SHA. No edits to `app.js`, the original 17 source sections, original Site, Supabase, mission/sidequest checkboxes, sector maps, ratings or feedback.
+**Verified release:** [PR #30](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/30) passed exact-ID, shared-storage, zero-reset, blocked-storage, old article, main 17-section and feedback checks in GitHub Actions run #44937492285; merged as `b10f9786c5b01f7491a52f02ade62e7bcfb2f844`; exact GitHub Pages deployment #44937542430 **succeeded**. Android manual visual validation remains outstanding. No edits to `app.js`, original source sections, original Site, Supabase, mission/sidequest controls, map assets, ratings or feedback.
 
 
 
