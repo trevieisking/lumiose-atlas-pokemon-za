@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch_id": "ATLAS-OWNER-WIDE-PHOTO-RECHECK-2026-11-21",
+  "source_date": "2026-11-21",
+  "source": "Ten new owner-supplied 1536x865 landscape HEIC TV-game-map screenshots received in chat; NOT the earlier ten 1152x1536 library photos. Photos are private evidence and are NOT uploaded to the public repository.",
+  "photos": [
+    {
+      "id": "W01",
+      "uploaded_basename": "1000027197.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "b0ebb7e7f77c63920dd9aa98d51e83bcfed770b72577db801e7075e4900918ec",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W02",
+      "uploaded_basename": "1000027198.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "f0419f4a67b91e5d5ef82bd5894e52d452652f438b01e5e1b8a194ff51054b9a",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W03",
+      "uploaded_basename": "1000027199.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "78311ae15c8ffd0b9d8db396699371bb86cc3b90a3ad2cbde914b28f6ac18886",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W04",
+      "uploaded_basename": "1000027200.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "9f45be40e399566b4e0578f757bdf1ab49fab7aa97b885c010026b1147433806",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W05",
+      "uploaded_basename": "1000027201.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "6283139cf1b9686fd698a07b42cfeebf797c7e126a283aeb6435dc8d7ba6af8b",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W06",
+      "uploaded_basename": "1000027202.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "01a4a0a8e740d7537c98e9ab1188b9619f66d0bcbdd3387307ea3e8d9c5cd940",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W07",
+      "uploaded_basename": "1000027203.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "e1327024552deb39f6690fbca2eac04ad1a953bdb8c2c6c946beea71bf5f9691",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W08",
+      "uploaded_basename": "1000027204.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "5b972853ca93053a6092cb71312541e3a6750a8d7cb64ca3f0b2c41ccb054401",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W09",
+      "uploaded_basename": "1000027205.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "88ca0d7716fb573e2b3ed152e615574ea289a3b3ca93e8fce2d5899e1b75445e",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "W10",
+      "uploaded_basename": "1000027206.heic",
+      "width": 1536,
+      "height": 865,
+      "sha256": "1982de3f818b6f3e968fe2360db26f1aed1f2f5e15b8a9e412b2e77206f01a10",
+      "file_committed_to_repo": false
+    }
+  ],
+  "coordinate_systems": {
+    "photo": "full owner HEIC image pixels, origin top-left, x right and y down; TV borders and interface included",
+    "atlas": "maps/lumiose-game-map.jpg native 1920x1920 pixels, NOT in-game world coordinates",
+    "control_source": "previous 1280x1280 preview anchor estimates retained in MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json multiplied by 1.5"
+  },
+  "icon_identity_evidence": {
+    "visual_match": "yellow map disc with two upward chevrons in owner capture",
+    "independently_described": "Pokémon Mythology walkthrough identifies in-game map icon for a Holovator after first use as a yellow icon with two upward-pointing arrows",
+    "source_url": "https://www.pokemythology.net/detonados/detonado-legends-z-a/",
+    "support": "symbol-type corroboration only; it does NOT uniquely assign individual quest missions, device entrances, rooftop exits or exact native XY"
+  },
+  "method": "For each frame with sufficient recognisable landmarks, manually match 3 to 6 controls from the new photo to previously recorded original-Atlas image controls. Fit 2x3 affine with least squares. Project visible double-chevron icons. Compare independently photographed overlaps and the earlier photo registrations; these are estimates, not pixel-accurate production markers.",
+  "registration_frames": [
+    {
+      "id": "W04",
+      "file": "1000027200.heic",
+      "controls": [
+        {
+          "name": "WZ12",
+          "photo_xy_approx": [
+            471,
+            468
+          ],
+          "map_preview_1280_xy_approx": [
+            526,
+            1029
+          ]
+        },
+        {
+          "name": "WZ17",
+          "photo_xy_approx": [
+            1267,
+            361
+          ],
+          "map_preview_1280_xy_approx": [
+            949,
+            967
+          ]
+        },
+        {
+          "name": "WZ01",
+          "photo_xy_approx": [
+            869,
+            687
+          ],
+          "map_preview_1280_xy_approx": [
+            736,
+            1146
+          ]
+        },
+        {
+          "name": "VertPokemonCenter",
+          "photo_xy_approx": [
+            1207,
+            540
+          ],
+          "map_preview_1280_xy_approx": [
+            916,
+            1065
+          ]
+        },
+        {
+          "name": "BleuPokemonCenter",
+          "photo_xy_approx": [
+            122,
+            543
+          ],
+          "map_preview_1280_xy_approx": [
+            327,
+            1065
+          ]
+        },
+        {
+          "name": "CafeCyclone",
+          "photo_xy_approx": [
+            1090,
+            238
+          ],
+          "map_preview_1280_xy_approx": [
+            851,
+            906
+          ]
+        }
+      ],
+      "affine": [
+        [
+          0.8100344,
+          0.0079205,
+          393.9660928
+        ],
+        [
+          0.0000225,
+          0.8028398,
+          1164.871717
+        ]
+      ],
+      "fit_rms_native_px": 5.8,
+      "max_control_error_native_px": 10.2,
+      "fit_method": "least_squares_affine_manually_matched_architectural_and_wild_zone_controls"
+    },
+    {
+      "id": "W05",
+      "file": "1000027201.heic",
+      "controls": [
+        {
+          "name": "WZ02",
+          "photo_xy_approx": [
+            242,
+            392
+          ],
+          "map_preview_1280_xy_approx": [
+            773,
+            838
+          ]
+        },
+        {
+          "name": "WZ17",
+          "photo_xy_approx": [
+            583,
+            644
+          ],
+          "map_preview_1280_xy_approx": [
+            949,
+            967
+          ]
+        },
+        {
+          "name": "WZ11",
+          "photo_xy_approx": [
+            720,
+            218
+          ],
+          "map_preview_1280_xy_approx": [
+            1029,
+            752
+          ]
+        },
+        {
+          "name": "CafeCyclone",
+          "photo_xy_approx": [
+            394,
+            527
+          ],
+          "map_preview_1280_xy_approx": [
+            851,
+            906
+          ]
+        }
+      ],
+      "affine": [
+        [
+          0.7937686,
+          -0.0264823,
+          977.7618979
+        ],
+        [
+          0.0072548,
+          0.7581563,
+          957.5391372
+        ]
+      ],
+      "fit_rms_native_px": 0.6,
+      "max_control_error_native_px": 0.9,
+      "fit_method": "least_squares_affine_manually_matched_architectural_and_wild_zone_controls"
+    },
+    {
+      "id": "W06",
+      "file": "1000027202.heic",
+      "controls": [
+        {
+          "name": "WZ03",
+          "photo_xy_approx": [
+            178,
+            361
+          ],
+          "map_preview_1280_xy_approx": [
+            626,
+            357
+          ]
+        },
+        {
+          "name": "WZ15",
+          "photo_xy_approx": [
+            888,
+            150
+          ],
+          "map_preview_1280_xy_approx": [
+            1008,
+            231
+          ]
+        },
+        {
+          "name": "WZ19",
+          "photo_xy_approx": [
+            886,
+            446
+          ],
+          "map_preview_1280_xy_approx": [
+            1009,
+            387
+          ]
+        }
+      ],
+      "affine": [
+        [
+          0.8101751,
+          0.0105417,
+          790.9832744
+        ],
+        [
+          -0.0313248,
+          0.7903289,
+          255.7670856
+        ]
+      ],
+      "fit_rms_native_px": 0,
+      "max_control_error_native_px": 0,
+      "qualification": "Three controls determine affine transform exactly; zero training residual is NOT validation.",
+      "fit_method": "least_squares_affine_manually_matched_architectural_and_wild_zone_controls"
+    },
+    {
+      "id": "W07",
+      "file": "1000027203.heic",
+      "controls": [
+        {
+          "name": "WZ03",
+          "photo_xy_approx": [
+            791,
+            462
+          ],
+          "map_preview_1280_xy_approx": [
+            626,
+            357
+          ]
+        },
+        {
+          "name": "WZ04",
+          "photo_xy_approx": [
+            953,
+            159
+          ],
+          "map_preview_1280_xy_approx": [
+            711,
+            184
+          ]
+        },
+        {
+          "name": "RougePokemonCenterSouth",
+          "photo_xy_approx": [
+            826,
+            762
+          ],
+          "map_preview_1280_xy_approx": [
+            641,
+            507
+          ]
+        }
+      ],
+      "affine": [
+        [
+          0.761211,
+          -0.013808,
+          343.2613377
+        ],
+        [
+          -0.1634153,
+          0.7690651,
+          309.4533823
+        ]
+      ],
+      "fit_rms_native_px": 0,
+      "max_control_error_native_px": 0,
+      "qualification": "Three controls determine affine transform exactly; local camera perspective likely stronger near bottom of screen.",
+      "fit_method": "least_squares_affine_manually_matched_architectural_and_wild_zone_controls"
+    },
+    {
+      "id": "W10",
+      "file": "1000027206.heic",
+      "controls": [
+        {
+          "name": "WZ16",
+          "photo_xy_approx": [
+            487,
+            170
+          ],
+          "map_preview_1280_xy_approx": [
+            459,
+            854
+          ]
+        },
+        {
+          "name": "WZ02",
+          "photo_xy_approx": [
+            1069,
+            138
+          ],
+          "map_preview_1280_xy_approx": [
+            773,
+            838
+          ]
+        },
+        {
+          "name": "WZ12",
+          "photo_xy_approx": [
+            601,
+            502
+          ],
+          "map_preview_1280_xy_approx": [
+            526,
+            1029
+          ]
+        },
+        {
+          "name": "BleuPokemonCenter",
+          "photo_xy_approx": [
+            237,
+            583
+          ],
+          "map_preview_1280_xy_approx": [
+            327,
+            1065
+          ]
+        },
+        {
+          "name": "WZ01",
+          "photo_xy_approx": [
+            1004,
+            718
+          ],
+          "map_preview_1280_xy_approx": [
+            736,
+            1146
+          ]
+        }
+      ],
+      "affine": [
+        [
+          0.802287,
+          0.0007222,
+          300.7608476
+        ],
+        [
+          0.0130612,
+          0.7905855,
+          1136.9384411
+        ]
+      ],
+      "fit_rms_native_px": 4.2,
+      "max_control_error_native_px": 6,
+      "fit_method": "least_squares_affine_manually_matched_architectural_and_wild_zone_controls"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "WIDE-H03",
+      "previous_photo_lead": "PHOTO-C03",
+      "possible_mission": "DR-H-03",
+      "named_area": "Vert Sector 7, south/southeast of Wild Zone 17 and southwest of Racine Construction",
+      "observations": [
+        {
+          "photo_id": "W04",
+          "owner_photo_xy_approx": [
+            1344,
+            457
+          ],
+          "estimated_atlas_native_xy": [
+            1486,
+            1532
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        },
+        {
+          "photo_id": "W05",
+          "owner_photo_xy_approx": [
+            665,
+            729
+          ],
+          "estimated_atlas_native_xy": [
+            1486,
+            1515
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "cross_capture_separation_native_px": 17,
+      "older_approx_atlas_native_xy": [
+        1475,
+        1540
+      ],
+      "assessment": "two captures reinforce same southern Vert 7 yellow double-up-arrow Holovator symbol; mission #40 unit remains spatially probable, not identity-verified"
+    },
+    {
+      "id": "WIDE-H04",
+      "previous_photo_lead": "PHOTO-C04",
+      "possible_mission": "DR-H-04",
+      "named_area": "South Boulevard immediately south of Aymis Park/Wild Zone 12 in Bleu Sector 7 vicinity",
+      "observations": [
+        {
+          "photo_id": "W04",
+          "owner_photo_xy_approx": [
+            379,
+            673
+          ],
+          "estimated_atlas_native_xy": [
+            706,
+            1705
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        },
+        {
+          "photo_id": "W10",
+          "owner_photo_xy_approx": [
+            509,
+            712
+          ],
+          "estimated_atlas_native_xy": [
+            710,
+            1706
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "cross_capture_separation_native_px": 4,
+      "older_approx_atlas_native_xy": [
+        698,
+        1729
+      ],
+      "assessment": "two captures independently project near the same South Boulevard Holovator icon; mission #45 Durstin device remains strong neighbourhood lead"
+    },
+    {
+      "id": "WIDE-H02",
+      "previous_photo_lead": "PHOTO-C02",
+      "possible_mission": "DR-H-02",
+      "named_area": "Vernal Avenue, northwest of Wild Zone 1",
+      "observations": [
+        {
+          "photo_id": "W04",
+          "owner_photo_xy_approx": [
+            692,
+            620
+          ],
+          "estimated_atlas_native_xy": [
+            959,
+            1663
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        },
+        {
+          "photo_id": "W10",
+          "owner_photo_xy_approx": [
+            831,
+            658
+          ],
+          "estimated_atlas_native_xy": [
+            968,
+            1668
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "cross_capture_separation_native_px": 10,
+      "older_approx_atlas_native_xy": [
+        949,
+        1666
+      ],
+      "assessment": "two captures and earlier photo registration agree at neighbourhood scale; mission #23 Terra/Diggersby lift identity still requires field match"
+    },
+    {
+      "id": "WIDE-H08",
+      "previous_photo_lead": "PHOTO-C06",
+      "possible_mission": "DR-H-08",
+      "named_area": "Hibernal Avenue, to west of Wild Zone 15 / Rouge Sector 6 neighbourhood",
+      "observations": [
+        {
+          "photo_id": "W06",
+          "owner_photo_xy_approx": [
+            489,
+            192
+          ],
+          "estimated_atlas_native_xy": [
+            1189,
+            392
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "older_approx_atlas_native_xy_pair": [
+        [
+          1197,
+          393
+        ],
+        [
+          1183,
+          402
+        ]
+      ],
+      "assessment": "same area and near earlier two photo projections; 3-control affine has no independent holdout so treat as exploratory"
+    },
+    {
+      "id": "WIDE-C08",
+      "previous_photo_lead": "PHOTO-C08",
+      "possible_mission": null,
+      "named_area": "Café Cyclone / Coulant Waterway, close to Vert Sectors 3/5",
+      "observations": [
+        {
+          "photo_id": "W05",
+          "owner_photo_xy_approx": [
+            426,
+            494
+          ],
+          "estimated_atlas_native_xy": [
+            1303,
+            1335
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "older_approx_atlas_native_xy_pair": [
+        [
+          1308,
+          1331
+        ],
+        [
+          1304,
+          1339
+        ]
+      ],
+      "assessment": "strong neighbourhood consistency across photograph sets; device not matched to a specific mission"
+    },
+    {
+      "id": "WIDE-C13",
+      "previous_photo_lead": null,
+      "possible_mission": null,
+      "named_area": "east/northeast of Aymis Park near Café Classe / Vernal Avenue (distinct from Café Cyclone)",
+      "observations": [
+        {
+          "photo_id": "W04",
+          "owner_photo_xy_approx": [
+            674,
+            376
+          ],
+          "estimated_atlas_native_xy": [
+            943,
+            1467
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        },
+        {
+          "photo_id": "W10",
+          "owner_photo_xy_approx": [
+            811,
+            412
+          ],
+          "estimated_atlas_native_xy": [
+            952,
+            1473
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "cross_capture_separation_native_px": 11,
+      "assessment": "new separately identifiable Holovator symbol lead with duplicate wide-photo views, no mission assigned"
+    },
+    {
+      "id": "WIDE-C12",
+      "previous_photo_lead": "PHOTO-C12",
+      "possible_mission": null,
+      "named_area": "Looker Bureau / Sushi High Roller, north of Rouge Plaza",
+      "observations": [
+        {
+          "photo_id": "W07",
+          "owner_photo_xy_approx": [
+            763,
+            280
+          ],
+          "estimated_atlas_native_xy": [
+            920,
+            400
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "older_approx_atlas_native_xy": [
+        914,
+        410
+      ],
+      "assessment": "close to prior PHOTO-C12 projection; non-mission access marker"
+    },
+    {
+      "id": "WIDE-H01-AMBIGUOUS",
+      "previous_photo_lead": "PHOTO-C01",
+      "possible_mission": "DR-H-01",
+      "named_area": "west of Rouge Plaza/Wild Zone 3",
+      "observations": [
+        {
+          "photo_id": "W07",
+          "owner_photo_xy_approx": [
+            656,
+            503
+          ],
+          "estimated_atlas_native_xy": [
+            836,
+            589
+          ],
+          "coordinate_status": "exploratory_not_exact",
+          "pixel_pick_uncertainty_photo_px": 15
+        }
+      ],
+      "older_alternative_native_xy": [
+        [
+          831,
+          633
+        ],
+        [
+          830,
+          560
+        ]
+      ],
+      "assessment": "new projection lies between earlier alternatives; cannot safely disambiguate or deduplicate the two original icon leads"
+    }
+  ],
+  "statistics": {
+    "new_photos_visually_reviewed": 10,
+    "new_photos_affine_aligned": 5,
+    "high_value_named_candidate_groups": 8,
+    "photo_observations_with_numeric_projections": 12,
+    "older_photo_group_alignment_rechecks": 7,
+    "new_distinct_named_candidate_groups": 1,
+    "holovator_symbol_class_independently_corroborated": true,
+    "mission_to_specific_device_confirmed": 0,
+    "exact_atlas_holovator_pins_confirmed": 0,
+    "confirmed_ground_entrance_to_rooftop_exit_pairs": 0
+  },
+  "critical_limitations": [
+    "Each map point is approximate: anchors from a manually selected 1280 preview, TV camera tilt/rotation, manual icon centre picks and no separate physical rooftop exit evidence.",
+    "Very low fitted control residual is not a calibrated accuracy guarantee. Exactly three controls (W06/W07) guarantee zero training residual and should not be interpreted as precise.",
+    "These HEIC files were checked in the current conversation but not uploaded into public GitHub; rechecking requires access to private owner uploads.",
+    "A map Holovator symbol can be geolocated approximately without proving which quest repaired it. No mission point is silently substituted for a device point.",
+    "Do not place any observation as an exact confirmed public map dot or alter source-site/progress code before a tested entrance/facade and roof verification."
+  ],
+  "next_validation_order": [
+    "WIDE-H03: distinguish mission #40 Élec lift from any nearby Holovator and verify actual ground-facing entrance/roof landing against user game.",
+    "WIDE-H04: match mission #45 Durstin lift on South Boulevard from direct facade/entry evidence.",
+    "WIDE-H02: confirm Vernal Avenue Terra lift relation to nearest screen chevron.",
+    "Check WIDE-C13 (Café Classe) and WIDE-C08 (Café Cyclone) are distinct used Holovators.",
+    "Register remaining in-game Holovator markers one at a time; only after that enumerate ladders/scaffolds and fixed collectible positions."
+  ],
+  "preservation": "Documentation and source links only; no images, map runtime code, original ChatGPT Site, GitHub main, Supabase, feedback, ratings or saved gameplay progress changed."
+}
