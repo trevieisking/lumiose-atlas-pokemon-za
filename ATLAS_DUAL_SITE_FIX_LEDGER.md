@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 11 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 12 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 ## The two distinct editions
@@ -203,6 +203,29 @@
 | AT-159 | Side Mission #139: Raichu duo | Original Workspace A source inaccessible. | B #002/#108 prereqs correct, but lacks Lv115 fight and boosted-donut preparation | Keep prereqs, add correct Passage du Palais yellow portal, ₱/₽6,000 and two Raichunite stones | HIGH-LEVEL PREP GAP — NOT FIXED |
 | AT-160 | Side Mission #140: Message Across Dimensions | Original Workspace A source inaccessible. | B letter/Moire/Tarragon ring sequence sound but rewards/context missing | Add husband's letter, 33/35 Tarragon team and Dream Ball×5, verify cash | STORY/REWARD GAP — NOT FIXED |
 
+**DLC Side Missions 141–160 audit:** [detailed source comparison](docs/qa/SIDE_MISSIONS_141_160_SOURCE_AUDIT_2026-11-21.md). Read all twenty exact reconstructed source cards and checked publisher mechanics versus third-party quest texts. Missing routes and reward data, known correct puzzle instructions, and disputed White Herb quantity are separated. **Neither guide A nor B has been edited or deployed.**
+
+| AT-161 | Side Mission #141 Rogue Mega Crabominable ×2 | Original Workspace edition A unavailable. | B correct two-boss case near Zone17, Crabominite; omits Boris, ₽5,300, level preparation | Add request, cash, boss-safe tactics; Lv114/116 provisional secondary until game QA | B DETAIL GAP / LEVEL HOLD — NOT FIXED |
+| AT-162 | Side Mission #142 Café Introversion Nacli | Original Workspace edition A unavailable. | B roof chase/catch correct, cash and mint counts absent | Add Plaise, ₽3,100, Modest/Rash/Quiet Mint ×5; verify roof turn markers | PAYOUT/ROOF DIRECTIONS — NOT FIXED |
+| AT-163 | Side Mission #143 choose ONE of three regional Meowth | Original Workspace edition A unavailable. | B mentions choice but not one-only or full regional details, no TM116 label | Explicitly warn selection of single gift Pokémon, ₽2,222 + TM116 Pay Day | PLAYER ONE-TIME CHOICE — NOT FIXED |
+| AT-164 | Side Mission #144 reproduce Canari photograph | Original Workspace edition A unavailable. | B bench photo-angle correct, does not fully separate bench identification and angle match; payout omitted | Add two sequential objectives, ₽2,300 Fast Ball ×5; validate roof image | DETAIL / REWARD — NOT FIXED |
+| AT-165 | Side Mission #145 Tinkatuff message relay | Original Workspace edition A unavailable. | B vague back-and-forth and item TM121 only | Provide five dialogue exchanges, Acier, ₽1,800 + TM121 Torment | REQUIRED SEQUENCE DETAILS — NOT FIXED |
+| AT-166 | Side Mission #146 Sandygast Wild Zone8 | Original Workspace edition A unavailable. | B five Sandygast correct, missing cash and named TM | Add ₽8,000 + TM136 Scorching Sands; do not guess catch constraints | REWARD DETAIL — NOT FIXED |
+| AT-167 | Side Mission #147 Gulpin donut | Original Workspace edition A unavailable. | B correct feed a prepared donut at Hotel Z; ₽10 small reward absent | Preserve tiny ₽10 as documented, Charti Berry ×1; explain donut resources | VERIFIED SMALL PAYMENT — NOT FIXED |
+| AT-168 | Side Mission #148 cemetery night-one-party-north gate phrase | Original Workspace edition A unavailable. | B exact clue sequence is sound; lacks Horace and TM119 title/cash | Preserve puzzle verbatim, add Greavard/Houndstone, ₽1,313 TM119 Ominous Wind | CORRECT CORE / PAYOUT — NOT FIXED |
+| AT-169 | Side Mission #149 Scovillain #026 prerequisite | Original Workspace edition A unavailable. | B Spicy Extract at restaurant correct but **omits required completion of Side Mission 026** | Add #026 gate, target every table/dish and ₽4,300 + 3 mint types ×5 | MISSING QUEST DEPENDENCY — NOT FIXED |
+| AT-170 | Side Mission #150 Corvisquire Dirty Scarf investigation | Original Workspace edition A unavailable. | B leaps from follow Corvisquire to trainer, omits Asami Boutique Couture → Académie Étoile trail | Add scarf Destin clue, Lida/Naveen call, Asami, school, Destin 20/21/21, ₽2,200/Pretty Feathers ×30 | **MISSING MANDATORY NPC ROUTE** — NOT FIXED |
+| AT-171 | Side Mission #151 DYN4MO entire cosmetic set | Original Workspace edition A unavailable. | B ally Naveen vs Canari/Tarragon correct; only says Canari tracksuit, no satchel, cash/shard count | Add ₽10,000 + Mega Shard×100 + set/crossbody satchel; verify colours in game | COSMETIC REWARD GAP — NOT FIXED |
+| AT-172 | Side Mission #152 Fist of Justice complete outfit | Original Workspace edition A unavailable. | B ally Korrina vs Ivor/Gwynn correct; says only Ivor gi | Add ₽10,000, Mega Shard×100, gloves, geta, clasped satchel and set details | COSMETIC REWARD GAP — NOT FIXED |
+| AT-173 | Side Mission #153 Rust Syndicate complete outfit | Original Workspace edition A unavailable. | B ally Taunie/Urbain vs Corbeau/Philippe correct; only says suit | Add ₽10,000, Mega Shard×100, glasses, leather satchel with suit; reflect player protagonist | COSMETIC REWARD GAP — NOT FIXED |
+| AT-174 | Side Mission #154 SBC complete outfit | Original Workspace edition A unavailable. | B ally Lida vs Jacinthe/Lebanne correct; only says Jacinthe dress | Add ₽10,000 + Mega Shard×100, hat, gloves, tights, pumps, satchel | COSMETIC REWARD GAP — NOT FIXED |
+| AT-175 | Side Mission #155 Team Flare Nouveau complete outfit | Original Workspace edition A unavailable. | B ally Emma vs Grisham/Griselle correct; only says chef top | Add ₽10,000 + Mega Shard×100, trousers, glasses, shoes, satchel | COSMETIC REWARD GAP — NOT FIXED |
+| AT-176 | Side Mission #156 genuine Seviper show | Original Workspace edition A unavailable. | B correctly identifies Arbok misrepresented as Seviper, no need to surrender | Add Erpen, Hyperspace encounter tips, ₽1,900 + TM123 Poison Fang | PRESERVE CORRECT SHOW-ONLY — NOT FIXED |
+| AT-177 | Side Mission #157 Wigglytuff White Herb 1 vs 9 conflict | Original Workspace edition A unavailable. | B Bubble Beam on Wigglytuff correct, location Bleu Sector9 supported Serebii; Bulbapedia South Boulevard near WZ10 | **DO NOT insert item quantity** until game receipt: Bulbapedia ×1 versus Serebii/Dexerto ×9. Add ₽9,310 and Bubble Beam minimum once | **REWARD QUANTITY CONFLICT / HOLD** — NOT FIXED |
+| AT-178 | Side Mission #158 trainer Tipster correct answers | Original Workspace edition A unavailable. | B Sparkling Power/Lv200/golden Ball correct, reward quantities missing | Preserve answers/last free choice; add ₽1,200 and Hyper Grepa/Tamato/Occa ×2 each | PRESERVE QUIZ / PAYOUT — NOT FIXED |
+| AT-179 | Side Mission #159 Nickit stolen Galette | Original Workspace edition A unavailable. | B chase/catch Nickit correct; cash and outcome of ownership not specified | Add ₽6,200 + Lumiose Galette×5, leave capture ownership unclear until game check | REWARD / OWNERSHIP HOLD — NOT FIXED |
+| AT-180 | Side Mission #160 Feebas donation unlocks wild spawn | Original Workspace edition A unavailable. | B says give a Feebas to Soucian, Prism Scale reward; doesn't mention later spawn in Vert Sector4 canal | Explain permanent handover, ₽1,600, Prism Scale×1 and delayed Feebas waterway spawn; crosslink Milotic Prism Scale Link Trade issue7 | **IMPORTANT UNLOCK OMISSION** — NOT FIXED |
+
 ### Cross-branch dependency and no-loss rule
 
 - [PR #1](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1): Mable's Research and audit — standalone draft from `main`.
@@ -242,6 +265,8 @@
 | 21 Nov 2026 | Source-audited Side Missions 101–120 and DLC introduction | [Evidence](docs/qa/SIDE_MISSIONS_101_120_SOURCE_AUDIT_2026-11-21.md), AT-121–AT-140. All 20 cards and checkboxes intact. #103 malformed unlock, #114 noncatchable Skarmory, #120 missing first Hyperspace battle. Correct Wild Zone12 Avalugg preserved; four Jacinthe rounds supported by Serebii. No live/code/database work. |
 
 | 21 Nov 2026 | Audited Mega Dimension Side Missions #121–140 and recorded source conflicts | [Detailed DLC audit](docs/qa/SIDE_MISSIONS_121_140_SOURCE_AUDIT_2026-11-21.md); AT-141–AT-160. All 20 card/check/link IDs preserved. Logged #136 false reward placeholder, #137 Foongus vs Amoonguss donation conflict, #133 solo Farfetch'd with Leek, #138 field Octolock action, #139 donut boost and Lv115 dual Mega Raichu; retained #002+#108 prerequisites and #134 TM139 Swagger. No gameplay/DB/live changes. |
+
+| 21 Nov 2026 | Audited DLC Side Missions 141–160, including full outfit rewards and catch/spawn constraints | [Evidence audit](docs/qa/SIDE_MISSIONS_141_160_SOURCE_AUDIT_2026-11-21.md), AT-161–AT-180. All 20 quest IDs/checkboxes/links preserved. #149 requires #026, #150 missing Asami→Académie investigation, #151–155 omit full outfits and 100 shards, #160 Feebas donation unlocks later wild canal spawns; #157 White Herb 1-vs-9 disagreement explicitly held. No gameplay or data write. |
 
 ## Workspace return and source handoff
 
