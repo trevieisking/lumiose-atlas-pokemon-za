@@ -19,7 +19,7 @@
   function repaint() {
     const q=(search?.value||"").trim().toLocaleLowerCase();
     const wanted=node=>district==="All"||node.dataset.district===district;
-    const textMatches=node=>!q||(node.dataset.search||node.textContent).toLocaleLowerCase().includes(q);
+    const textMatches=node=>!q||(node.dataset.search||"").toLocaleLowerCase().includes(q)||node.textContent.toLocaleLowerCase().includes(q);
     let visibleSectors=0,visibleZones=0,visibleLoose=0;
     for(const card of sectors) {
       card.hidden=!(wanted(card)&&textMatches(card));
@@ -74,6 +74,21 @@
   }
   function openDirectHash(){
     const hash=decodeURIComponent(location.hash.slice(1));
+    const lead=hash.match(/^map-lead-z(\d{1,2})-(\d{2})$/);
+    if(lead){
+      const zone=Number(lead[1]);
+      if(zone<1||zone>20)return;
+      const card=document.getElementById("wildzone-"+zone);
+      const target=document.getElementById(hash);
+      if(!card||!target)return;
+      district="All";
+      if(search)search.value="";
+      repaint();
+      const details=card.querySelector(".approx-clue-panel");
+      if(details)details.open=true;
+      if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>target.scrollIntoView({block:"center"}));
+      return;
+    }
     if(!/^(wildzone-\d{1,2}|sector-(vert|bleu|magenta|rouge|jaune)-sector-\d{1,2})$/.test(hash))return;
     const card=document.getElementById(hash);
     if(!card)return;
