@@ -23,6 +23,8 @@ for (const [pathname, hash, expectedPage] of [
   ['/index.html', '#walkthrough', '/index.html#walkthrough'],
   ['/', '#home', '/#home'],
   ['/guide/index.html', '#sidequests', '/guide/index.html#sidequests'],
+  ['/lumiose-atlas-pokemon-za/', '#walkthrough', '/lumiose-atlas-pokemon-za/index.html#walkthrough'],
+  ['/lumiose-atlas-pokemon-za/', '#items', '/lumiose-atlas-pokemon-za/index.html#items'],
   ['/index.html', '', '/index.html'],
   ['/index.html', '#<script>', '/'],
   ['/' + 'a'.repeat(164), '#home', '/']
