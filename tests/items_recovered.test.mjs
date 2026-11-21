@@ -76,7 +76,13 @@ for(const f of ["atlas-logo.png","favicon.png","recovered-articles.js","recovere
 assert.match(css,/@media\(max-width:680px\)/);
 assert.match(css,/@media\(max-width:420px\)/);
 assert.doesNotMatch(html+js+dataSrc,/sb_secret_|service_role_key|sk-proj-|github_pat_/i);
-assert.doesNotMatch(js+dataSrc,/\bfetch\s*\(|localStorage|sessionStorage|XMLHttpRequest/);
+assert.doesNotMatch(js+dataSrc,/\bfetch\s*\(|sessionStorage|XMLHttpRequest/);
+assert.match(js,/lumiose-atlas-reconstruction-v1/,"Use the existing main guide progress key");
+assert.match(js,/localStorage\.getItem\(PROGRESS_KEY\)/);
+assert.match(js,/localStorage\.setItem\(PROGRESS_KEY/);
+assert.ok(!html.includes('data-pickup="'),"Original inputs remain owned by the main guide");
+assert.equal((html.match(/data-atlas-pickup="/g)||[]).length,264);
+assert.equal((html.match(/data-atlas-screw="/g)||[]).length,100);
 // Simulate filtering without a browser or network.
 function elem(dataSet={}){
  return {dataset:dataSet,hidden:false,value:"",events:{},textContent:"",attrs:{},

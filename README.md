@@ -7,6 +7,8 @@
 Live original (not controlled by this repository):
 `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/`
 
+**Item Atlas progress follow-up:** The restored standalone Item Atlas now offers 264 item and 100 Colorful Screw checkboxes using the **same device-local `lumiose-atlas-reconstruction-v1` record as the reconstructed main guide**, retaining the same IDs and all walkthrough/side-quest values. The original ChatGPT Site has a separate origin and does not share this local browser data. This bounded follow-up is awaiting its own CI and deployment verification; the outstanding 48 sector-specific maps and verified item positions remain tracked in issue #28.
+
 ## What this ZIP gives you now
 
 - Complete captured homepage markup, split into **17 independently editable guide sections** in `src/sections/`.
