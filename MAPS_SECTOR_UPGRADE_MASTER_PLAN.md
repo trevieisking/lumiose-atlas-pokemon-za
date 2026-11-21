@@ -174,12 +174,12 @@ The owner correctly noted that the **ten original TV-map photographs** already s
 
 | Mapping lead | Original owner-photo pixel point(s), approximate | Grounding against mission/source references | Verification status |
 | --- | --- | --- | --- |
-| **PHOTO-C01 → DR-H-01?** | **P08 (480, 1055)**, **P09 (498, 500)** | Yellow chevron W/SW of WZ3, near Rouge Sector 1/Autumnal Avenue; candidate mission #4 repaired unit west of WZ3 | Plausible *cross-photo* icon; exact device match unverified |
+| **PHOTO-C01 → DR-H-01?** | **P08 (480, 1055)**, **P09 (498, 500)** | Two potential symbols W/SW of WZ3 near Rouge Sector 1/Autumnal Avenue | **Do not deduplicate:** provisional Atlas projections are ~73 native pixels apart; neither identified as mission #4 device |
 | **PHOTO-C02 → DR-H-02?** | **P04 (132, 984)** | W/NW of WZ1 near Vernal Avenue / Vert Sector 9; candidate mission #23 Diggersby-blocked unit | Needs icon identity, perspective transform and same-building check |
 | **PHOTO-C03 → DR-H-03?** | **P04 (783, 779)** | By Vert Sector 7, NE of Vert Pokémon Center / SW of Racine Construction, strongly fits mission #40 neighbourhood | **Strong relative-position lead**, not confirmed Holovator entrance |
 | **PHOTO-C04 → DR-H-04?** | **P05 (638, 977)** | South Boulevard, immediately south of WZ12 / Aymis Park, in Bleu Sector 7 area; strongly fits mission #45 neighbourhood | **Strong relative-position lead**, not confirmed Holovator entrance |
 | **PHOTO-C05 → DR-H-07?** | **P09 (377, 735)** | NE of WZ7 at Magenta Sector 2 / Autumnal Avenue approach, aligns with mission #71 region | Plausible, no device identity verified |
-| **PHOTO-C06 → DR-H-08?** | **P01 (376, 532)**, **P08 (955, 797)** | W/SW of WZ15 near Rouge Sector 6 / Hibernal Avenue, candidate mission #80 area | Two possible overlapping views; distinct identity unresolved |
+| **PHOTO-C06 → DR-H-08?** | **P01 (376, 532)**, **P08 (955, 797)** | W/SW of WZ15 near Rouge Sector 6 / Hibernal Avenue, candidate mission #80 area | Approximate source-map projections fall ~17 native px apart, consistent with same icon; **device identity unresolved** |
 | **PHOTO-C08 (unassigned)** | **P03 (523, 848)**, **P04 (563, 480)** | Café Cyclone / Coulant Waterway, Vert Sectors 3/5 | Potential repeat view to align, no mission assigned |
 
 Five further unassigned yellow-chevron location groups (PHOTO-C07/C09/C10/C11/C12) are retained in the JSON with local street/sector bearings and photo pixel centres. **A yellow circular double-chevron alone does not prove that the marker is a Holovator**, and overlap across two photos is not yet a measured homography/transform. The candidate list is a *sample* of visually identifiable symbols, **not a complete count** of all city Holovators or all visible chevrons.
@@ -187,6 +187,26 @@ Five further unassigned yellow-chevron location groups (PHOTO-C07/C09/C10/C11/C1
 **Next safe action is now better constrained:** inspect **PHOTO-C03** (Vert 7 / Racine) and **PHOTO-C04** (South Boulevard / WZ12), matching each visible map icon against its mission's **individual source Holovator category marker** and in-game facade/roof evidence. Then do photo perspective rectification and align at least 3 architectural controls per photo against the existing source image with a measured error budget. Only when all mandatory gates hold set `atlas_x`/`atlas_y`; until then **all 12 leads stay provisional**, and no new public map dot is created.
 
 **Preservation checkpoint:** 48 named sectors, 20 Wild Zones, 264 source item records, 100 Screw clues, 146 A-leads, old 30 landmark associations and all saved progress IDs stay intact; source-photo files and original Site A untouched; no JS/HTML/CSS, Supabase, live site or image asset mutation. Issue #28 remains OPEN. This batch is evidence consolidation in PR #58, **not** a new functioning map-layer release.
+
+## Owner-photo to original Atlas JPG — exploratory affine registration batch 04 (21 November 2026)
+
+**Now using the actual source-map asset, not just a guide's external XY:** Retrieved `maps/lumiose-game-map.jpg` directly from GitHub (`b951a877aea400564b1c4c6495b0cd41247bd8ca`), confirming its native dimensions **1920×1920 pixels**. Approximate correspondence between named Wild Zone centres/landmarks in that file and the player's original photos supports an initial **photo-pixel → Atlas-JPG-pixel** affine estimate for **six of the ten** photos. [Reproducible anchor/control register and projected coordinates](MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json).
+
+**Measurement method and important limits:** Four or five manually identified matching control points per registered photo (Wild Zone centre, known Pokémon Center, café, or Prism Tower). Source-map controls were selected using a visually displayed 1280×1280 preview and multiplied by **1.5** to convert to native JPG coordinates. Fitted 2×3 least-squares affine matrices and control-fit residuals are stored in JSON. **A low residual is not a proof of true positional accuracy:** controls are hand-picked and rounded, the player images are camera photos of a tilted TV, and perspective/wall or UI distortion was not fully modelled. This is usable for **approximate research bearings**, not finished, confirmed pins.
+
+| Possible device / lead | Approximate **native Atlas JPG pixel** estimate (1920×1920), not a confirmed pin | Source-photo evidence and caution |
+| --- | --- | --- |
+| DR-H-03? Vert 7 / Racine | **PHOTO-C03 ≈ (1475, 1540)** | P04 icon (783,779), 4 control points / 1.2 px native fit residual; unit still not individually identified |
+| DR-H-04? South Boulevard south WZ12 | **PHOTO-C04 ≈ (698, 1729)** | P05 icon (638,977), 4 controls / 15.1 px native residual; source image and photo-perspective uncertainty remain |
+| DR-H-02? Vernal Avenue | **PHOTO-C02 ≈ (949, 1666)** | P04 west/NW of WZ1, possible but device unproven |
+| DR-H-07? Magenta 2 / Autumnal | **PHOTO-C05 ≈ (739, 740)** | P09 NW/NE-area marker vs WZ7; icon classification not established |
+| DR-H-08? W/SW of WZ15 | **PHOTO-C06 ≈ (1197, 393) from P01**, **(1183, 402) from P08** | *Independent photo projections* differ by ~17 native px, consistent with same map icon; mission #80 physical unit still unverified |
+| Café Cyclone / Coulant Waterway (unassigned) | **PHOTO-C08 ≈ (1308, 1331) from P03**, **(1304, 1339) from P04** | Two photo projections differ ~9 native px, supporting a common visible icon location but not its type |
+| DR-H-01? west of WZ3 | **P08 ≈ (831, 633)** vs **P09 ≈ (830, 560)** | **73 native px difference**; do not assume these are the same icon or choose one as Sommi's unit without direct gameplay/marker verification |
+
+This is a meaningful improvement over the prior unaligned mission XY: **some owner photo icon locations are now registered approximately into the existing Atlas JPG frame** and two overlapping pairs are spatially corroborated. Nevertheless the **confirmed Holovator counter stays 0** because **(a)** yellow-chevron semantics are not definitively checked as Holovator, **(b)** mission-specific physical unit match is missing, **(c)** entrance building face and roof are not demonstrated and **(d)** manual affine registration still needs independent geometric/perspective validation.
+
+**Safe next order:** match DR-H-03's actual mission #40 unit to PHOTO-C03 and DR-H-04's #45 unit to PHOTO-C04 via in-game screenshot/category marker → validate physical entrance and rooftop arrival → improve perspective registration and independent residuals → then add a **confirmed** pin in a bounded, tested map-code PR. The approximate coordinates above are never sourced by the public confirmed map layer. Protect original ChatGPT Site A, Supabase, user photos, existing 48 sector/20 Wild Zone navigation and progress.
 
 ## Release boundaries and where to resume
 
