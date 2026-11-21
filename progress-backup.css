@@ -1,0 +1,32 @@
+
+/* Local progress backup page, isolated from the preserved game-guide layout. */
+.backup-main{min-width:0;padding-bottom:38px}
+.backup-hero{background:linear-gradient(125deg,#e9e2fb,#edfff6);border-radius:16px;padding:32px 34px;margin:12px 0 18px;border:1px solid #e2d9ee}
+.backup-hero h1{font-size:clamp(27px,4vw,46px);line-height:1.1;color:#352b59;margin:12px 0}.backup-hero h1 em{color:#7450b9}
+.backup-hero p{max-width:790px;color:#554a70;line-height:1.7;font-size:14px}
+.backup-hero-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.backup-hero-links a{background:#fff;color:#443178;border:1px solid #cabee0;padding:9px 12px;border-radius:9px;text-decoration:none;font-weight:800;font-size:12px}
+.backup-status{border-radius:9px;background:#effaf6;color:#246349;border:1px solid #c9e9dd;padding:11px 14px;margin:12px 0 18px;line-height:1.5;font-size:13px}
+.backup-status.backup-error{background:#fff0f0;color:#8a2727;border-color:#f0c9c9}
+.backup-panel{background:white;border:1px solid #e1dce9;border-radius:14px;margin:15px 0;padding:24px 25px}
+.backup-step{color:#785daa;font-weight:800;letter-spacing:.09em;font-size:11px;margin-bottom:7px}
+.backup-panel h2{margin:6px 0 10px;color:#30254f;font-size:clamp(19px,3vw,27px)}
+.backup-panel p,.backup-panel li{color:#534c62;line-height:1.65;font-size:13px}
+.backup-panel a{color:#6244a6;text-decoration:underline;font-weight:700}
+.backup-panel li{margin:7px 0}.backup-steps{padding-left:22px}
+.backup-summary{margin:12px 0 17px;background:#f5f1fc;border:1px solid #e7def3;padding:14px;border-radius:10px;color:#46335e;font-weight:700;font-size:12px;line-height:1.6}
+.backup-primary,.backup-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:41px;font-size:13px;font-weight:800;cursor:pointer;border-radius:9px;padding:11px 16px;text-align:center;margin:6px 8px 7px 0}
+.backup-primary{background:#6044a2;border:1px solid #6044a2;color:white}.backup-secondary{background:#f6f1ff;border:1px solid #c7b9e5;color:#443375}
+.backup-primary:focus-visible,.backup-secondary:focus-visible{outline:3px solid #ffaf50;outline-offset:2px}
+.backup-primary:disabled,.backup-secondary:disabled{opacity:.5;cursor:not-allowed}
+.backup-upload{display:block;background:#f9f7fd;border:1px dashed #ae9bd1;border-radius:9px;padding:15px;margin:15px 0;color:#3f326b;font-weight:800;font-size:13px}
+.backup-upload input{display:block;width:100%;margin-top:10px;font-size:13px;color:#302a43}
+.backup-preview{margin:15px 0;background:#eef9f3;border:1px solid #a3d8bb;padding:15px;border-radius:10px}.backup-preview strong{color:#1c6249}.backup-preview p{color:#315548}
+.backup-note{font-size:11px!important;color:#746d7d!important}
+.backup-code-help{margin:13px 0;border:1px solid #e4deed;border-radius:8px;padding:11px 15px}
+.backup-code-help summary{cursor:pointer;color:#483579;font-weight:800;font-size:13px}
+.backup-code-help textarea{display:block;width:100%;margin-top:12px;min-height:95px;box-sizing:border-box;padding:10px;background:#fbfaff;border:1px solid #d7cde9;border-radius:7px;font:11px/1.5 ui-monospace,monospace}
+.backup-faq details{border-top:1px solid #e9e2ef;padding:12px 0}.backup-faq summary{font-size:13px;color:#493773;font-weight:800;cursor:pointer}
+.backup-home-link{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#f2edff;border:1px solid #d9cdec;padding:15px 18px;border-radius:13px;margin:9px 0 20px}
+.backup-home-link b{display:block;color:#352759;font-size:14px}.backup-home-link p{margin:4px 0 0;color:#6c5d80;font-size:12px}
+.backup-home-link a{display:inline-flex;background:#6a4ca6;color:#fff;text-decoration:none;padding:10px 13px;border-radius:9px;font-size:12px;font-weight:800}
+@media(max-width:760px){.backup-hero{padding:24px 18px}.backup-panel{padding:19px 16px}.backup-main{min-width:0}.backup-primary,.backup-secondary{max-width:100%}}

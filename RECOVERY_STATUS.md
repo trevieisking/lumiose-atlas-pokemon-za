@@ -55,3 +55,7 @@ The original ChatGPT Site project could not be opened through the connected tool
 - Verified JS syntax via `node --check`.
 - Browser DOM smoke-checked navigation, mission expansion, local progress update, text search, Wild Zone selection, Pokédex filtering, Hyperspace missing-content notice, and phone/desktop layouts without JavaScript exceptions.
 - A direct localhost browser smoke run was blocked by the tool environment's administrative navigation rules; the equivalent document was loaded in Chromium with inline styles/scripts to test interactions and layout. **No hosted deployment has been smoke-tested.**
+
+## Player progress backup and migration (draft)
+
+The independent guide now provides a `progress-backup.html` page with local JSON export/import and a non-destructive merge workflow. The old Site's executable scripts were not in the recovered MHTML, so the legacy export mechanism is a voluntary on-page bookmarklet that reads checked boxes rather than guessing localStorage keys. It is **not yet tested on the live original**. No user data, original Site, Supabase table, domain or deployed guide was modified by drafting this feature. See `docs/qa/PROGRESS_MIGRATION_2026-11-21.md`.

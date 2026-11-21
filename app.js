@@ -369,6 +369,17 @@
   $$('#dexGrid > .dex-card').forEach((node,index)=>origDexOrder.set(node,index));
   restoreProgress();
   updateMissionFilter();updateSideFilter();updateBossFilter();updateAlphaFilter();updateLegendFilter();updateItemFilter();updateBerryFilter();updateDexFilter();updateRecipes();updateScrewFilter();
+  // Keep an already-open guide tab synchronized after a backup import elsewhere.
+  // Do not rewrite the saved value from stale in-memory state.
+  window.addEventListener('storage', event => {
+    if(event.key!==KEY)return;
+    try {
+      const latest=JSON.parse(event.newValue || '{}');
+      if(!latest || typeof latest!=='object')return;
+      for(const kind of checkedKinds) if(latest[kind] && typeof latest[kind]==='object' && !Array.isArray(latest[kind]))state[kind]=latest[kind];
+      restoreProgress();
+    } catch (_) { /* Invalid external writes never reset existing progress. */ }
+  });
   window.addEventListener('hashchange',renderRoute);
   renderRoute();
 })();

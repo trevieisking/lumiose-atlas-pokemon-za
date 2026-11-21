@@ -285,6 +285,17 @@
   decorateOriginalMapPins();
   decorateExistingChecklist();
   syncCompletion();
+  // Reflect a safe backup import made in another tab without resetting progress.
+  window.addEventListener('storage', event => {
+    if (event.key === storageKey) {
+      try {
+        const latest = JSON.parse(event.newValue || '{}');
+        if (latest && typeof latest === 'object' && !Array.isArray(latest)) unlinkedProgress = latest;
+      } catch (_) { return; }
+      syncCompletion();
+    }
+    if (event.key === 'lumiose-atlas-reconstruction-v1') syncCompletion();
+  });
   window.addEventListener('hashchange', ensureZoneOnMapRoute);
   ensureZoneOnMapRoute();
 })();
