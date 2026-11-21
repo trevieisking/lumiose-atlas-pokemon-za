@@ -8,9 +8,9 @@
 | --- | --- | --- |
 | Mable’s research & rewards (5) | `mable-research.html` · Mable’s research & rewards | **RESTORED · MERGED #16** — complete levels 2–50 and PDF's research route; TM move names independently checked; dedicated offline regression suite |
 | Complete journey route (46) | `journey.html` · Complete journey route | **RESTORED · MERGED #18** — 42 story, 14 Hyperspace, 20 zones, 42 practical-check sections; collapsed request text explicitly noted |
-| Every Rogue Mega Boss: Counters and Moves (12) | `boss-guide.html` · Full boss plans | **RESTORED IN PR** — 16 story encounters, 10 Mega Dimension fights, 2 finale plans, search and tactical cards |
-| Z-A Royale: Every Promotion Battle (7) | `royale-guide.html` · Story Z-A Royale | **RESTORED IN PR** — 10 illustrated promotion teams, level/counter plans, Canari quiz and story interruptions |
-| Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | PDF CAPTURED |
+| Every Rogue Mega Boss: Counters and Moves (12) | `boss-guide.html` · Full boss plans | **RESTORED · MERGED #20 · DEPLOYED** — 16 story, 10 Mega Dimension, 2 finale plans, searchable boss cards |
+| Z-A Royale: Every Promotion Battle (7) | `royale-guide.html` · Story Z-A Royale | **RESTORED · MERGED #19 · DEPLOYED** — 10 illustrated promotion teams, Canari quiz and story interruptions |
+| Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | **RESTORED IN PR** — 18 quick-reference cards, full 324-cell type matrix, dual-type counter calculator; print-clipped columns independently checked |
 | Alphas (5) | `alphas.html` · Alpha fieldbook | PDF CAPTURED |
 | Items (28) | `items.html` · Item atlas | PDF CAPTURED |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
@@ -43,7 +43,7 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed recovery slices:** Mable's Research & Rewards (5 pages), Shiny Hunting Routes & Tactics (3 pages), the 46-page Complete Journey Route, and the seven-page Z-A Royale promotion teams — individually rebuilt and test-gated. **Current recovery slice:** 12-page complete Rogue Mega boss plans (`boss-guide.html`) in bounded PR. **Next planned standalone PDF:** the 6-page Type Chart (`type-chart.html`), followed by map/item pages. Preserve the original site as read-only context.
+**Completed, deployed recovery slices:** Mable’s Research & Rewards (5 pages), Shiny Hunting Routes & Tactics (3 pages), Complete Journey Route (46 pages), Z-A Royale promotion teams (7 pages), and Rogue Mega Boss Plans (12 pages) — each tested and merged. **Current PR slice:** Complete Type Chart (6 pages), including separately verified modern chart columns omitted from the PDF print view. **Next candidate after merge:** Alpha fieldbook (5 pages), followed by maps/items where the supplied PDF shows enough actionable detail. Preserve the original ChatGPT Site as read-only context.
 
 ## Repeatable one-PDF-at-a-time loop
 
