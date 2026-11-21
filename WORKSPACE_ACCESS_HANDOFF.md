@@ -32,12 +32,15 @@
 
 ## Recent source-audit evidence to show the original Workspace editor
 
-The **canonical state** is always the [two-site fix ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md), revision 5 at this point. Recent documented evidence (no site content updated from these audits):
+The **canonical state** is always the [two-site fix ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md), revision 7 at this checkpoint. Recent documented evidence (no site content updated from these audits):
 
 - [Story missions 11–20](docs/qa/MAIN_STORY_011_020_SOURCE_AUDIT_2026-11-21.md): detailed case routes and rewards; corrected Roto-Glide 15/16 *overlap* classification; no unverified quest-timing assertion.
 - [Story missions 21–30](docs/qa/MAIN_STORY_021_030_SOURCE_AUDIT_2026-11-21.md): **Mega Barbaracle Rock/Fighting—not Rock/Water; Grass 2× not 4×**; **Ground neutral vs Mega Scolipede**, required Gwynn/Philippe/Asami/SBC fights, Corbeau Hotel Z ending and Lida/Naveen opponent rosters. Protect feedback #13 and #14.
 - [Story missions 31–42](docs/qa/MAIN_STORY_031_042_SOURCE_AUDIT_2026-11-21.md): mandatory Philippe battle in Mission 34, correct postgame first-reward-match unlock for legendary missions vs optional 15-win Floette milestone, Mable/Grisham follow-up and other route/reward details.
 - [Side missions 001–020](docs/qa/SIDE_MISSIONS_001_020_SOURCE_AUDIT_2026-11-21.md): Froakie third-course Roto-Glide requirement, incomplete item quantities, verified Shiny Mareep path, unresolved Fennekin NPC name conflict (Serebii says Jardin, Thonky says Branche).
+- [Side missions 021–040](docs/qa/SIDE_MISSIONS_021_040_SOURCE_AUDIT_2026-11-21.md): museum's 12 Spewpa locations, single Kanto starter gift and Lab 3F, missing cosmetic contact-lens rewards for #030–032, fossil subsidy vs mission payout, Alpha Magikarp shallow-water route. **HOLD source disagreements:** unlock timing #030/#033/#034 and Power Belt quantity #039.
+- [Side missions 041–060](docs/qa/SIDE_MISSIONS_041_060_SOURCE_AUDIT_2026-11-21.md): **#043 caught Alpha Weedle can be kept** (do not force donation), permanent Furfrou salon, nine new hair colours, #050 nighttime Goomy, #057 sewer route, full rewards. **HOLD source disagreements:** Rindo Berry, Exp. Candy M, Canari/Gwynn unlocks, sector markers.
+- Across 001–060, every reviewed B quest source has its source-content audit, **but the current guide HTML was not modified by these documentation-only passes**. Never mark both editions as corrected without actual on-device evidence.
 
 **Warning:** These are source comparisons and proposed corrections. They have **not** been applied or tested on A or B, and the guide is not certified accurate. Complete per-site changes/QA only after recovering actual Workspace source. Do not auto-delete feedback rows #13/#14 after fixing only the GitHub edition.
 
