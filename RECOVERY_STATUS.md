@@ -1,10 +1,17 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — Lumiose Maps PDF (PR pending review and tests)
+
+The owner’s four-page **Maps** PDF was examined visually and as extracted text. It provides the city overview image and legend, 20-zone introduction, the first five visible directory rows, and mentions 48 sector close-ups plus nine Hyperspace layouts **without containing their expanded images or access coordinates**. The preserved main-page `src/sections/maps.html` provides all 20 pin coordinates, district labels and unlock missions. The saved `src/sections/items.html` supplies 264 ordered item entries and 100 Colorful Screw text clues; `src/sections/alphas.html` supplies 38 fixed Alpha target listings. The new standalone `maps.html` uses the existing source map image, 20 selectable pins and directory rows, 20 readable zone detail cards, all 264 pickup entries (marking vague coordinate-less notes), 38 Alpha targets, 25 screw clues that explicitly reference Wild Zones, filters, a search field and a zoomed **crop of the same source image**. It does **not** represent these as newly discovered high-resolution close-ups. Full original 25-link nav and Back to walkthrough preserved. The old item progress system remains the only checkbox owner.
+
+**Proposed after this recovery PR: 9/19 standalone routes restored, 10 placeholders remaining.** Tests check all 20 exact map pin positions, 264 item records, 38 Alpha entries, 25 matching screw clues, 25-link menu, keyboard/mobile controls, offline-only search and preserved original guide/feedback. Merge and Pages deployment are pending; do not treat this page as published until CI is green and deployment succeeds. No changes to the original ChatGPT Site, Supabase, main interactive walkthrough, DNS or player progress.
+
+
 ## Player-confirmed in-game café menu and Premier Ball (21 November 2026)
 
 The owner provided four photographs of a **café truck interaction**, showing the three category menus and the item names in order, then supplied all ten prices separately in chat. Coffee: Ember Roast ₽250, Flamethrower Roast ₽250, Fire Blast Roast ₽250, Burn Up Roast ₽300. Tea: Panchamomile Tea ₽250, Wooloolong Tea ₽300, Roserade Tea ₽350. Something else: Moomoo Milk ₽200, Fresh Water ₽100, Sparkling Water ₽100. The owner also independently confirmed **Premier Ball ₽200** from the game. The photographs do **not** prove the truck's exact street or identify it as **Nouveau Café Truck No. 3**, so the ten drinks are stored as an explicitly player-verified **18th, separate catalogue group** rather than being attributed to the six-page PDF's berry truck. Their menu names/order come from photographs; prices come from the owner's firsthand report. Existing original 17 PDF groups/190 entries, Mega Shard and Screw planners, original source, feedback and player progress remain unchanged. Only the player-confirmed Premier Ball conflict flag is cleared; the Poké Ball and Sharpedonite disagreements stay visible.
 
-**This is a bounded follow-up PR**, not another standalone PDF recovery. Total restored routes remain **8 of 19**, with 11 placeholders still awaiting recovery. The main ChatGPT Site, Supabase and protected feedback system are untouched. Merge/deployment confirmation must be logged after green CI.
+**Follow-up PR #24 passed all existing article/static/feedback checks and merged as `14f9051844f98e7058f2c44a6bd2780dc6eac2e0`. GitHub Pages deployment #44934456582 succeeded at the exact SHA.** This did not change the 8/19 restored-route count. The original ChatGPT Site and Supabase remain untouched.
 
 
 ## Stage 2 update — Shops & Mega Shards (MERGED #23 · PAGES SUCCESS)
