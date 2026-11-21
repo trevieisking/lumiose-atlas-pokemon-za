@@ -112,6 +112,36 @@ The photographs are **ten overlapping views of ONE in-game city map**, not ten d
 
 The example is a schema illustration, **not actual verified Vert Sector 5 geometry**. Every future coordinate must carry its provenance and the coordinate space/transform used. All overlay/source additions must preserve existing IDs and navigation.
 
+
+## Coordinate validation loop — mission-source batch 01 (21 November 2026)
+
+**Evidence file:** [`MAPS_HOLOVATOR_COORDINATE_VALIDATION.json`](MAPS_HOLOVATOR_COORDINATE_VALIDATION.json) with **nine individually checked side-mission map references**. **These are raw Gamer Guides mission-map X/Y values in the site's own coordinate system, *not exact Holovator entrances* or coordinates on `maps/lumiose-game-map.jpg`.** The external labels/mission triggers were cross-referenced with [GameWith's Holovator guide](https://gamewith.jp/pokemon-za/524373), [Serebii mission guide](https://www.serebii.net/legendsz-a/sidemissions.shtml) and specialist mission entries. No coordinate-space transform is established; no new verified Atlas pins have been published.
+
+| Loop | Mission | Area independently established | Source **mission** map X,Y | Sector & next precise gate |
+| --- | --- | --- | --- | --- |
+| 01 | #4 A Break Time Battle | West of WZ3, Rouge Plaza | **9143, 6904** | **Rouge 1** corroborated; inspect corresponding Holovator glyph/building face |
+| 02 | #23 Underneath the Holovator | Vernal Avenue, NW of WZ1 | **10111, 16090** | Vert 9 *reported*, confirm boundary; identify lift entrance |
+| 03 | #40 A Holovator Without Power | S Boulevard, east of WZ1 / SW of Racine Construction | **14670, 14907** | numbered sector unknown; confirm actual device location |
+| 04 | #45 On Maintenance Duty | S Boulevard, south of WZ12 | **7987, 16433** | Bleu 7 *reported*, verify street/sector boundary |
+| 05 | #56 We'll Just Muscle Our Way Through! | Jaune Sector 6, south of WZ8 | **13808, 10090** | **Jaune 6** corroborated; distinguish quest approach from device |
+| 06 | #61 My Favorite Holovator | Bleu Sector 3 / Bleu Plaza, north of WZ12 | **8603, 13820** | **Bleu 3** corroborated by Serebii; verify map alignment |
+| 07 | #71 The Burning Gaze of Watchog | Autumnal Avenue, NE of WZ7 | **8429, 8099** | numbered sector unknown; inspect map glyph |
+| 08 | #80 A Shocking Territorial Dispute | West/SW of WZ15 | **13520, 5172** | numbered sector unknown; inspect map glyph |
+| 09 | #92 The Beldum Blockade | Bleu Sector 8, SE of WZ10 and Café Soleil area | **5123, 14626** | **Bleu 8** corroborated; inspect map glyph |
+
+**What has been validated:** nine source-published **mission-location coordinates**, nine relevant mission/area descriptions and unlock routes. **What has not:** placement of any of the 23 individual **Holovator-category** marker coordinates on our Atlas image, device-level GPS (the game map has no GPS), any rooftop entry/exit height or a verified entire-city scaffold inventory. The 23 Holovators is the **Gamer Guides category count**, and a nine-mission shortlist cannot be naively deducted from it without verifying one-to-one correspondence.
+
+**The strict one-by-one continuation loop**:
+
+1. Read the next row from `MAPS_HOLOVATOR_COORDINATE_VALIDATION.json`; check the original source URLs, not the report's conclusions alone.
+2. Compare the quest marker to the **specific Holovator-category marker**, confirm both refer to the *same physical device*, and record any mission-to-device spatial offset.
+3. Register source map XY and scale/origin. Calibrate with at least three correctly identified building/landmark control points against the preserved city image and owner screenshots, quantify registration error. **Mission XY must never be silently treated as the Holovator XY**.
+4. Confirm ground entrance / building face and arrival level using an in-game screenshot or independent clear gameplay evidence; cross-reference sector border and at least one other guide.
+5. Only after those gates: record exact `atlas_x`, `atlas_y`, coordinate transform, evidence URLs, source date, floors and human-readable directions. If any critical datum is missing, retain **not verified / no confirmed map dot**, log the missing evidence and proceed to the next candidate.
+6. Repeat remaining Holovator-category points; **then** apply the same proof standard to scaffold/ladder access networks; **then** fixed items/Screws. Every completed small batch updates this master plan, structured manifest, cross-site ledger and issue #28 with source references and reviewed commit SHA.
+
+**Safest next source check:** DR-H-01's **Holovator-category marker** (not its mission marker) next to the building west of Wild Zone 3. Exact entrance/floor and pixel alignment require independent verification; the original live site and Edition B maps remain unchanged by this documentation batch.
+
 ## Release boundaries and where to resume
 
 - **Edition A:** Original ChatGPT Workspace Site `lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site` remains unchanged. No original source export, redeploy, DNS change, Supabase change, ratings/feedback/report deletion or player progress reset.
