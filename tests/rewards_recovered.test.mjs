@@ -21,22 +21,22 @@ for(const [label,source] of [
 for(const phrase of ["100 Ultra Balls","CELEBRATE30TH","7 JANUARY 2027","26 FEBRUARY 2027, 01:59 UTC","Special distortion detected!","Garchompite Z","Pokémon HOME","Seeds of Mastery","Colorful Screws","Season X"]){
   assert.ok(html.includes(phrase),"Missing original PDF detail: "+phrase);
 }
-const nav=html.match(/<nav class="atlas-article-nav"[^>]*>([\\s\\S]*?)<\\/nav>/)?.[1];
-const mainNav=template.match(/<nav id="sideNav">([\\s\\S]*?)<\\/nav>/)?.[1];
+const nav=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+const mainNav=template.match(/<nav id="sideNav">([\s\S]*?)<\/nav>/)?.[1];
 assert.ok(nav&&mainNav,"Full navigation must appear");
 assert.equal((nav.match(/<a /g)||[]).length,25,"All 25 guide links must survive");
 assert.equal(nav.replace(' aria-current="page"',"").trim(),mainNav.trim(),"Guide menu must match overview");
-assert.match(nav,/href="index\\.html#rewards" aria-current="page"/);
-assert.match(html,/href="index\\.html#walkthrough"/);
+assert.match(nav,/href="index\.html#rewards" aria-current="page"/);
+assert.match(html,/href="index\.html#walkthrough"/);
 assert.match(html,/id="atlasArticleFeedback"/);
-assert.match(html,/href="items\\.html"/);
-assert.match(html,/href="battles\\.html"/);
-assert.match(html,/href="home-connection\\.html"/);
+assert.match(html,/href="items\.html"/);
+assert.match(html,/href="battles\.html"/);
+assert.match(html,/href="home-connection\.html"/);
 assert.doesNotMatch(html,/data-go=|unrecovered-route|REBUILD STATUS/);
-assert.match(css,/@media\\(max-width:590px\\)/);
+assert.match(css,/@media\(max-width:590px\)/);
 assert.match(css,/min-height:44px/);
-assert.doesNotMatch(html+css+shared,/sb_secret_|service_role_key|github_pat_|sk-proj-|localStorage\\.clear|localStorage\\.removeItem/i);
-assert.doesNotMatch(html,/fetch\\(|localStorage|sessionStorage|supabase\\.co/);
+assert.doesNotMatch(html+css+shared,/sb_secret_|service_role_key|github_pat_|sk-proj-|localStorage\.clear|localStorage\.removeItem/i);
+assert.doesNotMatch(html,/fetch\(|localStorage|sessionStorage|supabase\.co/);
 for(const img of html.matchAll(/<img[^>]*src="([^"]+)"/g)){
   assert.ok(existsSync(new URL("../"+img[1],import.meta.url)),"Missing reward artwork: "+img[1]);
 }
