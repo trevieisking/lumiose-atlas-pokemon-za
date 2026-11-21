@@ -65,6 +65,9 @@ on:
       - side-missions-index.css
       - side-missions-index.js
       - tests/side_missions_index.test.mjs
+      - mega-dimension.html
+      - mega-dimension-index.css
+      - tests/mega_dimension_index.test.mjs
       - shiny-hunting.css
       - shiny-hunting.js
       - tests/shiny_recovered.test.mjs
@@ -142,6 +145,8 @@ jobs:
         run: node --test tests/walkthrough_index.test.mjs
       - name: Verify all 203 saved side quests, EX links, filters, and read-only progress
         run: node --test tests/side_missions_index.test.mjs
+      - name: Verify source-exact 14 Mega Dimension DLC mission routes
+        run: node --test tests/mega_dimension_index.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
