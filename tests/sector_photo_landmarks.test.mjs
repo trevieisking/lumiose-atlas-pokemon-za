@@ -17,7 +17,7 @@ for(const list of lists)
  assert.equal((list[1].match(/<li>/g)||[]).length,6,"Six clear visual references per district");
 const links=[...panel.matchAll(/<a href="#([^"]+)">([^<]+)<\/a>/g)];
 assert.equal(links.length,32,"30 referenced landmarks + 2 direct directory jumps");
-const photoLinks=links.filter(x=>x[1].startsWith("sector-")||x[1].startsWith("wildzone-"));
+const photoLinks=links.filter(x=>/^sector-(?:vert|bleu|magenta|rouge|jaune)-sector-\d+$|^wildzone-\d+$/.test(x[1]));
 assert.equal(photoLinks.length,30,"No invented sector maps");
 const ids=new Set([...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
 for(const [,href,title]of links){
