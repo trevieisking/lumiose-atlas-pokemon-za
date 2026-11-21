@@ -1,6 +1,6 @@
 # Recovery status — 21 November 2026
 
-## Stage 2 update — Legendary & Mythical Fieldbook (PDF recovery PR awaiting checks)
+## Stage 2 update — Legendary & Mythical Fieldbook (MERGED #33 · PAGES SUCCESS)
 
 The owner’s exact **10-page “Legends” PDF** was visually inspected from pages 1 through 10. Pages 1–9 contain **25 illustrated field cards**; page 10 is only the original footer. The cards correspond exactly to the saved `src/sections/legends.html` records and artwork: **3 Base story** (Xerneas, Yveltal, Zygarde); **2 Gift mission** (Diancie, Mewtwo); **13 Mega Dimension** (Heatran, Darkrai, Groudon, Kyogre, Rayquaza, Meltan, Melmetal, Magearna, Hoopa, Volcanion, Genesect, Marshadow, Zeraora); **7 Special Scan** (Latias, Latios, Cobalion, Terrakion, Virizion, Keldeo, Meloetta).
 
@@ -8,7 +8,7 @@ The new standalone `legendaries.html` preserves **each original Pokémon name, n
 
 **Evidence boundaries:** the PDF specifies Mystery Gift items but not whether gifts are currently available; its Special Scan sixth-scan guarantee is reproduced as a PDF claim and needs confirmation in a future playthrough; Unknown Hyperspace Zones are **not** mapped as fixed city locations. The PDF does not fully specify the Genesect after-wall sequence, Marshadow follow-on capture or Zeraora rooftop entrance. These gaps are called out instead of guessed. The original ChatGPT Site has a different browser origin and its old progress does not automatically sync with the reconstructed GitHub site.
 
-**Proposed on safe release: 11/19 standalone routes restored, 8 remaining.** Do not mark live until CI passes at exact PR HEAD and GitHub Pages deployment of the merged SHA succeeds. Existing 17-section main guide, walkthrough, side quests, items, Alphas, feedback, protected owner inbox, RLS, Supabase and original ChatGPT Site remain unchanged. Android manual visual check remains outstanding.
+**Verified release:** [PR #33](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/33) passed all 25 exact-PDF/card/artwork and shared-progress assertions, the 17-section original guide and feedback regressions in GitHub Actions run **#44941733488**, then merged as **`696179c51224235e43b2453d0d53313137ee6bba`**. GitHub Pages deployment **#44941808697 succeeded at that exact SHA**. The total is now **11/19 standalone routes live**, with **8 placeholders remaining**. Android visual verification and new-playthrough route fact checks remain outstanding. Existing main guide, walkthrough, side quests, items, Alphas, feedback, owner inbox, RLS, Supabase and original ChatGPT Site are unchanged.
 
 
 
