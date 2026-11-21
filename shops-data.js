@@ -1,4 +1,4 @@
-// Catalog transcribed from the owner's six-page Lumiose Shops & Mega Shards PDF (21 Nov 2026). Some third-party sources disagree on Poké Ball, Premier Ball and Sharpedonite prices; original PDF figures retained, flagged in guide notes. Missing PDF prices are null. Shards, Screws and Pokédollars are NOT interchangeable.
+// Catalog transcribed from the owner's six-page Lumiose Shops & Mega Shards PDF (21 Nov 2026). Published sources disagree on Poké Ball and Sharpedonite; PDF values retained and flagged. Premier Ball ₽200 was independently confirmed by the player. New 10-item café drink group derives from player screenshots and price report; its location is NOT established. Missing PDF prices are null. Shards, Screws and Pokédollars are NOT interchangeable.
 window.ATLAS_SHOPS = [
   {
     "id": "centers",
@@ -140,7 +140,8 @@ window.ATLAS_SHOPS = [
       },
       {
         "name": "Premier Ball",
-        "price": 200
+        "price": 200,
+        "priceVerification": "Confirmed in game by player, 21 November 2026"
       }
     ]
   },
@@ -515,6 +516,77 @@ window.ATLAS_SHOPS = [
       {
         "name": "Regular Berries (selection and prices not listed in PDF)",
         "price": null
+      }
+    ]
+  },
+  {
+    "id": "cafe-drinks",
+    "name": "Café truck · drinks menu (player verified)",
+    "location": "Lumiose City café truck · exact street and truck number unverified",
+    "currency": "money",
+    "unlock": "Seen in player's in-game screenshots; access requirements not established",
+    "detail": "Coffee, tea and other drinks in the exact three-menu order photographed by the player. Names and order come from screenshots; prices were confirmed directly by the player. This truck has not been verified as Nouveau Café Truck No. 3.",
+    "source": "Owner-supplied in-game menu photographs and first-hand prices, 21 November 2026",
+    "items": [
+      {
+        "name": "Ember Roast",
+        "price": 250,
+        "menu": "Coffee",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Flamethrower Roast",
+        "price": 250,
+        "menu": "Coffee",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Fire Blast Roast",
+        "price": 250,
+        "menu": "Coffee",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Burn Up Roast",
+        "price": 300,
+        "menu": "Coffee",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Panchamomile Tea",
+        "price": 250,
+        "menu": "Tea",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Wooloolong Tea",
+        "price": 300,
+        "menu": "Tea",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Roserade Tea",
+        "price": 350,
+        "menu": "Tea",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Moomoo Milk",
+        "price": 200,
+        "menu": "Something else",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Fresh Water",
+        "price": 100,
+        "menu": "Something else",
+        "source": "owner gameplay report"
+      },
+      {
+        "name": "Sparkling Water",
+        "price": 100,
+        "menu": "Something else",
+        "source": "owner gameplay report"
       }
     ]
   },
