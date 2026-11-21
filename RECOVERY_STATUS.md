@@ -1,10 +1,16 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — Complete Journey Route PDF (21 November 2026)
+
+The 46-page owner export of the **Complete Journey Route** has been restored as a true standalone `journey.html` article. Source coverage: **42 story/postgame missions, 14 Hyperspace missions, 20 Wild Zone circuits, 42 Practical checks sections, 133 story steps and 37 DLC steps**. Search/filter/deep links are separate, offline enhancements; they never modify the main walkthrough's local completion records. Collapsed side-request lists, map details and request answers are labelled, with links to existing inline sections rather than invented data. The 25-link navigation and Back to walkthrough are carried forward. Read-only PR checks also guard Mable, Shiny and feedback components.
+
+**Restored standalone routes: 3/19; placeholders remaining: 16/19.** The original ChatGPT Site, its URL, Supabase data/functions and all existing 17-section main guide content remain unchanged.
+
 ## Stage 2 update — second PDF article (21 November 2026)
 
 The owner-supplied three-page **Shiny hunting routes & tactics** PDF has now been restored to `shiny-hunting.html`, with the full 25-link menu, step-by-step Wild Zone and bench resets, fixed Side Mission 17 Shiny Mareep route, shiny persistence warnings and DLC Sparkling Power rules. A no-network per-spawn odds estimator helps players understand chance without false guarantees. Facts were checked against the Serebii shiny mechanics and Mareep side-mission sources. Dedicated tests guard wording, menu parity, probability arithmetic and existing guide features.
 
-**Current remaining placeholders: 17 of 19.** Both restored articles are independent GitHub edition content; original Workspace Site, URL and Supabase remain unchanged. `PDF_RECOVERY_QUEUE.md` is the authoritative capture inventory.
+**After the second slice there were 17 placeholders; after the Complete Journey slice, there are 16 of 19.** Both restored articles are independent GitHub edition content; original Workspace Site, URL and Supabase remain unchanged. `PDF_RECOVERY_QUEUE.md` is the authoritative capture inventory.
 
 ## Stage 2 update — first PDF article (21 November 2026)
 
