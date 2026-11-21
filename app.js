@@ -8,9 +8,10 @@
   const VIEWS = new Set(['home','walkthrough','sidequests','dimension','bosses','alphas','maps','items','legends','berries','starters','pokedex','essentials','secrets','rewards','battles','sources']);
   const KEY = 'lumiose-atlas-reconstruction-v1';
   const checkedKinds = ['check','sideCheck','legendCheck','pickup','screw'];
-  // The feedback form lives on the server's own origin, so its POST uses the
-  // already-permitted same-origin path without changing live database/CORS rules.
-  const FEEDBACK_FORM = 'https://xzxqfrvqdgkzwujbkdbk.supabase.co/functions/v1/lumiose-atlas-feedback';
+  // Show the feedback form on this GitHub Pages origin; Edge Functions cannot
+  // serve HTML directly as a browser page (it is downgraded to text/plain).
+  // Keep the original Supabase feedback service and Site unmodified.
+  const FEEDBACK_PAGE = 'feedback.html';
   function buildAtlasFeedbackUrl(pathname, hash) {
     const pagePath = String(pathname || '/');
     // GitHub Pages project URLs end with /repo/; normalize for backend validation.
@@ -18,7 +19,7 @@
     const rawPage = canonicalPath + String(hash || '');
     const validPage = rawPage.length <= 160 &&
       /^\/(?:[a-z0-9-]+(?:\.html)?(?:\/[a-z0-9-]+(?:\.html)?)*)?(?:#[a-z0-9-]+)?$/i.test(rawPage);
-    const url = new URL(FEEDBACK_FORM);
+    const url = new URL(FEEDBACK_PAGE, document.baseURI);
     url.searchParams.set('view', 'feedback');
     url.searchParams.set('page', validPage ? rawPage : '/');
     return url.toString();
