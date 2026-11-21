@@ -1,0 +1,28 @@
+/* Scoped PDF-recovered boss cards. Existing guide and feedback styles untouched. */
+.atlas-article .boss-toolbar{display:flex;flex-wrap:wrap;align-items:end;gap:14px;margin:20px 0}
+.atlas-article .boss-toolbar>div:first-child{flex:1 1 230px}
+.atlas-article .boss-toolbar label{display:block;font-weight:800;font-size:13px;margin-bottom:6px}
+.atlas-article .boss-toolbar input{font:inherit;font-size:14px;width:100%;padding:10px 12px;border:1px solid #c8bfd5;border-radius:9px;min-height:44px;background:#fff}
+.atlas-article .boss-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.atlas-article .boss-tabs button{min-height:44px;border:1px solid #d3c5e4;border-radius:9px;background:#fff;color:#4d4065;padding:9px 11px;font-weight:800;cursor:pointer}
+.atlas-article .boss-tabs button[aria-pressed="true"]{background:#654d92;border-color:#654d92;color:#fff}
+.atlas-article .boss-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0 35px}
+.atlas-article .boss-card{background:#fff;border:1px solid #e5dfea;border-radius:15px;padding:22px;scroll-margin-top:20px}
+.atlas-article .boss-card[data-boss-group="dlc"]{border-top:4px solid #6e62a8}
+.atlas-article .boss-card[data-boss-group="finale"]{border-top:4px solid #a47c3b}
+.atlas-article .boss-top{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:16px}
+.atlas-article .boss-top h3{font-size:clamp(1.2rem,2vw,1.5rem);margin:6px 0;line-height:1.2}
+.atlas-article .boss-top img{width:94px;height:94px;object-fit:contain;flex:0 0 94px}
+.atlas-article .boss-gauntlet{font-size:44px}
+.atlas-article .boss-type{display:inline-block;border:1px solid #dfd4ef;background:#f7f2ff;border-radius:999px;padding:4px 10px;color:#6b508d;font-size:12px;font-weight:800}
+.atlas-article .boss-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
+.atlas-article .boss-facts>div{border:1px solid #ebe5f1;background:#faf8fd;border-radius:10px;padding:12px}
+.atlas-article .boss-facts span{display:block;font-size:10px;letter-spacing:.07em;color:#706284;font-weight:850;margin-bottom:5px}
+.atlas-article .boss-facts strong{font-size:13px;line-height:1.4;display:block;overflow-wrap:anywhere}
+.atlas-article .boss-card p{font-size:14px;color:#5b5666}
+.atlas-article .boss-card .boss-weak{color:#564277}
+.atlas-article .boss-links{display:flex;flex-wrap:wrap;gap:9px;border-top:1px solid #eee8f2;margin-top:16px;padding-top:12px}
+.atlas-article .boss-links a{font-size:12px;font-weight:800}
+.atlas-article .boss-card[hidden],.atlas-article #bossNoResults[hidden]{display:none}
+@media(max-width:800px){.atlas-article .boss-grid{grid-template-columns:1fr}.atlas-article .boss-card{padding:17px}}
+@media(max-width:400px){.atlas-article .boss-facts{grid-template-columns:1fr}.atlas-article .boss-top img{width:74px;height:74px;flex-basis:74px}}

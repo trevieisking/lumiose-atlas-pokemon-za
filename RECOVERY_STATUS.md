@@ -1,5 +1,12 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — Rogue Mega Boss plans (PR awaiting checks)
+
+The owner’s 12-page Rogue Mega Boss PDF is transcribed to `boss-guide.html`: **16 story**, **10 Mega Dimension**, and **2 finale** encounter cards. Each keeps its original counter example, move plan, weakness, danger cue and tactical advice. Responsive species portraits, a 25-link menu, Back to walkthrough and offline filters are added. Tests assert all 28 cards, menu parity, local assets, and no player-progress writes. **This is not considered live until PR checks and Pages deployment succeed.**
+
+**Proposed restored routes: 5/19; remaining placeholders after merge: 14/19.**
+
+
 ## Stage 2 update — Story Z-A Royale promotion battles (21 November 2026)
 
 The seven-page owner's **Z-A Royale: Every Promotion Battle** PDF has been restored into `royale-guide.html`, with **10 promotion opponents and 40 Pokémon illustrations**, all local `dex-art` images, source-recorded levels, suggested counters and move plans. A full Canari entrance/quiz/Tarragon sequence and the interruptions before Ivor/Jacinthe are integrated. Offline search and chapter filters use no stored player state. The exact 25-link main menu and Back to walkthrough remain consistent. Canari's entry details were also checked against Serebii and Bulbapedia.
