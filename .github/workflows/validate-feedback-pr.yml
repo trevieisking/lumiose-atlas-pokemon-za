@@ -1,0 +1,27 @@
+name: Validate Atlas feedback PR
+
+on:
+  pull_request:
+    paths:
+      - app.js
+      - tests/feedback_link.test.mjs
+      - .github/workflows/validate-feedback-pr.yml
+
+permissions:
+  contents: read
+
+jobs:
+  feedback-static-tests:
+    name: Feedback static tests (read only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check full app JavaScript syntax
+        run: node --check app.js
+      - name: Test feedback URL and security constraints
+        run: node --test tests/feedback_link.test.mjs
+      - name: Verify guide source integrity
+        run: python3 tests/validate_static.py
