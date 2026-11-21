@@ -1,0 +1,25 @@
+/* Owner inbox: additive styling on top of the existing feedback page theme. */
+[hidden]{display:none!important}
+.inbox-heading{display:flex;align-items:center;gap:16px;margin:0 0 16px}
+.inbox-heading h2{font-size:1.35rem;margin:0 0 6px;color:#251c3f}
+.inbox-heading p{color:#575365;line-height:1.5;margin:0}
+.inbox-heading-between{justify-content:space-between;align-items:start;flex-wrap:wrap}
+.inbox-heading-between .eyebrow{font-size:.72rem;color:#7055a3;font-weight:850;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
+.inbox-symbol{width:50px;height:50px;display:grid;place-items:center;flex:0 0 auto;background:#eee8fa;border-radius:14px;font-size:24px}
+.privacy{margin:18px 0 0;color:#595a6a;font-size:.86rem;line-height:1.65}
+.owner-status{margin:15px 2px;min-height:26px;font-size:.92rem;font-weight:700;color:#544575;line-height:1.5;overflow-wrap:anywhere}
+.owner-status.error{color:#9b2f45}
+.owner-status.success{color:#1e6a45}
+.button-secondary{background:#eee9f8;color:#483472;border:1px solid #d4c9e8;margin:0;padding:10px 16px;min-height:44px}
+.button-secondary:hover{background:#e1d8f2}
+.report-list{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.report-entry{border:1px solid #e4dcec;border-radius:13px;background:#fdfbff;padding:18px;overflow-wrap:anywhere}
+.report-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.report-heading h3{font-size:1.05rem;color:#2d2344;margin:0}
+.report-category{font-weight:750;font-size:.75rem;border-radius:999px;padding:5px 10px;background:#eee6fa;color:#5a3b8b}
+.report-meta{display:flex;flex-wrap:wrap;gap:7px 18px;font-size:.81rem;color:#615a70;margin:0 0 12px}
+.report-meta>span{word-break:break-word}
+.report-message{font-size:.95rem;line-height:1.6;color:#2f3044;white-space:pre-wrap;margin:0;border-top:1px solid #e9e3ee;padding-top:12px;overflow-wrap:anywhere}
+.report-empty{border:1px dashed #d4cae5;padding:22px;border-radius:12px;background:#fcfaff;color:#695e76}
+#loadMore{margin-top:18px}
+@media(max-width:480px){.inbox-heading{gap:12px}.inbox-heading h2{font-size:1.2rem}.report-entry{padding:13px}.inbox-heading-between{align-items:start}.inbox-heading-between .button-secondary{margin-top:8px}}
