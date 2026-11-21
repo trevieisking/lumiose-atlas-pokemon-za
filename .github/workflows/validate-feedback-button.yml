@@ -1,0 +1,27 @@
+name: Validate Atlas header feedback button
+
+on:
+  pull_request:
+    paths:
+      - app.js
+      - tests/feedback_button.test.mjs
+      - .github/workflows/validate-feedback-button.yml
+
+permissions:
+  contents: read
+
+jobs:
+  header-feedback:
+    name: Feedback header static checks (read-only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check complete app JavaScript syntax
+        run: node --check app.js
+      - name: Test header feedback navigation and existing form
+        run: node --test tests/feedback_button.test.mjs
+      - name: Check existing guide static integrity
+        run: python3 tests/validate_static.py
