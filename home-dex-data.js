@@ -7,7 +7,7 @@ window.ATLAS_HOME_SOURCE = {
     "originalMainSource": "src/sections/pokedex.html, exact first 232 entries checked 1-for-1",
     "pdfCanonicalSha256": "a36169f8a22e9e0d8ec1369f4da29966e5b32b4f3dad5c5396d31b2a319f7cc5",
     "sourceNote": "Full 364 roster derived from the owner PDF, not a live Nintendo HOME API",
-    "artNote": "Original MHTML capture contains 232 base portraits; four further portraits exist in local art archive, and 128 Hyperspace portraits are loaded from PokeAPI's public sprites GitHub CDN when online. No source assets were altered. External art is a visual fallback only and does not navigate away from this guide.",
+    "artNote": "236 portraits are available in the preserved dex-art archive (232 Lumiose and 4 Hyperspace); 20 additional portraits are available in the existing art archive; the remaining 108 Hyperspace portraits use PokeAPI's public GitHub-hosted HOME sprites when online. No source assets were altered. External artwork is a disclosed visual fallback and does not navigate visitors away from the guide.",
     "dataValidation": "All 232 Lumiose PDF entries match the saved main guide in order, name, National number and types; 132 Hyperspace entries recovered directly from PDF",
     "total": 364,
     "groups": {
