@@ -1,0 +1,27 @@
+/* Standalone Online Rewards article. Scoped: never changes main guide pages. */
+.rewards-page .page-intro{padding:12px 0 26px;max-width:830px}
+.rewards-page .page-intro h1{font-size:clamp(2.35rem,6vw,4rem);line-height:1.08;letter-spacing:-.05em;margin:10px 0 18px;color:#25233b}
+.rewards-page .page-intro em{font-style:normal;color:#674b9a}
+.rewards-page .page-intro p{max-width:690px;color:#5e5a70;font-size:17px}
+.rewards-page .reward-how{border:1px solid #e4d9f0;background:#fff;border-radius:16px;padding:24px 26px;margin:18px 0 23px}
+.rewards-page .reward-how b{display:block;margin-bottom:6px;font-size:17px;color:#2b2544}
+.rewards-page .reward-how p{color:#565068;margin-bottom:0}
+.rewards-page .reward-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:27px}
+.rewards-page .reward-grid article{min-width:0;display:flex;gap:17px;align-items:center;background:#fff;border:1px solid #e3dbe9;border-radius:16px;padding:20px}
+.rewards-page .reward-grid img,.rewards-page .reward-grid .reward-glyph{flex:0 0 98px;width:98px;height:98px;object-fit:contain}
+.rewards-page .reward-grid .reward-glyph{display:grid;place-items:center;font-size:56px;color:#7455a2}
+.rewards-page .reward-grid h3{font-size:18px;margin:4px 0 7px}
+.rewards-page .reward-grid p{font-size:14px;color:#5b5668;margin:0;line-height:1.65}
+.rewards-page .reward-grid strong{overflow-wrap:anywhere}
+.rewards-page .precision-map,.rewards-page .ranked-callout{border:1px solid #e2d5ef;border-radius:16px;background:#f7f1fd;padding:23px 25px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin:24px 0}
+.rewards-page .precision-map h3,.rewards-page .ranked-callout h3{font-size:22px;margin:5px 0}
+.rewards-page .precision-map p,.rewards-page .ranked-callout p{margin:0;color:#5e586d}
+.rewards-page .button{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:11px 17px;border-radius:11px;background:#624691;border:1px solid #624691;color:#fff;text-decoration:none;font-size:14px;font-weight:800;text-align:center}
+.rewards-page .button:hover{background:#4d327b;color:#fff}
+.rewards-page .button.light{background:#fff;color:#51357e;border-color:#d2c3e9}
+.rewards-page .button.light:hover{background:#ede3f7}
+.rewards-page .reward-how .button{margin-top:16px}
+.reward-context{margin-top:28px}
+@media(max-width:850px){.rewards-page .reward-grid{grid-template-columns:1fr}}
+@media(max-width:590px){.rewards-page .page-intro{padding:0 0 15px}.rewards-page .page-intro p{font-size:15px}.rewards-page .reward-grid article{padding:14px;gap:12px}.rewards-page .reward-grid img,.rewards-page .reward-grid .reward-glyph{width:74px;height:74px;flex-basis:74px}.rewards-page .reward-grid .reward-glyph{font-size:43px}.rewards-page .reward-grid h3{font-size:16px}.rewards-page .reward-grid p{font-size:13px}.rewards-page .reward-how{padding:18px}.rewards-page .precision-map,.rewards-page .ranked-callout{padding:18px;align-items:stretch;flex-direction:column}.rewards-page .button{width:100%}}
+@media(max-width:340px){.rewards-page .reward-grid article{align-items:flex-start}.rewards-page .reward-grid img,.rewards-page .reward-grid .reward-glyph{width:58px;height:58px;flex-basis:58px}.rewards-page .reward-grid .kicker{font-size:10px}}
