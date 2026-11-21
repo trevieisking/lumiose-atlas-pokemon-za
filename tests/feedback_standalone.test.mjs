@@ -23,13 +23,16 @@ elements.category.value='incorrect';
 let submit;
 elements.feedbackForm.addEventListener=(event,cb)=>{assert.equal(event,'submit'); submit=cb;};
 let captured;
+let calls = 0;
+let respond = async () => ({status:201,json:async()=>({saved:true})});
 const context={
  URLSearchParams,
  document:{getElementById(id){assert.ok(elements[id]);return elements[id];}},
  window:{location:{search:'?page=%2Flumiose-atlas-pokemon-za%2Findex.html%23walkthrough'}},
  fetch:async(url,params)=>{
   captured={url,params};
-  return {ok:true,json:async()=>({saved:true})};
+  calls += 1;
+  return respond();
  },
  Error
 };
@@ -48,4 +51,33 @@ assert.equal(payload.honey,'');
 assert.equal(elements.status.className,'status success');
 assert.equal(elements.details.value,'');
 assert.equal(elements.send.disabled,false);
-console.log('Standalone feedback form source, controls, mobile layout and mocked submission passed.');
+
+// A 200 response with saved:true is not the expected confirmed-save receipt.
+const report='The wild zone entry directions are missing a ladder.';
+elements.details.value=report;
+respond=async()=>({status:200,json:async()=>({saved:true})});
+await submit({preventDefault(){}});
+assert.equal(elements.status.className,'status error');
+assert.equal(elements.details.value,report,'Failed reports remain available for retry');
+assert.equal(elements.send.disabled,false);
+
+// A malformed JSON response must not be called a successful save.
+respond=async()=>({status:201,json:async()=>{throw new Error('Malformed receipt')}});
+await submit({preventDefault(){}});
+assert.equal(elements.status.className,'status error');
+assert.equal(elements.details.value,report);
+
+// Repeated submit events while the first is pending cannot duplicate a report.
+let finish;
+respond=()=>new Promise(resolve=>{finish=resolve;});
+const before=calls;
+const pending=submit({preventDefault(){}});
+await submit({preventDefault(){}});
+assert.equal(calls,before+1,'Only one request should be sent');
+assert.equal(elements.send.disabled,true);
+finish({status:201,json:async()=>({saved:true})});
+await pending;
+assert.equal(elements.status.className,'status success');
+assert.equal(elements.details.value,'');
+assert.equal(elements.send.disabled,false);
+console.log('Standalone feedback form controls, confirmed receipts, retry preservation and duplicate guard passed.');
