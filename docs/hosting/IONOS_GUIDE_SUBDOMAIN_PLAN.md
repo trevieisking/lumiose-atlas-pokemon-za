@@ -4,6 +4,9 @@
 
 ## Known facts
 
+**Brand ownership:** Chatterfriends is the overarching label; Stream Bandit is a Chatterfriends platform; Lumiose Atlas is a Stream Bandit gaming guide. The guide is intended to reuse **the existing Stream Bandit Supabase project**, not establish a separate database. This does not authorise modifying the connection, permissions or data. Full record: [`docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md`](../architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md).
+
+
 - Stream Bandit repository: `trevieisking/stream-bandit`; its `CNAME` file declares `chatterfriendsstreambandit.co.uk` for the existing home page. **Do not edit, rename, or repoint this root domain.**
 - Guide repository: `trevieisking/lumiose-atlas-pokemon-za`, using GitHub Pages from `main` at the repository root. Recovered static site is a reconstruction under accuracy audit.
 - Old ChatGPT Site: `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/#home`; this name is controlled by the ChatGPT Site platform, **not** by IONOS or GitHub. A separate DNS entry cannot take over this address.
