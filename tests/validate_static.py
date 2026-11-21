@@ -54,7 +54,7 @@ if not mable_page.exists():
     errors.append("Mable's Research page missing")
 else:
     mable_text=mable_page.read_text(encoding='utf-8')
-    research_levels=re.findall(r'<tr id="research-level-(\\d+)"',mable_text)
+    research_levels=re.findall(r'<tr id="research-level-(\d+)"',mable_text)
     if research_levels != [str(n) for n in range(2,51)]:
         errors.append("Mable research levels 2–50 must each occur once in order")
     for marker in [
