@@ -33,6 +33,20 @@
 
 **Spelling:** Use **Holovator** (not “Hovavator”), the English game term. It is a vertical traversal device, **not** necessarily any generic yellow icon, other elevator, fast-travel point, or ladder.
 
+
+## Raw mission-coordinate verification batch — 9 source points (21 November 2026)
+
+[**Read the 9-entry coordinate validation JSON**](MAPS_HOLOVATOR_COORDINATE_VALIDATION.json) and its [master-plan gate](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md#coordinate-validation-loop--mission-source-batch-01-21-november-2026). This batch examined all **nine named side-mission-dependent Holovators in their mission order** and checked the **published map coordinates of the nearby mission marker** from Gamer Guides against at least one separate location/unlock guide.
+
+Published **mission X,Y** (Gamer Guides coordinate space, **not a confirmed device centre**): **#4 9143/6904; #23 10111/16090; #40 14670/14907; #45 7987/16433; #56 13808/10090; #61 8603/13820; #71 8429/8099; #80 13520/5172; #92 5123/14626.** Every row includes its direct mission URL, other supporting sources, verified or source-reported sector status, location text, unlock action and outstanding original-game map/device/height gates.
+
+Three important limitations:
+1. **Mission marker does not equal Holovator marker.** The external map's **23 Holovator-category** glyphs must still be inspected individually. This batch did not extract those glyph coordinates or verify ground-level Holovator entrance pixels.
+2. The original site's coordinate system has **not** been calibrated to the Atlas `maps/lumiose-game-map.jpg` image, and the ten owner television photographs involve camera perspective. The Atlas still has **zero source-confirmed exact Holovator XY, scaffold access graph nodes or item XY/floor pins**.
+3. GameWith's **north of Wild Zone 12** phrasing for mission #61 and Serebii's **Bleu Sector 3 by Bleu Plaza** are retained as two independently sourced bearings, **not treated as a proven contradiction** without reviewing a labelled close-up. Mission #45's South Boulevard/Southside Street vs Gamer Guides Bleu Sector 7 also needs a sector-border review. Some guides express mission availability at the end of one main mission or the start of the next; exact game triggers should not be silently simplified.
+
+**Next safe physical-coordinate loop:** start with DR-H-01, locate the *actual* Gamer Guides Holovator marker and game screenshot on the **west side of Wild Zone 3**, establish building face and source-to-Atlas transform with measured landmark alignment, then repeat the other eight and proceed through the remaining 23-category Holovator source markers. Never publish guessed pins or copy third-party map artwork.
+
 ## Phase H — Nine named Holovator unlock leads to reconcile against all 23 points
 
 The evidence below summarizes Deep Research's cited [GameWith unlock catalogue](https://gamewith.jp/pokemon-za/524373), with related checks in Serebii/Bulbapedia as available. **“Described” means the cited source names an area and mission; it does NOT mean the exact point has been placed on our Atlas city map.** Use IDs as temporary research IDs, not final map pin numbers.
