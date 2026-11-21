@@ -1,0 +1,41 @@
+/* PDF-recovered Lumiose Shop catalog. Scoped to .atlas-article; never touches homepage styling. */
+.atlas-article .shop-currencies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:0 0 36px}
+.atlas-article .shop-currencies>div{border:1px solid #e4deec;border-radius:14px;background:#fff;padding:19px}
+.atlas-article .shop-currencies strong{display:block;color:#694992;font-size:17px;margin-bottom:9px}
+.atlas-article .shop-currencies p{color:#625a6e;font-size:14px;line-height:1.7}
+.atlas-article .shop-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin:22px 0 8px}
+.atlas-article .shop-controls label{display:flex;flex:1 1 230px;flex-direction:column;gap:7px;font-size:13px;font-weight:850;color:#594a70}
+.atlas-article .shop-controls input{min-height:44px;border:1px solid #d2c8df;border-radius:9px;background:#fff;padding:10px 12px;font:inherit;font-size:14px;color:#312a3b}
+.atlas-article .shop-filters{display:flex;flex-wrap:wrap;gap:6px}
+.atlas-article .shop-filters button{min-height:44px;border:1px solid #d4c7e3;border-radius:9px;background:#fff;padding:9px 12px;color:#504168;font-size:12px;font-weight:850;cursor:pointer}
+.atlas-article .shop-filters button[aria-pressed="true"]{background:#664c94;color:#fff;border-color:#664c94}
+.atlas-article .shop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:19px 0 25px}
+.atlas-article .shop-card{border:1px solid #e3dce9;border-radius:15px;padding:21px;background:#fff;min-width:0}
+.atlas-article .shop-card[hidden],.atlas-article #shopNoResults[hidden]{display:none}
+.atlas-article .shop-card-head{margin-bottom:12px}
+.atlas-article .shop-card-head h3{font-size:clamp(18px,2vw,22px);margin:6px 0}
+.atlas-article .shop-card-head .kicker{display:block;font-size:10px;line-height:1.6}
+.atlas-article .shop-unlock{color:#755a97!important;font-size:12px!important;font-weight:800;margin:6px 0!important}
+.atlas-article .shop-card>p{font-size:14px;color:#5f566b;line-height:1.65}
+.atlas-article .shop-inventory{border:1px solid #e6dfed;border-radius:10px;background:#fcfaff;overflow:hidden;margin-top:15px}
+.atlas-article .shop-inventory summary{font-size:13px;font-weight:850;color:#5d477c;cursor:pointer;padding:11px 14px;min-height:44px}
+.atlas-article .shop-inventory[open] summary{border-bottom:1px solid #e6dfed}
+.atlas-article .shop-inventory ul{max-height:390px;overflow-y:auto;scrollbar-width:thin;margin:0;padding:0 13px 4px;list-style:none}
+.atlas-article .shop-inventory li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 2px;border-bottom:1px solid #e8e2ee;font-size:13px}
+.atlas-article .shop-inventory li:last-child{border-bottom:0}
+.atlas-article .shop-item-name{color:#4d3d60;font-weight:750;overflow-wrap:anywhere}
+.atlas-article .shop-item-price{flex:0 0 auto;color:#625081;text-align:right;max-width:145px;white-space:normal}
+.atlas-article .store-verify{display:inline-block;padding:2px 6px;margin-left:5px;background:#fff4de;border:1px solid #ebd6ad;border-radius:6px;font-size:10px;font-weight:800;color:#8b5813}
+.atlas-article .shop-calculator-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 13px}
+.atlas-article .shop-calculator-fields label,.atlas-article .shop-planner-grid label{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:850;color:#594b70}
+.atlas-article .shop-calculator-fields select,.atlas-article .shop-calculator-fields input,.atlas-article .shop-planner-grid select,.atlas-article .shop-planner-grid input{min-height:44px;width:100%;border:1px solid #c9bed9;border-radius:9px;background:#fff;padding:9px 11px;color:#30283d;font:inherit;font-size:14px}
+.atlas-article .shop-calculator-answer{margin-top:12px;background:#f5eefb;border:1px solid #e3d5ef;border-radius:13px;padding:20px}
+.atlas-article .shop-calculator-answer output{display:block;color:#584089;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.2}
+.atlas-article .shop-calculator-answer p{margin:9px 0 0;font-size:13px;color:#635776}
+.atlas-article .shop-plush-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:18px 0 25px}
+.atlas-article .shop-plush-grid>div{padding:15px;border:1px solid #e5deed;border-radius:12px;background:#fff}
+.atlas-article .shop-plush-grid h3{color:#694a8e}
+.atlas-article .shop-plush-grid p{font-size:13px;color:#625968}
+.atlas-article .shop-planner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:800px){.atlas-article .shop-grid{grid-template-columns:1fr}.atlas-article .shop-currencies{grid-template-columns:1fr}.atlas-article .shop-plush-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.atlas-article .shop-card{padding:16px}.atlas-article .shop-calculator-fields,.atlas-article .shop-planner-grid,.atlas-article .shop-plush-grid{grid-template-columns:1fr}.atlas-article .shop-calculator-answer{padding:16px}.atlas-article .shop-filters button{padding:9px 10px}}
