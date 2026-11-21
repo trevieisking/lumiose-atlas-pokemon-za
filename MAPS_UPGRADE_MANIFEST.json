@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 6,
+  "revision": 7,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "PHOTO-C03 / DR-H-03 and PHOTO-C04 / DR-H-04: identify icon type and actual physical Holovator unit plus entrance/roof, then validate perspective-correct source-to-Atlas registration before confirmed pins",
+    "next_safe_record": "PHOTO-C03 / WIDE-H03 (mission #40): physical entrance/facade and rooftop exit verification; then #45 WIDE-H04. Independent guide now identifies yellow double-up-arrow as Holovator icon, but specific device and exact marker still unverified.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -955,6 +955,65 @@
       "method_limit": "hand-estimated Wild Zone and landmark controls, affine LS registration; TV camera perspective and marker identities not resolved. Internal control-fit residual not an accuracy guarantee.",
       "status": "approximate_navigation_leads_only",
       "published_verified_device_pins": 0
+    },
+    "owner_wide_photo_recheck": {
+      "record": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "received_on": "2026-11-21",
+      "new_camera_images": 10,
+      "new_camera_dimensions": "1536x865",
+      "new_frames_fitted": 5,
+      "new_candidate_groups_documented": 8,
+      "new_distinct_leads": 1,
+      "yellow_double_up_arrow_icon_semantics": "Holovator map icon, source-corroborated after first use; specific device identity still unverified",
+      "icon_class_source": "https://www.pokemythology.net/detonados/detonado-legends-z-a/",
+      "notable_two_photo_projected_pairs_native_1920": {
+        "DR-H-03_VertSector7": [
+          [
+            1486,
+            1532
+          ],
+          [
+            1486,
+            1515
+          ]
+        ],
+        "DR-H-04_SouthBoulevard": [
+          [
+            706,
+            1705
+          ],
+          [
+            710,
+            1706
+          ]
+        ],
+        "DR-H-02_VernalAvenue": [
+          [
+            959,
+            1663
+          ],
+          [
+            968,
+            1668
+          ]
+        ],
+        "CafeClasse_VernalNew": [
+          [
+            943,
+            1467
+          ],
+          [
+            952,
+            1473
+          ]
+        ]
+      },
+      "affine_caveat": "Manual source preview anchors and 3-6 photo controls; low residual is NOT absolute map precision. W06/W07 have exactly 3 controls, so zero fitting error is tautological.",
+      "actual_specific_holovator_mission_match_count": 0,
+      "verified_exact_atlas_holovator_pin_count": 0,
+      "verified_ground_and_roof_route_pairs": 0,
+      "publication": "research_only_no_code_or_map_dot_added",
+      "protected_original_photo_files": "kept outside repository"
     }
   },
   "last_coordinate_source_qa_on": "2026-11-21",
