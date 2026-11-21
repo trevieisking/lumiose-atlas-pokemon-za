@@ -1,4 +1,6 @@
-# Lumiose Atlas — Pokémon Legends: Z-A (independent reconstruction)
+# Lumiose Atlas — The Free Online Player’s Guide for Pokémon Legends: Z-A
+
+**Description:** A free, illustrated guide to Pokémon Legends: Z-A, including story walkthroughs, side missions, Wild Zone maps, Pokédex entries, items, Alpha Pokémon, rewards, shiny-hunting guidance and Mega Dimension DLC. This independently reconstructed edition is being completed and verified section by section.
 
 **Status:** Stage 1 recovery checkpoint. This is a **reconstructed, editable static site**, **not** an export of the original ChatGPT Site's source project. The original project was inaccessible; this copy was assembled from the user's own saved MHTML webpage capture from 20 November 2026. **No original live-site files were accessed for writing, and no deployment has occurred.**
 
