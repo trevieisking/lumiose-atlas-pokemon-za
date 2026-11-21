@@ -6,6 +6,8 @@
 
 **Legendary Fieldbook deployed:** The owner’s 10-page Legends PDF now has a separate professional guide with all 25 illustrated encounter records, source-backed steps, category filters and 25 checkboxes sharing the main guide’s `legendCheck` progress. PR #33 passed all tests and deployed to GitHub Pages as `696179c51224235e43b2453d0d53313137ee6bba` (run #44941808697). No new Supabase or browser storage namespace was created. Mystery Gift availability, the Special Scan guarantee and omitted exact directions remain marked for the owner’s future playthrough. **11/19** standalone pages restored; eight remain.
 
+**Pokémon HOME source recovery in review:** the 14-page owner PDF covers the first-transfer 3 Alpha gifts, the 3 HOME Pokédex Shiny Volcanion gift, safe one-way transfers and **every one of the 364 printed species** (232 Lumiose + 132 Hyperspace). A dedicated standalone page now contains that original roster, player-facing guide steps and a separate, device-local manual HOME registration checklist. Its 364-species text is complete; 256 portraits come from our preserved source and 108 require disclosed third-party online sprites. CI/Pages must succeed before this 12th recovery is called deployed. No Nintendo credentials, other game progress or original website changed.
+
 Live original (not controlled by this repository):
 `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/`
 
