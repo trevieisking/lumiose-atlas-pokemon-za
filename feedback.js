@@ -19,6 +19,7 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (button.disabled) return; // Ignore a second submit while the first is pending.
     const details = document.getElementById('details').value.trim();
     const category = document.getElementById('category').value;
     const honey = document.getElementById('honey').value;
@@ -37,8 +38,10 @@
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({kind:'report',page,category,details,honey})
       });
-      const data = await response.json();
-      if (!response.ok || data.saved !== true) throw new Error(data.error || 'Report could not be saved.');
+      const data = await response.json().catch(() => null);
+      if (response.status !== 201 || data?.saved !== true) {
+        throw new Error(data?.error || 'Report could not be saved.');
+      }
       status.className = 'status success';
       status.textContent = 'Thank you! Your feedback was saved privately.';
       document.getElementById('details').value = '';
