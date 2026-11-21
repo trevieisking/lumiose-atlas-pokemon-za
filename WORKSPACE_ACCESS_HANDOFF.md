@@ -35,6 +35,16 @@ When the original Workspace editor becomes available:
 
 **No passwords or administrator tokens should be sent in chat or committed to GitHub.** A link to a public site, an invitation to view a project, or a note in this file **does not automatically grant editable source access**. The editor or export capability must actually expose the files.
 
+## Edition B feedback-only draft PR #9
+
+[Draft PR #9](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/9) (branch `fix/atlas-feedback-access-2026-11-21`, commit `37f7ca05c3c20411219c79dad13355019f4e7364`) fixes **only the independent B reconstruction's inactive feedback button**: it will navigate to the existing Supabase-hosted report form with the current page prefilled, and changes the label from misleading *Rate / report* to **Send feedback**. No rating score, native B submission form, new server code or admin privileges were added.
+
+**A-specific Workspace instruction:** First inspect the original Site's actual feedback control and existing report form. The original Edge Function already serves a standalone feedback form and protected owner reports; **do not transplant B's button solution if A already works**. Preserve original A form, rating features (if any), styling, URL, authentication and Supabase reports #13/#14. Only make an equivalent, source-compatible repair if A is independently shown broken, with its own manual mobile/desktop test.
+
+**Release status:** B PR #9 is **draft only**, not merged or deployed. The source contains a built-in Node regression file `tests/feedback_link.test.mjs`; six local equivalent URL cases passed. Full branch test execution, phone navigation, form POST and owner verification are **pending**. Merge collision risk: stacked PR #3→#4→#5 also changes `app.js`, and PR #5 still contains the old inert feedback handler. Reconcile after review; do not replace their maps/import code or mistake PR #9 for a complete ratings implementation.
+
+Canonical parity tracking: [AT-225](ATLAS_DUAL_SITE_FIX_LEDGER.md). Record any later branch SHA, test result and Workspace decision there before marking either version published/verified.
+
 ## Checklist for the next agent / editor (no automatic edits)
 
 1. **Confirm identity and source access.** The Workspace project itself is the only authoritative source for its original code. The saved MHTML is only a rendered snapshot, not equivalent source. Preserve user ownership and the existing URL.
