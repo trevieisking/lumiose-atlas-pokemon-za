@@ -6,15 +6,15 @@
 
 | PDF, printed pages | Destination / main menu label | Status at this checkpoint |
 | --- | --- | --- |
-| Mable’s research & rewards (5) | `mable-research.html` · Mable’s research & rewards | **RESTORED IN PR** — complete levels 2–50 and PDF's research route; TM move names independently checked; dedicated offline regression suite |
-| Complete journey route (46) | `journey.html` · Complete journey route | PDF CAPTURED |
+| Mable’s research & rewards (5) | `mable-research.html` · Mable’s research & rewards | **RESTORED · MERGED #16** — complete levels 2–50 and PDF's research route; TM move names independently checked; dedicated offline regression suite |
+| Complete journey route (46) | `journey.html` · Complete journey route | **RESTORED IN PR** — 42 story, 14 Hyperspace, 20 zones, 42 practical-check sections; collapsed request text explicitly noted |
 | Every Rogue Mega Boss: Counters and Moves (12) | `boss-guide.html` · Full boss plans | PDF CAPTURED |
 | Z-A Royale: Every Promotion Battle (7) | `royale-guide.html` · Story Z-A Royale | PDF CAPTURED |
 | Complete Type Chart and Weaknesses (6) | `type-chart.html` · Type matchups | PDF CAPTURED |
 | Alphas (5) | `alphas.html` · Alpha fieldbook | PDF CAPTURED |
 | Items (28) | `items.html` · Item atlas | PDF CAPTURED |
 | Legends (10) | `legendaries.html` · Legendary routes | PDF CAPTURED |
-| Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED IN PR** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
+| Shiny hunting routes & tactics (3) | `shiny-hunting.html` · Shiny hunting | **RESTORED · MERGED #17** — original base/DLC hunting guidance, verified Mareep directions and a no-network shiny-odds estimator |
 | Lumiose shops, items and Mega Shards (6) | `shops.html` · Shops & Mega Shards | PDF CAPTURED |
 | Pokémon HOME rewards and transfer guide (14) | `home-connection.html` · Pokémon HOME | PDF CAPTURED |
 | Maps (4) | `maps.html` · Lumiose maps; **does not capture every linked map close-up** | PDF CAPTURED |
@@ -43,4 +43,17 @@
 5. Run deterministic, no-network tests; review exact changed-file list and CI before a controlled GitHub-only merge. Confirm mobile menu/reading and return navigation when possible.
 6. Keep clearly labelled incomplete placeholders for missing pages until there is enough evidence to make an actual guide.
 
-**Completed recovery slices:** Mable's Research & Rewards (5 pages) and Shiny Hunting Routes & Tactics (3 pages), one at a time. Next captured standalone PDFs remain queued; the original site is never the destination for these changes.
+**Completed recovery slices:** Mable's Research & Rewards (5 pages), Shiny Hunting Routes & Tactics (3 pages), and the 46-page Complete Journey Route — individually rebuilt and test-gated. **Next planned standalone PDF:** 7-page Z-A Royale promotion battles (`royale-guide.html`) to make the newly recovered journey's promotion checkpoints useful. Then the 12-page complete Rogue Mega boss plan (`boss-guide.html`). Preserve the original site as read-only context.
+
+## Repeatable one-PDF-at-a-time loop
+
+1. **Pick one pending owner PDF**, and confirm the exact live GitHub placeholder route and original PDF page count.
+2. **Inspect all PDF pages**, including visual tables/maps and what was collapsed at print time. Verify structural counts and key checkpoints; do not fabricate missing text.
+3. **Rebuild only that route**, copying the complete 25-link menu and Back to walkthrough; add relevant internal maps, item, side request and mission links.
+4. **Make one bounded branch and PR**, with its own offline regression tests (source fidelity, navigation, search and mobile CSS).
+5. **Run old and new CI together**, including unmodified main 17 sections, player progress, shared feedback form and absence of secrets.
+6. **Compare changed files and exact PR HEAD**, merge to GitHub `main` only when all CI is green; record the merge SHA and Pages deployment result.
+7. **Mark the PDF recovered** in this queue and update `routes.json`, `RECOVERY_STATUS.md` and `README.md`. Keep unverified manual/mobile checks explicit.
+8. **Repeat with the next PDF**. A completed article is never grounds to alter the original ChatGPT Site, database, domain or underlying reconstructed walkthrough.
+
+This is a user-driven iterative workflow, not a scheduled or background job. Each step must finish with verifiable GitHub evidence.
