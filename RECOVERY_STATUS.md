@@ -1,10 +1,16 @@
 # Recovery status — 21 November 2026
 
+## Stage 2 update — second PDF article (21 November 2026)
+
+The owner-supplied three-page **Shiny hunting routes & tactics** PDF has now been restored to `shiny-hunting.html`, with the full 25-link menu, step-by-step Wild Zone and bench resets, fixed Side Mission 17 Shiny Mareep route, shiny persistence warnings and DLC Sparkling Power rules. A no-network per-spawn odds estimator helps players understand chance without false guarantees. Facts were checked against the Serebii shiny mechanics and Mareep side-mission sources. Dedicated tests guard wording, menu parity, probability arithmetic and existing guide features.
+
+**Current remaining placeholders: 17 of 19.** Both restored articles are independent GitHub edition content; original Workspace Site, URL and Supabase remain unchanged. `PDF_RECOVERY_QUEUE.md` is the authoritative capture inventory.
+
 ## Stage 2 update — first PDF article (21 November 2026)
 
 The 5-page owner PDF of **Mable’s research & rewards** has been used to replace **one** standalone placeholder (`mable-research.html`). It now contains every research level 2–50 reward, verified TM move names, practical route guidance, direct links to Main Mission 3 and Side Mission 22, a 25-link menu matching the homepage, and a device-only reward checklist. New scope-only tests ensure no network writes or progress collisions.
 
-**Remaining placeholders: 18 of the original 19.** The initial Stage 1 status table and historical notes below describe the ZIP import checkpoint, not the current state. See `PDF_RECOVERY_QUEUE.md` for all **19 owner PDFs (213 pages)**, the captured article paths and five routes for which no equivalent standalone PDF was supplied. The independent GitHub edition's feedback form was connected and verified in earlier PRs; this PDF recovery does not change it. Original ChatGPT Site, URL and Supabase remain untouched.
+**Following this first slice there were 18 placeholders; after the second Shiny slice, there are 17 of the original 19.** The initial Stage 1 status table and historical notes below describe the ZIP import checkpoint, not the current state. See `PDF_RECOVERY_QUEUE.md` for all **19 owner PDFs (213 pages)**, the captured article paths and five routes for which no equivalent standalone PDF was supplied. The independent GitHub edition's feedback form was connected and verified in earlier PRs; this PDF recovery does not change it. Original ChatGPT Site, URL and Supabase remain untouched.
 
 ## This is a reconstruction, not the original source
 

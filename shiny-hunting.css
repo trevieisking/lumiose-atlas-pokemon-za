@@ -1,0 +1,18 @@
+/* Extra styles for the PDF-recovered Shiny Hunting fieldbook. */
+.atlas-article .shiny-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.atlas-article .shiny-choice{border:1px solid #dfd6ea;border-radius:13px;padding:18px;background:#fff}
+.atlas-article .shiny-choice .label{display:inline-block;font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#796198;margin-bottom:8px}
+.atlas-article .shiny-choice h3{margin-bottom:7px}
+.atlas-article .shiny-choice p{font-size:14px;color:#615c71;line-height:1.7}
+.atlas-article .odds-inputs{display:flex;flex-wrap:wrap;align-items:end;gap:16px;margin:15px 0}
+.atlas-article .odds-inputs label{font-weight:750;display:block;font-size:14px}
+.atlas-article .odds-inputs input[type=number]{width:min(220px,100%);margin-top:6px;padding:10px 12px;min-height:44px;border:1px solid #bbadcc;border-radius:9px;font:inherit}
+.atlas-article .odds-inputs .charm-option{display:flex;align-items:center;gap:10px;padding:12px;background:#f7f2fb;border:1px solid #e1d6ee;border-radius:10px;min-height:44px}
+.atlas-article .odds-inputs input[type=checkbox]{width:21px;height:21px;accent-color:#7454a8}
+.atlas-article .odds-answer{border-radius:14px;background:#f3edfb;border:1px solid #e5d7f1;padding:22px;margin-top:8px}
+.atlas-article .odds-answer output{display:block;font-size:clamp(27px,5vw,42px);font-weight:900;letter-spacing:-.03em;color:#553580;line-height:1.2}
+.atlas-article .odds-answer p{color:#5d546f;font-size:13px;margin:8px 0 0}
+.atlas-article .shiny-steps{padding-left:22px}
+.atlas-article .shiny-steps li{padding-left:6px;margin-bottom:13px;line-height:1.65}
+.atlas-article .tag{display:inline-block;font-size:12px;padding:4px 9px;background:#f0e9f9;border:1px solid #dfd1ef;border-radius:999px;color:#65458f;font-weight:850}
+@media(max-width:760px){.atlas-article .shiny-choices{grid-template-columns:1fr}.atlas-article .shiny-choice{padding:15px}.atlas-article .odds-answer{padding:16px}}
