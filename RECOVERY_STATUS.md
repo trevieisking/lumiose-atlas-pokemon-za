@@ -1,5 +1,14 @@
 # Recovery status — 21 November 2026
 
+## Photo-backed sector navigation improvement — 10 gameplay screenshots (MERGED #54 · CI PASS)
+
+The owner supplied ten photographs of the **in-game Lumiose City map**, panned through Jaune, Vert, Bleu, Magenta and Rouge. The images show district and sector labels as well as landmarks such as Jaune Plaza, Justice Dojo, Hotel Z, Rust Syndicate Office, Aymis Park, Magenta Plaza, Lumiose Sewers, Quasartico Inc., Rouge Plaza and Dormez Bien Cemetery. They depict **one city map with 48 named sectors**, not 48 separate in-game sector map pages; the distinct green numbered areas are Wild Zones.
+
+The existing standalone `sector-maps.html` now has a **five-district, 30-link landmark panel** pointing into the existing sector and Wild Zone cards, and the old request for an individual image per sector was corrected. Each “near”/“area” reference is explicitly approximate. The provided photos include access/travel icons but do not individually confirm that an icon is a Holovator, locate a specific item, or document a ladder/scaffold-to-rooftop route. All verified source counts are unchanged: **48 sectors, 20 Wild Zones, 264 original item records, 100 Colorful Screws and 146 approximate saved markers; 0 exact confirmed item-pin coordinates**. The ten photos remain conversation attachments, **not** newly embedded website images.
+
+**Evidence and release:** [PR #54](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/54), reviewed head `bbdf10f6526f89f963976838fef292af0b4d125b`, [CI #44954521553](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44954521553) success; merge `b94b9eaff7b326abf74ea644a1c0e341564f689e` and [Pages #44954577413](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/44954577413). Next: owner-verified pickups and ascent paths per sector; no invented roof or item pins. The original Workspace Site, Supabase, ratings, feedback, player progress and original interactive walkthrough remain unchanged. Manual Android visual review pending.
+
+
 ## Stage 2 — Final missing standalone route rebuilt: Hyperspace Map & Expedition Fieldbook (MERGED #52 · CI PASS)
 
 **Source diagnosis:** The owner's original four-page `Maps · Free Online Player’s Guide _ Pokémon Legends_ Z-A.PDF` has a visible navigation block promising *nine recurring Hyperspace layouts*, but **none of the nine enlarged layout images occurs in those PDF pages**. The independent repo also contains no nine separate Hyperspace map assets and does not expose the original editable Workspace Site source. As a result, an honest recovery cannot render nine exact original layouts. The phrase *nine layouts* remains attributed to the saved guide, **not an independently verified claim that Pokémon Legends: Z-A has exactly nine fixed layout geometries**.
