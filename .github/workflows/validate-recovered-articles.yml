@@ -58,6 +58,9 @@ on:
       - battles-guide.css
       - tests/battles_recovered.test.mjs
       - walkthrough.html
+      - index.html
+      - src/sections/walkthrough.html
+      - tests/mission37_ally_wave.test.mjs
       - walkthrough-index.css
       - walkthrough-index.js
       - tests/walkthrough_index.test.mjs
@@ -152,6 +155,8 @@ jobs:
         run: node --test tests/battles_recovered.test.mjs
       - name: Verify 42 source mission guides, no progress writes, navigation and mobile layout
         run: node --test tests/walkthrough_index.test.mjs
+      - name: Verify Mission 37 Ivor/Gwynn three-Mega guidance and 17-section rebuild parity
+        run: node --test tests/mission37_ally_wave.test.mjs
       - name: Verify all 203 saved side quests, EX links, filters, and read-only progress
         run: node --test tests/side_missions_index.test.mjs
       - name: Verify source-exact 14 Mega Dimension DLC mission routes
