@@ -47,6 +47,14 @@
       <button type="button" class="button-secondary" id="loadMore" hidden>Load older reports</button>
     </section>
     <p class="owner-status" id="ownerStatus" role="status" aria-live="polite">Sign in to view submitted reports.</p>
+    <section class="feedback-card owner-dashboard-access" id="ownerDashboardAccess" aria-label="Alternative private report access">
+      <div class="inbox-heading">
+        <span class="inbox-symbol" aria-hidden="true">🗂️</span>
+        <div><h2>Already use Supabase?</h2><p>You can view the same reports using your Supabase project account instead of the Stream Bandit owner sign-in.</p></div>
+      </div>
+      <p class="privacy">Open the private Table Editor, select the <strong>public</strong> schema and then <strong>atlas_reports</strong>. Sign in to Supabase if prompted. Only accounts with access to this project can view these reports.</p>
+      <p class="return"><a id="ownerSupabaseLink" href="https://supabase.com/dashboard/project/xzxqfrvqdgkzwujbkdbk/editor" rel="noreferrer">Open Atlas reports in Supabase</a></p>
+    </section>
     <p class="return"><a href="feedback.html">Open the public feedback form</a> · <a href="index.html#walkthrough">Back to walkthrough</a></p>
   </main>
 </body>
