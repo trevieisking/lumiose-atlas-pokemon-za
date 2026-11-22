@@ -125,3 +125,30 @@
 @media(max-width:1120px){.ae-grid{grid-template-columns:1fr}.ae-map-viewport{height:clamp(390px,57vh,680px)}.ae-results{max-height:190px}}
 @media(max-width:700px){.ae-hero{padding:22px 14px 15px}.ae-grid{padding:12px 8px}.ae-toolbar{padding:10px;gap:8px}.ae-tool-controls{justify-content:flex-start}.ae-map-viewport{height:min(56vh,580px);min-height:360px}.ae-map-guidance{font-size:10px}.ae-route-card{margin:4px 8px 13px;padding:14px}.ae-route-workspace,.ae-method-cols{grid-template-columns:1fr}.ae-method{margin:10px 8px 28px;padding:14px}.ae-rose{width:52px;height:52px}}
 @media(prefers-reduced-motion:reduce){.ae-stage{transition:none!important}}
+
+
+/* AT-267: every pixel of the existing city image remains navigable. The
+   five-by-five squares are a viewport index, never geographical boundaries. */
+.ae-coverage-panel{padding:16px 14px 18px;background:#f7f4fb;border-top:1px solid #dcd5e8}
+.ae-coverage-panel h3{font-size:18px;line-height:1.3;color:#35264d;margin:0 0 6px}
+.ae-coverage-intro{font-size:12px;line-height:1.7;color:#514760;margin:0 0 14px}
+.ae-coverage-body{display:grid;grid-template-columns:minmax(0,310px) minmax(0,1fr);align-items:start;gap:14px}
+.ae-coverage-mini{position:relative;aspect-ratio:1;width:100%;border:2px solid #b3a4c5;border-radius:12px;overflow:hidden;background:#d9d6e0;box-shadow:0 3px 13px #201b3830}
+.ae-coverage-mini img{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none}
+.ae-coverage-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr))}
+.ae-coverage-grid button{display:block;min-width:0;min-height:0;border:1px solid #fefdfd80;background:#ffffff03;cursor:pointer;padding:0}
+.ae-coverage-grid button:hover{background:#f9e7ad50;box-shadow:inset 0 0 0 2px #f7d37d}
+.ae-coverage-grid button[aria-pressed="true"]{background:#ffe0a05c;box-shadow:inset 0 0 0 3px #603d9d}
+.ae-coverage-grid button:focus-visible{outline:3px solid #352050;outline-offset:-3px;background:#ffe0a080;z-index:2}
+.ae-coverage-controls{min-width:0;display:grid;align-content:start;gap:8px}
+.ae-coverage-status{margin:0;font-size:12px;color:#443454;line-height:1.5;font-weight:750}
+.ae-coverage-controls h4{font-size:12px;color:#473352;margin:5px 0 0}
+.ae-coverage-controls>button,.ae-coverage-districts button{min-height:44px;padding:9px 11px;border-radius:9px;border:1px solid #b8a8cd;background:#fff;color:#4f3672;font-size:12px;font-weight:800;cursor:pointer}
+.ae-coverage-controls>button:hover,.ae-coverage-districts button:hover{background:#f2eafb}
+.ae-coverage-controls>button:focus-visible,.ae-coverage-districts button:focus-visible,.ae-coverage-controls select:focus-visible,.ae-coverage-directory:focus-visible{outline:3px solid #e0af58;outline-offset:2px}
+.ae-coverage-districts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.ae-coverage-controls label{font-size:12px;color:#473352;font-weight:800;margin-top:5px}
+.ae-coverage-controls select{display:block;width:100%;max-width:100%;font-size:13px;min-height:44px;border:1px solid #b8a8cd;border-radius:9px;padding:9px;background:#fff;color:#3a2948}
+.ae-coverage-caution{margin:4px 0;font-size:11px;color:#5d506a;line-height:1.6}
+.ae-coverage-directory{display:inline-flex;align-items:center;min-height:44px;font-size:12px;font-weight:800;color:#583a83;text-decoration:underline}
+@media(max-width:760px){.ae-coverage-body{grid-template-columns:1fr}.ae-coverage-mini{max-width:350px;margin-inline:auto}.ae-coverage-districts{grid-template-columns:repeat(2,minmax(0,1fr))}}
