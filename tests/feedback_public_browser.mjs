@@ -37,6 +37,12 @@ try {
     assert.equal(await page.title(), 'Send feedback — Lumiose Atlas');
     assert.equal(await page.locator('#page').inputValue(), PAGE, 'Must retain walkthrough context');
     if (BRANCH_PREVIEW) {
+      assert.equal(await page.locator('#missionPicker').isVisible(),true,'Walkthrough must offer optional mission number');
+      assert.equal(await page.locator('#missionNumber').getAttribute('type'),'number');
+      assert.equal(await page.locator('#missionNumber').getAttribute('max'),'42');
+      assert.equal(await page.locator('#missionNumberLabel').textContent(),'Main Mission number (optional)');
+      const gap = await page.locator('#missionPicker').evaluate(el => parseFloat(getComputedStyle(el).marginTop));
+      assert.ok(gap >= 16,device.name+': mission field must have comfortable separation from page link');
       assert.equal(await page.locator('label[for="page"]').textContent(), 'Page link to investigate',
         'Visible label should explain what this page link is for');
       assert.equal(await page.locator('#pageContext').textContent(), PAGE, 'Full page path must be displayed as safe text');
@@ -60,6 +66,21 @@ try {
     assert.equal(formFits, true, device.name + ': feedback form has horizontal overflow');
     await page.screenshot({path:OUT + '/feedback-' + device.name + '.png', fullPage:true});
     if (BRANCH_PREVIEW) {
+      await page.locator('#missionNumber').fill('36');
+      assert.equal(await page.locator('#pageContext').textContent(),PAGE+':mission-36');
+      assert.equal(await page.locator('#returnLink').getAttribute('href'),PAGE+':mission-36');
+      assert.equal(await page.locator('#details').getAttribute('maxlength'),
+        String(1500-'Guide location: Mission 36\n\n'.length));
+      await page.screenshot({path:OUT + '/feedback-manual-mission-' + device.name + '.png',fullPage:true});
+      await page.locator('#missionNumber').fill('43');
+      assert.equal(await page.locator('#missionNumber').evaluate(input=>input.validity.rangeOverflow),true);
+      assert.equal(await page.locator('#returnLink').getAttribute('href'),PAGE,
+        'Invalid manual number must not yield a deep link');
+      await page.locator('#missionNumber').fill('');
+      assert.equal(await page.locator('#returnLink').getAttribute('href'),PAGE);
+      assert.equal(await page.locator('#details').getAttribute('maxlength'),'1500');
+    }
+    if (BRANCH_PREVIEW) {
       // Browser-only validation; never submit, authenticate or write a report.
       const missionForm = await page.goto(SITE + '/feedback.html?page=' + encodeURIComponent(PAGE) +
         '&anchor=mission-36', {waitUntil:'networkidle'});
@@ -68,11 +89,29 @@ try {
       assert.equal(await page.locator('#pageContext').textContent(),PAGE+':mission-36');
       assert.equal(await page.locator('#returnLink').getAttribute('href'),PAGE+':mission-36');
       assert.equal(await page.locator('#headerBack').getAttribute('href'),PAGE+':mission-36');
+      assert.equal(await page.locator('#missionNumber').inputValue(),'36','Deep-linked mission number must be prefilled');
       assert.equal(await page.locator('#details').getAttribute('maxlength'),String(1500-'Guide location: Mission 36\n\n'.length));
       assert.match(await page.locator('#detailsHelp').textContent(),/Mission 36 automatically/);
       const contextFits = await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
       assert.equal(contextFits,true,device.name+': contextual form must not overflow');
       await page.screenshot({path:OUT+'/feedback-mission-'+device.name+'.png',fullPage:true});
+
+      const sidePage='/lumiose-atlas-pokemon-za/index.html#sidequests';
+      const sideForm=await page.goto(SITE+'/feedback.html?page='+encodeURIComponent(sidePage), {waitUntil:'networkidle'});
+      assert.equal(sideForm?.status(),200);
+      assert.equal(await page.locator('#missionPicker').isVisible(),true);
+      assert.equal(await page.locator('#missionNumber').getAttribute('max'),'203');
+      assert.equal(await page.locator('#missionNumberLabel').textContent(),'Side Mission number (optional)');
+      await page.locator('#missionNumber').fill('203');
+      assert.equal(await page.locator('#pageContext').textContent(),sidePage+':quest-203');
+      assert.equal(await page.locator('#returnLink').getAttribute('href'),sidePage+':quest-203');
+      const sideFits=await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1);
+      assert.equal(sideFits,true,device.name+': side mission locator must not overflow');
+      await page.screenshot({path:OUT+'/feedback-side-mission-'+device.name+'.png',fullPage:true});
+
+      await page.goto(SITE+'/feedback.html?page='+encodeURIComponent(
+        '/lumiose-atlas-pokemon-za/index.html#maps'), {waitUntil:'networkidle'});
+      assert.equal(await page.locator('#missionPicker').isVisible(),false,'Map feedback must not show a mission input');
     }
     if (BRANCH_PREVIEW && device.isMobile) {
       const longPage = '/lumiose-atlas-pokemon-za/index.html#' + 'route-'.repeat(18);

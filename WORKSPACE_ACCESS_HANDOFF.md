@@ -7,6 +7,8 @@
 
 **NEW 22 Nov 2026 — owner-only feedback resolution tracking (AT-259):** Read [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md) for the actual Supabase-private queue, read-only SQL, report #13/#14/#18/#19 statuses and independent GitHub vs Workspace verification requirements. The public Site is not connected to this tracking table. **Do not infer a fix on the original Site from GitHub-only verification.** Historic sections below predate reports #18 and #19; they are preserved for provenance but must not be used as the current report inventory.
 
+**AT-260 — optional exact mission context in GitHub-only feedback:** [PR #86](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/86) introduces a small, optional numeric Main/Side Mission input for feedback from general walkthrough and side-mission pages. It attaches the mission location inside the existing report message and maintains the valid section-only backend page and full return link. **This does not yet change the original ChatGPT Site**, which must be inspected independently before any equivalent patch. Retain the original Site's player progress, existing reports, form and deployment URL. Verify PR/Pages state before claiming GitHub publication.
+
 ## Copy/paste this request into the ORIGINAL Site's Workspace editor when access returns
 
 > I am the owner of **The Free Online Player's Guide for Pokémon Legends: Z-A**. Please read the **two-site fix ledger** at https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/main/ATLAS_DUAL_SITE_FIX_LEDGER.md and this handoff document.
