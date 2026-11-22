@@ -5,6 +5,8 @@
 **Independent repository:** https://github.com/trevieisking/lumiose-atlas-pokemon-za
 **Original live Site (keep online):** https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/
 
+**NEW 22 Nov 2026 — owner-only feedback resolution tracking (AT-259):** Read [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md) for the actual Supabase-private queue, read-only SQL, report #13/#14/#18/#19 statuses and independent GitHub vs Workspace verification requirements. The public Site is not connected to this tracking table. **Do not infer a fix on the original Site from GitHub-only verification.** Historic sections below predate reports #18 and #19; they are preserved for provenance but must not be used as the current report inventory.
+
 ## Copy/paste this request into the ORIGINAL Site's Workspace editor when access returns
 
 > I am the owner of **The Free Online Player's Guide for Pokémon Legends: Z-A**. Please read the **two-site fix ledger** at https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/main/ATLAS_DUAL_SITE_FIX_LEDGER.md and this handoff document.
@@ -13,7 +15,7 @@
 >
 > The original site must stay live at its current URL, and its existing feedback service, database rows, ratings and user progress must remain untouched. **Do not reset, rebuild, deploy, delete, transfer the domain or alter DNS merely to export its source.** I want to compare the original Site against the separate GitHub reconstruction, then apply missing corrections to each as appropriate. Do not push over `main`, merge open PRs or overwrite the new GitHub work automatically.
 >
-> Preserve the two outstanding player feedback reports: **#13 — Mission 24 Hotel Z conversation**, **#14 — Mission 25 Lida/Naveen battle guidance**. These are real and must remain visible until those details are fact-checked, corrected, published and tested in **both** the original Workspace guide and the independent GitHub/IONOS edition. Test reports #5 and #6 were already deleted from Supabase; no further report deletion is authorized.
+> Preserve all currently saved reports: **#13 — Mission 24 Hotel Z conversation**, **#14 — Mission 25 Lida/Naveen battle guidance**, **#18 — Mission 36/37 Ivor and Gwynn ally battle**, and owner wording test **#19**. The three genuine gameplay reports are OPEN; test #19 is GitHub VERIFIED but original Workspace verification remains OPEN. Read the **owner-only Supabase resolution queue** documented in https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/main/docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md before updating any status. Keep every report visible until its correction is independently verified on **both editions**. Earlier test reports #5 and #6 were already deleted; no additional deletion is authorised.
 >
 > First, inspect and inventory the **actual source** of this existing Site. Compare it against the detailed tracking ledger, including the 19 missing standalone pages, separately loaded Hyperspace Pokédex, navigation, map/ladder/Holovator directions, numbered item pins, Mable research, shiny-hunting, feedback form, numeric mobile rating, and progress storage. Report source differences accurately before making changes. I do not want useful content from either guide lost.
 >
