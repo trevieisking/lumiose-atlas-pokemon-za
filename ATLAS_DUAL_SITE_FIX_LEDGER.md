@@ -1,6 +1,6 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 41 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 42 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
