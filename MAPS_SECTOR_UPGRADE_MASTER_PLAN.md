@@ -419,3 +419,36 @@ W08 4-control fit RMS ≈**12.86 native pixels**; W09 ≈**4.02 pixels**; the fo
 **Safe validation next:** source *23 individual device-category marker identities* are still missing; continue exact facade/roof matching and deduplication before any real guide map code is modified. Finish research and all 23 physical devices first, then test a **Holovator-only production map layer** with correct original 25-link guide navigation, visible mobile controls and green CI/Pages deployment. Keep **scaffolds, ladders and numbered item/Screw dots out of this preview** and out of the production release until their separate phases.
 
 **Preservation:** documentation PR #58 remains unmerged; visual prototype PR #59 remains **draft and unmerged**; no changes to GitHub `main`, original ChatGPT Site A or live Edition B map entry points, old 20 Wild Zone markers, Supabase, feedback, ratings, original saved progress, 48 sector IDs, 264 source-item IDs, 100 Screw clue IDs, 146 approximate item leads or user photo originals.
+
+
+## Owner W06/W07 lift cross-photo mapping batch 11 (22 November 2026)
+
+**Goal:** convert the verified Holovator research into visible, inspectable location information while preserving the owner-approved release gate: **no live pins until all physical Holovators have been logged**. Exact photographed icon evidence is recorded in [the W06/W07 research register](MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json).
+
+### Paired yellow game-map symbols: original 1536×865 owner photographs
+
+| Candidate map icon | W06 photo XY | W07 photo XY | W07 minus W06 |
+| --- | --- | --- | --- |
+| West of Rouge Plaza / WZ3, candidate for **mission #004 Sommi** | (39,399) | (656,502) | (+617,+103) |
+| Hibernal Avenue / west WZ15, candidate for **mission #080** | (491,195) | (1108,301) | (+617,+106) |
+| Separate Jaune Sector 4 icon, east of Académie Étoile | (544,418) | (1157,524) | (+613,+106) |
+| **Independent control:** WZ3 crest | (175,359) | (791,463) | (+616,+104) |
+
+Four independent camera-photo controls agree on pan **(+615.75,+104.75)** with **2.09-pixel RMS** after simple translation. This proves robust repeat visibility of three distinct yellow map symbols in overlapping game-photo captures, **NOT actual street entrances**. Earlier three-control photo→1920 city-JPG models still disagree on the Jaune-04 symbol by about **50 pixels**. Do not treat approximate image-map positions as verified device entrances or deduplicate the conflicting old #004 estimates.
+
+### New #092 owner photo lead
+
+In W10, a yellow lift icon at approximately **(63,453)** full camera-photo pixels, near **Café Soleil / Bleu Sector 8**, projects with the older manually estimated transform to city-JPG **(352,1496)**. The [Game8 mission #092 map](https://game8.jp/pokemon-legends-z-a/731477) places the Beldum Blockade objective in this street neighbourhood. This is a **single-photo location lead only**, not a proved match to Aimant's physical lift or rooftop exit.
+
+### Independent world-map and gameplay mechanic corroboration
+
+A [Chinese-language player field map, edited 2 November 2025](https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600) describes all Lumiose ladders and holographic elevators and says **nine** lifts start broken, repaired via side missions. The player reports that lifts appear on the in-game map only after approaching and interacting, and investigated broken lifts can appear in **gray**; ordinary ladders do **not** get recorded to the in-game map. This helps explain why a player's screenshot may not display every lift. Do not reproduce the author's map artwork. Its low-resolution reference thumbnail is not grounds for claiming exact source marker coordinates.
+
+### Visual implementation and tests
+
+- Separate, unmerged [draft preview PR #59](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59) now displays **13** dashed, labelled **approximate symbol** pins on the existing original 1920px map JPG: newly added Rouge Plaza #004 candidate (832,580), Jaune Sector 4 candidate (1225,550; high uncertainty), and Café Soleil / #092 candidate (352,1496; single screenshot). Exact ground entrances and roof arrival coordinates remain unverified; #056 and #061 are still not separately photo-matched.
+- The **private offline five-photo visual comparison** embeds only the user's own originals W06/W07/W08/W09/W10, not in GitHub. It supports tapping source-photo symbols, five photo tabs, search, repeated/single-photo filters, and clear caveats. Fourteen named photo candidate groups appear across the five captures, **NOT 14 independently verified physical devices**.
+- **Actual Chromium Playwright DOM tests** at **1365×905** desktop and **390×844** mobile succeeded for the private photo comparison: original image loaded, tab symbol counts W06=4 / W07=6 / W08=5 / W09=2 / W10=4, selecting #092 displayed evidence and the repeated filter worked. JavaScript page errors = **zero**. GitHub draft page itself passed V8 syntax and static in-bounds/no-network checks; CI and direct production browser QA are **not claimed**.
+- Current validation gates remain **0 individual matched external Holovator category IDs of the reported 23**, **0 exact entrance/roof pairs**, **0 production pins published**.
+
+**Never confuse** external quest-objective pink stars with yellow in-game Holovator category symbols; neither equals a confirmed door or roof exit without further evidence. Research PR #58 stays unmerged and issue #28 open. No updates to Site A, live Edition B pages, original map artwork, main, Supabase, saved progress, ratings, 48 sectors, 20 Wild Zones, 264 original items, 100 Screw clues or 146 approximate leads. **Scaffolds/ladders remain a later phase.**
