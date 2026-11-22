@@ -2,7 +2,8 @@
    No user tracking, database, localStorage, external SDK, or game-state write. */
 import {
   MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project,
-  constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin
+  constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin,
+  coverageCellCentre, districtStart
 } from "./atlas-explorer-geometry.mjs";
 const by = id => document.getElementById(id);
 const viewport=by("aeViewport"),stage=by("aeStage"),layer=by("aeMapPins");
@@ -31,7 +32,7 @@ const evidenceText={owner_survey:"Owner-recorded approach",owner_photographed:"P
   owner_reported:"Owner reported; destination map position unknown",
   guide_crosscheck:"Independent quest-guide cross-check",
   unverified:"Further survey needed — do not assume connected access"};
-let records=[],routes=[],recordMap=new Map(),pinMap=new Map();
+let records=[],routes=[],recordMap=new Map(),pinMap=new Map(),zoneRows=[];
 let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
@@ -63,7 +64,82 @@ function applyView(next){
   scheduleDraw();
 }
 const mapCenter=()=>{const d=dimensions();return{x:d.width/2,y:d.height/2};};
+
+/* Whole city area navigation: source-image coverage, not invented item or sector pins. */
+const coverageGrid=by("aeCoverageGrid"),coverageStatus=by("aeCoverageStatus");
+const coverageSector=by("aeCoverageSector"),coverageDistricts=by("aeCoverageDistricts");
+function coverageMessage(message,activeArea="") {
+  coverageStatus.textContent=message;
+  for(const cell of coverageGrid.querySelectorAll("button"))
+    cell.setAttribute("aria-pressed",String(cell.dataset.area===activeArea));
+}
+function focusDistrict(district,sectorId="",sectorName="") {
+  const sourceCentre=districtStart(zoneRows,district);
+  if(!sourceCentre) {
+    coverageMessage("No preserved Wild Zone centre is available for "+district+". Use the full city map instead.");
+    return;
+  }
+  applyView(centreOn(sourceCentre,{...view,zoom:2.4,rotation:0},dimensions()));
+  coverageSector.value=sectorId;
+  coverageMessage(sectorName
+    ? sectorName+": showing a "+district+" district starting view, NOT a verified sector centre. Drag the map to find individual buildings."
+    : district+" district: source-based approximate starting area. Drag and zoom to explore; sector borders are not pinned.");
+}
+function setupCoverage(sectors) {
+  if(!coverageGrid||!coverageStatus||!coverageSector||!coverageDistricts)
+    throw Error("Missing whole-city map coverage controls");
+  coverageGrid.replaceChildren();
+  for(let row=0;row<5;row++)for(let col=0;col<5;col++) {
+    const area=String(row+1)+"-"+String(col+1);
+    const cell=element("button","ae-coverage-cell");
+    cell.type="button";cell.dataset.area=area;
+    cell.setAttribute("aria-label","Open original city image area, row "+(row+1)+" of 5 north to south, column "+(col+1)+" of 5 west to east");
+    cell.setAttribute("aria-pressed","false");
+    cell.title="Zoom to city map area "+area;
+    cell.addEventListener("click",()=>{
+      const point=coverageCellCentre(row,col);
+      applyView(centreOn(point,{...view,zoom:3.5,rotation:0},dimensions()));
+      coverageSector.value="";
+      coverageMessage("Opened city map area row "+(row+1)+", column "+(col+1)+" of 5. Drag, pinch or zoom to inspect its streets.",area);
+      viewport.scrollIntoView({behavior:"smooth",block:"center"});
+    });
+    coverageGrid.append(cell);
+  }
+  coverageDistricts.replaceChildren();
+  for(const district of ["Vert","Bleu","Magenta","Rouge","Jaune"]) {
+    const button=element("button","",district);
+    button.type="button";button.dataset.district=district;
+    button.setAttribute("aria-label","Open "+district+" district map starting view");
+    button.addEventListener("click",()=>{
+      focusDistrict(district);
+      viewport.scrollIntoView({behavior:"smooth",block:"center"});
+    });
+    coverageDistricts.append(button);
+  }
+  for(const sector of sectors) {
+    const option=element("option","",sector.name);
+    option.value=sector.id;
+    coverageSector.append(option);
+  }
+  coverageSector.addEventListener("change",()=>{
+    const item=recordMap.get(coverageSector.value);
+    if(item?.kind!=="sector")return;
+    activeKind="sector";drawList();selectRecord(item,true);
+    viewport.scrollIntoView({behavior:"smooth",block:"center"});
+  });
+  by("aeCoverageFullCity").addEventListener("click",()=>{
+    applyView(startView());
+    coverageSector.value="";
+    coverageMessage("Showing the complete Lumiose City map. All 25 area squares cover the entire image.");
+    viewport.scrollIntoView({behavior:"smooth",block:"center"});
+  });
+}
+
 function focusRecord(item){
+  if(item?.kind==="sector"){
+    focusDistrict(item.district,item.id,item.name);
+    return;
+  }
   if(!isPoint(item?.xy))return;
   const d=dimensions();
   applyView(centreOn(item.xy,{...view,zoom:Math.max(1.7,view.zoom)},d));
@@ -276,7 +352,11 @@ function setupNavigation(){
   const northUp=()=>applyView(changeAround(view,mapCenter(),dimensions(),1,-view.rotation));
   by("aeNorth").addEventListener("click",northUp);
   by("aeRose").addEventListener("click",northUp);
-  by("aeReset").addEventListener("click",()=>applyView(startView()));
+  by("aeReset").addEventListener("click",()=>{
+    applyView(startView());
+    coverageSector.value="";
+    coverageMessage("Full city map reset. Choose any area square, district or named sector.");
+  });
   by("aeOriginal").addEventListener("click",()=>setStyle(false));
   by("aeTint").addEventListener("click",()=>setStyle(true));
   viewport.addEventListener("pointerdown",event=>{
@@ -335,7 +415,7 @@ async function load(){
   const data=await response.json();
   if(data.map?.native_size?.[0]!==MAP_SIZE || data.map?.native_size?.[1]!==MAP_SIZE ||
      data.zones?.length!==20||data.sectors?.length!==48||data.holovators?.length!==21)throw Error("Source map baseline failed");
-  const zoneRows=data.zones.map(x=>({...x,kind:"zone"}));
+  zoneRows=data.zones.map(x=>({...x,kind:"zone"}));
   const sectors=data.sectors.map(x=>({...x,kind:"sector"}));
   const lifts=data.holovators.map(x=>({...x,kind:"holovator"}));
   if(data.scaffolds!==undefined&&!Array.isArray(data.scaffolds))
@@ -352,6 +432,7 @@ async function load(){
   const options=[...routePicker.options];
   routes.forEach((route,i)=>{options[i+1].value=route.id;});
   createPins();
+  setupCoverage(sectors);
   const scaffoldPins=[...pinMap.values()].filter(pin=>pin.dataset.kind==="scaffold").length;
   const scaffoldLayer=layerToggleByKind.get("scaffold");
   if(scaffoldLayer){
@@ -364,6 +445,11 @@ async function load(){
     ? "("+scaffoldPins+" evidence-verified pins)"
     : "(no verified map pins yet)";
   drawList();
+  const requestedSector=new URLSearchParams(window.location.search).get("sector");
+  const deepLinked=recordMap.get(requestedSector);
+  if(deepLinked?.kind==="sector"){
+    activeKind="sector";drawList();selectRecord(deepLinked,true);
+  }
   stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · 6 documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
 }
