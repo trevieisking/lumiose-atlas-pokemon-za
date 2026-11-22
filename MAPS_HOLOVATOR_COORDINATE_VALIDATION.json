@@ -959,8 +959,8 @@
         "https://gamewith.jp/pokemon-za/524373",
         "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml"
       ],
-      "validation_result": "external_mission_map_coordinates_confirmed_and_neighbourhood_corroborated; holovator_exact_point_not_confirmed",
-      "next_step": "Map the source's Holovator category marker individually and calibrate it to maps/lumiose-game-map.jpg from independently identifiable landmarks; obtain direct image and floor/access evidence before publishing a confirmed pin.",
+      "validation_result": "owner_ground_photo_and_two_position_maps_correlated_to_Bleu_Sector_3; approximate_original_1920_image_xy_765_1396; exact_roof_and_external_category_ID_unverified",
+      "next_step": "Verify the matching external Holovator category marker ID and exact rooftop landing/floor. Keep entrance research pin labelled photographed/approximate, not publish as fully verified 23-marker release.",
       "source_mission_marker": {
         "category": "Side Missions",
         "layer_id": 343,
@@ -992,9 +992,12 @@
         "mission_title": "My Favorite Holovator",
         "ground_area": "Bleu Sector 3 by Bleu Plaza, north of Wild Zone 12; Rust Syndicate grunt blocks a Holovator just west of Vernal Pokémon Center",
         "owner_photo_holovator_symbol": {
-          "source_photo": null,
-          "approximate_atlas_native_jpg_xy": null,
-          "status": "not yet uniquely matched to owner yellow double-chevron; owner screenshot has multiple access symbols near Bleu sector 3 and café area"
+          "source_photo": "1000027233.heic + 1000027234.heic map red-position ring, plus 1000027235.heic physical lift",
+          "approximate_atlas_native_jpg_xy": [
+            765,
+            1396
+          ],
+          "status": "owner_photo_lift_entrance_correlated_to_same_player_position; exact roof and 23-category marker identity unverified"
         },
         "independent_in_game_map": {
           "source_page": "https://game8.jp/pokemon-legends-z-a/731011",
@@ -1047,7 +1050,45 @@
         "entry_floor": null,
         "roof_exit_floor": null,
         "confirmed_map_pin": false,
-        "assessment": "Mission quest map, trainer and exact moves/rewards independently backed; exact owner chevron device identity not registered; no exact map dot."
+        "assessment": "Updated with 4 owner photos: physical glowing Holovator near mission 61 and red player-position ring at west/southwest Bleu Sector 3 building matched to original city image approx (765,1396) via W04 and W10 controls. Mission area supported; no source physical category ID or exact roof landing. Research pin allowed, production gate unchanged."
+      },
+      "owner_ground_lift_survey_2026_11_22": {
+        "evidence_file": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+        "owner_confirmed_mission_name": "My Favorite Holovator",
+        "source_photo_count": 4,
+        "area": "west-southwest end Bleu Sector 3 building, southeast Bleu Plaza, immediately north of Aymlis Park/WZ12, near Café Woof",
+        "photo_owner_red_ring_centres": [
+          [
+            706,
+            346
+          ],
+          [
+            707,
+            346
+          ]
+        ],
+        "photo_street_lift_seen": true,
+        "estimated_native_1920_map_image_xy": [
+          765,
+          1396
+        ],
+        "independent_projection_xy": [
+          [
+            762.29,
+            1395.74
+          ],
+          [
+            769.07,
+            1396.9
+          ]
+        ],
+        "pixel_disagreement_across_two_reference_frames": 6.88,
+        "triangulation_confidence": "strong photographed standing position and stationary lift object; original map image XY approximate",
+        "external_23_category_marker_id": null,
+        "photo_rooftop_landing": null,
+        "entry_exactly_one_pixel_verified": false,
+        "direct_zoom_old_reference_homographies_rejected": true,
+        "status": "owner_ground_device_and_position_photo_correlated; research_pin_eligible; rooftop_not_surveyed"
       }
     },
     {
@@ -1744,5 +1785,19 @@
     "public_map_dots_added": 0,
     "copy_external_image": false,
     "original_photo_binaries_private": true
+  },
+  "evidence_batch_9": {
+    "id": "OWNER-HOLOVATOR-061-ENTRY-2026-11-22",
+    "record": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "mission": 61,
+    "owner_physical_entrance_photo": true,
+    "red_player_ring_two_map_photos": true,
+    "estimated_native_atlas_jpg_xy": [
+      765,
+      1396
+    ],
+    "external_unique_category_marker_id_recovered": false,
+    "roof_arrival_position_recorded": false,
+    "exact_published_map_pins_added": 0
   }
 }
