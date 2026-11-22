@@ -44,6 +44,16 @@ for(const [path,hash,expected] of cases){
  assert.equal(url.searchParams.has('authorization'),false);
 }
 
+const missionLink=new URL(context.buildFeedback('/lumiose-atlas-pokemon-za/index.html','#walkthrough:mission-36'));
+assert.equal(missionLink.searchParams.get('page'),fallback);
+assert.equal(missionLink.searchParams.get('anchor'),'mission-36');
+const questLink=new URL(context.buildFeedback('/lumiose-atlas-pokemon-za/index.html','#sidequests:quest-160'));
+assert.equal(questLink.searchParams.get('page'),'/lumiose-atlas-pokemon-za/index.html#sidequests');
+assert.equal(questLink.searchParams.get('anchor'),'quest-160');
+for (const badHash of ['#walkthrough:mission-0','#walkthrough:mission-43','#sidequests:quest-204','#walkthrough:mission-36%3Cscript%3E']) {
+  const url=new URL(context.buildFeedback('/lumiose-atlas-pokemon-za/index.html',badHash));
+  assert.equal(url.searchParams.get('anchor'),null,'Invalid anchor must not be propagated: '+badHash);
+}
 assert.match(app,/window\.location\.assign\(buildAtlasFeedbackUrl\(location\.pathname, location\.hash\)\)/);
 assert.match(app,/reviewButton\.textContent='Send feedback'/);
 assert.match(app,/reviewButton\.removeAttribute\('aria-expanded'\)/);
