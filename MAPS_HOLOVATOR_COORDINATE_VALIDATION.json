@@ -1650,6 +1650,34 @@
         "roof_exit_floor": null,
         "confirmed_map_pin": false,
         "assessment": "Mission location and Beldum unblock mechanism independently evidenced; exact level source conflict, exact source device marker/owner photo entrance and roof exit not established."
+      },
+      "owner_direct_field_survey_2026_11_22": {
+        "source": "MAPS_BLEU8_CAFE_SOLEIL_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "date": "2026-11-22",
+        "mission": 92,
+        "photo_count": 5,
+        "owner_physical_lift_and_street_ring": true,
+        "owner_reported_rooftop_arrival_photographed": true,
+        "previous_research_source_city_JPG_approx": [
+          352,
+          1496
+        ],
+        "independent_new_calibration": false,
+        "exact_door_map_xy_verified": false,
+        "roof_city_xy_verified": false,
+        "exact_ground_to_roof_pair_verified": false,
+        "external_23_category_ID": null,
+        "production_pin_added": false,
+        "televised_screen_edge_correction": {
+          "original_photo": "1000027400.heic",
+          "crop_box_xyxy": [
+            0,
+            0,
+            1536,
+            848
+          ],
+          "guide_ready_sha256": "bdb743756c3ebd79cb9560f4b8d9541e6c398084cc89f27687415b657d5e4dec"
+        }
       }
     }
   ],
@@ -1864,5 +1892,13 @@
       "MAPS_BLEU7_SOUTH_BOULEVARD_OWNER_LIFT_SURVEY_2026-11-22.json"
     ],
     "notes": "Photos establish working ground devices/rooftop arrival visual at pre-existing mission 023 & 045 areas. Existing photo-derived source-JPG points approx 964,1666 and 708,1706 remain research-only. New exact city-image entrance/roof pixel pairs 0, external category ids 0/23, published production pins 0."
+  },
+  "owner_bleu8_cafe_soleil_batch_23": {
+    "source": "MAPS_BLEU8_CAFE_SOLEIL_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "date": "2026-11-22",
+    "photo_ground_and_owner_roof_groups_total": 6,
+    "exact_verified_ground_to_roof_pairs": 0,
+    "external_23_category_matched": 0,
+    "all_photo_assets_bytes_uploaded_to_Github": false
   }
 }
