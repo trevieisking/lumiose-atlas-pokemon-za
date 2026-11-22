@@ -271,7 +271,9 @@ function setupNavigation(){
   by("aeZoomOut").addEventListener("click",()=>applyView(changeAround(view,mapCenter(),dimensions(),1/1.3)));
   by("aeTurnLeft").addEventListener("click",()=>applyView(changeAround(view,mapCenter(),dimensions(),1,-45)));
   by("aeTurnRight").addEventListener("click",()=>applyView(changeAround(view,mapCenter(),dimensions(),1,45)));
-  by("aeNorth").addEventListener("click",()=>applyView(changeAround(view,mapCenter(),dimensions(),1,-view.rotation)));
+  const northUp=()=>applyView(changeAround(view,mapCenter(),dimensions(),1,-view.rotation));
+  by("aeNorth").addEventListener("click",northUp);
+  by("aeRose").addEventListener("click",northUp);
   by("aeReset").addEventListener("click",()=>applyView(startView()));
   by("aeOriginal").addEventListener("click",()=>setStyle(false));
   by("aeTint").addEventListener("click",()=>setStyle(true));
