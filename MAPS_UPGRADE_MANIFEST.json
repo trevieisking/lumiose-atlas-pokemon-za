@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 16,
+  "revision": 17,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Hotel Z owner physical ladder L001 user-position matched, approx map (1202,1556), separate unmerged research preview. Correct legend: red ring current player, blue arrow facing, yellow double chevrons Holovators, red Pokeball Pokemon Center, black pink/gold DLC Hyperspace. Continue independent 23 Holovator IDs/roof exits; accept ladders one at a time from physical+map photos; no production merge/scaffold until vetted.",
+    "next_safe_record": "Owner identifies three MOVING DLC Hyperspace map icon classes via selected popups; never pin their positions permanently. Next single user field target is #061 My Favorite Holovator near southeast Bleu Plaza / north Aymlis Park, missing confirmed source category icon; require ground photo + current player ring north-up photos, optional roof landing. Preserve all research-only preview dots and L001, no live release.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1457,6 +1457,45 @@
       "Supabase_and_player_progress_unchanged": true,
       "bulk_ladder_or_scaffold_mapping_started": false,
       "release_gate": "Continue all Holovators as planned; separately collect one ladder at a time. Live Holovator layer only after full source validation; ladder full production layer requires its own eventual safety QA."
+    },
+    "dynamic_DLC_and_target_061_batch_15": {
+      "record": "MAPS_DLC_DYNAMIC_ICONS_AND_FIELD_TARGET_2026-11-22.json",
+      "owner_source_photos_private": [
+        "1000027226.heic",
+        "1000027227.heic",
+        "1000027228.heic"
+      ],
+      "map_popup_types_seen": [
+        "HYPERSPACE WILD ZONE",
+        "HYPERSPACE BATTLE ZONE",
+        "HYPERSPACE ROGUE MEGA ARENA"
+      ],
+      "example_temporary_level_readouts": [
+        "Lv.120",
+        "Lv.140",
+        "Lv.???"
+      ],
+      "owner_verified_behavior": "Hyperspace locations move every in-game day",
+      "static_map_policy": "No permanently pinned Hyperspace encounter marker; no use as landmark calibration controls. These must remain separate from Holovators and physical ladders.",
+      "owner_provided_icon_semantics": "yellow double chevrons Holovators; red ring player position; blue arrow facing; red Pokeball Pokemon Centers; black/gold and black/pink rainbow DLC markers dynamic",
+      "next_field_target": {
+        "mission": 61,
+        "title": "My Favorite Holovator",
+        "district": "Bleu Sector 3",
+        "landmarks": "Southeast Bleu Plaza, north of Wild Zone 12/Aymlis Park; near Café Woof and Vernal Avenue",
+        "priority": "first source-researched mission lift with no individually matched owner physical Holovator map icon",
+        "capture": "one ground device photo, north-locked wide red-ring image at base, north-locked closer ring image; optional rooftop map ring if safe",
+        "exact_device_atlas_xy": null,
+        "source_category_marker_id": null
+      },
+      "research_only": true,
+      "additional_physical_holovator_ids_verified": 0,
+      "additional_static_lift_pins_added": 0,
+      "additional_roof_exit_pairs_verified": 0,
+      "live_site_modified": false,
+      "ladder_L001_preserved": true,
+      "scaffold_phase_deferred": true,
+      "owner_images_remain_private": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
