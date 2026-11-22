@@ -110,6 +110,109 @@
         "warning": "Earlier alternative map positions (831,633) and (830,560) not uniquely matched",
         "evidence_file": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
         "status": "in_game_holovator_symbol_class_corroborated_but_device_identity_and_exact_entrance_unverified"
+      },
+      "mission_lift_field_evidence_2026_11_22": {
+        "review_order": 1,
+        "date_checked": "2026-11-22",
+        "mission_number": 4,
+        "mission_title": "A Break Time Battle",
+        "ground_area": "Rouge Sector 1 on west/southwest edge of Wild Zone 3 / Rouge Plaza; Sommi stands beside broken red Holovator at street-facing pale stone facade with blue doors and shutters",
+        "owner_photo_chevron_candidates": [
+          {
+            "source": "P08",
+            "approximate_atlas_native_jpg_xy": [
+              831,
+              633
+            ],
+            "status": "unresolved_alternative; relatively consistent with quest screenshot being southwest of WZ3"
+          },
+          {
+            "source": "P09",
+            "approximate_atlas_native_jpg_xy": [
+              830,
+              560
+            ],
+            "status": "unresolved_alternative; lies more nearly due west of WZ3; cannot assume same Holovator"
+          },
+          {
+            "source": "W07",
+            "approximate_atlas_native_jpg_xy": [
+              836,
+              589
+            ],
+            "status": "third independent wide-photo projected lead between earlier alternatives; not authoritative selector"
+          }
+        ],
+        "owner_photo_sources": [
+          "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+          "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json",
+          "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json"
+        ],
+        "independent_in_game_map": {
+          "source_page": "https://game8.jp/pokemon-legends-z-a/729556",
+          "quest_city_overview_image": "https://img.game8.jp/11856350/9688948097bccccedf02f8cbcd859eae.webp/show",
+          "quest_closeup_image": "https://img.game8.jp/11856349/510834edbe85770fa37ff35f578d9772.webp/show",
+          "visual_landmark": "Quest star west/southwest of Wild Zone 3 circle, immediately west of Rouge Plaza's outer circular road, by a small block/building corner",
+          "source_icon_type": "pink side mission star, not independently registered Holovator category marker",
+          "source_to_owner_photo_device_point_registered": false
+        },
+        "physical_ground_lift": {
+          "screenshot": "https://img.game8.jp/11856351/b22976ba3cca13bce71058038f2403c2.webp/show",
+          "other_gameplay_photo": "https://www.gameroni.com/uploads/games/7/image_71.jpg",
+          "description": "Worker Sommi by malfunctioning red Holovator at pale beige masonry facade, decorative blue windows/doors; after battle lift changes from red to yellow",
+          "specific_owner_icon_and_source_device_exact_same_building_verified": false
+        },
+        "quest_unlock": "After completing Main Mission 5 / begin Main Mission 6 (Reaching Rank X)",
+        "npc": "Worker Sommi",
+        "action": "Speak to Sommi next to disabled unit west of Wild Zone 3; defeat his Pidgey Lv8, Budew Lv8, Emolga Lv10; he repairs the lift",
+        "rewards": [
+          {
+            "name": "Pokedollars",
+            "quantity": 1200
+          },
+          {
+            "name": "Exp. Candy S",
+            "quantity": 3
+          },
+          {
+            "name": "Fresh Water",
+            "quantity": 1
+          }
+        ],
+        "roof_access": {
+          "source_grounded": true,
+          "route": "Repair lift west of Rouge Plaza, ride to nearby roofs, navigate north to upper roof by ladder and cross bridge to Colorful Screw; a second rooftop drop/passage screw is independently reported, but neither mapped against owner's source Screw IDs.",
+          "source_links": [
+            "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations",
+            "https://gamepedia.jp/pokemon-legends-z-a/archives/16379",
+            "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/"
+          ],
+          "exact_roof_exit_height": null,
+          "exact_roof_exit_xy": null,
+          "exact_screw_xy": null,
+          "owner_screw_ids_matched": false,
+          "optional_biome_lead": "Vivillon can appear on rooftops; a third-party gameplay video mentions Goomy under rainy conditions, not established as fixed at this exact lift."
+        },
+        "source_links": [
+          "https://www.serebii.net/legendsz-a/sidemissions/abreaktimebattle.shtml",
+          "https://game8.jp/pokemon-legends-z-a/729556",
+          "https://gamewith.jp/pokemon-za/524346",
+          "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/A_Break_Time_Battle",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-break-time-battle"
+        ],
+        "external_quest_marker": {
+          "source": "Gamer Guides Side Missions layer 343",
+          "x": 9143,
+          "y": 6904,
+          "not_device_xy": true
+        },
+        "actual_holovator_category_marker_id": null,
+        "atlas_x": null,
+        "atlas_y": null,
+        "entry_floor": null,
+        "roof_exit_floor": null,
+        "confirmed_map_pin": false,
+        "assessment": "Strong independent objective neighbourhood and photographed physical lift, multiple owner icon candidates disagree ~73px; cannot assign exact yellow symbol or owner native JPG entrance without rectified same-building evidence"
       }
     },
     {
@@ -842,7 +945,103 @@
         "source": "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-burning-gaze-of-watchog",
         "not_roof_or_exact_xy_verified": true
       },
-      "additional_findings_20261121": "Bulbapedia lists the quest in Magenta Sector 2; Gamer Guides locates its mission marker along Autumnal Avenue. The device's own category marker and XY remain to be matched."
+      "additional_findings_20261121": "Bulbapedia lists the quest in Magenta Sector 2; Gamer Guides locates its mission marker along Autumnal Avenue. The device's own category marker and XY remain to be matched.",
+      "mission_lift_field_evidence_2026_11_22": {
+        "review_order": 2,
+        "date_checked": "2026-11-22",
+        "mission_number": 71,
+        "mission_title": "The Burning Gaze of Watchog",
+        "ground_area": "Autumnal Avenue northeast of Wild Zone 7, Magenta Sector 2; by Café Pokémon-Amie area and near Centrico plaza",
+        "owner_photo_chevron_candidate": {
+          "source": "P09 PHOTO-C05",
+          "owner_portrait_photo_pixel_approx": [
+            377,
+            735
+          ],
+          "approximate_atlas_native_jpg_xy": [
+            739,
+            740
+          ],
+          "status": "single previously registered candidate; symbol NE of WZ7, identity not separately matched to Chuckie's facade"
+        },
+        "owner_photo_sources": [
+          "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+          "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json"
+        ],
+        "independent_in_game_map": {
+          "source_page": "https://game8.jp/pokemon-legends-z-a/731300",
+          "quest_city_overview_image": "https://img.game8.jp/11871804/90f87c991a7ab4528a3585486a2e4a53.webp/show",
+          "quest_closeup_image": "https://img.game8.jp/11871803/7fa0b4743adfec055fcd2091f06773c5.webp/show",
+          "visual_landmark": "Pink star on Autumnal Avenue, northeast of Wild Zone 7, beside Magenta Sector 2 and near Centrico Plaza; mission marker not separate Holovator category marker",
+          "source_to_owner_photo_device_point_registered": false
+        },
+        "physical_ground_lift": {
+          "npc_scene_source": "https://img.gamewith.jp/img/6df58446f4067d49e61c51946ee6b6ec.png",
+          "game8_repaired_scene": "https://img.game8.jp/11872311/bd52725410fc2780f2e5de03e46808f4.webp/show",
+          "description": "Chuckie next to blue taxi against pale stone facade with arched blue-framed windows, blocked lift red until Lv50 Alpha Watchog cleared; yellow vertical beams after repair; screen shows source facade but not registered to owner map building",
+          "specific_owner_icon_and_source_device_exact_same_building_verified": false
+        },
+        "unlock_conflict": {
+          "preferred": "Available after visiting the Rust Syndicate Office during Main Mission 24 (Reaching Rank C), as stated by GameWith and Game8",
+          "source_variance": "Thonky says after starting Main Mission 25; preserve story-event gating rather than promise exact universal turn.",
+          "sources": [
+            "https://gamewith.jp/pokemon-za/524953",
+            "https://www.thonky.com/pokemon-legends-z-a/side-mission-071-the-burning-gaze-of-watchog",
+            "https://game8.jp/pokemon-legends-z-a/731300"
+          ]
+        },
+        "npc": "Chuckie",
+        "action": "Speak with Chuckie beside Holovator northeast of Wild Zone 7. Battle/catch or defeat the Lv50 Alpha Watchog (Normal type; weak to Fighting), clearing access.",
+        "alpha_watchog_catchable": true,
+        "rewards": [
+          {
+            "name": "Pokedollars",
+            "quantity": 1200
+          },
+          {
+            "name": "Assault Vest",
+            "quantity": 1
+          },
+          {
+            "name": "Full Heal",
+            "quantity": 3
+          }
+        ],
+        "roof_access": {
+          "source_grounded": true,
+          "route": "The repaired Holovator becomes usable for adjacent rooftops; exact rooftop landing/exit and which Magenta Sector 2 roof collectibles can be directly reached by this unit are not independently established.",
+          "area_only_collectible_leads": [
+            "Magenta Sector 2 scaffolding west of eastern building complex: Colorful Screw",
+            "Magenta Sector 2 multiple Roto-Glide-dependent rooftop pickups"
+          ],
+          "source": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html",
+          "lift_to_specific_pickup_route_verified": false,
+          "exact_screw_xy": null,
+          "roof_exit_height": null,
+          "roof_exit_xy": null
+        },
+        "source_links": [
+          "https://www.serebii.net/legendsz-a/sidemissions/theburninggazeofwatchog.shtml",
+          "https://game8.jp/pokemon-legends-z-a/731300",
+          "https://gamewith.jp/pokemon-za/524953",
+          "https://gamepedia.jp/pokemon-legends-z-a/quests/5552",
+          "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/the-burning-gaze-of-watchog"
+        ],
+        "external_quest_marker": {
+          "source": "Gamer Guides Side Missions layer 343",
+          "x": 8429,
+          "y": 8099,
+          "not_device_xy": true
+        },
+        "actual_holovator_category_marker_id": null,
+        "atlas_x": null,
+        "atlas_y": null,
+        "entry_floor": null,
+        "roof_exit_floor": null,
+        "confirmed_map_pin": false,
+        "assessment": "Quest and physical blocked/repaired lift photographed; owner screenshot symbol is in matching NE WZ7 street vicinity but exact building facade, device-centre map coordinates and rooftop exit remain uncertain."
+      }
     },
     {
       "id": "DR-H-08",
@@ -1216,5 +1415,24 @@
     "original_owner_photo_binaries_committed": false,
     "site_code_or_player_data_changes": false,
     "notes": "All coordinates remain exploratory manual projections. Mission stars are not identical to yellow Holovator device icon markers. Number 84 in StrategyWiki checklist cannot be silently relabelled as owner source #84. No live confirmed map markers created."
+  },
+  "evidence_batch_6": {
+    "batch_id": "ATLAS-HOLOVATOR-RECHECK-04-71-2026-11-22",
+    "date": "2026-11-22",
+    "sequence": [
+      "DR-H-01 mission 004",
+      "DR-H-07 mission 071"
+    ],
+    "independent_source_quest_map_closeups": 2,
+    "independent_physical_ground_lift_scenes": 2,
+    "owner_icons_resolved_to_specific_device": 0,
+    "exact_atlas_device_xy_confirmed": 0,
+    "exact_rooftop_exit_xy_confirmed": 0,
+    "new_published_pins": 0,
+    "mission_4_status": "Rouge Plaza source quest star near southwest of WZ3; owner alternative photos at 831,633 vs 830,560 diverge, wide view 836,589; no arbitrary selection",
+    "mission_71_status": "Magenta Sector 2 Autumnal Avenue NE WZ7, owner portrait icon near 739,740, mission map and Chuckie taxi+Watchog lift street scene sourced; precise pin unresolved",
+    "collection_links": "Mission 004 upper rooftop screw routes; Mission 071 Magenta Sector 2 roof/scaffold item clues are not yet matched to original owner 100 IDs",
+    "preservation": "docs evidence only, original screenshots private, live map unmodified",
+    "source_count_note": "23 category markers reported by Shackmaps; nine related unlock missions do not prove remaining 14 are unique devices until direct category-marker IDs and geometry are reconciled"
   }
 }
