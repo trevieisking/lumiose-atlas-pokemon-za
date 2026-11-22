@@ -128,6 +128,8 @@ test("verified scaffold access is extensible without inventing map pins",()=>{
   assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true}),false);
   assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"javascript:alert(1)"}),false);
   assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"MAPS_FIELD_SURVEY.json"}),true);
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"MAPS_SCAFFOLD_FIELD_SURVEY_2026-11-22.json"}),true,"Dated authentic MAPS evidence filenames must be accepted");
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"../MAPS_SCAFFOLD_FIELD_SURVEY.json"}),false);
   assert.equal(eligibleMapPin({kind:"scaffold",xy:[1921,960],pin_verified:true,source_record:"MAPS_FIELD_SURVEY.json"}),false);
   assert.equal(eligibleMapPin({kind:"zone",xy:[960,960]}),true,"Existing Wild Zone pins remain supported");
   assert.equal(eligibleMapPin({kind:"sector",xy:[960,960]}),false,"Sectors still lack evidence-backed pin geometry");
