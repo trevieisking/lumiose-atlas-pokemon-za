@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "inventory_revision": 2,
+  "inventory_revision": 3,
   "date": "2026-11-22",
   "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
   "reported_external_marker_category_count": 23,
@@ -37,13 +37,14 @@
       "sector_claim": "Rouge-01",
       "mission_unlock_research_completed": true,
       "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/729556",
-      "owner_photo_chevron_candidate": "WIDE-H01-AMBIGUOUS",
+      "owner_photo_chevron_candidate": "PHOTO-C01 / WIDE-H01-AMBIGUOUS / W06-W07-repeat",
       "external_device_category_marker_id": null,
       "unique_physical_device_confirmed_against_category_list": false,
       "native_atlas_device_entry_xy": null,
       "native_atlas_roof_landing_xy": null,
       "pin_published": false,
-      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending",
+      "owner_photo_candidate_status": "W06/W07 photo-pair same yellow symbol west of WZ3; mission-specific exact device and old two alternatives unresolved"
     },
     {
       "local_provisional_id": "DR-H-02",
@@ -165,13 +166,14 @@
       "sector_claim": "Bleu-08",
       "mission_unlock_research_completed": true,
       "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/731477",
-      "owner_photo_chevron_candidate": null,
+      "owner_photo_chevron_candidate": "W10 / H-CAND-BLEU08-CAFE-SOLEIL",
       "external_device_category_marker_id": null,
       "unique_physical_device_confirmed_against_category_list": false,
       "native_atlas_device_entry_xy": null,
       "native_atlas_roof_landing_xy": null,
       "pin_published": false,
-      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending",
+      "owner_photo_candidate_status": "single-photo yellow symbol near mission #92 quest area; physical device and roof not verified"
     }
   ],
   "other_owner_photo_visible_holovator_class_leads": [
@@ -244,6 +246,16 @@
       "atlas_exact_entry_xy": null,
       "roof_exit_xy": null,
       "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "W06/W07-JAUNE-SECTOR-4",
+      "area": "Jaune Sector 4 east of Académie Étoile / north-west of Wild Zone 8",
+      "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
     }
   ],
   "evidence_sources": [
@@ -252,14 +264,15 @@
     "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json",
     "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
     "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
-    "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json"
+    "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+    "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
     "mission_quest_map_marker_urls_recovered": 9,
     "external_category_markers_individually_recovered": 0,
     "unique_physical_holovators_confidently_deduplicated_to_23_category": 0,
-    "owner_photo_unmatched_named_lead_groups": 7,
+    "owner_photo_unmatched_named_lead_groups": 8,
     "exact_verified_lift_ground_entry_xy": 0,
     "exact_verified_roof_landings": 0,
     "exact_verified_ground_to_roof_pairs": 0,
@@ -267,9 +280,11 @@
     "owner_wide_W08_visible_photo_symbols": 5,
     "owner_wide_W09_overlap_repeated_photo_observations": 2,
     "named_nonmission_guide_photo_neighbourhood_leads_in_latest_batch": 9,
-    "guide_only_possible_holovator_leads_in_latest_batch": 4
+    "guide_only_possible_holovator_leads_in_latest_batch": 4,
+    "new_owner_photo_quest_candidate_rechecks_this_batch": 2,
+    "independent_W06_W07_repeated_symbol_groups_this_batch": 3
   },
-  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total.",
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead.",
   "next_evidence_order": [
     "Cross-register the two photo-proven distinct Estival Avenue yellow glyphs (W08/W09 Café Gallant vs Espace Vide/Bleu Sector 4) with independently named physical Holovator category markers, without treating picture pixel positions as Atlas image XY.",
     "Inspect each of source map's 23 Holovator-category glyphs directly, extract stable marker/page IDs and original source coordinate space, one by one.",
@@ -335,5 +350,33 @@
     "exact_roof_exit_xy_verified": 0,
     "production_map_pins_added": 0,
     "source_rights": "Do not copy owner or third-party images; store coordinates/evidence text only"
+  },
+  "owner_w06_w07_batch_11": {
+    "date": "2026-11-22",
+    "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+    "photo_ids": [
+      "W06",
+      "W07",
+      "W10"
+    ],
+    "W06_W07_same_yellow_glyph_groups": 3,
+    "W06_W07_WZ3_independent_control": 1,
+    "camera_photo_pan_delta_mean": [
+      615.75,
+      104.75
+    ],
+    "translation_alignment_RMS_original_camera_px": 2.09,
+    "mission_004_new_same_yellow_icon_two_photo_support": true,
+    "mission_004_older_alt_conflict_unresolved": true,
+    "mission_092_W10_single_photo_candidate_recovered": true,
+    "new_separately_visible_jaune_sector_4_symbol": true,
+    "independent_2025_all_holovator_ladders_map": "https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600",
+    "independent_map_game_mechanics": "Nine Holovators initially disabled; visiting/interacting records Holovator on map, disabled units displayed gray, repaired units active.",
+    "original_uploaded_photos_public": false,
+    "source_category_ids_recovered": 0,
+    "verified_exact_entrances": 0,
+    "verified_roof_exit_pairs": 0,
+    "published_pins": 0,
+    "uncertain_overlapping_records_unchanged": true
   }
 }
