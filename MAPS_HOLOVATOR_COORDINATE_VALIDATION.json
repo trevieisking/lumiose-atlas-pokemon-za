@@ -959,8 +959,8 @@
         "https://gamewith.jp/pokemon-za/524373",
         "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml"
       ],
-      "validation_result": "owner_ground_photo_and_two_position_maps_correlated_to_Bleu_Sector_3; approximate_original_1920_image_xy_765_1396; exact_roof_and_external_category_ID_unverified",
-      "next_step": "Verify the matching external Holovator category marker ID and exact rooftop landing/floor. Keep entrance research pin labelled photographed/approximate, not publish as fully verified 23-marker release.",
+      "validation_result": "five_owner_photos:ground_device_plus_two_ground_map_views_plus_roof_scene; only_ground_player_position_calibrated_to_original_JPG; roof_map_XY_unverified",
+      "next_step": "Do not return to locate ground entrance. Roof scene has now been photographed in fifth owner image. If available, a north-up full city map screenshot while standing on roof would allow rooftop XY calibration; exact device category ID and 23/23 reconciliation remain outstanding.",
       "source_mission_marker": {
         "category": "Side Missions",
         "layer_id": 343,
@@ -1055,7 +1055,7 @@
       "owner_ground_lift_survey_2026_11_22": {
         "evidence_file": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
         "owner_confirmed_mission_name": "My Favorite Holovator",
-        "source_photo_count": 4,
+        "source_photo_count": 5,
         "area": "west-southwest end Bleu Sector 3 building, southeast Bleu Plaza, immediately north of Aymlis Park/WZ12, near Café Woof",
         "photo_owner_red_ring_centres": [
           [
@@ -1085,10 +1085,18 @@
         "pixel_disagreement_across_two_reference_frames": 6.88,
         "triangulation_confidence": "strong photographed standing position and stationary lift object; original map image XY approximate",
         "external_23_category_marker_id": null,
-        "photo_rooftop_landing": null,
+        "photo_rooftop_landing": {
+          "owner_photo": "1000027236.heic",
+          "owner_reported_roof_after_ride": true,
+          "scene": "glowing pad on an open stone-paved roof, Prism Tower right background, park/fountain below left, nearby Investigate prompt",
+          "status": "rooftop_scene_photographed_and_owner_linked; full_map_ring_photo_absent; rooftop_native_XY_and_height_unknown",
+          "roof_city_jpg_xy": null,
+          "roof_floor": null,
+          "external_23_category_marker_id": null
+        },
         "entry_exactly_one_pixel_verified": false,
         "direct_zoom_old_reference_homographies_rejected": true,
-        "status": "owner_ground_device_and_position_photo_correlated; research_pin_eligible; rooftop_not_surveyed"
+        "status": "owner_ground_device_photo_and_roof_arrival_photo_reported; ground map XY approximate (765,1396); roof full-map XY and external category identity unresolved"
       }
     },
     {
@@ -1799,5 +1807,22 @@
     "external_unique_category_marker_id_recovered": false,
     "roof_arrival_position_recorded": false,
     "exact_published_map_pins_added": 0
+  },
+  "evidence_batch_10": {
+    "id": "OWNER-HOLOVATOR-061-FIFTH-ROOF-PHOTO-2026-11-22",
+    "source": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "mission": 61,
+    "roof_owner_photo": "1000027236.heic",
+    "roof_arrival_platform_visibly_photographed": true,
+    "same_lift_route_based_on_owner_report": true,
+    "roof_full_northlocked_city_map_photo_obtained": false,
+    "roof_source_native_jpg_xy": null,
+    "ground_research_native_jpg_xy": [
+      765,
+      1396
+    ],
+    "stable_external_23_category_device_id": null,
+    "published_pin_added": 0,
+    "warning": "Do not equate 5 photos with exact georeferenced ground-to-roof pair."
   }
 }
