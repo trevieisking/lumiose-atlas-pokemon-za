@@ -150,7 +150,8 @@ try{
   assert.equal(await phone.locator("#aeCoverageGrid button").count(),25);
   await phone.locator('#aeCoverageGrid button[data-area="5-5"]').click();
   await phone.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("row 5, column 5"));
-  assert.ok(Number.parseFloat(await phone.locator("#aeZoomLabel").textContent())>=3);
+  await phone.waitForFunction(()=>Number.parseFloat(document.getElementById("aeZoomLabel").textContent)>=3,
+    {timeout:10000});
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
     "Complete city selector must fit Android viewport");
   await phone.locator("#aeCoverageFullCity").click();
