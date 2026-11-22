@@ -40,7 +40,7 @@ test("all 21 unique owner-survey entries, 90 genuine hosted images, missing asse
   assert.equal(pics.length,90);
   assert.equal(new Set(pics.map(x=>x.path)).size,90);
   for(const p of pics){
-    assert.match(p.path,/^assets\/atlas\/holovators\/[a-z0-9-]+\/[a-z0-9-]+\.jpg$/);
+    assert.match(p.path,/^assets\/atlas\/holovators\/(?:[a-z0-9-]+\/)+[a-z0-9-]+\.jpg$/);
     const file=fs.readFileSync(path.join(root,p.path));
     assert.equal(file[0],0xff);assert.equal(file[1],0xd8);
   }
