@@ -52,7 +52,7 @@ for(const id of ["holMapStage","holMapScroll","holList","holDetails","holSearch"
 assert.match(page,/href="index.html#walkthrough"/);
 assert.match(page,/Complete guide menu/);
 assert.match(page,/maps\/lumiose-game-map.jpg/);
-assert.match(page,/Holovator map/i);
+assert.match(page,/Holovators/i);
 assert.match(page,/Hyperspace event icons/i);
 assert.match(js,/fetch\(SOURCE/);
 assert.match(js,/image\.loading="lazy"/);
