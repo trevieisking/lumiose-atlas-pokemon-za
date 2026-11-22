@@ -19,6 +19,8 @@ assert.match(html,/name="details" minlength="10" maxlength="1500"/);
 assert.match(html,/connect-src https:\/\/xzxqfrvqdgkzwujbkdbk\.supabase\.co/);
 assert.match(css,/max-width:480px/);
 assert.match(css,/\.page-context\{[^}]*overflow-wrap:anywhere/);
+assert.match(css,/#missionPicker:not\(\[hidden\]\)\{margin-top:1\.2rem\}/);
+assert.match(html,/placeholder="Explain what happened, what is missing, or which directions need correcting\.\.\."/);
 assert.match(html,/id="pageContext" class="page-context" aria-label="Full guide page address"/);
 assert.doesNotMatch(html+js+css,/SUPABASE_SERVICE_ROLE_KEY|sb_secret_|SECRET\s*=/);
 
