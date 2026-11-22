@@ -41,3 +41,32 @@ filters[2].events.click();assert.equal(nodes.bossStatus.textContent,"10 of 28 bo
 nodes.bossSearch.value="darkrai";nodes.bossSearch.events.input();assert.equal(nodes.bossStatus.textContent,"1 of 28 boss cards shown");
 nodes.bossSearch.value="not-a-boss";nodes.bossSearch.events.input();assert.equal(nodes.bossNoResults.hidden,false);
 console.log("PASS: 28 PDF boss cards, 25-link menu, internal assets, responsive cards, offline filters and unchanged player state.");
+
+
+/* AT-268: archive parity — every boss portrait must actually exist, or be an
+ * already documented external HOME sprite. Do not silently break images again.
+ * This check uses only read-only resources and never touches player progress. */
+const homeCtx={window:{}};
+runInNewContext(read("home-dex-data.js"),homeCtx);
+const homeByNumber=new Map(homeCtx.window.ATLAS_HOME_SOURCE.records.map(r=>[r.number,r]));
+const portraitSources=[...html.matchAll(/<article class="boss-card"[\s\S]*?<img\s+src="([^"]+)"\s+alt="([^"]+)"[^>]*>/g)]
+  .map(m=>({src:m[1],alt:m[2]}));
+assert.ok(portraitSources.length>=26,"All pictured boss cards need real source assets");
+for(const {src,alt} of portraitSources){
+  assert.match(alt,/species portrait/i,"Boss art must retain its form-accuracy disclosure");
+  if(src.startsWith("https://")){
+    const match=src.match(/^https:\/\/raw\.githubusercontent\.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/other\/home\/(\d+)\.png$/);
+    assert.ok(match,"No unreviewed external boss-image host");
+    const ref=homeByNumber.get(Number(match[1]));
+    assert.ok(ref&&ref.image===src&&ref.imageSource==="external-sprite-fallback",
+      "External boss art must match the already-working HOME guide's disclosed source");
+  }else{
+    assert.ok(existsSync(new URL("../"+src,import.meta.url)),"Broken local Rogue Mega Boss image: "+src);
+  }
+}
+for(const n of [398,978,485,491,383,382,384,807]){
+  const ref=homeByNumber.get(n);
+  assert.ok(ref,"Missing species in trusted HOME source: "+n);
+  assert.ok(html.includes('src="'+ref.image+'"'),"Broken boss gallery fallback for "+ref.name);
+  assert.ok(!html.includes('src="dex-art/'+n+'.webp"'),"Missing image path has regressed for "+ref.name);
+}
