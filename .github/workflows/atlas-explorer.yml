@@ -1,0 +1,57 @@
+name: Validate rotatable Lumiose Atlas Explorer
+on:
+  pull_request:
+    paths:
+      - atlas-explorer.html
+      - atlas-explorer.css
+      - atlas-explorer.js
+      - atlas-explorer-geometry.mjs
+      - atlas-explorer-data.json
+      - tests/atlas_explorer.test.mjs
+      - tests/atlas_explorer_browser.mjs
+      - .github/workflows/atlas-explorer.yml
+      - maps.html
+      - sector-maps.html
+      - holovator-map.html
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  atlas-unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax-check isolated map modules
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js
+      - name: Check source counts, actual photos and rotation/floor-route evidence
+        run: node --test tests/atlas_explorer.test.mjs
+      - name: Protect existing guide, checkmarks and map references
+        run: python3 tests/validate_static.py
+  atlas-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium smoke dependency, without changing package files
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Confirm system Chrome is available for offline-style browser smoke
+        run: command -v google-chrome || command -v google-chrome-stable
+      - name: Verify real map and stepwise routes on desktop and phone
+        run: node tests/atlas_explorer_browser.mjs
+      - name: Attach screenshot QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-explorer-mobile-desktop-preview
+          path: test-artifacts/atlas-explorer/
+          if-no-files-found: ignore
+          retention-days: 10
