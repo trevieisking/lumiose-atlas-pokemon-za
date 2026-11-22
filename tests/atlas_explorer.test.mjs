@@ -5,7 +5,8 @@ import path from "node:path";
 import {createHash} from "node:crypto";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
-  panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin
+  panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin,
+  coverageCellCentre, districtStart
 } from "../atlas-explorer-geometry.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
@@ -250,3 +251,44 @@ test("new explorer is isolated and links to preserved map and photo pages",()=>{
   assert.doesNotMatch(js,/localStorage\s*\.|sessionStorage\s*\.|supabase\.|fetch\s*\(\s*["']https?:/i);
 });
 
+
+
+test("AT-267 navigates all 25 image regions and 48 sectors without fabricated point geometry",()=>{
+  const positions=[];
+  for(let row=0;row<5;row++)for(let col=0;col<5;col++){
+    const point=coverageCellCentre(row,col);
+    assert.ok(point.every(x=>x>0&&x<MAP_SIZE));
+    positions.push(point.join(","));
+  }
+  assert.equal(new Set(positions).size,25);
+  assert.deepEqual(coverageCellCentre(0,0),[192,192]);
+  assert.deepEqual(coverageCellCentre(4,4),[1728,1728]);
+  assert.deepEqual(coverageCellCentre(2,2),[960,960]);
+  for(const bad of [[-1,0],[0,5],[2.5,0],[5,0]])
+    assert.equal(coverageCellCentre(...bad),null);
+  assert.equal(coverageCellCentre(0,0,0),null);
+  const districts=["Vert","Bleu","Magenta","Rouge","Jaune"];
+  for(const district of districts) {
+    const c=districtStart(data.zones,district);
+    const matching=data.zones.filter(x=>x.district===district);
+    assert.ok(matching.length>0,district+" has source Wild Zone anchors");
+    const avg=[0,1].map(axis=>matching.reduce((sum,x)=>sum+x.xy[axis],0)/matching.length);
+    assert.deepEqual(c,avg,"Source-derived district orientation only, no invented centre");
+    assert.ok(c.every(x=>x>=0&&x<=1920));
+  }
+  assert.equal(districtStart(data.zones,"Missing"),null);
+  assert.equal(districtStart([], "Vert"),null);
+  assert.ok(data.sectors.every(s=>s.xy===null),"No sector should receive false point geometry");
+  const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
+  assert.match(html,/id="aeCoverageGrid"/);
+  assert.match(html,/id="aeCoverageDistricts"/);
+  assert.match(html,/id="aeCoverageSector"/);
+  assert.match(html,/id="aeCoverageFullCity"/);
+  assert.match(js,/coverageCellCentre/);assert.match(js,/districtStart/);
+  assert.match(js,/new URLSearchParams\(window.location.search\)/);
+  assert.match(css,/\.ae-coverage-grid\{/);
+  assert.match(read("maps.html"),/sector-maps\.html#sector-directory/);
+  assert.match(read("sector-maps.js"),/atlas-explorer\.html\?sector=/);
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
