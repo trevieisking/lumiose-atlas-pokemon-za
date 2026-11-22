@@ -276,6 +276,24 @@
       "atlas_exact_entry_xy": null,
       "roof_exit_xy": null,
       "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "VERT4-EAST",
+      "area": "Eastern Vert Sector 4 courtyard (northeast of Café Classe), near Vert Sector 5",
+      "source": "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven_against_external_23": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "owner_physical_holovator_photographed": true,
+      "owner_ground_red_ring_two_maps_photographed": true,
+      "owner_rooftop_lift_arrival_scene_photographed": true,
+      "owner_recent_photo_count": 5,
+      "photographed_entry_approx_native_atlas_JPG_xy": [
+        1055,
+        1383
+      ],
+      "research_status": "distinct already known yellow chevron now owner-ground-and-roof-photographed; exact ground/roof map coordinates and external category device ID unverified"
     }
   ],
   "evidence_sources": [
@@ -290,7 +308,8 @@
     "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
     "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
     "1000027236.heic fifth owner photo (private; indexed by MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json)",
-    "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json"
+    "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -319,13 +338,14 @@
     "owner_photographed_061_ground_side_research_pin_candidates": 1,
     "owner_mission_61_source_photo_count": 5,
     "owner_mission_61_owner_reported_roof_pad_photographed": 1,
-    "owner_photographed_holovator_ground_side_photo_groups_total": 2,
-    "owner_photographed_holovator_roof_arrival_scene_groups_total": 2,
-    "owner_vert4_south_recent_photos": 5
+    "owner_photographed_holovator_ground_side_photo_groups_total": 3,
+    "owner_photographed_holovator_roof_arrival_scene_groups_total": 3,
+    "owner_vert4_south_recent_photos": 5,
+    "owner_vert4_east_recent_photos": 5
   },
   "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted. Five mission #061 owner photos now prove there is visible rooftop arrival scene by owner report, but original 1920 city image roof XY is not obtained. Do not increment exact ground↔roof matched count or external category-ID count. New five-photo Vert southern Holovator is same previously catalogued WIDE-C13 / r-vert4-south, NOT new unique device: new red-ring photo projects old VP-C [256.43,741.11], matching old chevron [257,737]. Owner has street lift and roof photograph but roof map XY and category marker ID unavailable; 0 full georeferenced pair and 0/23 external IDs still.",
   "next_evidence_order": [
-    "Next field trip after verified same WIDE-C13: distinct r-vert4-east fixed yellow double-chevron inside eastern/right Vert Sector 4, northeast of current Vernal Pokémon Center lift. New screenshot 7374 icon ~[895,204] maps to old VP-C [461.8,595.0], matching separately old [465,592]. Obtain actual facade/roof photo and red-ring map at device, no duplicate.",
+    "Next distinct field target: r-classe MIDDLE golden chevron at lower Vert Sector 4 just east of Café Classe, west/southwest of owner-confirmed eastern courtyard lift r-vert4-east. Do NOT revisit farther-south r-vert4-south by Pokémon Center. Capture physical lift, standing wide/close map and optional rooftop view; preserve approximate old research pixel (1010,1420) until independently calibrated.",
     "Mission #061 ground entrance found and roof arrival scene pictured in fifth owner photo; only missing optional north-locked FULL map on roof to calibrate upper exit. Do not send owner to rediscover same ground lift.",
     "Mission #061 owner physical entrance now located on city JPG approx (765,1396). If safely accessible, capture north-up rooftop exit red-ring map, then independently match exact external category device marker ID; do not confuse entry research point with permanent roof point.",
     "Confirm each of FOUR Vert Plaza-adjacent distinct yellow chevrons and their exact street entrances/roof landings; black/pink round icons on plaza ring are NOT Holovators. Keep r-classe middle, r-vert4-east, r-vert4-south and r-cyclone separate. A previous approximate W04 Café Classe point was the southern fourth icon.",
@@ -685,5 +705,36 @@
     },
     "new_photo_bytes_in_public_GitHub": false,
     "user_authorizes_future_GitHub_image_assets": true
+  },
+  "vert4_east_owner_field_batch_20": {
+    "date": "2026-11-22",
+    "source": "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "existing_draft_marker_id": "r-vert4-east",
+    "owner_ground_lift_photo": true,
+    "owner_wide_and_close_red_ring_maps": true,
+    "owner_reported_roof_arrival_scene": true,
+    "new_source_photo_count": 5,
+    "existing_approx_native_city_JPG_xy": [
+      1055,
+      1383
+    ],
+    "independently_recalibrated_new_photo_xy": false,
+    "other_separate_lifts": [
+      "r-classe",
+      "r-vert4-south",
+      "r-cyclone"
+    ],
+    "new_external_category_ID_reconciled": false,
+    "exact_upper_exit_city_map_xy": null,
+    "photo_binary_bytes_in_public_Github": false,
+    "next_single_different_field_target": {
+      "id": "r-classe",
+      "approximate_native_city_JPG_xy": [
+        1010,
+        1420
+      ],
+      "direction": "west/southwest from east side Vert Sector 4 toward Café Classe; middle icon, NOT farther-south Pokémon Center"
+    },
+    "count_rule": "One previously identified research symbol gains physical ground and owner rooftop visual. Do not increment externally reconciled 23 device identities or exact ground/roof coordinate pair count."
   }
 }
