@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 20,
+  "revision": 21,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "For eventual #061 published guide illustrations, use five newer clean cropped game-only screenshots 7244/7245/7246/7243/7247 INSTEAD of TV-framed 7232–7236, following MAPS_HOLOVATOR_061_CLEAN_GUIDE_PHOTO_REPLACEMENTS_2026-11-22.json. Ground pin remains approx (765,1396), rooftop position unverified. Do not change live site or publicize original user photo files without safe guide integration.",
+    "next_safe_record": "Owner has photographed south Café Classe / Vernal Pokemon Center Holovator WIDE-C13: ground object, current standing ring in two maps, rooftop pad. Same OLD yellow photo chevron reconciled, NOT a new 23 device. Approx source JPG (943,1466) retained; rooftop X/Y unknown. Next DIFFERENT yellow lift to survey is r-vert4-east around native approx (1055,1383), map 7374 yellow marker (895,204). Prepare new image bytes for GitHub as permitted, without claiming bytes uploaded yet; no ChatGPT live site until separately authorized.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1671,6 +1671,86 @@
       "source_image_binaries_publicly_uploaded": false,
       "live_site_updated": false,
       "separate_map_research_draft_P59_unchanged": true
+    },
+    "vert_cafe_classe_south_owner_field_match_batch_19": {
+      "source_record": "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "existing_research_marker_id": "r-vert4-south",
+      "existing_source_owner_icon": "WIDE-C13",
+      "owner_new_clean_photos": [
+        "1000027372.heic",
+        "1000027373.heic",
+        "1000027374.heic",
+        "1000027375.heic",
+        "1000027376.heic"
+      ],
+      "owner_photographed_street_Holovator": true,
+      "owner_red_ring_two_ground_zooms": true,
+      "owner_reported_roof_arrival_scene_photo": true,
+      "approx_native_city_JPG_map_xy_retained": [
+        943,
+        1466
+      ],
+      "photo_wide_map_7374_old_W04_alignment": {
+        "inliers": 90,
+        "photo_rms_px": 0.69,
+        "city_JPG_estimate_xy": [
+          943.1,
+          1468.15
+        ]
+      },
+      "photo_wide_map_7374_old_W10_alignment": {
+        "inliers": 88,
+        "photo_rms_px": 0.67,
+        "city_JPG_estimate_xy": [
+          951.2,
+          1471.82
+        ]
+      },
+      "independent_same_icon_old_VP_C": {
+        "inliers": 761,
+        "photo_rms_px": 1.2,
+        "projected_old_VP_C_photo_xy": [
+          256.43,
+          741.11
+        ],
+        "known_old_chevron_xy": [
+          257,
+          737
+        ]
+      },
+      "source_same_previous_device": true,
+      "new_unique_physical_lift_count_added": 0,
+      "external_23_device_category_ID_reconciled": false,
+      "native_city_JPG_roof_exit_xy": null,
+      "draft_preview_maintains_16_markers": true,
+      "draft_preview_now_owner_ground_photographed_count": 2,
+      "next_single_target": {
+        "id": "r-vert4-east",
+        "old_city_JPG_approx": [
+          1055,
+          1383
+        ],
+        "photo_7374_symbol_xy": [
+          895,
+          204
+        ],
+        "projected_old_VP_C_xy": [
+          461.8,
+          595
+        ],
+        "older_old_VP_C_marker_xy": [
+          465,
+          592
+        ],
+        "landmark": "East/right edge Vert Sector 4, northeast of player's current Pokémon Center lift, near Café Classe",
+        "status": "needs actual physical lift photo; do not confuse with current confirmed south lift"
+      },
+      "allowed_binary_media_in_GitHub_by_owner": true,
+      "actual_JPEG_binary_asset_upload_pending": true,
+      "live_chatgpt_site_unchanged": true,
+      "GitHub_main_unchanged_at_record_creation": true,
+      "user_progress_ratings_feedback_unchanged": true,
+      "scaffolds_still_separate": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
