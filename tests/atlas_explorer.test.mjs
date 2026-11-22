@@ -156,6 +156,8 @@ test("new explorer is isolated and links to preserved map and photo pages",()=>{
   assert.match(html,/sector-maps\.html/);
   assert.match(html,/atlas-explorer-data\.json/);
   assert.match(html,/aeTurnLeft/);assert.match(html,/aeTurnRight/);
+  assert.match(html,/<button[^>]+id="aeRose"[^>]+aria-label="Reset map to north-up"/);
+  assert.match(js,/by\("aeRose"\)\.addEventListener\("click",northUp\)/);
   for(const kind of ["zone","holovator","ladder","landmark","scaffold"])
     assert.match(html,new RegExp('data-layer="'+kind+'"'),"Missing independent "+kind+" layer");
   assert.match(html,/data-layer="scaffold" disabled/);
