@@ -73,6 +73,15 @@
     <button type="button" id="aeNorth" aria-label="Reset compass to north">North ↑</button>
     <button type="button" id="aeReset">Reset view</button>
   </div>
+  <fieldset class="ae-layers" id="aeLayers">
+    <legend>Visible map layers</legend>
+    <label><input type="checkbox" data-layer="zone" checked> Wild Zones</label>
+    <label><input type="checkbox" data-layer="holovator" checked> Holovators</label>
+    <label><input type="checkbox" data-layer="ladder" checked> Ladders</label>
+    <label><input type="checkbox" data-layer="landmark" checked> Landmarks</label>
+    <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
+    <span class="ae-layer-hint">Show several layers together; search results stay available even when a pin layer is hidden.</span>
+  </fieldset>
   <div class="ae-map-shell">
     <div class="ae-map-viewport" id="aeViewport" tabindex="0" role="region" aria-label="Interactive rotating Lumiose map: drag to pan, wheel or pinch to zoom, two fingers to rotate, arrow keys to pan, square brackets to rotate and Home to reset north">
       <div class="ae-stage" id="aeStage">
