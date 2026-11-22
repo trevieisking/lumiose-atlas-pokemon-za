@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 15,
+  "revision": 16,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Vert Plaza corrected: Four independently separate yellow-chevron photo symbols, all outside WZ2 green plaza. Keep r-vert4-east, r-classe middle, r-vert4-south (older WIDE-C13), and r-cyclone separate. Continue matching all 23 physical Holovators' category IDs and actual entrance/rooftop endpoints before any production release; scaffold phase later.",
+    "next_safe_record": "Hotel Z owner physical ladder L001 user-position matched, approx map (1202,1556), separate unmerged research preview. Correct legend: red ring current player, blue arrow facing, yellow double chevrons Holovators, red Pokeball Pokemon Center, black pink/gold DLC Hyperspace. Continue independent 23 Holovator IDs/roof exits; accept ladders one at a time from physical+map photos; no production merge/scaffold until vetted.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1395,6 +1395,68 @@
       "all_user_photos_outside_public_git": true,
       "live_site_main_supabase_untouched": true,
       "scaffold_phase_not_started": true
+    },
+    "ladder_field_pilot_l001_batch_14": {
+      "record": "MAPS_LADDER_FIELD_SURVEY_2026-11-22.json",
+      "owner_photos_private": [
+        "1000027223.heic",
+        "1000027224.heic",
+        "1000027225.heic"
+      ],
+      "recorded_ladder_id": "L-001",
+      "district": "Vert Sector 8",
+      "landmark": "Hotel Z",
+      "owner_instructions": "Facing Hotel Z front entrance, go right into narrow courtyard/alley. The silver vertical ladder is fixed to ivy-covered wall next to shrubs. Record one ladder at a time.",
+      "red_current_position_ring_photo_wide": [
+        686,
+        356
+      ],
+      "red_current_position_ring_photo_zoomed": [
+        735,
+        267
+      ],
+      "correct_legend": {
+        "red_outline_ring": "player position",
+        "blue_arrow": "player facing direction",
+        "yellow_double_chevron": "Holovator",
+        "red_pokeball_icon": "Pokemon Center",
+        "black_and_pink_or_gold_round": "Hyperspace DLC-related marker by owner report, exact subtype not inferred",
+        "ladder": "physical ladder recorded via player position, not a fixed game map icon"
+      },
+      "calibration": {
+        "zoom_to_wide_sift_inliers": 104,
+        "zoom_to_wide_photo_RMS_px": 0.81,
+        "wide_to_old_W04_inliers": 35,
+        "wide_to_old_photo_RMS_px": 0.92,
+        "old_W04_six_landmark_city_fit_RMS_px": 5.8,
+        "wide_native_city_image_xy": [
+          1202.6,
+          1556.1
+        ],
+        "zoom_native_city_image_xy": [
+          1202,
+          1555.7
+        ]
+      },
+      "approximate_original_1920_city_JPG_xy": [
+        1202,
+        1556
+      ],
+      "physical_wall_ladder_seen_in_owner_photo": true,
+      "user_marked_standing_point_seen_in_two_map_photos": true,
+      "exact_ladder_base_image_pixel_certified": false,
+      "exact_roof_exit_xy": null,
+      "source_tour": "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+      "separate_draft_ladder_visual_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/preview/holovator-research-visual-20261122/ladder-research-preview.html",
+      "existing_holovator_draft_marker_count_retained": 15,
+      "ladder_visual_research_pin_count": 1,
+      "private_owner_photo_viewer": "hotel_z_ladder_001_private_viewer.html (conversation artifact only)",
+      "private_viewer_chromium_checks": "Desktop 1280x850 and mobile 390x844, all three JPEG photos decode at 1536x865, tabs switch, zero JS errors, no horizontal overflow",
+      "original_owner_image_bytes_in_public_repo": false,
+      "existing_live_map_unchanged": true,
+      "Supabase_and_player_progress_unchanged": true,
+      "bulk_ladder_or_scaffold_mapping_started": false,
+      "release_gate": "Continue all Holovators as planned; separately collect one ladder at a time. Live Holovator layer only after full source validation; ladder full production layer requires its own eventual safety QA."
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
