@@ -9,11 +9,13 @@
   const page = valid ? candidate : PREFIX + 'index.html#walkthrough';
   const form = document.getElementById('feedbackForm');
   const pageField = document.getElementById('page');
+  const pageContext = document.getElementById('pageContext');
   const back = document.getElementById('returnLink');
   const headerBack = document.getElementById('headerBack');
   const status = document.getElementById('status');
   const button = document.getElementById('send');
   pageField.value = page;
+  pageContext.textContent = page;
   back.href = page;
   headerBack.href = page;
 

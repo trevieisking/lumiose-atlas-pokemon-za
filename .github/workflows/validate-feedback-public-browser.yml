@@ -31,6 +31,14 @@ jobs:
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Validate public form and private owner login on the published GitHub Pages site
         run: node tests/feedback_public_browser.mjs
+      - name: Validate this exact PR's feedback layout locally on desktop and phone
+        run: |
+          python3 -m http.server 18766 --bind 127.0.0.1 >/tmp/atlas-feedback-preview.log 2>&1 &
+          for attempt in 1 2 3 4 5 6; do
+            if curl --silent --fail http://127.0.0.1:18766/feedback.html >/dev/null; then break; fi
+            sleep 1
+          done
+          ATLAS_FEEDBACK_BROWSER_BASE=http://127.0.0.1:18766 node tests/feedback_public_browser.mjs
       - name: Recheck feedback handlers and existing guide without making requests
         run: |
           node --test tests/feedback_owner.test.mjs tests/feedback_standalone.test.mjs tests/feedback_proxy.test.mjs
@@ -40,6 +48,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: atlas-feedback-public-desktop-phone
-          path: test-artifacts/atlas-feedback-public/
+          path: |
+            test-artifacts/atlas-feedback-public/
+            test-artifacts/atlas-feedback-pr-preview/
           if-no-files-found: ignore
           retention-days: 10
