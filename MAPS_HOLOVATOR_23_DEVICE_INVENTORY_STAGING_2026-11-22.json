@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "inventory_revision": 3,
+  "inventory_revision": 4,
   "date": "2026-11-22",
   "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
   "reported_external_marker_category_count": 23,
@@ -265,7 +265,8 @@
     "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
     "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
     "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
-    "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json"
+    "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+    "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -282,10 +283,15 @@
     "named_nonmission_guide_photo_neighbourhood_leads_in_latest_batch": 9,
     "guide_only_possible_holovator_leads_in_latest_batch": 4,
     "new_owner_photo_quest_candidate_rechecks_this_batch": 2,
-    "independent_W06_W07_repeated_symbol_groups_this_batch": 3
+    "independent_W06_W07_repeated_symbol_groups_this_batch": 3,
+    "all_ten_owner_photo_symbol_groups_reconciled_research_only": 16,
+    "all_ten_owner_photo_symbol_observations": 28,
+    "all_ten_owner_photo_repeated_groups": 12,
+    "all_ten_owner_photo_single_groups": 4
   },
-  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead.",
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs.",
   "next_evidence_order": [
+    "Resolve northern Sushi High Roller / north Académie Étoile yellow icon relation to mission #080 (Café Kizuna rooftop), using actual red-to-yellow mission facade and physical exit. Preserve separate Looker Bureau icon. Do NOT count a guess as a unique device.",
     "Cross-register the two photo-proven distinct Estival Avenue yellow glyphs (W08/W09 Café Gallant vs Espace Vide/Bleu Sector 4) with independently named physical Holovator category markers, without treating picture pixel positions as Atlas image XY.",
     "Inspect each of source map's 23 Holovator-category glyphs directly, extract stable marker/page IDs and original source coordinate space, one by one.",
     "Reconcile nine quest-linked devices to actual category marker IDs, separating mission star from yellow Holovator glyph and preserving conflicting user photo candidates for #004.",
@@ -378,5 +384,51 @@
     "verified_roof_exit_pairs": 0,
     "published_pins": 0,
     "uncertain_overlapping_records_unchanged": true
+  },
+  "all_ten_photo_visual_reconciliation_batch_12": {
+    "date": "2026-11-22",
+    "source": "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json",
+    "private_interactive_viewer": "holovator_photo_comparison_v3.html (conversation artifact only; owner JPEGs embedded; not uploaded to public repo)",
+    "owner_photos_count": 10,
+    "readable_photo_symbol_groups": 16,
+    "groups_repeated_across_two_photos": 12,
+    "groups_seen_only_once": 4,
+    "original_photo_symbol_observations": 28,
+    "overview_W01_W03_direct_symbols_resolved": 0,
+    "W04_W05_repeated_symbols": [
+      "Vert Sector 7 / Élec mission #40 area",
+      "Café Cyclone / Coulant Waterway"
+    ],
+    "W04_W10_repeated_symbols": [
+      "Vernal Avenue / Terra mission #23 area",
+      "South Boulevard / Durstin mission #45 area",
+      "Café Classe / Vert Sector 4"
+    ],
+    "W06_W07_northern_icon_uncertainty": "Yellow icon W06(491,195) W07(1108,301) appears around Sushi High Roller / north of Académie Étoile / northern Hibernal corridor. Previous generic 'mission #80' label is NOT directly proven by source entrance geometry; the separate Looker Bureau icon W07(763,280) remains distinct. Do not count or relabel as confirmed #80.",
+    "new_source_maps": [
+      "https://www.pokeos.com/plza/map",
+      "https://www.serebii.net/pokearth/lumiosecity/"
+    ],
+    "rooftop_access_new_link": "Mission #80 repaired Café Kizuna-area Holovator enables access towards Side Mission #89 Emolga rooftop in Jaune Sector 7; independently corroborated by RPG Site, GameTrek and Thonky. Not proven same as owner screenshot northern icon.",
+    "external_marker_ids_individually_recovered": 0,
+    "verified_entrance_xy": 0,
+    "verified_roof_exit_xy": 0,
+    "production_map_pins_added": 0,
+    "private_browser_qa": {
+      "desktop": [
+        1365,
+        905
+      ],
+      "mobile": [
+        390,
+        844
+      ],
+      "ten_tabs": true,
+      "photo_image_loads": true,
+      "selection": true,
+      "repeat_single_filters": true,
+      "js_errors": 0
+    },
+    "caution": "16 photographed symbol GROUPS is NOT 16 verified unique physical Holovators, nor a completion fraction of the external 23. Do not overwrite existing site map or original source image."
   }
 }
