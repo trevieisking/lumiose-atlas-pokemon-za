@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "survey_id": "ATLAS-USER-PINNED-LADDER-L001-HOTEL-Z-2026-11-22",
+  "created_on": "2026-11-22",
+  "scope": "Owner specifically begins ladder mapping one physical ladder per user-marked in-game location, kept as separate research layer from ongoing Holovator map and without any scaffold work or live site changes.",
+  "map_icon_legend_correction": {
+    "red_ring": "Player's current position marker, NOT a ladder or Holovator icon.",
+    "blue_triangle_arrow": "Direction player is facing (orientation); not an entrance symbol.",
+    "yellow_double_up_chevrons": "Holovator lift symbols. Separate navigation layer from ladders.",
+    "red_pokeball_circles": "Pokemon Center fast-travel locations.",
+    "black_gold_and_black_pink_circular_symbols": "Hyperspace Mega Dimension DLC-related markers according to owner; not Holovator symbols. Do not infer exact category semantics from their shape alone.",
+    "ladders": "Physical climbable objects without reliably complete on-map category icons. The player's standing location + direct ladder photo provides local field survey evidence.",
+    "confidence": "Owner directly identifies map icon meanings and physical ladder; not derived from color assumptions."
+  },
+  "ladders": [
+    {
+      "id": "L-001",
+      "name": "Hotel Z courtyard ladder",
+      "district": "Vert Sector 8",
+      "landmarks": [
+        "Hotel Z",
+        "Vert Street",
+        "Station Front",
+        "Vert Sector 8"
+      ],
+      "description": "First owner-ground-verified physical ladder: tall pale metal ladder fixed to ivy-covered building wall in a small walled courtyard alongside Hotel Z. Bushes at base. Owner stands at foot of ladder for map screenshots.",
+      "player_route": "Stand outside Hotel Z facing its entrance doors. Go to the RIGHT side of the hotel into the narrow enclosed courtyard/alley. Follow the wall past shrubs to the tall metal ladder. Climb up to reach the rooftop approach.",
+      "route_source": "Owner direct in-game walkthrough and photograph; external walkthrough confirms ladder in courtyard behind Hotel Z.",
+      "owner_physical_photo": {
+        "filename": "1000027223.heic",
+        "photo_pixels": [
+          1536,
+          865
+        ],
+        "sha256": "b0a378d217c8f2eb1b4f806740b57565d68c5daf30eea0d433e8de1d5e423058",
+        "ladder_rectangle_photo_pixels_approx": [
+          825,
+          32,
+          902,
+          746
+        ],
+        "camera_minimap_player_position_photo_approx": [
+          147,
+          173
+        ]
+      },
+      "owner_location_map_photos": [
+        {
+          "filename": "1000027224.heic",
+          "sha256": "364de8c9f6a4b16455376be0d7b8c7c6756bcf1a7953f6b96d67446116556676",
+          "full_photo_size": [
+            1536,
+            865
+          ],
+          "player_red_ring_centre_approx_photo_px": [
+            686,
+            356
+          ],
+          "blue_arrow_facing": "roughly north-northeast; facing only, not location offset"
+        },
+        {
+          "filename": "1000027225.heic",
+          "sha256": "f5097296568cbe3f3fb1868682152ac44fb7f703b8715d9f21b7808b2ab4be9c",
+          "full_photo_size": [
+            1536,
+            865
+          ],
+          "player_red_ring_centre_approx_photo_px": [
+            735,
+            267
+          ],
+          "blue_arrow_facing": "roughly north-northeast; facing only, not ladder pixel coordinate"
+        }
+      ],
+      "map_alignment": {
+        "original_unchanged_reference_image": "maps/lumiose-game-map.jpg",
+        "native_image_width": 1920,
+        "native_image_height": 1920,
+        "origin": "top-left",
+        "units": "native jpg pixels, NOT GPS or 3D game-world coordinates",
+        "source_photo_map_zoomed_to_wide": {
+          "method": "OpenCV SIFT, CLAHE and RANSAC homography on game-map architecture, photo 7225→7224",
+          "match_count": 272,
+          "inliers": 104,
+          "reprojection_RMS_photo_px": 0.81,
+          "predicted_wide_photo_centre_from_zoom": [
+            684.3,
+            354.7
+          ]
+        },
+        "source_photo_map_wide_to_old_W04": {
+          "comparison_photo": "1000027200.heic",
+          "method": "SIFT/RANSAC homography",
+          "match_count": 264,
+          "inliers": 35,
+          "reprojection_RMS_photo_px": 0.92,
+          "predicted_old_W04_player_marker": [
+            993.5,
+            487.3
+          ]
+        },
+        "old_W04_to_native_city_image": {
+          "method": "Previously recorded W04 six-landmark affine from MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+          "six_landmark_control_fit_RMS_native_px": 5.8,
+          "max_control_error_native_px": 10.2
+        },
+        "two_source_image_projections": {
+          "wide": [
+            1202.6,
+            1556.1
+          ],
+          "zoomed": [
+            1202,
+            1555.7
+          ]
+        },
+        "consensus_atlas_native_xy_approx": [
+          1202,
+          1556
+        ],
+        "placement_confidence": "High-confidence player-demonstrated neighbourhood and map-symbol centre; approximate on legacy JPG due TV-camera perspective, reference-image control and ring partially hiding tile. NOT a proven exact ladder anchor to 1 pixel.",
+        "location_vs_exact_entrance_note": "Use player red-ring centre as first research pin because user placed their avatar at the ladder. Ground-level photographed metal ladder verifies object but the exact base may be a few game-map pixels away from player centre."
+      },
+      "topology": {
+        "entry_zone": "Hotel Z right/behind courtyard at ground floor",
+        "entry_altitude_level": "street/courtyard",
+        "exit_zone": "initial rooftop above Hotel Z courtyard",
+        "exit_level": null,
+        "exit_map_xy": null,
+        "subsequent_roof_ladder_ids": [],
+        "nearby_glide_route": "Mission 16 later introduces Roto-Glide via Hotel Z rooftops; other ladders along that route are NOT part of L001 until separately photographed.",
+        "access_gate": "unknown; do not assert mission requirement to climb this specific ladder",
+        "ground_entrance_photo_confirmed_by_owner": true,
+        "rooftop_exit_physically_surveyed": false
+      },
+      "relevant_external_checks": [
+        {
+          "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+          "claim": "Story mission describes ladder in courtyard behind Hotel Z leading onto the roof."
+        },
+        {
+          "url": "https://www.reddit.com/r/LegendsZA/comments/1x9ngwf/how_to_get_on_this_roof/",
+          "claim": "Player discussion describes ladder to right when facing Hotel Z entrance, then later rooftop gliding and another ladder. Community evidence only."
+        },
+        {
+          "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/poke-balls.html",
+          "claim": "Hotel Z area has several roof pickups reached by different ladders, not all attributable specifically to L001."
+        }
+      ],
+      "guide_ready": {
+        "finding_ladder": true,
+        "illustrated_physical_location": true,
+        "player_position_reconciled": true,
+        "street_rooftop_exits_verified": false,
+        "ready_as_first_provisional_ladder_preview": true,
+        "ready_as_final_all_ladders_live_layer": false
+      },
+      "public_user_photo_binaries_committed": false,
+      "production_site_modified": false,
+      "category_overlap_with_holovators": false
+    }
+  ],
+  "counts": {
+    "owner_verified_ground_ladders": 1,
+    "source_ladder_image_approx_positions": 1,
+    "verified_exact_ground_to_roof_pairs": 0,
+    "live_ladder_pins_published": 0
+  },
+  "next_user_photo_loop": "For L002, request no invented marker: capture a clear photo facing the next actual ladder with local minimap, plus north-locked map zoom while standing at its foot; add individually, then reconcile repeats. Do not add other ladder map dots until observed.",
+  "safety_and_preservation": {
+    "original_ChatGPT_Site_A_untouched": true,
+    "Edition_B_live_main_untouched": true,
+    "existing_holovator_draft_preserved": true,
+    "Supabase_unchanged": true,
+    "ratings_feedback_progress_unchanged": true,
+    "old_48_sectors_20_zones_264_items_100_screws_146_leads_untouched": true
+  }
+}
