@@ -238,6 +238,31 @@ try{
   assert.equal(await phone.locator(".ae-pin[data-kind='holovator']").count(),21);
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   await phone.screenshot({path:output+"/atlas-bleu-sector-deeplink-mobile.png",fullPage:true});
+  // AT-270: actual browser rendering of the researched finale route, on desktop and phone.
+  // This checks content visibility while leaving every checkbox and map state unchanged.
+  await desktop.goto(base+"/walkthrough.html#mission-37",{waitUntil:"domcontentloaded"});
+  await desktop.waitForFunction(()=>document.querySelector("#mission-37 .route-index-details")?.open===true,{timeout:12000});
+  assert.match(await desktop.locator("#mission-37").textContent(),/Mega Pidgeot[\s\S]*Mega Kangaskhan[\s\S]*Mega Garchomp/);
+  assert.doesNotMatch(await desktop.locator("#mission-36").textContent(),/Mega Garchomp/);
+  await desktop.locator("#mission-37").scrollIntoViewIfNeeded();
+  await desktop.screenshot({path:output+"/at270-mission37-ally-battle-desktop.png",fullPage:false});
+  await phone.goto(base+"/index.html#walkthrough:mission-37",{waitUntil:"domcontentloaded"});
+  await phone.waitForFunction(()=>{
+    const mission=document.getElementById("mission-37");
+    return mission?.classList.contains("open")&&mission.textContent.includes("Mega Kangaskhan");
+  },{timeout:15000});
+  assert.match(await phone.locator("#mission-37").textContent(),/Ice Beam[\s\S]*Thunderbolt[\s\S]*Brick Break/);
+  assert.equal(await phone.locator('#mission-37 input[data-check="37"]').count(),1,
+    "Main story checkbox must still exist without being toggled");
+  await phone.locator("#mission-37").scrollIntoViewIfNeeded();
+  await phone.screenshot({path:output+"/at270-mission37-main-guide-phone.png",fullPage:false});
+  await phone.goto(base+"/journey.html#journey-mission-37",{waitUntil:"domcontentloaded"});
+  await phone.waitForFunction(()=>document.getElementById("journey-mission-37")?.textContent.includes("Mega Garchomp"),
+    {timeout:15000});
+  assert.match(await phone.locator("#journey-mission-37").textContent(),/level-62/);
+  await phone.locator("#journey-mission-37").scrollIntoViewIfNeeded();
+  await phone.screenshot({path:output+"/at270-mission37-journey-phone.png",fullPage:false});
+  assert.equal(mobileErrors.length,0,"Mission 37 phone navigation JavaScript errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
