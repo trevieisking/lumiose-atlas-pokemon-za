@@ -9,6 +9,7 @@ for(const id of ['feedbackForm','page','pageContext','detailsHelp','category','d
   assert.ok(html.includes('id="'+id+'"'), 'Missing form control: '+id);
 }
 assert.match(html,/<script src="feedback\.js" defer><\/script>/);
+assert.match(html,/<label for="page">Page link to investigate<\/label>/, 'The form should clearly name the affected page link');
 assert.match(html,/<link rel="stylesheet" href="feedback\.css">/);
 assert.doesNotMatch(html,/Guide owner\?|feedback-owner\.html|Sign in to view reports/i,'Public guide feedback must not require or promote an account');
 assert.match(html,/name="category" required/);
