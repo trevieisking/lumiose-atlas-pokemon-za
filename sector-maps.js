@@ -109,6 +109,24 @@
   window.addEventListener("focus",refreshChecks);
   window.addEventListener("pageshow",refreshChecks);
   window.addEventListener("storage",event=>{if(event.key===KEY)refreshChecks();});
+  // Link every preserved sector card to a district starting view. Exact
+  // boundaries, individual ladders and item pins still require evidence.
+  function linkAllSectorsToMap() {
+    if(typeof document.createElement!=="function")return;
+    for(const card of sectors){
+      const id=card.id;
+      if(typeof id!=="string"||!/^sector-(vert|bleu|magenta|rouge|jaune)-sector-\d{1,2}$/.test(id))continue;
+      const heading=card.querySelector(".sector-card-top h3");
+      if(!heading||typeof heading.insertAdjacentElement!=="function")continue;
+      const a=document.createElement("a");
+      a.className="sector-open-city-map";
+      a.href="atlas-explorer.html?sector="+encodeURIComponent(id.slice("sector-".length));
+      a.textContent="Open this sector's district map";
+      a.setAttribute("aria-label","Open the district map near "+heading.textContent+"; exact sector boundary not yet verified");
+      heading.insertAdjacentElement("afterend",a);
+    }
+  }
+  linkAllSectorsToMap();
   repaint();
   refreshChecks();
   openDirectHash();
