@@ -924,6 +924,129 @@
         "symbol_matches_mission_exactly": false,
         "evidence_file": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
         "status": "in_game_holovator_symbol_class_corroborated_but_device_identity_and_exact_entrance_unverified"
+      },
+      "mission_lift_field_evidence_2026_11_22": {
+        "review_order": 2,
+        "date_checked": "2026-11-22",
+        "mission_number": 80,
+        "mission_title": "A Shocking Territorial Dispute",
+        "map_street": "Hibernal Avenue; west/southwest of Wild Zone 15; café-landmark approach near Café Kizuna",
+        "reported_sector": "Quest is on Hibernal Avenue. Jaune Sector 7 is a reachable rooftop district, NOT established as the lift's exact address or numbered sector.",
+        "quest_marker_not_device_marker": true,
+        "owner_photo_symbol_evidence": {
+          "photo_candidate": "PHOTO-C06 / WIDE-H08",
+          "observations": [
+            {
+              "owner_upload": "1000027202.heic",
+              "photo_pixel_approx": [
+                489,
+                192
+              ],
+              "projected_atlas_jpg_1920_native_px_approx": [
+                1189,
+                392
+              ]
+            },
+            {
+              "older_owner_portrait_photo": "P01",
+              "projected_atlas_jpg_1920_native_px_approx": [
+                1197,
+                393
+              ]
+            },
+            {
+              "older_owner_portrait_photo": "P08",
+              "projected_atlas_jpg_1920_native_px_approx": [
+                1183,
+                402
+              ]
+            }
+          ],
+          "source_registers": [
+            "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+            "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json"
+          ],
+          "status": "three_manual_approximate_projections_same_neighbourhood; W06 three control points exactly fit training landmarks so no independent holdout residual",
+          "exact_device_identity_verified": false
+        },
+        "independent_in_game_map": {
+          "source_title": "Game8 mission 080 in-game map objective screenshot",
+          "overview": "https://img.game8.jp/11874194/dd616459cb4eb3db6451fea364f89ddd.webp/show",
+          "closeup": "https://img.game8.jp/11874195/a82ea376feeb45815066a417e6789c4c.webp/show",
+          "interpretation": "Pink quest star on Hibernal Avenue west/southwest of Wild Zone 15, compatible with owner's map chevron neighbourhood. Map screenshot is from different quest-state/zoom and not registered at device level.",
+          "source_page": "https://game8.jp/pokemon-legends-z-a/731365",
+          "source_to_atlas_affine_or_homography_confirmed": false,
+          "mission_star_identified_as_exact_holovator_marker": false
+        },
+        "ground_device_visual": {
+          "quest_npc_street_view": "https://img.game8.jp/11874197/77858b5162400cb8a6baccae9349415d.webp/show",
+          "separate_source_blocked_lift_view": "https://img.gamewith.jp/img/original_06d3807ec5079a781fd4f1dbf0a1e3b4.jpg",
+          "description": "Game8 street screenshot shows blue and yellow electric-type pair in front of red disabled Holovator beside multi-story stone-faced buildings, planters and a roadway; GameWith view shows both Pokémon at lift along street; exact building facade not independently registered to owner's source city JPG.",
+          "exact_owner_symbol_ground_entrance_match": false
+        },
+        "quest_unlock": "Progress Main Mission 26, An Invitation from the SBC, including boutique outfit/furisode battle progression; published guides place unlock during/after this sequence",
+        "npc": "Amordél",
+        "action": "Approach Amordél by the blocked Hibernal Avenue Holovator, then fight both level 52 Manectric and Ampharos simultaneously; cannot catch either; once beaten, lift works",
+        "combat_note": "Both are Electric-type: Ground-type moves useful. One secondary guide reported level 50, but Thonky/Game8/Altissimo corroborate level 52; use 52 as guide value",
+        "rewards": [
+          {
+            "type": "currency",
+            "amount": 3500
+          },
+          {
+            "type": "Quick Ball",
+            "quantity": 4
+          },
+          {
+            "type": "Lumiose Galette",
+            "quantity": 1
+          }
+        ],
+        "rooftop_access": {
+          "confirmed_from_mission_source": true,
+          "main_route_description": "Game8 says unlocking #080 Holovator opens access to rooftops associated with Wild Zone 15; mentions Larvitar habitat up there. Earth Power TM is noted inside Wild Zone 15 grounds, not proved to be on the same rooftop.",
+          "additional_route_description": "StrategyWiki's independent checklist Screw #84 (site-local number, not owner's original screw ID) says from Café Kizuna head left along Hibernal Avenue, take Holovator on the right, turn right on roof, descend stairs at far side of red roof, go behind door, run/roll onto scaffolding and across another section to reach screw.",
+          "independent_research_leads": [
+            "Larvitar encounter on WZ15 roof area",
+            "TM Earth Power inside Wild Zone 15 bounds, NOT confirmed lift-connected rooftop placement",
+            "StrategyWiki list Screw #84 via post-#080 Hibernal Holovator to Jaune Sector 7 scaffolding"
+          ],
+          "source_links": [
+            "https://game8.jp/pokemon-legends-z-a/731365",
+            "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+            "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/hibernal-avenue.html"
+          ],
+          "unified_continuous_rooftop_route_verified": false,
+          "exact_landing_floor": null,
+          "exact_roof_exit_map_xy": null,
+          "exact_screw_pin_xy": null
+        },
+        "source_links": [
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-080-a-shocking-territorial-dispute",
+          "https://game8.jp/pokemon-legends-z-a/731365",
+          "https://gamewith.jp/pokemon-za/524974",
+          "https://www.serebii.net/legendsz-a/sidemissions/ashockingterritorialdispute.shtml",
+          "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/hibernal-avenue.html",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-shocking-territorial-dispute"
+        ],
+        "external_mission_map_coordinates_only": {
+          "x": 13520,
+          "y": 5172,
+          "source": "Gamer Guides side mission location, not Holovator device"
+        },
+        "exact_holovator_category_marker_id": null,
+        "atlas_x": null,
+        "atlas_y": null,
+        "street_entrance_pixel": null,
+        "roof_landing_pixel": null,
+        "confirmed_production_pin": false,
+        "evidence_assessment": "Independent screenshots show Hibernal Avenue mission star, real blocked Holovator and battle Pokémon, and rooftop access; owner's yellow symbol matches city block at approximate 3 photo projections, but exact same device entrance and rooftop endpoint are unverified",
+        "unresolved": [
+          "actual lift facade-to-owner chevron positive match",
+          "specific device layer category marker identity",
+          "mission star vs icon offset",
+          "independent holdout photo-map geometry and rooftop arrival floor/pixel"
+        ]
       }
     },
     {
@@ -1066,5 +1189,32 @@
     "production_site_code_modified": false,
     "original_owner_images_publicly_uploaded": false,
     "next": "Do independent geometric overlay of mission screenshot landmarks against owner's original map, verify the same building facade and arrival roof from an identifiable owner-play screenshot; then make precise source-backed pins only after proof gates."
+  },
+  "evidence_batch_5": {
+    "batch_id": "ATLAS-HOLOVATOR-SOURCE-FACADE-ROOF-RECHECK-23-80-2026-11-22",
+    "date": "2026-11-22",
+    "sequential_order": [
+      "DR-H-02 mission 23",
+      "DR-H-08 mission 80"
+    ],
+    "source_independent_in_game_quest_map_screenshots": 2,
+    "source_independent_physical_holovator_quest_screenshots": 2,
+    "source_ground_access_routes_checked": 2,
+    "photo_candidate_cross_photo_research_approx_only": [
+      "DR-H-02: (959,1663) vs (968,1668) native JPG px",
+      "DR-H-08: (1189,392) vs older (1197,393)/(1183,402) native JPG px"
+    ],
+    "new_access_research_leads": [
+      "Mission 23: rooftop above west/northwest of Wild Zone 1, no linked numbered pickups proven",
+      "Mission 80: WZ15 roof/Larvitar lead; independently documented Jaune Sector 7 Screw #84 via lift and scaffolding; earth power TM inside WZ15 is separate ground/area lead"
+    ],
+    "verified_mission_to_owner_photo_exact_device_identity_count": 0,
+    "verified_source_holovator_category_marker_ids": 0,
+    "verified_exact_atlas_native_holovator_entrance_xy": 0,
+    "verified_roof_exit_atlas_native_xy": 0,
+    "fixed_item_or_screw_pins_added": 0,
+    "original_owner_photo_binaries_committed": false,
+    "site_code_or_player_data_changes": false,
+    "notes": "All coordinates remain exploratory manual projections. Mission stars are not identical to yellow Holovator device icon markers. Number 84 in StrategyWiki checklist cannot be silently relabelled as owner source #84. No live confirmed map markers created."
   }
 }
