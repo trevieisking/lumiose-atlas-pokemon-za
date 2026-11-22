@@ -2134,5 +2134,114 @@
     "owner_traversed_roof_access_to_item": false,
     "production_pin_added": false,
     "asset_JPG_binaries_in_GitHub": false
+  },
+  "owner_jaune7_hibernal_batch_34": {
+    "survey_file": "MAPS_JAUNE7_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "photo_count": 5,
+    "owner_verified_new_fixed_entrance_and_maps": true,
+    "owner_reported_roof_photo": true,
+    "distinct_from_west_rouge6_group15": true,
+    "area": "Jaune Sector 7, east side of Hibernal Avenue, south-west of Café Ultimo, north-east of Café Kizuna",
+    "previous_distinct_owner_field_groups": 15,
+    "new_distinct_owner_field_groups": 16,
+    "provisional_photo_to_original_city_map": {
+      "source_image": "maps/lumiose-game-map.jpg",
+      "source_native_size": [
+        1920,
+        1920
+      ],
+      "projected_xy_native_approx": [
+        1389,
+        367
+      ],
+      "projected_xy_percent_approx": [
+        72.34,
+        19.11
+      ],
+      "projection_type": "MANUAL_CROSSWALK_RESEARCH_APPROXIMATION_NOT_EXACT_PRODUCTION_PIN",
+      "photo_basis": "1000027506.heic",
+      "matched_controls": [
+        {
+          "name": "WZ04",
+          "photo_approx_xy": [
+            455,
+            135
+          ],
+          "source_xy_from_maps_html": [
+            1080.96,
+            284.16
+          ]
+        },
+        {
+          "name": "WZ15",
+          "photo_approx_xy": [
+            991,
+            205
+          ],
+          "source_xy_from_maps_html": [
+            1545.6,
+            345.6
+          ]
+        },
+        {
+          "name": "WZ19",
+          "photo_approx_xy": [
+            989,
+            520
+          ],
+          "source_xy_from_maps_html": [
+            1549.44,
+            600.96
+          ]
+        },
+        {
+          "name": "WZ03",
+          "photo_approx_xy": [
+            303,
+            415
+          ],
+          "source_xy_from_maps_html": [
+            954.24,
+            535.68
+          ]
+        },
+        {
+          "name": "WZ08",
+          "photo_approx_xy": [
+            776,
+            745
+          ],
+          "source_xy_from_maps_html": [
+            1380.48,
+            819.84
+          ]
+        }
+      ],
+      "method": "Manual wide-map anchor centroids measured on submitted 1536x865 photo; align to existing maps.html original 1920px image Wild Zone pin positions by least-squares affine fitting of five anchors.",
+      "affine_map_from_photo_xy": [
+        [
+          0.8643630109928511,
+          0.03352993656311454,
+          681.1235815027279
+        ],
+        [
+          -0.02060458531904236,
+          0.8736057836055204,
+          178.79216598559321
+        ]
+      ],
+      "control_fit_radial_rms_native_px": 7.67,
+      "accuracy_limitation": "Control fit is not an absolute location-accuracy bound: manual anchor precision, game screenshot perspective, zone-centre approximations, photo capture distortions and imprecise entry marker centre are additional systematic errors. Needs actual source city-JPG overlay QA and second independent ground-to-roof registration to be called exact.",
+      "roof_exit_native_xy": null,
+      "can_publish_as_exact_pin": false,
+      "candidate_research_record_only": true
+    },
+    "exact_native_source_1920_image_ground_entry_XY": null,
+    "exact_native_source_1920_image_roof_exit_XY": null,
+    "actual_source_JPG_verified_ground_roof_pair": false,
+    "external_23_device_category_identifier": null,
+    "production_overlay_pin_created": false,
+    "source_7504_7506_7507_7508_7509_original_cropped": false,
+    "actual_JPG_binary_assets_in_GitHub": false
   }
 }
