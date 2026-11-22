@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "inventory_revision": 1,
+  "inventory_revision": 2,
   "date": "2026-11-22",
   "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
   "reported_external_marker_category_count": 23,
@@ -251,7 +251,8 @@
     "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
     "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json",
     "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
-    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md"
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -262,10 +263,15 @@
     "exact_verified_lift_ground_entry_xy": 0,
     "exact_verified_roof_landings": 0,
     "exact_verified_ground_to_roof_pairs": 0,
-    "published_map_holovator_pins": 0
+    "published_map_holovator_pins": 0,
+    "owner_wide_W08_visible_photo_symbols": 5,
+    "owner_wide_W09_overlap_repeated_photo_observations": 2,
+    "named_nonmission_guide_photo_neighbourhood_leads_in_latest_batch": 9,
+    "guide_only_possible_holovator_leads_in_latest_batch": 4
   },
-  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed.",
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total.",
   "next_evidence_order": [
+    "Cross-register the two photo-proven distinct Estival Avenue yellow glyphs (W08/W09 Café Gallant vs Espace Vide/Bleu Sector 4) with independently named physical Holovator category markers, without treating picture pixel positions as Atlas image XY.",
     "Inspect each of source map's 23 Holovator-category glyphs directly, extract stable marker/page IDs and original source coordinate space, one by one.",
     "Reconcile nine quest-linked devices to actual category marker IDs, separating mission star from yellow Holovator glyph and preserving conflicting user photo candidates for #004.",
     "Match seven additional owner photo leads to category marker coordinates; find all still unmatched source markers by district with >=3 landmark anchors and holdout accuracy.",
@@ -279,5 +285,55 @@
   "original_ChatGPT_Site_A_preserved": true,
   "Edition_B_runtime_preserved": true,
   "Supabase_preserved": true,
-  "main_branch_preserved": true
+  "main_branch_preserved": true,
+  "nonmission_crosscheck_batch_09": {
+    "record": "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+    "date": "2026-11-22",
+    "photo_files_private": [
+      "1000027204.heic",
+      "1000027205.heic"
+    ],
+    "W08_visible_yellow_symbol_groups": 5,
+    "W09_repeat_observations": 2,
+    "two_distinct_overlap_pair_landmarks": [
+      "Estival Avenue by Café Gallant (Magenta Sector 3 edge)",
+      "Estival Avenue / Espace Vide at northern Bleu Sector 4 edge"
+    ],
+    "crossphoto_pan_displacement_W08_minus_W09_photo_px": [
+      [
+        229,
+        361
+      ],
+      [
+        232,
+        364
+      ]
+    ],
+    "displacement_delta_mismatch_px_approx": 4.24,
+    "independently_guide_supported_photo_neighbourhoods": [
+      "Vert Sector 3 courtyard near Café Cyclone",
+      "Bleu Sector 4 Holovator north of western complex",
+      "Estival Avenue by Café Gallant (separate photo marker from Bleu Sector 4)",
+      "Jaune Street near Jaune Sector 11",
+      "Rouge Sector 5 across Sushi High Roller to Looker Bureau rooftops",
+      "Vert Sector 4 courtyard / Café Classe general area (exact physical match not proven)"
+    ],
+    "new_photo_symbol_leads_not_automatically_distinct_devices": [
+      "Magenta Sector 7 Pokémon Center by Lumiose Sewers",
+      "Magenta Street north/northwest of Magenta Plaza"
+    ],
+    "source_only_leads": [
+      "North Boulevard Rouge rooftops",
+      "Vert Sector 8 courtyard near Hotel Z",
+      "Hibernal Avenue north of Café Kizuna (possibly mission #80)",
+      "Jaune Sector 11 Pokémon Center (possibly same as Jaune Street photo icon)"
+    ],
+    "mission_duplicate_caution": "W08 Autumnal Avenue symbol could be mission #71, not additional non-mission device",
+    "unverified_physical_ids_count_unchanged": 23,
+    "source_holovator_category_marker_ids_verified": 0,
+    "exact_atlas_entrance_xy_verified": 0,
+    "exact_roof_exit_xy_verified": 0,
+    "production_map_pins_added": 0,
+    "source_rights": "Do not copy owner or third-party images; store coordinates/evidence text only"
+  }
 }
