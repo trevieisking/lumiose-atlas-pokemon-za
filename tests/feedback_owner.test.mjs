@@ -22,6 +22,8 @@ assert.match(html,/href="index\.html#walkthrough"/);
 assert.match(css,/@media\(max-width:480px\)/);
 assert.match(css,/min-height:44px/);
 assert.match(html,/id="ownerDashboardAccess" aria-label="Alternative private report access"/);
+assert.match(html,/Anyone can send feedback without signing in/);
+assert.match(html,/use your Supabase project account below to view reports/);
 assert.match(html,/id="ownerSupabaseLink" href="https:\/\/supabase\.com\/dashboard\/project\/xzxqfrvqdgkzwujbkdbk\/editor" rel="noreferrer"/);
 assert.match(html,/public<\/strong> schema and then <strong>atlas_reports/);
 assert.match(html,/Only accounts with access to this project can view these reports/);
