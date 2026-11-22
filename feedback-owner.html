@@ -23,11 +23,11 @@
   <main>
     <p class="eyebrow">Private owner tools</p>
     <h1>Feedback inbox</h1>
-    <p class="intro">Read reports sent through the Pokémon Atlas guide. Only the existing Stream Bandit owner account is authorised to view submissions. The public feedback form remains unchanged.</p>
+    <p class="intro">Anyone can send feedback without signing in. Reading saved reports is private: use the existing owner sign-in below or your Supabase project account using the alternative further down.</p>
     <section class="feedback-card" id="loginPanel" aria-label="Owner sign-in">
       <div class="inbox-heading">
         <span class="inbox-symbol" aria-hidden="true">🔐</span>
-        <div><h2>Owner sign-in</h2><p>Sign in with the Stream Bandit owner's email and password, not your ChatGPT account.</p></div>
+        <div><h2>Owner sign-in</h2><p>Use the existing Stream Bandit owner email and password, not your ChatGPT account. If you do not have those details, see the Supabase option below.</p></div>
       </div>
       <form id="ownerLogin" autocomplete="on">
         <label for="ownerEmail">Owner email</label>
@@ -46,7 +46,7 @@
       <div id="reportList" class="report-list" aria-label="Private feedback reports"></div>
       <button type="button" class="button-secondary" id="loadMore" hidden>Load older reports</button>
     </section>
-    <p class="owner-status" id="ownerStatus" role="status" aria-live="polite">Sign in to view submitted reports.</p>
+    <p class="owner-status" id="ownerStatus" role="status" aria-live="polite">Sign in here, or use your Supabase project account below to view reports.</p>
     <section class="feedback-card owner-dashboard-access" id="ownerDashboardAccess" aria-label="Alternative private report access">
       <div class="inbox-heading">
         <span class="inbox-symbol" aria-hidden="true">🗂️</span>
