@@ -37,6 +37,8 @@ try {
     assert.equal(await page.title(), 'Send feedback — Lumiose Atlas');
     assert.equal(await page.locator('#page').inputValue(), PAGE, 'Must retain walkthrough context');
     if (BRANCH_PREVIEW) {
+      assert.equal(await page.locator('label[for="page"]').textContent(), 'Page link to investigate',
+        'Visible label should explain what this page link is for');
       assert.equal(await page.locator('#pageContext').textContent(), PAGE, 'Full page path must be displayed as safe text');
       const wraps = await page.locator('#pageContext').evaluate(el => {
         const style = getComputedStyle(el);
