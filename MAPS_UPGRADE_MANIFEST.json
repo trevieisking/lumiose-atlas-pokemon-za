@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 21,
+  "revision": 22,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "SM-01 in progress: 10 original photos inspected; 6 manually registered to native 1920px Atlas city JPG, 11 approximate source-image icon projections, 2 cross-photo pair corroborations, 0 verified device entrance/roof exact pins",
+  "current_phase": "Owner firsthand Holovator fieldwork consolidated: 21 surveyed map entries, 90 real JPEG screenshot assets merged on GitHub main, isolated zoom/search/photo viewer in review branch. Pin/image registration and 23-source-device crosswalk still provisional; final 11 JPGs await binary GitHub transfer. The original ChatGPT-hosted site remains unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -1796,5 +1796,77 @@
       "copying_of_original_owner_photos": false,
       "site_code_changed": false
     }
-  ]
+  ],
+  "owner_holovator_fieldwork_checkpoint_2026_11_22": {
+    "status": "checkpoint_saved_on_independent_GitHub_edition_branch_NOT_live_site",
+    "evidence_date": "2026-11-22",
+    "source": "Owner's firsthand gameplay photo survey of permanent yellow-chevron fixed Holovators in Lumiose City",
+    "repository": "trevieisking/lumiose-atlas-pokemon-za",
+    "binary_photo_import_merged": {
+      "pr": 75,
+      "merge_sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8",
+      "total_committed_jpgs": 90,
+      "verified_by_tree_blob_sha_size": true,
+      "main_import_count": 85,
+      "previous_Jaune11_count": 5,
+      "image_inventory": "MAPS_OWNER_HOLOVATOR_85_JPG_IMPORT_2026-11-22.json",
+      "tv_frame_policy": "Only seven minimally cropped bottom edges; originals retained"
+    },
+    "isolated_fieldbook": {
+      "branch": "feat/owner-holovator-photo-fieldbook-20261122",
+      "files": [
+        "MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
+        "holovator-map.html",
+        "holovator-map.js",
+        "holovator-map.css",
+        "tests/owner_holovator_fieldbook.test.mjs"
+      ],
+      "existing_page_changes": [
+        "maps.html: additive link only",
+        "sector-maps.html: additive link only"
+      ],
+      "entry_count": 21,
+      "entries_with_genuine_repo_jpg_galleries": 17,
+      "gallery_jpg_count": 90,
+      "kind": "fixed_infrastructure_owner_photo_evidence",
+      "coords": "approximate 1920x1920 original city image research locations; not precise device entrance or roof coordinates",
+      "device_category_ids_individually_matched": 0,
+      "external_source_claimed_total_not_published_as_verified": 23,
+      "rouge5_repeat_visit_counted_once": true,
+      "live_chatgpt_site_changed": false,
+      "supabase_or_progress_changed": false
+    },
+    "final_11_photo_package": {
+      "source_photo_count": 11,
+      "distinct_location_groups": 2,
+      "groups": [
+        "Jaune Sector 12 / Wild Zone 6 / North Boulevard",
+        "Vert Café Cyclone / Coulant Waterway concealed courtyard"
+      ],
+      "binary_import_status": "local ZIP verified, NOT yet in GitHub",
+      "archive_name": "lumiose-atlas-holovator-final-11-github-ready.zip",
+      "exact_map_coordinates_verified": false
+    },
+    "older_photos_remaining_unpublished": {
+      "source_photo_count": 10,
+      "distinct_groups": 2,
+      "groups": [
+        "My Favorite Holovator — Bleu Sector 3, Side Mission 61",
+        "Café Classe south — Vernal Pokémon Center"
+      ],
+      "status": "owner survey JSONs exist; JPG assets not in GitHub"
+    },
+    "preserved": {
+      "original_chatgpt_guide": true,
+      "existing_independent_guide_routes": true,
+      "existing_map_image": true,
+      "wild_zone_pin_count": 20,
+      "city_sector_count": 48,
+      "item_record_count": 264,
+      "screw_clue_count": 100,
+      "dynamic_hyperspace_portals_as_fixed_pins": false,
+      "ladders_deferred": true
+    },
+    "next_chunk": "Run/verify fieldbook test and static build without editing original data; open a bounded PR. Later independently transfer final 11 JPGs and remaining 10 older owner JPGs using a verified binary-capable route. Only merge site viewer once CI and visual QA are green; never infer precise roof coordinates."
+  }
 }
