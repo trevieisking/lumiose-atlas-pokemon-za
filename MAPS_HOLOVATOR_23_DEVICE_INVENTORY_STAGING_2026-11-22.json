@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "inventory_revision": 6,
+  "inventory_revision": 7,
   "date": "2026-11-22",
   "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
   "reported_external_marker_category_count": 23,
@@ -124,14 +124,17 @@
       "native_atlas_device_entry_xy": null,
       "native_atlas_roof_landing_xy": null,
       "pin_published": false,
-      "research_status": "owner_photo_standing_at_lift_entrance; source_city_JPG_approx_position_verified_by_independent_photo_landmarks; physical_category_id_and_roof_exit_not_yet_verified",
-      "owner_photo_candidate_status": "Owner physically photographed glowing device and red player position at west/southwest Bleu Sector 3; two independent reference old city photo projections agree within about 7 native source pixels. Direct physical category marker ID and exact roof exit not known.",
+      "research_status": "owner_ground_entrance_and_reported_rooftop_destination_photographed; ground_JPG_XY_approx; rooftop_city_JPG_XY_and_category_id_pending",
+      "owner_photo_candidate_status": "Owner mapped ground entry to approx (765,1396) and supplied fifth photo of glowing rooftop lift pad on a large rooftop. Exact rooftop XY/height and individually extracted 23-category device ID still unknown.",
       "owner_ground_lift_photo_confirmed": true,
       "owner_photo_research_native_atlas_xy_approx": [
         765,
         1396
       ],
-      "owner_ground_lift_evidence_file": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json"
+      "owner_ground_lift_evidence_file": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+      "owner_source_photo_count": 5,
+      "owner_rooftop_arrival_photo_obtained": true,
+      "rooftop_arrival_source_image": "1000027236.heic"
     },
     {
       "local_provisional_id": "DR-H-07",
@@ -275,7 +278,8 @@
     "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
     "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json",
     "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
-    "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json"
+    "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "1000027236.heic fifth owner photo (private; indexed by MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json)"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -301,10 +305,13 @@
     "owner_private_photo_comparison_v4_symbol_groups": 18,
     "owner_private_photo_comparison_v4_observations": 36,
     "owner_photographed_Holovator_061_ground_side_devices": 1,
-    "owner_photographed_061_ground_side_research_pin_candidates": 1
+    "owner_photographed_061_ground_side_research_pin_candidates": 1,
+    "owner_mission_61_source_photo_count": 5,
+    "owner_mission_61_owner_reported_roof_pad_photographed": 1
   },
-  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted.",
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted. Five mission #061 owner photos now prove there is visible rooftop arrival scene by owner report, but original 1920 city image roof XY is not obtained. Do not increment exact ground↔roof matched count or external category-ID count.",
   "next_evidence_order": [
+    "Mission #061 ground entrance found and roof arrival scene pictured in fifth owner photo; only missing optional north-locked FULL map on roof to calibrate upper exit. Do not send owner to rediscover same ground lift.",
     "Mission #061 owner physical entrance now located on city JPG approx (765,1396). If safely accessible, capture north-up rooftop exit red-ring map, then independently match exact external category device marker ID; do not confuse entry research point with permanent roof point.",
     "Confirm each of FOUR Vert Plaza-adjacent distinct yellow chevrons and their exact street entrances/roof landings; black/pink round icons on plaza ring are NOT Holovators. Keep r-classe middle, r-vert4-east, r-vert4-south and r-cyclone separate. A previous approximate W04 Café Classe point was the southern fourth icon.",
     "Resolve northern Sushi High Roller / north Académie Étoile yellow icon relation to mission #080 (Café Kizuna rooftop), using actual red-to-yellow mission facade and physical exit. Preserve separate Looker Bureau icon. Do NOT count a guess as a unique device.",
@@ -583,5 +590,33 @@
     "new_production_pin_added": false,
     "user_photo_binaries_public": false,
     "clarification": "User photograph and two position map shots establish one physical quest-device location independently of the moving DLC icons. This does not imply all 23 devices are fully reconciled."
+  },
+  "mission_61_rooftop_fifth_photo_batch_17": {
+    "date": "2026-11-22",
+    "source": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "owner_mission_photo_total": 5,
+    "ground_physical_device_photo": true,
+    "ground_two_northlocked_map_photos": true,
+    "roof_pad_photo": true,
+    "roof_photo_filename": "1000027236.heic",
+    "owner_reports_same_lift": true,
+    "roof_visible_landmarks": [
+      "Prism Tower to right",
+      "fountain/park below left",
+      "open paved roof",
+      "nearby Investigate prompt"
+    ],
+    "ground_native_city_JPG_xy_approx": [
+      765,
+      1396
+    ],
+    "roof_native_city_JPG_xy": null,
+    "roof_floor": null,
+    "requires_roof_northlocked_map_photo_to_georeference": true,
+    "independent_physical_source_23_device_marker_id": null,
+    "new_published_map_dots": 0,
+    "existing_ground_side_draft_pin_preserved": true,
+    "one_ladder_L001_preserved": true,
+    "user_five_original_photos_not_public_git": true
   }
 }
