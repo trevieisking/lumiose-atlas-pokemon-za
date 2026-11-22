@@ -49,7 +49,7 @@ try {
     assert.equal(await page.locator('#headerBack').getAttribute('href'), PAGE);
     assert.equal(await page.locator('#feedbackForm').count(), 1);
     if (BRANCH_PREVIEW) {
-      assert.equal(await page.locator('a[href="feedback-owner.html"]').count(), 1, 'Owner inbox should be discoverable without exposing reports');
+      assert.equal(await page.locator('a[href="feedback-owner.html"]').count(), 0, 'Public form should not advertise account-only owner controls');
     }
     assert.equal(await page.locator('#details').getAttribute('maxlength'), '1500');
     assert.equal(await page.locator('link[href="feedback.css"]').evaluate(link => Boolean(link.sheet)), true, 'Feedback CSS must load');
