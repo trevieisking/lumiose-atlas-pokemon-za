@@ -28,6 +28,7 @@ h2{margin:0;font-size:18px}
 .map-stage{position:relative;width:100%;min-width:680px;aspect-ratio:1}
 .map-stage img{display:block;width:100%;height:100%;object-fit:fill}
 .map-pin{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border:3px dashed #efbd55;border-radius:50%;background:#2a2540;color:#ffe2a0;width:42px;height:42px;min-width:42px;min-height:42px;box-shadow:0 2px 5px #18233499,0 0 0 2px #f6d88366;cursor:pointer;z-index:1;touch-action:manipulation}
+.map-pin.owner-ground{border:3px solid #f9d386;background:#214f3e;color:#fff1b2;box-shadow:0 0 0 4px #3caa8b77,0 3px 10px #142232bb}
 .map-pin svg{width:21px;height:25px;fill:none;stroke:currentColor;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
 .map-pin:hover,.map-pin:focus-visible,.map-pin[aria-pressed="true"]{background:#f8d981;color:#171b2b;border-style:solid;outline:3px solid #fff;outline-offset:3px;z-index:3}
 .map-pin[hidden]{display:none}
@@ -63,7 +64,7 @@ h2{margin:0;font-size:18px}
 </head>
 <body>
 <header><div class="heading"><div><div class="eyebrow">LUMIOSE ATLAS · VISUAL LAB</div><h1>Holovator locations <span style="color:#ffe2a0">⤊</span></h1><div class="small">Research preview · Existing city map · No player progress changes</div></div><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="tag">APPROXIMATE RESEARCH DOTS</span><a class="back" href="ladder-research-preview.html">🪜 Ladder 001 survey</a><a class="back" href="maps.html">← Existing map room</a></div></div></header>
-<div class="summary"><strong>Research mode only:</strong> fifteen yellow map-symbol location leads are displayed, not fifteen certified physical entrances. The external map reports 23 Holovators; those devices are not yet individually reconciled. The yellow dotted markers below are visually approximate and <strong>must not be used as exact directions</strong>. This page is an isolated preview; the live Atlas and its existing Wild Zone markers remain unchanged.</div>
+<div class="summary"><strong>Research mode only:</strong> sixteen research locations are displayed, including one owner-photographed physical ground entrance at Side Mission #61. The other markers are photograph-derived map-symbol leads. The external map reports 23 Holovators; those devices are not yet individually reconciled. The yellow dotted markers below are visually approximate and <strong>must not be used as exact directions</strong>. This page is an isolated preview; the live Atlas and its existing Wild Zone markers remain unchanged.</div>
 <main class="layout">
 <section class="panel" aria-labelledby="map-title">
 <div class="map-heading"><div><h2 id="map-title">Lumiose City · in-game map</h2><span class="small">Tap a yellow double-chevron to read its evidence</span></div><button type="button" id="reset" style="background:#f3d48b;border:0;border-radius:9px;padding:10px 12px;font-weight:850;cursor:pointer">Reset selection</button></div>
@@ -71,7 +72,7 @@ h2{margin:0;font-size:18px}
 <div id="map-stage" class="map-stage">
 <img src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Original Lumiose city square image from the existing guide, with research overlay markers" draggable="false">
 </div></div>
-<div class="map-caption">Yellow dashed circles = photo-derived map-symbol estimate, <strong>not verified physical lift entrances</strong>. Pin positions use original 1920 × 1920 image-pixel coordinates. On phones, drag the map area to explore.</div>
+<div class="map-caption">Yellow dashed circles = provisional icon-area estimates; <strong>solid yellow-green ring</strong> = owner photographed the actual lift at the map position (still approximate; roof exit missing). Pin positions use original 1920 × 1920 image-pixel coordinates. On phones, drag the map area to explore.</div>
 </section>
 <aside class="panel"><div class="panel-body">
 <h2>Research locations</h2>
@@ -96,6 +97,7 @@ const pins=[
 {id:"r-023",title:"Vernal Avenue",area:"Northwest of Wild Zone 1",kind:"mission",mission:23,x:964,y:1666,route:"Terra's Diggersby quest opens nearby rooftop access.",evidence:"Owner W04/W10 repeated yellow symbol; mission map agrees by street block.",remaining:"Match the exact courtyard entrance and roof landing."},
 {id:"r-040",title:"Vert Sector 7",area:"South Boulevard, southwest of Racine Construction",kind:"mission",mission:40,x:1486,y:1524,route:"Élec repairs the lift; rooftop route towards Colorful Screw and Iron Defense.",evidence:"Two owner photo symbols and an independent mission map of the same block.",remaining:"Match Élec's photographed building face to this precise symbol."},
 {id:"r-045",title:"Aymis Park / South Boulevard",area:"Below Wild Zone 12",kind:"mission",mission:45,x:708,y:1706,route:"Durstin repairs the lift; rooftop route towards Iron Head.",evidence:"Two overlapping owner photos agree in approximate city-map position.",remaining:"Verify street entrance, floor and exact roof landing."},
+{id:"r-061",title:"My Favorite Holovator — Bleu Sector 3",area:"Southeast of Bleu Plaza, north of Aymlis Park / Wild Zone 12, near Café Woof",kind:"mission",mission:61,x:765,y:1396,photoGround:true,route:"From Bleu Plaza travel east/southeast into Bleu Sector 3. The glowing lift stands beside the short southwest building projection above the north side of Aymlis Park; approach from the public street. A Rust Syndicate grunt guards it if the mission is incomplete.",evidence:"Owner provided four original in-game photos: ground-level glowing lift with adjacent NPC, a wide north-up map position ring and a close north-up building map. Alignment to older W04 and W10 photo references gives native 1920 city JPG estimates (762.3,1395.7) and (769.1,1396.9).",remaining:"Map position is approximate, not exact to one image pixel; individually match external 23-device category marker and photograph the rooftop exit/floor if safely accessible."},
 {id:"r-071",title:"Magenta Sector 2",area:"Autumnal Avenue, northeast of Wild Zone 7",kind:"mission",mission:71,x:739,y:740,route:"Chuckie's Alpha Watchog blocks the lift until cleared.",evidence:"Owner PHOTO-C05 symbol and independent mission-area map.",remaining:"Match the photographed lift beside the taxi and actual owner icon."},
 {id:"r-092",title:"Café Soleil / Bleu Sector 8",area:"South-western ring, close to South Boulevard",kind:"mission",mission:92,x:352,y:1496,route:"The Beldum Blockade mission restores a lift in the broader Bleu Sector 8 neighbourhood.",evidence:"One yellow icon in owner W10 at photo (63,453); its Atlas JPG estimate (352,1496) is uncalibrated at street-entry level.",remaining:"Find a second photo or source Holovator category marker and confirm this is Aimant's entrance and rooftop exit."},
 {id:"r-080",title:"Hibernal Avenue",area:"West of Wild Zone 15",kind:"mission",mission:80,x:1189,y:392,route:"Battle Manectric and Ampharos; restored lift leads to rooftop routes.",evidence:"Three approximate owner-photo projections in the same street area.",remaining:"Confirm exact facade, rooftop exit and sector boundary."},
@@ -111,7 +113,7 @@ const pins=[
 const stage=document.getElementById("map-stage"),scroller=document.getElementById("map-scroll"),list=document.getElementById("list"),detail=document.getElementById("detail"),search=document.getElementById("search"),count=document.getElementById("count"),empty=document.getElementById("empty"),filters=[...document.querySelectorAll("[data-filter]")];
 const mapPins=new Map(),listButtons=new Map(); let chosen=null,mode="all";
 for(const p of pins){
- const b=document.createElement("button");b.type="button";b.className="map-pin";b.style.left=(p.x/1920*100)+"%";b.style.top=(p.y/1920*100)+"%";b.setAttribute("aria-label","Research Holovator near "+p.title+", approximate map position");b.setAttribute("aria-pressed","false");
+ const b=document.createElement("button");b.type="button";b.className="map-pin"+(p.photoGround?" owner-ground":"");b.style.left=(p.x/1920*100)+"%";b.style.top=(p.y/1920*100)+"%";b.setAttribute("aria-label","Research Holovator near "+p.title+", approximate map position");b.setAttribute("aria-pressed","false");
  b.innerHTML='<svg aria-hidden="true" viewBox="0 0 32 32"><path d="M7 15 16 6l9 9M7 25l9-9 9 9"/></svg>';
  b.addEventListener("click",()=>choose(p.id,false));stage.appendChild(b);mapPins.set(p.id,b);
  const row=document.createElement("button");row.type="button";row.className="list-item";row.setAttribute("aria-pressed","false");
@@ -124,7 +126,7 @@ function choose(id,scrollToMap){
  for(const [k,b] of mapPins)b.setAttribute("aria-pressed",String(k===id));
  for(const [k,b] of listButtons)b.setAttribute("aria-pressed",String(k===id));
  detail.replaceChildren();
- const eyebrow=document.createElement("span");eyebrow.className="eyebrow";eyebrow.textContent="APPROXIMATE · NOT VERIFIED";
+ const eyebrow=document.createElement("span");eyebrow.className="eyebrow";eyebrow.textContent=p.photoGround?"OWNER-PHOTOGRAPHED ENTRANCE · APPROX MAP XY":"APPROXIMATE SYMBOL · ENTRANCE NOT VERIFIED";
  const heading=document.createElement("h3");heading.textContent=p.title;
  const loc=document.createElement("p");loc.textContent=(p.mission?"Side Mission #"+p.mission+" · ":"")+p.area;
  const route=document.createElement("p");route.textContent=p.route;
@@ -138,7 +140,7 @@ function refresh(){
  const q=search.value.trim().toLocaleLowerCase();let visible=0;
  for(const p of pins){const on=(mode==="all"||p.kind===mode)&&(!q||(p.title+" "+p.area+" "+p.mission+" "+p.route).toLocaleLowerCase().includes(q));mapPins.get(p.id).hidden=!on;listButtons.get(p.id).hidden=!on;if(on)visible++;}
  for(const b of filters)b.setAttribute("aria-pressed",String(b.dataset.filter===mode));
- count.textContent=visible+" of "+pins.length+" approximate symbol leads shown; 0 verified lift entrances.";
+ count.textContent=visible+" of "+pins.length+" research locations shown; 1 owner-photographed ground entrance (#61), 0 exact rooftop exits or fully matched external device IDs.";
  empty.hidden=visible>0;
  if(chosen&&mapPins.get(chosen).hidden){chosen=null;for(const [k,b] of mapPins)b.setAttribute("aria-pressed","false");for(const [k,b] of listButtons)b.setAttribute("aria-pressed","false");detail.innerHTML="<span class='eyebrow'>FILTERED RESEARCH</span><h3>Select a visible pin</h3><p>The current filter hides the previously selected symbol.</p>";}
 }
