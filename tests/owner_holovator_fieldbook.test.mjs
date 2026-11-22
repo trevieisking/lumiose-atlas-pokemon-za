@@ -20,7 +20,7 @@ for(const r of catalog.locations){
  assert.ok(Array.isArray(xy)&&xy.length===2&&xy.every(x=>Number.isFinite(x)&&x>=0&&x<=1920),r.id+" bounded 1920px alignment");
  if(r.photo_status==="committed_main"){
    published++;
-   assert.equal(r.photos.length,5,r.id+" grounded standard image set");
+   assert.equal(r.photos.length,r.id==="rouge5-looker"?10:5,r.id+" standard images or confirmed same-lift return visit");
    for(const p of r.photos){
      assert.ok(p.path.startsWith("assets/atlas/holovators/")&&p.path.endsWith(".jpg"),p.path);
      assert.ok(!allImagePaths.has(p.path),"No double-counted photograph "+p.path);
@@ -39,7 +39,7 @@ for(const r of catalog.locations){
  }
  counts[r.district]=(counts[r.district]||0)+1;
 }
-assert.deepEqual([published,pending,photoCount],[17,4,85],"17 catalogued galleries = 85 photographs; Jaune 11 already main makes 90");
+assert.deepEqual([published,pending,photoCount],[17,4,90],"17 lift galleries include 90 JPGs; the Looker revisit is not a new lift");
 assert.equal(catalog.counts.photo_assets_committed_main,90);
 assert.equal(catalog.counts.final_11_jpgs_in_local_zip_only,11);
 assert.equal(catalog.counts.source_photographs_for_two_older_surveys_not_in_repo,10);
@@ -69,4 +69,4 @@ assert.equal((oldSectors.match(/class="wildzone-card"/g)||[]).length,20,"Origina
 assert.equal((oldSectors.match(/class="zone-item-lead"/g)||[]).length,264,"Original item entries preserved");
 assert.match(page,/Ladders, scaffolding and roof routes/,"Ladder/scaffold policy must be visible without speculative pins");
 assert.ok(page.includes("does <strong>not</strong> invent precise pins"),"No invented ladder dots");
-console.log("PASS: 21 owner-survey locations, 85 referenced genuine JPGs, 90 hosted total, 11 ZIP-only, 10 older pending, original 20/48/264 assets preserved.");
+console.log("PASS: 21 owner-survey locations, 90 referenced genuine JPGs, 90 hosted total, 11 ZIP-only, 10 older pending, original 20/48/264 assets preserved.");
