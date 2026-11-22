@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 23,
+  "revision": 24,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "Owner firsthand Holovator fieldwork consolidated: 21 surveyed map entries, 90 real JPEG screenshot assets merged on GitHub main, isolated zoom/search/photo viewer in review branch. Pin/image registration and 23-source-device crosswalk still provisional; final 11 JPGs await binary GitHub transfer. The original ChatGPT-hosted site remains unchanged.",
+  "current_phase": "Isolated rotating real-game Atlas Explorer with 20 Wild Zones, 48 sector directory records, 21 owner-photo Holovator research entries, Hotel Z ladder and 6 evidence-ranked building/passage/roof route cards; release pending CI/browser screenshot QA; original Workspace Site and Supabase untouched",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -1890,5 +1890,41 @@
     "original_chatgpt_site_untouched": true,
     "main_untouched": true,
     "all_new_binary_photos_committed": false
+  },
+  "atlas_explorer_feature_checkpoint_2026_11_22": {
+    "status": "standalone_branch_pending_merge_release_gate",
+    "branch": "feat/rotatable-lumiose-explorer-20261122",
+    "geographic_source": "maps/lumiose-game-map.jpg",
+    "geographic_source_native_px": [
+      1920,
+      1920
+    ],
+    "generated_ai_poster_used_for_coordinate_data": false,
+    "two_dimensional_rotation_not_three_dimensional_model": true,
+    "zoom_pan_rotation_touch_keyboard": true,
+    "source_zones": 20,
+    "source_sectors": 48,
+    "owner_survey_lifts": 21,
+    "hosted_verified_jpegs": 90,
+    "lift_records_with_pending_photos": 4,
+    "ground_verified_ladders": 1,
+    "player_routes_with_evidence_steps": 6,
+    "complete_indoor_floorplans_verified": 0,
+    "exact_lift_entry_or_roof_xy_verified": 0,
+    "source_item_ids_preserved_in_unchanged_pages": 264,
+    "source_screws_preserved_in_unchanged_pages": 100,
+    "approximate_item_leads_preserved_in_unchanged_pages": 146,
+    "files": [
+      "atlas-explorer.html",
+      "atlas-explorer.css",
+      "atlas-explorer.js",
+      "atlas-explorer-geometry.mjs",
+      "atlas-explorer-data.json",
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      ".github/workflows/atlas-explorer.yml"
+    ],
+    "rollback_and_release_policy": "new page additive links only; do not overwrite existing maps; hold unless CI and mobile desktop Chromium smoke pass",
+    "next_stage": "In original ChatGPT Workspace Site only after user grants source editor access; never rebuild original source from GitHub reproduction"
   }
 }
