@@ -29,11 +29,11 @@ try{
   assert.equal(await desktop.locator(".ae-pin[data-kind='holovator']").count(),21);
   assert.equal(await desktop.locator(".ae-pin[data-kind='ladder']").count(),1);
   await desktop.locator("#aeZoomIn").click();
-  assert.match(await desktop.locator("#aeZoomLabel").textContent(),/1\.30/);
+  await desktop.waitForFunction(()=>document.getElementById("aeZoomLabel").textContent.includes("1.30"));
   await desktop.locator("#aeTurnRight").click();
-  assert.match(await desktop.locator("#aePositionReadout").textContent(),/45°/);
+  await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("45°"));
   await desktop.locator("#aeNorth").click();
-  assert.match(await desktop.locator("#aePositionReadout").textContent(),/0°/);
+  await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("0°"));
   await desktop.locator("#aeTint").click();
   assert.equal(await desktop.locator("#aeTint").getAttribute("aria-pressed"),"true");
   await desktop.locator("#aeFilters button[data-kind='holovator']").click();
@@ -67,9 +67,9 @@ try{
   await phone.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
   await phone.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"),{timeout:20000});
   await phone.locator("#aeTurnRight").click();
-  assert.match(await phone.locator("#aePositionReadout").textContent(),/45°/);
+  await phone.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("45°"));
   await phone.locator("#aeNorth").click();
-  assert.match(await phone.locator("#aePositionReadout").textContent(),/0°/);
+  await phone.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("0°"));
   await phone.locator("#aeFilters button[data-kind='ladder']").click();
   assert.equal(await phone.locator("#aeResults button").count(),1);
   await phone.locator("#aeResults button[data-record-id='hotel-z-ladder']").click();
