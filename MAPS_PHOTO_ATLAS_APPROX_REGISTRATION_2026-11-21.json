@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "source_asset": {
+    "path": "maps/lumiose-game-map.jpg",
+    "sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+    "native_width": 1920,
+    "native_height": 1920,
+    "view_preview_width": 1280,
+    "view_preview_height": 1280
+  },
+  "date": "2026-11-21",
+  "method": "Manually identified named Wild Zone centres and landmarks on individual user TV camera photos (1152x1536) and in a 1280px preview of the unchanged GitHub city JPG; least-squares photo pixel-to-source image native-pixel affine transform calculated for each referenced photo. 1280 preview map landmark values multiplied by 1.5 to native 1920 values. Perspective/occlusion unmodelled and source/photo landmarks manually approximated.",
+  "important": "Estimated native map XY below are PHOTO-DERIVED APPROXIMATE RESEARCH PROJECTIONS, not confirmed Holovator device map pins. Small control-fit residual is NOT a positional accuracy guarantee. Two independent map/photo evidence routes including physical entrance and rooftop landing are required to promote to confirmed. This file must never be used directly as a production confirmed map layer.",
+  "frames": [
+    {
+      "photo_id": "P01",
+      "controls": [
+        {
+          "name": "WZ04",
+          "photo_xy_approx": [
+            182,
+            373
+          ],
+          "map_preview_xy_approx": [
+            711,
+            184
+          ]
+        },
+        {
+          "name": "WZ15",
+          "photo_xy_approx": [
+            837,
+            476
+          ],
+          "map_preview_xy_approx": [
+            1008,
+            231
+          ]
+        },
+        {
+          "name": "WZ19",
+          "photo_xy_approx": [
+            842,
+            806
+          ],
+          "map_preview_xy_approx": [
+            1009,
+            387
+          ]
+        },
+        {
+          "name": "WZ03_partial",
+          "photo_xy_approx": [
+            0,
+            709
+          ],
+          "map_preview_xy_approx": [
+            626,
+            357
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.682522,
+          -0.0078873,
+          944.868033
+        ],
+        [
+          -0.0225418,
+          0.736138,
+          10.055011
+        ]
+      ],
+      "control_fit_rms_native_px": 4.26,
+      "qualification": "WZ03 map centre cropped at left photo edge; anchor low precision despite small residual"
+    },
+    {
+      "photo_id": "P03",
+      "controls": [
+        {
+          "name": "WZ02",
+          "photo_xy_approx": [
+            328,
+            769
+          ],
+          "map_preview_xy_approx": [
+            774,
+            839
+          ]
+        },
+        {
+          "name": "WZ17",
+          "photo_xy_approx": [
+            686,
+            1007
+          ],
+          "map_preview_xy_approx": [
+            949,
+            967
+          ]
+        },
+        {
+          "name": "WZ11",
+          "photo_xy_approx": [
+            814,
+            490
+          ],
+          "map_preview_xy_approx": [
+            1029,
+            752
+          ]
+        },
+        {
+          "name": "CafeCyclone",
+          "photo_xy_approx": [
+            482,
+            896
+          ],
+          "map_preview_xy_approx": [
+            851,
+            906
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.7603419,
+          -0.0414562,
+          944.7987062
+        ],
+        [
+          0.1034997,
+          0.6506766,
+          724.8690815
+        ]
+      ],
+      "control_fit_rms_native_px": 1.66,
+      "qualification": "Neighbourhood matches are manual point estimates; residual does not measure absolute registration precision"
+    },
+    {
+      "photo_id": "P04",
+      "controls": [
+        {
+          "name": "WZ02",
+          "photo_xy_approx": [
+            380,
+            360
+          ],
+          "map_preview_xy_approx": [
+            773,
+            838
+          ]
+        },
+        {
+          "name": "WZ17",
+          "photo_xy_approx": [
+            714,
+            645
+          ],
+          "map_preview_xy_approx": [
+            949,
+            967
+          ]
+        },
+        {
+          "name": "WZ01",
+          "photo_xy_approx": [
+            327,
+            1060
+          ],
+          "map_preview_xy_approx": [
+            736,
+            1146
+          ]
+        },
+        {
+          "name": "VertPokemonCenter",
+          "photo_xy_approx": [
+            662,
+            869
+          ],
+          "map_preview_xy_approx": [
+            916,
+            1065
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.8015489,
+          -0.020142,
+          862.6175683
+        ],
+        [
+          0.0147947,
+          0.6609842,
+          1013.4637522
+        ]
+      ],
+      "control_fit_rms_native_px": 1.24,
+      "qualification": "Promising relative alignment but original camera geometry and target Holovator identity unverified"
+    },
+    {
+      "photo_id": "P05",
+      "controls": [
+        {
+          "name": "WZ10_partial",
+          "photo_xy_approx": [
+            102,
+            298
+          ],
+          "map_preview_xy_approx": [
+            200,
+            831
+          ]
+        },
+        {
+          "name": "WZ16",
+          "photo_xy_approx": [
+            622,
+            389
+          ],
+          "map_preview_xy_approx": [
+            459,
+            854
+          ]
+        },
+        {
+          "name": "WZ12",
+          "photo_xy_approx": [
+            720,
+            728
+          ],
+          "map_preview_xy_approx": [
+            526,
+            1029
+          ]
+        },
+        {
+          "name": "BleuPokemonCenter",
+          "photo_xy_approx": [
+            388,
+            793
+          ],
+          "map_preview_xy_approx": [
+            327,
+            1065
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.7983031,
+          -0.0307563,
+          218.3546541
+        ],
+        [
+          -0.0491181,
+          0.7538733,
+          1023.4830421
+        ]
+      ],
+      "control_fit_rms_native_px": 15.07,
+      "qualification": "Two anchors include partially clipped / camera-perspective features; treat as lower precision"
+    },
+    {
+      "photo_id": "P08",
+      "controls": [
+        {
+          "name": "WZ13",
+          "photo_xy_approx": [
+            384,
+            411
+          ],
+          "map_preview_xy_approx": [
+            500,
+            94
+          ]
+        },
+        {
+          "name": "WZ04",
+          "photo_xy_approx": [
+            800,
+            621
+          ],
+          "map_preview_xy_approx": [
+            711,
+            184
+          ]
+        },
+        {
+          "name": "WZ03",
+          "photo_xy_approx": [
+            628,
+            942
+          ],
+          "map_preview_xy_approx": [
+            626,
+            357
+          ]
+        },
+        {
+          "name": "RougePokemonCenter",
+          "photo_xy_approx": [
+            674,
+            442
+          ],
+          "map_preview_xy_approx": [
+            642,
+            97
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.7491166,
+          0.0161274,
+          454.3080631
+        ],
+        [
+          -0.0662221,
+          0.7736268,
+          -151.6135192
+        ]
+      ],
+      "control_fit_rms_native_px": 2.37,
+      "qualification": "Good internal source-map landmark agreement; icon identity still unresolved"
+    },
+    {
+      "photo_id": "P09",
+      "controls": [
+        {
+          "name": "WZ07",
+          "photo_xy_approx": [
+            109,
+            853
+          ],
+          "map_preview_xy_approx": [
+            364,
+            540
+          ]
+        },
+        {
+          "name": "WZ03_partial",
+          "photo_xy_approx": [
+            647,
+            435
+          ],
+          "map_preview_xy_approx": [
+            624,
+            350
+          ]
+        },
+        {
+          "name": "PrismTower",
+          "photo_xy_approx": [
+            659,
+            950
+          ],
+          "map_preview_xy_approx": [
+            624,
+            629
+          ]
+        },
+        {
+          "name": "RougePokemonCenter",
+          "photo_xy_approx": [
+            681,
+            741
+          ],
+          "map_preview_xy_approx": [
+            641,
+            507
+          ]
+        },
+        {
+          "name": "MagentaPokemonCenter",
+          "photo_xy_approx": [
+            223,
+            935
+          ],
+          "map_preview_xy_approx": [
+            415,
+            595
+          ]
+        }
+      ],
+      "native_xy_affine_from_photo_xy": [
+        [
+          0.7191321,
+          -0.016849,
+          480.0559433
+        ],
+        [
+          0.0843586,
+          0.8091839,
+          113.7453424
+        ]
+      ],
+      "control_fit_rms_native_px": 6.52,
+      "qualification": "WZ03 partly obscured by top UI and Prism Tower centre approximated; cross-photo error can exceed residual"
+    }
+  ],
+  "approximate_projected_leads": [
+    {
+      "id": "PHOTO-C01-P08",
+      "candidate_id": "PHOTO-C01",
+      "photo_id": "P08",
+      "photo_px": [
+        480,
+        1055
+      ],
+      "estimated_native_xy": [
+        831,
+        633
+      ],
+      "possible_mission_id": "DR-H-01",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C01-P09",
+      "candidate_id": "PHOTO-C01",
+      "photo_id": "P09",
+      "photo_px": [
+        498,
+        500
+      ],
+      "estimated_native_xy": [
+        830,
+        560
+      ],
+      "possible_mission_id": "DR-H-01",
+      "note": "73 native pixels from P08 candidate: do not deduplicate or claim same symbol; uncertain which, if either, is H-01",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C02",
+      "candidate_id": "PHOTO-C02",
+      "photo_id": "P04",
+      "photo_px": [
+        132,
+        984
+      ],
+      "estimated_native_xy": [
+        949,
+        1666
+      ],
+      "possible_mission_id": "DR-H-02",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C03",
+      "candidate_id": "PHOTO-C03",
+      "photo_id": "P04",
+      "photo_px": [
+        783,
+        779
+      ],
+      "estimated_native_xy": [
+        1475,
+        1540
+      ],
+      "possible_mission_id": "DR-H-03",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C04",
+      "candidate_id": "PHOTO-C04",
+      "photo_id": "P05",
+      "photo_px": [
+        638,
+        977
+      ],
+      "estimated_native_xy": [
+        698,
+        1729
+      ],
+      "possible_mission_id": "DR-H-04",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C05",
+      "candidate_id": "PHOTO-C05",
+      "photo_id": "P09",
+      "photo_px": [
+        377,
+        735
+      ],
+      "estimated_native_xy": [
+        739,
+        740
+      ],
+      "possible_mission_id": "DR-H-07",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C06-P01",
+      "candidate_id": "PHOTO-C06",
+      "photo_id": "P01",
+      "photo_px": [
+        376,
+        532
+      ],
+      "estimated_native_xy": [
+        1197,
+        393
+      ],
+      "possible_mission_id": "DR-H-08",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C06-P08",
+      "candidate_id": "PHOTO-C06",
+      "photo_id": "P08",
+      "photo_px": [
+        955,
+        797
+      ],
+      "estimated_native_xy": [
+        1183,
+        402
+      ],
+      "possible_mission_id": "DR-H-08",
+      "note": "~17 native pixels separation, plausible same photo-visible access symbol after independent calibrations",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C08-P03",
+      "candidate_id": "PHOTO-C08",
+      "photo_id": "P03",
+      "photo_px": [
+        523,
+        848
+      ],
+      "estimated_native_xy": [
+        1308,
+        1331
+      ],
+      "possible_mission_id": null,
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C08-P04",
+      "candidate_id": "PHOTO-C08",
+      "photo_id": "P04",
+      "photo_px": [
+        563,
+        480
+      ],
+      "estimated_native_xy": [
+        1304,
+        1339
+      ],
+      "possible_mission_id": null,
+      "note": "~9 native pixels separation, consistent with same photo-visible icon near Café Cyclone",
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    },
+    {
+      "id": "PHOTO-C12",
+      "candidate_id": "PHOTO-C12",
+      "photo_id": "P08",
+      "photo_px": [
+        597,
+        777
+      ],
+      "estimated_native_xy": [
+        914,
+        410
+      ],
+      "possible_mission_id": null,
+      "coordinate_type": "exploratory_projected_map_native_pixels_unverified",
+      "device_marker_classification": "yellow_chevron_not_proven_holovator",
+      "exact_device_pin": false,
+      "atlas_x": null,
+      "atlas_y": null
+    }
+  ],
+  "cross_photo_checks": [
+    {
+      "candidate_id": "PHOTO-C06",
+      "photos": [
+        "P01",
+        "P08"
+      ],
+      "estimated_native_separation_px": 17,
+      "assessment": "consistent_same_icon_possible_no_device_id_proven"
+    },
+    {
+      "candidate_id": "PHOTO-C08",
+      "photos": [
+        "P03",
+        "P04"
+      ],
+      "estimated_native_separation_px": 9,
+      "assessment": "consistent_same_icon_possible_no_device_id_proven"
+    },
+    {
+      "candidate_id": "PHOTO-C01",
+      "photos": [
+        "P08",
+        "P09"
+      ],
+      "estimated_native_separation_px": 73,
+      "assessment": "likely_different_locations_or_insufficient_alignment_do_not_deduplicate"
+    }
+  ],
+  "statistics": {
+    "registered_photos": 6,
+    "source_photos_total": 10,
+    "photo_control_point_min": 4,
+    "approximate_projected_observations": 11,
+    "confirmed_holovator_class_ids": 0,
+    "exact_atlas_device_pins": 0,
+    "rooftop_exit_positions_confirmed": 0
+  },
+  "next": "Reconfirm source map landmark centres and icon classification visually, perspective-correct and add independent residual/control check, establish source Holovator-category marker to photo symbol identity and exact building access/exit; then write confirmed pin if gates pass."
+}

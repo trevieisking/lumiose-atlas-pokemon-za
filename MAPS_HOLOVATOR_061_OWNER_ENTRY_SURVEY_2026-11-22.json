@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "survey_id": "ATLAS-OWNER-FIELD-HOLOVAT-061-2026-11-22",
+  "recorded_on": "2026-11-22",
+  "mission": {
+    "number": 61,
+    "title": "My Favorite Holovator",
+    "research_id": "DR-H-06",
+    "named_by_owner": true,
+    "sector": "Bleu Sector 3",
+    "relationship": "Southeast of Bleu Plaza / Wild Zone 16, northwest of Aymlis Park / Wild Zone 12, west/southwest side of the long Bleu Sector 3 building, near Café Woof"
+  },
+  "owner_evidence": {
+    "source_photos": [
+      {
+        "id": "H61-A",
+        "file": "1000027232.heic",
+        "sha256": "2a17f9e1d5ba19bcbfd85d936ee5d6ec369387a58d56488d3f58637904248ddb",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "north-up distant city overview",
+        "role": "orientation only, lower positional precision"
+      },
+      {
+        "id": "H61-B",
+        "file": "1000027233.heic",
+        "sha256": "652f9e6f386c4b81237a7069a057290b3b2084fea78fbc8619e104b842a2b53f",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "north-up zoomed district map",
+        "red_ring_center_photo_xy_approx": [
+          706,
+          346
+        ],
+        "role": "primary ground-location evidence"
+      },
+      {
+        "id": "H61-C",
+        "file": "1000027234.heic",
+        "sha256": "622c266c4a32806082a153dd6c40e9740c21bd1a9dad103ea31e52e52ebaf2c5",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "north-up zoomed building block",
+        "red_ring_center_photo_xy_approx": [
+          707,
+          346
+        ],
+        "role": "secondary same-current-location evidence; visible building footprint and courtyard"
+      },
+      {
+        "id": "H61-D",
+        "file": "1000027235.heic",
+        "sha256": "5956665965be336099188d278139a7190c2f7bac4e643bf1611f0948b57d91ed",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "street-level physical device photograph",
+        "role": "glowing yellow vertical triple chevrons above physical Holovator base, another character standing adjacent, paving and light-blue building walls"
+      },
+      {
+        "id": "H61-E",
+        "file": "1000027236.heic",
+        "sha256": "fc86cd62208480eb5f7f52812e4cc34c4c3b81741914fb27014e7d6ddebad931",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "elevated rooftop arrival scene immediately after owner reported riding mission 61 Holovator",
+        "role": "rooftop photograph / route endpoint visual only, not a north-locked full-map roof pin",
+        "visible_landmarks": [
+          "avatar standing on luminous lift platform",
+          "large open flat stone-paved roof",
+          "Prism Tower rising in right background",
+          "park fountain and tree-filled plaza visible below/left",
+          "Investigate interaction prompt near small purple object at roof edge",
+          "small upper-left minimap with player arrow, insufficient alone to establish native city-map rooftop X/Y"
+        ],
+        "owner_reported_same_Holovator_as_ground_Photos_H61_A_D": true
+      }
+    ],
+    "owner_direct_name": "My Favorite Holovator",
+    "observations": "User stood immediately next to the glowing physical Holovator and displayed red current-player ring in two map views. The yellow chevron is a stationary lift, not an ephemeral DLC Hyperspace icon. Fifth owner photo H61-E depicts the upper arrival area on a glowing pad as reported by player; roof photograph does not give verified native city map exit pixel.",
+    "npc": "Character visible next to device, consistent with Rust Syndicate grunt from published mission. Mission-complete/activation state not inferable solely from photo.",
+    "photo_binaries_committed": false
+  },
+  "registration": {
+    "target_source_map_asset": "maps/lumiose-game-map.jpg",
+    "target_image_coordinates": "1920x1920 pixels, top-left origin, not GPS/world coordinates",
+    "pixel_centres_original_photo": {
+      "wide": [
+        706,
+        346
+      ],
+      "close": [
+        707,
+        346
+      ]
+    },
+    "independent_old_reference_photos": [
+      "W04 (1000027200.heic)",
+      "W10 (1000027206.heic)"
+    ],
+    "wide_to_W04": {
+      "method": "SIFT CLAHE RANSAC 3x3 homography, match against permanent street/building geometry",
+      "inlier_features": 73,
+      "reprojection_RMS_original_photo_pixels": 1.06,
+      "marker_projected_old_W04_xy": [
+        451.89,
+        287.55
+      ],
+      "W04_six_landmark_native_map_affine_RMS_pixels": 5.8,
+      "projected_native_map_xy": [
+        762.29,
+        1395.74
+      ]
+    },
+    "wide_to_W10": {
+      "method": "SIFT CLAHE RANSAC 3x3 homography, match against permanent street/building geometry",
+      "inlier_features": 145,
+      "reprojection_RMS_original_photo_pixels": 0.76,
+      "marker_projected_old_W10_xy": [
+        583.43,
+        319.18
+      ],
+      "W10_five_landmark_native_map_affine_RMS_pixels": 4.2,
+      "projected_native_map_xy": [
+        769.07,
+        1396.9
+      ]
+    },
+    "close_to_wide": {
+      "method": "SIFT CLAHE RANSAC 3x3 homography",
+      "inlier_features": 139,
+      "reprojection_RMS_original_photo_pixels": 0.83,
+      "source_close_player_xy": [
+        707,
+        346
+      ],
+      "predicted_wide_photo_player_xy": [
+        704.69,
+        344.03
+      ]
+    },
+    "close_via_wide_to_W04": {
+      "projected_native_map_xy": [
+        761.43,
+        1394.34
+      ]
+    },
+    "close_via_wide_to_W10": {
+      "projected_native_map_xy": [
+        768.22,
+        1395.49
+      ]
+    },
+    "consensus_approx_native_map_xy": [
+      765,
+      1396
+    ],
+    "source_cross_reference_native_pixel_separation_approx": 6.88,
+    "false_correspondence_rejected": "Direct close-up→W04 and close-up→W10 homographies contain repeated architectural patterns and project inconsistent city map locations (~(964,1539),~(698,1489)); rejected as geometrically inconsistent. Both close-up results must be chained through verified close-up→wide registration.",
+    "precision_limit": "Strong source-photo symbol identification and internally consistent permanent-landmark alignment. Approximate native source JPG coordinates, not one-pixel exact entrance geometry. Red player ring may be offset several source pixels from actual lift base.",
+    "native_exact_physical_door_xy_verified": false
+  },
+  "how_to_find": {
+    "start": "Bleu Plaza fast-travel by Wild Zone 16",
+    "directions": [
+      "Face the streets east/southeast from Bleu Plaza, toward Bleu Sector 3 and the area north of Aymlis Park/Wild Zone 12.",
+      "Find the short west-facing/west-southwestern building projection on Bleu Sector 3's southern edge, directly above the north side of Aymlis Park.",
+      "The lift is in the small building-side courtyard. Look for a tall glowing golden triple-chevron column by a paved corner; a Rust Syndicate character may be nearby if the mission is unfinished."
+    ],
+    "no_need_to_enter_wild_zone_12": true,
+    "physical_building_side_identified_by_owner": true,
+    "entrance_floor": "street/paved courtyard",
+    "rooftop_exit_coords": null,
+    "rooftop_exit_floor": null,
+    "rooftop_exit_evidence": "Owner-supplied fifth photo shows character standing on rooftop glowing pad after reported lift arrival. Independent map exit XY not yet obtained.",
+    "mission_gate": "During Main Mission 20 Rust Syndicate storyline; if unfinished beat the guarding grunt to enable device",
+    "source": [
+      "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml",
+      "https://www.thonky.com/pokemon-legends-z-a/side-mission-061-my-favorite-holovator",
+      "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards"
+    ],
+    "rooftop_arrival_visual": "Broad stone-paved rooftop, Prism Tower prominent on right skyline, adjacent fountain/park below left, nearby optional Investigate prompt."
+  },
+  "status": {
+    "owner_physical_entry_photo_obtained": true,
+    "owner_red_ring_wide_and_close_photos_obtained": true,
+    "mission_neighbourhood_external_guides_corrob": true,
+    "source_map_entry_research_position_established": true,
+    "entry_exact_GPS_or_world_xy_claim": false,
+    "unique_external_map_23_device_marker_id_recovered": false,
+    "rooftop_landing_owner_verified": true,
+    "safe_to_show_approx_research_pin": true,
+    "safe_to_show_verified_entrance_label_with_photo_evidence": true,
+    "production_guide_pin_published": false,
+    "rooftop_landing_photo_obtained": true,
+    "rooftop_landing_native_city_jpg_XY_verified": false,
+    "full_ground_to_roof_coordinate_pair_verified": false
+  },
+  "preservation": {
+    "user_photos_private": true,
+    "GitHub_main_unchanged": true,
+    "live_original_chatgpt_site_unchanged": true,
+    "live_edition_B_map_unchanged": true,
+    "Supabase_and_progress_untouched": true,
+    "scaffolds_deferred": true,
+    "existing_ladder_L001_preserved": true
+  },
+  "rooftop_survey_2026_11_22": {
+    "status": "owner_reported_roof_arrival_photographed; exact_source_city_map_exit_xy_not_georeferenced",
+    "photo_file": "1000027236.heic",
+    "source_image_sha256": "fc86cd62208480eb5f7f52812e4cc34c4c3b81741914fb27014e7d6ddebad931",
+    "photographic_observation": "The player is standing on a luminous platform on a large flat rooftop with the Prism Tower in the right background and a landscaped green/fountain area below left. A separate Investigate prompt appears near a small purple object.",
+    "evidence_relationship": "Owner supplies the rooftop photo immediately after previously supplying ground-side mission 61 lift photos and explicitly identifies it as its roof. Visual confirms a rooftop/lift pad but a single image alone cannot independently prove transport source device identity or calculate rooftop image XY.",
+    "minimap_note": "Small minimap visible in top-left; NOT a full north-locked city map or precise original-image coordinate control. Do not derive a pixel-perfect roof point from it.",
+    "floor_or_height": null,
+    "atlas_native_roof_xy": null,
+    "roof_exit_physical_scene_photographed": true,
+    "roof_city_image_position_verified": false,
+    "external_23_marker_device_ID_matched": false,
+    "cross_zone_photo_link_confidence": "owner-reported route continuity; roof visual independently shows arrival platform; still needs optional north-up full map to georeference exact roof point",
+    "do_not_misclassify": "Investigate prompt is an interactable nearby object, not itself the lift exit; do not label its rewards, quest content or coordinates without verifying."
+  }
+}

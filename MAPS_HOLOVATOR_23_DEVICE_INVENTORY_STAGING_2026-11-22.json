@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "inventory_revision": 8,
+  "date": "2026-11-22",
+  "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
+  "reported_external_marker_category_count": 23,
+  "source_categories": [
+    {
+      "source": "Shackmaps",
+      "url": "https://www.shackmaps.com/pokemon-legends-z-a/map",
+      "category": "Holovator",
+      "category_total": 23,
+      "individual_marker_ids_recovered": 0
+    },
+    {
+      "source": "Gamer Guides",
+      "url": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+      "category": "Holovators",
+      "reported_total_from_prior_plan": 23,
+      "individual_marker_ids_recovered": 0
+    },
+    {
+      "source": "Serebii Pokéarth",
+      "url": "https://www.serebii.net/pokearth/lumiosecity/",
+      "category": "Holovators",
+      "reported_total": null,
+      "individual_marker_ids_recovered": 0
+    }
+  ],
+  "known_holovator_related_side_missions": [
+    {
+      "local_provisional_id": "DR-H-01",
+      "side_mission": 4,
+      "mission_title": "A Break Time Battle",
+      "quest_neighbourhood": "Rouge Plaza; west of Wild Zone 3",
+      "sector_claim": "Rouge-01",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/729556",
+      "owner_photo_chevron_candidate": "PHOTO-C01 / WIDE-H01-AMBIGUOUS / W06-W07-repeat",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending",
+      "owner_photo_candidate_status": "W06/W07 photo-pair same yellow symbol west of WZ3; mission-specific exact device and old two alternatives unresolved"
+    },
+    {
+      "local_provisional_id": "DR-H-02",
+      "side_mission": 23,
+      "mission_title": "Underneath the Holovator",
+      "quest_neighbourhood": "Vernal Avenue; northwest of Wild Zone 1; northwest of Pokémon Research Lab",
+      "sector_claim": "Vert-09",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/729708",
+      "owner_photo_chevron_candidate": "WIDE-H02",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-03",
+      "side_mission": 40,
+      "mission_title": "A Holovator Without Power",
+      "quest_neighbourhood": "South Boulevard; east of Wild Zone 1 near Pokémon Center; southwest of Racine Construction",
+      "sector_claim": "Vert-07",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": null,
+      "owner_photo_chevron_candidate": "WIDE-H03",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-04",
+      "side_mission": 45,
+      "mission_title": "On Maintenance Duty",
+      "quest_neighbourhood": "South Boulevard / Southside Street, south of Wild Zone 12",
+      "sector_claim": "Bleu-07",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": null,
+      "owner_photo_chevron_candidate": "WIDE-H04",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-05",
+      "side_mission": 56,
+      "mission_title": "We'll Just Muscle Our Way Through!",
+      "quest_neighbourhood": "Jaune Sector 6, south/southeast of Wild Zone 8",
+      "sector_claim": "Jaune-06",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/730741",
+      "owner_photo_chevron_candidate": null,
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-06",
+      "side_mission": 61,
+      "mission_title": "My Favorite Holovator",
+      "quest_neighbourhood": "Bleu Sector 3 by Bleu Plaza; north of Wild Zone 12",
+      "sector_claim": "Bleu-03",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/731011",
+      "owner_photo_chevron_candidate": "H61-B/H61-C same player ring, H61-D glowing Holovator street photo",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "owner_ground_entrance_and_reported_rooftop_destination_photographed; ground_JPG_XY_approx; rooftop_city_JPG_XY_and_category_id_pending",
+      "owner_photo_candidate_status": "Owner mapped ground entry to approx (765,1396) and supplied fifth photo of glowing rooftop lift pad on a large rooftop. Exact rooftop XY/height and individually extracted 23-category device ID still unknown.",
+      "owner_ground_lift_photo_confirmed": true,
+      "owner_photo_research_native_atlas_xy_approx": [
+        765,
+        1396
+      ],
+      "owner_ground_lift_evidence_file": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+      "owner_source_photo_count": 5,
+      "owner_rooftop_arrival_photo_obtained": true,
+      "rooftop_arrival_source_image": "1000027236.heic"
+    },
+    {
+      "local_provisional_id": "DR-H-07",
+      "side_mission": 71,
+      "mission_title": "The Burning Gaze of Watchog",
+      "quest_neighbourhood": "Autumnal Avenue; northeast of Wild Zone 7",
+      "sector_claim": "Magenta-02",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/731300",
+      "owner_photo_chevron_candidate": "PHOTO-C05",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-08",
+      "side_mission": 80,
+      "mission_title": "A Shocking Territorial Dispute",
+      "quest_neighbourhood": "Hibernal Avenue; west/southwest of Wild Zone 15",
+      "sector_claim": null,
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/731365",
+      "owner_photo_chevron_candidate": "WIDE-H08",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending"
+    },
+    {
+      "local_provisional_id": "DR-H-09",
+      "side_mission": 92,
+      "mission_title": "The Beldum Blockade",
+      "quest_neighbourhood": "South Boulevard; southeast of Café Soleil / Wild Zone 10; Bleu Sector 8 reported by GameWith",
+      "sector_claim": "Bleu-08",
+      "mission_unlock_research_completed": true,
+      "gameplay_side_mission_map_source": "https://game8.jp/pokemon-legends-z-a/731477",
+      "owner_photo_chevron_candidate": "W10 / H-CAND-BLEU08-CAFE-SOLEIL",
+      "external_device_category_marker_id": null,
+      "unique_physical_device_confirmed_against_category_list": false,
+      "native_atlas_device_entry_xy": null,
+      "native_atlas_roof_landing_xy": null,
+      "pin_published": false,
+      "research_status": "mission_quest_source_verified; device_category_identity_and_precise_map_pin_pending",
+      "owner_photo_candidate_status": "single-photo yellow symbol near mission #92 quest area; physical device and roof not verified"
+    }
+  ],
+  "other_owner_photo_visible_holovator_class_leads": [
+    {
+      "id": "PHOTO-C07",
+      "area": "Jaune Street east of Jaune Plaza",
+      "source": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "PHOTO-C08 / WIDE-C08",
+      "area": "Café Cyclone / Coulant Waterway in Vert",
+      "source": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "PHOTO-C09",
+      "area": "Bleu Sector 4 / north Estival Avenue",
+      "source": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "PHOTO-C10",
+      "area": "Bleu Sector 4 / western Estival Avenue",
+      "source": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "PHOTO-C11",
+      "area": "Magenta Street west/northwest of Magenta Plaza",
+      "source": "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "PHOTO-C12 / WIDE-C12",
+      "area": "Looker Bureau / Sushi High Roller, north of Rouge Plaza",
+      "source": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    },
+    {
+      "id": "WIDE-C13",
+      "area": "Café Classe / Vernal Avenue east/northeast of Aymis Park",
+      "source": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true,
+      "owner_physical_holovator_photographed": true,
+      "owner_ground_red_ring_two_maps_photographed": true,
+      "owner_rooftop_lift_arrival_scene_photographed": true,
+      "owner_recent_photo_count": 5,
+      "photographed_entry_approx_native_atlas_JPG_xy": [
+        943,
+        1466
+      ],
+      "owner_field_source": "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "research_status": "physical_ground_device_and_owner_ground_player_position_photos_correlated_to_preexisting_WIDE_C13; roof_photo_owner_reports_same_lift; exact_roof_XY_and_external_category_ID_unverified"
+    },
+    {
+      "id": "W06/W07-JAUNE-SECTOR-4",
+      "area": "Jaune Sector 4 east of Académie Étoile / north-west of Wild Zone 8",
+      "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+      "external_device_category_marker_id": null,
+      "unique_device_not_yet_proven": true,
+      "atlas_exact_entry_xy": null,
+      "roof_exit_xy": null,
+      "should_not_increment_verified_devices": true
+    }
+  ],
+  "evidence_sources": [
+    "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+    "MAPS_OWNER_PHOTO_ACCESS_LEADS_2026-11-21.json",
+    "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json",
+    "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+    "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+    "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json",
+    "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
+    "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "1000027236.heic fifth owner photo (private; indexed by MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json)",
+    "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json"
+  ],
+  "counts": {
+    "mission_quest_records_researched": 9,
+    "mission_quest_map_marker_urls_recovered": 9,
+    "external_category_markers_individually_recovered": 0,
+    "unique_physical_holovators_confidently_deduplicated_to_23_category": 0,
+    "owner_photo_unmatched_named_lead_groups": 8,
+    "exact_verified_lift_ground_entry_xy": 0,
+    "exact_verified_roof_landings": 0,
+    "exact_verified_ground_to_roof_pairs": 0,
+    "published_map_holovator_pins": 0,
+    "owner_wide_W08_visible_photo_symbols": 5,
+    "owner_wide_W09_overlap_repeated_photo_observations": 2,
+    "named_nonmission_guide_photo_neighbourhood_leads_in_latest_batch": 9,
+    "guide_only_possible_holovator_leads_in_latest_batch": 4,
+    "new_owner_photo_quest_candidate_rechecks_this_batch": 2,
+    "independent_W06_W07_repeated_symbol_groups_this_batch": 3,
+    "all_ten_owner_photo_symbol_groups_reconciled_research_only": 16,
+    "all_ten_owner_photo_symbol_observations": 28,
+    "all_ten_owner_photo_repeated_groups": 12,
+    "all_ten_owner_photo_single_groups": 4,
+    "owner_private_photo_comparison_v4_total_photos": 13,
+    "owner_private_photo_comparison_v4_symbol_groups": 18,
+    "owner_private_photo_comparison_v4_observations": 36,
+    "owner_photographed_Holovator_061_ground_side_devices": 1,
+    "owner_photographed_061_ground_side_research_pin_candidates": 1,
+    "owner_mission_61_source_photo_count": 5,
+    "owner_mission_61_owner_reported_roof_pad_photographed": 1,
+    "owner_photographed_holovator_ground_side_photo_groups_total": 2,
+    "owner_photographed_holovator_roof_arrival_scene_groups_total": 2,
+    "owner_vert4_south_recent_photos": 5
+  },
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted. Five mission #061 owner photos now prove there is visible rooftop arrival scene by owner report, but original 1920 city image roof XY is not obtained. Do not increment exact ground↔roof matched count or external category-ID count. New five-photo Vert southern Holovator is same previously catalogued WIDE-C13 / r-vert4-south, NOT new unique device: new red-ring photo projects old VP-C [256.43,741.11], matching old chevron [257,737]. Owner has street lift and roof photograph but roof map XY and category marker ID unavailable; 0 full georeferenced pair and 0/23 external IDs still.",
+  "next_evidence_order": [
+    "Next field trip after verified same WIDE-C13: distinct r-vert4-east fixed yellow double-chevron inside eastern/right Vert Sector 4, northeast of current Vernal Pokémon Center lift. New screenshot 7374 icon ~[895,204] maps to old VP-C [461.8,595.0], matching separately old [465,592]. Obtain actual facade/roof photo and red-ring map at device, no duplicate.",
+    "Mission #061 ground entrance found and roof arrival scene pictured in fifth owner photo; only missing optional north-locked FULL map on roof to calibrate upper exit. Do not send owner to rediscover same ground lift.",
+    "Mission #061 owner physical entrance now located on city JPG approx (765,1396). If safely accessible, capture north-up rooftop exit red-ring map, then independently match exact external category device marker ID; do not confuse entry research point with permanent roof point.",
+    "Confirm each of FOUR Vert Plaza-adjacent distinct yellow chevrons and their exact street entrances/roof landings; black/pink round icons on plaza ring are NOT Holovators. Keep r-classe middle, r-vert4-east, r-vert4-south and r-cyclone separate. A previous approximate W04 Café Classe point was the southern fourth icon.",
+    "Resolve northern Sushi High Roller / north Académie Étoile yellow icon relation to mission #080 (Café Kizuna rooftop), using actual red-to-yellow mission facade and physical exit. Preserve separate Looker Bureau icon. Do NOT count a guess as a unique device.",
+    "Cross-register the two photo-proven distinct Estival Avenue yellow glyphs (W08/W09 Café Gallant vs Espace Vide/Bleu Sector 4) with independently named physical Holovator category markers, without treating picture pixel positions as Atlas image XY.",
+    "Inspect each of source map's 23 Holovator-category glyphs directly, extract stable marker/page IDs and original source coordinate space, one by one.",
+    "Reconcile nine quest-linked devices to actual category marker IDs, separating mission star from yellow Holovator glyph and preserving conflicting user photo candidates for #004.",
+    "Match seven additional owner photo leads to category marker coordinates; find all still unmatched source markers by district with >=3 landmark anchors and holdout accuracy.",
+    "For each physical device, independently verify accessible street entrance, usable floor, roof arrival, mission gating, nearby landmark and written directions.",
+    "Only after verified 23/23 and deduplication, implement Holovator pin layer in one bounded, fully tested GitHub PR; map icons separate confirmed/provisional access points and never conflate user item/Screw progress IDs.",
+    "Scaffold/ladder network phase starts AFTER Holovator map release as user-directed; no scaffold code/data now."
+  ],
+  "source_photos_private": true,
+  "copyright_rule": "Link to external reference imagery, do not copy third-party screenshot/map art into our public repo without rights",
+  "hold_live_site_until_all_holovators_logged": true,
+  "original_ChatGPT_Site_A_preserved": true,
+  "Edition_B_runtime_preserved": true,
+  "Supabase_preserved": true,
+  "main_branch_preserved": true,
+  "nonmission_crosscheck_batch_09": {
+    "record": "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+    "date": "2026-11-22",
+    "photo_files_private": [
+      "1000027204.heic",
+      "1000027205.heic"
+    ],
+    "W08_visible_yellow_symbol_groups": 5,
+    "W09_repeat_observations": 2,
+    "two_distinct_overlap_pair_landmarks": [
+      "Estival Avenue by Café Gallant (Magenta Sector 3 edge)",
+      "Estival Avenue / Espace Vide at northern Bleu Sector 4 edge"
+    ],
+    "crossphoto_pan_displacement_W08_minus_W09_photo_px": [
+      [
+        229,
+        361
+      ],
+      [
+        232,
+        364
+      ]
+    ],
+    "displacement_delta_mismatch_px_approx": 4.24,
+    "independently_guide_supported_photo_neighbourhoods": [
+      "Vert Sector 3 courtyard near Café Cyclone",
+      "Bleu Sector 4 Holovator north of western complex",
+      "Estival Avenue by Café Gallant (separate photo marker from Bleu Sector 4)",
+      "Jaune Street near Jaune Sector 11",
+      "Rouge Sector 5 across Sushi High Roller to Looker Bureau rooftops",
+      "Vert Sector 4 courtyard / Café Classe general area (exact physical match not proven)"
+    ],
+    "new_photo_symbol_leads_not_automatically_distinct_devices": [
+      "Magenta Sector 7 Pokémon Center by Lumiose Sewers",
+      "Magenta Street north/northwest of Magenta Plaza"
+    ],
+    "source_only_leads": [
+      "North Boulevard Rouge rooftops",
+      "Vert Sector 8 courtyard near Hotel Z",
+      "Hibernal Avenue north of Café Kizuna (possibly mission #80)",
+      "Jaune Sector 11 Pokémon Center (possibly same as Jaune Street photo icon)"
+    ],
+    "mission_duplicate_caution": "W08 Autumnal Avenue symbol could be mission #71, not additional non-mission device",
+    "unverified_physical_ids_count_unchanged": 23,
+    "source_holovator_category_marker_ids_verified": 0,
+    "exact_atlas_entrance_xy_verified": 0,
+    "exact_roof_exit_xy_verified": 0,
+    "production_map_pins_added": 0,
+    "source_rights": "Do not copy owner or third-party images; store coordinates/evidence text only"
+  },
+  "owner_w06_w07_batch_11": {
+    "date": "2026-11-22",
+    "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+    "photo_ids": [
+      "W06",
+      "W07",
+      "W10"
+    ],
+    "W06_W07_same_yellow_glyph_groups": 3,
+    "W06_W07_WZ3_independent_control": 1,
+    "camera_photo_pan_delta_mean": [
+      615.75,
+      104.75
+    ],
+    "translation_alignment_RMS_original_camera_px": 2.09,
+    "mission_004_new_same_yellow_icon_two_photo_support": true,
+    "mission_004_older_alt_conflict_unresolved": true,
+    "mission_092_W10_single_photo_candidate_recovered": true,
+    "new_separately_visible_jaune_sector_4_symbol": true,
+    "independent_2025_all_holovator_ladders_map": "https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600",
+    "independent_map_game_mechanics": "Nine Holovators initially disabled; visiting/interacting records Holovator on map, disabled units displayed gray, repaired units active.",
+    "original_uploaded_photos_public": false,
+    "source_category_ids_recovered": 0,
+    "verified_exact_entrances": 0,
+    "verified_roof_exit_pairs": 0,
+    "published_pins": 0,
+    "uncertain_overlapping_records_unchanged": true
+  },
+  "all_ten_photo_visual_reconciliation_batch_12": {
+    "date": "2026-11-22",
+    "source": "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json",
+    "private_interactive_viewer": "holovator_photo_comparison_v3.html (conversation artifact only; owner JPEGs embedded; not uploaded to public repo)",
+    "owner_photos_count": 10,
+    "readable_photo_symbol_groups": 16,
+    "groups_repeated_across_two_photos": 12,
+    "groups_seen_only_once": 4,
+    "original_photo_symbol_observations": 28,
+    "overview_W01_W03_direct_symbols_resolved": 0,
+    "W04_W05_repeated_symbols": [
+      "Vert Sector 7 / Élec mission #40 area",
+      "Café Cyclone / Coulant Waterway"
+    ],
+    "W04_W10_repeated_symbols": [
+      "Vernal Avenue / Terra mission #23 area",
+      "South Boulevard / Durstin mission #45 area",
+      "Café Classe / Vert Sector 4"
+    ],
+    "W06_W07_northern_icon_uncertainty": "Yellow icon W06(491,195) W07(1108,301) appears around Sushi High Roller / north of Académie Étoile / northern Hibernal corridor. Previous generic 'mission #80' label is NOT directly proven by source entrance geometry; the separate Looker Bureau icon W07(763,280) remains distinct. Do not count or relabel as confirmed #80.",
+    "new_source_maps": [
+      "https://www.pokeos.com/plza/map",
+      "https://www.serebii.net/pokearth/lumiosecity/"
+    ],
+    "rooftop_access_new_link": "Mission #80 repaired Café Kizuna-area Holovator enables access towards Side Mission #89 Emolga rooftop in Jaune Sector 7; independently corroborated by RPG Site, GameTrek and Thonky. Not proven same as owner screenshot northern icon.",
+    "external_marker_ids_individually_recovered": 0,
+    "verified_entrance_xy": 0,
+    "verified_roof_exit_xy": 0,
+    "production_map_pins_added": 0,
+    "private_browser_qa": {
+      "desktop": [
+        1365,
+        905
+      ],
+      "mobile": [
+        390,
+        844
+      ],
+      "ten_tabs": true,
+      "photo_image_loads": true,
+      "selection": true,
+      "repeat_single_filters": true,
+      "js_errors": 0
+    },
+    "caution": "16 photographed symbol GROUPS is NOT 16 verified unique physical Holovators, nor a completion fraction of the external 23. Do not overwrite existing site map or original source image."
+  },
+  "vert_plaza_four_yellow_symbols_batch_13": {
+    "date": "2026-11-22",
+    "source": "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
+    "photo_ids": [
+      "VP-A / 1000027221.heic",
+      "VP-B / 1000027222.heic",
+      "VP-C / 1000027220.heic"
+    ],
+    "original_photo_dimensions": [
+      1536,
+      865
+    ],
+    "north_locked": true,
+    "actual_yellow_arrow_symbol_groups": 4,
+    "distinct_location_descriptions": [
+      {
+        "symbol": "VERT4-EAST",
+        "area": "east edge of Vert Sector 4, southwest of Vert Plaza",
+        "native_source_city_JPG_research_xy": [
+          1055,
+          1383
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-C"
+        ]
+      },
+      {
+        "symbol": "VERT4-CAFE-CLASSE",
+        "area": "middle/lower edge Vert Sector 4 next to Café Classe",
+        "native_source_city_JPG_research_xy": [
+          1010,
+          1420
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-C"
+        ]
+      },
+      {
+        "symbol": "VERT4-SOUTH-POKEMON-CENTER",
+        "area": "farther south near Vert Pokémon Center",
+        "native_source_city_JPG_research_xy": [
+          943,
+          1466
+        ],
+        "repeat_photos": [
+          "VP-C",
+          "older W04/W10"
+        ],
+        "overlap": "same as earlier WIDE-C13, NOT entirely newly discovered"
+      },
+      {
+        "symbol": "CAFE-CYCLONE",
+        "area": "Coulant Waterway east/southeast of green plaza by Café Cyclone",
+        "native_source_city_JPG_research_xy": [
+          1299,
+          1337
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-B",
+          "VP-C",
+          "older W04/W05"
+        ],
+        "overlap": "same as earlier WIDE-C08"
+      }
+    ],
+    "source_photo_registration_QA": {
+      "VP_C_to_VP_A_RANSAC_inliers": 137,
+      "reprojection_RMS_photo_px": 1.6,
+      "VP_C_to_VP_B_RANSAC_inliers": 187,
+      "VP_C_to_old_W04_RANSAC_inliers": 30,
+      "W04_to_native_city_JPG_six_landmark_RMS_native_px": 5.8,
+      "note": "Source-JPG estimates are approximate yellow map-symbol centres, not certified precise Holovator physical entrances."
+    },
+    "important_nonholovator_icons": [
+      "black circular yellow diamond/star on west/south edge of green Wild Zone 2",
+      "black circular magenta triangle on east/southeast edge of green Wild Zone 2",
+      "WZ2 black/gold badge in centre"
+    ],
+    "nonholovator_pin_removed_from_research_graphic": true,
+    "visual_code_preview": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+    "offline_private_owner_viewer": "holovator_photo_comparison_v4.html",
+    "offline_private_owner_photos_in_public_repo": false,
+    "private_browser_QA": {
+      "desktop": [
+        1365,
+        905
+      ],
+      "mobile": [
+        390,
+        844
+      ],
+      "total_tabs": 13,
+      "new_VP_A_icon_markers": 3,
+      "new_VP_B_icon_markers": 1,
+      "new_VP_C_icon_markers": 4,
+      "JS_errors": 0
+    },
+    "photo_candidate_groups_across_all_photos_research_only": 18,
+    "photo_yellow_symbol_observations_across_all_photos": 36,
+    "source_category_physical_ids_newly_extracted": 0,
+    "exact_building_entrance_xy_verified": 0,
+    "exact_roof_exit_xy_verified": 0,
+    "production_pins_added": 0
+  },
+  "mission_61_owner_entry_batch_16": {
+    "date": "2026-11-22",
+    "record": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "owner_source_photos": 4,
+    "owner_photographed_physical_device": true,
+    "owner_red_ring_position_wide_and_zoom": true,
+    "mission": "061 My Favorite Holovator",
+    "location": "Bleu Sector 3 building corner southeast Bleu Plaza, northwest Aymlis Park",
+    "two_old_city_reference_image_projections": [
+      [
+        762.29,
+        1395.74
+      ],
+      [
+        769.07,
+        1396.9
+      ]
+    ],
+    "research_city_JPG_xy_approx": [
+      765,
+      1396
+    ],
+    "unique_source_device_category_marker_id_recovered": false,
+    "exact_ground_lift_base_pixel_verified": false,
+    "roof_arrival_photo_recorded": false,
+    "new_draft_research_map_pin": "r-061 — owner observed ground-side lift, approximate city image symbol",
+    "new_production_pin_added": false,
+    "user_photo_binaries_public": false,
+    "clarification": "User photograph and two position map shots establish one physical quest-device location independently of the moving DLC icons. This does not imply all 23 devices are fully reconciled."
+  },
+  "mission_61_rooftop_fifth_photo_batch_17": {
+    "date": "2026-11-22",
+    "source": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "owner_mission_photo_total": 5,
+    "ground_physical_device_photo": true,
+    "ground_two_northlocked_map_photos": true,
+    "roof_pad_photo": true,
+    "roof_photo_filename": "1000027236.heic",
+    "owner_reports_same_lift": true,
+    "roof_visible_landmarks": [
+      "Prism Tower to right",
+      "fountain/park below left",
+      "open paved roof",
+      "nearby Investigate prompt"
+    ],
+    "ground_native_city_JPG_xy_approx": [
+      765,
+      1396
+    ],
+    "roof_native_city_JPG_xy": null,
+    "roof_floor": null,
+    "requires_roof_northlocked_map_photo_to_georeference": true,
+    "independent_physical_source_23_device_marker_id": null,
+    "new_published_map_dots": 0,
+    "existing_ground_side_draft_pin_preserved": true,
+    "one_ladder_L001_preserved": true,
+    "user_five_original_photos_not_public_git": true
+  },
+  "vert_cafe_classe_south_owner_ground_batch_19": {
+    "date": "2026-11-22",
+    "source": "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "candidate_id": "WIDE-C13",
+    "draft_visual_id": "r-vert4-south",
+    "new_source_photo_count": 5,
+    "location": "Vernal Pokémon Center, south of Café Classe, immediately east of Aymlis Park/WZ12",
+    "owner_physical_lift_photo": true,
+    "owner_ground_map_ring_two_zoom_levels": true,
+    "owner_roof_arrival_photo": true,
+    "source_historical_W04_projected_city_JPG_xy": [
+      943.1,
+      1468.15
+    ],
+    "source_historical_W10_projected_city_JPG_xy": [
+      951.2,
+      1471.82
+    ],
+    "agreed_keep_old_research_dot_xy": [
+      943,
+      1466
+    ],
+    "previously_sighted_VP_C_icon_xy": [
+      257,
+      737
+    ],
+    "direct_new_mid_to_old_VP_C_prediction": [
+      256.43,
+      741.11
+    ],
+    "same_previous_icon_proven": true,
+    "new_external_category_ID_reconciled": false,
+    "exact_upper_exit_map_xy": null,
+    "new_unique_physical_units_counted": 0,
+    "next_different_field_target": {
+      "id": "r-vert4-east",
+      "source_city_JPG_xy_approx": [
+        1055,
+        1383
+      ],
+      "owner_new_mid_photo_yellow_arrow_xy": [
+        895,
+        204
+      ],
+      "historic_VP_C_icon_xy": [
+        465,
+        592
+      ]
+    },
+    "new_photo_bytes_in_public_GitHub": false,
+    "user_authorizes_future_GitHub_image_assets": true
+  }
+}

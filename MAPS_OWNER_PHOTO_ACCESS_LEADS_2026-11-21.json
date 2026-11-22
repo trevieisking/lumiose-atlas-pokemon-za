@@ -1,0 +1,577 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch_id": "ATLAS-OWNER-PHOTO-LOCATION-LEADS-2026-11-21",
+  "source": "Ten owner-uploaded, overlapping Pokémon Legends Z-A in-game TV-map photographs (located in conversation file library); original photos remain private and are NOT committed to GitHub.",
+  "source_date": "2026-11-21",
+  "source_image_access": "inspected_original_pixels_for_all_10_in_library",
+  "purpose": "Record photo-visible building/street relative coordinates and potential yellow-chevron access markers, not validated device positions.",
+  "pixel_coordinate_system": "Unrectified full-camera photo top-left origin x right y down in pixels. EVERY file is 1152x1536 including black TV surround. Manually estimated centre +/- 20 pixels; the numbers are not game coordinates, not Atlas JPG coordinates and not source mission X/Y.",
+  "warning": "A yellow double-chevron alone is NOT proof of a Holovator. Distinct mission-to-device correspondence, icon classification, full perspective rectification, >=3 landmark controls and roof entry/exit evidence are required before confirmed map pins.",
+  "photos": [
+    {
+      "id": "P01",
+      "districts": [
+        "Rouge",
+        "Jaune"
+      ],
+      "landmarks": [
+        "Académie Étoile",
+        "Café Kizuna",
+        "Pokémon Center"
+      ],
+      "wild_zones": [
+        4,
+        15,
+        19
+      ],
+      "original_file_basename": "image-1795297989673.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P02",
+      "districts": [
+        "Jaune",
+        "Vert"
+      ],
+      "landmarks": [
+        "Jaune Plaza",
+        "Justice Dojo",
+        "Saison Canal"
+      ],
+      "wild_zones": [
+        6,
+        8,
+        11
+      ],
+      "original_file_basename": "image-1795298018431.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P03",
+      "districts": [
+        "Vert",
+        "Jaune"
+      ],
+      "landmarks": [
+        "Vert Plaza",
+        "Coulant Waterway",
+        "Café Cyclone",
+        "Nouveau Café"
+      ],
+      "wild_zones": [
+        2,
+        11,
+        17
+      ],
+      "original_file_basename": "image-1795298056370.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P04",
+      "districts": [
+        "Vert"
+      ],
+      "landmarks": [
+        "Hotel Z",
+        "Racine Construction",
+        "Café Cyclone",
+        "Vert Pokémon Center"
+      ],
+      "wild_zones": [
+        1,
+        2,
+        17
+      ],
+      "original_file_basename": "image-1795298104216.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P05",
+      "districts": [
+        "Bleu",
+        "Vert"
+      ],
+      "landmarks": [
+        "Aymis Park",
+        "South Boulevard",
+        "Nouveau Café (Truck No. 2)"
+      ],
+      "wild_zones": [
+        12,
+        16
+      ],
+      "original_file_basename": "image-1795298116529.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P06",
+      "districts": [
+        "Bleu",
+        "Magenta"
+      ],
+      "landmarks": [
+        "Bleu Plaza",
+        "Rust Syndicate Office",
+        "Prism Tower",
+        "Espace Vide"
+      ],
+      "wild_zones": [
+        5,
+        10,
+        16
+      ],
+      "original_file_basename": "image-1795298128074.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P07",
+      "districts": [
+        "Magenta",
+        "Rouge"
+      ],
+      "landmarks": [
+        "Magenta Plaza",
+        "Lumiose Sewers",
+        "Electrical Substation",
+        "Autumnal Avenue"
+      ],
+      "wild_zones": [
+        7,
+        14
+      ],
+      "original_file_basename": "image-1795298163315.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P08",
+      "districts": [
+        "Rouge",
+        "Magenta"
+      ],
+      "landmarks": [
+        "Rouge Plaza",
+        "Dormez Bien Cemetery",
+        "Looker Bureau",
+        "Sushi High Roller"
+      ],
+      "wild_zones": [
+        3,
+        4,
+        13
+      ],
+      "original_file_basename": "image-1795298190418.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P09",
+      "districts": [
+        "Rouge",
+        "Magenta",
+        "Jaune"
+      ],
+      "landmarks": [
+        "Rouge Sector 1",
+        "Magenta Sector 2",
+        "Pokémon Center",
+        "Autumnal Avenue",
+        "Magenta Plaza"
+      ],
+      "wild_zones": [
+        3,
+        7
+      ],
+      "original_file_basename": "image-1795298205053.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    },
+    {
+      "id": "P10",
+      "districts": [
+        "Bleu",
+        "Vert",
+        "Jaune",
+        "Magenta"
+      ],
+      "landmarks": [
+        "Prism Tower",
+        "Rust Syndicate Office",
+        "Justice Dojo",
+        "Bleu Plaza",
+        "Vert Plaza"
+      ],
+      "wild_zones": [
+        2,
+        5,
+        16
+      ],
+      "original_file_basename": "image-1795298216669.jpg",
+      "pixel_size": {
+        "width": 1152,
+        "height": 1536
+      },
+      "capture_type": "owner_tv_game_map_photo",
+      "file_committed_to_repo": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "PHOTO-C01",
+      "report_id": "DR-H-01",
+      "bearing": "Possible yellow double-chevron west/southwest of Wild Zone 3 near Rouge Sector 1 and Magenta border, close to Autumnal Avenue",
+      "confidence": "two_alternative_photo_icon_positions_not_verified_same_device",
+      "needed": "Independent approximate projection places P08 and P09 symbols ~73 native source-map pixels apart; do not count them as the same Holovator or choose a device point until icon/entrance is independently matched.",
+      "observations": [
+        {
+          "photo_id": "P08",
+          "photo_pixel_x_approx": 480,
+          "photo_pixel_y_approx": 1055,
+          "uncertainty_px": 20
+        },
+        {
+          "photo_id": "P09",
+          "photo_pixel_x_approx": 498,
+          "photo_pixel_y_approx": 500,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false,
+      "cross_photo_status": "not_deduplicated_different_projected_positions"
+    },
+    {
+      "id": "PHOTO-C02",
+      "report_id": "DR-H-02",
+      "bearing": "Yellow double-chevron west/northwest of Wild Zone 1 at the Vert Sector 9 / Vernal Avenue approach",
+      "confidence": "possible_based_on_sector_and_relative_direction",
+      "needed": "Verify whether marker is the mission #23 unit at Vernal Avenue and not another lift",
+      "observations": [
+        {
+          "photo_id": "P04",
+          "photo_pixel_x_approx": 132,
+          "photo_pixel_y_approx": 984,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C03",
+      "report_id": "DR-H-03",
+      "bearing": "Yellow double-chevron beside Vert Sector 7, west/southwest of Racine Construction and northeast of Vert Pokémon Center",
+      "confidence": "strong_neighbourhood_match_only",
+      "needed": "Confirm the chevron class and mission #40's specific powered unit; ground entrance and roof landing",
+      "observations": [
+        {
+          "photo_id": "P04",
+          "photo_pixel_x_approx": 783,
+          "photo_pixel_y_approx": 779,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C04",
+      "report_id": "DR-H-04",
+      "bearing": "Yellow double-chevron on South Boulevard south of Aymis Park / Wild Zone 12 in the Bleu Sector 7 area",
+      "confidence": "strong_neighbourhood_match_only",
+      "needed": "Confirm this is Durstin's repaired Holovator, not another nearby lift; rectify photo and verify roof",
+      "observations": [
+        {
+          "photo_id": "P05",
+          "photo_pixel_x_approx": 638,
+          "photo_pixel_y_approx": 977,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C05",
+      "report_id": "DR-H-07",
+      "bearing": "Yellow double-chevron northeast of Wild Zone 7 in the Magenta Sector 2 / Autumnal Avenue approach",
+      "confidence": "possible_based_on_quest_neighbourhood",
+      "needed": "Confirm this specific icon is the Alpha Watchog-blocked unit",
+      "observations": [
+        {
+          "photo_id": "P09",
+          "photo_pixel_x_approx": 377,
+          "photo_pixel_y_approx": 735,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C06",
+      "report_id": "DR-H-08",
+      "bearing": "Yellow double-chevron west/southwest of Wild Zone 15 near Rouge Sector 6 and Hibernal Avenue",
+      "confidence": "possible_same_marker_across_overlap_unproven",
+      "needed": "Check whether two photo icons depict same device and match mission #80's Manectric/Ampharos",
+      "observations": [
+        {
+          "photo_id": "P01",
+          "photo_pixel_x_approx": 376,
+          "photo_pixel_y_approx": 532,
+          "uncertainty_px": 20
+        },
+        {
+          "photo_id": "P08",
+          "photo_pixel_x_approx": 955,
+          "photo_pixel_y_approx": 797,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false,
+      "cross_photo_status": "two_source_aligned_locations_approx_17_native_px_apart_possible_same_symbol"
+    },
+    {
+      "id": "PHOTO-C07",
+      "report_id": null,
+      "bearing": "Yellow double-chevron on Jaune Street east of Jaune Plaza, near Jaune Sector 11",
+      "confidence": "direct_photo_symbol_location_only",
+      "needed": "Categorize icon and find independently matched named access point",
+      "observations": [
+        {
+          "photo_id": "P02",
+          "photo_pixel_x_approx": 800,
+          "photo_pixel_y_approx": 520,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C08",
+      "report_id": null,
+      "bearing": "Yellow double-chevron by Café Cyclone / Coulant Waterway, near Vert Sectors 3/5",
+      "confidence": "potential_same_marker_seen_twice_not_calibrated",
+      "needed": "Rectify P03/P04 overlap and identify icon category, entrance and roof",
+      "observations": [
+        {
+          "photo_id": "P03",
+          "photo_pixel_x_approx": 523,
+          "photo_pixel_y_approx": 848,
+          "uncertainty_px": 20
+        },
+        {
+          "photo_id": "P04",
+          "photo_pixel_x_approx": 563,
+          "photo_pixel_y_approx": 480,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false,
+      "cross_photo_status": "two_source_aligned_locations_approx_9_native_px_apart_possible_same_symbol"
+    },
+    {
+      "id": "PHOTO-C09",
+      "report_id": null,
+      "bearing": "Yellow double-chevron north of Bleu Sector 4 near Estival Avenue",
+      "confidence": "direct_photo_symbol_location_only",
+      "needed": "Verify icon and map block, no mission ID assigned",
+      "observations": [
+        {
+          "photo_id": "P06",
+          "photo_pixel_x_approx": 468,
+          "photo_pixel_y_approx": 589,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C10",
+      "report_id": null,
+      "bearing": "Yellow double-chevron near western side of Bleu Sector 4, on Estival Avenue",
+      "confidence": "direct_photo_symbol_location_only",
+      "needed": "Distinct from C09 unless proved same; do not assign to mission",
+      "observations": [
+        {
+          "photo_id": "P06",
+          "photo_pixel_x_approx": 347,
+          "photo_pixel_y_approx": 708,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C11",
+      "report_id": null,
+      "bearing": "Yellow double-chevron on Magenta Street west/northwest of Magenta Plaza",
+      "confidence": "direct_photo_symbol_location_only",
+      "needed": "Confirm relevant Holovator category and exact building face",
+      "observations": [
+        {
+          "photo_id": "P07",
+          "photo_pixel_x_approx": 525,
+          "photo_pixel_y_approx": 733,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    },
+    {
+      "id": "PHOTO-C12",
+      "report_id": null,
+      "bearing": "Yellow double-chevron by Looker Bureau/Sushi High Roller, north of Rouge Plaza",
+      "confidence": "direct_photo_symbol_location_only",
+      "needed": "Cross-reference source Holovator map, no mission or rooftop claim",
+      "observations": [
+        {
+          "photo_id": "P08",
+          "photo_pixel_x_approx": 597,
+          "photo_pixel_y_approx": 777,
+          "uncertainty_px": 20
+        }
+      ],
+      "icon_description": "yellow circular double-up-chevron",
+      "icon_type_verified": false,
+      "matched_holovator_category_marker_id": null,
+      "atlas_x": null,
+      "atlas_y": null,
+      "entry_floor": null,
+      "exit_floor": null,
+      "confirmed_map_pin": false
+    }
+  ],
+  "counts": {
+    "source_photos": 10,
+    "photo_icon_candidate_groups": 12,
+    "photo_appearances": 15,
+    "tentative_mission_links": 6,
+    "verified_exact_atlas_holovator_pins": 0,
+    "confirmed_photo_to_atlas_transform": 0,
+    "photo_icon_candidate_groups_semantics": "Research groups, not 12 independently confirmed physical devices; PHOTO-C01 has two likely distinct alternative photo symbols, not deduplicated."
+  },
+  "next_validation": [
+    "Determine visual identity of yellow chevron using unambiguous in-game legend or original icon asset.",
+    "For PHOTO-C03 and PHOTO-C04, independently match guide-marked physical Holovator to the photo-visible chevron.",
+    "Perspective-correct screenshot and register >=3 independent architectural landmarks to maps/lumiose-game-map.jpg; quantify pixel error.",
+    "Confirm ground entrance/facade, rooftop exit and exact required mission gate in gameplay evidence.",
+    "Only then promote photo candidate to confirmed Atlas device pin; keep unproved icons as exploratory leads."
+  ],
+  "followup_alignment_record": "MAPS_PHOTO_ATLAS_APPROX_REGISTRATION_2026-11-21.json"
+}

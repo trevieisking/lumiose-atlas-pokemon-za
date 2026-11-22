@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch": "W06-W07-PAIRED-SYMBOLS-AND-W10-BLEU08-2026-11-22",
+  "date": "2026-11-22",
+  "source_photos": [
+    {
+      "id": "W06",
+      "private_filename": "1000027202.heic",
+      "original_pixels": [
+        1536,
+        865
+      ]
+    },
+    {
+      "id": "W07",
+      "private_filename": "1000027203.heic",
+      "original_pixels": [
+        1536,
+        865
+      ]
+    },
+    {
+      "id": "W10",
+      "private_filename": "1000027206.heic",
+      "original_pixels": [
+        1536,
+        865
+      ]
+    }
+  ],
+  "method": "Manually identified original yellow double-up-arrow Holovator class map icons in two owner photos of overlapping areas. W06->W07 approximate translation estimated from three corresponding icons plus independent WZ3 crest landmark. Pre-existing 3-control affine source-JPG registrations are used only for exploratory native Atlas pixel estimates, not exact device points.",
+  "cross_photo_observations": [
+    {
+      "id": "H-CAND-ROUGE-WZ03",
+      "area": "West of Rouge Plaza/Wild Zone 3; possible mission #004 Sommi",
+      "left_photo": "W06",
+      "left_pixel": [
+        39,
+        399
+      ],
+      "right_photo": "W07",
+      "right_pixel": [
+        656,
+        502
+      ],
+      "delta_photo_pixels": [
+        617,
+        103
+      ],
+      "approximate_atlas_native_from_W06": [
+        826.8,
+        569.9
+      ],
+      "approximate_atlas_native_from_W07": [
+        835.7,
+        588.3
+      ],
+      "confidence": "repeated_same_game_map_glyph; mission_to_facade_not_verified",
+      "match_to_quest": "DR-H-01 candidate only"
+    },
+    {
+      "id": "H-CAND-HIBERNAL",
+      "area": "Hibernal Avenue west of Wild Zone 15 / Café Kizuna neighbourhood; possible mission #080",
+      "left_photo": "W06",
+      "left_pixel": [
+        491,
+        195
+      ],
+      "right_photo": "W07",
+      "right_pixel": [
+        1108,
+        301
+      ],
+      "delta_photo_pixels": [
+        617,
+        106
+      ],
+      "approximate_atlas_native_from_W06": [
+        1190.8,
+        394.5
+      ],
+      "approximate_atlas_native_from_W07": [
+        1182.5,
+        359.9
+      ],
+      "confidence": "repeated_same_game_map_glyph; mission_to_facade_not_verified",
+      "match_to_quest": "DR-H-08 candidate only"
+    },
+    {
+      "id": "H-CAND-JAUNE04",
+      "area": "Jaune Sector 4 along east side of Académie Étoile; separate from Hibernal and WZ3",
+      "left_photo": "W06",
+      "left_pixel": [
+        544,
+        418
+      ],
+      "right_photo": "W07",
+      "right_pixel": [
+        1157,
+        524
+      ],
+      "delta_photo_pixels": [
+        613,
+        106
+      ],
+      "approximate_atlas_native_from_W06": [
+        1236.1,
+        569.1
+      ],
+      "approximate_atlas_native_from_W07": [
+        1216.7,
+        523.4
+      ],
+      "confidence": "repeated_distinct_in_game_glyph; source_to_exact_atlas_registration_unreliable_at_this_part_of_photo",
+      "match_to_quest": null
+    }
+  ],
+  "non_icon_control": {
+    "name": "WZ3 crest / Rouge Plaza centre",
+    "left_photo": "W06",
+    "left_pixel": [
+      175,
+      359
+    ],
+    "right_photo": "W07",
+    "right_pixel": [
+      791,
+      463
+    ],
+    "delta_photo_pixels": [
+      616,
+      104
+    ],
+    "type": "independent_visual_landmark_not_holovator"
+  },
+  "cross_photo_translation_W06_to_W07_photo_pixels_mean": [
+    615.75,
+    104.75
+  ],
+  "four_control_translation_rms_photo_pixels": 2.09,
+  "four_control_translation_max_residual_photo_pixels": 3.02,
+  "strong_interpretation": "Three distinct yellow map symbols (including Rouge Plaza, Hibernal Avenue and Jaune Sector 4) are corroborated in two separately panned owner screenshots; alignment of the same symbols is strongly supported at the camera-photo level.",
+  "additional_single_photo_lead": {
+    "id": "H-CAND-BLEU08-CAFE-SOLEIL",
+    "owner_photo": "W10",
+    "photo_xy_approx": [
+      63,
+      453
+    ],
+    "estimated_atlas_native_research_xy_approx": [
+      351.6,
+      1495.9
+    ],
+    "area": "Bleu Sector 8 / west of Café Soleil on south-western city ring, possible mission #092 The Beldum Blockade",
+    "external_quest_references": [
+      "https://game8.jp/pokemon-legends-z-a/731477",
+      "https://www.gamerguides.com/pokemon-legends-z-a/checklists/side-missions-locations"
+    ],
+    "confidence": "single_owner_visible_yellow_map_symbol_only; mission_quest_star_to_actual_device_not_verified",
+    "overlap_warning": "The icon lies near the left margin of W10 and its exact ground doorway and rooftop exit are unknown."
+  },
+  "external_whole_city_reference": {
+    "url": "https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600",
+    "source_date": "2025-11-02",
+    "author_report": "Original Chinese-language player guide states all climbable ladders and holographic elevator distribution; nine elevators initially broken and restored through side missions; previously examined/unusable Holovators appear gray on the player's in-game map after approach/interact.",
+    "role": "Independent cross-check of icon-class/quest count and red-circled mission repair map; Chinese reference image NOT copied, redistributed or pixel-extracted into public repo",
+    "caution": "Small rendered external image and no calibrated marker-category XY; cannot choose one of the owner's earlier mission #4 source-native coordinate alternatives solely by its annotation. Category count 23 is separately established by Shackmaps."
+  },
+  "older_photo_ambiguity": {
+    "mission_4_older_native_research_alternatives": [
+      [
+        831,
+        633
+      ],
+      [
+        830,
+        560
+      ]
+    ],
+    "W06_W07_estimates": [
+      [
+        826.8,
+        569.9
+      ],
+      [
+        835.7,
+        588.3
+      ]
+    ],
+    "status": "independent_same_icon_between_W06_and_W07_but_exact_mission_device_unresolved; do not arbitrarily select old alternatives or publish as exact"
+  },
+  "critical_limits": [
+    "Original screenshot photo coordinates are not game-world coordinates.",
+    "Fit on W06/W07 is a simple translation in camera photograph space. Low 2.1px agreement proves same yellow icons at corresponding positions; it does not validate their original Atlas image coordinates.",
+    "Original source-image affine maps for W06 and W07 used three controls; fitted zero training error is tautological and independent accuracy is not established. For Jaune Sector 4 they differ >45 pixels.",
+    "Quest location/pink star is not the same dataset as a specific already discovered Holovator chevron or physical facade.",
+    "Neither external category stable ID nor ground entrance/roof exit height measured.",
+    "Do not count any of these matches as additional distinct verified physical category devices until deduplicated with the reported 23."
+  ],
+  "external_holovator_category_total_source": "https://www.shackmaps.com/pokemon-legends-z-a/map",
+  "external_reported_total": 23,
+  "external_category_marker_ids_recovered": 0,
+  "verified_exact_entrance_xy": 0,
+  "verified_roof_exit_xy": 0,
+  "production_pins_added": 0,
+  "user_photo_image_binaries_committed": false,
+  "scaffolds_deferred": true,
+  "live_site_unchanged": true
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 2,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "date": "2026-11-22",
+  "task": "Correct and fully count map chevrons around Vert Plaza from three north-up close-up photos. There are FOUR distinct yellow double-up chevrons: three west/southwest of the green zone (two in Vert Sector 4, one farther south by Pokemon Center) and one at Café Cyclone on the east.",
+  "image_subject": "Pokémon Legends Z-A in-game Lumiose map, Vert Plaza Wild Zone 2 and surrounding Vert Sectors 3/4/5; yellow two-up-chevron icons denote Holovators",
+  "upload_files": [
+    {
+      "id": "VP-A",
+      "private_file": "1000027221.heic",
+      "original_photo_size": [
+        1536,
+        865
+      ],
+      "holovator_photo_xy_approx": [
+        {
+          "candidate": "VERT4-EAST",
+          "xy": [
+            391,
+            519
+          ]
+        },
+        {
+          "candidate": "VERT4-CAFE-CLASSE",
+          "xy": [
+            242,
+            644
+          ]
+        },
+        {
+          "candidate": "CAFE-CYCLONE",
+          "xy": [
+            1268,
+            369
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VP-B",
+      "private_file": "1000027222.heic",
+      "original_photo_size": [
+        1536,
+        865
+      ],
+      "holovator_photo_xy_approx": [
+        {
+          "candidate": "CAFE-CYCLONE",
+          "xy": [
+            899,
+            710
+          ]
+        }
+      ],
+      "other_two": "outside photograph crop"
+    },
+    {
+      "id": "VP-C",
+      "private_file": "1000027220.heic",
+      "original_photo_size": [
+        1536,
+        865
+      ],
+      "holovator_photo_xy_approx": [
+        {
+          "candidate": "VERT4-EAST",
+          "xy": [
+            465,
+            592
+          ]
+        },
+        {
+          "candidate": "VERT4-CAFE-CLASSE",
+          "xy": [
+            381,
+            657
+          ]
+        },
+        {
+          "candidate": "CAFE-CYCLONE",
+          "xy": [
+            897,
+            527
+          ]
+        },
+        {
+          "candidate": "VERT4-SOUTH-POKEMON-CENTER",
+          "xy": [
+            257,
+            737
+          ]
+        }
+      ]
+    }
+  ],
+  "verified_observations": [
+    {
+      "id": "VERT4-EAST",
+      "sector": "Vert Sector 4",
+      "relative_location": "Right/eastern edge of Vert Sector 4 block, southwest of Vert Plaza, north-east of Café Classe",
+      "status": "distinct_amber_double_arrow_game_map_icon_in_two_photos",
+      "photo_source": [
+        "VP-A",
+        "VP-C"
+      ],
+      "exact_entrance_unverified": true
+    },
+    {
+      "id": "VERT4-CAFE-CLASSE",
+      "sector": "Vert Sector 4",
+      "relative_location": "Lower/southwest end of Vert Sector 4 block beside Café Classe",
+      "status": "distinct_amber_double_arrow_game_map_icon_in_two_photos",
+      "photo_source": [
+        "VP-A",
+        "VP-C"
+      ],
+      "exact_entrance_unverified": true
+    },
+    {
+      "id": "CAFE-CYCLONE",
+      "sector": "Coulant Waterway / Vert Sector 3/5 boundary",
+      "relative_location": "Long narrow building east/southeast of Vert Plaza, near Café Cyclone",
+      "status": "distinct_amber_double_arrow_game_map_icon_in_three_photos",
+      "photo_source": [
+        "VP-A",
+        "VP-B",
+        "VP-C"
+      ],
+      "exact_entrance_unverified": true
+    },
+    {
+      "id": "VERT4-SOUTH-POKEMON-CENTER",
+      "sector": "Southern edge of Vert Sector 4 / near Vert Pokemon Center and Café Classe",
+      "relative_location": "Farther south/down from the two Vert Sector 4 lifts, immediately north of Vert Pokemon Center; a third separate yellow chevron on the western side of the plaza",
+      "status": "separate_yellow_map_icon_in_new_VP-C_and_older_W04_W10_image_family",
+      "photo_source": [
+        "VP-C",
+        "W04 (older wider photo)"
+      ],
+      "exact_entrance_unverified": true
+    }
+  ],
+  "misclassification_warning": "The black circular yellow-star and pink-triangle icons on the green Vert Plaza perimeter are NOT yellow Holovator chevron icons; they represent other map activities. Wild Zone 2 badge at plaza center is also NOT a Holovator.",
+  "registration": {
+    "source": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json : W04 original six-landmark 2x3 affine into unchanged 1920x1920 city JPG, RMS 5.8 native source pixels, max control error 10.2 px",
+    "method": "OpenCV SIFT + CLAHE matched independent image architecture between VP-C and older W04, RANSAC 3x3 homography; inverse-project VP-C hand-selected symbol centres to W04 then through pre-existing six-landmark W04->city image affine. VP-A/VP-B independently cross-matched to VP-C, not directly forced through a bad old-image alignment.",
+    "VP_C_to_W04_inliers": 30,
+    "VP_C_to_W04_reprojection_RMS_pixels": 1.6,
+    "VP_C_to_VP_A_inliers": 137,
+    "VP_C_to_VP_A_reprojection_RMS_pixels": 1.34,
+    "VP_C_to_VP_B_inliers": 187,
+    "VP_C_to_VP_B_reprojection_RMS_pixels": 1.18,
+    "VP_A_to_VP_B_inliers": 323,
+    "VP_A_to_VP_B_reprojection_RMS_pixels": 1.23,
+    "VP_C_to_VP_A_independent_icon_prediction_errors_photo_pixels": {
+      "VERT4_EAST": 3.7,
+      "VERT4_CAFE_CLASSE": 2.3,
+      "CAFE_CYCLONE": 1.3
+    },
+    "landmark_scope": "These are map PHOTO symbol centres only. Low geometric image registration residual supports repeated symbol identity, not exact physical street entrance or roof exit; TV/camera perspective and source JPG control errors remain.",
+    "VP_C_to_W04_estimates_of_southern_icon": "VP-C (257,737) inverse-projected via VP-C↔W04 homography to W04 (674.3,374.9); W04 six-point affine gives city JPG approx (943,1466). This agrees with earlier W04 (674,376) / project WIDE-C13, so it is DIFFERENT from VP-C mid Café Classe icon at (381,657)."
+  },
+  "photo_symbol_city_JPG_native_1920_estimates": [
+    {
+      "id": "VERT4-EAST",
+      "derived_city_image_xy": [
+        1055,
+        1383
+      ],
+      "label": "new research candidate; was incorrectly absent or displaced on earlier synthesis"
+    },
+    {
+      "id": "VERT4-CAFE-CLASSE",
+      "derived_city_image_xy": [
+        1010,
+        1420
+      ],
+      "label": "replaces earlier approximate r-classe (948,1470), about 80 city-image pixels displaced"
+    },
+    {
+      "id": "CAFE-CYCLONE",
+      "derived_city_image_xy": [
+        1293,
+        1338
+      ],
+      "label": "agrees within ~12 city-image px of earlier r-cyclone (1305,1335)"
+    },
+    {
+      "id": "VERT4-SOUTH-POKEMON-CENTER",
+      "derived_city_image_xy": [
+        943,
+        1466
+      ],
+      "label": "Earlier r-classe had represented THIS southern third icon at approx (948,1470). Preserve it as a separate marker after reassigning r-classe to the middle icon."
+    }
+  ],
+  "draft_preview_intended_research_positions": [
+    {
+      "id": "r-vert4-east",
+      "x": 1055,
+      "y": 1383
+    },
+    {
+      "id": "r-classe",
+      "x": 1010,
+      "y": 1420
+    },
+    {
+      "id": "r-cyclone",
+      "x": 1299,
+      "y": 1337
+    },
+    {
+      "id": "r-vert4-south",
+      "x": 943,
+      "y": 1466
+    }
+  ],
+  "confidence": "four_distinct_yellow_icon_centres_high; source-JPG projections approximate; physical entrance/roof height unverified",
+  "count_caution": "FOUR separate in-game yellow-chevron icons in new Vert Plaza close-ups: 2 in Vert Sector4, 1 near Vert Pokemon Center, 1 at Café Cyclone; no four NEW count inferred for the externally reported 23. Southern icon is the old W04 yellow chevron candidate, not previously uncovered lift. Do not count user photo group IDs until source physical device list reconciled.",
+  "next_validation": "Match these actual yellow symbol centres to individual 23-category Holovator device records and check street entrance and rooftop exit, not just the green plaza zone perimeter.",
+  "private_photos_not_committed": true,
+  "production_map_unmodified": true,
+  "verified_source_device_ids_added": 0,
+  "verified_exact_street_roof_pairs_added": 0,
+  "scaffolds_deferred": true
+}

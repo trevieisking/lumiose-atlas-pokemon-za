@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch": "ATLAS-ESTIVAL-OWNER-TWO-PHOTO-CITY-JPG-ALIGNMENT-2026-11-22",
+  "checked_on": "2026-11-22",
+  "coordinate_system": "native 1920x1920 pixels of unchanged maps/lumiose-game-map.jpg. Exploratory location of owner in-game yellow map icon, NOT independently verified physical street entrance or roof exit.",
+  "method": "Manual owner photo W08/W09 full-image pixel centres matched with four Wild Zone icon-centre control points whose existing site map positions are preserved in maps.html percentages. For each shot least-squares 2x3 affine mapping into 1920x1920 image; camera/TV perspective unmodelled. Internal control residual must NOT be interpreted as source map physical accuracy.",
+  "frames": [
+    {
+      "id": "W08",
+      "private_photo": "1000027204.heic",
+      "size": [
+        1536,
+        865
+      ],
+      "controls": [
+        {
+          "zone": 7,
+          "photo_xy": [
+            765,
+            392
+          ],
+          "atlas_native_xy": [
+            560.64,
+            835.2
+          ]
+        },
+        {
+          "zone": 14,
+          "photo_xy": [
+            339,
+            391
+          ],
+          "atlas_native_xy": [
+            209.28,
+            800.64
+          ]
+        },
+        {
+          "zone": 9,
+          "photo_xy": [
+            391,
+            691
+          ],
+          "atlas_native_xy": [
+            249.6,
+            1069.44
+          ]
+        },
+        {
+          "zone": 5,
+          "photo_xy": [
+            1046,
+            771
+          ],
+          "atlas_native_xy": [
+            794.88,
+            1119.36
+          ],
+          "warning": "partly clipped badge, low precision"
+        }
+      ],
+      "photo_to_native_affine": [
+        [
+          0.830296,
+          -0.002288,
+          -72.560973
+        ],
+        [
+          0.009511,
+          0.802714,
+          499.594328
+        ]
+      ],
+      "fit_rms_native_px": 12.86,
+      "fit_max_control_residual_native_px": 16.09,
+      "estimated_symbols": [
+        {
+          "id": "CAFE_GALLANT",
+          "photo_xy": [
+            787,
+            655
+          ],
+          "atlas_native_xy_approx": [
+            579.4,
+            1032.9
+          ]
+        },
+        {
+          "id": "ESPACE_VIDE",
+          "photo_xy": [
+            663,
+            776
+          ],
+          "atlas_native_xy_approx": [
+            476.1,
+            1128.8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W09",
+      "private_photo": "1000027205.heic",
+      "size": [
+        1536,
+        865
+      ],
+      "controls": [
+        {
+          "zone": 9,
+          "photo_xy": [
+            155,
+            337
+          ],
+          "atlas_native_xy": [
+            249.6,
+            1069.44
+          ]
+        },
+        {
+          "zone": 10,
+          "photo_xy": [
+            217,
+            562
+          ],
+          "atlas_native_xy": [
+            309.12,
+            1280.64
+          ]
+        },
+        {
+          "zone": 5,
+          "photo_xy": [
+            821,
+            412
+          ],
+          "atlas_native_xy": [
+            794.88,
+            1119.36
+          ]
+        },
+        {
+          "zone": 16,
+          "photo_xy": [
+            715,
+            606
+          ],
+          "atlas_native_xy": [
+            710.4,
+            1294.08
+          ]
+        }
+      ],
+      "photo_to_native_affine": [
+        [
+          0.81138,
+          0.02617,
+          116.429581
+        ],
+        [
+          -0.037646,
+          0.918214,
+          768.783124
+        ]
+      ],
+      "fit_rms_native_px": 4.02,
+      "fit_max_control_residual_native_px": 4.68,
+      "estimated_symbols": [
+        {
+          "id": "CAFE_GALLANT",
+          "photo_xy": [
+            558,
+            294
+          ],
+          "atlas_native_xy_approx": [
+            576.9,
+            1017.7
+          ]
+        },
+        {
+          "id": "ESPACE_VIDE",
+          "photo_xy": [
+            431,
+            412
+          ],
+          "atlas_native_xy_approx": [
+            476.9,
+            1130.9
+          ]
+        }
+      ]
+    }
+  ],
+  "approximate_consensus_research_icons": [
+    {
+      "id": "ESTIVAL-CAFE-GALLANT",
+      "label": "Café Gallant / Estival Avenue",
+      "atlas_native_xy_approx": [
+        578,
+        1025
+      ],
+      "cross_photo_native_pixel_separation_approx": 15.5,
+      "source": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "confidence": "same_in_game_yellow_Holovator_class_symbol_repeated; exact_device_category_ID_and_physical_entrance_not_established"
+    },
+    {
+      "id": "ESTIVAL-ESPACE-VIDE",
+      "label": "Espace Vide / Bleu Sector 4",
+      "atlas_native_xy_approx": [
+        477,
+        1130
+      ],
+      "cross_photo_native_pixel_separation_approx": 2.2,
+      "source": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-4.html",
+      "confidence": "same_in_game_yellow_Holovator_class_symbol_repeated; exact_device_category_ID_and_physical_entrance_not_established"
+    }
+  ],
+  "accuracy_warning": "Estimated positions are symbol centres at best; manual controls may be wrong, W08 zone 5 partially clipped, TV perspective, symbol offset from facade, and unknown rooftop landing. Do NOT use as verified entrance pins or as permanent player guidance without field validation.",
+  "previous_crossphoto_evidence": "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+  "status": "research_visual_prototype_only",
+  "confirmed_exact_holovator_entry_xy": 0,
+  "published_production_pins": 0
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "intake_date": "2026-11-22",
+  "survey_id": "OWNER-HOLOVATOR-CANDIDATE-WIDE-C13-VERT4-SOUTH",
+  "purpose": "Photographic field confirmation of existing provisional southern Vert/Café Classe Holovator (NOT another counted source category device). GitHub-only staging for later Workspace/live site integration.",
+  "existing_draft_marker_id": "r-vert4-south",
+  "existing_photo_group": "VERT4-SOUTH-POKEMON-CENTER / WIDE-C13",
+  "not_new_unique_23_category_device": true,
+  "owner_game_screenshots": [
+    {
+      "file": "1000027372.heic",
+      "preferred_jpg": "holovator-vert4-south-ground.jpg",
+      "sha256": "0da2ac85a761456c7efab955692b650b408c7a818b65f9c6965933c0d0e5f8b7",
+      "size": [
+        1536,
+        865
+      ],
+      "role": "physical glowing yellow triple-chevron Holovator at building facade near cafe awning, street-level, not a dynamic Hyperspace portal"
+    },
+    {
+      "file": "1000027373.heic",
+      "preferred_jpg": "holovator-vert4-south-wide-map.jpg",
+      "sha256": "788385a53b318dd6b38fcf4b25fdf1c799644cc76980a387ce9b3a5b368bcb54",
+      "size": [
+        1536,
+        865
+      ],
+      "role": "distant wider north-locked city map; red current player position near east of Aymlis Park; not primary precision evidence"
+    },
+    {
+      "file": "1000027374.heic",
+      "preferred_jpg": "holovator-vert4-south-position-map.jpg",
+      "sha256": "cb1547dd7cc48e8add4a1775db66b6fe26fc41fa4ee0223cd5b7ea012b98018a",
+      "size": [
+        1536,
+        865
+      ],
+      "role": "primary red player ring ground-position map with Café Classe, nearby Pokémon Center and east Aymlis Park; approximate ring centre (682,378)"
+    },
+    {
+      "file": "1000027375.heic",
+      "preferred_jpg": "holovator-vert4-south-close-map.jpg",
+      "sha256": "cbf008523a62742624b00d0ff73da2993e2defb6ce15df6749908f27ffd2a154",
+      "size": [
+        1536,
+        865
+      ],
+      "role": "second zoomed red-ring ground position map at southern edge Café Classe/Pokémon Center, approximate ring centre (683,336)"
+    },
+    {
+      "file": "1000027376.heic",
+      "preferred_jpg": "holovator-vert4-south-rooftop-arrival.jpg",
+      "sha256": "9baddff2a0e53f7e781c8e689aa1d60402db2612ae914e0f62997b699fda56ef",
+      "size": [
+        1536,
+        865
+      ],
+      "role": "owner reported roof arrival scene; onscreen Vert District caption, avatar on glowing lift pad, nearby rooftop door and Investigate prompt; exact roof map X/Y unverified"
+    }
+  ],
+  "bytes_note": "All five uploads are actual 1536x865 JPEG images despite their .heic filenames; future browser assets must use .jpg without needing pixel recompression.",
+  "location": {
+    "district": "Vert District, southern Vert Sector 4 / northern Vert Sector 9 boundary",
+    "landmarks": [
+      "Vernal Avenue Pokémon Center",
+      "Café Classe",
+      "east edge of Aymlis Park (Wild Zone 12)",
+      "Stone Emporium"
+    ],
+    "physical_description": "Lift against street-facing building wall immediately south of Café Classe and near Pokémon Center, east of Aymlis Park, recognizable by gold/yellow upward arrows.",
+    "route_from_nearby_landmark": "From the Vernal Avenue Pokémon Center and Café Classe area, look on the building face on the EAST side of the street beside Aymlis Park, just south of the café. Do not enter Wild Zone 12 or follow shifting DLC portal icons.",
+    "map_icon_legend": "Red ring is avatar standing position, blue triangle is facing direction, permanent yellow double-chevron denotes Holovator, black/pink and gold/black round emblems are moving Hyperspace DLC encounters.",
+    "full_game_world_coordinates": null,
+    "entry_game_map_1920_native_JPG_research_xy_existing": [
+      943,
+      1466
+    ],
+    "new_independent_owner_photo_estimates": [
+      [
+        943.1,
+        1468.15
+      ],
+      [
+        951.2,
+        1471.82
+      ]
+    ],
+    "current_recommendation": "RETAIN earlier provisional (943,1466) for continuity, mark APPROXIMATE and owner-photo-confirmed physical ground entrance; do not claim pixel-perfect doorway.",
+    "rooftop_scene_visible": true,
+    "roof_exit_city_image_xy": null,
+    "roof_exit_floor": null,
+    "source_category_device_id": null
+  },
+  "image_registration": {
+    "method": "SIFT/CLAHE feature matches RANSAC against older owner W04 and W10 map photographs, each of which has previously recorded independent city-JPG landmark transforms. Repeated building patterns can create false homographies, therefore reject poorly agreeing direct-zoom estimates.",
+    "ground_photo_primary": "1000027374.heic",
+    "ground_position_photo_7374_xy_approx": [
+      682,
+      378
+    ],
+    "to_old_W04": {
+      "matches": 457,
+      "inliers": 90,
+      "reprojection_RMS_photo_px": 0.69,
+      "projected_old_W04_xy": [
+        674.22,
+        377.74
+      ],
+      "native_city_JPG_approx": [
+        943.1,
+        1468.15
+      ],
+      "old_W04_landmark_RMS_native_px": 5.8
+    },
+    "to_old_W10": {
+      "matches": 520,
+      "inliers": 88,
+      "reprojection_RMS_photo_px": 0.67,
+      "projected_old_W10_xy": [
+        810.36,
+        410.2
+      ],
+      "native_city_JPG_approx": [
+        951.2,
+        1471.82
+      ],
+      "old_W10_landmark_RMS_native_px": 4.2
+    },
+    "to_old_Vert_Plaza_VP_C": {
+      "matches": 1463,
+      "inliers": 761,
+      "reprojection_RMS_photo_px": 1.2,
+      "projected_old_photo_xy": [
+        256.43,
+        741.11
+      ],
+      "previously_seen_WIDE_C13_photo_symbol_xy_approx": [
+        257,
+        737
+      ]
+    },
+    "close_7375_to_mid_7374": {
+      "matches": 470,
+      "inliers": 175,
+      "reprojection_RMS_photo_px": 0.64,
+      "close_red_ring_center": [
+        683,
+        336
+      ],
+      "projected_mid_red_ring_center": [
+        681.73,
+        375.85
+      ]
+    },
+    "close_7375_to_old_VP_C": {
+      "matches": 367,
+      "inliers": 95,
+      "reprojection_RMS_photo_px": 0.64,
+      "projected_old_VP_C_ring": [
+        255.58,
+        739.08
+      ]
+    },
+    "rejected_direct_matches": "7373 wide-to-old W10 had only 22 inliers and produced conflicting city coordinate; 7375 close-to-W04 had only 16 inliers and misregistered to repeated buildings. Do not average false matches.",
+    "confidence": "high photo-identification of SAME old yellow map symbol and owner physical lift; approximate Atlas JPG point; exact roof position NOT derived from 3D roof scene"
+  },
+  "next_distinct_field_target": {
+    "existing_draft_marker_id": "r-vert4-east",
+    "research_city_map_1920_JPG_estimated_xy": [
+      1055,
+      1383
+    ],
+    "relative_to_current": "northeast of the player's ring on their north-up map; visible yellow double chevron on EAST/right edge of Vert Sector 4 block near Café Classe, not the same south-by-Pokémon-Center lift",
+    "new_owner_photo_7374_yellow_icon_centre_approx": [
+      895,
+      204
+    ],
+    "projected_older_VP_C_photo_xy": [
+      461.8,
+      595
+    ],
+    "independent_old_photographed_chevron_xy_approx": [
+      465,
+      592
+    ],
+    "status": "existing provisional yellow fixed-infrastructure icon, physically unverified",
+    "cautious_route": "From present ground lift, move north toward Café Classe along the streets by the Pokémon Center, then track the different yellow double-chevron further north-east on the eastern/right side of Vert Sector 4; if the facade is not accessible directly, check for a courtyard/rooftop approach instead of assuming a street door.",
+    "capture": [
+      "actual physical lift (ground or accessible roof) photo",
+      "north-up wider current-position red-ring map at its actual base",
+      "north-up close-up position map",
+      "upper arrival location only if easy/safe"
+    ],
+    "no_wild_zone_entry_required_by_map": true,
+    "no_reward_or_mission_number_invented": true
+  },
+  "repo_media_policy": {
+    "owner_now_explicitly_authorizes_GitHub_source_assets_for_guide": true,
+    "desired_repo_path": "assets/atlas/holovators/vert4-south/",
+    "actual_binary_upload_status": "pending; photo bytes not yet pushed by available GitHub text-only content actions",
+    "sources_referenced_by_SHA256": true,
+    "do_not_break_live_site": true,
+    "no_placeholder_broken_image_urls": true
+  },
+  "completion_gates": {
+    "owner_physical_ground_photo": true,
+    "owner_two_ground_position_maps": true,
+    "owner_rooftop_scene_reported": true,
+    "exact_ground_native_city_image_point_to_one_pixel": false,
+    "exact_roof_native_city_image_xy": false,
+    "fully_verified_native_ground_to_roof_coordinates": false,
+    "external_23_category_marker_individually_recovered": false,
+    "production_chatgpt_site_changed": false,
+    "preserve_existing_draft_16_pins": true,
+    "preserve_hotelZ_ladder_L001": true
+  },
+  "sources_independent": [
+    "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+    "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City"
+  ]
+}

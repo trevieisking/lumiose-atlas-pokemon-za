@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch": "ATLAS-HOLOVATOR-NONMISSION-OWNER-ICON-REVIEW-2026-11-22",
+  "checked_on": "2026-11-22",
+  "purpose": "Progress the 23 reported source Holovator markers by crosschecking owner map-photo yellow symbols with public non-mission Holovator and roof-route descriptions. NOT a production map pin file.",
+  "source_photos": {
+    "W08": "1000027204.heic",
+    "W09": "1000027205.heic",
+    "dimensions": "1536x865 each",
+    "contents": "JPEG/JFIF camera screenshot despite .heic filename",
+    "originals_private": true,
+    "source_image_bytes_copied_to_repo": false,
+    "manual_icon_pick_uncertainty_photo_px": 8,
+    "coordinate_space": "full original owner camera photo pixels, top-left origin; NOT source atlas image or game world XY"
+  },
+  "yellow_icons_reviewed_in_W08": [
+    {
+      "id": "W08-U01",
+      "photo_xy": [
+        405,
+        210
+      ],
+      "relative_location": "Magenta Sector 7 / Magenta Pokémon Center, west of Lumiose Sewers, north of Saison Canal",
+      "candidate_match": null,
+      "evidence_status": "owner_photo_icon_only",
+      "source_device_category_marker_id": null
+    },
+    {
+      "id": "W08-U02",
+      "photo_xy": [
+        689,
+        280
+      ],
+      "relative_location": "Magenta Street north/northwest of Magenta Plaza on canal north bank",
+      "candidate_match": "PHOTO-C11 possible",
+      "evidence_status": "owner_photo_icon_only_crossphoto_unverified",
+      "source_device_category_marker_id": null
+    },
+    {
+      "id": "W08-U03",
+      "photo_xy": [
+        994,
+        264
+      ],
+      "relative_location": "Autumnal Avenue north/east of Magenta Plaza, northwestern Magenta Sector 2 approach",
+      "candidate_match": "PHOTO-C05 / DR-H-07 mission #071 possible",
+      "evidence_status": "same_quest_neighbourhood_not_exact_device",
+      "source_device_category_marker_id": null
+    },
+    {
+      "id": "W08-U04",
+      "photo_xy": [
+        787,
+        655
+      ],
+      "relative_location": "Estival Avenue immediately west/southwest of Café Gallant, south edge of Magenta Sector 3",
+      "candidate_match": "W09-U01",
+      "evidence_status": "owner_photo_double_observed_and_independent_guide_street_confirmed",
+      "source_device_category_marker_id": null
+    },
+    {
+      "id": "W08-U05",
+      "photo_xy": [
+        663,
+        776
+      ],
+      "relative_location": "Northern edge of Bleu Sector 4 and Espace Vide, south of Estival Avenue",
+      "candidate_match": "W09-U02",
+      "evidence_status": "owner_photo_double_observed_and_independent_guide_neighbourhood_confirmed",
+      "source_device_category_marker_id": null
+    }
+  ],
+  "overlapping_W09_photo_icons": [
+    {
+      "id": "W09-U01",
+      "photo_xy": [
+        558,
+        294
+      ],
+      "relative_location": "Estival Avenue near Café Gallant, Magenta Sector 3 south edge",
+      "same_symbol_candidate": "W08-U04"
+    },
+    {
+      "id": "W09-U02",
+      "photo_xy": [
+        431,
+        412
+      ],
+      "relative_location": "Estival Avenue / Espace Vide near Bleu Sector 4 northern western complex",
+      "same_symbol_candidate": "W08-U05"
+    }
+  ],
+  "cross_photo_reprojection": {
+    "method": "Two manually identified visually identical yellow Holovator symbols in owner W08 and W09; compare W08-minus-W09 photo pixel displacement under unchanged game-map zoom, two independently observed icon pairs; estimated pure camera pan, NOT source-Atlas pixel registration.",
+    "W08_U04_minus_W09_U01": [
+      229,
+      361
+    ],
+    "W08_U05_minus_W09_U02": [
+      232,
+      364
+    ],
+    "displacement_difference": [
+      3,
+      3
+    ],
+    "displacement_residual_norm_photo_px_approx": 4.24,
+    "status": "two distinct owner-map symbols cross-supported by overlapping photos; no third independent image-control or exact original Atlas JPG transform; photo icon centres not physical street entry facades",
+    "conclusion": "Evidence that Café Gallant/Estival and Espace Vide/Bleu Sector 4 yellow icons are separately visible and are each consistent across both owner photos. Does not establish external category marker IDs, game coordinates or roof landing."
+  },
+  "owner_photo_related_research_leads": [
+    {
+      "id": "NONMISSION-L01",
+      "owner_refs": [
+        "PHOTO-C08",
+        "WIDE-C08"
+      ],
+      "area": "Vert Sector 3, southern building-complex courtyard close to Café Cyclone/Coulant Waterway",
+      "photo_approx_native_atlas_research_xy": [
+        [
+          1308,
+          1331
+        ],
+        [
+          1304,
+          1339
+        ],
+        [
+          1303,
+          1335
+        ]
+      ],
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-3.html",
+      "source_support": "Holovator in southern building-complex courtyard reaches rooftops with Hyper Potion, Colorful Screw and northern-complex rooftop items; guide mentions Confusion requirement for some pickups",
+      "connection_strength": "source_named_locality_and_previous_photo_neighbourhood_agree",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": false
+    },
+    {
+      "id": "NONMISSION-L02",
+      "owner_refs": [
+        "PHOTO-C09",
+        "PHOTO-C10",
+        "W08-U05",
+        "W09-U02"
+      ],
+      "area": "Estival Avenue / north of western Bleu Sector 4 building complex near Espace Vide",
+      "owner_wide_photo_pixels": [
+        {
+          "id": "W08",
+          "xy": [
+            663,
+            776
+          ]
+        },
+        {
+          "id": "W09",
+          "xy": [
+            431,
+            412
+          ]
+        }
+      ],
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-4.html",
+      "source_support": "Potion next to Holovator north of western building complex; lift-associated roof has Dive Ball, Sun Stone, Ice Stone, Repeat Ball and Water Stone as local leads",
+      "connection_strength": "stronger_two_owner_photos_and_independent_sector_neighbourhood; unproven whether old PHOTO-C09 and C10 depict the same or another lift",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": false
+    },
+    {
+      "id": "NONMISSION-L03",
+      "owner_refs": [
+        "W08-U04",
+        "W09-U01",
+        "PHOTO-C09 or PHOTO-C10 unresolved"
+      ],
+      "area": "Estival Avenue beside Café Gallant, on south edge of Magenta Sector 3",
+      "owner_wide_photo_pixels": [
+        {
+          "id": "W08",
+          "xy": [
+            787,
+            655
+          ]
+        },
+        {
+          "id": "W09",
+          "xy": [
+            558,
+            294
+          ]
+        }
+      ],
+      "source_url": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "source_support": "Raider King Magenta Sector 3 screw route explicitly starts at the Holovator on Estival Avenue by Café Gallant, crosses a roof bridge and drops into north building courtyard for Screw",
+      "connection_strength": "two owner's photos directly show a distinct yellow glyph immediately beside Café Gallant and independent source identifies Holovator at that precise named street landmark",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": false
+    },
+    {
+      "id": "NONMISSION-L04",
+      "owner_refs": [
+        "PHOTO-C07"
+      ],
+      "area": "Jaune Street on east side of Jaune Plaza, accessing Jaune Sector 11 southern roof",
+      "source_urls": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://sportsrant.indiatimes.com/gaming/list-of-all-colourful-screw-locations-in-pokmon-legends-z-a/amp_articleshow/126639673.html"
+      ],
+      "source_support": "Guides describe Holovator on Jaune Street to travel south across roofs toward Jaune Sector 11 Colorful Screws (source-local numbers, not canonical player checklist) and a Holovator in/near Sector 11 by a Pokémon Center used to reach Jaune Sector 5 across street via Roto-Glide; unclear whether these are the same unit.",
+      "connection_strength": "owner icon area and independent Jaune Street roof approach align; exact source Holovator unit vs more than one Jaune Street lift unresolved",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": "unknown"
+    },
+    {
+      "id": "NONMISSION-L05",
+      "owner_refs": [
+        "PHOTO-C12",
+        "WIDE-C12"
+      ],
+      "area": "Across the street from Sushi High Roller by Looker Bureau, Rouge Sector 5",
+      "photo_approx_native_atlas_research_xy": [
+        [
+          914,
+          410
+        ],
+        [
+          920,
+          400
+        ]
+      ],
+      "source_urls": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-5.html"
+      ],
+      "source_support": "Directly named Holovator opposite Sushi High Roller leads north to high rooftop and requires rolling/gliding to Looker Bureau roof; Rouge Sector 5 side mission #48 gives 'near the Holovator' street context",
+      "connection_strength": "strong_named_landmark_source_and_two_old_owner_photo_projections",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": false
+    },
+    {
+      "id": "NONMISSION-L06",
+      "owner_refs": [
+        "WIDE-C13"
+      ],
+      "area": "Near Café Classe/Vernal Avenue on western edge of Vert Sector 4, east of Aymis Park",
+      "photo_approx_native_atlas_research_xy": [
+        [
+          943,
+          1467
+        ],
+        [
+          952,
+          1473
+        ]
+      ],
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-4.html",
+      "source_support": "The sector page describes rooftop items accessible from a Holovator and from an 'eastern Holovator in the courtyard', including Colorful Screw and TM Body Slam access; no direct Café Classe facade photo.",
+      "connection_strength": "sector_and_roof_access_corroborated_not_yet_specific_photo_icon_to_courtyard_lift",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": "could overlap mission #23 depending sector border; not proven"
+    },
+    {
+      "id": "NONMISSION-L07",
+      "owner_refs": [
+        "PHOTO-C11",
+        "W08-U02"
+      ],
+      "area": "Magenta Street north/northwest of Magenta Plaza",
+      "owner_wide_photo_pixels": [
+        {
+          "id": "W08",
+          "xy": [
+            689,
+            280
+          ]
+        }
+      ],
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-street.html",
+      "source_support": "Street geography and Saison Canal landmarks supported; opened location page does not independently document this specific Holovator device.",
+      "connection_strength": "owner_game_map_symbol_only_no_external_device_corrob",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": "unknown"
+    },
+    {
+      "id": "NONMISSION-L08",
+      "owner_refs": [
+        "W08-U01"
+      ],
+      "area": "Magenta Sector 7 near Pokémon Center and Lumiose Sewers, north of canal",
+      "owner_wide_photo_pixels": [
+        {
+          "id": "W08",
+          "xy": [
+            405,
+            210
+          ]
+        }
+      ],
+      "source_support": "New direct screenshot-only yellow double-up-chevron in named area, no independent lift category point/facade matched.",
+      "connection_strength": "owner_photo_symbol_only",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": "unknown"
+    },
+    {
+      "id": "NONMISSION-L09",
+      "owner_refs": [
+        "W08-U03",
+        "PHOTO-C05 (possible)"
+      ],
+      "area": "Autumnal Avenue on northeastern side of Magenta Plaza, Magenta Sector 2",
+      "owner_wide_photo_pixels": [
+        {
+          "id": "W08",
+          "xy": [
+            994,
+            264
+          ]
+        }
+      ],
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html",
+      "source_support": "Sector index states mission #71 Alpha Watchog blocked Holovator in Magenta Sector 2; this new owner screenshot symbol is in same neighbourhood, not exact device registration.",
+      "connection_strength": "mission_link_candidate_not_unlocked_new_device",
+      "exact_device_source_marker_matched": false,
+      "exact_street_entry_and_roof_xy": null,
+      "possible_overlap_with_nine_missions": true
+    }
+  ],
+  "extra_guide_only_device_leads": [
+    {
+      "id": "GUIDE-ONLY-H01",
+      "area": "North Boulevard toward Rouge Sector 7",
+      "source_url": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "guide_context": "A Holovator on North Boulevard accesses rooftops leading back to Rouge Sector 3 (Raider King Rouge Sector 3 Screw 9) — may relate to Rouge 5/Sushi marker or another lift, needs direct map-category identity",
+      "source_category_marker_id": null,
+      "physical_device_uniqueness_proved": false
+    },
+    {
+      "id": "GUIDE-ONLY-H02",
+      "area": "Vert Sector 8 courtyard, southern building complex near Hotel Z",
+      "source_url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-8.html",
+      "guide_context": "Exp. Candy M on southern complex roof accessible from Holovator in courtyard; no verified owner symbol match",
+      "source_category_marker_id": null,
+      "physical_device_uniqueness_proved": false
+    },
+    {
+      "id": "GUIDE-ONLY-H03",
+      "area": "Hibernal Avenue north of Café Kizuna",
+      "source_url": "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+      "guide_context": "Holovator north of Café Kizuna reaches interior garden / Hyper Beam route; may overlap mission #80 (Hibernal Holovator). Must not count another physical unit until source marker IDs compared.",
+      "source_category_marker_id": null,
+      "physical_device_uniqueness_proved": false
+    },
+    {
+      "id": "GUIDE-ONLY-H04",
+      "area": "Jaune Sector 11 beside Pokémon Center along Jaune Street",
+      "source_url": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "guide_context": "Alternative post-lift route to Jaune Sector 5 via Roto Glide; possible same Holovator as NONMISSION-L04, unknown.",
+      "source_category_marker_id": null,
+      "physical_device_uniqueness_proved": false
+    }
+  ],
+  "visual_nonmatch_warning": "A Deltia's Gaming image independently labels 23 fast-travel locations (blue fast travel icons); 23 coincides numerically with Shackmaps/Gamer Guides Holovator category total but they are NOT automatically Holovators. Never copy fast-travel map pins to Holovator map.",
+  "visual_nonmatch_source": "https://deltiasgaming.com/pokemon-legends-z-a-all-fast-travel-locations/",
+  "sources": [
+    "https://www.shackmaps.com/pokemon-legends-z-a/map",
+    "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+    "https://www.serebii.net/pokearth/lumiosecity/",
+    "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-3.html",
+    "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-4.html",
+    "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-4.html",
+    "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/"
+  ],
+  "quality_gate": {
+    "photo_symbol_centers_are_not_atlas_xy": true,
+    "cross_photo_pan_does_not_prove_entry_or_exit": true,
+    "externally_reported_category_total": 23,
+    "external_individual_category_marker_ids_extracted": 0,
+    "confirmed_exact_atlas_entrance_pixels": 0,
+    "confirmed_exit_rooftop_locations": 0,
+    "confirmed_map_pins_added": 0,
+    "no_original_user_image_committed": true,
+    "no_republication_of_external_map_art": true,
+    "reconciliation_count_not_incremented": true
+  },
+  "next_validation": "Recover stable individual Holovator-category marker IDs/coordinates for all 23 from interactive map or game data, then compare W08/W09 Estival two-device pair with category marker coordinates and calibrated original Atlas 1920 JPG while determining ground facades and rooftop exit."
+}
