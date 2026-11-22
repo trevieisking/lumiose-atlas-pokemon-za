@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
-  panBy, changeAround, centreOn, wrapRotation, normaliseRoute
+  panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin
 } from "../atlas-explorer-geometry.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
@@ -122,6 +122,23 @@ test("zoom and pan bounds guard against a lost city map",()=>{
   near(centred.panX,0);near(centred.panY,0);
   assert.ok(panBy(startView(),30,-20,vp).zoom>0);
 });
+test("verified scaffold access is extensible without inventing map pins",()=>{
+  assert.equal(data.scaffolds?.length??0,0,"No verified scaffold coordinates may be fabricated");
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],source_record:"MAPS_FIELD_SURVEY.json"}),false);
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true}),false);
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"javascript:alert(1)"}),false);
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[960,960],pin_verified:true,source_record:"MAPS_FIELD_SURVEY.json"}),true);
+  assert.equal(eligibleMapPin({kind:"scaffold",xy:[1921,960],pin_verified:true,source_record:"MAPS_FIELD_SURVEY.json"}),false);
+  assert.equal(eligibleMapPin({kind:"zone",xy:[960,960]}),true,"Existing Wild Zone pins remain supported");
+  assert.equal(eligibleMapPin({kind:"sector",xy:[960,960]}),false,"Sectors still lack evidence-backed pin geometry");
+  const ids=new Set(["scaffold-01"]);
+  const route={id:"scaffold-access",point_id:"scaffold-01",steps:[
+    {space:"street",title:"Street",instruction:"Find entrance",evidence:"owner_survey"},
+    {space:"scaffold",title:"Climb",instruction:"Follow recorded scaffold",evidence:"owner_photographed"}]};
+  assert.equal(normaliseRoute(route,ids),true,"Verified scaffold routes can be added later without new engine");
+  assert.match(data.not_mapped.join(" "),/scaffold/i);
+  assert.match(data.not_mapped.join(" "),/Day-changing DLC Hyperspace/i);
+});
 test("route reject unknown teleport transitions and fake spaces",()=>{
   const ids=new Set(["lift"]);
   assert.equal(normaliseRoute({id:"x",point_id:"lift",steps:[{space:"teleport",title:"X",instruction:"Nowhere",evidence:"unverified"}]},ids),false);
@@ -137,9 +154,16 @@ test("new explorer is isolated and links to preserved map and photo pages",()=>{
   assert.match(html,/sector-maps\.html/);
   assert.match(html,/atlas-explorer-data\.json/);
   assert.match(html,/aeTurnLeft/);assert.match(html,/aeTurnRight/);
+  for(const kind of ["zone","holovator","ladder","landmark","scaffold"])
+    assert.match(html,new RegExp('data-layer="'+kind+'"'),"Missing independent "+kind+" layer");
+  assert.match(html,/data-layer="scaffold" disabled/);
+  assert.match(html,/id="aeLayers"/);
   assert.match(js,/pointermove/);assert.match(js,/changeAround/);
+  assert.match(js,/layerToggles\.forEach/);
+  assert.match(js,/eligibleMapPin/);
   assert.match(js,/evidenceText/);
   assert.match(css,/touch-action:none/);
+  assert.match(css,/\.ae-layers\{/);
   assert.doesNotMatch(js,/localStorage\s*\.|sessionStorage\s*\.|supabase\.|fetch\s*\(\s*["']https?:/i);
 });
 
