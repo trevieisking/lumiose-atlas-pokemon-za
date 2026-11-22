@@ -25,6 +25,21 @@ try{
   assert.match(await desktop.locator("#aeStats").textContent(),/20 Wild Zones · 48 named sectors · 21/);
   const natural=await desktop.locator("#aeMapImage").evaluate(img=>img.naturalWidth);
   assert.equal(natural,1920,"Real 1920px city map must load");
+  assert.equal(await desktop.locator("#aeCoverageGrid button").count(),25,"Every part of original map has a region button");
+  assert.equal(await desktop.locator("#aeCoverageDistricts button").count(),5);
+  assert.equal(await desktop.locator("#aeCoverageSector option").count(),49,"48 sectors plus placeholder");
+  await desktop.locator('#aeCoverageGrid button[data-area="1-1"]').click();
+  await desktop.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("row 1, column 1"));
+  assert.ok(Number.parseFloat(await desktop.locator("#aeZoomLabel").textContent())>=3,"Area button must zoom to genuine map pixels");
+  await desktop.locator("#aeCoverageFullCity").click();
+  await desktop.waitForFunction(()=>document.getElementById("aeZoomLabel").textContent.includes("1.00"));
+  await desktop.locator('#aeCoverageDistricts button[data-district="Bleu"]').click();
+  assert.match(await desktop.locator("#aeCoverageStatus").textContent(),/Bleu district.*starting area/);
+  await desktop.locator("#aeCoverageSector").selectOption("bleu-sector-3");
+  assert.match(await desktop.locator("#aeSelected").textContent(),/Bleu Sector 3/);
+  assert.match(await desktop.locator("#aeCoverageStatus").textContent(),/NOT a verified sector centre/);
+  assert.equal(await desktop.locator(".ae-pin[data-kind='zone']").count(),20);
+  await desktop.locator("#aeCoverageFullCity").click();
   assert.equal(await desktop.locator(".ae-pin[data-kind='zone']").count(),20);
   assert.equal(await desktop.locator(".ae-pin[data-kind='holovator']").count(),21);
   assert.equal(await desktop.locator(".ae-pin[data-kind='ladder']").count(),1);
@@ -132,6 +147,13 @@ try{
   assert.equal(await phone.locator(".ae-pin[data-kind='zone']:visible").count(),20);
   const fitsPhone=await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1);
   assert.equal(fitsPhone,true,"Layer choices must not cause sideways scrolling on phone");
+  assert.equal(await phone.locator("#aeCoverageGrid button").count(),25);
+  await phone.locator('#aeCoverageGrid button[data-area="5-5"]').click();
+  await phone.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("row 5, column 5"));
+  assert.ok(Number.parseFloat(await phone.locator("#aeZoomLabel").textContent())>=3);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+    "Complete city selector must fit Android viewport");
+  await phone.locator("#aeCoverageFullCity").click();
   await phone.locator("#aeTurnRight").click();
   await phone.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("45°"));
   await phone.locator("#aeNorth").click();
@@ -203,6 +225,18 @@ try{
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   await phone.screenshot({path:output+"/atlas-vert4-south-mobile.png",fullPage:true});
   assert.equal(mobileErrors.length,0,"Mobile JavaScript errors: "+mobileErrors.join(" | "));
+  // Every named-sector source card links to a real map; destination is a district view,
+  // never a guessed sector pin. Validate this on a phone-sized browser.
+  await phone.goto(base+"/sector-maps.html",{waitUntil:"networkidle"});
+  await phone.waitForFunction(()=>document.querySelectorAll(".sector-open-city-map").length===48,{timeout:20000});
+  assert.equal(await phone.locator(".sector-open-city-map").count(),48);
+  await phone.locator("#sector-bleu-sector-3 .sector-open-city-map").click();
+  await phone.waitForURL("**/atlas-explorer.html?sector=bleu-sector-3");
+  await phone.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("Bleu Sector 3"));
+  assert.equal(await phone.locator("#aeCoverageSector").inputValue(),"bleu-sector-3");
+  assert.equal(await phone.locator(".ae-pin[data-kind='holovator']").count(),21);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  await phone.screenshot({path:output+"/atlas-bleu-sector-deeplink-mobile.png",fullPage:true});
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
