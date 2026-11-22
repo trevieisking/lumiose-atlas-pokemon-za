@@ -25,6 +25,11 @@
       <label for="page">Page link to investigate</label>
       <input id="page" name="page" type="text" maxlength="160" required readonly aria-describedby="pageHelp">
       <small id="pageHelp">Automatically linked to the page you were viewing.<span id="pageContext" class="page-context" aria-label="Full guide page address"></span></small>
+      <div id="missionPicker" hidden>
+        <label id="missionNumberLabel" for="missionNumber">Mission number (optional)</label>
+        <input id="missionNumber" name="missionNumber" type="number" min="1" step="1" inputmode="numeric" aria-describedby="missionNumberHelp">
+        <small id="missionNumberHelp">Enter the mission number if the page link does not already identify it. Leave blank for general feedback.</small>
+      </div>
       <label for="category">Feedback category</label>
       <select id="category" name="category" required>
         <option value="stuck">I'm stuck</option>
