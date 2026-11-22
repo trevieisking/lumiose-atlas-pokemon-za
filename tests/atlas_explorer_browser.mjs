@@ -81,6 +81,15 @@ try{
   await desktop.locator("#aeSearch").fill("Café Cyclone");
   await desktop.locator("#aeResults button[data-record-id='vert-cyclone']").click();
   assert.match(await desktop.locator("#aeSelected").textContent(),/broad covered stone archway/i);
+  assert.match(await desktop.locator("#aeSelected").textContent(),/six original|six|six|Follow six original/i);
+  const cyclonePictures=desktop.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await cyclonePictures.count(),6,"All six original Cyclone photos must render");
+  assert.match(await desktop.locator("#aeSelected .ae-photo-grid").textContent(),/Covered stone archway/i);
+  assert.match(await desktop.locator("#aeSelected .ae-photo-grid").textContent(),/rooftop arrival/i);
+  for(let i=0;i<6;i++)await cyclonePictures.nth(i).scrollIntoViewIfNeeded();
+  await desktop.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===6 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth>0),{timeout:20000});
+  await desktop.screenshot({path:output+"/atlas-cyclone-original-photos-desktop.png",fullPage:true});
   assert.equal(await desktop.locator("#aeRouteSelect").inputValue(),"cafe-cyclone");
   await desktop.locator("#aeNextStep").click();
   assert.match(await desktop.locator("#aeCurrentStep").textContent(),/archway/i);
@@ -159,9 +168,22 @@ try{
   await phone.locator("#aeNextStep").click();
   assert.match(await phone.locator("#aeCurrentStep").textContent(),/Turn right/i);
   await phone.screenshot({path:output+"/atlas-mobile.png",fullPage:true});
+  await phone.locator("#aeFilters button[data-kind='all']").click();
+  await phone.locator("#aeSearch").fill("Wild Zone 6");
+  await phone.locator("#aeResults button[data-record-id='jaune12-wz6']").click();
+  assert.match(await phone.locator("#aeSelected").textContent(),/Houndour and Houndoom/i);
+  const jaunePictures=phone.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await jaunePictures.count(),5,"Wild Zone 6 must show five owner images");
+  for(let i=0;i<5;i++)await jaunePictures.nth(i).scrollIntoViewIfNeeded();
+  await phone.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth>0),{timeout:20000});
+  assert.match(await phone.locator("#aeSelected .ae-photo-grid").textContent(),/ground view|ground/i);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+    "New owner photo captions must not cause mobile horizontal overflow");
+  await phone.screenshot({path:output+"/atlas-wildzone6-original-photos-mobile.png",fullPage:true});
   assert.equal(mobileErrors.length,0,"Mobile JavaScript errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
-  console.log("ATLAS_BROWSER_SMOKE_OK original map, 20 zones, 48 sectors, 21 lifts, 1 ladder, layer combinations, no fabricated scaffolds, desktop wheel/drag, true mobile two-finger pinch+rotation, north reset, route steps, photos");
+  console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 101 owner JPGs, native desktop/touch gestures, all 11 recovered images loaded and captioned in Cyclone and Wild Zone 6 galleries, no made-up pins, original routes retained");
 }finally{
   if(browser)await browser.close();
   server.kill("SIGTERM");
