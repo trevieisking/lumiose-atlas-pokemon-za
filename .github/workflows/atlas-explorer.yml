@@ -7,6 +7,10 @@ on:
       - atlas-explorer.js
       - atlas-explorer-geometry.mjs
       - atlas-explorer-data.json
+      - sector-maps.js
+      - sector-maps.css
+      - tests/sector_map_directory.test.mjs
+      - tests/maps_recovered.test.mjs
       - tests/atlas_explorer.test.mjs
       - tests/atlas_explorer_browser.mjs
       - .github/workflows/atlas-explorer.yml
@@ -28,9 +32,9 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
-        run: node --test tests/atlas_explorer.test.mjs
+        run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs
       - name: Protect existing guide, checkmarks and map references
         run: python3 tests/validate_static.py
   atlas-browser:
