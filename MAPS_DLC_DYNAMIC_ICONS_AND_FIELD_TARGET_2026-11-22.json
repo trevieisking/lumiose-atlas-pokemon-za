@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "date": "2026-11-22",
+  "batch": "ATLAS-DYNAMIC-HYPERSPACE-CONFIRMATION-AND-SINGLE-FIELD-TARGET-2026-11-22",
+  "input_source": "Owner 3 direct in-game menu screenshots and clarification: dark/pink and black/yellow circular icons move every game day; they represent temporary Mega Dimension Hyperspace encounters, NOT fixed lifts or ladders.",
+  "source_screenshots_private": [
+    {
+      "filename": "1000027226.heic",
+      "readable_title": "HYPERSPACE WILD ZONE",
+      "example_estimated_hyperspace_level": 120,
+      "example_star_rating": "two highlighted stars",
+      "interpretation": "Yellow-black diamond map marker in this game session. Snapshot category and level are transient; not a persistent map pin."
+    },
+    {
+      "filename": "1000027227.heic",
+      "readable_title": "HYPERSPACE BATTLE ZONE",
+      "example_estimated_hyperspace_level": 140,
+      "example_star_rating": "three highlighted stars",
+      "interpretation": "Pink-black triangle map marker. Snapshot and difficulty are transient, not a fixed map pin."
+    },
+    {
+      "filename": "1000027228.heic",
+      "readable_title": "HYPERSPACE ROGUE MEGA ARENA",
+      "example_estimated_hyperspace_level": "???",
+      "example_star_rating": "five stars highlighted",
+      "interpretation": "Rainbow DNA/swirl-like symbol and arena are temporary event encounter location and not fixed-map infrastructure."
+    }
+  ],
+  "temporal_semantics": {
+    "asserted_by_owner": "Hyperspace icons dynamically shift locations every in-game day",
+    "treatment": "Do not permanently pin photo-observed Hyperspace portals onto the Atlas map, do not count as Holovators, and do not use them as spatial registration anchors because their position changes.",
+    "future_guide": "Explain icons as a separate dynamic map-legend category; if offering a user-session temporary overlay, label it transient with in-game day/time and never ship as a permanent location.",
+    "permitted_fixed_landmarks": "Permanent city streets, buildings, Pokémon Centers, plazas, Wild Zone structural boundaries, actual physical ladders, and independently verified stationary Holovators.",
+    "no_live_automated_tracking_or_refresh": "This evidence is only a static documentation correction; no in-game API or live location feed exists here."
+  },
+  "next_single_field_target": {
+    "id": "HOLOVAT-QUEST-061",
+    "mission_number": 61,
+    "mission_name": "My Favorite Holovator",
+    "sector": "Bleu Sector 3",
+    "map_reference": "Southeast of Bleu Plaza, north of Wild Zone 12/Aymlis Park, toward Vernal Avenue and Café Woof; outside Wild Zone 12",
+    "why_selected": "Nine Holovator-unlock missions already researched, but mission #061 has NO uniquely matched owner photo yellow-chevron lift icon and NO verified physical entrance/roof pair in the visual Atlas. Good one-at-a-time player field target.",
+    "route": "Use Bleu Plaza fast travel at Wild Zone 16. Head towards the east/southeast edge of the plaza into Bleu Sector 3; check streets north of Aymlis Park / Wild Zone 12, toward the Vernal Avenue/Café Woof side. Look for ground-level Holovator beside a building. Before unlocking, a Rust Syndicate grunt blocks it. If already cleared, only the functioning device may remain.",
+    "safety": "Approach from public streets; no need to enter Wild Zone 12 or take Pokémon encounters. Do not seek a moving Hyperspace marker. If mission not cleared, the grunt's Pokémon are Trubbish Lv45, Roselia Lv45, Mawile Lv46; return after preparing, don't battle just to take evidence.",
+    "progress_gate": "After returning to Hotel Z during Main Mission 20 Rust Syndicate arc. Player can already have cleared it; do not assume grunt is present.",
+    "required_owner_field_photos": [
+      "One ground-level photograph clearly showing physical lift and surrounding building/street facade",
+      "North-up map with player's red position ring precisely at lift base",
+      "One zoomed north-up map showing position and nearest permanent landmarks"
+    ],
+    "optional_field_photo": "After riding, north-up map with red ring standing at rooftop exit and a view toward the next roof; only if safely accessible.",
+    "do_not_invent": [
+      "Holovator-category unique physical marker ID",
+      "exact source map x/y",
+      "entry altitude/floor or rooftop exit",
+      "completion status for player's save file"
+    ],
+    "source_links": [
+      "https://game8.jp/pokemon-legends-z-a/731011",
+      "https://www.thonky.com/pokemon-legends-z-a/side-mission-061-my-favorite-holovator",
+      "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards",
+      "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+      "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-3.html"
+    ],
+    "source_mission_marker_caution": "Gamer Guides mission map reports source-space X8603 Y13820 for the mission marker, but this does not constitute the physical lift device or usable Atlas 1920 JPG coordinates.",
+    "exact_physical_lift_matched": false,
+    "draft_public_holovator_pin_added": false
+  },
+  "counts_unchanged": {
+    "reported_external_holovator_category_total": 23,
+    "independently_matched_individual_holovator_category_markers": 0,
+    "exact_verified_ground_to_roof_pair": 0,
+    "live_holovator_pins": 0,
+    "player_recorded_ladders": 1,
+    "live_ladder_pins": 0
+  },
+  "preserved": {
+    "private_owner_photo_binaries_not_committed": true,
+    "live_original_ChatGPT_Site_unchanged": true,
+    "edition_B_live_unchanged": true,
+    "GitHub_main_unchanged": true,
+    "Supabase_and_saved_progress_unchanged": true,
+    "old_map_assets_unchanged": true,
+    "scaffolds_deferred": true
+  }
+}
