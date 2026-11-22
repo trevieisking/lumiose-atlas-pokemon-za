@@ -35,6 +35,10 @@ try{
   await desktop.waitForFunction(()=>document.getElementById("aeZoomLabel").textContent.includes("1.30"));
   await desktop.locator("#aeTurnRight").click();
   await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("45°"));
+  await desktop.locator("#aeRose").click();
+  await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("0°"));
+  await desktop.locator("#aeTurnRight").click();
+  await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("45°"));
   await desktop.locator("#aeNorth").click();
   await desktop.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("0°"));
   await desktop.locator("#aeTint").click();
@@ -144,7 +148,7 @@ try{
     return zoom>1.1&&angle>7&&angle<90;
   },{timeout:10000});
   const gestureZoom=Number.parseFloat(await phone.locator("#aeZoomLabel").textContent());
-  await phone.locator("#aeNorth").click();
+  await phone.locator("#aeRose").click();
   await phone.waitForFunction(()=>document.getElementById("aePositionReadout").textContent.includes("0°"));
   const northZoom=Number.parseFloat(await phone.locator("#aeZoomLabel").textContent());
   assert.ok(Math.abs(northZoom-gestureZoom)<.01,"Compass north reset must retain pinch zoom");
