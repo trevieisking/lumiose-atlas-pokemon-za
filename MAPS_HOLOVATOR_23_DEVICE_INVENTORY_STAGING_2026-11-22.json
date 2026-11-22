@@ -379,7 +379,8 @@
     "MAPS_VERNAL_WZ1_OWNER_LIFT_SURVEY_2026-11-22.json",
     "MAPS_BLEU7_SOUTH_BOULEVARD_OWNER_LIFT_SURVEY_2026-11-22.json",
     "MAPS_BLEU8_CAFE_SOLEIL_OWNER_LIFT_SURVEY_2026-11-22.json",
-    "MAPS_BLEU4_ESPACE_VIDE_OWNER_LIFT_SURVEY_2026-11-22.json"
+    "MAPS_BLEU4_ESPACE_VIDE_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "MAPS_CAFE_GALLANT_ESTIVAL_OWNER_LIFT_SURVEY_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -408,17 +409,19 @@
     "owner_photographed_061_ground_side_research_pin_candidates": 1,
     "owner_mission_61_source_photo_count": 5,
     "owner_mission_61_owner_reported_roof_pad_photographed": 1,
-    "owner_photographed_holovator_ground_side_photo_groups_total": 7,
-    "owner_photographed_holovator_roof_arrival_scene_groups_total": 7,
+    "owner_photographed_holovator_ground_side_photo_groups_total": 8,
+    "owner_photographed_holovator_roof_arrival_scene_groups_total": 8,
     "owner_vert4_south_recent_photos": 5,
     "owner_vert4_east_recent_photos": 5,
     "owner_vernal_wz1_recent_photos": 5,
     "owner_bleu7_south_boulevard_recent_photos": 5,
     "owner_bleu8_cafe_soleil_recent_photos": 5,
-    "owner_bleu4_espace_vide_recent_photos": 5
+    "owner_bleu4_espace_vide_recent_photos": 5,
+    "owner_cafe_gallant_recent_photos": 5
   },
   "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted. Five mission #061 owner photos now prove there is visible rooftop arrival scene by owner report, but original 1920 city image roof XY is not obtained. Do not increment exact ground↔roof matched count or external category-ID count. New five-photo Vert southern Holovator is same previously catalogued WIDE-C13 / r-vert4-south, NOT new unique device: new red-ring photo projects old VP-C [256.43,741.11], matching old chevron [257,737]. Owner has street lift and roof photograph but roof map XY and category marker ID unavailable; 0 full georeferenced pair and 0/23 external IDs still.",
   "next_evidence_order": [
+    "After field-documenting distinct r-gallant on Estival Avenue beside Café Gallant, next research target is NONMISSION-L07/CAM-06/PHOTO-C11, a previously photographed *map symbol* on Magenta Street northwest of Magenta Plaza, without verified entrance or exact source city JPG XY. Navigate using in-game north-up plaza and fixed yellow double-chevron; do not fabricate door coordinates or claim necessarily nearest. Unvisited r-classe and r-cyclone remain open elsewhere.",
     "NEXT DISTINCT fixed lift: r-gallant by Café Gallant on Estival Avenue, northeast of now owner-ground-and-roof-photographed Espace Vide r-espace; prior independent photo symbol approx city JPG (578,1025). Source screenshot 7404 shows separate golden chevron up/right of player. Approach on ordinary streets, photograph facade, red-ring maps, rooftop arrival; 23-category marker ID unknown. No need to revisit r-espace or follow shifting Hyperspace portals.",
     "After ground+roof owner-photo verified DR-H-09 (Bleu Sector 8 / Café Soleil), continue to another visually distinct permanent golden Holovator, NOT mission 092 again. Existing r-classe mid Café Classe, r-cyclone by Café Cyclone, Estival Avenue near Café Gallant and Espace Vide/Bleu Sector 4 remain candidate research symbols. Do not assert closest next route without current player target map.",
     "Next distinct field target: r-classe MIDDLE golden chevron at lower Vert Sector 4 just east of Café Classe, west/southwest of owner-confirmed eastern courtyard lift r-vert4-east. Do NOT revisit farther-south r-vert4-south by Pokémon Center. Capture physical lift, standing wide/close map and optional rooftop view; preserve approximate old research pixel (1010,1420) until independently calibrated.",
@@ -907,5 +910,37 @@
       ],
       "area": "Estival Avenue at Café Gallant, northeast of Espace Vide"
     }
+  },
+  "cafe_gallant_owner_field_batch_25": {
+    "date": "2026-11-22",
+    "source": "MAPS_CAFE_GALLANT_ESTIVAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "preview": "r-gallant",
+    "nonmission_lead": "NONMISSION-L03",
+    "photos": 5,
+    "ground_device_photographed": true,
+    "owner_rooftop_arrival_photographed": true,
+    "original_source_city_map_research_xy_approx": [
+      578,
+      1025
+    ],
+    "exact_door_xy": null,
+    "roof_xy": null,
+    "individual_external_category_marker_id": null,
+    "guide_crops": {
+      "1000027409.heic": [
+        0,
+        0,
+        1536,
+        837
+      ],
+      "1000027410.heic": [
+        0,
+        0,
+        1536,
+        803
+      ]
+    },
+    "binaries_uploaded_to_GitHub": false,
+    "next_research_candidate": "NONMISSION-L07 CAM-06 Magenta Street northwest of Magenta Plaza, source-image XY unknown"
   }
 }
