@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 19,
+  "revision": 20,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Mission #061 has FIVE owner photos: actual ground entrance and two red-ring ground maps plus rooftop arrival view. Ground guide-image XY approx (765,1396); roof shown but not georeferenced to exact native X/Y. No new roof pin. If future precise roof coordinate desired, optional full north-up map ring from upper pad. Continue remaining physical lifts; don't revisit #061 ground location.",
+    "next_safe_record": "For eventual #061 published guide illustrations, use five newer clean cropped game-only screenshots 7244/7245/7246/7243/7247 INSTEAD of TV-framed 7232–7236, following MAPS_HOLOVATOR_061_CLEAN_GUIDE_PHOTO_REPLACEMENTS_2026-11-22.json. Ground pin remains approx (765,1396), rooftop position unverified. Do not change live site or publicize original user photo files without safe guide integration.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1627,6 +1627,50 @@
       "main_modified": false,
       "Supabase_or_progress_modified": false,
       "release_gate": "0 stable external physical category IDs reconciled of reported 23 and 0 exact physical ground->roof native city-map coordinate pairs."
+    },
+    "owner_061_preferred_clean_images_batch_18": {
+      "record": "MAPS_HOLOVATOR_061_CLEAN_GUIDE_PHOTO_REPLACEMENTS_2026-11-22.json",
+      "old_to_new_photo_names": [
+        [
+          "1000027232.heic",
+          "1000027244.heic"
+        ],
+        [
+          "1000027233.heic",
+          "1000027245.heic"
+        ],
+        [
+          "1000027234.heic",
+          "1000027246.heic"
+        ],
+        [
+          "1000027235.heic",
+          "1000027243.heic"
+        ],
+        [
+          "1000027236.heic",
+          "1000027247.heic"
+        ]
+      ],
+      "photos": 5,
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "file_bytes": "JPEG despite .heic name",
+      "ground_existing_map_XY_approx": [
+        765,
+        1396
+      ],
+      "rooftop_exact_map_XY": null,
+      "previous_source_evidence_preserved": true,
+      "owner_prefers_new_clean_photos_in_public_guide": true,
+      "private_viewer": "holovator_061_clean_five_photo_guide.html",
+      "downloadable_assets_pack": "holovator_061_clean_guide_assets.zip",
+      "desktop_phone_Chromium_verified": true,
+      "source_image_binaries_publicly_uploaded": false,
+      "live_site_updated": false,
+      "separate_map_research_draft_P59_unchanged": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
