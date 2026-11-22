@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
   "date": "2026-11-22",
   "batch": "ATLAS-DYNAMIC-HYPERSPACE-CONFIRMATION-AND-SINGLE-FIELD-TARGET-2026-11-22",
@@ -64,8 +64,19 @@
       "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-3.html"
     ],
     "source_mission_marker_caution": "Gamer Guides mission map reports source-space X8603 Y13820 for the mission marker, but this does not constitute the physical lift device or usable Atlas 1920 JPG coordinates.",
-    "exact_physical_lift_matched": false,
-    "draft_public_holovator_pin_added": false
+    "exact_physical_lift_matched": true,
+    "draft_public_holovator_pin_added": false,
+    "owner_physical_entry_obtained": true,
+    "owner_ground_survey_evidence": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+    "ground_photo_count": 4,
+    "owner_research_native_city_JPG_xy_approx": [
+      765,
+      1396
+    ],
+    "external_23_device_category_marker_id_matched": false,
+    "roof_destination_verified": false,
+    "status": "owner_ground_field_target_completed; external_category_ID_and_roof_exit_pending",
+    "rooftop_next_optional_capture": "If safely accessible after unlocking, stand where the lift arrives and send a north-up rooftop map with red player ring, plus an outward view of the roof. Do not require player to complete battle just for mapping."
   },
   "counts_unchanged": {
     "reported_external_holovator_category_total": 23,
@@ -73,7 +84,8 @@
     "exact_verified_ground_to_roof_pair": 0,
     "live_holovator_pins": 0,
     "player_recorded_ladders": 1,
-    "live_ladder_pins": 0
+    "live_ladder_pins": 0,
+    "owner_ground_physical_holovator_061_observed": true
   },
   "preserved": {
     "private_owner_photo_binaries_not_committed": true,
