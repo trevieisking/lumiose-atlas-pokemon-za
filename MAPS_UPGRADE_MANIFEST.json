@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 8,
+  "revision": 9,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "DR-H-03 and DR-H-04 now have independent in-game source quest-map, repaired-lift facade and rooftop access evidence; exact owner Holovator chevron-to-facade/roof pixel alignment remains missing. Next DR-H-02, then DR-H-08.",
+    "next_safe_record": "Next try DR-H-01 mission #004 Rouge Plaza / Sommi, where older owner icon alternatives differ about 73 source-image pixels and cannot be deduplicated. Then DR-H-07 #071 Magenta Sector 2. #23 and #80 have independent quest map and physical lift evidence but exact Atlas device entrance/roof points remain unverified.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1041,6 +1041,56 @@
         "https://gamewith.jp/pokemon-za/524377"
       ],
       "no_verified_pin_published": true
+    },
+    "mission_023_080_quest_map_physical_lift_rooftop_evidence": {
+      "record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "batch": "ATLAS-HOLOVATOR-SOURCE-FACADE-ROOF-RECHECK-23-80-2026-11-22",
+      "checked_on": "2026-11-22",
+      "ordered_missions": [
+        23,
+        80
+      ],
+      "source_mission_overview_and_closeup_image_pairs": 2,
+      "independent_physical_lift_battle_scene_examples": 2,
+      "newly_verified_quest_unlocked_holovator_roof_access_routes": 2,
+      "candidate_native_image_research_xy": {
+        "mission_023_VernalAvenue_WZ01": [
+          [
+            959,
+            1663
+          ],
+          [
+            968,
+            1668
+          ]
+        ],
+        "mission_080_HibernalAvenue_WZ15": [
+          [
+            1189,
+            392
+          ],
+          [
+            1197,
+            393
+          ],
+          [
+            1183,
+            402
+          ]
+        ]
+      },
+      "mission_map_pin_semantics": "Game8 pink stars denote side quest objective; they are NOT confirmed exact Holovator device icons or street entrances",
+      "rooftop_pickup_clarifications": [
+        "Mission 23 lift reaches roof by WZ1, no individually identified exact rooftop item proven.",
+        "Mission 80 restores roof access towards WZ15 with Larvitar reported; TM Earth Power is inside WZ15 area and cannot be asserted on Holovator roof.",
+        "StrategyWiki's Screw #84 is its own checklist ID for Jaune Sector 7 via mission 80 Hibernal Holovator and must NOT be treated as owner canonical Screw ID #84."
+      ],
+      "street_sector_cautions": "Hibernal Avenue borders multiple sector families; access to Jaune-07 rooftop is not proof lift street entry lies in Jaune-07 or Rouge-06",
+      "verified_exact_native_atlas_lift_entrance_pixels": 0,
+      "verified_owner_photo_icon_to_specific_quest_lift_exact_geometry": 0,
+      "verified_ground_entry_to_roof_exit_xy_pairs": 0,
+      "new_confirmed_item_screw_pins": 0,
+      "release_effect": "documentation_evidence_only_not_published_on_map"
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
