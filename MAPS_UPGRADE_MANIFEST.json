@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 7,
+  "revision": 8,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -778,7 +778,7 @@
     "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
     "evidence_scope": "Unknown entries stay explicitly unverified; issue #28 remains open until its full completeness gate"
   },
-  "last_evidence_intake_at": "2026-11-21",
+  "last_evidence_intake_at": "2026-11-22",
   "research_intakes": [
     {
       "id": "ATLAS-RESEARCH-MAPS-2026-11-21-R1",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "PHOTO-C03 / WIDE-H03 (mission #40): physical entrance/facade and rooftop exit verification; then #45 WIDE-H04. Independent guide now identifies yellow double-up-arrow as Holovator icon, but specific device and exact marker still unverified.",
+    "next_safe_record": "DR-H-03 and DR-H-04 now have independent in-game source quest-map, repaired-lift facade and rooftop access evidence; exact owner Holovator chevron-to-facade/roof pixel alignment remains missing. Next DR-H-02, then DR-H-08.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1014,9 +1014,36 @@
       "verified_ground_and_roof_route_pairs": 0,
       "publication": "research_only_no_code_or_map_dot_added",
       "protected_original_photo_files": "kept outside repository"
+    },
+    "mission_040_045_lift_image_route_evidence": {
+      "evidence_date": "2026-11-22",
+      "record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "reviewed_missions": [
+        40,
+        45
+      ],
+      "owner_photo_map_icon_match_status": "strong street-block correspondence, exact device/entrance/floor/image XY not proven",
+      "independent_quest_location_screenshots": 2,
+      "independent_repaired_lift_facade_screenshots": 2,
+      "roof_access_route_descriptions": 2,
+      "confirmed_holovator_exact_atlas_xy": 0,
+      "ground_entry_roof_exit_image_coordinate_pairs": 0,
+      "new_research_leads": [
+        "Mission 040 Colorful Screw and TM Iron Defense rooftop route",
+        "Mission 045 TM Iron Head and Larvitar rooftop route"
+      ],
+      "sources": [
+        "https://game8.jp/pokemon-legends-z-a/730135",
+        "https://game8.jp/pokemon-legends-z-a/730277",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power",
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-7.html",
+        "https://gamewith.jp/pokemon-za/524377"
+      ],
+      "no_verified_pin_published": true
     }
   },
-  "last_coordinate_source_qa_on": "2026-11-21",
+  "last_coordinate_source_qa_on": "2026-11-22",
   "coordinate_source_qa_checkpoints": [
     {
       "id": "ATLAS-HOLOVATOR-MISSION-LINKS-AND-QUEST-LOCATIONS-2026-11-21",
