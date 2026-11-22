@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "intake_date": "2026-11-22",
+  "purpose": "Owner explicitly requests cleaner screenshot-only images replace all 5 earlier television-framed photos in the eventual #061 guide page, without losing evidence/source coordinate registration or altering current live site.",
+  "mission": 61,
+  "title": "My Favorite Holovator",
+  "count": 5,
+  "image_format_note": "Uploaded files have .heic extensions but contain genuine JPEG bytes, 1536x865. For browser assets give them .jpg filenames without recompressing, using identical bytes.",
+  "sequence": [
+    {
+      "old": "1000027232.heic",
+      "new": "1000027244.heic",
+      "asset": "holovator-061-city-overview.jpg",
+      "role": "City overview",
+      "sha256": "23c7498623d544361173d1b16b599f1f1d58a90343c4d50e4e1c3b58669cad26",
+      "ring_xy": [
+        722,
+        352
+      ]
+    },
+    {
+      "old": "1000027233.heic",
+      "new": "1000027245.heic",
+      "asset": "holovator-061-position-map.jpg",
+      "role": "Position map",
+      "sha256": "59fdea727a75ff3210c736539a1e284e4d0ea08416dd588165d82980f601b1db",
+      "ring_xy": [
+        739,
+        317
+      ]
+    },
+    {
+      "old": "1000027234.heic",
+      "new": "1000027246.heic",
+      "asset": "holovator-061-close-map.jpg",
+      "role": "Close map",
+      "sha256": "69358a039bb501caf9c3d09ae09572537add905616dfc24ecb85f378169fa9ff",
+      "ring_xy": [
+        786,
+        340
+      ]
+    },
+    {
+      "old": "1000027235.heic",
+      "new": "1000027243.heic",
+      "asset": "holovator-061-ground-lift.jpg",
+      "role": "Actual lift",
+      "sha256": "f3e03c698b2b2332a836b49da478003849d632d3c943f82fd3d88c1b81cc5962",
+      "ring_xy": null
+    },
+    {
+      "old": "1000027236.heic",
+      "new": "1000027247.heic",
+      "asset": "holovator-061-rooftop-arrival.jpg",
+      "role": "Roof arrival",
+      "sha256": "34919c9cbbfaa691d124c02975818035c56e003b10aeab759f39c3608132aa91",
+      "ring_xy": null
+    }
+  ],
+  "geometry_crosscheck": {
+    "new_position_map_vs_earlier": "new 1000027245 -> old 1000027233 using SIFT/RANSAC: 103 feature ratio matches, 51 inliers; new ring ~ (739,317) projects near old (700.2,346.9), ~5.9 old source-photo pixels from old observed ring (706,346)",
+    "new_close_map_vs_earlier": "new 1000027246 -> old 1000027234: 151 ratio matches, 97 inliers; new ring ~ (786,340) projects near old (702.3,346.7), ~4.8 source-photo pixels from old observed ring (707,346)",
+    "conclusion": "Same Bleu Sector 3 ground location, consistent within manually estimated ring center variation; leave existing original city-JPG entrance research point approx (765,1396), no new roof XY fabricated.",
+    "ground_map_image_XY_approx": [
+      765,
+      1396
+    ],
+    "rooftop_city_JPG_image_XY": null,
+    "source_photo_sha_and_evidence_preserved": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json contains original five source references. New photos are PRESENTATION replacements, not evidence deletions."
+  },
+  "deliverables_created_in_current_conversation": [
+    "holovator_061_clean_five_photo_guide.html",
+    "holovator_061_clean_guide_assets.zip",
+    "atlas_061_clean_guide_desktop.png",
+    "atlas_061_clean_guide_phone.png"
+  ],
+  "private_viewer_offline_images_embedded": true,
+  "viewer_QA": {
+    "desktop": [
+      1280,
+      850
+    ],
+    "phone": [
+      390,
+      844
+    ],
+    "photo_tabs": 5,
+    "photo_images_decoded": 5,
+    "position_ring_toggle": true,
+    "zero_JS_errors": true,
+    "no_horizontal_overflow": true
+  },
+  "private_owner_photo_binary_committed_to_public_GitHub": false,
+  "deployment_status": "Images and guide-ready assets prepared locally and documented; not deployed or uploaded to public git until site integration authorized and tested. Both research and preview PRs remain unmerged.",
+  "preservation": {
+    "existing_16_Holovator_draft_markers_unchanged": true,
+    "existing_Side_Mission_061_approx_source_map_pin_unchanged": true,
+    "existing_Hotel_Z_L001_unchanged": true,
+    "original_ChatGPT_Site_A_unchanged": true,
+    "edition_B_live_unchanged": true,
+    "GitHub_main_unchanged": true,
+    "Supabase_and_feedback_rating_progress_unchanged": true
+  }
+}
