@@ -5,11 +5,13 @@ import {runInNewContext} from 'node:vm';
 const html=readFileSync(new URL('../feedback.html',import.meta.url),'utf8');
 const js=readFileSync(new URL('../feedback.js',import.meta.url),'utf8');
 const css=readFileSync(new URL('../feedback.css',import.meta.url),'utf8');
-for(const id of ['feedbackForm','page','pageContext','detailsHelp','category','details','honey','send','status','returnLink','headerBack']){
+for(const id of ['feedbackForm','page','pageContext','missionPicker','missionNumber','missionNumberLabel','missionNumberHelp','detailsHelp','category','details','honey','send','status','returnLink','headerBack']){
   assert.ok(html.includes('id="'+id+'"'), 'Missing form control: '+id);
 }
 assert.match(html,/<script src="feedback\.js" defer><\/script>/);
 assert.match(html,/<label for="page">Page link to investigate<\/label>/, 'The form should clearly name the affected page link');
+assert.match(html,/<div id="missionPicker" hidden>/, 'Mission selection must be optional and hidden outside mission pages');
+assert.match(html,/<input id="missionNumber"[^>]+type="number" min="1" step="1"/);
 assert.match(html,/<link rel="stylesheet" href="feedback\.css">/);
 assert.doesNotMatch(html,/Guide owner\?|feedback-owner\.html|Sign in to view reports/i,'Public guide feedback must not require or promote an account');
 assert.match(html,/name="category" required/);
@@ -21,9 +23,10 @@ assert.match(html,/id="pageContext" class="page-context" aria-label="Full guide 
 assert.doesNotMatch(html+js+css,/SUPABASE_SERVICE_ROLE_KEY|sb_secret_|SECRET\s*=/);
 
 const elements={};
-for(const id of ['feedbackForm','page','pageContext','detailsHelp','category','details','honey','send','status','returnLink','headerBack']) elements[id]={value:'',className:'',textContent:'',href:'',disabled:false};
+for(const id of ['feedbackForm','page','pageContext','missionPicker','missionNumber','missionNumberLabel','missionNumberHelp','detailsHelp','category','details','honey','send','status','returnLink','headerBack']) elements[id]={value:'',className:'',textContent:'',href:'',disabled:false};
 elements.details.value='A guide step that appears to be wrong.';
 elements.category.value='incorrect';
+elements.missionNumber.addEventListener=(event,_cb)=>{assert.equal(event,'input');};
 let submit;
 elements.feedbackForm.addEventListener=(event,cb)=>{assert.equal(event,'submit'); submit=cb;};
 let captured;
@@ -89,13 +92,16 @@ assert.equal(elements.send.disabled,false);
 // and submit an explicit, readable context within the unchanged backend fields.
 function contextualForm(query) {
   const controls={};
-  for(const id of ['feedbackForm','page','pageContext','detailsHelp','category','details','honey','send','status','returnLink','headerBack']) {
+  for(const id of ['feedbackForm','page','pageContext','missionPicker','missionNumber','missionNumberLabel','missionNumberHelp','detailsHelp','category','details','honey','send','status','returnLink','headerBack']) {
     controls[id]={value:'',className:'',textContent:'',href:'',disabled:false};
   }
   controls.details.value='The required ally battle is missing from the walkthrough.';
   controls.category.value='missing';
-  let listener,body,calls=0;
+  let listener,body,calls=0,inputListener;
   controls.feedbackForm.addEventListener=(_event,fn)=>{listener=fn;};
+  controls.missionNumber.addEventListener=(event,fn)=>{
+    assert.equal(event,'input'); inputListener=fn;
+  };
   runInNewContext(js,{
     URLSearchParams,
     document:{getElementById(id){assert.ok(controls[id],id);return controls[id];}},
@@ -107,11 +113,23 @@ function contextualForm(query) {
     },
     Error
   });
-  return {controls,submit:()=>listener({preventDefault(){}}),posted:()=>body,calls:()=>calls};
+  return {
+    controls,
+    submit:()=>listener({preventDefault(){}}),
+    posted:()=>body,
+    calls:()=>calls,
+    changeMission(number){
+      controls.missionNumber.value=number;
+      if(inputListener) inputListener();
+    }
+  };
 }
 const section='/lumiose-atlas-pokemon-za/index.html#walkthrough';
 const mission=contextualForm('?page='+encodeURIComponent(section)+'&anchor=mission-36');
 assert.equal(mission.controls.page.value,section,'Backend page must stay accepted by original writer');
+assert.equal(mission.controls.missionPicker.hidden,false);
+assert.equal(mission.controls.missionNumber.value,'36');
+assert.equal(mission.controls.missionNumber.max,'42');
 assert.equal(mission.controls.pageContext.textContent,section+':mission-36');
 assert.equal(mission.controls.returnLink.href,section+':mission-36');
 assert.equal(mission.controls.headerBack.href,section+':mission-36');
@@ -126,6 +144,8 @@ assert.equal(mission.controls.status.className,'status success');
 const questSection='/lumiose-atlas-pokemon-za/index.html#sidequests';
 const side=contextualForm('?page='+encodeURIComponent(questSection)+'&anchor=quest-160');
 assert.equal(side.controls.pageContext.textContent,questSection+':quest-160');
+assert.equal(side.controls.missionNumber.value,'160');
+assert.equal(side.controls.missionNumber.max,'203');
 await side.submit();
 assert.match(side.posted().details,/^Guide location: Side Mission 160\n\n/);
 assert.equal(side.posted().page,questSection);
@@ -141,6 +161,49 @@ for(const query of [
   await ignored.submit();
   assert.doesNotMatch(ignored.posted().details,/Guide location:/);
 }
+// Exact report location can be selected manually from a generic walkthrough.
+const manual=contextualForm('?page='+encodeURIComponent(section));
+assert.equal(manual.controls.missionNumber.value,'');
+assert.equal(manual.controls.returnLink.href,section);
+manual.changeMission('42');
+assert.equal(manual.controls.pageContext.textContent,section+':mission-42');
+assert.equal(manual.controls.headerBack.href,section+':mission-42');
+assert.match(manual.controls.detailsHelp.textContent,/Mission 42 automatically/);
+await manual.submit();
+assert.equal(manual.posted().page,section,'Manual location must not alter backend page validation');
+assert.match(manual.posted().details,/^Guide location: Mission 42\n\n/);
+manual.changeMission('');
+assert.equal(manual.controls.pageContext.textContent,section);
+assert.equal(manual.controls.details.maxLength,1500,'Clearing mission restores the full message limit');
+
+const manualSide=contextualForm('?page='+encodeURIComponent(questSection));
+manualSide.changeMission('203');
+assert.equal(manualSide.controls.returnLink.href,questSection+':quest-203');
+await manualSide.submit();
+assert.match(manualSide.posted().details,/^Guide location: Side Mission 203\n\n/);
+
+for(const bad of ['0','43','999','2.5','36<script>','003']) {
+  const invalidMission=contextualForm('?page='+encodeURIComponent(section));
+  invalidMission.changeMission(bad);
+  await invalidMission.submit();
+  assert.equal(invalidMission.calls(),0,'Invalid mission input must never reach server: '+bad);
+  assert.equal(invalidMission.controls.status.className,'status error');
+  assert.equal(invalidMission.controls.returnLink.href,section,'Invalid mission must not alter return link');
+  assert.match(invalidMission.controls.details.value,/required ally battle/);
+}
+const badSide=contextualForm('?page='+encodeURIComponent(questSection));
+badSide.changeMission('204');
+await badSide.submit();
+assert.equal(badSide.calls(),0);
+
+const otherPage='/lumiose-atlas-pokemon-za/index.html#items';
+const other=contextualForm('?page='+encodeURIComponent(otherPage));
+assert.equal(other.controls.missionPicker.hidden,true);
+assert.equal(other.controls.missionNumber.disabled,true);
+assert.equal(other.controls.returnLink.href,otherPage);
+await other.submit();
+assert.doesNotMatch(other.posted().details,/Guide location:/);
+
 const capped=contextualForm('?page='+encodeURIComponent(section)+'&anchor=mission-36');
 const oversized='x'.repeat(capped.controls.details.maxLength+1);
 capped.controls.details.value=oversized;
