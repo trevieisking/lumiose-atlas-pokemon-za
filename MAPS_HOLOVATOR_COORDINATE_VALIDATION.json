@@ -212,7 +212,45 @@
         "entry_floor": null,
         "roof_exit_floor": null,
         "confirmed_map_pin": false,
-        "assessment": "Strong independent objective neighbourhood and photographed physical lift, multiple owner icon candidates disagree ~73px; cannot assign exact yellow symbol or owner native JPG entrance without rectified same-building evidence"
+        "assessment": "Strong independent objective neighbourhood and photographed physical lift, multiple owner icon candidates disagree ~73px; cannot assign exact yellow symbol or owner native JPG entrance without rectified same-building evidence",
+        "crossphoto_owner_game_symbol_recheck": {
+          "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+          "W06_photo_pixel": [
+            39,
+            399
+          ],
+          "W07_photo_pixel": [
+            656,
+            502
+          ],
+          "difference_W06_to_W07": [
+            617,
+            103
+          ],
+          "approximate_original_map_JPG_points_from_independent_three_control_fits": [
+            [
+              826.8,
+              569.9
+            ],
+            [
+              835.7,
+              588.3
+            ]
+          ],
+          "interpretation": "The SAME west-of-Rouge-Plaza map glyph is repeat-visible across two independent owner photos; approximate source atlas y differs 18.4 px between manual projections. Relation to Sommi's precise street-level entrance still unverified.",
+          "older_research_alternatives": [
+            [
+              831,
+              633
+            ],
+            [
+              830,
+              560
+            ]
+          ],
+          "resolution": "still_ambiguous; not a verified quest-device pin",
+          "full_physical_device_verified": false
+        }
       }
     },
     {
@@ -1454,9 +1492,22 @@
         "ground_area": "South Boulevard / Southside Street, Bleu Sector 8 southwest of Wild Zone 10, near Café Soleil and southwest of Bleu Plaza",
         "ground_area_warning": "Quest references say southeast of WZ10; keep exact sidewalk/building relative location linked to source screenshot rather than assume WZ10 geometric centre from incomplete photos",
         "owner_photo_holovator_symbol": {
-          "source_photo": null,
-          "approximate_atlas_native_jpg_xy": null,
-          "status": "no distinct owner yellow double-chevron matched to this exact Bleu Sector 8 mission device"
+          "source": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+          "photo_id": "W10",
+          "approximate_original_photo_xy": [
+            63,
+            453
+          ],
+          "approximate_native_1920_map_research_xy": [
+            351.6,
+            1495.9
+          ],
+          "candidate_area": "Bleu Sector 8 / Café Soleil / South Boulevard",
+          "status": "one_in_game_yellow_symbol_observed_near_external_mission_92_quest_area; no exact source device identity / facade / roof confirmation",
+          "exact_holovator_category_marker_id": null,
+          "verified_exact_entry_xy": null,
+          "verified_roof_exit_xy": null,
+          "do_not_count_as_verified": true
         },
         "independent_in_game_map": {
           "source_page": "https://game8.jp/pokemon-legends-z-a/731477",
@@ -1668,5 +1719,30 @@
     "roof_entry_exit_xy_pairs": 0,
     "public_site_changes": 0,
     "next": "Source map separately reports 23 category devices; nine mission-linked quest accounts now have map screenshots/rewards/access, but need 23 individual device category IDs and physical owner photo geometry prior to complete inventory or pin release."
+  },
+  "evidence_batch_8": {
+    "id": "ATLAS-W06-W07-HOLOVATOR-TWO-VIEW-PLUS-W10-2026-11-22",
+    "evidence_file": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+    "photo_to_photo_translation_W06_W07": [
+      615.75,
+      104.75
+    ],
+    "four_control_RMS_photo_px": 2.09,
+    "photo_corresponding_holovator_glyphs": 3,
+    "newly_recorded_areas": [
+      "Jaune Sector 4 separately visible glyph in W06 and W07",
+      "Café Soleil/Bleu Sector 8 W10 single-view possible mission 92 glyph"
+    ],
+    "mission_4_multi_photo_symbol_now_confirmed_as_same_icon": true,
+    "mission_4_exact_quest_device_still_unverified": true,
+    "mission_92_direct_owner_photo_symbol_candidate_added": true,
+    "external_chinese_all_ladders_holovators_map_source": "https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600",
+    "game_mechanics_note": "Holovators become recorded in player's map when investigated; broken gray until repaired. Nine mission-locked lifts documented independently.",
+    "source_category_ids": 0,
+    "verified_exact_entrance_xy": 0,
+    "verified_roof_exit_xy": 0,
+    "public_map_dots_added": 0,
+    "copy_external_image": false,
+    "original_photo_binaries_private": true
   }
 }
