@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "inventory_revision": 4,
+  "inventory_revision": 5,
   "date": "2026-11-22",
   "intent": "Evidence register to support subsequent single controlled Atlas Holovator map-pin release, AFTER all distinct physical Holovators are checked. NOT a production pin layer.",
   "reported_external_marker_category_count": 23,
@@ -266,7 +266,8 @@
     "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
     "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
     "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
-    "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json"
+    "MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json",
+    "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -287,10 +288,14 @@
     "all_ten_owner_photo_symbol_groups_reconciled_research_only": 16,
     "all_ten_owner_photo_symbol_observations": 28,
     "all_ten_owner_photo_repeated_groups": 12,
-    "all_ten_owner_photo_single_groups": 4
+    "all_ten_owner_photo_single_groups": 4,
+    "owner_private_photo_comparison_v4_total_photos": 13,
+    "owner_private_photo_comparison_v4_symbol_groups": 18,
+    "owner_private_photo_comparison_v4_observations": 36
   },
-  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs.",
+  "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs.",
   "next_evidence_order": [
+    "Confirm each of FOUR Vert Plaza-adjacent distinct yellow chevrons and their exact street entrances/roof landings; black/pink round icons on plaza ring are NOT Holovators. Keep r-classe middle, r-vert4-east, r-vert4-south and r-cyclone separate. A previous approximate W04 Café Classe point was the southern fourth icon.",
     "Resolve northern Sushi High Roller / north Académie Étoile yellow icon relation to mission #080 (Café Kizuna rooftop), using actual red-to-yellow mission facade and physical exit. Preserve separate Looker Bureau icon. Do NOT count a guess as a unique device.",
     "Cross-register the two photo-proven distinct Estival Avenue yellow glyphs (W08/W09 Café Gallant vs Espace Vide/Bleu Sector 4) with independently named physical Holovator category markers, without treating picture pixel positions as Atlas image XY.",
     "Inspect each of source map's 23 Holovator-category glyphs directly, extract stable marker/page IDs and original source coordinate space, one by one.",
@@ -430,5 +435,112 @@
       "js_errors": 0
     },
     "caution": "16 photographed symbol GROUPS is NOT 16 verified unique physical Holovators, nor a completion fraction of the external 23. Do not overwrite existing site map or original source image."
+  },
+  "vert_plaza_four_yellow_symbols_batch_13": {
+    "date": "2026-11-22",
+    "source": "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
+    "photo_ids": [
+      "VP-A / 1000027221.heic",
+      "VP-B / 1000027222.heic",
+      "VP-C / 1000027220.heic"
+    ],
+    "original_photo_dimensions": [
+      1536,
+      865
+    ],
+    "north_locked": true,
+    "actual_yellow_arrow_symbol_groups": 4,
+    "distinct_location_descriptions": [
+      {
+        "symbol": "VERT4-EAST",
+        "area": "east edge of Vert Sector 4, southwest of Vert Plaza",
+        "native_source_city_JPG_research_xy": [
+          1055,
+          1383
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-C"
+        ]
+      },
+      {
+        "symbol": "VERT4-CAFE-CLASSE",
+        "area": "middle/lower edge Vert Sector 4 next to Café Classe",
+        "native_source_city_JPG_research_xy": [
+          1010,
+          1420
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-C"
+        ]
+      },
+      {
+        "symbol": "VERT4-SOUTH-POKEMON-CENTER",
+        "area": "farther south near Vert Pokémon Center",
+        "native_source_city_JPG_research_xy": [
+          943,
+          1466
+        ],
+        "repeat_photos": [
+          "VP-C",
+          "older W04/W10"
+        ],
+        "overlap": "same as earlier WIDE-C13, NOT entirely newly discovered"
+      },
+      {
+        "symbol": "CAFE-CYCLONE",
+        "area": "Coulant Waterway east/southeast of green plaza by Café Cyclone",
+        "native_source_city_JPG_research_xy": [
+          1299,
+          1337
+        ],
+        "repeat_photos": [
+          "VP-A",
+          "VP-B",
+          "VP-C",
+          "older W04/W05"
+        ],
+        "overlap": "same as earlier WIDE-C08"
+      }
+    ],
+    "source_photo_registration_QA": {
+      "VP_C_to_VP_A_RANSAC_inliers": 137,
+      "reprojection_RMS_photo_px": 1.6,
+      "VP_C_to_VP_B_RANSAC_inliers": 187,
+      "VP_C_to_old_W04_RANSAC_inliers": 30,
+      "W04_to_native_city_JPG_six_landmark_RMS_native_px": 5.8,
+      "note": "Source-JPG estimates are approximate yellow map-symbol centres, not certified precise Holovator physical entrances."
+    },
+    "important_nonholovator_icons": [
+      "black circular yellow diamond/star on west/south edge of green Wild Zone 2",
+      "black circular magenta triangle on east/southeast edge of green Wild Zone 2",
+      "WZ2 black/gold badge in centre"
+    ],
+    "nonholovator_pin_removed_from_research_graphic": true,
+    "visual_code_preview": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+    "offline_private_owner_viewer": "holovator_photo_comparison_v4.html",
+    "offline_private_owner_photos_in_public_repo": false,
+    "private_browser_QA": {
+      "desktop": [
+        1365,
+        905
+      ],
+      "mobile": [
+        390,
+        844
+      ],
+      "total_tabs": 13,
+      "new_VP_A_icon_markers": 3,
+      "new_VP_B_icon_markers": 1,
+      "new_VP_C_icon_markers": 4,
+      "JS_errors": 0
+    },
+    "photo_candidate_groups_across_all_photos_research_only": 18,
+    "photo_yellow_symbol_observations_across_all_photos": 36,
+    "source_category_physical_ids_newly_extracted": 0,
+    "exact_building_entrance_xy_verified": 0,
+    "exact_roof_exit_xy_verified": 0,
+    "production_pins_added": 0
   }
 }
