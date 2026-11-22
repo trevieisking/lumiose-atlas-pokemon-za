@@ -1,4 +1,4 @@
-/* Lumiose Atlas — evidence-labelled owner Holovator map. Read-only, no localStorage or Supabase. */
+/* Lumiose Atlas — photographed fixed Holovators; read-only viewer, no persistence or backend operations. */
 (() => {
 "use strict";
 const SOURCE="MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json";
