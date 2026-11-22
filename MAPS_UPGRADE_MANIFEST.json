@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 12,
+  "revision": 13,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Research visual prototype exists in separate draft PR #59 and two independent photo fits estimate Estival Café Gallant (578,1025) and Espace Vide (477,1130) on the source JPG. Neither is a confirmed entrance. Continue finding all 23 individual external category Holovator IDs, facade/exit evidence, then switch provisional dots to verified in a controlled production feature release. No map or scaffold deployment now.",
+    "next_safe_record": "All nine unlock missions researched. Owner W06/W07 paired icon match supports Sommi/Rouge Plaza, Hibernal #080 and separate Jaune Sector 4 symbol; W10 adds single #092 Bleu8 candidate. Source external 23 Holovator category IDs still not individually available. Finish exact match to physical entrances/roof exit, then one verified tested Holovator-only live map layer, scaffolds after.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1239,6 +1239,31 @@
       "browser_qa": "Local Chromium blocked loading both file:// and localhost; static JS syntax check succeeded on locally generated owner-photo interactive HTML, not full in-browser coverage of GitHub draft.",
       "release_order": "all 23 verified Holovators with exact owner-city-image entry and roof destination, then full tested Holovator map merge, scaffolds/ladders later",
       "app_baselines_unmodified": true
+    },
+    "owner_W06_W07_paired_symbols_batch_11": {
+      "evidence_file": "MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json",
+      "date": "2026-11-22",
+      "cross_photo_repeated_yellow_glyph_groups": 3,
+      "W06_W07_camera_pan_photo_pixels_mean": [
+        615.75,
+        104.75
+      ],
+      "four_control_translation_rms_camera_pixels": 2.09,
+      "new_owner_photo_lead": "Mission 092 Bleu Sector 8 Café Soleil approx native source city JPG (352,1496), only one W10 screenshot",
+      "existing_mission_004_lead": "W06/W07 same west WZ3 icon ≈(827,570)/(836,588), older alternatives (831,560)/(831,633) unresolved; exact quest device identity not proven",
+      "new_distinct_symbol_area": "Jaune Sector 4 east of Académie Étoile, repeated in W06/W07 but source JPG transforms disagree ~50px",
+      "external_full_city_reference": "https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600",
+      "source_mechanic": "9 initially broken side-mission Holovators; interacting can register working or disabled symbols on in-game map; ladders not listed as in-game map glyphs",
+      "visual_preview_draft_PR": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "provisional_map_symbol_dots_in_draft_preview": 13,
+      "private_offline_photo_preview_original_views": 5,
+      "private_photo_preview_visual_QA": "Chromium Playwright page.set_content passed 1365x905 + 390x844; 5 tabs loaded, selected detail, repeated filter, 0 JS page errors",
+      "draft_gitHub_preview_browser_QA": "not performed with original map image; V8 JS parse and static checks only",
+      "matched_23_external_category_marker_ids": 0,
+      "verified_exact_entrance_xy": 0,
+      "verified_exact_roof_exit_xy": 0,
+      "published_production_Holovator_pins": 0,
+      "production_maps_site_or_supabase_modified": false
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
