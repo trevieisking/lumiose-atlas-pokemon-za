@@ -2,6 +2,8 @@
 
 **Purpose:** GitHub source first; the owner will arrange permissions for the original ChatGPT live Site **later**. Do not assume a GitHub PR merge updates or grants write access to the original ChatGPT Site. Do not redeploy or replace it now.
 
+**22 November 2026 — Map 2.0 GitHub release AT-262:** [PR #90](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/90) is MERGED and the independent Atlas Explorer is [deployed](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45065788677) at source main SHA `e81e53079a0ef4c5fc2e81e294ae644826c32540`. New features are independently toggleable map pin layers and a tappable north-up compass; desktop wheel/drag and simulated mobile two-finger pinch/rotate passed [exact-head CI](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45065496238). The original Site has **not** been updated. Before any port, inspect its actual source and player-progress storage; do not overwrite live maps or assume GitHub deploys to ChatGPT Workspace.
+
 ## Source of truth and immutable baselines
 
 - Repository: `trevieisking/lumiose-atlas-pokemon-za`
