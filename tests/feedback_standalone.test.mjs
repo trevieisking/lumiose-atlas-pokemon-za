@@ -5,7 +5,7 @@ import {runInNewContext} from 'node:vm';
 const html=readFileSync(new URL('../feedback.html',import.meta.url),'utf8');
 const js=readFileSync(new URL('../feedback.js',import.meta.url),'utf8');
 const css=readFileSync(new URL('../feedback.css',import.meta.url),'utf8');
-for(const id of ['feedbackForm','page','category','details','honey','send','status','returnLink','headerBack']){
+for(const id of ['feedbackForm','page','pageContext','category','details','honey','send','status','returnLink','headerBack']){
   assert.ok(html.includes('id="'+id+'"'), 'Missing form control: '+id);
 }
 assert.match(html,/<script src="feedback\.js" defer><\/script>/);
@@ -14,10 +14,12 @@ assert.match(html,/name="category" required/);
 assert.match(html,/name="details" minlength="10" maxlength="1500"/);
 assert.match(html,/connect-src https:\/\/xzxqfrvqdgkzwujbkdbk\.supabase\.co/);
 assert.match(css,/max-width:480px/);
+assert.match(css,/\.page-context\{[^}]*overflow-wrap:anywhere/);
+assert.match(html,/id="pageContext" class="page-context" aria-label="Full guide page address"/);
 assert.doesNotMatch(html+js+css,/SUPABASE_SERVICE_ROLE_KEY|sb_secret_|SECRET\s*=/);
 
 const elements={};
-for(const id of ['feedbackForm','page','category','details','honey','send','status','returnLink','headerBack']) elements[id]={value:'',className:'',textContent:'',href:'',disabled:false};
+for(const id of ['feedbackForm','page','pageContext','category','details','honey','send','status','returnLink','headerBack']) elements[id]={value:'',className:'',textContent:'',href:'',disabled:false};
 elements.details.value='A guide step that appears to be wrong.';
 elements.category.value='incorrect';
 let submit;
@@ -38,6 +40,7 @@ const context={
 };
 runInNewContext(js,context);
 assert.equal(elements.page.value,'/lumiose-atlas-pokemon-za/index.html#walkthrough');
+assert.equal(elements.pageContext.textContent,elements.page.value,'The complete validated guide path must be visible as text');
 assert.equal(elements.returnLink.href,elements.page.value);
 assert.equal(typeof submit,'function');
 await submit({preventDefault(){}});
