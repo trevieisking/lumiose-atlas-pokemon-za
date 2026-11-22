@@ -120,7 +120,7 @@ function detailsFor(item){
     selectedPanel.append(paragraph(eligibleMapPin(item)
       ? "This scaffold pin is tied to documented ground coordinates. Any rooftop connection still needs its own evidence."
       : "No verified ground map coordinates yet. This location stays in the research directory, not on the permanent map."));
-    if(/^MAPS_[A-Z0-9_]+\.json$/.test(plain(item.source_record)))
+    if(/^MAPS_[A-Z0-9_-]+\.json$/.test(plain(item.source_record)))
       selectedPanel.append(link(item.source_record,"Read scaffold field-survey evidence"));
   }else if(item.kind==="landmark"&&!isPoint(item.xy)){
     selectedPanel.append(paragraph("Landmark is in the source directory but has no independently measured map position."));
