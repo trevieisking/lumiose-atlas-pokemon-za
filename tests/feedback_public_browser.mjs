@@ -41,6 +41,8 @@ try {
       assert.equal(await page.locator('#missionNumber').getAttribute('type'),'number');
       assert.equal(await page.locator('#missionNumber').getAttribute('max'),'42');
       assert.equal(await page.locator('#missionNumberLabel').textContent(),'Main Mission number (optional)');
+      const gap = await page.locator('#missionPicker').evaluate(el => parseFloat(getComputedStyle(el).marginTop));
+      assert.ok(gap >= 16,device.name+': mission field must have comfortable separation from page link');
       assert.equal(await page.locator('label[for="page"]').textContent(), 'Page link to investigate',
         'Visible label should explain what this page link is for');
       assert.equal(await page.locator('#pageContext').textContent(), PAGE, 'Full page path must be displayed as safe text');
