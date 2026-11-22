@@ -43,8 +43,8 @@ jobs:
           node-version: '22'
       - name: Install isolated Chromium smoke dependency, without changing package files
         run: npm install --no-save --package-lock=false playwright@1.56.1
-      - name: Install browser runtime
-        run: npx playwright install --with-deps chromium
+      - name: Confirm system Chrome is available for offline-style browser smoke
+        run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
         run: node tests/atlas_explorer_browser.mjs
       - name: Attach screenshot QA evidence
