@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 11,
+  "revision": 12,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Two different in-game yellow symbols on Estival Avenue (Café Gallant/Magenta 3 versus Espace Vide/Bleu 4) now corroborated across owner W08/W09 photos with ~4px agreement in camera-pan shift and named external lift-route guides. Next find separately addressable source Holovator category marker IDs and calibrate exact Atlas 1920 image XY / street facade / roof landing for all 23 before publishing any map dots.",
+    "next_safe_record": "Research visual prototype exists in separate draft PR #59 and two independent photo fits estimate Estival Café Gallant (578,1025) and Espace Vide (477,1130) on the source JPG. Neither is a confirmed entrance. Continue finding all 23 individual external category Holovator IDs, facade/exit evidence, then switch provisional dots to verified in a controlled production feature release. No map or scaffold deployment now.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1209,6 +1209,36 @@
       "map_pins_published": 0,
       "source_caution": "A public 23-fast-travel-points map is not a 23-Holovator locations map. Third-party interactive map category counts are accessible; individual category marker positions remain unextracted.",
       "no_live_runtime_or_data_changes": true
+    },
+    "owner_requested_holovator_visual_preview_batch_10": {
+      "research_record": "MAPS_ESTIVAL_TWO_PHOTO_APPROX_CALIBRATION_2026-11-22.json",
+      "preview_draft_pr": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "visual_preview_entrypoint": "holovator-research-preview.html",
+      "preview_location": "separate unmerged draft feature branch from main, not included in docs research PR branch",
+      "released_to_live_site": false,
+      "existing_map_code_modified": false,
+      "original_source_photo_binary_committed": false,
+      "approximate_research_markers_in_visual": 10,
+      "visually_plotted_source_holovator_category_device_ids": 0,
+      "confirmed_exact_physical_device_entrance_xy": 0,
+      "example_symbol_consensus_native_atlas_px": {
+        "Estival/CafeGallant": [
+          578,
+          1025
+        ],
+        "Estival/EspaceVide/BleuSector4": [
+          477,
+          1130
+        ]
+      },
+      "frame_align_fit_native_px_rms": {
+        "owner_W08": 12.86,
+        "owner_W09": 4.02
+      },
+      "quality_gate": "Two four-control manual image alignments, internal fit residuals only; no withheld architectural holdout, actual street entrance or roof exit verified. Draft research display only.",
+      "browser_qa": "Local Chromium blocked loading both file:// and localhost; static JS syntax check succeeded on locally generated owner-photo interactive HTML, not full in-browser coverage of GitHub draft.",
+      "release_order": "all 23 verified Holovators with exact owner-city-image entry and roof destination, then full tested Holovator map merge, scaffolds/ladders later",
+      "app_baselines_unmodified": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
