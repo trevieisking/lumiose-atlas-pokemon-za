@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f7f5fb">
+<meta name="description" content="Real-game Lumiose City map with rotation, pinch zoom, 48 sectors, 20 Wild Zones, owner Holovator photographs and careful building/roof directions.">
+<title>Interactive Rotating Lumiose City Atlas — Pokémon Legends: Z-A</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="recovered-articles.css"><link rel="stylesheet" href="atlas-explorer.css">
+<script src="recovered-articles.js" defer></script><script type="module" src="atlas-explorer.js"></script>
+</head><body class="atlas-article"><a class="skip-link" href="#main">Skip to Holovator fieldbook</a>
+<header class="atlas-article-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html#home" aria-label="Lumiose Atlas overview"><img src="atlas-logo.png" alt="" width="42" height="42"><span>LUMIOSE ATLAS<small>FREE ONLINE PLAYER’S GUIDE</small></span></a>
+    <div class="header-actions"><button class="action" id="atlasArticleShare" type="button">Share</button><a class="action feedback" id="atlasArticleFeedback" href="feedback.html">Send feedback</a><span id="atlasArticleShareStatus" aria-live="polite" class="muted"></span></div>
+  </div>
+  <div class="return-strip"><a href="index.html#walkthrough">← Back to walkthrough</a></div>
+</header>
+<div class="atlas-article-nav-wrap"><nav class="atlas-article-nav" aria-label="Complete guide menu">
+<a data-view="home" href="index.html#home"><span>◈</span> Overview</a>
+<a href="journey.html"><span>◎</span> Complete journey route</a>
+<a data-view="walkthrough" href="index.html#walkthrough"><span>01</span> Walkthrough</a>
+<a data-view="sidequests" href="index.html#sidequests"><span>+</span> Side missions</a>
+<a data-view="dimension" href="index.html#dimension"><span>✧</span> Mega Dimension</a>
+<a data-view="bosses" href="index.html#bosses"><span>02</span> Boss battles</a>
+<a href="boss-guide.html"><span>✶</span> Full boss plans</a>
+<a href="royale-guide.html"><span>⚔</span> Story Z-A Royale</a>
+<a href="type-chart.html"><span>×2</span> Type matchups</a>
+<a data-view="alphas" href="index.html#alphas"><span>03</span> Alpha fieldbook</a>
+<a class="active" data-view="maps" href="index.html#maps" aria-current="page"><span>↗</span> Lumiose maps</a>
+<a data-view="items" href="index.html#items"><span>✦</span> Item atlas</a>
+<a href="mable-research.html"><span>✧</span> Mable’s research &amp; rewards</a>
+<a href="shiny-hunting.html"><span>✳</span> Shiny hunting</a>
+<a href="shops.html"><span>₽</span> Shops &amp; Mega Shards</a>
+<a data-view="legends" href="index.html#legends"><span>★</span> Legendary routes</a>
+<a data-view="secrets" href="index.html#secrets"><span>?</span> Secrets &amp; tricks</a>
+<a href="home-connection.html"><span>⌂</span> Pokémon HOME</a>
+<a data-view="rewards" href="index.html#rewards"><span>✧</span> Online rewards</a>
+<a data-view="battles" href="index.html#battles"><span>⚔</span> Ranked battles</a>
+<a data-view="berries" href="index.html#berries"><span>04</span> Ultimate berry book</a>
+<a data-view="starters" href="index.html#starters"><span>05</span> Starter stats</a>
+<a data-view="pokedex" href="index.html#pokedex"><span>06</span> Lumiose Pokédex</a>
+<a data-view="essentials" href="index.html#essentials"><span>07</span> Essentials</a>
+<a data-view="sources" href="index.html#sources"><span>↗</span> Sources &amp; credits</a>
+</nav></div>
+
+<main class="atlas-article-main atlas-explorer" id="main">
+<section class="ae-hero">
+  <div class="ae-kicker">REAL IN-GAME CITY MAP · EVIDENCE-LED BUILDING NAVIGATION</div>
+  <h1>Explore Lumiose. <span>Know your way inside.</span></h1>
+  <p>Rotate, pinch and zoom the actual Pokémon Legends: Z-A city map. Find every Wild Zone, browse all 48 named sectors, inspect owner-photographed Holovators, and follow documented building, courtyard and rooftop access steps.</p>
+  <div class="ae-alert"><strong>Accuracy first:</strong> this is an interactive <strong>2D overhead map</strong>, not a made-up 3D city model. Yellow Holovator pins show <em>approximate researched neighbourhoods</em>, not surveyed door coordinates. We never connect rooms, roofs or ladders without evidence. Moving DLC Hyperspace portals are not fixed pins.</div>
+  <div class="ae-statline" id="aeStats" role="status" aria-live="polite">Loading original map records…</div>
+</section>
+
+<div class="ae-grid">
+<section class="ae-card ae-map-card" aria-label="Interactive original game map">
+  <div class="ae-toolbar">
+    <div class="ae-map-title"><h2>Bird’s-eye Lumiose</h2><p>North-up by default · rotate the original city geometry, not the street data</p></div>
+    <div class="ae-style-switch" role="group" aria-label="Map appearance">
+      <button type="button" id="aeOriginal" aria-pressed="true">Original game</button>
+      <button type="button" id="aeTint" aria-pressed="false">Atlas colour</button>
+    </div>
+  </div>
+  <div class="ae-toolbar ae-tool-controls" role="group" aria-label="Map navigation tools">
+    <button type="button" id="aeZoomOut" aria-label="Zoom out">−</button>
+    <span id="aeZoomLabel" class="ae-value" aria-live="polite">1.00×</span>
+    <button type="button" id="aeZoomIn" aria-label="Zoom in">+</button>
+    <span class="ae-separator" aria-hidden="true"></span>
+    <button type="button" id="aeTurnLeft" aria-label="Rotate map 45 degrees counterclockwise"><icon aria-hidden="true">↺</icon> Rotate −</button>
+    <button type="button" id="aeTurnRight" aria-label="Rotate map 45 degrees clockwise">Rotate + ↻</button>
+    <button type="button" id="aeNorth" aria-label="Reset compass to north">North ↑</button>
+    <button type="button" id="aeReset">Reset view</button>
+  </div>
+  <div class="ae-map-shell">
+    <div class="ae-map-viewport" id="aeViewport" tabindex="0" role="region" aria-label="Interactive rotating Lumiose map: drag to pan, wheel or pinch to zoom, two fingers to rotate, arrow keys to pan, square brackets to rotate and Home to reset north">
+      <div class="ae-stage" id="aeStage">
+        <img id="aeMapImage" src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Original overhead Lumiose City in-game overview, with original Wild Zones, roads, plazas and waterways" draggable="false">
+        <div class="ae-map-pins" id="aeMapPins"></div>
+      </div>
+      <div class="ae-rose" id="aeRose" aria-hidden="true"><span id="aeNeedle">▲</span><strong>N</strong></div>
+      <div class="ae-map-guidance" aria-hidden="true">Drag to explore · pinch to zoom and rotate</div>
+    </div>
+  </div>
+  <div class="ae-map-footer">
+    <span id="aePositionReadout">Original map · north up</span>
+    <span>Not live Switch tracking · all city pixels are from the existing 1920 × 1920 map</span>
+  </div>
+  <div class="ae-legend" aria-label="Map symbol key">
+    <span><b class="ae-symbol ae-symbol-zone">07</b> Wild Zone</span>
+    <span><b class="ae-symbol ae-symbol-lift">⤊</b> Holovator lead</span>
+    <span><b class="ae-symbol ae-symbol-ladder">≡</b> Surveyed ladder</span>
+    <span><b class="ae-symbol ae-symbol-landmark">◆</b> Landmark</span>
+    <span><b class="ae-symbol ae-symbol-sector">48</b> Sector directory only</span>
+  </div>
+</section>
+
+<aside class="ae-card ae-search-card" aria-labelledby="aeFindTitle">
+  <h2 id="aeFindTitle">Find a place</h2>
+  <label class="ae-label" for="aeSearch">Search the city, a sector, or a building entrance</label>
+  <input id="aeSearch" type="search" placeholder="Try Hotel Z, Café Cyclone, Wild Zone 6…" autocomplete="off">
+  <div id="aeFilters" class="ae-filters" role="group" aria-label="Map record category">
+    <button type="button" data-kind="all" aria-pressed="true">All</button>
+    <button type="button" data-kind="zone" aria-pressed="false">Wild Zones</button>
+    <button type="button" data-kind="holovator" aria-pressed="false">Holovators</button>
+    <button type="button" data-kind="ladder" aria-pressed="false">Ladders</button>
+    <button type="button" data-kind="landmark" aria-pressed="false">Landmarks</button>
+    <button type="button" data-kind="sector" aria-pressed="false">48 sectors</button>
+  </div>
+  <div class="ae-count" id="aeCount" aria-live="polite"></div>
+  <div class="ae-results" id="aeResults" role="group" aria-label="Matching locations"></div>
+  <p id="aeNoResults" class="ae-empty" hidden>No location matches. Try a neighbouring landmark or district.</p>
+  <section class="ae-selected" id="aeSelected" aria-label="Selected location and its evidence">
+    <h3>Select a map pin or place</h3><p>Tap a marker to see original pictures, local directions and whether a route has actually been checked.</p>
+  </section>
+</aside>
+</div>
+
+<section class="ae-route-card" id="aeRoutesSection" aria-labelledby="aeRouteTitle">
+  <div class="ae-route-heading">
+    <div><div class="ae-kicker">BUILDING / COURTYARD / ROOF PATHFINDER</div>
+      <h2 id="aeRouteTitle">The maze-aware guide</h2>
+      <p>We connect only photographed or explicitly reported steps. Select a known approach and move from one real landmark to the next. Unknown floors and onward roof paths remain marked as unknown.</p></div>
+    <label for="aeRouteSelect">Choose a documented approach
+      <select id="aeRouteSelect"><option value="">Choose an approach</option></select>
+    </label>
+  </div>
+  <div class="ae-route-workspace">
+    <div class="ae-route-detail" id="aeRouteDetail" aria-live="polite">
+      <strong>Routes available from owner fieldwork</strong>
+      <p>Hotel Z courtyard ladder, Café Cyclone’s hidden arch, Magenta Plaza terrace, Rouge Plaza, Wild Zone 6 and South Boulevard.</p>
+    </div>
+    <div class="ae-step-workspace">
+      <div class="ae-route-progress" id="aeRouteProgress">No route selected</div>
+      <div class="ae-step-card" id="aeCurrentStep" aria-live="polite"><p>Choose a route to see its street, passage, courtyard, stair, ladder or rooftop steps.</p></div>
+      <div class="ae-route-controls">
+        <button id="aePrevStep" type="button" disabled>← Previous</button>
+        <button id="aeNextStep" type="button" disabled>Next step →</button>
+        <button id="aeShowRouteMap" type="button" disabled>Show area on map</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ae-method">
+  <h2>What we can and cannot show yet</h2>
+  <div class="ae-method-cols">
+    <div><h3>📷 Direct photographic evidence</h3><p>Original owner photographs support many lift fronts, map close-ups and some rooftop arrivals. Photographs load only if their real JPG file is already present in this GitHub repository. Unknown images are labelled pending, not replaced with generated pictures.</p></div>
+    <div><h3>🏠 Building interiors</h3><p>A building can contain corridors, courtyards, stairs, hidden walls and different floors. An exterior map cannot tell us the whole interior. The route cards preserve the <em>known sequence of spaces</em> without drawing fictional rooms, floorplans or doors.</p></div>
+    <div><h3>🧭 Navigation limits</h3><p>No GPS-like live position comes from the Switch game. Choose your starting landmark manually. A rotated bird's-eye map is still 2D, not a full 3D fly-through. Dynamic DLC distortions and unverified ladders are never pinned permanently.</p></div>
+  </div>
+  <div class="ae-links">
+    <a href="maps.html">Original 20 Wild Zone map</a>
+    <a href="sector-maps.html">All 48 sector notes</a>
+    <a href="holovator-map.html">Holovator photo fieldbook</a>
+    <a href="index.html#items">264 items and 100 Screw clues</a>
+    <a href="index.html#walkthrough">Back to walkthrough</a>
+  </div>
+  <noscript><p class="ae-alert">JavaScript is required for rotation and filtering. The original Wild Zone and sector directory links above still work.</p></noscript>
+</section>
+</main></body></html>
