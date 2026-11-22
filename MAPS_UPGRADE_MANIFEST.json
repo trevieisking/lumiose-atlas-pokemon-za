@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 14,
+  "revision": 15,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Compare W07 east-Sushi High Roller yellow symbol (1108,301) and separate Looker Bureau symbol (763,280) against actual #080 mission facade north Café Kizuna, then validate all physical 23 Holovator category IDs. All ten private original photos now represented in interactive V3 visual (16 research groups), not on the live map. Scaffolds after Holovator release.",
+    "next_safe_record": "Vert Plaza corrected: Four independently separate yellow-chevron photo symbols, all outside WZ2 green plaza. Keep r-vert4-east, r-classe middle, r-vert4-south (older WIDE-C13), and r-cyclone separate. Continue matching all 23 physical Holovators' category IDs and actual entrance/rooftop endpoints before any production release; scaffold phase later.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1322,6 +1322,79 @@
       "production_live_holovator_pins_published": 0,
       "scaffold_ladder_phase_started": false,
       "existing_live_site_unchanged": true
+    },
+    "vert_plaza_four_chevron_correction_batch_13": {
+      "source_record": "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
+      "source_photos_private": [
+        "1000027221.heic",
+        "1000027222.heic",
+        "1000027220.heic"
+      ],
+      "actual_distinct_yellow_chevrons_around_green_Vert_Plaza": 4,
+      "native_city_JPG_research_points": [
+        {
+          "id": "Vert4East",
+          "xy": [
+            1055,
+            1383
+          ]
+        },
+        {
+          "id": "Vert4CafeClasse",
+          "xy": [
+            1010,
+            1420
+          ]
+        },
+        {
+          "id": "Vert4SouthPokemonCenter",
+          "xy": [
+            943,
+            1466
+          ]
+        },
+        {
+          "id": "CafeCycloneCoulant",
+          "xy": [
+            1299,
+            1337
+          ]
+        }
+      ],
+      "important_correction": "The old candidate r-classe ≈(948,1470) was a REAL southern yellow symbol near Vert Pokémon Center, not the middle Café Classe icon. Preserve both as separate entries. WZ2 green plaza center and black round symbols are NOT Holovator pins.",
+      "image_matching_QA": {
+        "VP_C_to_VP_A_inliers": 137,
+        "rms_photo_pixels": 1.6,
+        "VP_C_to_VP_B_inliers": 187,
+        "VP_C_to_old_W04_inliers": 30,
+        "old_W04_six_landmark_fit_rms_native_image_pixels": 5.8
+      },
+      "separate_draft_visual_PR": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "provisional_lift_symbol_dots_in_draft": 15,
+      "private_comparison_viewer": "holovator_photo_comparison_v4.html; all 13 user photos embedded solely in local downloadable HTML, never uploaded to public GitHub",
+      "private_viewer_group_count": 18,
+      "private_viewer_photo_observations": 36,
+      "offline_chromium_playwright_test": {
+        "desktop_viewport": [
+          1365,
+          905
+        ],
+        "phone_viewport": [
+          390,
+          844
+        ],
+        "photos": 13,
+        "VP_A_visible_chevrons": 3,
+        "VP_B_visible_chevrons": 1,
+        "VP_C_visible_chevrons": 4,
+        "JS_errors": 0
+      },
+      "external_verified_23_category_ids": 0,
+      "exact_entrance_to_roof_pairs": 0,
+      "production_guide_pins_published": 0,
+      "all_user_photos_outside_public_git": true,
+      "live_site_main_supabase_untouched": true,
+      "scaffold_phase_not_started": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
