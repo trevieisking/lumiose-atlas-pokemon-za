@@ -39,7 +39,7 @@ test("all 21 owner-survey entries, 111 genuine hosted images, no broken gallerie
   assert.equal(new Set(data.holovators.map(x=>x.id)).size,21);
   const pics=data.holovators.flatMap(x=>x.photos);
   assert.equal(pics.length,111);
-  assert.equal(new Set(pics.map(x=>x.path)).size,101);
+  assert.equal(new Set(pics.map(x=>x.path)).size,111);
   for(const p of pics){
     assert.match(p.path,/^assets\/atlas\/holovators\/(?:[a-z0-9-]+\/)+[a-z0-9-]+\.jpg$/);
     const file=fs.readFileSync(path.join(root,p.path));
