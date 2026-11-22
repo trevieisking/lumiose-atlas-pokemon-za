@@ -48,6 +48,9 @@ try {
     assert.equal(await page.locator('#returnLink').getAttribute('href'), PAGE, 'Back link must return to the walkthrough');
     assert.equal(await page.locator('#headerBack').getAttribute('href'), PAGE);
     assert.equal(await page.locator('#feedbackForm').count(), 1);
+    if (BRANCH_PREVIEW) {
+      assert.equal(await page.locator('a[href="feedback-owner.html"]').count(), 1, 'Owner inbox should be discoverable without exposing reports');
+    }
     assert.equal(await page.locator('#details').getAttribute('maxlength'), '1500');
     assert.equal(await page.locator('link[href="feedback.css"]').evaluate(link => Boolean(link.sheet)), true, 'Feedback CSS must load');
     assert.equal(await page.locator('#feedbackForm').evaluate(form => form.checkValidity()), false, 'Empty form must be invalid');
@@ -73,6 +76,13 @@ try {
     assert.equal(await page.locator('#ownerLogin').count(), 1, 'Owner login must be present');
     assert.equal(await page.locator('#ownerPassword').getAttribute('type'), 'password');
     assert.equal(await page.locator('#reportsPanel').isVisible(), false, 'Private reports must start hidden');
+    if (BRANCH_PREVIEW) {
+      assert.equal(await page.locator('#ownerDashboardAccess').isVisible(), true, 'Alternative dashboard instructions must be visible');
+      assert.equal(await page.locator('#ownerSupabaseLink').getAttribute('href'),
+        'https://supabase.com/dashboard/project/xzxqfrvqdgkzwujbkdbk/editor');
+      assert.match(await page.locator('#ownerDashboardAccess').textContent(), /atlas_reports/);
+      assert.equal(await page.locator('#reportList .report-entry').count(), 0, 'Alternative link must not expose private data');
+    }
     assert.equal(await page.locator('#reportList .report-entry').count(), 0, 'No reports exposed to visitors');
     assert.equal(await page.locator('link[href="feedback-owner.css"]').evaluate(link => Boolean(link.sheet)), true, 'Owner CSS must load');
     const ownerFits = await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);

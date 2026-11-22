@@ -10,6 +10,7 @@ for(const id of ['feedbackForm','page','pageContext','category','details','honey
 }
 assert.match(html,/<script src="feedback\.js" defer><\/script>/);
 assert.match(html,/<link rel="stylesheet" href="feedback\.css">/);
+assert.match(html,/Guide owner\? <a href="feedback-owner\.html">Open the private feedback inbox<\/a>/);
 assert.match(html,/name="category" required/);
 assert.match(html,/name="details" minlength="10" maxlength="1500"/);
 assert.match(html,/connect-src https:\/\/xzxqfrvqdgkzwujbkdbk\.supabase\.co/);
