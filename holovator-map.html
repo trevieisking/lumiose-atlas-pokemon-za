@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f7f5fb">
+<meta name="description" content="Owner-photographed fixed Holovator locations in Pokémon Legends: Z-A, with searchable Lumiose City image map, approach directions and original screenshot evidence.">
+<title>Holovator Lift Map &amp; Photo Fieldbook — Lumiose Atlas</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="recovered-articles.css"><link rel="stylesheet" href="holovator-map.css">
+<script src="recovered-articles.js" defer></script><script src="holovator-map.js" defer></script>
+</head><body class="atlas-article"><a class="skip-link" href="#main">Skip to Holovator fieldbook</a>
+<header class="atlas-article-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html#home" aria-label="Lumiose Atlas overview"><img src="atlas-logo.png" alt="" width="42" height="42"><span>LUMIOSE ATLAS<small>FREE ONLINE PLAYER’S GUIDE</small></span></a>
+    <div class="header-actions"><button class="action" id="atlasArticleShare" type="button">Share</button><a class="action feedback" id="atlasArticleFeedback" href="feedback.html">Send feedback</a><span id="atlasArticleShareStatus" aria-live="polite" class="muted"></span></div>
+  </div>
+  <div class="return-strip"><a href="index.html#walkthrough">← Back to walkthrough</a></div>
+</header>
+<div class="atlas-article-nav-wrap"><nav class="atlas-article-nav" aria-label="Complete guide menu">
+<a data-view="home" href="index.html#home"><span>◈</span> Overview</a>
+<a href="journey.html"><span>◎</span> Complete journey route</a>
+<a data-view="walkthrough" href="index.html#walkthrough"><span>01</span> Walkthrough</a>
+<a data-view="sidequests" href="index.html#sidequests"><span>+</span> Side missions</a>
+<a data-view="dimension" href="index.html#dimension"><span>✧</span> Mega Dimension</a>
+<a data-view="bosses" href="index.html#bosses"><span>02</span> Boss battles</a>
+<a href="boss-guide.html"><span>✶</span> Full boss plans</a>
+<a href="royale-guide.html"><span>⚔</span> Story Z-A Royale</a>
+<a href="type-chart.html"><span>×2</span> Type matchups</a>
+<a data-view="alphas" href="index.html#alphas"><span>03</span> Alpha fieldbook</a>
+<a class="active" data-view="maps" href="index.html#maps" aria-current="page"><span>↗</span> Lumiose maps</a>
+<a data-view="items" href="index.html#items"><span>✦</span> Item atlas</a>
+<a href="mable-research.html"><span>✧</span> Mable’s research &amp; rewards</a>
+<a href="shiny-hunting.html"><span>✳</span> Shiny hunting</a>
+<a href="shops.html"><span>₽</span> Shops &amp; Mega Shards</a>
+<a data-view="legends" href="index.html#legends"><span>★</span> Legendary routes</a>
+<a data-view="secrets" href="index.html#secrets"><span>?</span> Secrets &amp; tricks</a>
+<a href="home-connection.html"><span>⌂</span> Pokémon HOME</a>
+<a data-view="rewards" href="index.html#rewards"><span>✧</span> Online rewards</a>
+<a data-view="battles" href="index.html#battles"><span>⚔</span> Ranked battles</a>
+<a data-view="berries" href="index.html#berries"><span>04</span> Ultimate berry book</a>
+<a data-view="starters" href="index.html#starters"><span>05</span> Starter stats</a>
+<a data-view="pokedex" href="index.html#pokedex"><span>06</span> Lumiose Pokédex</a>
+<a data-view="essentials" href="index.html#essentials"><span>07</span> Essentials</a>
+<a data-view="sources" href="index.html#sources"><span>↗</span> Sources &amp; credits</a>
+</nav></div>
+
+<main class="atlas-article-main" id="main">
+<div class="hol-hero">
+<p class="hol-kicker">LUMIOSE CITY · OWNER PHOTOGRAPHIC SURVEY</p>
+<h1>Holovators <span>⤊ Lift Map</span></h1>
+<p>Explore the permanent yellow-chevron lifts, photographed at street level and on their rooftops. Choose a map dot or search by district and landmark to see an actual player's approach directions and original photographic evidence.</p>
+<div class="hol-important"><strong>Accuracy key:</strong> a photographed lift is confirmed as a physical location, but its <strong>dot on this historic city-map image is only an approximate neighbourhood alignment</strong>. It is not a precision GPS/device coordinate. Check the accompanying in-game map close-up and entrance photograph before walking. The reported 23-location external Holovator catalogue has not been individually reconciled.</div>
+<div class="hol-statusline"><span id="holStats" role="status" aria-live="polite">Loading owner field records…</span><a href="maps.html">Back to Wild Zone map</a><a href="sector-maps.html">All 48 sectors</a></div>
+</div>
+<div class="hol-layout">
+<section class="hol-panel hol-map-pane" aria-labelledby="holMapTitle">
+<div class="hol-bar"><div><h2 id="holMapTitle">Lumiose City — interactive lift map</h2><p>All pins use the original 1,920 × 1,920 image as a research overlay</p></div>
+<div class="hol-zoomcontrols" role="group" aria-label="Map zoom controls"><button type="button" id="holZoomOut" aria-label="Zoom out">−</button><output id="holZoomLabel">1.0×</output><button type="button" id="holZoomIn" aria-label="Zoom in">+</button><button type="button" id="holReset">Reset</button></div></div>
+<div class="hol-map-scroll" id="holMapScroll" role="region" tabindex="0" aria-label="Zoomable and scrollable Lumiose City map, with approximate fixed Holovator lift markers">
+<div class="hol-map-stage" id="holMapStage"><img src="maps/lumiose-game-map.jpg" alt="Original Lumiose city map from the Atlas guide, with a separate evidence-based layer of approximate permanent Holovator locations" width="1920" height="1920" draggable="false"><div class="hol-pin-layer" id="holPinLayer"></div></div>
+</div>
+<p class="hol-caption">⤊ = player-photographed permanent Holovator. Map placement is <strong>approximate</strong>; the original in-game neighbourhood and close-up photos identify the real building. Swipe to pan on mobile. Hyperspace event icons are <strong>not</strong> fixed lift pins.</p>
+</section>
+<aside class="hol-panel hol-sidebar" aria-labelledby="holListTitle">
+<div class="hol-sidehead"><h2 id="holListTitle">Find a lift</h2><p>Search the owner’s documented locations</p></div>
+<label class="hol-searchlabel" for="holSearch">Search landmark or district<input type="search" id="holSearch" placeholder="Try Café Cyclone, Bleu, WZ6…" autocomplete="off"></label>
+<div id="holFilters" class="hol-filters" aria-label="District filter">
+<button type="button" data-filter="All" aria-pressed="true">All</button><button type="button" data-filter="Vert" aria-pressed="false">Vert</button><button type="button" data-filter="Bleu" aria-pressed="false">Bleu</button><button type="button" data-filter="Magenta" aria-pressed="false">Magenta</button><button type="button" data-filter="Rouge" aria-pressed="false">Rouge</button><button type="button" data-filter="Jaune" aria-pressed="false">Jaune</button>
+</div>
+<p id="holCount" class="hol-small" aria-live="polite"></p>
+<div id="holList" class="hol-list" role="group" aria-label="Holovator location selection"></div>
+<p id="holNoResults" hidden>No matching lift records. Try another district or a nearby landmark.</p>
+<section id="holDetails" class="hol-details" aria-live="polite" aria-label="Selected Holovator directions"><h3>Choose a Holovator</h3><p>Tap a yellow pin or select a location from this directory.</p></section>
+</aside>
+</div>
+<section class="hol-method" aria-label="Photo evidence and map accuracy">
+<h2>How the evidence works</h2>
+<p>The original player photos record the ground entrance, one or more north-up game maps, and the rooftop arrival wherever available. Green Wild Zone areas and blue battle/map icons are <strong>not</strong> additional lift identities. Repeated photographs of the Looker Bureau lift are grouped under the original location, not counted twice.</p>
+<p>Seventeen survey entries already have <strong>90 genuine JPG photographs on GitHub main</strong>. The last 11 photos covering Wild Zone 6 and Café Cyclone are packaged for binary import; two older survey entries have written owner evidence but their photo binaries are not yet hosted. Every unavailable image is clearly marked, never presented as a broken gallery.</p>
+<p>The fieldbook covers the lifts the owner encountered; it does not claim that all 23 possible game devices have been matched. Precise roof exits and ladders remain separate work. Neither the original ChatGPT Site nor Supabase, feedback, ratings or player progress is changed by this independent GitHub map.</p>
+<h3>Ladders, scaffolding and roof routes</h3>
+<p>Ladders and scaffold access points are not individually identified on the owner's in-game city map screenshots, so this guide does <strong>not</strong> invent precise pins for them. Use a photographed lift to identify the correct building first. For additional roof access, follow only locally verified directions and look for visible climbable structures near the entrance, courtyard or roof edge. An untested climb remains unverified; an apparent nearby roof is not automatically connected.</p>
+<p><strong>Field-survey status:</strong> The owner's walk around Lumiose is complete for the permanent lifts they found and unlocked. The directory is a photographed field record, not a guarantee that all independently reported device IDs have been reconciled. Permanent lifts and moving DLC Hyperspace distortions must remain separate.</p>
+</section>
+</main></body></html>

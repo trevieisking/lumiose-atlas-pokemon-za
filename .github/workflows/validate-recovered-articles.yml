@@ -31,6 +31,12 @@ on:
       - shops.js
       - shops-data.js
       - tests/shops_recovered.test.mjs
+      - holovator-map.html
+      - holovator-map.css
+      - holovator-map.js
+      - MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json
+      - docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md
+      - tests/owner_holovator_fieldbook.test.mjs
       - maps.html
       - maps.css
       - maps.js
@@ -168,5 +174,9 @@ jobs:
         run: node --test tests/hyperspace_map_navigation.test.mjs
       - name: Verify existing 17-section static site remains unchanged and valid
         run: python3 tests/validate_static.py
+      - name: Check Holovator fieldbook JavaScript syntax
+        run: node --check holovator-map.js
+      - name: Validate 21-owner-lift photo fieldbook, genuine JPG assets and no invented ladder pins
+        run: node --test tests/owner_holovator_fieldbook.test.mjs
       - name: Guard against feedback form regression
         run: node --test tests/feedback_standalone.test.mjs
