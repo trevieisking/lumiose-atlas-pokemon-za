@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 21,
+  "revision": 22,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "SM-01 in progress: 10 original photos inspected; 6 manually registered to native 1920px Atlas city JPG, 11 approximate source-image icon projections, 2 cross-photo pair corroborations, 0 verified device entrance/roof exact pins",
+  "current_phase": "Independent clean-branch rotating city explorer: real 1920px game basemap, 20 original Wild Zones, 48 sector directory, 21 owner-surveyed approximate Holovators with 90 already hosted JPGs, Hotel Z courtyard ladder and six surveyed street/passage/roof route sequences. New standalone page awaiting CI/mobile browser QA and safe merge; original ChatGPT Site and Supabase untouched.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -1796,5 +1796,39 @@
       "copying_of_original_owner_photos": false,
       "site_code_changed": false
     }
-  ]
+  ],
+  "clean_standalone_rotatable_explorer_2026_11_22": {
+    "status": "feature_branch_awaiting_ci_and_visual_qa",
+    "branch": "feat/lumiose-city-explorer-clean-20261122",
+    "base_main_sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8",
+    "basemap": "maps/lumiose-game-map.jpg",
+    "native_size": [
+      1920,
+      1920
+    ],
+    "fictional_art_or_external_geometry_used": false,
+    "existing_wildzone_records": 20,
+    "source_sector_records": 48,
+    "owner_holovator_entries": 21,
+    "already_committed_original_jpgs": 90,
+    "owner_entries_with_missing_gallery": 4,
+    "first_verified_ground_ladder": "Hotel Z right-hand courtyard L-001",
+    "graded_building_route_sequences": 6,
+    "exact_holovator_door_or_roof_pixels_confirmed": 0,
+    "points_from_dynamic_dlc_hyperspace_pinned": 0,
+    "release_files": [
+      "atlas-explorer.html",
+      "atlas-explorer.css",
+      "atlas-explorer.js",
+      "atlas-explorer-geometry.mjs",
+      "atlas-explorer-data.json"
+    ],
+    "tests": [
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      ".github/workflows/atlas-explorer.yml"
+    ],
+    "existing_page_edits": "Add one link each to maps.html and sector-maps.html; preserve rest byte-for-byte",
+    "later_phase": "Inspect authoritative original ChatGPT Workspace project source when available, then plan independent port with feedback/player-data safety checks"
+  }
 }
