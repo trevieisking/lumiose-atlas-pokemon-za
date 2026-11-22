@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "date": "2026-11-22",
+  "evidence_scope": "Original owner gameplay screenshots and map position; research-only mapping evidence, not live pins",
+  "image_upload_policy": "All source uploads are JPEG byte streams named .heic. Copy unchanged JPEG bytes to .jpg paths. Proposed paths and hashes are provenance only; image binaries have not been pushed into repository by this documentation PR.",
+  "source_city_map_asset": "maps/lumiose-game-map.jpg",
+  "coordinates_are": "approximate pixel positions in a 1920x1920 source image, top-left origin; NOT in-game XYZ, verified door pixels, roof floor or GPS",
+  "preservation": {
+    "original_ChatGPT_site_unchanged": true,
+    "independent_GitHub_Pages_runtime_files_unchanged": true,
+    "Supabase_progress_feedback_untouched": true,
+    "original_map_asset_unchanged": true,
+    "prior_16_provisional_research_pins_preserved": true
+  },
+  "production_map_pin_added": false,
+  "individually_reconciled_external_category_marker_id": null,
+  "owner_ground_and_roof_visually_documented": true,
+  "exact_ground_to_roof_coordinate_pair_verified": false,
+  "survey_id": "OWNER-HOLOVATOR-DR-H-04-BLEU7-SOUTH-BLVD-20261122",
+  "existing_research_id": "DR-H-04",
+  "existing_photo_symbol_reference": "WIDE-H04 / CAM-13",
+  "mission": {
+    "number": 45,
+    "title": "On Maintenance Duty",
+    "status": "Strong location and worker-NPC concordance with external guide; no direct on-screen mission title or player-completion state in screenshot",
+    "external_sources": [
+      "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+      "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City"
+    ]
+  },
+  "location": {
+    "street": "South Boulevard",
+    "sector": "Bleu Sector 7 southern frontage",
+    "relations": [
+      "Immediately south of Bleu Sector 7",
+      "west of Vernal Avenue",
+      "south/southwest of Wild Zone 12 / Aymis Park",
+      "east of Bleu Pokémon Center / Nouveau Café (Truck No. 2)",
+      "northwest of Wild Zone 1"
+    ],
+    "photo_map_icon_matches_preexisting_named_area": true,
+    "existing_city_image_research_xy_approx": [
+      708,
+      1706
+    ],
+    "exact_street_entrance_city_image_xy": null,
+    "exact_roof_exit_city_image_xy": null
+  },
+  "ground_observation": "Working golden triple-chevron Holovator on black/dark façade against paved sidewalk on South Boulevard. Maintenance/construction-clothed character stands to left and another person to right (Diantha-related speech bubble). Do not infer their identity or quest status from clothing or speech.",
+  "rooftop_observation": "Owner-reported same-device rooftop arrival is a wide flat rooftop garden with rectangular blue-flower planters and bright pink Mega Crystals; ladder ahead on the facing building, slightly right of centre, and Investigate prompt near arrival pad. Roof ladder is a future candidate only: no climb, endpoints, height or exact city-map XY confirmed. Pink crystals are NOT evidence of a specific collectible Screw or item reward.",
+  "ground_position_proof": "Owner red ring lies on gold chevron along north side of South Boulevard in 7393–7395. Existing W04/W10 photo candidate WIDE-H04 researched near (706,1705) and (710,1706) city JPG; retain approximate consensus (708,1706) not claimed as independently aligned exact door.",
+  "photos": [
+    {
+      "original_filename": "1000027392.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 317704,
+      "sha256": "71bd69f09b624f80f533f1c64dd3096702860b3adddf800298b25eb43eaedefe",
+      "role": "ground",
+      "proposed_github_asset_path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-ground.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027393.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 216517,
+      "sha256": "35c427b22fa077d29ed4884d05869d7c4ff2be7cd13104418c08ea3ac5f1b28d",
+      "role": "wide-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-wide-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027394.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 215642,
+      "sha256": "e915f3cac06679f803287e64ed43d63e5511acc7ade91765f69300d7945bcbd6",
+      "role": "neighbourhood-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-neighbourhood-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027395.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 161680,
+      "sha256": "f324ddbd6278a9edafa02beec58d1e3523f0cc914ad7ad678e0f54131ef63b34",
+      "role": "close-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-close-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027396.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 316322,
+      "sha256": "a09a64fd1ef11e7c9559ce7391429816f5ad37cc56bbcdeee8c6117b7044fa08",
+      "role": "rooftop-arrival",
+      "proposed_github_asset_path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-rooftop-arrival.jpg",
+      "binary_in_repository": false
+    }
+  ],
+  "recommended_directions": "From Nouveau Café (Truck No. 2) or the Bleu Pokémon Center, proceed east along South Boulevard on the south side of Bleu Sector 7. Look for the functional golden Holovator on the black façade of the north-side buildings before Vernal Avenue. If the lift is not repaired in a new save, Side Mission 045's Durstin requires a drink.",
+  "roof_route_reference": "StrategyWiki Exploring Lumiose City describes a Colorful Screw route starting by the Holovator next to Bleu Sector 7 after Side Mission 045, but no exact item pickup location is authenticated from this five-photo batch.",
+  "future_non_holovator_evidence": [
+    "visible ladder on roof, unlocated; defer to ladder network phase",
+    "pink Mega Crystals on adjacent roof, not a numbered item pin",
+    "Investigate prompt not a confirmed reward"
+  ],
+  "next_candidate_research": {
+    "id": "DR-H-09",
+    "mission": 92,
+    "name": "The Beldum Blockade",
+    "area": "South Boulevard near Café Soleil / Bleu Sector 8, farther west",
+    "previous_candidate_native_city_JPG_xy_approx": [
+      352,
+      1496
+    ],
+    "status": "unverified physical entrance: W10 single-photo yellow map symbol and mission neighbourhood only; not assured next nearest device",
+    "navigation": "If continuing west, follow South Boulevard toward Café Soleil and check the yellow fixed double-chevron instead of transient DLC icons."
+  },
+  "original_owner_photo_count": 5,
+  "avoid_misclassification": [
+    "Do not count maintenance NPC as positive mission-completion proof",
+    "Do not label purple/pink dynamic DLC symbols as lifts",
+    "Do not mark ladder or Mega Crystal location as exact item pin"
+  ]
+}

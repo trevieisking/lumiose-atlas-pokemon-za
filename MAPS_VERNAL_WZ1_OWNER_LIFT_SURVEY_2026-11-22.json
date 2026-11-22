@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "date": "2026-11-22",
+  "evidence_scope": "Original owner gameplay screenshots and map position; research-only mapping evidence, not live pins",
+  "image_upload_policy": "All source uploads are JPEG byte streams named .heic. Copy unchanged JPEG bytes to .jpg paths. Proposed paths and hashes are provenance only; image binaries have not been pushed into repository by this documentation PR.",
+  "source_city_map_asset": "maps/lumiose-game-map.jpg",
+  "coordinates_are": "approximate pixel positions in a 1920x1920 source image, top-left origin; NOT in-game XYZ, verified door pixels, roof floor or GPS",
+  "preservation": {
+    "original_ChatGPT_site_unchanged": true,
+    "independent_GitHub_Pages_runtime_files_unchanged": true,
+    "Supabase_progress_feedback_untouched": true,
+    "original_map_asset_unchanged": true,
+    "prior_16_provisional_research_pins_preserved": true
+  },
+  "production_map_pin_added": false,
+  "individually_reconciled_external_category_marker_id": null,
+  "owner_ground_and_roof_visually_documented": true,
+  "exact_ground_to_roof_coordinate_pair_verified": false,
+  "survey_id": "OWNER-HOLOVATOR-DR-H-02-VERNAL-WZ1-20261122",
+  "existing_research_id": "DR-H-02",
+  "existing_photo_symbol_reference": "WIDE-H02 / CAM-12",
+  "mission": {
+    "number": 23,
+    "title": "Underneath the Holovator",
+    "status": "Independently documented quest site; no player quest-completion flag demonstrated in photos",
+    "external_source": "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator"
+  },
+  "location": {
+    "street": "Vernal Avenue",
+    "sector": "Near Vert Sector 9; do not claim exact boundary from street label",
+    "relations": [
+      "Northwest of Wild Zone 1",
+      "east side of Vernal Avenue",
+      "south/southeast of Stone Emporium",
+      "west/northwest of Pokémon Research Lab",
+      "west of Hotel Z / Vert Sector 8"
+    ],
+    "photo_map_icon_matches_preexisting_named_area": true,
+    "existing_city_image_research_xy_approx": [
+      964,
+      1666
+    ],
+    "exact_street_entrance_city_image_xy": null,
+    "exact_roof_exit_city_image_xy": null
+  },
+  "ground_observation": "Gold triple-chevron Holovator in paved/grassy recess against grey building wall. Small bin/recycling unit to left; bench to right; tree on right. Owner map ring coincides with yellow chevron on east side of Vernal Avenue immediately north/northwest of Wild Zone 1.",
+  "rooftop_observation": "Player stands on gold glowing arrival pad facing a sloped dark-tile roof; NPC visible beyond on higher roofline and a ladder visible on more distant building to the right. Investigate prompt displayed near lift. Ladder's exact attachment, access and endpoint not demonstrated; track visually only, without new permanent ladder pin.",
+  "ground_position_proof": "Owner red player ring directly on yellow map icon in 7388–7390. This is additional confirmation of preexisting owner-photo lead WIDE-H02; source-image research dot retained as approximate from earlier W04/W10, NOT independently recalculated.",
+  "photos": [
+    {
+      "original_filename": "1000027387.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 293856,
+      "sha256": "637b641bd1773abdf9b594a026df89bb4f544dd823185287d153fcadcdd7e328",
+      "role": "ground",
+      "proposed_github_asset_path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-ground.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027388.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 216826,
+      "sha256": "f608754628af0e5654fabc86dfa81a080323a53aa38b9d5e614c571aa32e54f5",
+      "role": "wide-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-wide-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027389.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 244633,
+      "sha256": "7c63109d24ccdada1bd4c362e752f66291f3b4fdc1bfbb90b2e9ef1c3b84528e",
+      "role": "neighbourhood-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-neighbourhood-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027390.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 208745,
+      "sha256": "4e44ec77f6d9a8f5692c40fd6a6e2d1234a41669ce75d8bc03e4ba231a66a9b6",
+      "role": "close-map",
+      "proposed_github_asset_path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-close-map.jpg",
+      "binary_in_repository": false
+    },
+    {
+      "original_filename": "1000027391.heic",
+      "actual_content_type": "image/jpeg",
+      "source_image_dimensions": [
+        1536,
+        865
+      ],
+      "byte_length": 288510,
+      "sha256": "ec2d2dc0270791322db4350d563921263ee0f7ab149433b87899b1fac1992c57",
+      "role": "rooftop-arrival",
+      "proposed_github_asset_path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-rooftop-arrival.jpg",
+      "binary_in_repository": false
+    }
+  ],
+  "recommended_directions": "From the Pokémon Research Lab or Wild Zone 1 northern edge, travel northwest toward Vernal Avenue. Find the small recessed Holovator beside the building east of the avenue, just north of Wild Zone 1, identifiable by a bin left and bench right. No Wild Zone entry is necessary.",
+  "next_field_survey": "Owner then proceeded west/southwest to south Bleu Sector 7 along South Boulevard; this is documented in separate batch 22.",
+  "unsafe_inferences_to_avoid": [
+    "Do not assert NPC Terra is currently there",
+    "Do not equate mission marker coordinates with device-category marker",
+    "Do not infer roof ladder is on same traversable roof or a pickup",
+    "Do not infer game save mission 23 completion"
+  ],
+  "original_owner_photo_count": 5
+}
