@@ -96,6 +96,16 @@ try{
   await desktop.locator("#aeNextStep").click();
   assert.match(await desktop.locator("#aeCurrentStep").textContent(),/grassy courtyard/i);
   await desktop.screenshot({path:output+"/atlas-desktop.png",fullPage:true});
+  // AT-265: the owner's preferred game-only Mission #61 photographs, not TV-framed captures.
+  await desktop.locator("#aeSearch").fill("My Favorite Holovator");
+  await desktop.locator("#aeResults button[data-record-id='bleu3-fav']").click();
+  assert.match(await desktop.locator("#aeSelected").textContent(),/Bleu Plaza/);
+  const mission61Pictures=desktop.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await mission61Pictures.count(),5);
+  for(let i=0;i<5;i++)await mission61Pictures.nth(i).scrollIntoViewIfNeeded();
+  await desktop.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536),{timeout:20000});
+  await desktop.screenshot({path:output+"/atlas-mission061-clean-desktop.png",fullPage:true});
   await desktop.locator("#aeSearch").fill("Sommi");
   await desktop.locator("#aeResults button[data-record-id='rouge-plaza-west']").click();
   const photos=desktop.locator("#aeSelected .ae-photo-grid img");
@@ -181,9 +191,20 @@ try{
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
     "New owner photo captions must not cause mobile horizontal overflow");
   await phone.screenshot({path:output+"/atlas-wildzone6-original-photos-mobile.png",fullPage:true});
+  // AT-265: southern Café Classe lift is separate from the central and east Vert 4 units.
+  await phone.locator("#aeSearch").fill("Café Classe south");
+  await phone.locator("#aeResults button[data-record-id='vert4-south']").click();
+  assert.match(await phone.locator("#aeSelected").textContent(),/east-side street-facing/i);
+  const southPictures=phone.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await southPictures.count(),5);
+  for(let i=0;i<5;i++)await southPictures.nth(i).scrollIntoViewIfNeeded();
+  await phone.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536),{timeout:20000});
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  await phone.screenshot({path:output+"/atlas-vert4-south-mobile.png",fullPage:true});
   assert.equal(mobileErrors.length,0,"Mobile JavaScript errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
-  console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 101 owner JPGs, native desktop/touch gestures, all 11 recovered images loaded and captioned in Cyclone and Wild Zone 6 galleries, no made-up pins, original routes retained");
+  console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
   if(browser)await browser.close();
   server.kill("SIGTERM");
