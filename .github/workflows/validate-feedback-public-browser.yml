@@ -1,0 +1,45 @@
+name: Validate published Atlas feedback on desktop and phone (read-only)
+
+on:
+  pull_request:
+    paths:
+      - feedback.html
+      - feedback.css
+      - feedback.js
+      - feedback-owner.html
+      - feedback-owner.css
+      - feedback-owner.js
+      - tests/feedback_public_browser.mjs
+      - .github/workflows/validate-feedback-public-browser.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  feedback-published-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated pinned Chromium automation dependency
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Confirm Chrome is available
+        run: command -v google-chrome || command -v google-chrome-stable
+      - name: Validate public form and private owner login on the published GitHub Pages site
+        run: node tests/feedback_public_browser.mjs
+      - name: Recheck feedback handlers and existing guide without making requests
+        run: |
+          node --test tests/feedback_owner.test.mjs tests/feedback_standalone.test.mjs tests/feedback_proxy.test.mjs
+          python3 tests/validate_static.py
+      - name: Attach non-private desktop and phone screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-feedback-public-desktop-phone
+          path: test-artifacts/atlas-feedback-public/
+          if-no-files-found: ignore
+          retention-days: 10
