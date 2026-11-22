@@ -16,7 +16,7 @@ export function eligibleMapPin(item) {
       !xy.every(value => Number.isFinite(value) && value >= 0 && value <= MAP_SIZE)) return false;
   if (item.kind !== "scaffold") return true;
   return item.pin_verified === true &&
-    typeof item.source_record === "string" && /^MAPS_[A-Z0-9_]+\.json$/.test(item.source_record);
+    typeof item.source_record === "string" && /^MAPS_[A-Z0-9_-]+\.json$/.test(item.source_record);
 }
 export function project([x, y], view, viewport) {
   const scale = stageBase(viewport) / MAP_SIZE * view.zoom;
