@@ -357,7 +357,22 @@
       "unique_device_not_yet_proven": true,
       "atlas_exact_entry_xy": null,
       "roof_exit_xy": null,
-      "should_not_increment_verified_devices": true
+      "should_not_increment_verified_devices": true,
+      "owner_batch_30_field_evidence": {
+        "source": "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "original_file_labels": [
+          "1000027483.heic",
+          "1000027484.heic",
+          "1000027485.heic",
+          "1000027486.heic",
+          "1000027487.heic"
+        ],
+        "physical_yellow_entrance_and_owner_map_ring": true,
+        "owner_rooftop_arrival": true,
+        "specific_old_WIDE_C12_photo_icon_precise_map_alignment": false,
+        "individual_external_category_marker_id": null,
+        "photo_files_not_uploaded_GitHub": true
+      }
     },
     {
       "id": "WIDE-C13",
@@ -430,7 +445,8 @@
     "MAPS_MAGENTA_PLAZA_NW_TERRACE_OWNER_LIFT_SURVEY_2026-11-22.json",
     "MAPS_MAGENTA8_SAISON_CANAL_OWNER_LIFT_SURVEY_2026-11-22.json",
     "MAPS_LYSANDRE_CAFE_AUTUMNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
-    "MAPS_ROUGE_PLAZA_WEST_SOMMI_OWNER_LIFT_SURVEY_2026-11-22.json"
+    "MAPS_ROUGE_PLAZA_WEST_SOMMI_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json"
   ],
   "counts": {
     "mission_quest_records_researched": 9,
@@ -459,8 +475,8 @@
     "owner_photographed_061_ground_side_research_pin_candidates": 1,
     "owner_mission_61_source_photo_count": 5,
     "owner_mission_61_owner_reported_roof_pad_photographed": 1,
-    "owner_photographed_holovator_ground_side_photo_groups_total": 12,
-    "owner_photographed_holovator_roof_arrival_scene_groups_total": 12,
+    "owner_photographed_holovator_ground_side_photo_groups_total": 13,
+    "owner_photographed_holovator_roof_arrival_scene_groups_total": 13,
     "owner_vert4_south_recent_photos": 5,
     "owner_vert4_east_recent_photos": 5,
     "owner_vernal_wz1_recent_photos": 5,
@@ -471,10 +487,12 @@
     "owner_magenta_plaza_terrace_photos": 5,
     "owner_magenta8_saison_canal_photos": 5,
     "owner_lysandre_cafe_autumnal_recent_photos": 5,
-    "owner_rouge_plaza_west_sommi_photo_count": 5
+    "owner_rouge_plaza_west_sommi_photo_count": 5,
+    "owner_rouge5_looker_sushi_photo_count": 5
   },
   "count_rule": "Do not subtract nine side mission quest markers from the twenty-three physical Holovator category markers until their unique 1:1 device identities are actually demonstrated; neither seven unassigned owner photo groups nor the nine quest leads imply 16 of 23 confirmed. The new batch 09 nine photo/source lead associations and four guide-only leads may overlap the seven existing unassigned groups or nine mission devices; they do NOT increase the verified unique total. W06/W07 cross-photo agrees on three separate map glyphs but is NOT a verified physical Holovator category-marker count; W10 mission #092 is a single-photo lead. Batch 12 lists 16 photo symbol research groups, NOT 16 category-marker-verified physical devices; no newly confirmed 23-category source IDs, entrances or roofs. Batch 13 Vert Plaza has FOUR distinct yellow chevrons, including the southern W04/W10 source candidate and pre-existing Cyclone marker. Do NOT count all four as newly uncovered physical lifts or as 4/23 verified source device IDs. Owner H61 #061 has strong owner photo ground-side verification at an approximate mapped city image position, NOT an extracted stable external category marker ID or independently surveyed rooftop exit. Keep source category IDs 0/23 until individual category records are extracted. Five mission #061 owner photos now prove there is visible rooftop arrival scene by owner report, but original 1920 city image roof XY is not obtained. Do not increment exact ground↔roof matched count or external category-ID count. New five-photo Vert southern Holovator is same previously catalogued WIDE-C13 / r-vert4-south, NOT new unique device: new red-ring photo projects old VP-C [256.43,741.11], matching old chevron [257,737]. Owner has street lift and roof photograph but roof map XY and category marker ID unavailable; 0 full georeferenced pair and 0/23 external IDs still.",
   "next_evidence_order": [
+    "NEW nearest optional owner-photo target from batch30 map screenshot 7485: separate fixed yellow arrow EAST past Sushi High Roller near Rouge Sector 6 along street south of Dormez Bien Cemetery. Return down and walk EAST, inspect north-up map and photograph ground+three map scales+roof; no ID or portal assumption. Alternative outstanding fixed yellow western arrow by Magenta Sector 8 Pokémon Center / North Boulevard (owner 7470).",
     "OPTIONAL NEXT DISTINCT fixed gold lift target after Rouge Plaza field batch 29: NONMISSION-L05 / PHOTO-C12 / WIDE-C12 across Sushi High Roller near Looker Bureau, north of Rouge Plaza. Prior research-only approx city JPG (914,410)/(920,400); ground building face and exit roof UNVERIFIED. Player may survey another closer fixed yellow glyph instead: always collect 5 photos and dedupe before counting. Prior Magenta8 west-of-Pokémon Center separate yellow icon is still pending.",
     "Next nearby potential DIFFERENT fixed yellow up-chevron in north-up map image 7475: northeast of Lysandre Café current ring, southwest of Wild Zone 3. Check old Mission 004 and photographed #061 identity before counting; still-unverified separate west-side Magenta 8 Pokémon Center/North Boulevard arrow from photo 7470 remains open. Never confuse dynamic Hyperspace symbols with fixed Holovators.",
     "Next OPTIONAL distinct golden Holovator candidate: WEST of Magenta Sector 8 Pokémon Center by North Boulevard (visible as separate yellow up-chevron in owner map photo 7470). From current EAST-side canal Holovator walk west past Pokémon Center along north bank Saison Canal, then seek west/North Boulevard icon. Photograph separate ground facade, wide/close player map and roof. Prior W08-U01 / NONMISSION-L08 may be THIS WESTERN device and must NOT be falsely merged with new east-of-Center B27 owner ground photo. Exact device/category IDs unknown.",
@@ -1054,5 +1072,28 @@
     "images_binary_in_GitHub": false,
     "crop_required": false,
     "recommended_next_photo_lead": "NONMISSION-L05 across Sushi High Roller by Looker Bureau north of Rouge Plaza"
+  },
+  "rouge5_sushi_looker_owner_batch_30": {
+    "source": "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "date": "2026-11-22",
+    "photos": 5,
+    "preexisting_research_lead": "NONMISSION-L05 / PHOTO-C12 / WIDE-C12",
+    "physical_ground_entrance_and_owner_roof_photographed": true,
+    "old_photo_map_source_JPG_symbol_candidates_approx": [
+      [
+        914,
+        410
+      ],
+      [
+        920,
+        400
+      ]
+    ],
+    "original_exact_native_JPG_entrance_xy": null,
+    "roof_xy": null,
+    "unique_external_category_marker_id": null,
+    "photo_binary_in_repo": false,
+    "crop_needed": false,
+    "next_target": "separate east-of-Sushi High Roller map arrow (owner map photo 7485) before claiming an exact position; alternative deferred Magenta Sector 8 west side."
   }
 }
