@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
   "survey_id": "ATLAS-OWNER-FIELD-HOLOVAT-061-2026-11-22",
   "recorded_on": "2026-11-22",
@@ -64,10 +64,30 @@
         ],
         "kind": "street-level physical device photograph",
         "role": "glowing yellow vertical triple chevrons above physical Holovator base, another character standing adjacent, paving and light-blue building walls"
+      },
+      {
+        "id": "H61-E",
+        "file": "1000027236.heic",
+        "sha256": "fc86cd62208480eb5f7f52812e4cc34c4c3b81741914fb27014e7d6ddebad931",
+        "image_size": [
+          1536,
+          865
+        ],
+        "kind": "elevated rooftop arrival scene immediately after owner reported riding mission 61 Holovator",
+        "role": "rooftop photograph / route endpoint visual only, not a north-locked full-map roof pin",
+        "visible_landmarks": [
+          "avatar standing on luminous lift platform",
+          "large open flat stone-paved roof",
+          "Prism Tower rising in right background",
+          "park fountain and tree-filled plaza visible below/left",
+          "Investigate interaction prompt near small purple object at roof edge",
+          "small upper-left minimap with player arrow, insufficient alone to establish native city-map rooftop X/Y"
+        ],
+        "owner_reported_same_Holovator_as_ground_Photos_H61_A_D": true
       }
     ],
     "owner_direct_name": "My Favorite Holovator",
-    "observations": "User stood immediately next to the glowing physical Holovator and displayed red current-player ring in two map views. The yellow chevron is a stationary lift, not an ephemeral DLC Hyperspace icon.",
+    "observations": "User stood immediately next to the glowing physical Holovator and displayed red current-player ring in two map views. The yellow chevron is a stationary lift, not an ephemeral DLC Hyperspace icon. Fifth owner photo H61-E depicts the upper arrival area on a glowing pad as reported by player; roof photograph does not give verified native city map exit pixel.",
     "npc": "Character visible next to device, consistent with Rust Syndicate grunt from published mission. Mission-complete/activation state not inferable solely from photo.",
     "photo_binaries_committed": false
   },
@@ -162,13 +182,14 @@
     "entrance_floor": "street/paved courtyard",
     "rooftop_exit_coords": null,
     "rooftop_exit_floor": null,
-    "rooftop_exit_evidence": "not photographed by owner",
+    "rooftop_exit_evidence": "Owner-supplied fifth photo shows character standing on rooftop glowing pad after reported lift arrival. Independent map exit XY not yet obtained.",
     "mission_gate": "During Main Mission 20 Rust Syndicate storyline; if unfinished beat the guarding grunt to enable device",
     "source": [
       "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml",
       "https://www.thonky.com/pokemon-legends-z-a/side-mission-061-my-favorite-holovator",
       "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards"
-    ]
+    ],
+    "rooftop_arrival_visual": "Broad stone-paved rooftop, Prism Tower prominent on right skyline, adjacent fountain/park below left, nearby optional Investigate prompt."
   },
   "status": {
     "owner_physical_entry_photo_obtained": true,
@@ -177,10 +198,13 @@
     "source_map_entry_research_position_established": true,
     "entry_exact_GPS_or_world_xy_claim": false,
     "unique_external_map_23_device_marker_id_recovered": false,
-    "rooftop_landing_owner_verified": false,
+    "rooftop_landing_owner_verified": true,
     "safe_to_show_approx_research_pin": true,
     "safe_to_show_verified_entrance_label_with_photo_evidence": true,
-    "production_guide_pin_published": false
+    "production_guide_pin_published": false,
+    "rooftop_landing_photo_obtained": true,
+    "rooftop_landing_native_city_jpg_XY_verified": false,
+    "full_ground_to_roof_coordinate_pair_verified": false
   },
   "preservation": {
     "user_photos_private": true,
@@ -190,5 +214,20 @@
     "Supabase_and_progress_untouched": true,
     "scaffolds_deferred": true,
     "existing_ladder_L001_preserved": true
+  },
+  "rooftop_survey_2026_11_22": {
+    "status": "owner_reported_roof_arrival_photographed; exact_source_city_map_exit_xy_not_georeferenced",
+    "photo_file": "1000027236.heic",
+    "source_image_sha256": "fc86cd62208480eb5f7f52812e4cc34c4c3b81741914fb27014e7d6ddebad931",
+    "photographic_observation": "The player is standing on a luminous platform on a large flat rooftop with the Prism Tower in the right background and a landscaped green/fountain area below left. A separate Investigate prompt appears near a small purple object.",
+    "evidence_relationship": "Owner supplies the rooftop photo immediately after previously supplying ground-side mission 61 lift photos and explicitly identifies it as its roof. Visual confirms a rooftop/lift pad but a single image alone cannot independently prove transport source device identity or calculate rooftop image XY.",
+    "minimap_note": "Small minimap visible in top-left; NOT a full north-locked city map or precise original-image coordinate control. Do not derive a pixel-perfect roof point from it.",
+    "floor_or_height": null,
+    "atlas_native_roof_xy": null,
+    "roof_exit_physical_scene_photographed": true,
+    "roof_city_image_position_verified": false,
+    "external_23_marker_device_ID_matched": false,
+    "cross_zone_photo_link_confidence": "owner-reported route continuity; roof visual independently shows arrival platform; still needs optional north-up full map to georeference exact roof point",
+    "do_not_misclassify": "Investigate prompt is an interactable nearby object, not itself the lift exit; do not label its rewards, quest content or coordinates without verifying."
   }
 }
