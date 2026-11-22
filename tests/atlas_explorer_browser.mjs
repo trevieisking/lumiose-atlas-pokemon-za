@@ -16,7 +16,7 @@ try{
     await pause(150);
   }
   assert.ok(available,"Static page test server must be reachable");
-  browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
+  browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
   const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
