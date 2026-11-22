@@ -67,4 +67,6 @@ assert.equal((oldCity.match(/data-map-pin="\d+"/g)||[]).length,20,"Original twen
 assert.equal((oldSectors.match(/class="sector-card"/g)||[]).length,48,"Original 48 city sectors preserved");
 assert.equal((oldSectors.match(/class="wildzone-card"/g)||[]).length,20,"Original 20 sector-directory Wild Zones preserved");
 assert.equal((oldSectors.match(/class="zone-item-lead"/g)||[]).length,264,"Original item entries preserved");
-assert.match(page,/Ladders, scaffolding and roof routes/,"Ladder/scaffold policy must be visible without speculative pins");\nassert.match(page,/does <strong>not<\\/strong> invent precise pins/,"No invented ladder dots");\nconsole.log("PASS: 21 owner-survey locations, 85 referenced genuine JPGs, 90 hosted total, 11 ZIP-only, 10 older pending, original 20/48/264 assets preserved.");
+assert.match(page,/Ladders, scaffolding and roof routes/,"Ladder/scaffold policy must be visible without speculative pins");
+assert.ok(page.includes("does <strong>not</strong> invent precise pins"),"No invented ladder dots");
+console.log("PASS: 21 owner-survey locations, 85 referenced genuine JPGs, 90 hosted total, 11 ZIP-only, 10 older pending, original 20/48/264 assets preserved.");
