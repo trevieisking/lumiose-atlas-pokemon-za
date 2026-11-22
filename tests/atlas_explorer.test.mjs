@@ -117,15 +117,21 @@ test("AT-265 final two owner galleries use independently hash-verified real phot
   assert.match(south.directions,/Pokémon Center/);
   assert.match(south.directions,/NOT the central/i);
   const provenance=read("docs/qa/ATLAS_AT265_LAST_TWO_OWNER_HOLOVATOR_GALLERIES_2026-11-22.md");
-  const rows=[...provenance.matchAll(/\\| \`(assets\\/atlas\\/holovators\\/(?:mission-061|vert4-south)\\/[a-z0-9-]+\\.jpg)\` \\| \`([a-f0-9]{64})\` \\| \`([a-f0-9]{40})\` \\|/g)];
+  const rows=provenance.split("\n")
+    .filter(line=>line.startsWith("| `assets/atlas/holovators/mission-061/")||
+      line.startsWith("| `assets/atlas/holovators/vert4-south/"))
+    .map(line=>{
+      const cells=line.split("|").map(cell=>cell.trim().replaceAll("`",""));
+      return {path:cells[1],sha256:cells[2],blob:cells[3]};
+    });
   assert.equal(rows.length,10,"All ten new images need recorded SHA-256 and exact Git blob fingerprints");
-  const source=new Map(rows.map(m=>[m[1],{sha256:m[2],blob:m[3]}]));
+  const source=new Map(rows.map(row=>[row.path,{sha256:row.sha256,blob:row.blob}]));
   assert.deepEqual([...source.keys()].sort(),[...bleu.photos,...south.photos].map(p=>p.path).sort());
   for(const photo of [...bleu.photos,...south.photos]){
     const buf=fs.readFileSync(path.join(root,photo.path));
     assert.equal(buf[0],0xff);assert.equal(buf[1],0xd8,"JPEG bytes, not mislabeled HEIC");
     assert.equal(createHash("sha256").update(buf).digest("hex"),source.get(photo.path).sha256,photo.path);
-    const expectedGitBlob=createHash("sha1").update(Buffer.concat([Buffer.from("blob "+buf.length+"\\0"),buf])).digest("hex");
+    const expectedGitBlob=createHash("sha1").update(Buffer.from("blob "+buf.length)).update(Buffer.from([0])).update(buf).digest("hex");
     assert.equal(expectedGitBlob,source.get(photo.path).blob,photo.path);
   }
 });
