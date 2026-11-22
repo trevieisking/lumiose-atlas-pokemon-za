@@ -327,7 +327,22 @@
       "connection_strength": "owner_game_map_symbol_only_no_external_device_corrob",
       "exact_device_source_marker_matched": false,
       "exact_street_entry_and_roof_xy": null,
-      "possible_overlap_with_nine_missions": "unknown"
+      "possible_overlap_with_nine_missions": "unknown",
+      "owner_field_survey_2026_11_22": {
+        "source": "MAPS_MAGENTA_PLAZA_NW_TERRACE_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "batch": 26,
+        "field_ground_terrace_lift_photographed": true,
+        "ground_position_maps_photographed": true,
+        "owner_roof_arrival_photo": true,
+        "distinctive_terrace_access": "Take broad staircase on right to café terrace; golden lift behind railing",
+        "rooftop_nearby_ladder_visible": true,
+        "ladder_exact_endpoint_unknown": true,
+        "original_native_city_image_entry_xy": null,
+        "original_native_city_image_roof_xy": null,
+        "individual_external_category_marker_id": null,
+        "photo_count": 5,
+        "old_two_photo_map_symbol_correspondence": "strong location match to CAM-06 / PHOTO-C11; exact source JPG pixel remains unverified"
+      }
     },
     {
       "id": "NONMISSION-L08",
@@ -348,7 +363,19 @@
       "connection_strength": "owner_photo_symbol_only",
       "exact_device_source_marker_matched": false,
       "exact_street_entry_and_roof_xy": null,
-      "possible_overlap_with_nine_missions": "unknown"
+      "possible_overlap_with_nine_missions": "unknown",
+      "owner_field_survey_candidate_2026_11_22": {
+        "source": "MAPS_MAGENTA8_SAISON_CANAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "batch": 27,
+        "match_status": "neighbourhood_match_only; one-to-one icon ID unresolved",
+        "reason": "New owner physical device EAST of Magenta 8 Pokémon Center; photo 7470 also shows a separate yellow device WEST near North Boulevard. Previous W08-U01 had single owner map view and has no source-image pin. Do not collapse them.",
+        "grounded_new_owner_canal_side_device": true,
+        "owner_ground_and_roof_photos": true,
+        "candidate_westward_physical_check_still_needed": true,
+        "original_city_map_ground_xy": null,
+        "roof_xy": null,
+        "unique_external_category_marker_id": null
+      }
     },
     {
       "id": "NONMISSION-L09",
@@ -431,5 +458,13 @@
     "no_republication_of_external_map_art": true,
     "reconciliation_count_not_incremented": true
   },
-  "next_validation": "Recover stable individual Holovator-category marker IDs/coordinates for all 23 from interactive map or game data, then compare W08/W09 Estival two-device pair with category marker coordinates and calibrated original Atlas 1920 JPG while determining ground facades and rooftop exit."
+  "next_validation": "Recover stable individual Holovator-category marker IDs/coordinates for all 23 from interactive map or game data, then compare W08/W09 Estival two-device pair with category marker coordinates and calibrated original Atlas 1920 JPG while determining ground facades and rooftop exit.",
+  "owner_magenta8_east_canalside_field_batch_27": {
+    "source": "MAPS_MAGENTA8_SAISON_CANAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+    "photo_count": 5,
+    "location": "East of Magenta Sector 8 Pokémon Center, north bank Saison Canal",
+    "relationship_to_prior_L08": "unresolved; W08-U01 may be farther western separate icon",
+    "owner_photo_group_confirmed": true,
+    "permanent_pin_published": false
+  }
 }
