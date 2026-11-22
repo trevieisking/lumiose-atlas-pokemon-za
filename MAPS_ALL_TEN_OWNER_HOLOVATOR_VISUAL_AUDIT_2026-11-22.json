@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch_id": "ATLAS-ALL-TEN-OWNER-PHOTO-VISUAL-RECONCILIATION-2026-11-22",
+  "review_date": "2026-11-22",
+  "intent": "Private 10-photo icon-by-icon Holovator visual comparison; preserve user-directed 23/23 physical device validation requirement before publishing permanent map dots; scaffold and ladders deferred.",
+  "source_photos": [
+    {
+      "photo_id": "W01",
+      "private_filename": "1000027197.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "zoomed_out_city_orientation_no_clearly_readable_amber_holovator_glyph"
+    },
+    {
+      "photo_id": "W02",
+      "private_filename": "1000027198.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "zoomed_out_city_orientation_no_clearly_readable_amber_holovator_glyph"
+    },
+    {
+      "photo_id": "W03",
+      "private_filename": "1000027199.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "zoomed_out_city_orientation_no_clearly_readable_amber_holovator_glyph"
+    },
+    {
+      "photo_id": "W04",
+      "private_filename": "1000027200.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W05",
+      "private_filename": "1000027201.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W06",
+      "private_filename": "1000027202.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W07",
+      "private_filename": "1000027203.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W08",
+      "private_filename": "1000027204.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W09",
+      "private_filename": "1000027205.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    },
+    {
+      "photo_id": "W10",
+      "private_filename": "1000027206.heic",
+      "native_photo_size": [
+        1536,
+        865
+      ],
+      "use": "readable_holovator_symbols"
+    }
+  ],
+  "icon_groups": [
+    {
+      "id": "CAM-01",
+      "area": "Rouge Plaza west of WZ3",
+      "possible_mission": 4,
+      "observed_photo_pixel_centres": {
+        "W06": [
+          39,
+          399
+        ],
+        "W07": [
+          656,
+          502
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        832,
+        580
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Mission #4 exact Sommi device not proven"
+    },
+    {
+      "id": "CAM-02",
+      "area": "North of Académie Étoile / Sushi High Roller corridor",
+      "possible_mission": 80,
+      "observed_photo_pixel_centres": {
+        "W06": [
+          491,
+          195
+        ],
+        "W07": [
+          1108,
+          301
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        1189,
+        392
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Possible #80 but nearby distinct lifts complicate this association; verify correct facade, do not imply direct correspondence"
+    },
+    {
+      "id": "CAM-03",
+      "area": "Jaune Sector 4 east of Académie Étoile",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W06": [
+          544,
+          418
+        ],
+        "W07": [
+          1157,
+          524
+        ]
+      },
+      "estimated_city_jpg_1920_xy": null,
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Atlas projections disagree by about 50 image pixels"
+    },
+    {
+      "id": "CAM-04",
+      "area": "Jaune Street / Jaune Sector 11",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W06": [
+          1032,
+          597
+        ]
+      },
+      "estimated_city_jpg_1920_xy": null,
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "One photo in this 10-photo batch; external named access route exists"
+    },
+    {
+      "id": "CAM-05",
+      "area": "Looker Bureau / Sushi High Roller western vicinity",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W07": [
+          763,
+          280
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        917,
+        405
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Separate from eastern Sushi High Roller symbol CAM-02"
+    },
+    {
+      "id": "CAM-06",
+      "area": "Magenta Street northwest of Magenta Plaza",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W07": [
+          236,
+          706
+        ],
+        "W08": [
+          689,
+          280
+        ]
+      },
+      "estimated_city_jpg_1920_xy": null,
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Two photos"
+    },
+    {
+      "id": "CAM-07",
+      "area": "Autumnal Avenue Magenta Sector 2",
+      "possible_mission": 71,
+      "observed_photo_pixel_centres": {
+        "W07": [
+          543,
+          691
+        ],
+        "W08": [
+          994,
+          264
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        739,
+        740
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Mission 71 association tentative"
+    },
+    {
+      "id": "CAM-08",
+      "area": "Café Gallant Estival Avenue",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W08": [
+          787,
+          655
+        ],
+        "W09": [
+          558,
+          294
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        578,
+        1025
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Two independent four-control image fits, still approximate"
+    },
+    {
+      "id": "CAM-09",
+      "area": "Espace Vide northern Bleu Sector 4",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W08": [
+          663,
+          776
+        ],
+        "W09": [
+          431,
+          412
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        477,
+        1130
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Separate icon from Café Gallant"
+    },
+    {
+      "id": "CAM-10",
+      "area": "Magenta Sector 7 north of Saison Canal",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W08": [
+          405,
+          210
+        ]
+      },
+      "estimated_city_jpg_1920_xy": null,
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "One photo"
+    },
+    {
+      "id": "CAM-11",
+      "area": "Café Soleil Bleu Sector 8",
+      "possible_mission": 92,
+      "observed_photo_pixel_centres": {
+        "W10": [
+          63,
+          453
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        352,
+        1496
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Possible mission #92 single-photo, physical device not proven"
+    },
+    {
+      "id": "CAM-12",
+      "area": "Vernal Avenue northwest of WZ1",
+      "possible_mission": 23,
+      "observed_photo_pixel_centres": {
+        "W04": [
+          694,
+          619
+        ],
+        "W10": [
+          831,
+          656
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        964,
+        1666
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Repeated photo and quest-area crosscheck"
+    },
+    {
+      "id": "CAM-13",
+      "area": "South Boulevard below Aymis Park WZ12",
+      "possible_mission": 45,
+      "observed_photo_pixel_centres": {
+        "W04": [
+          379,
+          675
+        ],
+        "W10": [
+          509,
+          714
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        708,
+        1706
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Repeated photo and quest-area crosscheck"
+    },
+    {
+      "id": "CAM-14",
+      "area": "Café Classe / eastern Aymis Park",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W04": [
+          674,
+          376
+        ],
+        "W10": [
+          810,
+          408
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        948,
+        1470
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Repeated photo, distinct from Café Cyclone"
+    },
+    {
+      "id": "CAM-15",
+      "area": "Vert Sector 7 southwest of Racine Construction",
+      "possible_mission": 40,
+      "observed_photo_pixel_centres": {
+        "W04": [
+          1344,
+          457
+        ],
+        "W05": [
+          665,
+          729
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        1486,
+        1524
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Repeated photo and quest-area crosscheck"
+    },
+    {
+      "id": "CAM-16",
+      "area": "Café Cyclone / Coulant Waterway",
+      "possible_mission": null,
+      "observed_photo_pixel_centres": {
+        "W04": [
+          1108,
+          216
+        ],
+        "W05": [
+          426,
+          494
+        ]
+      },
+      "estimated_city_jpg_1920_xy": [
+        1305,
+        1335
+      ],
+      "accuracy": "research_only_not_exact_entrance",
+      "warning": "Repeated photo, named guide for Vert Sector 3 courtyard access but actual facade not matched"
+    }
+  ],
+  "counts": {
+    "photos_original": 10,
+    "group_count": 16,
+    "repeat_in_multiple_photos": 12,
+    "single_photo_groups": 4,
+    "source_photo_glyph_observations": 28,
+    "external_reported_physical_category_count": 23,
+    "external_individual_device_marker_ids_matched": 0,
+    "confirmed_exact_facade_entry_xy": 0,
+    "confirmed_roof_exit_xy": 0,
+    "production_pins_published": 0
+  },
+  "key_findings": [
+    "Five previously unmounted original city screenshots now included in private offline viewer, allowing all ten originals to be compared.",
+    "W04 and W05 have two independent repeated yellow symbols: Vert Sector 7 (mission 40 vicinity) and Café Cyclone/Coulant Waterway (different lift).",
+    "W04 and W10 have three repeated symbols: Vernal Avenue (mission 23 vicinity), South Boulevard below Aymis Park (mission 45 vicinity), and Café Classe east of Aymis Park.",
+    "W01/W02/W03 are overview camera photos; no small yellow double-chevron was confidently resolved at these zoom/perspective settings. Absence of marker is NOT evidence that physical lift does not exist.",
+    "Older W06/W07 paired yellow icon (491,195)->(1108,301) lies in broad north of Académie Étoile/Sushi High Roller/Hibernal corridor. Existing provisional mission #80 attribution is NOT proven. W07 also shows a separate yellow icon (763,280) closer to Looker Bureau. Do not merge or infer which is Amordél's Holovator without mission screenshot-to-facade verification.",
+    "External source pages show mission #80 repaired Holovator near Café Kizuna is later used to reach the rooftop of mission #89 Up, Up, and Away After Emolga!; its link is guide-supported, but owner photo-to-device pixel and roof floor remain unmapped.",
+    "Pokéos and Serebii interactive maps separately provide Holovator filters, but accessible public text does not yield individual marker IDs nor authoritative owner JPG XY. Shackmaps reports 23 category icons."
+  ],
+  "cross_photo_translation_checks": [
+    {
+      "photos": [
+        "W04",
+        "W10"
+      ],
+      "labels": [
+        "Vernal Avenue",
+        "South Boulevard below Aymis Park",
+        "Café Classe"
+      ],
+      "photo_pixel_displacements": [
+        [
+          137,
+          37
+        ],
+        [
+          130,
+          39
+        ],
+        [
+          136,
+          32
+        ]
+      ],
+      "status": "3_repeat_icons_identified_not_absolute_map_alignment"
+    },
+    {
+      "photos": [
+        "W04",
+        "W05"
+      ],
+      "labels": [
+        "Café Cyclone",
+        "Vert Sector 7"
+      ],
+      "photo_pixel_displacements": [
+        [
+          -682,
+          278
+        ],
+        [
+          -679,
+          272
+        ]
+      ],
+      "status": "2_repeat_icons_identified_not_absolute_map_alignment"
+    },
+    {
+      "photos": [
+        "W06",
+        "W07"
+      ],
+      "status": "See MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json: three repeated glyphs plus WZ3 landmark, pan RMS 2.09 photo px"
+    },
+    {
+      "photos": [
+        "W08",
+        "W09"
+      ],
+      "status": "See MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json: two distinct Estival glyphs repeated"
+    }
+  ],
+  "independent_sources": [
+    {
+      "url": "https://www.pokeos.com/plza/map",
+      "role": "interactive map includes Holovators filter; credits Serebii/yakkun and datamine; exact coordinates not extracted"
+    },
+    {
+      "url": "https://www.serebii.net/pokearth/lumiosecity/",
+      "role": "independent Holovator toggle; no exact individual device IDs extracted"
+    },
+    {
+      "url": "https://www.shackmaps.com/pokemon-legends-z-a/map",
+      "role": "reports 23 Holovator-category markers, individual IDs not extracted"
+    },
+    {
+      "url": "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards",
+      "role": "mission 89 starts on roof attached to #80 Holovator; external route claim"
+    },
+    {
+      "url": "https://gmtreks.com/pokemon-z-a/side-missions/89",
+      "role": "mission 89 rooftop entry using Holovator"
+    },
+    {
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-089-up-up-and-away-after-emolga",
+      "role": "main mission 30 gate and holovator access to rooftop"
+    },
+    {
+      "url": "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+      "role": "Holovator north of Académie Étoile towards Toxic Spikes, separate device identity not resolved"
+    }
+  ],
+  "private_preview_artifact": "holovator_photo_comparison_v3.html, delivered only within this conversation; never upload embedded user images to public GitHub",
+  "browser_test": {
+    "viewport_desktop": [
+      1365,
+      905
+    ],
+    "viewport_phone": [
+      390,
+      844
+    ],
+    "tabs": 10,
+    "W04_visible_photo_icons": 5,
+    "W10_repeat_filter": 3,
+    "W10_single_filter": 1,
+    "original_photos_loaded": true,
+    "selection_worked": true,
+    "zero_Javascript_errors": true,
+    "preview_uses_no_supabase_or_network": true,
+    "production_GitHub_preview_CI_result": "not_tested_in_this_batch"
+  },
+  "limitations": [
+    "16 research groups are not 16 individually confirmed physically distinct category devices; grouping can overlap mission units, known leads or neighbouring roof floors.",
+    "Native photo pixels are NOT the unchanged 1920x1920 city JPG XY nor in-game world coordinates.",
+    "Paired-photo displacement agreement does NOT validate the physical building entrance or rooftop exit.",
+    "Site source marker category total is 23, but none of 23 stable physical Holovator IDs individually extracted.",
+    "Do not use World map mission star coordinates as a Holovator entrance point or confuse 23 fast travel spots with 23 lifts."
+  ],
+  "preservation": {
+    "user_photos_private": true,
+    "live_original_ChatGPT_Site_unchanged": true,
+    "Edition_B_live_map_code_unchanged": true,
+    "GitHub_main_unchanged": true,
+    "Supabase_user_data_unchanged": true,
+    "old_collectible_IDs_unchanged": true,
+    "scaffold_ladder_work_deferred": true
+  }
+}
