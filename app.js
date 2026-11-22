@@ -15,14 +15,18 @@
     const sourcePath = String(pathname || '/');
     const canonicalPath = sourcePath !== '/' && sourcePath.endsWith('/')
       ? sourcePath + 'index.html' : sourcePath;
-    // Atlas uses #walkthrough:mission-27; the report service permits a
-    // section hash, not a colon suffix. Keep the section instead of losing it.
-    const sectionHash = String(hash || '').split(':', 1)[0];
+    // Keep the backend-compatible section URL, and carry an exact validated
+    // mission/quest anchor separately so reports retain useful location context.
+    const originalHash = String(hash || '');
+    const sectionHash = originalHash.split(':', 1)[0];
     const page = canonicalPath + sectionHash;
     const validPage = page.length <= 160 &&
       /^\/(?:[a-z0-9-]+(?:\.html)?(?:\/[a-z0-9-]+(?:\.html)?)*)?(?:#[a-z0-9-]+)?$/i.test(page);
     const target = new URL(FEEDBACK_PAGE, document.baseURI);
     target.searchParams.set('page', validPage ? page : '/lumiose-atlas-pokemon-za/index.html#walkthrough');
+    const exactAnchor = /^#walkthrough:(mission-(?:[1-9]|[1-3][0-9]|4[0-2]))$/i.exec(originalHash)
+      || /^#sidequests:(quest-(?:[1-9]|[1-9][0-9]|1[0-9]{2}|20[0-3]))$/i.exec(originalHash);
+    if (validPage && exactAnchor) target.searchParams.set('anchor', exactAnchor[1].toLowerCase());
     return target.toString();
   }
 

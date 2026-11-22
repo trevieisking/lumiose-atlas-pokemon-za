@@ -57,6 +57,21 @@ try {
     const formFits = await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
     assert.equal(formFits, true, device.name + ': feedback form has horizontal overflow');
     await page.screenshot({path:OUT + '/feedback-' + device.name + '.png', fullPage:true});
+    if (BRANCH_PREVIEW) {
+      // Browser-only validation; never submit, authenticate or write a report.
+      const missionForm = await page.goto(SITE + '/feedback.html?page=' + encodeURIComponent(PAGE) +
+        '&anchor=mission-36', {waitUntil:'networkidle'});
+      assert.equal(missionForm?.status(),200);
+      assert.equal(await page.locator('#page').inputValue(),PAGE,'Backend section URL must be unchanged');
+      assert.equal(await page.locator('#pageContext').textContent(),PAGE+':mission-36');
+      assert.equal(await page.locator('#returnLink').getAttribute('href'),PAGE+':mission-36');
+      assert.equal(await page.locator('#headerBack').getAttribute('href'),PAGE+':mission-36');
+      assert.equal(await page.locator('#details').getAttribute('maxlength'),String(1500-'Guide location: Mission 36\n\n'.length));
+      assert.match(await page.locator('#detailsHelp').textContent(),/Mission 36 automatically/);
+      const contextFits = await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
+      assert.equal(contextFits,true,device.name+': contextual form must not overflow');
+      await page.screenshot({path:OUT+'/feedback-mission-'+device.name+'.png',fullPage:true});
+    }
     if (BRANCH_PREVIEW && device.isMobile) {
       const longPage = '/lumiose-atlas-pokemon-za/index.html#' + 'route-'.repeat(18);
       assert.ok(longPage.length <= 160);
