@@ -83,3 +83,22 @@ export function normaliseRoute(route, pointIds) {
     typeof step.title === "string" && step.title.length > 0 &&
     typeof step.instruction === "string" && step.instruction.length > 0);
 }
+
+/* Whole-city coverage cells are image-navigation regions, never sector borders or game pins. */
+export function coverageCellCentre(row, column, divisions = 5) {
+  if (!Number.isInteger(divisions) || divisions < 1 || divisions > 24 ||
+      !Number.isInteger(row) || !Number.isInteger(column) ||
+      row < 0 || column < 0 || row >= divisions || column >= divisions) return null;
+  const side = MAP_SIZE / divisions;
+  return [(column + 0.5) * side, (row + 0.5) * side];
+}
+/* A district starting view is derived only from preserved Wild Zone centre markers.
+   It must never be presented as an exact sector coordinate or boundary. */
+export function districtStart(zones, district) {
+  if (!Array.isArray(zones) || typeof district !== "string") return null;
+  const anchors = zones.filter(zone => zone?.district === district &&
+    Array.isArray(zone.xy) && zone.xy.length === 2 &&
+    zone.xy.every(v => Number.isFinite(v) && v >= 0 && v <= MAP_SIZE));
+  if (!anchors.length) return null;
+  return [0, 1].map(axis => anchors.reduce((sum, zone) => sum + zone.xy[axis], 0) / anchors.length);
+}
