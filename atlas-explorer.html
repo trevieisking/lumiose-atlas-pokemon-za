@@ -96,7 +96,27 @@
     <span id="aePositionReadout">Original map · north up</span>
     <span>Not live Switch tracking · all city pixels are from the existing 1920 × 1920 map</span>
   </div>
-  <div class="ae-legend" aria-label="Map symbol key">
+  <section class="ae-coverage-panel" aria-labelledby="aeCoverageTitle">
+  <h3 id="aeCoverageTitle">Open every part of Lumiose</h3>
+  <p class="ae-coverage-intro">Choose any square on this <strong>complete original city map</strong> to enlarge that area above, or choose a district or one of all 48 named sectors. You can then drag, pinch, rotate and zoom around every street. The squares are navigation regions, <strong>not</strong> unverified sector borders or item locations.</p>
+  <div class="ae-coverage-body">
+    <div class="ae-coverage-mini" aria-label="Five-by-five selectable overview covering the full Lumiose map">
+      <img src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Complete unmodified Lumiose City game map: select any of 25 overlaid regions to zoom" draggable="false" loading="lazy">
+      <div id="aeCoverageGrid" class="ae-coverage-grid" role="group" aria-label="Select any part of the entire city map"></div>
+    </div>
+    <div class="ae-coverage-controls">
+      <p id="aeCoverageStatus" class="ae-coverage-status" role="status" aria-live="polite">The full city is available. Select any map square to open a closer view.</p>
+      <button type="button" id="aeCoverageFullCity">Show complete city</button>
+      <h4>Jump to a district</h4>
+      <div id="aeCoverageDistricts" class="ae-coverage-districts" role="group" aria-label="Jump to a district starting view"></div>
+      <label for="aeCoverageSector">Open a named sector</label>
+      <select id="aeCoverageSector"><option value="">Choose from 48 named sectors</option></select>
+      <p class="ae-coverage-caution">Sector boundaries and exact sector-centre coordinates still need verification. A sector selection opens a <strong>nearby district starting view</strong>, not a falsely precise sector pin. Wild Zone centres and Holovator leads remain evidence-labelled.</p>
+      <a class="ae-coverage-directory" href="sector-maps.html#sector-directory">All 48 sectors and original item/Screw clues</a>
+    </div>
+  </div>
+</section>
+<div class="ae-legend" aria-label="Map symbol key">
     <span><b class="ae-symbol ae-symbol-zone">07</b> Wild Zone</span>
     <span><b class="ae-symbol ae-symbol-lift">⤊</b> Holovator lead</span>
     <span><b class="ae-symbol ae-symbol-ladder">≡</b> Surveyed ladder</span>
