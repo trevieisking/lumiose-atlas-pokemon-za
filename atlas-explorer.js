@@ -94,17 +94,19 @@ function detailsFor(item){
   }else if(item.kind==="holovator"){
     selectedPanel.append(paragraph("The physical lift is in the owner's field survey. The symbol on this 1920px overview is an approximate approach lead, not a measured door or roof landing."));
     if(item.photos?.length){
+      if(item.photo_story)selectedPanel.append(paragraph(item.photo_story));
       selectedPanel.append(element("h4","",item.photos.length+" genuine owner photographs on GitHub"));
       const gallery=element("div","ae-photo-grid");
       for(const photo of item.photos.slice(0,8)){
         if(typeof photo.path!=="string"||!photo.path.startsWith("assets/atlas/holovators/")||!photo.path.endsWith(".jpg"))continue;
         const fig=element("figure"),a=link(photo.path,"",true);
-        a.setAttribute("aria-label","Open original "+item.name+" photo, "+plain(photo.role));
+        const label=plain(photo.caption)||plain(photo.role).replace(/[-_]/g," ");
+        a.setAttribute("aria-label","Open original "+item.name+" photograph: "+label);
         const img=element("img");
-        img.src=photo.path;img.alt="Original game photograph of "+item.name+": "+plain(photo.role).replace(/[-_]/g," ");
+        img.src=photo.path;img.alt="Original game photograph of "+item.name+": "+label;
         img.loading="lazy";img.decoding="async";
         a.append(img);
-        fig.append(a,element("figcaption","",plain(photo.role).replace(/[-_]/g," ")));
+        fig.append(a,element("figcaption","",label));
         gallery.append(fig);
       }
       selectedPanel.append(gallery);

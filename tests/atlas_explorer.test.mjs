@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import {createHash} from "node:crypto";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
   panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin
@@ -33,19 +34,20 @@ test("the 20 source Wild Zones and 48 sectors retain identity and deep links",()
     assert.match(s.link,/^sector-maps\.html#sector-[a-z]+-sector-\d+$/);
   }
 });
-test("all 21 unique owner-survey entries, 90 genuine hosted images, missing assets never linked",()=>{
+test("all 21 owner-survey entries, 101 genuine hosted images, missing assets never linked",()=>{
   assert.equal(data.holovators.length,21);
   assert.equal(new Set(data.holovators.map(x=>x.id)).size,21);
   const pics=data.holovators.flatMap(x=>x.photos);
-  assert.equal(pics.length,90);
-  assert.equal(new Set(pics.map(x=>x.path)).size,90);
+  assert.equal(pics.length,101);
+  assert.equal(new Set(pics.map(x=>x.path)).size,101);
   for(const p of pics){
     assert.match(p.path,/^assets\/atlas\/holovators\/(?:[a-z0-9-]+\/)+[a-z0-9-]+\.jpg$/);
     const file=fs.readFileSync(path.join(root,p.path));
     assert.equal(file[0],0xff);assert.equal(file[1],0xd8);
   }
   const missing=data.holovators.filter(h=>h.photo_status==="not_hosted");
-  assert.equal(missing.length,4);
+  assert.equal(missing.length,2);
+  assert.deepEqual(missing.map(x=>x.id).sort(),["bleu3-fav","vert4-south"]);
   for(const h of missing)assert.equal(h.photos.length,0);
   for(const h of data.holovators){
     assert.deepEqual(h.xy.length,2);
@@ -55,6 +57,42 @@ test("all 21 unique owner-survey entries, 90 genuine hosted images, missing asse
     assert.equal(h.device_category_id,null);
   }
   assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
+});
+test("both recovered owner photo walk-throughs preserve their original JPEG SHA-256",()=>{
+  const jaune=data.holovators.find(x=>x.id==="jaune12-wz6");
+  const cyclone=data.holovators.find(x=>x.id==="vert-cyclone");
+  assert.equal(jaune.photo_status,"hosted_owner_photos");
+  assert.equal(cyclone.photo_status,"hosted_owner_photos");
+  assert.equal(jaune.photos.length,5);
+  assert.equal(cyclone.photos.length,6);
+  assert.equal(jaune.photo_count_referenced,5);
+  assert.equal(cyclone.photo_count_referenced,6);
+  assert.deepEqual(jaune.photos.map(x=>x.role),
+    ["wide-city-map","neighbourhood-map","close-map","ground-lift","rooftop-arrival"]);
+  assert.deepEqual(cyclone.photos.map(x=>x.role),
+    ["wide-city-map","neighbourhood-map","close-map","courtyard-arch-approach","courtyard-ground-lift","rooftop-arrival"]);
+  for(const item of [jaune,cyclone]){
+    assert.equal(item.precision,"approx_owner_map_research");
+    assert.equal(item.entrance_exact,false);
+    assert.equal(item.roof_exact,false);
+    assert.equal(item.device_category_id,null);
+    assert.ok(item.photos.every(p=>typeof p.caption==="string"&&p.caption.length>20));
+    assert.match(item.photo_story,/owner|Owner/);
+    assert.equal(item.source_record,"docs/qa/ATLAS_AT264_OWNER_HOLOVATOR_GALLERY_PROVENANCE_2026-11-22.md");
+  }
+  const provenance=read("docs/qa/ATLAS_AT264_OWNER_HOLOVATOR_GALLERY_PROVENANCE_2026-11-22.md");
+  assert.match(provenance,/54,291,692|2c819b0817a941e59019240322574ee2b954b54c4e0b567f531f62c1b663c733/);
+  const rows=[...provenance.matchAll(/\| `(assets\/atlas\/holovators\/(?:jaune12-wild-zone-6|vert-cafe-cyclone)\/[a-z0-9-]+\.jpg)` \| `([a-f0-9]{64})` \|/g)];
+  assert.equal(rows.length,11,"All eleven recovered image fingerprints must be recorded");
+  const expected=new Map(rows.map(m=>[m[1],m[2]]));
+  const photos=[...jaune.photos,...cyclone.photos];
+  assert.deepEqual([...expected.keys()].sort(),photos.map(x=>x.path).sort(),"No source image omitted or substituted");
+  for(const photo of photos){
+    const bytes=fs.readFileSync(path.join(root,photo.path));
+    assert.equal(bytes[0],0xff);assert.equal(bytes[1],0xd8);
+    const digest=createHash("sha256").update(bytes).digest("hex");
+    assert.equal(digest,expected.get(photo.path),photo.path+" must match the verified original survey ZIP");
+  }
 });
 test("first directly photographed Hotel Z ladder is not promoted as exact roof XY",()=>{
   assert.equal(data.ladders.length,1);
