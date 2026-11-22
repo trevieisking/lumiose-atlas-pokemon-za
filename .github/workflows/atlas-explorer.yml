@@ -17,7 +17,6 @@ on:
 
 permissions:
   contents: read
-  issues: write # Temporary PR-only diagnostics; remove before release
 
 jobs:
   atlas-unit:
@@ -47,20 +46,7 @@ jobs:
       - name: Confirm system Chrome is available for offline-style browser smoke
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
-        run: |
-          set -o pipefail
-          node tests/atlas_explorer_browser.mjs 2>&1 | tee atlas-browser-output.log
-      - name: Report failed browser assertion on this PR (temporary diagnostics)
-        if: failure()
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: |
-          echo '### Temporary Atlas browser smoke diagnostics' > atlas-browser-pr-comment.txt
-          echo '```text' >> atlas-browser-pr-comment.txt
-          tail -n 65 atlas-browser-output.log >> atlas-browser-pr-comment.txt || true
-          echo '```' >> atlas-browser-pr-comment.txt
-          gh pr comment "$PR_NUMBER" --body-file atlas-browser-pr-comment.txt
+        run: node tests/atlas_explorer_browser.mjs
       - name: Attach screenshot QA evidence
         if: always()
         uses: actions/upload-artifact@v4
