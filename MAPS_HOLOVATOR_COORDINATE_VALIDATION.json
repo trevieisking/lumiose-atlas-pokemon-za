@@ -199,6 +199,111 @@
         "symbol_matches_mission_exactly": false,
         "evidence_file": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
         "status": "in_game_holovator_symbol_class_corroborated_but_device_identity_and_exact_entrance_unverified"
+      },
+      "mission_lift_field_evidence_2026_11_22": {
+        "review_order": 1,
+        "date_checked": "2026-11-22",
+        "mission_number": 23,
+        "mission_title": "Underneath the Holovator",
+        "map_street": "Vernal Avenue (English), near northwestern corner of Wild Zone 1",
+        "reported_sector": "Vert Sector 9; source-reported location for quest, do not infer lift polygon/entry-face from sector string",
+        "quest_marker_not_device_marker": true,
+        "owner_photo_symbol_evidence": {
+          "photo_candidate": "PHOTO-C02 / WIDE-H02",
+          "observations": [
+            {
+              "owner_upload": "1000027200.heic",
+              "photo_pixel_approx": [
+                692,
+                620
+              ],
+              "projected_atlas_jpg_1920_native_px_approx": [
+                959,
+                1663
+              ]
+            },
+            {
+              "owner_upload": "1000027206.heic",
+              "photo_pixel_approx": [
+                831,
+                658
+              ],
+              "projected_atlas_jpg_1920_native_px_approx": [
+                968,
+                1668
+              ]
+            }
+          ],
+          "source": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+          "cross_photo_projection_separation_native_px_approx": 10,
+          "status": "two_original_owner_yellow_holovator_symbol_observations_at_same_neighbourhood; not exact entrance"
+        },
+        "independent_in_game_map": {
+          "source_title": "Game8 mission 023 in-game map objective screenshot",
+          "overview": "https://img.game8.jp/11858709/7a3fb31a5197418a3880201f775fd7b6.webp/show",
+          "closeup": "https://img.game8.jp/11858711/03e4d7aae71d402a8d6ef5ac044c3d4f.webp/show",
+          "interpretation": "Quest pink star immediately northwest of Wild Zone 1 in the Vernal Avenue / Vert-09 approach; source map objective icon is NOT necessarily centred at lift facade",
+          "source_page": "https://game8.jp/pokemon-legends-z-a/729708",
+          "source_to_atlas_affine_or_homography_confirmed": false,
+          "mission_star_identified_as_exact_holovator_marker": false
+        },
+        "ground_device_visual": {
+          "pre_activation": "https://img.game8.jp/11858766/daf62b37934bcaf747910af6697c2d29.webp/original",
+          "post_activation": "https://img.game8.jp/11858773/bb63356ab102a7ab0f3cf8cc6af6e625.webp/original",
+          "description": "Before repair a soil mound lies in grassy enclosed courtyard directly in front of red holographic barrier; after Diggersby encounter yellow double-up-arrow lift stands against light stone building wall with blue window/door on adjoining wall.",
+          "ground_facing_street_exact_entrance_wall_verified_to_owner_map": false
+        },
+        "quest_unlock": "After the Taunie/Urbain battle during Main Mission 10: The Secrets of Mega Evolution; Thonky says after mission 10 begins, other guides specify after rival battle",
+        "npc": "Terra",
+        "action": "Speak to Terra northwest of Wild Zone 1; investigate dirt mound and choose to drive out the Pokémon; battle level 28 Diggersby, catch or defeat it; Holovator becomes usable",
+        "rewards": [
+          {
+            "type": "currency",
+            "amount": 1500
+          },
+          {
+            "type": "Soft Sand",
+            "quantity": 1
+          },
+          {
+            "type": "Revive",
+            "quantity": 1
+          }
+        ],
+        "rooftop_access": {
+          "confirmed_by_guide": true,
+          "description": "Repaired Holovator can be ridden to rooftop overlooking this city block; no numbered rooftop item pickup in source has been independently matched to this lift and owner's coordinate system",
+          "source": "https://www.dexerto.com/wikis/pokemon-legends-z-a/underneath-the-holovator-pokemon-legends-z-a/",
+          "exact_exit_floor": null,
+          "exact_exit_map_xy": null,
+          "unrelated_research_note": "Vernal Avenue southwest scaffolding includes a Colorful Screw/Big Pearl/Super Potion in independent street index, but its linkage to this mission lift is NOT demonstrated; do not conflate."
+        },
+        "source_links": [
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator",
+          "https://game8.jp/pokemon-legends-z-a/729708",
+          "https://gamewith.jp/pokemon-za/524359",
+          "https://www.serebii.net/legendsz-a/sidemissions/underneaththeholovator.shtml",
+          "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vernal-avenue.html",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/underneath-the-holovator"
+        ],
+        "external_mission_map_coordinates_only": {
+          "x": 10111,
+          "y": 16090,
+          "source": "Gamer Guides side mission location, not Holovator device"
+        },
+        "exact_holovator_category_marker_id": null,
+        "atlas_x": null,
+        "atlas_y": null,
+        "street_entrance_pixel": null,
+        "roof_landing_pixel": null,
+        "confirmed_production_pin": false,
+        "evidence_assessment": "Independently pictured actual repaired mission lift and rough city-block map locality; owner map icon strong spatial lead but no geometric proof connecting it exactly to pictured lift facade or rooftop exit",
+        "unresolved": [
+          "exact source category marker identity",
+          "source mission star vs yellow icon offset",
+          "perspective-correct photo-to-map registration with withheld landmark check",
+          "usable ground entrance wall and rooftop landing coordinates"
+        ]
       }
     },
     {
