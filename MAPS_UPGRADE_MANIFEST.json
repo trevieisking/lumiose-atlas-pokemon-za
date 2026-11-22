@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 18,
+  "revision": 19,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Mission #61 My Favorite Holovator is now owner photographed (physical lift) and red-ring mapped to approx JPG (765,1396); do not send user to find this ground-side entrance again. If convenient, optional roof landing north-up red ring + physical roof photo. Continue 23 physical-category marker individual reconciliation, source ground/roof pairs and other missing #56 if needed; never map dynamic daily Hyperspace; scaffolds later.",
+    "next_safe_record": "Mission #061 has FIVE owner photos: actual ground entrance and two red-ring ground maps plus rooftop arrival view. Ground guide-image XY approx (765,1396); roof shown but not georeferenced to exact native X/Y. No new roof pin. If future precise roof coordinate desired, optional full north-up map ring from upper pad. Continue remaining physical lifts; don't revisit #061 ground location.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1572,6 +1572,61 @@
       "production_main_site_modified": false,
       "supabase_progress_modified": false,
       "original_user_image_binaries_uploaded_to_repo": false
+    },
+    "owner_mission61_fifth_roof_photo_batch_17": {
+      "source": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+      "mission_no": 61,
+      "title": "My Favorite Holovator",
+      "owner_photos_total": 5,
+      "new_rooftop_photo": "1000027236.heic",
+      "new_photo_sha256": "fc86cd62208480eb5f7f52812e4cc34c4c3b81741914fb27014e7d6ddebad931",
+      "owner_reports_this_is_same_lift_roof": true,
+      "roof_arrival_platform_photo_visible": true,
+      "roof_surroundings": [
+        "Prism Tower visible right",
+        "fountain and park visible left below",
+        "open stone-paved roof",
+        "nearby Investigate prompt"
+      ],
+      "owner_original_ground_research_city_JPG_xy": [
+        765,
+        1396
+      ],
+      "native_city_JPG_roof_xy": null,
+      "roof_height_floor": null,
+      "explanation": "Five photos provide owner-reported ground/roof journey and identifiable roof appearance, but fifth image is a 3D rooftop scene with only small minimap; exact 2D upper exit remains unregistered. Do not treat rooftop as a second confirmed point on the city JPG.",
+      "unique_external_23_category_device_ID": null,
+      "draft_map_pr": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "draft_map_r061_existing_ground_pin_preserved": true,
+      "draft_map_marker_count": 16,
+      "new_roof_pin_added": false,
+      "private_conversation_only_five_photo_viewer": "holovator_061_five_photo_route_viewer.html",
+      "private_viewer_QA": {
+        "chromium_executable": "/usr/bin/chromium",
+        "viewports": [
+          [
+            1280,
+            850
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "tabs": 5,
+        "roof_panel_click_and_image_decode": true,
+        "roof_image_pixels": [
+          1536,
+          865
+        ],
+        "horizontal_overflow": false,
+        "JS_errors": 0
+      },
+      "source_photos_not_publicly_uploaded": true,
+      "production_site_modified": false,
+      "main_modified": false,
+      "Supabase_or_progress_modified": false,
+      "release_gate": "0 stable external physical category IDs reconciled of reported 23 and 0 exact physical ground->roof native city-map coordinate pairs."
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
