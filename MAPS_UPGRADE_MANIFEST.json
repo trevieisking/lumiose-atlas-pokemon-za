@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 17,
+  "revision": 18,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Owner identifies three MOVING DLC Hyperspace map icon classes via selected popups; never pin their positions permanently. Next single user field target is #061 My Favorite Holovator near southeast Bleu Plaza / north Aymlis Park, missing confirmed source category icon; require ground photo + current player ring north-up photos, optional roof landing. Preserve all research-only preview dots and L001, no live release.",
+    "next_safe_record": "Mission #61 My Favorite Holovator is now owner photographed (physical lift) and red-ring mapped to approx JPG (765,1396); do not send user to find this ground-side entrance again. If convenient, optional roof landing north-up red ring + physical roof photo. Continue 23 physical-category marker individual reconciliation, source ground/roof pairs and other missing #56 if needed; never map dynamic daily Hyperspace; scaffolds later.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1496,6 +1496,82 @@
       "ladder_L001_preserved": true,
       "scaffold_phase_deferred": true,
       "owner_images_remain_private": true
+    },
+    "owner_mission61_ground_entry_batch_16": {
+      "record": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
+      "mission_title": "My Favorite Holovator",
+      "mission_no": 61,
+      "district": "Bleu Sector 3 west/southwest short corner above Aymlis Park; southeast Bleu Plaza",
+      "source_original_photos": [
+        "1000027232.heic",
+        "1000027233.heic",
+        "1000027234.heic",
+        "1000027235.heic"
+      ],
+      "north_up_wide_player_ring_photo_xy": [
+        706,
+        346
+      ],
+      "north_up_close_player_ring_photo_xy": [
+        707,
+        346
+      ],
+      "glowing_physical_lift_entrance_photographed": true,
+      "old_city_photo_reference_paths": [
+        "1000027200.heic W04",
+        "1000027206.heic W10"
+      ],
+      "wide_to_W04_inliers": 73,
+      "wide_to_W04_photo_RMS_px": 1.06,
+      "wide_to_W10_inliers": 145,
+      "wide_to_W10_photo_RMS_px": 0.76,
+      "close_to_wide_inliers": 139,
+      "close_to_wide_photo_RMS_px": 0.83,
+      "independent_native_city_JPG_research_projections": [
+        [
+          762.29,
+          1395.74
+        ],
+        [
+          769.07,
+          1396.9
+        ]
+      ],
+      "rounded_source_1920_image_research_xy": [
+        765,
+        1396
+      ],
+      "reference_projection_disagreement_native_px_approx": 6.88,
+      "rejected_bad_direct_close_old_reference_matches": true,
+      "epistemic_status": "Owner physical glowing ground Holovator + standing position confirmed. Map image XY approximate by reference mapping, not exact doorway. No external 23-category marker ID nor rooftop arrival/floor confirmed.",
+      "individual_23_Holovator_category_marker_ids_recovered_this_batch": 0,
+      "source_category_ids_total_still": 0,
+      "roof_exit_native_image_xy": null,
+      "draft_preview_path": "holovator-research-preview.html",
+      "draft_preview_PR": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "draft_preview_marker_id": "r-061",
+      "draft_research_holovator_symbols_total": 16,
+      "other_15_existing_research_lift_icons_preserved": true,
+      "ladder_L001_preserved": true,
+      "private_offline_owner_photo_viewer": "holovator_061_private_photo_comparison.html (conversation artifact only, no public GitHub user photographs)",
+      "private_annotated_source_image": "holovator_061_ground_entrance_reference.png (conversation artifact only)",
+      "private_Chromium_qa": {
+        "desktop_viewport": [
+          1365,
+          900
+        ],
+        "mobile_viewport": [
+          390,
+          844
+        ],
+        "images": 4,
+        "tabs": 4,
+        "JS_errors": 0,
+        "horizontal_overflow": false
+      },
+      "production_main_site_modified": false,
+      "supabase_progress_modified": false,
+      "original_user_image_binaries_uploaded_to_repo": false
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
