@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 10,
+  "revision": 11,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "All nine Holovator-unlock mission QUEST sources checked. Next individually recover 23 real Holovator-category device marker identities/coords from source maps, cross-register each with owner images, confirm street entry facade and roof exit. Do not claim 23/23 complete or publish map pins until all strict gates hold.",
+    "next_safe_record": "Two different in-game yellow symbols on Estival Avenue (Café Gallant/Magenta 3 versus Espace Vide/Bleu 4) now corroborated across owner W08/W09 photos with ~4px agreement in camera-pan shift and named external lift-route guides. Next find separately addressable source Holovator category marker IDs and calibrate exact Atlas 1920 image XY / street facade / roof landing for all 23 before publishing any map dots.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1149,6 +1149,66 @@
       ],
       "no_user_images_committed_to_public_repo": true,
       "production_site_changed": false
+    },
+    "nonmission_holovator_crossphoto_batch_09": {
+      "record": "MAPS_HOLOVATOR_NONMISSION_CROSSCHECKS_2026-11-22.json",
+      "staging_inventory": "MAPS_HOLOVATOR_23_DEVICE_INVENTORY_STAGING_2026-11-22.json",
+      "checked_on": "2026-11-22",
+      "two_original_owner_photo_ids": [
+        "W08 (1000027204.heic)",
+        "W09 (1000027205.heic)"
+      ],
+      "W08_holovator_glyph_groups_observed": 5,
+      "W09_independent_repeat_glyph_observations": 2,
+      "crossphoto_distinct_paired_icons": [
+        {
+          "place": "Estival Avenue / Café Gallant / Magenta Sector 3",
+          "W08": [
+            787,
+            655
+          ],
+          "W09": [
+            558,
+            294
+          ]
+        },
+        {
+          "place": "Estival Avenue / Espace Vide / Bleu Sector 4",
+          "W08": [
+            663,
+            776
+          ],
+          "W09": [
+            431,
+            412
+          ]
+        }
+      ],
+      "photo_pan_displacement_difference_norm_px": 4.24,
+      "coordinates_are_full_1536x865_camera_photo_pixels_not_atlas_jpg": true,
+      "new_nonmission_researched_photo_neighbourhoods": 9,
+      "guide_only_related_device_leads": 4,
+      "photo_related_crosschecks": [
+        "Vert Sector 3 courtyard by Café Cyclone",
+        "Bleu Sector 4 north-west complex by Espace Vide",
+        "Estival Avenue by Café Gallant (separate owner map symbol)",
+        "Jaune Street/Jaune Sector 11",
+        "Rouge Sector 5 across Sushi High Roller to Looker Bureau",
+        "Vert Sector 4 courtyard by Café Classe (exact icon match unverified)"
+      ],
+      "screenshot_only_new_unmatched_leads": [
+        "Magenta Sector 7 by Pokémon Center / Lumiose Sewers",
+        "Magenta Street northwest of Magenta Plaza"
+      ],
+      "mission_duplicate_caution": "Autumnal Avenue W08 icon may be mission #071, not new physical device",
+      "category_total_crosschecked_with_shackmaps_and_gamerguides": 23,
+      "individual_source_category_marker_ids_extracted": 0,
+      "unique_physical_devices_reconciled_to_category_count": 0,
+      "exact_atlas_entry_xy_verified": 0,
+      "exact_roof_exit_xy_verified": 0,
+      "map_pins_published": 0,
+      "source_caution": "A public 23-fast-travel-points map is not a 23-Holovator locations map. Third-party interactive map category counts are accessible; individual category marker positions remain unextracted.",
+      "no_live_runtime_or_data_changes": true
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
