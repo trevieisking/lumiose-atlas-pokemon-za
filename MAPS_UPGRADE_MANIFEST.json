@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 9,
+  "revision": 10,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -859,7 +859,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Next try DR-H-01 mission #004 Rouge Plaza / Sommi, where older owner icon alternatives differ about 73 source-image pixels and cannot be deduplicated. Then DR-H-07 #071 Magenta Sector 2. #23 and #80 have independent quest map and physical lift evidence but exact Atlas device entrance/roof points remain unverified.",
+    "next_safe_record": "All nine Holovator-unlock mission QUEST sources checked. Next individually recover 23 real Holovator-category device marker identities/coords from source maps, cross-register each with owner images, confirm street entry facade and roof exit. Do not claim 23/23 complete or publish map pins until all strict gates hold.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -1091,6 +1091,64 @@
       "verified_ground_entry_to_roof_exit_xy_pairs": 0,
       "new_confirmed_item_screw_pins": 0,
       "release_effect": "documentation_evidence_only_not_published_on_map"
+    },
+    "all_nine_holovator_unlock_missions_source_checked": {
+      "record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "inventory": "MAPS_HOLOVATOR_23_DEVICE_INVENTORY_STAGING_2026-11-22.json",
+      "batch": "ATLAS-HOLOVATOR-RECHECK-04-71-56-61-92-2026-11-22",
+      "checked_on": "2026-11-22",
+      "nine_mission_numbers": [
+        4,
+        23,
+        40,
+        45,
+        56,
+        61,
+        71,
+        80,
+        92
+      ],
+      "quest_location_unlock_activation_roof_research_records_complete": 9,
+      "source_in_game_quest_map_images_referenced": 9,
+      "newly_researched_missions_this_batch": [
+        4,
+        71,
+        56,
+        61,
+        92
+      ],
+      "new_rooftop_route_leads": [
+        "004 Rouge Plaza: two Colorful Screw leads via upper roof bridge and northern ladder (not owner pin IDs)",
+        "071 Magenta Sector 2: some rooftop/scaffold collectibles nearby but not linked to this exact lift",
+        "056 Jaune Sector 6: TM Wild Charge and Larvitar after Fighting-type physical move",
+        "061 Bleu Plaza: TM Energy Ball via breakable icy rooftop bridge, white Flabébé Stone Emporium roof lead",
+        "092 Bleu Sector 8: rooftop access, closer Bleu Sector 9 Dratini habitat"
+      ],
+      "source_conflicts_to_preserve": [
+        "Side Mission 071 availability: Game8/GameWith around Main24 Rust Syndicate office vs Thonky after starting Main25; story-event trigger preferred.",
+        "Side Mission 056 availability: Main19 after Muku battle per Game8/GameWith vs some mission groupings Main20.",
+        "Side Mission 092 four Beldum levels: Thonky and GameTrek Level49 vs Game8 Level36; unverified in-game combat level."
+      ],
+      "camera_photo_conflict": "Mission 004 Rouge Plaza old P08 ≈(831,633) vs P09 ≈(830,560) differing ~73px, plus W07 ≈(836,589), remain independent alternatives not deduplicated.",
+      "owner_photo_unmatched_holovator_symbol_candidate_groups": 7,
+      "external_category_holovators_reported": 23,
+      "holovator_category_marker_ids_individually_extracted": 0,
+      "mission_to_physical_category_marker_id_matches": 0,
+      "verified_exact_native_atlas_holovator_entrances": 0,
+      "verified_ground_to_roof_pixel_pairs": 0,
+      "confirmed_holovator_map_pins_published": 0,
+      "owner_release_gate": "Do not change live/Edition B map until complete Holovator physical inventory documented and validated; scaffolds and ladders after Holovators; collectibles after scaffold phase.",
+      "source_reference_pages": [
+        "https://www.shackmaps.com/pokemon-legends-z-a/map",
+        "https://gamewith.jp/pokemon-za/524373",
+        "https://game8.jp/pokemon-legends-z-a/729556",
+        "https://game8.jp/pokemon-legends-z-a/731300",
+        "https://game8.jp/pokemon-legends-z-a/730741",
+        "https://game8.jp/pokemon-legends-z-a/731011",
+        "https://game8.jp/pokemon-legends-z-a/731477"
+      ],
+      "no_user_images_committed_to_public_repo": true,
+      "production_site_changed": false
     }
   },
   "last_coordinate_source_qa_on": "2026-11-22",
