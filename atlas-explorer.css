@@ -51,7 +51,9 @@
 .ae-pin[data-kind="landmark"]{background:#6f478d;color:#fff}
 .ae-pin:hover,.ae-pin:focus-visible,.ae-pin[aria-pressed="true"]{z-index:4;outline:4px solid #fef2a8;border-color:#583f8d}
 .ae-pin[hidden]{display:none}
-.ae-rose{position:absolute;top:12px;right:12px;display:grid;place-items:center;background:#ffffffed;color:#34294a;border:2px solid #cdb16d;box-shadow:0 3px 14px #17294650;border-radius:50%;width:64px;height:64px;pointer-events:none}
+.ae-rose{position:absolute;top:12px;right:12px;display:grid;place-items:center;background:#ffffffed;color:#34294a;border:2px solid #cdb16d;box-shadow:0 3px 14px #17294650;border-radius:50%;width:64px;height:64px;padding:0;cursor:pointer}
+.ae-rose:hover{background:#fff3d8;border-color:#8b643d}
+.ae-rose:focus-visible{outline:3px solid #e5a83e;outline-offset:3px}
 .ae-rose span{font-size:21px;display:block;line-height:1.05;transform:rotate(0deg);color:#a64246}
 .ae-rose strong{font-size:11px}
 .ae-map-guidance{position:absolute;left:10px;bottom:12px;background:#203457ce;color:#fff;border-radius:9px;padding:7px 10px;font-size:11px;pointer-events:none}
