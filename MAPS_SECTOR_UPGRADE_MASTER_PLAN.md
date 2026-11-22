@@ -852,3 +852,11 @@ The new close map 7375 matches map 7374 at **175 inliers / 0.64px RMS**, close r
 
 **Progress ledger:** `MAPS_UPGRADE_MANIFEST.json` revision 22, `owner_holovator_fieldwork_checkpoint_2026_11_22`. Existing original site and its Supabase/feedback/player data remain unchanged.
 
+
+### Owner final Holovator ZIP handoff and no-speculation ladder policy (2026-11-22)
+
+- Owner survey is **complete for all permanent gold-chevron lifts personally found/unlocked**, not proof that all externally listed 23 device IDs have been uniquely matched. Keep the 21 owner fieldbook entries as research-level locations with photo-backed approach directions, not precision GPS/pixel pins.
+- ZIP integrity verified: original combined survey archive (218 entries); flattened GitHub-ready archive (96 verified JPEGs); delta archive for last 11 JPEGs (5 Wild Zone 6; 6 Cafe Cyclone). GitHub main contains 90 owner photo JPGs; the 11 final JPGs and 10 earlier source images are **not** yet hosted. Do not point live galleries at missing files.
+- Owner requests **no invented ladder or scaffold pins**: in-game maps do not individually identify such climbs. Write photo-supported walking/climbing directions where verified; leave other roof passages explicitly unverified. Rotating Hyperspace distortions remain separate from permanent Holovators.
+- Photo import and policy manifest: `docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md`; pending archive `lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip`; stable draft PR #76. No main/live/Workspace/Supabase/feedback/player-progress change from this checkpoint.
+
