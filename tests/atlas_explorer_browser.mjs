@@ -276,6 +276,18 @@ try{
   assert.equal(await phone.locator("#aeSelected h3").textContent(),"Select a map pin or place",
     "Unknown links must not create or pretend to verify a map record");
   assert.equal(await phone.locator(".ae-pin[data-kind='holovator']").count(),21);
+  // AT-279: browser-check Zygarde's safe-zone advice on desktop and phone, read-only.
+  for(const [page,device] of [[desktop,"desktop"],[phone,"phone"]]){
+    await page.goto(base+"/journey.html#journey-mission-42",{waitUntil:"domcontentloaded"});
+    const tip=page.locator("#journey-mission-42 p.note");
+    assert.equal(await tip.count(),1,"Mission 42 must have exactly one no-hit note");
+    assert.match(await tip.textContent(),/two small unlit triangular pockets/);
+    await tip.scrollIntoViewIfNeeded();
+    assert.equal(await tip.isVisible(),true);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+      "Mission 42 note must not cause horizontal overflow on "+device);
+    await page.screenshot({path:output+"/at279-zygarde-mission42-"+device+".png",fullPage:false});
+  }
   // AT-270: actual browser rendering of the researched finale route, on desktop and phone.
   // This checks content visibility while leaving every checkbox and map state unchanged.
   await desktop.goto(base+"/walkthrough.html#mission-37",{waitUntil:"domcontentloaded"});
