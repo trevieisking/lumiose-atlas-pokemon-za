@@ -322,6 +322,36 @@ try{
   assert.match(await desktop.locator("#journey-mission-37").textContent(),/Mega Garchomp/);
   await desktop.screenshot({path:output+"/at272-journey-mission37-desktop-deeplink.png",fullPage:false});
   assert.equal(mobileErrors.length,0,"AT-272 phone navigation errors: "+mobileErrors.join(" | "));
+  // AT-273: click real recovered DLC links on desktop and phone, not guessed fragments.
+  await desktop.goto(base+"/mega-dimension.html#hyper-1",{waitUntil:"domcontentloaded"});
+  const dlcOne=desktop.locator('#hyper-1 a.dlc-index-primary[href="journey.html#journey-dlc-1"]');
+  assert.equal(await dlcOne.count(),1,"DLC Mission 1 must have a real Complete Journey link");
+  await dlcOne.click();
+  await desktop.waitForURL("**/journey.html#journey-dlc-1",{timeout:12000});
+  await desktop.waitForFunction(()=>{
+    const card=document.getElementById("journey-dlc-1");
+    const box=card?.getBoundingClientRect();
+    return box && box.top>=-20 && box.top<160;
+  },{timeout:12000});
+  assert.equal(await desktop.locator("#journey-dlc-1").isVisible(),true);
+  await desktop.screenshot({path:output+"/at273-journey-dlc1-desktop.png",fullPage:false});
+
+  await phone.goto(base+"/mega-dimension.html#hyper-14",{waitUntil:"domcontentloaded"});
+  const dlcFourteen=phone.locator('#hyper-14 a.dlc-index-primary[href="journey.html#journey-dlc-14"]');
+  assert.equal(await dlcFourteen.count(),1,"DLC Mission 14 must have a real Complete Journey link");
+  await dlcFourteen.click();
+  await phone.waitForURL("**/journey.html#journey-dlc-14",{timeout:12000});
+  await phone.waitForFunction(()=>{
+    const card=document.getElementById("journey-dlc-14");
+    const box=card?.getBoundingClientRect();
+    return box && box.top>=-20 && box.top<160;
+  },{timeout:12000});
+  assert.equal(await phone.locator("#journey-dlc-14").isVisible(),true);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+    "Completed DLC Journey anchor must remain within phone viewport");
+  await phone.screenshot({path:output+"/at273-journey-dlc14-phone.png",fullPage:false});
+  assert.equal(errors.length,0,"Desktop DLC link navigation JavaScript errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"Phone DLC link navigation JavaScript errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
