@@ -59,6 +59,10 @@ on:
       - tests/battles_recovered.test.mjs
       - walkthrough.html
       - index.html
+      - src/template.html
+      - coverage.html
+      - coverage.css
+      - tests/coverage_navigation.test.mjs
       - src/sections/walkthrough.html
       - tests/mission37_ally_wave.test.mjs
       - tests/mission24_25_source_parity.test.mjs
@@ -155,6 +159,8 @@ jobs:
         run: node --test tests/rewards_recovered.test.mjs
       - name: Verify PDF-backed Ranked Battles page, Season X table and mobile navigation
         run: node --test tests/battles_recovered.test.mjs
+      - name: Verify coverage HTML, original 25-link menu, generated-source parity and no raw Markdown navigation
+        run: node --test tests/coverage_navigation.test.mjs
       - name: Verify 42 source mission guides, no progress writes, navigation and mobile layout
         run: node --test tests/walkthrough_index.test.mjs
       - name: Check all 48 Walkthrough to Complete Journey mission links and untouched player progress
