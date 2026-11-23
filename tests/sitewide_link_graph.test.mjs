@@ -91,3 +91,49 @@ test("AT-275: every published HTML page's local href and fragment resolves",()=>
   assert.ok(homeDeepLinks>150,"The mission/deep-link routes were unexpectedly lost");
   console.log("Sitewide link graph verified",JSON.stringify({pages:pages.length,checked,crossPage,homeDeepLinks}));
 });
+
+
+test("AT-276: all 68 original homepage shortcuts now point to verified live section IDs",()=>{
+  const walkthrough=read("src/sections/walkthrough.html");
+  const dimension=read("src/sections/dimension.html");
+  const secrets=read("src/sections/secrets.html");
+  const starters=read("src/sections/starters.html");
+  const sectors=pageIds.get("sector-maps.html");
+  const journey=pageIds.get("journey.html");
+  const royale=pageIds.get("royale-guide.html");
+  const bosses=pageIds.get("boss-guide.html");
+  const shops=pageIds.get("shops.html");
+  const homeIds=pageIds.get("home-connection.html");
+  for(let n=1;n<=20;n++){
+    const href='href="sector-maps.html#wildzone-'+n+'"';
+    assert.ok(walkthrough.includes(href)&&home.includes(href),"Missing Wild Zone route "+n);
+    assert.ok(sectors.has("wildzone-"+n),"No actual zone directory target "+n);
+  }
+  const zoneLinks=[...walkthrough.matchAll(/href="sector-maps\.html#wildzone-(\d+)"/g)];
+  assert.equal(zoneLinks.length,20,"All 20 Wild Zone links must survive");
+  const dlcLinks=[...dimension.matchAll(/href="journey\.html#journey-dlc-(\d+)"/g)];
+  assert.equal(dlcLinks.length,20,"Preserve 20 DLC chapter links covering 14 unique missions");
+  assert.equal(new Set(dlcLinks.map(m=>m[1])).size,14);
+  for(let n=1;n<=14;n++){
+    assert.ok(journey.has("journey-dlc-"+n),"DLC Journey destination missing "+n);
+    assert.ok(home.includes('href="journey.html#journey-dlc-'+n+'"'));
+  }
+  const rankMap={y:1,x:2,w:3,v:4,e:6,d:7,c:8,b:9,a:10};
+  const rankLinks=[...walkthrough.matchAll(/href="royale-guide\.html#royale-match-(\d+)"/g)];
+  assert.equal(rankLinks.length,9,"Preserve all nine referenced promotion shortcuts");
+  for(const n of Object.values(rankMap))assert.ok(royale.has("royale-match-"+n));
+  const bossLinks=[...walkthrough.matchAll(/href="boss-guide\.html#boss-(\d{2})"/g)];
+  assert.equal(bossLinks.length,16,"Preserve all sixteen referenced Rogue Mega boss cards");
+  for(let n=1;n<=16;n++)assert.ok(bosses.has("boss-"+String(n).padStart(2,"0")));
+  for(const target of ["shop-directory","colorful-screws"]){
+    assert.ok(shops.has(target)&&secrets.includes('href="shops.html#'+target+'"'));
+    assert.ok(home.includes('href="shops.html#'+target+'"'));
+  }
+  assert.ok(homeIds.has("alpha-starters"));
+  assert.ok(starters.includes('href="home-connection.html#alpha-starters"'));
+  assert.ok(home.includes('href="home-connection.html#alpha-starters"'));
+  const stale=/href="(?:journey\.html#(?:zone|hyper)-\d+|royale-guide\.html#rank-[a-z]+|boss-guide\.html#boss-[a-z]+|shops\.html#(?:vendors|racine)|home-connection\.html#claim)"/;
+  for(const [name,markup] of [["generated home",home],["walkthrough source",walkthrough],
+    ["DLC source",dimension],["secrets source",secrets],["starters source",starters]])
+    assert.doesNotMatch(markup,stale,name+" still contains a dead legacy shortcut");
+});
