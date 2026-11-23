@@ -385,6 +385,37 @@ try{
     {timeout:12000});
   assert.equal(mobileErrors.length,0,"Coverage phone JS errors: "+mobileErrors.join(" | "));
   assert.equal(errors.length,0,"Coverage desktop JS errors: "+errors.join(" | "));
+  // AT-276: click a restored Wild Zone link from the real Mission 3 card on Android.
+  await phone.goto(base+"/index.html#walkthrough:mission-3",{waitUntil:"domcontentloaded"});
+  await phone.waitForFunction(()=>document.getElementById("mission-3")?.classList.contains("open"),
+    {timeout:15000});
+  const storyZone=phone.locator('#mission-3 a[href="sector-maps.html#wildzone-1"]');
+  assert.equal(await storyZone.count(),1,"Missing real Zone 1 directory link from Mission 3");
+  await storyZone.click();
+  await phone.waitForURL("**/sector-maps.html#wildzone-1",{timeout:12000});
+  await phone.waitForFunction(()=>{
+    const card=document.getElementById("wildzone-1");
+    const rect=card?.getBoundingClientRect();
+    return card&&!card.hidden&&rect&&rect.top>=-30&&rect.top<180;
+  },{timeout:12000});
+  assert.match(await phone.locator("#wildzone-1").textContent(),/Wild Zone 1/);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  await phone.screenshot({path:output+"/at276-mission3-wildzone1-phone.png",fullPage:false});
+
+  // AT-276: a main-guide DLC chapter must open the exact existing Journey mission.
+  await desktop.goto(base+"/index.html#dimension",{waitUntil:"domcontentloaded"});
+  const mainDlc=desktop.locator('a[href="journey.html#journey-dlc-14"]').last();
+  assert.ok(await mainDlc.count()>=1,"Missing corrected final DLC mission shortcut");
+  await mainDlc.click();
+  await desktop.waitForURL("**/journey.html#journey-dlc-14",{timeout:12000});
+  await desktop.waitForFunction(()=>{
+    const rect=document.getElementById("journey-dlc-14")?.getBoundingClientRect();
+    return rect&&rect.top>=-30&&rect.top<180;
+  },{timeout:12000});
+  assert.equal(await desktop.locator("#journey-dlc-14").isVisible(),true);
+  await desktop.screenshot({path:output+"/at276-main-guide-dlc14-desktop.png",fullPage:false});
+  assert.equal(errors.length,0,"AT-276 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-276 Android JS errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
