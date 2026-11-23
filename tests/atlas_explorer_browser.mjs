@@ -303,7 +303,7 @@ try{
   await phone.waitForFunction(()=>{
     const card=document.getElementById("journey-mission-24");
     const box=card?.getBoundingClientRect();
-    return box&&box.top<innerHeight&&box.bottom>0;
+    return box&&box.top>=-20&&box.top<160;
   },{timeout:12000});
   assert.match(await phone.locator("#journey-mission-24").textContent(),/TM100 Gunk Shot/);
   await phone.screenshot({path:output+"/at272-journey-mission24-phone-deeplink.png",fullPage:false});
@@ -317,7 +317,7 @@ try{
   await desktop.waitForURL("**/journey.html#journey-mission-37",{timeout:12000});
   await desktop.waitForFunction(()=>{
     const box=document.getElementById("journey-mission-37")?.getBoundingClientRect();
-    return box&&box.top<innerHeight&&box.bottom>0;
+    return box&&box.top>=-20&&box.top<160;
   },{timeout:12000});
   assert.match(await desktop.locator("#journey-mission-37").textContent(),/Mega Garchomp/);
   await desktop.screenshot({path:output+"/at272-journey-mission37-desktop-deeplink.png",fullPage:false});
