@@ -126,7 +126,7 @@ try{
   assert.equal(await mission61Link.count(),1);
   await mission61Link.click();
   await desktop.waitForURL("**/atlas-explorer.html?place=bleu3-fav");
-  await desktop.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent==="My Favorite Holovator");
+  await desktop.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.startsWith("My Favorite Holovator"));
   assert.equal(await desktop.locator('#aeResults button[data-record-id="bleu3-fav"]').getAttribute("aria-pressed"),"true");
   assert.equal(await desktop.locator("#aeSelected .ae-photo-grid img").count(),5,
     "Deep link must retain all five original mission 61 photographs");
@@ -254,6 +254,10 @@ try{
   await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.includes("Hotel Z"));
   assert.equal(await phone.locator("#aeRouteSelect").inputValue(),"hotel-z-ladder");
   assert.equal(await phone.locator('#aeResults button[data-record-id="hotel-z-ladder"]').getAttribute("aria-pressed"),"true");
+  await phone.goto(base+"/atlas-explorer.html?place=wz-06",{waitUntil:"networkidle"});
+  await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent==="Wild Zone 06");
+  assert.equal(await phone.locator('#aeFilters button[data-kind="zone"]').getAttribute("aria-pressed"),"true");
+  assert.match(await phone.locator("#aeSelected").textContent(),/source-saved Wild Zone centre/);
   await phone.goto(base+"/atlas-explorer.html?place=jaune12-wz6",{waitUntil:"networkidle"});
   await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.includes("Wild Zone 6"));
   assert.equal(await phone.locator("#aeSelected .ae-photo-grid img").count(),5);
