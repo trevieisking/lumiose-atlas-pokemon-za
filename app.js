@@ -92,7 +92,7 @@
         if(hiddenCard?.hidden){
           const search=$(currentView==='walkthrough'?'#missionSearch':'#sideSearch');
           if(search)search.value='';
-          $('#'+currentView+' .toolbar .tabs [data-filter]').forEach(tab=>{
+          $$('#'+currentView+' .toolbar .tabs [data-filter]').forEach(tab=>{
             const selected=tab.dataset.filter==='All';
             tab.classList.toggle('active',selected);
             tab.setAttribute('aria-pressed',String(selected));
