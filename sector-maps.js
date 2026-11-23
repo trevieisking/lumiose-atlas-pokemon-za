@@ -86,7 +86,7 @@
       repaint();
       const details=card.querySelector(".approx-clue-panel");
       if(details)details.open=true;
-      if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>target.scrollIntoView({block:"center"}));
+      if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>target.scrollIntoView({block:"center",behavior:"instant"}));
       return;
     }
     if(!/^(wildzone-\d{1,2}|sector-(vert|bleu|magenta|rouge|jaune)-sector-\d{1,2})$/.test(hash))return;
@@ -97,7 +97,7 @@
     repaint();
     const details=card.querySelector("details");
     if(details)details.open=true;
-    if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>card.scrollIntoView({block:"start"}));
+    if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>card.scrollIntoView({block:"start",behavior:"instant"}));
   }
 
   for(const button of buttons)button.addEventListener("click",()=>{
@@ -130,4 +130,13 @@
   repaint();
   refreshChecks();
   openDirectHash();
+  // A long directory can shift after the browser's first hash scroll while
+  // city-map images load. Re-align the initial deep link once at window load;
+  // never repeat it after the player navigates to another hash or moves a map.
+  const initialMapHash=location.hash;
+  if(initialMapHash)window.addEventListener("load",()=>{
+    if(location.hash!==initialMapHash)return;
+    if(typeof requestAnimationFrame==="function")requestAnimationFrame(openDirectHash);
+    else openDirectHash();
+  },{once:true});
 })();
