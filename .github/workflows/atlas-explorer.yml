@@ -6,6 +6,7 @@ on:
       - atlas-explorer.css
       - atlas-explorer.js
       - index.html
+      - app.js
       - src/template.html
       - coverage.html
       - coverage.css
@@ -46,7 +47,7 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged

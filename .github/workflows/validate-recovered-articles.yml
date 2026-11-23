@@ -59,6 +59,7 @@ on:
       - tests/battles_recovered.test.mjs
       - walkthrough.html
       - index.html
+      - app.js
       - src/template.html
       - coverage.html
       - coverage.css
@@ -107,7 +108,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify article JS syntax
-        run: node --check recovered-articles.js
+        run: node --check recovered-articles.js && node --check app.js
       - name: Verify original PDF reward order, menu, safe local state and navigation
         run: node --test tests/mable_recovered.test.mjs
       - name: Verify shiny calculator JavaScript syntax

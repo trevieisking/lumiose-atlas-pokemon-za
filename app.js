@@ -82,12 +82,38 @@
     if(anchor){
       const target=document.getElementById(anchor);
       if(target){
+        // The requested card may be hidden by a search or chapter filter from
+        // earlier navigation in this tab. Only clear that section's filter when
+        // the specific deep-link target is hidden; otherwise preserve it.
+        const hiddenCard=currentView==='walkthrough'
+          ? target.closest('#missionsList > .mission')
+          : currentView==='sidequests'
+            ? target.closest('#sideList > .side-quest') : null;
+        const wasHidden=Boolean(hiddenCard?.hidden);
+        if(wasHidden){
+          const search=$(currentView==='walkthrough'?'#missionSearch':'#sideSearch');
+          if(search)search.value='';
+          $$('#'+currentView+' .toolbar .tabs [data-filter]').forEach(tab=>{
+            const selected=tab.dataset.filter==='All';
+            tab.classList.toggle('active',selected);
+            tab.setAttribute('aria-pressed',String(selected));
+          });
+          if(currentView==='walkthrough')updateMissionFilter();
+          else updateSideFilter();
+        }
         if(target.classList.contains('mission')){
           target.classList.add('open');
           const toggler=$('.mission-toggle',target);
           if(toggler){toggler.setAttribute('aria-expanded','true');toggler.textContent='Close guide ↑';}
         }
-        requestAnimationFrame(()=>target.scrollIntoView({behavior:'auto',block:'start'}));
+        requestAnimationFrame(()=>{
+          if(wasHidden){
+            // Avoid inherited smooth scrolling on this newly revealed card.
+            // Align beneath the existing sticky header without modifying CSS.
+            const top=target.getBoundingClientRect().top+window.scrollY-96;
+            window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+          }else target.scrollIntoView({behavior:'auto',block:'start'});
+        });
         return;
       }
     }
