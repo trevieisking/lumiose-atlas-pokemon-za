@@ -326,6 +326,7 @@ try{
   await desktop.goto(base+"/mega-dimension.html#hyper-1",{waitUntil:"domcontentloaded"});
   const dlcOne=desktop.locator('#hyper-1 a.dlc-index-primary[href="journey.html#journey-dlc-1"]');
   assert.equal(await dlcOne.count(),1,"DLC Mission 1 must have a real Complete Journey link");
+  await desktop.locator("#hyper-1 details.dlc-index-detail > summary").click();
   await dlcOne.click();
   await desktop.waitForURL("**/journey.html#journey-dlc-1",{timeout:12000});
   await desktop.waitForFunction(()=>{
@@ -339,6 +340,7 @@ try{
   await phone.goto(base+"/mega-dimension.html#hyper-14",{waitUntil:"domcontentloaded"});
   const dlcFourteen=phone.locator('#hyper-14 a.dlc-index-primary[href="journey.html#journey-dlc-14"]');
   assert.equal(await dlcFourteen.count(),1,"DLC Mission 14 must have a real Complete Journey link");
+  await phone.locator("#hyper-14 details.dlc-index-detail > summary").click();
   await dlcFourteen.click();
   await phone.waitForURL("**/journey.html#journey-dlc-14",{timeout:12000});
   await phone.waitForFunction(()=>{
