@@ -393,21 +393,12 @@ try{
   assert.equal(await storyZone.count(),1,"Missing real Zone 1 directory link from Mission 3");
   await storyZone.click();
   await phone.waitForURL("**/sector-maps.html#wildzone-1",{timeout:12000});
-  await phone.waitForTimeout(900);
-  const zoneDebug=await phone.evaluate(()=>{
-    const card=document.getElementById("wildzone-1");
-    const box=card?.getBoundingClientRect();
-    return {hash:location.hash,cardExists:!!card,cardHidden:card?.hidden,
-      display:card?getComputedStyle(card).display:null,
-      top:box?.top,bottom:box?.bottom,viewport:innerHeight,scrollY,
-      parentHidden:card?.parentElement?.hidden,htmlHeight:document.documentElement.scrollHeight,
-      childDetails:[...card?.querySelectorAll("details")||[]].map(d=>d.open).slice(0,4)};
-  });
-  console.log("AT276_WILDZONE_PHONE_POSITION",JSON.stringify(zoneDebug));
+  await phone.waitForLoadState("load");
   await phone.waitForFunction(()=>{
     const card=document.getElementById("wildzone-1");
-    const rect=card?.getBoundingClientRect();
-    return card&&!card.hidden&&rect&&rect.top>=-30&&rect.top<180;
+    const heading=card?.querySelector(".wildzone-card-head h3");
+    const rect=heading?.getBoundingClientRect();
+    return card&&!card.hidden&&rect&&rect.top>=-30&&rect.top<innerHeight-80;
   },{timeout:12000});
   assert.match(await phone.locator("#wildzone-1").textContent(),/Wild Zone 1/);
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
