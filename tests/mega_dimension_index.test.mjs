@@ -14,9 +14,24 @@ for(let i=0;i<starts.length;i++){
  assert.ok(html.includes('id="hyper-'+n+'"'),"Missing standalone route "+n);
  assert.ok(html.includes("<h3>"+title+"</h3>"),"Title not source exact "+n);
  assert.ok(html.includes('<ol class="dlc-index-steps">'+steps+"</ol>"),"Original steps altered "+n);
- if(detour)assert.ok(html.includes(detour),"Original optional side requests altered "+n);
- assert.ok(html.includes('href="journey.html#hyper-'+n+'"'),"Missing journey deep link "+n);
+ if(detour) {
+   // Preserve original side-request text byte for byte; correct only its broken Journey href.
+   const correctedDetour=detour.replace(/href="journey\.html#hyper-(\d+)"/g,(_,id)=>
+     'href="journey.html#journey-dlc-'+id+'"');
+   assert.ok(html.includes(correctedDetour),"Original optional side requests changed beyond the verified href fix "+n);
+ }
+ assert.ok(html.includes('href="journey.html#journey-dlc-'+n+'"'),"Missing real Complete Journey DLC mission target "+n);
 }
+// AT-273: compare the 20 mission links against real ids; 3 DLC overview links are intentionally separate.
+const journey=read("journey.html");
+const journeyIds=new Set([...journey.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]));
+const dlcTargets=[...html.matchAll(/href="journey\.html#(journey-dlc-\d+)"/g)].map(match=>match[1]);
+assert.equal(dlcTargets.length,20,"Preserve all 20 DLC-to-Journey mission links");
+assert.deepEqual([...new Set(dlcTargets)].sort((a,b)=>Number(a.split("-").at(-1))-Number(b.split("-").at(-1))),
+  Array.from({length:14},(_,i)=>"journey-dlc-"+(i+1)),"All 14 distinct DLC missions must be linked");
+for(const target of dlcTargets)assert.ok(journeyIds.has(target),"Broken Complete Journey destination #"+target);
+assert.doesNotMatch(html,/href="journey\.html#hyper-\d+"/,"Previous dead-link form must not recur");
+assert.equal((journey.match(/id="journey-dlc-\d+"/g)||[]).length,14,"Do not remove DLC destination cards");
 assert.equal((html.match(/class="dlc-index-card"/g)||[]).length,14);
 assert.equal((html.match(/class="dlc-index-steps"/g)||[]).length,14);
 const nav=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
