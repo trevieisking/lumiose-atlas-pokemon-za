@@ -219,6 +219,9 @@ function detailsFor(item){
   }else if(item.kind==="holovator"){
     selectedPanel.append(paragraph("Indoor rooms and rooftop connections for this lift have not been documented step by step."));
   }
+  // Stable, shareable URL for this *existing* evidence-labelled record; no new map point.
+  selectedPanel.append(link("atlas-explorer.html?place="+encodeURIComponent(item.id),
+    "Direct link to this location"));
 }
 function selectRecord(item,focus=true){
   if(!item)return;
@@ -445,10 +448,13 @@ async function load(){
     ? "("+scaffoldPins+" evidence-verified pins)"
     : "(no verified map pins yet)";
   drawList();
-  const requestedSector=new URLSearchParams(window.location.search).get("sector");
-  const deepLinked=recordMap.get(requestedSector);
-  if(deepLinked?.kind==="sector"){
-    activeKind="sector";drawList();selectRecord(deepLinked,true);
+  const requested=new URLSearchParams(window.location.search);
+  const requestedPlace=recordMap.get(requested.get("place"));
+  const requestedSector=recordMap.get(requested.get("sector"));
+  // Existing ?sector= links keep working; only registered place IDs can select records.
+  const deepLinked=requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
+  if(deepLinked){
+    activeKind=deepLinked.kind;drawList();selectRecord(deepLinked,true);
   }
   stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · 6 documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
