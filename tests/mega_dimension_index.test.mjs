@@ -14,7 +14,12 @@ for(let i=0;i<starts.length;i++){
  assert.ok(html.includes('id="hyper-'+n+'"'),"Missing standalone route "+n);
  assert.ok(html.includes("<h3>"+title+"</h3>"),"Title not source exact "+n);
  assert.ok(html.includes('<ol class="dlc-index-steps">'+steps+"</ol>"),"Original steps altered "+n);
- if(detour)assert.ok(html.includes(detour),"Original optional side requests altered "+n);
+ if(detour) {
+   // Preserve original side-request text byte for byte; correct only its broken Journey href.
+   const correctedDetour=detour.replace(/href="journey\.html#hyper-(\d+)"/g,(_,id)=>
+     'href="journey.html#journey-dlc-'+id+'"');
+   assert.ok(html.includes(correctedDetour),"Original optional side requests changed beyond the verified href fix "+n);
+ }
  assert.ok(html.includes('href="journey.html#journey-dlc-'+n+'"'),"Missing real Complete Journey DLC mission target "+n);
 }
 // AT-273: compare the 20 mission links against real ids; 3 DLC overview links are intentionally separate.
