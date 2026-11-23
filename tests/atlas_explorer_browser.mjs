@@ -431,9 +431,20 @@ try{
     return mission&&!mission.hidden&&mission.classList.contains("open")&&
       document.getElementById("missionSearch").value===""&&
       document.querySelector('#missionTabs [data-filter="All"]')?.classList.contains("active")&&
-      bounds&&bounds.top>=-50&&bounds.top<innerHeight-80;
+      bounds&&bounds.top>=70&&bounds.top<180;
   },undefined,{timeout:15000});
   await phone.screenshot({path:output+"/at277-filtered-mission3-phone.png",fullPage:false});
+  // A target that is already visible under a specific search must not reset
+  // the player's chosen search merely because it was deep-linked.
+  await phone.evaluate(()=>{location.hash="#walkthrough";});
+  await phone.locator("#missionSearch").fill("A New Life in Lumiose City");
+  assert.equal(await phone.locator("#mission-3").isVisible(),true);
+  await phone.evaluate(()=>{location.hash="#walkthrough:mission-3";});
+  await phone.waitForFunction(()=>
+    document.getElementById("mission-3")?.classList.contains("open")&&
+    document.getElementById("missionSearch")?.value==="A New Life in Lumiose City",
+    undefined,{timeout:12000});
+
 
   // The identical defect affects Side Missions when the old DLC-only chapter
   // filter hides a base-game request that was opened by a canonical deep link.
@@ -447,7 +458,7 @@ try{
     const bounds=quest?.getBoundingClientRect();
     return quest&&!quest.hidden&&document.getElementById("sideSearch").value===""&&
       document.querySelector('#sideTabs [data-filter="All"]')?.classList.contains("active")&&
-      bounds&&bounds.top>=-50&&bounds.top<180;
+      bounds&&bounds.top>=70&&bounds.top<180;
   },undefined,{timeout:15000});
   await desktop.screenshot({path:output+"/at277-filtered-quest22-desktop.png",fullPage:false});
   assert.equal(errors.length,0,"AT-277 desktop JS errors: "+errors.join(" | "));
