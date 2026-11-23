@@ -121,6 +121,17 @@ try{
   await desktop.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
     [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536),{timeout:20000});
   await desktop.screenshot({path:output+"/atlas-mission061-clean-desktop.png",fullPage:true});
+  // AT-278: a location card links back to that exact already-surveyed record.
+  const mission61Link=desktop.locator('#aeSelected a[href="atlas-explorer.html?place=bleu3-fav"]');
+  assert.equal(await mission61Link.count(),1);
+  await mission61Link.click();
+  await desktop.waitForURL("**/atlas-explorer.html?place=bleu3-fav");
+  await desktop.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent==="My Favorite Holovator");
+  assert.equal(await desktop.locator('#aeResults button[data-record-id="bleu3-fav"]').getAttribute("aria-pressed"),"true");
+  assert.equal(await desktop.locator("#aeSelected .ae-photo-grid img").count(),5,
+    "Deep link must retain all five original mission 61 photographs");
+  assert.match(await desktop.locator("#aeSelected").textContent(),/Approximate map pin/);
+  await desktop.screenshot({path:output+"/at278-direct-holovator-desktop.png",fullPage:true});
   await desktop.locator("#aeSearch").fill("Sommi");
   await desktop.locator("#aeResults button[data-record-id='rouge-plaza-west']").click();
   const photos=desktop.locator("#aeSelected .ae-photo-grid img");
@@ -238,6 +249,21 @@ try{
   assert.equal(await phone.locator(".ae-pin[data-kind='holovator']").count(),21);
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   await phone.screenshot({path:output+"/atlas-bleu-sector-deeplink-mobile.png",fullPage:true});
+  // AT-278: an existing photographed ladder and Wild Zone are directly shareable on phone.
+  await phone.goto(base+"/atlas-explorer.html?place=hotel-z-ladder",{waitUntil:"networkidle"});
+  await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.includes("Hotel Z"));
+  assert.equal(await phone.locator("#aeRouteSelect").inputValue(),"hotel-z-ladder");
+  assert.equal(await phone.locator('#aeResults button[data-record-id="hotel-z-ladder"]').getAttribute("aria-pressed"),"true");
+  await phone.goto(base+"/atlas-explorer.html?place=jaune12-wz6",{waitUntil:"networkidle"});
+  await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.includes("Wild Zone 6"));
+  assert.equal(await phone.locator("#aeSelected .ae-photo-grid img").count(),5);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  await phone.screenshot({path:output+"/at278-direct-wildzone6-mobile.png",fullPage:true});
+  await phone.goto(base+"/atlas-explorer.html?place=unrecognized-place",{waitUntil:"networkidle"});
+  await phone.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"));
+  assert.equal(await phone.locator("#aeSelected h3").textContent(),"Select a map pin or place",
+    "Unknown links must not create or pretend to verify a map record");
+  assert.equal(await phone.locator(".ae-pin[data-kind='holovator']").count(),21);
   // AT-270: actual browser rendering of the researched finale route, on desktop and phone.
   // This checks content visibility while leaving every checkbox and map state unchanged.
   await desktop.goto(base+"/walkthrough.html#mission-37",{waitUntil:"domcontentloaded"});
