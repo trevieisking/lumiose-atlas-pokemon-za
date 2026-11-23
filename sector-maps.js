@@ -86,7 +86,7 @@
       repaint();
       const details=card.querySelector(".approx-clue-panel");
       if(details)details.open=true;
-      if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>target.scrollIntoView({block:"center"}));
+      if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>target.scrollIntoView({block:"center",behavior:"instant"}));
       return;
     }
     if(!/^(wildzone-\d{1,2}|sector-(vert|bleu|magenta|rouge|jaune)-sector-\d{1,2})$/.test(hash))return;
@@ -97,7 +97,7 @@
     repaint();
     const details=card.querySelector("details");
     if(details)details.open=true;
-    if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>card.scrollIntoView({block:"start"}));
+    if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>card.scrollIntoView({block:"start",behavior:"instant"}));
   }
 
   for(const button of buttons)button.addEventListener("click",()=>{
