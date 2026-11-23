@@ -128,8 +128,12 @@ try{
   await desktop.waitForURL("**/atlas-explorer.html?place=bleu3-fav");
   await desktop.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.startsWith("My Favorite Holovator"));
   assert.equal(await desktop.locator('#aeResults button[data-record-id="bleu3-fav"]').getAttribute("aria-pressed"),"true");
-  assert.equal(await desktop.locator("#aeSelected .ae-photo-grid img").count(),5,
+  const reloaded61Pictures=desktop.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await reloaded61Pictures.count(),5,
     "Deep link must retain all five original mission 61 photographs");
+  for(let i=0;i<5;i++)await reloaded61Pictures.nth(i).scrollIntoViewIfNeeded();
+  await desktop.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536),{timeout:20000});
   assert.match(await desktop.locator("#aeSelected").textContent(),/Approximate map pin/);
   await desktop.screenshot({path:output+"/at278-direct-holovator-desktop.png",fullPage:true});
   await desktop.locator("#aeSearch").fill("Sommi");
@@ -260,7 +264,11 @@ try{
   assert.match(await phone.locator("#aeSelected").textContent(),/source-saved Wild Zone centre/);
   await phone.goto(base+"/atlas-explorer.html?place=jaune12-wz6",{waitUntil:"networkidle"});
   await phone.waitForFunction(()=>document.querySelector("#aeSelected h3")?.textContent?.includes("Wild Zone 6"));
-  assert.equal(await phone.locator("#aeSelected .ae-photo-grid img").count(),5);
+  const wz6EntryPictures=phone.locator("#aeSelected .ae-photo-grid img");
+  assert.equal(await wz6EntryPictures.count(),5);
+  for(let i=0;i<5;i++)await wz6EntryPictures.nth(i).scrollIntoViewIfNeeded();
+  await phone.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].length===5 &&
+    [...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536),{timeout:20000});
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   await phone.screenshot({path:output+"/at278-direct-wildzone6-mobile.png",fullPage:true});
   await phone.goto(base+"/atlas-explorer.html?place=unrecognized-place",{waitUntil:"networkidle"});
