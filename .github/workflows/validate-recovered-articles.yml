@@ -62,6 +62,7 @@ on:
       - src/template.html
       - coverage.html
       - coverage.css
+      - tests/sitewide_link_graph.test.mjs
       - tests/coverage_navigation.test.mjs
       - src/sections/walkthrough.html
       - tests/mission37_ally_wave.test.mjs
@@ -159,6 +160,8 @@ jobs:
         run: node --test tests/rewards_recovered.test.mjs
       - name: Verify PDF-backed Ranked Battles page, Season X table and mobile navigation
         run: node --test tests/battles_recovered.test.mjs
+      - name: Reject broken local guide anchors and raw Markdown destinations across every page
+        run: node --test tests/sitewide_link_graph.test.mjs
       - name: Verify coverage HTML, original 25-link menu, generated-source parity and no raw Markdown navigation
         run: node --test tests/coverage_navigation.test.mjs
       - name: Verify 42 source mission guides, no progress writes, navigation and mobile layout
