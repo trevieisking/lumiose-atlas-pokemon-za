@@ -263,6 +263,35 @@ try{
   await phone.locator("#journey-mission-37").scrollIntoViewIfNeeded();
   await phone.screenshot({path:output+"/at270-mission37-journey-phone.png",fullPage:false});
   assert.equal(mobileErrors.length,0,"Mission 37 phone navigation JavaScript errors: "+mobileErrors.join(" | "));
+  // AT-271: regression coverage for genuine player reports #13/#14 and safe Rank C advice.
+  // The Atlas full-city tests above still run before these page-only checks.
+  await desktop.goto(base+"/royale-guide.html#rank-c",{waitUntil:"domcontentloaded"});
+  assert.match(await desktop.locator("#royale-match-8").textContent(),/Ground is neutral against Bug\/Poison Mega Scolipede/);
+  await desktop.goto(base+"/walkthrough.html#mission-24",{waitUntil:"domcontentloaded"});
+  await desktop.waitForFunction(()=>document.querySelector("#mission-24 .route-index-details")?.open===true,{timeout:12000});
+  assert.match(await desktop.locator("#mission-24").textContent(),/TM100 Gunk Shot/);
+  assert.match(await desktop.locator("#mission-24").textContent(),/Corbeau arrives and checks in/);
+  await desktop.locator("#mission-24").scrollIntoViewIfNeeded();
+  await desktop.screenshot({path:output+"/at271-mission24-after-corbeau-desktop.png",fullPage:false});
+
+  await phone.goto(base+"/index.html#walkthrough:mission-25",{waitUntil:"domcontentloaded"});
+  await phone.waitForFunction(()=>{
+    const mission=document.getElementById("mission-25");
+    return mission?.classList.contains("open")&&mission.textContent.includes("Mega Scrafty (Lv. 50");
+  },{timeout:15000});
+  assert.match(await phone.locator("#mission-25").textContent(),/Clawitzer[\s\S]*Vanillish[\s\S]*Emolga[\s\S]*Staryu/);
+  assert.match(await phone.locator("#mission-25").textContent(),/Ariados[\s\S]*Sableye[\s\S]*Krookodile[\s\S]*Mega Scrafty/);
+  assert.equal(await phone.locator('#mission-25 input[data-check="25"]').count(),1);
+  await phone.locator("#mission-25").scrollIntoViewIfNeeded();
+  await phone.screenshot({path:output+"/at271-mission25-main-guide-phone.png",fullPage:false});
+
+  await phone.goto(base+"/journey.html#journey-mission-24",{waitUntil:"domcontentloaded"});
+  await phone.waitForFunction(()=>document.getElementById("journey-mission-24")?.textContent.includes("TM100 Gunk Shot"),
+    {timeout:12000});
+  assert.match(await phone.locator("#journey-mission-24").textContent(),/Ground deals neutral damage to Mega Scolipede/);
+  await phone.locator("#journey-mission-24").scrollIntoViewIfNeeded();
+  await phone.screenshot({path:output+"/at271-mission24-journey-phone.png",fullPage:false});
+  assert.equal(mobileErrors.length,0,"AT-271 phone browser errors: "+mobileErrors.join(" | "));
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
