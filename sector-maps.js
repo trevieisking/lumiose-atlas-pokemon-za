@@ -130,4 +130,13 @@
   repaint();
   refreshChecks();
   openDirectHash();
+  // A long directory can shift after the browser's first hash scroll while
+  // city-map images load. Re-align the initial deep link once at window load;
+  // never repeat it after the player navigates to another hash or moves a map.
+  const initialMapHash=location.hash;
+  if(initialMapHash)window.addEventListener("load",()=>{
+    if(location.hash!==initialMapHash)return;
+    if(typeof requestAnimationFrame==="function")requestAnimationFrame(openDirectHash);
+    else openDirectHash();
+  },{once:true});
 })();
