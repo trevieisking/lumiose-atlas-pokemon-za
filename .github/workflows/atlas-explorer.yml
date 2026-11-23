@@ -9,6 +9,7 @@ on:
       - src/template.html
       - coverage.html
       - coverage.css
+      - tests/sitewide_link_graph.test.mjs
       - tests/coverage_navigation.test.mjs
       - src/sections/walkthrough.html
       - walkthrough.html
@@ -50,6 +51,8 @@ jobs:
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
+      - name: Reject broken local guide anchors and raw Markdown destinations across every page
+        run: node --test tests/sitewide_link_graph.test.mjs
       - name: Validate native coverage destination and original 25-link menu
         run: node --test tests/coverage_navigation.test.mjs
       - name: Protect existing guide, checkmarks and map references
