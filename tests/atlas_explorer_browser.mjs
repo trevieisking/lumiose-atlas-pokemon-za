@@ -418,6 +418,41 @@ try{
   await desktop.screenshot({path:output+"/at276-main-guide-dlc14-desktop.png",fullPage:false});
   assert.equal(errors.length,0,"AT-276 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-276 Android JS errors: "+mobileErrors.join(" | "));
+  // AT-277: navigating to a real mission must reveal it even when the player's
+  // current search has hidden it. No progress state or map behaviour is touched.
+  await phone.goto(base+"/index.html#walkthrough",{waitUntil:"load"});
+  await phone.locator("#missionSearch").fill("Mega Garchomp");
+  assert.equal(await phone.locator("#mission-3").isHidden(),true,
+    "Precondition: a story search must hide unrelated Mission 3");
+  await phone.evaluate(()=>{location.hash="#walkthrough:mission-3";});
+  await phone.waitForFunction(()=>{
+    const mission=document.getElementById("mission-3");
+    const bounds=mission?.getBoundingClientRect();
+    return mission&&!mission.hidden&&mission.classList.contains("open")&&
+      document.getElementById("missionSearch").value===""&&
+      document.querySelector('#missionTabs [data-filter="All"]')?.classList.contains("active")&&
+      bounds&&bounds.top>=-50&&bounds.top<innerHeight-80;
+  },undefined,{timeout:15000});
+  await phone.screenshot({path:output+"/at277-filtered-mission3-phone.png",fullPage:false});
+
+  // The identical defect affects Side Missions when the old DLC-only chapter
+  // filter hides a base-game request that was opened by a canonical deep link.
+  await desktop.goto(base+"/index.html#sidequests",{waitUntil:"load"});
+  await desktop.locator('#sideTabs [data-filter="Mega Dimension"]').click();
+  assert.equal(await desktop.locator("#quest-22").isHidden(),true,
+    "Precondition: the DLC filter must hide base-game Side Mission 22");
+  await desktop.evaluate(()=>{location.hash="#sidequests:quest-22";});
+  await desktop.waitForFunction(()=>{
+    const quest=document.getElementById("quest-22");
+    const bounds=quest?.getBoundingClientRect();
+    return quest&&!quest.hidden&&document.getElementById("sideSearch").value===""&&
+      document.querySelector('#sideTabs [data-filter="All"]')?.classList.contains("active")&&
+      bounds&&bounds.top>=-50&&bounds.top<180;
+  },undefined,{timeout:15000});
+  await desktop.screenshot({path:output+"/at277-filtered-quest22-desktop.png",fullPage:false});
+  assert.equal(errors.length,0,"AT-277 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-277 phone JS errors: "+mobileErrors.join(" | "));
+
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
