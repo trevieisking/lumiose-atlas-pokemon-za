@@ -37,9 +37,16 @@
     const id = decodeURIComponent(location.hash.slice(1));
     if (!/^journey-(?:mission|dlc)-(?:[1-9]|[1-3][0-9]|4[0-2])$/.test(id)) return;
     const target = document.getElementById(id);
-    if (!target || !target.hidden) return;
-    active = "all";search.value="";update();
-    target.scrollIntoView({block:"start",behavior:"auto"});
+    if (!target) return;
+    // A valid deep link must land on its mission even when the card is already
+    // visible: native hash scrolling can run before the search/filter layout settles.
+    if (target.hidden) { active = "all";search.value="";update(); }
+    const moveToMission = () => {
+      if (decodeURIComponent(location.hash.slice(1)) === id)
+        target.scrollIntoView({block:"start",behavior:"auto"});
+    };
+    if (typeof requestAnimationFrame === "function") requestAnimationFrame(moveToMission);
+    else moveToMission();
   }
   window.addEventListener("hashchange",revealHashTarget);
   update();

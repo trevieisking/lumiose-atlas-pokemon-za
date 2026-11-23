@@ -82,4 +82,6 @@ runInNewContext(script2,{document:{
  querySelectorAll(sel){return sel==="button[data-journey-filter]"?filters2:sel==="article[data-journey-mission]"?cards:sel==="section[data-journey-chapter]"?chapters:[]}
 },location:hashLocation,window:{addEventListener(){}},decodeURIComponent,String,Array});
 assert.equal(second.journeyCount.textContent,"56 of 56 mission cards shown");
+assert.equal(second["journey-mission-19"].scrolled,true,
+ "Valid visible deep link must scroll to its mission after filter setup");
 console.log("PASS: 42 story + 14 DLC missions, 20 Wild Zones, 42 notes, 25-link menu, deep links, no-network filters and existing guide boundaries");
