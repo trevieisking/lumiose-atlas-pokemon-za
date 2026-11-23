@@ -9,6 +9,8 @@ on:
       - src/sections/walkthrough.html
       - walkthrough.html
       - journey.html
+      - mega-dimension.html
+      - tests/mega_dimension_index.test.mjs
       - journey.js
       - tests/mission37_ally_wave.test.mjs
       - tests/mission24_25_source_parity.test.mjs
@@ -42,6 +44,8 @@ jobs:
         run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs
+      - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
+        run: node --test tests/mega_dimension_index.test.mjs
       - name: Protect existing guide, checkmarks and map references
         run: python3 tests/validate_static.py
   atlas-browser:
