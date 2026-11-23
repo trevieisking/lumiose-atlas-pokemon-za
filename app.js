@@ -89,7 +89,8 @@
           ? target.closest('#missionsList > .mission')
           : currentView==='sidequests'
             ? target.closest('#sideList > .side-quest') : null;
-        if(hiddenCard?.hidden){
+        const wasHidden=Boolean(hiddenCard?.hidden);
+        if(wasHidden){
           const search=$(currentView==='walkthrough'?'#missionSearch':'#sideSearch');
           if(search)search.value='';
           $$('#'+currentView+' .toolbar .tabs [data-filter]').forEach(tab=>{
@@ -105,7 +106,14 @@
           const toggler=$('.mission-toggle',target);
           if(toggler){toggler.setAttribute('aria-expanded','true');toggler.textContent='Close guide ↑';}
         }
-        requestAnimationFrame(()=>target.scrollIntoView({behavior:'auto',block:'start'}));
+        requestAnimationFrame(()=>{
+          if(wasHidden){
+            // Avoid inherited smooth scrolling on this newly revealed card.
+            // Align beneath the existing sticky header without modifying CSS.
+            const top=target.getBoundingClientRect().top+window.scrollY-96;
+            window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+          }else target.scrollIntoView({behavior:'auto',block:'start'});
+        });
         return;
       }
     }
