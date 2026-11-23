@@ -354,6 +354,37 @@ try{
   await phone.screenshot({path:output+"/at273-journey-dlc14-phone.png",fullPage:false});
   assert.equal(errors.length,0,"Desktop DLC link navigation JavaScript errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"Phone DLC link navigation JavaScript errors: "+mobileErrors.join(" | "));
+  // AT-274: real desktop/Android-sized click from Coverage and known gaps to
+  // the native, readable article. Never open a raw .md source document to players.
+  await desktop.goto(base+"/index.html#home",{waitUntil:"domcontentloaded"});
+  const coverageDesktop=desktop.locator('.rebuild-notice a[href="coverage.html"]');
+  assert.equal(await coverageDesktop.count(),1,"Coverage banner must use HTML destination");
+  await coverageDesktop.click();
+  await desktop.waitForURL("**/coverage.html",{timeout:12000});
+  assert.match(await desktop.locator("h1").textContent(),/Coverage .*known gaps/i);
+  assert.equal(await desktop.locator(".coverage-card").count(),4);
+  assert.equal(await desktop.locator(".atlas-article-nav a").count(),25);
+  assert.match(await desktop.locator("#needs-verification").textContent(),/Hyperspace/i);
+  assert.equal(await desktop.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+    "Coverage desktop layout must fit viewport");
+  await desktop.screenshot({path:output+"/at274-coverage-known-gaps-desktop.png",fullPage:false});
+
+  await phone.goto(base+"/index.html#home",{waitUntil:"domcontentloaded"});
+  const coveragePhone=phone.locator('.rebuild-notice a[href="coverage.html"]');
+  assert.equal(await coveragePhone.count(),1,"Coverage button missing on Android viewport");
+  await coveragePhone.click();
+  await phone.waitForURL("**/coverage.html",{timeout:12000});
+  assert.equal(await phone.locator(".coverage-gap-list li").count(),5);
+  assert.equal(await phone.locator(".atlas-article-nav a").count(),25);
+  assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,
+    "Coverage page must be readable without horizontal phone scrolling");
+  await phone.screenshot({path:output+"/at274-coverage-known-gaps-phone.png",fullPage:false});
+  await phone.locator('.return-strip a[href="index.html#walkthrough"]').click();
+  await phone.waitForURL("**/index.html#walkthrough",{timeout:12000});
+  await phone.waitForFunction(()=>document.getElementById("walkthrough")?.classList.contains("active"),
+    {timeout:12000});
+  assert.equal(mobileErrors.length,0,"Coverage phone JS errors: "+mobileErrors.join(" | "));
+  assert.equal(errors.length,0,"Coverage desktop JS errors: "+errors.join(" | "));
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

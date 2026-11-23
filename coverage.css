@@ -1,0 +1,22 @@
+/* AT-274: coverage status page only. Does not change shared maps or guide styles. */
+.coverage-page .coverage-hero{margin-bottom:31px}
+.coverage-page .coverage-hero h1 em{font-style:normal;color:#7052a4}
+.coverage-page .coverage-overview{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin:9px 0 3px}
+.coverage-page .coverage-overview strong{font-size:40px;color:#604491;line-height:1.1}
+.coverage-page .coverage-overview span{color:#6d637d;font-size:13px;font-weight:750}
+.coverage-page .coverage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 31px}
+.coverage-page .coverage-card{padding:20px;border:1px solid #e6deef;background:#fff;border-radius:15px;min-width:0}
+.coverage-page .coverage-card h3{margin:8px 0 7px;color:#342c4c}
+.coverage-page .coverage-card p{font-size:14px;color:#625b6f;line-height:1.7}
+.coverage-page .coverage-card a,.coverage-page .coverage-links a{display:inline-flex;align-items:center;justify-content:center;border:1px solid #d4c7e7;background:#faf7ff;padding:9px 13px;min-height:44px;border-radius:9px;font-weight:760;font-size:13px;text-decoration:none}
+.coverage-page .coverage-card a:hover,.coverage-page .coverage-links a:hover{background:#efe5fa}
+.coverage-page .coverage-gap-list{list-style:none;padding:0;margin:15px 0 28px;display:grid;gap:11px}
+.coverage-page .coverage-gap-list li{border-left:4px solid #ad8ccd;border-radius:0 12px 12px 0;padding:14px 17px;background:#fff;border-top:1px solid #ece6f2;border-right:1px solid #ece6f2;border-bottom:1px solid #ece6f2}
+.coverage-page .coverage-gap-list strong{display:block;color:#3c3053;margin-bottom:5px}
+.coverage-page .coverage-gap-list span{font-size:14px;line-height:1.68;color:#625d6c;display:block}
+.coverage-page .coverage-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.coverage-page .coverage-provenance{font-size:14px;line-height:1.75;color:#625c70}
+.coverage-page .coverage-provenance strong{color:#3d3157}
+.coverage-page .coverage-note{background:#f8f4ff;border:1px solid #e7dff2;border-radius:14px;padding:17px;margin-top:20px;font-size:14px;line-height:1.7}
+.coverage-page .coverage-note p:last-child{margin-bottom:0}
+@media(max-width:680px){.coverage-page .coverage-grid{grid-template-columns:1fr}.coverage-page .coverage-card{padding:17px}.coverage-page .coverage-gap-list li{padding:12px 13px}.coverage-page .coverage-links a{width:100%;justify-content:flex-start}.coverage-page .coverage-hero{margin-bottom:23px}}
