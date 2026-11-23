@@ -23,6 +23,12 @@ assert.deepEqual(story,Array.from({length:42},(_,i)=>i+1));
 assert.deepEqual(dlc,Array.from({length:14},(_,i)=>i+1));
 assert.equal((html.match(/class="journey-note"/g)||[]).length,42,"Each main mission must retain practical checks");
 assert.equal((html.match(/class="journey-zone"/g)||[]).length,20,"All 20 Wild Zone circuits required");
+const zygarde42=html.match(/<article class="journey-card" id="journey-mission-42"[\s\S]*?<\/article>/)?.[0]||"";
+assert.match(zygarde42,/Core Enforcer - no-hit positioning/,"Mission 42 must explain the player's real safe-zone problem");
+assert.match(zygarde42,/two small unlit triangular pockets/,"Keep the verified Z-shaped safe areas");
+assert.match(zygarde42,/dodge roll may avoid the hit/,"Rolling must not be called guaranteed");
+assert.match(zygarde42,/separate inward-moving green rings/,"Do not conflate the ring attack with Core Enforcer");
+
 assert.equal((html.match(/<ol class="journey-steps">/g)||[]).length,57,"42 story + 14 DLC + final sweep");
 for (const phrase of [
  "Get Your Travel Bag Back","Operation Protect Lumiose","To Keep the World in Balance",
