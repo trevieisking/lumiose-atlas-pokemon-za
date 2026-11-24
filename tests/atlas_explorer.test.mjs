@@ -74,7 +74,7 @@ test("AT-283: Watchog neighbourhood has photos but no falsely confirmed mission 
   assert.equal(h.roof_exact,false);
   assert.equal(h.device_category_id,null);
   assert.match(h.directions,/Chuckie's Side Mission 071/);
-  assert.match(h.directions,/Lv\\. 50 Alpha Watchog/);
+  assert.ok(h.directions.includes("Lv. 50 Alpha Watchog"));
   assert.match(h.directions,/NOT been independently proven to be the exact quest device/);
   assert.ok(!data.holovators.some(r=>r.id==="mission-071"||r.id==="mission-080"));
   assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
