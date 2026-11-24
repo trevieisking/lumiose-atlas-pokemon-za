@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 32,
+  "revision": 33,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-290 branch: Vert Sector 6 Racine/Le Nah access, seven new route leads and four source-space pickup coordinates matched by actual marker-link ID. Eight partial sectors, 29 cumulative leads, eleven proposed approaches. AT-289 ten-route release verified live. No calibrated source-to-Atlas transform or new exact pins. Next AT-291 Vert 7 and source-coordinate calibration pilot.",
+  "current_phase": "AT-291: Vert Sector 7 source research; calibration held at control eligibility gate. AT-290 eleven-route release verified live. Nine partial sectors, 34 leads, six cumulative source pickup references, zero new exact geometry. Next AT-292 Vert Sector 8 / Hotel Z.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -120,8 +120,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -172,7 +172,7 @@
         "SM-04"
       ],
       "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate",
-      "progress_note": "Source-first access research continues: 68 area targets, eight partial sector audits, 29 route/course leads. AT-290 recovered four source pickup coordinates by matching marker IDs; native coordinate calibration and physical entrance/exit identity still unresolved."
+      "progress_note": "Nine partial sectors, 34 route/course leads; calibration parked until independently matched same-feature control pairs become available. Continue bounded sector research without repeatedly fetching unavailable sources."
     },
     {
       "id": "SM-06",
@@ -304,8 +304,8 @@
       "sector_number": 7,
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
-      "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "holovators": "mission40_existing_written_route_owner_candidate_not_exactly_matched",
+      "scaffolds_and_ladders": "partial_text_and_source_coordinate_research_calibration_held",
       "items": "source_text_only_unless_future_exact_evidence",
       "capture_coverage": "requires_individual_evidence_review",
       "holovator_approach_evidence": {
@@ -313,7 +313,14 @@
         "status": "bulbapedia_quest_sector_reported_holovator_device_boundary_unverified",
         "source": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
         "exact_location_point": null
-      }
+      },
+      "access_survey_lead_ids": [
+        "AR-V07-01",
+        "AR-V07-02",
+        "AR-V07-03",
+        "AR-V07-04",
+        "AR-V07-05"
+      ]
     },
     {
       "id": "Vert-08",
@@ -905,7 +912,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "AT-291 Vert Sector 7 plus small source-coordinate calibration pilot using matched permanent landmarks and independent withheld controls; retain unresolved #20/#21 scaffold identity, all prior registration gaps and H-08 facade queue. Do not use pickup coordinates as physical access points.",
+    "next_safe_record": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -2297,7 +2304,67 @@
     "existing_photos_preserved": 111,
     "exact_new_geometry": 0,
     "release_scope": "one district-only data route using existing renderer; no renderer, menu, map asset, player progress, feedback, Supabase or Workspace change",
-    "release_gate": "branch_pending_exact_SHA_CI_visual_review_and_Pages",
-    "next": "AT-291 Vert Sector 7 and source-coordinate calibration pilot: distinguish Side Mission 40 repaired lift and the existing approximate Vert 7 lead from fixed scaffolding, Screw #18 and rooftop/park pickups. Use small shared permanent landmark controls to test source XY registration before any exact pins. Retain unresolved prior sectors and H-08 facade."
+    "release_gate": "passed_exact_head_CI_visual_review_and_Pages",
+    "next": "AT-291 Vert Sector 7 and source-coordinate calibration pilot: distinguish Side Mission 40 repaired lift and the existing approximate Vert 7 lead from fixed scaffolding, Screw #18 and rooftop/park pickups. Use small shared permanent landmark controls to test source XY registration before any exact pins. Retain unresolved prior sectors and H-08 facade.",
+    "release_evidence": {
+      "pr": 127,
+      "reviewed_sha": "702f0ffaba1cd2eebdfba17f9a79bb33a9d561a8",
+      "validation_run": 45380222390,
+      "screenshot_artifact": 14911774991,
+      "merged_sha": "f8cb229bf59fa0b41acc3203ad5ec51a928087d2",
+      "pages_run": 45386680060,
+      "pages_conclusion": "success"
+    }
+  },
+  "at_291_access_survey": {
+    "baseline_main_sha": "f8cb229bf59fa0b41acc3203ad5ec51a928087d2",
+    "canonical_register": "MAPS_ACCESS_ROUTE_SURVEY.json",
+    "sector": "vert-sector-7",
+    "coverage": {
+      "areas_total": 68,
+      "sector_text_research_started": 9,
+      "wild_zone_text_research_started": 0,
+      "route_course_leads": 34,
+      "new_exact_ladder_pins": 0,
+      "new_exact_scaffold_pins": 0,
+      "new_exact_bridge_endpoints": 0,
+      "fully_completed_areas": 0
+    },
+    "lead_ids": [
+      "AR-V07-01",
+      "AR-V07-02",
+      "AR-V07-03",
+      "AR-V07-04",
+      "AR-V07-05"
+    ],
+    "source_pickup_links_matched": 2,
+    "cumulative_source_pickup_refs": 6,
+    "source_xy_references": [
+      {
+        "original_clue": 17,
+        "marker_id": 235607,
+        "source_xy": [
+          14688,
+          14156
+        ]
+      },
+      {
+        "original_clue": 18,
+        "marker_id": 235589,
+        "source_xy": [
+          14986,
+          14518
+        ]
+      }
+    ],
+    "calibration_pilot": "held_at_control_eligibility_gate",
+    "eligible_control_pairs": 0,
+    "fit_attempted": false,
+    "transform": null,
+    "existing_route_id": "vert7-holovator-power",
+    "routes_retained": 11,
+    "new_exact_geometry": 0,
+    "release_scope": "documentation-only; existing live runtime and all player data preserved",
+    "next": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence."
   }
 }
