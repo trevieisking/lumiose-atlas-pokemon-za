@@ -503,6 +503,11 @@ window.ATLAS_LEGENDARY_SOURCE = {
       "place": "Station distortion",
       "description": "After Rayquaza and the other gift missions, trade for Popping Candy on a Vert Sector 3 rooftop. Ask Ansha for the Plasma Donut, then follow Emma to the station portal.",
       "tip": "Level 85 · Dodge the sweeping Electroweb patterns.",
+      "encounterLevels": {
+        "rogueMegaBoss": 200,
+        "postBattleCatch": 85,
+        "sources": ["https://www.serebii.net/legendsz-a/sidemissions/raginglightning.shtml", "https://www.dexerto.com/wikis/pokemon-legends-z-a/zeraora-pokemon-legends-z-a/"]
+      },
       "originalPdfPage": 7,
       "steps": [
         "After Rayquaza and the other gift missions, find the Popping Candy trade on a Vert Sector 3 rooftop.",
