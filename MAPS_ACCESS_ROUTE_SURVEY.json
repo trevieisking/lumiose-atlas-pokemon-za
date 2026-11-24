@@ -1,4 +1,19 @@
 {
+  "read_first": {
+    "binding": true,
+    "read_order": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "atlas_internal.feature_checklist",
+      "atlas_internal.report_resolution_queue"
+    ],
+    "rule": "Before any development loop, reopen current main and active PR plan/manifest, read ledger and relevant evidence/checklist; follow linked plans rather than stale summaries. Compare independent site states, select bounded next task, sync plan/manifest/ledger/private checklist with actual evidence. Never mark verified without separate deployment and manual checks.",
+    "owner_only_query": "select item_id, purpose, video_url, manifest_revision, github_status, github_stage, github_revision, workspace_status, workspace_stage from atlas_internal.feature_checklist order by item_id;",
+    "feedback_protocol": "docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md",
+    "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified"
+  },
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
   "batch": "AT-293",
@@ -2429,7 +2444,7 @@
       }
     },
     "dual_site_checklist": {
-      "revision": 39,
+      "revision": 40,
       "private_table": "atlas_internal.feature_checklist",
       "feedback_table_unchanged": "atlas_internal.report_resolutions",
       "items": [
@@ -2502,7 +2517,126 @@
         ],
         "corrected_test_head": "5318fbe0e473ed3b1f6bcc1c4f413842cf06528f",
         "retest_required": true
+      },
+      "latest_retest": {
+        "run": 45415870260,
+        "unit": "success",
+        "browser": "failure",
+        "cause": "Playwright implicit single-page context cannot create a fresh tab",
+        "test_correction": "b0bb44714d9d56dba912d7b1eaea3184095c60c4",
+        "final_validation": "pending"
       }
     }
+  },
+  "at_294_vert_reconciliation": {
+    "status": "reviewed_existing_evidence_not_complete",
+    "sectors_reviewed": 9,
+    "vert_leads_reviewed": 40,
+    "all_leads_preserved": 42,
+    "existing_routes_preserved": 12,
+    "sector_rows": [
+      [
+        "Vert 1",
+        4,
+        "No dedicated route yet; separate tower scaffold, alley scaffold, courtyard and northern approach."
+      ],
+      [
+        "Vert 2",
+        1,
+        "No dedicated route yet; roof course and early roll vs Glide dispute."
+      ],
+      [
+        "Vert 3",
+        2,
+        "Café Cyclone owner route; boundary #13/#14 and rooftop #15 need written follow-up."
+      ],
+      [
+        "Vert 4",
+        6,
+        "Existing courtyard route covers #6–8 and TM033."
+      ],
+      [
+        "Vert 5",
+        6,
+        "Existing scaffold route; #1/#5 candidates and TM001; do not duplicate Hotel Z."
+      ],
+      [
+        "Vert 6",
+        7,
+        "Racine route; keep #20/#21 unresolved, waterway #16 distinct."
+      ],
+      [
+        "Vert 7",
+        5,
+        "Mission 40 route; #17/#18 and DLC trader distinct."
+      ],
+      [
+        "Vert 8",
+        4,
+        "Hotel Z ladder pilot; #3/#4 written approaches still need integration."
+      ],
+      [
+        "Vert 9",
+        5,
+        "Vernal route and video pilot; #2 remains distinct from TM019."
+      ]
+    ],
+    "boundary_refs": [
+      {
+        "clue": 1,
+        "landmark": "Northwest of Hotel Z",
+        "marker_id": 235034,
+        "source_xy_candidate": [
+          11619,
+          14912
+        ],
+        "database_heading": 235035,
+        "link_verified": false,
+        "route_leads": [
+          "AR-V05-01",
+          "AR-V05-02",
+          "AR-V08-01"
+        ],
+        "decision": "Keep original unassigned sector and distinct #5. Regional source link recovered; database heading candidate only until literal marker link matched."
+      },
+      {
+        "clue": 15,
+        "landmark": "East of Wild Zone 2",
+        "marker_id": 235420,
+        "source_xy_candidate": [
+          13371,
+          13062
+        ],
+        "database_heading": 235421,
+        "link_verified": false,
+        "route_leads": [
+          "AR-V03-02"
+        ],
+        "decision": "Distinct original pickup. Northern roof approach from database candidate; Raider King Vert #7 is a possible roof sequence from Café Cyclone, not confirmed identity."
+      },
+      {
+        "clue": 16,
+        "landmark": "Coulant Waterway",
+        "marker_id": 235502,
+        "source_xy_candidate": [
+          13659,
+          13359
+        ],
+        "database_heading": 235503,
+        "link_verified": false,
+        "route_leads": [
+          "AR-V06-07"
+        ],
+        "decision": "Keep as existing single waterway clue; distinct from #15; no duplicate route or pin."
+      }
+    ],
+    "sources": [
+      "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+      "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/"
+    ],
+    "source_limit": "Actual regional marker IDs recovered from links, map requests failed. Candidate database headings and XY observed but corresponding database marker links not verified; no coordinate count increase or transform.",
+    "new_pins": 0,
+    "next": "After AT-295 release, integrate practical Vert 1, 2 and 8 routes and #15 follow-up, then Bleu 1. No exhaustive ladder inventory."
   }
 }
