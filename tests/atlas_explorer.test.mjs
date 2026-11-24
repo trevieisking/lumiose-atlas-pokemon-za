@@ -12,6 +12,26 @@ const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
 const near=(a,b,tolerance=1e-5)=>assert.ok(Math.abs(a-b)<tolerance,String(a)+" != "+String(b));
+test("AT-280 source-verified mission approach text never upgrades Holovator coordinates",()=>{
+  const sommi=data.holovators.find(x=>x.id==="rouge-plaza-west");
+  const terra=data.holovators.find(x=>x.id==="vernal-wz1");
+  for(const h of [sommi,terra]){
+    assert.ok(h,"Source-surveyed Holovator must still exist");
+    assert.equal(h.precision,"approx_owner_map_research");
+    assert.equal(h.entrance_exact,false);
+    assert.equal(h.roof_exact,false);
+    assert.equal(h.device_category_id,null);
+    assert.equal(h.photos.length,5,"No owner picture may be removed");
+    assert.match(h.directions,/approximate surveyed approach, not an exact doorway pixel/);
+  }
+  assert.match(sommi.directions,/Main Mission 6/);
+  assert.match(sommi.directions,/Sommi/);
+  assert.match(sommi.directions,/Side Mission 004: A Break Time Battle/);
+  assert.match(terra.directions,/Main Mission 10/);
+  assert.match(terra.directions,/Terra/);
+  assert.match(terra.directions,/Side Mission 023: Underneath the Holovator/);
+  assert.match(terra.directions,/Lv\\. 28 Diggersby/);
+});
 test("authentic source map remains the shared 1920px geometry",()=>{
   assert.deepEqual(data.map.native_size,[1920,1920]);
   assert.equal(data.map.path,"maps/lumiose-game-map.jpg");
