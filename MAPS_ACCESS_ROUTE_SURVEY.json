@@ -2402,6 +2402,31 @@
     "prior_routes_preserved": 12,
     "owner_photos_preserved": 111,
     "existing_holovators_preserved": 21,
-    "next": "Continue AT-294 Vert reconciliation using video evidence where available; then Bleu Sector 1."
+    "next": "Continue AT-294 Vert reconciliation using video evidence where available; then Bleu Sector 1.",
+    "smart_return": {
+      "owner_requested": true,
+      "date": "2026-11-24",
+      "bookmark_version": 1,
+      "scope": "existing and future Atlas Explorer video step links",
+      "storage_key": "lumiose-atlas:video-return:v1",
+      "storage": "one same-origin local device navigation bookmark plus current browser history entry; only on explicit click or middle-click; no playback history, analytics, cookies, database writes or cross-device sync",
+      "restores": [
+        "route ID and step",
+        "selected location",
+        "pan, zoom, rotation and tint",
+        "filter, search, visible layers and coverage view",
+        "scroll offset relative to clicked video"
+      ],
+      "priority": "same-entry history return first; explicit place, sector or hash links override unrelated device bookmark; plain Explorer reopening restores last valid saved video step",
+      "validation": "reject stale or malformed route/step/video reference; storage failure does not block YouTube or guide",
+      "clear": "Forget saved video place removes only bookmark key and current history bookmark; no player progress mutation",
+      "release_status": "proposed; exact final head CI and visual QA required",
+      "previous_video_only_ci": {
+        "head": "aa1794e6caeb0c8efba45093e8896dfdb8bdce25",
+        "run": 45414225060,
+        "conclusion": "success",
+        "applies_to_new_head": false
+      }
+    }
   }
 }
