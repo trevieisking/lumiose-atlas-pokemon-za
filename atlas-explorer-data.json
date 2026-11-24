@@ -2194,6 +2194,66 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "vert9-vernal-rooftop-screw",
+      "title": "Vert Sector 9 — Vernal Avenue lift, rooftop Screw and Power Gem",
+      "point_id": "vert-sector-9",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "side_mission": 23,
+      "description": "Two published approaches to the original rooftop Screw #2, with a separate optional TM near Hotel Z. Our existing Vernal Avenue photographs show the ground lift, approximate map location and rooftop arrival. The precise roof-to-roof path and individual ladder endpoints are not registered.",
+      "related_photo_ids": [
+        "vernal-wz1"
+      ],
+      "steps": [
+        {
+          "space": "street",
+          "title": "Locate the Vernal Avenue Holovator",
+          "instruction": "From Vernal Avenue, find the recessed grassy frontage immediately northwest of Wild Zone 1. Match the original ground photograph: golden arrows against a plain stone wall, a bench to the right and a green bin to the left. The existing approximate map point is for orientation, not an exact doorway.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Complete Terra's Side Mission 23",
+          "instruction": "After the rival battle during Main Mission 10, speak to Terra. Examine the disturbed soil and defeat or catch the level 28 Diggersby. This restores the Holovator; the mission rewards include Soft Sand and a Revive.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Reach the first roof",
+          "instruction": "Ride the repaired lift. The owner's rooftop-arrival photograph shows a green-grey roof surface, a higher sloping roof ahead and a visible ladder on a more distant building to the right. The photograph does not establish a safe crossing to that ladder or its exact endpoints.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Rooftop Screw #2 — Holovator approach",
+          "instruction": "Published guides describe reaching the northeastern building complex of Vert Sector 9 from the lift beside Wild Zone 1, crossing roof sections and using Roto-Glide for the final gap. Look for the purple item ball. The pickup database also reports a Beedrill encounter nearby; prepare to deal with it if present. Roto-Glide unlocks during Main Mission 16.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Alternative alley ladder",
+          "instruction": "Another guide describes a route through an alley blocked by purple sludge. Target the obstruction with a sufficiently strong Water-type move, or a compatible special Psychic-type move. Continue to the ladder, ascend, follow the rooftop left and use Roto-Glide to reach the next building. This is an alternative reported approach to the Screw, not an independently aligned ladder-to-lift connection.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Optional TM019 Power Gem",
+          "instruction": "For the separate golden TM pickup, begin near Hotel Z. After learning Roto-Glide, follow the rooftop approach behind the hotel and glide west toward the smaller building west of the grassy square north of Hotel Z. Bring a ranged Pokémon move in case a web needs unfurling into a bridge. Guides disagree on the Vert 5/9 sector label; use landmarks rather than treating either label as an exact boundary. Do not count this as another Screw.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Remaining alignment checks",
+          "instruction": "The original Screw #2 has a source-space pickup coordinate matched by marker link, not an Atlas pixel. The photographed neighbouring ladder, alternative alley ascent, exact roof exits and optional TM position still require physical registration. No new fixed pin or collection checkbox is claimed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [

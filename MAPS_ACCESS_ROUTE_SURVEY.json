@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-292",
+  "batch": "AT-293",
   "date": "2026-11-24",
-  "baseline_main_sha": "64157f8f59bfecf268deda8c9d573966de428780",
+  "baseline_main_sha": "f570c00e8939bd73193f4ecdb0766376d264a5b7",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -184,8 +184,14 @@
       "id": "vert-sector-9",
       "kind": "sector",
       "label": "Vert Sector 9",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "partial_text_and_owner_photo_research_source_pickup_coordinate_unregistered",
+      "lead_ids": [
+        "AR-V09-01",
+        "AR-V09-02",
+        "AR-V09-03",
+        "AR-V09-04",
+        "AR-V09-05"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1713,19 +1719,156 @@
       "floor_exact": null,
       "geometry_status": "unregistered",
       "publish_new_pin": false
+    },
+    {
+      "id": "AR-V09-01",
+      "area": "vert-sector-9",
+      "kind": "existing_mission_holovator",
+      "landmark": "Vernal Avenue northwest of Wild Zone 1",
+      "notes": "Three owner photographs reinspected at baseline: ground view golden arrows on plain stone wall, lawn, bin at left, bench at right; close map ring over yellow lift symbol above Wild Zone 1; rooftop arrival. Terra's Side Mission 23, available after rival battle in Main Mission 10, restores lift after Lv.28 Diggersby encounter. Quest marker 238914 XY (10111,16090) is not lift entrance. Existing approximate owner point (964,1666) retained, no new registration.",
+      "sources": [
+        "MAPS_VERNAL_WZ1_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator",
+        "https://www.serebii.net/legendsz-a/sidemissions/underneaththeholovator.shtml",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/underneath-the-holovator"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vernal-wz1",
+      "existing_atlas_approx_player_xy": [
+        964,
+        1666
+      ],
+      "mission_source_xy": [
+        10111,
+        16090
+      ],
+      "mission_marker_id": 238914,
+      "side_mission": 23
+    },
+    {
+      "id": "AR-V09-02",
+      "area": "vert-sector-9",
+      "kind": "visible_neighbouring_ladder",
+      "landmark": "View from Vernal Holovator rooftop arrival",
+      "notes": "Original roof photograph shows a vertical pale ladder on a more distant facade at image right, above the green Wild Zone barrier. This proves a ladder is visible but not its ground level, roof landing, traversability from the photographed arrival or membership of the named Screw course. Treat as visual research lead, not a mapped ladder.",
+      "sources": [
+        "MAPS_VERNAL_WZ1_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-rooftop-arrival.jpg"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vernal-wz1",
+      "physical_ladder_visible": true
+    },
+    {
+      "id": "AR-V09-03",
+      "area": "vert-sector-9",
+      "kind": "lift_glide_rooftop_pickup",
+      "landmark": "Northeastern building complex in Vert Sector 9",
+      "notes": "Raider King describes lift near Wild Zone 1 followed by roof crossings and Glide for final building. Altissimo corroborates northeastern roof and Glide requirement. Regional original #2 link and database item marker link both target markerId 235101, database heading 235102, raw XY (11039,14738). Database describes a roof near Beedrill; do not equate this with a certified story arena or exact ladder. Existing ID #2 preserved.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        2
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235101
+      ],
+      "identity_status": "regional roof clue and database marker link match; exact route-to-point geometry unresolved"
+    },
+    {
+      "id": "AR-V09-04",
+      "area": "vert-sector-9",
+      "kind": "sludge_alley_ladder_glide",
+      "landmark": "Alternative alley access near southern Vert rooftops",
+      "notes": "StrategyWiki describes crossing a street, clearing purple sludge, continuing in alley, climbing ladder and heading left along roof then Roto-Glide to next building. Serebii corroborates compatible Water or special Psychic obstacle-clearing moves with sufficient power. Distinguish this from visible ladder on owner roof photo and original Hotel Z ladder. No assumed identity between any of these.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://www.serebii.net/legendsz-a/overworldobstacles.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html"
+      ],
+      "candidate_original_screw_ids": [
+        2
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "identity_status": "alternative source-described route, exact individual ladder unknown"
+    },
+    {
+      "id": "AR-V09-05",
+      "area": "vert-sector-9",
+      "kind": "boundary_rooftop_tm",
+      "landmark": "Smaller rooftop west of grassy square north of Hotel Z",
+      "notes": "TM019 Power Gem. Raider King and PokeJungle describe a westward roof approach after Roto-Glide; Psypokes reports a web-unfurling move requirement. Serebii labels Vert 5; Altissimo lists Vert 9 while explicitly identifying small building in Vert 5. Record boundary conflict and use landmarks, not certified sector. Story walkthrough confirms web bridge activation by attack and Glide unlock during Mission 16. No new TM or Screw collection key.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
+        "https://www.serebii.net/legendsz-a/tm.shtml",
+        "https://www.psypokes.com/plza/tm.php",
+        "https://pokejungle.net/pokemon-legends-z-a/tm-list-locations/",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://www.serebii.net/legendsz-a/overworldobstacles.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "tm_number": 19,
+      "tm_name": "Power Gem",
+      "also_relevant_area": "vert-sector-5",
+      "related_existing_route_id": "hotel-z-ladder",
+      "sector_label_conflict": true
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 9,
+    "sector_text_research_started": 10,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 37,
+    "route_course_leads": 42,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links.",
+  "next": "AT-294 Vert district reconciliation: review all nine sector entries, distinguish boundary leads #1/#15/#16, prioritize attainable route fixes and reconcile owner photo references and Holovator research before advancing to Bleu Sector 1. No repeated failed geometry requests without new evidence.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -2123,5 +2266,78 @@
     "source_coordinate_discovery": "No new matched marker links or XY verified this batch.",
     "calibration": "Held pending same-feature controls, revisit when new evidence permits; investigate solvable issues before deferral.",
     "existing_routes_retained": 11
+  },
+  "at_293": {
+    "date": "2026-11-24",
+    "route_id": "vert9-vernal-rooftop-screw",
+    "existing_route_count": 11,
+    "proposed_route_count": 12,
+    "original_clue": 2,
+    "owner_photo_reinspection": {
+      "count": 3,
+      "paths_and_blob_shas": [
+        [
+          "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-ground.jpg",
+          "7d1c52390792200600987cbdb3be475b645505d9"
+        ],
+        [
+          "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-close-map.jpg",
+          "5c0de5e2e85701f18b12a8d31c8738265d9acb85"
+        ],
+        [
+          "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-rooftop-arrival.jpg",
+          "d7ada002878eaa5dbc9d0767cc6e0ac7362a5257"
+        ]
+      ],
+      "original_coordinates_preserved": true,
+      "visible_ladder_not_registered": true
+    },
+    "source_coordinate_discovery": {
+      "regional_source": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "database_source": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+      "records": [
+        {
+          "original_clue": 2,
+          "marker_id": 235101,
+          "database_display_id": 235102,
+          "source_xy": [
+            11039,
+            14738
+          ],
+          "source_coordinate_space": "Gamer Guides map space, uncalibrated XY",
+          "coordinate_semantics": "pickup marker, not entrance or exit",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235101",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235101",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        }
+      ],
+      "link_ids_verified": 1,
+      "cumulative_pickup_refs": 7,
+      "source_to_atlas_transform_calibrated": false
+    },
+    "external_retrieval": {
+      "unavailable": [
+        "Altissimo sector-specific page",
+        "Gamer Guides regional marker link",
+        "Gamer Guides database marker link",
+        "Raider King rooftop JPG"
+      ],
+      "available": [
+        "Altissimo Colorful Screws list",
+        "Raider King route text",
+        "StrategyWiki route text",
+        "Gamer Guides regional list and database text",
+        "multiple TM guides"
+      ],
+      "external_images_inspected": 0
+    },
+    "new_exact_pins": 0,
+    "no_new_collection_keys": true,
+    "calibration_status": "No new eligible same-feature control pair; held from AT-291, revisit when new evidence permits."
   }
 }
