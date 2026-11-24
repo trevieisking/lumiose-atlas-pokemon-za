@@ -514,6 +514,51 @@ try{
   assert.equal(errors.length,0,"AT-277 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-277 phone JS errors: "+mobileErrors.join(" | "));
 
+
+  // Phone-page overflow regression: test the actual main-guide views, not just
+  // the desktop DLC link or the standalone map. Never disable local scrolling.
+  const widthProbe = await browser.newPage({viewport:{width:393,height:852},
+    deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const widths = [];
+  const mainViews = ["home","walkthrough","sidequests","dimension","bosses","alphas",
+    "maps","items","legends","berries","starters","pokedex","essentials","secrets","rewards","battles","sources"];
+  await widthProbe.goto(base+"/index.html#dimension",{waitUntil:"domcontentloaded"});
+  for (const view of mainViews) {
+    await widthProbe.evaluate(id=>{location.hash="#"+id;},view);
+    await widthProbe.waitForFunction(id=>document.getElementById(id)?.classList.contains("active"),view);
+    await pause(350);
+    const measurement=await widthProbe.evaluate(()=>{
+      window.scrollTo({left:0,top:0,behavior:"instant"});
+      const root=document.documentElement, width=root.clientWidth;
+      const over=[...document.querySelectorAll("body *")].filter(el=>{
+        const b=el.getBoundingClientRect();
+        if(!b.width||!b.height||b.right<=width+1)return false;
+        for(let p=el.parentElement;p&&p!==document.body;p=p.parentElement){
+          if(["auto","scroll","hidden","clip"].includes(getComputedStyle(p).overflowX))return false;
+        }
+        return true;
+      }).map(el=>({tag:el.tagName,id:el.id,cls:typeof el.className==="string"?el.className:"",right:Math.round(el.getBoundingClientRect().right)}))
+        .sort((a,b)=>b.right-a.right).slice(0,10);
+      window.scrollTo({left:100000,top:0,behavior:"instant"});
+      const moved=window.scrollX;
+      window.scrollTo({left:0,top:0,behavior:"instant"});
+      return {width,scrollWidth:root.scrollWidth,bodyWidth:document.body.scrollWidth,moved,over};
+    });
+    widths.push({view,...measurement});
+  }
+  console.log("MOBILE_GUIDE_WIDTH_DIAGNOSTICS "+JSON.stringify(widths));
+  const failures=widths.filter(x=>x.scrollWidth>x.width+1||x.moved>1);
+  assert.deepEqual(failures,[],"Main guide must never horizontally scroll on a 393px phone");
+  // Swiping the 25-link navigation remains intentional; it must not drag the page.
+  assert.equal(await widthProbe.locator("#sideNav a").count(),25);
+  const navTravel=await widthProbe.locator(".sidebar").evaluate(el=>{
+    el.scrollLeft=0;const before=el.scrollLeft;el.scrollLeft=el.scrollWidth;
+    return el.scrollLeft-before;
+  });
+  assert.ok(navTravel>0,"Phone menu must retain horizontal scrolling");
+  assert.equal(await widthProbe.evaluate(()=>window.scrollX),0);
+  await widthProbe.close();
+
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
