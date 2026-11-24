@@ -956,7 +956,7 @@ try{
     await page.locator("#aeLayers [data-layer='sector-label']").check();
     assert.equal(await name.textContent(),"Vert Sector 1");
     await page.locator("#aeCoverageSector").selectOption("bleu-sector-9");
-    assert.match(await context.textContent(),/Street-level map position not yet source-verified/);
+    assert.match(await context.textContent(),/Source-map street bearing \(orientation only\): Bleu Sector 9 is east of South Boulevard/);
 
     assert.equal(await name.textContent(),"Bleu Sector 9");
     await page.locator("#aeCoverageSector").selectOption("");
