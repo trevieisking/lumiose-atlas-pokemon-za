@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 38,
+  "revision": 39,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-295 smart video return bookmark and timestamp links; final-head validation pending. AT-294 Vert reconciliation remains next.",
+  "current_phase": "AT-295 dual-site feature checklist recorded; smart-return validation pending; AT-294 Vert reconciliation next.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -2580,6 +2580,82 @@
         "run": 45414225060,
         "conclusion": "success",
         "applies_to_new_head": false
+      }
+    },
+    "dual_site_checklist": {
+      "revision": 39,
+      "private_table": "atlas_internal.feature_checklist",
+      "feedback_table_unchanged": "atlas_internal.report_resolutions",
+      "items": [
+        {
+          "id": "AT-295-VIDEO-STANDARD",
+          "purpose": "Reusable timestamped public video links, attribution and evidence labels",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        },
+        {
+          "id": "AT-295-SMART-RETURN",
+          "purpose": "Restore route, step, selected place, map view, filters and scroll on return",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        },
+        {
+          "id": "AT-295-CLEAR-BOOKMARK",
+          "purpose": "Clear only the private navigation bookmark",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        },
+        {
+          "id": "AT-295-VIDEO-MISSION23",
+          "purpose": "Mission 23 Diggersby battle",
+          "route": "vert9-vernal-rooftop-screw",
+          "step": 2,
+          "url": "https://www.youtube.com/watch?v=IuvITD247zU&t=59s",
+          "creator": "TheLandOGaming",
+          "evidence": "publisher chapter; frames unverified",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        },
+        {
+          "id": "AT-295-VIDEO-SCREW2",
+          "purpose": "Candidate rooftop Screw #2 approach",
+          "route": "vert9-vernal-rooftop-screw",
+          "step": 4,
+          "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=694s",
+          "creator": "Archive 64",
+          "evidence": "numbering candidate; frames and connection unverified",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        },
+        {
+          "id": "AT-295-VIDEO-POWERGEM",
+          "purpose": "TM019 Power Gem pickup",
+          "route": "vert9-vernal-rooftop-screw",
+          "step": 6,
+          "url": "https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s",
+          "creator": "Quick Guides",
+          "evidence": "publisher chapter; frames unverified",
+          "github_status": "in_progress",
+          "workspace_status": "open",
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+        }
+      ],
+      "policy": "Keep each edition independently verified. For every new feature or video add stable checklist ID, purpose, URL if applicable, route/step and evidence. GitHub verified requires deployed exact SHA and manual evidence; Workspace verified requires independent original site release and evidence. Update private rows after each verified checkpoint; never infer parity. No runtime access or player data.",
+      "failed_test": {
+        "run": 45415144696,
+        "head": "f36984d323651c028a98829d9f69c3956ec9dfda",
+        "conclusion": "failure",
+        "causes": [
+          "overescaped regex in unit test",
+          "popup URL assertion before navigation"
+        ],
+        "corrected_test_head": "5318fbe0e473ed3b1f6bcc1c4f413842cf06528f",
+        "retest_required": true
       }
     }
   }
