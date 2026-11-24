@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 34,
+  "revision": 35,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-292 Hotel Z supplemental research; 37 leads across nine partial sectors. Next AT-293 Vert 9.",
+  "current_phase": "AT-293: Vert 9 Vernal Avenue Holovator, rooftop Screw and alternate ladder approach; 42 research leads, ten partial sectors, all nine Vert sectors researched to initial level. Twelve proposed routes, seven source pickup references. Next AT-294 district reconciliation.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -120,8 +120,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -172,7 +172,7 @@
         "SM-04"
       ],
       "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate",
-      "progress_note": "Resolve tractable issues before deferral; revisit parked issues when new evidence permits. 37 leads across nine partial sectors."
+      "progress_note": "Ten partial city-sector audits, 42 route/course leads. All nine Vert sectors have initial research, not complete access inventories. Continue solving tractable issues and revisit held calibration when independently matched landmarks become available."
     },
     {
       "id": "SM-06",
@@ -345,8 +345,8 @@
       "sector_number": 9,
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
-      "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "holovators": "vernal_wz1_existing_owner_gallery_reinspected_approximate_position_preserved",
+      "scaffolds_and_ladders": "partial_text_and_owner_photo_research_source_pickup_coordinate_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
       "capture_coverage": "requires_individual_evidence_review",
       "holovator_approach_evidence": {
@@ -354,7 +354,14 @@
         "status": "sector_reported_requires_border_check",
         "source": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
         "exact_location_point": null
-      }
+      },
+      "access_survey_lead_ids": [
+        "AR-V09-01",
+        "AR-V09-02",
+        "AR-V09-03",
+        "AR-V09-04",
+        "AR-V09-05"
+      ]
     },
     {
       "id": "Bleu-01",
@@ -915,7 +922,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links.",
+    "next_safe_record": "AT-294 Vert district reconciliation: review all nine sector entries, distinguish boundary leads #1/#15/#16, prioritize attainable route fixes and reconcile owner photo references and Holovator research before advancing to Bleu Sector 1. No repeated failed geometry requests without new evidence.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -2390,6 +2397,61 @@
     "release_scope": "documentation-only",
     "existing_routes_retained": 11,
     "new_exact_geometry": 0,
-    "next": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links."
+    "next": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links.",
+    "release_evidence": {
+      "pr": 129,
+      "reviewed_sha": "0c755eb991dba8f38812935d1e8d1fd3c4ff3c25",
+      "merged_sha": "f570c00e8939bd73193f4ecdb0766376d264a5b7",
+      "exact_four_document_diff": true,
+      "runtime_data_unchanged": true
+    }
+  },
+  "at_293_access_survey": {
+    "baseline_main_sha": "f570c00e8939bd73193f4ecdb0766376d264a5b7",
+    "canonical_register": "MAPS_ACCESS_ROUTE_SURVEY.json",
+    "sector": "vert-sector-9",
+    "coverage": {
+      "areas_total": 68,
+      "sector_text_research_started": 10,
+      "wild_zone_text_research_started": 0,
+      "route_course_leads": 42,
+      "new_exact_ladder_pins": 0,
+      "new_exact_scaffold_pins": 0,
+      "new_exact_bridge_endpoints": 0,
+      "fully_completed_areas": 0
+    },
+    "lead_ids": [
+      "AR-V09-01",
+      "AR-V09-02",
+      "AR-V09-03",
+      "AR-V09-04",
+      "AR-V09-05"
+    ],
+    "original_screw_clue": 2,
+    "source_pickup_links_matched": 1,
+    "cumulative_source_pickup_refs": 7,
+    "source_xy_references": [
+      {
+        "original_clue": 2,
+        "marker_id": 235101,
+        "source_xy": [
+          11039,
+          14738
+        ]
+      }
+    ],
+    "source_to_atlas_transform_calibrated": false,
+    "owner_photos_reinspected": 3,
+    "existing_owner_photo_group": "vernal-wz1",
+    "visible_neighbour_ladder_registered": false,
+    "prior_routes_retained": 11,
+    "proposed_routes": 12,
+    "new_route_id": "vert9-vernal-rooftop-screw",
+    "existing_holovator_pins_preserved": 21,
+    "existing_photos_preserved": 111,
+    "exact_new_geometry": 0,
+    "release_scope": "one district-only data route using existing renderer and original gallery; no renderer, menu, map asset, progress, feedback, Supabase or Workspace change",
+    "release_gate": "branch_pending_exact_SHA_CI_visual_review_and_Pages",
+    "next": "AT-294 Vert district reconciliation: review all nine sector entries, distinguish boundary leads #1/#15/#16, prioritize attainable route fixes and reconcile owner photo references and Holovator research before advancing to Bleu Sector 1. No repeated failed geometry requests without new evidence."
   }
 }
