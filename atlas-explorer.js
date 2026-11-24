@@ -207,7 +207,7 @@ function detailsFor(item){
     selectedPanel.append(paragraph("Research provenance:"));
     selectedPanel.append(link(item.source_record,"Open owner field-survey record"));
   }
-  const related=routes.find(r=>r.point_id===item.id);
+  const related=routes.find(r=>r.point_id===item.id)||routes.find(r=>r.related_photo_ids?.includes(item.id));
   if(related){
     const b=element("button","ae-route-link","Follow documented approach →");
     b.type="button";b.style.cssText="margin-top:12px;padding:9px 12px;background:#4f337a;color:white;border:none;border-radius:9px";
@@ -310,6 +310,17 @@ function renderRoute(){
     if(route.source_record==="MAPS_HOLOVATOR_COORDINATE_VALIDATION.json")
       routeDetail.append(paragraph("Research provenance:"),
         link(route.source_record,"Read the Holovator evidence register"));
+    if(route.source_record==="MAPS_ACCESS_ROUTE_SURVEY.json")
+      routeDetail.append(paragraph("Research provenance:"),link(route.source_record,"Read the access survey register"));
+    if(route.related_photo_ids?.length){
+      routeDetail.append(paragraph("Existing owner photo references (orientation only, not certified roof connections):"));
+      for(const id of route.related_photo_ids){
+        const photoRecord=recordMap.get(id);
+        const row=paragraph("");
+        row.append(link("atlas-explorer.html?place="+encodeURIComponent(id),photoRecord.name+" — original photographs"));
+        routeDetail.append(row);
+      }
+    }
   }else{
     routeDetail.append(paragraph("Evidence: recorded player approach. No complete interior floorplan, live GPS or automatic between-building walking route exists yet."));
   }
@@ -452,6 +463,14 @@ async function load(){
          !route.steps.every(step=>step.evidence==="guide_crosscheck"||step.evidence==="unverified"))
         throw Error("Invalid district-only guide route");
     }else if(anchor?.kind==="sector")throw Error("A sector route must declare district-only precision");
+    if(route.related_photo_ids!==undefined){
+      if(route.anchor_precision!=="district_only"||!Array.isArray(route.related_photo_ids)||
+         new Set(route.related_photo_ids).size!==route.related_photo_ids.length||
+         !route.related_photo_ids.every(id=>{
+           const ref=recordMap.get(id);
+           return ref?.kind==="holovator"&&ref.district===route.district&&ref.photos?.length>0;
+         }))throw Error("Invalid existing photo references on written route");
+    }
   }
   for(const route of routes)routePicker.append(element("option","",route.title));
   const options=[...routePicker.options];
