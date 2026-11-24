@@ -159,3 +159,9 @@
 .ae-route-video p{margin:5px 0;font-size:12px}
 .ae-route-video a{display:inline-block;max-width:100%;box-sizing:border-box;padding:8px 10px;border-radius:7px;background:#4f337a;color:white;font-weight:750;font-size:13px;text-decoration:none;overflow-wrap:anywhere}
 .ae-route-video a:focus-visible{outline:2px solid #30294a;outline-offset:2px}
+
+/* AT-295: compact private video-return bookmark controls. */
+.ae-video-bookmark-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:9px;min-width:0}
+.ae-video-bookmark-bar p{margin:0;color:#5b5368;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.ae-video-bookmark-bar button{border:1px solid #cdbddc;background:#fff;color:#4b3675;padding:8px 10px;border-radius:8px;font-size:12px;font-weight:750;max-width:100%}
+.ae-video-bookmark-bar button[hidden]{display:none}
