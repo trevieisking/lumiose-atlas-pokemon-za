@@ -583,5 +583,5 @@ test("AT-295 video return uses one private key, preserves unrelated state and to
   forgetVideoBookmark(host);assert.equal(readVideoBookmark(host,true),null);assert.equal(values.get("existing-progress"),"unchanged");assert.equal(values.has(VIDEO_BOOKMARK_KEY),false);
   const denied={history:{state:null,replaceState(){throw Error("blocked");}},get localStorage(){throw Error("blocked");}};
   assert.equal(saveVideoBookmark(denied,b),false);assert.equal(readVideoBookmark(denied,true),null);assert.doesNotThrow(()=>forgetVideoBookmark(denied));
-  const module=read("atlas-video-bookmark.mjs");assert.doesNotMatch(module,/fetch\\s*\\(|supabase\\.|sessionStorage\\s*\\./i);
+  const module=read("atlas-video-bookmark.mjs");assert.doesNotMatch(module,/fetch\s*\(|supabase\.|sessionStorage\s*\./i);
 });
