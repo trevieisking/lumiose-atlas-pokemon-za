@@ -2928,7 +2928,7 @@
     "id": "AT-299",
     "date": "2026-11-24",
     "owner_approved": true,
-    "status": "context_pilot_pending_validation_geographic_labels_open",
+    "status": "context_pilot_deployed_geographic_labels_open",
     "purpose": "Show clear game-matching sector names directly on the existing Atlas Explorer map, retaining the existing highlighted square navigation and zoom-in behavior.",
     "pilot_sector": "vert-sector-1",
     "target_sectors": 48,
@@ -3351,11 +3351,11 @@
         "workspace_status": "open"
       }
     ],
-    "next": "Validate and publish the bounded selected-sector context improvement. Keep geographical Vert 1 pilot open until direct labelled source and reliable alignment are available. Continue source-backed AT-300 detail assessment or planned Vert 8 written routes without fabricating map positions.",
+    "next": "First transfer reviewed clean crops via authorized binary upload and validate hashes; use sector_orientation rows for bounded sector-directory street notes. Register one genuine geographic label/close-up with matching control points, held-out check and uncertainty; no guesses. Continue Vert 8 written routes and Bleu 1 if alignment remains gated.",
     "context_pilot": {
       "id": "AT-299-SECTOR-CONTEXT",
       "date": "2026-11-24",
-      "status": "implemented_pending_exact_head_ci_and_visual_qa",
+      "status": "github_deployed_verified_workspace_open",
       "purpose": "Optional upright selected-sector name on the map viewport, with explicit unverified district-view qualification; applies to existing named sector selection without inventing geographical anchors.",
       "scope": [
         "atlas-explorer.html",
@@ -3365,7 +3365,7 @@
         "tests/atlas_explorer_browser.mjs"
       ],
       "geographic_anchors_added": 0,
-      "geographic_pilot_status": "held_missing_visible_vert1_label_and_verified_alignment",
+      "geographic_pilot_status": "vert1_label_visible_new_owner_png_alignment_pending",
       "evidence_review": {
         "basemap_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
         "gallery_photo": "assets/atlas/holovators/vert-cafe-cyclone/holovator-vert-cafe-cyclone-neighbourhood-map.jpg",
@@ -3393,9 +3393,23 @@
         "original_workspace": true,
         "progress": true
       },
-      "github_status": "in_progress",
+      "github_status": "verified",
       "workspace_status": "open",
-      "next": "Validate and publish the bounded selected-sector context improvement. Keep geographical Vert 1 pilot open until direct labelled source and reliable alignment are available. Continue source-backed AT-300 detail assessment or planned Vert 8 written routes without fabricating map positions."
+      "next": "Validate and publish the bounded selected-sector context improvement. Keep geographical Vert 1 pilot open until direct labelled source and reliable alignment are available. Continue source-backed AT-300 detail assessment or planned Vert 8 written routes without fabricating map positions.",
+      "release": {
+        "reviewed_head": "ebe9c2f9c555b2c25c21dafe49b2919943baa94c",
+        "validation_run": 45430959764,
+        "validation_conclusion": "success",
+        "screenshot_artifact": 14937548387,
+        "desktop_mobile_screenshots_reviewed": 2,
+        "merged_sha": "0ff51bfdce125470a0400aa97aeeae7b733a9aee",
+        "reviewed_and_merged_tree": "8b8042b769a08b9a8705414ddd0f08803c6a95cd",
+        "pages_run": 45436093501,
+        "pages_conclusion": "success",
+        "direct_live_browser_inspection": "not performed",
+        "github_status": "verified",
+        "workspace_status": "open"
+      }
     }
   },
   "at_300_map_clarity": {
@@ -3597,6 +3611,334 @@
         "workspace_status": "open"
       }
     ],
-    "next": "Complete AT-299 pilot first. Reuse AT-266 source recovery for AT-300 image-detail pilot; if real source imagery or alignment is unavailable, keep the stage open and continue planned Vert 8 and Bleu 1 written route work without fabricating detail."
+    "next": "First transfer reviewed clean crops via authorized binary upload and validate hashes; use sector_orientation rows for bounded sector-directory street notes. Register one genuine geographic label/close-up with matching control points, held-out check and uncertainty; no guesses. Continue Vert 8 written routes and Bleu 1 if alignment remains gated.",
+    "source_intake": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"
+  },
+  "at_301_borderless_source_intake": {
+    "id": "AT-301",
+    "date": "2026-11-24",
+    "status": "source_intake_and_local_crop_pilot_complete_publication_pending",
+    "format_policy": {
+      "accepted_extensions": [
+        ".jpg",
+        ".jpeg",
+        ".png"
+      ],
+      "preserve_source_bytes": true,
+      "output": "Native-pixel borderless map-only crops; PNG preferred for already-PNG source detail. JPEG accepted. No device chrome, decorative borders, unrelated content, UI or temporary Hyperspace symbols. Do not remove obstructions by synthesizing roads or buildings. Reject unsuitable images; retain them as research only. No stretching or destructive edits."
+    },
+    "screened_sources": {
+      "total": 19,
+      "jpeg": 10,
+      "png": 9
+    },
+    "source_scope": "Three overview JPEGs, seven gallery screenshots and nine labelled PNG captures visually screened. Four PNGs used for the six pilot crops. Original captures may contain dynamic overlay symbols. Source images not overwritten.",
+    "crop_records": [
+      {
+        "id": "vert-1-saison-canal",
+        "source": "file_0000000060848210b745f93ec9eb69a5.png",
+        "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          436,
+          535,
+          794,
+          802
+        ],
+        "file": "vert-1-saison-canal.png",
+        "size": [
+          358,
+          267
+        ],
+        "sha256": "e293faa9b42375862a0aa1ab07a76c50b80d77cced96c25168738d4f8f19e3c4",
+        "visible_labels": [
+          "Vert Sector 1",
+          "Saison Canal",
+          "Saison-Canalside"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      },
+      {
+        "id": "vert-2-vernal-avenue",
+        "source": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+        "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          797,
+          0,
+          1127,
+          351
+        ],
+        "file": "vert-2-vernal-avenue.png",
+        "size": [
+          330,
+          351
+        ],
+        "sha256": "a98b2ec3fba25b5d91621dda0b5cf9d03a903fe91c188305697067f04b3e41df",
+        "visible_labels": [
+          "Vert Sector 2",
+          "Vernal Avenue"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      },
+      {
+        "id": "vert-4-5",
+        "source": "file_00000000a4bc81f4a961603abfbdcf80.png",
+        "source_sha256": "fb89e5d7b1ea2bc6c12ef7d12a888a4201aab0ee3158d0bc08da1f546aa90a77",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          814,
+          83,
+          1611,
+          377
+        ],
+        "file": "vert-4-5.png",
+        "size": [
+          797,
+          294
+        ],
+        "sha256": "4138f192169c7bf56e9440368635fc95d98da31649fb9e25b627de0d2de5460e",
+        "visible_labels": [
+          "Vert Sector 4",
+          "Vert Sector 5",
+          "Vert Street"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      },
+      {
+        "id": "bleu-5-7-aymlis-park",
+        "source": "file_00000000a4bc81f4a961603abfbdcf80.png",
+        "source_sha256": "fb89e5d7b1ea2bc6c12ef7d12a888a4201aab0ee3158d0bc08da1f546aa90a77",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          121,
+          271,
+          759,
+          780
+        ],
+        "file": "bleu-5-7-aymlis-park.png",
+        "size": [
+          638,
+          509
+        ],
+        "sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+        "visible_labels": [
+          "Bleu Sector 5",
+          "Bleu Sector 7",
+          "Aymlis Park",
+          "South Boulevard"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      },
+      {
+        "id": "jaune-9-10-11-12",
+        "source": "file_0000000060848210b745f93ec9eb69a5.png",
+        "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          1053,
+          0,
+          1672,
+          833
+        ],
+        "file": "jaune-9-10-11-12.png",
+        "size": [
+          619,
+          833
+        ],
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "visible_labels": [
+          "Jaune Sector 9",
+          "Jaune Sector 10",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      },
+      {
+        "id": "magenta-1-3-estival",
+        "source": "file_00000000177081f49f80ddd7a137d21c.png",
+        "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+        "source_size": [
+          1672,
+          941
+        ],
+        "crop_xyxy": [
+          544,
+          494,
+          1167,
+          740
+        ],
+        "file": "magenta-1-3-estival.png",
+        "size": [
+          623,
+          246
+        ],
+        "sha256": "d6665319cd497583dcf9d2475e8a9b34425286ab0ba807b8915fb574f8ed2cc6",
+        "visible_labels": [
+          "Magenta Sector 1",
+          "Magenta Sector 3",
+          "Estival Avenue"
+        ],
+        "status": "locally_prepared_unregistered_not_published"
+      }
+    ],
+    "sector_orientation": [
+      {
+        "sector_id": "vert-sector-1",
+        "crop_id": "vert-1-saison-canal",
+        "orientation": "South of Saison Canal; Saison-Canalside is on the opposite side of the canal.",
+        "landmarks": [
+          "Saison Canal",
+          "Saison-Canalside"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "vert-sector-2",
+        "crop_id": "vert-2-vernal-avenue",
+        "orientation": "Immediately beside Vernal Avenue, between the avenue and Vert Plaza.",
+        "landmarks": [
+          "Vernal Avenue",
+          "Vert Plaza"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "vert-sector-4",
+        "crop_id": "vert-4-5",
+        "orientation": "Between the Vernal Avenue corridor and the buildings of Vert Sector 5; south of Vert Plaza.",
+        "landmarks": [
+          "Vernal Avenue",
+          "Vert Plaza"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "vert-sector-5",
+        "crop_id": "vert-4-5",
+        "orientation": "Beside the waterway and Vert Street, next to Vert Sector 4.",
+        "landmarks": [
+          "Vert Street"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "bleu-sector-5",
+        "crop_id": "bleu-5-7-aymlis-park",
+        "orientation": "West of Aymlis Park, near Bleu Street.",
+        "landmarks": [
+          "Aymlis Park",
+          "Bleu Street"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "bleu-sector-7",
+        "crop_id": "bleu-5-7-aymlis-park",
+        "orientation": "Along South Boulevard below Aymlis Park.",
+        "landmarks": [
+          "South Boulevard",
+          "Aymlis Park"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "jaune-sector-9",
+        "crop_id": "jaune-9-10-11-12",
+        "orientation": "Below Jaune Street and southwest of the Jaune Sector 11 label.",
+        "landmarks": [
+          "Jaune Street"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "jaune-sector-10",
+        "crop_id": "jaune-9-10-11-12",
+        "orientation": "North side of Saison Canal, to the west of Jaune Sector 12.",
+        "landmarks": [
+          "Saison Canal"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "jaune-sector-11",
+        "crop_id": "jaune-9-10-11-12",
+        "orientation": "South of Jaune Street and west of North Boulevard.",
+        "landmarks": [
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "jaune-sector-12",
+        "crop_id": "jaune-9-10-11-12",
+        "orientation": "Near North Boulevard and the eastern end of Saison Canal.",
+        "landmarks": [
+          "North Boulevard",
+          "Saison Canal"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "magenta-sector-1",
+        "crop_id": "magenta-1-3-estival",
+        "orientation": "Above Estival Avenue and east of Magenta Sector 3.",
+        "landmarks": [
+          "Estival Avenue"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      },
+      {
+        "sector_id": "magenta-sector-3",
+        "crop_id": "magenta-1-3-estival",
+        "orientation": "Above Estival Avenue, around the long landscaped courtyard.",
+        "landmarks": [
+          "Estival Avenue"
+        ],
+        "precision": "source_image_orientation_only",
+        "native_label_xy": null
+      }
+    ],
+    "local_pack": {
+      "file": "lumiose-atlas-borderless-map-pilot.zip",
+      "sha256": "ec0adfdb629981ed450c30f504e7c37842c9d7c148026f4090f94dea18c53a4c",
+      "hosted_in_github": false,
+      "description": "Six checked PNG crops, exact source hashes/rectangles and orientation table; available as conversation artifact only. No claim uploaded to repository or displayed on guide."
+    },
+    "geographic_label_status": "Vert Sector 1 text now directly visible in owner source (formerly missing); no native XY registered; still require control-point alignment to unchanged original city image. All 48 geographic label anchors remain unverified.",
+    "limitations": "Crop references are not complete sector boundaries; a few labels near edges due to avoiding game UI. Full source PNGs support context beyond individual crops. No new exact pins, routes or player identifiers.",
+    "next": "First transfer reviewed clean crops via authorized binary upload and validate hashes; use sector_orientation rows for bounded sector-directory street notes. Register one genuine geographic label/close-up with matching control points, held-out check and uncertainty; no guesses. Continue Vert 8 written routes and Bleu 1 if alignment remains gated.",
+    "checklist_id": "AT-301-MAP-SOURCE-POLICY",
+    "register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"
   }
 }
