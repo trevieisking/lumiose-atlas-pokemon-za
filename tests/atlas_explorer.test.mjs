@@ -64,6 +64,21 @@ test("AT-282: My Favorite Holovator preserves five original user photographs and
   assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((a,x)=>a+x.photos.length,0),111);
 });
+test("AT-283: Watchog neighbourhood has photos but no falsely confirmed mission Holovator pin",()=>{
+  const h=data.holovators.find(r=>r.id==="lysandre-autumnal");
+  assert.ok(h);
+  assert.equal(h.photos.length,5);
+  assert.deepEqual(h.xy,[739,740],"Keep legacy owner-surveyed approximate map position");
+  assert.equal(h.precision,"approx_owner_map_research");
+  assert.equal(h.entrance_exact,false);
+  assert.equal(h.roof_exact,false);
+  assert.equal(h.device_category_id,null);
+  assert.match(h.directions,/Chuckie's Side Mission 071/);
+  assert.match(h.directions,/Lv\\. 50 Alpha Watchog/);
+  assert.match(h.directions,/NOT been independently proven to be the exact quest device/);
+  assert.ok(!data.holovators.some(r=>r.id==="mission-071"||r.id==="mission-080"));
+  assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
+});
 test("authentic source map remains the shared 1920px geometry",()=>{
   assert.deepEqual(data.map.native_size,[1920,1920]);
   assert.equal(data.map.path,"maps/lumiose-game-map.jpg");
