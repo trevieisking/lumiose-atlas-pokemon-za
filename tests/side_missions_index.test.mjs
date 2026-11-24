@@ -9,6 +9,23 @@ const original=[...source.matchAll(/<article class="side-quest" id="quest-(\d+)"
 const recovered=[...html.matchAll(/<article class="side-quest restored-side-quest" id="quest-(\d+)" data-quest-key="([^"]+)" data-quest-category="([^"]+)">([\s\S]*?)<\/article>/g)];
 assert.equal(original.length,203,"The archived guide must retain 200 numbered and 3 EX requests");
 assert.equal(recovered.length,203,"Every original quest must be restored exactly once");
+// AT-281: verified side-mission route addenda supplement, never overwrite, archived 203 quest records.
+const forQuest=n=>recovered.find(m=>Number(m[1])===n)?.[4]||"";
+const h03=forQuest(40),h04=forQuest(45);
+assert.match(h03,/data-verified-holovator="H-03"/);
+assert.match(h03,/Vert Pokémon Center/);
+assert.match(h03,/speak to Élec|Speak to Élec/);
+assert.match(h03,/₽1,700, 3 Ultra Balls, 10 Mega Shards/);
+assert.match(h03,/href="atlas-explorer\.html\?sector=vert-sector-7"/);
+assert.match(h03,/not a verified physical entrance or rooftop pin/);
+assert.match(h04,/data-verified-holovator="H-04"/);
+assert.match(h04,/Bleu Pokémon Center/);
+assert.match(h04,/Durstin/);
+assert.match(h04,/₽800, 1 Serious Mint, 10 Chilan Berries/);
+assert.match(h04,/href="atlas-explorer\.html\?place=bleu7-south"/);
+assert.match(h04,/precise door and rooftop coordinates remain unverified/);
+assert.equal((html.match(/data-verified-holovator=/g)||[]).length,2);
+
 const categoryCounts={base:0,dlc:0,ex:0};
 const names=[];
 for(let i=0;i<203;i++){
