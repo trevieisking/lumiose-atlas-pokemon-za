@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 27,
+  "revision": 28,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "Live independent Atlas 2.0 on GitHub Pages: 48 named sectors, 20 Wild Zones, 21 approximate owner-surveyed Holovator areas and 111 hosted owner photos. Source-first H-01/H-02 access route recheck ongoing; 0 exact entrance-roof coordinate pairs. Issue #28 full sector item mapping remains open. Original ChatGPT Site and Supabase untouched.",
+  "current_phase": "AT-286 branch: two source-checked written Holovator routes, district-only map focus. Live baseline AT-285 mobile containment verified. Nine mission leads researched; 21 approximate owner lifts, 111 JPGs, 48 named sectors, 20 zones retained. Zero verified exact entrance/roof pairs. Pending exact-head validation; next H-08 facade and ladder/bridge reconciliation.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -120,8 +120,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -1978,5 +1978,41 @@
     "original_supabase_workspace_or_daily_hyperspace_marker_changes": false,
     "next_research_phase": "Individually reconcile 23 Holovator category symbols against owner photographs; exact door/roof pairs, ladder/scaffold access and 48 sector-specific item map positions remain incomplete",
     "gate": "branch_pending_reviewed_SHA_CI_browser_screenshots_and_Pages_deploy"
+  },
+  "at_286_verification_2026_11_24": {
+    "baseline_main_sha": "c9b40a156fff0da388a7d012d22c3f5150b9f13e",
+    "mobile_fix_pr": 122,
+    "mobile_fix_pages_run": 45370121608,
+    "mobile_fix_pages_success": true,
+    "new_written_route_ids": [
+      "vert7-holovator-power",
+      "jaune6-holovator-muscle"
+    ],
+    "new_route_anchor_precision": "district_only",
+    "mission_numbers": [
+      40,
+      56
+    ],
+    "original_routes_retained": 6,
+    "total_documented_routes": 8,
+    "exact_new_pins": 0,
+    "exact_entry_roof_pairs_verified": 0,
+    "holovator_photo_groups_retained": 21,
+    "owner_jpgs_retained": 111,
+    "source_counts": {
+      "holovators": [
+        23,
+        23
+      ],
+      "ladders": [
+        255,
+        132
+      ],
+      "ladder_definitions_reconciled": false
+    },
+    "source_record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+    "map_geometry_player_progress_supabase_and_original_site_changed": false,
+    "release_gate": "branch_pending_reviewed_SHA_full_CI_visual_QA_and_Pages",
+    "next_target": "DR-H-08 Rouge 6 east-of-Sushi owner facade reconciliation, then Hotel Z / Rouge 1 ladder and bridge approaches"
   }
 }

@@ -228,14 +228,28 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
   assert.match(l.directions,/RIGHT side|right side/);
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
-  const ids=new Set([...data.holovators,...data.ladders].map(x=>x.id));
-  assert.equal(data.routes.length,6);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,6);
+  const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
+  assert.equal(data.routes.length,8);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,8);
+  assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
+    ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
+    "Keep all six existing owner approaches in the same order");
   for(const r of data.routes){
     assert.ok(normaliseRoute(r,ids),r.id);
     assert.equal(r.known_floor_plan,false);
     assert.equal(r.roof_exit_xy,null);
-    assert.equal(r.steps.some(s=>s.evidence==="owner_survey"||s.evidence==="owner_photographed"),true);
+    if(r.anchor_precision==="district_only"){
+      const sector=data.sectors.find(x=>x.id===r.point_id);
+      assert.ok(sector);
+      assert.equal(sector.xy,null);
+      assert.equal(sector.district,r.district);
+      assert.equal(eligibleMapPin({...sector,kind:"sector"}),false);
+      assert.ok(r.steps.every(s=>s.evidence==="guide_crosscheck"||s.evidence==="unverified"));
+      assert.equal(r.steps.at(-1).evidence,"unverified");
+      assert.equal(r.source_record,"MAPS_HOLOVATOR_COORDINATE_VALIDATION.json");
+    }else{
+      assert.equal(r.steps.some(s=>s.evidence==="owner_survey"||s.evidence==="owner_photographed"),true);
+    }
     assert.ok(r.steps.every(s=>!/<[^>]+>/.test(s.instruction)),"source text only");
   }
   const cyclone=data.routes.find(x=>x.id==="cafe-cyclone");
@@ -245,6 +259,24 @@ test("maze routes have known progression and evidence grade; no invented floor l
   assert.ok(hotel.steps.some(x=>x.space==="ladder"&&x.evidence==="owner_photographed"));
   assert.equal(hotel.steps.at(-1).evidence,"unverified");
   assert.equal(data.routes.find(x=>x.id==="jaune12-wz6").risk,"hostile_wild_pokemon");
+});
+test("AT-286 mission 40 and 56 written routes have no fabricated device or item points",()=>{
+  const written=data.routes.filter(r=>r.anchor_precision==="district_only");
+  assert.deepEqual(written.map(r=>[r.id,r.point_id,r.side_mission]),[
+    ["vert7-holovator-power","vert-sector-7",40],
+    ["jaune6-holovator-muscle","jaune-sector-6",56]
+  ]);
+  assert.match(written[0].steps.map(s=>s.instruction).join(" "),/leaf bridge.*Colorful Screw|leaf bridge.*pickup pixel/);
+  assert.match(written[1].steps.map(s=>s.instruction).join(" "),/physical Fighting-type move.*Wild Charge TM and wild Larvitar/);
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.ladders.length,1);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
+  const evidence=JSON.parse(read("MAPS_HOLOVATOR_COORDINATE_VALIDATION.json")).at_286_district_route_reconciliation;
+  assert.ok(evidence,"New written routes must have a dated research register");
+  assert.equal(evidence.published_new_exact_pins,0);
+  assert.deepEqual(evidence.route_ids,written.map(r=>r.id));
+  assert.equal(evidence.ladder_counts_confirmed_equal,false);
 });
 test("map algebra recovers actual image pixels after rotation, zoom and pan",()=>{
   const vp={width:970,height:635};

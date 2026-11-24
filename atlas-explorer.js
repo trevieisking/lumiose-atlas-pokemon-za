@@ -302,7 +302,17 @@ function renderRoute(){
   const item=recordMap.get(route.point_id);
   routeDetail.replaceChildren();
   routeDetail.append(element("strong","",route.title),paragraph(route.description));
-  routeDetail.append(paragraph("Evidence: recorded player approach. No complete interior floorplan, live GPS or automatic between-building walking route exists yet."));
+  const districtOnly=route.anchor_precision==="district_only"&&item?.kind==="sector";
+  if(districtOnly){
+    routeDetail.append(paragraph("Evidence: independent guide cross-check. District starting view only; no exact lift pin or owner-photographed device match is claimed."));
+    if(Number.isInteger(route.side_mission)&&route.side_mission>=1&&route.side_mission<=203)
+      routeDetail.append(link("side-missions.html#quest-"+route.side_mission,"Open Side Mission "+route.side_mission+" in our guide"));
+    if(route.source_record==="MAPS_HOLOVATOR_COORDINATE_VALIDATION.json")
+      routeDetail.append(paragraph("Research provenance:"),
+        link(route.source_record,"Read the Holovator evidence register"));
+  }else{
+    routeDetail.append(paragraph("Evidence: recorded player approach. No complete interior floorplan, live GPS or automatic between-building walking route exists yet."));
+  }
   if(route.risk==="hostile_wild_pokemon")routeDetail.append(element("p","ae-warning","⚠ Hostile wild Pokémon in this approach."));
   if(!route.known_floor_plan)routeDetail.append(element("p","ae-warning","Room and roof geometry not fully measured. Treat any unrecorded doorway or connection as unknown."));
   routeProgress.textContent="Step "+(stepIndex+1)+" of "+route.steps.length+" · "+(item?.district||"Lumiose");
@@ -315,7 +325,8 @@ function renderRoute(){
   );
   prevStep.disabled=stepIndex===0;
   nextStep.disabled=stepIndex===route.steps.length-1;
-  showRouteMap.disabled=!isPoint(item?.xy);
+  showRouteMap.disabled=!isPoint(item?.xy)&&!districtOnly;
+  showRouteMap.textContent=districtOnly?"Show district starting map":"Show area on map";
 }
 const pointerView=()=>{
   const rect=viewport.getBoundingClientRect();
@@ -431,6 +442,17 @@ async function load(){
   const ids=new Set(records.map(x=>x.id));
   routes=data.routes.filter(x=>normaliseRoute(x,ids));
   if(routes.length!==data.routes.length)throw Error("Unverified or unanchored building route in source register");
+  // A written route may start from an existing named sector with no coordinates.
+  // Never convert a sector, quest star or route step into a marker.
+  for(const route of routes){
+    const anchor=recordMap.get(route.point_id);
+    if(route.anchor_precision==="district_only"){
+      if(anchor?.kind!=="sector"||anchor.xy!==null||route.district!==anchor.district||
+         route.roof_exit_xy!==null||route.known_floor_plan!==false||
+         !route.steps.every(step=>step.evidence==="guide_crosscheck"||step.evidence==="unverified"))
+        throw Error("Invalid district-only guide route");
+    }else if(anchor?.kind==="sector")throw Error("A sector route must declare district-only precision");
+  }
   for(const route of routes)routePicker.append(element("option","",route.title));
   const options=[...routePicker.options];
   routes.forEach((route,i)=>{options[i+1].value=route.id;});
@@ -456,7 +478,7 @@ async function load(){
   if(deepLinked){
     activeKind=deepLinked.kind;drawList();selectRecord(deepLinked,true);
   }
-  stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · 6 documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
+  stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · "+routes.length+" documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
 }
 setupNavigation();
@@ -470,6 +492,7 @@ routePicker.addEventListener("change",()=>{
     routeProgress.textContent="No route selected";
     currentStep.replaceChildren(paragraph("Select a route to inspect street-to-interior and rooftop transitions."));
     prevStep.disabled=true;nextStep.disabled=true;showRouteMap.disabled=true;
+    showRouteMap.textContent="Show area on map";
   }
 });
 prevStep.addEventListener("click",()=>{const route=routes.find(x=>x.id===routeId);if(route){stepIndex=Math.max(0,stepIndex-1);renderRoute();}});
@@ -477,7 +500,14 @@ nextStep.addEventListener("click",()=>{const route=routes.find(x=>x.id===routeId
 showRouteMap.addEventListener("click",()=>{
   const route=routes.find(x=>x.id===routeId);
   const item=recordMap.get(route?.point_id);
-  if(item){selectRecord(item,true);viewport.scrollIntoView({behavior:"smooth",block:"center"});}
+  if(item){
+    const retainedStep=stepIndex;
+    selectRecord(item,true);
+    if(route.anchor_precision==="district_only"&&routeId===route.id){
+      stepIndex=retainedStep;renderRoute();
+    }
+    viewport.scrollIntoView({behavior:"smooth",block:"center"});
+  }
 });
 load().catch(error=>{
   stats.textContent="The independent Atlas records could not load.";

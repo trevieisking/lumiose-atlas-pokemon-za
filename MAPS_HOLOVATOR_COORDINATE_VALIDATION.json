@@ -2742,5 +2742,87 @@
     "saved_progress_supabase_original_chatgpt_workspace_changed": false,
     "next_mapping_phase": "Reconcile 23 external Holovator category markers one by one to owner physical photo groups, obtain exact ground and roof game-map coordinates without guessing; expand remaining ladder/scaffold and verified per-sector item mappings",
     "source_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28"
+  },
+  "at_286_district_route_reconciliation": {
+    "checked_on": "2026-11-24",
+    "baseline_main_sha": "c9b40a156fff0da388a7d012d22c3f5150b9f13e",
+    "scope": "Two written access routes through the existing Atlas route system; no new physical marker or measured coordinate.",
+    "route_ids": [
+      "vert7-holovator-power",
+      "jaune6-holovator-muscle"
+    ],
+    "external_map_category_counts": [
+      {
+        "source": "Shackmaps",
+        "url": "https://www.shackmaps.com/pokemon-legends-z-a/map",
+        "holovator": 23,
+        "ladder": 255
+      },
+      {
+        "source": "Gamer Guides",
+        "url": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+        "holovator": 23,
+        "ladder": 132,
+        "bridge": 43
+      }
+    ],
+    "ladder_counts_confirmed_equal": false,
+    "count_rule": "Different sources report different ladder counts; category definitions and individual source records remain unreconciled. Neither ladder total is adopted as a canonical count. The 23 Holovator category totals agree but are not a device-to-photo match.",
+    "research": [
+      {
+        "route_id": "vert7-holovator-power",
+        "mission_number": 40,
+        "sector_id": "vert-sector-7",
+        "owner_photo_status": "No individual physical match established.",
+        "sources": [
+          {
+            "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power",
+            "supports": "Vert Pokemon Center northeast approach, Elec and Electric-type attack."
+          },
+          {
+            "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-7.html",
+            "supports": "Unlock after Canari Quiz Whiz; mission-gated roof access and northeastern rooftop Screw."
+          },
+          {
+            "url": "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+            "supports": "Source's own Screw 13 route: ascent, leaf bridge ahead, right turn and end of roof. This source's numbering is not our original ledger ID."
+          }
+        ],
+        "exact_ground_entry_xy": null,
+        "exact_rooftop_landing_xy": null,
+        "exact_screw_xy": null,
+        "canonical_screw_id": null
+      },
+      {
+        "route_id": "jaune6-holovator-muscle",
+        "mission_number": 56,
+        "sector_id": "jaune-sector-6",
+        "owner_photo_status": "No individual physical match established.",
+        "sources": [
+          {
+            "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-056-well-just-muscle-our-way-through",
+            "supports": "Wild Zone 8 southwest then southeast; Mediera and physical Fighting-type Rock Smash."
+          },
+          {
+            "url": "https://gamewith.jp/pokemon-za/524901",
+            "supports": "South of Wild Zone 8; physical Fighting-type move; rooftop Wild Charge TM and wild Larvitar. Source reports unlock after the Rank D battle in Main Mission 19."
+          },
+          {
+            "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-6.html",
+            "supports": "Quest location and unlock after Gwynn in Main Mission 19. Retain source-guide transition-to-M20 wording separately."
+          }
+        ],
+        "exact_ground_entry_xy": null,
+        "exact_rooftop_landing_xy": null,
+        "exact_tm_xy": null,
+        "exact_pokemon_spawn_xy": null
+      }
+    ],
+    "owner_holovator_photo_groups_retained": 21,
+    "owner_jpgs_retained": 111,
+    "original_owner_routes_retained": 6,
+    "published_new_exact_pins": 0,
+    "original_map_geometry_changed": false,
+    "next_target": "Resolve H-08 against existing Rouge 6 owner facade evidence; separately document Hotel Z and Rouge 1 rooftop ladder / bridge approaches, without duplicating physical devices or original Screw IDs."
   }
 }
