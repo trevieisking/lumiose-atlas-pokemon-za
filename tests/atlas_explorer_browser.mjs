@@ -720,10 +720,19 @@ try{
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 10.*Terra.*level 28 Diggersby/);
+    const missionVideo=page.locator('#aeCurrentStep .ae-route-video a');
+    assert.equal(await missionVideo.getAttribute("href"),"https://www.youtube.com/watch?v=IuvITD247zU&t=59s");
+    assert.equal(await missionVideo.getAttribute("target"),"_blank");
+    assert.equal(await missionVideo.getAttribute("rel"),"noopener noreferrer");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/TheLandOGaming.*not frame-verified/);
     await page.locator("#aeNextStep").click();
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
     assert.match(await page.locator("#aeCurrentStep").textContent(),/visible ladder.*does not establish a safe crossing/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Rooftop Screw #2.*Roto-Glide/);
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=694s");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*Archive 64.*unconfirmed/);
+    assert.equal(await page.locator('iframe[src*="youtube"]').count(),0);
     await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     await page.screenshot({path:output+"/at293-vert9-screw-"+device+".png",fullPage:false});
@@ -731,6 +740,8 @@ try{
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Alternative alley ladder.*purple sludge/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/TM019 Power Gem.*Vert 5\/9 sector label/);
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Quick Guides.*not frame-verified/);
     const step=await page.locator("#aeRouteProgress").textContent();
     await page.locator("#aeShowRouteMap").click();
     assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
