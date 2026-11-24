@@ -71,7 +71,7 @@ assert.ok(h09.includes("not a uniquely verified mission-device entrance or exact
 const source92=source.slice(source.indexOf('id="quest-92"'),source.indexOf('id="quest-93"'));
 assert.ok(source92.includes("<b>Reward:</b> ₽3,000, Rocky Helmet ×1, Full Restore ×1"));
 assert.ok(source92.includes("cannot be caught in this scripted battle"));
-assert.ok(!/level (?:36|49)|Lv\\.? ?(?:36|49)/.test(source92),"Do not assign contested Beldum level");
+assert.ok(!source92.includes("level 36") && !source92.includes("level 49") && !source92.includes("Lv. 36") && !source92.includes("Lv. 49"),"Do not assign contested Beldum level");
 assert.equal((html.match(/data-verified-holovator=/g)||[]).length,7);
 
 const categoryCounts={base:0,dlc:0,ex:0};
