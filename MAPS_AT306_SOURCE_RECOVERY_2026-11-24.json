@@ -388,5 +388,18 @@
   "public_guidance": "Written source bearings may be shown before PNG binary upload. Never create missing image URLs or label native Atlas XY until true registration.",
   "release_gate": "Exact-head test/preview/safe merge and verified Pages deployment for text notes; future binary upload requires each actual file hash/Git blob verification before display.",
   "workspace": "not_changed",
-  "supabase": "read_only_no_writes"
+  "supabase": "read_only_no_writes",
+  "github_text_release": {
+    "pr": 144,
+    "head": "cb000f5b07493019011255785a8e467800ab757d",
+    "main": "a0f1e013f400f245ba85193adc6b4738097a4b43",
+    "tree_match": true,
+    "ci_atlas_run": 45473749946,
+    "ci_recovered_run": 45473749952,
+    "screenshot_artifact": 14956879229,
+    "pages_run": 45474397446,
+    "pages_conclusion": "success",
+    "published_image_assets_from_candidates": 0,
+    "status": "written_source_bearings_verified_on_github_png_upload_pending"
+  }
 }
