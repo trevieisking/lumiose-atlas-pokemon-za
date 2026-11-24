@@ -100,3 +100,12 @@ body.atlas-article{margin:0;background:#fbfafc;color:#25233b;font:16px/1.64 syst
   .atlas-article-main { overflow-wrap: anywhere; }
   .atlas-article .table-scroll { max-width: 100%; overscroll-behavior-x: contain; }
 }
+
+/* AT-311: read-only map/video references, sized inside existing cards. */
+.atlas-article .atlas-guide-links{display:block;grid-column:1/-1;min-width:0;max-width:100%;box-sizing:border-box;margin:12px 0 4px;padding:12px;border:1px solid #dcd3e8;border-radius:10px;background:#f8f5fc;color:#483661;overflow-wrap:anywhere}
+.atlas-article .atlas-guide-links>strong{display:block;font-size:13px;margin-bottom:7px}
+.atlas-article .atlas-guide-link-row{display:flex;flex-wrap:wrap;gap:6px;min-width:0;max-width:100%}
+.atlas-article .atlas-guide-link-row a{display:inline-flex;align-items:center;box-sizing:border-box;max-width:100%;min-width:0;min-height:42px;padding:7px 10px;border:1px solid #c9bcd9;border-radius:7px;background:#fff;color:#49346e;font-size:12px;line-height:1.4;text-decoration:underline;white-space:normal;overflow-wrap:anywhere}
+.atlas-article .atlas-guide-link-row a.atlas-guide-video{border-color:#b9a9d3}
+.atlas-article .atlas-guide-links p{font-size:12px;line-height:1.45;color:#5f536f;margin:8px 0 0}
+@media(max-width:420px){.atlas-article .atlas-guide-links{padding:10px}.atlas-article .atlas-guide-link-row a{flex:1 1 140px}}

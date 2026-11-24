@@ -1102,6 +1102,41 @@ try{
     await page.locator("#aeViewport").screenshot({path:output+"/"+file+".png"});
     await page.close();
   }
+  // AT-311 actual guide links on desktop and mobile; no external network needed.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const guide=await context.newPage();
+    for(const [page,selector,count] of [
+      ["maps.html",".map-zone-detail > .atlas-guide-links",20],
+      ["alphas.html",".alpha-zone-card > .atlas-guide-links",20],
+      ["sector-maps.html",".sector-card-body > .atlas-guide-links",48],
+      ["items.html",".item-ledger-zone > .atlas-guide-links",20],
+      ["walkthrough.html",".route-index-body > .atlas-guide-links",42]
+    ]){
+      await guide.goto(base+"/"+page,{waitUntil:"load"});
+      await guide.waitForFunction(({selector,count})=>document.querySelectorAll(selector).length===count,{selector,count});
+      const bounds=await guide.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+      assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-311 overflow "+page+JSON.stringify(bounds));
+    }
+    await guide.goto(base+"/alphas.html#zone-3",{waitUntil:"load"});
+    const alpha=guide.locator("#zone-3 .atlas-guide-links");
+    await alpha.waitFor();
+    assert.equal(await alpha.locator("a.atlas-guide-video").count(),2);
+    assert.equal(await alpha.locator("a.atlas-guide-video").first().getAttribute("href"),"https://www.youtube.com/watch?v=iQeOi4sjLB4&t=202s");
+    await alpha.scrollIntoViewIfNeeded();
+    await alpha.screenshot({path:output+"/at311-alpha-zone3-"+kind+".png"});
+    await guide.goto(base+"/side-missions.html#quest-61",{waitUntil:"load"});
+    const mission=guide.locator("#quest-61 .atlas-guide-links");
+    await mission.waitFor();
+    assert.equal(await mission.locator("a.atlas-guide-video").getAttribute("href"),"https://www.youtube.com/watch?v=oNzm9uQOCcs");
+    assert.equal(await mission.locator('a[href="atlas-explorer.html?place=bleu3-fav"]').count(),1);
+    await mission.scrollIntoViewIfNeeded();await mission.screenshot({path:output+"/at311-mission61-"+kind+".png"});
+    await guide.goto(base+"/atlas-explorer.html?place=wz-03",{waitUntil:"load"});
+    const selected=guide.locator("#aeSelected .atlas-guide-links");
+    await selected.waitFor();
+    assert.equal(await selected.locator("a.atlas-guide-video").count(),2);
+    await selected.scrollIntoViewIfNeeded();await selected.screenshot({path:output+"/at311-explorer-zone3-"+kind+".png"});
+    await guide.close();
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

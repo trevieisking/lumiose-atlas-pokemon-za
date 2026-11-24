@@ -21,6 +21,8 @@ on:
       - tests/mission37_ally_wave.test.mjs
       - tests/mission24_25_source_parity.test.mjs
       - atlas-explorer-geometry.mjs
+      - atlas-guide-links.mjs
+      - tests/atlas_guide_links.test.mjs
       - atlas-explorer-data.json
       - sector-maps.js
       - sector-maps.css
@@ -49,7 +51,7 @@ jobs:
       - name: Syntax-check isolated map modules
         run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
-        run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs
+        run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
       - name: Reject broken local guide anchors and raw Markdown destinations across every page

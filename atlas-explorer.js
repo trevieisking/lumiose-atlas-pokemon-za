@@ -6,6 +6,7 @@ import {
   coverageCellCentre, districtStart, routeVideoUrl
 } from "./atlas-explorer-geometry.mjs";
 import {saveVideoBookmark,readVideoBookmark,forgetVideoBookmark} from "./atlas-video-bookmark.mjs";
+import {appendGuidePanel,zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo} from "./atlas-guide-links.mjs";
 const by = id => document.getElementById(id);
 const viewport=by("aeViewport"),stage=by("aeStage"),layer=by("aeMapPins");
 const resultList=by("aeResults"),selectedPanel=by("aeSelected"),search=by("aeSearch");
@@ -183,6 +184,7 @@ function detailsFor(item){
   if(item.kind==="zone"){
     selectedPanel.append(paragraph("This source-saved Wild Zone centre is for orientation, not an exact item, ladder or interior entrance."));
     selectedPanel.append(link(item.link,"Open Wild Zone "+String(item.number).padStart(2,"0")+" and pickup notes"));
+    appendGuidePanel(selectedPanel,"Wild Zone field guides",[...zoneLinks(item.number,"atlas-explorer.html").filter(x=>x.href!==item.link),...zoneVideos(item.number)],"Video links cover encounters and hunting; not measured pickup or entrance coordinates.");
   }else if(item.kind==="sector"){
     selectedPanel.append(paragraph("This sector name is verified in the directory. Its exact map boundary is not independently traced, so no arbitrary pin is drawn."));
     if(item.street_bearing?.confidence==="source_image_orientation_only"){
@@ -208,6 +210,8 @@ function detailsFor(item){
       selectedPanel.append(paragraph("Original in-game screenshot for this numbered sector still needs verification. No precise street position is asserted."));
     }
     selectedPanel.append(link(item.link,"Open this sector's original clues"));
+    const sectorMatch=item.id.match(/^(vert|bleu|magenta|rouge|jaune)-sector-(\d+)$/);
+    if(sectorMatch)appendGuidePanel(selectedPanel,"Sector field guides",[...sectorLinks(sectorMatch[1],Number(sectorMatch[2]),"atlas-explorer.html").filter(x=>x.href!==item.link),screwVideo(sectorMatch[1])],"Creator colour chapter only; Atlas Screw numbering and exact map geometry are not verified by this video.");
   }else if(item.kind==="holovator"){
     selectedPanel.append(paragraph("The physical lift is in the owner's field survey. The symbol on this 1920px overview is an approximate approach lead, not a measured door or roof landing."));
     if(item.photos?.length){
@@ -232,6 +236,7 @@ function detailsFor(item){
       selectedPanel.append(paragraph("Original survey images for this location are not yet hosted in GitHub. No broken or replacement artwork is shown."));
     }
     selectedPanel.append(link("maps.html","Open the original Wild Zone city map"));
+    if(item.id==="bleu3-fav")appendGuidePanel(selectedPanel,"My Favorite Holovator · Side Mission 61",[ {href:"side-missions.html#quest-61",label:"Written mission solution"},sideVideo(61)],"The original owner photographs and approximate approach map remain the location evidence.");
   }else if(item.kind==="ladder"){
     selectedPanel.append(paragraph("The real ladder was photographed at ground level; its exact rooftop landing and onward path remain unverified."));
     if(item.source_record)selectedPanel.append(link(item.source_record,"Read original Hotel Z ladder survey evidence"));

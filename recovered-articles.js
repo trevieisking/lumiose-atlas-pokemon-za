@@ -95,3 +95,11 @@
   });
   repaint();
 })();
+
+/* AT-311: progressive, same-origin enrichment on the map-related articles only. */
+(() => {
+  if(typeof window==="undefined"||!document.documentElement||typeof window.location?.pathname!=="string")return;
+  const page=window.location.pathname.split("/").pop();
+  if(!["maps.html","sector-maps.html","alphas.html","items.html","walkthrough.html","side-missions.html","shiny-hunting.html","hyperspace-maps.html","mega-dimension.html"].includes(page))return;
+  import("./atlas-guide-links.mjs").then(({installArticleLinks})=>installArticleLinks(document,page)).catch(error=>console.warn("Optional guide references unavailable",error));
+})();

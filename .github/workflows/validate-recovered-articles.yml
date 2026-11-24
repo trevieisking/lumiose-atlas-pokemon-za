@@ -93,6 +93,8 @@ on:
       - tests/shiny_recovered.test.mjs
       - recovered-articles.css
       - recovered-articles.js
+      - atlas-guide-links.mjs
+      - tests/atlas_guide_links.test.mjs
       - tests/mable_recovered.test.mjs
       - .github/workflows/validate-recovered-articles.yml
 
@@ -108,7 +110,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify article JS syntax
-        run: node --check recovered-articles.js && node --check app.js
+        run: node --check recovered-articles.js && node --check app.js && node --check atlas-guide-links.mjs && node --test tests/atlas_guide_links.test.mjs
       - name: Verify original PDF reward order, menu, safe local state and navigation
         run: node --test tests/mable_recovered.test.mjs
       - name: Verify shiny calculator JavaScript syntax
