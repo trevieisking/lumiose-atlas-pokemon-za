@@ -8,6 +8,7 @@ import {
   panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin,
   coverageCellCentre, districtStart, routeVideoUrl
 } from "../atlas-explorer-geometry.mjs";
+import {VIDEO_BOOKMARK_KEY,validVideoBookmark,saveVideoBookmark,readVideoBookmark,forgetVideoBookmark} from "../atlas-video-bookmark.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
@@ -569,4 +570,18 @@ test("AT-295 optional video references are timestamped, labelled, safe and do no
   assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
   assert.equal(data.routes.length,12);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
+
+test("AT-295 video return uses one private key, preserves unrelated state and tolerates blocked storage",()=>{
+  const b={version:1,routeId:"vert9-vernal-rooftop-screw",stepIndex:3,stepTitle:"Rooftop Screw #2 — Holovator approach",videoId:"5-dLjd4o8Rc",selectedId:"vert-sector-9",filter:"sector",search:"",hiddenLayers:["ladder"],sector:"vert-sector-9",coverageArea:"",coverageText:"District starting view",tint:false,view:{zoom:2.4,rotation:45,panX:12,panY:-24},stageSize:400,anchorTop:350};
+  assert.ok(validVideoBookmark(b));
+  for(const invalid of [null,{...b,version:2},{...b,stepIndex:-1},{...b,videoId:"javascript:alert(1)"},{...b,view:{...b.view,panX:Infinity}},{...b,stageSize:0}])assert.equal(validVideoBookmark(invalid),false);
+  const values=new Map([["existing-progress","unchanged"]]);
+  const host={history:{state:{other:"preserved"},replaceState(value){this.state=value;}},localStorage:{setItem(k,v){values.set(k,v);},getItem(k){return values.get(k)||null;},removeItem(k){values.delete(k);}}};
+  assert.equal(saveVideoBookmark(host,b),true);assert.deepEqual(readVideoBookmark(host,false),b);assert.equal(host.history.state.other,"preserved");
+  host.history.state=null;assert.equal(readVideoBookmark(host,false),null);assert.deepEqual(readVideoBookmark(host,true),b);
+  forgetVideoBookmark(host);assert.equal(readVideoBookmark(host,true),null);assert.equal(values.get("existing-progress"),"unchanged");assert.equal(values.has(VIDEO_BOOKMARK_KEY),false);
+  const denied={history:{state:null,replaceState(){throw Error("blocked");}},get localStorage(){throw Error("blocked");}};
+  assert.equal(saveVideoBookmark(denied,b),false);assert.equal(readVideoBookmark(denied,true),null);assert.doesNotThrow(()=>forgetVideoBookmark(denied));
+  const module=read("atlas-video-bookmark.mjs");assert.doesNotMatch(module,/fetch\\s*\\(|supabase\\.|sessionStorage\\s*\\./i);
 });
