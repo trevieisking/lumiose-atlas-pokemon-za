@@ -2495,5 +2495,84 @@
     "dynamic_hyperspace_pins_added": 0,
     "next_record": "DR-H-05 / Side Mission 056 We'll Just Muscle Our Way Through!",
     "source_coordinates_are_not_atlas_pixels": true
+  },
+  "independent_source_recheck_h05_h06_2026_11_24": {
+    "date": "2026-11-24",
+    "mission_records": [
+      "DR-H-05",
+      "DR-H-06"
+    ],
+    "scope": "Exact mission solution/reward audit, owner-photo route linkage; no new physical Holovator XY",
+    "h05": {
+      "number": 56,
+      "sector": "Jaune Sector 6",
+      "requester": "Médierà",
+      "physical_move_requirement": "physical Fighting-type damaging move; Rock Smash valid, status or special type is not enough",
+      "rewards": {
+        "pokedollars": 900,
+        "muscle_bands": 1
+      },
+      "source_unlock_conflict": "Gwynn Main Mission 19 milestone vs beginning Main Mission 20; source guide field preserved until verified in-game",
+      "sources": [
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-056-well-just-muscle-our-way-through",
+        "https://www.serebii.net/legendsz-a/sidemissions/we%27lljustmuscleourwaythrough%21.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)"
+      ],
+      "published_map_link": "atlas-explorer.html?sector=jaune-sector-6",
+      "new_holovator_pin": false,
+      "exact_entrance_xy": null,
+      "exact_roof_xy": null
+    },
+    "h06": {
+      "number": 61,
+      "name": "My Favorite Holovator",
+      "sector": "Bleu Sector 3",
+      "owner_survey_record": "bleu3-fav",
+      "owner_original_jpg_photos_retained": 5,
+      "existing_approx_original_jpg_xy": [
+        765,
+        1396
+      ],
+      "mechanic_corrected": "A Rust Syndicate grunt is blocking the working permanent Holovator; not an electrical or broken-device repair",
+      "npc_pokemon_levels": [
+        [
+          "Trubbish",
+          45
+        ],
+        [
+          "Roselia",
+          45
+        ],
+        [
+          "Mawile",
+          46
+        ]
+      ],
+      "rewards": {
+        "pokedollars": 2000,
+        "poison_barbs": 1,
+        "mega_shards": 20
+      },
+      "sources": [
+        "https://www.serebii.net/legendsz-a/sidemissions/myfavoriteholovator.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Side_Missions_61-80",
+        "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards"
+      ],
+      "published_map_link": "atlas-explorer.html?place=bleu3-fav",
+      "new_holovator_pin": false,
+      "exact_entrance_xy": null,
+      "exact_roof_xy": null
+    },
+    "changed_source_main_quest_records": [
+      56,
+      61
+    ],
+    "all_203_completion_keys_and_source_sections_retained": true,
+    "all_holovator_owner_photos_retained": 111,
+    "all_21_owner_holovators_retained": true,
+    "all_48_sectors_and_20_wild_zones_retained": true,
+    "original_chatgpt_workspace_site_modified": false,
+    "next_target": "DR-H-07 / Side Mission 071 The Burning Gaze of Watchog",
+    "release_state": "branch_pending_exact_head_ci_and_Pages"
   }
 }
