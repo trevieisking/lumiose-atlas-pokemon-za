@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 49,
+  "revision": 50,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-302 twelve screenshot-backed sector street notes in GitHub review; crops hash-verified locally, images still unhosted. Geographic labels/high-detail registration remain open.",
+  "current_phase": "AT-302 text street notes deployed to independent GitHub Atlas; AT-303 integrating the twelve sourced street bearings into Explorer view/search on a review branch. All 48 sector names stay selectable; 36 require source-bearing evidence and all geographic sector-label anchors remain unverified. Original PNG crop binaries unhosted.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4137,5 +4137,35 @@
     "release_gate": "Exact-head CI+regressions and reviewed mobile/desktop screenshots before merge and verified Pages deployment after",
     "database": "Read-only preflight, no writes to private checklist or feedback queue",
     "workspace": "not_changed"
+  },
+  "at_303_street_bearings_in_explorer": {
+    "id": "AT-303",
+    "date": "2026-11-24",
+    "status": "review_branch_not_deployed",
+    "starting_main": "9f82e17985435f4b92a6686a60ce4063df0ee0fd",
+    "focus": "Source-verified street/sector labelling ahead of image-detail and Holovator route expansions",
+    "target_sectors": 48,
+    "sector_names_preserved": 48,
+    "street_bearing_rows_from_at_301": 12,
+    "sectors_without_street_bearings": 36,
+    "geographic_sector_label_anchors_verified": 0,
+    "new_map_geometry_or_pins": 0,
+    "original_owner_holovator_approach_entries_preserved": 21,
+    "original_owner_jpgs_preserved": 111,
+    "unhosted_crop_pngs": 6,
+    "source_register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
+    "runtime_files": [
+      "atlas-explorer-data.json",
+      "atlas-explorer.html",
+      "atlas-explorer.js",
+      "atlas-explorer.css"
+    ],
+    "tests": [
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "release_requirements": "Exact-head green CI, complete original regressions, screenshot QA on Android-sized Chromium and desktop, no draft/conflicts, exact SHA merge, verified Pages deployment",
+    "outstanding": "All 48 map-label anchors, verified images for remaining sectors and named streets, first crop byte upload and source-point alignment, original Workspace port",
+    "supabase_and_workspace": "not changed"
   }
 }

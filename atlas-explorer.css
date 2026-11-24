@@ -173,3 +173,8 @@
 .ae-sector-context strong{font-size:17px;font-weight:850;color:#fff}
 .ae-sector-context #aeSectorContextNote{font-size:11px;color:#f1f4f9}
 @media(max-width:480px){.ae-sector-context{top:10px;left:8px;padding:8px 10px;gap:2px}.ae-sector-context strong{font-size:16px}.ae-sector-context #aeSectorContextNote{font-size:10px}}
+
+/* AT-303: screen-space street bearing remains upright and does not touch map pins. */
+.ae-sector-context #aeSectorContextBearing{font-size:11px;line-height:1.45;color:#ffe4a8;max-width:340px;overflow-wrap:anywhere}
+.ae-coverage-panel #aeStreetEvidenceSummary{margin:9px 0 14px;max-width:720px;color:#5b4b71}
+@media(max-width:480px){.ae-sector-context #aeSectorContextBearing{font-size:10px;line-height:1.35;max-width:250px}}
