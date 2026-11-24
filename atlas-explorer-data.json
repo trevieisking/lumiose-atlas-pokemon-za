@@ -2126,6 +2126,74 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "vert6-racine-rooftop-courses",
+      "title": "Vert Sector 6 — Racine Construction, Le Nah and rooftop TMs",
+      "point_id": "vert-sector-6",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Separate optional approaches around Racine Construction, Restaurant Le Nah and South Boulevard. Original Screw clues #19–22 are retained. Four source pickup coordinates are recorded in the research register, but are not calibrated Atlas pixels or ladder entrances. These are written directions, not a certified continuous route.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start outside Racine Construction",
+          "instruction": "Find the construction company on South Boulevard in Vert Sector 6. The worker outside exchanges Colorful Screws for Canari plush bonuses. Use the construction frontage and park as landmarks; the district map view is approximate.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "interior",
+          "title": "Indoor Screw #19 and Canari reward",
+          "instruction": "When story access permits, enter the building and inspect the lobby behind the front desk for the purple Screw pickup. TM066 Volt Switch is different: Canari awards it after her Rank E promotion battle during Main Mission 15. It is not a rooftop TM or another Screw.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Park-side scaffold — clues #20–21",
+          "instruction": "Look behind Racine Construction toward the park between the company and Restaurant Le Nah. Follow the rising scaffold platforms to roof height, then drop onto the platform holding the purple pickup. This is one of the two nearby scaffold clues #20–21; the individual clue, entrance and tier are not yet matched.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "South Boulevard scaffold — clues #20–21",
+          "instruction": "Check the separate tall roadside scaffolding north of Racine Construction. Climb the ladder and reach the next platform across the gap; Roto-Glide is the recommended option. Some walkthroughs describe a timed roll instead. Do not confuse this course with the park-side scaffold. The individual correspondence to original clues #20–21 remains unresolved.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Restaurant Le Nah rooftop Screw #22",
+          "instruction": "Look behind the building immediately south of the restaurant for its ladder. Climb to the roof, follow the ledge and cross to the restaurant roof using a controlled roll or Roto-Glide. The published roof description matches the original #22 clue. The exact ladder base and landing remain unregistered.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "TM080 Iron Defense",
+          "instruction": "Find the separate building northeast of the Racine Construction block. Use the ladder on its northeastern side, then Roto-Glide onto the construction company's roof. Look for the golden TM pickup above the fast-travel area.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "TM074 Shadow Ball",
+          "instruction": "A second rooftop TM is reported overlooking Coulant Waterway near Wild Zone 17. Published routes use a ladder-accessible building to the northeast and Roto-Glide to the target roof. One guide lists this pickup under Rank C or higher; check story progression if it is unavailable. Do not assume the two TM approaches use the same physical ladder until verified.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Optional Coulant Waterway approach",
+          "instruction": "For the separate canal-side Screw clue #16, start at Café Cyclone, go south down the steps and look beneath the bridge for the scaffold course. A published route uses ladders and a beam crossing. This is a boundary-area lead, not a new pickup or a surveyed connection from Racine's roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Remaining map alignment",
+          "instruction": "The original #19–22 pickup markers have source-space coordinate references, but no calibrated Atlas entrances, scaffold bases or roof exits. The two TMs and waterway route also remain unregistered. No new permanent pin or collection checkbox has been added.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [

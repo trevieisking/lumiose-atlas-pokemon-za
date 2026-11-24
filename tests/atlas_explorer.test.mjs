@@ -229,8 +229,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,10);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,10);
+  assert.equal(data.routes.length,11);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,11);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -337,6 +337,51 @@ test("AT-289 distinguishes two Vert 5 scaffold courses without duplicating Screw
   assert.equal(survey.at_289.new_exact_pins,0);
   assert.equal(survey.at_289.visual_evidence.coordinate_alignment_performed,false);
   assert.ok(survey.leads.filter(l=>v5.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&l.canonical_screw_id===null&&!l.publish_new_pin));
+  assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.ladders.length,1);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
+test("AT-290 preserves Racine pickup identities and separates source coordinates from access geometry",()=>{
+  const route=data.routes.find(x=>x.id==="vert6-racine-rooftop-courses");
+  assert.ok(route);
+  assert.equal(route.point_id,"vert-sector-6");
+  assert.equal(route.anchor_precision,"district_only");
+  assert.equal(route.source_record,"MAPS_ACCESS_ROUTE_SURVEY.json");
+  assert.equal(route.roof_exit_xy,null);
+  assert.equal(route.known_floor_plan,false);
+  assert.match(route.steps[1].instruction,/TM066 Volt Switch.*Main Mission 15.*not a rooftop TM/);
+  assert.match(route.steps[2].instruction,/#20–21.*not yet matched/);
+  assert.match(route.steps[3].instruction,/#20–21 remains unresolved/);
+  assert.match(route.steps[4].instruction,/south of the restaurant.*exact ladder base/);
+  assert.equal(route.steps[5].title,"TM080 Iron Defense");
+  assert.equal(route.steps[6].title,"TM074 Shadow Ball");
+  assert.match(route.steps[6].instruction,/Do not assume.*same physical ladder/);
+  assert.match(route.steps[7].instruction,/#16.*not a new pickup/);
+  assert.equal(route.steps.at(-1).evidence,"unverified");
+  const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+  const v6=survey.coverage.find(x=>x.id==="vert-sector-6");
+  assert.equal(v6.geometry_complete,false);
+  assert.equal(v6.inventory_complete,false);
+  assert.equal(v6.lead_ids.length,7);
+  const discovery=survey.at_290.source_coordinate_discovery;
+  assert.equal(discovery.link_ids_verified,4);
+  assert.equal(discovery.source_to_atlas_transform_calibrated,false);
+  assert.deepEqual(discovery.records.map(r=>[r.original_clue,r.marker_id,r.source_xy]),[
+    [19,238356,[15101,14156]],[20,235632,[15891,13705]],
+    [21,235674,[15040,13434]],[22,235931,[16076,12551]]
+  ]);
+  for(const p of discovery.records){
+    assert.equal(p.link_marker_id_match,true);
+    assert.equal(new URL(p.regional_link).searchParams.get("markerId"),String(p.marker_id));
+    assert.equal(new URL(p.database_link).searchParams.get("markerId"),String(p.marker_id));
+    assert.equal(p.atlas_xy,null);
+    assert.equal(p.physical_entrance_xy,null);
+    assert.equal(p.physical_exit_xy,null);
+    assert.equal(p.publish_new_pin,false);
+  }
+  assert.ok(survey.leads.filter(l=>v6.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&l.canonical_screw_id===null&&!l.publish_new_pin));
+  assert.equal(survey.at_290.no_new_screw_ids,true);
   assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
   assert.equal(data.holovators.length,21);
   assert.equal(data.ladders.length,1);
