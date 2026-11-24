@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-291",
+  "batch": "AT-292",
   "date": "2026-11-24",
-  "baseline_main_sha": "f8cb229bf59fa0b41acc3203ad5ec51a928087d2",
+  "baseline_main_sha": "64157f8f59bfecf268deda8c9d573966de428780",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -170,9 +170,12 @@
       "id": "vert-sector-8",
       "kind": "sector",
       "label": "Vert Sector 8",
-      "status": "partial_text_research",
+      "status": "partial_text_research_expanded",
       "lead_ids": [
-        "AR-V08-01"
+        "AR-V08-01",
+        "AR-V08-02",
+        "AR-V08-03",
+        "AR-V08-04"
       ],
       "geometry_complete": false,
       "inventory_complete": false
@@ -1644,19 +1647,85 @@
       "dlc_only": true,
       "side_mission": 191,
       "gate_status": "vendor exact earliest availability unresolved"
+    },
+    {
+      "id": "AR-V08-02",
+      "area": "vert-sector-8",
+      "kind": "riverside_ladder_scaffold_descent",
+      "landmark": "Waterway behind Hotel Z",
+      "notes": "Published routes describe climbing a riverside ladder, moving southeast across the roof and descending scaffold tiers. Regional clue #3 northeast of Hotel Z is a candidate; exact ladder identity relative to owner courtyard ladder not established. No Glide requirement stated for this course by cited guides.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        3
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V08-03",
+      "area": "vert-sector-8",
+      "kind": "multi_roof_ladder_glide",
+      "landmark": "Hotel Z and taller building east of hotel",
+      "notes": "Published approach uses rear ladder, Glide to adjacent roof, further hotel roof ladders, blue roof transitions and a final ladder on taller building. Roto-Glide required. Candidate original #4; no surveyed intermediate ladder IDs, roof connection or final point.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        4
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V08-04",
+      "area": "vert-sector-8",
+      "kind": "early_story_rooftop_shortcut",
+      "landmark": "Hotel Z to Nouveau Café near Centrico Plaza",
+      "notes": "Main Mission 5 introduces rooftop shortcut and a ladder blocked by Mega Crystals. Clear crystals with damaging Pokémon move then follow companion. Independent story approach, not proof the same ladder or all later roof crossings are accessible before Glide.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/The_City_in_the_Shadow_of_Prism_Tower",
+        "MAPS_LADDER_FIELD_SURVEY_2026-11-22.json"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
     "sector_text_research_started": 9,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 34,
+    "route_course_leads": 37,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence.",
+  "next": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -2036,5 +2105,23 @@
     "new_exact_pins": 0,
     "existing_route_count": 11,
     "proposed_route_count": 11
+  },
+  "at_292": {
+    "existing_lead": "AR-V08-01",
+    "new_leads": [
+      "AR-V08-02",
+      "AR-V08-03",
+      "AR-V08-04"
+    ],
+    "original_clues": [
+      3,
+      4
+    ],
+    "boundary_clue": 1,
+    "source_numbering_note": "Regional numbers and Raider King local sequence 20/21 and checklist ordering are not interchangeable.",
+    "new_exact_pins": 0,
+    "source_coordinate_discovery": "No new matched marker links or XY verified this batch.",
+    "calibration": "Held pending same-feature controls, revisit when new evidence permits; investigate solvable issues before deferral.",
+    "existing_routes_retained": 11
   }
 }

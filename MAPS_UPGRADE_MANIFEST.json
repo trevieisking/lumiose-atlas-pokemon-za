@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 33,
+  "revision": 34,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-291: Vert Sector 7 source research; calibration held at control eligibility gate. AT-290 eleven-route release verified live. Nine partial sectors, 34 leads, six cumulative source pickup references, zero new exact geometry. Next AT-292 Vert Sector 8 / Hotel Z.",
+  "current_phase": "AT-292 Hotel Z supplemental research; 37 leads across nine partial sectors. Next AT-293 Vert 9.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -172,7 +172,7 @@
         "SM-04"
       ],
       "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate",
-      "progress_note": "Nine partial sectors, 34 route/course leads; calibration parked until independently matched same-feature control pairs become available. Continue bounded sector research without repeatedly fetching unavailable sources."
+      "progress_note": "Resolve tractable issues before deferral; revisit parked issues when new evidence permits. 37 leads across nine partial sectors."
     },
     {
       "id": "SM-06",
@@ -329,11 +329,14 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
+      "scaffolds_and_ladders": "partial_text_research_expanded",
       "items": "source_text_only_unless_future_exact_evidence",
       "capture_coverage": "requires_individual_evidence_review",
       "access_survey_lead_ids": [
-        "AR-V08-01"
+        "AR-V08-01",
+        "AR-V08-02",
+        "AR-V08-03",
+        "AR-V08-04"
       ]
     },
     {
@@ -912,7 +915,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence.",
+    "next_safe_record": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -2366,5 +2369,27 @@
     "new_exact_geometry": 0,
     "release_scope": "documentation-only; existing live runtime and all player data preserved",
     "next": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence."
+  },
+  "at_292_access_survey": {
+    "coverage": {
+      "areas_total": 68,
+      "sector_text_research_started": 9,
+      "wild_zone_text_research_started": 0,
+      "route_course_leads": 37,
+      "new_exact_ladder_pins": 0,
+      "new_exact_scaffold_pins": 0,
+      "new_exact_bridge_endpoints": 0,
+      "fully_completed_areas": 0
+    },
+    "lead_ids": [
+      "AR-V08-01",
+      "AR-V08-02",
+      "AR-V08-03",
+      "AR-V08-04"
+    ],
+    "release_scope": "documentation-only",
+    "existing_routes_retained": 11,
+    "new_exact_geometry": 0,
+    "next": "AT-293 Vert Sector 9: rooftop Screw #2 and Wild Zone 1 Holovator approach, preserve existing route and investigate unresolved physical links."
   }
 }
