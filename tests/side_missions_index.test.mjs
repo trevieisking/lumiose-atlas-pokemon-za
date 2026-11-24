@@ -58,7 +58,21 @@ assert.ok(source.includes("Catch it if you want to keep this Alpha, or defeat it
 assert.ok(source.includes("<b>Reward:</b> ₽1,200, Assault Vest ×1, Full Heal ×3"));
 assert.ok(source.includes("<b>Reward:</b> ₽3,500, Quick Ball ×4, Lumiose Galette ×1"));
 assert.ok(html.includes('href="alphas.html#alpha-watchog-mission-71"'));
-assert.equal((html.match(/data-verified-holovator=/g)||[]).length,6);
+// AT-284: mission 092 is four uncatchable scripted Beldum; do not pick an unverified level.
+const h09=forQuest(92);
+assert.ok(h09.includes('data-verified-holovator="H-09"'));
+assert.ok(h09.includes("Café Soleil"));
+assert.ok(h09.includes("Aimant"));
+assert.ok(h09.includes("cannot be caught during this mission"));
+assert.ok(h09.includes("Published guides disagree about the Beldum levels"));
+assert.ok(h09.includes("₽3,000, 1 Rocky Helmet and 1 Full Restore"));
+assert.ok(h09.includes('href="atlas-explorer.html?place=bleu8-soleil"'));
+assert.ok(h09.includes("not a uniquely verified mission-device entrance or exact rooftop XY"));
+const source92=source.slice(source.indexOf('id="quest-92"'),source.indexOf('id="quest-93"'));
+assert.ok(source92.includes("<b>Reward:</b> ₽3,000, Rocky Helmet ×1, Full Restore ×1"));
+assert.ok(source92.includes("cannot be caught in this scripted battle"));
+assert.ok(!/level (?:36|49)|Lv\\.? ?(?:36|49)/.test(source92),"Do not assign contested Beldum level");
+assert.equal((html.match(/data-verified-holovator=/g)||[]).length,7);
 
 const categoryCounts={base:0,dlc:0,ex:0};
 const names=[];
