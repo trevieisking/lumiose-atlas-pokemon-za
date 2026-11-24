@@ -543,7 +543,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),9);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),10);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -565,6 +565,55 @@ try{
   }
   assert.equal(errors.length,0,"AT-286 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-286 phone JS errors: "+mobileErrors.join(" | "));
+
+  // AT-288: district-only courtyard instructions and links to the original
+  // three five-photo Holovator galleries. Never convert the course into a pin.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
+    assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
+    assert.equal(await page.locator("#aeRouteSelect option").count(),10);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
+    assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
+    for(const id of ["vert4-south","vert4-central","vert4-east"])
+      assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place='+id+'"]').count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
+    assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
+    assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Ralts and Bunnelby/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/dark scaffold panels.*blue-shuttered/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/original clue #8/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/#6 and #7/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/TM033 Body Slam/);
+    const step=await page.locator("#aeRouteProgress").textContent();
+    await page.locator("#aeShowRouteMap").click();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at288-vert4-route-"+device+".png",fullPage:false});
+    for(const id of ["vert4-central","vert4-east","vert4-south"]){
+      await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place='+id+'"]').click();
+      await page.waitForURL("**/atlas-explorer.html?place="+id);
+      await page.waitForFunction(()=>document.querySelectorAll("#aeSelected .ae-photo-grid img").length===5);
+      const pics=page.locator("#aeSelected .ae-photo-grid img");
+      assert.equal(await pics.count(),5);
+      for(let i=0;i<5;i++)await pics.nth(i).scrollIntoViewIfNeeded();
+      await page.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536));
+      assert.match(await page.locator("#aeSelected").textContent(),/Approximate map pin/);
+      await page.locator("#aeSelected .ae-route-link").click();
+      assert.equal(await page.locator("#aeRouteSelect").inputValue(),"vert4-courtyard-screws");
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+      if(id==="vert4-central")await page.screenshot({path:output+"/at288-vert4-gallery-"+device+".png",fullPage:true});
+    }
+  }
+  assert.equal(errors.length,0,"AT-288 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-288 phone JS errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.

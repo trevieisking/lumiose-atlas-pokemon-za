@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-287",
+  "batch": "AT-288",
   "date": "2026-11-24",
-  "baseline_main_sha": "f13799f35fd00b384501586d5a56809a73e9ecae",
+  "baseline_main_sha": "d5bff8305fefa932bdb5d364465876fa4ba14e16",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -106,8 +106,15 @@
       "id": "vert-sector-4",
       "kind": "sector",
       "label": "Vert Sector 4",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "partial_text_and_owner_photo_research",
+      "lead_ids": [
+        "AR-V04-01",
+        "AR-V04-02",
+        "AR-V04-03",
+        "AR-V04-04",
+        "AR-V04-05",
+        "AR-V04-06"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -943,17 +950,247 @@
       "publish_new_pin": false,
       "existing_record_id": "rouge-plaza-west",
       "existing_route_id": "rouge-plaza-west"
+    },
+    {
+      "id": "AR-V04-01",
+      "area": "vert-sector-4",
+      "kind": "roof_to_courtyard",
+      "landmark": "Café Classe / Vernal Pokémon Center",
+      "notes": "Independent sources describe ascending from the street-side Holovator in the café neighbourhood then descending to the enclosed grassy courtyard behind the café. Existing south lift ground image shows public street frontage; exact independent source-to-photo identity not certified. Ordinary Ralts and Bunnelby reported in courtyard.",
+      "sources": [
+        "https://www.siliconera.com/where-to-find-ralts-in-pokemon-legends-z-a/",
+        "https://www.nintendolife.com/guides/pokemon-legends-z-a-where-to-catch-ralts",
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vert4-south",
+      "existing_atlas_approx_player_xy": [
+        943,
+        1466
+      ]
+    },
+    {
+      "id": "AR-V04-02",
+      "area": "vert-sector-4",
+      "kind": "existing_lift_scaffold_adjacency",
+      "landmark": "Southern edge of enclosed courtyard",
+      "notes": "Reopened owner central-lift ground photograph: gold lift beside large dark scaffold panels, grassy ground, barred lower windows and geometric window frames. Close eastern-lift map image shows central chevrons on south courtyard edge. This establishes adjacency, not the scaffold's exact base or climbing route. Do not treat lift pixel as scaffold pixel.",
+      "sources": [
+        "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
+        "atlas-explorer-data.json",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vert4-central",
+      "existing_atlas_approx_player_xy": [
+        1010,
+        1420
+      ],
+      "physical_scaffold_visible": true
+    },
+    {
+      "id": "AR-V04-03",
+      "area": "vert-sector-4",
+      "kind": "existing_lift_rooftop_pickup",
+      "landmark": "Eastern courtyard facade / northwest rooftop",
+      "notes": "Owner photograph confirms golden lift against long pale stone blue-shuttered wall. Eastern ground-to-roof arrival scene present. Independent sources describe returning from courtyard via east lift then walking to northwestern roof Screw; matches original #8 roof description, but exact source marker pixel unregistered.",
+      "sources": [
+        "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        8
+      ],
+      "canonical_screw_id": 8,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vert4-east",
+      "existing_atlas_approx_player_xy": [
+        1055,
+        1383
+      ],
+      "source_pickup_marker": {
+        "source": "Gamer Guides",
+        "layer": 342,
+        "id": 234992,
+        "geometry_retrieved": false
+      },
+      "identity_status": "matching numbered textual clue, not exact pickup geometry"
+    },
+    {
+      "id": "AR-V04-04",
+      "area": "vert-sector-4",
+      "kind": "ladder",
+      "landmark": "Near Café Classe / courtyard descent",
+      "notes": "Siliconera reports a ladder as an alternative way down from the roof into the enclosed area. Independent source map coordinates unavailable. Visible distant ladder-like structure in east arrival photograph is not proven to be that ladder. No new ladder record or pixel assigned.",
+      "sources": [
+        "https://www.siliconera.com/where-to-find-ralts-in-pokemon-legends-z-a/",
+        "https://www.nintendolife.com/guides/pokemon-legends-z-a-where-to-catch-ralts",
+        "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V04-05",
+      "area": "vert-sector-4",
+      "kind": "scaffold_course",
+      "landmark": "Lower and upper courtyard platforms",
+      "notes": "Two local Screw pickups on different scaffold levels. Original #6 lower and #7 upper tier descriptions match Gamer Guides regional numbering, but individual screenshot-to-tier identity remains unregistered. Roto-Glide recommended; StrategyWiki reports rolling alternatives, Raider King finds one difficult, Altissimo lists glide. Do not assert mandatory Glide for both. Separate optional descents, not certified continuous roof connections.",
+      "sources": [
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+      ],
+      "candidate_original_screw_ids": [
+        6,
+        7
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_markers": [
+        {
+          "source": "Gamer Guides",
+          "layer": 342,
+          "id": 235003,
+          "original_screw_clue": 6,
+          "geometry_retrieved": false
+        },
+        {
+          "source": "Gamer Guides",
+          "layer": 342,
+          "id": 234999,
+          "original_screw_clue": 7,
+          "geometry_retrieved": false
+        }
+      ]
+    },
+    {
+      "id": "AR-V04-06",
+      "area": "vert-sector-4",
+      "kind": "scaffold_tm_pickup",
+      "landmark": "Courtyard scaffold course",
+      "notes": "TM033 Body Slam on a courtyard platform; Psypokes identifies TM/location and Raider King describes a Roto-Glide descent. Distinguish golden TM pickup from purple Screw items; exact platform and entry not verified.",
+      "sources": [
+        "https://www.psypokes.com/plza/tm.php",
+        "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "tm_number": 33,
+      "tm_name": "Body Slam"
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 5,
+    "sector_text_research_started": 6,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 10,
+    "route_course_leads": 16,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "Try independent accessible map/gameplay images for AR-V01-02/03 and AR-V02-01, then reconcile with native map and the owner photo survey. Continue Vert 4 courtyard scaffolds and H-08 facade evidence in parallel. Request owner images only for specifically unresolved locations."
+  "next": "AT-289 Vert Sector 5: distinguish courtyard and grassy-plaza scaffolds; reconcile original Screw clue #5 and independently reported additional pickups, and check the rooftop link from Vert 4 without inventing a connection. Preserve unresolved Vert 1/2 and H-08 research.",
+  "at_288": {
+    "date": "2026-11-24",
+    "route_id": "vert4-courtyard-screws",
+    "owner_photo_reinspection": {
+      "count": 7,
+      "paths_and_blob_shas": [
+        [
+          "assets/atlas/holovators/vert4-east/holovator-vert4-east-ground.jpg",
+          "fb37805b4acc3114e6de434427f8af9fa838d4b2"
+        ],
+        [
+          "assets/atlas/holovators/vert4-east/holovator-vert4-east-position-map.jpg",
+          "61eb799395fd81022228fe69dc78bbec797d76e7"
+        ],
+        [
+          "assets/atlas/holovators/vert4-east/holovator-vert4-east-rooftop-arrival.jpg",
+          "9fa52a94d7a64571afdcd20d557b3fcae2c88436"
+        ],
+        [
+          "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-ground-entrance.jpg",
+          "40b6cde36a738082e900035b253f8e7c3380ec6a"
+        ],
+        [
+          "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-rooftop-arrival.jpg",
+          "5ff66ddf4ccd692d540f678d07b2b7e50b755999"
+        ],
+        [
+          "assets/atlas/holovators/vert4-south/holovator-vert4-south-ground.jpg",
+          "665f02f263bd89a5224eba335a951cb632998232"
+        ],
+        [
+          "assets/atlas/holovators/vert4-south/holovator-vert4-south-rooftop-arrival.jpg",
+          "c193bf83204575a38b020f6ada37f5d55f9a4994"
+        ]
+      ],
+      "all_three_ground_and_roof_scenes_inspected": true,
+      "three_separate_chevrons_on_east_close_map": true,
+      "existing_coordinates_preserved": true
+    },
+    "external_visual_retrieval": {
+      "four_raider_king_image_requests": "cache miss",
+      "three_gamer_guides_deep_links": "cache miss; source pickup IDs retained but no geometry",
+      "coordinate_alignment_performed": false
+    },
+    "original_screw_clues": [
+      6,
+      7,
+      8
+    ],
+    "new_exact_pins": 0,
+    "existing_route_count": 8,
+    "proposed_route_count": 9
+  }
 }

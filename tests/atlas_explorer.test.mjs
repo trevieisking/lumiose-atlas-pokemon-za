@@ -229,8 +229,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,8);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,8);
+  assert.equal(data.routes.length,9);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,9);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -246,7 +246,7 @@ test("maze routes have known progression and evidence grade; no invented floor l
       assert.equal(eligibleMapPin({...sector,kind:"sector"}),false);
       assert.ok(r.steps.every(s=>s.evidence==="guide_crosscheck"||s.evidence==="unverified"));
       assert.equal(r.steps.at(-1).evidence,"unverified");
-      assert.equal(r.source_record,"MAPS_HOLOVATOR_COORDINATE_VALIDATION.json");
+      assert.ok(["MAPS_HOLOVATOR_COORDINATE_VALIDATION.json","MAPS_ACCESS_ROUTE_SURVEY.json"].includes(r.source_record));
     }else{
       assert.equal(r.steps.some(s=>s.evidence==="owner_survey"||s.evidence==="owner_photographed"),true);
     }
@@ -261,7 +261,7 @@ test("maze routes have known progression and evidence grade; no invented floor l
   assert.equal(data.routes.find(x=>x.id==="jaune12-wz6").risk,"hostile_wild_pokemon");
 });
 test("AT-286 mission 40 and 56 written routes have no fabricated device or item points",()=>{
-  const written=data.routes.filter(r=>r.anchor_precision==="district_only");
+  const written=data.routes.filter(r=>r.anchor_precision==="district_only"&&r.source_record==="MAPS_HOLOVATOR_COORDINATE_VALIDATION.json");
   assert.deepEqual(written.map(r=>[r.id,r.point_id,r.side_mission]),[
     ["vert7-holovator-power","vert-sector-7",40],
     ["jaune6-holovator-muscle","jaune-sector-6",56]
@@ -277,6 +277,39 @@ test("AT-286 mission 40 and 56 written routes have no fabricated device or item 
   assert.equal(evidence.published_new_exact_pins,0);
   assert.deepEqual(evidence.route_ids,written.map(r=>r.id));
   assert.equal(evidence.ladder_counts_confirmed_equal,false);
+});
+test("AT-288 courtyard route preserves all three distinct photo galleries and original Screw IDs",()=>{
+  const route=data.routes.find(x=>x.id==="vert4-courtyard-screws");
+  assert.ok(route);
+  assert.equal(route.point_id,"vert-sector-4");
+  assert.equal(route.anchor_precision,"district_only");
+  assert.equal(route.roof_exit_xy,null);
+  assert.equal(route.known_floor_plan,false);
+  assert.equal(route.source_record,"MAPS_ACCESS_ROUTE_SURVEY.json");
+  assert.deepEqual(route.related_photo_ids,["vert4-south","vert4-central","vert4-east"]);
+  assert.match(route.steps.map(x=>x.title).join(" "),/#8.*#6 and #7.*TM033 Body Slam/);
+  assert.match(route.steps.map(x=>x.instruction).join(" "),/Ralts.*Bunnelby/);
+  assert.match(route.steps.map(x=>x.instruction).join(" "),/Glide is recommended rather than asserted mandatory/);
+  for(const [id,xy] of [["vert4-central",[1010,1420]],["vert4-east",[1055,1383]],["vert4-south",[943,1466]]]){
+    const h=data.holovators.find(x=>x.id===id);
+    assert.deepEqual(h.xy,xy);
+    assert.equal(h.photos.length,5);
+    assert.equal(h.entrance_exact,false);
+    assert.equal(h.roof_exact,false);
+  }
+  assert.match(data.holovators.find(x=>x.id==="vert4-central").directions,/enclosed grassy.*dark scaffold panels/);
+  assert.match(data.holovators.find(x=>x.id==="vert4-east").directions,/enclosed grassy.*blue shutters/);
+  const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+  const v4=survey.coverage.find(x=>x.id==="vert-sector-4");
+  assert.equal(v4.geometry_complete,false);
+  assert.equal(v4.inventory_complete,false);
+  assert.equal(v4.lead_ids.length,6);
+  assert.equal(survey.at_288.owner_photo_reinspection.count,7);
+  assert.equal(survey.at_288.new_exact_pins,0);
+  assert.ok(survey.leads.filter(l=>v4.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&!l.publish_new_pin));
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.ladders.length,1);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
 test("map algebra recovers actual image pixels after rotation, zoom and pan",()=>{
   const vp={width:970,height:635};

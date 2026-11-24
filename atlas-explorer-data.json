@@ -662,7 +662,7 @@
       ],
       "precision": "approx_owner_map_research",
       "evidence": "owner_field_survey",
-      "directions": "From Café Classe, inspect the central Vert Sector 4 building front and its permanent yellow chevrons. Use the ground photograph and map close-up to distinguish this entrance from the east and south Vert 4 lifts.",
+      "directions": "Inside the enclosed grassy Vert Sector 4 courtyard behind Café Classe, find the central golden Holovator beside the large dark scaffold panels. The ground photo shows barred lower windows and geometric window frames. Published guides approach this courtyard from the surrounding roofs; do not assume there is a direct street-level entrance. Use the separate south street lift or the published Café Classe rooftop approach to begin.",
       "photo_count_referenced": 5,
       "photos": [
         {
@@ -705,7 +705,7 @@
       ],
       "precision": "approx_owner_map_research",
       "evidence": "owner_field_survey",
-      "directions": "From Café Classe and its Pokémon Center, go northeast around the block to the east-side building courtyard; look for the fixed yellow lift.",
+      "directions": "Once inside the enclosed grassy courtyard behind Café Classe, head toward its eastern building frontage. The golden Holovator is against a long pale stone wall with blue shutters. Independent rooftop guides describe returning to roof level using the courtyard's eastern lift. The owner's ground and arrival photographs support the location type, not a measured roof landing or an independently certified connection between all three lifts.",
       "photo_count_referenced": 5,
       "photos": [
         {
@@ -2009,6 +2009,67 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
+    },
+    {
+      "id": "vert4-courtyard-screws",
+      "title": "Vert Sector 4 — Café Classe courtyard, Ralts and three Screws",
+      "point_id": "vert-sector-4",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Independent guides describe a roof-to-courtyard route, courtyard lifts and two scaffold pickup heights. Our three distinct photographed Holovators are useful orientation references. Their exact roof connections and individual pickup pixels are not yet measured. Treat the pickup steps as separate optional destinations, not a fully surveyed walking path.",
+      "related_photo_ids": [
+        "vert4-south",
+        "vert4-central",
+        "vert4-east"
+      ],
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start at Vernal Pokémon Center",
+          "instruction": "Go toward Café Classe on Vernal Avenue, by the east side of Aymlis Park. Published routes start using the street-side Holovator in this neighbourhood. Compare the original south-lift photo for the public street frontage; the exact guide-to-photo device identity is not independently certified.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Reach the enclosed courtyard from above",
+          "instruction": "Ascend to the surrounding roofs and look into the large grassy courtyard behind Café Classe. Descend into the enclosed area rather than searching for an assumed street-level doorway. Ralts and Bunnelby are reported in this yard.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Identify the two internal lifts",
+          "instruction": "The original central-lift photograph shows the golden chevrons beside dark scaffold panels; the eastern-lift photograph shows a long blue-shuttered stone frontage. These are distinct courtyard lifts. Guides also report a ladder near the café, but its precise base and exit remain unregistered.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Rooftop Screw — original clue #8",
+          "instruction": "Use the eastern courtyard lift to return to the roofs. Follow the rooftop toward the northwest and look for the rooftop Screw; guides describe this as the easier of the three local pickups. The item-to-source route numbering matches the roof clue, but no exact pixel or guaranteed roof crossing has been surveyed.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Two scaffold Screws — original clues #6 and #7",
+          "instruction": "Return to the roof overlooking the courtyard's scaffold structures. The lower and upper tiers each contain a Screw. Plan separate descents, using Roto-Glide to land at the intended platform height. Some guides report difficult running-roll alternatives, so Glide is recommended rather than asserted mandatory for both Screws. Match each purple pickup to its tier before marking the original clue complete.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Optional TM033 Body Slam",
+          "instruction": "A golden TM pickup is reported on a platform in the same courtyard scaffold course. Use Roto-Glide after it becomes available in Main Mission 16 to reach the platform. This is a separate pickup from the two purple Screw balls; its exact platform and landing XY remain unmeasured.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Remaining field checks",
+          "instruction": "The three photographed lifts have approximate existing approach positions. The separate ladder, scaffold entrances, precise roof exits and all collectible pixels still need independent visual registration. No new fixed pin is claimed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [
