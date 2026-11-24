@@ -30,7 +30,7 @@ test("AT-280 source-verified mission approach text never upgrades Holovator coor
   assert.match(terra.directions,/Main Mission 10/);
   assert.match(terra.directions,/Terra/);
   assert.match(terra.directions,/Side Mission 023: Underneath the Holovator/);
-  assert.match(terra.directions,/Lv\\. 28 Diggersby/);
+  assert.ok(terra.directions.includes("Lv. 28 Diggersby"));
 });
 test("authentic source map remains the shared 1920px geometry",()=>{
   assert.deepEqual(data.map.native_size,[1920,1920]);
