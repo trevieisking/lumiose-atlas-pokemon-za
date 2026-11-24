@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 51,
+  "revision": 52,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-304 original owner PNG crops moved byte-identically to Git object storage and prepared for GitHub review: 23 images referencing 29/48 sectors, 19 original-source gaps. Gallery/Explorer integration and full QA pending. All 48 geographic anchors and exact device/item pins still unverified; original Workspace Site unchanged.",
+  "current_phase": "AT-304 23 original source PNGs published and displayed in GitHub Edition B across 29/48 sector records and 8 observed street labels; 19 sectors still need source photos, all geographical sector anchors remain unverified. AT-305 release evidence synchronized; original Workspace A, Supabase, player data unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -139,8 +139,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -3775,7 +3775,7 @@
   "at_301_borderless_source_intake": {
     "id": "AT-301",
     "date": "2026-11-24",
-    "status": "source_intake_and_local_crop_pilot_complete_publication_pending",
+    "status": "six_original_png_crops_hosted_as_unregistered_photo_references",
     "format_policy": {
       "accepted_extensions": [
         ".jpg",
@@ -4097,7 +4097,8 @@
     "limitations": "Crop references are not complete sector boundaries; a few labels near edges due to avoiding game UI. Full source PNGs support context beyond individual crops. No new exact pins, routes or player identifiers.",
     "next": "AT-304 bytes now transferred to unmerged Git object store, pending exact-head PR and photo-link QA. Continue missing sector-source survey after first bounded release; do not georeference unaligned crops.",
     "checklist_id": "AT-301-MAP-SOURCE-POLICY",
-    "register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"
+    "register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
+    "release_note": "Original six native-pixel crops are now hosted alongside 17 later crops under AT-304. Their original source/register details remain unchanged; none is geographically registered."
   },
   "at_302_sector_street_bearings": {
     "id": "AT-302",
@@ -4180,7 +4181,7 @@
   "at_304_original_sector_street_image_library": {
     "id": "AT-304",
     "date": "2026-11-24",
-    "status": "review_branch_only_not_deployed",
+    "status": "github_deployed_original_png_references_workspace_open",
     "source_library": "MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json",
     "image_folder": "assets/atlas/sector-streets/",
     "source_crops": 23,
@@ -4240,8 +4241,63 @@
       "ATLAS_DUAL_SITE_FIX_LEDGER.md",
       "MAPS_ACCESS_ROUTE_SURVEY.json"
     ],
-    "pending_validation": "Exact-head Atlas unit/browser plus recovered-guide workflows, inspect real Android-sized/desktop screenshots, no changed original map/photo assets, no unsupported map positions, no running background changes, safe merge then verify Pages",
+    "pending_validation": "Completed for GitHub Edition B at AT-304 reviewed head; future batches still require exact-head CI and visual QA. Original Workspace deployment remains open.",
     "workspace": "not_changed",
-    "supabase": "read_only_preflight_only"
+    "supabase": "read_only_preflight_only",
+    "release": {
+      "pr": 142,
+      "reviewed_head": "d16bb3c62bb7e9090f49874f28914268cb907e11",
+      "reviewed_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "merged_main": "50643822a6a6f47f3eb643f2595cb9a28c5f5a11",
+      "merged_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "ci_atlas_run": 45465366578,
+      "ci_recovered_run": 45465366663,
+      "ci_checks": [
+        "atlas-unit",
+        "atlas-browser",
+        "recovered-articles"
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 14954423944,
+      "qa": "four original Chrome phone/desktop screenshot artifacts visually inspected; 393px article width and all core map controls tested",
+      "pages_run": 45466461743,
+      "pages_conclusion": "success",
+      "direct_live_http_inspection": "not_performed",
+      "original_workspace": "not_changed",
+      "database": "read_only_not_changed"
+    }
+  },
+  "at_305_deployment_evidence_reconciliation": {
+    "id": "AT-305",
+    "date": "2026-11-24",
+    "status": "prior_at304_release_evidence_reconciled_docs_only",
+    "purpose": "Synchronize published AT-304 image-library release evidence with master plan, image register, manifest, dual-site ledger and access survey",
+    "image_count": 23,
+    "sector_coverage": 29,
+    "still_needing_source": 19,
+    "street_labels_observed": 8,
+    "verified_release": {
+      "pr": 142,
+      "reviewed_head": "d16bb3c62bb7e9090f49874f28914268cb907e11",
+      "reviewed_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "merged_main": "50643822a6a6f47f3eb643f2595cb9a28c5f5a11",
+      "merged_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "ci_atlas_run": 45465366578,
+      "ci_recovered_run": 45465366663,
+      "ci_checks": [
+        "atlas-unit",
+        "atlas-browser",
+        "recovered-articles"
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 14954423944,
+      "qa": "four original Chrome phone/desktop screenshot artifacts visually inspected; 393px article width and all core map controls tested",
+      "pages_run": 45466461743,
+      "pages_conclusion": "success",
+      "direct_live_http_inspection": "not_performed",
+      "original_workspace": "not_changed",
+      "database": "read_only_not_changed"
+    },
+    "next": "Recover missing 19 genuine sector map references and additional original-game street names. Native-XY registration requires multiple fixed landmark control points and independent held-out check. Complete before promoting geographic overlays."
   }
 }

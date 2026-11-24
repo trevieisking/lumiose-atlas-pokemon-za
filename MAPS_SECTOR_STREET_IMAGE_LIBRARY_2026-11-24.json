@@ -3,7 +3,7 @@
   "schema_version": 1,
   "source_plan": "ATLAS-MAPS-2026-11-21-V1",
   "phase": "AT-304",
-  "status": "github_review_branch_not_live",
+  "status": "github_deployed_original_png_references_workspace_open",
   "source_registers": [
     "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
     "AT304 owner source crop manifest (local attached evidence, reproduced in entries below)"
@@ -1275,5 +1275,28 @@
     "geographic_alignment": "At least three measured common landmarks plus independent held-out residual validation before overlaying any tile or geographic label",
     "workspace": "Original Workspace Site A remains separate and unmodified",
     "hyperspace": "No dynamic portal pins"
+  },
+  "release": {
+    "pr": 142,
+    "reviewed_head": "d16bb3c62bb7e9090f49874f28914268cb907e11",
+    "reviewed_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+    "merged_main": "50643822a6a6f47f3eb643f2595cb9a28c5f5a11",
+    "merged_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+    "ci_atlas_run": 45465366578,
+    "ci_recovered_run": 45465366663,
+    "ci_checks": [
+      "atlas-unit",
+      "atlas-browser",
+      "recovered-articles"
+    ],
+    "ci_conclusion": "success",
+    "screenshot_artifact": 14954423944,
+    "qa": "four original Chrome phone/desktop screenshot artifacts visually inspected; 393px article width and all core map controls tested",
+    "pages_run": 45466461743,
+    "pages_conclusion": "success",
+    "direct_live_http_inspection": "not_performed",
+    "original_workspace": "not_changed",
+    "database": "read_only_not_changed",
+    "asset_sha256_and_git_blob_sha_checks": 23
   }
 }

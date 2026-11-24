@@ -194,3 +194,23 @@ for(const entry of at304.sector_coverage){
     assert.ok(!card.includes('class="sector-source-map"'),"Invented source photo on "+entry.sector_id);
   }
 }
+
+
+// AT-305: published photo library release evidence stays synchronized without changing map geometry.
+const atlasPublished=JSON.parse(read("MAPS_UPGRADE_MANIFEST.json"));
+const atlasPhotoLibrary=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
+assert.ok(atlasPublished.revision>=52);
+assert.equal(atlasPublished.id,"ATLAS-MAPS-2026-11-21-V1");
+assert.equal(atlasPublished.at_304_original_sector_street_image_library.status,"github_deployed_original_png_references_workspace_open");
+assert.equal(atlasPhotoLibrary.status,"github_deployed_original_png_references_workspace_open");
+assert.equal(atlasPhotoLibrary.release.reviewed_head,"d16bb3c62bb7e9090f49874f28914268cb907e11");
+assert.equal(atlasPhotoLibrary.release.reviewed_tree,atlasPhotoLibrary.release.merged_tree);
+assert.equal(atlasPhotoLibrary.release.merged_main,"50643822a6a6f47f3eb643f2595cb9a28c5f5a11");
+assert.equal(atlasPhotoLibrary.release.pages_run,45466461743);
+assert.equal(atlasPhotoLibrary.release.pages_conclusion,"success");
+assert.equal(atlasPhotoLibrary.counts.image_crops,23);
+assert.equal(atlasPhotoLibrary.counts.sectors_with_photographic_references,29);
+assert.equal(atlasPhotoLibrary.missing_sector_ids.length,19);
+assert.equal(atlasPhotoLibrary.counts.geographically_registered_tiles,0);
+assert.equal(atlasPhotoLibrary.counts.geographic_sector_label_anchors,0);
+assert.equal(atlasPhotoLibrary.release.original_workspace,"not_changed");
