@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 36,
+  "revision": 37,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-294 owner-confirmed written access scope; Vert district route reconciliation next. Ladders, scaffolds, bridges and rooftop transitions are written directions, not individual pins. Twelve routes live; 42 prior research leads preserved.",
+  "current_phase": "AT-295 optional public gameplay video references pilot; AT-294 Vert reconciliation remains next. No new pins; footage not frame-verified.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -2518,5 +2518,44 @@
     "existing_photos": 111,
     "release_scope": "documentation-only, no runtime data, map asset, marker, menu, progress, feedback, Supabase or Workspace modification",
     "next": "AT-294 Vert district written-route reconciliation: review all nine sectors, integrate useful existing research into player-facing directions, resolve overlapping boundary clues #1/#15/#16 and attainable Holovator/item evidence; then Bleu Sector 1. No routine ladder/scaffold coordinate calibration or exhaustive inventory."
+  },
+  "at_295_video_references": {
+    "date": "2026-11-24",
+    "route_id": "vert9-vernal-rooftop-screw",
+    "video_refs": [
+      {
+        "step_index": 1,
+        "video_id": "IuvITD247zU",
+        "start_seconds": 59,
+        "verification": "publisher_chapter"
+      },
+      {
+        "step_index": 3,
+        "video_id": "5-dLjd4o8Rc",
+        "start_seconds": 694,
+        "verification": "numbering_candidate"
+      },
+      {
+        "step_index": 5,
+        "video_id": "PKw9fyChBVg",
+        "start_seconds": 377,
+        "verification": "publisher_chapter"
+      }
+    ],
+    "source_numbering_crosscheck": {
+      "atlas_regional_clue": 2,
+      "raider_king_vert_number": 22,
+      "source_url": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "video_creator_cites_source": true,
+      "visual_identity_verified": false
+    },
+    "verification": "publisher metadata and chapter descriptions only; no actual video frames inspected, no route geometry or new pin proven",
+    "release_status": "proposed_pending_exact_head_CI_and_visual_QA",
+    "new_pins": 0,
+    "prior_routes_preserved": 12,
+    "owner_photos_preserved": 111,
+    "existing_holovators_preserved": 21,
+    "next": "Continue AT-294 Vert reconciliation using video evidence where available; then Bleu Sector 1.",
+    "policy": "Own written directions, original photos and map remain authoritative; allowlisted YouTube video IDs, creator credit and publisher chapter timestamps; no third-party loading before click; no copied footage or coordinate promotion from metadata."
   }
 }
