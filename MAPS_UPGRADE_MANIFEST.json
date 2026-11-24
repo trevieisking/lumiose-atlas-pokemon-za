@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 28,
+  "revision": 29,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
-  "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "AT-286 branch: two source-checked written Holovator routes, district-only map focus. Live baseline AT-285 mobile containment verified. Nine mission leads researched; 21 approximate owner lifts, 111 JPGs, 48 named sectors, 20 zones retained. Zero verified exact entrance/roof pairs. Pending exact-head validation; next H-08 facade and ladder/bridge reconciliation.",
+  "status": "owner_approved_source_first_access_survey_in_progress",
+  "current_phase": "AT-287: owner-approved source-first ladder, scaffold, bridge and rooftop survey. AT-286 live: eight documented approaches, 21 approximate owner lifts, 111 photographs and one surveyed ladder; zero newly verified exact access coordinates. Research register covers 48 sectors and 20 Wild Zones; five partial sector text audits and ten route/course leads. Geometry validation and full inventory remain open.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -120,8 +120,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -167,11 +167,12 @@
     {
       "id": "SM-05",
       "name": "Scaffolds, ladders, glides and rooftop access",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-04"
       ],
-      "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate"
+      "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate",
+      "progress_note": "Owner-approved source research can run alongside unfinished SM-04 physical device reconciliation. SM-04 dependency remains a publication gate; no unverified exact pins. Initial access register covers 68 area targets, five partial sector text audits and ten route/course leads; no complete inventory or new precise coordinates."
     },
     {
       "id": "SM-06",
@@ -200,9 +201,15 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "access_survey_lead_ids": [
+        "AR-V01-01",
+        "AR-V01-02",
+        "AR-V01-03",
+        "AR-V01-04"
+      ]
     },
     {
       "id": "Vert-02",
@@ -211,9 +218,12 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "access_survey_lead_ids": [
+        "AR-V02-01"
+      ]
     },
     {
       "id": "Vert-03",
@@ -222,9 +232,13 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "access_survey_lead_ids": [
+        "AR-V03-01",
+        "AR-V03-02"
+      ]
     },
     {
       "id": "Vert-04",
@@ -283,9 +297,12 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "access_survey_lead_ids": [
+        "AR-V08-01"
+      ]
     },
     {
       "id": "Vert-09",
@@ -544,7 +561,7 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
       "capture_coverage": "requires_individual_evidence_review",
       "holovator_approach_evidence": {
@@ -552,7 +569,11 @@
         "status": "corroborated_neighbourhood_not_aligned",
         "source": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
         "exact_location_point": null
-      }
+      },
+      "access_survey_lead_ids": [
+        "AR-R01-01",
+        "AR-R01-02"
+      ]
     },
     {
       "id": "Rouge-02",
@@ -859,7 +880,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Owner has photographed south Café Classe / Vernal Pokemon Center Holovator WIDE-C13: ground object, current standing ring in two maps, rooftop pad. Same OLD yellow photo chevron reconciled, NOT a new 23 device. Approx source JPG (943,1466) retained; rooftop X/Y unknown. Next DIFFERENT yellow lift to survey is r-vert4-east around native approx (1055,1383), map 7374 yellow marker (895,204). Prepare new image bytes for GitHub as permitted, without claiming bytes uploaded yet; no ChatGPT live site until separately authorized.",
+    "next_safe_record": "Continue H-08 Hibernal Avenue / Rouge 6 owner facade reconciliation and independently verify exact ground and roof endpoints. Source-first ladder and scaffold research proceeds in parallel under the access survey register; no assumption that 21 owner leads identify 21 of 23 externally listed devices.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -2012,7 +2033,62 @@
     },
     "source_record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
     "map_geometry_player_progress_supabase_and_original_site_changed": false,
-    "release_gate": "branch_pending_reviewed_SHA_full_CI_visual_QA_and_Pages",
-    "next_target": "DR-H-08 Rouge 6 east-of-Sushi owner facade reconciliation, then Hotel Z / Rouge 1 ladder and bridge approaches"
+    "release_gate": "passed_exact_head_CI_visual_review_and_Pages",
+    "next_target": "DR-H-08 Rouge 6 east-of-Sushi owner facade reconciliation, then Hotel Z / Rouge 1 ladder and bridge approaches",
+    "release_evidence": {
+      "pr": 123,
+      "reviewed_sha": "97411e8a04bdd2a24fd6a4bf22a36748c1fedcec",
+      "validation_run": 45371167929,
+      "screenshot_artifact": 14908848184,
+      "merged_sha": "f13799f35fd00b384501586d5a56809a73e9ecae",
+      "pages_run": 45376062022,
+      "pages_conclusion": "success"
+    }
+  },
+  "at_287_access_survey": {
+    "canonical_register": "MAPS_ACCESS_ROUTE_SURVEY.json",
+    "owner_approved": true,
+    "method": "Independent source-first map, written guide and gameplay evidence; original image alignment and identity check before new geometry; targeted owner photography only when necessary.",
+    "coverage": {
+      "areas_total": 68,
+      "sector_text_research_started": 5,
+      "wild_zone_text_research_started": 0,
+      "route_course_leads": 10,
+      "new_exact_ladder_pins": 0,
+      "new_exact_scaffold_pins": 0,
+      "new_exact_bridge_endpoints": 0,
+      "fully_completed_areas": 0
+    },
+    "source_counts": {
+      "holovators": [
+        23,
+        23
+      ],
+      "ladders": [
+        255,
+        132
+      ],
+      "bridges_gamer_guides": 43,
+      "canonical_ladder_total": null,
+      "canonical_scaffold_total": null
+    },
+    "pending_visual_evidence": "Six linked screenshots not retrievable; no visual alignment performed.",
+    "protected_baseline": {
+      "owner_holovator_entries": 21,
+      "owner_photos": 111,
+      "ladders": 1,
+      "verified_scaffold_pins": 0,
+      "original_screw_clues": 100,
+      "original_routes": 8
+    },
+    "maintain": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "issue #28"
+    ],
+    "next": "Try independent accessible map/gameplay images for AR-V01-02/03 and AR-V02-01, then reconcile with native map and the owner photo survey. Continue Vert 4 courtyard scaffolds and H-08 facade evidence in parallel. Request owner images only for specifically unresolved locations.",
+    "release_scope": "documentation_only; runtime, menus, player progress, Supabase, feedback and original Workspace unchanged"
   }
 }
