@@ -543,7 +543,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),10);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -572,7 +572,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),10);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -614,6 +614,49 @@ try{
   }
   assert.equal(errors.length,0,"AT-288 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-288 phone JS errors: "+mobileErrors.join(" | "));
+
+  // AT-289: both distinct Vert 5 scaffold routes, the optional ground TM,
+  // and the unresolved cross-sector ladder route. No new pins or save keys.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
+    assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
+    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
+    assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
+    assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Grassy plaza scaffold/);
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/#1 is a likely match/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Separate enclosed courtyard scaffold/);
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/#5 is a likely candidate/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/pipe-lined wall.*not a verified connection/);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at289-vert5-roof-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/TM001 Headbutt.*Rock Smash/);
+    const step=await page.locator("#aeRouteProgress").textContent();
+    await page.locator("#aeShowRouteMap").click();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at289-vert5-tm-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 16.*Beedrillite/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Remaining alignment checks/);
+    assert.ok(await page.locator("#aeNextStep").isDisabled());
+    await page.locator("#aePrevStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 16/);
+  }
+  assert.equal(errors.length,0,"AT-289 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-289 phone JS errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.

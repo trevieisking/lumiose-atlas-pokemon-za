@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-288",
+  "batch": "AT-289",
   "date": "2026-11-24",
-  "baseline_main_sha": "d5bff8305fefa932bdb5d364465876fa4ba14e16",
+  "baseline_main_sha": "fdc61c0cd86bda37d200b3e65b39966e109f4fd0",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -122,8 +122,15 @@
       "id": "vert-sector-5",
       "kind": "sector",
       "label": "Vert Sector 5",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "partial_text_and_external_photo_research",
+      "lead_ids": [
+        "AR-V05-01",
+        "AR-V05-02",
+        "AR-V05-03",
+        "AR-V05-04",
+        "AR-V05-05",
+        "AR-V05-06"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1127,19 +1134,176 @@
       "publish_new_pin": false,
       "tm_number": 33,
       "tm_name": "Body Slam"
+    },
+    {
+      "id": "AR-V05-01",
+      "area": "vert-sector-5",
+      "kind": "grassy_plaza_scaffold_course",
+      "landmark": "Park northwest of Hotel Z",
+      "notes": "Raider King Vert district #12 describes a relatively simple open-park course using platforms and bridges. Altissimo describes a second scaffold Screw specifically in the grassy plaza; Serebii's regional inventory lists two Screws. Likely existing clue #1, not a verified identity. Other items reported on this scaffold include Exp. Candy S, Nest Ball, Calcium and Fire Stone; do not infer an exact pickup tier.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-5.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.serebii.net/pokearth/lumiosecity/vertdistrict.shtml"
+      ],
+      "candidate_original_screw_ids": [
+        1,
+        5
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "preferred_candidate_original_screw_id": 1,
+      "identity_status": "probable clue #1 by northwest-Hotel-Z landmark; marker-level match not confirmed"
+    },
+    {
+      "id": "AR-V05-02",
+      "area": "vert-sector-5",
+      "kind": "courtyard_scaffold_course",
+      "landmark": "Larger building complex, recessed platform",
+      "notes": "Altissimo's courtyard Screw and Raider King's Vert district #13 distinguish this from the grassy plaza. GameSpot describes reaching a recessed scaffold pickup by climbing and gliding down. Bulbapedia's sector photograph visibly shows a paved inner courtyard, multi-level scaffold and fenced area. It does not show a certified pickup, entry or floor. Glide recommended; StrategyWiki reports a roll alternative, but its viability for this exact marker is not independently tested.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-5.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_5"
+      ],
+      "candidate_original_screw_ids": [
+        5,
+        1
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "preferred_candidate_original_screw_id": 5,
+      "identity_status": "probable clue #5 by sector scaffold description; individual marker unresolved",
+      "visual_structure_observed": true
+    },
+    {
+      "id": "AR-V05-03",
+      "area": "vert-sector-5",
+      "kind": "cross_sector_roof_scaffold_ladder",
+      "landmark": "Green roofs between Vert 4 and Vert 5, wall with pipes",
+      "notes": "StrategyWiki #22 describes crossing green roof sections from the Vert 4 lift used in its #19-21 route, dropping to a scaffold near pipes, ascending a ladder, then making further rolls to the next structures. Single source for this detailed topology. No exact owner-device match, compass orientation, ladder base or exit. Retain as an alternative described route; do not assert it establishes a continuous route across the owner's three lifts.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_5",
+        "MAPS_ACCESS_ROUTE_SURVEY.json"
+      ],
+      "candidate_original_screw_ids": [
+        5
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "also_relevant_area": "vert-sector-4",
+      "existing_route_id": "vert4-courtyard-screws",
+      "gate_dispute": "StrategyWiki reports roll-only alternative; Raider King labels its courtyard route Glide-only; GameSpot recommends Glide. Identity of these approaches not fully matched."
+    },
+    {
+      "id": "AR-V05-04",
+      "area": "vert-sector-5",
+      "kind": "ground_obstacle_tm_pickup",
+      "landmark": "Riverside south of Vert Plaza, east side of larger complex",
+      "notes": "Altissimo, Psypokes, Raider King and Serebii identify TM001 Headbutt behind breakable rocks. Use Rock Smash, obtained via Mable Research rank 2, to clear the path to the golden TM ball. This is independent of scaffold access and is not a new Screw or progress key.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-5.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
+        "https://www.psypokes.com/plza/tm.php",
+        "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+        "https://www.serebii.net/pokearth/lumiosecity/vertdistrict.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "tm_number": 1,
+      "tm_name": "Headbutt",
+      "required_access": "breakable rock obstacle; Rock Smash documented",
+      "map_pin": null
+    },
+    {
+      "id": "AR-V05-05",
+      "area": "vert-sector-5",
+      "kind": "story_rooftop_web_bridge",
+      "landmark": "Hotel Z courtyard to Rogue Mega Beedrill arena",
+      "notes": "Thonky Main Mission 16 and Bulbapedia's sector entry corroborate the story route: existing Hotel Z courtyard ladder, meeting Urbain/Taunie on roof, Roto-Glide unlock, rooftop and web-bridge crossings, Beedrillite as reward. GameSpot reports Water moves on a web route toward nearby Vert 9; specific move requirement is not established for every bridge. No permanent bridge geometry or exact arena point added.",
+      "sources": [
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_5",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "MAPS_LADDER_FIELD_SURVEY_2026-11-22.json"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "hotel-z-ladder",
+      "existing_route_id": "hotel-z-ladder",
+      "also_relevant_area": "vert-sector-8",
+      "story_gate": "Main Mission 16"
+    },
+    {
+      "id": "AR-V05-06",
+      "area": "vert-sector-5",
+      "kind": "small_inner_building_roof_courtyard",
+      "landmark": "Small middle building separate from larger courtyard",
+      "notes": "Altissimo reports a separate small inner courtyard accessible with Roto-Glide containing Hyper Potion, Ultra Ball and Heal Ball, plus Calcium on southeastern roof. Single detailed text source, not individual map coordinates; not counted as another Screw site. Keep distinct from the larger scaffold courtyard.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-5.html",
+        "https://www.serebii.net/pokearth/lumiosecity/vertdistrict.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 6,
+    "sector_text_research_started": 7,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 16,
+    "route_course_leads": 22,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-289 Vert Sector 5: distinguish courtyard and grassy-plaza scaffolds; reconcile original Screw clue #5 and independently reported additional pickups, and check the rooftop link from Vert 4 without inventing a connection. Preserve unresolved Vert 1/2 and H-08 research.",
+  "next": "AT-290 Vert Sector 6: Racine Construction and nearby grassy area scaffolding, Restaurant Le Nah rooftop ladder, waterway approaches and TM leads; preserve original Screw IDs and distinguish story rewards from pickups. Retain unresolved Vert 1/2/4/5 geometry and H-08 facade queue.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -1192,5 +1356,59 @@
     "new_exact_pins": 0,
     "existing_route_count": 8,
     "proposed_route_count": 9
+  },
+  "at_289": {
+    "date": "2026-11-24",
+    "route_id": "vert5-scaffold-courses",
+    "distinct_scaffold_pickup_locations_text_corroborated": 2,
+    "original_clues_preserved": [
+      {
+        "number": 1,
+        "hint": "scaffold NW of Hotel Z",
+        "source_pickup_marker": {
+          "source": "Gamer Guides",
+          "layer": 342,
+          "id": 235034,
+          "geometry_retrieved": false
+        },
+        "candidate_lead": "AR-V05-01"
+      },
+      {
+        "number": 5,
+        "hint": "Vert Sector 5 scaffold",
+        "source_pickup_marker": {
+          "source": "Gamer Guides",
+          "layer": 342,
+          "id": 235164,
+          "geometry_retrieved": false
+        },
+        "candidate_lead": "AR-V05-02"
+      }
+    ],
+    "marker_identity_confirmed": false,
+    "no_new_screw_ids": true,
+    "visual_evidence": {
+      "inspected_external_images": [
+        {
+          "page": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_5",
+          "url": "https://archives.bulbagarden.net/media/upload/thumb/9/99/Vert_Sector_5_ZA.png/1200px-Vert_Sector_5_ZA.png",
+          "observation": "Web image result visually shows a paved courtyard with separate small building, surrounding tall blocks, railings and a cyan-edged multi-tier scaffold. Confirms physical type only; exact object/pickup identity and position not registered."
+        },
+        {
+          "page": "https://www.saudigamer.com/pokemon-legends-za-charcadet-evolve-auspicious-malicious-armor-part1/",
+          "observation": "In-game map screenshot visibly labels Vert Sector 5 east of Vert 4, south of Vert Plaza and northwest of Hotel Z. Used only for orientation; moving Hyperspace markers ignored."
+        }
+      ],
+      "unavailable": [
+        "Raider King map/gameplay JPG pairs for its Vert #12 and #13 (4 cache misses)",
+        "Gamer Guides original #1 and #5 marker deep links (2 cache misses)"
+      ],
+      "coordinate_alignment_performed": false,
+      "third_party_art_republished": false
+    },
+    "guide_disagreement": "Raider King marks courtyard route Glide-only; GameSpot recommends descending with Glide; StrategyWiki #22 reports rolling between platforms. No claim of universal mandatory Glide or proven no-Glide access. Keep route variants separate.",
+    "new_exact_pins": 0,
+    "existing_route_count": 9,
+    "proposed_route_count": 10
   }
 }
