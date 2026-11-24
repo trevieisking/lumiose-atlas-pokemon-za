@@ -543,7 +543,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),13);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -572,7 +572,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),13);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -621,7 +621,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),13);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -664,7 +664,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),13);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -702,6 +702,54 @@ try{
   }
   assert.equal(errors.length,0,"AT-290 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-290 phone JS errors: "+mobileErrors.join(" | "));
+
+  // AT-293: preserve the original Vernal gallery and distinguish the
+  // visible ladder, alternative alley route and separate TM.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
+    assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-9");
+    assert.equal(await page.locator("#aeRouteSelect option").count(),13);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
+    assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
+    assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-23"]').count(),1);
+    assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vernal-wz1"]').count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
+    assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 10.*Terra.*level 28 Diggersby/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/visible ladder.*does not establish a safe crossing/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Rooftop Screw #2.*Roto-Glide/);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at293-vert9-screw-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Alternative alley ladder.*purple sludge/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/TM019 Power Gem.*Vert 5\/9 sector label/);
+    const step=await page.locator("#aeRouteProgress").textContent();
+    await page.locator("#aeShowRouteMap").click();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at293-vert9-tm-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.ok(await page.locator("#aeNextStep").isDisabled());
+    await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vernal-wz1"]').click();
+    await page.waitForURL("**/atlas-explorer.html?place=vernal-wz1");
+    await page.waitForFunction(()=>document.querySelectorAll("#aeSelected .ae-photo-grid img").length===5);
+    for(let i=0;i<5;i++)await page.locator("#aeSelected .ae-photo-grid img").nth(i).scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536));
+    await page.locator("#aeSelected .ae-route-link").click();
+    assert.equal(await page.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  }
+  assert.equal(errors.length,0,"AT-293 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-293 phone JS errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.
