@@ -545,7 +545,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),15);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -574,7 +574,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),15);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -623,7 +623,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),15);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -666,7 +666,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),15);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -711,7 +711,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-9");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),15);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-23"]').count(),1);
@@ -836,6 +836,41 @@ try{
   }
   assert.equal(errors.length,0,"AT-296 desktop errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-296 phone errors: "+mobileErrors.join(" | "));
+
+  // AT-298: separate district route; six original owner photographs remain reachable.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-3",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert3-cyclone-rooftop-courses");
+    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').count(),1);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/orientation only, not certified roof connections/);
+    const times={2:138,4:181,5:238};
+    for(let n=1;n<=6;n++){
+      assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 6"));
+      const links=page.locator("#aeCurrentStep .ae-route-video a");
+      assert.equal(await links.count(),times[n]?1:0);
+      if(times[n]){
+        assert.equal(await links.getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t="+times[n]+"s");
+        assert.equal(await links.getAttribute("target"),"_blank");
+        assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*not frame-verified/);
+        await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+        await page.screenshot({path:output+"/at298-vert3-step"+n+"-"+device+".png",fullPage:false});
+      }
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+      if(n<6)await page.locator("#aeNextStep").click();
+    }
+    assert.ok(await page.locator("#aeNextStep").isDisabled());
+    await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').click();
+    await page.waitForURL("**/atlas-explorer.html?place=vert-cyclone");
+    await page.waitForFunction(()=>document.querySelectorAll("#aeSelected .ae-photo-grid img").length===6);
+    for(let i=0;i<6;i++)await page.locator("#aeSelected .ae-photo-grid img").nth(i).scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>[...document.querySelectorAll("#aeSelected .ae-photo-grid img")].every(img=>img.complete&&img.naturalWidth===1536));
+    await page.locator("#aeSelected .ae-route-link").click();
+    assert.equal(await page.locator("#aeRouteSelect").inputValue(),"cafe-cyclone");
+  }
+  assert.equal(errors.length,0,"AT-298 desktop errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-298 phone errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.

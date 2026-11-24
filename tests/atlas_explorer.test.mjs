@@ -230,8 +230,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,14);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,14);
+  assert.equal(data.routes.length,15);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,15);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -569,7 +569,7 @@ test("AT-295 optional video references are timestamped, labelled, safe and do no
   for(const invalid of [null,{...v,video_id:"javascript:alert(1)"},{...v,video_id:"abc&evil.com"},{...v,start_seconds:-1},{...v,start_seconds:1.5},{...v,verification:"frame_verified"},{...v,creator:""}])assert.equal(routeVideoUrl(invalid),null);
   assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
-  assert.equal(data.routes.length,14);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.routes.length,15);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
 
 test("AT-295 video return uses one private key, preserves unrelated state and tolerates blocked storage",()=>{
@@ -596,4 +596,16 @@ test("AT-296 Vert 1 and 2 written approaches retain all prior routes and use can
   assert.match(a.steps[1].instruction,/#10 and #11.*candidates/);assert.match(b.steps[2].instruction,/Roto-Glide.*difficult running-roll/);
   assert.ok([a,b].flatMap(r=>r.steps.flatMap(s=>s.video_refs||[])).every(v=>v.verification==="numbering_candidate"));
   assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
+});
+
+
+test("AT-298 Vert 3 rooftop guidance preserves owner route and uncertain identities",()=>{
+  const r=data.routes.find(x=>x.id==="vert3-cyclone-rooftop-courses");
+  assert.equal(r.point_id,"vert-sector-3");assert.equal(r.anchor_precision,"district_only");assert.equal(r.steps.length,6);
+  assert.deepEqual(r.related_photo_ids,["vert-cyclone"]);assert.equal(r.roof_exit_xy,null);assert.equal(r.known_floor_plan,false);
+  assert.deepEqual(r.steps.flatMap(s=>(s.video_refs||[]).map(v=>routeVideoUrl(v))),["https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=138s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=181s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=238s"]);
+  assert.ok(r.steps.flatMap(s=>s.video_refs||[]).every(v=>v.verification==="numbering_candidate"));
+  assert.match(r.steps[1].instruction,/Do not tick both/);assert.match(r.steps[4].instruction,/#15 separate from the west-rooftops clue #14/);assert.match(r.steps[5].instruction,/#16, not another name for #15/);
+  const original=data.routes.find(x=>x.id==="cafe-cyclone");assert.equal(original.steps.length,5);assert.match(original.steps[1].instruction,/archway/);
+  assert.equal(data.holovators.find(x=>x.id==="vert-cyclone").photos.length,6);assert.equal(data.holovators.length,21);assert.equal(data.ladders.length,1);assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
 });
