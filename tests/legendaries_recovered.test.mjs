@@ -53,6 +53,16 @@ for(let i=0;i<25;i++){
 }
 assert.deepEqual(db.records.slice(0,5).map(r=>r.name),["Xerneas","Yveltal","Zygarde","Diancie","Mewtwo"]);
 assert.deepEqual(db.records.slice(-7).map(r=>r.name),["Latias","Latios","Cobalion","Terrakion","Virizion","Keldeo","Meloetta"]);
+// AT-280: preserve PDF-faithful Lv. 85 text while documenting the Level 200 boss.
+const zeraora=db.records.find(r=>r.id==="zeraora");
+assert.equal(zeraora.tip,"Level 85 · Dodge the sweeping Electroweb patterns.");
+assert.equal(zeraora.encounterLevels.rogueMegaBoss,200);
+assert.equal(zeraora.encounterLevels.postBattleCatch,85);
+assert.equal(zeraora.encounterLevels.sources.length,2);
+const zeraoraCard=html.split('id="legend-zeraora"')[1]?.split("</article>")[0]||"";
+assert.match(zeraoraCard,/Rogue Mega Zeraora is Lv\. 200 during the battle/);
+assert.match(zeraoraCard,/Zeraora you catch afterward is Lv\. 85/);
+assert.match(zeraoraCard,/rogue mega boss level 200 catch zeraora level 85/);
 assert.equal((html.match(/data-legend-card(?:\s|>)/g)||[]).length,25);
 assert.equal((html.match(/data-atlas-legend="/g)||[]).length,25);
 assert.equal((html.match(/class="legend-artwork"/g)||[]).length,25);
