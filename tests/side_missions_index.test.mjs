@@ -40,7 +40,25 @@ assert.match(h06,/not a precisely verified doorway or rooftop XY/);
 assert.match(source,/id="quest-56"[\s\S]*?<b>Reward:<\/b> ₽900, Muscle Band ×1/);
 assert.match(source,/id="quest-61"[\s\S]*?<b>Reward:<\/b> ₽2,000, Poison Barb ×1, Mega Shard ×20/);
 assert.doesNotMatch(source,/id="quest-61"[\s\S]*?At the broken Holovator in Bleu Sector 3/);
-assert.equal((html.match(/data-verified-holovator=/g)||[]).length,4);
+// AT-283: mission-specific Alpha capture opportunity and uncatchable scripted encounter.
+const h07=forQuest(71),h08=forQuest(80);
+assert.ok(h07.includes('data-verified-holovator="H-07"'));
+assert.ok(h07.includes("The Lv. 50 Alpha Watchog"));
+assert.ok(h07.includes("<strong>caught or defeated</strong>"));
+assert.ok(h07.includes("₽1,200, 1 Assault Vest and 3 Full Heals"));
+assert.ok(h07.includes('href="atlas-explorer.html?place=lysandre-autumnal"'));
+assert.ok(h07.includes("not yet proven to be Chuckie's exact mission entrance"));
+assert.ok(h08.includes('data-verified-holovator="H-08"'));
+assert.ok(h08.includes("Lv. 52 Manectric and Lv. 52 Ampharos"));
+assert.ok(h08.includes("cannot be caught in this scripted mission"));
+assert.ok(h08.includes("₽3,500, 4 Quick Balls and 1 Lumiose Galette"));
+assert.ok(h08.includes('href="atlas-explorer.html"'));
+assert.ok(h08.includes("not yet verified"));
+assert.ok(source.includes("Catch it if you want to keep this Alpha, or defeat it; either outcome clears the lift."));
+assert.ok(source.includes("<b>Reward:</b> ₽1,200, Assault Vest ×1, Full Heal ×3"));
+assert.ok(source.includes("<b>Reward:</b> ₽3,500, Quick Ball ×4, Lumiose Galette ×1"));
+assert.ok(html.includes('href="alphas.html#alpha-watchog-mission-71"'));
+assert.equal((html.match(/data-verified-holovator=/g)||[]).length,6);
 
 const categoryCounts={base:0,dlc:0,ex:0};
 const names=[];
