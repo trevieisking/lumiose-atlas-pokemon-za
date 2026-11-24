@@ -3345,6 +3345,207 @@
         "workspace_status": "open"
       }
     ],
-    "next": "Finish AT-298 publication; implement and validate AT-299 Vert 1 label pilot and evidence-driven rollout in bounded stages; then resume Vert 8 Hotel Z routes and Bleu 1. Workspace gates unchanged."
+    "next": "Complete AT-299 pilot first. Reuse AT-266 source recovery for AT-300 image-detail pilot; if real source imagery or alignment is unavailable, keep the stage open and continue planned Vert 8 and Bleu 1 written route work without fabricating detail."
+  },
+  "at_300_map_clarity": {
+    "id": "AT-300",
+    "date": "2026-11-24",
+    "status": "owner_requested_planned_not_implemented",
+    "purpose": "Make the existing interactive city map as visually clear and useful as the photographed Holovator guides, without replacing the original map or changing its behaviour.",
+    "depends_on": "AT-299 sector label pilot; reuse AT-266 source recovery, do not merge its stale draft wholesale",
+    "source_recovery_reference": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/be9d047c8de15a8f52946b129e4040c06f14c8a1/docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md",
+    "original_basemap": {
+      "path": "maps/lumiose-game-map.jpg",
+      "native_size": [
+        1920,
+        1920
+      ],
+      "preserve_bytes": true,
+      "coordinate_frame_unchanged": true
+    },
+    "audit": {
+      "all_gallery_photos": 111,
+      "close_map_candidate_count": 21,
+      "candidate_images": [
+        {
+          "location_id": "vert4-central",
+          "role": "close-player-map",
+          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-close-player-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "vernal-wz1",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "bleu7-south",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "bleu8-soleil",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "bleu4-espace",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "cafe-gallant",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "magenta-plaza-nw",
+          "role": "close-player-map",
+          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-close-player-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "magenta8-canal",
+          "role": "close-player-map",
+          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-close-player-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "lysandre-autumnal",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "rouge-plaza-west",
+          "role": "rouge-plaza-close-map",
+          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-rouge-plaza-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "rouge5-looker",
+          "role": "close-up-map",
+          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-close-up-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "rouge5-looker",
+          "role": "close-map-revisit",
+          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-close-map-revisit.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "north-boulevard-rouge3",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "rouge6-east-sushi",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "jaune7-hibernal",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "jaune4-etoile",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "jaune11-street",
+          "role": "close-up-map",
+          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-close-up-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "jaune12-wz6",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/jaune12-wild-zone-6/holovator-jaune12-wild-zone-6-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "vert-cyclone",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/vert-cafe-cyclone/holovator-vert-cafe-cyclone-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "bleu3-fav",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/mission-061/holovator-061-close-map.jpg",
+          "status": "candidate_not_registered"
+        },
+        {
+          "location_id": "vert4-south",
+          "role": "close-map",
+          "path": "assets/atlas/holovators/vert4-south/holovator-vert4-south-close-map.jpg",
+          "status": "candidate_not_registered"
+        }
+      ],
+      "registered_detail_tiles": 0,
+      "limits": "Current map is one 1920×1920 JPEG; ordinary enlargement does not add information. Source gallery role metadata and current rendered phone map were reviewed; no new close-up spatial registration or full-resolution quality claim."
+    },
+    "stages": [
+      {
+        "id": "AT-300-A",
+        "purpose": "Audit genuine existing in-game close-up map images and original Workspace source assets when available; compare detail and verify provenance, dimensions, north orientation, common landmarks and rights. Reject magnified copies of the same basemap.",
+        "status": "open"
+      },
+      {
+        "id": "AT-300-B",
+        "purpose": "Pilot optional high-detail view using Bleu Sector 3 / My Favorite Holovator #61, matching existing AT-266 priority. Use source-labelled standalone close-up reference if alignment is not yet proven; add a geographically registered overlay only after at least three measured landmarks and an independent held-out check establish acceptable residuals. Record transform, coverage, limitations and image checksum.",
+        "status": "open"
+      },
+      {
+        "id": "AT-300-C",
+        "purpose": "Make verified high-detail image layer available progressively on zoom with original base fallback everywhere else. Keep existing 5×5 browsing square selection, pinch, pan, rotation, compass, filter and marker interactions. Use readable upright text labels from AT-299, avoid overlapping UI, offer original-map mode and optional detail view, and link existing street/entrance/rooftop photographs and route steps without duplicating assets.",
+        "status": "open"
+      },
+      {
+        "id": "AT-300-D",
+        "purpose": "Review and expand one district/region at a time, lazy-load bounded image assets, check rendering quality and device performance, preserve all existing route, marker, progress and smart-video behavior, require exact-head tests plus mobile/desktop visual QA and successful Pages deployment.",
+        "status": "open"
+      }
+    ],
+    "rules": [
+      "Never invent roads, building outlines, roofs, item pins or geographic label positions with AI upscaling or redrawing.",
+      "No permanent dynamic Hyperspace distortion pins.",
+      "Do not imply map screenshot labels or zoom prove exact lift or pickup coordinates.",
+      "Do not expose personal UI or private source archives; use approved image assets and preserve original bytes.",
+      "Independent Workspace port only after AT-297 access, backup, progress and compatibility gates; never link deployments."
+    ],
+    "preserve": {
+      "coverage_cells": 25,
+      "sectors": 48,
+      "wild_zones": 20,
+      "owner_holovator_research_entries": 21,
+      "photos": 111,
+      "original_screw_ids": 100,
+      "routes": 15,
+      "video_references": 10,
+      "existing_progress": true,
+      "original_workspace": true
+    },
+    "checklist_items": [
+      {
+        "id": "AT-300-MAP-DETAIL-CLARITY",
+        "purpose": "Source-backed high-detail interactive map and photo reference layer, using AT-266 recovery and AT-299 labels; preserve current map and controls.",
+        "github_status": "open",
+        "workspace_status": "open"
+      }
+    ],
+    "next": "Complete AT-299 pilot first. Reuse AT-266 source recovery for AT-300 image-detail pilot; if real source imagery or alignment is unavailable, keep the stage open and continue planned Vert 8 and Bleu 1 written route work without fabricating detail."
   }
 }
