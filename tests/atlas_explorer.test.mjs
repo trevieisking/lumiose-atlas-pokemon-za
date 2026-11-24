@@ -653,3 +653,53 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
   assert.match(css,/\.ae-sector-context #aeSectorContextBearing/);
   assert.equal((js.match(/localStorage\.setItem/g)||[]).length,(read("atlas-explorer.js").match(/localStorage\.setItem/g)||[]).length);
 });
+
+
+test("AT-304: 23 byte-verified original-game PNG crops cover 29 sectors without assigning geography or changing 111 Holovator photos",()=>{
+  const library=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
+  assert.equal(library.images.length,23);
+  assert.equal(library.sector_coverage.length,48);
+  assert.equal(library.counts.sectors_with_photographic_references,29);
+  assert.equal(library.missing_sector_ids.length,19);
+  assert.equal(library.observed_street_labels.length,8);
+  assert.equal(library.counts.geographic_sector_label_anchors,0);
+  assert.equal(library.counts.geographically_registered_tiles,0);
+  const uniquePaths=new Set(),uniqueImages=new Set(),sectorPaths=new Set();
+  for(const image of library.images){
+    assert.match(image.path,/^assets\/atlas\/sector-streets\/(vert|bleu|magenta|rouge|jaune)\/[a-z0-9-]+\.png$/);
+    assert.ok(!uniquePaths.has(image.path),"Duplicate asset "+image.path);
+    uniquePaths.add(image.path);uniqueImages.add(image.id);
+    assert.equal(image.registration,"not_georeferenced");
+    assert.equal(image.precision,"source_image_orientation_only");
+    assert.ok(image.sector_ids.length>=1);
+    const buf=fs.readFileSync(path.join(root,image.path));
+    assert.deepEqual([...buf.subarray(0,8)],[137,80,78,71,13,10,26,10],"Source must be original PNG");
+    assert.equal(buf.length,image.bytes,"Changed source byte count "+image.path);
+    assert.equal(createHash("sha256").update(buf).digest("hex"),image.sha256,"Changed original PNG "+image.path);
+    assert.equal(createHash("sha1").update(Buffer.from("blob "+buf.length)).update(Buffer.from([0])).update(buf).digest("hex"),image.git_blob_sha,"Blob identity mismatch "+image.path);
+    assert.equal(buf.readUInt32BE(16),image.width);
+    assert.equal(buf.readUInt32BE(20),image.height);
+    for(const s of image.sector_ids)sectorPaths.add(s);
+  }
+  assert.equal(uniqueImages.size,23);assert.equal(sectorPaths.size,29);
+  for(const sector of data.sectors){
+    assert.equal(sector.xy,null,"Do not infer native map sector XY");
+    const entry=library.sector_coverage.find(s=>s.sector_id===sector.id);
+    assert.ok(entry,"Missing sector tracking row");
+    assert.equal(entry.native_label_xy,null);
+    assert.equal(entry.verified_geographic_polygon,false);
+    if(entry.source_crop_id){
+      const image=library.images.find(a=>a.id===entry.source_crop_id);
+      assert.ok(image?.sector_ids.includes(sector.id));
+      assert.deepEqual(sector.source_map_reference,{crop_id:image.id,image_path:image.path,sha256:image.sha256,width:image.width,height:image.height,visible_labels:image.visible_labels,precision:"source_image_orientation_only",geographically_registered:false});
+    }else{assert.equal(sector.source_image_status,"needs_original_screenshot");assert.equal(sector.source_map_reference,undefined);}
+  }
+  assert.equal(data.zones.length,20);assert.equal(data.holovators.length,21);
+  assert.equal(data.holovators.reduce((s,h)=>s+h.photos.length,0),111);
+  assert.equal(data.routes.length,15);
+  const html=read("atlas-explorer.html"),js=read("atlas-explorer.js");
+  assert.match(html,/23 clean PNG map crops/);
+  assert.match(js,/ae-source-map-reference/);
+  assert.match(js,/item\.source_map_reference/);
+  assert.match(js,/No registered map XY, sector border or exact lift\/pickup pin/);
+});

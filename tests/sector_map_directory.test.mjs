@@ -166,3 +166,31 @@ for(const source of at302Source.sector_orientation){
  assert.match(card,/exact sector boundaries, lift entrances, roof exits and pickup coordinates remain unverified/);
 }
 assert.ok(!page.includes('src="assets/atlas/at301/'),"Do not link unhosted PNGs");
+
+
+// AT-304: 23 real hosted PNGs, 29 exact source cards and 19 honest gaps.
+const at304=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
+assert.equal(at304.images.length,23);
+assert.equal(at304.sector_coverage.length,48);
+assert.equal((page.match(/class="sector-source-map"/g)||[]).length,29);
+assert.equal((page.match(/class="sector-source-pending"/g)||[]).length,19);
+assert.equal((page.match(/class="street-source-row"/g)||[]).length,8);
+assert.ok(page.includes('id="street-photo-index"'));
+for(const entry of at304.sector_coverage){
+  const start=page.indexOf('<article class="sector-card" id="sector-'+entry.sector_id+'"');
+  assert.ok(start>=0,"Missing old source card "+entry.sector_id);
+  const end=page.indexOf("</article>",start);
+  assert.ok(end>start);
+  const card=page.slice(start,end);
+  if(entry.source_crop_id){
+    const image=at304.images.find(x=>x.id===entry.source_crop_id);
+    assert.ok(image,"Missing source file metadata");
+    assert.ok(existsSync(new URL("../"+image.path,import.meta.url)),"PNG not physically hosted "+image.path);
+    assert.ok(card.includes('class="sector-source-map" data-at304-source-id="'+image.id+'"'));
+    assert.ok(card.includes('src="'+image.path+'"'),"Broken sector crop "+entry.sector_id);
+    assert.ok(card.includes("Orientation reference only; not a measured sector boundary"));
+  }else{
+    assert.ok(card.includes('data-at304-source-status="needs_source_image"'),"Missing source TODO "+entry.sector_id);
+    assert.ok(!card.includes('class="sector-source-map"'),"Invented source photo on "+entry.sector_id);
+  }
+}
