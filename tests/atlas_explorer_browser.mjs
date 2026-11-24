@@ -543,7 +543,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -572,7 +572,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -621,7 +621,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),11);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -657,6 +657,51 @@ try{
   }
   assert.equal(errors.length,0,"AT-289 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-289 phone JS errors: "+mobileErrors.join(" | "));
+
+  // AT-290: Racine lobby, distinct scaffold routes, Le Nah ladder and
+  // rooftop TMs. Source coordinates remain provenance, not new map pins.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
+    assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
+    assert.equal(await page.locator("#aeRouteSelect option").count(),12);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
+    assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
+    assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Screw #19.*TM066 Volt Switch.*Main Mission 15/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Park-side scaffold.*#20–21.*not yet matched/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/South Boulevard scaffold.*#20–21 remains unresolved/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Restaurant Le Nah rooftop Screw #22.*exact ladder base/);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at290-vert6-restaurant-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/TM080 Iron Defense.*Roto-Glide/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/TM074 Shadow Ball.*Coulant Waterway/);
+    const step=await page.locator("#aeRouteProgress").textContent();
+    await page.locator("#aeShowRouteMap").click();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
+    await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at290-vert6-tm-"+device+".png",fullPage:false});
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Coulant Waterway approach.*#16.*not a new pickup/);
+    await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Remaining map alignment.*No new permanent pin/);
+    assert.ok(await page.locator("#aeNextStep").isDisabled());
+    await page.locator("#aePrevStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),/Optional Coulant Waterway approach/);
+  }
+  assert.equal(errors.length,0,"AT-290 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-290 phone JS errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.
