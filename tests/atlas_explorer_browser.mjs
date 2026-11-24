@@ -17,6 +17,24 @@ try{
   }
   assert.ok(available,"Static page test server must be reachable");
   browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
+  // Fail early with actual uncontained element bounds on the sector directory.
+  const sectorProbe=await browser.newPage({viewport:{width:393,height:852},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  await sectorProbe.goto(base+"/sector-maps.html",{waitUntil:"load"});
+  const sectorBounds=await sectorProbe.evaluate(()=>{
+    const width=document.documentElement.clientWidth;
+    const over=[...document.querySelectorAll("body *")].filter(el=>{
+      const b=el.getBoundingClientRect();
+      if(!b.width||!b.height||b.right<=width+1)return false;
+      for(let p=el.parentElement;p&&p!==document.body;p=p.parentElement){
+        if(["auto","scroll","hidden","clip"].includes(getComputedStyle(p).overflowX))return false;
+      }
+      return true;
+    }).map(el=>({tag:el.tagName,id:el.id,cls:typeof el.className==="string"?el.className:"",right:Math.round(el.getBoundingClientRect().right),parent:el.parentElement.className,text:el.textContent.slice(0,85)})).sort((a,b)=>b.right-a.right).slice(0,15);
+    return {width,body:document.body.scrollWidth,scroll:document.documentElement.scrollWidth,over};
+  });
+  console.log("SECTOR_PHONE_OVERFLOW "+JSON.stringify(sectorBounds));
+  await sectorProbe.close();
+  assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
   const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
@@ -29,7 +47,7 @@ try{
   assert.equal(await desktop.locator("#aeCoverageDistricts button").count(),5);
   assert.equal(await desktop.locator("#aeCoverageSector option").count(),49,"48 sectors plus placeholder");
   await desktop.locator('#aeCoverageGrid button[data-area="1-1"]').click();
-  await desktop.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("row 1, column 1"));
+  await desktop.waitForFunction(()=>document.getElementById("aeCoverageStatus").textContent.includes("row 1, column 1")&&Number.parseFloat(document.getElementById("aeZoomLabel").textContent)>=3);
   assert.ok(Number.parseFloat(await desktop.locator("#aeZoomLabel").textContent())>=3,"Area button must zoom to genuine map pixels");
   await desktop.locator("#aeCoverageFullCity").click();
   await desktop.waitForFunction(()=>document.getElementById("aeZoomLabel").textContent.includes("1.00"));
@@ -513,6 +531,101 @@ try{
   await desktop.screenshot({path:output+"/at277-filtered-quest22-desktop.png",fullPage:false});
   assert.equal(errors.length,0,"AT-277 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-277 phone JS errors: "+mobileErrors.join(" | "));
+
+
+  // Phone-page overflow regression: test the actual main-guide views, not just
+  // the desktop DLC link or the standalone map. Never disable local scrolling.
+  const widthProbe = await browser.newPage({viewport:{width:393,height:852},
+    deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const widths = [];
+  const mainViews = ["home","walkthrough","sidequests","dimension","bosses","alphas",
+    "maps","items","legends","berries","starters","pokedex","essentials","secrets","rewards","battles","sources"];
+  await widthProbe.goto(base+"/index.html#dimension",{waitUntil:"domcontentloaded"});
+  for (const view of mainViews) {
+    await widthProbe.evaluate(id=>{location.hash="#"+id;},view);
+    await widthProbe.waitForFunction(id=>document.getElementById(id)?.classList.contains("active"),view);
+    await pause(350);
+    const measurement=await widthProbe.evaluate(()=>{
+      window.scrollTo({left:0,top:0,behavior:"instant"});
+      const root=document.documentElement, width=root.clientWidth;
+      const over=[...document.querySelectorAll("body *")].filter(el=>{
+        const b=el.getBoundingClientRect();
+        if(!b.width||!b.height||b.right<=width+1)return false;
+        for(let p=el.parentElement;p&&p!==document.body;p=p.parentElement){
+          if(["auto","scroll","hidden","clip"].includes(getComputedStyle(p).overflowX))return false;
+        }
+        return true;
+      }).map(el=>({tag:el.tagName,id:el.id,cls:typeof el.className==="string"?el.className:"",right:Math.round(el.getBoundingClientRect().right)}))
+        .sort((a,b)=>b.right-a.right).slice(0,10);
+      window.scrollTo({left:100000,top:0,behavior:"instant"});
+      const moved=window.scrollX;
+      window.scrollTo({left:0,top:0,behavior:"instant"});
+      return {width,scrollWidth:root.scrollWidth,bodyWidth:document.body.scrollWidth,moved,over};
+    });
+    widths.push({view,...measurement});
+  }
+  console.log("MOBILE_GUIDE_WIDTH_DIAGNOSTICS "+JSON.stringify(widths));
+  const failures=widths.filter(x=>x.width!==393||x.scrollWidth>x.width+1||x.bodyWidth>x.width+1||x.moved>1);
+  assert.deepEqual(failures,[],"Main guide must never horizontally scroll on a 393px phone");
+  // Swiping the 25-link navigation remains intentional; it must not drag the page.
+  assert.equal(await widthProbe.locator("#sideNav a").count(),25);
+  const navTravel=await widthProbe.locator(".sidebar").evaluate(el=>{
+    el.scrollLeft=0;const before=el.scrollLeft;el.scrollLeft=el.scrollWidth;
+    return el.scrollLeft-before;
+  });
+  assert.ok(navTravel>0,"Phone menu must retain horizontal scrolling");
+  assert.equal(await widthProbe.evaluate(()=>window.scrollX),0);
+
+  // Confirm the oversized seasonal table still works as a LOCAL scroller
+  // and switching back to DLC does not retain the enlarged visual viewport.
+  await widthProbe.evaluate(()=>{location.hash="#battles";});
+  await widthProbe.waitForFunction(()=>document.getElementById("battles")?.classList.contains("active"));
+  const tableTravel=await widthProbe.locator(".battle-season").evaluate(el=>{
+    el.scrollLeft=0;const before=el.scrollLeft;el.scrollLeft=el.scrollWidth;
+    return el.scrollLeft-before;
+  });
+  assert.ok(tableTravel>0,"Wide battle table must remain locally scrollable");
+  assert.equal(await widthProbe.evaluate(()=>window.scrollX),0);
+  await widthProbe.screenshot({path:output+"/phone-ranked-battles-contained.png"});
+  for(const width of [320,360,393,430]){
+    await widthProbe.setViewportSize({width,height:852});
+    for(const view of ["battles","dimension"]){
+      await widthProbe.evaluate(id=>{location.hash="#"+id;},view);
+      await widthProbe.waitForFunction(id=>document.getElementById(id)?.classList.contains("active"),view);
+      await pause(300);
+      const bounds=await widthProbe.evaluate(()=>{
+        const root=document.documentElement;
+        const intro=document.querySelector(".view.active .page-intro");
+        return {client:root.clientWidth,scroll:root.scrollWidth,body:document.body.scrollWidth,
+          x:window.scrollX,mainRight:document.querySelector("main").getBoundingClientRect().right,
+          introRight:intro?.getBoundingClientRect().right||0};
+      });
+      assert.equal(bounds.client,width,`Wrong layout viewport at ${width}px #${view}`);
+      assert.ok(bounds.scroll<=width+1&&bounds.body<=width+1&&bounds.x===0&&bounds.mainRight<=width+1&&bounds.introRight<=width+1,
+        `Phone overflow at ${width}px #${view}: ${JSON.stringify(bounds)}`);
+      if(width===393&&view==="dimension")await widthProbe.screenshot({path:output+"/phone-dlc-contained.png"});
+    }
+  }
+  // All recovered standalone guide pages share the phone guard. Feedback
+  // screens are deliberately excluded because their separate workflow owns them.
+  await widthProbe.setViewportSize({width:393,height:852});
+  const articlePages=["alphas","atlas-explorer","battles","boss-guide","coverage","home-connection",
+    "hyperspace-maps","items","journey","legendaries","mable-research","maps",
+    "mega-dimension","rewards","royale-guide","sector-maps","shiny-hunting",
+    "shops","side-missions","type-chart","walkthrough"];
+  const articleWidths=[];
+  for(const slug of articlePages){
+    await widthProbe.goto(base+"/"+slug+".html",{waitUntil:"load"});
+    const bounds=await widthProbe.evaluate(()=>{
+      const root=document.documentElement;
+      return {client:root.clientWidth,scroll:root.scrollWidth,body:document.body.scrollWidth,x:window.scrollX};
+    });
+    articleWidths.push({slug,...bounds});
+  }
+  console.log("MOBILE_ARTICLE_WIDTH_DIAGNOSTICS "+JSON.stringify(articleWidths));
+  assert.deepEqual(articleWidths.filter(x=>x.client!==393||x.scroll>394||x.body>394||x.x!==0),[],
+    "Every standalone guide page must fit the phone without disabling local maps or tables");
+  await widthProbe.close();
 
   await phone.close();await desktop.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");

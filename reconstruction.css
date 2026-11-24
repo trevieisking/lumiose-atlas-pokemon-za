@@ -19,3 +19,25 @@
 .unrecovered-page .button{display:inline-block;margin:9px 9px 9px 0;text-decoration:none}
 .unrecovered-note{font-size:12px;border-top:1px solid #dedce5;margin-top:32px;padding-top:19px}
 @media(max-width:780px){.rebuild-notice{padding:8px 10px}.rebuild-zone-detail{padding:10px}.unrecovered-page{margin:18px 10px;padding:18px}}
+
+/* Phone-only page-width containment. Keep the menu and wide data tables
+   as their own horizontal scrollers; never constrain the map's pan/zoom stage.
+   clip (unlike hidden on body) does not introduce a sticky-breaking scroller. */
+@media (max-width: 760px) {
+  html { overflow-x: hidden; }
+  body { max-width: 100%; overflow-x: clip; }
+  .topbar, .shell, .sidebar, main, .view { min-width: 0; max-width: 100%; }
+  .sidebar { overflow-x: auto; overscroll-behavior-x: contain; }
+  .view, main > footer { overflow-wrap: anywhere; }
+  .view :is(.hyper-list, .side-list, .extra-teasers, .three-steps,
+    .mission-guide-grid, .mission-pickup-list, .item-pickup-grid,
+    .battle-rewards) { grid-template-columns: minmax(0, 1fr); }
+  .view :is(.hyper-card, .hyper-top > h3, .side-quest > strong,
+    .extra-map-room > div, .battle-season, .mission-guide-copy,
+    .search, .table-wrap) { min-width: 0; max-width: 100%; }
+  .view :is(.precision-map a, .extra-map-room a, .map-teaser button,
+    .dex-teaser button, .atlas-map-caption a) { white-space: normal; max-width: 100%; }
+  .view :is(.button, .hyper-card button, .side-quest a) { max-width: 100%; }
+  .view .battle-season { overflow-x: auto; overscroll-behavior-x: contain; }
+  .view .table-wrap { overscroll-behavior-x: contain; }
+}

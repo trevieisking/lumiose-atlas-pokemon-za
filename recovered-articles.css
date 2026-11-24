@@ -86,3 +86,17 @@ body.atlas-article{margin:0;background:#fbfafc;color:#25233b;font:16px/1.64 syst
 @media(max-width:760px){.atlas-article-header .header-inner{padding:15px 16px 10px}.atlas-article-header .return-strip{padding:0 16px 12px}.atlas-article .hero{grid-template-columns:1fr;gap:13px}.atlas-article .hero-summary{padding:18px}.atlas-article .milestones{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-article-main{padding:27px 16px 50px}.atlas-article .step-grid{grid-template-columns:1fr}.atlas-article .panel{padding:18px;margin:12px 0}.atlas-article .reward-panel{padding:15px}.atlas-article .rewards th,.atlas-article .rewards td{padding:10px 8px}}
 @media(max-width:420px){.atlas-article-header .header-actions{width:100%;justify-content:flex-start}.atlas-article-header .header-actions .action{font-size:12px;min-height:38px}.atlas-article .milestone{padding:12px}.atlas-article .milestone strong{font-size:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.atlas-article .progress-track span{transition:none}}
+
+/* The standalone guide pages must not drag the browser viewport sideways.
+   Preserve independent navigation/table/map scrollers and touch gestures. */
+@media (max-width: 760px) {
+  html { overflow-x: hidden; }
+  body.atlas-article { max-width: 100%; overflow-x: clip; }
+  .atlas-article-header, .atlas-article-nav-wrap, .atlas-article-nav,
+  .atlas-article-main { min-width: 0; max-width: 100%; }
+  .atlas-article .hero { grid-template-columns: minmax(0, 1fr); }
+  .atlas-article .hero > *, .atlas-article .panel, .atlas-article .step-card,
+  .atlas-article .reward-panel { min-width: 0; max-width: 100%; }
+  .atlas-article-main { overflow-wrap: anywhere; }
+  .atlas-article .table-scroll { max-width: 100%; overscroll-behavior-x: contain; }
+}
