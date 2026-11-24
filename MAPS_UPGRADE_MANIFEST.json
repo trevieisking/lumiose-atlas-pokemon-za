@@ -15,11 +15,11 @@
     "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 41,
+  "revision": 42,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-295 deployed; AT-296 Vert 1/2 written routes and smart video candidates pending validation.",
+  "current_phase": "AT-296 browser count correction; exact-head retest and visual review pending.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -2910,6 +2910,17 @@
       "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
       "https://www.youtube.com/watch?v=5-dLjd4o8Rc"
     ],
-    "next": "Vert 3 rooftop and boundary #15, then Vert 8 Hotel Z #3/#4; then Bleu 1. No new coordinate claims."
+    "next": "Vert 3 rooftop and boundary #15, then Vert 8 Hotel Z #3/#4; then Bleu 1. No new coordinate claims.",
+    "test_correction": {
+      "failed_run": 45417601078,
+      "failed_head": "3e30fbfc94a4fefbf617cb43954ecf77c8c44cca",
+      "unit": "success",
+      "browser": "failure",
+      "cause": "Five previous browser assertions expected 13 dropdown options (12 routes plus placeholder); the new data correctly contains 15 options (14 routes plus placeholder).",
+      "correction_sha": "d23038714a0de2d291f9697526bed75e4488e20c",
+      "scope": "browser-test assertions only, no runtime or route data edits",
+      "retest": "pending exact final head"
+    },
+    "checklist_manifest_revision": 42
   }
 }
