@@ -2397,5 +2397,103 @@
     "owner_photo_bytes_or_refs_changed": false,
     "next_target": "DR-H-03 / Side Mission 040 A Holovator Without Power: verify target physical device identity against owner-supplied photography and Vert Sector 7 quest location; do not assign unsupported existing Holovator points",
     "report": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md#at-280--resume-full-atlas-source-verification-holovator-h-01h-02-and-ex3-boss-clarity-24-november-2026"
+  },
+  "independent_source_recheck_h03_h04_2026_11_24": {
+    "date": "2026-11-24",
+    "plan": "ATLAS-MAPS-2026-11-21-V1",
+    "purpose": "Mission-first verification of H-03/H-04 without mapping unverified physical device coordinates",
+    "records": [
+      {
+        "id": "DR-H-03",
+        "mission_no": 40,
+        "name": "A Holovator Without Power",
+        "quest_sector": "Vert Sector 7",
+        "street": "South Boulevard, northeast from Vert Pokémon Center, near Gare de Lumiose",
+        "requester": "Élec",
+        "unlock": "Win the Canari Quiz Whiz in Main Mission 14",
+        "action": "Speak to Élec; target disabled Holovator; hit it with Electric-type move",
+        "rewards": {
+          "pokedollars": 1700,
+          "ultra_balls": 3,
+          "mega_shards": 10
+        },
+        "source_reference": [
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power",
+          "https://www.serebii.net/legendsz-a/sidemissions/aholovatorwithoutpower.shtml",
+          "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-holovator-without-power"
+        ],
+        "third_party_quest_marker_xy": [
+          14670,
+          14907
+        ],
+        "approx_wide_photo_symbol_candidates": [
+          [
+            1486,
+            1532
+          ],
+          [
+            1486,
+            1515
+          ]
+        ],
+        "candidate_is_not_verified_physical_device": true,
+        "atlas_live_exact_entrance_xy": null,
+        "atlas_live_roof_xy": null,
+        "published_new_pin": false,
+        "guide_route": "side-missions.html#quest-40",
+        "map_fallback": "atlas-explorer.html?sector=vert-sector-7"
+      },
+      {
+        "id": "DR-H-04",
+        "mission_no": 45,
+        "name": "On Maintenance Duty",
+        "quest_sector": "Bleu Sector 7 / South Boulevard",
+        "street": "Southeast from Bleu Pokémon Center, by southern side of Bleu Sector 7",
+        "requester": "Durstin",
+        "unlock": "Begin Main Mission 19 according to Serebii/Thonky; Bulbapedia reports completion of Main Mission 15 as the prerequisite; do not silently reconcile these separate milestone descriptions",
+        "action": "Give Durstin Fresh Water, Soda Pop, Lemonade, or Moomoo Milk to restore Holovator",
+        "rewards": {
+          "pokedollars": 800,
+          "serious_mints": 1,
+          "chilan_berries": 10
+        },
+        "source_reference": [
+          "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-045-on-maintenance-duty",
+          "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/on-maintenance-duty"
+        ],
+        "third_party_quest_marker_xy": [
+          7987,
+          16433
+        ],
+        "existing_owner_gallery_id": "bleu7-south",
+        "owner_photo_count": 5,
+        "atlas_saved_approx_approach_xy": [
+          708,
+          1706
+        ],
+        "atlas_live_exact_entrance_xy": null,
+        "atlas_live_roof_xy": null,
+        "published_new_pin": false,
+        "guide_route": "side-missions.html#quest-45",
+        "map_fallback": "atlas-explorer.html?place=bleu7-south"
+      }
+    ],
+    "visible_pages_edited": [
+      "side-missions.html",
+      "atlas-explorer-data.json"
+    ],
+    "original_17_main_sections_changed": false,
+    "original_203_side_request_source_records_changed": false,
+    "sector_views_retained": 48,
+    "wild_zone_views_retained": 20,
+    "holovator_approximate_gallery_records_retained": 21,
+    "owner_jpg_links_retained": 111,
+    "holovator_exact_pin_count": 0,
+    "dynamic_hyperspace_pins_added": 0,
+    "next_record": "DR-H-05 / Side Mission 056 We'll Just Muscle Our Way Through!",
+    "source_coordinates_are_not_atlas_pixels": true
   }
 }
