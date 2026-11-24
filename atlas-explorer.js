@@ -3,7 +3,7 @@
 import {
   MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project,
   constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart
+  coverageCellCentre, districtStart, routeVideoUrl
 } from "./atlas-explorer-geometry.mjs";
 const by = id => document.getElementById(id);
 const viewport=by("aeViewport"),stage=by("aeStage"),layer=by("aeMapPins");
@@ -334,6 +334,17 @@ function renderRoute(){
     paragraph(step.instruction),
     element("div","ae-evidence-status",evidenceText[step.evidence]||"Needs independent verification")
   );
+  const videoRefs=Array.isArray(step.video_refs)?step.video_refs: [];
+  for(const video of videoRefs){
+    const url=routeVideoUrl(video);
+    if(!url)continue;
+    const card=element("div","ae-route-video");
+    const time=Math.floor(video.start_seconds/60)+":"+String(video.start_seconds%60).padStart(2,"0");
+    const status=video.verification==="numbering_candidate"?"Candidate video match":"Publisher-listed video chapter";
+    const anchor=link(url,"Watch "+video.title+" ("+time+") on YouTube",true);
+    card.append(element("strong","",status),paragraph("Creator: "+video.creator+" · Footage not frame-verified"),anchor,paragraph(video.note));
+    currentStep.append(card);
+  }
   prevStep.disabled=stepIndex===0;
   nextStep.disabled=stepIndex===route.steps.length-1;
   showRouteMap.disabled=!isPoint(item?.xy)&&!districtOnly;
