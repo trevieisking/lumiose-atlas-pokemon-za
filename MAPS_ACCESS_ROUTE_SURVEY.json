@@ -1,0 +1,959 @@
+{
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "batch": "AT-287",
+  "date": "2026-11-24",
+  "baseline_main_sha": "f13799f35fd00b384501586d5a56809a73e9ecae",
+  "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
+  "reference_map": {
+    "path": "maps/lumiose-game-map.jpg",
+    "native_size": [
+      1920,
+      1920
+    ],
+    "coordinate_origin": "top-left",
+    "native_units": "image pixels"
+  },
+  "external_inventory": [
+    {
+      "source": "Shackmaps",
+      "url": "https://www.shackmaps.com/pokemon-legends-z-a/map",
+      "reported": {
+        "holovator": 23,
+        "ladder": 255
+      },
+      "retrieval": "indexed category list; full page exceeded fetch limit"
+    },
+    {
+      "source": "Gamer Guides",
+      "url": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city",
+      "reported": {
+        "holovator": 23,
+        "ladder": 132,
+        "bridge": 43
+      },
+      "retrieval": "category list retrieved; individual device coordinates not extracted"
+    }
+  ],
+  "scaffold_total": null,
+  "ladder_total": null,
+  "counts_are_not_canonical": true,
+  "visual_evidence": {
+    "status": "reference_pages_identified_image_bytes_not_retrieved",
+    "source": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+    "attempted_pairs": [
+      "Vert 1 first scaffold: map/gameplay images",
+      "Vert 2 roof route: map/gameplay images",
+      "Rouge 1 courtyard and west plaza screenshots"
+    ],
+    "result": "Six linked JPG requests returned cache errors or HTTP failures. Captions/text read; images not visually inspected or aligned. No image reuse or inferred pixel position."
+  },
+  "existing_baseline": {
+    "owner_holovator_entries": 21,
+    "owner_photos": 111,
+    "ladders": 1,
+    "verified_scaffold_pins": 0,
+    "original_screw_clues": 100,
+    "original_routes": 8
+  },
+  "method": {
+    "survey_order": "one location or route at a time within a sector; review all 48 sectors and all 20 Wild Zones, then boundary roads, canals and plazas",
+    "source_policy": "Use publicly accessible map category entries, gameplay images and independent descriptions as research; record source attribution, ID, date and coordinate space. Do not copy a guide's map artwork/database or bypass access restrictions. Owner photographs only when unresolved evidence warrants them.",
+    "alignment_gate": "Use permanent shared landmarks across source and original native map; fit appropriate transform, independently test withheld controls, record residual and local uncertainty. Establish marker semantics and exact ladder base vs avatar/pickup marker; no arbitrary threshold or exact pixel claim from fit alone.",
+    "dedup_gate": "Separate structures, ladders within structures, upper/lower exits, route edges and pickup identities; reconcile neighbouring-sector references and differing source counts.",
+    "release_gate": "Text may be reviewed independently as clearly labelled research; pin publication requires device identity, aligned entry coordinate, floor evidence, source attribution and confidence. Unknown exit remains null. All runtime changes require branch QA and visual review; no permanent moving Hyperspace pin.",
+    "progress_policy": "Update manifest revision, plan, register, issue #28 and ledger together after each batch; never infer complete coverage from partial research."
+  },
+  "coverage": [
+    {
+      "id": "vert-sector-1",
+      "kind": "sector",
+      "label": "Vert Sector 1",
+      "status": "partial_text_research",
+      "lead_ids": [
+        "AR-V01-01",
+        "AR-V01-02",
+        "AR-V01-03",
+        "AR-V01-04"
+      ],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-2",
+      "kind": "sector",
+      "label": "Vert Sector 2",
+      "status": "partial_text_research",
+      "lead_ids": [
+        "AR-V02-01"
+      ],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-3",
+      "kind": "sector",
+      "label": "Vert Sector 3",
+      "status": "partial_text_research",
+      "lead_ids": [
+        "AR-V03-01",
+        "AR-V03-02"
+      ],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-4",
+      "kind": "sector",
+      "label": "Vert Sector 4",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-5",
+      "kind": "sector",
+      "label": "Vert Sector 5",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-6",
+      "kind": "sector",
+      "label": "Vert Sector 6",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-7",
+      "kind": "sector",
+      "label": "Vert Sector 7",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-8",
+      "kind": "sector",
+      "label": "Vert Sector 8",
+      "status": "partial_text_research",
+      "lead_ids": [
+        "AR-V08-01"
+      ],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "vert-sector-9",
+      "kind": "sector",
+      "label": "Vert Sector 9",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-1",
+      "kind": "sector",
+      "label": "Bleu Sector 1",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-2",
+      "kind": "sector",
+      "label": "Bleu Sector 2",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-3",
+      "kind": "sector",
+      "label": "Bleu Sector 3",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-4",
+      "kind": "sector",
+      "label": "Bleu Sector 4",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-5",
+      "kind": "sector",
+      "label": "Bleu Sector 5",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-6",
+      "kind": "sector",
+      "label": "Bleu Sector 6",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-7",
+      "kind": "sector",
+      "label": "Bleu Sector 7",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-8",
+      "kind": "sector",
+      "label": "Bleu Sector 8",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-9",
+      "kind": "sector",
+      "label": "Bleu Sector 9",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "bleu-sector-10",
+      "kind": "sector",
+      "label": "Bleu Sector 10",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-1",
+      "kind": "sector",
+      "label": "Magenta Sector 1",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-2",
+      "kind": "sector",
+      "label": "Magenta Sector 2",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-3",
+      "kind": "sector",
+      "label": "Magenta Sector 3",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-4",
+      "kind": "sector",
+      "label": "Magenta Sector 4",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-5",
+      "kind": "sector",
+      "label": "Magenta Sector 5",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-6",
+      "kind": "sector",
+      "label": "Magenta Sector 6",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-7",
+      "kind": "sector",
+      "label": "Magenta Sector 7",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-8",
+      "kind": "sector",
+      "label": "Magenta Sector 8",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "magenta-sector-9",
+      "kind": "sector",
+      "label": "Magenta Sector 9",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-1",
+      "kind": "sector",
+      "label": "Rouge Sector 1",
+      "status": "partial_text_research",
+      "lead_ids": [
+        "AR-R01-01",
+        "AR-R01-02"
+      ],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-2",
+      "kind": "sector",
+      "label": "Rouge Sector 2",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-3",
+      "kind": "sector",
+      "label": "Rouge Sector 3",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-4",
+      "kind": "sector",
+      "label": "Rouge Sector 4",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-5",
+      "kind": "sector",
+      "label": "Rouge Sector 5",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-6",
+      "kind": "sector",
+      "label": "Rouge Sector 6",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-7",
+      "kind": "sector",
+      "label": "Rouge Sector 7",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "rouge-sector-8",
+      "kind": "sector",
+      "label": "Rouge Sector 8",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-1",
+      "kind": "sector",
+      "label": "Jaune Sector 1",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-2",
+      "kind": "sector",
+      "label": "Jaune Sector 2",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-3",
+      "kind": "sector",
+      "label": "Jaune Sector 3",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-4",
+      "kind": "sector",
+      "label": "Jaune Sector 4",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-5",
+      "kind": "sector",
+      "label": "Jaune Sector 5",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-6",
+      "kind": "sector",
+      "label": "Jaune Sector 6",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-7",
+      "kind": "sector",
+      "label": "Jaune Sector 7",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-8",
+      "kind": "sector",
+      "label": "Jaune Sector 8",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-9",
+      "kind": "sector",
+      "label": "Jaune Sector 9",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-10",
+      "kind": "sector",
+      "label": "Jaune Sector 10",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-11",
+      "kind": "sector",
+      "label": "Jaune Sector 11",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "jaune-sector-12",
+      "kind": "sector",
+      "label": "Jaune Sector 12",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-01",
+      "kind": "wild_zone",
+      "label": "Wild Zone 01",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-02",
+      "kind": "wild_zone",
+      "label": "Wild Zone 02",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-03",
+      "kind": "wild_zone",
+      "label": "Wild Zone 03",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-04",
+      "kind": "wild_zone",
+      "label": "Wild Zone 04",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-05",
+      "kind": "wild_zone",
+      "label": "Wild Zone 05",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-06",
+      "kind": "wild_zone",
+      "label": "Wild Zone 06",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-07",
+      "kind": "wild_zone",
+      "label": "Wild Zone 07",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-08",
+      "kind": "wild_zone",
+      "label": "Wild Zone 08",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-09",
+      "kind": "wild_zone",
+      "label": "Wild Zone 09",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-10",
+      "kind": "wild_zone",
+      "label": "Wild Zone 10",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-11",
+      "kind": "wild_zone",
+      "label": "Wild Zone 11",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-12",
+      "kind": "wild_zone",
+      "label": "Wild Zone 12",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-13",
+      "kind": "wild_zone",
+      "label": "Wild Zone 13",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-14",
+      "kind": "wild_zone",
+      "label": "Wild Zone 14",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-15",
+      "kind": "wild_zone",
+      "label": "Wild Zone 15",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-16",
+      "kind": "wild_zone",
+      "label": "Wild Zone 16",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-17",
+      "kind": "wild_zone",
+      "label": "Wild Zone 17",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-18",
+      "kind": "wild_zone",
+      "label": "Wild Zone 18",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-19",
+      "kind": "wild_zone",
+      "label": "Wild Zone 19",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "id": "wz-20",
+      "kind": "wild_zone",
+      "label": "Wild Zone 20",
+      "status": "not_started",
+      "lead_ids": [],
+      "geometry_complete": false,
+      "inventory_complete": false
+    }
+  ],
+  "leads": [
+    {
+      "id": "AR-V01-01",
+      "area": "vert-sector-1",
+      "kind": "ladder",
+      "landmark": "Small courtyard in northern building complex",
+      "notes": "Clear the rock obstacle to reach the courtyard ladder and northern roof; a route to Protein and Pearl is described. Gamer Guides separately describes a northern-path building ladder leading over scaffolding; physical identity of the two ladders is not established.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-1.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V01-02",
+      "area": "vert-sector-1",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Centrico Plaza-facing northern edge",
+      "notes": "A ladder and platform course is reported close to the tower-facing edge. Screw clues in the existing west/north scaffold areas are candidates, not matched identities.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-1.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        10,
+        11
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V01-03",
+      "area": "vert-sector-1",
+      "kind": "scaffold_bridge_course",
+      "landmark": "Alley reached from Saison Canal",
+      "notes": "Use the right-side ladder and narrow crossings of the tall scaffolding, then descend to a lower platform. Altissimo also reports an alley Screw and items. Do not merge this structure with the plaza course without aligned evidence.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-1.html"
+      ],
+      "candidate_original_screw_ids": [
+        10,
+        11,
+        13
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V01-04",
+      "area": "vert-sector-1",
+      "kind": "roof_to_courtyard_glide",
+      "landmark": "Eastern building complex",
+      "notes": "Sources describe dropping into the enclosed courtyard from adjacent rooftop access; Roto-Glide is reported for the eastern courtyard Screw. Retain the original #12 clue, but exact path identity, initial ladder and landing remain unknown.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        12
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-V02-01",
+      "area": "vert-sector-2",
+      "kind": "ladder_rooftop_crossing",
+      "landmark": "Northern part of sector toward Vert Street",
+      "notes": "Raider King and StrategyWiki describe a ladder followed by crates or raised platform and a rolling crossing to the next roof. Altissimo marks the southern roof Screw as Roto-Glide-required. Record both descriptions; earliest viable no-glide route is not yet confirmed in-game.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        9
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "gate_dispute": "roll-only route reported by two guides; another lists Roto-Glide"
+    },
+    {
+      "id": "AR-V03-01",
+      "area": "vert-sector-3",
+      "kind": "boundary_scaffold_course",
+      "landmark": "Eastern edge of Vert Sector 1 / western approach to Vert Sector 3",
+      "notes": "Ramps, several ladders and a glide across a gap connect platforms. Both sources place the climb near the sector boundary; one assigns the pickup to Vert 3 based on the in-game label. Do not duplicate the same structure in both sectors.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html"
+      ],
+      "candidate_original_screw_ids": [
+        13,
+        14
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "also_relevant_area": "vert-sector-1"
+    },
+    {
+      "id": "AR-V03-02",
+      "area": "vert-sector-3",
+      "kind": "existing_holovator_roof_scaffold",
+      "landmark": "Courtyard near Café Cyclone",
+      "notes": "Existing owner route through covered arch to courtyard lift remains authoritative for its photographed approach. Raider King describes a northern scaffolding course from the roof; obstacle-removal methods differ across secondary sources. No new mandatory move requirement or exact ladder location is asserted.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/stat-boosters.html",
+        "atlas-explorer-data.json"
+      ],
+      "candidate_original_screw_ids": [
+        14
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vert-cyclone",
+      "existing_route_id": "cafe-cyclone"
+    },
+    {
+      "id": "AR-V08-01",
+      "area": "vert-sector-8",
+      "kind": "existing_ladder_rooftop_glide",
+      "landmark": "Hotel Z right/behind courtyard",
+      "notes": "Owner-photographed Hotel Z ladder and Thonky Mission 16 establish courtyard climb, roof descent to Urbain/Taunie, Roto-Glide unlock, then crossing to adjacent roofs and two web bridges. These are written route observations, not measured bridge endpoints. The ladder is not a newly discovered physical device.",
+      "sources": [
+        "MAPS_LADDER_FIELD_SURVEY_2026-11-22.json",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/stat-boosters.html"
+      ],
+      "candidate_original_screw_ids": [
+        1,
+        3,
+        4
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "hotel-z-ladder",
+      "existing_route_id": "hotel-z-ladder",
+      "existing_atlas_approx_player_xy": [
+        1203,
+        1556
+      ],
+      "existing_precision": "approx_owner_player_standing_ring"
+    },
+    {
+      "id": "AR-R01-01",
+      "area": "rouge-sector-1",
+      "kind": "courtyard_scaffold_course",
+      "landmark": "Between the southern buildings / central courtyard",
+      "notes": "Two pickups are described at different levels: one accessible by a carefully timed roll to a lower platform, another by gliding to a separate platform. Altissimo also records rock-clearing access and a Roto-Glide requirement for one pickup. Preserve original #23/#24 clues but individual mapping and tier correspondence need visual confirmation.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        23,
+        24
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-R01-02",
+      "area": "rouge-sector-1",
+      "kind": "existing_holovator_rooftop_route",
+      "landmark": "West of Rouge Plaza",
+      "notes": "Independent guide describes using the repaired lift after the worker battle, then navigating around the northern rooftop. Related scaffold and onward roof routes exist but have not been visually matched to the owner-photo arrival or individual original Screw markers.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-004-a-break-time-battle",
+        "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
+      ],
+      "candidate_original_screw_ids": [
+        25,
+        26,
+        27
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "rouge-plaza-west",
+      "existing_route_id": "rouge-plaza-west"
+    }
+  ],
+  "summary": {
+    "areas_total": 68,
+    "sector_text_research_started": 5,
+    "wild_zone_text_research_started": 0,
+    "route_course_leads": 10,
+    "new_exact_ladder_pins": 0,
+    "new_exact_scaffold_pins": 0,
+    "new_exact_bridge_endpoints": 0,
+    "fully_completed_areas": 0
+  },
+  "next": "Try independent accessible map/gameplay images for AR-V01-02/03 and AR-V02-01, then reconcile with native map and the owner photo survey. Continue Vert 4 courtyard scaffolds and H-08 facade evidence in parallel. Request owner images only for specifically unresolved locations."
+}
