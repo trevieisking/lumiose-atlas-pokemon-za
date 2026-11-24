@@ -229,8 +229,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,9);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,9);
+  assert.equal(data.routes.length,10);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,10);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -307,6 +307,37 @@ test("AT-288 courtyard route preserves all three distinct photo galleries and or
   assert.equal(survey.at_288.owner_photo_reinspection.count,7);
   assert.equal(survey.at_288.new_exact_pins,0);
   assert.ok(survey.leads.filter(l=>v4.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&!l.publish_new_pin));
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.ladders.length,1);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
+test("AT-289 distinguishes two Vert 5 scaffold courses without duplicating Screw IDs or inventing pins",()=>{
+  const route=data.routes.find(x=>x.id==="vert5-scaffold-courses");
+  assert.ok(route);
+  assert.equal(route.point_id,"vert-sector-5");
+  assert.equal(route.anchor_precision,"district_only");
+  assert.equal(route.roof_exit_xy,null);
+  assert.equal(route.known_floor_plan,false);
+  assert.equal(route.source_record,"MAPS_ACCESS_ROUTE_SURVEY.json");
+  assert.match(route.steps[1].instruction,/northwest of Hotel Z.*#1 is a likely match/);
+  assert.match(route.steps[2].instruction,/recessed platform.*#5 is a likely candidate/);
+  assert.match(route.steps[3].instruction,/pipe-lined wall.*not a verified connection/);
+  assert.match(route.steps[4].instruction,/Rock Smash.*golden TM ball/);
+  assert.match(route.steps[5].instruction,/Main Mission 16.*Beedrillite/);
+  assert.equal(route.steps.at(-1).evidence,"unverified");
+  const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+  const v5=survey.coverage.find(x=>x.id==="vert-sector-5");
+  assert.equal(v5.geometry_complete,false);
+  assert.equal(v5.inventory_complete,false);
+  assert.equal(v5.lead_ids.length,6);
+  assert.equal(survey.at_289.distinct_scaffold_pickup_locations_text_corroborated,2);
+  assert.deepEqual(survey.at_289.original_clues_preserved.map(x=>x.number),[1,5]);
+  assert.equal(survey.at_289.marker_identity_confirmed,false);
+  assert.equal(survey.at_289.no_new_screw_ids,true);
+  assert.equal(survey.at_289.new_exact_pins,0);
+  assert.equal(survey.at_289.visual_evidence.coordinate_alignment_performed,false);
+  assert.ok(survey.leads.filter(l=>v5.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&l.canonical_screw_id===null&&!l.publish_new_pin));
+  assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
   assert.equal(data.holovators.length,21);
   assert.equal(data.ladders.length,1);
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
