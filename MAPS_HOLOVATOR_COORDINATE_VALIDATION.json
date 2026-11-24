@@ -2574,5 +2574,103 @@
     "original_chatgpt_workspace_site_modified": false,
     "next_target": "DR-H-07 / Side Mission 071 The Burning Gaze of Watchog",
     "release_state": "branch_pending_exact_head_ci_and_Pages"
+  },
+  "independent_source_recheck_h07_h08_2026_11_24": {
+    "date": "2026-11-24",
+    "recheck_scope": "H-07 and H-08 independent mission game guide / capture eligibility / owner photo proximity; source coordinates NOT exact device points",
+    "mission_ids": [
+      "DR-H-07",
+      "DR-H-08"
+    ],
+    "h07": {
+      "mission_no": 71,
+      "quest_name": "The Burning Gaze of Watchog",
+      "area": "Magenta Sector 2 / Autumnal Avenue northeast of Wild Zone 7, near Lysandre Café and Centrico",
+      "requester": "Chuckie",
+      "enemy": "Alpha Watchog",
+      "enemy_level": 50,
+      "enemy_catchable": true,
+      "mission_clears_when": "Capture OR defeat Alpha Watchog; catching is useful for Alpha collection",
+      "rewards": {
+        "pokedollars": 1200,
+        "assault_vest": 1,
+        "full_heal": 3
+      },
+      "unlock_variance": "Serebii lists visiting Rust Syndicate Office in Main Mission 24; Thonky references starting Main Mission 25; preserve existing game-guide event wording",
+      "evidence": [
+        "https://www.serebii.net/legendsz-a/sidemissions/theburninggazeofwatchog.shtml",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-071-the-burning-gaze-of-watchog",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_in-game_event_Pok%C3%A9mon_in_Pok%C3%A9mon_Legends:_Z-A",
+        "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards"
+      ],
+      "owner_photographed_nearby_holovator": "lysandre-autumnal",
+      "owner_photographed_nearby_holovator_approx_city_JPG_xy": [
+        739,
+        740
+      ],
+      "owner_gallery_original_jpg_count": 5,
+      "owner_same_physical_device_as_Chuckies_quest_confirmed": false,
+      "mission_marker_other_coordinate_space": [
+        8429,
+        8099
+      ],
+      "exact_Atlas_ground_entrance_xy": null,
+      "exact_roof_exit_xy": null,
+      "new_map_pin": false,
+      "fieldbook_special_tip": "alphas.html#alpha-watchog-mission-71",
+      "sidequest_link": "side-missions.html#quest-71",
+      "photo_reference": "atlas-explorer.html?place=lysandre-autumnal"
+    },
+    "h08": {
+      "mission_no": 80,
+      "quest_name": "A Shocking Territorial Dispute",
+      "area": "Hibernal Avenue west/southwest of Wild Zone 15, from Hibernal Pokémon Center northeast along avenue",
+      "requester": "Amordél",
+      "enemy": [
+        {
+          "species": "Manectric",
+          "level": 52,
+          "catchable": false
+        },
+        {
+          "species": "Ampharos",
+          "level": 52,
+          "catchable": false
+        }
+      ],
+      "rewards": {
+        "pokedollars": 3500,
+        "quick_balls": 4,
+        "lumiose_galettes": 1
+      },
+      "unlock": "Progress Main Mission 26; Serebii after battling Lebanne, Thonky after advancing An Invitation from the SBC",
+      "evidence": [
+        "https://www.serebii.net/legendsz-a/sidemissions/ashockingterritorialdispute.shtml",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-080-a-shocking-territorial-dispute",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)"
+      ],
+      "source_marker_other_coordinate_space": [
+        13520,
+        5172
+      ],
+      "nearby_owner_research_screens_not_positively_device_matched": true,
+      "exact_Atlas_ground_entrance_xy": null,
+      "exact_roof_exit_xy": null,
+      "new_map_pin": false,
+      "sidequest_link": "side-missions.html#quest-80",
+      "map_fallback": "atlas-explorer.html"
+    },
+    "source_guide_records_corrected": [
+      71,
+      80
+    ],
+    "existing_17_source_sections_retained": true,
+    "existing_203_quest_progress_keys_retained": true,
+    "owner_Holovator_research_records_retained": 21,
+    "owner_photo_count_retained": 111,
+    "confirmed_exact_physical_device_pins_added": 0,
+    "registered_dynamic_hyperspace_portal_pins_added": 0,
+    "original_ChatGPT_SiteA_and_Supabase_changed": false,
+    "next_target": "DR-H-09 / Side Mission 092 The Beldum Blockade / Beldum Blockage: verify quest/camera identity, access and rewards without new exact pin"
   }
 }

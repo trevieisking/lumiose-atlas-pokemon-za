@@ -33,6 +33,11 @@ for(const x of restored){
   const sourcePath=x.match(/<img src="(dex-art\/[^"]+)"/)?.[1];
   assert.ok(sourcePath&&existsSync(new URL("../"+sourcePath,import.meta.url)),"Missing source illustration "+sourcePath);
 }
+// AT-283: independently verified catchable mission Alpha; preserve all 20 original zone cards.
+assert.ok(html.includes('id="alpha-watchog-mission-71"'));
+assert.ok(html.includes("Catching this red-eyed level 50 Watchog also completes the mission"));
+assert.ok(html.includes('href="side-missions.html#quest-71"'));
+assert.equal((html.match(/id="alpha-watchog-mission-71"/g)||[]).length,1);
 assert.match(css,/@media\(max-width:480px\)/);
 assert.match(css, /grid-template-columns:1fr/);
 assert.doesNotMatch(html+css+js,/sb_secret_|service_role_key|sk-proj-|github_pat_/i);
