@@ -1913,6 +1913,102 @@
       ],
       "known_floor_plan": false,
       "roof_exit_xy": null
+    },
+    {
+      "id": "vert7-holovator-power",
+      "title": "Vert Sector 7 — Élec's lift and rooftop Screw (#40)",
+      "point_id": "vert-sector-7",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "side_mission": 40,
+      "description": "Independent quest and rooftop guides establish the route sequence. The exact physical lift, door and roof landing are not yet matched to our owner photos. This is a written route, not a new map pin.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start at Vert Pokémon Center",
+          "instruction": "Head northeast along South Boulevard toward the station-side frontage of Vert Sector 7. The disabled lift is near Élec.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Unlock the request",
+          "instruction": "After winning the Canari Quiz Whiz during Main Mission 14, speak to Élec for Side Mission 40.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Restore the lift",
+          "instruction": "Target the disabled Holovator and hit it with an Electric-type move. Complete the request before trying to ascend.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Ascend and find the roof bridge",
+          "instruction": "Use the repaired lift. A published Screw route leads ahead across a leaf bridge and then turns right along the roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Look for the Colorful Screw",
+          "instruction": "Check the far end of that rooftop, near the northeastern corner of the complex southeast of the grassy area. Our original numbered Screw clue and its exact pickup pixel have not yet been reconciled with this route.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check the remaining geometry",
+          "instruction": "Exact doorway, roof arrival, bridge endpoints and pickup positions still require an in-game survey. No exact pin or new collection checkbox is claimed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
+    },
+    {
+      "id": "jaune6-holovator-muscle",
+      "title": "Jaune Sector 6 — Médierà's lift and rooftop finds (#56)",
+      "point_id": "jaune-sector-6",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "side_mission": 56,
+      "description": "Follow corroborated mission directions and an independently reported rooftop lead. A named sector is not an exact lift location; the device and landing coordinates are still awaiting a field survey.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start from Wild Zone 8",
+          "instruction": "Take the streets southwest from Wild Zone 8, then turn southeast toward Jaune Sector 6 and the mission marker.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Find Médierà",
+          "instruction": "Speak to Médierà beside the disabled lift for Side Mission 56. Sources place availability around the Rank D victory in Main Mission 19 and the transition to Main Mission 20.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Use a physical Fighting-type attack",
+          "instruction": "Target the Holovator with a physical Fighting-type move, such as Rock Smash. A special-category or status move will not complete the request.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Explore the reopened rooftop",
+          "instruction": "Ride the restored lift. GameWith reports a Wild Charge TM and wild Larvitar in the rooftop area. Look for them in-game; neither has a measured Atlas pickup or spawn coordinate.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check the roof landing",
+          "instruction": "We still need ground and roof photographs and independent map registration. No exact new doorway, roof, item or Pokémon pin has been placed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
     }
   ],
   "not_mapped": [
