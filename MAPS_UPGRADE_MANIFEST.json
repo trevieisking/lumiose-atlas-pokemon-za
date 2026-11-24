@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 22,
+  "revision": 23,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
-  "current_phase": "Independent clean-branch rotating city explorer: real 1920px game basemap, 20 original Wild Zones, 48 sector directory, 21 owner-surveyed approximate Holovators with 90 already hosted JPGs, Hotel Z courtyard ladder and six surveyed street/passage/roof route sequences. New standalone page awaiting CI/mobile browser QA and safe merge; original ChatGPT Site and Supabase untouched.",
+  "current_phase": "Live independent Atlas 2.0 on GitHub Pages: 48 named sectors, 20 Wild Zones, 21 approximate owner-surveyed Holovator areas and 111 hosted owner photos. Source-first H-01/H-02 access route recheck ongoing; 0 exact entrance-roof coordinate pairs. Issue #28 full sector item mapping remains open. Original ChatGPT Site and Supabase untouched.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -1830,5 +1830,22 @@
     ],
     "existing_page_edits": "Add one link each to maps.html and sector-maps.html; preserve rest byte-for-byte",
     "later_phase": "Inspect authoritative original ChatGPT Workspace project source when available, then plan independent port with feedback/player-data safety checks"
+  },
+  "at_280_verification_2026_11_24": {
+    "baseline_main_sha": "76331c54eed9e0bf2996f7ecbf5f44c8d6c6b616",
+    "checked_holovator_mission_ids": [
+      "DR-H-01",
+      "DR-H-02"
+    ],
+    "published_geometry_changes": 0,
+    "external_mission_xy_used_as_device_pin": false,
+    "owner_photo_count_retained": 111,
+    "holovator_research_count_retained": 21,
+    "source_battle_level_verified": 200,
+    "source_capture_level_verified": 85,
+    "next_target": "DR-H-03 / Side Mission 040, independent device-identity reconciliation before map pins",
+    "ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#at-280--source-first-guide-and-holovator-validation-resumed-24-november-2026",
+    "plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md#at-280--resume-full-atlas-source-verification-holovator-h-01h-02-and-ex3-boss-clarity-24-november-2026",
+    "publication": "branch_only_pending_CI_and_Pages_review"
   }
 }
