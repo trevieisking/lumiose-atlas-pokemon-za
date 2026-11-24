@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 30,
+  "revision": 31,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-288 branch: Vert Sector 4 courtyard source-first route and owner photo reinspection. Six partial sector audits, 16 access-route/course leads, nine proposed written/owner approaches; zero new exact ladder/scaffold/bridge points. AT-287 deployed baseline unchanged pending exact-head tests. Next AT-289 Vert Sector 5.",
+  "current_phase": "AT-289 branch: Vert Sector 5 source-first research of two distinct scaffold pickups, cross-roof ladder, ground TM and separate Mission 16 access. Seven partial sector audits, 22 route/course leads, ten proposed written/owner approaches. AT-288 nine-route release verified live. Zero new exact access points; pending exact-head CI and visual review. Next AT-290 Vert Sector 6.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -172,7 +172,7 @@
         "SM-04"
       ],
       "acceptance": "Evidence-backed ascent points, floors and written route; unverified leads remain separate",
-      "progress_note": "Source-first access research ongoing alongside unfinished SM-04 physical-device reconciliation. 68 area targets, six partial sector audits, 16 route/course leads. Vert 4 owner photo reinspection supports scaffold adjacency and two distinct courtyard lifts; no measured new entrance, roof exit or scaffold coordinate."
+      "progress_note": "Source-first access research continues alongside SM-04 unresolved Holovator reconciliation. 68 targets, seven partial sector audits, 22 leads. Vert 5 two distinct scaffold pickup sites text corroborated, image evidence inspected, individual clue identity and geometry unresolved."
     },
     {
       "id": "SM-06",
@@ -266,9 +266,17 @@
       "record": "present_in_existing_directory",
       "geometry": "not_individually_verified",
       "holovators": "not_yet_audited",
-      "scaffolds_and_ladders": "not_yet_audited",
+      "scaffolds_and_ladders": "partial_text_and_external_photo_research_geometry_unregistered",
       "items": "source_text_only_unless_future_exact_evidence",
-      "capture_coverage": "requires_individual_evidence_review"
+      "capture_coverage": "requires_individual_evidence_review",
+      "access_survey_lead_ids": [
+        "AR-V05-01",
+        "AR-V05-02",
+        "AR-V05-03",
+        "AR-V05-04",
+        "AR-V05-05",
+        "AR-V05-06"
+      ]
     },
     {
       "id": "Vert-06",
@@ -888,7 +896,7 @@
     "holovator_category_marker_coordinates_individually_extracted": 0,
     "atlas_holovator_entry_xy_verified": 0,
     "verified_rooftop_exit_elevations": 0,
-    "next_safe_record": "Retain unresolved H-08 Hibernal Avenue / Rouge 6 facade reconciliation and Vert 1/2 image-registration leads. Next AT-289 Vert Sector 5 source-first courtyard and grassy plaza scaffold research; no inferred roof link.",
+    "next_safe_record": "AT-290 Vert Sector 6: Racine Construction, grassy-area scaffolding, Restaurant Le Nah rooftop ladder and waterway access. Keep unresolved prior sector registration and H-08 facade queue.",
     "status": "9 source mission deep-links and quest localities crosschecked; 0 device category glyphs/entrances/Atlas XY confirmed",
     "key_qualification": "Do not convert Gamer Guides mission X/Y into exact Holovator X/Y or Atlas image percentages without independently matched device marker and calibrated coordinate transform. No third-party image copying.",
     "source_mission_marker_deep_links_verified": 9,
@@ -2141,7 +2149,55 @@
     "existing_photos_preserved": 111,
     "exact_new_geometry": 0,
     "release_scope": "two existing direction strings, one district-only route, validated reciprocal links to original galleries; no menu, map asset, player progress, feedback, Supabase or Workspace change",
+    "release_gate": "passed_exact_head_CI_visual_review_and_Pages",
+    "next": "AT-289 Vert Sector 5: distinguish courtyard and grassy-plaza scaffolds; reconcile original Screw clue #5 and independently reported additional pickups, and check the rooftop link from Vert 4 without inventing a connection. Preserve unresolved Vert 1/2 and H-08 research.",
+    "release_evidence": {
+      "pr": 125,
+      "reviewed_sha": "5ab75a0436f9df09a8627a7802d30bc234e890a0",
+      "validation_run": 45377640237,
+      "screenshot_artifact": 14911787238,
+      "merged_sha": "fdc61c0cd86bda37d200b3e65b39966e109f4fd0",
+      "pages_run": 45378112587,
+      "pages_conclusion": "success"
+    }
+  },
+  "at_289_access_survey": {
+    "baseline_main_sha": "fdc61c0cd86bda37d200b3e65b39966e109f4fd0",
+    "canonical_register": "MAPS_ACCESS_ROUTE_SURVEY.json",
+    "sector": "vert-sector-5",
+    "coverage": {
+      "areas_total": 68,
+      "sector_text_research_started": 7,
+      "wild_zone_text_research_started": 0,
+      "route_course_leads": 22,
+      "new_exact_ladder_pins": 0,
+      "new_exact_scaffold_pins": 0,
+      "new_exact_bridge_endpoints": 0,
+      "fully_completed_areas": 0
+    },
+    "lead_ids": [
+      "AR-V05-01",
+      "AR-V05-02",
+      "AR-V05-03",
+      "AR-V05-04",
+      "AR-V05-05",
+      "AR-V05-06"
+    ],
+    "source_scaffold_pickup_sites": 2,
+    "candidate_original_screw_clues": [
+      1,
+      5
+    ],
+    "individual_marker_match_confirmed": false,
+    "external_images_visually_reviewed": 2,
+    "new_route_id": "vert5-scaffold-courses",
+    "prior_routes_retained": 9,
+    "proposed_routes": 10,
+    "existing_holovator_pins_preserved": 21,
+    "existing_photos_preserved": 111,
+    "exact_new_geometry": 0,
+    "release_scope": "one district-only data route through existing renderer; no renderer, menu, map asset, player progress, feedback, Supabase or Workspace change",
     "release_gate": "branch_pending_exact_SHA_CI_visual_review_and_Pages",
-    "next": "AT-289 Vert Sector 5: distinguish courtyard and grassy-plaza scaffolds; reconcile original Screw clue #5 and independently reported additional pickups, and check the rooftop link from Vert 4 without inventing a connection. Preserve unresolved Vert 1/2 and H-08 research."
+    "next": "AT-290 Vert Sector 6: Racine Construction and nearby grassy area scaffolding, Restaurant Le Nah rooftop ladder, waterway approaches and TM leads; preserve original Screw IDs and distinguish story rewards from pickups. Retain unresolved Vert 1/2/4/5 geometry and H-08 facade queue."
   }
 }
