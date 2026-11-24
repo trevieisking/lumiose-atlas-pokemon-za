@@ -632,7 +632,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
   assert.equal(data.sectors.length,48);
   assert.equal(data.zones.length,20);
   assert.equal(data.holovators.length,21);
-  assert.equal(matched.length,23);
+  assert.equal(matched.length,31);
   assert.equal(source.sector_orientation.length,12);
   assert.ok(data.sectors.every(s=>s.xy===null),"No fictitious sector centroid pin");
   for(const row of source.sector_orientation){
@@ -642,7 +642,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
     assert.deepEqual(record.street_bearing,{text:row.orientation,source_crop_id:row.crop_id,confidence:"source_image_orientation_only",native_label_xy:null});
     assert.ok(source.crop_records.some(c=>c.id===row.crop_id),"Missing provenance record");
   }
-  assert.equal(data.sectors.filter(s=>!s.street_bearing).length,25);
+  assert.equal(data.sectors.filter(s=>!s.street_bearing).length,17);
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
   assert.match(html,/id="aeSectorContextBearing"/);
   assert.match(html,/id="aeStreetEvidenceSummary"/);
@@ -720,7 +720,7 @@ test("AT-306: 11 locally verified original screenshot crops are tracked honestly
  assert.equal(data.holovators.length,21);
  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
  assert.equal(data.routes.length,15);
- assert.equal(data.sectors.filter(s=>s.street_bearing).length,23);
+ assert.equal(data.sectors.filter(s=>s.street_bearing).length,31);
  const unique=new Set();
  for(const row of candidates.accepted){
   assert.ok(!unique.has(row.sector_id));unique.add(row.sector_id);
@@ -747,12 +747,41 @@ test("AT-306: 11 locally verified original screenshot crops are tracked honestly
   assert.ok(!unique.has(row.sector_id));
   assert.ok(hosted.missing_sector_ids.includes(row.sector_id));
   assert.equal(row.status,"research_only_rejected");
-  assert.equal(data.sectors.find(s=>s.id===row.sector_id).pending_source_photo_evidence,undefined);
+  assert.equal(data.sectors.find(s=>s.id===row.sector_id).pending_source_photo_evidence?.status,"verified_local_png_pending_binary_transfer","New owner replacements supersede previously rejected partial photos; old crop remains excluded.");
  }
- assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,11);
+ assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,19);
  const map=read("atlas-explorer.js");
  assert.match(map,/clean original game-map screenshot crop was verified/);
  assert.match(map,/MAPS_AT306_SOURCE_RECOVERY_2026-11-24\.json/);
  assert.match(map,/clean source crop pending GitHub upload/);
  assert.match(read("atlas-explorer.html"),/23 named-sector bearings/);
+});
+
+
+test("AT-309: all remaining eight owner sector screenshot labels are source registered but not given fake geographic coordinates or PNG URLs",()=>{
+ const at309=JSON.parse(read("MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"));
+ const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
+ const hosted=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
+ assert.equal(at309.accepted.length,8);
+ assert.equal(at306.accepted.length,11);
+ assert.equal(hosted.counts.sectors_with_photographic_references,29);
+ assert.equal(hosted.counts.image_crops,23);
+ assert.equal(data.sectors.length,48);assert.equal(data.zones.length,20);
+ assert.equal(data.holovators.length,21);assert.equal(data.routes.length,15);
+ assert.ok(data.sectors.every(s=>s.xy===null));
+ assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,19);
+ assert.deepEqual(new Set([...at306.accepted.map(r=>r.sector_id),...at309.accepted.map(r=>r.sector_id)]).size,19);
+ assert.deepEqual([...at306.accepted.map(r=>r.sector_id),...at309.accepted.map(r=>r.sector_id)].sort(),hosted.missing_sector_ids.slice().sort());
+ for(const row of at309.accepted){
+  const s=data.sectors.find(s=>s.id===row.sector_id);assert.ok(s,row.sector_id);
+  assert.equal(s.source_map_reference,undefined);
+  assert.equal(s.source_image_status,"needs_original_screenshot");
+  assert.deepEqual(s.street_bearing,{text:row.orientation_text,source_crop_id:row.sector_id,confidence:"source_image_orientation_only",native_label_xy:null});
+  assert.deepEqual(s.pending_source_photo_evidence,{status:"verified_local_png_pending_binary_transfer",source_name:row.source_name,source_sha256:row.source_sha256,crop_sha256:row.sha256,crop_id:row.sector_id,native_label_xy:null});
+  assert.equal(row.native_label_xy,null);assert.equal(row.geographically_registered,false);
+  assert.match(row.sha256,/^[0-9a-f]{64}$/);assert.match(row.predicted_git_blob_sha,/^[0-9a-f]{40}$/);
+  assert.equal(row.width,row.crop_xyxy[2]-row.crop_xyxy[0]);assert.equal(row.height,row.crop_xyxy[3]-row.crop_xyxy[1]);
+  assert.ok(!read("sector-maps.html").includes('<img src="'+row.expected_future_asset_path+'"'));
+ }
+ assert.match(read("atlas-explorer.js"),/MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24/);
 });

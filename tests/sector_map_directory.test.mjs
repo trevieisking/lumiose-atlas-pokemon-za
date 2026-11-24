@@ -219,7 +219,7 @@ assert.equal(atlasPhotoLibrary.release.original_workspace,"not_changed");
 // AT-306: the eleven real screenshot crops are verified locally but not hosted; never render 404 image links.
 const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
 assert.equal(at306.accepted.length,11);
-assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,11);
+assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,19,"Eleven AT-306 + eight AT-309 source notes use the same existing orientation style");
 for(const row of at306.accepted){
  const id="sector-"+row.sector_id;
  const start=page.indexOf('<article class="sector-card" id="'+id+'"');
@@ -238,4 +238,20 @@ for(const row of at306.excluded){
  const end=page.indexOf("</article>",start);
  assert.ok(start>=0&&end>start);
  assert.ok(!page.slice(start,end).includes('data-at306-candidate='),"Rejected crop must not be promoted");
+}
+
+
+// AT-309: the last eight clean owner source screenshot crops are registered but not hosted.
+const at309=JSON.parse(read("MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"));
+assert.equal(at309.accepted.length,8);
+assert.equal(at309.counts.published_sector_photo_coverage,29);
+assert.equal(at309.counts.total_source_sector_coverage_after_previous_unhosted_and_current,48);
+assert.equal((page.match(/data-at309-source="/g)||[]).length,8);
+for(const row of at309.accepted){
+ const start=page.indexOf('id="sector-'+row.sector_id+'"');
+ const end=page.indexOf("</article>",start);assert.ok(start>=0&&end>start);
+ const section=page.slice(start,end);
+ assert.ok(section.includes('data-at309-source="'+row.sector_id+'"'));
+ assert.ok(section.includes(row.orientation_text));
+ assert.ok(!section.includes('<img src="'+row.expected_future_asset_path+'"'));
 }

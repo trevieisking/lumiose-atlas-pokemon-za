@@ -203,7 +203,7 @@ function detailsFor(item){
       selectedPanel.append(link("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json","Review source image provenance"));
     }else if(item.pending_source_photo_evidence?.status==="verified_local_png_pending_binary_transfer"){
       selectedPanel.append(paragraph("A clean original game-map screenshot crop was verified from the owner source, but its PNG has not yet been uploaded to GitHub. No image is linked until its exact file hashes are checked."));
-      selectedPanel.append(link("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json","Inspect prepared source-crop provenance"));
+      selectedPanel.append(link(item.pending_source_photo_evidence?.source_name?.startsWith("10000283")?"MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json":"MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json","Inspect prepared source-crop provenance"));
     }else{
       selectedPanel.append(paragraph("Original in-game screenshot for this numbered sector still needs verification. No precise street position is asserted."));
     }

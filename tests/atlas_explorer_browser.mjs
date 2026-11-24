@@ -956,7 +956,7 @@ try{
     await page.locator("#aeLayers [data-layer='sector-label']").check();
     assert.equal(await name.textContent(),"Vert Sector 1");
     await page.locator("#aeCoverageSector").selectOption("bleu-sector-9");
-    assert.match(await context.textContent(),/Street-level map position not yet source-verified/);
+    assert.match(await context.textContent(),/Source-map street bearing \(orientation only\): Bleu Sector 9 is east of South Boulevard/);
 
     assert.equal(await name.textContent(),"Bleu Sector 9");
     await page.locator("#aeCoverageSector").selectOption("");
@@ -1088,6 +1088,20 @@ try{
   assert.ok(at306Width.scroll<=at306Width.width+1&&at306Width.body<=at306Width.width+1,"AT-306 phone must be contained: "+JSON.stringify(at306Width));
   await at306Mobile.locator("#aeViewport").screenshot({path:output+"/at306-bleu3-phone.png"});
   await at306Mobile.close();
+  // AT-309: two new owner-source sector labels, original geometry and phone containment.
+  for(const [context,sector,expected,file] of [[desktopContext,"magenta-sector-2","Autumnal Avenue","at309-magenta-2-desktop"],[phoneContext,"jaune-sector-5","Jaune Plaza","at309-jaune-5-phone"]]){
+    const page=await context.newPage();
+    await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
+    await page.waitForFunction(name=>document.getElementById("aeSectorContextName")?.textContent===name,sector.split("-").map((p,i)=>i===0?p[0].toUpperCase()+p.slice(1):i===1?"Sector":p).join(" "));
+    assert.match(await page.locator("#aeSectorContextBearing").textContent(),new RegExp(expected));
+    assert.match(await page.locator("#aeSelected").textContent(),/PNG has not yet been uploaded to GitHub/);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    assert.equal(await page.locator("#aeCoverageGrid button").count(),25);
+    const sizes=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+    assert.ok(sizes.scroll<=sizes.width+1&&sizes.body<=sizes.width+1,"AT-309 screen overflow: "+JSON.stringify(sizes));
+    await page.locator("#aeViewport").screenshot({path:output+"/"+file+".png"});
+    await page.close();
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
