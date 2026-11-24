@@ -75,6 +75,16 @@ export function centreOn([x, y], view, viewport) {
   const where = project([x, y], { ...view, panX: 0, panY: 0 }, viewport);
   return constrain({ ...view, panX: viewport.width / 2 - where.x, panY: viewport.height / 2 - where.y }, viewport);
 }
+/* Optional, click-only public video references. Never accept arbitrary URLs,
+   infer coordinates, or treat a publisher's chapter as inspected footage. */
+export function routeVideoUrl(video) {
+  if (!video || typeof video.video_id !== "string" ||
+      !/^[A-Za-z0-9_-]{11}$/.test(video.video_id) ||
+      !Number.isInteger(video.start_seconds) || video.start_seconds < 0 || video.start_seconds > 86400 ||
+      !["publisher_chapter", "numbering_candidate"].includes(video.verification) ||
+      !["title", "creator", "note"].every(k => typeof video[k] === "string" && video[k].trim().length > 0 && video[k].length <= 500)) return null;
+  return "https://www.youtube.com/watch?v=" + video.video_id + "&t=" + video.start_seconds + "s";
+}
 export function normaliseRoute(route, pointIds) {
   if (!route || typeof route.id !== "string" || !pointIds.has(route.point_id) || !Array.isArray(route.steps) || !route.steps.length) return false;
   const allowed = new Set(["street", "plaza", "ground", "wild-zone", "stairs", "terrace", "passage", "courtyard", "ladder", "scaffold", "roof", "interior"]);

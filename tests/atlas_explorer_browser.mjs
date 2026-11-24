@@ -35,7 +35,8 @@ try{
   console.log("SECTOR_PHONE_OVERFLOW "+JSON.stringify(sectorBounds));
   await sectorProbe.close();
   assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
-  const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+  const desktopContext=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
+  const desktop=await desktopContext.newPage();
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
   await desktop.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
@@ -167,7 +168,8 @@ try{
   await desktop.locator("#aeResults button").first().click();
   assert.match(await desktop.locator("#aeSelected").textContent(),/no arbitrary pin|no precise mapped sector polygon/i);
   assert.equal(errors.length,0,"Desktop JavaScript errors: "+errors.join(" | "));
-  const phone=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const phoneContext=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const phone=await phoneContext.newPage();
   const mobileErrors=[];
   phone.on("pageerror",e=>mobileErrors.push(String(e)));
   await phone.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
@@ -720,10 +722,19 @@ try{
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 10.*Terra.*level 28 Diggersby/);
+    const missionVideo=page.locator('#aeCurrentStep .ae-route-video a');
+    assert.equal(await missionVideo.getAttribute("href"),"https://www.youtube.com/watch?v=IuvITD247zU&t=59s");
+    assert.equal(await missionVideo.getAttribute("target"),"_blank");
+    assert.equal(await missionVideo.getAttribute("rel"),"noopener noreferrer");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/TheLandOGaming.*not frame-verified/);
     await page.locator("#aeNextStep").click();
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
     assert.match(await page.locator("#aeCurrentStep").textContent(),/visible ladder.*does not establish a safe crossing/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Rooftop Screw #2.*Roto-Glide/);
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=694s");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*Archive 64.*unconfirmed/);
+    assert.equal(await page.locator('iframe[src*="youtube"]').count(),0);
     await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     await page.screenshot({path:output+"/at293-vert9-screw-"+device+".png",fullPage:false});
@@ -731,6 +742,8 @@ try{
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Alternative alley ladder.*purple sludge/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/TM019 Power Gem.*Vert 5\/9 sector label/);
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s");
+    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Quick Guides.*not frame-verified/);
     const step=await page.locator("#aeRouteProgress").textContent();
     await page.locator("#aeShowRouteMap").click();
     assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
@@ -750,6 +763,59 @@ try{
   }
   assert.equal(errors.length,0,"AT-293 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-293 phone JS errors: "+mobileErrors.join(" | "));
+
+  // AT-295: real click, intercepted YouTube tab, same-entry reload and fresh-tab return.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    const context=page.context();
+    await context.route("https://www.youtube.com/**",request=>request.fulfill({status:200,contentType:"text/html",body:"<p>Intercepted video for offline test</p>"}));
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
+    await page.locator("#aeZoomIn").click();
+    await page.locator("#aeTurnRight").click();
+    await page.locator("#aeViewport").press("ArrowLeft");
+    await page.locator("#aeLayers [data-layer='ladder']").uncheck();
+    for(let i=0;i<3;i++)await page.locator("#aeNextStep").click();
+    const video=page.locator("#aeCurrentStep .ae-route-video a");
+    await video.scrollIntoViewIfNeeded();
+    const originalTransform=await page.locator("#aeStage").evaluate(el=>el.style.transform);
+    const originalStep=await page.locator("#aeRouteProgress").textContent();
+    await page.evaluate(()=>localStorage.setItem("atlas-bookmark-regression-sentinel","untouched"));
+    const popupPromise=page.waitForEvent("popup");
+    await video.click();
+    const popup=await popupPromise;
+    // A popup may initially report about:blank. Wait for the actual expected navigation.
+    await popup.waitForURL(url=>url.origin==="https://www.youtube.com"&&url.pathname==="/watch"&&url.searchParams.get("v")==="5-dLjd4o8Rc"&&url.searchParams.get("t")==="694s",{waitUntil:"domcontentloaded",timeout:15000});
+    await popup.close();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),originalStep);
+    const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem("lumiose-atlas:video-return:v1")));
+    assert.equal(saved.stepIndex,3);assert.equal(saved.videoId,"5-dLjd4o8Rc");
+    await page.reload({waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeVideoBookmarkNotice").textContent.includes("Resumed"));
+    await page.waitForFunction(expected=>document.getElementById("aeStage").style.transform===expected,originalTransform);
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),originalStep);
+    assert.equal(await page.locator("#aeLayers [data-layer='ladder']").isChecked(),false);
+    await page.waitForFunction(top=>Math.abs(document.querySelector("#aeCurrentStep .ae-route-video a").getBoundingClientRect().top-Math.max(0,Math.min(innerHeight-60,top)))<25,saved.anchorTop);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.screenshot({path:output+"/at295-video-return-"+device+".png",fullPage:false});
+    const reopened=await context.newPage();
+    await reopened.goto(base+"/atlas-explorer.html",{waitUntil:"load"});
+    await reopened.waitForFunction(()=>document.getElementById("aeVideoBookmarkNotice").textContent.includes("Resumed"));
+    assert.equal(await reopened.locator("#aeRouteProgress").textContent(),originalStep);
+    assert.equal(await reopened.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
+    await reopened.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
+    await reopened.waitForFunction(()=>document.getElementById("aeCoverageSector").value==="vert-sector-4");
+    assert.notEqual(await reopened.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
+    await reopened.locator("#aeForgetVideoBookmark").click();
+    assert.equal(await reopened.evaluate(()=>localStorage.getItem("lumiose-atlas:video-return:v1")),null);
+    assert.equal(await reopened.evaluate(()=>localStorage.getItem("atlas-bookmark-regression-sentinel")),"untouched");
+    await reopened.goto(base+"/atlas-explorer.html",{waitUntil:"load"});
+    await reopened.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"));
+    assert.equal(await reopened.locator("#aeRouteSelect").inputValue(),"");
+    await reopened.close();
+    await context.unroute("https://www.youtube.com/**");
+  }
+  assert.equal(errors.length,0,"AT-295 desktop errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-295 phone errors: "+mobileErrors.join(" | "));
 
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.
@@ -845,7 +911,7 @@ try{
     "Every standalone guide page must fit the phone without disabling local maps or tables");
   await widthProbe.close();
 
-  await phone.close();await desktop.close();
+  await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
   if(browser)await browser.close();
