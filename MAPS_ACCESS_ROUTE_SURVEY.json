@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-290",
+  "batch": "AT-291",
   "date": "2026-11-24",
-  "baseline_main_sha": "287e8ceb0a7948425d690d2950d73b27d8287f95",
+  "baseline_main_sha": "f8cb229bf59fa0b41acc3203ad5ec51a928087d2",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -155,8 +155,14 @@
       "id": "vert-sector-7",
       "kind": "sector",
       "label": "Vert Sector 7",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "partial_text_and_source_coordinate_research_calibration_held",
+      "lead_ids": [
+        "AR-V07-01",
+        "AR-V07-02",
+        "AR-V07-03",
+        "AR-V07-04",
+        "AR-V07-05"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1501,19 +1507,156 @@
       "existing_record_id": "vert-cyclone",
       "existing_route_id": "cafe-cyclone",
       "also_relevant_area": "vert-sector-5"
+    },
+    {
+      "id": "AR-V07-01",
+      "area": "vert-sector-7",
+      "kind": "mission_holovator_access",
+      "landmark": "South Boulevard, northeast of Vert Pokémon Center, southwest of Racine Construction",
+      "notes": "Existing Side Mission 40 route already live. Thonky and Gamer Guides corroborate Élec, Electric attack and Main Mission 14 access; quest source XY (14670,14907) is not the device glyph. Previously documented W04/W05 chevrons project approximately to (1486,1532)/(1486,1515); same neighbourhood but not independently matched to mission device. Retain existing route and keep both candidate positions in the evidence register only.",
+      "sources": [
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-040-a-holovator-without-power",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-holovator-without-power",
+        "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_route_id": "vert7-holovator-power",
+      "existing_research_id": "DR-H-03",
+      "mission_source_xy": [
+        14670,
+        14907
+      ],
+      "mission_marker_id": 238212,
+      "exact_device_identity_confirmed": false
+    },
+    {
+      "id": "AR-V07-02",
+      "area": "vert-sector-7",
+      "kind": "mission_rooftop_vine_bridge",
+      "landmark": "Roof east of Wild Zone 17 / roof complex southeast of grassy area",
+      "notes": "After restoring the mission lift, a published route crosses a leaf bridge and follows the roof. Original clue #17 links to a separately recorded pickup with vine-bridge approach from the southern rooftops, while Altissimo reports a mission-gated rooftop Screw. This is a strong route-type candidate, not a measured identity or guaranteed continuous crossing. Do not confuse Raider King's own local #19 numbering with our #19 Racine interior clue.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        17
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235607
+      ],
+      "identity_status": "source pickup link matched to original roof clue; exact connection to mission40 unverified"
+    },
+    {
+      "id": "AR-V07-03",
+      "area": "vert-sector-7",
+      "kind": "scaffold_course",
+      "landmark": "Scaffold next to Racine Construction in Vert Sector 7",
+      "notes": "Raider King describes a simple ascending platform course next to Racine; source regional clue #18 explicitly specifies scaffolding, separate from the roof clue #17. Database destination marker ID 235589 corroborates the scaffold pickup category. Actual ground ascent base, tier and roof exit remain unknown.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        18
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235589
+      ],
+      "identity_status": "matching regional text and database marker link; individual physical ascent unverified"
+    },
+    {
+      "id": "AR-V07-04",
+      "area": "vert-sector-7",
+      "kind": "wild_zone_rooftop_orientation",
+      "landmark": "Wild Zone 17, south of Coulant Waterway",
+      "notes": "Wild Zone 17 opens after Main Mission 24 Reaching Rank C. Preserve its existing approximate centre and separate guide. Published encounter guide identifies day Klefki, night Lampent and flying Skarmory on/around rooftops; ground burrows for Diggersby and Chespin. These are area descriptions, not fixed spawn pins. No assumption that every nearby rooftop pickup requires Wild Zone unlock.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_7",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/wild-zones/vert-sector-7/all-wild-zone-17-pokemon-locations",
+        "https://www.powerpyx.com/pokemon-legends-z-a-all-wild-zone-locations/"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "wz-17",
+      "existing_atlas_approx_xy": [
+        1471,
+        1480
+      ],
+      "unlock": "after Main Mission 24",
+      "also_relevant_area": "wz-17"
+    },
+    {
+      "id": "AR-V07-05",
+      "area": "vert-sector-7",
+      "kind": "fixed_vendor_alley_orientation",
+      "landmark": "Alley near Wild Zone 17, Mega Shard Exchange",
+      "notes": "DLC Mega Shard trader is a fixed-location navigation lead, separate from daily-changing distortions. Bulbapedia and Serebii corroborate merchant and Genesect Drives, 540 Mega Shards each once relevant Side Mission 191 begins. Exact earliest shop availability differs by source revision and is not asserted. No shop pin or dynamic distortion marker added; existing guide data unchanged.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_7",
+        "https://www.serebii.net/pokearth/lumiosecity/vertdistrict.shtml",
+        "https://www.serebii.net/legendsz-a/legendary.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "dlc_only": true,
+      "side_mission": 191,
+      "gate_status": "vendor exact earliest availability unresolved"
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 8,
+    "sector_text_research_started": 9,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 29,
+    "route_course_leads": 34,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-291 Vert Sector 7 and source-coordinate calibration pilot: distinguish Side Mission 40 repaired lift and the existing approximate Vert 7 lead from fixed scaffolding, Screw #18 and rooftop/park pickups. Use small shared permanent landmark controls to test source XY registration before any exact pins. Retain unresolved prior sectors and H-08 facade.",
+  "next": "AT-292 Vert Sector 8: deepen Hotel Z courtyard ladder, adjacent roof/scaffold courses and original Screw clues #3/#4; preserve boundary clue #1 and existing Mission 16 route. Coordinate calibration held until independently matched permanent landmark control pairs become available. Continue the sector loop without retrying failed sources; retain earlier unresolved evidence.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -1755,6 +1898,143 @@
     },
     "new_exact_pins": 0,
     "existing_route_count": 10,
+    "proposed_route_count": 11
+  },
+  "at_291": {
+    "date": "2026-11-24",
+    "existing_route_id": "vert7-holovator-power",
+    "new_route_count": 0,
+    "reason_no_runtime_change": "Mission40 route already covers supported directions; additional scaffold identity, boundary and geometry not sufficiently resolved for another physical marker. Avoid duplicate route anchor or unsupported direction. Documentation-only checkpoint.",
+    "source_coordinate_discovery": {
+      "regional_source": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "database_source": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+      "records": [
+        {
+          "original_clue": 17,
+          "marker_id": 235607,
+          "database_display_id": 235608,
+          "source_xy": [
+            14688,
+            14156
+          ],
+          "description": "vine bridge from southern roof, then descent",
+          "source_coordinate_space": "Gamer Guides map space, uncalibrated XY",
+          "coordinate_semantics": "pickup marker, not physical entrance",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235607",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235607",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        },
+        {
+          "original_clue": 18,
+          "marker_id": 235589,
+          "database_display_id": 235590,
+          "source_xy": [
+            14986,
+            14518
+          ],
+          "description": "scaffold crossing",
+          "source_coordinate_space": "Gamer Guides map space, uncalibrated XY",
+          "coordinate_semantics": "pickup marker, not physical entrance",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235589",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235589",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        }
+      ],
+      "link_ids_verified": 2,
+      "cumulative_pickup_refs": 6,
+      "source_to_atlas_transform_calibrated": false
+    },
+    "calibration_pilot": {
+      "status": "held_at_control_eligibility_gate",
+      "fit_attempted": false,
+      "reason": "No independently matched source/native coordinates for the same precisely identified permanent feature. Interactive source map and pickup thumbnails unavailable; exact source landmark points unavailable. Do not treat a mission marker as a device, a rough zone centre as a fast-travel entrance, or an item marker as a ladder.",
+      "attempted_sources": [
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-holovator-without-power",
+        "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city"
+      ],
+      "unavailable": [
+        "2 regional pickup deep links",
+        "2 database pickup deep links",
+        "2 marker thumbnails"
+      ],
+      "control_candidates_reviewed": [
+        {
+          "name": "DR-H-03",
+          "source_xy": [
+            14670,
+            14907
+          ],
+          "native_candidates": [
+            [
+              1486,
+              1532
+            ],
+            [
+              1486,
+              1515
+            ]
+          ],
+          "rejected": "quest marker versus approximate lift symbol; physical identity and offset unknown"
+        },
+        {
+          "name": "Wild Zone 17",
+          "native_xy": [
+            1471,
+            1480
+          ],
+          "source_xy": null,
+          "rejected": "source identical centre coordinate unavailable; existing saved centre only approximate"
+        },
+        {
+          "name": "Prism Tower",
+          "native_xy": [
+            960,
+            960
+          ],
+          "source_xy": null,
+          "rejected": "approximate centre, no same-feature source coordinate"
+        },
+        {
+          "name": "Hotel Z",
+          "native_xy": [
+            1202,
+            1556
+          ],
+          "source_xy": null,
+          "rejected": "owner standing point at courtyard ladder, not certified hotel landmark centre"
+        },
+        {
+          "name": "Racine Construction",
+          "native_xy": null,
+          "source_xy": null,
+          "rejected": "no registered matching physical landmark coordinates"
+        }
+      ],
+      "eligible_control_pairs": 0,
+      "minimum_affine_fit_controls": 3,
+      "minimum_independent_holdout_controls": 1,
+      "required": "at least three noncollinear same-feature pairs plus independent holdout(s), sufficient local accuracy and separate entrance/exit evidence",
+      "transform": null,
+      "residual": null,
+      "withheld_test": null,
+      "projection_performed": false,
+      "next_policy": "Park calibration until actual same-feature pairs are available. Do not repeat failed link requests each sector; proceed with source-backed routes."
+    },
+    "source_confidence_note": "Regional list marker IDs matched literally; database headings differ, no numeric-offset assumption. Independent roof approach sources corroborate route type only. Two pickups not two new structures.",
+    "new_exact_pins": 0,
+    "existing_route_count": 11,
     "proposed_route_count": 11
   }
 }
