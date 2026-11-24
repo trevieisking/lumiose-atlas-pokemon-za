@@ -6,7 +6,7 @@ import {createHash} from "node:crypto";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
   panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart
+  coverageCellCentre, districtStart, routeVideoUrl
 } from "../atlas-explorer-geometry.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
@@ -557,4 +557,16 @@ test("AT-267 navigates all 25 image regions and 48 sectors without fabricated po
   assert.match(read("sector-maps.js"),/atlas-explorer\.html\?sector=/);
   assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
+
+test("AT-295 optional video references are timestamped, labelled, safe and do not establish map geometry",()=>{
+  const route=data.routes.find(x=>x.id==="vert9-vernal-rooftop-screw");
+  const refs=route.steps.flatMap((s,i)=>(s.video_refs||[]).map(v=>[i,v]));
+  assert.deepEqual(refs.map(([i,v])=>[i,v.video_id,v.start_seconds,v.verification]),[[1,"IuvITD247zU",59,"publisher_chapter"],[3,"5-dLjd4o8Rc",694,"numbering_candidate"],[5,"PKw9fyChBVg",377,"publisher_chapter"]]);
+  for(const [i,v] of refs){const url=new URL(routeVideoUrl(v));assert.equal(url.origin,"https://www.youtube.com");assert.equal(url.pathname,"/watch");assert.equal(url.searchParams.get("v"),v.video_id);assert.equal(url.searchParams.get("t"),v.start_seconds+"s");assert.equal(route.steps[i].evidence,"guide_crosscheck");}
+  const v=refs[0][1];
+  for(const invalid of [null,{...v,video_id:"javascript:alert(1)"},{...v,video_id:"abc&evil.com"},{...v,start_seconds:-1},{...v,start_seconds:1.5},{...v,verification:"frame_verified"},{...v,creator:""}])assert.equal(routeVideoUrl(invalid),null);
+  assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
+  assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
+  assert.equal(data.routes.length,12);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
