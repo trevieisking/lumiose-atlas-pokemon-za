@@ -32,7 +32,7 @@ test("AT-280 source-verified mission approach text never upgrades Holovator coor
   assert.match(terra.directions,/Side Mission 023: Underneath the Holovator/);
   assert.ok(terra.directions.includes("Lv. 28 Diggersby"));
 });
-test("authentic source map remains the shared 1920px geometry",()=>{test("AT-281: owner-photo-backed Bleu 7 quest remains approximate, no invented Vert 7 pin",()=>{
+test("AT-281: owner-photo-backed Bleu 7 quest remains approximate, no invented Vert 7 pin",()=>{
   const bleu7=data.holovators.find(h=>h.id==="bleu7-south");
   assert.ok(bleu7);
   assert.deepEqual(bleu7.xy,[708,1706],"Original owner survey coordinate cannot move");
@@ -48,7 +48,7 @@ test("authentic source map remains the shared 1920px geometry",()=>{test("AT-281
     "Unidentified Side Mission 040 cannot receive a guessed new map pin");
   assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
 });
-
+test("authentic source map remains the shared 1920px geometry",()=>{
   assert.deepEqual(data.map.native_size,[1920,1920]);
   assert.equal(data.map.path,"maps/lumiose-game-map.jpg");
   const jpg=fs.readFileSync(path.join(root,data.map.path));
