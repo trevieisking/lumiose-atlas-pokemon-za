@@ -214,3 +214,28 @@ assert.equal(atlasPhotoLibrary.missing_sector_ids.length,19);
 assert.equal(atlasPhotoLibrary.counts.geographically_registered_tiles,0);
 assert.equal(atlasPhotoLibrary.counts.geographic_sector_label_anchors,0);
 assert.equal(atlasPhotoLibrary.release.original_workspace,"not_changed");
+
+
+// AT-306: the eleven real screenshot crops are verified locally but not hosted; never render 404 image links.
+const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
+assert.equal(at306.accepted.length,11);
+assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,11);
+for(const row of at306.accepted){
+ const id="sector-"+row.sector_id;
+ const start=page.indexOf('<article class="sector-card" id="'+id+'"');
+ assert.ok(start>=0,"AT-306 missing old sector "+id);
+ const end=page.indexOf("</article>",start);
+ assert.ok(end>start);
+ const card=page.slice(start,end);
+ assert.ok(card.includes('data-at306-candidate="'+row.sector_id+'"'));
+ assert.ok(card.includes('class="sector-at306-orientation" data-at306-source="'+row.sector_id+'"'));
+ assert.ok(card.includes(clean(row.orientation_text)));
+ assert.ok(card.includes('data-at304-source-status="needs_source_image"'));
+ assert.ok(!card.includes('<img src="'+row.expected_future_asset_path+'"'),"No fabricated public asset link "+id);
+}
+for(const row of at306.excluded){
+ const start=page.indexOf('id="sector-'+row.sector_id+'"');
+ const end=page.indexOf("</article>",start);
+ assert.ok(start>=0&&end>start);
+ assert.ok(!page.slice(start,end).includes('data-at306-candidate='),"Rejected crop must not be promoted");
+}

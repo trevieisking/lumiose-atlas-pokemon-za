@@ -955,10 +955,10 @@ try{
     assert.equal(await context.isVisible(),false);
     await page.locator("#aeLayers [data-layer='sector-label']").check();
     assert.equal(await name.textContent(),"Vert Sector 1");
-    await page.locator("#aeCoverageSector").selectOption("bleu-sector-3");
+    await page.locator("#aeCoverageSector").selectOption("bleu-sector-9");
     assert.match(await context.textContent(),/Street-level map position not yet source-verified/);
 
-    assert.equal(await name.textContent(),"Bleu Sector 3");
+    assert.equal(await name.textContent(),"Bleu Sector 9");
     await page.locator("#aeCoverageSector").selectOption("");
     assert.equal(await context.isVisible(),false);
     await page.locator("#aeCoverageSector").selectOption("vert-sector-1");
@@ -1068,6 +1068,26 @@ try{
     "Every standalone guide page must fit the phone without disabling local maps or tables");
   await widthProbe.close();
 
+  // AT-306: source-backed local crop provenance appears as text, never as a missing public photo.
+  const at306Desk=await desktopContext.newPage();
+  await at306Desk.goto(base+"/atlas-explorer.html?sector=vert-sector-7",{waitUntil:"load"});
+  await at306Desk.waitForFunction(()=>document.getElementById("aeSectorContextName")?.textContent==="Vert Sector 7");
+  assert.match(await at306Desk.locator("#aeSectorContextBearing").textContent(),/Station Front/);
+  assert.equal(await at306Desk.locator("#aeSelected .ae-source-map-reference").count(),0);
+  assert.match(await at306Desk.locator("#aeSelected").textContent(),/PNG has not yet been uploaded to GitHub/);
+  await at306Desk.locator("#aeViewport").screenshot({path:output+"/at306-vert7-desktop.png"});
+  await at306Desk.locator("#aeSearch").fill("Station Front");
+  assert.equal(await at306Desk.locator('#aeResults [data-record-id="vert-sector-7"]').count(),1);
+  await at306Desk.close();
+  const at306Mobile=await phoneContext.newPage();
+  await at306Mobile.goto(base+"/atlas-explorer.html?sector=bleu-sector-3",{waitUntil:"load"});
+  await at306Mobile.waitForFunction(()=>document.getElementById("aeSectorContextName")?.textContent==="Bleu Sector 3");
+  assert.match(await at306Mobile.locator("#aeSectorContextBearing").textContent(),/Bleu Plaza/);
+  assert.equal(await at306Mobile.locator("#aeSelected .ae-source-map-reference").count(),0);
+  const at306Width=await at306Mobile.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+  assert.ok(at306Width.scroll<=at306Width.width+1&&at306Width.body<=at306Width.width+1,"AT-306 phone must be contained: "+JSON.stringify(at306Width));
+  await at306Mobile.locator("#aeViewport").screenshot({path:output+"/at306-bleu3-phone.png"});
+  await at306Mobile.close();
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
