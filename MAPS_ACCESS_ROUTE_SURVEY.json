@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "batch": "AT-289",
+  "batch": "AT-290",
   "date": "2026-11-24",
-  "baseline_main_sha": "fdc61c0cd86bda37d200b3e65b39966e109f4fd0",
+  "baseline_main_sha": "287e8ceb0a7948425d690d2950d73b27d8287f95",
   "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
@@ -138,8 +138,16 @@
       "id": "vert-sector-6",
       "kind": "sector",
       "label": "Vert Sector 6",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "partial_text_external_photo_and_source_coordinate_research",
+      "lead_ids": [
+        "AR-V06-01",
+        "AR-V06-02",
+        "AR-V06-03",
+        "AR-V06-04",
+        "AR-V06-05",
+        "AR-V06-06",
+        "AR-V06-07"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1291,19 +1299,221 @@
       "floor_exact": null,
       "geometry_status": "unregistered",
       "publish_new_pin": false
+    },
+    {
+      "id": "AR-V06-01",
+      "area": "vert-sector-6",
+      "kind": "indoor_pickup_and_story_reward",
+      "landmark": "Racine Construction lobby, South Boulevard",
+      "notes": "Original Screw #19 is behind the lobby desk when access permits. Separate story TM066 Volt Switch and Autographed Plush from Canari after Main Mission 15 Reaching Rank E. Do not repeat the conflicting secondary guide's Rank D claim for that battle. Worker outside exchanges Screws; no new collection entry.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Racine_Construction",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_TMs_in_Pok%C3%A9mon_Legends%3A_Z-A",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/tips-and-tricks/purple-slime/"
+      ],
+      "candidate_original_screw_ids": [
+        19
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        238356
+      ],
+      "identity_status": "matching named indoor clue, no floor-level geometry",
+      "story_reward": {
+        "tm_number": 66,
+        "tm_name": "Volt Switch",
+        "main_mission": 15,
+        "rank": "E"
+      }
+    },
+    {
+      "id": "AR-V06-02",
+      "area": "vert-sector-6",
+      "kind": "park_scaffold_course",
+      "landmark": "Behind Racine Construction, south of the park between Racine and Le Nah",
+      "notes": "Sources distinguish park scaffold from boulevard course. Climb to roof height and descend onto the pickup platform. Which of the original #20/#21 corresponds to this route remains unresolved: do not swap or duplicate IDs. Text route only.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://serebii.net/pokearth/lumiosecity/vertdistrict.shtml",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        20,
+        21
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235632,
+        235674
+      ]
+    },
+    {
+      "id": "AR-V06-03",
+      "area": "vert-sector-6",
+      "kind": "boulevard_scaffold_ladder_course",
+      "landmark": "South Boulevard north of Racine Construction",
+      "notes": "Separate taller roadside scaffold; ladder ascent and transfer to the next platform. StrategyWiki reports Roto-Glide; Raider King describes a roll alternative and easier Glide. Do not assert that Glide is mandatory for every version. Original #20/#21 identity unresolved.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        20,
+        21
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235632,
+        235674
+      ],
+      "gate_dispute": "Glide route corroborated; roll-only alternative reported, not independently playtested"
+    },
+    {
+      "id": "AR-V06-04",
+      "area": "vert-sector-6",
+      "kind": "ladder_roof_crossing",
+      "landmark": "Restaurant Le Nah and building immediately south",
+      "notes": "Two guides describe ladder ascent beside/behind southern building and a ledge transfer onto restaurant roof. Original #22 roof clue text matches; raw pickup coordinate matched through link identity, not ladder coordinate.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://serebii.net/pokearth/lumiosecity/vertdistrict.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Restaurant_Le_Nah",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw"
+      ],
+      "candidate_original_screw_ids": [
+        22
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "source_pickup_reference_ids": [
+        235931
+      ],
+      "identity_status": "named restaurant roof matches regional clue; no aligned native point"
+    },
+    {
+      "id": "AR-V06-05",
+      "area": "vert-sector-6",
+      "kind": "ladder_glide_tm_pickup",
+      "landmark": "Isolated building northeast of Racine Construction block",
+      "notes": "Northeastern ladder on the smaller building and Roto-Glide to Racine roof, where TM080 Iron Defense is reported above fast-travel spot. Do not reuse pickup position as ladder base.",
+      "sources": [
+        "https://www.psypokes.com/plza/tm.php",
+        "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+        "https://nightlygamingbinge.com/pokemon-legends-z-a-tm-guide/",
+        "https://serebii.net/pokearth/lumiosecity/vertdistrict.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "tm_number": 80,
+      "tm_name": "Iron Defense",
+      "required_access": "Roto-Glide via ladder-accessible building"
+    },
+    {
+      "id": "AR-V06-06",
+      "area": "vert-sector-6",
+      "kind": "ladder_glide_waterway_tm",
+      "landmark": "Roof overlooking Coulant Waterway near Wild Zone 17",
+      "notes": "TM074 Shadow Ball reached by Roto-Glide from a building to the northeast with ladder access. One guide places it in Rank C or higher group. Exact story gate and whether same ladder as Iron Defense not certified.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+        "https://nightlygamingbinge.com/pokemon-legends-z-a-tm-guide/",
+        "https://serebii.net/pokearth/lumiosecity/vertdistrict.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_TMs_in_Pok%C3%A9mon_Legends%3A_Z-A"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "tm_number": 74,
+      "tm_name": "Shadow Ball",
+      "also_relevant_area": "vert-sector-7"
+    },
+    {
+      "id": "AR-V06-07",
+      "area": "vert-sector-6",
+      "kind": "canal_scaffold_course",
+      "landmark": "Café Cyclone and Coulant Waterway under bridge",
+      "notes": "StrategyWiki describes steps south of Café Cyclone down to canal, passing beneath bridge, scaffold ascent, transfer, ladder and beam. Original #16 waterway clue is a boundary lead already present in the 100-item inventory, not an additional Screw. GameSpot describes rooftop/scaffold pair in same neighbourhood; exact connection to this course unknown.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+      ],
+      "candidate_original_screw_ids": [
+        16
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "existing_record_id": "vert-cyclone",
+      "existing_route_id": "cafe-cyclone",
+      "also_relevant_area": "vert-sector-5"
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 7,
+    "sector_text_research_started": 8,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 22,
+    "route_course_leads": 29,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-290 Vert Sector 6: Racine Construction and nearby grassy area scaffolding, Restaurant Le Nah rooftop ladder, waterway approaches and TM leads; preserve original Screw IDs and distinguish story rewards from pickups. Retain unresolved Vert 1/2/4/5 geometry and H-08 facade queue.",
+  "next": "AT-291 Vert Sector 7 and source-coordinate calibration pilot: distinguish Side Mission 40 repaired lift and the existing approximate Vert 7 lead from fixed scaffolding, Screw #18 and rooftop/park pickups. Use small shared permanent landmark controls to test source XY registration before any exact pins. Retain unresolved prior sectors and H-08 facade.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -1410,5 +1620,141 @@
     "new_exact_pins": 0,
     "existing_route_count": 9,
     "proposed_route_count": 10
+  },
+  "at_290": {
+    "date": "2026-11-24",
+    "route_id": "vert6-racine-rooftop-courses",
+    "source_coordinate_discovery": {
+      "regional_source": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "database_source": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+      "database_snapshot_note": "Web retrieved database snapshot contains PHP warning and visible numeric headings differing from actual marker-link IDs. Match each actual destination markerId across regional table and database, not headings, row order or an assumed arithmetic offset. Regional and database links also differ in activeLayer 342/343; record both literally, do not infer category semantics from the layer numbers.",
+      "records": [
+        {
+          "original_clue": 19,
+          "marker_id": 238356,
+          "regional_link_layer": 342,
+          "database_link_layer": 343,
+          "database_display_id": 238357,
+          "source_xy": [
+            15101,
+            14156
+          ],
+          "source_coordinate_space": "Gamer Guides Lumiose City map, uncalibrated XY; units/transform not independently established",
+          "coordinate_semantics": "collectible marker, not physical ascent entrance or roof arrival",
+          "description": "Racine interior",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=238356",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=238356",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        },
+        {
+          "original_clue": 20,
+          "marker_id": 235632,
+          "regional_link_layer": 342,
+          "database_link_layer": 343,
+          "database_display_id": 235633,
+          "source_xy": [
+            15891,
+            13705
+          ],
+          "source_coordinate_space": "Gamer Guides Lumiose City map, uncalibrated XY; units/transform not independently established",
+          "coordinate_semantics": "collectible marker, not physical ascent entrance or roof arrival",
+          "description": "scaffold transfer, then beam",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235632",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235632",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        },
+        {
+          "original_clue": 21,
+          "marker_id": 235674,
+          "regional_link_layer": 342,
+          "database_link_layer": 343,
+          "database_display_id": 235675,
+          "source_xy": [
+            15040,
+            13434
+          ],
+          "source_coordinate_space": "Gamer Guides Lumiose City map, uncalibrated XY; units/transform not independently established",
+          "coordinate_semantics": "collectible marker, not physical ascent entrance or roof arrival",
+          "description": "scaffold top",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235674",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235674",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        },
+        {
+          "original_clue": 22,
+          "marker_id": 235931,
+          "regional_link_layer": 342,
+          "database_link_layer": 343,
+          "database_display_id": 235932,
+          "source_xy": [
+            16076,
+            12551
+          ],
+          "source_coordinate_space": "Gamer Guides Lumiose City map, uncalibrated XY; units/transform not independently established",
+          "coordinate_semantics": "collectible marker, not physical ascent entrance or roof arrival",
+          "description": "roof reached from taller roof southward",
+          "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=235931",
+          "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=235931",
+          "link_marker_id_match": true,
+          "interactive_map_retrieved": false,
+          "atlas_xy": null,
+          "physical_entrance_xy": null,
+          "physical_exit_xy": null,
+          "publish_new_pin": false
+        }
+      ],
+      "link_ids_verified": 4,
+      "source_to_atlas_transform_calibrated": false,
+      "identity_limit": "Source link identity corroborates source-space pickup references; it is not an independent in-game measurement. #20 and #21 route correspondence unresolved. No source coordinate used as an Atlas pin.",
+      "future_method": "Retrieve a small set of shared stable architectural or map landmark controls with matching coordinate semantics from independently accessible reference data; solve transform and validate withheld points, assess local uncertainty, then verify individual physical entrance vs pickup before any pin. Do not copy full external database."
+    },
+    "original_screw_clues": [
+      19,
+      20,
+      21,
+      22
+    ],
+    "boundary_screw_clue": 16,
+    "no_new_screw_ids": true,
+    "visual_evidence": {
+      "inspected_external_images": [
+        {
+          "page": "https://www.sportskeeda.com/pokemon/how-to-get-dratini-dragonair-dragonite-in-pokemon-legends-z-a-locations",
+          "url": "https://staticg.sportskeeda.com/editor/2025/10/3d5f0-17606214162966-1920.jpg?w=1600",
+          "observation": "Visible north-up light map crop labels Vert Sector 6, South Boulevard, Restaurant Le Nah and Racine Construction, with WZ11 above the park. Red ring at restaurant is player/current-location evidence, not a ladder."
+        },
+        {
+          "page": "https://deltiasgaming.com/pokemon-legends-z-a-all-colorful-screw-locations/",
+          "url": "https://static.deltiasgaming.com/2025/10/Pokemon-Legends_-Z-A_2025-10-29_16-51-26.png",
+          "observation": "Racine fast-travel popup with pale facade and large garage door; selected fast-travel marker is not scaffold or interior pickup. No geometry derived."
+        }
+      ],
+      "unavailable": [
+        "six Raider King paired image fetches",
+        "four regional marker deep links",
+        "four item database marker deep links",
+        "three source marker thumbnail fetches"
+      ],
+      "coordinate_alignment_performed": false,
+      "third_party_art_republished": false
+    },
+    "new_exact_pins": 0,
+    "existing_route_count": 10,
+    "proposed_route_count": 11
   }
 }
