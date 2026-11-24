@@ -1,6 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
-**Revision:** 47 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+## START HERE — mandatory preflight for every development cycle
+
+**Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence.
+
+
+**Revision:** 48 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
@@ -569,3 +574,15 @@ The owner requires every smart video feature and link to be recorded with purpos
 | AT-295-VIDEO-POWERGEM | [TM019 Power Gem pickup](https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s) — Quick Guides; step 6; publisher chapter; frames unverified | In progress | Open |
 
 Owner-only query: `select item_id,purpose,video_url,github_status,workspace_status,github_stage,workspace_stage from atlas_internal.feature_checklist order by item_id;`. For each new video or feature, record stable ID, link, route/step, purpose and verification limits in the manifest and private checklist. Mark either edition verified only after its own deployment and manual checks; GitHub requires exact deployed SHA and evidence URL, Workspace requires release reference and independent evidence. Never mark the original site complete from a GitHub merge. Run 45415144696 failed due to overescaped unit-test regex and premature popup URL assertion; test-only corrections saved at 5318fbe0e473ed3b1f6bcc1c4f413842cf06528f; fresh exact-head validation required. Continue Vert reconciliation after safe release.
+
+### AT-294 continuation — Vert district reconciliation (24 November 2026)
+
+Reopened all nine Vert area entries, 40 associated research leads (42 across the whole survey), original items-data.js and all 12 existing routes. No changes to player-facing route or map data in this checkpoint. Vert 1 and 2 need dedicated written routes, Vert 3 needs #13/#14 and #15 follow-up around the existing Café Cyclone route, Vert 8 needs #3/#4 integration beyond the legacy ladder pilot. Vert 4–7 and 9 retain their existing routes. All nine remain partial research, not certified completed geometry.
+
+| Boundary clue | Original landmark | Regional marker ID | Candidate database XY (unverified match) |
+| --- | --- | --- | --- |
+| #1 | Hotel Z NW scaffold | 235034 | (11619,14912) |
+| #15 | Roof east of Wild Zone 2 | 235420 | (13371,13062) |
+| #16 | Coulant Waterway scaffold | 235502 | (13659,13359) |
+
+Sources: [regional list](https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations), [database](https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw), [Raider King routes](https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/). Literal regional links recovered, but the linked maps failed and database link identity has not yet been confirmed. Candidate headings differ by one; do not assume an offset proves identity or increment confirmed source references. #1 stays separate from #5, #15 separate from #16; original sector-null labels and all collection IDs retained. No new exact pins. Next: integrate attainable written Vert routes before Bleu 1. AT-295 validation run 45415870260: unit success; browser failed at Playwright newPage on implicit single-page context after passing popup/reload/scroll checks on the first device. Explicit test contexts corrected at b0bb44714d9d56dba912d7b1eaea3184095c60c4; full exact-head validation still required. Mandatory read-first policy added at the top of plan, manifest, ledger and README. Manifest revision 40.
