@@ -3981,7 +3981,7 @@
   "at_304_original_sector_street_image_library": {
     "id": "AT-304",
     "date": "2026-11-24",
-    "status": "review_branch_images_not_deployed",
+    "status": "github_deployed_original_png_references_workspace_open",
     "source_registry": "MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json",
     "native_pixel_png_crops_transferred": 23,
     "source_image_sector_coverage": 29,
@@ -3995,6 +3995,63 @@
     "existing_route_count": 15,
     "geographic_label_anchor_claims": 0,
     "hyperspace_dynamic_pins_added": 0,
-    "next": "Complete 19 source image sector gaps from real in-game images; track exact street labels separately. Only register native map anchors after three control points and held-out check. Preserve original source galleries, map geometry and written routes."
+    "next": "Complete 19 source image sector gaps from real in-game images; track exact street labels separately. Only register native map anchors after three control points and held-out check. Preserve original source galleries, map geometry and written routes.",
+    "release": {
+      "pr": 142,
+      "reviewed_head": "d16bb3c62bb7e9090f49874f28914268cb907e11",
+      "reviewed_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "merged_main": "50643822a6a6f47f3eb643f2595cb9a28c5f5a11",
+      "merged_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "ci_atlas_run": 45465366578,
+      "ci_recovered_run": 45465366663,
+      "ci_checks": [
+        "atlas-unit",
+        "atlas-browser",
+        "recovered-articles"
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 14954423944,
+      "qa": "four original Chrome phone/desktop screenshot artifacts visually inspected; 393px article width and all core map controls tested",
+      "pages_run": 45466461743,
+      "pages_conclusion": "success",
+      "direct_live_http_inspection": "not_performed",
+      "original_workspace": "not_changed",
+      "database": "read_only_not_changed"
+    }
+  },
+  "at_305_deployment_evidence_reconciliation": {
+    "id": "AT-305",
+    "date": "2026-11-24",
+    "status": "prior_at304_release_evidence_reconciled_docs_only",
+    "published_reference_images": 23,
+    "photographed_sector_records": 29,
+    "remaining_sector_image_gaps": 19,
+    "original_access_leads_retained": 42,
+    "original_area_records_retained": 68,
+    "original_route_count_retained": 15,
+    "new_map_xy_markers": 0,
+    "release": {
+      "pr": 142,
+      "reviewed_head": "d16bb3c62bb7e9090f49874f28914268cb907e11",
+      "reviewed_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "merged_main": "50643822a6a6f47f3eb643f2595cb9a28c5f5a11",
+      "merged_tree": "4346c57fcae2e7de8f0804d939095c2cec398227",
+      "ci_atlas_run": 45465366578,
+      "ci_recovered_run": 45465366663,
+      "ci_checks": [
+        "atlas-unit",
+        "atlas-browser",
+        "recovered-articles"
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 14954423944,
+      "qa": "four original Chrome phone/desktop screenshot artifacts visually inspected; 393px article width and all core map controls tested",
+      "pages_run": 45466461743,
+      "pages_conclusion": "success",
+      "direct_live_http_inspection": "not_performed",
+      "original_workspace": "not_changed",
+      "database": "read_only_not_changed"
+    },
+    "next": "Original screenshots for 19 uncovered sectors and further named roads, then independently validated alignment"
   }
 }
