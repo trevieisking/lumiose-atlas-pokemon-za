@@ -1,10 +1,10 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 37,
+  "revision": 38,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-295 optional public gameplay video references pilot; AT-294 Vert reconciliation remains next. No new pins; footage not frame-verified.",
+  "current_phase": "AT-295 smart video return bookmark and timestamp links; final-head validation pending. AT-294 Vert reconciliation remains next.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -2556,6 +2556,31 @@
     "owner_photos_preserved": 111,
     "existing_holovators_preserved": 21,
     "next": "Continue AT-294 Vert reconciliation using video evidence where available; then Bleu Sector 1.",
-    "policy": "Own written directions, original photos and map remain authoritative; allowlisted YouTube video IDs, creator credit and publisher chapter timestamps; no third-party loading before click; no copied footage or coordinate promotion from metadata."
+    "policy": "Own written directions, original photos and map remain authoritative; allowlisted YouTube video IDs, creator credit and publisher chapter timestamps; no third-party loading before click; no copied footage or coordinate promotion from metadata.",
+    "smart_return": {
+      "owner_requested": true,
+      "date": "2026-11-24",
+      "bookmark_version": 1,
+      "scope": "existing and future Atlas Explorer video step links",
+      "storage_key": "lumiose-atlas:video-return:v1",
+      "storage": "one same-origin local device navigation bookmark plus current browser history entry; only on explicit click or middle-click; no playback history, analytics, cookies, database writes or cross-device sync",
+      "restores": [
+        "route ID and step",
+        "selected location",
+        "pan, zoom, rotation and tint",
+        "filter, search, visible layers and coverage view",
+        "scroll offset relative to clicked video"
+      ],
+      "priority": "same-entry history return first; explicit place, sector or hash links override unrelated device bookmark; plain Explorer reopening restores last valid saved video step",
+      "validation": "reject stale or malformed route/step/video reference; storage failure does not block YouTube or guide",
+      "clear": "Forget saved video place removes only bookmark key and current history bookmark; no player progress mutation",
+      "release_status": "proposed; exact final head CI and visual QA required",
+      "previous_video_only_ci": {
+        "head": "aa1794e6caeb0c8efba45093e8896dfdb8bdce25",
+        "run": 45414225060,
+        "conclusion": "success",
+        "applies_to_new_head": false
+      }
+    }
   }
 }
