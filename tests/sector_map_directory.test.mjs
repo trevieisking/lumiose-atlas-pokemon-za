@@ -168,12 +168,12 @@ for(const source of at302Source.sector_orientation){
 assert.ok(!page.includes('src="assets/atlas/at301/'),"Do not link unhosted PNGs");
 
 
-// AT-304: 23 real hosted PNGs, 29 exact source cards and 19 honest gaps.
+// AT-304: 42 real PNGs and 48 source cards.
 const at304=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
-assert.equal(at304.images.length,23);
+assert.equal(at304.images.length,42);
 assert.equal(at304.sector_coverage.length,48);
-assert.equal((page.match(/class="sector-source-map"/g)||[]).length,29);
-assert.equal((page.match(/class="sector-source-pending"/g)||[]).length,19);
+assert.equal((page.match(/class="sector-source-map"/g)||[]).length,48);
+assert.equal((page.match(/class="sector-source-pending"/g)||[]).length,0);
 assert.equal((page.match(/class="street-source-row"/g)||[]).length,8);
 assert.ok(page.includes('id="street-photo-index"'));
 for(const entry of at304.sector_coverage){
@@ -202,21 +202,21 @@ const atlasPhotoLibrary=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-1
 assert.ok(atlasPublished.revision>=52);
 assert.equal(atlasPublished.id,"ATLAS-MAPS-2026-11-21-V1");
 assert.equal(atlasPublished.at_304_original_sector_street_image_library.status,"github_deployed_original_png_references_workspace_open");
-assert.equal(atlasPhotoLibrary.status,"github_deployed_original_png_references_workspace_open");
+assert.equal(atlasPhotoLibrary.status,"at310_branch_complete_pending_release");
 assert.equal(atlasPhotoLibrary.release.reviewed_head,"d16bb3c62bb7e9090f49874f28914268cb907e11");
 assert.equal(atlasPhotoLibrary.release.reviewed_tree,atlasPhotoLibrary.release.merged_tree);
 assert.equal(atlasPhotoLibrary.release.merged_main,"50643822a6a6f47f3eb643f2595cb9a28c5f5a11");
 assert.equal(atlasPhotoLibrary.release.pages_run,45466461743);
 assert.equal(atlasPhotoLibrary.release.pages_conclusion,"success");
-assert.equal(atlasPhotoLibrary.counts.image_crops,23);
-assert.equal(atlasPhotoLibrary.counts.sectors_with_photographic_references,29);
-assert.equal(atlasPhotoLibrary.missing_sector_ids.length,19);
+assert.equal(atlasPhotoLibrary.counts.image_crops,42);
+assert.equal(atlasPhotoLibrary.counts.sectors_with_photographic_references,48);
+assert.equal(atlasPhotoLibrary.missing_sector_ids.length,0);
 assert.equal(atlasPhotoLibrary.counts.geographically_registered_tiles,0);
 assert.equal(atlasPhotoLibrary.counts.geographic_sector_label_anchors,0);
 assert.equal(atlasPhotoLibrary.release.original_workspace,"not_changed");
 
 
-// AT-306: the eleven real screenshot crops are verified locally but not hosted; never render 404 image links.
+// AT-310: preserve both intake batches and link their actual image files.
 const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
 assert.equal(at306.accepted.length,11);
 assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,19,"Eleven AT-306 + eight AT-309 source notes use the same existing orientation style");
@@ -227,11 +227,9 @@ for(const row of at306.accepted){
  const end=page.indexOf("</article>",start);
  assert.ok(end>start);
  const card=page.slice(start,end);
- assert.ok(card.includes('data-at306-candidate="'+row.sector_id+'"'));
  assert.ok(card.includes('class="sector-at306-orientation" data-at306-source="'+row.sector_id+'"'));
  assert.ok(card.includes(clean(row.orientation_text)));
- assert.ok(card.includes('data-at304-source-status="needs_source_image"'));
- assert.ok(!card.includes('<img src="'+row.expected_future_asset_path+'"'),"No fabricated public asset link "+id);
+ assert.ok(card.includes('<img src="'+row.expected_future_asset_path+'"'),"Missing verified asset link "+id);
 }
 for(const row of at306.excluded){
  const start=page.indexOf('id="sector-'+row.sector_id+'"');
@@ -241,7 +239,7 @@ for(const row of at306.excluded){
 }
 
 
-// AT-309: the last eight clean owner source screenshot crops are registered but not hosted.
+// AT-310: the last eight original source crops are also linked.
 const at309=JSON.parse(read("MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"));
 assert.equal(at309.accepted.length,8);
 assert.equal(at309.counts.published_sector_photo_coverage,29);
@@ -253,5 +251,5 @@ for(const row of at309.accepted){
  const section=page.slice(start,end);
  assert.ok(section.includes('data-at309-source="'+row.sector_id+'"'));
  assert.ok(section.includes(row.orientation_text));
- assert.ok(!section.includes('<img src="'+row.expected_future_asset_path+'"'));
+ assert.ok(section.includes('<img src="'+row.expected_future_asset_path+'"'));
 }

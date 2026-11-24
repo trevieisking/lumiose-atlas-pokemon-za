@@ -646,7 +646,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
   assert.match(html,/id="aeSectorContextBearing"/);
   assert.match(html,/id="aeStreetEvidenceSummary"/);
-  assert.ok(html.includes("19 sectors</strong> still need suitable source screenshots"));
+  assert.ok(html.includes("all 48 sector areas</strong>"));
   assert.match(js,/street_bearing\?\.text/);
   assert.match(js,/Street-level map position not yet source-verified/);
   assert.match(js,/Source-labelled street bearings \(orientation only\)/);
@@ -655,12 +655,12 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
 });
 
 
-test("AT-304: 23 byte-verified original-game PNG crops cover 29 sectors without assigning geography or changing 111 Holovator photos",()=>{
+test("AT-310: 42 byte-verified original-game PNG crops cover 48 sectors without assigning geography or changing 111 Holovator photos",()=>{
   const library=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
-  assert.equal(library.images.length,23);
+  assert.equal(library.images.length,42);
   assert.equal(library.sector_coverage.length,48);
-  assert.equal(library.counts.sectors_with_photographic_references,29);
-  assert.equal(library.missing_sector_ids.length,19);
+  assert.equal(library.counts.sectors_with_photographic_references,48);
+  assert.equal(library.missing_sector_ids.length,0);
   assert.equal(library.observed_street_labels.length,8);
   assert.equal(library.counts.geographic_sector_label_anchors,0);
   assert.equal(library.counts.geographically_registered_tiles,0);
@@ -681,7 +681,7 @@ test("AT-304: 23 byte-verified original-game PNG crops cover 29 sectors without 
     assert.equal(buf.readUInt32BE(20),image.height);
     for(const s of image.sector_ids)sectorPaths.add(s);
   }
-  assert.equal(uniqueImages.size,23);assert.equal(sectorPaths.size,29);
+  assert.equal(uniqueImages.size,42);assert.equal(sectorPaths.size,48);
   for(const sector of data.sectors){
     assert.equal(sector.xy,null,"Do not infer native map sector XY");
     const entry=library.sector_coverage.find(s=>s.sector_id===sector.id);
@@ -698,90 +698,42 @@ test("AT-304: 23 byte-verified original-game PNG crops cover 29 sectors without 
   assert.equal(data.holovators.reduce((s,h)=>s+h.photos.length,0),111);
   assert.equal(data.routes.length,15);
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js");
-  assert.match(html,/23 clean PNG map crops/);
+  assert.match(html,/42 clean PNG map crops/);
   assert.match(js,/ae-source-map-reference/);
   assert.match(js,/item\.source_map_reference/);
   assert.match(js,/No registered map XY, sector border or exact lift\/pickup pin/);
 });
 
 
-test("AT-306: 11 locally verified original screenshot crops are tracked honestly without broken public PNG links",()=>{
- const candidates=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
- const hosted=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
- assert.equal(candidates.counts.clean_unpublished_candidates,11);
- assert.equal(candidates.accepted.length,11);
- assert.equal(candidates.excluded.length,2);
- assert.equal(candidates.remaining_without_suitable_clean_published_source_after_future_upload.length,8);
- assert.equal(candidates.counts.published_sector_coverage_unchanged,29);
- assert.equal(hosted.counts.sectors_with_photographic_references,29);
- assert.equal(hosted.images.length,23);
- assert.equal(data.sectors.length,48);
- assert.equal(data.zones.length,20);
- assert.equal(data.holovators.length,21);
- assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
- assert.equal(data.routes.length,15);
- assert.equal(data.sectors.filter(s=>s.street_bearing).length,31);
- const unique=new Set();
- for(const row of candidates.accepted){
-  assert.ok(!unique.has(row.sector_id));unique.add(row.sector_id);
-  assert.ok(hosted.missing_sector_ids.includes(row.sector_id),"Already public image must not be reintroduced");
-  assert.match(row.sha256,/^[a-f0-9]{64}$/);
-  assert.match(row.source_sha256,/^[a-f0-9]{64}$/);
-  assert.match(row.predicted_git_blob_sha,/^[a-f0-9]{40}$/);
-  assert.match(row.expected_future_asset_path,/^assets\/atlas\/sector-streets\/(vert|bleu|magenta|rouge|jaune)\/[a-z0-9-]+\.png$/);
-  assert.equal(row.hosted_on_github,false);
-  assert.equal(row.geographically_registered,false);
-  assert.equal(row.native_label_xy,null);
-  assert.equal(row.verified_sector_polygon,false);
-  assert.equal(row.crop_xyxy[2]-row.crop_xyxy[0],row.width);
-  assert.equal(row.crop_xyxy[3]-row.crop_xyxy[1],row.height);
-  const sector=data.sectors.find(s=>s.id===row.sector_id);
-  assert.ok(sector);
-  assert.equal(sector.xy,null);
-  assert.equal(sector.source_map_reference,undefined,"No broken pending image URLs");
-  assert.equal(sector.source_image_status,"needs_original_screenshot");
-  assert.deepEqual(sector.street_bearing,{text:row.orientation_text,source_crop_id:row.sector_id,confidence:"source_image_orientation_only",native_label_xy:null});
-  assert.deepEqual(sector.pending_source_photo_evidence,{status:"verified_local_png_pending_binary_transfer",source_name:row.source_name,source_sha256:row.source_sha256,crop_sha256:row.sha256,crop_id:row.sector_id,native_label_xy:null});
- }
- for(const row of candidates.excluded){
-  assert.ok(!unique.has(row.sector_id));
-  assert.ok(hosted.missing_sector_ids.includes(row.sector_id));
-  assert.equal(row.status,"research_only_rejected");
-  assert.equal(data.sectors.find(s=>s.id===row.sector_id).pending_source_photo_evidence?.status,"verified_local_png_pending_binary_transfer","New owner replacements supersede previously rejected partial photos; old crop remains excluded.");
- }
- assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,19);
- const map=read("atlas-explorer.js");
- assert.match(map,/clean original game-map screenshot crop was verified/);
- assert.match(map,/MAPS_AT306_SOURCE_RECOVERY_2026-11-24\.json/);
- assert.match(map,/clean source crop pending GitHub upload/);
- assert.match(read("atlas-explorer.html"),/23 named-sector bearings/);
-});
-
-
-test("AT-309: all remaining eight owner sector screenshot labels are source registered but not given fake geographic coordinates or PNG URLs",()=>{
- const at309=JSON.parse(read("MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"));
- const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
- const hosted=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
- assert.equal(at309.accepted.length,8);
- assert.equal(at306.accepted.length,11);
- assert.equal(hosted.counts.sectors_with_photographic_references,29);
- assert.equal(hosted.counts.image_crops,23);
- assert.equal(data.sectors.length,48);assert.equal(data.zones.length,20);
- assert.equal(data.holovators.length,21);assert.equal(data.routes.length,15);
- assert.ok(data.sectors.every(s=>s.xy===null));
- assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,19);
- assert.deepEqual(new Set([...at306.accepted.map(r=>r.sector_id),...at309.accepted.map(r=>r.sector_id)]).size,19);
- assert.deepEqual([...at306.accepted.map(r=>r.sector_id),...at309.accepted.map(r=>r.sector_id)].sort(),hosted.missing_sector_ids.slice().sort());
- for(const row of at309.accepted){
-  const s=data.sectors.find(s=>s.id===row.sector_id);assert.ok(s,row.sector_id);
-  assert.equal(s.source_map_reference,undefined);
-  assert.equal(s.source_image_status,"needs_original_screenshot");
-  assert.deepEqual(s.street_bearing,{text:row.orientation_text,source_crop_id:row.sector_id,confidence:"source_image_orientation_only",native_label_xy:null});
-  assert.deepEqual(s.pending_source_photo_evidence,{status:"verified_local_png_pending_binary_transfer",source_name:row.source_name,source_sha256:row.source_sha256,crop_sha256:row.sha256,crop_id:row.sector_id,native_label_xy:null});
-  assert.equal(row.native_label_xy,null);assert.equal(row.geographically_registered,false);
-  assert.match(row.sha256,/^[0-9a-f]{64}$/);assert.match(row.predicted_git_blob_sha,/^[0-9a-f]{40}$/);
-  assert.equal(row.width,row.crop_xyxy[2]-row.crop_xyxy[0]);assert.equal(row.height,row.crop_xyxy[3]-row.crop_xyxy[1]);
-  assert.ok(!read("sector-maps.html").includes('<img src="'+row.expected_future_asset_path+'"'));
- }
- assert.match(read("atlas-explorer.js"),/MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24/);
+test("AT-310: all 19 accepted owner crops are registered and linked without mutating source evidence",()=>{
+  const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
+  const at309=JSON.parse(read("MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"));
+  const hosted=JSON.parse(read("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json"));
+  assert.equal(at306.accepted.length,11);assert.equal(at309.accepted.length,8);
+  assert.equal(at306.excluded.length,2);
+  const mapPage=read("sector-maps.html");
+  for(const row of [...at306.accepted,...at309.accepted]){
+    const s=data.sectors.find(x=>x.id===row.sector_id);
+    const photo=hosted.images.find(x=>x.id===row.sector_id);
+    assert.equal(photo.path,row.expected_future_asset_path);
+    assert.equal(photo.git_blob_sha,row.predicted_git_blob_sha);
+    assert.equal(photo.sha256,row.sha256);
+    assert.equal(photo.bytes,row.bytes);
+    assert.equal(s.source_map_reference.image_path,photo.path);
+    assert.equal(s.xy,null);
+    assert.equal(s.pending_source_photo_evidence,undefined);
+    assert.deepEqual(s.street_bearing,{text:row.orientation_text,source_crop_id:row.sector_id,confidence:"source_image_orientation_only",native_label_xy:null});
+    assert.ok(mapPage.includes('<img src="'+photo.path+'"'));
+  }
+  for(const row of at306.excluded){
+    const replacement=at309.accepted.find(x=>x.sector_id===row.sector_id);
+    assert.equal(row.status,"research_only_rejected");
+    assert.equal(hosted.images.find(x=>x.id===row.sector_id).source_name,replacement.source_name);
+  }
+  assert.equal(data.sectors.filter(x=>x.source_map_reference).length,48);
+  assert.equal(data.sectors.filter(x=>x.street_bearing).length,31);
+  assert.equal(data.zones.length,20);
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.routes.length,15);
 });
