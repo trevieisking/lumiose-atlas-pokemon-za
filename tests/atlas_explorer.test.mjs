@@ -632,7 +632,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
   assert.equal(data.sectors.length,48);
   assert.equal(data.zones.length,20);
   assert.equal(data.holovators.length,21);
-  assert.equal(matched.length,23);
+  assert.equal(matched.length,31);
   assert.equal(source.sector_orientation.length,12);
   assert.ok(data.sectors.every(s=>s.xy===null),"No fictitious sector centroid pin");
   for(const row of source.sector_orientation){
@@ -642,7 +642,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
     assert.deepEqual(record.street_bearing,{text:row.orientation,source_crop_id:row.crop_id,confidence:"source_image_orientation_only",native_label_xy:null});
     assert.ok(source.crop_records.some(c=>c.id===row.crop_id),"Missing provenance record");
   }
-  assert.equal(data.sectors.filter(s=>!s.street_bearing).length,25);
+  assert.equal(data.sectors.filter(s=>!s.street_bearing).length,17);
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
   assert.match(html,/id="aeSectorContextBearing"/);
   assert.match(html,/id="aeStreetEvidenceSummary"/);
@@ -720,7 +720,7 @@ test("AT-306: 11 locally verified original screenshot crops are tracked honestly
  assert.equal(data.holovators.length,21);
  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
  assert.equal(data.routes.length,15);
- assert.equal(data.sectors.filter(s=>s.street_bearing).length,23);
+ assert.equal(data.sectors.filter(s=>s.street_bearing).length,31);
  const unique=new Set();
  for(const row of candidates.accepted){
   assert.ok(!unique.has(row.sector_id));unique.add(row.sector_id);
@@ -747,9 +747,9 @@ test("AT-306: 11 locally verified original screenshot crops are tracked honestly
   assert.ok(!unique.has(row.sector_id));
   assert.ok(hosted.missing_sector_ids.includes(row.sector_id));
   assert.equal(row.status,"research_only_rejected");
-  assert.equal(data.sectors.find(s=>s.id===row.sector_id).pending_source_photo_evidence,undefined);
+  assert.equal(data.sectors.find(s=>s.id===row.sector_id).pending_source_photo_evidence?.status,"verified_local_png_pending_binary_transfer","New owner replacements supersede previously rejected partial photos; old crop remains excluded.");
  }
- assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,11);
+ assert.equal(data.sectors.filter(s=>s.pending_source_photo_evidence).length,19);
  const map=read("atlas-explorer.js");
  assert.match(map,/clean original game-map screenshot crop was verified/);
  assert.match(map,/MAPS_AT306_SOURCE_RECOVERY_2026-11-24\.json/);

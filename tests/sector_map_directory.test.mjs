@@ -219,7 +219,7 @@ assert.equal(atlasPhotoLibrary.release.original_workspace,"not_changed");
 // AT-306: the eleven real screenshot crops are verified locally but not hosted; never render 404 image links.
 const at306=JSON.parse(read("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json"));
 assert.equal(at306.accepted.length,11);
-assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,11);
+assert.equal((page.match(/class="sector-at306-orientation"/g)||[]).length,19,"Eleven AT-306 + eight AT-309 source notes use the same existing orientation style");
 for(const row of at306.accepted){
  const id="sector-"+row.sector_id;
  const start=page.indexOf('<article class="sector-card" id="'+id+'"');
