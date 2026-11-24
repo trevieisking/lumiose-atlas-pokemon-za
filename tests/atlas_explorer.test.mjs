@@ -624,3 +624,32 @@ test("AT-299 selected-sector name is an optional non-geographic viewport context
   assert.equal(data.sectors.length,48);assert.ok(data.sectors.every(s=>s.xy===null));
   assert.equal(data.routes.length,15);assert.equal(data.holovators.length,21);
 });
+
+
+test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-verified street bearings have exact source parity",()=>{
+  const source=JSON.parse(read("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"));
+  const matched=data.sectors.filter(s=>s.street_bearing);
+  assert.equal(data.sectors.length,48);
+  assert.equal(data.zones.length,20);
+  assert.equal(data.holovators.length,21);
+  assert.equal(matched.length,12);
+  assert.equal(source.sector_orientation.length,12);
+  assert.ok(data.sectors.every(s=>s.xy===null),"No fictitious sector centroid pin");
+  for(const row of source.sector_orientation){
+    const record=data.sectors.find(s=>s.id===row.sector_id);
+    assert.ok(record,"Source sector missing "+row.sector_id);
+    assert.equal(row.native_label_xy,null,"Original labelled source still needs spatial registration");
+    assert.deepEqual(record.street_bearing,{text:row.orientation,source_crop_id:row.crop_id,confidence:"source_image_orientation_only",native_label_xy:null});
+    assert.ok(source.crop_records.some(c=>c.id===row.crop_id),"Missing provenance record");
+  }
+  assert.equal(data.sectors.filter(s=>!s.street_bearing).length,36);
+  const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
+  assert.match(html,/id="aeSectorContextBearing"/);
+  assert.match(html,/id="aeStreetEvidenceSummary"/);
+  assert.match(html,/36 locations still need verified street evidence/);
+  assert.match(js,/street_bearing\?\.text/);
+  assert.match(js,/Street-level map position not yet source-verified/);
+  assert.match(js,/Source-labelled street bearings \(orientation only\)/);
+  assert.match(css,/\.ae-sector-context #aeSectorContextBearing/);
+  assert.equal((js.match(/localStorage\.setItem/g)||[]).length,(read("atlas-explorer.js").match(/localStorage\.setItem/g)||[]).length);
+});

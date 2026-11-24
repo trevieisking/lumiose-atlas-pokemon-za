@@ -57,6 +57,11 @@ try{
   desktop.on("pageerror",error=>errors.push(String(error)));
   await desktop.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
   await desktop.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"),{timeout:20000});
+  await desktop.locator("#aeSearch").fill("Vernal Avenue");
+  await desktop.waitForFunction(()=>!!document.querySelector('#aeResults [data-record-id="vert-sector-2"]'));
+  assert.equal(await desktop.locator('#aeResults [data-record-id="vert-sector-2"]').count(),1,"Source street name should find the linked sector");
+  await desktop.locator("#aeSearch").fill("");
+
   assert.match(await desktop.locator("#aeStats").textContent(),/20 Wild Zones · 48 named sectors · 21/);
   const natural=await desktop.locator("#aeMapImage").evaluate(img=>img.naturalWidth);
   assert.equal(natural,1920,"Real 1920px city map must load");
@@ -895,6 +900,10 @@ try{
     await page.waitForFunction(()=>document.getElementById("aeSectorContextName").textContent==="Vert Sector 1");
     assert.ok(await context.isVisible());
     assert.match(await context.textContent(),/exact sector position unverified/);
+    assert.match(await context.textContent(),/South of Saison Canal/,"Street bearing must appear without implying a mapped location");
+    assert.equal(await page.locator("#aeSectorContextBearing").count(),1);
+    await page.locator("#aeViewport").screenshot({path:output+"/at303-sector-street-"+device+".png"});
+
     assert.equal(await context.evaluate(el=>el.parentElement.id),"aeViewport");
     assert.equal(await context.evaluate(el=>getComputedStyle(el).pointerEvents),"none");
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -914,6 +923,8 @@ try{
     await page.locator("#aeLayers [data-layer='sector-label']").check();
     assert.equal(await name.textContent(),"Vert Sector 1");
     await page.locator("#aeCoverageSector").selectOption("bleu-sector-3");
+    assert.match(await context.textContent(),/Street-level map position not yet source-verified/);
+
     assert.equal(await name.textContent(),"Bleu Sector 3");
     await page.locator("#aeCoverageSector").selectOption("");
     assert.equal(await context.isVisible(),false);

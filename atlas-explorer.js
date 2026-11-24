@@ -71,13 +71,17 @@ const mapCenter=()=>{const d=dimensions();return{x:d.width/2,y:d.height/2};};
 const coverageGrid=by("aeCoverageGrid"),coverageStatus=by("aeCoverageStatus");
 const coverageSector=by("aeCoverageSector"),coverageDistricts=by("aeCoverageDistricts");
 const sectorContext=by("aeSectorContext"),sectorContextName=by("aeSectorContextName");
-/* The selected name is a screen-space orientation aid, not a map coordinate.
-   Do not use districtStart or place a geographic label until a source anchor is verified. */
+const sectorContextBearing=by("aeSectorContextBearing");
+/* Selected names and street bearings are screen-space orientation aids, NOT map coordinates.
+   Never promote a screenshot label or text observation to an XY, polygon or exact pin. */
 function syncSectorContext(){
   const item=recordMap.get(coverageSector.value);
   const visible=layerVisible("sector-label")&&item?.kind==="sector"&&item.id===selectedId;
   sectorContext.hidden=!visible;
   sectorContextName.textContent=visible?item.name:"";
+  sectorContextBearing.textContent=!visible?"":item.street_bearing?.confidence==="source_image_orientation_only"
+    ? "Source-map street bearing (orientation only): "+item.street_bearing.text
+    : "Street-level map position not yet source-verified";
 }
 function coverageMessage(message,activeArea="") {
   coverageStatus.textContent=message;
@@ -178,6 +182,13 @@ function detailsFor(item){
     selectedPanel.append(link(item.link,"Open Wild Zone "+String(item.number).padStart(2,"0")+" and pickup notes"));
   }else if(item.kind==="sector"){
     selectedPanel.append(paragraph("This sector name is verified in the directory. Its exact map boundary is not independently traced, so no arbitrary pin is drawn."));
+    if(item.street_bearing?.confidence==="source_image_orientation_only"){
+      selectedPanel.append(paragraph("Source-labelled street bearings (orientation only): "+item.street_bearing.text));
+      selectedPanel.append(paragraph("Street source crop: "+item.street_bearing.source_crop_id+". Its original screenshot crop is not yet hosted as a map detail tile; no exact map XY is implied."));
+      selectedPanel.append(link("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json","Inspect source-image evidence register"));
+    }else{
+      selectedPanel.append(paragraph("Street reference not yet source-verified for this numbered sector. Do not treat its district starting view as an exact location."));
+    }
     selectedPanel.append(link(item.link,"Open this sector's original clues"));
   }else if(item.kind==="holovator"){
     selectedPanel.append(paragraph("The physical lift is in the owner's field survey. The symbol on this 1920px overview is an approximate approach lead, not a measured door or roof landing."));
@@ -258,7 +269,7 @@ function match(item){
   const query=search.value.trim().toLocaleLowerCase();
   if(activeKind!=="all"&&item.kind!==activeKind)return false;
   if(!query)return true;
-  return [item.name,item.area,item.district,item.description,item.directions,labels[item.kind]]
+  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,labels[item.kind]]
     .some(value=>plain(value).toLocaleLowerCase().includes(query));
 }
 function drawList(){
