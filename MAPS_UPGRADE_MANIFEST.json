@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 44,
+  "revision": 45,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-298 Vert 3 written route and candidate video references pending validation. Then Vert 8; Workspace access gated.",
+  "current_phase": "AT-298 merged; AT-299 sector labels planned; finish publication then pilot Vert 1, retain highlighted grid and zoom.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -112,7 +112,8 @@
       "count": 48,
       "source_map": "maps/lumiose-game-map.jpg",
       "approach": "selectable evidence-labelled zoom/overlays on shared city image; separate image per sector not mandatory",
-      "status": "upgrade_planned"
+      "status": "upgrade_planned",
+      "label_enhancement": "at_299_sector_labels"
     },
     "wild_zone": {
       "count": 20,
@@ -2990,7 +2991,7 @@
   "at_298_vert3": {
     "id": "AT-298",
     "date": "2026-11-24",
-    "status": "proposed_pending_exact_head_ci_and_visual_qa",
+    "status": "github_deployed_verified_workspace_open",
     "baseline_main": "421a2bb275af279f2df3256966ac952205f7245f",
     "routes_added": [
       "vert3-cyclone-rooftop-courses"
@@ -3016,7 +3017,7 @@
         "purpose": "Vert 3 separate boundary scaffold, existing Cafe Cyclone photo approach and northern rooftop directions; original clues 13-16 distinct.",
         "route": "vert3-cyclone-rooftop-courses",
         "evidence": "Source-backed written approach; district-only, no measured geometry.",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open"
       },
       {
@@ -3026,7 +3027,7 @@
         "step": 2,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=138s",
         "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open"
       },
       {
@@ -3036,7 +3037,7 @@
         "step": 4,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=181s",
         "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open"
       },
       {
@@ -3046,7 +3047,7 @@
         "step": 5,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=238s",
         "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open"
       }
     ],
@@ -3062,6 +3063,444 @@
       "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
       "https://www.youtube.com/watch?v=5-dLjd4o8Rc"
     ],
-    "next": "Finish AT-298 validation, screenshot review and deployment; then Vert 8 Hotel Z approaches before Bleu 1. Workspace AT-297 source access/export remains gated."
+    "next": "Finish AT-298 publication; implement and validate AT-299 Vert 1 label pilot and evidence-driven rollout in bounded stages; then resume Vert 8 Hotel Z routes and Bleu 1. Workspace gates unchanged.",
+    "release": {
+      "reviewed_head": "fc292218b4029507a2ba3ecf92b438f419f69c86",
+      "validation_run": 45423838590,
+      "validation_conclusion": "success",
+      "screenshot_artifact": 14935207303,
+      "desktop_mobile_screenshots_reviewed": 6,
+      "merged_sha": "3598568b8f8b7003b023be3377fc632cd7b68197",
+      "reviewed_and_merged_tree": "21efa2874851f930817ebeab553d50d813964ce9",
+      "pages_run": 45425537206,
+      "pages_status": "completed",
+      "pages_conclusion": "success",
+      "direct_live_browser_inspection": "not performed",
+      "github_status": "verified",
+      "workspace_status": "open"
+    }
+  },
+  "at_299_sector_labels": {
+    "id": "AT-299",
+    "date": "2026-11-24",
+    "owner_approved": true,
+    "status": "planned_not_implemented",
+    "purpose": "Show clear game-matching sector names directly on the existing Atlas Explorer map, retaining the existing highlighted square navigation and zoom-in behavior.",
+    "pilot_sector": "vert-sector-1",
+    "target_sectors": 48,
+    "existing_map": "maps/lumiose-game-map.jpg",
+    "existing_map_native_size": [
+      1920,
+      1920
+    ],
+    "preserve_25_coverage_squares": true,
+    "coverage_rule": "The 5 by 5 squares are browsing cells, never real sector boundaries. Preserve selection highlight, zoom, pan, rotation and compass. Do not rename cells as sectors.",
+    "label_rule": "Use evidence-aligned original in-game sector text locations on the preserved map. A label anchor is not a sector centre, boundary, item coordinate or new point marker. Keep label coordinates separate from existing sector xy fields. No placement at a guessed district centroid. If a selected sector has no verified label position, show the selected name as a clearly non-geographic overlay with the existing district-start disclaimer.",
+    "readability": "Readable mobile/desktop, zoom-dependent density, upright labels during rotation, overlap avoidance, optional independent sector-name layer, no interference with touch or marker clicks. Keep source map and current map controls unchanged.",
+    "evidence_required": "Reopen owner screenshots/original map evidence; align matching landmarks to native pixels; record screenshot reference, transformation and confidence. Pilot Vert 1 before wider rollout. Unknown anchors remain unpublished.",
+    "sector_label_register": [
+      {
+        "sector_id": "vert-sector-1",
+        "display_name": "Vert Sector 1",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-2",
+        "display_name": "Vert Sector 2",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-3",
+        "display_name": "Vert Sector 3",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-4",
+        "display_name": "Vert Sector 4",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-5",
+        "display_name": "Vert Sector 5",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-6",
+        "display_name": "Vert Sector 6",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-7",
+        "display_name": "Vert Sector 7",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-8",
+        "display_name": "Vert Sector 8",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "vert-sector-9",
+        "display_name": "Vert Sector 9",
+        "district": "Vert",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-1",
+        "display_name": "Bleu Sector 1",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-2",
+        "display_name": "Bleu Sector 2",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-3",
+        "display_name": "Bleu Sector 3",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-4",
+        "display_name": "Bleu Sector 4",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-5",
+        "display_name": "Bleu Sector 5",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-6",
+        "display_name": "Bleu Sector 6",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-7",
+        "display_name": "Bleu Sector 7",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-8",
+        "display_name": "Bleu Sector 8",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-9",
+        "display_name": "Bleu Sector 9",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "bleu-sector-10",
+        "display_name": "Bleu Sector 10",
+        "district": "Bleu",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-1",
+        "display_name": "Magenta Sector 1",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-2",
+        "display_name": "Magenta Sector 2",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-3",
+        "display_name": "Magenta Sector 3",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-4",
+        "display_name": "Magenta Sector 4",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-5",
+        "display_name": "Magenta Sector 5",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-6",
+        "display_name": "Magenta Sector 6",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-7",
+        "display_name": "Magenta Sector 7",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-8",
+        "display_name": "Magenta Sector 8",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "magenta-sector-9",
+        "display_name": "Magenta Sector 9",
+        "district": "Magenta",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-1",
+        "display_name": "Rouge Sector 1",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-2",
+        "display_name": "Rouge Sector 2",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-3",
+        "display_name": "Rouge Sector 3",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-4",
+        "display_name": "Rouge Sector 4",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-5",
+        "display_name": "Rouge Sector 5",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-6",
+        "display_name": "Rouge Sector 6",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-7",
+        "display_name": "Rouge Sector 7",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "rouge-sector-8",
+        "display_name": "Rouge Sector 8",
+        "district": "Rouge",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-1",
+        "display_name": "Jaune Sector 1",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-2",
+        "display_name": "Jaune Sector 2",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-3",
+        "display_name": "Jaune Sector 3",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-4",
+        "display_name": "Jaune Sector 4",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-5",
+        "display_name": "Jaune Sector 5",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-6",
+        "display_name": "Jaune Sector 6",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-7",
+        "display_name": "Jaune Sector 7",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-8",
+        "display_name": "Jaune Sector 8",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-9",
+        "display_name": "Jaune Sector 9",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-10",
+        "display_name": "Jaune Sector 10",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-11",
+        "display_name": "Jaune Sector 11",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      },
+      {
+        "sector_id": "jaune-sector-12",
+        "display_name": "Jaune Sector 12",
+        "district": "Jaune",
+        "label_anchor_xy": null,
+        "evidence": null,
+        "status": "needs_verification"
+      }
+    ],
+    "test_gates": [
+      "Pilot Vert 1 verified label placement before geographic labels",
+      "Existing 25 highlighted cells and zoom-to-cell behavior",
+      "All 48 sector selector names and links retained; no false sector pins",
+      "Desktop pan/zoom/rotation and mobile pinch/drag/two-finger rotation",
+      "Readable non-overlapping names, optional layer toggle and accessible map controls",
+      "Existing marker/gallery/navigation, smart-video return and progress regression checks",
+      "Exact-head CI, actual desktop/mobile screenshot review and confirmed Pages deployment; independently verify Workspace only after AT-297 gates"
+    ],
+    "checklist_items": [
+      {
+        "id": "AT-299-SECTOR-LABELS",
+        "purpose": "Readable evidence-aligned sector labels for all 48 sectors on existing interactive map; Vert 1 pilot; retain highlighted grid and zoom.",
+        "github_status": "open",
+        "workspace_status": "open"
+      }
+    ],
+    "next": "Finish AT-298 publication; implement and validate AT-299 Vert 1 label pilot and evidence-driven rollout in bounded stages; then resume Vert 8 Hotel Z routes and Bleu 1. Workspace gates unchanged."
   }
 }
