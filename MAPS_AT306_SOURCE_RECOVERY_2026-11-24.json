@@ -1,0 +1,392 @@
+{
+  "id": "ATLAS-AT306-OWNER-SOURCE-RECOVERY-2026-11-24",
+  "schema_version": 1,
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "base_main_sha": "3eb3651be2ddf299a9e6fa60dbf78edfa99568e0",
+  "stage": "AT-306",
+  "status": "eleven_clean_source_crops_verified_locally_pending_github_binary_upload",
+  "source_register": "MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json",
+  "source_policy": "Real owner-supplied map screenshots only, native pixels and honest provenance; do not remove temporary UI by fabricated pixels, add guessed coordinates or permanent Hyperspace portals.",
+  "counts": {
+    "published_pngs_unchanged": 23,
+    "published_sector_coverage_unchanged": 29,
+    "clean_unpublished_candidates": 11,
+    "rejected_nonclean_candidates": 2,
+    "remaining_after_future_accepted_upload": 8,
+    "total_sectors": 48,
+    "geographic_sector_anchors_added": 0,
+    "owner_holovator_jpgs_unchanged": 111
+  },
+  "binary_pack": "lumiose-at306-11-verified-sector-crops-20261124.zip; available in owner conversation, NOT stored at GitHub",
+  "accepted": [
+    {
+      "sector_id": "vert-sector-7",
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        704,
+        338,
+        954,
+        430
+      ],
+      "width": 250,
+      "height": 92,
+      "bytes": 39799,
+      "sha256": "ca3728dc59b2752ae057c32d416470a9ba354f2446451888829e26a3f4f36a96",
+      "predicted_git_blob_sha": "141a10181603cc5630776da21d9dc13361a6f7ab",
+      "orientation_text": "Near Vert Street and Station Front, above South Boulevard.",
+      "visible_labels": [
+        "Vert Sector 7"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-8",
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        423,
+        541,
+        645,
+        675
+      ],
+      "width": 222,
+      "height": 134,
+      "bytes": 48526,
+      "sha256": "023903eb59ca9f7188309b00254b2b5f464d66d4aab1c72139754bd680f1cb10",
+      "predicted_git_blob_sha": "5fb22030aa25df81bd5f1379726de7e21bf2d699",
+      "orientation_text": "Between Vert Street and Station Front, north of South Boulevard.",
+      "visible_labels": [
+        "Vert Sector 8"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-9",
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        79,
+        444,
+        319,
+        610
+      ],
+      "width": 240,
+      "height": 166,
+      "bytes": 62726,
+      "sha256": "2e2f79c5e87ca7e348268ce82fa0e1e0969bbadbcf9c3d88ce430efa012b7b1e",
+      "predicted_git_blob_sha": "fc26b45d542ac348ec9ca197b5e187263781eb63",
+      "orientation_text": "Between Vernal Avenue and Vert Sector 8, north of South Boulevard.",
+      "visible_labels": [
+        "Vert Sector 9"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-3",
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        614,
+        379,
+        796,
+        462
+      ],
+      "width": 182,
+      "height": 83,
+      "bytes": 18510,
+      "sha256": "14ac67d6a493f96ea6206bda0d1a8f132bc9039dae751e3c9ba43a1984d1b2ca",
+      "predicted_git_blob_sha": "9fd2271b33622f6638aaddb46e8780ffa214b3a6",
+      "orientation_text": "East of Bleu Plaza and west of Vernal Avenue, north of Aymlis Park.",
+      "visible_labels": [
+        "Bleu Sector 3"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-8",
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        0,
+        573,
+        220,
+        748
+      ],
+      "width": 220,
+      "height": 175,
+      "bytes": 57357,
+      "sha256": "68a049bcdffd53d875c4e707ce7ec0fb0a700bedaaeb69b46c98c4bb8d0b5afd",
+      "predicted_git_blob_sha": "26b4976062260860b2f30c7e3dc89f1e0ce280ce",
+      "orientation_text": "Southwest of Bleu Plaza, beside Bleu Street.",
+      "visible_labels": [
+        "Bleu Sector 8"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-1",
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        543,
+        70,
+        795,
+        260
+      ],
+      "width": 252,
+      "height": 190,
+      "bytes": 70800,
+      "sha256": "013f7ac7fb9b4105841c34ca430f187b2626334321065a82e3b73f7661808c8b",
+      "predicted_git_blob_sha": "3369d1f073d4f003bb35cadd2a43e040bd0a5190",
+      "orientation_text": "Between Autumnal Avenue and Rouge Street, beside the central city square.",
+      "visible_labels": [
+        "Rouge Sector 1"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-2",
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        900,
+        28,
+        1120,
+        187
+      ],
+      "width": 220,
+      "height": 159,
+      "bytes": 49325,
+      "sha256": "b535c70c9378f159ab74ced60f7202fb11ee4d2e46b7aaa0b75a63c339e01c6d",
+      "predicted_git_blob_sha": "690ecfb5ce6deed374c08dba16a778512c90cf2e",
+      "orientation_text": "East of Rouge Street, near Vernal Avenue and north of the central city square.",
+      "visible_labels": [
+        "Rouge Sector 2"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-4",
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1250,
+        0,
+        1484,
+        191
+      ],
+      "width": 234,
+      "height": 191,
+      "bytes": 63401,
+      "sha256": "e2e6dd4f5af527d440dc28dfcd1b8e809fc501478011bf25408237a0281caabd",
+      "predicted_git_blob_sha": "f271830230f217f45c498a339c8e131cb44c645a",
+      "orientation_text": "North of Jaune Sector 3 at the upper edge of the observed Jaune district view.",
+      "visible_labels": [
+        "Jaune Sector 4"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-8",
+      "source_name": "file_000000003f68821096de231a6761b66d.png",
+      "source_sha256": "a7ea2df3c0dc56c93c9aff76b821e5338212d02237256d81afa08426d0272ae9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        780,
+        776,
+        1117,
+        941
+      ],
+      "width": 337,
+      "height": 165,
+      "bytes": 74638,
+      "sha256": "2a5e3ba639a4313a502409b63db46561051567766d1514050b7512d9bc28a545",
+      "predicted_git_blob_sha": "b52dd52797d940ebbaf31cd24bafad3dd2540de5",
+      "orientation_text": "Below Jaune Sector 7, toward the southeastern edge of the observed map.",
+      "visible_labels": [
+        "Jaune Sector 8"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-6",
+      "source_name": "file_00000000d8a08210afd30399933bc0f9.png",
+      "source_sha256": "74dfec1c91a211166926867ffc71232ee65dbf7908f21bb9a3055d24045858c9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        861,
+        522,
+        1223,
+        658
+      ],
+      "width": 362,
+      "height": 136,
+      "bytes": 55091,
+      "sha256": "127aecbe019c9c908acea5292cbe887446be69c912291890652de4d6821ec764",
+      "predicted_git_blob_sha": "9b5797a5a0bdcff329450b599c6323dec3c2f660",
+      "orientation_text": "South of Dormez Bien Cemetery, near Rouge Plaza.",
+      "visible_labels": [
+        "Rouge Sector 6"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-9",
+      "source_name": "file_00000000ca1481f49c3225ef542bdde4.png",
+      "source_sha256": "24a0111d4c6fb9a2447e4a2afdb4d76693dfb967a82dbce23260fce8f01b6282",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        481,
+        604,
+        784,
+        788
+      ],
+      "width": 303,
+      "height": 184,
+      "bytes": 82296,
+      "sha256": "7fae594c39eb6465426c9b8f60413a98075d953f4ff8cdcd51e3fe2bd72a06fd",
+      "predicted_git_blob_sha": "137f00fdf58876920a98dfac2929a8a8fe9eb994",
+      "orientation_text": "Between the North Boulevard side of Magenta and the Autumnal Avenue corridor.",
+      "visible_labels": [
+        "Magenta Sector 9"
+      ],
+      "expected_future_asset_path": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+      "source_pixel_integrity": "Native-pixel screenshot crop, original pixel values compared locally",
+      "status": "verified_local_png_pending_binary_transfer",
+      "hosted_on_github": false,
+      "geographically_registered": false,
+      "native_label_xy": null,
+      "verified_sector_polygon": false
+    }
+  ],
+  "excluded": [
+    {
+      "sector_id": "magenta-sector-2",
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "status": "research_only_rejected",
+      "reason": "Transient black/purple star marker overlaps first letter of sector title; fails clean map-only evidence gate."
+    },
+    {
+      "sector_id": "jaune-sector-5",
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "status": "research_only_rejected",
+      "reason": "The sector-number label is cut off by original screenshot frame; require clearer full label."
+    }
+  ],
+  "remaining_without_suitable_clean_published_source_after_future_upload": [
+    "vert-sector-3",
+    "vert-sector-6",
+    "bleu-sector-9",
+    "bleu-sector-10",
+    "magenta-sector-2",
+    "magenta-sector-7",
+    "magenta-sector-8",
+    "jaune-sector-5"
+  ],
+  "public_guidance": "Written source bearings may be shown before PNG binary upload. Never create missing image URLs or label native Atlas XY until true registration.",
+  "release_gate": "Exact-head test/preview/safe merge and verified Pages deployment for text notes; future binary upload requires each actual file hash/Git blob verification before display.",
+  "workspace": "not_changed",
+  "supabase": "read_only_no_writes"
+}

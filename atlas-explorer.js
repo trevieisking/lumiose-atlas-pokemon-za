@@ -201,6 +201,9 @@ function detailsFor(item){
       figure.append(a,element("figcaption","",photo.visible_labels.join(" · ")+" · original screenshot crop for orientation only. No registered map XY, sector border or exact lift/pickup pin."));
       selectedPanel.append(figure);
       selectedPanel.append(link("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json","Review source image provenance"));
+    }else if(item.pending_source_photo_evidence?.status==="verified_local_png_pending_binary_transfer"){
+      selectedPanel.append(paragraph("A clean original game-map screenshot crop was verified from the owner source, but its PNG has not yet been uploaded to GitHub. No image is linked until its exact file hashes are checked."));
+      selectedPanel.append(link("MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json","Inspect prepared source-crop provenance"));
     }else{
       selectedPanel.append(paragraph("Original in-game screenshot for this numbered sector still needs verification. No precise street position is asserted."));
     }
@@ -297,7 +300,7 @@ function drawList(){
     const badge=element("span","ae-list-symbol",item.kind==="zone"?String(item.number).padStart(2,"0"):icons[item.kind]);
     const text=element("span");
     const placement=item.kind==="sector"
-      ? item.source_map_reference?" · original game-map photo · no exact pin":" · original photo pending · no exact pin"
+      ? item.source_map_reference?" · original game-map photo · no exact pin":item.pending_source_photo_evidence?" · clean source crop pending GitHub upload · no exact pin":" · original photo pending · no exact pin"
       : pinMap.has(item.id)
         ? (item.kind==="scaffold"?" · verified ground pin":" · approx. map point")
         : " · directory / awaiting precise pin";

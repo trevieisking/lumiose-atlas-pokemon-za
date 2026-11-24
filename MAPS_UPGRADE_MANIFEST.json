@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 52,
+  "revision": 53,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-304 23 original source PNGs published and displayed in GitHub Edition B across 29/48 sector records and 8 observed street labels; 19 sectors still need source photos, all geographical sector anchors remain unverified. AT-305 release evidence synchronized; original Workspace A, Supabase, player data unchanged.",
+  "current_phase": "AT-306 11 additional visually verified source-native crop candidates from original owner screenshots, two rejected, eight remaining after future upload. Published GitHub photo coverage still 29/48; candidate binaries are NOT hosted. Review-only orientation notes and source-hash recovery manifest, no geographic anchors or private data changes.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4299,5 +4299,36 @@
       "database": "read_only_not_changed"
     },
     "next": "Recover missing 19 genuine sector map references and additional original-game street names. Native-XY registration requires multiple fixed landmark control points and independent held-out check. Complete before promoting geographic overlays."
+  },
+  "at_306_owner_source_crop_recovery": {
+    "id": "AT-306",
+    "date": "2026-11-24",
+    "status": "github_review_branch_text_only_source_crop_binaries_not_hosted",
+    "register": "MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json",
+    "starting_main": "3eb3651be2ddf299a9e6fa60dbf78edfa99568e0",
+    "verified_local_unhosted_crop_count": 11,
+    "rejected_research_only_crop_count": 2,
+    "published_photo_coverage_unchanged": 29,
+    "possible_future_coverage_after_upload": 40,
+    "total_sectors": 48,
+    "remaining_without_publishable_source_after_upload": 8,
+    "remaining_sector_ids": [
+      "vert-sector-3",
+      "vert-sector-6",
+      "bleu-sector-9",
+      "bleu-sector-10",
+      "magenta-sector-2",
+      "magenta-sector-7",
+      "magenta-sector-8",
+      "jaune-sector-5"
+    ],
+    "source_png_assets_uploaded_to_github_this_stage": 0,
+    "new_map_pin_or_polygon_count": 0,
+    "original_owner_holovator_jpgs_preserved": 111,
+    "retained_25_square_navigation": true,
+    "source_orientation_notes_added": 11,
+    "private_checklist": "read_only_no_private_database_write",
+    "separate_workspace": "not_changed",
+    "promotion_gate": "exact-head CI, actual desktop/mobile screenshot review, conflict-free non-draft, merge with expected SHA, Pages deployment confirmation"
   }
 }
