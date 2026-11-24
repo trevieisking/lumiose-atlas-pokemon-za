@@ -9,10 +9,11 @@
       "atlas_internal.feature_checklist",
       "atlas_internal.report_resolution_queue"
     ],
-    "rule": "Before any development loop, reopen current main and active PR plan/manifest, read ledger and relevant evidence/checklist; follow linked plans rather than stale summaries. Compare independent site states, select bounded next task, sync plan/manifest/ledger/private checklist with actual evidence. Never mark verified without separate deployment and manual checks.",
+    "rule": "Before any development loop, reopen current main and active PR plan/manifest, read ledger and relevant evidence/checklist; follow linked plans rather than stale summaries. Compare independent site states, select bounded next task, sync plan/manifest/ledger/private checklist with actual evidence. Never mark verified without separate deployment and manual checks. Follow AT-297 before any Edition A source access or changes. No automatic connection between the two sites.",
     "owner_only_query": "select item_id, purpose, video_url, manifest_revision, github_status, github_stage, github_revision, workspace_status, workspace_stage from atlas_internal.feature_checklist order by item_id;",
     "feedback_protocol": "docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md",
-    "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified"
+    "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified",
+    "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "schema_version": 1,
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
@@ -2672,7 +2673,7 @@
   "at_296_vert1_2": {
     "id": "AT-296",
     "date": "2026-11-24",
-    "status": "proposed_pending_exact_head_ci_and_visual_qa",
+    "status": "github_deployed_verified_workspace_open",
     "routes_added": [
       "vert1-scaffold-courses",
       "vert2-southern-rooftop"
@@ -2696,7 +2697,7 @@
         "id": "AT-296-VERT1-ROUTE",
         "purpose": "Vert 1 separate plaza, alley, northern courtyard and eastern courtyard approaches",
         "route": "vert1-scaffold-courses",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Source-backed written approach; district-only, no measured geometry."
       },
@@ -2704,7 +2705,7 @@
         "id": "AT-296-VERT2-ROUTE",
         "purpose": "Vert 2 northern ladder, raised platform and southern rooftop approach; early roll vs Glide dispute",
         "route": "vert2-southern-rooftop",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Source-backed written approach; district-only, no measured geometry."
       },
@@ -2714,7 +2715,7 @@
         "route": "vert1-scaffold-courses",
         "step": 2,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=30s",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
       },
@@ -2724,7 +2725,7 @@
         "route": "vert1-scaffold-courses",
         "step": 3,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=46s",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
       },
@@ -2734,7 +2735,7 @@
         "route": "vert1-scaffold-courses",
         "step": 5,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
       },
@@ -2744,7 +2745,7 @@
         "route": "vert2-southern-rooftop",
         "step": 3,
         "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s",
-        "github_status": "in_progress",
+        "github_status": "verified",
         "workspace_status": "open",
         "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
       }
@@ -2765,8 +2766,70 @@
       "cause": "Five previous browser assertions expected 13 dropdown options (12 routes plus placeholder); the new data correctly contains 15 options (14 routes plus placeholder).",
       "correction_sha": "d23038714a0de2d291f9697526bed75e4488e20c",
       "scope": "browser-test assertions only, no runtime or route data edits",
-      "retest": "pending exact final head"
+      "retest": "passed at e876de0fda8cd565609ed66b2c42ceb5a3037473"
     },
-    "checklist_manifest_revision": 42
+    "checklist_manifest_revision": 42,
+    "release": {
+      "github_status": "verified",
+      "workspace_status": "open",
+      "reviewed_head": "e876de0fda8cd565609ed66b2c42ceb5a3037473",
+      "validation_run": 45420440439,
+      "screenshot_artifact": 14933772897,
+      "desktop_mobile_screenshots_reviewed": 8,
+      "merged_sha": "e5b9c531e6e08e2977ef9ddd283dc3ba23b18db3",
+      "reviewed_and_merged_tree": "e2817aec100c3d6f967e440c0a6b7904987ec461",
+      "pages_run": 45421532730,
+      "pages_conclusion": "success",
+      "direct_live_browser_inspection": "unavailable; exact tree, CI, preview and deployment evidence",
+      "live_routes": 14,
+      "video_references": 7
+    }
+  },
+  "at_297_workspace_handoff": {
+    "id": "AT-297",
+    "date": "2026-11-24",
+    "owner_approved": true,
+    "status": "documented_pending_authorized_workspace_access",
+    "review_date": "2026-11-25",
+    "handoff": "WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy",
+    "checklist_id": "AT-297-HANDOFF-PROTOCOL",
+    "edition_a": "Original live ChatGPT Site; preserve its source, URL, existing progress and Supabase integration.",
+    "edition_b": "Independent GitHub guide and isolated Codespaces development/testing.",
+    "auto_sync": false,
+    "auto_deploy_to_a": false,
+    "source_export": "Private complete original-source ZIP or supported read-only access; verify inventory and hashes; exclude secrets and private player/feedback data.",
+    "progress": "Audit actual A storage schema, origin and stable IDs; preserve all saved values. Test existing player export or separately implement a validated user-controlled backup/restore. PR #5 remains an unmerged draft.",
+    "gates": [
+      {
+        "requirement": "A1 authorized original source access",
+        "status": "open"
+      },
+      {
+        "requirement": "A2 verified source export and rollback",
+        "status": "open"
+      },
+      {
+        "requirement": "A3 progress and integration audit",
+        "status": "open"
+      },
+      {
+        "requirement": "A4 compare actual A source with verified B and prepare bounded patch",
+        "status": "open"
+      },
+      {
+        "requirement": "A5 isolated preview and regression tests",
+        "status": "open"
+      },
+      {
+        "requirement": "A6 independent safe publication through original editor",
+        "status": "open"
+      },
+      {
+        "requirement": "A7 live verification and checklist evidence",
+        "status": "open"
+      }
+    ],
+    "owner_testing": "Live guide only; assistant handles development review.",
+    "no_changes_to_a_now": true
   }
 }
