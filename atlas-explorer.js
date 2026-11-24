@@ -70,10 +70,20 @@ const mapCenter=()=>{const d=dimensions();return{x:d.width/2,y:d.height/2};};
 /* Whole city area navigation: source-image coverage, not invented item or sector pins. */
 const coverageGrid=by("aeCoverageGrid"),coverageStatus=by("aeCoverageStatus");
 const coverageSector=by("aeCoverageSector"),coverageDistricts=by("aeCoverageDistricts");
+const sectorContext=by("aeSectorContext"),sectorContextName=by("aeSectorContextName");
+/* The selected name is a screen-space orientation aid, not a map coordinate.
+   Do not use districtStart or place a geographic label until a source anchor is verified. */
+function syncSectorContext(){
+  const item=recordMap.get(coverageSector.value);
+  const visible=layerVisible("sector-label")&&item?.kind==="sector"&&item.id===selectedId;
+  sectorContext.hidden=!visible;
+  sectorContextName.textContent=visible?item.name:"";
+}
 function coverageMessage(message,activeArea="") {
   coverageStatus.textContent=message;
   for(const cell of coverageGrid.querySelectorAll("button"))
     cell.setAttribute("aria-pressed",String(cell.dataset.area===activeArea));
+  syncSectorContext();
 }
 function focusDistrict(district,sectorId="",sectorName="") {
   const sourceCentre=districtStart(zoneRows,district);
@@ -125,7 +135,7 @@ function setupCoverage(sectors) {
   }
   coverageSector.addEventListener("change",()=>{
     const item=recordMap.get(coverageSector.value);
-    if(item?.kind!=="sector")return;
+    if(item?.kind!=="sector"){syncSectorContext();return;}
     activeKind="sector";drawList();selectRecord(item,true);
     viewport.scrollIntoView({behavior:"smooth",block:"center"});
   });
@@ -240,6 +250,7 @@ function selectRecord(item,focus=true){
     button.setAttribute("aria-pressed",String(button.dataset.recordId===selectedId));
   }
   if(focus)focusRecord(item);
+  syncSectorContext();
   const route=routes.find(r=>r.point_id===item.id);
   if(route)chooseRoute(route.id);
 }
@@ -273,6 +284,7 @@ function drawList(){
   for(const b of filters)b.setAttribute("aria-pressed",String(b.dataset.kind===activeKind));
   count.textContent=matches.length+" of "+records.length+" documented city entries";
   noResults.hidden=matches.length!==0;
+  syncSectorContext();
 }
 function createPins(){
   layer.replaceChildren();pinMap.clear();
