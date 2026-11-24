@@ -79,9 +79,12 @@ function syncSectorContext(){
   const visible=layerVisible("sector-label")&&item?.kind==="sector"&&item.id===selectedId;
   sectorContext.hidden=!visible;
   sectorContextName.textContent=visible?item.name:"";
+  const sourceNames=item?.source_map_reference?.visible_labels?.filter(name=>!/(?:Vert|Bleu|Magenta|Rouge|Jaune) Sector [0-9]+/.test(name))||[];
   sectorContextBearing.textContent=!visible?"":item.street_bearing?.confidence==="source_image_orientation_only"
     ? "Source-map street bearing (orientation only): "+item.street_bearing.text
-    : "Street-level map position not yet source-verified";
+    : item.source_map_reference
+      ? (sourceNames.length?"Original source-map labels: "+sourceNames.join(", "):"Original-game sector photo available")+" · geographic anchor unverified"
+      : "Street-level map position not yet source-verified";
 }
 function coverageMessage(message,activeArea="") {
   coverageStatus.textContent=message;
@@ -184,10 +187,22 @@ function detailsFor(item){
     selectedPanel.append(paragraph("This sector name is verified in the directory. Its exact map boundary is not independently traced, so no arbitrary pin is drawn."));
     if(item.street_bearing?.confidence==="source_image_orientation_only"){
       selectedPanel.append(paragraph("Source-labelled street bearings (orientation only): "+item.street_bearing.text));
-      selectedPanel.append(paragraph("Street source crop: "+item.street_bearing.source_crop_id+". Its original screenshot crop is not yet hosted as a map detail tile; no exact map XY is implied."));
-      selectedPanel.append(link("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json","Inspect source-image evidence register"));
+      selectedPanel.append(link("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json","Read written street-bearing evidence"));
+    }
+    const photo=item.source_map_reference;
+    if(photo?.precision==="source_image_orientation_only"&&photo?.geographically_registered===false){
+      const figure=element("figure","ae-source-map-reference");
+      const a=element("a");a.href=photo.image_path;a.target="_blank";a.rel="noopener noreferrer";
+      a.setAttribute("aria-label","Open genuine original game-map crop for "+item.name);
+      const img=element("img");img.src=photo.image_path;img.loading="lazy";img.decoding="async";
+      img.width=photo.width;img.height=photo.height;
+      img.alt="Original in-game map screenshot crop for "+item.name+": "+photo.visible_labels.join(", ")+". Reference only, not a registered map tile.";
+      a.append(img);
+      figure.append(a,element("figcaption","",photo.visible_labels.join(" · ")+" · original screenshot crop for orientation only. No registered map XY, sector border or exact lift/pickup pin."));
+      selectedPanel.append(figure);
+      selectedPanel.append(link("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json","Review source image provenance"));
     }else{
-      selectedPanel.append(paragraph("Street reference not yet source-verified for this numbered sector. Do not treat its district starting view as an exact location."));
+      selectedPanel.append(paragraph("Original in-game screenshot for this numbered sector still needs verification. No precise street position is asserted."));
     }
     selectedPanel.append(link(item.link,"Open this sector's original clues"));
   }else if(item.kind==="holovator"){
@@ -269,7 +284,7 @@ function match(item){
   const query=search.value.trim().toLocaleLowerCase();
   if(activeKind!=="all"&&item.kind!==activeKind)return false;
   if(!query)return true;
-  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,labels[item.kind]]
+  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),labels[item.kind]]
     .some(value=>plain(value).toLocaleLowerCase().includes(query));
 }
 function drawList(){
@@ -281,9 +296,11 @@ function drawList(){
     button.setAttribute("aria-pressed",String(selectedId===item.id));
     const badge=element("span","ae-list-symbol",item.kind==="zone"?String(item.number).padStart(2,"0"):icons[item.kind]);
     const text=element("span");
-    const placement=pinMap.has(item.id)
-      ? (item.kind==="scaffold"?" · verified ground pin":" · approx. map point")
-      : " · directory / awaiting precise pin";
+    const placement=item.kind==="sector"
+      ? item.source_map_reference?" · original game-map photo · no exact pin":" · original photo pending · no exact pin"
+      : pinMap.has(item.id)
+        ? (item.kind==="scaffold"?" · verified ground pin":" · approx. map point")
+        : " · directory / awaiting precise pin";
     text.append(element("strong","",item.name),element("small","",labels[item.kind]+" · "+(item.district||"city")+placement));
     button.append(badge,text);
     button.addEventListener("click",()=>selectRecord(item,true));

@@ -1,0 +1,1279 @@
+{
+  "id": "ATLAS-SECTOR-STREET-SOURCE-LIBRARY-2026-11-24",
+  "schema_version": 1,
+  "source_plan": "ATLAS-MAPS-2026-11-21-V1",
+  "phase": "AT-304",
+  "status": "github_review_branch_not_live",
+  "source_registers": [
+    "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
+    "AT304 owner source crop manifest (local attached evidence, reproduced in entries below)"
+  ],
+  "source_binary_policy": "Only original native-pixel map-only PNG crops with validated SHA-256 and Git blob SHA. Never change the original 1920x1920 basemap, owner Holovator galleries, or game source files.",
+  "coordinate_policy": "Image crop rectangle is measured in source screenshot pixels, not Atlas 1920x1920 geographic coordinates. No label anchors, sector boundaries, lift entrances, ladder/scaffold or pickup pins asserted.",
+  "counts": {
+    "image_crops": 23,
+    "sectors_with_photographic_references": 29,
+    "sectors_needing_source_image": 19,
+    "total_sectors": 48,
+    "wild_zones_preserved": 20,
+    "holovator_research_entries_preserved": 21,
+    "source_jpgs_unchanged": 111,
+    "geographically_registered_tiles": 0,
+    "geographic_sector_label_anchors": 0
+  },
+  "images": [
+    {
+      "id": "bleu-5-7-aymlis-park",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "git_blob_sha": "c9451d1ef67c55660fe74153a945f0b374222d93",
+      "sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+      "bytes": 397818,
+      "width": 638,
+      "height": 509,
+      "source_name": "file_00000000a4bc81f4a961603abfbdcf80.png",
+      "source_sha256": "fb89e5d7b1ea2bc6c12ef7d12a888a4201aab0ee3158d0bc08da1f546aa90a77",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        121,
+        271,
+        759,
+        780
+      ],
+      "visible_labels": [
+        "Bleu Sector 5",
+        "Bleu Sector 7",
+        "Aymlis Park",
+        "South Boulevard"
+      ],
+      "sector_ids": [
+        "bleu-sector-5",
+        "bleu-sector-7"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-1-vernal-avenue",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png",
+      "git_blob_sha": "a25b5abb05f683cbe31a1f4b6edc852e035d570b",
+      "sha256": "98d3723db3c23a50405b456a08fb7405e41e1db13ab50ced48d6c8f34c784923",
+      "bytes": 41516,
+      "width": 290,
+      "height": 103,
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        620,
+        115,
+        910,
+        218
+      ],
+      "visible_labels": [
+        "Bleu Sector 1",
+        "Vernal Avenue"
+      ],
+      "sector_ids": [
+        "bleu-sector-1"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-2-estival",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png",
+      "git_blob_sha": "b16b958392f357f8c8b5d064349c68951a244f11",
+      "sha256": "1f5ea3072b9fc98b8fba43096d4bc05e18077bf90dc4af3779bc93f27f792df9",
+      "bytes": 138812,
+      "width": 415,
+      "height": 230,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1010,
+        650,
+        1425,
+        880
+      ],
+      "visible_labels": [
+        "Bleu Sector 2",
+        "Bleu Street"
+      ],
+      "sector_ids": [
+        "bleu-sector-2"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-4-estival",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png",
+      "git_blob_sha": "5d03ece60328592002173bb863c48bb96ffc848f",
+      "sha256": "517e57caf03eb2835cc266f8d13c4c93ab7d61e1bd835fcf9e4cfe92c66bc2cb",
+      "bytes": 77051,
+      "width": 325,
+      "height": 157,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        685,
+        760,
+        1010,
+        917
+      ],
+      "visible_labels": [
+        "Bleu Sector 4"
+      ],
+      "sector_ids": [
+        "bleu-sector-4"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-6-bleu-plaza",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png",
+      "git_blob_sha": "cd69586faf4fbb32e6b8fc94c8df9a7a0bca2b10",
+      "sha256": "7c6b975ffb52320efbd98229bd0741bffc96af914ea6ef8943379c5339cf719c",
+      "bytes": 190584,
+      "width": 520,
+      "height": 275,
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        0,
+        245,
+        520,
+        520
+      ],
+      "visible_labels": [
+        "Bleu Sector 6",
+        "Bleu Plaza"
+      ],
+      "sector_ids": [
+        "bleu-sector-6"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-9-10-11-12",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "git_blob_sha": "bf689c1e06cd9202e20bf0a44ae2926c5fe16486",
+      "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+      "bytes": 647663,
+      "width": 619,
+      "height": 833,
+      "source_name": "file_0000000060848210b745f93ec9eb69a5.png",
+      "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1053,
+        0,
+        1672,
+        833
+      ],
+      "visible_labels": [
+        "Jaune Sector 9",
+        "Jaune Sector 10",
+        "Jaune Sector 11",
+        "Jaune Sector 12",
+        "Jaune Street",
+        "North Boulevard"
+      ],
+      "sector_ids": [
+        "jaune-sector-9",
+        "jaune-sector-10",
+        "jaune-sector-11",
+        "jaune-sector-12"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-1-jaune-street",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+      "git_blob_sha": "2b0e3dc4a1cbcc5f75d8b6851a8ff1987cb421fa",
+      "sha256": "bdf45031e93f4301ea7272f782d677b27ca954596c8973ec13bce6879fbe1f8a",
+      "bytes": 71483,
+      "width": 265,
+      "height": 195,
+      "source_name": "file_0000000060848210b745f93ec9eb69a5.png",
+      "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        360,
+        235,
+        625,
+        430
+      ],
+      "visible_labels": [
+        "Jaune Sector 1",
+        "Jaune Street"
+      ],
+      "sector_ids": [
+        "jaune-sector-1"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-2",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+      "git_blob_sha": "812c169b0d628cbb709e4fc3103f1a1c6a1154e0",
+      "sha256": "8b86f78e130d6cab7417a08668acff2009b82fc84d7127e1506772c39c8f0c1c",
+      "bytes": 84590,
+      "width": 310,
+      "height": 175,
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1120,
+        510,
+        1430,
+        685
+      ],
+      "visible_labels": [
+        "Jaune Sector 2"
+      ],
+      "sector_ids": [
+        "jaune-sector-2"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-3-plaza",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+      "git_blob_sha": "02018c76df778695a39d0d26a3ae08e2abb5ddd5",
+      "sha256": "6a3537bab46b2e093dee5c8c75a00308cbb0c10f5ee4bcdd2e0537fb58c2cd0e",
+      "bytes": 120719,
+      "width": 495,
+      "height": 195,
+      "source_name": "file_0000000060848210b745f93ec9eb69a5.png",
+      "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        500,
+        85,
+        995,
+        280
+      ],
+      "visible_labels": [
+        "Jaune Sector 3",
+        "Jaune Plaza"
+      ],
+      "sector_ids": [
+        "jaune-sector-3"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-6",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+      "git_blob_sha": "edd63702e7b402551d52db4c27b16bde0922098a",
+      "sha256": "09e4232a8fb8c45f520bb257f90b4f57f5c4df231ca2741ae60eaa336c80943d",
+      "bytes": 71294,
+      "width": 220,
+      "height": 205,
+      "source_name": "file_0000000060848210b745f93ec9eb69a5.png",
+      "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        900,
+        420,
+        1120,
+        625
+      ],
+      "visible_labels": [
+        "Jaune Sector 6"
+      ],
+      "sector_ids": [
+        "jaune-sector-6"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-7-hibernal",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+      "git_blob_sha": "e37c77bd5356e4f7173a767cc95aa71894250aa1",
+      "sha256": "45bb22c18c7fe7ba27681909813d3890d9cc7b4d55be688bdf7ff20134000c3b",
+      "bytes": 193910,
+      "width": 465,
+      "height": 300,
+      "source_name": "file_000000003f68821096de231a6761b66d.png",
+      "source_sha256": "a7ea2df3c0dc56c93c9aff76b821e5338212d02237256d81afa08426d0272ae9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        625,
+        540,
+        1090,
+        840
+      ],
+      "visible_labels": [
+        "Jaune Sector 7",
+        "Hibernal Avenue"
+      ],
+      "sector_ids": [
+        "jaune-sector-7"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-1-3-estival",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "git_blob_sha": "b53c9f167c1347806797915f49ee4c23eb4f773b",
+      "sha256": "d6665319cd497583dcf9d2475e8a9b34425286ab0ba807b8915fb574f8ed2cc6",
+      "bytes": 198890,
+      "width": 623,
+      "height": 246,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        544,
+        494,
+        1167,
+        740
+      ],
+      "visible_labels": [
+        "Magenta Sector 1",
+        "Magenta Sector 3",
+        "Estival Avenue"
+      ],
+      "sector_ids": [
+        "magenta-sector-1",
+        "magenta-sector-3"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-4",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-4.png",
+      "git_blob_sha": "c88a89f064c8eb2dc2167a43aeffa00504a7228b",
+      "sha256": "7aa9f26f13392be3ab1a4f6f14da4f8a9e1e66ff6086aa3b8748c4e38db24ce5",
+      "bytes": 57327,
+      "width": 280,
+      "height": 160,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        710,
+        0,
+        990,
+        160
+      ],
+      "visible_labels": [
+        "Magenta Sector 4"
+      ],
+      "sector_ids": [
+        "magenta-sector-4"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-5",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-5.png",
+      "git_blob_sha": "6a74fd76729398fc7ff9070da2cf69e35368d341",
+      "sha256": "a2eb1a1c79c7b9ed61bffa6603f15fca56331afd2261f744e82448176ed6f5df",
+      "bytes": 104071,
+      "width": 430,
+      "height": 180,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        50,
+        675,
+        480,
+        855
+      ],
+      "visible_labels": [
+        "Magenta Sector 5"
+      ],
+      "sector_ids": [
+        "magenta-sector-5"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-6-south-boulevard",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png",
+      "git_blob_sha": "60e0fcf409f91ba18620681b5d06c84ac013e132",
+      "sha256": "12b9f3778d221f0db400a59ab40b1a40e77394b6b2d02af1349889dc0670d740",
+      "bytes": 264513,
+      "width": 645,
+      "height": 320,
+      "source_name": "file_00000000177081f49f80ddd7a137d21c.png",
+      "source_sha256": "ea35e861793142ef6ffb20cabb493750fe54ff7a5dc794556ba95d123b9cf713",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        0,
+        315,
+        645,
+        635
+      ],
+      "visible_labels": [
+        "Magenta Sector 6",
+        "South Boulevard"
+      ],
+      "sector_ids": [
+        "magenta-sector-6"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-3",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+      "git_blob_sha": "15d80b1cf971972f0b28f2f5b43862829ba3bbfc",
+      "sha256": "69130576a4d84fe5f76d10a25c82a053f429a3fc77882ac73c37b4987fd844d8",
+      "bytes": 99680,
+      "width": 265,
+      "height": 235,
+      "source_name": "file_00000000d8a08210afd30399933bc0f9.png",
+      "source_sha256": "74dfec1c91a211166926867ffc71232ee65dbf7908f21bb9a3055d24045858c9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        55,
+        345,
+        320,
+        580
+      ],
+      "visible_labels": [
+        "Rouge Sector 3"
+      ],
+      "sector_ids": [
+        "rouge-sector-3"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-4",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+      "git_blob_sha": "5bc225e0dda2b145ded20259640f68f6c36592fa",
+      "sha256": "fa0f1576425c8d33b5270f71d38ad5636aa53fc3bac5b465747cf8a8f99ffed8",
+      "bytes": 94858,
+      "width": 250,
+      "height": 245,
+      "source_name": "file_00000000d8a08210afd30399933bc0f9.png",
+      "source_sha256": "74dfec1c91a211166926867ffc71232ee65dbf7908f21bb9a3055d24045858c9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        300,
+        315,
+        550,
+        560
+      ],
+      "visible_labels": [
+        "Rouge Sector 4"
+      ],
+      "sector_ids": [
+        "rouge-sector-4"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-5",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+      "git_blob_sha": "27572527024ef94d7fc1b1e94b1322412ea1d7ff",
+      "sha256": "7dad792eca8b791558c34b5a29e2fe9c8efae601b72011414b45cf4bab90feff",
+      "bytes": 62098,
+      "width": 250,
+      "height": 210,
+      "source_name": "file_00000000ca1481f49c3225ef542bdde4.png",
+      "source_sha256": "24a0111d4c6fb9a2447e4a2afdb4d76693dfb967a82dbce23260fce8f01b6282",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1300,
+        410,
+        1550,
+        620
+      ],
+      "visible_labels": [
+        "Rouge Sector 5"
+      ],
+      "sector_ids": [
+        "rouge-sector-5"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-7-north-boulevard",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+      "git_blob_sha": "32d1fe968f940cda890b61913fed4b10ba0b842f",
+      "sha256": "fafef8190975b4ae65bc7396946377233c473d8bb59356c6ef9ce2416f3e51a2",
+      "bytes": 182470,
+      "width": 710,
+      "height": 210,
+      "source_name": "file_00000000ca1481f49c3225ef542bdde4.png",
+      "source_sha256": "24a0111d4c6fb9a2447e4a2afdb4d76693dfb967a82dbce23260fce8f01b6282",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        840,
+        180,
+        1550,
+        390
+      ],
+      "visible_labels": [
+        "Rouge Sector 7",
+        "North Boulevard"
+      ],
+      "sector_ids": [
+        "rouge-sector-7"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-8-hibernal",
+      "batch": "AT-304",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+      "git_blob_sha": "a36f646c35ad254d9717052fd9ce5d95521e7476",
+      "sha256": "d860612a6d23607c09e98ba199fb3ecd7ad9f4c0feade140421fc0b1dd9b9ffb",
+      "bytes": 215897,
+      "width": 472,
+      "height": 395,
+      "source_name": "file_00000000d8a08210afd30399933bc0f9.png",
+      "source_sha256": "74dfec1c91a211166926867ffc71232ee65dbf7908f21bb9a3055d24045858c9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1200,
+        240,
+        1672,
+        635
+      ],
+      "visible_labels": [
+        "Rouge Sector 8",
+        "Hibernal Avenue"
+      ],
+      "sector_ids": [
+        "rouge-sector-8"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-1-saison-canal",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/vert/vert-1-saison-canal.png",
+      "git_blob_sha": "193e9989fc757e95a03827fdf56336604c34ab8d",
+      "sha256": "e293faa9b42375862a0aa1ab07a76c50b80d77cced96c25168738d4f8f19e3c4",
+      "bytes": 137103,
+      "width": 358,
+      "height": 267,
+      "source_name": "file_0000000060848210b745f93ec9eb69a5.png",
+      "source_sha256": "e22e228273008f7389c8bd8b1bf1eadfa1ced781328ccc241d72f2d88ab3edf8",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        436,
+        535,
+        794,
+        802
+      ],
+      "visible_labels": [
+        "Vert Sector 1",
+        "Saison Canal",
+        "Saison-Canalside"
+      ],
+      "sector_ids": [
+        "vert-sector-1"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-2-vernal-avenue",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png",
+      "git_blob_sha": "0326e4560da1ed3a6fc7e7d30b48eae8880db37e",
+      "sha256": "a98b2ec3fba25b5d91621dda0b5cf9d03a903fe91c188305697067f04b3e41df",
+      "bytes": 126795,
+      "width": 330,
+      "height": 351,
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        797,
+        0,
+        1127,
+        351
+      ],
+      "visible_labels": [
+        "Vert Sector 2",
+        "Vernal Avenue"
+      ],
+      "sector_ids": [
+        "vert-sector-2"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-4-5",
+      "batch": "AT-301",
+      "path": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "git_blob_sha": "024d6bbe4420644914884a3de9fcb043b76d3fc4",
+      "sha256": "4138f192169c7bf56e9440368635fc95d98da31649fb9e25b627de0d2de5460e",
+      "bytes": 307492,
+      "width": 797,
+      "height": 294,
+      "source_name": "file_00000000a4bc81f4a961603abfbdcf80.png",
+      "source_sha256": "fb89e5d7b1ea2bc6c12ef7d12a888a4201aab0ee3158d0bc08da1f546aa90a77",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        814,
+        83,
+        1611,
+        377
+      ],
+      "visible_labels": [
+        "Vert Sector 4",
+        "Vert Sector 5",
+        "Vert Street"
+      ],
+      "sector_ids": [
+        "vert-sector-4",
+        "vert-sector-5"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    }
+  ],
+  "sector_coverage": [
+    {
+      "sector_id": "vert-sector-1",
+      "district": "Vert",
+      "source_crop_id": "vert-1-saison-canal",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-2",
+      "district": "Vert",
+      "source_crop_id": "vert-2-vernal-avenue",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-3",
+      "district": "Vert",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-4",
+      "district": "Vert",
+      "source_crop_id": "vert-4-5",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-5",
+      "district": "Vert",
+      "source_crop_id": "vert-4-5",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-6",
+      "district": "Vert",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-7",
+      "district": "Vert",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-8",
+      "district": "Vert",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "vert-sector-9",
+      "district": "Vert",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-1",
+      "district": "Bleu",
+      "source_crop_id": "bleu-sector-1-vernal-avenue",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-2",
+      "district": "Bleu",
+      "source_crop_id": "bleu-sector-2-estival",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-3",
+      "district": "Bleu",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-4",
+      "district": "Bleu",
+      "source_crop_id": "bleu-sector-4-estival",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-5",
+      "district": "Bleu",
+      "source_crop_id": "bleu-5-7-aymlis-park",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-6",
+      "district": "Bleu",
+      "source_crop_id": "bleu-sector-6-bleu-plaza",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-7",
+      "district": "Bleu",
+      "source_crop_id": "bleu-5-7-aymlis-park",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-8",
+      "district": "Bleu",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-9",
+      "district": "Bleu",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "bleu-sector-10",
+      "district": "Bleu",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-1",
+      "district": "Magenta",
+      "source_crop_id": "magenta-1-3-estival",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-2",
+      "district": "Magenta",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-3",
+      "district": "Magenta",
+      "source_crop_id": "magenta-1-3-estival",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-4",
+      "district": "Magenta",
+      "source_crop_id": "magenta-sector-4",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-5",
+      "district": "Magenta",
+      "source_crop_id": "magenta-sector-5",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-6",
+      "district": "Magenta",
+      "source_crop_id": "magenta-sector-6-south-boulevard",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-7",
+      "district": "Magenta",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-8",
+      "district": "Magenta",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "magenta-sector-9",
+      "district": "Magenta",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-1",
+      "district": "Rouge",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-2",
+      "district": "Rouge",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-3",
+      "district": "Rouge",
+      "source_crop_id": "rouge-sector-3",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-4",
+      "district": "Rouge",
+      "source_crop_id": "rouge-sector-4",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-5",
+      "district": "Rouge",
+      "source_crop_id": "rouge-sector-5",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-6",
+      "district": "Rouge",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-7",
+      "district": "Rouge",
+      "source_crop_id": "rouge-sector-7-north-boulevard",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "rouge-sector-8",
+      "district": "Rouge",
+      "source_crop_id": "rouge-sector-8-hibernal",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-1",
+      "district": "Jaune",
+      "source_crop_id": "jaune-sector-1-jaune-street",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-2",
+      "district": "Jaune",
+      "source_crop_id": "jaune-sector-2",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-3",
+      "district": "Jaune",
+      "source_crop_id": "jaune-sector-3-plaza",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-4",
+      "district": "Jaune",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-5",
+      "district": "Jaune",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-6",
+      "district": "Jaune",
+      "source_crop_id": "jaune-sector-6",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-7",
+      "district": "Jaune",
+      "source_crop_id": "jaune-sector-7-hibernal",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-8",
+      "district": "Jaune",
+      "source_crop_id": null,
+      "status": "needs_source_image",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-9",
+      "district": "Jaune",
+      "source_crop_id": "jaune-9-10-11-12",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-10",
+      "district": "Jaune",
+      "source_crop_id": "jaune-9-10-11-12",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-11",
+      "district": "Jaune",
+      "source_crop_id": "jaune-9-10-11-12",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    },
+    {
+      "sector_id": "jaune-sector-12",
+      "district": "Jaune",
+      "source_crop_id": "jaune-9-10-11-12",
+      "status": "source_photo_registered",
+      "native_label_xy": null,
+      "verified_geographic_polygon": false
+    }
+  ],
+  "observed_street_labels": [
+    {
+      "name": "Bleu Street",
+      "sector_ids": [
+        "bleu-sector-2"
+      ]
+    },
+    {
+      "name": "Estival Avenue",
+      "sector_ids": [
+        "magenta-sector-1",
+        "magenta-sector-3"
+      ]
+    },
+    {
+      "name": "Hibernal Avenue",
+      "sector_ids": [
+        "jaune-sector-7",
+        "rouge-sector-8"
+      ]
+    },
+    {
+      "name": "Jaune Street",
+      "sector_ids": [
+        "jaune-sector-1",
+        "jaune-sector-10",
+        "jaune-sector-11",
+        "jaune-sector-12",
+        "jaune-sector-9"
+      ]
+    },
+    {
+      "name": "North Boulevard",
+      "sector_ids": [
+        "jaune-sector-10",
+        "jaune-sector-11",
+        "jaune-sector-12",
+        "jaune-sector-9",
+        "rouge-sector-7"
+      ]
+    },
+    {
+      "name": "South Boulevard",
+      "sector_ids": [
+        "bleu-sector-5",
+        "bleu-sector-7",
+        "magenta-sector-6"
+      ]
+    },
+    {
+      "name": "Vernal Avenue",
+      "sector_ids": [
+        "bleu-sector-1",
+        "vert-sector-2"
+      ]
+    },
+    {
+      "name": "Vert Street",
+      "sector_ids": [
+        "vert-sector-4",
+        "vert-sector-5"
+      ]
+    }
+  ],
+  "observed_non_street_landmark_labels": [
+    {
+      "name": "Aymlis Park",
+      "sector_ids": [
+        "bleu-sector-5",
+        "bleu-sector-7"
+      ]
+    },
+    {
+      "name": "Bleu Plaza",
+      "sector_ids": [
+        "bleu-sector-6"
+      ]
+    },
+    {
+      "name": "Jaune Plaza",
+      "sector_ids": [
+        "jaune-sector-3"
+      ]
+    },
+    {
+      "name": "Saison Canal",
+      "sector_ids": [
+        "vert-sector-1"
+      ]
+    },
+    {
+      "name": "Saison-Canalside",
+      "sector_ids": [
+        "vert-sector-1"
+      ]
+    }
+  ],
+  "missing_sector_ids": [
+    "vert-sector-3",
+    "vert-sector-6",
+    "vert-sector-7",
+    "vert-sector-8",
+    "vert-sector-9",
+    "bleu-sector-3",
+    "bleu-sector-8",
+    "bleu-sector-9",
+    "bleu-sector-10",
+    "magenta-sector-2",
+    "magenta-sector-7",
+    "magenta-sector-8",
+    "magenta-sector-9",
+    "rouge-sector-1",
+    "rouge-sector-2",
+    "rouge-sector-6",
+    "jaune-sector-4",
+    "jaune-sector-5",
+    "jaune-sector-8"
+  ],
+  "follow_up": {
+    "image_coverage": "Find original source evidence for missing sector IDs and additional streets, not arbitrary image substitutes",
+    "geographic_alignment": "At least three measured common landmarks plus independent held-out residual validation before overlaying any tile or geographic label",
+    "workspace": "Original Workspace Site A remains separate and unmodified",
+    "hyperspace": "No dynamic portal pins"
+  }
+}

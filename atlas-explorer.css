@@ -178,3 +178,14 @@
 .ae-sector-context #aeSectorContextBearing{font-size:11px;line-height:1.45;color:#ffe4a8;max-width:340px;overflow-wrap:anywhere}
 .ae-coverage-panel #aeStreetEvidenceSummary{margin:9px 0 14px;max-width:720px;color:#5b4b71}
 @media(max-width:480px){.ae-sector-context #aeSectorContextBearing{font-size:10px;line-height:1.35;max-width:250px}}
+
+/* AT-304: original screenshot reference in the existing Explorer detail panel. Never a geo-overlay or new pin. */
+.ae-source-map-reference{max-width:100%;margin:14px 0;padding:10px;border:1px solid #daceea;border-radius:12px;background:#f9f6fd;overflow:hidden}
+.ae-source-map-reference a{display:block;max-width:100%;width:max-content;margin:auto;border-radius:6px;overflow:hidden}
+.ae-source-map-reference img{display:block;width:auto;max-width:100%;height:auto;max-height:440px;object-fit:contain}
+.ae-source-map-reference figcaption{margin-top:9px;font-size:12px;line-height:1.6;color:#554c61;overflow-wrap:anywhere}
+.ae-source-map-reference a:focus-visible{outline:3px solid #eab963;outline-offset:3px}
+
+/* AT-304 review: keep photo-provenance, guide and direct-location links distinct and tappable. */
+#aeSelected > a{display:block;width:fit-content;max-width:100%;padding:3px 0;margin:7px 0;line-height:1.5;overflow-wrap:anywhere}
+#aeSelected > a:focus-visible{outline:3px solid #eab963;outline-offset:2px;border-radius:4px}

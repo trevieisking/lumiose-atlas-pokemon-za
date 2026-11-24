@@ -158,3 +158,22 @@
 .sector-orientation-note{margin:12px 0;padding:11px 12px;border-left:3px solid #765399;background:#f8f4fd;border-radius:8px;color:#40364a;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
 .sector-orientation-note strong{color:#563779}
 .sector-orientation-note small{display:block;margin-top:6px;color:#62576e;font-size:12px;line-height:1.5}
+
+/* AT-304: verified original-game PNG excerpts. Gallery references are not map-coordinate overlays. */
+.sector-source-map{max-width:100%;margin:13px 0;padding:9px;border:1px solid #ddd2e8;border-radius:11px;background:#f9f7fc;overflow:hidden}
+.sector-source-map a{display:block;width:max-content;max-width:100%;margin:auto;border-radius:6px;overflow:hidden}
+.sector-source-map img{display:block;width:auto;max-width:100%;height:auto;max-height:390px;object-fit:contain}
+.sector-source-map figcaption{font-size:12px;color:#5f5769;line-height:1.55;overflow-wrap:anywhere;margin-top:9px}
+.sector-source-map figcaption strong{color:#543674}
+.sector-source-pending{margin:11px 0;padding:9px 11px;border:1px dashed #d3c4df;border-radius:8px;color:#665874;background:#faf8fb;font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+.sector-photo-progress{font-size:13px;line-height:1.6;color:#51445f}
+.street-source-index{margin:25px 0;padding:18px;border:1px solid #dfd4ea;background:#fbf9ff;border-radius:14px;min-width:0;scroll-margin-top:16px}
+.street-source-index h2{font-size:clamp(18px,2.7vw,24px);line-height:1.25;margin:7px 0}
+.street-source-index p{font-size:13px;color:#5c5268;line-height:1.6;max-width:790px}
+.street-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.street-source-row{min-width:0;border:1px solid #e1d4ee;border-radius:9px;background:#fff;padding:11px 12px;display:grid;gap:8px}
+.street-source-row strong{font-size:13px;color:#5c3d83}
+.street-source-row span{display:flex;flex-wrap:wrap;gap:6px}
+.street-source-row a{display:inline-flex;min-height:40px;align-items:center;padding:7px 9px;color:#553975;background:#f6effa;border:1px solid #e3d8ea;border-radius:8px;font-size:11px;text-decoration:none;overflow-wrap:anywhere}
+.street-source-row a:focus-visible,.sector-source-map a:focus-visible{outline:3px solid #efbb67;outline-offset:2px}
+@media(max-width:700px){.street-source-index{padding:14px}.street-source-grid{grid-template-columns:minmax(0,1fr)}}

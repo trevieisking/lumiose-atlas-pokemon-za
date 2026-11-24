@@ -26,6 +26,14 @@ try{
   assert.match(await at302Phone.textContent(),/South of Saison Canal/);
   await at302Phone.scrollIntoViewIfNeeded();
   await sectorProbe.screenshot({path:output+"/phone-at302-sector-street-bearings.png"});
+  const at304PhoneCrop=sectorProbe.locator("#sector-vert-sector-1 .sector-source-map img");
+  assert.equal(await at304PhoneCrop.count(),1);
+  await at304PhoneCrop.scrollIntoViewIfNeeded();
+  await sectorProbe.waitForFunction(()=>document.querySelector("#sector-vert-sector-1 .sector-source-map img")?.naturalWidth===358);
+  assert.equal(await at304PhoneCrop.evaluate(el=>el.naturalHeight),267);
+  assert.equal(await sectorProbe.locator("#sector-vert-sector-3 .sector-source-pending").count(),1);
+  await sectorProbe.screenshot({path:output+"/phone-at304-source-image-vert1.png"});
+
 
   const sectorBounds=await sectorProbe.evaluate(()=>{
     const width=document.documentElement.clientWidth;
@@ -40,6 +48,13 @@ try{
     return {width,body:document.body.scrollWidth,scroll:document.documentElement.scrollWidth,over};
   });
   console.log("SECTOR_PHONE_OVERFLOW "+JSON.stringify(sectorBounds));
+  await sectorProbe.goto(base+"/atlas-explorer.html?sector=magenta-sector-6",{waitUntil:"load"});
+  await sectorProbe.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===645,{timeout:15000});
+  assert.match(await sectorProbe.locator("#aeSelected").textContent(),/South Boulevard/);
+  assert.equal(await sectorProbe.locator("#aeSelected > a").first().evaluate(node=>getComputedStyle(node).display),"block","Phone source links must be individually readable");
+
+  await sectorProbe.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
+  await sectorProbe.screenshot({path:output+"/phone-at304-explorer-source.png"});
   await sectorProbe.close();
   assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
   const desktopContext=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
@@ -51,7 +66,25 @@ try{
   assert.match(await at302DesktopNote.textContent(),/South Boulevard/);
   await at302DesktopNote.scrollIntoViewIfNeeded();
   await at302Desktop.screenshot({path:output+"/desktop-at302-sector-street-bearings.png"});
+  const at304DesktopCrop=at302Desktop.locator("#sector-bleu-sector-7 .sector-source-map img");
+  assert.equal(await at304DesktopCrop.count(),1);
+  await at304DesktopCrop.scrollIntoViewIfNeeded();
+  await at302Desktop.waitForFunction(()=>document.querySelector("#sector-bleu-sector-7 .sector-source-map img")?.naturalWidth===638);
+  await at302Desktop.screenshot({path:output+"/desktop-at304-source-image-bleu7.png"});
+
   await at302Desktop.close();
+  const at304Explorer=await desktopContext.newPage();
+  await at304Explorer.goto(base+"/atlas-explorer.html?sector=rouge-sector-7",{waitUntil:"load"});
+  await at304Explorer.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===710,{timeout:15000});
+  assert.match(await at304Explorer.locator("#aeSelected").textContent(),/North Boulevard/);
+  const at304Links=at304Explorer.locator("#aeSelected > a");
+  assert.ok(await at304Links.count()>=3,"Provenance, source clues and direct link must all remain");
+  const linkPositions=await at304Links.evaluateAll(nodes=>nodes.map(n=>({top:n.getBoundingClientRect().top,bottom:n.getBoundingClientRect().bottom,display:getComputedStyle(n).display})));
+  assert.ok(linkPositions.every((r,i)=>r.display==="block"&&(i===0||r.top>=linkPositions[i-1].bottom)),"Explorer source links must be separate readable rows");
+
+  await at304Explorer.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
+  await at304Explorer.screenshot({path:output+"/desktop-at304-explorer-source.png"});
+  await at304Explorer.close();
   const desktop=await desktopContext.newPage();
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
