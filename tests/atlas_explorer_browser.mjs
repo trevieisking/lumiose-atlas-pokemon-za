@@ -533,6 +533,39 @@ try{
   assert.equal(mobileErrors.length,0,"AT-277 phone JS errors: "+mobileErrors.join(" | "));
 
 
+  // AT-286: two independently researched written routes use existing district
+  // views, not fabricated device, item or spawn pins. Both map and quest
+  // navigation remain usable on touch and desktop.
+  for(const [page,sector,route,mission,roofText] of [
+    [phone,"vert-sector-7","vert7-holovator-power",40,/leaf bridge/i],
+    [desktop,"jaune-sector-6","jaune6-holovator-muscle",56,/Wild Charge TM and wild Larvitar/i]
+  ]){
+    await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
+    await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
+    assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),9);
+    assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
+    assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
+    assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-'+mission+'"]').count(),1);
+    assert.equal(await page.locator("#aeShowRouteMap").textContent(),"Show district starting map");
+    for(let step=0;step<3;step++)await page.locator("#aeNextStep").click();
+    assert.match(await page.locator("#aeCurrentStep").textContent(),roofText);
+    const stepBefore=await page.locator("#aeRouteProgress").textContent();
+    await page.locator("#aeShowRouteMap").click();
+    assert.equal(await page.locator("#aeRouteProgress").textContent(),stepBefore);
+    assert.match(await page.locator("#aeCoverageStatus").textContent(),/NOT a verified sector centre/);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+    await page.locator("#aeRoutesSection").scrollIntoViewIfNeeded();
+    await page.screenshot({path:output+"/at286-mission-"+mission+"-route.png",fullPage:false});
+    await page.locator('#aeRouteDetail a[href="side-missions.html#quest-'+mission+'"]').click();
+    await page.waitForURL("**/side-missions.html#quest-"+mission);
+    assert.equal(await page.locator("#quest-"+mission).isVisible(),true);
+  }
+  assert.equal(errors.length,0,"AT-286 desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-286 phone JS errors: "+mobileErrors.join(" | "));
+
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.
   const widthProbe = await browser.newPage({viewport:{width:393,height:852},
