@@ -35,7 +35,8 @@ try{
   console.log("SECTOR_PHONE_OVERFLOW "+JSON.stringify(sectorBounds));
   await sectorProbe.close();
   assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
-  const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+  const desktopContext=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
+  const desktop=await desktopContext.newPage();
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
   await desktop.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
@@ -167,7 +168,8 @@ try{
   await desktop.locator("#aeResults button").first().click();
   assert.match(await desktop.locator("#aeSelected").textContent(),/no arbitrary pin|no precise mapped sector polygon/i);
   assert.equal(errors.length,0,"Desktop JavaScript errors: "+errors.join(" | "));
-  const phone=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const phoneContext=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  const phone=await phoneContext.newPage();
   const mobileErrors=[];
   phone.on("pageerror",e=>mobileErrors.push(String(e)));
   await phone.goto(base+"/atlas-explorer.html",{waitUntil:"networkidle"});
@@ -909,7 +911,7 @@ try{
     "Every standalone guide page must fit the phone without disabling local maps or tables");
   await widthProbe.close();
 
-  await phone.close();await desktop.close();
+  await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{
   if(browser)await browser.close();
