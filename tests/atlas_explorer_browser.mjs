@@ -872,6 +872,48 @@ try{
   assert.equal(errors.length,0,"AT-298 desktop errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-298 phone errors: "+mobileErrors.join(" | "));
 
+  // AT-299: visible selected sector name; not a map-coordinate claim.
+  for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-1",{waitUntil:"load"});
+    const context=page.locator("#aeSectorContext"),name=page.locator("#aeSectorContextName");
+    await page.waitForFunction(()=>document.getElementById("aeSectorContextName").textContent==="Vert Sector 1");
+    assert.ok(await context.isVisible());
+    assert.match(await context.textContent(),/exact sector position unverified/);
+    assert.equal(await context.evaluate(el=>el.parentElement.id),"aeViewport");
+    assert.equal(await context.evaluate(el=>getComputedStyle(el).pointerEvents),"none");
+    assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+    assert.equal(await page.locator("#aeCoverageGrid button").count(),25);
+    assert.equal(await page.locator("#aeCoverageSector option").count(),49);
+    await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+    const relativeBox=()=>context.evaluate(el=>{const a=el.getBoundingClientRect(),b=el.parentElement.getBoundingClientRect();return [a.x-b.x,a.y-b.y,a.width,a.height];});
+    const before=await relativeBox();
+    await page.locator("#aeTurnRight").click();
+    await page.locator("#aeZoomIn").click();
+    await page.waitForFunction(()=>document.getElementById("aeStage").style.transform.includes("rotate(45deg)"));
+    assert.deepEqual(await relativeBox(),before,"Sector context remains upright and stationary");
+    await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+    await page.locator("#aeViewport").screenshot({path:output+"/at299-selected-sector-"+device+".png"});
+    await page.locator("#aeLayers [data-layer='sector-label']").uncheck();
+    assert.equal(await context.isVisible(),false);
+    await page.locator("#aeLayers [data-layer='sector-label']").check();
+    assert.equal(await name.textContent(),"Vert Sector 1");
+    await page.locator("#aeCoverageSector").selectOption("bleu-sector-3");
+    assert.equal(await name.textContent(),"Bleu Sector 3");
+    await page.locator("#aeCoverageSector").selectOption("");
+    assert.equal(await context.isVisible(),false);
+    await page.locator("#aeCoverageSector").selectOption("vert-sector-1");
+    await page.locator('#aeCoverageGrid button[data-area="4-4"]').click();
+    assert.equal(await context.isVisible(),false);
+    assert.equal(await page.locator('#aeCoverageGrid button[data-area="4-4"]').getAttribute("aria-pressed"),"true");
+    await page.waitForFunction(()=>Number.parseFloat(document.getElementById("aeZoomLabel").textContent)>=3);
+    await page.locator("#aeCoverageSector").selectOption("vert-sector-1");
+    await page.locator("#aeReset").click();
+    assert.equal(await context.isVisible(),false);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  }
+  assert.equal(errors.length,0,"AT-299 desktop errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-299 phone errors: "+mobileErrors.join(" | "));
+
   // Phone-page overflow regression: test the actual main-guide views, not just
   // the desktop DLC link or the standalone map. Never disable local scrolling.
   const widthProbe = await browser.newPage({viewport:{width:393,height:852},

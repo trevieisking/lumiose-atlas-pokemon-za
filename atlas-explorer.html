@@ -79,6 +79,7 @@
     <label><input type="checkbox" data-layer="holovator" checked> Holovators</label>
     <label><input type="checkbox" data-layer="ladder" checked> Ladders</label>
     <label><input type="checkbox" data-layer="landmark" checked> Landmarks</label>
+    <label><input type="checkbox" data-layer="sector-label" checked> Sector names</label>
     <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
     <span class="ae-layer-hint">Show several layers together; search results stay available even when a pin layer is hidden.</span>
   </fieldset>
@@ -87,6 +88,11 @@
       <div class="ae-stage" id="aeStage">
         <img id="aeMapImage" src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Original overhead Lumiose City in-game overview, with original Wild Zones, roads, plazas and waterways" draggable="false">
         <div class="ae-map-pins" id="aeMapPins"></div>
+      </div>
+      <div class="ae-sector-context" id="aeSectorContext" role="status" aria-live="polite" aria-atomic="true" hidden>
+        <span class="ae-sector-context-kicker">Selected sector</span>
+        <strong id="aeSectorContextName"></strong>
+        <span id="aeSectorContextNote">District starting view · exact sector position unverified</span>
       </div>
       <button type="button" class="ae-rose" id="aeRose" aria-label="Reset map to north-up" title="Reset north-up"><span id="aeNeedle" aria-hidden="true">▲</span><strong aria-hidden="true">N</strong></button>
       <div class="ae-map-guidance" aria-hidden="true">Drag to explore · pinch to zoom and rotate</div>

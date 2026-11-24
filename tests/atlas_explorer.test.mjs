@@ -609,3 +609,18 @@ test("AT-298 Vert 3 rooftop guidance preserves owner route and uncertain identit
   const original=data.routes.find(x=>x.id==="cafe-cyclone");assert.equal(original.steps.length,5);assert.match(original.steps[1].instruction,/archway/);
   assert.equal(data.holovators.find(x=>x.id==="vert-cyclone").photos.length,6);assert.equal(data.holovators.length,21);assert.equal(data.ladders.length,1);assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
 });
+
+
+test("AT-299 selected-sector name is an optional non-geographic viewport context",()=>{
+  const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
+  assert.match(html,/data-layer="sector-label" checked/);
+  assert.match(html,/id="aeSectorContext" role="status" aria-live="polite" aria-atomic="true" hidden/);
+  assert.match(html,/District starting view · exact sector position unverified/);
+  assert.match(html,/<\/div>\s*<div class="ae-sector-context"/,"Context is outside the rotating stage");
+  assert.match(js,/item=recordMap\.get\(coverageSector\.value\)/);
+  assert.match(js,/layerVisible\("sector-label"\).*item\.id===selectedId/);
+  assert.match(css,/\.ae-sector-context\{[^}]*pointer-events:none/);
+  assert.match(css,/\.ae-sector-context\[hidden\]\{display:none\}/);
+  assert.equal(data.sectors.length,48);assert.ok(data.sectors.every(s=>s.xy===null));
+  assert.equal(data.routes.length,15);assert.equal(data.holovators.length,21);
+});
