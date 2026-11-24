@@ -153,3 +153,8 @@
   .trust-grid>div{min-width:0;max-width:100%}
   .trust-grid p strong{display:inline;font:inherit;font-weight:800;white-space:normal;overflow-wrap:anywhere}
 }
+
+/* AT-302: source-photo street bearings are text, not new map geometry. */
+.sector-orientation-note{margin:12px 0;padding:11px 12px;border-left:3px solid #765399;background:#f8f4fd;border-radius:8px;color:#40364a;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.sector-orientation-note strong{color:#563779}
+.sector-orientation-note small{display:block;margin-top:6px;color:#62576e;font-size:12px;line-height:1.5}
