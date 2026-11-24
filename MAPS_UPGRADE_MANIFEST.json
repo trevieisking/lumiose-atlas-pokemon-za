@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 26,
+  "revision": 27,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -1941,5 +1941,42 @@
     "original_game_map_images_supabase_and_site_a_changed": false,
     "next_target": "DR-H-09 Side Mission 092 The Beldum Blockade / The Beldum Blockage; source title and actual device identity unconfirmed",
     "release": "branch_only_pending_exact_head_CI_and_Pages"
+  },
+  "at_284_verification_2026_11_24": {
+    "baseline_main_sha": "a8282cab513d318757298a1d6f9f792bb5ddb0fd",
+    "mission_id": "DR-H-09",
+    "mission_number": 92,
+    "verified_name": "The Beldum Blockade",
+    "verified_route": "South Boulevard near Café Soleil / Bleu Sector 8",
+    "enemy_count": 4,
+    "enemy_species": "Beldum",
+    "can_catch_in_scripted_battle": false,
+    "enemy_level_contradiction": "Thonky/GameTrek 49 vs Game8 36; no fixed level on player guide until in-game resolution",
+    "complete_rewards": {
+      "pokedollars": 3000,
+      "rocky_helmet": 1,
+      "full_restore": 1
+    },
+    "source_guide_records_corrected": [
+      92
+    ],
+    "quest_note_route": "side-missions.html#quest-92",
+    "owner_photo_route": "atlas-explorer.html?place=bleu8-soleil",
+    "owner_gallery_approx_map_xy_retained": [
+      352,
+      1496
+    ],
+    "owner_photo_count_retained": 5,
+    "photographed_lift_same_as_quest_device_confirmed": false,
+    "all_nine_mission_holovator_research_records_checked": true,
+    "all_nine_exact_door_and_roof_xy_pairs_verified": false,
+    "owner_surveyed_holovator_leads_retained": 21,
+    "hosted_owner_jpgs_retained": 111,
+    "new_exact_holovator_device_pins": 0,
+    "original_203_quest_keys_changed": false,
+    "original_17_source_sections_removed": false,
+    "original_supabase_workspace_or_daily_hyperspace_marker_changes": false,
+    "next_research_phase": "Individually reconcile 23 Holovator category symbols against owner photographs; exact door/roof pairs, ladder/scaffold access and 48 sector-specific item map positions remain incomplete",
+    "gate": "branch_pending_reviewed_SHA_CI_browser_screenshots_and_Pages_deploy"
   }
 }
