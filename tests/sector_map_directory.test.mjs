@@ -186,7 +186,7 @@ for(const entry of at304.sector_coverage){
     const image=at304.images.find(x=>x.id===entry.source_crop_id);
     assert.ok(image,"Missing source file metadata");
     assert.ok(existsSync(new URL("../"+image.path,import.meta.url)),"PNG not physically hosted "+image.path);
-    assert.ok(card.includes('class="sector-source-map" data-at304-source-id="'+image.id+'"'));
+    assert.ok(card.includes('class="sector-source-map" data-at304-crop="'+image.id+'"'));
     assert.ok(card.includes('src="'+image.path+'"'),"Broken sector crop "+entry.sector_id);
     assert.ok(card.includes("Orientation reference only; not a measured sector boundary"));
   }else{

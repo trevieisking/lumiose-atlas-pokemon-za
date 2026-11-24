@@ -646,7 +646,7 @@ test("AT-303: all 48 map sectors retain no point geometry; twelve screenshot-ver
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js"),css=read("atlas-explorer.css");
   assert.match(html,/id="aeSectorContextBearing"/);
   assert.match(html,/id="aeStreetEvidenceSummary"/);
-  assert.match(html,/36 locations still need verified street evidence/);
+  assert.ok(html.includes("19 sectors</strong> still need suitable source screenshots"));
   assert.match(js,/street_bearing\?\.text/);
   assert.match(js,/Street-level map position not yet source-verified/);
   assert.match(js,/Source-labelled street bearings \(orientation only\)/);
