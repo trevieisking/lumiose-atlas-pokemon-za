@@ -2341,5 +2341,61 @@
     ],
     "original_photos_unchanged": true,
     "guide_jpg_crops": 0
+  },
+  "independent_source_recheck_2026_11_24": {
+    "date": "2026-11-24",
+    "scope": "Read-only double-source mission check; no new exact Atlas coordinates",
+    "record_ids": [
+      "DR-H-01",
+      "DR-H-02"
+    ],
+    "route_improvements": [
+      {
+        "id": "DR-H-01",
+        "owner_record": "rouge-plaza-west",
+        "atlas_native_approx": [
+          832,
+          580
+        ],
+        "street": "Rouge Sector 1, west of Wild Zone 3",
+        "unlock": "Main Mission 6 begins; defeat Sommi in Side Mission 004",
+        "battle": "Pidgey Lv.8; Budew Lv.8; Emolga Lv.10",
+        "evidence": [
+          "https://www.serebii.net/legendsz-a/sidemissions/abreaktimebattle.shtml",
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-004-a-break-time-battle",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/a-break-time-battle"
+        ],
+        "mission_xy_not_atlas_device_xy": [
+          9143,
+          6904
+        ]
+      },
+      {
+        "id": "DR-H-02",
+        "owner_record": "vernal-wz1",
+        "atlas_native_approx": [
+          964,
+          1666
+        ],
+        "street": "Vernal Avenue, northwest of Wild Zone 1 / Pokémon Research Lab",
+        "unlock": "After rival battle during Main Mission 10; talk to Terra",
+        "battle": "Interact with dirt mound; Lv.28 Diggersby, defeat or catch",
+        "evidence": [
+          "https://www.serebii.net/legendsz-a/sidemissions/underneaththeholovator.shtml",
+          "https://www.thonky.com/pokemon-legends-z-a/side-mission-023-underneath-the-holovator",
+          "https://www.gamerguides.com/pokemon-legends-z-a/database/missions/side-missions/underneath-the-holovator"
+        ],
+        "mission_xy_not_atlas_device_xy": [
+          10111,
+          16090
+        ]
+      }
+    ],
+    "published_exact_physical_device_pins": 0,
+    "verified_ground_to_roof_coordinate_pairs": 0,
+    "external_23_device_marker_ids_matched": 0,
+    "owner_photo_bytes_or_refs_changed": false,
+    "next_target": "DR-H-03 / Side Mission 040 A Holovator Without Power: verify target physical device identity against owner-supplied photography and Vert Sector 7 quest location; do not assign unsupported existing Holovator points",
+    "report": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md#at-280--resume-full-atlas-source-verification-holovator-h-01h-02-and-ex3-boss-clarity-24-november-2026"
   }
 }
