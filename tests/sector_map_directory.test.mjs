@@ -147,3 +147,22 @@ assert.equal(search.value,"");
 assert.equal(readCount,1,"Filtering and navigation must not need repeated storage access");
 assert.equal(writeCount,0);
 console.log("PASS: 48 sector names, 20 original map centres and previews, 264 numbered item records, 100 exact Screw clues, zero invented item pins, 25-link menu and read-only mobile controls.");
+
+// AT-302: source-image orientation only; nothing becomes a point or sector polygon.
+const at302Source=JSON.parse(read("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"));
+assert.equal(at302Source.sector_orientation.length,12);
+assert.equal((page.match(/class="sector-orientation-note"/g)||[]).length,12);
+for(const source of at302Source.sector_orientation){
+ assert.equal(source.native_label_xy,null);
+ assert.ok(at302Source.crop_records.some(c=>c.id===source.crop_id));
+ const name="sector-"+source.sector_id;
+ const start=page.indexOf('<article class="sector-card" id="'+name+'"');
+ assert.ok(start>=0,"No card "+name);
+ const end=page.indexOf("</article>",start);
+ assert.ok(end>start);
+ const card=page.slice(start,end);
+ assert.ok(card.includes('class="sector-orientation-note" data-at302-crop="'+source.crop_id+'"'));
+ assert.ok(card.includes(clean(source.orientation)),"Changed source wording for "+name);
+ assert.match(card,/exact sector boundaries, lift entrances, roof exits and pickup coordinates remain unverified/);
+}
+assert.ok(!page.includes('src="assets/atlas/at301/'),"Do not link unhosted PNGs");

@@ -20,6 +20,13 @@ try{
   // Fail early with actual uncontained element bounds on the sector directory.
   const sectorProbe=await browser.newPage({viewport:{width:393,height:852},deviceScaleFactor:1,isMobile:true,hasTouch:true});
   await sectorProbe.goto(base+"/sector-maps.html",{waitUntil:"load"});
+  await sectorProbe.locator("#sector-vert-sector-1 details.sector-clues").evaluate(el=>{el.open=true});
+  const at302Phone=sectorProbe.locator("#sector-vert-sector-1 .sector-orientation-note");
+  assert.equal(await at302Phone.count(),1);
+  assert.match(await at302Phone.textContent(),/South of Saison Canal/);
+  await at302Phone.scrollIntoViewIfNeeded();
+  await sectorProbe.screenshot({path:output+"/phone-at302-sector-street-bearings.png"});
+
   const sectorBounds=await sectorProbe.evaluate(()=>{
     const width=document.documentElement.clientWidth;
     const over=[...document.querySelectorAll("body *")].filter(el=>{
@@ -36,6 +43,15 @@ try{
   await sectorProbe.close();
   assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
   const desktopContext=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
+  const at302Desktop=await desktopContext.newPage();
+  await at302Desktop.goto(base+"/sector-maps.html",{waitUntil:"load"});
+  await at302Desktop.locator("#sector-bleu-sector-7 details.sector-clues").evaluate(el=>{el.open=true});
+  const at302DesktopNote=at302Desktop.locator("#sector-bleu-sector-7 .sector-orientation-note");
+  assert.equal(await at302DesktopNote.count(),1);
+  assert.match(await at302DesktopNote.textContent(),/South Boulevard/);
+  await at302DesktopNote.scrollIntoViewIfNeeded();
+  await at302Desktop.screenshot({path:output+"/desktop-at302-sector-street-bearings.png"});
+  await at302Desktop.close();
   const desktop=await desktopContext.newPage();
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));

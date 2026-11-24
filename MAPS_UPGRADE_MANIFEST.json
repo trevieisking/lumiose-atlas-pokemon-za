@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 48,
+  "revision": 49,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-299 context overlay deployed; AT-301 source intake and borderless crop pilot; sector directory street-note pilot and source registration next.",
+  "current_phase": "AT-302 twelve screenshot-backed sector street notes in GitHub review; crops hash-verified locally, images still unhosted. Geographic labels/high-detail registration remain open.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -139,8 +139,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -4098,5 +4098,44 @@
     "next": "First transfer reviewed clean crops via authorized binary upload and validate hashes; use sector_orientation rows for bounded sector-directory street notes. Register one genuine geographic label/close-up with matching control points, held-out check and uncertainty; no guesses. Continue Vert 8 written routes and Bleu 1 if alignment remains gated.",
     "checklist_id": "AT-301-MAP-SOURCE-POLICY",
     "register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json"
+  },
+  "at_302_sector_street_bearings": {
+    "id": "AT-302",
+    "date": "2026-11-24",
+    "status": "github_review_not_deployed",
+    "source_register": "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
+    "verified_original_png_source_hashes": 4,
+    "verified_reproduced_crop_hashes": 6,
+    "source_crops_hosted_in_github": 0,
+    "sector_street_orientation_rows": 12,
+    "sector_ids": [
+      "vert-sector-1",
+      "vert-sector-2",
+      "vert-sector-4",
+      "vert-sector-5",
+      "bleu-sector-5",
+      "bleu-sector-7",
+      "jaune-sector-9",
+      "jaune-sector-10",
+      "jaune-sector-11",
+      "jaune-sector-12",
+      "magenta-sector-1",
+      "magenta-sector-3"
+    ],
+    "evidence_level": "source_image_orientation_only",
+    "new_sector_label_xy": 0,
+    "new_holovator_ladder_scaffold_or_item_pins": 0,
+    "new_collection_ids": 0,
+    "code_scope": [
+      "sector-maps.html",
+      "sector-maps.css"
+    ],
+    "tests": [
+      "tests/sector_map_directory.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "release_gate": "Exact-head CI+regressions and reviewed mobile/desktop screenshots before merge and verified Pages deployment after",
+    "database": "Read-only preflight, no writes to private checklist or feedback queue",
+    "workspace": "not_changed"
   }
 }
