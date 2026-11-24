@@ -17,6 +17,24 @@ try{
   }
   assert.ok(available,"Static page test server must be reachable");
   browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
+  // Fail early with actual uncontained element bounds on the sector directory.
+  const sectorProbe=await browser.newPage({viewport:{width:393,height:852},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+  await sectorProbe.goto(base+"/sector-maps.html",{waitUntil:"load"});
+  const sectorBounds=await sectorProbe.evaluate(()=>{
+    const width=document.documentElement.clientWidth;
+    const over=[...document.querySelectorAll("body *")].filter(el=>{
+      const b=el.getBoundingClientRect();
+      if(!b.width||!b.height||b.right<=width+1)return false;
+      for(let p=el.parentElement;p&&p!==document.body;p=p.parentElement){
+        if(["auto","scroll","hidden","clip"].includes(getComputedStyle(p).overflowX))return false;
+      }
+      return true;
+    }).map(el=>({tag:el.tagName,id:el.id,cls:typeof el.className==="string"?el.className:"",right:Math.round(el.getBoundingClientRect().right),parent:el.parentElement.className,text:el.textContent.slice(0,85)})).sort((a,b)=>b.right-a.right).slice(0,15);
+    return {width,body:document.body.scrollWidth,scroll:document.documentElement.scrollWidth,over};
+  });
+  console.log("SECTOR_PHONE_OVERFLOW "+JSON.stringify(sectorBounds));
+  await sectorProbe.close();
+  assert.ok(sectorBounds.width===393&&sectorBounds.body<=394&&sectorBounds.scroll<=394,"Sector directory must fit the phone; inspect diagnostics above");
   const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
   const errors=[];
   desktop.on("pageerror",error=>errors.push(String(error)));
