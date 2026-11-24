@@ -48,6 +48,22 @@ test("AT-281: owner-photo-backed Bleu 7 quest remains approximate, no invented V
     "Unidentified Side Mission 040 cannot receive a guessed new map pin");
   assert.equal(data.counts.confirmed_exact_holovator_device_pins,0);
 });
+test("AT-282: My Favorite Holovator preserves five original user photographs and unverified roof XY",()=>{
+  const h=data.holovators.find(x=>x.id==="bleu3-fav");
+  assert.ok(h);
+  assert.deepEqual(h.xy,[765,1396]);
+  assert.equal(h.photos.length,5);
+  assert.deepEqual(h.photos.map(x=>x.role),
+    ["wide-city-map","neighbourhood-map","close-map","ground-lift","rooftop-arrival"]);
+  assert.equal(h.precision,"approx_owner_map_research");
+  assert.equal(h.entrance_exact,false);
+  assert.equal(h.roof_exact,false);
+  assert.equal(h.device_category_id,null);
+  assert.ok(!data.holovators.some(x=>x.id==="mission-056"),
+    "Jaune Sector 6 physical mission device not yet uniquely photographed or aligned");
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.holovators.reduce((a,x)=>a+x.photos.length,0),111);
+});
 test("authentic source map remains the shared 1920px geometry",()=>{
   assert.deepEqual(data.map.native_size,[1920,1920]);
   assert.equal(data.map.path,"maps/lumiose-game-map.jpg");
