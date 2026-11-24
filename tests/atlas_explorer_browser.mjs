@@ -781,8 +781,8 @@ try{
     const popupPromise=page.waitForEvent("popup");
     await video.click();
     const popup=await popupPromise;
-    await popup.waitForLoadState("domcontentloaded");
-    assert.ok(popup.url().includes("5-dLjd4o8Rc"));
+    // A popup may initially report about:blank. Wait for the actual expected navigation.
+    await popup.waitForURL(url=>url.origin==="https://www.youtube.com"&&url.pathname==="/watch"&&url.searchParams.get("v")==="5-dLjd4o8Rc"&&url.searchParams.get("t")==="694s",{waitUntil:"domcontentloaded",timeout:15000});
     await popup.close();
     assert.equal(await page.locator("#aeRouteProgress").textContent(),originalStep);
     const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem("lumiose-atlas:video-return:v1")));
