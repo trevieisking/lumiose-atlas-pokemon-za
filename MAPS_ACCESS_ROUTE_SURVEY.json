@@ -2412,7 +2412,7 @@
       "visual_identity_verified": false
     },
     "verification": "publisher metadata and chapter descriptions only; no actual video frames inspected, no route geometry or new pin proven",
-    "release_status": "proposed_pending_exact_head_CI_and_visual_QA",
+    "release_status": "github_deployed_verified_workspace_open",
     "new_pins": 0,
     "prior_routes_preserved": 12,
     "owner_photos_preserved": 111,
@@ -2451,23 +2451,29 @@
         {
           "id": "AT-295-VIDEO-STANDARD",
           "purpose": "Reusable timestamped public video links, attribution and evidence labels",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         },
         {
           "id": "AT-295-SMART-RETURN",
           "purpose": "Restore route, step, selected place, map view, filters and scroll on return",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         },
         {
           "id": "AT-295-CLEAR-BOOKMARK",
           "purpose": "Clear only the private navigation bookmark",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         },
         {
           "id": "AT-295-VIDEO-MISSION23",
@@ -2477,9 +2483,11 @@
           "url": "https://www.youtube.com/watch?v=IuvITD247zU&t=59s",
           "creator": "TheLandOGaming",
           "evidence": "publisher chapter; frames unverified",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         },
         {
           "id": "AT-295-VIDEO-SCREW2",
@@ -2489,9 +2497,11 @@
           "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=694s",
           "creator": "Archive 64",
           "evidence": "numbering candidate; frames and connection unverified",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         },
         {
           "id": "AT-295-VIDEO-POWERGEM",
@@ -2501,9 +2511,11 @@
           "url": "https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s",
           "creator": "Quick Guides",
           "evidence": "publisher chapter; frames unverified",
-          "github_status": "in_progress",
+          "github_status": "verified",
           "workspace_status": "open",
-          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132"
+          "tracking_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/132",
+          "github_revision": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+          "github_evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45417126232"
         }
       ],
       "policy": "Keep each edition independently verified. For every new feature or video add stable checklist ID, purpose, URL if applicable, route/step and evidence. GitHub verified requires deployed exact SHA and manual evidence; Workspace verified requires independent original site release and evidence. Update private rows after each verified checkpoint; never infer parity. No runtime access or player data.",
@@ -2525,6 +2537,24 @@
         "cause": "Playwright implicit single-page context cannot create a fresh tab",
         "test_correction": "b0bb44714d9d56dba912d7b1eaea3184095c60c4",
         "final_validation": "pending"
+      },
+      "release": {
+        "pr": 132,
+        "reviewed_head": "3eddf19e1152780bc1cd1140ad751b3f40bd8207",
+        "merged_sha": "478fa0eab43a514e31be3c68218ff5d3e633cfc9",
+        "identical_tree": "29457266bbe74c27a560fdd1fa984a1f0b61c0f4",
+        "validation_run": 45416618547,
+        "conclusion": "success",
+        "visual_artifact": 14932527358,
+        "inspected_images": [
+          "at295-video-return-desktop.png",
+          "at295-video-return-phone.png"
+        ],
+        "pages_run": 45417126232,
+        "pages_conclusion": "success",
+        "github_status": "verified",
+        "workspace_status": "open",
+        "limitation": "Exact deployed tree matches tested/visually reviewed preview. Public live URL direct HTTP inspection unavailable in session; no physical device claim. Workspace original source not accessed."
       }
     }
   },
@@ -2638,5 +2668,105 @@
     "source_limit": "Actual regional marker IDs recovered from links, map requests failed. Candidate database headings and XY observed but corresponding database marker links not verified; no coordinate count increase or transform.",
     "new_pins": 0,
     "next": "After AT-295 release, integrate practical Vert 1, 2 and 8 routes and #15 follow-up, then Bleu 1. No exhaustive ladder inventory."
+  },
+  "at_296_vert1_2": {
+    "id": "AT-296",
+    "date": "2026-11-24",
+    "status": "proposed_pending_exact_head_ci_and_visual_qa",
+    "routes_added": [
+      "vert1-scaffold-courses",
+      "vert2-southern-rooftop"
+    ],
+    "existing_routes_preserved": 12,
+    "total_routes_proposed": 14,
+    "leads_integrated": [
+      "AR-V01-01",
+      "AR-V01-02",
+      "AR-V01-03",
+      "AR-V01-04",
+      "AR-V02-01"
+    ],
+    "all_42_leads_preserved": true,
+    "photos_preserved": 111,
+    "holovators_preserved": 21,
+    "original_screw_ids_preserved": 100,
+    "new_pins": 0,
+    "checklist_items": [
+      {
+        "id": "AT-296-VERT1-ROUTE",
+        "purpose": "Vert 1 separate plaza, alley, northern courtyard and eastern courtyard approaches",
+        "route": "vert1-scaffold-courses",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Source-backed written approach; district-only, no measured geometry."
+      },
+      {
+        "id": "AT-296-VERT2-ROUTE",
+        "purpose": "Vert 2 northern ladder, raised platform and southern rooftop approach; early roll vs Glide dispute",
+        "route": "vert2-southern-rooftop",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Source-backed written approach; district-only, no measured geometry."
+      },
+      {
+        "id": "AT-296-VIDEO-V1-PLAZA",
+        "purpose": "Plaza-facing scaffold candidate, source Screw 1",
+        "route": "vert1-scaffold-courses",
+        "step": 2,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=30s",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
+      },
+      {
+        "id": "AT-296-VIDEO-V1-ALLEY",
+        "purpose": "Canal-side alley scaffold candidate, source Screw 2",
+        "route": "vert1-scaffold-courses",
+        "step": 3,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=46s",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
+      },
+      {
+        "id": "AT-296-VIDEO-V1-COURTYARD",
+        "purpose": "Eastern courtyard candidate, shared source chapter 3–4",
+        "route": "vert1-scaffold-courses",
+        "step": 5,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
+      },
+      {
+        "id": "AT-296-VIDEO-V2-ROOF",
+        "purpose": "Southern rooftop candidate, shared source chapter 3–4",
+        "route": "vert2-southern-rooftop",
+        "step": 3,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s",
+        "github_status": "in_progress",
+        "workspace_status": "open",
+        "evidence": "Archive 64 publisher chapter, source numbering candidate; actual frames and exact identity unverified"
+      }
+    ],
+    "sources": [
+      "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+      "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "https://www.youtube.com/watch?v=5-dLjd4o8Rc"
+    ],
+    "next": "Vert 3 rooftop and boundary #15, then Vert 8 Hotel Z #3/#4; then Bleu 1. No new coordinate claims.",
+    "test_correction": {
+      "failed_run": 45417601078,
+      "failed_head": "3e30fbfc94a4fefbf617cb43954ecf77c8c44cca",
+      "unit": "success",
+      "browser": "failure",
+      "cause": "Five previous browser assertions expected 13 dropdown options (12 routes plus placeholder); the new data correctly contains 15 options (14 routes plus placeholder).",
+      "correction_sha": "d23038714a0de2d291f9697526bed75e4488e20c",
+      "scope": "browser-test assertions only, no runtime or route data edits",
+      "retest": "pending exact final head"
+    },
+    "checklist_manifest_revision": 42
   }
 }

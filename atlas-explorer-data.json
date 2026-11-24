@@ -2284,6 +2284,134 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "vert1-scaffold-courses",
+      "title": "Vert Sector 1 — plaza, canal scaffolds and courtyard",
+      "point_id": "vert-sector-1",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the Centrico Plaza and Nouveau Café landmarks to orient yourself. These are separate optional courses, not a proven continuous route. Existing clues #10–13 keep their original numbers; exact matches between the source guides' numbering systems remain unresolved.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start near Nouveau Café and Centrico Plaza",
+          "instruction": "Face the tower-facing edge of Vert Sector 1. Published routes describe scaffolding near the plaza and another tall scaffold down a canal-side alley. Start at street level and identify the correct structure before climbing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Plaza-facing scaffold — clues #10–11 candidates",
+          "instruction": "Find the scaffold on the plaza-facing edge. Ascend its ladder, descend onto the next platform and follow the marked ramp towards the purple pickup. Our western and northern scaffold clues #10 and #11 are both candidates; do not mark both collected from one pickup.",
+          "evidence": "guide_crosscheck",
+          "video_refs": [
+            {
+              "video_id": "5-dLjd4o8Rc",
+              "start_seconds": 30,
+              "title": "Plaza scaffold — source Screw 1",
+              "creator": "Archive 64",
+              "verification": "numbering_candidate",
+              "note": "The creator cites Raider King and lists source Screw 1 at 0:30. The plaza course is described in that guide, but Atlas #10 versus #11 and the exact frames remain unconfirmed."
+            }
+          ]
+        },
+        {
+          "space": "scaffold",
+          "title": "Canal-side alley scaffold",
+          "instruction": "From street level by the canal, look for the alley with a taller scaffold. Use the ladder on the right, cross the narrow platform, descend one level and cross the next walkway. A second source describes two scaffolds in this alley. The western/northern/eastern clues #10, #11 and #13 are not yet individually matched.",
+          "evidence": "guide_crosscheck",
+          "video_refs": [
+            {
+              "video_id": "5-dLjd4o8Rc",
+              "start_seconds": 46,
+              "title": "Alley scaffold — source Screw 2",
+              "creator": "Archive 64",
+              "verification": "numbering_candidate",
+              "note": "Archive 64's chapter begins at 0:46. The source guide describes the canal-side course; the Atlas clue identity and video frames remain unverified."
+            }
+          ]
+        },
+        {
+          "space": "ladder",
+          "title": "Separate northern courtyard ladder",
+          "instruction": "A small courtyard in the northern building complex is reported behind breakable rocks. Clear the obstruction with a compatible move and climb its ladder. Guides report Protein and Pearl in this roof approach. A separate northern path ladder and scaffold crossing is also reported; do not assume it is this same ladder.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Eastern enclosed courtyard — original clue #12",
+          "instruction": "After unlocking Roto-Glide, use the published scaffold approach near the Vert 1/3 boundary to reach the surrounding roofs. Look for the enclosed courtyard of the eastern building complex and descend into it. The purple pickup is reported in its western corner. The exact initial ascent and drop have not been registered.",
+          "evidence": "guide_crosscheck",
+          "video_refs": [
+            {
+              "video_id": "5-dLjd4o8Rc",
+              "start_seconds": 82,
+              "title": "Courtyard and Vert 2 — shared chapter 3–4",
+              "creator": "Archive 64",
+              "verification": "numbering_candidate",
+              "note": "The creator groups source Screws 3 and 4 at 1:22. Raider King describes Screw 3 as the courtyard approach, but the exact split time and visual match are unverified."
+            }
+          ]
+        },
+        {
+          "space": "roof",
+          "title": "Keep boundary clues separate",
+          "instruction": "The eastern scaffold near Vert 3 may relate to original #13 or #14. Do not treat the courtyard, canal course and tower scaffold as one proven connection. Existing collection keys and map pins are unchanged; no exact ascent or pickup pixel is claimed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "vert2-southern-rooftop",
+      "title": "Vert Sector 2 — southern rooftop Screw",
+      "point_id": "vert-sector-2",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A separately reported climb from the northern side leads toward the southern rooftop clue #9. Guides disagree about whether a running roll is sufficient before Roto-Glide; use the safer later-game approach if the early crossing does not work.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Orient from Nouveau Café toward Wild Zone 2",
+          "instruction": "Follow Vert Street toward Wild Zone 2. A published approach turns right toward a stairway and passes through a courtyard to reach a ladder. The exact stairway and ladder base are not surveyed.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Climb the northern ladder",
+          "instruction": "Use the reported northern ascent to reach the roof. Move along the roof toward the stacked brown crates and raised grey platform. Confirm the roof and crates are present before attempting the crossing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Cross to the southern roof — original clue #9",
+          "instruction": "Use Roto-Glide once unlocked during Main Mission 16. Two written guides also report a difficult running-roll crossing from the raised platform, but another lists Glide as required. Do not rely on a guaranteed early-game jump. Look for the purple pickup on the southern roof; Larvitar may be nearby.",
+          "evidence": "guide_crosscheck",
+          "video_refs": [
+            {
+              "video_id": "5-dLjd4o8Rc",
+              "start_seconds": 82,
+              "title": "Southern rooftop — shared chapter 3–4",
+              "creator": "Archive 64",
+              "verification": "numbering_candidate",
+              "note": "The creator groups source Screws 3 and 4 at 1:22. Raider King describes Screw 4 as the Vert 2 rooftop. The exact subchapter start and actual frames have not been inspected."
+            }
+          ]
+        },
+        {
+          "space": "roof",
+          "title": "Check the landing and story gate",
+          "instruction": "The original clue #9 is preserved, but exact roof connection, earliest viable crossing and pickup pixel remain unverified. If the crossing fails, return with Roto-Glide. No new permanent marker is claimed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [
