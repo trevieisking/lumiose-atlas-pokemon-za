@@ -4,7 +4,7 @@
   "batch": "AT-293",
   "date": "2026-11-24",
   "baseline_main_sha": "f570c00e8939bd73193f4ecdb0766376d264a5b7",
-  "scope": "Source-first research register only. No new runtime marker or coordinate. Route/course leads may overlap; they are not a deduplicated physical ladder/scaffold count.",
+  "scope": "Source-first research for actionable written ladder, scaffold, bridge and rooftop access directions. No exhaustive physical ascent inventory or new individual access-structure pins. Preserve existing Hotel Z pilot and historical research. Holovator and fixed-pickup coordinate research remains separate.",
   "reference_map": {
     "path": "maps/lumiose-game-map.jpg",
     "native_size": [
@@ -57,12 +57,12 @@
     "original_routes": 8
   },
   "method": {
-    "survey_order": "one location or route at a time within a sector; review all 48 sectors and all 20 Wild Zones, then boundary roads, canals and plazas",
+    "survey_order": "Review all 48 sectors and 20 Wild Zones for useful destination approaches, then shared boundary routes; research the ladders, scaffolds, obstacles and roof crossings needed for those directions, not every physical structure.",
     "source_policy": "Use publicly accessible map category entries, gameplay images and independent descriptions as research; record source attribution, ID, date and coordinate space. Do not copy a guide's map artwork/database or bypass access restrictions. Owner photographs only when unresolved evidence warrants them.",
-    "alignment_gate": "Use permanent shared landmarks across source and original native map; fit appropriate transform, independently test withheld controls, record residual and local uncertainty. Establish marker semantics and exact ladder base vs avatar/pickup marker; no arbitrary threshold or exact pixel claim from fit alone.",
-    "dedup_gate": "Separate structures, ladders within structures, upper/lower exits, route edges and pickup identities; reconcile neighbouring-sector references and differing source counts.",
-    "release_gate": "Text may be reviewed independently as clearly labelled research; pin publication requires device identity, aligned entry coordinate, floor evidence, source attribution and confidence. Unknown exit remains null. All runtime changes require branch QA and visual review; no permanent moving Hyperspace pin.",
-    "progress_policy": "Update manifest revision, plan, register, issue #28 and ledger together after each batch; never infer complete coverage from partial research."
+    "alignment_gate": "Coordinate alignment applies to eligible Holovator and fixed collectible/item markers only. Use independently matched permanent landmark controls, withheld validation and correct marker semantics. Routine written access steps do not need exact entrance or exit XY.",
+    "dedup_gate": "Reconcile overlapping routes, distinguish relevant ascent/descent steps and pickup identities, preserve original collectible IDs; do not calculate or require a citywide physical ladder/scaffold count.",
+    "release_gate": "Publish evidence-backed written access directions with stable landmarks, prerequisites, photographs when useful and explicit uncertainty. No new individual ladder, scaffold, bridge or rooftop-transition map pins. Preserve existing Hotel Z pilot. Holovator/fixed item pins remain subject to independent identity, geometry and floor gates. Runtime changes require branch QA and visual review. No permanent moving Hyperspace pin.",
+    "progress_policy": "Update manifest revision, plan, register, issue #28 and ledger together. Count researched destinations and useful published routes, not all physical structures; never claim full coverage from partial research."
   },
   "coverage": [
     {
@@ -1868,7 +1868,7 @@
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-294 Vert district reconciliation: review all nine sector entries, distinguish boundary leads #1/#15/#16, prioritize attainable route fixes and reconcile owner photo references and Holovator research before advancing to Bleu Sector 1. No repeated failed geometry requests without new evidence.",
+  "next": "AT-294 Vert district written-route reconciliation: review all nine sectors, integrate useful existing research into player-facing directions, resolve overlapping boundary clues #1/#15/#16 and attainable Holovator/item evidence; then Bleu Sector 1. No routine ladder/scaffold coordinate calibration or exhaustive inventory.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -2339,5 +2339,22 @@
     "new_exact_pins": 0,
     "no_new_collection_keys": true,
     "calibration_status": "No new eligible same-feature control pair; held from AT-291, revisit when new evidence permits."
+  },
+  "owner_scope_at_294": {
+    "date": "2026-11-24",
+    "binding": true,
+    "guide_only": [
+      "ladder",
+      "scaffold",
+      "bridge",
+      "rooftop_transition"
+    ],
+    "new_individual_access_structure_pins_authorized": false,
+    "exhaustive_structure_inventory_required": false,
+    "exact_ladder_scaffold_entry_exit_xy_required": false,
+    "legacy_hotel_z_pilot_preserved": true,
+    "holovator_and_verified_fixed_pickup_pin_evidence_gates_unchanged": true,
+    "all_42_prior_leads_preserved": true,
+    "all_68_area_records_preserved": true
   }
 }
