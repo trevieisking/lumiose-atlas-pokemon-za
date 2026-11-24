@@ -1,5 +1,29 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+## AT-297 — Workspace source access, export and safe upgrade policy
+
+**Owner-approved 24 November 2026.** Review access on 25 November if the original editor becomes available. Access is not yet verified. The original ChatGPT Site (A) and GitHub guide (B) must remain independent. Codespaces may be used for isolated development; no automatic repository synchronization or deployment connection to A.
+
+### Current Workspace request
+
+Please open the existing original Atlas Site project, preserving its live URL. First inspect its actual editable source and, if supported, provide a private source ZIP with an inventory and hashes. Include pages, scripts, routes, original maps/images, data, dependencies, lockfiles and nonsecret configuration. Exclude secrets, environment values, private feedback and player records. Report unsupported export/access capabilities accurately. Do not substitute a rendered-page reconstruction.
+
+Read the [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md), [manifest](MAPS_UPGRADE_MANIFEST.json), [ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) and authorized private Supabase feature/feedback queues. Use the following gates:
+
+- [ ] A1: Confirm authorized access to the existing original project.
+- [ ] A2: Verify source export, inventory and rollback checkpoint.
+- [ ] A3: Audit the original progress storage contract, stable IDs and Supabase connection. Preserve existing values and same browser origin. Do not clear or reset storage.
+- [ ] A4: Compare original source with the verified GitHub release. Prepare individual compatible patches identified by AT number; never overwrite the original with the reconstruction.
+- [ ] A5: Test in an isolated working copy or supported preview using test fixtures; verify existing progress, maps, links, feedback and desktop/mobile behavior.
+- [ ] A6: Publish only verified compatible changes through the original Workspace editor, preserving its URL and integrations.
+- [ ] A7: Check the actual live original Site, then record its separate release and evidence in the shared plan, manifest, ledger and private checklist.
+
+**Player progress export:** Preserve and test any existing user-controlled progress export. If absent, plan a separate versioned progress-only download and non-destructive validated restore after examining the actual source. Existing GitHub draft PR #5 is not approved for release; never use an untested exporter on live player data. Do not assume storage is shared across origins. No bulk transfer of personal player data.
+
+**Stop conditions:** missing access or source, unavailable backup/rollback, unknown progress compatibility, failed tests, or risk to the original URL, feedback, ratings, maps, saved progress or database. Owner tests the published website, not development PRs. No original Site change or export is claimed in this planning checkpoint.
+
+
+
 **Prepared:** 21 November 2026
 **Canonical shared ledger:** [ATLAS_DUAL_SITE_FIX_LEDGER.md](ATLAS_DUAL_SITE_FIX_LEDGER.md)
 **Independent repository:** https://github.com/trevieisking/lumiose-atlas-pokemon-za
@@ -11,7 +35,7 @@
 
 **AT-261 — choose Main or Side Missions without leaving the feedback form:** [GitHub PR #88](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/88) adds an explicit guide selector to the existing optional mission-number field. Selecting Side Missions while coming from the main walkthrough must change the actual backend-compatible report page section to `#sidequests`, the visible destination and return link to the exact `#sidequests:quest-N` anchor, and prepend `Side Mission N` to the report text. Main Missions continue to use `#walkthrough:mission-N`. Do not carry a stale number across guide switches: Main #99 and `00` are rejected, Side #99 is valid. **GitHub implementation is VERIFIED AND DEPLOYED:** PR #88 head `5825b83c56acf1c94a9f9e17869dc37c8e331e43`, merged main SHA `17acedcd91453bf6a1403e98648b4eb90471a63f`, [standalone tests](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45062927942), [read-only mobile/desktop UI checks](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45062927986), and [successful GitHub Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45063114240). Verify the original form independently before any mirror. Original ChatGPT Site A has not been changed, and player progress, report rows and backend writer must be preserved.
 
-## Copy/paste this request into the ORIGINAL Site's Workspace editor when access returns
+## Historical 21 November request (AT-297 above controls current work)
 
 > I am the owner of **The Free Online Player's Guide for Pokémon Legends: Z-A**. Please read the **two-site fix ledger** at https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/main/ATLAS_DUAL_SITE_FIX_LEDGER.md and this handoff document.
 >
