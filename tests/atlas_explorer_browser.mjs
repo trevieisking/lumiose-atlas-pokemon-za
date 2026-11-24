@@ -51,6 +51,8 @@ try{
   await sectorProbe.goto(base+"/atlas-explorer.html?sector=magenta-sector-6",{waitUntil:"load"});
   await sectorProbe.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===645,{timeout:15000});
   assert.match(await sectorProbe.locator("#aeSelected").textContent(),/South Boulevard/);
+  assert.equal(await sectorProbe.locator("#aeSelected > a").first().evaluate(node=>getComputedStyle(node).display),"block","Phone source links must be individually readable");
+
   await sectorProbe.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
   await sectorProbe.screenshot({path:output+"/phone-at304-explorer-source.png"});
   await sectorProbe.close();
@@ -75,6 +77,11 @@ try{
   await at304Explorer.goto(base+"/atlas-explorer.html?sector=rouge-sector-7",{waitUntil:"load"});
   await at304Explorer.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===710,{timeout:15000});
   assert.match(await at304Explorer.locator("#aeSelected").textContent(),/North Boulevard/);
+  const at304Links=at304Explorer.locator("#aeSelected > a");
+  assert.ok(await at304Links.count()>=3,"Provenance, source clues and direct link must all remain");
+  const linkPositions=await at304Links.evaluateAll(nodes=>nodes.map(n=>({top:n.getBoundingClientRect().top,bottom:n.getBoundingClientRect().bottom,display:getComputedStyle(n).display})));
+  assert.ok(linkPositions.every((r,i)=>r.display==="block"&&(i===0||r.top>=linkPositions[i-1].bottom)),"Explorer source links must be separate readable rows");
+
   await at304Explorer.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
   await at304Explorer.screenshot({path:output+"/desktop-at304-explorer-source.png"});
   await at304Explorer.close();

@@ -185,3 +185,7 @@
 .ae-source-map-reference img{display:block;width:auto;max-width:100%;height:auto;max-height:440px;object-fit:contain}
 .ae-source-map-reference figcaption{margin-top:9px;font-size:12px;line-height:1.6;color:#554c61;overflow-wrap:anywhere}
 .ae-source-map-reference a:focus-visible{outline:3px solid #eab963;outline-offset:3px}
+
+/* AT-304 review: keep photo-provenance, guide and direct-location links distinct and tappable. */
+#aeSelected > a{display:block;width:fit-content;max-width:100%;padding:3px 0;margin:7px 0;line-height:1.5;overflow-wrap:anywhere}
+#aeSelected > a:focus-visible{outline:3px solid #eab963;outline-offset:2px;border-radius:4px}
