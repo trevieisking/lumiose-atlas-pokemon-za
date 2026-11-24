@@ -31,7 +31,7 @@ try{
   await at304PhoneCrop.scrollIntoViewIfNeeded();
   await sectorProbe.waitForFunction(()=>document.querySelector("#sector-vert-sector-1 .sector-source-map img")?.naturalWidth===358);
   assert.equal(await at304PhoneCrop.evaluate(el=>el.naturalHeight),267);
-  assert.equal(await sectorProbe.locator("#sector-vert-sector-3 .sector-source-pending").count(),1);
+  assert.equal(await sectorProbe.locator('#sector-vert-sector-3 .sector-source-map img[src$="/vert-sector-3.png"]').count(),1);
   await sectorProbe.screenshot({path:output+"/phone-at304-source-image-vert1.png"});
 
 
