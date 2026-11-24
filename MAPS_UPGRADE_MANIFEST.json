@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 43,
+  "revision": 44,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-296 deployed; AT-297 Workspace handoff recorded, all original Site access/port gates open; Vert 3 and 8 then Bleu 1 next.",
+  "current_phase": "AT-298 Vert 3 written route and candidate video references pending validation. Then Vert 8; Workspace access gated.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -2986,5 +2986,82 @@
     ],
     "owner_testing": "Live guide only; assistant handles development review.",
     "no_changes_to_a_now": true
+  },
+  "at_298_vert3": {
+    "id": "AT-298",
+    "date": "2026-11-24",
+    "status": "proposed_pending_exact_head_ci_and_visual_qa",
+    "baseline_main": "421a2bb275af279f2df3256966ac952205f7245f",
+    "routes_added": [
+      "vert3-cyclone-rooftop-courses"
+    ],
+    "previous_routes_preserved": 14,
+    "total_routes_proposed": 15,
+    "previous_video_refs_preserved": 7,
+    "total_video_refs_proposed": 10,
+    "existing_leads_integrated": [
+      "AR-V03-01",
+      "AR-V03-02"
+    ],
+    "all_42_leads_preserved": true,
+    "owner_photos_preserved": 111,
+    "holovators_preserved": 21,
+    "original_screw_ids_preserved": 100,
+    "related_gallery": "vert-cyclone",
+    "new_pins": 0,
+    "checklist_manifest_revision": 44,
+    "checklist_items": [
+      {
+        "id": "AT-298-VERT3-ROUTE",
+        "purpose": "Vert 3 separate boundary scaffold, existing Cafe Cyclone photo approach and northern rooftop directions; original clues 13-16 distinct.",
+        "route": "vert3-cyclone-rooftop-courses",
+        "evidence": "Source-backed written approach; district-only, no measured geometry.",
+        "github_status": "in_progress",
+        "workspace_status": "open"
+      },
+      {
+        "id": "AT-298-VIDEO-V3-BOUNDARY",
+        "purpose": "Vert 1/3 boundary scaffold, source Screw 5",
+        "route": "vert3-cyclone-rooftop-courses",
+        "step": 2,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=138s",
+        "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
+        "github_status": "in_progress",
+        "workspace_status": "open"
+      },
+      {
+        "id": "AT-298-VIDEO-V3-CYCLONE",
+        "purpose": "Cafe Cyclone rooftop scaffold, source Screw 6",
+        "route": "vert3-cyclone-rooftop-courses",
+        "step": 4,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=181s",
+        "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
+        "github_status": "in_progress",
+        "workspace_status": "open"
+      },
+      {
+        "id": "AT-298-VIDEO-V3-ROOF",
+        "purpose": "Northern roof structure, source Screw 7",
+        "route": "vert3-cyclone-rooftop-courses",
+        "step": 5,
+        "url": "https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=238s",
+        "evidence": "Archive 64 publisher chapter and source numbering candidate; actual gameplay frames and exact pickup identity unverified.",
+        "github_status": "in_progress",
+        "workspace_status": "open"
+      }
+    ],
+    "source_disagreements": [
+      "Raider King source 5 boundary scaffold is described in Vert 3; original #13/#14 identity not certified.",
+      "Archive 64 calls source 6 Glide Required and source 7 has no Glide label, whereas Raider King labels source 7 Glide-only. Recommend Roto-Glide for uncertain gaps.",
+      "Original #15 east of Wild Zone 2 remains distinct from #14 west roofs and #16 waterway scaffold. No verified marker link or coordinate added."
+    ],
+    "sources": [
+      "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+      "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations",
+      "https://www.youtube.com/watch?v=5-dLjd4o8Rc"
+    ],
+    "next": "Finish AT-298 validation, screenshot review and deployment; then Vert 8 Hotel Z approaches before Bleu 1. Workspace AT-297 source access/export remains gated."
   }
 }
