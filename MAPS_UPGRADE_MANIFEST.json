@@ -1,6 +1,6 @@
 {
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 25,
+  "revision": 26,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
@@ -1904,5 +1904,42 @@
     "original_supabase_or_workspace_changed": false,
     "next_target": "DR-H-07 mission 071 Watchog, source match and map photo verification",
     "release_gate": "branch_pending_exact_SHA_ci_visual_review_Pages"
+  },
+  "at_283_verification_2026_11_24": {
+    "base_main_sha": "5a126282ee32adce6e93de02b3fc492ab63f5f60",
+    "verified_holovator_mission_ids": [
+      "DR-H-07",
+      "DR-H-08"
+    ],
+    "source_mission_records_corrected": [
+      71,
+      80
+    ],
+    "alpha_watchog_catchable_during_mission_71": true,
+    "level_50_watchog": true,
+    "watchog_fieldbook_route": "alphas.html#alpha-watchog-mission-71",
+    "watchog_gallery_photo_count_retained": 5,
+    "watchog_gallery_id": "lysandre-autumnal",
+    "watchog_gallery_approx_native_xy_retained": [
+      739,
+      740
+    ],
+    "watchog_photographed_lift_exactly_same_as_mission_device": false,
+    "mission_80_enemies_catchable": false,
+    "mission_80_level_both": 52,
+    "mission_80_money_reward": 3500,
+    "mission_80_quick_balls": 4,
+    "mission_80_galettes": 1,
+    "mission_80_map_fallback": "atlas-explorer.html",
+    "original_section_count_retained": 17,
+    "original_quest_progress_count_retained": 203,
+    "wild_zones_retained": 20,
+    "source_alphas_fixed_zone_targets_retained": 38,
+    "owner_photo_inventory_retained": 111,
+    "owner_holovator_records_retained": 21,
+    "new_exact_holovator_pins": 0,
+    "original_game_map_images_supabase_and_site_a_changed": false,
+    "next_target": "DR-H-09 Side Mission 092 The Beldum Blockade / The Beldum Blockage; source title and actual device identity unconfirmed",
+    "release": "branch_only_pending_exact_head_CI_and_Pages"
   }
 }
