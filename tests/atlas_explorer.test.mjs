@@ -229,8 +229,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,11);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,11);
+  assert.equal(data.routes.length,12);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,12);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -382,6 +382,48 @@ test("AT-290 preserves Racine pickup identities and separates source coordinates
   }
   assert.ok(survey.leads.filter(l=>v6.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&l.canonical_screw_id===null&&!l.publish_new_pin));
   assert.equal(survey.at_290.no_new_screw_ids,true);
+  assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
+  assert.equal(data.holovators.length,21);
+  assert.equal(data.ladders.length,1);
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});
+test("AT-293 preserves the Vernal lift gallery and separates photographed ladder from source pickup",()=>{
+  const route=data.routes.find(x=>x.id==="vert9-vernal-rooftop-screw");
+  assert.ok(route);
+  assert.equal(route.point_id,"vert-sector-9");
+  assert.equal(route.anchor_precision,"district_only");
+  assert.equal(route.side_mission,23);
+  assert.equal(route.source_record,"MAPS_ACCESS_ROUTE_SURVEY.json");
+  assert.deepEqual(route.related_photo_ids,["vernal-wz1"]);
+  assert.equal(route.roof_exit_xy,null);
+  assert.equal(route.known_floor_plan,false);
+  assert.match(route.steps[1].instruction,/Main Mission 10.*Terra.*level 28 Diggersby/);
+  assert.match(route.steps[2].instruction,/visible ladder.*does not establish a safe crossing/);
+  assert.match(route.steps[3].instruction,/Roto-Glide.*Main Mission 16/);
+  assert.match(route.steps[4].instruction,/Water-type move.*special Psychic-type move/);
+  assert.match(route.steps[5].instruction,/Vert 5\/9 sector label/);
+  assert.equal(route.steps.at(-1).evidence,"unverified");
+  const lift=data.holovators.find(h=>h.id==="vernal-wz1");
+  assert.deepEqual(lift.xy,[964,1666]);
+  assert.equal(lift.entrance_exact,false);
+  assert.equal(lift.roof_exact,false);
+  assert.equal(lift.photos.length,5);
+  const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+  const area=survey.coverage.find(x=>x.id==="vert-sector-9");
+  assert.equal(area.geometry_complete,false);
+  assert.equal(area.inventory_complete,false);
+  assert.equal(area.lead_ids.length,5);
+  assert.equal(survey.at_293.owner_photo_reinspection.count,3);
+  const p=survey.at_293.source_coordinate_discovery.records[0];
+  assert.deepEqual([p.original_clue,p.marker_id,p.source_xy],[2,235101,[11039,14738]]);
+  assert.equal(new URL(p.regional_link).searchParams.get("markerId"),String(p.marker_id));
+  assert.equal(new URL(p.database_link).searchParams.get("markerId"),String(p.marker_id));
+  assert.equal(p.atlas_xy,null);
+  assert.equal(p.physical_entrance_xy,null);
+  assert.equal(p.physical_exit_xy,null);
+  assert.equal(p.publish_new_pin,false);
+  assert.equal(survey.at_293.source_coordinate_discovery.source_to_atlas_transform_calibrated,false);
+  assert.ok(survey.leads.filter(l=>area.lead_ids.includes(l.id)).every(l=>l.atlas_entrance_xy===null&&l.atlas_exit_xy===null&&!l.publish_new_pin));
   assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
   assert.equal(data.holovators.length,21);
   assert.equal(data.ladders.length,1);
