@@ -230,8 +230,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,12);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,12);
+  assert.equal(data.routes.length,14);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,14);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -569,7 +569,7 @@ test("AT-295 optional video references are timestamped, labelled, safe and do no
   for(const invalid of [null,{...v,video_id:"javascript:alert(1)"},{...v,video_id:"abc&evil.com"},{...v,start_seconds:-1},{...v,start_seconds:1.5},{...v,verification:"frame_verified"},{...v,creator:""}])assert.equal(routeVideoUrl(invalid),null);
   assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
-  assert.equal(data.routes.length,12);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.routes.length,14);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
 
 test("AT-295 video return uses one private key, preserves unrelated state and tolerates blocked storage",()=>{
@@ -584,4 +584,16 @@ test("AT-295 video return uses one private key, preserves unrelated state and to
   const denied={history:{state:null,replaceState(){throw Error("blocked");}},get localStorage(){throw Error("blocked");}};
   assert.equal(saveVideoBookmark(denied,b),false);assert.equal(readVideoBookmark(denied,true),null);assert.doesNotThrow(()=>forgetVideoBookmark(denied));
   const module=read("atlas-video-bookmark.mjs");assert.doesNotMatch(module,/fetch\s*\(|supabase\.|sessionStorage\s*\./i);
+});
+
+test("AT-296 Vert 1 and 2 written approaches retain all prior routes and use candidate chapter metadata",()=>{
+  const a=data.routes.find(r=>r.id==="vert1-scaffold-courses"),b=data.routes.find(r=>r.id==="vert2-southern-rooftop");
+  assert.equal(a.point_id,"vert-sector-1");assert.equal(b.point_id,"vert-sector-2");
+  assert.equal(a.steps.length,6);assert.equal(b.steps.length,4);
+  for(const r of [a,b]){assert.equal(r.anchor_precision,"district_only");assert.equal(r.roof_exit_xy,null);assert.equal(r.known_floor_plan,false);assert.equal(r.steps.at(-1).evidence,"unverified");}
+  assert.deepEqual(a.steps.flatMap(s=>(s.video_refs||[]).map(v=>routeVideoUrl(v))),["https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=30s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=46s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s"]);
+  assert.equal(routeVideoUrl(b.steps[2].video_refs[0]),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s");
+  assert.match(a.steps[1].instruction,/#10 and #11.*candidates/);assert.match(b.steps[2].instruction,/Roto-Glide.*difficult running-roll/);
+  assert.ok([a,b].flatMap(r=>r.steps.flatMap(s=>s.video_refs||[])).every(v=>v.verification==="numbering_candidate"));
+  assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
 });
