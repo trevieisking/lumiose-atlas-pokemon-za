@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 66,
+  "revision": 67,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-321 merged after exact-head CI success; AT-322/323 boundary and encounter research documented; geometry calibration and independent deployment verification pending. AT-320 remains separate.",
+  "current_phase": "AT-324 source identity crosswalk and international map research; boundary calibration and encounter reconciliation pending; no runtime changes.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -143,8 +143,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -4743,5 +4743,23 @@
       "new_image_binaries": 0
     },
     "next": "Independently calibrate boundary pilots Vert1 and WZ11; check overlaps, route access and encounter discrepancies with owner captures. No runtime edits or new public data."
+  },
+  "at_324_location_identity_research": {
+    "status": "research_documentation_only",
+    "baseline_main_sha": "3b6b7834a75b7728b423e63e10eabba00a277dc6",
+    "audit": "docs/qa/ATLAS_AT324_INTERNATIONAL_LOCATION_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json",
+    "counts": {
+      "sectors": 48,
+      "wild_zones": 20,
+      "unique_game_location_ids": 68,
+      "prior_german_directory_gaps_with_text_references": 3,
+      "new_source_findings": 10,
+      "new_published_reference_images_visually_reviewed": 1,
+      "new_verified_polygons": 0,
+      "new_verified_routes": 0,
+      "new_binary_images": 0
+    },
+    "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   }
 }
