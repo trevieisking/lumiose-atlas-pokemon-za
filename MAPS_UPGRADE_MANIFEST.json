@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 68,
+  "revision": 69,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -4795,7 +4795,30 @@
       "existing_routes": 22,
       "registered_sector_boundaries": 0,
       "registered_wild_zone_boundaries": 0,
-      "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
+      "original_three_piece_set": "historical overview trio recovered and byte-verified; direct message identity and calibration remain unproven",
+        "historical_overview_recovery": {
+          "state": "historical_originals_recovered_and_visually_checked_calibration_pending",
+          "evidence": "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
+          "recovered_count": 3,
+          "matching_sha256_count": 3,
+          "decoded_format": "JPEG",
+          "decoded_dimensions": [
+            1536,
+            865
+          ],
+          "orientation": [
+            "south",
+            "center",
+            "north"
+          ],
+          "visual_chain": [
+            "W01↔W02: Wild Zones 5, 16, 2 and 11",
+            "W02↔W03: Wild Zones 3, 7, 8 and 19"
+          ],
+          "owner_exact_message_identity": "consistent_with_three_piece_description_not_named_in_message",
+          "originals_in_public_repository": false,
+          "geometry_added": 0
+        },
       "historical_candidate_overview_records": [
         {
           "id": "W01",
@@ -4836,7 +4859,7 @@
       },
       {
         "id": "G2",
-        "state": "pending"
+        "state": "historical_overview_recovery_verified_calibration_pending"
       },
       {
         "id": "G3",
