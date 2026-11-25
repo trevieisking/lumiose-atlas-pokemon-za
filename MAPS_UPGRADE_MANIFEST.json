@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 56,
+  "revision": 57,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-310 draft: all 19 remaining original PNGs byte-verified in GitHub and wired to sector guide/Explorer for 48/48 branch coverage; exact-head CI, visual QA, merge and Pages verification pending.",
+  "current_phase": "AT-310 deployed: 42 owner-source PNGs cover all 48 sectors. AT-311 guide/video cross-links are pending combined exact-head review.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4388,20 +4388,52 @@
     "next": "AT-310 true 19 PNG byte transfer and visual guide/browser integration after integrity verification"
   },
   "at_310_complete_sector_photo_coverage": {
-    "status": "draft_assets_and_gallery_references_pending_ci_visual_review_pages",
+    "status": "deployed_github_pages_after_exact_head_ci_and_visual_review",
     "baseline_main": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
     "pull_request": 148,
     "added_pngs": 19,
     "added_png_bytes": 4325433,
-    "branch_total_pngs": 42,
-    "branch_sector_coverage": 48,
+    "published_total_pngs": 42,
+    "published_sector_coverage": 48,
     "baseline_public_pngs": 23,
     "baseline_public_sector_coverage": 29,
     "geographic_anchors_added": 0,
-    "pages_verified": false,
+    "pages_verified": true,
+    "pages_deploy_sha": "b80e03e7d3d103578dd83189151b433027e77106",
+    "pages_deploy_run": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45529025107",
     "original_workspace_changed": false,
     "supabase_changed": false,
     "original_handoff_png_bytes": 4865787,
     "source_visual_recrops": 3
+  },
+  "at_311_cross_page_map_video_references": {
+    "status": "review_branch_pending_exact_head_ci_and_visual_qa",
+    "baseline_main_sha": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+    "owner_priority": "Use all existing guide maps and relevant attributed video walkthroughs across pages",
+    "module": "atlas-guide-links.mjs",
+    "wild_zone_references": 20,
+    "sector_references": 48,
+    "main_mission_area_panels": 42,
+    "video_chapters": {
+      "encounters": 20,
+      "hunting": 20,
+      "screw_colour": 5,
+      "side_missions": 33,
+      "individual_side_mission": 61
+    },
+    "sources": {
+      "encounters": "https://www.youtube.com/watch?v=iQeOi4sjLB4",
+      "hunting": "https://www.youtube.com/watch?v=X54oNz8lhJ4",
+      "screws": "https://www.youtube.com/watch?v=BYfSBf-a4g0",
+      "sides": "https://www.youtube.com/watch?v=zh74vxGo56o",
+      "holovator61": "https://www.youtube.com/watch?v=oNzm9uQOCcs"
+    },
+    "verification": "Creator titles and published chapters inspected; actual video frames not verified. No item-ID crosswalk or map geometry inferred.",
+    "at_310_binary_publication": "deployed; 42 original-game PNGs across all 48 sectors",
+    "reconciled_main_sha": "b80e03e7d3d103578dd83189151b433027e77106",
+    "new_coordinates": 0,
+    "workspace": "unchanged_open",
+    "supabase": "not_accessed_no_writes",
+    "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment"
   }
 }

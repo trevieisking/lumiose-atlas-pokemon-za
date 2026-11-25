@@ -4109,5 +4109,34 @@
     "source_photo_geographic_registration": 0,
     "route_leads_unchanged": 42,
     "coverage_records_unchanged": 68
+  },
+  "at_311_cross_page_map_video_references": {
+    "status": "review_branch_pending_exact_head_ci_and_visual_qa",
+    "baseline_main_sha": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+    "owner_priority": "Use all existing guide maps and relevant attributed video walkthroughs across pages",
+    "module": "atlas-guide-links.mjs",
+    "wild_zone_references": 20,
+    "sector_references": 48,
+    "main_mission_area_panels": 42,
+    "video_chapters": {
+      "encounters": 20,
+      "hunting": 20,
+      "screw_colour": 5,
+      "side_missions": 33,
+      "individual_side_mission": 61
+    },
+    "sources": {
+      "encounters": "https://www.youtube.com/watch?v=iQeOi4sjLB4",
+      "hunting": "https://www.youtube.com/watch?v=X54oNz8lhJ4",
+      "screws": "https://www.youtube.com/watch?v=BYfSBf-a4g0",
+      "sides": "https://www.youtube.com/watch?v=zh74vxGo56o",
+      "holovator61": "https://www.youtube.com/watch?v=oNzm9uQOCcs"
+    },
+    "verification": "Creator titles and published chapters inspected; actual video frames not verified. No item-ID crosswalk or map geometry inferred.",
+    "at_310_binary_publication": "open; 19 prepared crops not published",
+    "new_coordinates": 0,
+    "workspace": "unchanged_open",
+    "supabase": "not_accessed_no_writes",
+    "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment"
   }
 }
