@@ -32,3 +32,6 @@ Publication remains gated on validation of the new exact head, review findings, 
 
 ### Review correction
 Codex P2 on initial head: both new article feedback anchors lacked the shared `atlasArticleFeedback` ID. Corrected both to use the existing article controller, which forwards the current pathname and hash to the existing feedback form. Checked the form and relay source path patterns accept these filenames and section IDs. Added static regression coverage; no feedback submission, service change or live end-to-end test performed. Exact-head review and CI remain required.
+
+### Browser validation checkpoint
+Corrected head 475b2c30b0d307a7d099592abeae83261133d267 passed article validation (run 45715529880). Added isolated Chromium smoke checks for 393px phone and 1440px desktop, full menu, both Shops entry links, layout overflow, shared feedback source and round-trip return links. All nonlocal network is blocked in the browser test; no real feedback submission or progress mutation. New exact-head test results not yet observed. Screenshots collected as CI artifacts for inspection. No live publication claimed.

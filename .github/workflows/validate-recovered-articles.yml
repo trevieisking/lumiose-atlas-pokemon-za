@@ -31,6 +31,7 @@ on:
       - hair-beauty-guide.html
       - fashion-guide.css
       - tests/fashion_guides.test.mjs
+      - tests/fashion_guides_browser.mjs
       - shops.css
       - shops.js
       - shops-data.js
@@ -199,3 +200,26 @@ jobs:
         run: python3 tests/validate_static.py
       - name: Guard against feedback form regression
         run: node --test tests/feedback_standalone.test.mjs
+
+  fashion-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium smoke dependency
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Check system Chrome
+        run: command -v google-chrome || command -v google-chrome-stable
+      - name: Verify fashion guide phone and desktop layout and feedback navigation
+        run: node tests/fashion_guides_browser.mjs
+      - name: Attach fashion preview screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fashion-phone-desktop-preview
+          path: test-artifacts/fashion/
+          if-no-files-found: ignore
+          retention-days: 10
