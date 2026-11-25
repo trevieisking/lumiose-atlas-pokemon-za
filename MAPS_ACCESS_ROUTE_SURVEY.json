@@ -228,8 +228,12 @@
       "id": "bleu-sector-2",
       "kind": "sector",
       "label": "Bleu Sector 2",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B02-01",
+        "AR-B02-02",
+        "AR-B02-03"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -249,8 +253,11 @@
       "id": "bleu-sector-4",
       "kind": "sector",
       "label": "Bleu Sector 4",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B04-01",
+        "AR-B04-02"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -271,8 +278,11 @@
       "id": "bleu-sector-6",
       "kind": "sector",
       "label": "Bleu Sector 6",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B06-01",
+        "AR-B06-02"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -2068,19 +2078,188 @@
       "floor_exact": null,
       "geometry_status": "unregistered",
       "publish_new_pin": false
+    },
+    {
+      "id": "AR-B02-01",
+      "area": "bleu-sector-2",
+      "kind": "wild_zone_rooftop",
+      "landmark": "Wild Zone 5 northwestern ladder and roof",
+      "notes": "Northwest ladder access for Abra; Pearl, Leaf Stone (Ember), Full Heal and upper Great Ball (Roto-Glide) are location leads. Serebii describes Leaf Stone at zone level. Existing sector item IDs #05-17–26 are not individually crosswalked.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/wild-zones/dormez-bien-cemetery/all-wild-zone-4-pokemon-locations",
+        "https://www.serebii.net/legendsz-a/items.shtml",
+        "https://www.pokemon-france.com/en/guides/pokemon-legends-z-a/wild-zones/"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_wild_zone": 5
+    },
+    {
+      "id": "AR-B02-02",
+      "area": "bleu-sector-2",
+      "kind": "waterway_approach",
+      "landmark": "Wild Zone 5 northeast sludge and Alpha Whirlipede clearing",
+      "notes": "Water attacks clear two sludge barriers before the tunnel encounter. Separate from a certified sewer-entry or roof connection.",
+      "sources": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-whirlipede-location/",
+        "https://www.nintendolife.com/guides/pokemon-legends-z-a-wild-zone-5-guide-all-pokemon-and-alphas",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_wild_zone": 5
+    },
+    {
+      "id": "AR-B02-03",
+      "area": "bleu-sector-2",
+      "kind": "rooftop_tm",
+      "landmark": "Eastern rooftop ladder near Whirlipede and southern entrance",
+      "notes": "Independent TM lists locate TM040 Bullet Seed on the accessible rooftop; no measured ladder base or landing.",
+      "sources": [
+        "https://www.psypokes.com/plza/tm.php",
+        "https://www.pockettactics.com/pokemon-legends-z-a/wild-zone-5",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_wild_zone": 5,
+      "tm_number": 40,
+      "tm_name": "Bullet Seed"
+    },
+    {
+      "id": "AR-B06-01",
+      "area": "bleu-sector-6",
+      "kind": "paired_scaffold_course",
+      "landmark": "Park southwest of Bleu Plaza",
+      "notes": "Two purple pickups on the western course, lower sheltered staircase/crates and upper tier. Source descriptions match saved #62–63; no original category marker or native XY crosswalk.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html"
+      ],
+      "candidate_original_screw_ids": [
+        62,
+        63
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B06-02",
+      "area": "bleu-sector-6",
+      "kind": "roof_course",
+      "landmark": "Eastern roof above plaza and arcade",
+      "notes": "Published descriptions of ladder and glazed roof approach to eastern pickup agree with Altissimo's roof grouping. Moon Stone independently listed at sector level. Do not assign #60 or #61 individually.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/evo-items.html",
+        "https://www.serebii.net/legendsz-a/items.shtml",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        60,
+        61
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B04-01",
+      "area": "bleu-sector-4",
+      "kind": "cross_sector_rooftop_course",
+      "landmark": "Southern building roof via Sector 6 scaffold",
+      "notes": "Raider King and StrategyWiki describe the cross-sector rooftop approach; Altissimo lists the southern roof pickup. Original sector list has no numbered Screw; district-level #60/#61 remain candidates only.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        60,
+        61
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_existing_route_id": "bleu6-plaza-scaffold-roofs"
+    },
+    {
+      "id": "AR-B04-02",
+      "area": "bleu-sector-4",
+      "kind": "roof_item_lead",
+      "landmark": "Western building roofs",
+      "notes": "Sun Stone, Ice Stone and Water Stone are reported in Sector 4 and western roofs. Access to these from the southern roof is not established; no new items or progress records.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/evo-items.html",
+        "https://www.serebii.net/legendsz-a/items.shtml"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 13,
+    "sector_text_research_started": 16,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 50,
+    "route_course_leads": 57,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-315 review the two new Bleu routes, then investigate Bleu 2, 4, 6 and remaining sectors; retain exact-coordinate hold.",
+  "next": "AT-319 validate Bleu 2/4/6; then continue Bleu 7–10, respecting existing Bleu 7 lift route. Written/photo-first policy; videos only for evidence-verified difficult steps.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -4427,7 +4606,7 @@
     }
   },
   "at_315_bleu3_5_access_routes": {
-    "status": "review_only_not_deployed",
+    "status": "github_deployed_ci_verified",
     "baseline_main_sha": "3d2f8522abfaa3114b78919546a5100e164bfe9f",
     "route_ids": [
       "bleu3-woof-scaffold-courses",
@@ -4460,6 +4639,82 @@
     "private_checklist": "read metadata only; no writes",
     "workspace": "unchanged_v37",
     "youtube": "owner reports verification pending; no new upload queries, footage analysis, or channel changes this cycle",
-    "release_gate": "exact-head CI, actual phone/desktop browser screenshots, same-tree promotion and Pages deployment"
+    "release_gate": "exact-head CI, actual phone/desktop browser screenshots, same-tree promotion and Pages deployment",
+    "release": {
+      "pr": 152,
+      "reviewed_head": "9e399f62c37774c997ca1b40b6a9686128e4d6c4",
+      "merged_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
+      "identical_tree": "08efc191d4d42dadce1c094acc96cf2982ce8fe5",
+      "atlas_run": 45629274862,
+      "unit": "success",
+      "browser": "success",
+      "pages_run": 45642783837,
+      "pages_conclusion": "success",
+      "visual_review": "Not independently repeated in this turn",
+      "workspace": "v37 unchanged"
+    }
+  },
+  "at_319_written_first_policy": {
+    "status": "owner_approved_active",
+    "primary": "complete written instructions and existing map photographs; no video required to complete the guide",
+    "videos": "Only when a difficult location or action cannot be sufficiently explained with text and images; verify clip content and timestamp before adding",
+    "buddyvidz": "Owner continues independent YouTube playthrough; no requirement to upload large original files or review all recordings",
+    "held_prs": [
+      153,
+      154
+    ],
+    "frame_reader_commit": "cc9a98cdfaf6c4ecd9bad797e7e75946a8acec4d",
+    "frame_reader_status": "unattached_commit; not promoted; future optional tool",
+    "existing_links": "Preserve previously deployed links, references and credit; no new video library rollout",
+    "vidiq_credits": 0,
+    "workspace_credits": 0,
+    "code_labs_changes": false
+  },
+  "at_319_bleu2_4_6_written_routes": {
+    "status": "review_only_not_deployed",
+    "baseline_main_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
+    "route_ids": [
+      "bleu2-wildzone5-roof-sweep",
+      "bleu6-plaza-scaffold-roofs",
+      "bleu4-southern-roof-from-bleu6"
+    ],
+    "source_refs": {
+      "plaza": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-plaza.html",
+      "wz5": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html",
+      "nl": "https://www.nintendolife.com/guides/pokemon-legends-z-a-wild-zone-5-guide-all-pokemon-and-alphas",
+      "ggzone": "https://www.gamerguides.com/pokemon-legends-z-a/guide/wild-zones/dormez-bien-cemetery/all-wild-zone-4-pokemon-locations",
+      "tm": "https://www.psypokes.com/plza/tm.php",
+      "pp": "https://www.powerpyx.com/pokemon-legends-z-a-whirlipede-location/",
+      "pt": "https://www.pockettactics.com/pokemon-legends-z-a/wild-zone-5",
+      "pf": "https://www.pokemon-france.com/en/guides/pokemon-legends-z-a/wild-zones/",
+      "raider": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "wiki": "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+      "screws": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "evo": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/evo-items.html",
+      "balls": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/poke-balls.html",
+      "serebii": "https://www.serebii.net/legendsz-a/items.shtml",
+      "gg": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+      "checklist": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+      "gamespot": "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+    },
+    "existing_routes_preserved": 19,
+    "total_routes_proposed": 22,
+    "new_route_leads": 7,
+    "existing_numbered_screw_clues": [
+      62,
+      63
+    ],
+    "unresolved_district_clue_candidates": [
+      60,
+      61
+    ],
+    "existing_sector2_item_leads": "05-17 through 05-26 unchanged; zone-level inventory does not establish individual ID crosswalk",
+    "new_screw_ids": 0,
+    "new_item_ids": 0,
+    "new_exact_pins": 0,
+    "sector_xy_remain_null": true,
+    "private_checklist": "read only; later rows absent; reconciliation pending",
+    "workspace": "unchanged_v37",
+    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
   }
 }
