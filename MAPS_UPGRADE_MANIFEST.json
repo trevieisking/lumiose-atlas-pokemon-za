@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 67,
+  "revision": 68,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-324 source identity crosswalk and international map research; boundary calibration and encounter reconciliation pending; no runtime changes.",
+  "current_phase": "AT-325 GitHub-first full map upgrade plan and private Workspace queue; G1–G5 implementation/release pending; final Workspace prompt blocked until verified full-scope GitHub release.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -149,7 +149,8 @@
     "supabase_changed": false,
     "feedback_changed": false,
     "original_workspace_site_changed": false,
-    "protected_code_labs_writer_used": false
+    "protected_code_labs_writer_used": false,
+    "supabase_private_feature_metadata_update_planned": true
   },
   "phases": [
     {
@@ -4626,7 +4627,7 @@
     "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
   },
   "at_321_wild_zone_photo_fieldbook": {
-    "status": "merged_main_deployment_not_rechecked_in_at323",
+    "status": "pages_deployed_outstanding_review_followup",
     "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
     "requirements": [
       "All 20 numbered Wild Zones, each with exactly two original owner PNGs: wider area/encounter-card overview and detailed zone close-up; both open full resolution.",
@@ -4689,7 +4690,8 @@
     "zone20_rotating_alpha_pool": 67,
     "unit_test": "tests/wild_zone_fieldbook.test.mjs",
     "browser_test": "tests/wild_zone_fieldbook_browser.mjs",
-    "verification_status": "Exact head 2faef6b25d4f4d7abfae00001a7e35163a78fb41: runs 45678803670, 45678804312, 45678804365 success. Merged 344a84050a26a50f899752ab61693bc1190e985b. Exact Pages deployment not checked in AT-323; Workspace unchanged."
+    "verification_status": "Exact head 2faef6b25d4f4d7abfae00001a7e35163a78fb41 CI success; merged 344a84050a26a50f899752ab61693bc1190e985b; exact Pages run 45679413635 success; baseline run 45680305852 success. New direct-live check not performed. Three source-confirmed review findings AT325-R01–R03 require repair before full-scope handoff.",
+    "pages_run": 45679413635
   },
   "at_322_pokemaps_reference_audit": {
     "status": "documentation_on_main_partial_research_no_ui_release",
@@ -4761,5 +4763,126 @@
       "new_binary_images": 0
     },
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
+  },
+  "at_325_github_first_workspace_gate": {
+    "status": "plan_checkpoint_only_full_upgrade_pending",
+    "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
+    "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+    "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
+    "baseline_pages_run": 45680305852,
+    "owner_photo_inventory": {
+      "base_map": {
+        "path": "maps/lumiose-game-map.jpg",
+        "native_size": [
+          1920,
+          1920
+        ],
+        "git_blob_sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+        "bytes": 411683
+      },
+      "sector_count": 48,
+      "sector_pngs": 42,
+      "wild_zone_count": 20,
+      "wild_zone_pngs": 40,
+      "verified_photo_blob_and_byte_matches": 82,
+      "sector_reference_coverage": 48,
+      "wild_zone_pair_coverage": 20,
+      "holovator_photo_count": 111,
+      "holovator_research_entries": 21,
+      "existing_item_records": 264,
+      "colorful_screw_ids": 100,
+      "approximate_item_leads": 146,
+      "existing_routes": 22,
+      "registered_sector_boundaries": 0,
+      "registered_wild_zone_boundaries": 0,
+      "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
+      "historical_candidate_overview_records": [
+        {
+          "id": "W01",
+          "uploaded_basename": "1000027197.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "b0ebb7e7f77c63920dd9aa98d51e83bcfed770b72577db801e7075e4900918ec",
+          "file_committed_to_repo": false
+        },
+        {
+          "id": "W02",
+          "uploaded_basename": "1000027198.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "f0419f4a67b91e5d5ef82bd5894e52d452652f438b01e5e1b8a194ff51054b9a",
+          "file_committed_to_repo": false
+        },
+        {
+          "id": "W03",
+          "uploaded_basename": "1000027199.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "78311ae15c8ffd0b9d8db396699371bb86cc3b90a3ad2cbde914b28f6ac18886",
+          "file_committed_to_repo": false
+        }
+      ],
+      "historical_candidate_manifest": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration."
+    },
+    "phase_states": [
+      {
+        "id": "G0",
+        "state": "documentation_checkpoint"
+      },
+      {
+        "id": "G1",
+        "state": "pending"
+      },
+      {
+        "id": "G2",
+        "state": "pending"
+      },
+      {
+        "id": "G3",
+        "state": "pending"
+      },
+      {
+        "id": "G4",
+        "state": "pending"
+      },
+      {
+        "id": "G5",
+        "state": "pending"
+      },
+      {
+        "id": "A0",
+        "state": "blocked_until_G5_verified"
+      },
+      {
+        "id": "A1-A7",
+        "state": "blocked_until_A0"
+      }
+    ],
+    "remaining_review_findings": [
+      {
+        "id": "AT325-R01",
+        "state": "source_confirmed_pending_fix"
+      },
+      {
+        "id": "AT325-R02",
+        "state": "source_confirmed_pending_fix"
+      },
+      {
+        "id": "AT325-R03",
+        "state": "source_confirmed_pending_fix"
+      }
+    ],
+    "workspace_prompt": {
+      "state": "blocked",
+      "required_approved_github_release_sha": null,
+      "required_exact_deployment_evidence": null,
+      "required_full_scope_signoff": null,
+      "final_prompt_path": null,
+      "allowed_to_send_or_execute": false,
+      "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
+    },
+    "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+    "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
   }
 }
