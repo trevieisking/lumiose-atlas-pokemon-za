@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 61,
+  "revision": 63,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-315 deployed on GitHub; owner-approved written/photo-first policy. AT-319 adds Bleu 2, 4 and 6 written routes under review. Video library and frame-reader work held.",
+  "current_phase": "AT-321 owner-approved Wild Zone photo and encounter fieldbook planned; AT-320 PR #156 remains separate.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -119,8 +119,12 @@
     },
     "wild_zone": {
       "count": 20,
-      "status": "existing_keep_and_regression_test",
-      "separate_ids": true
+      "status": "photo_fieldbook_planned",
+      "separate_ids": true,
+      "owner_photographs": 40,
+      "required_photos_per_zone": 2,
+      "photo_directory": "assets/atlas/wild-zones/",
+      "catchable_pokemon_text": true
     }
   },
   "layer_order": [
@@ -139,8 +143,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -854,7 +858,7 @@
   ],
   "completion_requirements": {
     "sector_navigation": "48/48 distinct sector selectors and useful zoom, not 48 fabricated images",
-    "wild_zone_navigation": "20/20 existing Wild Zone map positions preserve behavior",
+    "wild_zone_navigation": "20/20 existing positions and behavior preserved; every Wild Zone category shows its two verified owner images, named area and readable catchable Pokémon roster, with Alpha/rotation distinctions, mobile/desktop viewing and full-size image links.",
     "confirmed_access_points": "Confirmed Holovator map points require type, aligned coordinate, floor/route directions and dated evidence. Ladder/scaffold/bridge/roof access is documented in written guides, not individually mapped.",
     "confirmed_item_pins": "Every plotted exact item with source ID, exact location, altitude and verified access",
     "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
@@ -4620,5 +4624,34 @@
     "private_checklist": "read only; later rows absent; reconciliation pending",
     "workspace": "unchanged_v37",
     "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
+  },
+  "at_321_wild_zone_photo_fieldbook": {
+    "status": "owner_approved_planned_not_deployed",
+    "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
+    "requirements": [
+      "All 20 numbered Wild Zones, each with exactly two original owner PNGs: wider area/encounter-card overview and detailed zone close-up; both open full resolution.",
+      "Show the named location and district and a readable text roster of catchable Pokémon, including guaranteed Alpha encounters and the separate rotating Zone 20 Alpha pool. Identify conditions/uncertainty; do not treat screenshot icons as permanent encounters.",
+      "Present these directly inside the existing Lumiose maps Wild Zone selection (main guide, standalone map, sector/Wild Zone directory, interactive Explorer), in the same evidence-first style as sector photographs; mobile stack, desktop responsive layout.",
+      "Keep existing unlock missions, zone IDs, coordinates, all 264 item records, 100 Screw IDs, 38 fixed Alpha entries, all sector photos/routes, filters, saved progress, feedback and Supabase connections. Never pin transient Hyperspace distortions.",
+      "Use 40 checksum-verified PNGs from merged PRs #157–159; retain originals unmodified, with provenance and full-size viewing. Text encounter data cross-checked against source and existing Alpha fieldbook.",
+      "Exact-head automated unit/browser tests for all 20 pairs and roster, mobile and desktop visual review, expected-head merge and exact GitHub Pages deployment. Original Workspace requires separate approved handoff and independent verification."
+    ],
+    "asset_prs": [
+      157,
+      158,
+      159
+    ],
+    "asset_count": 40,
+    "zone_count": 20,
+    "source_manifests": [
+      "assets/atlas/wild-zones/batch-01-manifest.json",
+      "assets/atlas/wild-zones/batch-02-manifest.json",
+      "assets/atlas/wild-zones/batch-03-manifest.json",
+      "assets/atlas/wild-zones/batch-04-manifest.json"
+    ],
+    "active_separate_pr": 156,
+    "private_checklist": "read-only preflight; AT-321 row absent; pending synchronization",
+    "workspace": "unchanged",
+    "release_gate": "exact-head CI and phone/desktop visual evidence; exact Pages deployment"
   }
 }
