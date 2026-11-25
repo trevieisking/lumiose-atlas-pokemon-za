@@ -6,6 +6,7 @@ import {
   coverageCellCentre, districtStart, routeVideoUrl
 } from "./atlas-explorer-geometry.mjs";
 import {saveVideoBookmark,readVideoBookmark,forgetVideoBookmark} from "./atlas-video-bookmark.mjs";
+import {wildZoneFieldbookMarkup,zoneSearchText} from "./wild-zone-fieldbook.mjs";
 import {appendGuidePanel,zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,buddyVidzClips} from "./atlas-guide-links.mjs";
 const by = id => document.getElementById(id);
 const viewport=by("aeViewport"),stage=by("aeStage"),layer=by("aeMapPins");
@@ -183,6 +184,7 @@ function detailsFor(item){
   if(item.description)selectedPanel.append(paragraph(item.description));
   if(item.kind==="zone"){
     selectedPanel.append(paragraph("This source-saved Wild Zone centre is for orientation, not an exact item, ladder or interior entrance."));
+    selectedPanel.insertAdjacentHTML("beforeend",wildZoneFieldbookMarkup(item.number));
     selectedPanel.append(link(item.link,"Open Wild Zone "+String(item.number).padStart(2,"0")+" and pickup notes"));
     appendGuidePanel(selectedPanel,"Wild Zone field guides",[...zoneLinks(item.number,"atlas-explorer.html").filter(x=>x.href!==item.link),...zoneVideos(item.number),...buddyVidzClips("alpha_zone",item.number)],"Video links cover encounters and hunting; not measured pickup or entrance coordinates.");
   }else if(item.kind==="sector"){
@@ -292,7 +294,7 @@ function match(item){
   const query=search.value.trim().toLocaleLowerCase();
   if(activeKind!=="all"&&item.kind!==activeKind)return false;
   if(!query)return true;
-  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),labels[item.kind]]
+  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),item.kind==="zone"?zoneSearchText(item.number):"",labels[item.kind]]
     .some(value=>plain(value).toLocaleLowerCase().includes(query));
 }
 function drawList(){

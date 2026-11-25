@@ -90,4 +90,9 @@
   // Script runs deferred: keep all source notes readable if JavaScript is disabled.
   clearSelection();
   updateList();
+  // Preserve normal filters; a validated explicit zone deep link opens its existing card.
+  if(typeof window!=="undefined"){
+    const openHash=()=>{const match=/^#wild-zone-([1-9]|1[0-9]|20)$/.exec(window.location.hash);if(match){district="All";search.value="";updateList();selectZone(match[1]);}};
+    window.addEventListener("hashchange",openHash);openHash();
+  }
 })();
