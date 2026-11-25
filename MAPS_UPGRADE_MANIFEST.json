@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 75,
+  "revision": 76,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -5132,5 +5132,32 @@
     },
     "future_idea": "Legends: Arceus and Pokémon Wind/Waves are deferred separate guide ideas; no implementation approved or change to Z-A map priorities.",
     "evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/176"
+  },
+  "at_331_international_route_research": {
+    "id": "AT-331",
+    "status": "partial_research_documentation",
+    "baseline_main_sha": "c6abfd35876fa70f2a630082cac97cc278f1134a",
+    "audit": "docs/qa/ATLAS_AT331_INTERNATIONAL_ROUTE_RESEARCH.md",
+    "register": "docs/qa/ATLAS_AT331_INTERNATIONAL_ROUTE_REGISTER.json",
+    "access_survey": "MAPS_ACCESS_ROUTE_SURVEY.json",
+    "counts": {
+      "total_areas": 68,
+      "new_sector_areas": 9,
+      "new_wild_zone_areas": 1,
+      "new_leads": 13,
+      "all_sector_partial": 25,
+      "all_wild_zone_partial": 1,
+      "all_route_leads": 70,
+      "fully_completed_areas": 0,
+      "new_exact_pins": 0,
+      "verified_new_routes": 0
+    },
+    "all_68_areas_queued": true,
+    "mission_unlock_discrepancies": [
+      45,
+      71
+    ],
+    "map_priority_unchanged": true,
+    "workspace": "open_pending_AT325_G5_and_AT297"
   }
 }

@@ -1,0 +1,1950 @@
+{
+  "id": "AT-331",
+  "date": "2026-11-25",
+  "baseline_main_sha": "c6abfd35876fa70f2a630082cac97cc278f1134a",
+  "status": "research_only_not_live",
+  "area_count": 68,
+  "language_search_policy": "Research by English location ID plus Japanese/German/French/Chinese/Spanish search aliases where available; read source content, paraphrase facts in English, record source and limits, never assume translation alone confirms a physical path.",
+  "sources": {
+    "jpKing": "https://pente.koro-pokemon.com/legendsz-a/map-rose-district.shtml",
+    "jp8": "https://game8.jp/pokemon-legends-z-a/729591",
+    "jpPedia": "https://gamepedia.jp/pokemon-legends-z-a/archives/16379",
+    "jpRanbu": "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+    "jpHol": "https://gamewith.jp/pokemon-za/524373",
+    "jpLadder": "https://gamewith.jp/pokemon-za/524370",
+    "jpMission": "https://gamepedia.jp/pokemon-legends-z-a/archives/16594",
+    "jp45": "https://gamewith.jp/pokemon-za/524526",
+    "jpScrews": "https://gamewith.jp/pokemon-za/523908",
+    "jpAltaria": "https://appmedia.jp/pokemon_legends_za/79398416",
+    "jpScrewLight": "https://chucco.com/pokemonza-colorful-screw-place/",
+    "enStrategy": "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+    "enGamer": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+    "enChecklist": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+    "enWatchog": "https://www.serebii.net/legendsz-a/sidemissions/theburninggazeofwatchog.shtml",
+    "enMissions": "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+    "frVideo": "https://www.youtube.com/watch?v=nRurHeuBw_M",
+    "frGuide": "https://www.palais-des-goodies.fr/blog/pokemon/legendes-pokemon-z-a-vis-colorees-naricalines.html",
+    "enM1": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-1.html",
+    "enM2": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html",
+    "enM3": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-3.html",
+    "enM4": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-4.html",
+    "enM6": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-6.html",
+    "enM8": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-8.html",
+    "enM9": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-9.html",
+    "deM1": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-1.php",
+    "deM2": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-2.php",
+    "deM3": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-3.php"
+  },
+  "source_limits": [
+    "Japanese pages inspected via accessible search excerpts; full Pente Koro page fetch failed, so only retrieved snippets used.",
+    "German Bisafans sectors 1–3 actually inspected; their empty item tables are not proof of absence; not all 9 German pages individually read.",
+    "French BORAMY video chapter metadata and French guide inspected, not video frames or independent confirmation; French guide explicitly translates English sources. No copied map/artwork.",
+    "English sector 5 and 7 catalogue URLs were not retrievable; alternate sources retained, no invented access details.",
+    "Different source screw numbers are independent; use Atlas stable IDs only as candidates by location description.",
+    "No actual game traversal or fresh image inspection in this pass; no new confirmed coordinates."
+  ],
+  "glossary": [
+    {
+      "source": "ローズ地区 / Rose-Zone",
+      "meaning": "Magenta district"
+    },
+    {
+      "source": "番地 / Bezirk",
+      "meaning": "numbered sector"
+    },
+    {
+      "source": "ホロベーター",
+      "meaning": "Holovator"
+    },
+    {
+      "source": "はしご / Leiter",
+      "meaning": "ladder"
+    },
+    {
+      "source": "足場・アスレチック / Baugerüst / échafaudage",
+      "meaning": "scaffolding or obstacle course (context matters)"
+    },
+    {
+      "source": "屋上 / Dach / toit",
+      "meaning": "rooftop"
+    },
+    {
+      "source": "ロトムグライド / Moti-Voltige",
+      "meaning": "Roto-Glide"
+    },
+    {
+      "source": "カラフルなネジ / vis colorées",
+      "meaning": "Colorful Screws"
+    }
+  ],
+  "recognition": [
+    {
+      "fact": "Japanese GameWith reports red lifts are unusable until their associated side mission is cleared. Approach and press A to use an available device.",
+      "source_keys": [
+        "jpHol",
+        "jpMission"
+      ],
+      "scope": "game mechanic, not a new marker identity"
+    },
+    {
+      "fact": "Owner archive documents gold/yellow triple-chevron devices at Café Gallant/Lysandre Café. A photographed yellow object without matched geometry or device interaction remains ambiguous.",
+      "source_keys": [],
+      "local_evidence": [
+        "MAPS_CAFE_GALLANT_ESTIVAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+        "MAPS_LYSANDRE_CAFE_AUTUMNAL_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ]
+    },
+    {
+      "fact": "Japanese gameplay account identifies purple glowing Poké Balls as Colorful Screw pickups. Avoid treating them as lifts.",
+      "source_keys": [
+        "jpScrewLight"
+      ]
+    },
+    {
+      "fact": "Ladders may be used with A when close; no fall damage in Z-A. Gliding, rolling, obstacle-clearing and mission gating must be noted per route.",
+      "source_keys": [
+        "jpLadder",
+        "jpHol"
+      ]
+    }
+  ],
+  "mission_unlocks": {
+    "source_keys": [
+      "jpMission",
+      "jpHol",
+      "enWatchog",
+      "enMissions",
+      "jp45"
+    ],
+    "published_side_missions": [
+      4,
+      23,
+      40,
+      45,
+      56,
+      61,
+      71,
+      80,
+      92
+    ],
+    "discrepancies": [
+      "071: MM24 Rust Syndicate Office visit vs MM20 completion vs MM24 start; preserve as open",
+      "045: general Japanese list states MM15 start while dedicated Japanese GameWith page states MM19 start; no change to current mission text without reconciliation"
+    ]
+  },
+  "areas": [
+    {
+      "atlas_id": "vert-sector-1",
+      "english": "Vert Sector 1",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール１番地",
+        "zh_hans": "翡绿１号街区",
+        "de": "Verte-Bezirk 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_research",
+      "prior_lead_ids": [
+        "AR-V01-01",
+        "AR-V01-02",
+        "AR-V01-03",
+        "AR-V01-04"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-1-saison-canal.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-2",
+      "english": "Vert Sector 2",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール２番地",
+        "zh_hans": "翡绿２号街区",
+        "de": "Verte-Bezirk 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_research",
+      "prior_lead_ids": [
+        "AR-V02-01"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-3",
+      "english": "Vert Sector 3",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール３番地",
+        "zh_hans": "翡绿３号街区",
+        "de": "Verte-Bezirk 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_research",
+      "prior_lead_ids": [
+        "AR-V03-01",
+        "AR-V03-02"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-4",
+      "english": "Vert Sector 4",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール４番地",
+        "zh_hans": "翡绿４号街区",
+        "de": "Verte-Bezirk 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_and_owner_photo_research",
+      "prior_lead_ids": [
+        "AR-V04-01",
+        "AR-V04-02",
+        "AR-V04-03",
+        "AR-V04-04",
+        "AR-V04-05",
+        "AR-V04-06"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-5",
+      "english": "Vert Sector 5",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール５番地",
+        "zh_hans": "翡绿５号街区",
+        "de": "Verte-Bezirk 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_and_external_photo_research",
+      "prior_lead_ids": [
+        "AR-V05-01",
+        "AR-V05-02",
+        "AR-V05-03",
+        "AR-V05-04",
+        "AR-V05-05",
+        "AR-V05-06"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-6",
+      "english": "Vert Sector 6",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール６番地",
+        "zh_hans": "翡绿６号街区",
+        "de": "Verte-Bezirk 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_external_photo_and_source_coordinate_research",
+      "prior_lead_ids": [
+        "AR-V06-01",
+        "AR-V06-02",
+        "AR-V06-03",
+        "AR-V06-04",
+        "AR-V06-05",
+        "AR-V06-06",
+        "AR-V06-07"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-7",
+      "english": "Vert Sector 7",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール７番地",
+        "zh_hans": "翡绿７号街区",
+        "de": "Verte-Bezirk 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_and_source_coordinate_research_calibration_held",
+      "prior_lead_ids": [
+        "AR-V07-01",
+        "AR-V07-02",
+        "AR-V07-03",
+        "AR-V07-04",
+        "AR-V07-05"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-8",
+      "english": "Vert Sector 8",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール８番地",
+        "zh_hans": "翡绿８号街区",
+        "de": "Verte-Bezirk 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-V08-01",
+        "AR-V08-02",
+        "AR-V08-03",
+        "AR-V08-04"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "vert-sector-9",
+      "english": "Vert Sector 9",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ベール９番地",
+        "zh_hans": "翡绿９号街区",
+        "de": "Verte-Bezirk 9"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_and_owner_photo_research_source_pickup_coordinate_unregistered",
+      "prior_lead_ids": [
+        "AR-V09-01",
+        "AR-V09-02",
+        "AR-V09-03",
+        "AR-V09-04",
+        "AR-V09-05"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-1",
+      "english": "Bleu Sector 1",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー１番地",
+        "zh_hans": "浦蓝１号街区",
+        "de": "Cyan-Bezirk 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B01-01",
+        "AR-B01-02",
+        "AR-B01-03"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-2",
+      "english": "Bleu Sector 2",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー２番地",
+        "zh_hans": "浦蓝２号街区",
+        "de": "Cyan-Bezirk 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B02-01",
+        "AR-B02-02",
+        "AR-B02-03"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-3",
+      "english": "Bleu Sector 3",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー３番地",
+        "zh_hans": "浦蓝３号街区",
+        "de": "Cyan-Bezirk 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B03-01",
+        "AR-B03-02"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-4",
+      "english": "Bleu Sector 4",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー４番地",
+        "zh_hans": "浦蓝４号街区",
+        "de": "Cyan-Bezirk 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B04-01",
+        "AR-B04-02"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-5",
+      "english": "Bleu Sector 5",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー５番地",
+        "zh_hans": "浦蓝５号街区",
+        "de": "Cyan-Bezirk 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B05-01",
+        "AR-B05-02",
+        "AR-B05-03"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-6",
+      "english": "Bleu Sector 6",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー６番地",
+        "zh_hans": "浦蓝６号街区",
+        "de": "Cyan-Bezirk 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "written_route_integrated_pending_review",
+      "prior_lead_ids": [
+        "AR-B06-01",
+        "AR-B06-02"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-7",
+      "english": "Bleu Sector 7",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー７番地",
+        "zh_hans": "浦蓝７号街区",
+        "de": "Cyan-Bezirk 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-8",
+      "english": "Bleu Sector 8",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー８番地",
+        "zh_hans": "浦蓝８号街区",
+        "de": "Cyan-Bezirk 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-9",
+      "english": "Bleu Sector 9",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー９番地",
+        "zh_hans": "浦蓝９号街区",
+        "de": "Cyan-Bezirk 9"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "bleu-sector-10",
+      "english": "Bleu Sector 10",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ブルー１０番地",
+        "zh_hans": "浦蓝１０号街区",
+        "de": "Cyan-Bezirk 10"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-1",
+      "english": "Magenta Sector 1",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ１番地",
+        "zh_hans": "蓉粉１号街区",
+        "de": "Rose-Bezirk 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M01-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-2",
+      "english": "Magenta Sector 2",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ２番地",
+        "zh_hans": "蓉粉２号街区",
+        "de": "Rose-Bezirk 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M02-01",
+        "AR-M02-02"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-3",
+      "english": "Magenta Sector 3",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ３番地",
+        "zh_hans": "蓉粉３号街区",
+        "de": "Rose-Bezirk 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M03-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-4",
+      "english": "Magenta Sector 4",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ４番地",
+        "zh_hans": "蓉粉４号街区",
+        "de": "Rose-Bezirk 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M04-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-4.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-5",
+      "english": "Magenta Sector 5",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ５番地",
+        "zh_hans": "蓉粉５号街区",
+        "de": "Rose-Bezirk 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M05-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-5.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-6",
+      "english": "Magenta Sector 6",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ６番地",
+        "zh_hans": "蓉粉６号街区",
+        "de": "Rose-Bezirk 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M06-01",
+        "AR-M06-02"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-7",
+      "english": "Magenta Sector 7",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ７番地",
+        "zh_hans": "蓉粉７号街区",
+        "de": "Rose-Bezirk 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M07-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-7.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-8",
+      "english": "Magenta Sector 8",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ８番地",
+        "zh_hans": "蓉粉８号街区",
+        "de": "Rose-Bezirk 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M08-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-8.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "magenta-sector-9",
+      "english": "Magenta Sector 9",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ローズ９番地",
+        "zh_hans": "蓉粉９号街区",
+        "de": "Rose-Bezirk 9"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-M09-01",
+        "AR-M09-02"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-1",
+      "english": "Rouge Sector 1",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ１番地",
+        "zh_hans": "榴红１号街区",
+        "de": "Rouge-Bezirk 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "partial_text_research",
+      "prior_lead_ids": [
+        "AR-R01-01",
+        "AR-R01-02"
+      ],
+      "new_lead_ids": [],
+      "status": "prior_partial_research_retained",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-2",
+      "english": "Rouge Sector 2",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ２番地",
+        "zh_hans": "榴红２号街区",
+        "de": "Rouge-Bezirk 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-3",
+      "english": "Rouge Sector 3",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ３番地",
+        "zh_hans": "榴红３号街区",
+        "de": "Rouge-Bezirk 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-4",
+      "english": "Rouge Sector 4",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ４番地",
+        "zh_hans": "榴红４号街区",
+        "de": "Rouge-Bezirk 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-5",
+      "english": "Rouge Sector 5",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ５番地",
+        "zh_hans": "榴红５号街区",
+        "de": "Rouge-Bezirk 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-6",
+      "english": "Rouge Sector 6",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ６番地",
+        "zh_hans": "榴红６号街区",
+        "de": "Rouge-Bezirk 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-7",
+      "english": "Rouge Sector 7",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ７番地",
+        "zh_hans": "榴红７号街区",
+        "de": "Rouge-Bezirk 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "rouge-sector-8",
+      "english": "Rouge Sector 8",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ルージュ８番地",
+        "zh_hans": "榴红８号街区",
+        "de": "Rouge-Bezirk 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-1",
+      "english": "Jaune Sector 1",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ１番地",
+        "zh_hans": "琼黄１号街区",
+        "de": "Jaune-Bezirk 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-2",
+      "english": "Jaune Sector 2",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ２番地",
+        "zh_hans": "琼黄２号街区",
+        "de": "Jaune-Bezirk 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-3",
+      "english": "Jaune Sector 3",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ３番地",
+        "zh_hans": "琼黄３号街区",
+        "de": "Jaune-Bezirk 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-4",
+      "english": "Jaune Sector 4",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ４番地",
+        "zh_hans": "琼黄４号街区",
+        "de": "Jaune-Bezirk 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-5",
+      "english": "Jaune Sector 5",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ５番地",
+        "zh_hans": "琼黄５号街区",
+        "de": "Jaune-Bezirk 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-6",
+      "english": "Jaune Sector 6",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ６番地",
+        "zh_hans": "琼黄６号街区",
+        "de": "Jaune-Bezirk 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-7",
+      "english": "Jaune Sector 7",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ７番地",
+        "zh_hans": "琼黄７号街区",
+        "de": "Jaune-Bezirk 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-8",
+      "english": "Jaune Sector 8",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ８番地",
+        "zh_hans": "琼黄８号街区",
+        "de": "Jaune-Bezirk 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-9",
+      "english": "Jaune Sector 9",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ９番地",
+        "zh_hans": "琼黄９号街区",
+        "de": "Jaune-Bezirk 9"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-10",
+      "english": "Jaune Sector 10",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ１０番地",
+        "zh_hans": "琼黄１０号街区",
+        "de": "Jaune-Bezirk 10"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-11",
+      "english": "Jaune Sector 11",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ１１番地",
+        "zh_hans": "琼黄１１号街区",
+        "de": "Jaune-Bezirk 11"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "jaune-sector-12",
+      "english": "Jaune Sector 12",
+      "kind": "sector",
+      "search_aliases": {
+        "ja": "ジョーヌ１２番地",
+        "zh_hans": "琼黄１２号街区",
+        "de": "Jaune-Bezirk 12"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-01",
+      "english": "Wild Zone 1",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１番ワイルドゾーン",
+        "zh_hans": "１号野生特区",
+        "de": "Wildsektor 1"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-02",
+      "english": "Wild Zone 2",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "２番ワイルドゾーン",
+        "zh_hans": "２号野生特区",
+        "de": "Wildsektor 2"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-03",
+      "english": "Wild Zone 3",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "３番ワイルドゾーン",
+        "zh_hans": "３号野生特区",
+        "de": "Wildsektor 3"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-04",
+      "english": "Wild Zone 4",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "４番ワイルドゾーン",
+        "zh_hans": "４号野生特区",
+        "de": "Wildsektor 4"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-05",
+      "english": "Wild Zone 5",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "５番ワイルドゾーン",
+        "zh_hans": "５号野生特区",
+        "de": "Wildsektor 5"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-06",
+      "english": "Wild Zone 6",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "６番ワイルドゾーン",
+        "zh_hans": "６号野生特区",
+        "de": "Wildsektor 6"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-07",
+      "english": "Wild Zone 7",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "７番ワイルドゾーン",
+        "zh_hans": "７号野生特区",
+        "de": "Wildsektor 7"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-08",
+      "english": "Wild Zone 8",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "８番ワイルドゾーン",
+        "zh_hans": "８号野生特区",
+        "de": "Wildsektor 8"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-09",
+      "english": "Wild Zone 9",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "９番ワイルドゾーン",
+        "zh_hans": "９号野生特区",
+        "de": "Wildsektor 9"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [
+        "AR-WZ09-01"
+      ],
+      "status": "partial_international_text_research",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-10",
+      "english": "Wild Zone 10",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１０番ワイルドゾーン",
+        "zh_hans": "１０号野生特区",
+        "de": "Wildsektor 10"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-11",
+      "english": "Wild Zone 11",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１１番ワイルドゾーン",
+        "zh_hans": "１１号野生特区",
+        "de": "Wildsektor 11"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-12",
+      "english": "Wild Zone 12",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１２番ワイルドゾーン",
+        "zh_hans": "１２号野生特区",
+        "de": "Wildsektor 12"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-13",
+      "english": "Wild Zone 13",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１３番ワイルドゾーン",
+        "zh_hans": "１３号野生特区",
+        "de": "Wildsektor 13"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-14",
+      "english": "Wild Zone 14",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１４番ワイルドゾーン",
+        "zh_hans": "１４号野生特区",
+        "de": "Wildsektor 14"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-15",
+      "english": "Wild Zone 15",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１５番ワイルドゾーン",
+        "zh_hans": "１５号野生特区",
+        "de": "Wildsektor 15"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-16",
+      "english": "Wild Zone 16",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１６番ワイルドゾーン",
+        "zh_hans": "１６号野生特区",
+        "de": "Wildsektor 16"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-17",
+      "english": "Wild Zone 17",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１７番ワイルドゾーン",
+        "zh_hans": "１７号野生特区",
+        "de": "Wildsektor 17"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-18",
+      "english": "Wild Zone 18",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１８番ワイルドゾーン",
+        "zh_hans": "１８号野生特区",
+        "de": "Wildsektor 18"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-19",
+      "english": "Wild Zone 19",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "１９番ワイルドゾーン",
+        "zh_hans": "１９号野生特区",
+        "de": "Wildsektor 19"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    },
+    {
+      "atlas_id": "wz-20",
+      "english": "Wild Zone 20",
+      "kind": "wild_zone",
+      "search_aliases": {
+        "ja": "２０番ワイルドゾーン",
+        "zh_hans": "２０号野生特区",
+        "de": "Wildsektor 20"
+      },
+      "alias_confidence": "inherited AT-324 search aids, not verified official locale strings for every record",
+      "prior_access_status": "not_started",
+      "prior_lead_ids": [],
+      "new_lead_ids": [],
+      "status": "queued_not_yet_individually_researched",
+      "owner_map_reference": null,
+      "geometry_verified": false,
+      "walkthrough_complete": false,
+      "publish_new_pin": false
+    }
+  ],
+  "new_leads": [
+    {
+      "id": "AR-M01-01",
+      "area": "magenta-sector-1",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Estival Avenue roadside / eastern building",
+      "notes": "Japanese and English item sources describe raised scaffolding along the avenue. Check the street-facing course first; nearby rooftop or scaffold loot is not proof of a specific Atlas Screw identity. Start at Café Gallant or Magenta Plaza Pokémon Center; exact ascent and relationship to screw 85 remain open.",
+      "sources": [
+        "https://pente.koro-pokemon.com/legendsz-a/map-rose-district.shtml",
+        "https://game8.jp/pokemon-legends-z-a/729591",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-1.html"
+      ],
+      "source_keys": [
+        "jpKing",
+        "jp8",
+        "enM1"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M02-01",
+      "area": "magenta-sector-2",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Alley west of eastern building complex",
+      "notes": "Search the scaffolding in the alley on the west side of the eastern building group. The reported screw is above ground; the approach is consistent with the existing Sector 2 scaffold clue, but the first climb has not been walked.",
+      "sources": [
+        "https://pente.koro-pokemon.com/legendsz-a/map-rose-district.shtml",
+        "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "jpKing",
+        "jpRanbu",
+        "enM2",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        86
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M02-02",
+      "area": "magenta-sector-2",
+      "kind": "holovator_access",
+      "landmark": "Chuckie's Watchog mission",
+      "notes": "Find Chuckie and clear the Alpha Watchog blocking access in Side Mission 071. The owner's existing Lysandre Café/Autumnal Avenue photographed lift is a nearby candidate, NOT an identified mission device. Use the mission marker. Serebii places availability after the Rust Syndicate Office visit in MM24; Bulbapedia records completion of MM20. Gamepedia associates it with accepting MM24. Exact earliest trigger is unresolved.",
+      "sources": [
+        "https://www.serebii.net/legendsz-a/sidemissions/theburninggazeofwatchog.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://gamepedia.jp/pokemon-legends-z-a/archives/16594",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-2.html"
+      ],
+      "source_keys": [
+        "enWatchog",
+        "enMissions",
+        "jpMission",
+        "enM2"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [
+        "lysandre-autumnal"
+      ],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M03-01",
+      "area": "magenta-sector-3",
+      "kind": "holovator_rooftop_course",
+      "landmark": "Café Gallant / northern building group",
+      "notes": "A published screw route starts by Café Gallant, rises by Holovator and crosses the roof near benches and a bridge before descending into a narrow gap. This is a candidate connection from the existing Café Gallant lift photographs; exact turns, landing and pickup identity require visual comparison. Separately, the German area guide places TM009 on a triangular-building roof and records Hawluchanite as a mission reward; do not conflate a reward with a pickup.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-3.html",
+        "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-3.php"
+      ],
+      "source_keys": [
+        "enStrategy",
+        "enM3",
+        "deM3"
+      ],
+      "candidate_original_screw_ids": [
+        87
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [
+        "cafe-gallant"
+      ],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M04-01",
+      "area": "magenta-sector-4",
+      "kind": "holovator_rooftop_course",
+      "landmark": "Magenta Plaza / Rogue Mega Altaria destination",
+      "notes": "The Japanese mission guide reports an ascent from the plaza edge followed by a counterclockwise rooftop approach in MM28. Roto-Glide may shorten the route. English location data places the boss on the central building roof. Compare the existing Magenta Plaza northwestern terrace lift ground and rooftop photos before identifying the exact entrance.",
+      "sources": [
+        "https://appmedia.jp/pokemon_legends_za/79398416",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-4.html",
+        "https://pente.koro-pokemon.com/legendsz-a/map-rose-district.shtml"
+      ],
+      "source_keys": [
+        "jpAltaria",
+        "enM4",
+        "jpKing"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [
+        "magenta-plaza-nw"
+      ],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M05-01",
+      "area": "magenta-sector-5",
+      "kind": "ladder_scaffold_course",
+      "landmark": "Café Rouleau / nearby battle court",
+      "notes": "English route account describes entering the scaffold area by a battle court near Café Rouleau, ascending a ladder and descending from the roof onto a platform. Check which street entrance and roof edge are visible in the owner crop before writing precise turns. Source numbering differs from Atlas; no collectible match assumed.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City"
+      ],
+      "source_keys": [
+        "enStrategy"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M06-01",
+      "area": "magenta-sector-6",
+      "kind": "scaffold_ladder_course",
+      "landmark": "North-side scaffold complex",
+      "notes": "Japanese route descriptions identify multiple reachable levels on the course; rolling is mentioned for crossing between platforms. The existing north-side clue pair 88/89 is consistent with lower and upper levels, but individual landings are not matched.",
+      "sources": [
+        "https://game8.jp/pokemon-legends-z-a/729591",
+        "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "jp8",
+        "jpRanbu",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        88,
+        89
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M06-02",
+      "area": "magenta-sector-6",
+      "kind": "rooftop_crossing",
+      "landmark": "South roof / west alley of large complex",
+      "notes": "English and Japanese sources place further rewards on the west-side scaffold and a smaller rooftop above the southern part of the building complex. Roto-Glide is reported for specific high-level pickups. Preserve separate candidate targets and verify the roof approach, rather than assuming all are reachable from the north course.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-6.html",
+        "https://gamepedia.jp/pokemon-legends-z-a/archives/16379",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "enM6",
+        "jpPedia",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        90,
+        92,
+        93,
+        94
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M07-01",
+      "area": "magenta-sector-7",
+      "kind": "ladder_rooftop_course",
+      "landmark": "Courtyard north of sector",
+      "notes": "Japanese sources describe climbing from the northern courtyard and crossing toward a southern roof by Roto-Glide. Compare with the owner's sector reference near the sewer entrance. Existing roof clue 96 is a candidate; no exact building or ladder location assigned.",
+      "sources": [
+        "https://gamepedia.jp/pokemon-legends-z-a/archives/16379",
+        "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "jpPedia",
+        "jpRanbu",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        96
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M08-01",
+      "area": "magenta-sector-8",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Southwestern alley / southwestern building complex",
+      "notes": "One English checklist points to a crate reached by rolling from an adjacent scaffold in the southwest alley. The location catalogue places a screw on scaffolding north of the southwestern complex; Japanese route notes also describe rolling between platforms. Compare the positions to determine whether these describe the same course and existing clue 95. Nearby canal lift is separate; no connection assumed.",
+      "sources": [
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-8.html",
+        "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "enChecklist",
+        "enM8",
+        "jpRanbu",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        95
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [
+        "magenta8-canal"
+      ],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M09-01",
+      "area": "magenta-sector-9",
+      "kind": "obstacle_rooftop_course",
+      "landmark": "Southern building complex / Café Triste vicinity",
+      "notes": "Location catalogue describes access to a courtyard and southern/western roof pickups after clearing rock obstacles with Rock Smash. Some of this sector becomes Wild Zone 18 after MM30; early and late layouts need comparison. No specific lift, roof edge or screw identity assigned.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-9.html"
+      ],
+      "source_keys": [
+        "enM9"
+      ],
+      "candidate_original_screw_ids": [
+        99
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-M09-02",
+      "area": "magenta-sector-9",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Central gap and western North Boulevard edge",
+      "notes": "Existing screw clues distinguish a central course, two west-side platforms and a roof. Japanese summaries indicate multi-level obstacle courses; English area notes distinguish the central scaffolding from western roofing. Keep all four clues separate and verify access level and orientation; no direct connection assumed.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-9.html",
+        "https://game8.jp/pokemon-legends-z-a/729591",
+        "https://gameranbu.jp/pokemonza/e7042aaabead761b753a",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "source_keys": [
+        "enM9",
+        "jp8",
+        "jpRanbu",
+        "enGamer"
+      ],
+      "candidate_original_screw_ids": [
+        97,
+        98,
+        99,
+        100
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    },
+    {
+      "id": "AR-WZ09-01",
+      "area": "wz-09",
+      "kind": "scaffold_ladder_course",
+      "landmark": "Inside Wild Zone 9",
+      "notes": "Japanese guides identify an interior scaffold platform for a Colorful Screw; English clue 91 also specifies the zone's scaffolding. Do not confuse it with platforms outside the zone between Zones 9 and 14. Need compare the two original Wild Zone photos and walk the entry-to-platform approach.",
+      "sources": [
+        "https://gamewith.jp/pokemon-za/523908",
+        "https://game8.jp/pokemon-legends-z-a/729591",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/magenta-sector-6.html"
+      ],
+      "source_keys": [
+        "jpScrews",
+        "jp8",
+        "enGamer",
+        "enM6"
+      ],
+      "candidate_original_screw_ids": [
+        91
+      ],
+      "canonical_screw_id": null,
+      "related_existing_holovator_candidates": [],
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "access_status": "published_research_lead_not_game_walked"
+    }
+  ],
+  "counts": {
+    "total_areas": 68,
+    "new_sector_areas": 9,
+    "new_wild_zone_areas": 1,
+    "new_leads": 13,
+    "all_sector_partial": 25,
+    "all_wild_zone_partial": 1,
+    "all_route_leads": 70,
+    "fully_completed_areas": 0,
+    "new_exact_pins": 0,
+    "verified_new_routes": 0
+  },
+  "next_batch": "Continue all remaining areas, prioritizing current G1 AT-320/AT-328 Bleu 7–10 reconciliation separately. Next unstarted district Rouge/Jaune, then Wild Zones; review existing Vert/Bleu research against additional language sources. No priority change to AT-325.",
+  "preservation": {
+    "existing_photos": true,
+    "existing_routes": 22,
+    "existing_holovator_records": 21,
+    "existing_ladder_pilot": true,
+    "existing_item_ids": 264,
+    "existing_screw_ids": 100,
+    "existing_approx_item_leads": 146,
+    "progress": true,
+    "workspace_unchanged": true
+  }
+}
