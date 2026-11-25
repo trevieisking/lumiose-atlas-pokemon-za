@@ -1,0 +1,22 @@
+/* AT-321: scoped photo/encounter panel used by all existing map views. */
+.wz-fieldbook{box-sizing:border-box;min-width:0;max-width:100%;margin:16px 0;padding:14px;background:#fbfafc;color:#30293e;border:1px solid #ded5e8;border-radius:12px;overflow-wrap:anywhere;text-align:left}
+.wz-fieldbook *{box-sizing:border-box}
+.wz-fieldbook h3,.wz-fieldbook h4{color:#49336d;line-height:1.35;margin:0 0 8px}
+.wz-fieldbook h3{font-size:17px}.wz-fieldbook h4{font-size:15px;margin-top:15px}
+.wz-fieldbook p{color:#51465e;font-size:13px;line-height:1.55;margin:7px 0}
+.wz-fieldbook .wz-fieldbook-title p{margin:0 0 12px}
+.wz-photo-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;min-width:0}
+.wz-photo-pair figure{margin:0;min-width:0;border:1px solid #e4ddeb;background:white;border-radius:8px;overflow:hidden}
+.wz-photo-pair a{display:block;min-width:0}
+.wz-photo-pair img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1536/865;object-fit:contain;background:#e7e5ec}
+.wz-photo-pair figcaption{padding:9px;color:#493d59;font-size:12px;line-height:1.4}
+.wz-photo-pair figcaption strong,.wz-photo-pair figcaption span{display:block}
+.wz-photo-pair figcaption span{margin-top:3px;color:#685778}
+.wz-species,.wz-fixed-alphas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.wz-species li,.wz-fixed-alphas li{max-width:100%;border:1px solid #e3dbea;border-radius:7px;padding:5px 8px;background:#fff;color:#40334e;font-size:13px;line-height:1.45}
+.wz-fixed-alphas li{display:flex;flex-wrap:wrap;gap:4px 9px}.wz-fixed-alphas li span{color:#695b76}
+.wz-alpha-pool{margin-top:12px;border:1px solid #dcd1e8;padding:10px;border-radius:8px}
+.wz-alpha-pool summary{color:#49336d;font-weight:750;cursor:pointer}
+.wz-fieldbook a{color:#573789;text-decoration:underline;text-underline-offset:2px}
+.wz-fieldbook a:focus-visible,.wz-alpha-pool summary:focus-visible{outline:3px solid #8056b1;outline-offset:2px}
+.wz-evidence{border-top:1px solid #e0d7e8;padding-top:10px}
