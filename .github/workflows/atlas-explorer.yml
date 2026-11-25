@@ -32,6 +32,13 @@ on:
       - tests/atlas_explorer_browser.mjs
       - .github/workflows/atlas-explorer.yml
       - maps.html
+      - maps.js
+      - 'assets/atlas/wild-zones/**'
+      - wild-zone-fieldbook.mjs
+      - wild-zone-fieldbook.css
+      - tests/wild_zone_fieldbook.test.mjs
+      - tests/wild_zone_fieldbook_browser.mjs
+      - reconstruction.css
       - sector-maps.html
       - holovator-map.html
   workflow_dispatch:
@@ -49,9 +56,11 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check app.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
+      - name: Verify original Wild Zone photo pairs and roster parity
+        run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
       - name: Reject broken local guide anchors and raw Markdown destinations across every page
@@ -74,6 +83,8 @@ jobs:
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
         run: node tests/atlas_explorer_browser.mjs
+      - name: Verify all 20 Wild Zone photo panels and four map surfaces
+        run: node tests/wild_zone_fieldbook_browser.mjs
       - name: Attach screenshot QA evidence
         if: always()
         uses: actions/upload-artifact@v4

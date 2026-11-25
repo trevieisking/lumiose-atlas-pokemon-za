@@ -1,0 +1,1779 @@
+{
+  "id": "AT-322",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "as_of": "2026-11-25",
+  "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
+  "source_owner_url": "https://pokemaps.net/maps/lza/lumiose?x=6.57&y=0.75&z=1&s=0.46v",
+  "status": "partial_indexed_source_audit_not_full_interactive_scan",
+  "source_access": {
+    "interactive_exact_url": "web cache miss; local browser host DNS unavailable",
+    "interactive_base_url": "web cache miss",
+    "help": "indexed text read https://pokemaps.net/help",
+    "game_hub": "indexed text read https://pokemaps.net/games/lza",
+    "snapshot_rights": "not established",
+    "actual_capture_available": false
+  },
+  "features": [
+    {
+      "feature": "area_selection_and_species_highlight",
+      "status": "described_in_public_help_owner_observed",
+      "limit": "No physical walking path verified; distinction between habitat coverage and route."
+    },
+    {
+      "feature": "location_encounter_panel",
+      "status": "indexed_LZA_place_pages_confirm_method_level_and_some_condition_fields",
+      "limit": "General labels can include special events or bosses; blank fields do not imply all times/odds."
+    },
+    {
+      "feature": "area_outlines",
+      "status": "described_in_public_help",
+      "limit": "No Lumiose polygon inspected or registered."
+    },
+    {
+      "feature": "wild_mode_layer",
+      "status": "described_in_public_help",
+      "limit": "No exact LZA pixel or spawn point inspected."
+    },
+    {
+      "feature": "mobile_panel_settings_share",
+      "status": "described_in_public_help",
+      "limit": "Not interactively verified on either viewport."
+    }
+  ],
+  "coverage": {
+    "sectors_total": 48,
+    "wild_zones_total": 20,
+    "area_records_tracked": 68,
+    "sector_pages_reviewed": 3,
+    "sectors_with_some_evidence": 36,
+    "wild_zones_with_some_evidence": 5,
+    "extra_place_pages_reviewed": 2,
+    "species_pages_sampled": 15,
+    "complete_pokemaps_area_rosters": 0,
+    "actual_pokemaps_screenshots": 0,
+    "verified_polygons": 0,
+    "verified_walkable_routes": 0
+  },
+  "area_pages": [
+    {
+      "area": "Bleu Sector 1",
+      "source": "https://pokemaps.net/maps/lza/lumiose/bleu-sector-1",
+      "source_shape": "species_method_summary",
+      "review": "Ariados ordinary and Whirlipede static are separate source leads. Exact floor, level and fixed-vs-random Alpha not established."
+    },
+    {
+      "area": "Bleu Sector 6",
+      "source": "https://pokemaps.net/maps/lza/lumiose/bleu-sector-6",
+      "source_shape": "species_method_level_table",
+      "review": "Examples include walking Fletchling and Pidgey at levels 6–9 and static Nickit level 15. Bulbapedia event list corroborates level/location; event availability and acquisition method need separate check.",
+      "crosscheck": [
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_in-game_event_Pok%C3%A9mon_in_Pok%C3%A9mon_Legends%3A_Z-A"
+      ]
+    },
+    {
+      "area": "Magenta Sector 6",
+      "source": "https://pokemaps.net/maps/lza/lumiose/magenta-sector-6",
+      "source_shape": "species_method_level_condition_table",
+      "review": "Mawile row is marked scripted, Lv 48–52. Bulbapedia and Serebii identify Rogue Mega Mawile as a boss; do not convert to catchable repeatable encounter.",
+      "crosscheck": [
+        "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_6",
+        "https://www.serebii.net/pokearth/lumiosecity/magentadistrict.shtml"
+      ]
+    },
+    {
+      "area": "Espace Vide",
+      "source": "https://pokemaps.net/maps/lza/lumiose/espace-vide",
+      "source_shape": "species_method_level_table",
+      "review": "Gastly Lv 15–18 lead; level and floor should be checked independently."
+    },
+    {
+      "area": "Hotel Z",
+      "source": "https://pokemaps.net/maps/lza/lumiose/hotel-z",
+      "source_shape": "species_method_summary",
+      "review": "Lucario classified static by PokéMaps; independently verified as a level-50 post-story gift in Room 202, not a wild catch.",
+      "crosscheck": [
+        "https://www.serebii.net/legendsz-a/giftpokemon.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Hotel_Z"
+      ]
+    }
+  ],
+  "species_reference_samples": [
+    {
+      "species": "Eevee",
+      "source": "https://pokemaps.net/locations/eevee",
+      "areas": [
+        "Bleu Sector 7",
+        "Jaune Sector 7",
+        "Magenta Sector 7",
+        "Magenta Sector 9",
+        "Rouge Sector 8",
+        "Vert Sector 8",
+        "Vert Sector 9",
+        "Wild Zone 19"
+      ],
+      "status": "area_membership_corroborated",
+      "check": [
+        "https://rotomlabs.net/dex/legends-z-a/eevee",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/pokemon-locations/where-to-find-eevee-in-legends-z-a"
+      ],
+      "note": "Independent area list agrees. Bleu 7 rooftop access is source-reported; separate route/floor verification required."
+    },
+    {
+      "species": "Riolu",
+      "source": "https://pokemaps.net/maps/lza/lumiose/riolu",
+      "areas": [
+        "Bleu Sector 5",
+        "Magenta Sector 9",
+        "Rouge Sector 4",
+        "Vert Sector 8"
+      ],
+      "status": "area_membership_corroborated",
+      "check": [
+        "https://rotomlabs.net/dex/legends-z-a/riolu",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/pokedex/pokemon/riolu/"
+      ],
+      "note": "Gamer Guides reports sunny daytime roof encounters for three sectors; keep conditions and roof access separate. Trade is a distinct method."
+    },
+    {
+      "species": "Pikachu",
+      "source": "https://pokemaps.net/locations/pikachu",
+      "areas": [
+        "Vert Sector 8",
+        "Wild Zone 3",
+        "Wild Zone 6"
+      ],
+      "status": "zone_membership_corroborated_sector_lead",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone3.shtml",
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone6.shtml"
+      ],
+      "note": "Zone 6 has fixed Alpha; do not assume ordinary availability from Walk label."
+    },
+    {
+      "species": "Gible",
+      "source": "https://pokemaps.net/maps/lza/lumiose/gible",
+      "areas": [
+        "Wild Zone 8"
+      ],
+      "status": "zone_membership_corroborated",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone8.shtml"
+      ],
+      "note": "Standard wild roster confirms Gible."
+    },
+    {
+      "species": "Bagon",
+      "source": "https://pokemaps.net/locations/bagon",
+      "areas": [
+        "Wild Zone 18"
+      ],
+      "status": "zone_membership_corroborated",
+      "check": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18"
+      ],
+      "note": "Ordinary encounter; not equivalent to fixed Alpha Salamence."
+    },
+    {
+      "species": "Pichu",
+      "source": "https://pokemaps.net/locations/pichu",
+      "areas": [
+        "Wild Zone 1"
+      ],
+      "status": "zone_membership_corroborated",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone1.shtml"
+      ]
+    },
+    {
+      "species": "Bulbasaur",
+      "source": "https://pokemaps.net/locations/bulbasaur",
+      "areas": [
+        "Wild Zone 20"
+      ],
+      "status": "zone_membership_corroborated",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone20.shtml"
+      ],
+      "note": "Ordinary spawn; do not confuse with rotation."
+    },
+    {
+      "species": "Simisear",
+      "source": "https://pokemaps.net/maps/lza/lumiose/simisear",
+      "areas": [
+        "Wild Zone 20"
+      ],
+      "status": "zone_membership_corroborated_method_needs_qualification",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone20.shtml"
+      ],
+      "note": "PokéMaps general Walk label is insufficient: preserved guide lists rotating Alpha candidate, not ordinary or always present."
+    },
+    {
+      "species": "Absol",
+      "source": "https://pokemaps.net/locations/absol",
+      "areas": [
+        "Académie Étoile",
+        "Bleu Sector 4",
+        "Jaune Sector 10",
+        "Jaune Street",
+        "Magenta Sector 7",
+        "Wild Zone 20"
+      ],
+      "status": "zone20_rotation_corroborated_other_areas_leads",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone20.shtml"
+      ],
+      "note": "Jaune Sector 10 is labelled static; not a guarantee of repeatable wild encounter."
+    },
+    {
+      "species": "Gastly",
+      "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+      "areas": [
+        "Bleu Sector 4",
+        "Bleu Sector 5",
+        "Bleu Sector 8",
+        "Espace Vide",
+        "Jaune Sector 4",
+        "Jaune Sector 6",
+        "Jaune Sector 7",
+        "Jaune Sector 9",
+        "Lumiose Sewers",
+        "Magenta Sector 1",
+        "Magenta Sector 3",
+        "Magenta Sector 4",
+        "Magenta Sector 6",
+        "Magenta Sector 9",
+        "Vert Sector 1",
+        "Vert Sector 5",
+        "Vert Sector 7",
+        "Vert Sector 9",
+        "Wild Zone 18",
+        "Wild Zone 4"
+      ],
+      "status": "mixed_discrepancy_requires_reconciliation",
+      "check": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml",
+        "https://rotomlabs.net/locations/legends-z-a/wild-zone-18",
+        "https://trainerlab.top/lza/pokemon/gastly/"
+      ],
+      "note": "Zone 18 is listed by PokéMaps and TrainerLab, but absent from standard zone tables; no roster change or location pin until source/game condition resolved. PokéMaps species listing also omits ordinary Zone 7 Gastly listed by Serebii and Bulbapedia."
+    },
+    {
+      "species": "Bellsprout",
+      "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+      "areas": [
+        "Aymlis Park",
+        "Bleu Sector 2",
+        "Bleu Sector 3",
+        "Bleu Sector 6",
+        "Bleu Sector 7",
+        "Bleu Street",
+        "Jaune Sector 11",
+        "Jaune Sector 2",
+        "Jaune Sector 7",
+        "Jaune Sector 8",
+        "Magenta Sector 3",
+        "Magenta Sector 6",
+        "Magenta Sector 8",
+        "Rouge Sector 5",
+        "Rouge Sector 8",
+        "Vert Sector 1",
+        "Vert Sector 2",
+        "Vert Sector 7",
+        "Vert Sector 9",
+        "Wild Zone 10",
+        "Wild Zone 5"
+      ],
+      "status": "zone_membership_corroborated_other_areas_leads",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone5.shtml",
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone10.shtml"
+      ],
+      "note": "Some area records explicitly static. Preserve separate methods."
+    },
+    {
+      "species": "Bunnelby",
+      "source": "https://pokemaps.net/locations/bunnelby",
+      "areas": [
+        "Bleu Sector 3",
+        "Bleu Sector 6",
+        "Bleu Sector 8",
+        "Jaune Sector 11",
+        "Jaune Sector 6",
+        "Jaune Sector 7",
+        "Magenta Sector 7",
+        "Magenta Sector 8",
+        "Rouge Sector 2",
+        "Rouge Sector 8",
+        "Vert Sector 4",
+        "Vert Sector 6",
+        "Vert Sector 8",
+        "Wild Zone 1",
+        "Wild Zone 5"
+      ],
+      "status": "zone_membership_corroborated_other_areas_leads",
+      "check": [
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone1.shtml",
+        "https://www.serebii.net/pokearth/lumiosecity/wildzone5.shtml"
+      ],
+      "note": "Rouge 8 and Zone 1 include static records; Zone 1 has story capture in addition to regular spawn."
+    },
+    {
+      "species": "Ralts",
+      "source": "https://pokemaps.net/locations/ralts",
+      "areas": [
+        "Bleu Sector 7",
+        "Magenta Sector 7",
+        "Rouge Sector 2",
+        "Vert Sector 4"
+      ],
+      "status": "source_reported_leads",
+      "check": [],
+      "note": "No precise rooftop, spawn or odds inferred."
+    },
+    {
+      "species": "Shuppet",
+      "source": "https://pokemaps.net/locations/shuppet",
+      "areas": [
+        "Bleu Sector 3",
+        "Jaune Sector 2",
+        "Jaune Sector 9",
+        "Magenta Sector 7",
+        "Rouge Sector 3",
+        "Vert Sector 5",
+        "Wild Zone 15",
+        "Wild Zone 7"
+      ],
+      "status": "zone_membership_corroborated_other_areas_leads",
+      "check": [
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "note": "Need check day/night separately."
+    },
+    {
+      "species": "Litwick",
+      "source": "https://pokemaps.net/locations/litwick",
+      "areas": [
+        "Lumiose Sewers"
+      ],
+      "status": "source_reported_lead",
+      "check": [],
+      "note": "Interior floor and access prerequisites not established by this listing."
+    }
+  ],
+  "areas": [
+    {
+      "id": "vert-sector-1",
+      "name": "Vert Sector 1",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-2",
+      "name": "Vert Sector 2",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-3",
+      "name": "Vert Sector 3",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-4",
+      "name": "Vert Sector 4",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Ralts",
+          "source": "https://pokemaps.net/locations/ralts",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-5",
+      "name": "Vert Sector 5",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-6",
+      "name": "Vert Sector 6",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-7",
+      "name": "Vert Sector 7",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-8",
+      "name": "Vert Sector 8",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Riolu",
+          "source": "https://pokemaps.net/maps/lza/lumiose/riolu",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Pikachu",
+          "source": "https://pokemaps.net/locations/pikachu",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "vert-sector-9",
+      "name": "Vert Sector 9",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-1",
+      "name": "Bleu Sector 1",
+      "kind": "sector",
+      "source_page": "https://pokemaps.net/maps/lza/lumiose/bleu-sector-1",
+      "source_page_status": "indexed_text_reviewed",
+      "species_reference_leads": [],
+      "coverage": "area_page_sample_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-2",
+      "name": "Bleu Sector 2",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-3",
+      "name": "Bleu Sector 3",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-4",
+      "name": "Bleu Sector 4",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Absol",
+          "source": "https://pokemaps.net/locations/absol",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-5",
+      "name": "Bleu Sector 5",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Riolu",
+          "source": "https://pokemaps.net/maps/lza/lumiose/riolu",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-6",
+      "name": "Bleu Sector 6",
+      "kind": "sector",
+      "source_page": "https://pokemaps.net/maps/lza/lumiose/bleu-sector-6",
+      "source_page_status": "indexed_text_reviewed",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "area_page_sample_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-7",
+      "name": "Bleu Sector 7",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Ralts",
+          "source": "https://pokemaps.net/locations/ralts",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-8",
+      "name": "Bleu Sector 8",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-9",
+      "name": "Bleu Sector 9",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "bleu-sector-10",
+      "name": "Bleu Sector 10",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-1",
+      "name": "Magenta Sector 1",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-2",
+      "name": "Magenta Sector 2",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-3",
+      "name": "Magenta Sector 3",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-4",
+      "name": "Magenta Sector 4",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-5",
+      "name": "Magenta Sector 5",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-6",
+      "name": "Magenta Sector 6",
+      "kind": "sector",
+      "source_page": "https://pokemaps.net/maps/lza/lumiose/magenta-sector-6",
+      "source_page_status": "indexed_text_reviewed",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "area_page_sample_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-7",
+      "name": "Magenta Sector 7",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Absol",
+          "source": "https://pokemaps.net/locations/absol",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Ralts",
+          "source": "https://pokemaps.net/locations/ralts",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-8",
+      "name": "Magenta Sector 8",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "magenta-sector-9",
+      "name": "Magenta Sector 9",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Riolu",
+          "source": "https://pokemaps.net/maps/lza/lumiose/riolu",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-1",
+      "name": "Rouge Sector 1",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-2",
+      "name": "Rouge Sector 2",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Ralts",
+          "source": "https://pokemaps.net/locations/ralts",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-3",
+      "name": "Rouge Sector 3",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-4",
+      "name": "Rouge Sector 4",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Riolu",
+          "source": "https://pokemaps.net/maps/lza/lumiose/riolu",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-5",
+      "name": "Rouge Sector 5",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-6",
+      "name": "Rouge Sector 6",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-7",
+      "name": "Rouge Sector 7",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "rouge-sector-8",
+      "name": "Rouge Sector 8",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-1",
+      "name": "Jaune Sector 1",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-2",
+      "name": "Jaune Sector 2",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-3",
+      "name": "Jaune Sector 3",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-4",
+      "name": "Jaune Sector 4",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-5",
+      "name": "Jaune Sector 5",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-6",
+      "name": "Jaune Sector 6",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-7",
+      "name": "Jaune Sector 7",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-8",
+      "name": "Jaune Sector 8",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-9",
+      "name": "Jaune Sector 9",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-10",
+      "name": "Jaune Sector 10",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Absol",
+          "source": "https://pokemaps.net/locations/absol",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-11",
+      "name": "Jaune Sector 11",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Bunnelby",
+          "source": "https://pokemaps.net/locations/bunnelby",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "jaune-sector-12",
+      "name": "Jaune Sector 12",
+      "kind": "sector",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-01",
+      "name": "Wild Zone 01",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-02",
+      "name": "Wild Zone 02",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-03",
+      "name": "Wild Zone 03",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-04",
+      "name": "Wild Zone 04",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-05",
+      "name": "Wild Zone 05",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-06",
+      "name": "Wild Zone 06",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-07",
+      "name": "Wild Zone 07",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-08",
+      "name": "Wild Zone 08",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-09",
+      "name": "Wild Zone 09",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-10",
+      "name": "Wild Zone 10",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bellsprout",
+          "source": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-11",
+      "name": "Wild Zone 11",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-12",
+      "name": "Wild Zone 12",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-13",
+      "name": "Wild Zone 13",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-14",
+      "name": "Wild Zone 14",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-15",
+      "name": "Wild Zone 15",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Shuppet",
+          "source": "https://pokemaps.net/locations/shuppet",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-16",
+      "name": "Wild Zone 16",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-17",
+      "name": "Wild Zone 17",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [],
+      "coverage": "not_reviewed",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-18",
+      "name": "Wild Zone 18",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bagon",
+          "source": "https://pokemaps.net/locations/bagon",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Gastly",
+          "source": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "status": "disputed"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-19",
+      "name": "Wild Zone 19",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Eevee",
+          "source": "https://pokemaps.net/locations/eevee",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    },
+    {
+      "id": "wz-20",
+      "name": "Wild Zone 20",
+      "kind": "wild_zone",
+      "source_page": null,
+      "source_page_status": "not_retrieved",
+      "species_reference_leads": [
+        {
+          "species": "Bulbasaur",
+          "source": "https://pokemaps.net/locations/bulbasaur",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Simisear",
+          "source": "https://pokemaps.net/maps/lza/lumiose/simisear",
+          "status": "source_lead_not_complete_area_roster"
+        },
+        {
+          "species": "Absol",
+          "source": "https://pokemaps.net/locations/absol",
+          "status": "source_lead_not_complete_area_roster"
+        }
+      ],
+      "coverage": "partial_species_leads_only",
+      "polygon": null,
+      "walkable_route": null,
+      "snapshot": null,
+      "roster_complete": false
+    }
+  ],
+  "independent_at321_check": {
+    "pr": 160,
+    "head": "1a56c8c6a47e83c590998eb0e83cc212f3235b24",
+    "baseline_roster_review": "Manually compared the AT-321 20-zone ordinary/fixed union sets (Zone 20 ordinary distinct) with Serebii aggregate list; no standard roster membership differences observed. PokéMaps is partial and cannot independently certify full coverage.",
+    "source": "https://www.serebii.net/legendsz-a/wildzones.shtml",
+    "zone20_method": "15 ordinary + preserved 67 rotating candidates; keep distinct",
+    "workflow": 45675208275,
+    "unit": "passed",
+    "existing_atlas_browser_smoke": "passed",
+    "new_photo_browser": "failed: Wild Zone 1 panel did not become visible; test line 41, locator timeout; root cause not confirmed",
+    "promotion": "HOLD",
+    "source_reconciliation_notes": [
+      "Gastly Zone 18 disagreement and missing Zone 7 listing",
+      "Hotel Z Lucario gift vs static",
+      "Magenta 6 Rogue Mega Mawile scripted boss vs catchable",
+      "Zone 20 Simisear/Absol rotation vs general Walk"
+    ]
+  },
+  "requirements": [
+    "Use an original Atlas encounter index keyed by existing zone/sector IDs and species/form; keep ordinary, fixed Alpha, rotating Alpha, special mission, gift, trade and scripted boss categories separate.",
+    "Select a known place to focus/highlight its independently validated geometry, or show clearly labelled approximate orientation until registered boundaries exist. Search a species and highlight every verified area, with condition filters and source evidence.",
+    "Use original owner photographs and existing 1920x1920 map; independently align any candidate geometry using at least four distributed noncollinear landmarks and independent check points, record residuals and ambiguity. Do not infer exact coordinates from the external URL, perspective images or screenshots.",
+    "Keep selection/highlight distinct from route navigation. Only render a walkable path where contiguous street, ladder, scaffold, Holovator, roof, door/floor connections and prerequisites are verified; otherwise preserve written directions without misleading lines.",
+    "Retain the 40 zone images, 48 sector photo references, 20 zone IDs, 264 item records, 100 Screw IDs, 38 fixed Alpha rows, current player progress, feedback and existing Supabase connections. Do not permanently mark transient DLC distortions.",
+    "Document actual browser captures with exact public URL, selection, layers, game, date, viewport, author and SHA-256; retain screenshots as evidence only if rights permit, never treat generated images as proof. No copying PokéMaps proprietary source, database or map tiles; independently authored implementation and credited factual cross-checks.",
+    "Acceptance: complete all 68 area research rows and independent cross-checks, reconcile differences, test area/species selection, filters, mobile gestures, desktop controls and deep links, inspect actual screenshots, then exact-head CI and separate deployment verification."
+  ],
+  "snapshot_capture_plan": [
+    {
+      "id": "PM-01",
+      "view": "full Lumiose map, north-up, visible legend and layer settings",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-02",
+      "view": "selected Wild Zone 1 highlight, details and actual browser URL",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-03",
+      "view": "selected Bleu Sector 7 outline and encounter panel",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-04",
+      "view": "Eevee selected, multiple habitats and list; click one matching area",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-05",
+      "view": "Riolu selected, rooftop locations and detail conditions",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-06",
+      "view": "Wild Mode revealed and hidden; same selected place",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-07",
+      "view": "Zone 20 regular vs rotating Alpha listings, if supported",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "id": "PM-08",
+      "view": "mobile expanded/collapsed panel; same selection retained",
+      "status": "pending_actual_browser_capture_and_rights_review",
+      "path": null,
+      "sha256": null
+    }
+  ],
+  "preservation": {
+    "site_code_changed": false,
+    "map_assets_changed": false,
+    "player_progress_changed": false,
+    "feedback_changed": false,
+    "original_workspace_changed": false,
+    "external_assets_imported": 0
+  }
+}

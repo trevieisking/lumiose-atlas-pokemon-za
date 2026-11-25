@@ -840,7 +840,9 @@ test("AT-320: Bleu 7–10 photo-first written approaches preserve routes and all
  const b7=data.routes.find(x=>x.id==="bleu7-south");assert.equal(b7.point_id,"bleu7-south");assert.equal(b7.steps.length,4);
  const b8=data.routes.find(x=>x.id==="bleu8-soleil-beldum-access");assert.equal(b8.side_mission,92);
  assert.match(b8.steps[1].instruction,/not proof/);assert.match(b8.steps[2].instruction,/in-game objective marker/);
- assert.match(data.routes.find(x=>x.id==="bleu9-soleil-scaffold-roof-leads").steps[2].instruction,/Main Mission 16/);
+ assert.match(data.routes.find(x=>x.id==="bleu9-soleil-scaffold-roof-leads").steps[2].instruction,/tutorial behind Hotel Z during the Main Mission 15–16/);
+ assert.match(data.routes.find(x=>x.id==="bleu7-aymlis-roof-scaffold-courses").steps[3].instruction,/rooftop tutorial behind Hotel Z/);
+ assert.match(b8.steps[2].instruction,/completing Main Mission 30 and beginning Main Mission 31/);
  assert.match(data.routes.find(x=>x.id==="bleu10-estival-boulevard-scaffold").steps[3].instruction,/#65/);
  const s=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));const receipt=s.at_320_bleu7_10_written_routes;
  assert.deepEqual(receipt.existing_numbered_screw_clues,[48,49,50,51,52,53,64,65]);

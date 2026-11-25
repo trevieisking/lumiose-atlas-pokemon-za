@@ -1,5 +1,9 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+## AT-325 — Current release-order instruction (25 November 2026)
+
+**Do not run a Workspace upgrade prompt yet.** Owner requires the full approved Interactive Map 2.0 upgrade to be finished, tested, merged and verified on GitHub Pages first. Follow [AT-325 ordered gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [machine-readable release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json); the final approved release SHA, validation packet and prompt remain unset. After G5 is verified, prepare **one** consolidated final prompt pinned to the exact approved release and AT identifiers. Reconfirm access and actual original Workspace source/version, export/rollback and compatibility under AT-297 before any publication. The historical version 37 release record is in [PR #149](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/149), not new permission or confirmation of the currently live version. Preserve original Site URL, design, existing progress, feedback, Supabase integration, maps and guides; do not create a replacement site or automatically sync the repository. No prompt generated or submitted at this checkpoint. Historical prompts below are source-access policy context, not permission to apply the incomplete upgrade now.
+
 ## AT-297 — Workspace source access, export and safe upgrade policy
 
 **Owner-approved 24 November 2026.** Review access on 25 November if the original editor becomes available. Access is not yet verified. The original ChatGPT Site (A) and GitHub guide (B) must remain independent. Codespaces may be used for isolated development; no automatic repository synchronization or deployment connection to A.

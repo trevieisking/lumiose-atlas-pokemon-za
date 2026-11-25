@@ -292,6 +292,15 @@
     const button=document.createElement('button');button.type='button';button.className='button light';button.textContent=`Open all zone ${zone} pickups ↗`;
     button.addEventListener('click',()=>{setItemZone(String(zone));route('items');});wrap.appendChild(button);
     detail.appendChild(wrap);
+    // Reuse the same local photo/encounter record as the standalone maps.
+    // Keep the original Alpha/item panel available if the optional module fails.
+    const photoLink=document.createElement('a');
+    photoLink.href='maps.html#wild-zone-'+zone;
+    photoLink.textContent='Open this Wild Zone’s original photos and Pokémon roster ↗';
+    wrap.appendChild(photoLink);
+    import('./wild-zone-fieldbook.mjs').then(({wildZoneFieldbookMarkup})=>{
+      if(wrap.isConnected && currentZone===zone)intro.insertAdjacentHTML('afterend',wildZoneFieldbookMarkup(zone));
+    }).catch(()=>{/* The explicit standalone link remains available. */});
   }
   function setItemZone(value) {
     $$('#itemZoneTabs [data-item-zone]').forEach(x=>x.classList.toggle('active',x.dataset.itemZone===value));

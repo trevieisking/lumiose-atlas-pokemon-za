@@ -40,7 +40,18 @@
     zoom.setAttribute("aria-label","Magnified original city overview near Wild Zone "+selected+
       ". The view does not contain verified individual item or ladder coordinates.");
   }
-  function clearSelection(){
+  const zoneHash=/^#wild-zone-([1-9]|1[0-9]|20)$/;
+  // History API avoids hashchange on internal clicks, preserving active filters
+  // and the existing scroll-to-detail behaviour. Share uses location.href.
+  function syncZoneHash(id){
+    if(typeof window==="undefined"||!window.location||!window.history)return;
+    const {pathname,search,hash}=window.location;
+    if(id===null&&!zoneHash.test(hash))return;
+    const next=id===null?"":"#wild-zone-"+id;
+    if(next===hash)return;
+    window.history.pushState(window.history.state,"",pathname+search+next);
+  }
+  function clearSelection(sync=true){
     selected=null;
     for(const button of pins)button.setAttribute("aria-pressed","false");
     for(const button of directory)button.setAttribute("aria-pressed","false");
@@ -50,8 +61,9 @@
     zoomSlider.disabled=true;
     zoom.dataset.selectedZone="";
     zoom.style.backgroundPosition="center";
+    if(sync)syncZoneHash(null);
   }
-  function selectZone(value,scroll=true){
+  function selectZone(value,scroll=true,sync=true){
     const id=String(value);
     if(!pinById.has(id)||!detailById.has(id))return;
     selected=id;
@@ -62,6 +74,7 @@
     zoomTitle.textContent="Wild Zone "+id+" · magnified city overview";
     zoomSlider.disabled=false;
     zoomOnZone();
+    if(sync)syncZoneHash(id);
     if(scroll&&typeof focus.scrollIntoView==="function")focus.scrollIntoView({behavior:"smooth",block:"start"});
   }
   function updateList(){
@@ -88,6 +101,25 @@
   allButton?.addEventListener("click",()=>{district="All";search.value="";updateList()});
   zoomSlider.addEventListener("input",zoomOnZone);
   // Script runs deferred: keep all source notes readable if JavaScript is disabled.
-  clearSelection();
+  clearSelection(false);
   updateList();
+  // Direct links and browser history may reveal a filtered-out zone. Reset
+  // filters only when necessary; never rewrite unrelated page anchors.
+  if(typeof window!=="undefined"){
+    const openHash=()=>{
+      const match=zoneHash.exec(window.location.hash);
+      if(!match){if(selected!==null)clearSelection(false);return;}
+      const id=match[1];
+      if(selected===id)return;
+      if(pinById.get(id)?.hidden){
+        district="All";search.value="";
+        // Clear the old view without changing the incoming history entry.
+        clearSelection(false);updateList();
+      }
+      selectZone(id,true,false);
+    };
+    window.addEventListener("popstate",openHash);
+    window.addEventListener("hashchange",openHash);
+    openHash();
+  }
 })();

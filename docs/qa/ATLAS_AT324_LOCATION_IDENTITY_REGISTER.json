@@ -1,0 +1,1500 @@
+{
+  "id": "AT-324",
+  "date": "2026-11-25",
+  "status": "documentation_only_source_identity_crosswalk_not_geometry",
+  "base_main_sha": "3b6b7834a75b7728b423e63e10eabba00a277dc6",
+  "source_plan": "ATLAS-MAPS-2026-11-21-V1",
+  "source_index": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number_in_Pok%C3%A9mon_Legends%3A_Z-A",
+  "source_index_limits": "Community-published game identity list, transcribed by named Atlas areas, not independently extracted from a game or official developer documentation. IDs are not x/y, spawn or route identifiers. No save manipulation or progress access.",
+  "counts": {
+    "sectors": 48,
+    "wild_zones": 20,
+    "unique_game_location_ids": 68,
+    "prior_german_directory_gaps_with_text_references": 3,
+    "new_source_findings": 10,
+    "new_published_reference_images_visually_reviewed": 1,
+    "new_verified_polygons": 0,
+    "new_verified_routes": 0,
+    "new_binary_images": 0
+  },
+  "sources": {
+    "identity": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number_in_Pok%C3%A9mon_Legends%3A_Z-A",
+    "china_city": "https://wiki.52poke.com/zh-hans/%E5%AF%86%E9%98%BF%E9%9B%B7%E5%B8%82%EF%BC%88%E4%BC%A0%E8%AF%B4_Z-A%EF%BC%89",
+    "japan_bleu": "https://pente.koro-pokemon.com/legendsz-a/map-bleu-district.shtml",
+    "japan_jaune": "https://pente.koro-pokemon.com/legendsz-a/map-jaune-district.shtml",
+    "japan_rare_pokemon": "https://game8.jp/pokemon-legends-z-a/729719",
+    "archive_catalogue": "https://archives.bulbagarden.net/wiki/Category%3ALegends%3A_Z-A_maps"
+  },
+  "missing_sector_research": [
+    {
+      "atlas_id": "bleu-sector-1",
+      "source": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_1",
+      "facts": "Adjacent to Vernal Avenue and Bleu Street; eastern part of WZ5. Sewer gate associated with this sector in Bulbapedia.",
+      "additional_sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-plaza.html"
+      ],
+      "archive_filename": "Kalos Bleu Sector 1 Map.png",
+      "archive_thumbnail_url": "https://archives.bulbagarden.net/media/upload/thumb/8/83/Kalos_Bleu_Sector_1_Map.png/300px-Kalos_Bleu_Sector_1_Map.png",
+      "archive_state": "filename and source image link confirmed; download failed; not visually inspected in this cycle"
+    },
+    {
+      "atlas_id": "bleu-sector-2",
+      "source": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_2",
+      "facts": "Adjacent to Estival Avenue and Bleu Street; western part of WZ5. Separate waterway/back-exit access lead.",
+      "additional_sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/estival-avenue.html"
+      ],
+      "archive_filename": "Kalos Bleu Sector 2 Map.png",
+      "archive_thumbnail_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4f/Kalos_Bleu_Sector_2_Map.png/300px-Kalos_Bleu_Sector_2_Map.png",
+      "archive_state": "filename and source image link confirmed; download failed; not visually inspected in this cycle"
+    },
+    {
+      "atlas_id": "jaune-sector-1",
+      "source": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_1",
+      "facts": "East of central plaza/tower site; west of Jaune Sector 3. Hibernal Avenue and Jaune Street border it. Reported building-free sector; source reports Side Mission 35 near southeastern corner.",
+      "additional_sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-street.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/hibernal-avenue.html",
+        "https://pente.koro-pokemon.com/legendsz-a/map-jaune-district.shtml"
+      ],
+      "archive_filename": "Kalos Jaune Sector 1 Map.png",
+      "archive_state": "archive catalogue listing only; direct location page returned cache miss, indexed description retrieved"
+    }
+  ],
+  "areas": [
+    {
+      "atlas_id": "vert-sector-1",
+      "kind": "sector",
+      "english": "Vert Sector 1",
+      "game_location_index": 21,
+      "hex": "0x0015",
+      "search_aliases": {
+        "ja": "ベール１番地",
+        "zh_hans": "翡绿１号街区",
+        "de": "Verte-Bezirk 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-2",
+      "kind": "sector",
+      "english": "Vert Sector 2",
+      "game_location_index": 27,
+      "hex": "0x001B",
+      "search_aliases": {
+        "ja": "ベール２番地",
+        "zh_hans": "翡绿２号街区",
+        "de": "Verte-Bezirk 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-3",
+      "kind": "sector",
+      "english": "Vert Sector 3",
+      "game_location_index": 22,
+      "hex": "0x0016",
+      "search_aliases": {
+        "ja": "ベール３番地",
+        "zh_hans": "翡绿３号街区",
+        "de": "Verte-Bezirk 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-4",
+      "kind": "sector",
+      "english": "Vert Sector 4",
+      "game_location_index": 28,
+      "hex": "0x001C",
+      "search_aliases": {
+        "ja": "ベール４番地",
+        "zh_hans": "翡绿４号街区",
+        "de": "Verte-Bezirk 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-5",
+      "kind": "sector",
+      "english": "Vert Sector 5",
+      "game_location_index": 29,
+      "hex": "0x001D",
+      "search_aliases": {
+        "ja": "ベール５番地",
+        "zh_hans": "翡绿５号街区",
+        "de": "Verte-Bezirk 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-6",
+      "kind": "sector",
+      "english": "Vert Sector 6",
+      "game_location_index": 24,
+      "hex": "0x0018",
+      "search_aliases": {
+        "ja": "ベール６番地",
+        "zh_hans": "翡绿６号街区",
+        "de": "Verte-Bezirk 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-7",
+      "kind": "sector",
+      "english": "Vert Sector 7",
+      "game_location_index": 25,
+      "hex": "0x0019",
+      "search_aliases": {
+        "ja": "ベール７番地",
+        "zh_hans": "翡绿７号街区",
+        "de": "Verte-Bezirk 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-8",
+      "kind": "sector",
+      "english": "Vert Sector 8",
+      "game_location_index": 30,
+      "hex": "0x001E",
+      "search_aliases": {
+        "ja": "ベール８番地",
+        "zh_hans": "翡绿８号街区",
+        "de": "Verte-Bezirk 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "vert-sector-9",
+      "kind": "sector",
+      "english": "Vert Sector 9",
+      "game_location_index": 31,
+      "hex": "0x001F",
+      "search_aliases": {
+        "ja": "ベール９番地",
+        "zh_hans": "翡绿９号街区",
+        "de": "Verte-Bezirk 9"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-1",
+      "kind": "sector",
+      "english": "Bleu Sector 1",
+      "game_location_index": 37,
+      "hex": "0x0025",
+      "search_aliases": {
+        "ja": "ブルー１番地",
+        "zh_hans": "浦蓝１号街区",
+        "de": "Cyan-Bezirk 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-2",
+      "kind": "sector",
+      "english": "Bleu Sector 2",
+      "game_location_index": 42,
+      "hex": "0x002A",
+      "search_aliases": {
+        "ja": "ブルー２番地",
+        "zh_hans": "浦蓝２号街区",
+        "de": "Cyan-Bezirk 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-3",
+      "kind": "sector",
+      "english": "Bleu Sector 3",
+      "game_location_index": 38,
+      "hex": "0x0026",
+      "search_aliases": {
+        "ja": "ブルー３番地",
+        "zh_hans": "浦蓝３号街区",
+        "de": "Cyan-Bezirk 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-4",
+      "kind": "sector",
+      "english": "Bleu Sector 4",
+      "game_location_index": 43,
+      "hex": "0x002B",
+      "search_aliases": {
+        "ja": "ブルー４番地",
+        "zh_hans": "浦蓝４号街区",
+        "de": "Cyan-Bezirk 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-5",
+      "kind": "sector",
+      "english": "Bleu Sector 5",
+      "game_location_index": 40,
+      "hex": "0x0028",
+      "search_aliases": {
+        "ja": "ブルー５番地",
+        "zh_hans": "浦蓝５号街区",
+        "de": "Cyan-Bezirk 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-6",
+      "kind": "sector",
+      "english": "Bleu Sector 6",
+      "game_location_index": 45,
+      "hex": "0x002D",
+      "search_aliases": {
+        "ja": "ブルー６番地",
+        "zh_hans": "浦蓝６号街区",
+        "de": "Cyan-Bezirk 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-7",
+      "kind": "sector",
+      "english": "Bleu Sector 7",
+      "game_location_index": 41,
+      "hex": "0x0029",
+      "search_aliases": {
+        "ja": "ブルー７番地",
+        "zh_hans": "浦蓝７号街区",
+        "de": "Cyan-Bezirk 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-8",
+      "kind": "sector",
+      "english": "Bleu Sector 8",
+      "game_location_index": 46,
+      "hex": "0x002E",
+      "search_aliases": {
+        "ja": "ブルー８番地",
+        "zh_hans": "浦蓝８号街区",
+        "de": "Cyan-Bezirk 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-9",
+      "kind": "sector",
+      "english": "Bleu Sector 9",
+      "game_location_index": 47,
+      "hex": "0x002F",
+      "search_aliases": {
+        "ja": "ブルー９番地",
+        "zh_hans": "浦蓝９号街区",
+        "de": "Cyan-Bezirk 9"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "bleu-sector-10",
+      "kind": "sector",
+      "english": "Bleu Sector 10",
+      "game_location_index": 48,
+      "hex": "0x0030",
+      "search_aliases": {
+        "ja": "ブルー１０番地",
+        "zh_hans": "浦蓝１０号街区",
+        "de": "Cyan-Bezirk 10"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-1",
+      "kind": "sector",
+      "english": "Magenta Sector 1",
+      "game_location_index": 54,
+      "hex": "0x0036",
+      "search_aliases": {
+        "ja": "ローズ１番地",
+        "zh_hans": "蓉粉１号街区",
+        "de": "Rose-Bezirk 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-2",
+      "kind": "sector",
+      "english": "Magenta Sector 2",
+      "game_location_index": 59,
+      "hex": "0x003B",
+      "search_aliases": {
+        "ja": "ローズ２番地",
+        "zh_hans": "蓉粉２号街区",
+        "de": "Rose-Bezirk 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-3",
+      "kind": "sector",
+      "english": "Magenta Sector 3",
+      "game_location_index": 55,
+      "hex": "0x0037",
+      "search_aliases": {
+        "ja": "ローズ３番地",
+        "zh_hans": "蓉粉３号街区",
+        "de": "Rose-Bezirk 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-4",
+      "kind": "sector",
+      "english": "Magenta Sector 4",
+      "game_location_index": 60,
+      "hex": "0x003C",
+      "search_aliases": {
+        "ja": "ローズ４番地",
+        "zh_hans": "蓉粉４号街区",
+        "de": "Rose-Bezirk 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-5",
+      "kind": "sector",
+      "english": "Magenta Sector 5",
+      "game_location_index": 56,
+      "hex": "0x0038",
+      "search_aliases": {
+        "ja": "ローズ５番地",
+        "zh_hans": "蓉粉５号街区",
+        "de": "Rose-Bezirk 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-6",
+      "kind": "sector",
+      "english": "Magenta Sector 6",
+      "game_location_index": 57,
+      "hex": "0x0039",
+      "search_aliases": {
+        "ja": "ローズ６番地",
+        "zh_hans": "蓉粉６号街区",
+        "de": "Rose-Bezirk 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-7",
+      "kind": "sector",
+      "english": "Magenta Sector 7",
+      "game_location_index": 61,
+      "hex": "0x003D",
+      "search_aliases": {
+        "ja": "ローズ７番地",
+        "zh_hans": "蓉粉７号街区",
+        "de": "Rose-Bezirk 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-8",
+      "kind": "sector",
+      "english": "Magenta Sector 8",
+      "game_location_index": 63,
+      "hex": "0x003F",
+      "search_aliases": {
+        "ja": "ローズ８番地",
+        "zh_hans": "蓉粉８号街区",
+        "de": "Rose-Bezirk 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "magenta-sector-9",
+      "kind": "sector",
+      "english": "Magenta Sector 9",
+      "game_location_index": 64,
+      "hex": "0x0040",
+      "search_aliases": {
+        "ja": "ローズ９番地",
+        "zh_hans": "蓉粉９号街区",
+        "de": "Rose-Bezirk 9"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-1",
+      "kind": "sector",
+      "english": "Rouge Sector 1",
+      "game_location_index": 70,
+      "hex": "0x0046",
+      "search_aliases": {
+        "ja": "ルージュ１番地",
+        "zh_hans": "榴红１号街区",
+        "de": "Rouge-Bezirk 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-2",
+      "kind": "sector",
+      "english": "Rouge Sector 2",
+      "game_location_index": 75,
+      "hex": "0x004B",
+      "search_aliases": {
+        "ja": "ルージュ２番地",
+        "zh_hans": "榴红２号街区",
+        "de": "Rouge-Bezirk 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-3",
+      "kind": "sector",
+      "english": "Rouge Sector 3",
+      "game_location_index": 71,
+      "hex": "0x0047",
+      "search_aliases": {
+        "ja": "ルージュ３番地",
+        "zh_hans": "榴红３号街区",
+        "de": "Rouge-Bezirk 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-4",
+      "kind": "sector",
+      "english": "Rouge Sector 4",
+      "game_location_index": 72,
+      "hex": "0x0048",
+      "search_aliases": {
+        "ja": "ルージュ４番地",
+        "zh_hans": "榴红４号街区",
+        "de": "Rouge-Bezirk 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-5",
+      "kind": "sector",
+      "english": "Rouge Sector 5",
+      "game_location_index": 73,
+      "hex": "0x0049",
+      "search_aliases": {
+        "ja": "ルージュ５番地",
+        "zh_hans": "榴红５号街区",
+        "de": "Rouge-Bezirk 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-6",
+      "kind": "sector",
+      "english": "Rouge Sector 6",
+      "game_location_index": 77,
+      "hex": "0x004D",
+      "search_aliases": {
+        "ja": "ルージュ６番地",
+        "zh_hans": "榴红６号街区",
+        "de": "Rouge-Bezirk 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-7",
+      "kind": "sector",
+      "english": "Rouge Sector 7",
+      "game_location_index": 74,
+      "hex": "0x004A",
+      "search_aliases": {
+        "ja": "ルージュ７番地",
+        "zh_hans": "榴红７号街区",
+        "de": "Rouge-Bezirk 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "rouge-sector-8",
+      "kind": "sector",
+      "english": "Rouge Sector 8",
+      "game_location_index": 79,
+      "hex": "0x004F",
+      "search_aliases": {
+        "ja": "ルージュ８番地",
+        "zh_hans": "榴红８号街区",
+        "de": "Rouge-Bezirk 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-1",
+      "kind": "sector",
+      "english": "Jaune Sector 1",
+      "game_location_index": 85,
+      "hex": "0x0055",
+      "search_aliases": {
+        "ja": "ジョーヌ１番地",
+        "zh_hans": "琼黄１号街区",
+        "de": "Jaune-Bezirk 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-2",
+      "kind": "sector",
+      "english": "Jaune Sector 2",
+      "game_location_index": 91,
+      "hex": "0x005B",
+      "search_aliases": {
+        "ja": "ジョーヌ２番地",
+        "zh_hans": "琼黄２号街区",
+        "de": "Jaune-Bezirk 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-3",
+      "kind": "sector",
+      "english": "Jaune Sector 3",
+      "game_location_index": 86,
+      "hex": "0x0056",
+      "search_aliases": {
+        "ja": "ジョーヌ３番地",
+        "zh_hans": "琼黄３号街区",
+        "de": "Jaune-Bezirk 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-4",
+      "kind": "sector",
+      "english": "Jaune Sector 4",
+      "game_location_index": 87,
+      "hex": "0x0057",
+      "search_aliases": {
+        "ja": "ジョーヌ４番地",
+        "zh_hans": "琼黄４号街区",
+        "de": "Jaune-Bezirk 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-5",
+      "kind": "sector",
+      "english": "Jaune Sector 5",
+      "game_location_index": 88,
+      "hex": "0x0058",
+      "search_aliases": {
+        "ja": "ジョーヌ５番地",
+        "zh_hans": "琼黄５号街区",
+        "de": "Jaune-Bezirk 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-6",
+      "kind": "sector",
+      "english": "Jaune Sector 6",
+      "game_location_index": 93,
+      "hex": "0x005D",
+      "search_aliases": {
+        "ja": "ジョーヌ６番地",
+        "zh_hans": "琼黄６号街区",
+        "de": "Jaune-Bezirk 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-7",
+      "kind": "sector",
+      "english": "Jaune Sector 7",
+      "game_location_index": 89,
+      "hex": "0x0059",
+      "search_aliases": {
+        "ja": "ジョーヌ７番地",
+        "zh_hans": "琼黄７号街区",
+        "de": "Jaune-Bezirk 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-8",
+      "kind": "sector",
+      "english": "Jaune Sector 8",
+      "game_location_index": 90,
+      "hex": "0x005A",
+      "search_aliases": {
+        "ja": "ジョーヌ８番地",
+        "zh_hans": "琼黄８号街区",
+        "de": "Jaune-Bezirk 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-9",
+      "kind": "sector",
+      "english": "Jaune Sector 9",
+      "game_location_index": 94,
+      "hex": "0x005E",
+      "search_aliases": {
+        "ja": "ジョーヌ９番地",
+        "zh_hans": "琼黄９号街区",
+        "de": "Jaune-Bezirk 9"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-10",
+      "kind": "sector",
+      "english": "Jaune Sector 10",
+      "game_location_index": 95,
+      "hex": "0x005F",
+      "search_aliases": {
+        "ja": "ジョーヌ１０番地",
+        "zh_hans": "琼黄１０号街区",
+        "de": "Jaune-Bezirk 10"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-11",
+      "kind": "sector",
+      "english": "Jaune Sector 11",
+      "game_location_index": 96,
+      "hex": "0x0060",
+      "search_aliases": {
+        "ja": "ジョーヌ１１番地",
+        "zh_hans": "琼黄１１号街区",
+        "de": "Jaune-Bezirk 11"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "jaune-sector-12",
+      "kind": "sector",
+      "english": "Jaune Sector 12",
+      "game_location_index": 97,
+      "hex": "0x0061",
+      "search_aliases": {
+        "ja": "ジョーヌ１２番地",
+        "zh_hans": "琼黄１２号街区",
+        "de": "Jaune-Bezirk 12"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale district and numbering pattern; search aids, not independently checked official strings for every row",
+      "native_xy": null,
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-01",
+      "kind": "wild_zone",
+      "english": "Wild Zone 1",
+      "game_location_index": 194,
+      "hex": "0x00C2",
+      "search_aliases": {
+        "ja": "１番ワイルドゾーン",
+        "zh_hans": "１号野生特区",
+        "de": "Wildsektor 1"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1140,
+        1761
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-02",
+      "kind": "wild_zone",
+      "english": "Wild Zone 2",
+      "game_location_index": 195,
+      "hex": "0x00C3",
+      "search_aliases": {
+        "ja": "２番ワイルドゾーン",
+        "zh_hans": "２号野生特区",
+        "de": "Wildsektor 2"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1175,
+        1269
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-03",
+      "kind": "wild_zone",
+      "english": "Wild Zone 3",
+      "game_location_index": 206,
+      "hex": "0x00CE",
+      "search_aliases": {
+        "ja": "３番ワイルドゾーン",
+        "zh_hans": "３号野生特区",
+        "de": "Wildsektor 3"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        954,
+        536
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-04",
+      "kind": "wild_zone",
+      "english": "Wild Zone 4",
+      "game_location_index": 205,
+      "hex": "0x00CD",
+      "search_aliases": {
+        "ja": "４番ワイルドゾーン",
+        "zh_hans": "４号野生特区",
+        "de": "Wildsektor 4"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1081,
+        284
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-05",
+      "kind": "wild_zone",
+      "english": "Wild Zone 5",
+      "game_location_index": 198,
+      "hex": "0x00C6",
+      "search_aliases": {
+        "ja": "５番ワイルドゾーン",
+        "zh_hans": "５号野生特区",
+        "de": "Wildsektor 5"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        795,
+        1119
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-06",
+      "kind": "wild_zone",
+      "english": "Wild Zone 6",
+      "game_location_index": 209,
+      "hex": "0x00D1",
+      "search_aliases": {
+        "ja": "６番ワイルドゾーン",
+        "zh_hans": "６号野生特区",
+        "de": "Wildsektor 6"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1745,
+        995
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-07",
+      "kind": "wild_zone",
+      "english": "Wild Zone 7",
+      "game_location_index": 203,
+      "hex": "0x00CB",
+      "search_aliases": {
+        "ja": "７番ワイルドゾーン",
+        "zh_hans": "７号野生特区",
+        "de": "Wildsektor 7"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        561,
+        835
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-08",
+      "kind": "wild_zone",
+      "english": "Wild Zone 8",
+      "game_location_index": 211,
+      "hex": "0x00D3",
+      "search_aliases": {
+        "ja": "８番ワイルドゾーン",
+        "zh_hans": "８号野生特区",
+        "de": "Wildsektor 8"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1380,
+        820
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-09",
+      "kind": "wild_zone",
+      "english": "Wild Zone 9",
+      "game_location_index": 201,
+      "hex": "0x00C9",
+      "search_aliases": {
+        "ja": "９番ワイルドゾーン",
+        "zh_hans": "９号野生特区",
+        "de": "Wildsektor 9"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        250,
+        1069
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-10",
+      "kind": "wild_zone",
+      "english": "Wild Zone 10",
+      "game_location_index": 197,
+      "hex": "0x00C5",
+      "search_aliases": {
+        "ja": "１０番ワイルドゾーン",
+        "zh_hans": "１０号野生特区",
+        "de": "Wildsektor 10"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        309,
+        1281
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-11",
+      "kind": "wild_zone",
+      "english": "Wild Zone 11",
+      "game_location_index": 210,
+      "hex": "0x00D2",
+      "search_aliases": {
+        "ja": "１１番ワイルドゾーン",
+        "zh_hans": "１１号野生特区",
+        "de": "Wildsektor 11"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1580,
+        1135
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-12",
+      "kind": "wild_zone",
+      "english": "Wild Zone 12",
+      "game_location_index": 196,
+      "hex": "0x00C4",
+      "search_aliases": {
+        "ja": "１２番ワイルドゾーン",
+        "zh_hans": "１２号野生特区",
+        "de": "Wildsektor 12"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        801,
+        1571
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-13",
+      "kind": "wild_zone",
+      "english": "Wild Zone 13",
+      "game_location_index": 204,
+      "hex": "0x00CC",
+      "search_aliases": {
+        "ja": "１３番ワイルドゾーン",
+        "zh_hans": "１３号野生特区",
+        "de": "Wildsektor 13"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        776,
+        144
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-14",
+      "kind": "wild_zone",
+      "english": "Wild Zone 14",
+      "game_location_index": 200,
+      "hex": "0x00C8",
+      "search_aliases": {
+        "ja": "１４番ワイルドゾーン",
+        "zh_hans": "１４号野生特区",
+        "de": "Wildsektor 14"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        209,
+        801
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-15",
+      "kind": "wild_zone",
+      "english": "Wild Zone 15",
+      "game_location_index": 207,
+      "hex": "0x00CF",
+      "search_aliases": {
+        "ja": "１５番ワイルドゾーン",
+        "zh_hans": "１５号野生特区",
+        "de": "Wildsektor 15"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1546,
+        346
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-16",
+      "kind": "wild_zone",
+      "english": "Wild Zone 16",
+      "game_location_index": 199,
+      "hex": "0x00C7",
+      "search_aliases": {
+        "ja": "１６番ワイルドゾーン",
+        "zh_hans": "１６号野生特区",
+        "de": "Wildsektor 16"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        710,
+        1294
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-17",
+      "kind": "wild_zone",
+      "english": "Wild Zone 17",
+      "game_location_index": 193,
+      "hex": "0x00C1",
+      "search_aliases": {
+        "ja": "１７番ワイルドゾーン",
+        "zh_hans": "１７号野生特区",
+        "de": "Wildsektor 17"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1471,
+        1480
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-18",
+      "kind": "wild_zone",
+      "english": "Wild Zone 18",
+      "game_location_index": 202,
+      "hex": "0x00CA",
+      "search_aliases": {
+        "ja": "１８番ワイルドゾーン",
+        "zh_hans": "１８号野生特区",
+        "de": "Wildsektor 18"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        390,
+        361
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-19",
+      "kind": "wild_zone",
+      "english": "Wild Zone 19",
+      "game_location_index": 208,
+      "hex": "0x00D0",
+      "search_aliases": {
+        "ja": "１９番ワイルドゾーン",
+        "zh_hans": "１９号野生特区",
+        "de": "Wildsektor 19"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        1549,
+        601
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    },
+    {
+      "atlas_id": "wz-20",
+      "kind": "wild_zone",
+      "english": "Wild Zone 20",
+      "game_location_index": 212,
+      "hex": "0x00D4",
+      "search_aliases": {
+        "ja": "２０番ワイルドゾーン",
+        "zh_hans": "２０号野生特区",
+        "de": "Wildsektor 20"
+      },
+      "identity_evidence": "published_game_index_transcribed_by_name",
+      "alias_evidence": "locale numbering pattern; search aids",
+      "native_xy": [
+        950,
+        960
+      ],
+      "existing_precision": "approx_saved_zone_centre",
+      "boundary_polygon": null,
+      "registered": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "AT324-G01",
+      "area_ids": [
+        "bleu-sector-1",
+        "bleu-sector-2",
+        "wz-05"
+      ],
+      "status": "multiple_source_geography_agreement",
+      "note": "WZ5 includes both sectors and the street between them. Sector IDs 37/42 and zone ID 198 are separate. Chinese WZ5 entry agrees with overlap and reports rooftop Pidgey Lv11–13 as a condition-bearing lead.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_1",
+        "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_2",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/wild-zone-5.html",
+        "https://wiki.52poke.com/wiki/%EF%BC%95%E8%99%9F%E9%87%8E%E7%94%9F%E7%89%B9%E5%8D%80"
+      ]
+    },
+    {
+      "id": "AT324-G02",
+      "area_ids": [
+        "jaune-sector-1"
+      ],
+      "status": "source_geography_corroborated",
+      "note": "Building-free sector reported east of central plaza; independent adjacent-street records give orientation. It also supplies a small DLC layout reference, not a permanent real-city distortion.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_1",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-street.html",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/hibernal-avenue.html",
+        "https://bulbapedia.bulbagarden.net/wiki/Hyperspace_Lumiose"
+      ]
+    },
+    {
+      "id": "AT324-G03",
+      "area_ids": [
+        "wz-11",
+        "jaune-sector-10",
+        "vert-sector-6"
+      ],
+      "status": "cross_district_overlap_corroborated",
+      "note": "The zone includes both canal banks. The ordinary roster and special Xerneas capture (Main Mission 40) must stay distinct. No crossing geometry proven.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11",
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_6",
+        "https://bulbapedia.bulbagarden.net/wiki/Vert_District"
+      ]
+    },
+    {
+      "id": "AT324-R01",
+      "area_ids": [
+        "bleu-sector-1",
+        "bleu-sector-2",
+        "bleu-sector-3",
+        "wz-05"
+      ],
+      "status": "route_lead_and_boundary_label_disagreement",
+      "note": "PowerPyx calls optional sewer approach Bleu 3; Bulbapedia associates gate with Bleu 1. GamesRadar agrees approach from Café Woof/Bleu 3. Distinguish approach sector, WZ5 rear exit and actual doorway location; record in-game labels. Side Mission 57 starts gate unlock per PowerPyx; alternate approach from WZ5 involves water move clearing sludge and descending to canal. No new exact route certified.",
+      "sources": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-how-to-return-to-lumiose-sewers/",
+        "https://www.gamesradar.com/games/pokemon/full-pokemon-legends-z-a-map-and-all-locations/",
+        "https://bulbapedia.bulbagarden.net/wiki/The_Sewers"
+      ]
+    },
+    {
+      "id": "AT324-E01",
+      "area_ids": [
+        "rouge-sector-4",
+        "bleu-sector-5",
+        "bleu-sector-7",
+        "vert-sector-8",
+        "magenta-sector-9"
+      ],
+      "status": "rare_encounter_approach_leads",
+      "note": "Game8 distinguishes rooftop travel approach from final sector (summary calls Bleu7 while detail says ascend from Bleu5). Gamer Guides and PokéMaps list Bleu5, Rouge4, Magenta9 and Vert8. Sunny daytime Riolu is corroborated by Japanese district source and Gamer Guides; trade in Side Mission24 separate. Do not copy provider coordinate values.",
+      "sources": [
+        "https://game8.jp/pokemon-legends-z-a/729719",
+        "https://pente.koro-pokemon.com/legendsz-a/map-bleu-district.shtml",
+        "https://www.gamerguides.com/pokemon-legends-z-a/database/pokedex/pokemon/riolu/",
+        "https://pokemaps.net/maps/lza/lumiose/riolu"
+      ]
+    },
+    {
+      "id": "AT324-E02",
+      "area_ids": [
+        "vert-sector-6",
+        "bleu-sector-6",
+        "bleu-sector-9",
+        "jaune-sector-3"
+      ],
+      "status": "source_reported_route_lead",
+      "note": "Game8 rare-Pokémon guide reports Dratini rooftop at Restaurant Le Nah/Vert6, access via Bleu6 construction toward Bleu9 roof, and Jaune3 roof after Roto-Glide obtained in Main16. Preserve distinction between approach and encounter area; photograph prerequisites and exit.",
+      "sources": [
+        "https://game8.jp/pokemon-legends-z-a/729719"
+      ]
+    },
+    {
+      "id": "AT324-E03",
+      "area_ids": [
+        "wz-17"
+      ],
+      "status": "unresolved_roster_conflict",
+      "note": "Japanese Alpha guide and France guide agree male fixed Alpha Pyroar + Mawile; female Pyroar normal. Talonflame appears in Bulbapedia WZ17 table but not Serebii or Japanese Pokédex ordinary WZ17 entries. Existing two Pyroar rows retained until source/game check; no automatic roster edit.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml",
+        "https://pente.koro-pokemon.com/legendsz-a/pokemon-miare.shtml",
+        "https://pente.koro-pokemon.com/legendsz-a/oyabun.shtml",
+        "https://www.pokemon-france.com/en/guides/pokemon-legends-z-a/wild-zones/"
+      ]
+    },
+    {
+      "id": "AT324-E04",
+      "area_ids": [
+        "wz-07",
+        "wz-18"
+      ],
+      "status": "unresolved_roster_conflict",
+      "note": "Japanese Gastly entry lists WZ4, multiple districts and Bleu sewers, not WZ18 or WZ7 explicitly. Serebii and Bulbapedia WZ7 include Gastly (latter night, Lv19–21); VGC and Pokémon GO Hub omit it. Keep WZ7 and do not add WZ18 from PokéMaps alone. Verify rare night encounter with met-location evidence.",
+      "sources": [
+        "https://pente.koro-pokemon.com/legendsz-a/pokemon-miare.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_7",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml",
+        "https://www.videogameschronicle.com/guide/pokemon-legends-z-a-wild-zone-7/",
+        "https://pokemongohub.net/post/guide/all-wild-zones-pokemon-legends-z-a/"
+      ]
+    },
+    {
+      "id": "AT324-E05",
+      "area_ids": [
+        "wz-19"
+      ],
+      "status": "spawn_condition_corroborated",
+      "note": "Japanese Alpha guide describes daytime central Furfrou slot sometimes replaced by ordinary Drampa; Gamer Guides specifies morning Drampa at pavilion. Preserve conditional slot; not a guaranteed Alpha Drampa. Mission30/31 opening discrepancy remains.",
+      "sources": [
+        "https://pente.koro-pokemon.com/legendsz-a/oyabun.shtml",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/wild-zones/magenta-sector-9",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_19"
+      ]
+    },
+    {
+      "id": "AT324-D01",
+      "area_ids": [],
+      "status": "template_not_portal_location",
+      "note": "Japanese Game8 describes battle-zone nightly selection and post-story multiple simultaneous zones. Bulbapedia says nine recurring DLC layouts can have different Holovator/scaffold arrangements. Separate fixed templates, session-dependent battle zones and temporary distortions. Never draw permanent live-state pins from template.",
+      "sources": [
+        "https://game8.jp/pokemon-legends-z-a/730143",
+        "https://bulbapedia.bulbagarden.net/wiki/Hyperspace_Lumiose"
+      ]
+    }
+  ],
+  "visual_evidence": {
+    "jaune_district": {
+      "url": "https://archives.bulbagarden.net/media/upload/thumb/d/d7/Kalos_Jaune_District_Map.png/1200px-Kalos_Jaune_District_Map.png",
+      "source_page": "https://bulbapedia.bulbagarden.net/wiki/Jaune_District",
+      "review": "Published image visually inspected via search result: wedge east of Centrico, red border, Hibernal Avenue and Saison Canal orientation. This is district extent, not Jaune Sector 1.",
+      "download_status": "DNS failure; no binary acquired"
+    },
+    "bleu_1_2": "source thumbnail links found but web cache misses and direct PNG requests DNS failure",
+    "jaune_1": "catalogue entry only",
+    "reuse": "No external map image copied into public repository; do not infer licensing."
+  },
+  "new_capture_requests": [
+    {
+      "id": "AT324-C01",
+      "areas": [
+        "bleu-sector-1",
+        "bleu-sector-2",
+        "bleu-sector-3",
+        "wz-05"
+      ],
+      "need": "Use same-zoom north-up captures at WZ5 rear exit, canal tunnel, sewer gate and location header; separate approach from actual door. No repeat of existing 40 photos."
+    },
+    {
+      "id": "AT324-C02",
+      "areas": [
+        "jaune-sector-1"
+      ],
+      "need": "Location header/area transition at Hibernal Avenue, Jaune Street and Centrico; distinguish city plaza and numbered park sector."
+    },
+    {
+      "id": "AT324-C03",
+      "areas": [
+        "wz-07",
+        "wz-17",
+        "wz-18",
+        "wz-19"
+      ],
+      "need": "If naturally encountered, record day/night/weather, species/form and met-location. Do not restart progress."
+    }
+  ],
+  "preservation": {
+    "runtime_changed": false,
+    "game_progress_changed": false,
+    "supabase_public_data_changed": false,
+    "old_geometry_changed": false,
+    "workspace_changed": false
+  }
+}

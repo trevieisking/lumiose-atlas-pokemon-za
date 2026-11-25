@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 62,
+  "revision": 71,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-315 deployed on GitHub; owner-approved written/photo-first policy. AT-319 adds Bleu 2, 4 and 6 written routes under review. Video library and frame-reader work held.",
+  "current_phase": "AT-328 reconciles AT-320 four Bleu written routes into current main-based PR #156; exact-head validation pending; G2 candidate image registration and full Workspace gate unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -119,8 +119,12 @@
     },
     "wild_zone": {
       "count": 20,
-      "status": "existing_keep_and_regression_test",
-      "separate_ids": true
+      "status": "photo_fieldbook_implemented_review_pending",
+      "separate_ids": true,
+      "owner_photographs": 40,
+      "required_photos_per_zone": 2,
+      "photo_directory": "assets/atlas/wild-zones/",
+      "catchable_pokemon_text": true
     }
   },
   "layer_order": [
@@ -145,7 +149,8 @@
     "supabase_changed": false,
     "feedback_changed": false,
     "original_workspace_site_changed": false,
-    "protected_code_labs_writer_used": false
+    "protected_code_labs_writer_used": false,
+    "supabase_private_feature_metadata_update_planned": true
   },
   "phases": [
     {
@@ -854,7 +859,7 @@
   ],
   "completion_requirements": {
     "sector_navigation": "48/48 distinct sector selectors and useful zoom, not 48 fabricated images",
-    "wild_zone_navigation": "20/20 existing Wild Zone map positions preserve behavior",
+    "wild_zone_navigation": "20/20 existing positions and behavior preserved; every Wild Zone category shows its two verified owner images, named area and readable catchable Pokémon roster, with Alpha/rotation distinctions, mobile/desktop viewing and full-size image links.",
     "confirmed_access_points": "Confirmed Holovator map points require type, aligned coordinate, floor/route directions and dated evidence. Ladder/scaffold/bridge/roof access is documented in written guides, not individually mapped.",
     "confirmed_item_pins": "Every plotted exact item with source ID, exact location, altitude and verified access",
     "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
@@ -4635,8 +4640,333 @@
       "workspace": "v37 unchanged"
     }
   },
+  "at_321_wild_zone_photo_fieldbook": {
+    "status": "pages_deployed_outstanding_review_followup",
+    "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
+    "requirements": [
+      "All 20 numbered Wild Zones, each with exactly two original owner PNGs: wider area/encounter-card overview and detailed zone close-up; both open full resolution.",
+      "Show the named location and district and a readable text roster of catchable Pokémon, including guaranteed Alpha encounters and the separate rotating Zone 20 Alpha pool. Identify conditions/uncertainty; do not treat screenshot icons as permanent encounters.",
+      "Present these directly inside the existing Lumiose maps Wild Zone selection (main guide, standalone map, sector/Wild Zone directory, interactive Explorer), in the same evidence-first style as sector photographs; mobile stack, desktop responsive layout.",
+      "Keep existing unlock missions, zone IDs, coordinates, all 264 item records, 100 Screw IDs, 38 fixed Alpha entries, all sector photos/routes, filters, saved progress, feedback and Supabase connections. Never pin transient Hyperspace distortions.",
+      "Use 40 checksum-verified PNGs from merged PRs #157–159; retain originals unmodified, with provenance and full-size viewing. Text encounter data cross-checked against source and existing Alpha fieldbook.",
+      "Exact-head automated unit/browser tests for all 20 pairs and roster, mobile and desktop visual review, expected-head merge and exact GitHub Pages deployment. Original Workspace requires separate approved handoff and independent verification."
+    ],
+    "asset_prs": [
+      157,
+      158,
+      159
+    ],
+    "asset_count": 40,
+    "zone_count": 20,
+    "source_manifests": [
+      "assets/atlas/wild-zones/batch-01-manifest.json",
+      "assets/atlas/wild-zones/batch-02-manifest.json",
+      "assets/atlas/wild-zones/batch-03-manifest.json",
+      "assets/atlas/wild-zones/batch-04-manifest.json"
+    ],
+    "active_separate_pr": 156,
+    "private_checklist": "AT-321 metadata row created at manifest revision 64; updating documented review checkpoint only, no public data change.",
+    "workspace": "unchanged",
+    "release_gate": "exact-head CI and phone/desktop visual evidence; exact Pages deployment",
+    "implementation_commit": "28a3b8e7e71209918e7396fc9fdb78f7c1b51730",
+    "record_module": "wild-zone-fieldbook.mjs",
+    "evidence": "docs/qa/ATLAS_AT321_WILD_ZONE_PHOTO_FIELDBOOK.md",
+    "surfaces": [
+      "index.html#maps",
+      "maps.html",
+      "sector-maps.html",
+      "atlas-explorer.html"
+    ],
+    "species_counts": [
+      7,
+      6,
+      7,
+      6,
+      12,
+      9,
+      9,
+      7,
+      8,
+      8,
+      8,
+      10,
+      7,
+      7,
+      11,
+      8,
+      7,
+      8,
+      7,
+      15
+    ],
+    "fixed_alpha_rows_preserved": 38,
+    "zone20_ordinary_species": 15,
+    "zone20_rotating_alpha_pool": 67,
+    "unit_test": "tests/wild_zone_fieldbook.test.mjs",
+    "browser_test": "tests/wild_zone_fieldbook_browser.mjs",
+    "verification_status": "Exact head 2faef6b25d4f4d7abfae00001a7e35163a78fb41 CI success; merged 344a84050a26a50f899752ab61693bc1190e985b; exact Pages run 45679413635 success; baseline run 45680305852 success. New direct-live check not performed. Three source-confirmed review findings AT325-R01–R03 require repair before full-scope handoff.",
+    "pages_run": 45679413635
+  },
+  "at_322_pokemaps_reference_audit": {
+    "status": "documentation_on_main_partial_research_no_ui_release",
+    "source": "https://pokemaps.net/maps/lza/lumiose?x=6.57&y=0.75&z=1&s=0.46v",
+    "audit": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+    "documentation_pr": 161,
+    "documentation_main_sha": "c05cade2d904199f6567918244582f7d2c65c70e",
+    "coverage": {
+      "sectors_total": 48,
+      "wild_zones_total": 20,
+      "area_records_tracked": 68,
+      "sector_pages_reviewed": 3,
+      "sectors_with_some_evidence": 36,
+      "wild_zones_with_some_evidence": 5,
+      "extra_place_pages_reviewed": 2,
+      "species_pages_sampled": 15,
+      "complete_pokemaps_area_rosters": 0,
+      "actual_pokemaps_screenshots": 0,
+      "verified_polygons": 0,
+      "verified_walkable_routes": 0
+    },
+    "requirements": [
+      "Use an original Atlas encounter index keyed by existing zone/sector IDs and species/form; keep ordinary, fixed Alpha, rotating Alpha, special mission, gift, trade and scripted boss categories separate.",
+      "Select a known place to focus/highlight its independently validated geometry, or show clearly labelled approximate orientation until registered boundaries exist. Search a species and highlight every verified area, with condition filters and source evidence.",
+      "Use original owner photographs and existing 1920x1920 map; independently align any candidate geometry using at least four distributed noncollinear landmarks and independent check points, record residuals and ambiguity. Do not infer exact coordinates from the external URL, perspective images or screenshots.",
+      "Keep selection/highlight distinct from route navigation. Only render a walkable path where contiguous street, ladder, scaffold, Holovator, roof, door/floor connections and prerequisites are verified; otherwise preserve written directions without misleading lines.",
+      "Retain the 40 zone images, 48 sector photo references, 20 zone IDs, 264 item records, 100 Screw IDs, 38 fixed Alpha rows, current player progress, feedback and existing Supabase connections. Do not permanently mark transient DLC distortions.",
+      "Document actual browser captures with exact public URL, selection, layers, game, date, viewport, author and SHA-256; retain screenshots as evidence only if rights permit, never treat generated images as proof. No copying PokéMaps proprietary source, database or map tiles; independently authored implementation and credited factual cross-checks.",
+      "Acceptance: complete all 68 area research rows and independent cross-checks, reconcile differences, test area/species selection, filters, mobile gestures, desktop controls and deep links, inspect actual screenshots, then exact-head CI and separate deployment verification."
+    ],
+    "photo_capture": "8 representative captures planned; 0 actual screenshots; rights and live browser access pending",
+    "geometry": "0 new polygons or walkable routes verified",
+    "workspace": "unchanged"
+  },
+  "at_323_multisource_research": {
+    "status": "research_documentation_merged_no_runtime",
+    "documentation_pr": 162,
+    "documentation_sha": "5d6424e008cb1c8bd98993ea008d35b8549ee0b5",
+    "audit": "docs/qa/ATLAS_AT323_GAME_RESEARCH_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+    "capture_guide": "docs/qa/ATLAS_AT323_OWNER_CAPTURE_REQUESTS.md",
+    "coverage": {
+      "sectors_catalogued": 48,
+      "wild_zone_geography_notes": 20,
+      "bisafans_linked_sectors": 45,
+      "archive_filename_leads": 32,
+      "inspected_published_images": 3,
+      "registered_polygons": 0,
+      "verified_new_routes": 0,
+      "new_image_binaries": 0
+    },
+    "next": "Independently calibrate boundary pilots Vert1 and WZ11; check overlaps, route access and encounter discrepancies with owner captures. No runtime edits or new public data."
+  },
+  "at_324_location_identity_research": {
+    "status": "research_documentation_only",
+    "baseline_main_sha": "3b6b7834a75b7728b423e63e10eabba00a277dc6",
+    "audit": "docs/qa/ATLAS_AT324_INTERNATIONAL_LOCATION_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json",
+    "counts": {
+      "sectors": 48,
+      "wild_zones": 20,
+      "unique_game_location_ids": 68,
+      "prior_german_directory_gaps_with_text_references": 3,
+      "new_source_findings": 10,
+      "new_published_reference_images_visually_reviewed": 1,
+      "new_verified_polygons": 0,
+      "new_verified_routes": 0,
+      "new_binary_images": 0
+    },
+    "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
+  },
+  "at_325_github_first_workspace_gate": {
+    "status": "g1_reconciled_review_pending_g2_pilots",
+    "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
+    "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+    "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
+    "baseline_pages_run": 45680305852,
+    "owner_photo_inventory": {
+      "base_map": {
+        "path": "maps/lumiose-game-map.jpg",
+        "native_size": [
+          1920,
+          1920
+        ],
+        "git_blob_sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+        "bytes": 411683
+      },
+      "sector_count": 48,
+      "sector_pngs": 42,
+      "wild_zone_count": 20,
+      "wild_zone_pngs": 40,
+      "verified_photo_blob_and_byte_matches": 82,
+      "sector_reference_coverage": 48,
+      "wild_zone_pair_coverage": 20,
+      "holovator_photo_count": 111,
+      "holovator_research_entries": 21,
+      "existing_item_records": 264,
+      "colorful_screw_ids": 100,
+      "approximate_item_leads": 146,
+      "existing_routes": 22,
+      "registered_sector_boundaries": 0,
+      "registered_wild_zone_boundaries": 0,
+      "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
+      "historical_candidate_overview_records": [
+        {
+          "id": "W01",
+          "uploaded_basename": "1000027197.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "b0ebb7e7f77c63920dd9aa98d51e83bcfed770b72577db801e7075e4900918ec",
+          "file_committed_to_repo": false
+        },
+        {
+          "id": "W02",
+          "uploaded_basename": "1000027198.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "f0419f4a67b91e5d5ef82bd5894e52d452652f438b01e5e1b8a194ff51054b9a",
+          "file_committed_to_repo": false
+        },
+        {
+          "id": "W03",
+          "uploaded_basename": "1000027199.heic",
+          "width": 1536,
+          "height": 865,
+          "sha256": "78311ae15c8ffd0b9d8db396699371bb86cc3b90a3ad2cbde914b28f6ac18886",
+          "file_committed_to_repo": false
+        }
+      ],
+      "historical_candidate_manifest": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+      "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration."
+    },
+    "phase_states": [
+      {
+        "id": "G0",
+        "state": "documentation_and_private_queue_recorded"
+      },
+      {
+        "id": "G1",
+        "state": "at320_reconciled_pending_exact_head_validation"
+      },
+      {
+        "id": "G2",
+        "state": "four_candidate_photo_registrations_two_areas_no_production_geometry"
+      },
+      {
+        "id": "G3",
+        "state": "pending"
+      },
+      {
+        "id": "G4",
+        "state": "pending"
+      },
+      {
+        "id": "G5",
+        "state": "pending"
+      },
+      {
+        "id": "A0",
+        "state": "blocked_until_G5_verified"
+      },
+      {
+        "id": "A1-A7",
+        "state": "blocked_until_A0"
+      }
+    ],
+    "remaining_review_findings": [
+      {
+        "id": "AT325-R01",
+        "state": "github_pages_deployed_exact_sha_verified"
+      },
+      {
+        "id": "AT325-R02",
+        "state": "github_pages_deployed_exact_sha_verified"
+      },
+      {
+        "id": "AT325-R03",
+        "state": "github_pages_deployed_exact_sha_verified"
+      }
+    ],
+    "workspace_prompt": {
+      "state": "blocked",
+      "required_approved_github_release_sha": null,
+      "required_exact_deployment_evidence": null,
+      "required_full_scope_signoff": null,
+      "final_prompt_path": null,
+      "allowed_to_send_or_execute": false,
+      "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
+    },
+    "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+    "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
+  },
+  "at_326_map_review_regressions": {
+    "status": "github_pages_deployed_exact_sha_verified",
+    "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
+    "evidence": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
+    "findings": [
+      "AT325-R01",
+      "AT325-R02",
+      "AT325-R03"
+    ],
+    "files": [
+      "maps.js",
+      "sector-maps.js",
+      ".github/workflows/atlas-explorer.yml",
+      "tests/maps_recovered.test.mjs",
+      "tests/sector_map_directory.test.mjs",
+      "tests/wild_zone_fieldbook_browser.mjs"
+    ],
+    "geometry_changed": false,
+    "photos_changed": false,
+    "progress_changed": false,
+    "workspace_changed": false,
+    "release": {
+      "pr": 167,
+      "reviewed_head": "74e36ece129433a37a9dc13d571c6f6504993ddf",
+      "reviewed_tree": "d09bd0915b7484c543da2598d87976e750aaf3c9",
+      "first_failed_run": 45692791625,
+      "ci_runs": [
+        45693885162,
+        45693885482
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 15059399203,
+      "visual_review": "Reviewed actual screenshots: Zone 20 item-panel open on phone/desktop, both photo layouts, both complete roster panels; original map overview. No visual regression identified in inspected samples.",
+      "merged_main": "eb711adf56a68b05e55d335586eb6b320d340203",
+      "merged_tree": "2cd6e4e78e11cd94e0e93ba39e68a7c343bd51e5",
+      "tree_delta_only": [
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+        "docs/qa/regenerate_at327_registration.py"
+      ],
+      "pages_run": 45694649336,
+      "pages_conclusion": "success",
+      "live_direct_check": false
+    }
+  },
+  "at_327_owner_map_registration": {
+    "pr": 169,
+    "main_sha": "61596fac07f73809c3f3a23954997d1b4078c0b7",
+    "report": "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+    "register": "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+    "reproduce": "docs/qa/regenerate_at327_registration.py",
+    "source_recovery_run": 45693109903,
+    "source_artifact": 15059033948,
+    "source_pngs_actual_bytes_verified": 82,
+    "fit_frames": 4,
+    "areas_candidate": 2,
+    "holdout_rms_native_px": [
+      1.364,
+      1.401,
+      1.517,
+      1.8
+    ],
+    "verified_production_polygons": 0,
+    "new_verified_routes": 0,
+    "old_three_overview_files_recovered": 0
+  },
   "at_320_bleu7_10_written_routes": {
-    "status": "review_only_not_deployed",
+    "status": "reconciled_review_branch_pending_exact_head_validation",
     "baseline_main_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
     "route_ids": [
       "bleu7-aymlis-roof-scaffold-courses",
@@ -4686,6 +5016,36 @@
     "workspace": "unchanged_v37",
     "private_checklist": "not accessed or written in this bounded GitHub cycle; reconciliation outstanding",
     "video_policy": "no new videos; photo and written directions primary",
-    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment"
+    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment",
+    "reconciliation": {
+      "prior_pr": 156,
+      "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "prior_base": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+      "retained_routes": 22,
+      "new_routes": 4,
+      "new_steps": 23,
+      "new_leads": 8,
+      "unchanged_existing_data": "All non-route Explorer keys and first 22 routes identical as JSON values; all 57 prior survey leads preserved. Four coverage rows changed.",
+      "prerequisite_source_review": [
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://www.dexerto.com/wikis/pokemon-legends-z-a/roto-glide-pokemon-legends-z-a/"
+      ],
+      "note": "Roto-Glide sources label the rooftop tutorial under Missions 15 or 16; use actual unlock tutorial at Hotel Z rather than require completion of 16. Mission 92 after completing 30/beginning 31; photographed device remains unverified. Prior AT-319 status receipt recovered and exact CI/Pages success rechecked."
+    }
+  },
+  "at_328_at320_reconciliation": {
+    "status": "review_branch_pending_exact_head_validation",
+    "pr": 156,
+    "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+    "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+    "route_count": 26,
+    "added_routes": 4,
+    "added_steps": 23,
+    "added_leads": 8,
+    "preservation": "All previous route data, photographs, native geometry, 264 item records, 100 screw identities, 38 fixed Alpha rows, Zone20 pools, AT-321/326 map regressions, AT-327 research, progress/feedback and Supabase preserved."
   }
 }

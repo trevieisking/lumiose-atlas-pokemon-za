@@ -2456,7 +2456,7 @@
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-320 exact-head validation and phone/desktop visual QA; continue Magenta sectors after release. Retain separate original Workspace parity and private checklist reconciliation.",
+  "next": "AT-320 reconciled against current main; exact-head CI, screenshot review, merge and Pages verification pending. G1 remains incomplete until deployment verified. Continue G2 native photo registration and G3–G5 after bounded release.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -4929,7 +4929,7 @@
     }
   },
   "at_320_bleu7_10_written_routes": {
-    "status": "review_only_not_deployed",
+    "status": "reconciled_review_branch_pending_exact_head_validation",
     "baseline_main_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
     "route_ids": [
       "bleu7-aymlis-roof-scaffold-courses",
@@ -4979,6 +4979,25 @@
     "workspace": "unchanged_v37",
     "private_checklist": "not accessed or written in this bounded GitHub cycle; reconciliation outstanding",
     "video_policy": "no new videos; photo and written directions primary",
-    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment"
+    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment",
+    "reconciliation": {
+      "prior_pr": 156,
+      "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "prior_base": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+      "retained_routes": 22,
+      "new_routes": 4,
+      "new_steps": 23,
+      "new_leads": 8,
+      "unchanged_existing_data": "All non-route Explorer keys and first 22 routes identical as JSON values; all 57 prior survey leads preserved. Four coverage rows changed.",
+      "prerequisite_source_review": [
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://www.dexerto.com/wikis/pokemon-legends-z-a/roto-glide-pokemon-legends-z-a/"
+      ],
+      "note": "Roto-Glide sources label the rooftop tutorial under Missions 15 or 16; use actual unlock tutorial at Hotel Z rather than require completion of 16. Mission 92 after completing 30/beginning 31; photographed device remains unverified. Prior AT-319 status receipt recovered and exact CI/Pages success rechecked."
+    }
   }
 }
