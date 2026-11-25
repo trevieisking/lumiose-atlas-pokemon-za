@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 70,
+  "revision": 71,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-326 three regressions deployed to GitHub Pages after exact-head tests and visual QA; AT-327 registration pilots recorded. AT-320 route reconciliation and G2-G5 incomplete.",
+  "current_phase": "AT-328 three new owner city overview sources and candidate photo registration; G1 route reconciliation and G2-G5 remain incomplete.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4823,7 +4823,9 @@
         }
       ],
       "historical_candidate_manifest": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
-      "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration."
+      "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration.",
+      "new_city_overview_frames": 3,
+      "new_city_overview_manifest": "assets/atlas/city-overview/manifest.json"
     },
     "phase_states": [
       {
@@ -4836,7 +4838,7 @@
       },
       {
         "id": "G2",
-        "state": "four_candidate_photo_registrations_two_areas_no_production_geometry"
+        "state": "four_zone_and_three_city_overview_candidate_registrations_no_production_geometry"
       },
       {
         "id": "G3",
@@ -4950,5 +4952,82 @@
     "verified_production_polygons": 0,
     "new_verified_routes": 0,
     "old_three_overview_files_recovered": 0
+  },
+  "at_328_city_overview_sources": {
+    "id": "AT-328",
+    "status": "source_assets_prepared_candidate_registration_only",
+    "baseline_main_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
+    "manifest": "assets/atlas/city-overview/manifest.json",
+    "registration": "docs/qa/ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json",
+    "report": "docs/qa/ATLAS_AT328_CITY_OVERVIEW_INTAKE.md",
+    "new_pngs": 3,
+    "verified_png_bytes": 3625927,
+    "photo_source_views_candidate": 3,
+    "prior_82_pngs_preserved": true,
+    "historical_W01_W03_recovered": false,
+    "production_polygons": 0,
+    "route_changes": 0,
+    "original_workspace_changed": false,
+    "frames": [
+      {
+        "part": "south",
+        "holdout_candidates": 71,
+        "within_3px": 51,
+        "conditional_rms_px": 1.603,
+        "all_median_px": 1.938
+      },
+      {
+        "part": "north",
+        "holdout_candidates": 30,
+        "within_3px": 16,
+        "conditional_rms_px": 1.353,
+        "all_median_px": 2.2
+      },
+      {
+        "part": "central",
+        "holdout_candidates": 72,
+        "within_3px": 40,
+        "conditional_rms_px": 1.468,
+        "all_median_px": 2.496
+      }
+    ],
+    "pairwise_checks": [
+      {
+        "parts": [
+          "north",
+          "central"
+        ],
+        "pairwise_descriptor_candidates": 675,
+        "pairwise_ransac_inliers": 340,
+        "native_registration_difference_rms_px": 2.05,
+        "median_px": 1.543,
+        "max_px": 5.568,
+        "status": "candidate_overlap_support_only"
+      },
+      {
+        "parts": [
+          "central",
+          "south"
+        ],
+        "pairwise_descriptor_candidates": 971,
+        "pairwise_ransac_inliers": 615,
+        "native_registration_difference_rms_px": 3.629,
+        "median_px": 2.662,
+        "max_px": 9.634,
+        "status": "candidate_overlap_support_only"
+      },
+      {
+        "parts": [
+          "north",
+          "south"
+        ],
+        "pairwise_descriptor_candidates": 321,
+        "pairwise_ransac_inliers": 82,
+        "native_registration_difference_rms_px": 850.89,
+        "median_px": 850.863,
+        "max_px": 852.19,
+        "status": "rejected_false_correspondence"
+      }
+    ]
   }
 }
