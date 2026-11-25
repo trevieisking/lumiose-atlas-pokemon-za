@@ -5088,7 +5088,7 @@
     },
     "github": {
       "status": "in_progress",
-      "stage": "merged_pages_deployment_and_live_verification_pending",
+      "stage": "pages_deployed_live_verification_pending",
       "pr": 176,
       "head_sha": "5906395e28c9b84739c108774dde88f191c2ba74",
       "base_sha": "c72281063e258b19b0378cf886757e9a4548f6d1",
@@ -5109,8 +5109,9 @@
       "live_deployment": {
         "run_id": 45719670653,
         "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653",
-        "status": "in_progress",
-        "verified": false
+        "status": "success",
+        "verified": false,
+        "verification_note": "Exact merge deployment completed successfully; independent public-page access unavailable through current inspection tool."
       },
       "merge_sha": "0f11d8a505a550ca1e29ce64dcb5840961a3108e",
       "rollback_baseline": "d320e8116fa25e39a8128b34f79ac65f65e2afba"

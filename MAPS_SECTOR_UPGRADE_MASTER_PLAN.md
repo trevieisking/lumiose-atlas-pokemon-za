@@ -1391,7 +1391,7 @@ PR #176 merged as `0f11d8a505a550ca1e29ce64dcb5840961a3108e` after exact feature
 - [x] Review the four captured viewport images; readable layouts and intentional shared horizontal navigation.
 - [x] Resolve the feedback-origin review finding using exact-head passing browser navigation and return-link tests.
 - [x] Merge bounded clothing, beauty and treasure features to main.
-- [ ] Exact-revision [Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653): in_progress / pending.
+- [x] Exact-revision [Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653) succeeded. Direct public-page inspection unavailable through current tool; live verification remains open.
 - [ ] Inspect actual live pages before marking live verification complete. Complete clothing variants, salon swatches, storefront photos and physical-device checks; preserve existing type chart and map priorities.
 - [ ] Workspace remains open and gated by AT-325 and AT-297; no prompt, release or original-site change.
 
