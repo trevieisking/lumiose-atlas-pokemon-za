@@ -2,8 +2,8 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 71,
-  "ledger_revision": 79,
+  "manifest_revision": 72,
+  "ledger_revision": 80,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
@@ -1609,9 +1609,9 @@
     "new_verified_routes": 0,
     "old_three_overview_files_recovered": 0
   },
-  "at328": {
-    "id": "AT-328",
-    "status": "source_assets_prepared_candidate_registration_only",
+  "at329": {
+    "id": "AT-329",
+    "status": "source_assets_merged_candidate_registration_only",
     "baseline_main_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
     "manifest": "assets/atlas/city-overview/manifest.json",
     "registration": "docs/qa/ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json",
@@ -1684,6 +1684,14 @@
         "max_px": 852.19,
         "status": "rejected_false_correspondence"
       }
-    ]
+    ],
+    "initial_import_label": "AT-328",
+    "asset_pr": 173,
+    "asset_reviewed_head": "85066dd7ad6a9cb4dab95bc6505538b18bb82f99",
+    "asset_merge_sha": "e01c6c428a3b6f320cb94a7044eb5dfbd4e6d2f0",
+    "asset_tree": "76fc2d1f3647748301dd9ebce727b26a921e1063",
+    "asset_validation": "Exact crop pixel equality locally, PNG decoding and dimensions, local SHA-256 and Git blob identity, three exact paths/byte counts on reviewed tree and identical merged tree. No site runtime changes or workflow triggered.",
+    "tracking_id": "AT-329-CITY-OVERVIEW-INTAKE",
+    "tracking_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links."
   }
 }
