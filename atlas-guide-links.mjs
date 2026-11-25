@@ -114,7 +114,7 @@ export function appendGuidePanel(host,title,links,note=""){
     row.append(a);
   }
   panel.append(row);
-  const notes=[note,links.some(x=>x.external&&!x.owner)?VIDEO_NOTE:"",links.some(x=>x.owner)?"BuddyVidz: owner recording checked against this guide topic; opens a new tab.":"".filter(Boolean);
+  const notes=[note,links.some(x=>x.external&&!x.owner)?VIDEO_NOTE:"",links.some(x=>x.owner)?"BuddyVidz: owner recording checked against this guide topic; opens a new tab.":""].filter(Boolean);
   if(notes.length){const p=doc.createElement("p");p.textContent=notes.join(" ");panel.append(p);}
   host.append(panel);return panel;
 }
