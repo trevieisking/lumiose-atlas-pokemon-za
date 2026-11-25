@@ -37,7 +37,7 @@ test("AT-311 all 48 registered sector crosslinks, no inferred points",()=>{
 });
 test("AT-311 only published side chapters and mission #61 are offered; dynamic areas remain general",()=>{
   for(let n=1;n<=33;n++)checkLink(sideVideo(n));
-  assert.equal(sideVideo(34),null);assert.equal(sideVideo(60),null);checkLink(sideVideo(61));assert.equal(sideVideo(62),null);
+  assert.equal(sideVideo(34),null);checkLink(sideVideo(57));assert.equal(sideVideo(57).href,"https://www.youtube.com/watch?v=DYB6AtF6dpo");assert.equal(sideVideo(60),null);checkLink(sideVideo(61));assert.equal(sideVideo(62),null);
   assert.equal(locationLinks("New Wild Zones 2–6").length,5);
   assert.deepEqual(locationLinks("Nightly battle zone · location changes"),[]);
   assert.deepEqual(locationLinks("Vert Sector 10; Wild Zone 21"),[]);

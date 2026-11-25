@@ -3316,6 +3316,129 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "vert8-hotel-rooftop-courses",
+      "title": "Vert Sector 8 — Hotel Z rooftop and riverside pickups",
+      "point_id": "vert-sector-8",
+      "district": "Vert",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Two separate published pickup approaches near Hotel Z. The hotel courtyard ladder is already owner-photographed; the exact riverside ladder identity and onward roof links are not measured. Do not combine these as one continuous route.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Choose your Hotel Z route",
+          "instruction": "Start at Hotel Z, between Vert Street and Station Front. For the early scaffold pickup use the waterway behind the hotel. For the high eastern roof, wait until Roto-Glide is unlocked.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Riverside course — climb from the waterway",
+          "instruction": "Find the published ladder beside the canal behind Hotel Z and climb onto the surrounding building. This may be a different ladder from the existing owner-photographed courtyard ladder.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Riverside course — descend southeast",
+          "instruction": "From the roof head southeast to the scaffold attached to the building south of the waterway. Drop carefully down its levels toward the purple pickup. No Roto-Glide requirement is established for this particular course.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Separate high-roof course — return to Hotel Z",
+          "instruction": "After unlocking Roto-Glide, use the rear ladder and glide to the adjoining roof as in the story tutorial. Climb the ladder onto the higher hotel roof and the next ladder to the right.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "High-roof course — blue roof crossings",
+          "instruction": "Look back along the approach, move left and glide to the higher blue roof. Follow its edge to the next roof gap, then glide toward the northeastern blue roof. Stop if the roof shape or height does not match the in-game surroundings.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "High-roof course — eastern tall building",
+          "instruction": "From the northeast roof of the hotel identify the taller building to the east. Descend onto its accessible approach and climb its final ladder to the rooftop purple pickup.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Keep regional clues separate",
+          "instruction": "The two described courses are candidate matches for original district-only Screw clues #3 and #4, respectively. The exact pickup IDs, individual ladders and crossing coordinates are unresolved. Keep the original checkboxes and owner ladder route unchanged.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu1-sewer-approaches",
+      "title": "Bleu Sector 1 / 3 — Wild Zone 5 and Sewer Entrance (Side Mission 57)",
+      "point_id": "bleu-sector-1",
+      "district": "Bleu",
+      "risk": "hostile_wild_pokemon",
+      "anchor_precision": "district_only",
+      "side_mission": 57,
+      "description": "Two alternative approaches to Hérup, who waits underground near the Wild Zone 5 / Bleu Sector 3 passage. Some sources assign his mission to Bleu 1 and others Bleu 3; both describe the same sewer access. Begin Main Mission 20 (after Rank D). No fixed entrance XY or underground floor plan is asserted.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Choose the street or Wild Zone 5 entrance",
+          "instruction": "Activate guidance for Side Mission 57, The Camerupt Entrepreneur. The blue request icon can appear above an underground target; do not try to find Hérup on street level. Use either the Bleu Sector 3 alley route or the Wild Zone 5 route.",
+          "evidence": "guide_crosscheck",
+          "video_refs": [
+            {
+              "video_id": "DYB6AtF6dpo",
+              "start_seconds": 0,
+              "title": "Finding the underground Side Mission 57 entrance",
+              "creator": "JoseRockzVGC",
+              "verification": "publisher_video",
+              "note": "The creator describes the underground entrance and Water-move obstacle route. Whole mission-access video from its start; no individual frame or exact Atlas coordinate verified."
+            }
+          ]
+        },
+        {
+          "space": "passage",
+          "title": "Street approach — Bleu Sector 3 alley",
+          "instruction": "Look near Café Woof and the Bleu Sector 3 map label for the alley entrance to the underground path. Remove any purple sludge using a Water-type move, descend the path and turn left into the tunnel.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "wild-zone",
+          "title": "Alternative approach — Wild Zone 5",
+          "instruction": "If approaching from Wild Zone 5, find its northwest sludge-blocked stairs. Wash away the sludge with a Water move and follow the waterway, clearing further sludge if necessary. Watch for the Alpha Whirlipede and take the southeast exit to the underground passage.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "passage",
+          "title": "Meet Hérup and open the gate",
+          "instruction": "Both approaches lead to Hérup at the sewer entrance. Speak to him to begin the request and open access. Enter the sewer once to register the Sewer Entrance fast-travel destination.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "interior",
+          "title": "Follow mission guidance and battle Camerupt",
+          "instruction": "Inside, the documented route takes the left branch and descends from a ledge, then turns right and takes the right fork. Follow active guidance to Hérup's room and defeat his level 46 Camerupt. Completion rewards: 4,500 Pokédollars, one Fire Stone and one Charcoal.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Return to the city",
+          "instruction": "Use the registered Sewer Entrance fast-travel point, then turn back and climb the exit ladder. Litwick and Scraggy can be found underground.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "passage",
+          "title": "Access evidence and limits",
+          "instruction": "The two entrance descriptions agree on underground access but differ in sector naming. No measured stair, gate, item, room or exit coordinates are claimed, and no permanent moving Hyperspace marker is added.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [
