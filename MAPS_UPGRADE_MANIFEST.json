@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 57,
+  "revision": 58,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -2947,7 +2947,7 @@
     "id": "AT-297",
     "date": "2026-11-24",
     "owner_approved": true,
-    "status": "documented_pending_authorized_workspace_access",
+    "status": "workspace_v37_deployed_and_live_verified",
     "review_date": "2026-11-25",
     "handoff": "WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy",
     "checklist_id": "AT-297-HANDOFF-PROTOCOL",
@@ -2960,35 +2960,45 @@
     "gates": [
       {
         "requirement": "A1 authorized original source access",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A2 verified source export and rollback",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A3 progress and integration audit",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A4 compare actual A source with verified B and prepare bounded patch",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A5 isolated preview and regression tests",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A6 independent safe publication through original editor",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       },
       {
         "requirement": "A7 live verification and checklist evidence",
-        "status": "open"
+        "status": "verified_for_v37_scope"
       }
     ],
     "owner_testing": "Live guide only; assistant handles development review.",
-    "no_changes_to_a_now": true
+    "no_changes_to_a_now": false,
+    "workspace_release": {
+      "version": 37,
+      "source_sha": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
+      "comparison_github_sha": "ca62d68f2e052bb5b7d584957be114cd6318d8d7",
+      "date": "2026-11-25",
+      "rollback_version": 35,
+      "evidence": "docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md",
+      "scope": "Interactive map, 48-sector photo library, Holovator gallery, map and video crosslinks, scoped mission corrections, responsive layouts",
+      "supabase_database_changes": false
+    }
   },
   "at_298_vert3": {
     "id": "AT-298",

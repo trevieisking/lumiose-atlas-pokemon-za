@@ -2,6 +2,8 @@
 
 ## AT-297 — Workspace source access, export and safe upgrade policy
 
+**25 November 2026 · Workspace v37 verified.** Original Workspace source commit `1ac2c20002451d295dc4f8e80068297682fcdc4b` was independently published and checked on the existing live origin. Version 35 remains the rehearsed rollback checkpoint. The scoped upgrade covers the interactive map, 48 sector entries and 42 photos, 21 Holovators and 111 photos, reference links, mission corrections and responsive layouts. Supabase records and the independent GitHub Pages release were preserved. [Gate receipts and live checks](docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md).
+
 **Owner-approved 24 November 2026.** Review access on 25 November if the original editor becomes available. Access is not yet verified. The original ChatGPT Site (A) and GitHub guide (B) must remain independent. Codespaces may be used for isolated development; no automatic repository synchronization or deployment connection to A.
 
 ### Current Workspace request
