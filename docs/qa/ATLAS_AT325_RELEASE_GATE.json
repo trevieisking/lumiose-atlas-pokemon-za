@@ -149,21 +149,21 @@
           "source": "PR #160 review and current maps.js selectZone/openHash",
           "problem": "Selecting another Wild Zone from standalone map/directory leaves old #wild-zone-N fragment; reload or shared link may reopen stale selection.",
           "required": "Synchronize selection and clearing to validated fragment without dropping unrelated query/fragment behavior or resetting filters on internal clicks. Test open deep link, change zone, reload, copy URL, filter-clear and back/forward where supported.",
-          "state": "merged_main_exact_head_checks_passed_pages_pending"
+          "state": "github_pages_deployed_exact_sha_verified"
         },
         {
           "id": "AT325-R02",
           "source": "PR #160 review and current .github/workflows/atlas-explorer.yml paths",
           "problem": "40 source Wild Zone images and batch manifests do not trigger dedicated Atlas validation on photo-only PRs.",
           "required": "Add assets/atlas/wild-zones/** and maps.js to pull-request path scope; protect actual bytes, dimensions, hash, references and unchanged existing test requirements.",
-          "state": "merged_main_exact_head_checks_passed_pages_pending"
+          "state": "github_pages_deployed_exact_sha_verified"
         },
         {
           "id": "AT325-R03",
           "source": "PR #160 review and current sector-maps.js openDirectHash",
           "problem": "Generic first details selector now selects Zone 20 Alpha pool instead of original item-record panel.",
           "required": "Use explicitly named existing item-record disclosure for Wild Zone anchors without changing ordinary sector behavior or #map-lead deep links. Add browser regression for #wildzone-20 and saved numbered clue panel.",
-          "state": "merged_main_exact_head_checks_passed_pages_pending"
+          "state": "github_pages_deployed_exact_sha_verified"
         }
       ],
       "status": "deployed_with_outstanding_review_followup"
@@ -1459,7 +1459,7 @@
     {
       "id": "G1",
       "name": "Protect current live map and reconcile existing branches",
-      "state": "three_regressions_merged_pages_pending_at320_reconciliation_pending",
+      "state": "three_regressions_deployed_at320_reconciliation_pending",
       "acceptance": [
         "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
         "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
@@ -1550,7 +1550,7 @@
     "other_prs_changed": false
   },
   "at326": {
-    "status": "merged_main_pages_verification_pending",
+    "status": "github_pages_deployed_exact_sha_verified",
     "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
     "qa": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
     "findings": [
@@ -1582,7 +1582,7 @@
         "docs/qa/regenerate_at327_registration.py"
       ],
       "pages_run": 45694649336,
-      "pages_conclusion": "queued_at_checkpoint",
+      "pages_conclusion": "success",
       "live_direct_check": false
     }
   },

@@ -20,7 +20,7 @@
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-326 merged after exact-head validation; Pages verification pending. AT-327 four source image registration pilots recorded, G1 AT-320 reconciliation and G2-G5 incomplete.",
+  "current_phase": "AT-326 three regressions deployed to GitHub Pages after exact-head tests and visual QA; AT-327 registration pilots recorded. AT-320 route reconciliation and G2-G5 incomplete.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4832,7 +4832,7 @@
       },
       {
         "id": "G1",
-        "state": "three_regressions_merged_pages_pending_at320_reconciliation_pending"
+        "state": "three_regressions_deployed_at320_reconciliation_pending"
       },
       {
         "id": "G2",
@@ -4862,15 +4862,15 @@
     "remaining_review_findings": [
       {
         "id": "AT325-R01",
-        "state": "merged_main_exact_head_checks_passed_pages_pending"
+        "state": "github_pages_deployed_exact_sha_verified"
       },
       {
         "id": "AT325-R02",
-        "state": "merged_main_exact_head_checks_passed_pages_pending"
+        "state": "github_pages_deployed_exact_sha_verified"
       },
       {
         "id": "AT325-R03",
-        "state": "merged_main_exact_head_checks_passed_pages_pending"
+        "state": "github_pages_deployed_exact_sha_verified"
       }
     ],
     "workspace_prompt": {
@@ -4886,7 +4886,7 @@
     "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
   },
   "at_326_map_review_regressions": {
-    "status": "merged_main_pages_verification_pending",
+    "status": "github_pages_deployed_exact_sha_verified",
     "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
     "evidence": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
     "findings": [
@@ -4926,7 +4926,7 @@
         "docs/qa/regenerate_at327_registration.py"
       ],
       "pages_run": 45694649336,
-      "pages_conclusion": "queued_at_checkpoint",
+      "pages_conclusion": "success",
       "live_direct_check": false
     }
   },
