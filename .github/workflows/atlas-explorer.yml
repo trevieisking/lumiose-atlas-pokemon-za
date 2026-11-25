@@ -32,6 +32,8 @@ on:
       - tests/atlas_explorer_browser.mjs
       - .github/workflows/atlas-explorer.yml
       - maps.html
+      - maps.js
+      - 'assets/atlas/wild-zones/**'
       - wild-zone-fieldbook.mjs
       - wild-zone-fieldbook.css
       - tests/wild_zone_fieldbook.test.mjs
@@ -54,7 +56,7 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check app.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Verify original Wild Zone photo pairs and roster parity

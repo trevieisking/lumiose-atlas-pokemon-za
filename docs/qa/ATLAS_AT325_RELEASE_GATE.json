@@ -2,13 +2,13 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 68,
-  "ledger_revision": 76,
+  "manifest_revision": 69,
+  "ledger_revision": 77,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "planning_and_private_queue_checkpoint_only",
+  "current_state": "g1_review_regressions_implemented_on_branch_not_validated",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -149,21 +149,21 @@
           "source": "PR #160 review and current maps.js selectZone/openHash",
           "problem": "Selecting another Wild Zone from standalone map/directory leaves old #wild-zone-N fragment; reload or shared link may reopen stale selection.",
           "required": "Synchronize selection and clearing to validated fragment without dropping unrelated query/fragment behavior or resetting filters on internal clicks. Test open deep link, change zone, reload, copy URL, filter-clear and back/forward where supported.",
-          "state": "source_confirmed_pending_fix"
+          "state": "implemented_on_review_branch_pending_validation"
         },
         {
           "id": "AT325-R02",
           "source": "PR #160 review and current .github/workflows/atlas-explorer.yml paths",
           "problem": "40 source Wild Zone images and batch manifests do not trigger dedicated Atlas validation on photo-only PRs.",
           "required": "Add assets/atlas/wild-zones/** and maps.js to pull-request path scope; protect actual bytes, dimensions, hash, references and unchanged existing test requirements.",
-          "state": "source_confirmed_pending_fix"
+          "state": "implemented_on_review_branch_pending_validation"
         },
         {
           "id": "AT325-R03",
           "source": "PR #160 review and current sector-maps.js openDirectHash",
           "problem": "Generic first details selector now selects Zone 20 Alpha pool instead of original item-record panel.",
           "required": "Use explicitly named existing item-record disclosure for Wild Zone anchors without changing ordinary sector behavior or #map-lead deep links. Add browser regression for #wildzone-20 and saved numbered clue panel.",
-          "state": "source_confirmed_pending_fix"
+          "state": "implemented_on_review_branch_pending_validation"
         }
       ],
       "status": "deployed_with_outstanding_review_followup"
@@ -171,7 +171,7 @@
     "at320": {
       "pr": 156,
       "head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
-      "status": "separate_pending_reconciliation"
+      "status": "separate_conflicted_pr_pending_reconciliation"
     },
     "workspace": {
       "last_documented_version": 37,
@@ -1443,7 +1443,7 @@
     {
       "id": "G0",
       "name": "Plan, inventory, and private Workspace queue",
-      "state": "documentation_checkpoint",
+      "state": "documentation_and_private_queue_recorded",
       "acceptance": [
         "Record owner direction: finish GitHub before writing or submitting final Workspace prompt.",
         "Reconcile AT-321–324 evidence, review findings, exact source inventory, master plan, manifest, ledger and private checklist.",
@@ -1453,7 +1453,7 @@
     {
       "id": "G1",
       "name": "Protect current live map and reconcile existing branches",
-      "state": "pending",
+      "state": "review_regressions_implemented_pending_validation",
       "acceptance": [
         "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
         "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
@@ -1536,11 +1536,25 @@
     "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
   },
   "preservation": {
-    "runtime_changed": false,
+    "runtime_changed": true,
     "public_database_changed": false,
     "player_progress_changed": false,
     "feedback_changed": false,
     "workspace_changed": false,
     "other_prs_changed": false
+  },
+  "at326": {
+    "status": "implemented_on_review_branch_pending_validation",
+    "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
+    "qa": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
+    "findings": [
+      "AT325-R01",
+      "AT325-R02",
+      "AT325-R03"
+    ],
+    "reviewed_head": null,
+    "ci": null,
+    "visual_review": null,
+    "pages": null
   }
 }

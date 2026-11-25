@@ -95,7 +95,9 @@
     district="All";
     if(search)search.value="";
     repaint();
-    const details=card.querySelector("details");
+    // A Wild Zone may also contain an encounter disclosure (Zone 20).
+    // Restore the numbered item-record panel rather than the first details element.
+    const details=card.querySelector(hash.startsWith("wildzone-")?"details.zone-records":"details");
     if(details)details.open=true;
     if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>card.scrollIntoView({block:"start",behavior:"instant"}));
   }
