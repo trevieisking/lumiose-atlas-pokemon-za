@@ -81,7 +81,7 @@ export function routeVideoUrl(video) {
   if (!video || typeof video.video_id !== "string" ||
       !/^[A-Za-z0-9_-]{11}$/.test(video.video_id) ||
       !Number.isInteger(video.start_seconds) || video.start_seconds < 0 || video.start_seconds > 86400 ||
-      !["publisher_chapter", "numbering_candidate"].includes(video.verification) ||
+      (!["publisher_chapter", "numbering_candidate", "publisher_video"].includes(video.verification) || (video.verification === "publisher_video" && video.start_seconds !== 0)) ||
       !["title", "creator", "note"].every(k => typeof video[k] === "string" && video[k].trim().length > 0 && video[k].length <= 500)) return null;
   return "https://www.youtube.com/watch?v=" + video.video_id + "&t=" + video.start_seconds + "s";
 }

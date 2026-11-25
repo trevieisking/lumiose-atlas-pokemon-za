@@ -11,7 +11,8 @@ export const VIDEO_SOURCES=Object.freeze({
   hunting:{id:"X54oNz8lhJ4",creator:"Hylianstagram",title:"Complete shiny and shalpha hunting guide",date:"2025-12-30"},
   screws:{id:"BYfSBf-a4g0",creator:"Khrey",title:"All 100 Colorful Screws",date:"2025-10-22"},
   sides:{id:"zh74vxGo56o",creator:"Crystal Longplays",title:"All Side Mission Guide/Walkthrough",date:"2025-11-05"},
-  holovator61:{id:"oNzm9uQOCcs",creator:"Andruidus",title:"Side Mission #061: My Favorite Holovator",date:"2025-10-22"}
+  holovator61:{id:"oNzm9uQOCcs",creator:"Andruidus",title:"Side Mission #061: My Favorite Holovator",date:"2025-10-22"},
+  sewer57:{id:"DYB6AtF6dpo",creator:"JoseRockzVGC",title:"How to Find the Hidden Side Mission in Bleu Sector 3",date:"2025-10-27"}
 });
 const cap=s=>s[0].toUpperCase()+s.slice(1);
 const zoneOK=n=>Number.isInteger(n)&&n>=1&&n<=20;
@@ -50,6 +51,7 @@ export function screwVideo(d){
   return Object.hasOwn(SCREW,d)?video("screws",SCREW[d][0],"Colorful Screws · creator's "+SCREW[d][1]+" chapter"):null;
 }
 export function sideVideo(n){
+  if(n===57)return video("sewer57",0,"The Camerupt Entrepreneur · underground access video");
   if(n===61)return video("holovator61",0,"My Favorite Holovator · mission video");
   return Number.isInteger(n)&&n>=1&&n<=SIDE.length?video("sides",SIDE[n-1],"Side Mission "+n+" · walkthrough chapter"):null;
 }
@@ -123,6 +125,7 @@ export function installArticleLinks(doc,page){
       const start=[...body.querySelectorAll("p")].find(p=>p.querySelector("b")?.textContent.trim()==="Start:");
       const links=locationLinks(start?.textContent||"");
       const n=Number(card.dataset.questKey),clip=sideVideo(n);
+      if(n===57)links.push(internal("atlas-explorer.html?sector=bleu-sector-1","Step-by-step sewer entrance routes · district reference"));
       if(n===61)links.push(internal("atlas-explorer.html?place=bleu3-fav","Owner-photo Holovator approach · approximate map area"));
       if(clip)links.push(clip);
       if(links.length)appendGuidePanel(body,"Map and video references",links,

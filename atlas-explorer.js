@@ -436,7 +436,7 @@ function renderRoute(){
     if(!url)continue;
     const card=element("div","ae-route-video");
     const time=Math.floor(video.start_seconds/60)+":"+String(video.start_seconds%60).padStart(2,"0");
-    const status=video.verification==="numbering_candidate"?"Candidate video match":"Publisher-listed video chapter";
+    const status=video.verification==="numbering_candidate"?"Candidate video match":video.verification==="publisher_video"?"Creator-listed mission video":"Publisher-listed video chapter";
     const anchor=link(url,"Watch "+video.title+" ("+time+") on YouTube",true);
     anchor.dataset.videoId=video.video_id;
     anchor.addEventListener("click",()=>rememberVideo(video,anchor,route,step));

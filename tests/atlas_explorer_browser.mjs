@@ -599,7 +599,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -628,7 +628,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -677,7 +677,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -720,7 +720,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -765,7 +765,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-9");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-23"]').count(),1);
@@ -895,7 +895,7 @@ try{
   for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-3",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert3-cyclone-rooftop-courses");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),16);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),18);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').count(),1);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/orientation only, not certified roof connections/);
@@ -1175,6 +1175,35 @@ try{
     assert.equal(await selected.locator("a.atlas-guide-video").count(),2);
     await selected.scrollIntoViewIfNeeded();await selected.screenshot({path:output+"/at311-explorer-zone3-"+kind+".png"});
     await guide.close();
+  }
+  // AT-313: actual new approaches and video/mission navigation on phone and desktop.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage();
+    for(const [sector,route] of [["vert-sector-8","vert8-hotel-rooftop-courses"],["bleu-sector-1","bleu1-sewer-approaches"]]){
+      await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
+      await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),18);
+      assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+      for(let n=1;n<=7;n++){
+        assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 7"));
+        if(sector==="bleu-sector-1"&&n===1){
+          assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=DYB6AtF6dpo&t=0s");
+          assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Creator-listed mission video.*not frame-verified/);
+        }
+        const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+        assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1);
+        if(n===1||n===5){await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();await page.screenshot({path:output+"/at313-"+sector+"-step"+n+"-"+kind+".png"});}
+        if(n<7)await page.locator("#aeNextStep").click();
+      }
+      assert.ok(await page.locator("#aeNextStep").isDisabled());
+    }
+    await page.goto(base+"/side-missions.html#quest-57",{waitUntil:"load"});
+    const panel=page.locator("#quest-57 .atlas-guide-links");await panel.waitFor();
+    assert.equal(await panel.locator("a.atlas-guide-video").getAttribute("href"),"https://www.youtube.com/watch?v=DYB6AtF6dpo");
+    await panel.locator('a[href="atlas-explorer.html?sector=bleu-sector-1"]').click();
+    await page.waitForURL("**/atlas-explorer.html?sector=bleu-sector-1");
+    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="bleu1-sewer-approaches");
+    await page.close();
   }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");

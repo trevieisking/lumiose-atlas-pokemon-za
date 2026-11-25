@@ -186,7 +186,7 @@
       "id": "vert-sector-8",
       "kind": "sector",
       "label": "Vert Sector 8",
-      "status": "partial_text_research_expanded",
+      "status": "written_route_integrated_pending_review",
       "lead_ids": [
         "AR-V08-01",
         "AR-V08-02",
@@ -215,8 +215,12 @@
       "id": "bleu-sector-1",
       "kind": "sector",
       "label": "Bleu Sector 1",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B01-01",
+        "AR-B01-02",
+        "AR-B01-03"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1872,13 +1876,79 @@
       "also_relevant_area": "vert-sector-5",
       "related_existing_route_id": "hotel-z-ladder",
       "sector_label_conflict": true
+    },
+    {
+      "id": "AR-B01-01",
+      "area": "bleu-sector-1",
+      "kind": "street_alley_underground_access",
+      "landmark": "Bleu Sector 3 alley near Café Woof",
+      "notes": "Water-type move clears sludge; descend and turn left to the underground passage.",
+      "sources": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-how-to-return-to-lumiose-sewers/",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-057-the-camerupt-entrepreneur",
+        "https://www.serebii.net/legendsz-a/sidemissions/thecameruptentrepreneur.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-1.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B01-02",
+      "area": "bleu-sector-1",
+      "kind": "wildzone_5_alternative_access",
+      "landmark": "Wild Zone 5 northwest stairs and southeast exit",
+      "notes": "Clear sludge with Water-type attacks; watch for Alpha Whirlipede; exit toward Hérup.",
+      "sources": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-how-to-return-to-lumiose-sewers/",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-057-the-camerupt-entrepreneur",
+        "https://www.serebii.net/legendsz-a/sidemissions/thecameruptentrepreneur.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-1.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B01-03",
+      "area": "bleu-sector-1",
+      "kind": "sewer_gate_and_exit",
+      "landmark": "Underground passage and sewer entrance",
+      "notes": "Start Side Mission 57 after Rank D, register entry for fast travel, follow mission guidance to level 46 Camerupt. No new gate coordinates.",
+      "sources": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-how-to-return-to-lumiose-sewers/",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-057-the-camerupt-entrepreneur",
+        "https://www.serebii.net/legendsz-a/sidemissions/thecameruptentrepreneur.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-1.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 10,
+    "sector_text_research_started": 11,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 42,
+    "route_course_leads": 45,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
@@ -4138,5 +4208,34 @@
     "workspace": "unchanged_open",
     "supabase": "not_accessed_no_writes",
     "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment"
+  },
+  "at_313_vert8_bleu1_route_reconciliation": {
+    "status": "review_only_not_deployed",
+    "route_ids": [
+      "vert8-hotel-rooftop-courses",
+      "bleu1-sewer-approaches"
+    ],
+    "baseline_main_sha": "ca62d68f2e052bb5b7d584957be114cd6318d8d7",
+    "source_refs": {
+      "vert8": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/vert-sector-8.html"
+      ],
+      "bleu1": [
+        "https://www.powerpyx.com/pokemon-legends-z-a-how-to-return-to-lumiose-sewers/",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-057-the-camerupt-entrepreneur",
+        "https://www.serebii.net/legendsz-a/sidemissions/thecameruptentrepreneur.shtml",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-1.html"
+      ],
+      "video": "https://www.youtube.com/watch?v=DYB6AtF6dpo"
+    },
+    "new_exact_pins": 0,
+    "existing_routes_preserved": 15,
+    "total_routes_proposed": 17,
+    "existing_owner_photos_preserved": 111,
+    "sector_xy_remain_null": true,
+    "workspace": "unchanged_v37",
+    "notes": "Original district-only Screw IDs #3/#4 remain candidates; no crosswalk. Side Mission 57 entrance sector naming varies; both approach descriptions agree on the underground passage. Creator video description checked; frames not inspected. AT-299 map alignment still held: real owner close-up/wide-photo control and holdout study did not meet independent landmark gates. Exact native 1920px registration not attempted locally because the original map binary could not be downloaded to that runtime.",
+    "release_gate": "Exact-head unit, recovered-article, desktop and phone browser tests plus screenshot inspection; no promotion until verified."
   }
 }
