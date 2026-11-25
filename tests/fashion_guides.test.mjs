@@ -39,3 +39,19 @@ test("Verified fashion follow-up: exact clothing examples, five flower locations
   assert.ok(side.includes('id="quest-'+n+'"'));
  }
 });
+
+test("Fashion feedback preserves the originating guide and existing route format",()=>{
+ for(const doc of [clothes,hair]){
+  assert.equal((doc.match(/id="atlasArticleFeedback"/g)||[]).length,1);
+  assert.match(doc,/<a class="action feedback" id="atlasArticleFeedback" href="feedback\.html">/);
+ }
+ const shared=read("recovered-articles.js");
+ assert.match(shared,/getElementById\("atlasArticleFeedback"\)/);
+ assert.match(shared,/url\.searchParams\.set\("page", location\.pathname \+ location\.hash\)/);
+ const feedback=read("feedback.js");
+ const pagePattern=/^\/(?:[a-z0-9-]+(?:\.html)?(?:\/[a-z0-9-]+(?:\.html)?)*)?(?:#[a-z0-9-]+)?$/i;
+ for(const p of ["clothing-guide.html#accessory-prices","hair-beauty-guide.html#furfrou"]){
+  assert.ok(pagePattern.test("/lumiose-atlas-pokemon-za/"+p));
+ }
+ assert.ok(feedback.includes("candidate.startsWith(PREFIX)"));
+});

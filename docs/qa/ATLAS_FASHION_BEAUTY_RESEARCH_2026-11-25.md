@@ -29,3 +29,6 @@ Additional source checks:
 - https://serebii.net/legendsz-a/customisation.shtml — selected accessory examples checked by category; these are not a complete catalogue.
 
 Publication remains gated on validation of the new exact head, review findings, and visual readiness. Do not publish an original Workspace prompt independently of AT-325.
+
+### Review correction
+Codex P2 on initial head: both new article feedback anchors lacked the shared `atlasArticleFeedback` ID. Corrected both to use the existing article controller, which forwards the current pathname and hash to the existing feedback form. Checked the form and relay source path patterns accept these filenames and section IDs. Added static regression coverage; no feedback submission, service change or live end-to-end test performed. Exact-head review and CI remain required.
