@@ -3,17 +3,19 @@
   "schema_version": 1,
   "source_plan": "ATLAS-MAPS-2026-11-21-V1",
   "phase": "AT-304",
-  "status": "github_deployed_original_png_references_workspace_open",
+  "status": "at310_branch_complete_pending_release",
   "source_registers": [
     "MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json",
-    "AT304 owner source crop manifest (local attached evidence, reproduced in entries below)"
+    "AT304 owner source crop manifest (local attached evidence, reproduced in entries below)",
+    "MAPS_AT306_SOURCE_RECOVERY_2026-11-24.json",
+    "MAPS_AT309_OWNER_SOURCE_48_SECTORS_2026-11-24.json"
   ],
   "source_binary_policy": "Only original native-pixel map-only PNG crops with validated SHA-256 and Git blob SHA. Never change the original 1920x1920 basemap, owner Holovator galleries, or game source files.",
   "coordinate_policy": "Image crop rectangle is measured in source screenshot pixels, not Atlas 1920x1920 geographic coordinates. No label anchors, sector boundaries, lift entrances, ladder/scaffold or pickup pins asserted.",
   "counts": {
-    "image_crops": 23,
-    "sectors_with_photographic_references": 29,
-    "sectors_needing_source_image": 19,
+    "image_crops": 42,
+    "sectors_with_photographic_references": 48,
+    "sectors_needing_source_image": 0,
     "total_sectors": 48,
     "wild_zones_preserved": 20,
     "holovator_research_entries_preserved": 21,
@@ -764,6 +766,620 @@
       "registration": "not_georeferenced",
       "precision": "source_image_orientation_only",
       "source_original_unchanged": true
+    },
+    {
+      "id": "vert-sector-7",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+      "git_blob_sha": "141a10181603cc5630776da21d9dc13361a6f7ab",
+      "sha256": "ca3728dc59b2752ae057c32d416470a9ba354f2446451888829e26a3f4f36a96",
+      "bytes": 39799,
+      "width": 250,
+      "height": 92,
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        704,
+        338,
+        954,
+        430
+      ],
+      "visible_labels": [
+        "Vert Sector 7"
+      ],
+      "sector_ids": [
+        "vert-sector-7"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-sector-8",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+      "git_blob_sha": "5fb22030aa25df81bd5f1379726de7e21bf2d699",
+      "sha256": "023903eb59ca9f7188309b00254b2b5f464d66d4aab1c72139754bd680f1cb10",
+      "bytes": 48526,
+      "width": 222,
+      "height": 134,
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        423,
+        541,
+        645,
+        675
+      ],
+      "visible_labels": [
+        "Vert Sector 8"
+      ],
+      "sector_ids": [
+        "vert-sector-8"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-sector-9",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+      "git_blob_sha": "fc26b45d542ac348ec9ca197b5e187263781eb63",
+      "sha256": "2e2f79c5e87ca7e348268ce82fa0e1e0969bbadbcf9c3d88ce430efa012b7b1e",
+      "bytes": 62726,
+      "width": 240,
+      "height": 166,
+      "source_name": "file_0000000061b482468c7fe3f383107521.png",
+      "source_sha256": "61a86b8253ba026dbcfc0c7b3a2121144fa2416d606fb6bcdf5dd9c5fbabdebd",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        79,
+        444,
+        319,
+        610
+      ],
+      "visible_labels": [
+        "Vert Sector 9"
+      ],
+      "sector_ids": [
+        "vert-sector-9"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-3",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+      "git_blob_sha": "9fd2271b33622f6638aaddb46e8780ffa214b3a6",
+      "sha256": "14ac67d6a493f96ea6206bda0d1a8f132bc9039dae751e3c9ba43a1984d1b2ca",
+      "bytes": 18510,
+      "width": 182,
+      "height": 83,
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        614,
+        379,
+        796,
+        462
+      ],
+      "visible_labels": [
+        "Bleu Sector 3"
+      ],
+      "sector_ids": [
+        "bleu-sector-3"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-8",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+      "git_blob_sha": "26b4976062260860b2f30c7e3dc89f1e0ce280ce",
+      "sha256": "68a049bcdffd53d875c4e707ce7ec0fb0a700bedaaeb69b46c98c4bb8d0b5afd",
+      "bytes": 57357,
+      "width": 220,
+      "height": 175,
+      "source_name": "file_00000000906481f4bc2f0c5ac4fd1075.png",
+      "source_sha256": "17e50e163c44980e32b8bb13fcdda9e6002e76c044f2982fe7826a63beb3dc56",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        0,
+        573,
+        220,
+        748
+      ],
+      "visible_labels": [
+        "Bleu Sector 8"
+      ],
+      "sector_ids": [
+        "bleu-sector-8"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-1",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+      "git_blob_sha": "3369d1f073d4f003bb35cadd2a43e040bd0a5190",
+      "sha256": "013f7ac7fb9b4105841c34ca430f187b2626334321065a82e3b73f7661808c8b",
+      "bytes": 70800,
+      "width": 252,
+      "height": 190,
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        543,
+        70,
+        795,
+        260
+      ],
+      "visible_labels": [
+        "Rouge Sector 1"
+      ],
+      "sector_ids": [
+        "rouge-sector-1"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-2",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+      "git_blob_sha": "690ecfb5ce6deed374c08dba16a778512c90cf2e",
+      "sha256": "b535c70c9378f159ab74ced60f7202fb11ee4d2e46b7aaa0b75a63c339e01c6d",
+      "bytes": 49325,
+      "width": 220,
+      "height": 159,
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        900,
+        28,
+        1120,
+        187
+      ],
+      "visible_labels": [
+        "Rouge Sector 2"
+      ],
+      "sector_ids": [
+        "rouge-sector-2"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-4",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+      "git_blob_sha": "f271830230f217f45c498a339c8e131cb44c645a",
+      "sha256": "e2e6dd4f5af527d440dc28dfcd1b8e809fc501478011bf25408237a0281caabd",
+      "bytes": 63401,
+      "width": 234,
+      "height": 191,
+      "source_name": "file_000000002ad882109613c0285df16cb8.png",
+      "source_sha256": "bef9893df5f1516ac576f69b7655d6a966c230b492894cece37c831e2fc6309d",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        1250,
+        0,
+        1484,
+        191
+      ],
+      "visible_labels": [
+        "Jaune Sector 4"
+      ],
+      "sector_ids": [
+        "jaune-sector-4"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-8",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+      "git_blob_sha": "b52dd52797d940ebbaf31cd24bafad3dd2540de5",
+      "sha256": "2a5e3ba639a4313a502409b63db46561051567766d1514050b7512d9bc28a545",
+      "bytes": 74638,
+      "width": 337,
+      "height": 165,
+      "source_name": "file_000000003f68821096de231a6761b66d.png",
+      "source_sha256": "a7ea2df3c0dc56c93c9aff76b821e5338212d02237256d81afa08426d0272ae9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        780,
+        776,
+        1117,
+        941
+      ],
+      "visible_labels": [
+        "Jaune Sector 8"
+      ],
+      "sector_ids": [
+        "jaune-sector-8"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "rouge-sector-6",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+      "git_blob_sha": "9b5797a5a0bdcff329450b599c6323dec3c2f660",
+      "sha256": "127aecbe019c9c908acea5292cbe887446be69c912291890652de4d6821ec764",
+      "bytes": 55091,
+      "width": 362,
+      "height": 136,
+      "source_name": "file_00000000d8a08210afd30399933bc0f9.png",
+      "source_sha256": "74dfec1c91a211166926867ffc71232ee65dbf7908f21bb9a3055d24045858c9",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        861,
+        522,
+        1223,
+        658
+      ],
+      "visible_labels": [
+        "Rouge Sector 6"
+      ],
+      "sector_ids": [
+        "rouge-sector-6"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-9",
+      "batch": "AT-306",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+      "git_blob_sha": "137f00fdf58876920a98dfac2929a8a8fe9eb994",
+      "sha256": "7fae594c39eb6465426c9b8f60413a98075d953f4ff8cdcd51e3fe2bd72a06fd",
+      "bytes": 82296,
+      "width": 303,
+      "height": 184,
+      "source_name": "file_00000000ca1481f49c3225ef542bdde4.png",
+      "source_sha256": "24a0111d4c6fb9a2447e4a2afdb4d76693dfb967a82dbce23260fce8f01b6282",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "crop_xyxy": [
+        481,
+        604,
+        784,
+        788
+      ],
+      "visible_labels": [
+        "Magenta Sector 9"
+      ],
+      "sector_ids": [
+        "magenta-sector-9"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "vert-sector-3",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+      "git_blob_sha": "0d8109802a20b1da03bbe63ee303f80a517c5cdb",
+      "sha256": "630170cb7f689db311c8aac41d314b334f5f6e1ae6331c63ec65d59e9c9f062e",
+      "bytes": 69130,
+      "width": 309,
+      "height": 201,
+      "source_name": "holovator-vert-cafe-cyclone-neighbourhood-map.jpg",
+      "source_sha256": "23480416a825e0f59bc7cd3909abe7c0a9c6ebfe91538b9fa6bb590e6a466146",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        735,
+        3,
+        1044,
+        204
+      ],
+      "visible_labels": [
+        "Vert Sector 3"
+      ],
+      "sector_ids": [
+        "vert-sector-3"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true,
+      "source_repository_path": "assets/atlas/holovators/vert-cafe-cyclone/holovator-vert-cafe-cyclone-neighbourhood-map.jpg",
+      "source_repository_ref": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+      "supersedes_crop_sha256": "69ad1177c55eb5445cc3684c820a04bd8d2c11114d79c440e5869cd9748a0ac8",
+      "crop_review": "AT-310 source visual QA"
+    },
+    {
+      "id": "vert-sector-6",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+      "git_blob_sha": "5c105ba5302a582634753a41af1b8230507bbe09",
+      "sha256": "f4dd643b2b10ace15657d9aee0d754ba2591d051aad19ab6f5a5b750e52cf5cb",
+      "bytes": 662433,
+      "width": 1150,
+      "height": 670,
+      "source_name": "1000028343.heic",
+      "source_sha256": "98ed77874354f7f5fcb3f2c11541ba489baedcc278b133a4f1af1e632f526a91",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        190,
+        140,
+        1340,
+        810
+      ],
+      "visible_labels": [
+        "Vert Sector 6",
+        "Coulant Waterway",
+        "South Boulevard",
+        "Restaurant Le Nah"
+      ],
+      "sector_ids": [
+        "vert-sector-6"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-9",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+      "git_blob_sha": "2bfd18afa63d73f8aee4db66350e709bb709698d",
+      "sha256": "fc76701b527f5199d7cba6832909a5c447498644f87e88d80a229e165855039f",
+      "bytes": 657589,
+      "width": 1130,
+      "height": 715,
+      "source_name": "1000028349.heic",
+      "source_sha256": "2329095100cafcc84673e4ded30827ae4ba86b8a3b2638ee130684b9c6801a6f",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        130,
+        85,
+        1260,
+        800
+      ],
+      "visible_labels": [
+        "Bleu Sector 9",
+        "Café Soleil",
+        "South Boulevard"
+      ],
+      "sector_ids": [
+        "bleu-sector-9"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "bleu-sector-10",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+      "git_blob_sha": "f2eb364a38bf84a3bd75ceda3a6abc8d0503ebe9",
+      "sha256": "4c176e73c9c985fc3bdf483d11e48e607289ccac728764a2612592ed52afd13f",
+      "bytes": 748941,
+      "width": 1290,
+      "height": 805,
+      "source_name": "1000028352.heic",
+      "source_sha256": "ef93baa92e8066563f03860547ea2e4da06dae54a4561f8c5857d0581cfbab05",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        100,
+        15,
+        1390,
+        820
+      ],
+      "visible_labels": [
+        "Bleu Sector 10",
+        "Estival Avenue",
+        "Espace Vide"
+      ],
+      "sector_ids": [
+        "bleu-sector-10"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-2",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+      "git_blob_sha": "95de26961d2ab4c1b74753fb9f64bd0db4ccbfa6",
+      "sha256": "e84bad9f1aa3214a057a087481c98919b69069f4213221c7682ef7c8004eaec7",
+      "bytes": 280502,
+      "width": 792,
+      "height": 377,
+      "source_name": "holovator-lysandre-cafe-autumnal-close-map.jpg",
+      "source_sha256": "07703077a8563e0d21fa504a7ee2aef36eee818ac966057f1696a6d703498fd5",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        398,
+        488,
+        1190,
+        865
+      ],
+      "visible_labels": [
+        "Magenta Sector 2",
+        "Lysandre Café"
+      ],
+      "sector_ids": [
+        "magenta-sector-2"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true,
+      "source_repository_path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-close-map.jpg",
+      "source_repository_ref": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+      "supersedes_crop_sha256": "cb39a4fd478f79f78fd2d409d9649a7557531cdae4271747e5bf5f871d49bc5b",
+      "crop_review": "AT-310 source visual QA"
+    },
+    {
+      "id": "magenta-sector-7",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-7.png",
+      "git_blob_sha": "7788e8dbf2837137481b6f30ca1f13fc8840675e",
+      "sha256": "b12627e68cee77c0f5fbabff116b0f5e34a237e7b1eaa383d4edef46a8801c24",
+      "bytes": 295450,
+      "width": 800,
+      "height": 505,
+      "source_name": "1000028358.heic",
+      "source_sha256": "19c878bcf0544052ebc54973152ba45028d44e6dd63df8b0b4faa9411266313b",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        450,
+        240,
+        1250,
+        745
+      ],
+      "visible_labels": [
+        "Magenta Sector 7",
+        "Lumiose Sewers",
+        "Magenta Street"
+      ],
+      "sector_ids": [
+        "magenta-sector-7"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "magenta-sector-8",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-8.png",
+      "git_blob_sha": "048f65ed4a8431e799e9db42cc1fca5e26aed0b2",
+      "sha256": "96c1f53a3fad3846a8eb22864bba34e79d9e24197f048b99b018c644938e1d8d",
+      "bytes": 391491,
+      "width": 865,
+      "height": 555,
+      "source_name": "1000028358.heic",
+      "source_sha256": "19c878bcf0544052ebc54973152ba45028d44e6dd63df8b0b4faa9411266313b",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        60,
+        165,
+        925,
+        720
+      ],
+      "visible_labels": [
+        "Magenta Sector 8",
+        "Pokémon Center",
+        "Magenta Street"
+      ],
+      "sector_ids": [
+        "magenta-sector-8"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true
+    },
+    {
+      "id": "jaune-sector-5",
+      "batch": "AT-309",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+      "git_blob_sha": "871f8675f1ba3a0b80f0f3107984823926049dd4",
+      "sha256": "02a1d70040d7f0b2a6fedd38ace58c611bb5b2910cd3de0987f0e8ff5e42be57",
+      "bytes": 597428,
+      "width": 1151,
+      "height": 754,
+      "source_name": "1000028364.heic",
+      "source_sha256": "9b3a231239780293545767af8fed6f7e1b7147c8350ff55e649fea8ccee7e57b",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        270,
+        75,
+        1421,
+        829
+      ],
+      "visible_labels": [
+        "Jaune Sector 5",
+        "Jaune Plaza"
+      ],
+      "sector_ids": [
+        "jaune-sector-5"
+      ],
+      "registration": "not_georeferenced",
+      "precision": "source_image_orientation_only",
+      "source_original_unchanged": true,
+      "source_repository_path": null,
+      "source_repository_ref": null,
+      "supersedes_crop_sha256": "12096c661910d8f3293d50af6f2cd73983f13ac22b3f19da504401a8602db584",
+      "crop_review": "AT-310 source visual QA"
     }
   ],
   "sector_coverage": [
@@ -786,8 +1402,8 @@
     {
       "sector_id": "vert-sector-3",
       "district": "Vert",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "vert-sector-3",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -810,32 +1426,32 @@
     {
       "sector_id": "vert-sector-6",
       "district": "Vert",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "vert-sector-6",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "vert-sector-7",
       "district": "Vert",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "vert-sector-7",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "vert-sector-8",
       "district": "Vert",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "vert-sector-8",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "vert-sector-9",
       "district": "Vert",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "vert-sector-9",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -858,8 +1474,8 @@
     {
       "sector_id": "bleu-sector-3",
       "district": "Bleu",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "bleu-sector-3",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -898,24 +1514,24 @@
     {
       "sector_id": "bleu-sector-8",
       "district": "Bleu",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "bleu-sector-8",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "bleu-sector-9",
       "district": "Bleu",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "bleu-sector-9",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "bleu-sector-10",
       "district": "Bleu",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "bleu-sector-10",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -930,8 +1546,8 @@
     {
       "sector_id": "magenta-sector-2",
       "district": "Magenta",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "magenta-sector-2",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -970,40 +1586,40 @@
     {
       "sector_id": "magenta-sector-7",
       "district": "Magenta",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "magenta-sector-7",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "magenta-sector-8",
       "district": "Magenta",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "magenta-sector-8",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "magenta-sector-9",
       "district": "Magenta",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "magenta-sector-9",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "rouge-sector-1",
       "district": "Rouge",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "rouge-sector-1",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "rouge-sector-2",
       "district": "Rouge",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "rouge-sector-2",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -1034,8 +1650,8 @@
     {
       "sector_id": "rouge-sector-6",
       "district": "Rouge",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "rouge-sector-6",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -1082,16 +1698,16 @@
     {
       "sector_id": "jaune-sector-4",
       "district": "Jaune",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "jaune-sector-4",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
     {
       "sector_id": "jaune-sector-5",
       "district": "Jaune",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "jaune-sector-5",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -1114,8 +1730,8 @@
     {
       "sector_id": "jaune-sector-8",
       "district": "Jaune",
-      "source_crop_id": null,
-      "status": "needs_source_image",
+      "source_crop_id": "jaune-sector-8",
+      "status": "source_photo_registered",
       "native_label_xy": null,
       "verified_geographic_polygon": false
     },
@@ -1249,29 +1865,9 @@
       ]
     }
   ],
-  "missing_sector_ids": [
-    "vert-sector-3",
-    "vert-sector-6",
-    "vert-sector-7",
-    "vert-sector-8",
-    "vert-sector-9",
-    "bleu-sector-3",
-    "bleu-sector-8",
-    "bleu-sector-9",
-    "bleu-sector-10",
-    "magenta-sector-2",
-    "magenta-sector-7",
-    "magenta-sector-8",
-    "magenta-sector-9",
-    "rouge-sector-1",
-    "rouge-sector-2",
-    "rouge-sector-6",
-    "jaune-sector-4",
-    "jaune-sector-5",
-    "jaune-sector-8"
-  ],
+  "missing_sector_ids": [],
   "follow_up": {
-    "image_coverage": "Find original source evidence for missing sector IDs and additional streets, not arbitrary image substitutes",
+    "image_coverage": "Review additional original imagery for precise street references only where useful; all 48 named sectors have orientation images in this branch.",
     "geographic_alignment": "At least three measured common landmarks plus independent held-out residual validation before overlaying any tile or geographic label",
     "workspace": "Original Workspace Site A remains separate and unmodified",
     "hyperspace": "No dynamic portal pins"
@@ -1318,5 +1914,22 @@
     "published_photo_sectors_unchanged": 29,
     "published_pngs_unchanged": 23,
     "pending_unhosted_png_candidates": 11
+  },
+  "at_310_image_completion": {
+    "status": "draft_assets_and_gallery_references_pending_ci_visual_review_pages",
+    "baseline_main": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+    "pull_request": 148,
+    "added_pngs": 19,
+    "added_png_bytes": 4325433,
+    "branch_total_pngs": 42,
+    "branch_sector_coverage": 48,
+    "baseline_public_pngs": 23,
+    "baseline_public_sector_coverage": 29,
+    "geographic_anchors_added": 0,
+    "pages_verified": false,
+    "original_workspace_changed": false,
+    "supabase_changed": false,
+    "original_handoff_png_bytes": 4865787,
+    "source_visual_recrops": 3
   }
 }
