@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 61,
+  "revision": 62,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -4575,7 +4575,7 @@
     "code_labs_changes": false
   },
   "at_319_bleu2_4_6_written_routes": {
-    "status": "review_only_not_deployed",
+    "status": "github_deployed_ci_visual_verified",
     "baseline_main_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
     "route_ids": [
       "bleu2-wildzone5-roof-sweep",
@@ -4619,6 +4619,73 @@
     "sector_xy_remain_null": true,
     "private_checklist": "read only; later rows absent; reconciliation pending",
     "workspace": "unchanged_v37",
-    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
+    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment",
+    "release": {
+      "pr": 155,
+      "reviewed_head": "d9dfd34ee7b0341507c20d83131e6ead207ae18d",
+      "merged_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "identical_tree": "39b4cff0f250fa41415a9df90870d0a003639061",
+      "atlas_run": 45652407346,
+      "unit": "success",
+      "browser": "success",
+      "visual_artifact": 15041382534,
+      "visual_review": "All 18 AT-319 phone/desktop Chromium source-map and route-step screenshots inspected; no visible clipping or broken images. Browser traversed all 19 new steps on both viewport sizes. Physical hardware not tested.",
+      "pages_run": 45653969683,
+      "pages_conclusion": "success",
+      "workspace": "v37 unchanged"
+    }
+  },
+  "at_320_bleu7_10_written_routes": {
+    "status": "review_only_not_deployed",
+    "baseline_main_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+    "route_ids": [
+      "bleu7-aymlis-roof-scaffold-courses",
+      "bleu8-soleil-beldum-access",
+      "bleu9-soleil-scaffold-roof-leads",
+      "bleu10-estival-boulevard-scaffold"
+    ],
+    "source_refs": {
+      "raider": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "gg": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+      "checklist": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+      "screws": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "b7": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-7.html",
+      "b9": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-9.html",
+      "duty": "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+      "duty2": "https://www.thonky.com/pokemon-legends-z-a/side-mission-045-on-maintenance-duty",
+      "beldum": "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+      "beldum2": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Side_Missions_81-100",
+      "rpg": "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards",
+      "gamespot": "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+    },
+    "existing_routes_preserved": 22,
+    "total_routes_proposed": 26,
+    "new_route_leads": 8,
+    "sector_text_research_started": 20,
+    "route_course_leads": 65,
+    "existing_numbered_screw_clues": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      64,
+      65
+    ],
+    "original_owner_route_preserved": "bleu7-south",
+    "existing_photo_refs": [
+      "bleu7-south",
+      "bleu8-soleil"
+    ],
+    "mission_92_exact_device": "unverified",
+    "new_screw_ids": 0,
+    "new_item_ids": 0,
+    "new_exact_pins": 0,
+    "sector_xy_remain_null": true,
+    "workspace": "unchanged_v37",
+    "private_checklist": "not accessed or written in this bounded GitHub cycle; reconciliation outstanding",
+    "video_policy": "no new videos; photo and written directions primary",
+    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment"
   }
 }
