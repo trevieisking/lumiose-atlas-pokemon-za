@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,locationLinks,VIDEO_SOURCES} from "../atlas-guide-links.mjs";
+import {zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,locationLinks,VIDEO_SOURCES,BUDDYVIDZ_CHANNEL,BUDDYVIDZ_CLIPS,buddyVidzClips} from "../atlas-guide-links.mjs";
 const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
 const checkLink=l=>{
@@ -44,4 +44,19 @@ test("AT-311 only published side chapters and mission #61 are offered; dynamic a
   assert.deepEqual(locationLinks("Rouge Sector 1 roof, Hyperspace portal").map(x=>x.href),["sector-maps.html#sector-rouge-sector-1","hyperspace-maps.html#portal-types"]);
   checkLink({href:"side-missions.html#quest-61"});
   for(const page of ["maps.html","sector-maps.html","alphas.html","items.html","walkthrough.html","side-missions.html","shiny-hunting.html","hyperspace-maps.html","mega-dimension.html"])assert.ok(read(page).includes("recovered-articles.js"),page);
+});
+
+test("AT-314 owner channel is separate from actual mission/Alpha videos and accepts only reviewed valid entries",()=>{
+  assert.equal(BUDDYVIDZ_CHANNEL,"https://www.youtube.com/@BuddyVidz-z8g");
+  assert.equal(BUDDYVIDZ_CLIPS.length,0,"No published clip was supplied at intake");
+  for(const [kind,max] of [["main_mission",42],["alpha_zone",20],["side_mission",203]]){
+    assert.deepEqual(buddyVidzClips(kind,1),[]);
+    const fixture={kind,number:1,videoId:"AbCdEf12345",title:"TEST fixture",startSeconds:37,reviewed:true};
+    assert.deepEqual(buddyVidzClips(kind,1,[fixture]),[{href:"https://www.youtube.com/watch?v=AbCdEf12345&t=37s",label:"BuddyVidz · TEST fixture (0:37)",external:true,owner:true}]);
+    assert.deepEqual(buddyVidzClips(kind,max+1,[{...fixture,number:max+1}]),[]);
+    for(const bad of [{...fixture,reviewed:false},{...fixture,videoId:"https://bad.example"},{...fixture,startSeconds:-1},{...fixture,title:""},{...fixture,number:2}])assert.deepEqual(buddyVidzClips(kind,1,[bad]),[]);
+  }
+  assert.equal(zoneVideos(3).length,2,"Preserve attributed existing guides");
+  assert.equal(sideVideo(57).href,"https://www.youtube.com/watch?v=DYB6AtF6dpo");
+  assert.match(read("app.js"),/installMainGuideBuddyVidz/);
 });

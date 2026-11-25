@@ -41,3 +41,8 @@
   .view .battle-season { overflow-x: auto; overscroll-behavior-x: contain; }
   .view .table-wrap { overscroll-behavior-x: contain; }
 }
+
+/* AT-314: owner channel entry; no changes to navigation or map gestures. */
+.atlas-buddyvidz{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;min-width:0;max-width:100%;box-sizing:border-box;padding:12px 14px;margin:14px 0;border:1px solid #dcd3e8;border-radius:10px;background:#f8f5fc;color:#483661;overflow-wrap:anywhere}
+.atlas-buddyvidz>div{flex:1 1 220px;min-width:0;max-width:100%}.atlas-buddyvidz strong{font-size:14px;line-height:1.35}.atlas-buddyvidz p{font-size:12px;line-height:1.45;margin:4px 0 0;color:#5f536f}.atlas-buddyvidz>a{display:inline-flex;align-items:center;min-height:42px;box-sizing:border-box;min-width:0;max-width:100%;padding:8px 12px;border:1px solid #c9bcd9;border-radius:7px;background:#fff;color:#49346e;font-size:13px;font-weight:700;white-space:normal;text-decoration:underline}
+@media(max-width:420px){.atlas-buddyvidz>a{flex:1 1 100%;justify-content:center;text-align:center}}

@@ -4210,7 +4210,7 @@
     "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment"
   },
   "at_313_vert8_bleu1_route_reconciliation": {
-    "status": "review_only_not_deployed",
+    "status": "deployed_verified",
     "route_ids": [
       "vert8-hotel-rooftop-courses",
       "bleu1-sewer-approaches"
@@ -4236,6 +4236,35 @@
     "sector_xy_remain_null": true,
     "workspace": "unchanged_v37",
     "notes": "Original district-only Screw IDs #3/#4 remain candidates; no crosswalk. Side Mission 57 entrance sector naming varies; both approach descriptions agree on the underground passage. Creator video description checked; frames not inspected. AT-299 map alignment still held: real owner close-up/wide-photo control and holdout study did not meet independent landmark gates. Exact native 1920px registration not attempted locally because the original map binary could not be downloaded to that runtime.",
-    "release_gate": "Exact-head unit, recovered-article, desktop and phone browser tests plus screenshot inspection; no promotion until verified."
+    "release_gate": "Exact-head unit, recovered-article, desktop and phone browser tests plus screenshot inspection; no promotion until verified.",
+    "release": {
+      "pr": 150,
+      "reviewed_head": "865403f979da738e8cccb7fe53ac3338cce51f14",
+      "merged_sha": "f46de9a9386c795d41a980f5adf060f5bb449cc4",
+      "identical_tree": "fe5d5532d068d52e2978db1c753d90fa2f144c8e",
+      "atlas_run": 45588041619,
+      "recovered_guide_run": 45588041824,
+      "checks": "success",
+      "visual_artifact": 15009452192,
+      "visual_review": "Eight actual desktop/mobile Chromium route screenshots inspected; device simulation",
+      "pages_run": 45606924784,
+      "pages_conclusion": "success",
+      "github_status": "deployed_verified",
+      "workspace": "v37 unchanged"
+    }
+  },
+  "at_314_buddyvidz_video_library": {
+    "status": "review_pending_exact_head_ci_and_visual_qa",
+    "channel": "https://www.youtube.com/@BuddyVidz-z8g",
+    "channel_source": "owner supplied; direct retrieval unavailable",
+    "recording_focus": [
+      "main missions",
+      "Alpha captures"
+    ],
+    "published_clips": 0,
+    "register": "atlas-guide-links.mjs#BUDDYVIDZ_CLIPS",
+    "policy": "Only individually reviewed public watch IDs, existing mission or Wild Zone IDs, optional timestamp. Keep external credited guides. No external SDK, tracking, storage, database writes, new map positions or gameplay account changes.",
+    "workspace": "hold_v37_until_batched_verified_delta",
+    "private_checklist": "not_written"
   }
 }

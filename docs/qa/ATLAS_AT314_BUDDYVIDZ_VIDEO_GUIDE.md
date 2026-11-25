@@ -1,0 +1,5 @@
+# AT-314 — BuddyVidz video intake
+
+Owner channel: https://www.youtube.com/@BuddyVidz-z8g
+
+No individual recording is currently supplied. The channel link is distinct from a verified watch link. A public clip can cover several missions or Alpha targets; use one reviewed entry per existing topic with its actual start timestamp. For Alpha footage, record the zone, species, day/night if relevant, approach/capture and whether it is a fixed, story, random or Hyperspace encounter. No need to catch the same Pokémon twice or create another account. Do not expose account details or private footage. Retain third-party attribution until useful first-party coverage is actually available. Preserve existing checkboxes, maps, and source evidence. For each future entry verify the public watch ID, channel/owner, title, timestamp, exact mission or zone and content, then run tests and stage the reviewed change. No fictitious placeholders or automatically imported video claims. Workspace uses extensionless routes and must adapt compatible changes using AT-297 after a tested GitHub batch.
