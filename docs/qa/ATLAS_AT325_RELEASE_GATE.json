@@ -2,13 +2,13 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 69,
-  "ledger_revision": 77,
+  "manifest_revision": 70,
+  "ledger_revision": 78,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "g1_review_regressions_implemented_on_branch_not_validated",
+  "current_state": "g1_partial_merged_g2_pilot_research",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -149,21 +149,21 @@
           "source": "PR #160 review and current maps.js selectZone/openHash",
           "problem": "Selecting another Wild Zone from standalone map/directory leaves old #wild-zone-N fragment; reload or shared link may reopen stale selection.",
           "required": "Synchronize selection and clearing to validated fragment without dropping unrelated query/fragment behavior or resetting filters on internal clicks. Test open deep link, change zone, reload, copy URL, filter-clear and back/forward where supported.",
-          "state": "implemented_on_review_branch_pending_validation"
+          "state": "github_pages_deployed_exact_sha_verified"
         },
         {
           "id": "AT325-R02",
           "source": "PR #160 review and current .github/workflows/atlas-explorer.yml paths",
           "problem": "40 source Wild Zone images and batch manifests do not trigger dedicated Atlas validation on photo-only PRs.",
           "required": "Add assets/atlas/wild-zones/** and maps.js to pull-request path scope; protect actual bytes, dimensions, hash, references and unchanged existing test requirements.",
-          "state": "implemented_on_review_branch_pending_validation"
+          "state": "github_pages_deployed_exact_sha_verified"
         },
         {
           "id": "AT325-R03",
           "source": "PR #160 review and current sector-maps.js openDirectHash",
           "problem": "Generic first details selector now selects Zone 20 Alpha pool instead of original item-record panel.",
           "required": "Use explicitly named existing item-record disclosure for Wild Zone anchors without changing ordinary sector behavior or #map-lead deep links. Add browser regression for #wildzone-20 and saved numbered clue panel.",
-          "state": "implemented_on_review_branch_pending_validation"
+          "state": "github_pages_deployed_exact_sha_verified"
         }
       ],
       "status": "deployed_with_outstanding_review_followup"
@@ -1097,13 +1097,16 @@
       "game_location_index_reference": 198,
       "identity_source": "AT-324 published community index; not coordinate evidence",
       "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
-      "source_geometry_status": "approximate_saved_centre_only",
+      "source_geometry_status": "two_views_candidate_photo_alignment_reviewed_no_polygon",
       "existing_centre": [
         795,
         1119
       ],
       "geometry": null,
-      "registration_evidence": null,
+      "registration_evidence": {
+        "register": "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+        "scope": "two approximate source-view registrations, manual controls and holdouts; no approved boundary"
+      },
       "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
       "navigation_review": "pending_evidence_review",
       "ready_for_verified_highlight": false
@@ -1229,13 +1232,16 @@
       "game_location_index_reference": 210,
       "identity_source": "AT-324 published community index; not coordinate evidence",
       "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
-      "source_geometry_status": "approximate_saved_centre_only",
+      "source_geometry_status": "two_views_candidate_photo_alignment_reviewed_no_polygon",
       "existing_centre": [
         1580,
         1135
       ],
       "geometry": null,
-      "registration_evidence": null,
+      "registration_evidence": {
+        "register": "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+        "scope": "two approximate source-view registrations, manual controls and holdouts; no approved boundary"
+      },
       "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
       "navigation_review": "pending_evidence_review",
       "ready_for_verified_highlight": false
@@ -1453,7 +1459,7 @@
     {
       "id": "G1",
       "name": "Protect current live map and reconcile existing branches",
-      "state": "review_regressions_implemented_pending_validation",
+      "state": "three_regressions_deployed_at320_reconciliation_pending",
       "acceptance": [
         "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
         "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
@@ -1463,7 +1469,7 @@
     {
       "id": "G2",
       "name": "Recover and calibrate owner-source map coverage",
-      "state": "pending",
+      "state": "four_candidate_photo_registrations_two_areas_no_production_geometry",
       "acceptance": [
         "Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.",
         "Find owner three city-map pieces in authorized prior files or source archive; the historical W01–W03 manifest is a candidate provenance lead, not proof that it is the identical three-piece set. No bytes newly recovered. Check exact hashes, image dimensions, overlaps, north-up, zoom, distortion and source purpose.",
@@ -1544,7 +1550,7 @@
     "other_prs_changed": false
   },
   "at326": {
-    "status": "implemented_on_review_branch_pending_validation",
+    "status": "github_pages_deployed_exact_sha_verified",
     "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
     "qa": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
     "findings": [
@@ -1555,6 +1561,50 @@
     "reviewed_head": null,
     "ci": null,
     "visual_review": null,
-    "pages": null
+    "pages": null,
+    "release": {
+      "pr": 167,
+      "reviewed_head": "74e36ece129433a37a9dc13d571c6f6504993ddf",
+      "reviewed_tree": "d09bd0915b7484c543da2598d87976e750aaf3c9",
+      "first_failed_run": 45692791625,
+      "ci_runs": [
+        45693885162,
+        45693885482
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 15059399203,
+      "visual_review": "Reviewed actual screenshots: Zone 20 item-panel open on phone/desktop, both photo layouts, both complete roster panels; original map overview. No visual regression identified in inspected samples.",
+      "merged_main": "eb711adf56a68b05e55d335586eb6b320d340203",
+      "merged_tree": "2cd6e4e78e11cd94e0e93ba39e68a7c343bd51e5",
+      "tree_delta_only": [
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+        "docs/qa/regenerate_at327_registration.py"
+      ],
+      "pages_run": 45694649336,
+      "pages_conclusion": "success",
+      "live_direct_check": false
+    }
+  },
+  "at327": {
+    "pr": 169,
+    "main_sha": "61596fac07f73809c3f3a23954997d1b4078c0b7",
+    "report": "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+    "register": "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+    "reproduce": "docs/qa/regenerate_at327_registration.py",
+    "source_recovery_run": 45693109903,
+    "source_artifact": 15059033948,
+    "source_pngs_actual_bytes_verified": 82,
+    "fit_frames": 4,
+    "areas_candidate": 2,
+    "holdout_rms_native_px": [
+      1.364,
+      1.401,
+      1.517,
+      1.8
+    ],
+    "verified_production_polygons": 0,
+    "new_verified_routes": 0,
+    "old_three_overview_files_recovered": 0
   }
 }
