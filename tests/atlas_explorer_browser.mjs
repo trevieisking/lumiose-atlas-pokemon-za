@@ -1205,6 +1205,33 @@ try{
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="bleu1-sewer-approaches");
     await page.close();
   }
+  // AT-314: channel is a normal external link, not an invented published video.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage();
+    for(const url of ["index.html#home","index.html#walkthrough","index.html#alphas","index.html#maps","walkthrough.html","alphas.html","maps.html","atlas-explorer.html?place=wz-03","sector-maps.html","journey.html"]){
+      await page.goto(base+"/"+url,{waitUntil:"load"});
+      const callout=page.locator(".atlas-buddyvidz:visible");
+      await callout.waitFor();
+      assert.equal(await callout.count(),1);
+      const channel=callout.locator("a");
+      assert.equal(await channel.getAttribute("href"),"https://www.youtube.com/@BuddyVidz-z8g");
+      assert.equal(await channel.getAttribute("target"),"_blank");
+      assert.equal(await channel.getAttribute("rel"),"noopener noreferrer");
+      assert.match(await callout.textContent(),/will be (linked|added)/);
+      const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+      assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-314 overflow "+url+JSON.stringify(bounds));
+      if(url==="journey.html"){
+        await page.goto(base+"/journey.html#journey-mission-24",{waitUntil:"load"});
+        await page.waitForFunction(()=>{const rect=document.getElementById("journey-mission-24")?.getBoundingClientRect();return rect&&rect.top>=-20&&rect.top<160;});
+        assert.equal(await page.locator(".atlas-buddyvidz").count(),1);
+      }
+      if(url==="index.html#home"||url==="walkthrough.html"||url==="alphas.html"){
+        await callout.scrollIntoViewIfNeeded();
+        await callout.screenshot({path:output+"/at314-"+url.replace(/[^a-z0-9]/gi,"-")+"-"+kind+".png"});
+      }
+    }
+    await page.close();
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

@@ -24,6 +24,37 @@ function video(source,seconds,label){
   return {href:"https://www.youtube.com/watch?v="+info.id+(seconds>0?"&t="+seconds+"s":""),label:label+" · "+info.creator+(seconds>0?" ("+stamp(seconds)+")":""),external:true,source,seconds};
 }
 const dedupe=links=>[...new Map(links.map(l=>[l.href,l])).values()];
+
+/* AT-314: Owner-provided channel and individually reviewed recordings.
+   No YouTube API, login, iframe, tracking, storage or unpublished video IDs. */
+export const BUDDYVIDZ_CHANNEL="https://www.youtube.com/@BuddyVidz-z8g";
+// Add only a publicly available, individually checked BuddyVidz recording.
+// {kind:"main_mission"|"alpha_zone"|"side_mission", number, videoId, title,
+//  startSeconds, reviewed:true}. The exact area/mission is checked before adding.
+export const BUDDYVIDZ_CLIPS=Object.freeze([]);
+const CLIP_LIMITS=Object.freeze({main_mission:42,alpha_zone:20,side_mission:203});
+export function buddyVidzClips(kind,number,records=BUDDYVIDZ_CLIPS){
+  if(!Object.hasOwn(CLIP_LIMITS,kind)||!Number.isInteger(number)||number<1||number>CLIP_LIMITS[kind]||!Array.isArray(records))return [];
+  return records.filter(r=>r&&r.kind===kind&&r.number===number&&r.reviewed===true&&typeof r.videoId==="string"&&/^[A-Za-z0-9_-]{11}$/.test(r.videoId)&&typeof r.title==="string"&&r.title.trim().length>0&&r.title.length<=180&&Number.isInteger(r.startSeconds)&&r.startSeconds>=0&&r.startSeconds<=86400)
+    .map(r=>({href:"https://www.youtube.com/watch?v="+r.videoId+(r.startSeconds?"&t="+r.startSeconds+"s":""),label:"BuddyVidz · "+r.title+(r.startSeconds?" ("+stamp(r.startSeconds)+")":""),external:true,owner:true}));
+}
+export function installBuddyVidzChannel(host,topic){
+  if(!host||host.querySelector(":scope > .atlas-buddyvidz"))return;
+  const doc=host.ownerDocument,callout=doc.createElement("aside");
+  callout.className="atlas-buddyvidz";callout.setAttribute("aria-label","BuddyVidz video channel");
+  const copy=doc.createElement("div"),title=doc.createElement("strong"),desc=doc.createElement("p");
+  title.textContent="Our video guide · BuddyVidz";
+  desc.textContent=topic==="alpha"?"Follow our Alpha-catching playthrough. Individual recordings will be linked to their Wild Zones after review.":"Follow our Pokémon Legends: Z-A playthrough. Individual mission and location videos will be added as they are recorded and checked.";
+  copy.append(title,desc);
+  const a=doc.createElement("a");a.href=BUDDYVIDZ_CHANNEL;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open BuddyVidz on YouTube";
+  callout.append(copy,a);
+  const intro=host.querySelector(":scope > .hero, :scope > .page-intro, :scope > .ae-hero");
+  if(intro)intro.insertAdjacentElement("afterend",callout);else host.prepend(callout);
+}
+export function installMainGuideBuddyVidz(doc){
+  for(const [id,topic] of [["home","story"],["walkthrough","story"],["alphas","alpha"],["maps","story"]])installBuddyVidzChannel(doc.getElementById(id),topic);
+}
+
 export function zoneLinks(n,current=""){
   if(!zoneOK(n))return [];
   const links=[
@@ -83,17 +114,19 @@ export function appendGuidePanel(host,title,links,note=""){
     row.append(a);
   }
   panel.append(row);
-  const notes=[note,links.some(x=>x.external)?VIDEO_NOTE:""].filter(Boolean);
+  const notes=[note,links.some(x=>x.external&&!x.owner)?VIDEO_NOTE:"",links.some(x=>x.owner)?"BuddyVidz: owner recording checked against this guide topic; opens a new tab.":""].filter(Boolean);
   if(notes.length){const p=doc.createElement("p");p.textContent=notes.join(" ");panel.append(p);}
   host.append(panel);return panel;
 }
 export function installArticleLinks(doc,page){
   const by=id=>doc.getElementById(id);
+  // Journey has a static channel entry so deep links do not move after initial layout.
+  if(page!=="journey.html")installBuddyVidzChannel(by("main"),page==="alphas.html"?"alpha":"story");
   const zonePages={"maps.html":"wild-zone-","sector-maps.html":"wildzone-","alphas.html":"zone-","items.html":"items-zone-"};
   if(Object.hasOwn(zonePages,page)){
     for(let n=1;n<=20;n++){
       const card=by(zonePages[page]+n);
-      const videos=page==="items.html"?[]:zoneVideos(n);
+      const videos=page==="items.html"?[]:[...zoneVideos(n),...buddyVidzClips("alpha_zone",n)];
       appendGuidePanel(card,"Maps, field notes and videos",[...zoneLinks(n,page),...videos],
         page==="items.html"?"Use the existing pickup checklist; a zone overview does not establish an exact pickup point.":"Videos cover encounters and hunting, not verified pickup or entrance coordinates.");
     }
@@ -113,8 +146,9 @@ export function installArticleLinks(doc,page){
     for(const card of doc.querySelectorAll(".route-index-card[data-mission]")){
       const location=card.querySelector(".route-index-map")?.textContent||"";
       const links=locationLinks(location);
+      const refs=links.length?links:[internal("maps.html","Open Lumiose city map"),internal("sector-maps.html#sector-directory","Browse all sector maps")];
       appendGuidePanel(card.querySelector(".route-index-body"),"Route map references",
-        links.length?links:[internal("maps.html","Open Lumiose city map"),internal("sector-maps.html#sector-directory","Browse all sector maps")],
+        [...refs,...buddyVidzClips("main_mission",Number(card.dataset.mission))],
         "Use the named area for orientation, then follow the mission's in-game marker. A changing battle zone or unmeasured location is not a fixed pin.");
     }
   }
@@ -128,6 +162,7 @@ export function installArticleLinks(doc,page){
       if(n===57)links.push(internal("atlas-explorer.html?sector=bleu-sector-1","Step-by-step sewer entrance routes · district reference"));
       if(n===61)links.push(internal("atlas-explorer.html?place=bleu3-fav","Owner-photo Holovator approach · approximate map area"));
       if(clip)links.push(clip);
+      links.push(...buddyVidzClips("side_mission",n));
       if(links.length)appendGuidePanel(body,"Map and video references",links,
         "Map links show the named area, not a precise quest marker. Follow the active marker for changing or DLC portal locations.");
     }

@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 57,
+  "revision": 59,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-310 deployed: 42 owner-source PNGs cover all 48 sectors. AT-311 guide/video cross-links are pending combined exact-head review.",
+  "current_phase": "AT-314 authorized BuddyVidz access confirmed; five public uploads inventoried, four mission candidates pending content review; channel UI under renewed exact-head validation after journey deep-link fix. AT-313 live on GitHub; Workspace v37 unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -139,8 +139,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -4407,7 +4407,7 @@
     "source_visual_recrops": 3
   },
   "at_311_cross_page_map_video_references": {
-    "status": "review_branch_pending_exact_head_ci_and_visual_qa",
+    "status": "github_deployed_verified",
     "baseline_main_sha": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
     "owner_priority": "Use all existing guide maps and relevant attributed video walkthroughs across pages",
     "module": "atlas-guide-links.mjs",
@@ -4434,6 +4434,63 @@
     "new_coordinates": 0,
     "workspace": "unchanged_open",
     "supabase": "not_accessed_no_writes",
-    "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment"
+    "release_gate": "Exact-head unit, recovered guide, Chromium phone/desktop screenshot QA and Pages deployment",
+    "release": {
+      "pr": 147,
+      "reviewed_head": "635b14fb0d97e4d59b03e577e1ecce8dddacccfd",
+      "merged_sha": "ca62d68f2e052bb5b7d584957be114cd6318d8d7",
+      "tree": "c63b761e8b822961fcfaaaab9408746e572b1321",
+      "atlas_run": 45556472066,
+      "recovered_guide_run": 45556472052,
+      "pages_run": 45556857970,
+      "conclusions": "success",
+      "workspace": "v37 scoped release reported; documentation PR #149 pending reconciliation"
+    }
+  },
+  "at_313_vert8_bleu1_release": {
+    "pr": 150,
+    "reviewed_head": "865403f979da738e8cccb7fe53ac3338cce51f14",
+    "merged_sha": "f46de9a9386c795d41a980f5adf060f5bb449cc4",
+    "identical_tree": "fe5d5532d068d52e2978db1c753d90fa2f144c8e",
+    "atlas_run": 45588041619,
+    "recovered_guide_run": 45588041824,
+    "checks": "success",
+    "visual_artifact": 15009452192,
+    "visual_review": "Eight actual desktop/mobile Chromium route screenshots inspected; device simulation",
+    "pages_run": 45606924784,
+    "pages_conclusion": "success",
+    "github_status": "deployed_verified",
+    "workspace": "v37 unchanged"
+  },
+  "at_314_buddyvidz_video_library": {
+    "status": "review_pending_exact_head_ci_and_visual_qa",
+    "channel": "https://www.youtube.com/@BuddyVidz-z8g",
+    "channel_source": "authorized_vidiq_owner_channel_verified",
+    "recording_focus": [
+      "main missions",
+      "Alpha captures",
+      "location and access routes"
+    ],
+    "published_clips": 0,
+    "register": "atlas-guide-links.mjs#BUDDYVIDZ_CLIPS",
+    "policy": "Only individually reviewed public watch IDs, existing mission or Wild Zone IDs, optional timestamp. Keep external credited guides. No external SDK, tracking, storage, database writes, new map positions or gameplay account changes.",
+    "workspace": "hold_v37_until_batched_verified_delta",
+    "private_checklist": "not_written",
+    "public_channel_id": "UCMIoyivRt1u4EYG-KPtfHwQ",
+    "public_upload_register": "docs/qa/BUDDYVIDZ_PUBLIC_UPLOAD_REGISTER.json",
+    "public_uploads_retrieved": 5,
+    "candidate_mission_recordings": 4,
+    "overview_recordings": 1,
+    "content_reviewed_clips": 0,
+    "alpha_clips": 0,
+    "discovery": "public uploads retrieved on requested development cycles; no automatic background sync",
+    "review_budget": "No paid visual review this pass; 25 credits per YouTube video, 125 for initial five; obtain approval before costly batch.",
+    "regression": {
+      "prior_head": "08963ba8c8a4cf1b96c32cccc45cbe4bfc450ae6",
+      "prior_run": 45607237651,
+      "prior_failed_check": "AT-272 mobile journey mission 24 hash position",
+      "fix": "static Journey channel panel; preserve hash navigation; require existing and added browser tests",
+      "status": "pending_validation"
+    }
   }
 }
