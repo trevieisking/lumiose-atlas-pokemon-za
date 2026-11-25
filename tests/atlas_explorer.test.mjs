@@ -230,8 +230,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,19);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,19);
+  assert.equal(data.routes.length,22);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,22);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -569,7 +569,7 @@ test("AT-295 optional video references are timestamped, labelled, safe and do no
   for(const invalid of [null,{...v,video_id:"javascript:alert(1)"},{...v,video_id:"abc&evil.com"},{...v,start_seconds:-1},{...v,start_seconds:1.5},{...v,verification:"frame_verified"},{...v,creator:""}])assert.equal(routeVideoUrl(invalid),null);
   assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
-  assert.equal(data.routes.length,19);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.routes.length,22);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
 
 test("AT-295 video return uses one private key, preserves unrelated state and tolerates blocked storage",()=>{
@@ -622,7 +622,7 @@ test("AT-299 selected-sector name is an optional non-geographic viewport context
   assert.match(css,/\.ae-sector-context\{[^}]*pointer-events:none/);
   assert.match(css,/\.ae-sector-context\[hidden\]\{display:none\}/);
   assert.equal(data.sectors.length,48);assert.ok(data.sectors.every(s=>s.xy===null));
-  assert.equal(data.routes.length,19);assert.equal(data.holovators.length,21);
+  assert.equal(data.routes.length,22);assert.equal(data.holovators.length,21);
 });
 
 
@@ -696,7 +696,7 @@ test("AT-310: 42 byte-verified original-game PNG crops cover 48 sectors without 
   }
   assert.equal(data.zones.length,20);assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((s,h)=>s+h.photos.length,0),111);
-  assert.equal(data.routes.length,19);
+  assert.equal(data.routes.length,22);
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js");
   assert.match(html,/42 clean PNG map crops/);
   assert.match(js,/ae-source-map-reference/);
@@ -743,7 +743,7 @@ test("AT-310: all 19 accepted owner crops are registered and linked without muta
   assert.equal(data.zones.length,20);
   assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
-  assert.equal(data.routes.length,19);
+  assert.equal(data.routes.length,22);
 });
 
 test("AT-313: Vert 8 and Bleu 1 routes preserve the owner ladder and never add new coordinates",()=>{
@@ -790,5 +790,37 @@ test("AT-315: separate Bleu 3 and Bleu 5 written courses, no inferred collectibl
   assert.ok(leads.every(x=>x.canonical_screw_id===null&&x.atlas_entrance_xy===null&&x.atlas_exit_xy===null&&!x.publish_new_pin));
   const owner=data.holovators.find(x=>x.id==="bleu3-fav");
   assert.equal(owner.photos.length,5);assert.equal(owner.entrance_exact,false);assert.equal(owner.roof_exact,false);
-  assert.equal(data.routes.length,19);assert.ok(data.sectors.every(x=>x.xy===null));
+  assert.equal(data.routes.length,22);assert.ok(data.sectors.every(x=>x.xy===null));
+});
+
+test("AT-319: written-first Bleu 2, 4 and 6 routes use existing map photos without inventing pins or collection IDs",()=>{
+  const b2=data.routes.find(x=>x.id==="bleu2-wildzone5-roof-sweep");
+  const b4=data.routes.find(x=>x.id==="bleu4-southern-roof-from-bleu6");
+  const b6=data.routes.find(x=>x.id==="bleu6-plaza-scaffold-roofs");
+  assert.equal(b2.steps.length,7);assert.equal(b4.steps.length,6);assert.equal(b6.steps.length,6);
+  assert.equal(b2.risk,"hostile_wild_pokemon");
+  assert.match(b2.steps[2].instruction,/northwest.*Abra.*Leaf Stone/);
+  assert.match(b2.steps[4].instruction,/Water-type attack.*Alpha Whirlipede/);
+  assert.match(b2.steps[5].instruction,/TM040 Bullet Seed/);
+  assert.match(b6.steps[2].instruction,/#62/);assert.match(b6.steps[3].instruction,/#63/);
+  assert.match(b4.steps[1].instruction,/Sector 6 route/);
+  assert.match(b4.steps[4].instruction,/Sun Stone, Ice Stone and Water Stone/);
+  for(const [n,r] of [[2,b2],[4,b4],[6,b6]]){
+    assert.equal(r.point_id,"bleu-sector-"+n);
+    assert.equal(r.anchor_precision,"district_only");
+    assert.equal(r.roof_exit_xy,null);assert.equal(r.known_floor_plan,false);
+    assert.equal(r.steps.at(-1).evidence,"unverified");
+    assert.ok(r.steps.every(x=>!x.video_refs));
+    const sector=data.sectors.find(s=>s.id===r.point_id);
+    assert.equal(sector.xy,null);assert.ok(sector.source_map_reference.image_path);
+  }
+  const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+  const receipt=survey.at_319_bleu2_4_6_written_routes;
+  assert.equal(receipt.new_exact_pins,0);assert.equal(receipt.new_screw_ids,0);assert.equal(receipt.new_item_ids,0);
+  assert.deepEqual(receipt.unresolved_district_clue_candidates,[60,61]);
+  const leads=survey.leads.filter(x=>/^AR-B(?:02|04|06)-/.test(x.id));
+  assert.equal(leads.length,7);
+  assert.ok(leads.every(x=>!x.publish_new_pin&&x.canonical_screw_id===null&&x.atlas_entrance_xy===null&&x.atlas_exit_xy===null));
+  assert.deepEqual(survey.at_319_written_first_policy.held_prs,[153,154]);
+  assert.equal(data.routes.length,22);
 });

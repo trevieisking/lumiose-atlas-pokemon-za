@@ -3551,6 +3551,162 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu2-wildzone5-roof-sweep",
+      "title": "Bleu Sector 2 — Wild Zone 5 roof and waterway sweep",
+      "point_id": "bleu-sector-2",
+      "district": "Bleu",
+      "risk": "hostile_wild_pokemon",
+      "anchor_precision": "district_only",
+      "description": "Three separate approaches: the northwestern roof, eastern courtyard and rooftop, and the underground waterway. Use this guide with the existing Wild Zone 5 and Bleu Sector 2 maps and saved item records. These are not measured roof-to-roof connections.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find Wild Zone 5",
+          "instruction": "Orient from Café Gallant, southwest of Centrico Plaza. Wild Zone 5 covers parts of Bleu Sectors 1 and 2 and Bleu Street. Use the open in-game gate and the existing Wild Zone 5 map. Do not confuse the zone entrance with the separate story sewer entrance.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Sweep the ground-level paths",
+          "instruction": "Search the open western grass and the buildings around it before climbing. Published inventories describe a Revive in the grassy area and a Great Ball near the adjoining building. Check the northwest stairwell and waterway for additional healing items; keep the original item IDs until each is individually matched.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Northwestern ladder — Abra and rooftop items",
+          "instruction": "Go to the northwest corner of the zone, look for the ladder on the building, and climb to the western rooftop. This is a useful search area for Abra and Electrike. Look around the lower roof for a Pearl and the upper roof for a Leaf Stone; a Fire move such as Ember is reported for the Leaf Stone obstacle.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Return for upper pickups",
+          "instruction": "Inspect the northwestern rooftops for a Full Heal and Great Ball. A higher Great Ball and a Timer Ball on a market stall are reported as Roto-Glide pickups. If your story has not unlocked Roto-Glide, leave these for a later visit instead of forcing a jump.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "passage",
+          "title": "Separate eastern approach — waterway",
+          "instruction": "Return to ground level and locate the blocked waterway in the northeastern part of Wild Zone 5. Clear the purple sludge with a Water-type attack, then clear the next obstruction below and follow the tunnel. An Alpha Whirlipede can be encountered beyond it; prepare to evade or catch it rather than assume the path is safe.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Eastern rooftop — TM040 Bullet Seed",
+          "instruction": "Near the Whirlipede and sewer approach, look for ladders leading onto the neighbouring eastern roofs. Follow accessible ladders toward the southern entrance and inspect the roof edge for the gold TM040 Bullet Seed pickup. Search the roofs for Electrike and Pidgeotto. Do not assume a crossing to the northwestern roof exists.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Finish the item checklist",
+          "instruction": "The original Bleu Sector 2 list has ten named item leads, #05-17 to #05-26. Some sources describe their surrounding Wild Zone 5 instead of a numbered sector. Use the existing Item Atlas checkmarks only after finding the item; neither the exact ID crosswalk nor all ladder positions are confirmed.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu6-plaza-scaffold-roofs",
+      "title": "Bleu Sector 6 — southwest plaza scaffold and eastern roof",
+      "point_id": "bleu-sector-6",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "The paired Screw pickups on the western scaffold are distinguished from the separate rooftop pickup overlooking the Rust Syndicate neighbourhood. Existing #62 and #63 describe the lower and upper tiers. The rooftop lead remains unnumbered here.",
+      "steps": [
+        {
+          "space": "plaza",
+          "title": "Find the small park southwest of Bleu Plaza",
+          "instruction": "Use the Bleu Plaza and Bleu Sector 6 source map for orientation. Find the large western scaffold course in the small park southwest of the plaza. A route from Café Soleil approaches via adjoining streets, but start at the visible park if possible.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Reach the first upper platform",
+          "instruction": "Follow the scaffold ramps and steps from the side with the accessible climb. Reach the upper part of the first structure and line up with the neighbouring platform. Published guides describe a controlled roll across this gap; do not jump toward an unconfirmed roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Collect the lower-tier Screw clue #62",
+          "instruction": "After reaching the adjacent scaffold, inspect the sheltered area around its staircase and crates for the purple pickup. This fits the saved partway-up #62 description; check the actual item before marking the existing record.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Climb higher for Screw clue #63",
+          "instruction": "Continue up the stairs and ladder to the higher platform. Check the upper tier for a second purple pickup. This fits #63. A Sun Stone is also reported on the western scaffold, but its exact position and the existing item ID are not established.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Optional eastern rooftop search",
+          "instruction": "A separate published route uses the higher ladder and the glazed arcade roof, followed by another ladder onto the eastern building. Look around the upper roof facing the plaza and Rust Syndicate Office for another Screw and a reported Moon Stone. Do not assume this is the same as the Sector 4 pickup.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Keep the existing records",
+          "instruction": "The two scaffold tiers match the regional #62/#63 clues. The rooftop location is supported, but its correspondence to the district-level #60 or #61 records is unresolved. There is no new collection ID, exact scaffold base, calibrated roof exit or measured map pin.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu4-southern-roof-from-bleu6",
+      "title": "Bleu Sector 4 — southern roof via Bleu Sector 6",
+      "point_id": "bleu-sector-4",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Cross-checked rooftop approach from the Sector 6 scaffold. A separate western-roof group of evolution stones is reported, but its entrance has not been matched to this approach. No new Screw or item IDs.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start at Bleu Plaza, west side",
+          "instruction": "Bleu Sector 4 lies west of Bleu Plaza. Its source crop identifies the sector but does not establish an exact ladder. For the southern-roof Screw, start with the Sector 6 western scaffold course instead of looking for an unverified street entrance in Sector 4.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Use the Sector 6 scaffold approach",
+          "instruction": "Follow the written Bleu Sector 6 route through the two scaffold tiers and reach the roof above the course. Treat any return to street level as a separate approach; do not assume the other Sector 6 roof reaches the same target.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Continue toward the taller building",
+          "instruction": "At roof level, follow the accessible path toward the tall southern building in Sector 4. Published descriptions agree on using a ladder from the Sector 6 roof approach. Check that the visible path and ladders match before continuing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Climb and search the lower eastern roof",
+          "instruction": "Use the ladder to reach the higher part, then look down toward the east for the lower roof with the purple pickup. Drop only when the lower surface is visible and within reach. This is the reported Sector 4 Screw, not either of the two Sector 6 scaffold pickups.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Separate western-roof item leads",
+          "instruction": "Published inventories report Sun Stone, Ice Stone and Water Stone on the western building roofs. These are useful return targets but their access course has not been established. Do not present them as guaranteed pickups along the southern-roof route.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Unresolved collection crosswalk",
+          "instruction": "The original numbered-sector list contains no explicitly assigned Screw for Bleu Sector 4, whereas district-level clues #60 and #61 describe rooftops near Wild Zone 16 and the Rust Syndicate Office. Preserve the existing 100-entry checklist; do not create a new number or tick a candidate automatically. Exact entrances, roof geometry and item crosswalk remain unverified.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [

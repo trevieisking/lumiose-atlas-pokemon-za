@@ -599,7 +599,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -628,7 +628,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -677,7 +677,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -720,7 +720,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -765,7 +765,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-9");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-23"]').count(),1);
@@ -895,7 +895,7 @@ try{
   for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-3",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert3-cyclone-rooftop-courses");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),23);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').count(),1);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/orientation only, not certified roof connections/);
@@ -1182,7 +1182,7 @@ try{
     for(const [sector,route] of [["vert-sector-8","vert8-hotel-rooftop-courses"],["bleu-sector-1","bleu1-sewer-approaches"]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),23);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       for(let n=1;n<=7;n++){
         assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 7"));
@@ -1238,7 +1238,7 @@ try{
     for(const [sector,route,steps] of [["bleu-sector-3","bleu3-woof-scaffold-courses",6],["bleu-sector-5","bleu5-plaza-scaffold-rooftop",7]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),20);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),23);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
       assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=bleu3-fav"]').count(),1);
@@ -1260,6 +1260,31 @@ try{
       await photos.first().waitFor();await photos.first().scrollIntoViewIfNeeded();
       assert.equal(await photos.count(),5);
       await page.waitForFunction(()=>document.querySelector("#aeSelected .ae-photo-grid img")?.naturalWidth===1536);
+    }
+    await page.close();
+  }
+  // AT-319: use existing sector images and traverse each written route without video or new pins.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage();
+    for(const [sector,route,steps,width] of [["bleu-sector-2","bleu2-wildzone5-roof-sweep",7,415],["bleu-sector-4","bleu4-southern-roof-from-bleu6",6,325],["bleu-sector-6","bleu6-plaza-scaffold-roofs",6,520]]){
+      await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
+      await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),23);
+      assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
+      assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
+      const photo=page.locator("#aeSelected .ae-source-map-reference img");
+      await photo.scrollIntoViewIfNeeded();
+      await page.waitForFunction(w=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===w,width);
+      await page.screenshot({path:output+"/at319-"+sector+"-source-"+kind+".png"});
+      for(let n=1;n<=steps;n++){
+        assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of "+steps));
+        assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
+        const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+        assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-319 overflow "+JSON.stringify(bounds));
+        if(n===1||n===4){await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();await page.screenshot({path:output+"/at319-"+sector+"-step"+n+"-"+kind+".png"});}
+        if(n<steps)await page.locator("#aeNextStep").click();
+      }
+      assert.ok(await page.locator("#aeNextStep").isDisabled());
     }
     await page.close();
   }
