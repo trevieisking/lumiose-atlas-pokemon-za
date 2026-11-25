@@ -30,3 +30,7 @@ The script [regenerate_at327_registration.py](regenerate_at327_registration.py) 
 ## Gate and next steps
 
 Four aligned photographs, two candidate areas, **zero approved polygons** and no new exact route pins. Preserve original saved centre, existing coordinates, all 42/40 photos, all sector and progress records. Continue actual perimeter tracing and independent checks, then build approved native-space overlay geometry. Exact-head AT-326 PR #167 validation is separate; do not promote incomplete G1 or final Workspace prompt. This standalone research checkpoint deliberately avoids touching the active PR's canonical plan files; reconcile into the plan/manifest/ledger after its validation, retaining all evidence.
+
+## Follow-up: southern edge of Wild Zone 11
+
+[The daylight Vert 6 check](ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md) corroborates the visible southern green edge using an architecture-based fit independent of the earlier border/gate controls. Full perimeter and release gates remain open.

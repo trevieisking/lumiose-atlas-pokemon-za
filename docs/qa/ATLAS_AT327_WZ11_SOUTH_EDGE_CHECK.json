@@ -1,0 +1,249 @@
+{
+  "id": "AT-327-WZ11-SOUTH-EDGE-CHECK",
+  "status": "research_only_no_approved_geometry",
+  "baseline": "91e80f4bc1765981436e5c861540b422dd3487ad",
+  "source": {
+    "path": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+    "git_blob": "5c105ba5302a582634753a41af1b8230507bbe09",
+    "sha256": "f4dd643b2b10ace15657d9aee0d754ba2591d051aad19ab6f5a5b750e52cf5cb"
+  },
+  "base": {
+    "path": "maps/lumiose-game-map.jpg",
+    "git_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+    "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+  },
+  "comparison": [
+    {
+      "view": "closeup",
+      "path": "assets/atlas/wild-zones/wild-zone-11-closeup.png",
+      "git_blob": "7ddbc50bedc9efea810aa47bcd0f568fc712cb06",
+      "sha256": "580caa7e3b217969bd3bf2e044466434a304d2af633a3261a807db3711278e0a"
+    },
+    {
+      "view": "overview",
+      "path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+      "git_blob": "924c8d9e486206c7a9036d4775cb0f5e6a3cafa2",
+      "sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c"
+    }
+  ],
+  "method": "ordinary least squares affine; approximate manual architecture picks; border and icons excluded",
+  "native_map_size": [
+    1920,
+    1920
+  ],
+  "source_crop_size": [
+    1150,
+    670
+  ],
+  "matrix": [
+    [
+      0.3241152632,
+      -0.0158485402,
+      1409.3924686475
+    ],
+    [
+      0.0096850568,
+      0.3218498482,
+      1195.4421627068
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "controls": [
+    {
+      "role": "fit",
+      "landmark": "pond north",
+      "photo_xy": [
+        141,
+        122
+      ],
+      "base_xy": [
+        1453,
+        1236
+      ],
+      "residual_px": 0.175
+    },
+    {
+      "role": "holdout",
+      "landmark": "pond northeast",
+      "photo_xy": [
+        191,
+        138
+      ],
+      "base_xy": [
+        1471,
+        1242
+      ],
+      "residual_px": 1.911
+    },
+    {
+      "role": "fit",
+      "landmark": "pond southeast",
+      "photo_xy": [
+        143,
+        336
+      ],
+      "base_xy": [
+        1452,
+        1304
+      ],
+      "residual_px": 1.857
+    },
+    {
+      "role": "holdout",
+      "landmark": "pond southwest",
+      "photo_xy": [
+        79,
+        316
+      ],
+      "base_xy": [
+        1429,
+        1297
+      ],
+      "residual_px": 1.346
+    },
+    {
+      "role": "fit",
+      "landmark": "small pond southwest",
+      "photo_xy": [
+        40,
+        476
+      ],
+      "base_xy": [
+        1413,
+        1350
+      ],
+      "residual_px": 2.056
+    },
+    {
+      "role": "holdout",
+      "landmark": "small pond southeast",
+      "photo_xy": [
+        100,
+        496
+      ],
+      "base_xy": [
+        1436,
+        1357
+      ],
+      "residual_px": 2.266
+    },
+    {
+      "role": "fit",
+      "landmark": "diagonal west roof north",
+      "photo_xy": [
+        300,
+        414
+      ],
+      "base_xy": [
+        1500,
+        1332
+      ],
+      "residual_px": 0.412
+    },
+    {
+      "role": "fit",
+      "landmark": "diagonal west roof east",
+      "photo_xy": [
+        420,
+        547
+      ],
+      "base_xy": [
+        1537,
+        1375
+      ],
+      "residual_px": 0.581
+    },
+    {
+      "role": "holdout",
+      "landmark": "diagonal west roof south",
+      "photo_xy": [
+        371,
+        590
+      ],
+      "base_xy": [
+        1520,
+        1392
+      ],
+      "residual_px": 3.087
+    },
+    {
+      "role": "fit",
+      "landmark": "diagonal east roof south",
+      "photo_xy": [
+        541,
+        568
+      ],
+      "base_xy": [
+        1577,
+        1383
+      ],
+      "residual_px": 1.356
+    },
+    {
+      "role": "fit",
+      "landmark": "diagonal east roof east",
+      "photo_xy": [
+        725,
+        412
+      ],
+      "base_xy": [
+        1638,
+        1336
+      ],
+      "residual_px": 0.947
+    },
+    {
+      "role": "fit",
+      "landmark": "small east roof south",
+      "photo_xy": [
+        872,
+        436
+      ],
+      "base_xy": [
+        1684,
+        1344
+      ],
+      "residual_px": 1.131
+    },
+    {
+      "role": "holdout",
+      "landmark": "roof southwest corner below western stepped bank",
+      "photo_xy": [
+        298,
+        138
+      ],
+      "base_xy": [
+        1503,
+        1243
+      ],
+      "residual_px": 0.832
+    },
+    {
+      "role": "holdout",
+      "landmark": "central bridge west end at southern abutment",
+      "photo_xy": [
+        558,
+        202
+      ],
+      "base_xy": [
+        1588,
+        1267
+      ],
+      "residual_px": 1.486
+    }
+  ],
+  "fit_rms_px": 1.236,
+  "fit_max_px": 2.056,
+  "holdout_rms_px": 1.959,
+  "holdout_max_px": 3.087,
+  "production_geometry": null,
+  "limitations": [
+    "Approximate image landmark picks; not a positional confidence bound.",
+    "Four held-out points share structures with fitting points; two additional held-out structures are independent of the fit.",
+    "Daylight crop clips upper and lateral geometry. Do not infer a continuous perimeter or traversable connection across the bridge."
+  ]
+}
