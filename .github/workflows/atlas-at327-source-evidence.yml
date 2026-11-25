@@ -1,0 +1,35 @@
+name: AT-327 source image evidence (research branch only)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/atlas-at327-source-evidence.yml'
+permissions:
+  contents: read
+jobs:
+  exact-source-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Confirm unchanged source inventory
+        run: |
+          test "$(find assets/atlas/sector-streets -type f -name '*.png' | wc -l)" -eq 42
+          test "$(find assets/atlas/wild-zones -type f -name '*.png' | wc -l)" -eq 40
+          test -f maps/lumiose-game-map.jpg
+          git rev-parse HEAD
+      - name: Make exact original map inputs available to authorized research session
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-at327-original-map-inputs
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+          path: |
+            maps/lumiose-game-map.jpg
+            assets/atlas/sector-streets/**/*.png
+            assets/atlas/wild-zones/*.png
+            assets/atlas/wild-zones/batch-*-manifest.json
+            MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json
+            atlas-explorer-data.json
