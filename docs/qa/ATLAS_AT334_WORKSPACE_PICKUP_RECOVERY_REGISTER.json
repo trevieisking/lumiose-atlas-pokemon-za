@@ -1,0 +1,5173 @@
+{
+  "id": "AT-334",
+  "date": "2026-11-25",
+  "baseline_main_sha": "0a9557d2a014b645812a7c1c71b8e0b3444057ed",
+  "status": "original_archive_recovered_physical_verification_pending",
+  "source_provenance": {
+    "workspace_archives": [
+      {
+        "name": "lumiose-atlas-workspace-v35-source.zip",
+        "sha256": "0b3b274cf735db8f5e9b8795475cd083c745405848ac66618f0aebc76e68c835",
+        "members": 963,
+        "crc_check": "pass"
+      },
+      {
+        "name": "lumiose-atlas-workspace-v37-source.zip",
+        "sha256": "1a35949ff538dc42287a0ba9a32037023fa0362ff849857c16ed0c66b7aa64f7",
+        "members": 1127,
+        "crc_check": "pass"
+      }
+    ],
+    "dataset": "dist/map-items.json",
+    "dataset_sha256": "e76661e901bccd5fdac3eba577003429223f82f54767f956da023da316723fee",
+    "data_byte_identical_across_versions": true,
+    "zone_items_sha256": "bf09dcf55e3d6e67979309993bf57b73eb5fcfe0dc110043d016f8612fa5c346",
+    "screw_areas_sha256": "537c782555ad2cb28484213cda4c815340b5ec3c07696702788af3bbdede309a",
+    "screw_areas_geometry_fields": false,
+    "source_credit_file": "dist/index.html",
+    "source_credit_summary": "Original Workspace credits identify GamesRadar as city-map image source and Serebii Lumiose map as aligned fixed-pickup-coordinate source; original guide itself qualifies alignment as approximate.",
+    "source_map": "dist/maps/lumiose-game-map.jpg",
+    "native_size": [
+      1920,
+      1920
+    ],
+    "map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "map_git_blob_sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+    "current_github_map_blob_same": true,
+    "render_source": "dist/app.js uses source x/y percentages for left/top; archived height >40 mapped to upper level, <0 mapped to lower/underground, otherwise street. Do not reuse this classifier.",
+    "saved_markup_path": "src/sections/walkthrough.html",
+    "saved_markup_blob": "d7d2a9105a0ea7b647799aa3f84e81c7f35c1084",
+    "all_146_source_id_name_zone_xy_matches": true,
+    "height_transfer_adler32": 1264332332,
+    "source_archive_location": "Authorized private Library; complete source archives not committed or shared. No secrets, third-party sprite URLs, or owner data imported."
+  },
+  "counts": {
+    "archived_positions": 146,
+    "ordinary_item_marker_records": 144,
+    "screw_candidate_marker_records": 2,
+    "archive_to_saved_markup_matches": 146,
+    "numeric_height_values": 146,
+    "distinct_zones": 20,
+    "unique_name_zone_candidates": 111,
+    "one_item_multiple_marker_rows": 9,
+    "multiple_item_candidate_rows": 26,
+    "tm_area_text_crosschecks": 18,
+    "explicit_above_ground_legacy_floor_conflicts": 7,
+    "verified_physical_positions": 0,
+    "new_verified_native_pins": 0,
+    "new_numbered_screw_id_matches": 0
+  },
+  "records": [
+    {
+      "legacy_marker_id": 8021,
+      "name": "TM062",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        76.43,
+        76.12
+      ],
+      "archived_native_image_xy": [
+        1467.46,
+        1461.5
+      ],
+      "archived_height_raw": -0.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-6",
+          "number": "17-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Flamethrower",
+        "reported_zone": 17,
+        "reported_level_cue": "roof",
+        "written_target": "chimney-side rooftop",
+        "old_floor_label_review": "Legacy negative-height label contradicts rooftop.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8026,
+      "name": "Potion",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        75.82,
+        77.27
+      ],
+      "archived_native_image_xy": [
+        1455.74,
+        1483.58
+      ],
+      "archived_height_raw": 76.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-5",
+          "number": "17-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8028,
+      "name": "Rare Candy",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        74.29,
+        73.66
+      ],
+      "archived_native_image_xy": [
+        1426.37,
+        1414.27
+      ],
+      "archived_height_raw": 76.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-2",
+          "number": "17-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8029,
+      "name": "Big Nugget",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        75.88,
+        76.94
+      ],
+      "archived_native_image_xy": [
+        1456.9,
+        1477.25
+      ],
+      "archived_height_raw": -0.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-4",
+          "number": "17-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8088,
+      "name": "Max Revive",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        75.07,
+        73.96
+      ],
+      "archived_native_image_xy": [
+        1441.34,
+        1420.03
+      ],
+      "archived_height_raw": 55.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-3",
+          "number": "17-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8110,
+      "name": "Dusk Ball",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        79.03,
+        75.38
+      ],
+      "archived_native_image_xy": [
+        1517.38,
+        1447.3
+      ],
+      "archived_height_raw": 55.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-1",
+          "number": "17-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8111,
+      "name": "Rare Candy",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        77.18,
+        73.67
+      ],
+      "archived_native_image_xy": [
+        1481.86,
+        1414.46
+      ],
+      "archived_height_raw": 55.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-2",
+          "number": "17-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8112,
+      "name": "Ultra Ball",
+      "legacy_zone": 17,
+      "archived_city_percent_xy": [
+        75.8,
+        79.08
+      ],
+      "archived_native_image_xy": [
+        1455.36,
+        1518.34
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "17-0",
+          "number": "17-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8122,
+      "name": "Potion",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        59,
+        89.38
+      ],
+      "archived_native_image_xy": [
+        1132.8,
+        1716.1
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-2",
+          "number": "01-03",
+          "kind": "reward"
+        },
+        {
+          "id": "1-9",
+          "number": "01-10",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8151,
+      "name": "Poke Ball",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        61.82,
+        90.31
+      ],
+      "archived_native_image_xy": [
+        1186.94,
+        1733.95
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-0",
+          "number": "01-01",
+          "kind": "reward"
+        },
+        {
+          "id": "1-1",
+          "number": "01-02",
+          "kind": "reward"
+        },
+        {
+          "id": "1-3",
+          "number": "01-04",
+          "kind": "landmark"
+        },
+        {
+          "id": "1-6",
+          "number": "01-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8152,
+      "name": "Potion",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        56.1,
+        89.12
+      ],
+      "archived_native_image_xy": [
+        1077.12,
+        1711.1
+      ],
+      "archived_height_raw": 72.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-2",
+          "number": "01-03",
+          "kind": "reward"
+        },
+        {
+          "id": "1-9",
+          "number": "01-10",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8174,
+      "name": "Poke Ball",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        58.95,
+        87.53
+      ],
+      "archived_native_image_xy": [
+        1131.84,
+        1680.58
+      ],
+      "archived_height_raw": 12.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-0",
+          "number": "01-01",
+          "kind": "reward"
+        },
+        {
+          "id": "1-1",
+          "number": "01-02",
+          "kind": "reward"
+        },
+        {
+          "id": "1-3",
+          "number": "01-04",
+          "kind": "landmark"
+        },
+        {
+          "id": "1-6",
+          "number": "01-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8208,
+      "name": "Poke Ball",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        55.12,
+        94.21
+      ],
+      "archived_native_image_xy": [
+        1058.3,
+        1808.83
+      ],
+      "archived_height_raw": 75.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-0",
+          "number": "01-01",
+          "kind": "reward"
+        },
+        {
+          "id": "1-1",
+          "number": "01-02",
+          "kind": "reward"
+        },
+        {
+          "id": "1-3",
+          "number": "01-04",
+          "kind": "landmark"
+        },
+        {
+          "id": "1-6",
+          "number": "01-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8224,
+      "name": "Revive",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        57.58,
+        90.63
+      ],
+      "archived_native_image_xy": [
+        1105.54,
+        1740.1
+      ],
+      "archived_height_raw": -10.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-5",
+          "number": "01-06",
+          "kind": "landmark"
+        },
+        {
+          "id": "1-7",
+          "number": "01-08",
+          "kind": "zone_only"
+        },
+        {
+          "id": "1-8",
+          "number": "01-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8227,
+      "name": "TM103",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        58.63,
+        88.99
+      ],
+      "archived_native_image_xy": [
+        1125.7,
+        1708.61
+      ],
+      "archived_height_raw": -10.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-10",
+          "number": "01-11",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Work Up",
+        "reported_zone": 1,
+        "reported_level_cue": "roof",
+        "written_target": "western ladder to roof; rock obstacle",
+        "old_floor_label_review": "Legacy negative-height label contradicts rooftop.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://gamepedia.jp/pokemon-legends-z-a/items/4398",
+          "https://game8.jp/pokemon-legends-z-a/730916",
+          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8240,
+      "name": "Revive",
+      "legacy_zone": 1,
+      "archived_city_percent_xy": [
+        54.52,
+        92.23
+      ],
+      "archived_native_image_xy": [
+        1046.78,
+        1770.82
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "1-5",
+          "number": "01-06",
+          "kind": "landmark"
+        },
+        {
+          "id": "1-7",
+          "number": "01-08",
+          "kind": "zone_only"
+        },
+        {
+          "id": "1-8",
+          "number": "01-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8248,
+      "name": "TM027",
+      "legacy_zone": 2,
+      "archived_city_percent_xy": [
+        63.41,
+        66.89
+      ],
+      "archived_native_image_xy": [
+        1217.47,
+        1284.29
+      ],
+      "archived_height_raw": 76.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "2-0",
+          "number": "02-01",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Swift",
+        "reported_zone": 2,
+        "reported_level_cue": "ground_cue",
+        "written_target": "tree beside central water",
+        "old_floor_label_review": "Legacy upper-level label conflicts with grass-side cue.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8249,
+      "name": "Potion",
+      "legacy_zone": 2,
+      "archived_city_percent_xy": [
+        65.91,
+        64.51
+      ],
+      "archived_native_image_xy": [
+        1265.47,
+        1238.59
+      ],
+      "archived_height_raw": 76.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "2-3",
+          "number": "02-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8257,
+      "name": "Heal Ball",
+      "legacy_zone": 2,
+      "archived_city_percent_xy": [
+        58.55,
+        64.91
+      ],
+      "archived_native_image_xy": [
+        1124.16,
+        1246.27
+      ],
+      "archived_height_raw": 76.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "2-1",
+          "number": "02-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8258,
+      "name": "Great Ball",
+      "legacy_zone": 2,
+      "archived_city_percent_xy": [
+        64.71,
+        69.8
+      ],
+      "archived_native_image_xy": [
+        1242.43,
+        1340.16
+      ],
+      "archived_height_raw": 76.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "2-5",
+          "number": "02-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8262,
+      "name": "Paralyze Heal",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        42.65,
+        84.02
+      ],
+      "archived_native_image_xy": [
+        818.88,
+        1613.18
+      ],
+      "archived_height_raw": 95.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-4",
+          "number": "12-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8263,
+      "name": "TM013",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        42.04,
+        78.41
+      ],
+      "archived_native_image_xy": [
+        807.17,
+        1505.47
+      ],
+      "archived_height_raw": 78.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-10",
+          "number": "12-11",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Ice Beam",
+        "reported_zone": 12,
+        "reported_level_cue": "courtyard",
+        "written_target": "battle courtyard",
+        "old_floor_label_review": "Legacy upper-level label not supported by courtyard cue.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8312,
+      "name": "Ultra Ball",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        42.95,
+        79.32
+      ],
+      "archived_native_image_xy": [
+        824.64,
+        1522.94
+      ],
+      "archived_height_raw": 78.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-9",
+          "number": "12-10",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8344,
+      "name": "Repeat Ball",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        43.94,
+        82.52
+      ],
+      "archived_native_image_xy": [
+        843.65,
+        1584.38
+      ],
+      "archived_height_raw": 81.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-5",
+          "number": "12-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8345,
+      "name": "Dusk Ball",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        46.84,
+        81.22
+      ],
+      "archived_native_image_xy": [
+        899.33,
+        1559.42
+      ],
+      "archived_height_raw": 81.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-1",
+          "number": "12-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8346,
+      "name": "Dive Ball",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        45.75,
+        77.62
+      ],
+      "archived_native_image_xy": [
+        878.4,
+        1490.3
+      ],
+      "archived_height_raw": 81.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-0",
+          "number": "12-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8349,
+      "name": "Nest Ball",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        40.43,
+        80.79
+      ],
+      "archived_native_image_xy": [
+        776.26,
+        1551.17
+      ],
+      "archived_height_raw": 81.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-8",
+          "number": "12-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8350,
+      "name": "Ice Stone",
+      "legacy_zone": 12,
+      "archived_city_percent_xy": [
+        40.65,
+        82.08
+      ],
+      "archived_native_image_xy": [
+        780.48,
+        1575.94
+      ],
+      "archived_height_raw": 96.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "12-6",
+          "number": "12-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8354,
+      "name": "Revive",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        16.75,
+        62.36
+      ],
+      "archived_native_image_xy": [
+        321.6,
+        1197.31
+      ],
+      "archived_height_raw": 0.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-3",
+          "number": "10-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8355,
+      "name": "Nugget",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        15.01,
+        67.52
+      ],
+      "archived_native_image_xy": [
+        288.19,
+        1296.38
+      ],
+      "archived_height_raw": -8.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-9",
+          "number": "10-10",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8356,
+      "name": "Ultra Ball",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        11.7,
+        66.84
+      ],
+      "archived_native_image_xy": [
+        224.64,
+        1283.33
+      ],
+      "archived_height_raw": 0.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-0",
+          "number": "10-01",
+          "kind": "zone_only"
+        },
+        {
+          "id": "10-11",
+          "number": "10-12",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8358,
+      "name": "TM040",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        41.16,
+        64.07
+      ],
+      "archived_native_image_xy": [
+        790.27,
+        1230.14
+      ],
+      "archived_height_raw": 22.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-7",
+          "number": "05-08",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Bullet Seed",
+        "reported_zone": 5,
+        "reported_level_cue": "roof",
+        "written_target": "southern rooftop; clear slime and climb ladder",
+        "old_floor_label_review": "Legacy street-level label contradicts rooftop.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8360,
+      "name": "Full Heal",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        38.32,
+        56.92
+      ],
+      "archived_native_image_xy": [
+        735.74,
+        1092.86
+      ],
+      "archived_height_raw": 74,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-21",
+          "number": "05-22",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-22",
+          "number": "05-23",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8361,
+      "name": "Revive",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        38.61,
+        61.18
+      ],
+      "archived_native_image_xy": [
+        741.31,
+        1174.66
+      ],
+      "archived_height_raw": 70.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-3",
+          "number": "05-04",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-4",
+          "number": "05-05",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-16",
+          "number": "05-17",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-20",
+          "number": "05-21",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8362,
+      "name": "Luxury Ball",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        43.18,
+        58.95
+      ],
+      "archived_native_image_xy": [
+        829.06,
+        1131.84
+      ],
+      "archived_height_raw": 107.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-15",
+          "number": "05-16",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8364,
+      "name": "Great Ball",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        43.59,
+        61.9
+      ],
+      "archived_native_image_xy": [
+        836.93,
+        1188.48
+      ],
+      "archived_height_raw": 32,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-9",
+          "number": "05-10",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-17",
+          "number": "05-18",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-19",
+          "number": "05-20",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8380,
+      "name": "Hyper Potion",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        14.45,
+        69.02
+      ],
+      "archived_native_image_xy": [
+        277.44,
+        1325.18
+      ],
+      "archived_height_raw": 73.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-4",
+          "number": "10-05",
+          "kind": "zone_only"
+        },
+        {
+          "id": "10-6",
+          "number": "10-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8387,
+      "name": "Great Ball",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        14.35,
+        62.44
+      ],
+      "archived_native_image_xy": [
+        275.52,
+        1198.85
+      ],
+      "archived_height_raw": 76,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-2",
+          "number": "10-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8429,
+      "name": "TM034",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        16.52,
+        65.91
+      ],
+      "archived_native_image_xy": [
+        317.18,
+        1265.47
+      ],
+      "archived_height_raw": -17.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-7",
+          "number": "10-08",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Night Slash",
+        "reported_zone": 10,
+        "reported_level_cue": "roof",
+        "written_target": "rooftop slime; clear with Water attack",
+        "old_floor_label_review": "Legacy negative-height label contradicts rooftop.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8431,
+      "name": "Full Heal",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        39,
+        56.88
+      ],
+      "archived_native_image_xy": [
+        748.8,
+        1092.1
+      ],
+      "archived_height_raw": -0.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-21",
+          "number": "05-22",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-22",
+          "number": "05-23",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8432,
+      "name": "Revive",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        42.3,
+        55.02
+      ],
+      "archived_native_image_xy": [
+        812.16,
+        1056.38
+      ],
+      "archived_height_raw": 73.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-3",
+          "number": "05-04",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-4",
+          "number": "05-05",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-16",
+          "number": "05-17",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-20",
+          "number": "05-21",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8433,
+      "name": "Great Ball",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        41.46,
+        57.23
+      ],
+      "archived_native_image_xy": [
+        796.03,
+        1098.82
+      ],
+      "archived_height_raw": -17.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-9",
+          "number": "05-10",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-17",
+          "number": "05-18",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-19",
+          "number": "05-20",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8434,
+      "name": "Leaf Stone",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        41.19,
+        58.41
+      ],
+      "archived_native_image_xy": [
+        790.85,
+        1121.47
+      ],
+      "archived_height_raw": 8.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-18",
+          "number": "05-19",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8435,
+      "name": "Great Ball",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        39.99,
+        58.78
+      ],
+      "archived_native_image_xy": [
+        767.81,
+        1128.58
+      ],
+      "archived_height_raw": 71,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-9",
+          "number": "05-10",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-17",
+          "number": "05-18",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-19",
+          "number": "05-20",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8436,
+      "name": "Zinc",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        43.11,
+        63.58
+      ],
+      "archived_native_image_xy": [
+        827.71,
+        1220.74
+      ],
+      "archived_height_raw": 95.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-8",
+          "number": "05-09",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8438,
+      "name": "Paralyze Heal",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        45.9,
+        58.69
+      ],
+      "archived_native_image_xy": [
+        881.28,
+        1126.85
+      ],
+      "archived_height_raw": 76.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-1",
+          "number": "05-02",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-13",
+          "number": "05-14",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8454,
+      "name": "Dive Ball",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        15.71,
+        66.55
+      ],
+      "archived_native_image_xy": [
+        301.63,
+        1277.76
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-8",
+          "number": "10-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8456,
+      "name": "Quick Ball",
+      "legacy_zone": 10,
+      "archived_city_percent_xy": [
+        13.63,
+        65.01
+      ],
+      "archived_native_image_xy": [
+        261.7,
+        1248.19
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "10-1",
+          "number": "10-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8458,
+      "name": "Timer Ball",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        44.33,
+        58.06
+      ],
+      "archived_native_image_xy": [
+        851.14,
+        1114.75
+      ],
+      "archived_height_raw": 60.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-11",
+          "number": "05-12",
+          "kind": "sector_area"
+        },
+        {
+          "id": "5-14",
+          "number": "05-15",
+          "kind": "landmark"
+        },
+        {
+          "id": "5-24",
+          "number": "05-25",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8459,
+      "name": "Max Revive",
+      "legacy_zone": 5,
+      "archived_city_percent_xy": [
+        46.03,
+        59.33
+      ],
+      "archived_native_image_xy": [
+        883.78,
+        1139.14
+      ],
+      "archived_height_raw": 93.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "5-12",
+          "number": "05-13",
+          "kind": "sector_area"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8460,
+      "name": "Ultra Ball",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        33.35,
+        66.34
+      ],
+      "archived_native_image_xy": [
+        640.32,
+        1273.73
+      ],
+      "archived_height_raw": 76.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-8",
+          "number": "16-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8461,
+      "name": "Dusk Ball",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        38.34,
+        70.73
+      ],
+      "archived_native_image_xy": [
+        736.13,
+        1358.02
+      ],
+      "archived_height_raw": 78.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-3",
+          "number": "16-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8462,
+      "name": "TM076",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        38.62,
+        64.38
+      ],
+      "archived_native_image_xy": [
+        741.5,
+        1236.1
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-1",
+          "number": "16-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Liquidation",
+        "reported_zone": 16,
+        "reported_level_cue": "upper_ledge",
+        "written_target": "upper ledge; northern shrubs reported",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8463,
+      "name": "Quick Ball",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        37.19,
+        68.97
+      ],
+      "archived_native_image_xy": [
+        714.05,
+        1324.22
+      ],
+      "archived_height_raw": 82.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-4",
+          "number": "16-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8464,
+      "name": "Luxury Ball",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        39.25,
+        68.21
+      ],
+      "archived_native_image_xy": [
+        753.6,
+        1309.63
+      ],
+      "archived_height_raw": 82.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-2",
+          "number": "16-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8465,
+      "name": "Big Pearl",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        36.98,
+        65.72
+      ],
+      "archived_native_image_xy": [
+        710.02,
+        1261.82
+      ],
+      "archived_height_raw": 82.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-7",
+          "number": "16-08",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8466,
+      "name": "Heal Ball",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        35.38,
+        67.28
+      ],
+      "archived_native_image_xy": [
+        679.3,
+        1291.78
+      ],
+      "archived_height_raw": 82.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-6",
+          "number": "16-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8467,
+      "name": "Rare Candy",
+      "legacy_zone": 16,
+      "archived_city_percent_xy": [
+        36.85,
+        67.72
+      ],
+      "archived_native_image_xy": [
+        707.52,
+        1300.22
+      ],
+      "archived_height_raw": 81.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "16-5",
+          "number": "16-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8469,
+      "name": "TM079",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        79.44,
+        28.13
+      ],
+      "archived_native_image_xy": [
+        1525.25,
+        540.1
+      ],
+      "archived_height_raw": 55.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-8",
+          "number": "19-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Hurricane",
+        "reported_zone": 19,
+        "reported_level_cue": "bramble",
+        "written_target": "hedges; clear bramble with Fire",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8478,
+      "name": "TM052",
+      "legacy_zone": 15,
+      "archived_city_percent_xy": [
+        78.04,
+        18.9
+      ],
+      "archived_native_image_xy": [
+        1498.37,
+        362.88
+      ],
+      "archived_height_raw": -7.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "15-4",
+          "number": "15-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Earth Power",
+        "reported_zone": 15,
+        "reported_level_cue": "roof",
+        "written_target": "roof edge; lift access reported",
+        "old_floor_label_review": "Legacy negative-height label contradicts rooftop; exact lift identity unresolved.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8495,
+      "name": "Super Potion",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        79.4,
+        34.88
+      ],
+      "archived_native_image_xy": [
+        1524.48,
+        669.7
+      ],
+      "archived_height_raw": 28.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-7",
+          "number": "19-08",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8539,
+      "name": "Ultra Ball",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        80.56,
+        28.87
+      ],
+      "archived_native_image_xy": [
+        1546.75,
+        554.3
+      ],
+      "archived_height_raw": 51.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-1",
+          "number": "19-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8540,
+      "name": "Nugget",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        82.54,
+        29.86
+      ],
+      "archived_native_image_xy": [
+        1584.77,
+        573.31
+      ],
+      "archived_height_raw": 51.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-2",
+          "number": "19-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8543,
+      "name": "Full Heal",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        77.36,
+        29.97
+      ],
+      "archived_native_image_xy": [
+        1485.31,
+        575.42
+      ],
+      "archived_height_raw": 52.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-0",
+          "number": "19-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8574,
+      "name": "Nugget",
+      "legacy_zone": 15,
+      "archived_city_percent_xy": [
+        80.62,
+        18.06
+      ],
+      "archived_native_image_xy": [
+        1547.9,
+        346.75
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "15-1",
+          "number": "15-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8576,
+      "name": "Ultra Ball",
+      "legacy_zone": 15,
+      "archived_city_percent_xy": [
+        77.99,
+        16.89
+      ],
+      "archived_native_image_xy": [
+        1497.41,
+        324.29
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "15-0",
+          "number": "15-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8578,
+      "name": "Timer Ball",
+      "legacy_zone": 15,
+      "archived_city_percent_xy": [
+        77.92,
+        20.01
+      ],
+      "archived_native_image_xy": [
+        1496.06,
+        384.19
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "15-3",
+          "number": "15-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8579,
+      "name": "Dusk Ball",
+      "legacy_zone": 15,
+      "archived_city_percent_xy": [
+        83.32,
+        21.94
+      ],
+      "archived_native_image_xy": [
+        1599.74,
+        421.25
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "15-6",
+          "number": "15-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8580,
+      "name": "Quick Ball",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        82.98,
+        32.51
+      ],
+      "archived_native_image_xy": [
+        1593.22,
+        624.19
+      ],
+      "archived_height_raw": 39.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-3",
+          "number": "19-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8581,
+      "name": "Luxury Ball",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        78.32,
+        33.04
+      ],
+      "archived_native_image_xy": [
+        1503.74,
+        634.37
+      ],
+      "archived_height_raw": 47.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-5",
+          "number": "19-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8582,
+      "name": "Rare Candy",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        81,
+        35.35
+      ],
+      "archived_native_image_xy": [
+        1555.2,
+        678.72
+      ],
+      "archived_height_raw": 36,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-6",
+          "number": "19-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8583,
+      "name": "Repeat Ball",
+      "legacy_zone": 19,
+      "archived_city_percent_xy": [
+        81.93,
+        31.69
+      ],
+      "archived_native_image_xy": [
+        1573.06,
+        608.45
+      ],
+      "archived_height_raw": 35.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "19-4",
+          "number": "19-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8593,
+      "name": "Ultra Ball",
+      "legacy_zone": 11,
+      "archived_city_percent_xy": [
+        79.5,
+        62.68
+      ],
+      "archived_native_image_xy": [
+        1526.4,
+        1203.46
+      ],
+      "archived_height_raw": 81.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "11-4",
+          "number": "11-05",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8598,
+      "name": "Great Ball",
+      "legacy_zone": 6,
+      "archived_city_percent_xy": [
+        92.41,
+        53.47
+      ],
+      "archived_native_image_xy": [
+        1774.27,
+        1026.62
+      ],
+      "archived_height_raw": -17.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "6-2",
+          "number": "06-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8623,
+      "name": "Super Potion",
+      "legacy_zone": 6,
+      "archived_city_percent_xy": [
+        87.7,
+        54.87
+      ],
+      "archived_native_image_xy": [
+        1683.84,
+        1053.5
+      ],
+      "archived_height_raw": 30.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "6-4",
+          "number": "06-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8650,
+      "name": "Super Potion",
+      "legacy_zone": 6,
+      "archived_city_percent_xy": [
+        87.73,
+        50.68
+      ],
+      "archived_native_image_xy": [
+        1684.42,
+        973.06
+      ],
+      "archived_height_raw": -61.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "6-4",
+          "number": "06-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8664,
+      "name": "TM063",
+      "legacy_zone": 11,
+      "archived_city_percent_xy": [
+        82.65,
+        56.07
+      ],
+      "archived_native_image_xy": [
+        1586.88,
+        1076.54
+      ],
+      "archived_height_raw": 78.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "11-9",
+          "number": "11-10",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Psychic",
+        "reported_zone": 11,
+        "reported_level_cue": "bramble",
+        "written_target": "tree-side bramble; use Fire",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8668,
+      "name": "Pearl",
+      "legacy_zone": 6,
+      "archived_city_percent_xy": [
+        89,
+        55.35
+      ],
+      "archived_native_image_xy": [
+        1708.8,
+        1062.72
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "6-5",
+          "number": "06-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8669,
+      "name": "Super Potion",
+      "legacy_zone": 6,
+      "archived_city_percent_xy": [
+        92.95,
+        55.28
+      ],
+      "archived_native_image_xy": [
+        1784.64,
+        1061.38
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "6-4",
+          "number": "06-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8684,
+      "name": "Net Ball",
+      "legacy_zone": 11,
+      "archived_city_percent_xy": [
+        82.41,
+        62.92
+      ],
+      "archived_native_image_xy": [
+        1582.27,
+        1208.06
+      ],
+      "archived_height_raw": 87.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "11-3",
+          "number": "11-04",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8686,
+      "name": "Max Potion",
+      "legacy_zone": 11,
+      "archived_city_percent_xy": [
+        79.13,
+        56.33
+      ],
+      "archived_native_image_xy": [
+        1519.3,
+        1081.54
+      ],
+      "archived_height_raw": 96.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "11-10",
+          "number": "11-11",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8689,
+      "name": "Dive Ball",
+      "legacy_zone": 11,
+      "archived_city_percent_xy": [
+        84.64,
+        56.58
+      ],
+      "archived_native_image_xy": [
+        1625.09,
+        1086.34
+      ],
+      "archived_height_raw": 77,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "11-1",
+          "number": "11-02",
+          "kind": "landmark"
+        },
+        {
+          "id": "11-8",
+          "number": "11-09",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8698,
+      "name": "TM036",
+      "legacy_zone": 8,
+      "archived_city_percent_xy": [
+        70.79,
+        42.08
+      ],
+      "archived_native_image_xy": [
+        1359.17,
+        807.94
+      ],
+      "archived_height_raw": 29.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "8-3",
+          "number": "08-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Rock Tomb",
+        "reported_zone": 8,
+        "reported_level_cue": "ground_cue",
+        "written_target": "central dirt area",
+        "old_floor_label_review": "Ground cue; no measured floor.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8699,
+      "name": "Heal Ball",
+      "legacy_zone": 8,
+      "archived_city_percent_xy": [
+        69.31,
+        42.74
+      ],
+      "archived_native_image_xy": [
+        1330.75,
+        820.61
+      ],
+      "archived_height_raw": 29.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "8-2",
+          "number": "08-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8700,
+      "name": "Hyper Potion",
+      "legacy_zone": 8,
+      "archived_city_percent_xy": [
+        72.74,
+        43.19
+      ],
+      "archived_native_image_xy": [
+        1396.61,
+        829.25
+      ],
+      "archived_height_raw": 29.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "8-1",
+          "number": "08-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8701,
+      "name": "Great Ball",
+      "legacy_zone": 8,
+      "archived_city_percent_xy": [
+        73.01,
+        41.7
+      ],
+      "archived_native_image_xy": [
+        1401.79,
+        800.64
+      ],
+      "archived_height_raw": 29.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "8-0",
+          "number": "08-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8702,
+      "name": "Great Ball",
+      "legacy_zone": 8,
+      "archived_city_percent_xy": [
+        70.05,
+        38.98
+      ],
+      "archived_native_image_xy": [
+        1344.96,
+        748.42
+      ],
+      "archived_height_raw": 29,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "8-0",
+          "number": "08-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8709,
+      "name": "Full Heal",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.09,
+        54.53
+      ],
+      "archived_native_image_xy": [
+        174.53,
+        1046.98
+      ],
+      "archived_height_raw": 70.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-4",
+          "number": "09-05",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-12",
+          "number": "09-13",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8710,
+      "name": "Revive",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        13.16,
+        57.7
+      ],
+      "archived_native_image_xy": [
+        252.67,
+        1107.84
+      ],
+      "archived_height_raw": 70,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-15",
+          "number": "09-16",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8712,
+      "name": "Paralyze Heal",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        16.04,
+        54.66
+      ],
+      "archived_native_image_xy": [
+        307.97,
+        1049.47
+      ],
+      "archived_height_raw": 70.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-23",
+          "number": "09-24",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8713,
+      "name": "Big Pearl",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        12.04,
+        54.26
+      ],
+      "archived_native_image_xy": [
+        231.17,
+        1041.79
+      ],
+      "archived_height_raw": 14.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-2",
+          "number": "09-03",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-3",
+          "number": "09-04",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-20",
+          "number": "09-21",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8714,
+      "name": "Protein",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        15.42,
+        59.09
+      ],
+      "archived_native_image_xy": [
+        296.06,
+        1134.53
+      ],
+      "archived_height_raw": -9.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-18",
+          "number": "09-19",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8715,
+      "name": "Colorful Screw",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        15.97,
+        54.95
+      ],
+      "archived_native_image_xy": [
+        306.62,
+        1055.04
+      ],
+      "archived_height_raw": 39.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-22",
+          "number": "09-23",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8717,
+      "name": "Luxury Ball",
+      "legacy_zone": 14,
+      "archived_city_percent_xy": [
+        7.74,
+        41.64
+      ],
+      "archived_native_image_xy": [
+        148.61,
+        799.49
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "14-2",
+          "number": "14-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8718,
+      "name": "Max Revive",
+      "legacy_zone": 14,
+      "archived_city_percent_xy": [
+        8.43,
+        43.99
+      ],
+      "archived_native_image_xy": [
+        161.86,
+        844.61
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "14-3",
+          "number": "14-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8719,
+      "name": "Ultra Ball",
+      "legacy_zone": 14,
+      "archived_city_percent_xy": [
+        8.12,
+        45.51
+      ],
+      "archived_native_image_xy": [
+        155.9,
+        873.79
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "14-4",
+          "number": "14-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8722,
+      "name": "TM039",
+      "legacy_zone": 14,
+      "archived_city_percent_xy": [
+        9.71,
+        47.68
+      ],
+      "archived_native_image_xy": [
+        186.43,
+        915.46
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "14-6",
+          "number": "14-07",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Discharge",
+        "reported_zone": 14,
+        "reported_level_cue": "obstacle_corner",
+        "written_target": "corner behind rocks",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8725,
+      "name": "Full Heal",
+      "legacy_zone": 14,
+      "archived_city_percent_xy": [
+        10.97,
+        45.06
+      ],
+      "archived_native_image_xy": [
+        210.62,
+        865.15
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "14-5",
+          "number": "14-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8774,
+      "name": "TM018",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        15.35,
+        58.12
+      ],
+      "archived_native_image_xy": [
+        294.72,
+        1115.9
+      ],
+      "archived_height_raw": -9.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-17",
+          "number": "09-18",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Power-Up Punch",
+        "reported_zone": 9,
+        "reported_level_cue": "roof",
+        "written_target": "roof near Kadabra",
+        "old_floor_label_review": "Legacy negative-height label contradicts rooftop.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8775,
+      "name": "Pearl",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        16.34,
+        55.76
+      ],
+      "archived_native_image_xy": [
+        313.73,
+        1070.59
+      ],
+      "archived_height_raw": 22.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-21",
+          "number": "09-22",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8776,
+      "name": "Timer Ball",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.39,
+        56.39
+      ],
+      "archived_native_image_xy": [
+        180.29,
+        1082.69
+      ],
+      "archived_height_raw": 6.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-5",
+          "number": "09-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8777,
+      "name": "Nest Ball",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        15.44,
+        56.94
+      ],
+      "archived_native_image_xy": [
+        296.45,
+        1093.25
+      ],
+      "archived_height_raw": 25.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-0",
+          "number": "09-01",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-19",
+          "number": "09-20",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8782,
+      "name": "Nugget",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.99,
+        53.75
+      ],
+      "archived_native_image_xy": [
+        191.81,
+        1032
+      ],
+      "archived_height_raw": 54.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-1",
+          "number": "09-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8783,
+      "name": "Rare Candy",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.22,
+        55.99
+      ],
+      "archived_native_image_xy": [
+        177.02,
+        1075.01
+      ],
+      "archived_height_raw": 37.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-7",
+          "number": "09-08",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-10",
+          "number": "09-11",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8784,
+      "name": "Dusk Ball",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.13,
+        58.91
+      ],
+      "archived_native_image_xy": [
+        175.3,
+        1131.07
+      ],
+      "archived_height_raw": 54.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-11",
+          "number": "09-12",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8785,
+      "name": "Great Ball",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        10.79,
+        58.19
+      ],
+      "archived_native_image_xy": [
+        207.17,
+        1117.25
+      ],
+      "archived_height_raw": 54.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-8",
+          "number": "09-09",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-13",
+          "number": "09-14",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8786,
+      "name": "Full Heal",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        10.54,
+        58.67
+      ],
+      "archived_native_image_xy": [
+        202.37,
+        1126.46
+      ],
+      "archived_height_raw": 4.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-4",
+          "number": "09-05",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-12",
+          "number": "09-13",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8794,
+      "name": "Hyper Potion",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        14.04,
+        56.27
+      ],
+      "archived_native_image_xy": [
+        269.57,
+        1080.38
+      ],
+      "archived_height_raw": 62,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-16",
+          "number": "09-17",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8800,
+      "name": "Zinc",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        11,
+        58.43
+      ],
+      "archived_native_image_xy": [
+        211.2,
+        1121.86
+      ],
+      "archived_height_raw": 21.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-14",
+          "number": "09-15",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8801,
+      "name": "Rare Candy",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.16,
+        59.17
+      ],
+      "archived_native_image_xy": [
+        175.87,
+        1136.06
+      ],
+      "archived_height_raw": 21.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-7",
+          "number": "09-08",
+          "kind": "zone_only"
+        },
+        {
+          "id": "9-10",
+          "number": "09-11",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "multiple_item_candidates",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8802,
+      "name": "Calcium",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        9.65,
+        56.1
+      ],
+      "archived_native_image_xy": [
+        185.28,
+        1077.12
+      ],
+      "archived_height_raw": 54.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-6",
+          "number": "09-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8808,
+      "name": "Colorful Screw",
+      "legacy_zone": 9,
+      "archived_city_percent_xy": [
+        13.91,
+        52.41
+      ],
+      "archived_native_image_xy": [
+        267.07,
+        1006.27
+      ],
+      "archived_height_raw": -45.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "9-22",
+          "number": "09-23",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "many_legacy_markers_share_one_item_candidate",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8820,
+      "name": "Big Nugget",
+      "legacy_zone": 18,
+      "archived_city_percent_xy": [
+        20.23,
+        18.99
+      ],
+      "archived_native_image_xy": [
+        388.42,
+        364.61
+      ],
+      "archived_height_raw": 75.6,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "18-2",
+          "number": "18-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8849,
+      "name": "Burn Heal",
+      "legacy_zone": 18,
+      "archived_city_percent_xy": [
+        21.78,
+        14.64
+      ],
+      "archived_native_image_xy": [
+        418.18,
+        281.09
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "18-0",
+          "number": "18-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8905,
+      "name": "Rare Candy",
+      "legacy_zone": 18,
+      "archived_city_percent_xy": [
+        20.27,
+        20.87
+      ],
+      "archived_native_image_xy": [
+        389.18,
+        400.7
+      ],
+      "archived_height_raw": 25.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "18-6",
+          "number": "18-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8916,
+      "name": "Quick Ball",
+      "legacy_zone": 18,
+      "archived_city_percent_xy": [
+        21.6,
+        20.14
+      ],
+      "archived_native_image_xy": [
+        414.72,
+        386.69
+      ],
+      "archived_height_raw": -1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "18-5",
+          "number": "18-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8918,
+      "name": "Hyper Potion",
+      "legacy_zone": 18,
+      "archived_city_percent_xy": [
+        18.38,
+        18.85
+      ],
+      "archived_native_image_xy": [
+        352.9,
+        361.92
+      ],
+      "archived_height_raw": 76.1,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "18-3",
+          "number": "18-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8919,
+      "name": "Net Ball",
+      "legacy_zone": 7,
+      "archived_city_percent_xy": [
+        28.4,
+        40
+      ],
+      "archived_native_image_xy": [
+        545.28,
+        768
+      ],
+      "archived_height_raw": 75.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "7-0",
+          "number": "07-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8921,
+      "name": "TM092",
+      "legacy_zone": 7,
+      "archived_city_percent_xy": [
+        29.42,
+        43.05
+      ],
+      "archived_native_image_xy": [
+        564.86,
+        826.56
+      ],
+      "archived_height_raw": 75.2,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "7-4",
+          "number": "07-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Dazzling Gleam",
+        "reported_zone": 7,
+        "reported_level_cue": "monument_base",
+        "written_target": "obelisk base; bramble",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8923,
+      "name": "Great Ball",
+      "legacy_zone": 7,
+      "archived_city_percent_xy": [
+        28.76,
+        44.97
+      ],
+      "archived_native_image_xy": [
+        552.19,
+        863.42
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "7-3",
+          "number": "07-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8924,
+      "name": "Dive Ball",
+      "legacy_zone": 7,
+      "archived_city_percent_xy": [
+        27.93,
+        42.54
+      ],
+      "archived_native_image_xy": [
+        536.26,
+        816.77
+      ],
+      "archived_height_raw": 75.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "7-1",
+          "number": "07-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8984,
+      "name": "TM081",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        39.37,
+        8.45
+      ],
+      "archived_native_image_xy": [
+        755.9,
+        162.24
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-3",
+          "number": "13-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "X-Scissor",
+        "reported_zone": 13,
+        "reported_level_cue": "bramble",
+        "written_target": "bramble beside path",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8985,
+      "name": "Big Pearl",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        41.39,
+        7.46
+      ],
+      "archived_native_image_xy": [
+        794.69,
+        143.23
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-1",
+          "number": "13-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8995,
+      "name": "Great Ball",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        40.77,
+        8.85
+      ],
+      "archived_native_image_xy": [
+        782.78,
+        169.92
+      ],
+      "archived_height_raw": 71.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-2",
+          "number": "13-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8996,
+      "name": "Hyper Potion",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        38.82,
+        9.3
+      ],
+      "archived_native_image_xy": [
+        745.34,
+        178.56
+      ],
+      "archived_height_raw": 71.3,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-4",
+          "number": "13-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 8997,
+      "name": "Ultra Ball",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        37.58,
+        9.03
+      ],
+      "archived_native_image_xy": [
+        721.54,
+        173.38
+      ],
+      "archived_height_raw": 71.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-5",
+          "number": "13-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9021,
+      "name": "Luxury Ball",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        39.04,
+        6.65
+      ],
+      "archived_native_image_xy": [
+        749.57,
+        127.68
+      ],
+      "archived_height_raw": 71.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-7",
+          "number": "13-08",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9023,
+      "name": "Dive Ball",
+      "legacy_zone": 13,
+      "archived_city_percent_xy": [
+        37.6,
+        7.11
+      ],
+      "archived_native_image_xy": [
+        721.92,
+        136.51
+      ],
+      "archived_height_raw": 75.5,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "13-6",
+          "number": "13-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9033,
+      "name": "Great Ball",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        55.23,
+        12.51
+      ],
+      "archived_native_image_xy": [
+        1060.42,
+        240.19
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-8",
+          "number": "04-09",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9034,
+      "name": "Revive",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        58.73,
+        13.19
+      ],
+      "archived_native_image_xy": [
+        1127.62,
+        253.25
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-7",
+          "number": "04-08",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9036,
+      "name": "Net Ball",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        53.52,
+        13.1
+      ],
+      "archived_native_image_xy": [
+        1027.58,
+        251.52
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-9",
+          "number": "04-10",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9038,
+      "name": "TM072",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        56.01,
+        18.08
+      ],
+      "archived_native_image_xy": [
+        1075.39,
+        347.14
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-2",
+          "number": "04-03",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Fire Spin",
+        "reported_zone": 4,
+        "reported_level_cue": "building_back",
+        "written_target": "vines behind building",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9119,
+      "name": "Dusk Ball",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        55.17,
+        16.05
+      ],
+      "archived_native_image_xy": [
+        1059.26,
+        308.16
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-3",
+          "number": "04-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9120,
+      "name": "Heal Ball",
+      "legacy_zone": 4,
+      "archived_city_percent_xy": [
+        57.75,
+        16.69
+      ],
+      "archived_native_image_xy": [
+        1108.8,
+        320.45
+      ],
+      "archived_height_raw": 75.9,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "4-4",
+          "number": "04-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9127,
+      "name": "TM022",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        47.43,
+        27.74
+      ],
+      "archived_native_image_xy": [
+        910.66,
+        532.61
+      ],
+      "archived_height_raw": -27.4,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-7",
+          "number": "03-08",
+          "kind": "landmark"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Aerial Ace",
+        "reported_zone": 3,
+        "reported_level_cue": "tower_top",
+        "written_target": "tower summit",
+        "old_floor_label_review": "Legacy negative-height label contradicts above-ground tower.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9128,
+      "name": "Great Ball",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        46.97,
+        29.9
+      ],
+      "archived_native_image_xy": [
+        901.82,
+        574.08
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-4",
+          "number": "03-05",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9129,
+      "name": "Super Potion",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        47.68,
+        24.6
+      ],
+      "archived_native_image_xy": [
+        915.46,
+        472.32
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-6",
+          "number": "03-07",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9135,
+      "name": "Antidote",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        51.58,
+        29.73
+      ],
+      "archived_native_image_xy": [
+        990.34,
+        570.82
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-2",
+          "number": "03-03",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9136,
+      "name": "Paralyze Heal",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        52.75,
+        27.76
+      ],
+      "archived_native_image_xy": [
+        1012.8,
+        532.99
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-1",
+          "number": "03-02",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9137,
+      "name": "Nest Ball",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        51.97,
+        24.88
+      ],
+      "archived_native_image_xy": [
+        997.82,
+        477.7
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-0",
+          "number": "03-01",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9138,
+      "name": "Pearl",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        46.39,
+        28.75
+      ],
+      "archived_native_image_xy": [
+        890.69,
+        552
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-5",
+          "number": "03-06",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9139,
+      "name": "Revive",
+      "legacy_zone": 3,
+      "archived_city_percent_xy": [
+        50.6,
+        31.17
+      ],
+      "archived_native_image_xy": [
+        971.52,
+        598.46
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "3-3",
+          "number": "03-04",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9145,
+      "name": "TM054",
+      "legacy_zone": 20,
+      "archived_city_percent_xy": [
+        47.7,
+        47.91
+      ],
+      "archived_native_image_xy": [
+        915.84,
+        919.87
+      ],
+      "archived_height_raw": 74.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "20-65",
+          "number": "20-66",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": {
+        "move": "Draco Meteor",
+        "reported_zone": 20,
+        "reported_level_cue": "container",
+        "written_target": "behind shipping container; postgame zone",
+        "old_floor_label_review": "Precise floor unverified.",
+        "sources": [
+          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
+          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
+        ],
+        "independent_visual_position_verified": false
+      },
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9148,
+      "name": "Rare Candy",
+      "legacy_zone": 20,
+      "archived_city_percent_xy": [
+        51.33,
+        47.52
+      ],
+      "archived_native_image_xy": [
+        985.54,
+        912.38
+      ],
+      "archived_height_raw": 75.8,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "20-61",
+          "number": "20-62",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9149,
+      "name": "Bottle Cap",
+      "legacy_zone": 20,
+      "archived_city_percent_xy": [
+        46,
+        49.4
+      ],
+      "archived_native_image_xy": [
+        883.2,
+        948.48
+      ],
+      "archived_height_raw": 74.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "20-59",
+          "number": "20-60",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    },
+    {
+      "legacy_marker_id": 9152,
+      "name": "Big Nugget",
+      "legacy_zone": 20,
+      "archived_city_percent_xy": [
+        51.22,
+        51.6
+      ],
+      "archived_native_image_xy": [
+        983.42,
+        990.72
+      ],
+      "archived_height_raw": 75.7,
+      "archived_height_unit": null,
+      "archived_height_datum": null,
+      "archive_match": "v35_v37_and_saved_primary_markup_exact",
+      "candidate_item_ids": [
+        {
+          "id": "20-60",
+          "number": "20-61",
+          "kind": "zone_only"
+        }
+      ],
+      "identity_status": "unique_bidirectional_name_zone_candidate_not_physical_match",
+      "numbered_screw_id": null,
+      "tm_research": null,
+      "verified_atlas_xy": null,
+      "verified_floor": null,
+      "world_xyz": null,
+      "progress_key_assigned": false,
+      "publish_new_pin": false
+    }
+  ],
+  "limits": [
+    "Recovering identical historical positions does not verify physical pickup locations; no new source-to-game registration proved.",
+    "18 TM numbered identities and reported zones cross-checked against published location text. No actual map images or game traversal newly verified. The old credits indicate Serebii alignment; may not be independent of prior area data. Pokémon GO Hub, GameSpot and Japanese sources supply additional text crosschecks.",
+    "Seven above-ground targets expose an incorrect old universal height threshold; raw sign, units and datum remain unproven. Do not flip all values or infer floor from raw number.",
+    "Two legacy Colorful Screw markers share candidate 09-23 and are not assigned canonical Screw numbers; preserve both as separate records.",
+    "111 reciprocal name/zone matches are identity candidates only, not assigned collection keys or confirmed physical locations; nine competing one-candidate rows and 26 multi-candidate rows remain unresolved.",
+    "Source public map HTML direct download failed; GameSpot north/south map images and Work Up image returned cache misses. No independent image registration in this session."
+  ],
+  "next": [
+    "Use the recovered source map percentages as preserved historical candidate positions; reconcile original per-ID source record and physical landmark/pickup evidence, especially unique numbered TM pilot records and the two Screw candidates.",
+    "Seek public individual map reference images and appropriate author-permitted source geometry; compare permanent controls against current owner map images. Check same-item geometry and floor; use written directions while positions remain uncertain.",
+    "Continue all 68 area research rows and retain AT-332's 12 separate raw Gamer Guides coordinates. These are a different coordinate space and cannot be directly merged.",
+    "AT-333 small-dot prototype and density QA may use historical research points only in a clearly segregated non-production research view; verified production items require existing gate. No duplicate photo/whole-playthrough request."
+  ],
+  "preservation": {
+    "original_item_records": 264,
+    "original_screw_ids": 100,
+    "original_archive_leads": 146,
+    "access_leads": 70,
+    "original_routes": 22,
+    "holovators": 21,
+    "all_map_assets_unchanged": true,
+    "existing_progress_keys_unchanged": true,
+    "workspace_current_site_untouched": true,
+    "public_backend_unchanged": true
+  }
+}
