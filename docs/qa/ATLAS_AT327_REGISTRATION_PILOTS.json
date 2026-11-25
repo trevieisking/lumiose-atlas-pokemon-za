@@ -1,0 +1,744 @@
+{
+  "id": "AT-327",
+  "date": "2026-11-25",
+  "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
+  "method": "Six manually matched distributed green-border/gate controls per image; OpenCV 4.13.0 least-squares projective homography; separate held-out same-frame border/gate landmarks; second independently captured overview registered separately. Both source/base are rendered game maps, not world-coordinate truth. Visual-pick uncertainty is additional to residual.",
+  "source_artifact": {
+    "research_pr": 168,
+    "head": "01323423c49b5e781c2a4ac2584381ffe7f4ac52",
+    "run": 45693109903,
+    "artifact": 15059033948,
+    "status": "downloaded_materialized_verified; temporary draft PR closed unmerged; retention 3 days"
+  },
+  "base_map": {
+    "path": "maps/lumiose-game-map.jpg",
+    "dimensions": [
+      1920,
+      1920
+    ],
+    "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "git_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca"
+  },
+  "inventory": {
+    "owner_pngs": 82,
+    "sector_pngs": 42,
+    "wild_zone_pngs": 40,
+    "actual_bytes_sha256_git_blob_dimensions_verified": 82,
+    "sector_coverage": 48,
+    "wild_zone_coverage": 20,
+    "old_three_overview_files_recovered": 0
+  },
+  "counts": {
+    "source_views_registered_as_research": 4,
+    "wild_zones_with_candidate_alignment": 2,
+    "sectors_with_candidate_alignment": 0,
+    "verified_production_polygons": 0,
+    "verified_new_routes": 0
+  },
+  "coordinate_space": "Photo pixels and original 1920×1920 native raster pixels; origin top-left, x right, y down.",
+  "point_schema": [
+    "landmark",
+    "photo_x_manual",
+    "photo_y_manual",
+    "native_x_manual",
+    "native_y_manual",
+    "f=fit,h=holdout",
+    "residual_native_px"
+  ],
+  "frames": [
+    {
+      "zone": 5,
+      "view": "closeup",
+      "photo_sha256": "c970f04cc400ce8bfca46676b32a92bdc8ac433b364e51273dedd2e6293816a7",
+      "photo_blob": "4c363502bec8f246b15237c445158b3b91bba0e8",
+      "matrix": [
+        [
+          0.2465405886,
+          -0.0370832967,
+          595.7757285032
+        ],
+        [
+          -0.0345033965,
+          0.2080176673,
+          1030.0933563235
+        ],
+        [
+          -0.0000264182,
+          -0.0000540614,
+          1
+        ]
+      ],
+      "fit_rms": 0.459,
+      "holdout_rms": 1.364,
+      "max_holdout": 2.41,
+      "points": [
+        [
+          "northwest border turn",
+          210,
+          212,
+          651,
+          1085,
+          "f",
+          0.48
+        ],
+        [
+          "upper boundary notch outer corner",
+          442,
+          114,
+          713,
+          1057,
+          "h",
+          0.49
+        ],
+        [
+          "upper boundary notch inner corner",
+          448,
+          141,
+          715,
+          1065,
+          "h",
+          0.33
+        ],
+        [
+          "north tip",
+          801,
+          10,
+          810,
+          1027,
+          "f",
+          0.51
+        ],
+        [
+          "northeast entrance square center",
+          947,
+          211,
+          854,
+          1080,
+          "h",
+          1.67
+        ],
+        [
+          "northeast entrance second square center",
+          1014,
+          261,
+          874,
+          1095,
+          "h",
+          2.41
+        ],
+        [
+          "east-north border corner",
+          1216,
+          344,
+          930.5,
+          1116.5,
+          "f",
+          0.55
+        ],
+        [
+          "east-south outside ledge",
+          1199,
+          742,
+          930.5,
+          1231,
+          "f",
+          0.51
+        ],
+        [
+          "east-south inside ledge",
+          1175,
+          743,
+          923.5,
+          1231,
+          "h",
+          0.85
+        ],
+        [
+          "southwest rounded border tangent",
+          391,
+          682,
+          700,
+          1216,
+          "f",
+          0.16
+        ],
+        [
+          "west upper gate center",
+          282,
+          414,
+          669,
+          1140,
+          "h",
+          1.06
+        ],
+        [
+          "west lower gate center",
+          306,
+          483,
+          676,
+          1159,
+          "h",
+          0.79
+        ],
+        [
+          "southwest first gate square center",
+          596,
+          697,
+          755.5,
+          1220,
+          "h",
+          1.86
+        ],
+        [
+          "southwest second gate square center",
+          655,
+          742,
+          774,
+          1233,
+          "f",
+          0.43
+        ]
+      ],
+      "compare_sha256": "018231e87bd1dbbf9d72ad63e47156e1d082925cb1ce74be86409eec082ff67a",
+      "path": "assets/atlas/wild-zones/wild-zone-05-closeup.png",
+      "visual_review": "Original base crop, registered photograph and 50/50 overlay inspected; architecture and border turns agree visually; icon/UI size changes and camera perspective not physical geometry.",
+      "crop_native": [
+        620,
+        1010,
+        950,
+        1280
+      ],
+      "fit_count": 6,
+      "holdout_count": 8,
+      "production_geometry": null
+    },
+    {
+      "zone": 5,
+      "view": "overview",
+      "photo_sha256": "041d7774dafb2a2b8636c20fcc71268b2460399d20bbe7eb643d41bf05aba843",
+      "photo_blob": "0c7e56145b4c10754b62c0aea9914e862fbae91a",
+      "matrix": [
+        [
+          0.4899333492,
+          -0.0264306479,
+          497.8250229396
+        ],
+        [
+          -0.0378875907,
+          0.4857214831,
+          923.9765458621
+        ],
+        [
+          -0.0000312858,
+          -0.0000303873,
+          1
+        ]
+      ],
+      "fit_rms": 0.253,
+      "holdout_rms": 1.401,
+      "max_holdout": 2.24,
+      "points": [
+        [
+          "NW corner",
+          304,
+          313,
+          651,
+          1085,
+          "f",
+          0.18
+        ],
+        [
+          "notch outer",
+          424,
+          260,
+          713,
+          1057,
+          "h",
+          0.91
+        ],
+        [
+          "notch inner",
+          428,
+          273,
+          715,
+          1065,
+          "h",
+          1.78
+        ],
+        [
+          "north tip",
+          607,
+          206,
+          810,
+          1027,
+          "f",
+          0.23
+        ],
+        [
+          "NE first gate",
+          690,
+          308,
+          854,
+          1080,
+          "h",
+          0.9
+        ],
+        [
+          "NE second gate",
+          725,
+          331,
+          874,
+          1095,
+          "h",
+          2.24
+        ],
+        [
+          "east north corner",
+          832,
+          375,
+          930.5,
+          1116.5,
+          "f",
+          0.19
+        ],
+        [
+          "east outer ledge",
+          831,
+          586,
+          930.5,
+          1231,
+          "f",
+          0.28
+        ],
+        [
+          "east inner ledge",
+          818,
+          587,
+          923.5,
+          1231,
+          "h",
+          0.68
+        ],
+        [
+          "bottom right corner",
+          818,
+          652,
+          923,
+          1267,
+          "f",
+          0.35
+        ],
+        [
+          "bottom left corner",
+          569,
+          652,
+          789,
+          1267,
+          "f",
+          0.25
+        ],
+        [
+          "west upper gate",
+          341,
+          416,
+          669,
+          1140,
+          "h",
+          0.59
+        ],
+        [
+          "west lower gate",
+          354,
+          452,
+          676,
+          1159,
+          "h",
+          0.16
+        ],
+        [
+          "west rounded tangent",
+          397,
+          557,
+          700,
+          1216,
+          "h",
+          2.09
+        ],
+        [
+          "southwest second gate",
+          540,
+          587,
+          774,
+          1233,
+          "h",
+          1.62
+        ]
+      ],
+      "compare_sha256": "9871f5dcbe8f43ea9604b99b8fa050ca9c9e8abcb1c6a409c87716efeab8eb11",
+      "path": "assets/atlas/wild-zones/wild-zone-05-overview.png",
+      "visual_review": "Original base crop, registered photograph and 50/50 overlay inspected; architecture and border turns agree visually; icon/UI size changes and camera perspective not physical geometry.",
+      "crop_native": [
+        620,
+        1010,
+        950,
+        1280
+      ],
+      "fit_count": 6,
+      "holdout_count": 9,
+      "production_geometry": null
+    },
+    {
+      "zone": 11,
+      "view": "closeup",
+      "photo_sha256": "580caa7e3b217969bd3bf2e044466434a304d2af633a3261a807db3711278e0a",
+      "photo_blob": "7ddbc50bedc9efea810aa47bcd0f568fc712cb06",
+      "matrix": [
+        [
+          0.2277867946,
+          -0.1665962832,
+          1414.2578248128
+        ],
+        [
+          -0.0067608959,
+          0.1410736678,
+          1036.6188137699
+        ],
+        [
+          -0.0000145442,
+          -0.0001015561,
+          1
+        ]
+      ],
+      "fit_rms": 0.499,
+      "holdout_rms": 1.517,
+      "max_holdout": 2.37,
+      "points": [
+        [
+          "northwest canal border corner",
+          286,
+          151,
+          1483,
+          1077.5,
+          "f",
+          0.54
+        ],
+        [
+          "west canal border corner",
+          226,
+          386,
+          1463.5,
+          1137,
+          "f",
+          0.9
+        ],
+        [
+          "west elbow outside",
+          270,
+          398,
+          1474.5,
+          1141,
+          "h",
+          0.67
+        ],
+        [
+          "west elbow inside",
+          285,
+          422,
+          1477,
+          1149,
+          "h",
+          1.58
+        ],
+        [
+          "southwest rounded turn",
+          238,
+          596,
+          1463,
+          1196,
+          "f",
+          0.46
+        ],
+        [
+          "lower-left gate outer turn",
+          365,
+          649,
+          1494,
+          1210.5,
+          "h",
+          2.37
+        ],
+        [
+          "lower-left entrance west square center",
+          382,
+          598,
+          1500,
+          1196,
+          "h",
+          2.13
+        ],
+        [
+          "lower-left entrance east square center",
+          431,
+          615,
+          1512,
+          1203,
+          "h",
+          2.04
+        ],
+        [
+          "northeast upper tip",
+          875,
+          165,
+          1634.5,
+          1086,
+          "f",
+          0.23
+        ],
+        [
+          "east canal border corner",
+          1069,
+          443,
+          1686,
+          1162,
+          "f",
+          0.25
+        ],
+        [
+          "east lower upper gate center",
+          1019,
+          595,
+          1673,
+          1204.5,
+          "f",
+          0.26
+        ],
+        [
+          "east lower lower gate center",
+          997,
+          648,
+          1666.5,
+          1219,
+          "h",
+          0.83
+        ],
+        [
+          "northwest upper gate center",
+          422,
+          132,
+          1517.5,
+          1073,
+          "h",
+          0.67
+        ],
+        [
+          "northwest lower gate center",
+          405,
+          194,
+          1513,
+          1089,
+          "h",
+          0.15
+        ]
+      ],
+      "compare_sha256": "def958b93f4fdcabe07cd932a940a8caedb02fc8bf9f51c1688332c8641107d1",
+      "path": "assets/atlas/wild-zones/wild-zone-11-closeup.png",
+      "visual_review": "Original base crop, registered photograph and 50/50 overlay inspected; architecture and border turns agree visually; icon/UI size changes and camera perspective not physical geometry.",
+      "crop_native": [
+        1445,
+        1030,
+        1700,
+        1240
+      ],
+      "fit_count": 6,
+      "holdout_count": 8,
+      "production_geometry": null
+    },
+    {
+      "zone": 11,
+      "view": "overview",
+      "photo_sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c",
+      "photo_blob": "924c8d9e486206c7a9036d4775cb0f5e6a3cafa2",
+      "matrix": [
+        [
+          0.4547367546,
+          -0.1365831997,
+          1374.3709435434
+        ],
+        [
+          0.0029753573,
+          0.3644342433,
+          925.3342658996
+        ],
+        [
+          0.0000019199,
+          -0.0000887053,
+          1
+        ]
+      ],
+      "fit_rms": 0.565,
+      "holdout_rms": 1.8,
+      "max_holdout": 2.65,
+      "points": [
+        [
+          "northwest canal border corner",
+          244,
+          330,
+          1483,
+          1077.5,
+          "f",
+          0.15
+        ],
+        [
+          "west canal border corner",
+          205,
+          455,
+          1463.5,
+          1137,
+          "f",
+          0.5
+        ],
+        [
+          "west elbow outside",
+          228,
+          465,
+          1474.5,
+          1141,
+          "h",
+          1.11
+        ],
+        [
+          "west elbow inside",
+          235,
+          478,
+          1477,
+          1149,
+          "h",
+          1.12
+        ],
+        [
+          "southwest rounded turn",
+          204,
+          575,
+          1463,
+          1196,
+          "f",
+          0.37
+        ],
+        [
+          "lower-left gate outer turn",
+          273,
+          608,
+          1494,
+          1210.5,
+          "h",
+          2.39
+        ],
+        [
+          "lower-left entrance west square center",
+          284,
+          580,
+          1500,
+          1196,
+          "h",
+          2.65
+        ],
+        [
+          "lower-left entrance east square center",
+          313,
+          590,
+          1512,
+          1203,
+          "h",
+          2.53
+        ],
+        [
+          "northeast upper tip",
+          569,
+          347,
+          1634.5,
+          1086,
+          "f",
+          0.38
+        ],
+        [
+          "east canal border corner",
+          676,
+          507,
+          1686,
+          1162,
+          "f",
+          0.92
+        ],
+        [
+          "east lower upper gate center",
+          646,
+          590,
+          1673,
+          1204.5,
+          "f",
+          0.72
+        ],
+        [
+          "east lower lower gate center",
+          634,
+          622,
+          1666.5,
+          1219,
+          "h",
+          1.4
+        ],
+        [
+          "northwest upper gate center",
+          320,
+          322,
+          1517.5,
+          1073,
+          "h",
+          1.06
+        ],
+        [
+          "northwest lower gate center",
+          311,
+          354,
+          1513,
+          1089,
+          "h",
+          1.1
+        ]
+      ],
+      "compare_sha256": "5e69c3027c0a002e9694cf97b7ac4735b686c50d34a7f10318a562eef2a6c25f",
+      "path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+      "visual_review": "Original base crop, registered photograph and 50/50 overlay inspected; architecture and border turns agree visually; icon/UI size changes and camera perspective not physical geometry.",
+      "crop_native": [
+        1445,
+        1030,
+        1700,
+        1240
+      ],
+      "fit_count": 6,
+      "holdout_count": 8,
+      "production_geometry": null
+    }
+  ],
+  "findings": [
+    {
+      "id": "wz-05",
+      "source": "Both photo views corroborate shared green perimeter around Bleu 1, Bleu 2 and Bleu Street. Overview reveals lower border clipped by close-up; gate squares are map glyphs, not physical door measurements.",
+      "next": "Trace only evidenced perimeter; validate independent architectural checkpoints and all edges, including gate gaps and south border. Keep sector boundaries separate."
+    },
+    {
+      "id": "wz-11",
+      "source": "Both photos and base show both banks and canal-spanning green extent. Red dynamic overlay obscures parts of southern border in photographs; native base provides additional visible contour. Do not infer crossing or sector boundary from green extent.",
+      "next": "Trace source-visible perimeter with occlusion flags; confirm southern edge and actual traversal before production."
+    }
+  ],
+  "limitations": [
+    "The four residual statistics quantify fit against held-out manually selected raster points, not independently surveyed absolute real-world or game-world accuracy.",
+    "Held-out landmarks are separate but are mostly points on the same rendered green perimeter and gates; future independent architectural checks are mandatory.",
+    "Perspective and camera/TV angle corrected by homography; residual does not quantify all boundary uncertainty.",
+    "No closed polygons, route graph, exact entrances or new markers are asserted; transient quest/portal/battle overlays excluded.",
+    "Vert 1 photo has area name/canal but not an actual sector perimeter; source alignment alone does not establish sector extent.",
+    "Historic W01–W03 original three-piece images not yet recovered; this does not block further use of 82 exact existing files."
+  ],
+  "workspace_prompt": "blocked_until_AT325_G5"
+}
