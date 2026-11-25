@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 64,
+  "revision": 65,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-321 four existing map surfaces now implement the owner-approved Wild Zone fieldbook on review branch; exact-head tests and mobile/desktop visual QA pending. AT-320 PR #156 remains separate.",
+  "current_phase": "AT-321 held on browser visibility failure; AT-322 research documented on main, independent highlighting planned only. AT-320 remains separate.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4650,7 +4650,7 @@
       "assets/atlas/wild-zones/batch-04-manifest.json"
     ],
     "active_separate_pr": 156,
-    "private_checklist": "read-only preflight; AT-321 row absent; pending synchronization",
+    "private_checklist": "AT-321 metadata row created at manifest revision 64; updating documented review checkpoint only, no public data change.",
     "workspace": "unchanged",
     "release_gate": "exact-head CI and phone/desktop visual evidence; exact Pages deployment",
     "implementation_commit": "28a3b8e7e71209918e7396fc9fdb78f7c1b51730",
@@ -4689,6 +4689,40 @@
     "zone20_rotating_alpha_pool": 67,
     "unit_test": "tests/wild_zone_fieldbook.test.mjs",
     "browser_test": "tests/wild_zone_fieldbook_browser.mjs",
-    "verification_status": "pending exact-head GitHub Actions and visual inspection; no release claimed"
+    "verification_status": "HOLD: exact earlier head 1a56c8c6a47e83c590998eb0e83cc212f3235b24 unit and original browser smoke passed, new browser test timed out at Zone 1 visibility, run 45675208275. Root cause and actual visual QA pending."
+  },
+  "at_322_pokemaps_reference_audit": {
+    "status": "documentation_on_main_partial_research_no_ui_release",
+    "source": "https://pokemaps.net/maps/lza/lumiose?x=6.57&y=0.75&z=1&s=0.46v",
+    "audit": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+    "documentation_pr": 161,
+    "documentation_main_sha": "c05cade2d904199f6567918244582f7d2c65c70e",
+    "coverage": {
+      "sectors_total": 48,
+      "wild_zones_total": 20,
+      "area_records_tracked": 68,
+      "sector_pages_reviewed": 3,
+      "sectors_with_some_evidence": 36,
+      "wild_zones_with_some_evidence": 5,
+      "extra_place_pages_reviewed": 2,
+      "species_pages_sampled": 15,
+      "complete_pokemaps_area_rosters": 0,
+      "actual_pokemaps_screenshots": 0,
+      "verified_polygons": 0,
+      "verified_walkable_routes": 0
+    },
+    "requirements": [
+      "Use an original Atlas encounter index keyed by existing zone/sector IDs and species/form; keep ordinary, fixed Alpha, rotating Alpha, special mission, gift, trade and scripted boss categories separate.",
+      "Select a known place to focus/highlight its independently validated geometry, or show clearly labelled approximate orientation until registered boundaries exist. Search a species and highlight every verified area, with condition filters and source evidence.",
+      "Use original owner photographs and existing 1920x1920 map; independently align any candidate geometry using at least four distributed noncollinear landmarks and independent check points, record residuals and ambiguity. Do not infer exact coordinates from the external URL, perspective images or screenshots.",
+      "Keep selection/highlight distinct from route navigation. Only render a walkable path where contiguous street, ladder, scaffold, Holovator, roof, door/floor connections and prerequisites are verified; otherwise preserve written directions without misleading lines.",
+      "Retain the 40 zone images, 48 sector photo references, 20 zone IDs, 264 item records, 100 Screw IDs, 38 fixed Alpha rows, current player progress, feedback and existing Supabase connections. Do not permanently mark transient DLC distortions.",
+      "Document actual browser captures with exact public URL, selection, layers, game, date, viewport, author and SHA-256; retain screenshots as evidence only if rights permit, never treat generated images as proof. No copying PokéMaps proprietary source, database or map tiles; independently authored implementation and credited factual cross-checks.",
+      "Acceptance: complete all 68 area research rows and independent cross-checks, reconcile differences, test area/species selection, filters, mobile gestures, desktop controls and deep links, inspect actual screenshots, then exact-head CI and separate deployment verification."
+    ],
+    "photo_capture": "8 representative captures planned; 0 actual screenshots; rights and live browser access pending",
+    "geometry": "0 new polygons or walkable routes verified",
+    "workspace": "unchanged"
   }
 }
