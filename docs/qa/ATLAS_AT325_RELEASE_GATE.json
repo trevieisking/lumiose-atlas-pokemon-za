@@ -2,8 +2,8 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 72,
-  "ledger_revision": 80,
+  "manifest_revision": 73,
+  "ledger_revision": 81,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
@@ -1693,5 +1693,16 @@
     "asset_validation": "Exact crop pixel equality locally, PNG decoding and dimensions, local SHA-256 and Git blob identity, three exact paths/byte counts on reviewed tree and identical merged tree. No site runtime changes or workflow triggered.",
     "tracking_id": "AT-329-CITY-OVERVIEW-INTAKE",
     "tracking_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links."
+  },
+  "at329_original_byte_provenance": {
+    "status": "review_branch_pending_merge",
+    "source_manifest": "assets/atlas/city-overview/manifest.json",
+    "original_files": 3,
+    "original_bytes": 329778,
+    "existing_pngs_unchanged": true,
+    "existing_pngs_exactly_reproduced": 3,
+    "registration_geometry_changed": false,
+    "source_notes": "Actual upload WebP bytes preserved under correct extension. Original source SHA-256 hashes match AT-329 manifest; native RGB crops exactly reproduce previously merged PNGs. No second set of crops, no live map replacement.",
+    "baseline_main_sha": "c7749d479ef0d793de7c44340d42f4e271633983"
   }
 }
