@@ -31,7 +31,7 @@ try{
   await at304PhoneCrop.scrollIntoViewIfNeeded();
   await sectorProbe.waitForFunction(()=>document.querySelector("#sector-vert-sector-1 .sector-source-map img")?.naturalWidth===358);
   assert.equal(await at304PhoneCrop.evaluate(el=>el.naturalHeight),267);
-  assert.equal(await sectorProbe.locator("#sector-vert-sector-3 .sector-source-pending").count(),1);
+  assert.equal(await sectorProbe.locator('#sector-vert-sector-3 .sector-source-map img[src$="/vert-sector-3.png"]').count(),1);
   await sectorProbe.screenshot({path:output+"/phone-at304-source-image-vert1.png"});
 
 
@@ -1073,8 +1073,8 @@ try{
   await at306Desk.goto(base+"/atlas-explorer.html?sector=vert-sector-7",{waitUntil:"load"});
   await at306Desk.waitForFunction(()=>document.getElementById("aeSectorContextName")?.textContent==="Vert Sector 7");
   assert.match(await at306Desk.locator("#aeSectorContextBearing").textContent(),/Station Front/);
-  assert.equal(await at306Desk.locator("#aeSelected .ae-source-map-reference").count(),0);
-  assert.match(await at306Desk.locator("#aeSelected").textContent(),/PNG has not yet been uploaded to GitHub/);
+  await at306Desk.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
+  await at306Desk.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
   await at306Desk.locator("#aeViewport").screenshot({path:output+"/at306-vert7-desktop.png"});
   await at306Desk.locator("#aeSearch").fill("Station Front");
   assert.equal(await at306Desk.locator('#aeResults [data-record-id="vert-sector-7"]').count(),1);
@@ -1083,7 +1083,8 @@ try{
   await at306Mobile.goto(base+"/atlas-explorer.html?sector=bleu-sector-3",{waitUntil:"load"});
   await at306Mobile.waitForFunction(()=>document.getElementById("aeSectorContextName")?.textContent==="Bleu Sector 3");
   assert.match(await at306Mobile.locator("#aeSectorContextBearing").textContent(),/Bleu Plaza/);
-  assert.equal(await at306Mobile.locator("#aeSelected .ae-source-map-reference").count(),0);
+  await at306Mobile.locator("#aeSelected .ae-source-map-reference img").scrollIntoViewIfNeeded();
+  await at306Mobile.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
   const at306Width=await at306Mobile.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
   assert.ok(at306Width.scroll<=at306Width.width+1&&at306Width.body<=at306Width.width+1,"AT-306 phone must be contained: "+JSON.stringify(at306Width));
   await at306Mobile.locator("#aeViewport").screenshot({path:output+"/at306-bleu3-phone.png"});
@@ -1094,7 +1095,10 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(name=>document.getElementById("aeSectorContextName")?.textContent===name,sector.split("-").map((p,i)=>i===0?p[0].toUpperCase()+p.slice(1):i===1?"Sector":p).join(" "));
     assert.match(await page.locator("#aeSectorContextBearing").textContent(),new RegExp(expected));
-    assert.match(await page.locator("#aeSelected").textContent(),/PNG has not yet been uploaded to GitHub/);
+    const crop=page.locator("#aeSelected .ae-source-map-reference img");
+    await crop.scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
+    await crop.screenshot({path:output+"/"+file+"-at310-photo.png"});
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     assert.equal(await page.locator("#aeCoverageGrid button").count(),25);
     const sizes=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
@@ -1102,6 +1106,15 @@ try{
     await page.locator("#aeViewport").screenshot({path:output+"/"+file+".png"});
     await page.close();
   }
+  const at310Directory=await phoneContext.newPage();
+  await at310Directory.goto(base+"/sector-maps.html#sector-jaune-sector-5",{waitUntil:"load"});
+  const dirCrop=at310Directory.locator("#sector-jaune-sector-5 .sector-source-map img");
+  await dirCrop.scrollIntoViewIfNeeded();
+  await at310Directory.waitForFunction(()=>document.querySelector("#sector-jaune-sector-5 .sector-source-map img")?.naturalWidth>0);
+  const dirSizes=await at310Directory.evaluate(()=>({view:document.documentElement.clientWidth,document:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+  assert.ok(dirSizes.document<=dirSizes.view+1&&dirSizes.body<=dirSizes.view+1,JSON.stringify(dirSizes));
+  await dirCrop.screenshot({path:output+"/at310-jaune-5-sector-directory-phone.png"});
+  await at310Directory.close();
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

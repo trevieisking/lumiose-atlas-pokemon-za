@@ -1,8 +1,8 @@
 # Atlas source sector & street photographs
 
-**Canonical register:** [MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json](../../../MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json) · Plan: `ATLAS-MAPS-2026-11-21-V1` · Batch: `AT-304`.
+**Canonical register:** [MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json](../../../MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json) · Plan: `ATLAS-MAPS-2026-11-21-V1` · Batches: `AT-304` and `AT-310`.
 
-This folder contains **23 authentic, original-game, native-pixel PNG screenshot crops** grouped by district: `vert/`, `bleu/`, `magenta/`, `rouge/`, `jaune/`. Exactly **29/48** named sector records can be linked to these photographic references; **19** currently need further real-game evidence. One image may legitimately show several neighbouring sectors. Every PNG is preserved byte-for-byte from the prepared crop, with SHA-256, dimensions, original screenshot filename and SHA-256, crop rectangle, and Git blob SHA in the register.
+This folder contains **42 authentic, original-game, native-pixel PNG screenshot crops** grouped by district: `vert/`, `bleu/`, `magenta/`, `rouge/`, `jaune/`. Exactly **48/48** named sector records can be linked to these photographic references in the AT-310 draft; the previous verified public baseline was 29/48. One image may legitimately show several neighbouring sectors. Every PNG is preserved byte-for-byte from the prepared crop, with SHA-256, dimensions, original screenshot filename and SHA-256, crop rectangle, and Git blob SHA in the register.
 
 ## Image confidence
 
@@ -24,6 +24,6 @@ This folder contains **23 authentic, original-game, native-pixel PNG screenshot 
 
 ## Source gaps
 
-These **19** sector images have no honest replacement yet: `vert-sector-3`, `vert-sector-6`, `vert-sector-7`, `vert-sector-8`, `vert-sector-9`, `bleu-sector-3`, `bleu-sector-8`, `bleu-sector-9`, `bleu-sector-10`, `magenta-sector-2`, `magenta-sector-7`, `magenta-sector-8`, `magenta-sector-9`, `rouge-sector-1`, `rouge-sector-2`, `rouge-sector-6`, `jaune-sector-4`, `jaune-sector-5`, `jaune-sector-8`.
+No sector is missing an orientation image in the AT-310 draft. Exact geographic registration remains separate.
 
 Observed named road labels are **not** an exhaustive street inventory: `Bleu Street`, `Estival Avenue`, `Hibernal Avenue`, `Jaune Street`, `North Boulevard`, `South Boulevard`, `Vernal Avenue`, `Vert Street`. Each source linkage is in the JSON register.

@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 55,
+  "revision": 56,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-309: owner-original screenshot source evidence is complete for 48/48 sectors (29 published sector references/23 hosted PNGs, 19 native crop PNGs prepared but not yet committed as public image assets). Text/Explorer evidence under exact-head PR validation; AT-310 binary publication still OPEN, geographic map anchors remain unverified.",
+  "current_phase": "AT-310 draft: all 19 remaining original PNGs byte-verified in GitHub and wired to sector guide/Explorer for 48/48 branch coverage; exact-head CI, visual QA, merge and Pages verification pending.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4386,5 +4386,22 @@
     "supabase": "read_only_no_writes",
     "tests": "exact-head unit/recovered-guide/desktop/mobile screenshot QA required",
     "next": "AT-310 true 19 PNG byte transfer and visual guide/browser integration after integrity verification"
+  },
+  "at_310_complete_sector_photo_coverage": {
+    "status": "draft_assets_and_gallery_references_pending_ci_visual_review_pages",
+    "baseline_main": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+    "pull_request": 148,
+    "added_pngs": 19,
+    "added_png_bytes": 4325433,
+    "branch_total_pngs": 42,
+    "branch_sector_coverage": 48,
+    "baseline_public_pngs": 23,
+    "baseline_public_sector_coverage": 29,
+    "geographic_anchors_added": 0,
+    "pages_verified": false,
+    "original_workspace_changed": false,
+    "supabase_changed": false,
+    "original_handoff_png_bytes": 4865787,
+    "source_visual_recrops": 3
   }
 }
