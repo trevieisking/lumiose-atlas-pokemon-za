@@ -11,6 +11,11 @@ assert.equal(original.length,203,"The archived guide must retain 200 numbered an
 assert.equal(recovered.length,203,"Every original quest must be restored exactly once");
 // AT-281: verified side-mission route addenda supplement, never overwrite, archived 203 quest records.
 const forQuest=n=>recovered.find(m=>Number(m[1])===n)?.[4]||"";
+// Side Mission 109: a one-time postgame restock with identical rewards in both views.
+const mission109Reward="<b>Reward:</b> ₽4,500, Lucky Egg ×1, Full Restore ×5, Max Revive ×2";
+assert.ok(forQuest(109).includes(mission109Reward));
+assert.ok(original.find(m=>m[1]==="109")?.[2].includes(mission109Reward));
+assert.match(forQuest(109),/Talk to Bien at Vert Pokémon Center/);
 const h03=forQuest(40),h04=forQuest(45);
 assert.match(h03,/data-verified-holovator="H-03"/);
 assert.match(h03,/Vert Pokémon Center/);
