@@ -15,3 +15,15 @@ This is the original owner-provided Wild Zone source image library for Lumiose A
 | 5 — Bleu Sectors 1 and 2 / Bleu Street | [Overview](wild-zone-05-overview.png) | [Close-up](wild-zone-05-closeup.png) |
 
 Do not infer exact native XY, new item IDs, permanent Hyperspace markers or path connectivity from a screenshot. Any future registered map layers, clean crops, written route links or UI integration must cite this source and pass the existing mobile/desktop regression gates. The original Workspace site and Supabase are unaffected by asset intake.
+
+## Batch 02 (25 November 2026)
+
+[Provenance and checksum manifest](batch-02-manifest.json) — 10 additional genuine PNGs, Wild Zones 6–10 of 20. All ten retain their original 1536 × 865 decoded pixels and ICC profile. Each Git blob hash matched the local PNG. Total collection: 20/40 photographs, 10/20 Wild Zones. Session-specific quest and Hyperspace symbols remain photograph evidence only.
+
+| Zone | Overview | Close-up |
+|---|---|---|
+| 6 — Jaune Sector 12 / North Boulevard | [Overview](wild-zone-06-overview.png) | [Close-up](wild-zone-06-closeup.png) |
+| 7 — Magenta Plaza | [Overview](wild-zone-07-overview.png) | [Close-up](wild-zone-07-closeup.png) |
+| 8 — Jaune Plaza | [Overview](wild-zone-08-overview.png) | [Close-up](wild-zone-08-closeup.png) |
+| 9 — Magenta Sector 5 / Estival Avenue | [Overview](wild-zone-09-overview.png) | [Close-up](wild-zone-09-closeup.png) |
+| 10 — Bleu Sector 10 / South Boulevard / Espace Vide | [Overview](wild-zone-10-overview.png) | [Close-up](wild-zone-10-closeup.png) |
