@@ -1,0 +1,470 @@
+{
+  "id": "AT-335",
+  "date": "2026-11-25",
+  "baseline_main_sha": "7d9bafb8e4eb893e7fab48e40df10c8ef80832d1",
+  "at334_register": "docs/qa/ATLAS_AT334_WORKSPACE_PICKUP_RECOVERY_REGISTER.json",
+  "status": "research_candidate_transform_only",
+  "counts": {
+    "original_recovered_markers": 146,
+    "unique_name_zone_candidates": 111,
+    "ambiguous_candidates": 35,
+    "fit_pairs": 6,
+    "holdout_pairs": 5,
+    "diagnostic_only_pairs": 2,
+    "fit_rms_px": 2.765,
+    "holdout_rms_px": 5.308,
+    "holdout_max_px": 6.669,
+    "extra_screw_source_link_match": 1,
+    "cumulative_source_screw_matches": 13,
+    "verified_new_pins": 0
+  },
+  "archive_verification": {
+    "actual_v35_v37_ZIPs_opened": true,
+    "v35_sha256": "0b3b274cf735db8f5e9b8795475cd083c745405848ac66618f0aebc76e68c835",
+    "v37_sha256": "1a35949ff538dc42287a0ba9a32037023fa0362ff849857c16ed0c66b7aa64f7",
+    "original_member_sha256": "e76661e901bccd5fdac3eba577003429223f82f54767f956da023da316723fee",
+    "canonical_full_fnv64": "fde26a8061fff120",
+    "canonical_full_sha256_from_local_archive": "c752376a875fce863257966964ec8797a971de90858fb86c3882306cba314b76",
+    "original_map_git_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+    "original_map_native_size": [
+      1920,
+      1920
+    ],
+    "source_credit": "Original Workspace credits Serebii for aligned pickup coordinates and GamesRadar for image. No new external dataset imported."
+  },
+  "source_urls": {
+    "great": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
+    "revive": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/medicines/revive",
+    "net": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/net-ball",
+    "dusk": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/dusk-ball",
+    "heal": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/heal-ball",
+    "fr": "https://www.pokemon-france.com/en/guides/pokemon-legends-z-a/wild-zones/",
+    "alt": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/poke-balls.html",
+    "jp": "https://gamepedia.jp/pokemon-legends-z-a/archives/16622",
+    "serebii": "https://www.serebii.net/pokearth/lumiosecity/wildzone4.shtml",
+    "screw": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw",
+    "screw_regional": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations"
+  },
+  "model": {
+    "description": "Exploratory affine least squares of Gamer Guides XY to old Workspace map percentages scaled to identical Atlas 1920px image; not physical calibration.",
+    "native_x_coefficients": [
+      0.12314493241660858,
+      0.0009021054183760389,
+      -284.3221172853738
+    ],
+    "native_y_coefficients": [
+      -0.00021875909524611895,
+      0.12209726942855927,
+      -268.0792561034065
+    ],
+    "pairs": [
+      {
+        "archive_id": 9033,
+        "zone": 4,
+        "name": "Great Ball",
+        "source_xy": [
+          10885,
+          4199
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
+        "identity_basis": "Explicit WZ4 ground pickup; grave approach.",
+        "archive_display_xy": [
+          1060.416,
+          240.192
+        ],
+        "candidate_projected_xy": [
+          1059.898,
+          242.226
+        ],
+        "residual_px": 2.099
+      },
+      {
+        "archive_id": 9034,
+        "zone": 4,
+        "name": "Revive",
+        "source_xy": [
+          11447,
+          4275
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/medicines/revive",
+        "identity_basis": "Explicit WZ4 ground pickup; graves beside central circle.",
+        "archive_display_xy": [
+          1127.616,
+          253.248
+        ],
+        "candidate_projected_xy": [
+          1129.174,
+          251.382
+        ],
+        "residual_px": 2.431
+      },
+      {
+        "archive_id": 9036,
+        "zone": 4,
+        "name": "Net Ball",
+        "source_xy": [
+          10603,
+          4251
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/net-ball",
+        "identity_basis": "Explicit WZ4 ground pickup; northwest graves.",
+        "archive_display_xy": [
+          1027.584,
+          251.52
+        ],
+        "candidate_projected_xy": [
+          1025.218,
+          248.637
+        ],
+        "residual_px": 3.729
+      },
+      {
+        "archive_id": 9119,
+        "zone": 4,
+        "name": "Dusk Ball",
+        "source_xy": [
+          10868,
+          4774
+        ],
+        "role": "holdout",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/dusk-ball",
+        "identity_basis": "Explicit WZ4 ground pickup; graves near southern monument.",
+        "archive_display_xy": [
+          1059.264,
+          308.16
+        ],
+        "candidate_projected_xy": [
+          1058.324,
+          312.436
+        ],
+        "residual_px": 4.378
+      },
+      {
+        "archive_id": 9120,
+        "zone": 4,
+        "name": "Heal Ball",
+        "source_xy": [
+          11311,
+          4879
+        ],
+        "role": "holdout",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/heal-ball",
+        "identity_basis": "Explicit WZ4 cemetery pickup near southern entrance.",
+        "archive_display_xy": [
+          1108.8,
+          320.448
+        ],
+        "candidate_projected_xy": [
+          1112.972,
+          325.159
+        ],
+        "residual_px": 6.292
+      },
+      {
+        "archive_id": 8258,
+        "zone": 2,
+        "name": "Great Ball",
+        "source_xy": [
+          12301,
+          13155
+        ],
+        "role": "diagnostic",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
+        "identity_basis": "Two WZ2 Great Ball candidates; eastern bank not proven.",
+        "archive_display_xy": [
+          1242.432,
+          1340.16
+        ],
+        "candidate_projected_xy": [
+          1242.351,
+          1335.419
+        ],
+        "residual_px": 4.741
+      },
+      {
+        "archive_id": 8257,
+        "zone": 2,
+        "name": "Heal Ball",
+        "source_xy": [
+          11351,
+          12454
+        ],
+        "role": "diagnostic",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/heal-ball",
+        "identity_basis": "WZ2: northern island versus western bank description conflict.",
+        "archive_display_xy": [
+          1124.16,
+          1246.272
+        ],
+        "candidate_projected_xy": [
+          1124.731,
+          1250.037
+        ],
+        "residual_px": 3.808
+      },
+      {
+        "archive_id": 9128,
+        "zone": 3,
+        "name": "Great Ball",
+        "source_xy": [
+          9597,
+          6948
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
+        "identity_basis": "Explicit southwestern WZ3 pickup, not NPC gift.",
+        "archive_display_xy": [
+          901.824,
+          574.08
+        ],
+        "candidate_projected_xy": [
+          903.768,
+          578.153
+        ],
+        "residual_px": 4.513
+      },
+      {
+        "archive_id": 9139,
+        "zone": 3,
+        "name": "Revive",
+        "source_xy": [
+          10121,
+          7067
+        ],
+        "role": "holdout",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/medicines/revive",
+        "identity_basis": "Explicit WZ3 southeast pickup, not nearby street Revive.",
+        "archive_display_xy": [
+          971.52,
+          598.464
+        ],
+        "candidate_projected_xy": [
+          968.403,
+          592.568
+        ],
+        "residual_px": 6.669
+      },
+      {
+        "archive_id": 8784,
+        "zone": 9,
+        "name": "Dusk Ball",
+        "source_xy": [
+          3646,
+          11458
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/dusk-ball",
+        "identity_basis": "Distinctive WZ9 scaffold descent from roof.",
+        "archive_display_xy": [
+          175.296,
+          1131.072
+        ],
+        "candidate_projected_xy": [
+          175.001,
+          1130.114
+        ],
+        "residual_px": 1.003
+      },
+      {
+        "archive_id": 8995,
+        "zone": 13,
+        "name": "Great Ball",
+        "source_xy": [
+          8634,
+          3592
+        ],
+        "role": "holdout",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
+        "identity_basis": "Distinctive WZ13 stump location.",
+        "archive_display_xy": [
+          782.784,
+          169.92
+        ],
+        "candidate_projected_xy": [
+          782.152,
+          168.605
+        ],
+        "residual_px": 1.459
+      },
+      {
+        "archive_id": 8110,
+        "zone": 17,
+        "name": "Dusk Ball",
+        "source_xy": [
+          14525,
+          14072
+        ],
+        "role": "fit",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/dusk-ball",
+        "identity_basis": "Distinctive WZ17 statue-side pickup.",
+        "archive_display_xy": [
+          1517.376,
+          1447.296
+        ],
+        "candidate_projected_xy": [
+          1517.052,
+          1446.896
+        ],
+        "residual_px": 0.514
+      },
+      {
+        "archive_id": 8684,
+        "zone": 11,
+        "name": "Net Ball",
+        "source_xy": [
+          15024,
+          12099
+        ],
+        "role": "holdout",
+        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/net-ball",
+        "identity_basis": "WZ11 west of bridge.",
+        "archive_display_xy": [
+          1582.272,
+          1208.064
+        ],
+        "candidate_projected_xy": [
+          1576.722,
+          1205.889
+        ],
+        "residual_px": 5.961
+      }
+    ],
+    "leave_one_fit_zone_out": [
+      {
+        "omitted_zone": 3,
+        "rms_px": 5.472
+      },
+      {
+        "omitted_zone": 4,
+        "rms_px": 8.668
+      },
+      {
+        "omitted_zone": 9,
+        "rms_px": 20.098
+      },
+      {
+        "omitted_zone": 17,
+        "rms_px": 48.16
+      }
+    ],
+    "limits": "Potential shared upstream data; approximate old positions, not surveyed controls. Paired by descriptions; distinctive generic zone descriptions are candidate matches, not demonstrated exact identities. Two WZ2 ambiguous/contradictory records excluded. No independent permanent landmark pairs or floor validation. Do not apply to production.",
+    "production_transform": null
+  },
+  "wz4_height_counterexample": [
+    {
+      "archive_id": 9033,
+      "name": "Great Ball",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    },
+    {
+      "archive_id": 9034,
+      "name": "Revive",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    },
+    {
+      "archive_id": 9036,
+      "name": "Net Ball",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    },
+    {
+      "archive_id": 9038,
+      "name": "TM072",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    },
+    {
+      "archive_id": 9119,
+      "name": "Dusk Ball",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    },
+    {
+      "archive_id": 9120,
+      "name": "Heal Ball",
+      "raw_height": 75.9,
+      "reported_level": "cemetery ground/behind building, not a proven rooftop",
+      "floor_verified": false,
+      "source_keys": [
+        "fr",
+        "alt",
+        "serebii"
+      ]
+    }
+  ],
+  "screw91": {
+    "atlas_screw_candidate": 91,
+    "source_xy": [
+      4741,
+      10842
+    ],
+    "source_marker_id": 236385,
+    "display_heading": 236386,
+    "regional_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=342&markerId=236385",
+    "database_link": "https://www.gamerguides.com/pokemon-legends-z-a/maps/lumiose-city?activeLayer=343&markerId=236385",
+    "map_and_thumbnail_access": "cache miss; literal linked marker IDs agree",
+    "candidate_projection": [
+      309.289,
+      1054.662
+    ],
+    "comparisons": [
+      {
+        "legacy_marker_id": 8715,
+        "residual_px": 2.691
+      },
+      {
+        "legacy_marker_id": 8808,
+        "residual_px": 64.217
+      }
+    ],
+    "preferred_old_id": 8715,
+    "confirmed_identity": false,
+    "verified_xy": null,
+    "floor_verified": false,
+    "publish_new_pin": false,
+    "not_used_for_fit": true,
+    "reported_route": "Reach scaffold by western ladder and cross platforms or descend from roof."
+  },
+  "preservation": {
+    "all_146_AT334_records_unchanged": true,
+    "all_70_access_leads_unchanged": true,
+    "original_264_100_keys_preserved": true,
+    "no_new_native_pins": true,
+    "workspace_untouched": true
+  }
+}
