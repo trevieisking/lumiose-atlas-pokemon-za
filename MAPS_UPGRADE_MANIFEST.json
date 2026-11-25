@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 63,
+  "revision": 64,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-321 owner-approved Wild Zone photo and encounter fieldbook planned; AT-320 PR #156 remains separate.",
+  "current_phase": "AT-321 four existing map surfaces now implement the owner-approved Wild Zone fieldbook on review branch; exact-head tests and mobile/desktop visual QA pending. AT-320 PR #156 remains separate.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -119,7 +119,7 @@
     },
     "wild_zone": {
       "count": 20,
-      "status": "photo_fieldbook_planned",
+      "status": "photo_fieldbook_implemented_review_pending",
       "separate_ids": true,
       "owner_photographs": 40,
       "required_photos_per_zone": 2,
@@ -143,8 +143,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -4626,7 +4626,7 @@
     "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
   },
   "at_321_wild_zone_photo_fieldbook": {
-    "status": "owner_approved_planned_not_deployed",
+    "status": "implemented_on_review_branch_not_deployed",
     "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
     "requirements": [
       "All 20 numbered Wild Zones, each with exactly two original owner PNGs: wider area/encounter-card overview and detailed zone close-up; both open full resolution.",
@@ -4652,6 +4652,43 @@
     "active_separate_pr": 156,
     "private_checklist": "read-only preflight; AT-321 row absent; pending synchronization",
     "workspace": "unchanged",
-    "release_gate": "exact-head CI and phone/desktop visual evidence; exact Pages deployment"
+    "release_gate": "exact-head CI and phone/desktop visual evidence; exact Pages deployment",
+    "implementation_commit": "28a3b8e7e71209918e7396fc9fdb78f7c1b51730",
+    "record_module": "wild-zone-fieldbook.mjs",
+    "evidence": "docs/qa/ATLAS_AT321_WILD_ZONE_PHOTO_FIELDBOOK.md",
+    "surfaces": [
+      "index.html#maps",
+      "maps.html",
+      "sector-maps.html",
+      "atlas-explorer.html"
+    ],
+    "species_counts": [
+      7,
+      6,
+      7,
+      6,
+      12,
+      9,
+      9,
+      7,
+      8,
+      8,
+      8,
+      10,
+      7,
+      7,
+      11,
+      8,
+      7,
+      8,
+      7,
+      15
+    ],
+    "fixed_alpha_rows_preserved": 38,
+    "zone20_ordinary_species": 15,
+    "zone20_rotating_alpha_pool": 67,
+    "unit_test": "tests/wild_zone_fieldbook.test.mjs",
+    "browser_test": "tests/wild_zone_fieldbook_browser.mjs",
+    "verification_status": "pending exact-head GitHub Actions and visual inspection; no release claimed"
   }
 }

@@ -18,7 +18,7 @@ try{
    async function check(n,screen,shot=false){
      const z=wildZoneRecords[n-1];const panel=page.locator('[data-wz-fieldbook="'+n+'"]:visible');
      await panel.waitFor();assert.equal(await panel.count(),1);
-     assert.match(await panel.textContent(),new RegExp(z.area.replace(/[.*+?^$\x7b\x7d()|[\]\\]/g,"\\$&")));
+     assert.ok((await panel.textContent()).includes(z.area),"Named area missing: "+z.area);
      const imgs=panel.locator(".wz-photo-pair img");assert.equal(await imgs.count(),2);
      for(let i=0;i<2;i++){
        const img=imgs.nth(i);assert.equal(await img.getAttribute("src"),z.photos[i].path);
@@ -30,7 +30,7 @@ try{
      if(n===20){await panel.locator("summary").click();assert.equal(await panel.locator(".wz-alpha-pool li").count(),67);}
      const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
      assert.ok(overflow<=1,screen+" "+kind+" overflow "+overflow);
-     if(shot){await panel.scrollIntoViewIfNeeded();await page.screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+".png"});}
+     if(shot){await panel.locator(".wz-photo-pair").screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-photos.png"});await panel.screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-roster.png"});}
    }
    await page.goto(base+"/index.html#maps",{waitUntil:"load"});
    for(const n of [1,6,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
