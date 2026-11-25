@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 71,
+  "revision": 72,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-328 three new owner city overview sources and candidate photo registration; G1 route reconciliation and G2-G5 remain incomplete.",
+  "current_phase": "AT-329 city overview source images merged; preserve AT-328/AT-320 route reconciliation separately; G1-G5 pending.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4953,9 +4953,9 @@
     "new_verified_routes": 0,
     "old_three_overview_files_recovered": 0
   },
-  "at_328_city_overview_sources": {
-    "id": "AT-328",
-    "status": "source_assets_prepared_candidate_registration_only",
+  "at_329_city_overview_sources": {
+    "id": "AT-329",
+    "status": "source_assets_merged_candidate_registration_only",
     "baseline_main_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
     "manifest": "assets/atlas/city-overview/manifest.json",
     "registration": "docs/qa/ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json",
@@ -5028,6 +5028,14 @@
         "max_px": 852.19,
         "status": "rejected_false_correspondence"
       }
-    ]
+    ],
+    "initial_import_label": "AT-328",
+    "asset_pr": 173,
+    "asset_reviewed_head": "85066dd7ad6a9cb4dab95bc6505538b18bb82f99",
+    "asset_merge_sha": "e01c6c428a3b6f320cb94a7044eb5dfbd4e6d2f0",
+    "asset_tree": "76fc2d1f3647748301dd9ebce727b26a921e1063",
+    "asset_validation": "Exact crop pixel equality locally, PNG decoding and dimensions, local SHA-256 and Git blob identity, three exact paths/byte counts on reviewed tree and identical merged tree. No site runtime changes or workflow triggered.",
+    "tracking_id": "AT-329-CITY-OVERVIEW-INTAKE",
+    "tracking_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links."
   }
 }
