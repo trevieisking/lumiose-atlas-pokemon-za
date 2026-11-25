@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 65,
+  "revision": 66,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-321 held on browser visibility failure; AT-322 research documented on main, independent highlighting planned only. AT-320 remains separate.",
+  "current_phase": "AT-321 merged after exact-head CI success; AT-322/323 boundary and encounter research documented; geometry calibration and independent deployment verification pending. AT-320 remains separate.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4626,7 +4626,7 @@
     "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
   },
   "at_321_wild_zone_photo_fieldbook": {
-    "status": "implemented_on_review_branch_not_deployed",
+    "status": "merged_main_deployment_not_rechecked_in_at323",
     "baseline_main_sha": "8f7b308629978dfba9e3ca25160bc96f7c085604",
     "requirements": [
       "All 20 numbered Wild Zones, each with exactly two original owner PNGs: wider area/encounter-card overview and detailed zone close-up; both open full resolution.",
@@ -4689,7 +4689,7 @@
     "zone20_rotating_alpha_pool": 67,
     "unit_test": "tests/wild_zone_fieldbook.test.mjs",
     "browser_test": "tests/wild_zone_fieldbook_browser.mjs",
-    "verification_status": "HOLD: exact earlier head 1a56c8c6a47e83c590998eb0e83cc212f3235b24 unit and original browser smoke passed, new browser test timed out at Zone 1 visibility, run 45675208275. Root cause and actual visual QA pending."
+    "verification_status": "Exact head 2faef6b25d4f4d7abfae00001a7e35163a78fb41: runs 45678803670, 45678804312, 45678804365 success. Merged 344a84050a26a50f899752ab61693bc1190e985b. Exact Pages deployment not checked in AT-323; Workspace unchanged."
   },
   "at_322_pokemaps_reference_audit": {
     "status": "documentation_on_main_partial_research_no_ui_release",
@@ -4724,5 +4724,24 @@
     "photo_capture": "8 representative captures planned; 0 actual screenshots; rights and live browser access pending",
     "geometry": "0 new polygons or walkable routes verified",
     "workspace": "unchanged"
+  },
+  "at_323_multisource_research": {
+    "status": "research_documentation_merged_no_runtime",
+    "documentation_pr": 162,
+    "documentation_sha": "5d6424e008cb1c8bd98993ea008d35b8549ee0b5",
+    "audit": "docs/qa/ATLAS_AT323_GAME_RESEARCH_AUDIT.md",
+    "register": "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+    "capture_guide": "docs/qa/ATLAS_AT323_OWNER_CAPTURE_REQUESTS.md",
+    "coverage": {
+      "sectors_catalogued": 48,
+      "wild_zone_geography_notes": 20,
+      "bisafans_linked_sectors": 45,
+      "archive_filename_leads": 32,
+      "inspected_published_images": 3,
+      "registered_polygons": 0,
+      "verified_new_routes": 0,
+      "new_image_binaries": 0
+    },
+    "next": "Independently calibrate boundary pilots Vert1 and WZ11; check overlaps, route access and encounter discrepancies with owner captures. No runtime edits or new public data."
   }
 }
