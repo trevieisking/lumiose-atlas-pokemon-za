@@ -1383,3 +1383,18 @@ This is a parallel content workstream, not a change to AT-294 map scope or AT-32
 - [ ] Keep Workspace status OPEN; inspect the original source and mirror only missing compatible features within the single consolidated AT-325 / AT-297 handoff after the full map release. No separate Workspace prompt, automatic synchronization or current site change.
 
 The complete clothing inventory and original storefront photography remain pending. A possible future Legends: Arceus guide is a separate idea only, not a new approved implementation or a change to the Z-A map release. Manifest revision 74; ledger revision 82.
+
+### AT-330 — Reviewed merge and future guide ideas (25 November 2026)
+
+PR #176 merged as `0f11d8a505a550ca1e29ce64dcb5840961a3108e` after exact feature-head validation (both CI jobs successful in run 45716560795), manual inspection of all four 393×852 / 1440×900 viewport screenshots, and resolution of the sole feedback-origin review finding. Screenshot review covers captured top sections, not full physical-device inspection. Existing type calculator, map scope, progress and feedback backend unchanged. The preceding main advance was documentation-only (PR #178). Rollback baseline: `d320e8116fa25e39a8128b34f79ac65f65e2afba`.
+
+- [x] Review the four captured viewport images; readable layouts and intentional shared horizontal navigation.
+- [x] Resolve the feedback-origin review finding using exact-head passing browser navigation and return-link tests.
+- [x] Merge bounded clothing, beauty and treasure features to main.
+- [x] Exact-revision [Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653) succeeded. Direct public-page inspection unavailable through current tool; live verification remains open.
+- [ ] Inspect actual live pages before marking live verification complete. Complete clothing variants, salon swatches, storefront photos and physical-device checks; preserve existing type chart and map priorities.
+- [ ] Workspace remains open and gated by AT-325 and AT-297; no prompt, release or original-site change.
+
+Cross-checked the orange Flabébé lead on Bleu Street and blue Flabébé rooftop lead near Wild Zone 7 against published game references. Distinguish Flabébé from Floette for Side Mission 012. No private player details or new permanent map markers required.
+
+**Future guide ideas — deferred:** Pokémon Legends: Arceus and Pokémon Wind/Waves are separate possible future guide projects. Reuse Atlas lessons (walkthroughs, accessible type matchups, verified maps, optional cosmetics, side missions and economy) only where the relevant games support them. No new repository, implementation, purchase, release date assertion or change to Z-A delivery priorities authorized by these ideas. Manifest revision 75; ledger revision 83.

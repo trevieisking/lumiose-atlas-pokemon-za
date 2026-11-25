@@ -5,7 +5,7 @@
 **Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
 
 
-**Revision:** 82 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+**Revision:** 83 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
 **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
 
 **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
@@ -832,3 +832,18 @@ This is a parallel content workstream, not a change to AT-294 map scope or AT-32
 The complete clothing inventory and original storefront photography remain pending. A possible future Legends: Arceus guide is a separate idea only, not a new approved implementation or a change to the Z-A map release. Manifest revision 74; ledger revision 82.
 
 Edition B: branch only, not merged or deployed. Edition A: original source not inspected for this feature; no changes. Private tracker rows AT-330-CLOTHING, AT-330-HAIR-BEAUTY, AT-330-TREASURE-ECONOMY and AT-330-TYPE-MATCHUP-PROTECTION record open or in-progress status without verified timestamps until real independent validation.
+
+### AT-330 — Reviewed merge and future guide ideas (25 November 2026)
+
+PR #176 merged as `0f11d8a505a550ca1e29ce64dcb5840961a3108e` after exact feature-head validation (both CI jobs successful in run 45716560795), manual inspection of all four 393×852 / 1440×900 viewport screenshots, and resolution of the sole feedback-origin review finding. Screenshot review covers captured top sections, not full physical-device inspection. Existing type calculator, map scope, progress and feedback backend unchanged. The preceding main advance was documentation-only (PR #178). Rollback baseline: `d320e8116fa25e39a8128b34f79ac65f65e2afba`.
+
+- [x] Review the four captured viewport images; readable layouts and intentional shared horizontal navigation.
+- [x] Resolve the feedback-origin review finding using exact-head passing browser navigation and return-link tests.
+- [x] Merge bounded clothing, beauty and treasure features to main.
+- [x] Exact-revision [Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653) succeeded. Direct public-page inspection unavailable through current tool; live verification remains open.
+- [ ] Inspect actual live pages before marking live verification complete. Complete clothing variants, salon swatches, storefront photos and physical-device checks; preserve existing type chart and map priorities.
+- [ ] Workspace remains open and gated by AT-325 and AT-297; no prompt, release or original-site change.
+
+Cross-checked the orange Flabébé lead on Bleu Street and blue Flabébé rooftop lead near Wild Zone 7 against published game references. Distinguish Flabébé from Floette for Side Mission 012. No private player details or new permanent map markers required.
+
+**Future guide ideas — deferred:** Pokémon Legends: Arceus and Pokémon Wind/Waves are separate possible future guide projects. Reuse Atlas lessons (walkthroughs, accessible type matchups, verified maps, optional cosmetics, side missions and economy) only where the relevant games support them. No new repository, implementation, purchase, release date assertion or change to Z-A delivery priorities authorized by these ideas. Manifest revision 75; ledger revision 83.

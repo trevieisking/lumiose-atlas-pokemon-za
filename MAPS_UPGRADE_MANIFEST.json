@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 74,
+  "revision": 75,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -5049,7 +5049,7 @@
       "baseline_main_sha": "c7749d479ef0d793de7c44340d42f4e271633983"
     }
   },
-    "at_330_player_choice_guides": {
+  "at_330_player_choice_guides": {
     "tracking_id": "AT-330",
     "approved_on": "2026-11-25",
     "scope": "Optional appearance and economy guides plus protection of the existing type-matchup guide",
@@ -5088,7 +5088,7 @@
     },
     "github": {
       "status": "in_progress",
-      "stage": "exact_head_automated_validation_passed_manual_visual_review_pending",
+      "stage": "pages_deployed_live_verification_pending",
       "pr": 176,
       "head_sha": "5906395e28c9b84739c108774dde88f191c2ba74",
       "base_sha": "c72281063e258b19b0378cf886757e9a4548f6d1",
@@ -5104,9 +5104,17 @@
       ],
       "screenshot_artifact_id": 15069922724,
       "screenshot_artifact_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45716560795/artifacts/15069922724",
-      "manual_visual_review": "not_completed_here",
-      "review_thread": "initial_feedback_finding_fixed_in_code_thread_and_final_review_pending",
-      "live_deployment": null
+      "manual_visual_review": "four captured viewport screenshots inspected; full physical-device/live review pending",
+      "review_thread": "sole feedback-origin finding resolved with exact-head passing browser evidence",
+      "live_deployment": {
+        "run_id": 45719670653,
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45719670653",
+        "status": "success",
+        "verified": false,
+        "verification_note": "Exact merge deployment completed successfully; independent public-page access unavailable through current inspection tool."
+      },
+      "merge_sha": "0f11d8a505a550ca1e29ce64dcb5840961a3108e",
+      "rollback_baseline": "d320e8116fa25e39a8128b34f79ac65f65e2afba"
     },
     "workspace": {
       "status": "open",
@@ -5122,7 +5130,7 @@
       "random_hyperspace_distortions_unpinned": true,
       "private_player_information_published": false
     },
-    "future_idea": "Legends: Arceus guide is a separate possibility, not approved Z-A scope",
+    "future_idea": "Legends: Arceus and Pokémon Wind/Waves are deferred separate guide ideas; no implementation approved or change to Z-A map priorities.",
     "evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/176"
   }
 }
