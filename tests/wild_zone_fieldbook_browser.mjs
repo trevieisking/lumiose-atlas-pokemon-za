@@ -6,6 +6,8 @@ import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 import {wildZoneRecords} from "../wild-zone-fieldbook.mjs";
 const base="http://127.0.0.1:18766",output="test-artifacts/atlas-explorer";
+// Explorer stores zero-padded IDs; the other map surfaces use numeric fragments.
+const explorerZoneId=n=>"wz-"+String(n).padStart(2,"0");
 fs.mkdirSync(output,{recursive:true});
 const server=spawn("python3",["-m","http.server","18766","--bind","127.0.0.1"],{stdio:"ignore"});
 let browser;
@@ -38,9 +40,9 @@ try{
    await page.locator('#zone-directory [data-map-zone-button="20"]').click();await check(20,"map",true);
    await page.locator("#mapSearch").fill("Eevee");assert.equal(await page.locator('[data-map-zone-button="19"]').isVisible(),true);
    await page.goto(base+"/sector-maps.html#wildzone-12",{waitUntil:"load"});await check(12,"sector",true);
-   await page.goto(base+"/atlas-explorer.html?place=wz-1",{waitUntil:"networkidle"});await check(1,"explorer",true);
+   await page.goto(base+"/atlas-explorer.html?place="+explorerZoneId(1),{waitUntil:"networkidle"});await check(1,"explorer",true);
    await page.locator('#aeFilters button[data-kind="zone"]').click();
-   for(let n=2;n<=20;n++){await page.locator('#aeResults [data-record-id="wz-'+n+'"]').click();await check(n,"explorer",n===20);}
+   for(let n=2;n<=20;n++){await page.locator('#aeResults [data-record-id="'+explorerZoneId(n)+'"]').click();await check(n,"explorer",n===20);}
    assert.deepEqual(errors,[]);await page.close();
  }
  console.log("PASS AT-321: 20 Explorer selections, original PNG pairs, full-size links, 15/67 Zone 20 lists, standalone/map directory/main views on desktop and phone.");
