@@ -1,0 +1,1421 @@
+{
+  "id": "AT-323",
+  "date": "2026-11-25",
+  "status": "research_addendum_only_not_runtime",
+  "base_main": "c05cade2d904199f6567918244582f7d2c65c70e",
+  "active_pr_160_head": "2faef6b25d4f4d7abfae00001a7e35163a78fb41",
+  "source_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+  "prior_audit": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+  "counts": {
+    "sectors": 48,
+    "wild_zones": 20,
+    "bisafans_sector_names": 47,
+    "bisafans_linked_sectors": 45,
+    "archive_sector_filename_leads": 32,
+    "visually_reviewed_published_boundary_images": 3,
+    "new_verified_polygons": 0,
+    "new_verified_routes": 0,
+    "new_image_files": 0
+  },
+  "sources": {
+    "bisafans_index": "https://www.bisafans.de/routendex/illumina-city/",
+    "bulbapedia_archive": "https://archives.bulbagarden.net/wiki/Category:Legends:_Z-A_maps",
+    "serebii_map": "https://www.serebii.net/pokearth/lumiosecity/",
+    "serebii_roster": "https://www.serebii.net/legendsz-a/wildzones.shtml",
+    "game8_map": "https://game8.jp/pokemon-legends-z-a/729758",
+    "gamewith_map": "https://gamewith.jp/pokemon-za/524038",
+    "nintendo_update": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68626/",
+    "official_dlc": "https://legends.pokemon.com/en-us/dlc"
+  },
+  "sectors": [
+    {
+      "id": "vert-sector-1",
+      "name": "Vert Sector 1",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-1-saison-canal.png",
+      "owner_street_bearing": "South of Saison Canal; Saison-Canalside is on the opposite side of the canal.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_1",
+      "bulbapedia_file_name_lead": "Kalos Vert Sector 1 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-1.php",
+      "bisafans_index_state": "linked",
+      "source_status": "reference_image_visually_reviewed",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-2",
+      "name": "Vert Sector 2",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png",
+      "owner_street_bearing": "Immediately beside Vernal Avenue, between the avenue and Vert Plaza.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_2",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-2.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-3",
+      "name": "Vert Sector 3",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+      "owner_street_bearing": "Owner map places Vert Sector 3 immediately west of the green Wild Zone edge; a long narrow canal runs south of its western block.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_3",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-3.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-4",
+      "name": "Vert Sector 4",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "owner_street_bearing": "Between the Vernal Avenue corridor and the buildings of Vert Sector 5; south of Vert Plaza.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_4",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-4.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-5",
+      "name": "Vert Sector 5",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "owner_street_bearing": "Beside the waterway and Vert Street, next to Vert Sector 4.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_5",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-5.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-6",
+      "name": "Vert Sector 6",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+      "owner_street_bearing": "Vert Sector 6 sits west of Restaurant Le Nah, beside South Boulevard; Coulant Waterway is southwest.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_6",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-6.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-7",
+      "name": "Vert Sector 7",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+      "owner_street_bearing": "Near Vert Street and Station Front, above South Boulevard.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_7",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-7.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-8",
+      "name": "Vert Sector 8",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+      "owner_street_bearing": "Between Vert Street and Station Front, north of South Boulevard.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_8",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-8.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "vert-sector-9",
+      "name": "Vert Sector 9",
+      "district": "Vert",
+      "owner_reference": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+      "owner_street_bearing": "Between Vernal Avenue and Vert Sector 8, north of South Boulevard.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Vert_Sector_9",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-9.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-1",
+      "name": "Bleu Sector 1",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_1",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 1 Map.png",
+      "bisafans_catalogue_target": null,
+      "bisafans_index_state": "listed_without_link",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-2",
+      "name": "Bleu Sector 2",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_2",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 2 Map.png",
+      "bisafans_catalogue_target": null,
+      "bisafans_index_state": "not_listed",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-3",
+      "name": "Bleu Sector 3",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+      "owner_street_bearing": "East of Bleu Plaza and west of Vernal Avenue, north of Aymlis Park.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_3",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 3 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-3.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-4",
+      "name": "Bleu Sector 4",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_4",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 4 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-4.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-5",
+      "name": "Bleu Sector 5",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "owner_street_bearing": "West of Aymlis Park, near Bleu Street.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_5",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 5 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-5.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-6",
+      "name": "Bleu Sector 6",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_6",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 6 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-6.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-7",
+      "name": "Bleu Sector 7",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "owner_street_bearing": "Along South Boulevard below Aymlis Park.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_7",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 7 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php",
+      "bisafans_index_state": "linked",
+      "source_status": "reference_image_visually_reviewed",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-8",
+      "name": "Bleu Sector 8",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+      "owner_street_bearing": "Southwest of Bleu Plaza, beside Bleu Street.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_8",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 8 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-8.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-9",
+      "name": "Bleu Sector 9",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+      "owner_street_bearing": "Bleu Sector 9 is east of South Boulevard, just north of Café Soleil; Bleu Sector 6 is northeast and Bleu Sector 8 is southeast.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_9",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 9 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-9.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "bleu-sector-10",
+      "name": "Bleu Sector 10",
+      "district": "Bleu",
+      "owner_reference": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+      "owner_street_bearing": "Bleu Sector 10 is south of Estival Avenue, east of South Boulevard and west of Espace Vide.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_10",
+      "bulbapedia_file_name_lead": "Kalos Bleu Sector 10 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-10.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-1",
+      "name": "Magenta Sector 1",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "owner_street_bearing": "Above Estival Avenue and east of Magenta Sector 3.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_1",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 1 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-1.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-2",
+      "name": "Magenta Sector 2",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+      "owner_street_bearing": "Magenta Sector 2 lies west of Autumnal Avenue, near Lysandre Café; Magenta Street and Saison Canal are immediately south.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_2",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 2 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-2.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-3",
+      "name": "Magenta Sector 3",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "owner_street_bearing": "Above Estival Avenue, around the long landscaped courtyard.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_3",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 3 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-3.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-4",
+      "name": "Magenta Sector 4",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-4.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_4",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 4 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-4.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-5",
+      "name": "Magenta Sector 5",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-5.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_5",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 5 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-5.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-6",
+      "name": "Magenta Sector 6",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_6",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 6 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-6.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-7",
+      "name": "Magenta Sector 7",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-7.png",
+      "owner_street_bearing": "Magenta Sector 7 is at the Lumiose Sewers entrance, immediately north of Magenta Street and Saison Canal; Magenta Sector 8 is west.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_7",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 7 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-7.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-8",
+      "name": "Magenta Sector 8",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-8.png",
+      "owner_street_bearing": "Magenta Sector 8 is beside the Pokémon Center, west of the Lumiose Sewers entrance and north of Magenta Street/Saison Canal.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_8",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 8 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-8.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "magenta-sector-9",
+      "name": "Magenta Sector 9",
+      "district": "Magenta",
+      "owner_reference": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+      "owner_street_bearing": "Between the North Boulevard side of Magenta and the Autumnal Avenue corridor.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_9",
+      "bulbapedia_file_name_lead": "Kalos Magenta Sector 9 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-9.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-1",
+      "name": "Rouge Sector 1",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+      "owner_street_bearing": "Between Autumnal Avenue and Rouge Street, beside the central city square.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_1",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-1.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-2",
+      "name": "Rouge Sector 2",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+      "owner_street_bearing": "East of Rouge Street, near Vernal Avenue and north of the central city square.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_2",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-2.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-3",
+      "name": "Rouge Sector 3",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_3",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-3.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-4",
+      "name": "Rouge Sector 4",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_4",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-4.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-5",
+      "name": "Rouge Sector 5",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_5",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-5.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-6",
+      "name": "Rouge Sector 6",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+      "owner_street_bearing": "South of Dormez Bien Cemetery, near Rouge Plaza.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_6",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-6.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-7",
+      "name": "Rouge Sector 7",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_7",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-7.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "rouge-sector-8",
+      "name": "Rouge Sector 8",
+      "district": "Rouge",
+      "owner_reference": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Rouge_Sector_8",
+      "bulbapedia_file_name_lead": null,
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-8.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-1",
+      "name": "Jaune Sector 1",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_1",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 1 Map.png",
+      "bisafans_catalogue_target": null,
+      "bisafans_index_state": "listed_without_link",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-2",
+      "name": "Jaune Sector 2",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_2",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 2 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-2.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-3",
+      "name": "Jaune Sector 3",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_3",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 3 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-3.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-4",
+      "name": "Jaune Sector 4",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+      "owner_street_bearing": "North of Jaune Sector 3 at the upper edge of the observed Jaune district view.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_4",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 4 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-4.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-5",
+      "name": "Jaune Sector 5",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+      "owner_street_bearing": "Jaune Sector 5 lies between Jaune Sector 4 and Wild Zone 19 (Jaune Sector 8), north of Jaune Street and Jaune Plaza.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_5",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 5 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-5.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-6",
+      "name": "Jaune Sector 6",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_6",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 6 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-6.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-7",
+      "name": "Jaune Sector 7",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+      "owner_street_bearing": null,
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_7",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 7 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-7.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-8",
+      "name": "Jaune Sector 8",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+      "owner_street_bearing": "Below Jaune Sector 7, toward the southeastern edge of the observed map.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_8",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 8 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-8.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-9",
+      "name": "Jaune Sector 9",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "owner_street_bearing": "Below Jaune Street and southwest of the Jaune Sector 11 label.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_9",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 9 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-9.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-10",
+      "name": "Jaune Sector 10",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "owner_street_bearing": "North side of Saison Canal, to the west of Jaune Sector 12.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_10",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 10 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-10.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-11",
+      "name": "Jaune Sector 11",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "owner_street_bearing": "South of Jaune Street and west of North Boulevard.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_11",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 11 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-11.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "jaune-sector-12",
+      "name": "Jaune Sector 12",
+      "district": "Jaune",
+      "owner_reference": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "owner_street_bearing": "Near North Boulevard and the eastern end of Saison Canal.",
+      "bulbapedia_catalogue_target": "https://bulbapedia.bulbagarden.net/wiki/Jaune_Sector_12",
+      "bulbapedia_file_name_lead": "Kalos Jaune Sector 12 Map.png",
+      "bisafans_catalogue_target": "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-12.php",
+      "bisafans_index_state": "linked",
+      "source_status": "catalogued_only_not_individually_validated",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    }
+  ],
+  "wild_zones": [
+    {
+      "id": "wz-01",
+      "name": "Wild Zone 01",
+      "primary_district": "Vert",
+      "existing_centre": [
+        1140,
+        1761
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Southern part of Vert Sector 9 / South Boulevard; compare Research Lab and Vernal Avenue bearings.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_1",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-1.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-02",
+      "name": "Wild Zone 02",
+      "primary_district": "Vert",
+      "existing_centre": [
+        1175,
+        1269
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Vert Plaza, between Vert Sectors 1 and 5.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_2",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-2.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-03",
+      "name": "Wild Zone 03",
+      "primary_district": "Rouge",
+      "existing_centre": [
+        954,
+        536
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Rouge Plaza.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_3",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-3.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-04",
+      "name": "Wild Zone 04",
+      "primary_district": "Rouge",
+      "existing_centre": [
+        1081,
+        284
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Dormez Bien Cemetery, off Rouge Street.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_4",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-4.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-05",
+      "name": "Wild Zone 05",
+      "primary_district": "Bleu",
+      "existing_centre": [
+        795,
+        1119
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Overlaps Bleu Sectors 1 and 2 and part of Bleu Street north of Bleu Plaza; not equivalent to a single numbered sector.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_5",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-5.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-06",
+      "name": "Wild Zone 06",
+      "primary_district": "Jaune",
+      "existing_centre": [
+        1745,
+        995
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Jaune Sector 12 and the southern end of North Boulevard; rooftop and canal approaches require separate level-specific evidence.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_6",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-6.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-07",
+      "name": "Wild Zone 07",
+      "primary_district": "Magenta",
+      "existing_centre": [
+        561,
+        835
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Magenta Plaza between Magenta Sectors 3 and 4.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_7",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-7.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-08",
+      "name": "Wild Zone 08",
+      "primary_district": "Jaune",
+      "existing_centre": [
+        1380,
+        820
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Jaune Plaza.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_8",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-8.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-09",
+      "name": "Wild Zone 09",
+      "primary_district": "Magenta",
+      "existing_centre": [
+        250,
+        1069
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Mostly Magenta Sector 5.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-9.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-10",
+      "name": "Wild Zone 10",
+      "primary_district": "Bleu",
+      "existing_centre": [
+        309,
+        1281
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Bleu Sector 10, including rooftops and waterway approaches; separate floor records.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_10",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-10.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-11",
+      "name": "Wild Zone 11",
+      "primary_district": "Jaune",
+      "existing_centre": [
+        1580,
+        1135
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Jaune Sector 10 and part of Vert Sector 6 across Saison Canal; one zone spans two districts. Preserve existing primary district and add secondary coverage as research only.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-11.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": "Vert",
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-12",
+      "name": "Wild Zone 12",
+      "primary_district": "Bleu",
+      "existing_centre": [
+        801,
+        1571
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Aymlis Park in Bleu District.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_12",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-12.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-13",
+      "name": "Wild Zone 13",
+      "primary_district": "Rouge",
+      "existing_centre": [
+        776,
+        144
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "North Boulevard north of Rouge Sector 7.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_13",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-13.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-14",
+      "name": "Wild Zone 14",
+      "primary_district": "Magenta",
+      "existing_centre": [
+        209,
+        801
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Electrical Substation northwest of Magenta Sector 6. Source infobox and body conflict on district; check game location header and preserve existing Atlas data pending reconciliation.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-14.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-15",
+      "name": "Wild Zone 15",
+      "primary_district": "Jaune",
+      "existing_centre": [
+        1546,
+        346
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "North Boulevard northeast of Jaune Sector 7; Café Ultimo is an owner-photo orientation landmark.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_15",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-15.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-16",
+      "name": "Wild Zone 16",
+      "primary_district": "Bleu",
+      "existing_centre": [
+        710,
+        1294
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Bleu Plaza.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_16",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-16.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-17",
+      "name": "Wild Zone 17",
+      "primary_district": "Vert",
+      "existing_centre": [
+        1471,
+        1480
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Vert Sector 7 south of Coulant Waterway.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-17.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-18",
+      "name": "Wild Zone 18",
+      "primary_district": "Magenta",
+      "existing_centre": [
+        390,
+        361
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Magenta Sector 9 and North Boulevard.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-18.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-19",
+      "name": "Wild Zone 19",
+      "primary_district": "Jaune",
+      "existing_centre": [
+        1549,
+        601
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Part of Jaune Sector 8; published unlock wording differs (mission 30 versus 31). Verify actual gate rather than overwrite.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_19",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-19.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    },
+    {
+      "id": "wz-20",
+      "name": "Wild Zone 20",
+      "primary_district": "Centrico",
+      "existing_centre": [
+        950,
+        960
+      ],
+      "existing_centre_precision": "approx_saved_zone_centre",
+      "source_geography_note": "Centrico Plaza, former tower site, post-story. Ordinary roster and rotating Alpha pool must remain separate.",
+      "sources": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_20",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-20.php",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ],
+      "source_status": "location_text_reference_reviewed_not_boundary_registered",
+      "secondary_district_lead": null,
+      "boundary_polygon": null,
+      "geometry_status": "unregistered",
+      "walkable_route": null,
+      "complete_encounter_roster_verified": false
+    }
+  ],
+  "visual_references": [
+    {
+      "area_id": "vert-sector-1",
+      "page": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-1.php",
+      "url": "https://media.bisafans.de/19c15b5/routendex/illumina-city/verte-bezirk-1/verte-bezirk-1.jpg",
+      "observation": "Red highlighted irregular sector block on whole-city reference; compare canal, streets and plaza.",
+      "status": "published_image_visually_inspected_not_calibrated"
+    },
+    {
+      "area_id": "bleu-sector-7",
+      "page": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php",
+      "url": "https://media.bisafans.de/a218c4a/routendex/illumina-city/cyan-bezirk-7/cyan-bezirk-7.jpg",
+      "observation": "Red highlighted southern strip; distinguish district sector extent from rooftop routes.",
+      "status": "published_image_visually_inspected_not_calibrated"
+    },
+    {
+      "area_id": "wz-11",
+      "page": "https://www.bisafans.de/routendex/illumina-city/wildsektor-11.php",
+      "url": "https://media.bisafans.de/6175dc8/routendex/illumina-city/wildsektor-11/wildsektor-11.jpg",
+      "observation": "Green highlighted zone visible on both banks of Saison Canal; corroborates textual cross-district extent.",
+      "status": "published_image_visually_inspected_not_calibrated"
+    }
+  ],
+  "discrepancies": [
+    {
+      "area": "wz-11",
+      "type": "cross_district",
+      "finding": "Jaune 10 and Vert 6 on opposite canal banks; text and highlighted picture agree. Do not imply straight walk across water.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11",
+        "https://media.bisafans.de/6175dc8/routendex/illumina-city/wildsektor-11/wildsektor-11.jpg"
+      ]
+    },
+    {
+      "area": "wz-05",
+      "type": "overlap",
+      "finding": "Bleu 1, Bleu 2 and Bleu Street overlap. Keep sector and Wild Zone as independent layers.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_5"
+      ]
+    },
+    {
+      "area": "wz-14",
+      "type": "district_conflict",
+      "finding": "Electrical Substation near Magenta 6; Wild Zone 14 page infobox contradicts its geography text. Check in-game header.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14",
+        "https://bulbapedia.bulbagarden.net/wiki/Electrical_Substation"
+      ]
+    },
+    {
+      "area": "wz-17",
+      "type": "encounter_disagreement",
+      "finding": "Bulbapedia lists Talonflame Lv45–46 where other reviewed tables omit it. Fixed Alpha Pyroar form listings also differ; retain existing roster until verified.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17",
+        "https://www.serebii.net/pokearth/lumiosecity/",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-17.php"
+      ]
+    },
+    {
+      "area": "wz-18",
+      "type": "encounter_disagreement",
+      "finding": "Prior AT-322 Gastly listing discrepancy remains unresolved; compare ordinary spawns with PokéMaps and in-game record.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18",
+        "https://pokemaps.net/"
+      ]
+    },
+    {
+      "area": "wz-19",
+      "type": "unlock_disagreement",
+      "finding": "Mission 30/31 wording differs; observe exact gate state before/after progression.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_19",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ]
+    },
+    {
+      "area": "wz-20",
+      "type": "rotating_pool",
+      "finding": "Preserve existing ordinary 15 and possible rotating Alpha 67; two rotating slots are not 67 simultaneous spawns. External map coordinates cannot be pasted into Atlas.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_20",
+        "https://www.serebii.net/legendsz-a/wildzones.shtml"
+      ]
+    },
+    {
+      "area": "wz-09",
+      "type": "condition",
+      "finding": "Meowstic male night, female day, source-reported; verify without assuming flattened table weather columns.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9"
+      ]
+    },
+    {
+      "area": "wz-03,wz-07,wz-16",
+      "type": "form",
+      "finding": "Source-reported flower colours: WZ3 Flabébé red/blue/white; WZ7 Floette red/orange; WZ16 Florges blue/white. Preserve species and form separately.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_3",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_7",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_16"
+      ]
+    },
+    {
+      "area": "wz-15",
+      "type": "roster_disagreement",
+      "finding": "Serebii area data includes Trevenant, Noibat and Banette where some other tables differ. Retain existing entries and separate roof and street encounters.",
+      "source": [
+        "https://www.serebii.net/pokearth/lumiosecity/",
+        "https://www.bisafans.de/routendex/illumina-city/wildsektor-15.php"
+      ]
+    },
+    {
+      "area": "multiple",
+      "type": "scripted_encounters",
+      "finding": "Mission encounters are not automatically wild catches: WZ6 side180 Alpha Annihilape and WZ17 side114 Skarmory are reported noncatchable; WZ3 Steelix, WZ5 Gallade, WZ9 Pangoro and WZ11 Xerneas need mission-specific records.",
+      "source": [
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_6",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_3",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_5",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9",
+        "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11"
+      ]
+    }
+  ],
+  "encounter_and_access_leads": [
+    {
+      "area": "vert-sector-1",
+      "subject": "Hawlucha",
+      "note": "Bisafans reports Lv21–24 and a roof north of WZ2, with an encounter probability reported by that source; verify placement and odds in game.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-1.php"
+    },
+    {
+      "area": "bleu-sector-7",
+      "subject": "Eevee, Larvitar, Ralts",
+      "note": "Eevee Lv15–17 roof, Larvitar Lv12 roof grass reached via yellow lift, Ralts Lv10–13 courtyard south of WZ12; source leads, verify route/level.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php"
+    },
+    {
+      "area": "bleu-sector-7",
+      "subject": "Goomy, Scatterbug, Spewpa",
+      "note": "Rain-dependent Goomy near water; grass/stair access near Nouveau Café Truck No.2 for Scatterbug/Spewpa. Treat weather and floor as explicit fields.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php"
+    },
+    {
+      "area": "bleu-sector-7",
+      "subject": "TM058 Iron Head; TM101 Electroweb",
+      "note": "Source describes lift then ladder and right along western longitudinal roof for TM058, and eastern courtyard entrance for TM101. Confirm from matching screenshots before publishing directions.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php"
+    },
+    {
+      "area": "bleu-sector-8",
+      "subject": "Rooftop approach",
+      "note": "Café Soleil, southward approach, first lift and left/lower roof; route lead only until landmarks photographed.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-8.php"
+    },
+    {
+      "area": "rouge-sector-7",
+      "subject": "Larvitar / elemental monkey Alpha leads",
+      "note": "Source reports roof east of WZ13 and special encounter leads; confirm times and access before publish.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-7.php"
+    },
+    {
+      "area": "wz-15",
+      "subject": "Larvitar / TM052 Earth Power",
+      "note": "Lift/mission80 access lead; distinguish roof approach and prerequisites.",
+      "url": "https://www.bisafans.de/routendex/illumina-city/wildsektor-15.php"
+    }
+  ],
+  "restrictions": [
+    "No external map screenshots or pixels imported; download attempt failed and reuse rights not established.",
+    "Published image visual inspection is not a native-size measurement or proof of a boundary polygon.",
+    "Archive filenames and catalogue links are discovery leads, not proof that all images/pages were individually retrieved.",
+    "Do not replace existing source IDs, marker coordinates, progress, routes or Supabase.",
+    "Independent game captures and calibration required before promoting geometry."
+  ]
+}
