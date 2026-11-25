@@ -46,18 +46,25 @@ try{
    await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
    await page.reload({waitUntil:"load"});await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
    await page.locator("#mapSearch").fill("not-a-real-at326-species");
-   assert.equal(new URL(page.url()).hash,"");assert.equal(new URL(page.url()).search,"?source=atlas");
+   // Same-document navigation notifications can reach the Playwright client
+   // after the input action completes. Verify the actual browser state and
+   // then wait for the client's URL notification; do not relax either assertion.
+   await page.waitForFunction(()=>location.hash===""&&location.search==="?source=atlas"&&
+     document.getElementById("mapZoomImage").dataset.selectedZone===""&&
+     [...document.querySelectorAll("[data-map-zone-detail]")].every(card=>card.hidden));
+   await page.waitForURL(url=>url.hash===""&&url.search==="?source=atlas");
    assert.equal(await page.locator("[data-wz-fieldbook]:visible").count(),0);
    await page.locator("#mapSearch").fill("Eevee");assert.equal(await page.locator('[data-map-zone-button="19"]').isVisible(),true);
    await page.locator('[data-map-zone-button="19"]').click();
    assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
-   assert.equal(new URL(page.url()).hash,"#wild-zone-19");
+   await page.waitForURL(url=>url.hash==="#wild-zone-19"&&url.search==="?source=atlas");
    await page.evaluate(()=>{Object.defineProperty(navigator,"share",{configurable:true,value:async data=>{window.__at326SharedUrl=data.url;}});document.getElementById("atlasArticleShare").click();});
    await page.waitForFunction(()=>window.__at326SharedUrl===location.href);
    await page.locator('[data-map-pin="19"]').click();
    assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
    await page.goto(base+"/maps.html?source=atlas#map-key",{waitUntil:"load"});
-   await page.locator("#mapSearch").fill("not-a-real-at326-species");assert.equal(new URL(page.url()).hash,"#map-key");
+   await page.locator("#mapSearch").fill("not-a-real-at326-species");
+   assert.equal(await page.evaluate(()=>location.hash),"#map-key");
    // The new rotating-Alpha disclosure must not steal the old item-record anchor.
    await page.goto(base+"/sector-maps.html#wildzone-20",{waitUntil:"load"});
    await page.locator("#wildzone-20 details.zone-records[open]").waitFor();

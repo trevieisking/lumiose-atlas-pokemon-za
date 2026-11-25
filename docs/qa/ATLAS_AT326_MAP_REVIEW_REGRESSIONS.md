@@ -16,3 +16,5 @@ Baseline main `8b15a8b7afd8370291f90c846217d0aff2eef601`. This is a bounded revi
 - No source images, map data, coordinates, roster records, item/progress identifiers, database schema or feedback changes. No original Workspace edit. Separate conflicted PR #156 unchanged.
 
 **Gate:** expected-head review, CI, screenshots, merge and exact Pages verification before calling this deployed. Full Interactive Map 2.0 handoff remains blocked by AT-325 G1–G5.
+
+**First exact-head run (590551d97e7a07b0283afbbde2a536229b949baa):** static and unit checks passed; original browser smoke passed. New browser test failed immediately after filter input at the cached Playwright `page.url()` assertion (run 45692791625, job 139482348758, line 49). The actual in-page state was not logged, so do not assume the application passed. Revised proof requires the actual document location, cleared selection and hidden detail panels, then the client's same-document URL notification. No production change in this follow-up, no assertion removed. Full rerun required.
