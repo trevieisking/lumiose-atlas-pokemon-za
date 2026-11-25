@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 58,
+  "revision": 59,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-313 merged; Pages verified; AT-314 first-party video channel integration under review. Vert 1 exact geographic labels remain held.",
+  "current_phase": "AT-314 authorized BuddyVidz access confirmed; five public uploads inventoried, four mission candidates pending content review; channel UI under renewed exact-head validation after journey deep-link fix. AT-313 live on GitHub; Workspace v37 unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4465,15 +4465,32 @@
   "at_314_buddyvidz_video_library": {
     "status": "review_pending_exact_head_ci_and_visual_qa",
     "channel": "https://www.youtube.com/@BuddyVidz-z8g",
-    "channel_source": "owner supplied; direct retrieval unavailable",
+    "channel_source": "authorized_vidiq_owner_channel_verified",
     "recording_focus": [
       "main missions",
-      "Alpha captures"
+      "Alpha captures",
+      "location and access routes"
     ],
     "published_clips": 0,
     "register": "atlas-guide-links.mjs#BUDDYVIDZ_CLIPS",
     "policy": "Only individually reviewed public watch IDs, existing mission or Wild Zone IDs, optional timestamp. Keep external credited guides. No external SDK, tracking, storage, database writes, new map positions or gameplay account changes.",
     "workspace": "hold_v37_until_batched_verified_delta",
-    "private_checklist": "not_written"
+    "private_checklist": "not_written",
+    "public_channel_id": "UCMIoyivRt1u4EYG-KPtfHwQ",
+    "public_upload_register": "docs/qa/BUDDYVIDZ_PUBLIC_UPLOAD_REGISTER.json",
+    "public_uploads_retrieved": 5,
+    "candidate_mission_recordings": 4,
+    "overview_recordings": 1,
+    "content_reviewed_clips": 0,
+    "alpha_clips": 0,
+    "discovery": "public uploads retrieved on requested development cycles; no automatic background sync",
+    "review_budget": "No paid visual review this pass; 25 credits per YouTube video, 125 for initial five; obtain approval before costly batch.",
+    "regression": {
+      "prior_head": "08963ba8c8a4cf1b96c32cccc45cbe4bfc450ae6",
+      "prior_run": 45607237651,
+      "prior_failed_check": "AT-272 mobile journey mission 24 hash position",
+      "fix": "static Journey channel panel; preserve hash navigation; require existing and added browser tests",
+      "status": "pending_validation"
+    }
   }
 }

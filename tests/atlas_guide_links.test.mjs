@@ -60,3 +60,26 @@ test("AT-314 owner channel is separate from actual mission/Alpha videos and acce
   assert.equal(sideVideo(57).href,"https://www.youtube.com/watch?v=DYB6AtF6dpo");
   assert.match(read("app.js"),/installMainGuideBuddyVidz/);
 });
+
+test("AT-314 authorized public upload intake is separate from content-verified clips",()=>{
+  const intake=JSON.parse(read("docs/qa/BUDDYVIDZ_PUBLIC_UPLOAD_REGISTER.json"));
+  assert.equal(intake.channel.id,"UCMIoyivRt1u4EYG-KPtfHwQ");
+  assert.equal(intake.channel.url,BUDDYVIDZ_CHANNEL);
+  assert.equal(intake.uploads.length,5);
+  assert.equal(new Set(intake.uploads.map(x=>x.video_id)).size,5);
+  assert.deepEqual(intake.uploads.map(x=>x.candidate_mission),[null,1,1,2,2]);
+  for(const entry of intake.uploads){
+    assert.match(entry.video_id,/^[A-Za-z0-9_-]{11}$/);
+    assert.equal(entry.privacy,"public");
+    assert.equal(entry.upload_status,"processed");
+    assert.equal(entry.content_review,"pending");
+    assert.equal(entry.verified_start_seconds,null);
+    assert.ok(Number.isInteger(entry.duration_seconds)&&entry.duration_seconds>0);
+    if(entry.candidate_mission!==null)assert.ok(read("walkthrough.html").includes('id="mission-'+entry.candidate_mission+'"'));
+    assert.ok(!BUDDYVIDZ_CLIPS.some(x=>x.videoId===entry.video_id),"Do not promote metadata-only evidence");
+  }
+  assert.equal(intake.counts.footage_verified_clips,0);
+  const journey=read("journey.html");
+  assert.equal((journey.match(/class="atlas-buddyvidz"/g)||[]).length,1);
+  assert.ok(journey.indexOf('class="atlas-buddyvidz"')<journey.indexOf('id="journey-mission-1"'));
+});

@@ -120,7 +120,8 @@ export function appendGuidePanel(host,title,links,note=""){
 }
 export function installArticleLinks(doc,page){
   const by=id=>doc.getElementById(id);
-  installBuddyVidzChannel(by("main"),page==="alphas.html"?"alpha":"story");
+  // Journey has a static channel entry so deep links do not move after initial layout.
+  if(page!=="journey.html")installBuddyVidzChannel(by("main"),page==="alphas.html"?"alpha":"story");
   const zonePages={"maps.html":"wild-zone-","sector-maps.html":"wildzone-","alphas.html":"zone-","items.html":"items-zone-"};
   if(Object.hasOwn(zonePages,page)){
     for(let n=1;n<=20;n++){
