@@ -38,6 +38,68 @@ export function buddyVidzClips(kind,number,records=BUDDYVIDZ_CLIPS){
   return records.filter(r=>r&&r.kind===kind&&r.number===number&&r.reviewed===true&&typeof r.videoId==="string"&&/^[A-Za-z0-9_-]{11}$/.test(r.videoId)&&typeof r.title==="string"&&r.title.trim().length>0&&r.title.length<=180&&Number.isInteger(r.startSeconds)&&r.startSeconds>=0&&r.startSeconds<=86400)
     .map(r=>({href:"https://www.youtube.com/watch?v="+r.videoId+(r.startSeconds?"&t="+r.startSeconds+"s":""),label:"BuddyVidz · "+r.title+(r.startSeconds?" ("+stamp(r.startSeconds)+")":""),external:true,owner:true}));
 }
+
+/* AT-316: reviewed public gameplay, keyed to the actual preserved instruction. */
+export const BUDDYVIDZ_STEP_CLIPS=Object.freeze([
+  {
+    "kind": "main_mission",
+    "number": 2,
+    "step": 2,
+    "anchorText": "Enter Hotel Z, check in and ride the lift to room 202. Rest, then answer the knock at your door.",
+    "videoId": "1EAamrpLcME",
+    "part": 6,
+    "title": "After answering the door: Taunie and the Hotel Z rooftop",
+    "startSeconds": 0,
+    "durationSeconds": 75,
+    "reviewed": true
+  },
+  {
+    "kind": "main_mission",
+    "number": 3,
+    "step": 1,
+    "anchorText": "Meet your teammate in the lobby and battle outside Hotel Z.",
+    "videoId": "PFK9trYe1rA",
+    "part": 10,
+    "title": "Battle Taunie outside Hotel Z",
+    "startSeconds": 6,
+    "durationSeconds": 193,
+    "reviewed": true
+  }
+]);
+
+const stepClipHref=r=>"https://www.youtube.com/watch?v="+r.videoId+(r.startSeconds?"&t="+r.startSeconds+"s":"");
+const stepClipLabel=r=>"Watch BuddyVidz · Part "+r.part+" — "+r.title+" ("+stamp(r.startSeconds)+")";
+export function buddyVidzStepClips(number,step,anchorText,records=BUDDYVIDZ_STEP_CLIPS){
+  if(!Number.isInteger(number)||number<1||number>42||!Number.isInteger(step)||step<1||typeof anchorText!=="string"||!Array.isArray(records))return [];
+  return records.filter(r=>r&&r.kind==="main_mission"&&r.number===number&&r.step===step&&r.anchorText===anchorText&&r.reviewed===true&&Number.isInteger(r.part)&&r.part>=1&&typeof r.videoId==="string"&&/^[A-Za-z0-9_-]{11}$/.test(r.videoId)&&typeof r.title==="string"&&r.title.trim()&&Number.isInteger(r.durationSeconds)&&r.durationSeconds>0&&Number.isInteger(r.startSeconds)&&r.startSeconds>=0&&r.startSeconds<r.durationSeconds)
+    .map(r=>({part:r.part,href:stepClipHref(r),label:stepClipLabel(r)}));
+}
+export function installBuddyVidzStorySteps(doc,page){
+  const selectors={"index.html":".mission-steps","walkthrough.html":".route-index-steps"};
+  const selector=selectors[page];
+  if(!selector)return;
+  for(const number of new Set(BUDDYVIDZ_STEP_CLIPS.map(r=>r.number))){
+    const card=doc.getElementById("mission-"+number);
+    const list=card?.querySelector(selector);
+    if(!list)continue;
+    Array.from(list.children).forEach((li,index)=>{
+      if(li.tagName!=="LI"||li.querySelector(":scope > .atlas-step-video"))return;
+      const links=buddyVidzStepClips(number,index+1,li.textContent.trim());
+      if(!links.length)return;
+      const span=doc.createElement("span");
+      span.className="atlas-step-video";
+      span.setAttribute("data-buddyvidz-step",number+"-"+(index+1));
+      for(const item of links){
+        const a=doc.createElement("a");
+        a.href=item.href;a.target="_blank";a.rel="noopener noreferrer";
+        a.setAttribute("data-buddyvidz-part",String(item.part));a.textContent=item.label;
+        span.append(a);
+      }
+      li.append(span);
+    });
+  }
+}
+
 export function installBuddyVidzChannel(host,topic){
   if(!host||host.querySelector(":scope > .atlas-buddyvidz"))return;
   const doc=host.ownerDocument,callout=doc.createElement("aside");
@@ -53,6 +115,7 @@ export function installBuddyVidzChannel(host,topic){
 }
 export function installMainGuideBuddyVidz(doc){
   for(const [id,topic] of [["home","story"],["walkthrough","story"],["alphas","alpha"],["maps","story"]])installBuddyVidzChannel(doc.getElementById(id),topic);
+  installBuddyVidzStorySteps(doc,"index.html");
 }
 
 export function zoneLinks(n,current=""){
@@ -143,6 +206,7 @@ export function installArticleLinks(doc,page){
     [video("screws",0,"All 100 Colorful Screws"),...Object.keys(SCREW).map(screwVideo)],
     "Use the creator's colour chapters as a visual supplement. Their numbering is not an Atlas item-ID crosswalk.");
   if(page==="walkthrough.html"){
+    installBuddyVidzStorySteps(doc,page);
     for(const card of doc.querySelectorAll(".route-index-card[data-mission]")){
       const location=card.querySelector(".route-index-map")?.textContent||"";
       const links=locationLinks(location);

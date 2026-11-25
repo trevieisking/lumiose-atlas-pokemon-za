@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,locationLinks,VIDEO_SOURCES,BUDDYVIDZ_CHANNEL,BUDDYVIDZ_CLIPS,buddyVidzClips} from "../atlas-guide-links.mjs";
+import {zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,locationLinks,VIDEO_SOURCES,BUDDYVIDZ_CHANNEL,BUDDYVIDZ_CLIPS,buddyVidzClips,BUDDYVIDZ_STEP_CLIPS,buddyVidzStepClips} from "../atlas-guide-links.mjs";
 const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
 const checkLink=l=>{
@@ -61,25 +61,52 @@ test("AT-314 owner channel is separate from actual mission/Alpha videos and acce
   assert.match(read("app.js"),/installMainGuideBuddyVidz/);
 });
 
-test("AT-314 authorized public upload intake is separate from content-verified clips",()=>{
+test("AT-316 public intake and exact reviewed mission steps remain separate",()=>{
   const intake=JSON.parse(read("docs/qa/BUDDYVIDZ_PUBLIC_UPLOAD_REGISTER.json"));
   assert.equal(intake.channel.id,"UCMIoyivRt1u4EYG-KPtfHwQ");
   assert.equal(intake.channel.url,BUDDYVIDZ_CHANNEL);
-  assert.equal(intake.uploads.length,5);
-  assert.equal(new Set(intake.uploads.map(x=>x.video_id)).size,5);
-  assert.deepEqual(intake.uploads.map(x=>x.candidate_mission),[null,1,1,2,2]);
-  for(const entry of intake.uploads){
-    assert.match(entry.video_id,/^[A-Za-z0-9_-]{11}$/);
-    assert.equal(entry.privacy,"public");
-    assert.equal(entry.upload_status,"processed");
-    assert.equal(entry.content_review,"pending");
-    assert.equal(entry.verified_start_seconds,null);
-    assert.ok(Number.isInteger(entry.duration_seconds)&&entry.duration_seconds>0);
-    if(entry.candidate_mission!==null)assert.ok(read("walkthrough.html").includes('id="mission-'+entry.candidate_mission+'"'));
-    assert.ok(!BUDDYVIDZ_CLIPS.some(x=>x.videoId===entry.video_id),"Do not promote metadata-only evidence");
-  }
-  assert.equal(intake.counts.footage_verified_clips,0);
+  assert.equal(intake.uploads.length,10);
+  assert.equal(new Set(intake.uploads.map(x=>x.video_id)).size,10);
+  assert.deepEqual(intake.unavailable_parts,[11,12,13]);
+  assert.equal(intake.counts.footage_verified_clips,2);
+  assert.deepEqual(BUDDYVIDZ_STEP_CLIPS.map(x=>x.part),[6,10]);
   const journey=read("journey.html");
   assert.equal((journey.match(/class="atlas-buddyvidz"/g)||[]).length,1);
   assert.ok(journey.indexOf('class="atlas-buddyvidz"')<journey.indexOf('id="journey-mission-1"'));
+  for(const entry of intake.uploads){
+    assert.match(entry.video_id,/^[A-Za-z0-9_-]{11}$/);
+    assert.equal(entry.privacy,"public");assert.equal(entry.upload_status,"processed");
+    const clip=BUDDYVIDZ_STEP_CLIPS.find(x=>x.videoId===entry.video_id);
+    assert.ok(Number.isInteger(entry.duration_seconds)&&entry.duration_seconds>0);
+    if(!clip){
+      assert.equal(entry.content_review,"pending");assert.equal(entry.verified_start_seconds,null);
+      assert.ok(!BUDDYVIDZ_CLIPS.some(x=>x.videoId===entry.video_id));
+      assert.ok(!journey.includes("watch?v="+entry.video_id),"Do not publish metadata-only videos");
+      continue;
+    }
+    assert.equal(entry.content_review,"visual_review_complete");
+    assert.equal(entry.verified_step,clip.step);
+    assert.equal(entry.verified_start_seconds,clip.startSeconds);
+    assert.equal(entry.step_anchor,clip.anchorText);
+    assert.equal(entry.verified_mission,clip.number);
+    const link=buddyVidzStepClips(clip.number,clip.step,clip.anchorText);
+    assert.equal(link.length,1);assert.equal(link[0].part,clip.part);
+    assert.equal(buddyVidzStepClips(clip.number,clip.step,"changed instruction").length,0);
+    assert.equal(buddyVidzStepClips(clip.number,clip.step,clip.anchorText,[{...clip,reviewed:false}]).length,0);
+    assert.equal(buddyVidzStepClips(clip.number,clip.step,clip.anchorText,[{...clip,startSeconds:clip.durationSeconds}]).length,0);
+    for(const [file,prefix,klass] of [["src/sections/walkthrough.html","mission-","mission-steps"],["walkthrough.html","mission-","route-index-steps"],["journey.html","journey-mission-","journey-steps"]]){
+      const html=read(file),start=html.indexOf('id="'+prefix+clip.number+'"'),ol=html.indexOf('<ol class="'+klass+'">',start),end=html.indexOf("</ol>",ol);
+      assert.ok(start>=0&&ol>=0&&end>=0);
+      const steps=[...html.slice(ol,end).matchAll(/<li>([\s\S]*?)<\/li>/g)].map(x=>x[1]);
+      if(file==="journey.html"){
+        const s=steps[clip.step-1];
+        assert.ok(s.startsWith(clip.anchorText+'<span class="atlas-step-video"'));
+        assert.ok(s.includes('href="'+link[0].href.replace(/&/g,"&amp;")+'"'));
+        assert.ok(s.includes('data-buddyvidz-part="'+clip.part+'"'));
+        assert.ok(s.includes(link[0].label));
+      }else assert.equal(steps[clip.step-1],clip.anchorText);
+    }
+  }
+  assert.equal((journey.match(/class="atlas-step-video"/g)||[]).length,2);
+  assert.equal(buddyVidzStepClips(3,2,"Visit the Pokémon Center opposite Gare de Lumiose and install the Pokédex app.").length,0);
 });

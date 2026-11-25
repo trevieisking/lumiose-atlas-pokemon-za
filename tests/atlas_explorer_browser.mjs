@@ -1232,6 +1232,33 @@ try{
     }
     await page.close();
   }
+  // AT-316: exact reviewed clips appear directly under their written step on each guide surface.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage();
+    for(const [mission,step,part,video] of [[2,2,6,"https://www.youtube.com/watch?v=1EAamrpLcME"],[3,1,10,"https://www.youtube.com/watch?v=PFK9trYe1rA&t=6s"]]){
+      for(const [url,prefix,klass] of [["index.html#walkthrough:mission-","mission-",".mission-steps"],["walkthrough.html#mission-","mission-",".route-index-steps"],["journey.html#journey-mission-","journey-mission-",".journey-steps"]]){
+        await page.goto(base+"/"+url+mission,{waitUntil:"load"});
+        const card=page.locator("#"+prefix+mission);
+        if(url.startsWith("index")&&!(await card.locator(klass).isVisible()))await card.locator(".mission-toggle").click();
+        if(url.startsWith("walkthrough")&&!(await card.locator(klass).isVisible()))await card.locator("details.route-index-details summary").click();
+        const selector=klass+" > li:nth-child("+step+") > .atlas-step-video";
+        const panel=card.locator(selector);await panel.waitFor({state:"visible"});
+        assert.equal(await card.locator(".atlas-step-video").count(),1);
+        assert.equal(await panel.getAttribute("data-buddyvidz-step"),mission+"-"+step);
+        const anchor=panel.locator("a");assert.equal(await anchor.count(),1);
+        assert.equal(await anchor.getAttribute("data-buddyvidz-part"),String(part));
+        assert.equal(await anchor.getAttribute("href"),video);
+        assert.equal(await anchor.getAttribute("target"),"_blank");assert.equal(await anchor.getAttribute("rel"),"noopener noreferrer");
+        const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+        assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-316 overflow "+JSON.stringify(bounds));
+        await panel.scrollIntoViewIfNeeded();
+        await panel.screenshot({path:output+"/at316-"+url.split(".")[0]+"-part"+part+"-"+kind+".png"});
+      }
+    }
+    await page.goto(base+"/journey.html#journey-mission-24",{waitUntil:"load"});
+    await page.waitForFunction(()=>{const rect=document.getElementById("journey-mission-24")?.getBoundingClientRect();return rect&&rect.top>=-20&&rect.top<160;});
+    await page.close();
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

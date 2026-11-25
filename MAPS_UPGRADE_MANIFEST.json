@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 59,
+  "revision": 60,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-314 authorized BuddyVidz access confirmed; five public uploads inventoried, four mission candidates pending content review; channel UI under renewed exact-head validation after journey deep-link fix. AT-313 live on GitHub; Workspace v37 unchanged.",
+  "current_phase": "AT-314 live on GitHub; AT-316 precise BuddyVidz story links under review, two visually analyzed recordings and ten public uploads inventoried; separate AT-315 map PR #152 pending.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4463,7 +4463,7 @@
     "workspace": "v37 unchanged"
   },
   "at_314_buddyvidz_video_library": {
-    "status": "review_pending_exact_head_ci_and_visual_qa",
+    "status": "github_deployed_verified",
     "channel": "https://www.youtube.com/@BuddyVidz-z8g",
     "channel_source": "authorized_vidiq_owner_channel_verified",
     "recording_focus": [
@@ -4490,7 +4490,82 @@
       "prior_run": 45607237651,
       "prior_failed_check": "AT-272 mobile journey mission 24 hash position",
       "fix": "static Journey channel panel; preserve hash navigation; require existing and added browser tests",
-      "status": "pending_validation"
+      "status": "resolved_in_exact_head_browser_checks"
+    },
+    "release": {
+      "pr": 151,
+      "reviewed_head": "96851cc4daa33c56f79ea320aa1468cffa57f4da",
+      "merged_sha": "3d2f8522abfaa3114b78919546a5100e164bfe9f",
+      "identical_tree": "ad80aab06ebef26361b223a180585d1004790393",
+      "atlas_run": 45618376044,
+      "recovered_guide_run": 45618376105,
+      "feedback_static_run": 45618376001,
+      "checks": "all_four_success",
+      "visual_artifact": 15024156325,
+      "visual_review": "Eight simulated phone/desktop screenshots reviewed in prior promotion turn",
+      "pages_run": 45619732651,
+      "pages_conclusion": "success",
+      "workspace": "v37 unchanged"
     }
+  },
+  "at_316_buddyvidz_exact_story_steps": {
+    "status": "review_only_not_deployed",
+    "baseline_main_sha": "3d2f8522abfaa3114b78919546a5100e164bfe9f",
+    "owner_reported_parts": 13,
+    "public_uploads_retrieved": 10,
+    "public_parts_not_returned": [
+      11,
+      12,
+      13
+    ],
+    "content_reviewed_parts": [
+      6,
+      10
+    ],
+    "pending_public_parts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "step_placements": [
+      {
+        "part": 6,
+        "mission": 2,
+        "step": 2,
+        "start_seconds": 0,
+        "video_id": "1EAamrpLcME",
+        "anchor": "Enter Hotel Z, check in and ride the lift to room 202. Rest, then answer the knock at your door."
+      },
+      {
+        "part": 10,
+        "mission": 3,
+        "step": 1,
+        "start_seconds": 6,
+        "video_id": "PFK9trYe1rA",
+        "anchor": "Meet your teammate in the lobby and battle outside Hotel Z."
+      }
+    ],
+    "render_targets": [
+      "index.html#walkthrough:mission-N",
+      "walkthrough.html#mission-N",
+      "journey.html#journey-mission-N"
+    ],
+    "registry": "atlas-guide-links.mjs#BUDDYVIDZ_STEP_CLIPS",
+    "intake": "docs/qa/BUDDYVIDZ_PUBLIC_UPLOAD_REGISTER.json",
+    "evidence": "Two completed vidIQ visual-analysis jobs; no claim to independently play or inspect frames directly. No inferred timestamps.",
+    "credits_used": {
+      "vidiq_public_listings": 10,
+      "vidiq_visual_reviews": 50,
+      "workspace": 0
+    },
+    "release_gate": "Exact-head unit, recovered guide, actual phone/desktop browser screenshots and same-tree Pages deployment; no unreviewed clip promotion.",
+    "workspace": "v37 unchanged",
+    "private_checklist": "not_written",
+    "parallel_map_pr": 152
   }
 }
