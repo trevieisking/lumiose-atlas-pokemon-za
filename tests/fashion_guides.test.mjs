@@ -55,3 +55,21 @@ test("Fashion feedback preserves the originating guide and existing route format
  }
  assert.ok(feedback.includes("candidate.startsWith(PREFIX)"));
 });
+
+test("Treasure advice uses published prices and distinguishes resources",()=>{
+ const treasure=shops.split('id="treasure-pocket"')[1].split("</section>")[0];
+ for(const [name,price] of [["Big Nugget","20,000"],["Pearl String","10,000"],["Nugget","5,000"],["Big Pearl","4,000"],["Pearl","1,000"]]){
+  assert.ok(treasure.includes("<strong>"+name+"</strong></dt><dd>₽"+price+" each</dd>"));
+ }
+ for(const term of ["Big Haul Power","Item Power","Bonus Ball","Old Amber","Colorful Screws","Mega Shards"])assert.ok(treasure.includes(term));
+ assert.ok(clothes.includes('href="shops.html#treasure-pocket"'));
+ assert.equal(20000*2+10000,50000);
+});
+test("Only fashion pages attach the in-page feedback context listener",()=>{
+ const js=read("fashion-guide.js");
+ for(const doc of [clothes,hair])assert.match(doc,/<script src="fashion-guide\.js" defer><\/script>/);
+ assert.match(js,/addEventListener\("hashchange", syncFeedback\)/);
+ assert.match(js,/addEventListener\("click", syncFeedback\)/);
+ assert.match(js,/url\.searchParams\.set\("page", location\.pathname \+ location\.hash\)/);
+ assert.doesNotMatch(js,/fetch\s*\(|localStorage|sessionStorage/);
+});

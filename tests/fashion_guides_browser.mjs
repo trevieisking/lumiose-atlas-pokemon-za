@@ -27,6 +27,12 @@ try {
   const errors=[];page.on("pageerror",error=>errors.push(String(error)));
   for(const [file,anchor,selector,count] of [["clothing-guide.html","accessory-prices","[data-fashion-boutique]",41],["hair-beauty-guide.html","furfrou","[data-fashion-salon]",5]]){
    await page.goto(base+"shops.html",{waitUntil:"load"});
+   const treasure=page.locator("#treasure-pocket details");
+   assert.equal(await treasure.count(),1);
+   await treasure.locator("summary").click();
+   assert.equal(await treasure.getAttribute("open"),"");
+   assert.ok(await treasure.getByText("₽20,000 each",{exact:true}).isVisible());
+   await treasure.locator("summary").click();
    await page.locator('#fashion-subguides a[href="'+file+'"]').click();
    await page.waitForURL(base+file);
    assert.equal(await page.locator(selector).count(),count);
@@ -38,7 +44,7 @@ try {
    await page.screenshot({path:output+"/"+file.replace(".html","")+"-"+kind+".png"});
    await page.goto(base+file+"#"+anchor,{waitUntil:"load"});
    assert.ok(await page.locator("#"+anchor).isVisible());
-   await page.waitForFunction(()=>document.getElementById("atlasArticleFeedback").href.includes("page="));
+   await page.waitForFunction(expected=>new URL(document.getElementById("atlasArticleFeedback").href).searchParams.get("page")===expected,prefix+file+"#"+anchor);
    const feedbackUrl=new URL(await page.locator("#atlasArticleFeedback").getAttribute("href"));
    assert.equal(feedbackUrl.searchParams.get("page"),prefix+file+"#"+anchor);
    await page.locator("#atlasArticleFeedback").click();
@@ -48,6 +54,9 @@ try {
    assert.equal(new URL(await page.locator("#returnLink").evaluate(el=>el.href)).hash,"#"+anchor);
    await page.locator("#returnLink").click();
    await page.waitForURL(base+file+"#"+anchor);
+   // Also test a same-document hash change, not only a direct page load.
+   await page.evaluate(()=>{location.hash="main";});
+   await page.waitForFunction(expected=>new URL(document.getElementById("atlasArticleFeedback").href).searchParams.get("page")===expected,prefix+file+"#main");
   }
   assert.deepEqual(errors,[],kind+" browser exceptions");
   await context.close();
