@@ -288,5 +288,96 @@
     "github_edition_b": "not_released_for_at309",
     "workspace_edition_a": "not_touched"
   },
-  "next": "Complete actual 19-asset GitHub transfer before converting any pending source note into a public image link; validate SHA-256/Git blob match, exact-head CI, phone/desktop screenshots, preserving 48 sector XY null."
+  "next": "Complete actual 19-asset GitHub transfer before converting any pending source note into a public image link; validate SHA-256/Git blob match, exact-head CI, phone/desktop screenshots, preserving 48 sector XY null.",
+  "at_310_visual_quality_recrops": [
+    {
+      "sector_id": "vert-sector-3",
+      "source_sha256": "23480416a825e0f59bc7cd3909abe7c0a9c6ebfe91538b9fa6bb590e6a466146",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        735,
+        3,
+        1044,
+        204
+      ],
+      "width": 309,
+      "height": 201,
+      "bytes": 69130,
+      "sha256": "630170cb7f689db311c8aac41d314b334f5f6e1ae6331c63ec65d59e9c9f062e",
+      "git_blob_sha": "0d8109802a20b1da03bbe63ee303f80a517c5cdb",
+      "visible_labels": [
+        "Vert Sector 3"
+      ],
+      "source_name": "holovator-vert-cafe-cyclone-neighbourhood-map.jpg",
+      "source_repository_path": "assets/atlas/holovators/vert-cafe-cyclone/holovator-vert-cafe-cyclone-neighbourhood-map.jpg",
+      "source_repository_ref": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+      "supersedes_crop_sha256": "69ad1177c55eb5445cc3684c820a04bd8d2c11114d79c440e5869cd9748a0ac8",
+      "reason": "Use the owner’s neighbourhood frame with no reticle or quest symbol covering the complete sector label.",
+      "expected_future_asset_path": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+      "status": "reviewed_native_pixel_recrop_no_new_geography"
+    },
+    {
+      "sector_id": "magenta-sector-2",
+      "source_sha256": "07703077a8563e0d21fa504a7ee2aef36eee818ac966057f1696a6d703498fd5",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        398,
+        488,
+        1190,
+        865
+      ],
+      "width": 792,
+      "height": 377,
+      "bytes": 280502,
+      "sha256": "e84bad9f1aa3214a057a087481c98919b69069f4213221c7682ef7c8004eaec7",
+      "git_blob_sha": "95de26961d2ab4c1b74753fb9f64bd0db4ccbfa6",
+      "visible_labels": [
+        "Magenta Sector 2",
+        "Lysandre Café"
+      ],
+      "source_name": "holovator-lysandre-cafe-autumnal-close-map.jpg",
+      "source_repository_path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-close-map.jpg",
+      "source_repository_ref": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
+      "supersedes_crop_sha256": "cb39a4fd478f79f78fd2d409d9649a7557531cdae4271747e5bf5f871d49bc5b",
+      "reason": "Use the owner’s already published close map and crop outside the badge and reticles; preserve the full sector label and café name.",
+      "expected_future_asset_path": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+      "status": "reviewed_native_pixel_recrop_no_new_geography"
+    },
+    {
+      "sector_id": "jaune-sector-5",
+      "source_sha256": "9b3a231239780293545767af8fed6f7e1b7147c8350ff55e649fea8ccee7e57b",
+      "source_dimensions": [
+        1536,
+        865
+      ],
+      "crop_xyxy": [
+        270,
+        75,
+        1421,
+        829
+      ],
+      "width": 1151,
+      "height": 754,
+      "bytes": 597428,
+      "sha256": "02a1d70040d7f0b2a6fedd38ace58c611bb5b2910cd3de0987f0e8ff5e42be57",
+      "git_blob_sha": "871f8675f1ba3a0b80f0f3107984823926049dd4",
+      "visible_labels": [
+        "Jaune Sector 5",
+        "Jaune Plaza"
+      ],
+      "source_name": "1000028364.heic",
+      "source_repository_path": null,
+      "source_repository_ref": null,
+      "supersedes_crop_sha256": "12096c661910d8f3293d50af6f2cd73983f13ac22b3f19da504401a8602db584",
+      "reason": "Re-crop the same owner source to exclude the far-left badge and cursor, preserving the full sector label, plaza, and Wild Zone 19.",
+      "expected_future_asset_path": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+      "status": "reviewed_native_pixel_recrop_no_new_geography"
+    }
+  ]
 }

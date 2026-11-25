@@ -712,13 +712,20 @@ test("AT-310: all 19 accepted owner crops are registered and linked without muta
   assert.equal(at306.accepted.length,11);assert.equal(at309.accepted.length,8);
   assert.equal(at306.excluded.length,2);
   const mapPage=read("sector-maps.html");
+  assert.equal(at309.at_310_visual_quality_recrops.length,3);
   for(const row of [...at306.accepted,...at309.accepted]){
+    const recrop=at309.at_310_visual_quality_recrops.find(x=>x.sector_id===row.sector_id);
+    if(recrop)assert.equal(recrop.supersedes_crop_sha256,row.sha256);
+    const display=recrop||row;
     const s=data.sectors.find(x=>x.id===row.sector_id);
     const photo=hosted.images.find(x=>x.id===row.sector_id);
     assert.equal(photo.path,row.expected_future_asset_path);
-    assert.equal(photo.git_blob_sha,row.predicted_git_blob_sha);
-    assert.equal(photo.sha256,row.sha256);
-    assert.equal(photo.bytes,row.bytes);
+    assert.equal(photo.git_blob_sha,display.git_blob_sha||display.predicted_git_blob_sha);
+    assert.equal(photo.sha256,display.sha256);
+    assert.equal(photo.bytes,display.bytes);
+    assert.equal(photo.source_sha256,display.source_sha256);
+    assert.deepEqual(photo.crop_xyxy,display.crop_xyxy);
+    assert.deepEqual(photo.visible_labels,display.visible_labels);
     assert.equal(s.source_map_reference.image_path,photo.path);
     assert.equal(s.xy,null);
     assert.equal(s.pending_source_photo_evidence,undefined);
@@ -728,7 +735,8 @@ test("AT-310: all 19 accepted owner crops are registered and linked without muta
   for(const row of at306.excluded){
     const replacement=at309.accepted.find(x=>x.sector_id===row.sector_id);
     assert.equal(row.status,"research_only_rejected");
-    assert.equal(hosted.images.find(x=>x.id===row.sector_id).source_name,replacement.source_name);
+    const reviewed=at309.at_310_visual_quality_recrops.find(x=>x.sector_id===row.sector_id)||replacement;
+    assert.equal(hosted.images.find(x=>x.id===row.sector_id).source_name,reviewed.source_name);
   }
   assert.equal(data.sectors.filter(x=>x.source_map_reference).length,48);
   assert.equal(data.sectors.filter(x=>x.street_bearing).length,31);
