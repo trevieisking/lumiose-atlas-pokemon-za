@@ -290,8 +290,13 @@
       "id": "bleu-sector-7",
       "kind": "sector",
       "label": "Bleu Sector 7",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B07-01",
+        "AR-B07-02",
+        "AR-B07-03",
+        "AR-B07-04"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -299,8 +304,10 @@
       "id": "bleu-sector-8",
       "kind": "sector",
       "label": "Bleu Sector 8",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B08-01"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -308,8 +315,11 @@
       "id": "bleu-sector-9",
       "kind": "sector",
       "label": "Bleu Sector 9",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B09-01",
+        "AR-B09-02"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -317,8 +327,10 @@
       "id": "bleu-sector-10",
       "kind": "sector",
       "label": "Bleu Sector 10",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B10-01"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -2247,19 +2259,204 @@
       "floor_exact": null,
       "geometry_status": "unregistered",
       "publish_new_pin": false
+    },
+    {
+      "id": "AR-B07-01",
+      "area": "bleu-sector-7",
+      "kind": "scaffold_roof_course",
+      "landmark": "Aymlis Park south scaffold and north roof perimeter",
+      "notes": "Two described approaches may intersect but individual west-block/northern-scaffold clue matches are unconfirmed.",
+      "sources": [
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-7.html"
+      ],
+      "candidate_original_screw_ids": [
+        52,
+        53
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B07-02",
+      "area": "bleu-sector-7",
+      "kind": "ladder_rooftop_course",
+      "landmark": "Nouveau Café Truck No. 2, east ladder and Vernal Avenue",
+      "notes": "Two-ladder approach, perimeter roof, eastern building and separate Vernal Avenue scaffold; no certified connection or ID crosswalk.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-7.html"
+      ],
+      "candidate_original_screw_ids": [
+        48,
+        49,
+        52,
+        53
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B07-03",
+      "area": "bleu-sector-7",
+      "kind": "paired_scaffold_course",
+      "landmark": "South Boulevard below Bleu Sector 7",
+      "notes": "Two pickups reported on distinct tiers. Original west-of-lab higher/lower numbers are candidates only.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        50,
+        51
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B07-04",
+      "area": "bleu-sector-7",
+      "kind": "existing_photo_route_reference",
+      "landmark": "Durstin, South Boulevard Holovator",
+      "notes": "Existing owner route and five photographs retained; Mission 45 repairs the lift after starting Main Mission 19. No lift-to-pickup connection confirmed.",
+      "sources": [
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://www.thonky.com/pokemon-legends-z-a/side-mission-045-on-maintenance-duty"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_existing_route_id": "bleu7-south"
+    },
+    {
+      "id": "AR-B08-01",
+      "area": "bleu-sector-8",
+      "kind": "quest_holovator_neighbourhood",
+      "landmark": "Café Soleil and Mission 92, The Beldum Blockade",
+      "notes": "In-game quest marker controls device identification. Five existing photos show a nearby lift, not a confirmed mission-device match.",
+      "sources": [
+        "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Side_Missions_81-100",
+        "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false,
+      "related_photo_id": "bleu8-soleil"
+    },
+    {
+      "id": "AR-B09-01",
+      "area": "bleu-sector-9",
+      "kind": "glide_scaffold_course",
+      "landmark": "South Boulevard opposite Café Soleil",
+      "notes": "Bridge, glide to raised platform and final ladder. Matches #64 regional clue, without measured geometry.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        64
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B09-02",
+      "area": "bleu-sector-9",
+      "kind": "courtyard_roof_item_lead",
+      "landmark": "Sector 9 complex and Café Soleil roof",
+      "notes": "Published courtyard/roof item inventory; access paths and saved item IDs unresolved.",
+      "sources": [
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-9.html"
+      ],
+      "candidate_original_screw_ids": [],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B10-01",
+      "area": "bleu-sector-10",
+      "kind": "lower_scaffold_course",
+      "landmark": "South Boulevard and Estival Avenue junction",
+      "notes": "Lower scaffold walkway pickup consistent with the west-of-Wild-Zone-10 clue. No measured map point.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/"
+      ],
+      "candidate_original_screw_ids": [
+        65
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 16,
+    "sector_text_research_started": 20,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 57,
+    "route_course_leads": 65,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-319 validate Bleu 2/4/6; then continue Bleu 7–10, respecting existing Bleu 7 lift route. Written/photo-first policy; videos only for evidence-verified difficult steps.",
+  "next": "AT-320 reconciled against current main; exact-head CI, screenshot review, merge and Pages verification pending. G1 remains incomplete until deployment verified. Continue G2 native photo registration and G3–G5 after bounded release.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -4671,7 +4868,7 @@
     "code_labs_changes": false
   },
   "at_319_bleu2_4_6_written_routes": {
-    "status": "review_only_not_deployed",
+    "status": "github_deployed_ci_visual_verified",
     "baseline_main_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
     "route_ids": [
       "bleu2-wildzone5-roof-sweep",
@@ -4715,6 +4912,92 @@
     "sector_xy_remain_null": true,
     "private_checklist": "read only; later rows absent; reconciliation pending",
     "workspace": "unchanged_v37",
-    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
+    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment",
+    "release": {
+      "pr": 155,
+      "reviewed_head": "d9dfd34ee7b0341507c20d83131e6ead207ae18d",
+      "merged_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "identical_tree": "39b4cff0f250fa41415a9df90870d0a003639061",
+      "atlas_run": 45652407346,
+      "unit": "success",
+      "browser": "success",
+      "visual_artifact": 15041382534,
+      "visual_review": "All 18 AT-319 phone/desktop Chromium source-map and route-step screenshots inspected; no visible clipping or broken images. Browser traversed all 19 new steps on both viewport sizes. Physical hardware not tested.",
+      "pages_run": 45653969683,
+      "pages_conclusion": "success",
+      "workspace": "v37 unchanged"
+    }
+  },
+  "at_320_bleu7_10_written_routes": {
+    "status": "reconciled_review_branch_pending_exact_head_validation",
+    "baseline_main_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+    "route_ids": [
+      "bleu7-aymlis-roof-scaffold-courses",
+      "bleu8-soleil-beldum-access",
+      "bleu9-soleil-scaffold-roof-leads",
+      "bleu10-estival-boulevard-scaffold"
+    ],
+    "source_refs": {
+      "raider": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "gg": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+      "checklist": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+      "screws": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "b7": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-7.html",
+      "b9": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-9.html",
+      "duty": "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+      "duty2": "https://www.thonky.com/pokemon-legends-z-a/side-mission-045-on-maintenance-duty",
+      "beldum": "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+      "beldum2": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Side_Missions_81-100",
+      "rpg": "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards",
+      "gamespot": "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+    },
+    "existing_routes_preserved": 22,
+    "total_routes_proposed": 26,
+    "new_route_leads": 8,
+    "sector_text_research_started": 20,
+    "route_course_leads": 65,
+    "existing_numbered_screw_clues": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      64,
+      65
+    ],
+    "original_owner_route_preserved": "bleu7-south",
+    "existing_photo_refs": [
+      "bleu7-south",
+      "bleu8-soleil"
+    ],
+    "mission_92_exact_device": "unverified",
+    "new_screw_ids": 0,
+    "new_item_ids": 0,
+    "new_exact_pins": 0,
+    "sector_xy_remain_null": true,
+    "workspace": "unchanged_v37",
+    "private_checklist": "not accessed or written in this bounded GitHub cycle; reconciliation outstanding",
+    "video_policy": "no new videos; photo and written directions primary",
+    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment",
+    "reconciliation": {
+      "prior_pr": 156,
+      "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "prior_base": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+      "retained_routes": 22,
+      "new_routes": 4,
+      "new_steps": 23,
+      "new_leads": 8,
+      "unchanged_existing_data": "All non-route Explorer keys and first 22 routes identical as JSON values; all 57 prior survey leads preserved. Four coverage rows changed.",
+      "prerequisite_source_review": [
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://www.dexerto.com/wikis/pokemon-legends-z-a/roto-glide-pokemon-legends-z-a/"
+      ],
+      "note": "Roto-Glide sources label the rooftop tutorial under Missions 15 or 16; use actual unlock tutorial at Hotel Z rather than require completion of 16. Mission 92 after completing 30/beginning 31; photographed device remains unverified. Prior AT-319 status receipt recovered and exact CI/Pages success rechecked."
+    }
   }
 }

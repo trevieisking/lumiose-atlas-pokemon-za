@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 70,
+  "revision": 71,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-326 three regressions deployed to GitHub Pages after exact-head tests and visual QA; AT-327 registration pilots recorded. AT-320 route reconciliation and G2-G5 incomplete.",
+  "current_phase": "AT-328 reconciles AT-320 four Bleu written routes into current main-based PR #156; exact-head validation pending; G2 candidate image registration and full Workspace gate unchanged.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -143,8 +143,8 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
@@ -4580,7 +4580,7 @@
     "code_labs_changes": false
   },
   "at_319_bleu2_4_6_written_routes": {
-    "status": "review_only_not_deployed",
+    "status": "github_deployed_ci_visual_verified",
     "baseline_main_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
     "route_ids": [
       "bleu2-wildzone5-roof-sweep",
@@ -4624,7 +4624,21 @@
     "sector_xy_remain_null": true,
     "private_checklist": "read only; later rows absent; reconciliation pending",
     "workspace": "unchanged_v37",
-    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment"
+    "release_gate": "exact-head CI, real desktop/mobile preview screenshot review, expected-head merge and exact Pages deployment",
+    "release": {
+      "pr": 155,
+      "reviewed_head": "d9dfd34ee7b0341507c20d83131e6ead207ae18d",
+      "merged_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "identical_tree": "39b4cff0f250fa41415a9df90870d0a003639061",
+      "atlas_run": 45652407346,
+      "unit": "success",
+      "browser": "success",
+      "visual_artifact": 15041382534,
+      "visual_review": "All 18 AT-319 phone/desktop Chromium source-map and route-step screenshots inspected; no visible clipping or broken images. Browser traversed all 19 new steps on both viewport sizes. Physical hardware not tested.",
+      "pages_run": 45653969683,
+      "pages_conclusion": "success",
+      "workspace": "v37 unchanged"
+    }
   },
   "at_321_wild_zone_photo_fieldbook": {
     "status": "pages_deployed_outstanding_review_followup",
@@ -4765,7 +4779,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "g1_partial_merged_g2_pilot_research",
+    "status": "g1_reconciled_review_pending_g2_pilots",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4832,7 +4846,7 @@
       },
       {
         "id": "G1",
-        "state": "three_regressions_deployed_at320_reconciliation_pending"
+        "state": "at320_reconciled_pending_exact_head_validation"
       },
       {
         "id": "G2",
@@ -4950,5 +4964,88 @@
     "verified_production_polygons": 0,
     "new_verified_routes": 0,
     "old_three_overview_files_recovered": 0
+  },
+  "at_320_bleu7_10_written_routes": {
+    "status": "reconciled_review_branch_pending_exact_head_validation",
+    "baseline_main_sha": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+    "route_ids": [
+      "bleu7-aymlis-roof-scaffold-courses",
+      "bleu8-soleil-beldum-access",
+      "bleu9-soleil-scaffold-roof-leads",
+      "bleu10-estival-boulevard-scaffold"
+    ],
+    "source_refs": {
+      "raider": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "gg": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves/",
+      "checklist": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+      "screws": "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/colorful-screws.html",
+      "b7": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-7.html",
+      "b9": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-9.html",
+      "duty": "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+      "duty2": "https://www.thonky.com/pokemon-legends-z-a/side-mission-045-on-maintenance-duty",
+      "beldum": "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+      "beldum2": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Side_Missions_81-100",
+      "rpg": "https://www.rpgsite.net/guide/18713-pokemon-legends-z-a-side-mission-list-rewards",
+      "gamespot": "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+    },
+    "existing_routes_preserved": 22,
+    "total_routes_proposed": 26,
+    "new_route_leads": 8,
+    "sector_text_research_started": 20,
+    "route_course_leads": 65,
+    "existing_numbered_screw_clues": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      64,
+      65
+    ],
+    "original_owner_route_preserved": "bleu7-south",
+    "existing_photo_refs": [
+      "bleu7-south",
+      "bleu8-soleil"
+    ],
+    "mission_92_exact_device": "unverified",
+    "new_screw_ids": 0,
+    "new_item_ids": 0,
+    "new_exact_pins": 0,
+    "sector_xy_remain_null": true,
+    "workspace": "unchanged_v37",
+    "private_checklist": "not accessed or written in this bounded GitHub cycle; reconciliation outstanding",
+    "video_policy": "no new videos; photo and written directions primary",
+    "release_gate": "exact-head unit and browser CI, mobile/desktop visual review, expected-head merge and exact Pages deployment",
+    "reconciliation": {
+      "prior_pr": 156,
+      "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "prior_base": "84ff8eecc5f4f429ebeba65a558e1510d5c9bc66",
+      "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+      "retained_routes": 22,
+      "new_routes": 4,
+      "new_steps": 23,
+      "new_leads": 8,
+      "unchanged_existing_data": "All non-route Explorer keys and first 22 routes identical as JSON values; all 57 prior survey leads preserved. Four coverage rows changed.",
+      "prerequisite_source_review": [
+        "https://www.serebii.net/legendsz-a/sidemissions/onmaintenanceduty.shtml",
+        "https://www.serebii.net/legendsz-a/sidemissions/thebeldumblockade.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)",
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-16-a-rogue-mega-beedrill",
+        "https://www.dexerto.com/wikis/pokemon-legends-z-a/roto-glide-pokemon-legends-z-a/"
+      ],
+      "note": "Roto-Glide sources label the rooftop tutorial under Missions 15 or 16; use actual unlock tutorial at Hotel Z rather than require completion of 16. Mission 92 after completing 30/beginning 31; photographed device remains unverified. Prior AT-319 status receipt recovered and exact CI/Pages success rechecked."
+    }
+  },
+  "at_328_at320_reconciliation": {
+    "status": "review_branch_pending_exact_head_validation",
+    "pr": 156,
+    "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+    "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+    "route_count": 26,
+    "added_routes": 4,
+    "added_steps": 23,
+    "added_leads": 8,
+    "preservation": "All previous route data, photographs, native geometry, 264 item records, 100 screw identities, 38 fixed Alpha rows, Zone20 pools, AT-321/326 map regressions, AT-327 research, progress/feedback and Supabase preserved."
   }
 }

@@ -2,13 +2,13 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 70,
-  "ledger_revision": 78,
+  "manifest_revision": 71,
+  "ledger_revision": 79,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "g1_partial_merged_g2_pilot_research",
+  "current_state": "g1_at320_reconciled_pending_validation_g2_pilots",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -171,7 +171,13 @@
     "at320": {
       "pr": 156,
       "head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
-      "status": "separate_conflicted_pr_pending_reconciliation"
+      "status": "reconciled_on_same_pr_pending_exact_head_ci_and_visual_review",
+      "prior_head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "current_base": "91e80f4bc1765981436e5c861540b422dd3487ad",
+      "route_count": 26,
+      "added_steps": 23,
+      "new_leads": 8,
+      "approved_release_sha": null
     },
     "workspace": {
       "last_documented_version": 37,
@@ -451,7 +457,7 @@
       "geometry": null,
       "registration_evidence": null,
       "encounter_review": "pending_conditions_and_area_membership",
-      "navigation_review": "pending_evidence_review",
+      "navigation_review": "written_route_reconciled_pending_browser_review_not_verified_walkable_geometry",
       "ready_for_verified_highlight": false
     },
     {
@@ -468,7 +474,7 @@
       "geometry": null,
       "registration_evidence": null,
       "encounter_review": "pending_conditions_and_area_membership",
-      "navigation_review": "pending_evidence_review",
+      "navigation_review": "written_route_reconciled_pending_browser_review_not_verified_walkable_geometry",
       "ready_for_verified_highlight": false
     },
     {
@@ -485,7 +491,7 @@
       "geometry": null,
       "registration_evidence": null,
       "encounter_review": "pending_conditions_and_area_membership",
-      "navigation_review": "pending_evidence_review",
+      "navigation_review": "written_route_reconciled_pending_browser_review_not_verified_walkable_geometry",
       "ready_for_verified_highlight": false
     },
     {
@@ -502,7 +508,7 @@
       "geometry": null,
       "registration_evidence": null,
       "encounter_review": "pending_conditions_and_area_membership",
-      "navigation_review": "pending_evidence_review",
+      "navigation_review": "written_route_reconciled_pending_browser_review_not_verified_walkable_geometry",
       "ready_for_verified_highlight": false
     },
     {
@@ -1459,7 +1465,7 @@
     {
       "id": "G1",
       "name": "Protect current live map and reconcile existing branches",
-      "state": "three_regressions_deployed_at320_reconciliation_pending",
+      "state": "at320_reconciled_pending_exact_head_validation",
       "acceptance": [
         "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
         "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
