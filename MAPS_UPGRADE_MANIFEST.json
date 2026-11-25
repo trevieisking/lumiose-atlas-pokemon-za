@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 72,
+  "revision": 73,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -5036,6 +5036,17 @@
     "asset_tree": "76fc2d1f3647748301dd9ebce727b26a921e1063",
     "asset_validation": "Exact crop pixel equality locally, PNG decoding and dimensions, local SHA-256 and Git blob identity, three exact paths/byte counts on reviewed tree and identical merged tree. No site runtime changes or workflow triggered.",
     "tracking_id": "AT-329-CITY-OVERVIEW-INTAKE",
-    "tracking_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links."
+    "tracking_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links.",
+    "original_byte_provenance": {
+      "status": "review_branch_pending_merge",
+      "source_manifest": "assets/atlas/city-overview/manifest.json",
+      "original_files": 3,
+      "original_bytes": 329778,
+      "existing_pngs_unchanged": true,
+      "existing_pngs_exactly_reproduced": 3,
+      "registration_geometry_changed": false,
+      "source_notes": "Actual upload WebP bytes preserved under correct extension. Original source SHA-256 hashes match AT-329 manifest; native RGB crops exactly reproduce previously merged PNGs. No second set of crops, no live map replacement.",
+      "baseline_main_sha": "c7749d479ef0d793de7c44340d42f4e271633983"
+    }
   }
 }

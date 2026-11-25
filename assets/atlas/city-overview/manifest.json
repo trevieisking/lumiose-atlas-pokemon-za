@@ -25,7 +25,11 @@
       "bytes": 1220936,
       "sha256": "dbc03fce94278b2db7f4111a9f5ad6eba21b8836247de4b8f0256c3159dbf3c3",
       "git_blob_sha": "e12faecb3572a6f5bd0ae02b9c007102882f3c0f",
-      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry"
+      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry",
+      "original_path": "assets/atlas/city-overview/lumiose-city-south-original.webp",
+      "original_bytes": 115430,
+      "original_git_blob_sha": "6deff3f857fb8f58dcc6d1b10dab67322a9bff70",
+      "exact_png_reproduction": "Local Pillow RGB crop using recorded rectangle and optimize=True reproduced the already-merged PNG SHA-256 exactly."
     },
     {
       "part": "north",
@@ -48,7 +52,11 @@
       "bytes": 1090335,
       "sha256": "779bdf2ef4fafc5eebeb631e2f5956c015fe81710f9bcd1cbb6e7bcabf887c00",
       "git_blob_sha": "26db3bbb17331834ad4f31eed48e59298883e7c7",
-      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry"
+      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry",
+      "original_path": "assets/atlas/city-overview/lumiose-city-north-original.webp",
+      "original_bytes": 94132,
+      "original_git_blob_sha": "8dce257df2e6207dfc671c1b412b18189843cc0d",
+      "exact_png_reproduction": "Local Pillow RGB crop using recorded rectangle and optimize=True reproduced the already-merged PNG SHA-256 exactly."
     },
     {
       "part": "central",
@@ -71,12 +79,24 @@
       "bytes": 1314656,
       "sha256": "7a4d23f7a00ae4c989bb0e89c566ab284c92ff8a56d115b843b78d35e39f91a5",
       "git_blob_sha": "5118d2f5baf86cc65a5153be1a0a2ae59d9f6741",
-      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry"
+      "geometry_status": "candidate_registration_in_ATLAS_AT328_CITY_OVERVIEW_REGISTRATION.json_not_production_geometry",
+      "original_path": "assets/atlas/city-overview/lumiose-city-central-original.webp",
+      "original_bytes": 120216,
+      "original_git_blob_sha": "dec09e484375951a42ba41255e6356051e5235e8",
+      "exact_png_reproduction": "Local Pillow RGB crop using recorded rectangle and optimize=True reproduced the already-merged PNG SHA-256 exactly."
     }
   ],
   "baseline_main_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
   "basemap_unchanged": true,
   "storage_scope": "source evidence only; not loaded by the live map",
   "initial_import_label": "AT-328",
-  "archive_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links."
+  "archive_note": "AT-328 reserved for earlier AT-320 route-reconciliation session; AT-329 is independent. Original AT328 evidence filenames retained as archival paths to preserve links.",
+  "original_byte_provenance": {
+    "status": "review_branch_pending_merge",
+    "original_files": 3,
+    "total_bytes": 329778,
+    "raw_extension": "webp",
+    "existing_cropped_pngs_unchanged": true,
+    "all_three_existing_crop_sha256_reproduced": true
+  }
 }
