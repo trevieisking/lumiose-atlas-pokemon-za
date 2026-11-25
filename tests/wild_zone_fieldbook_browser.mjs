@@ -36,9 +36,45 @@ try{
    }
    await page.goto(base+"/index.html#maps",{waitUntil:"load"});
    for(const n of [1,6,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
-   await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});await check(1,"map",true);
+   // AT-326: share links track the selection without resetting filters on a click.
+   await page.goto(base+"/maps.html?source=atlas#wild-zone-1",{waitUntil:"load"});await check(1,"map",true);
    await page.locator('#zone-directory [data-map-zone-button="20"]').click();await check(20,"map",true);
+   assert.equal(new URL(page.url()).hash,"#wild-zone-20");assert.equal(new URL(page.url()).search,"?source=atlas");
+   await page.evaluate(()=>history.back());await page.waitForURL("**/maps.html?source=atlas#wild-zone-1");
+   await page.locator('[data-wz-fieldbook="1"]:visible').waitFor();
+   await page.evaluate(()=>history.forward());await page.waitForURL("**/maps.html?source=atlas#wild-zone-20");
+   await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
+   await page.reload({waitUntil:"load"});await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
+   await page.locator("#mapSearch").fill("not-a-real-at326-species");
+   // Same-document navigation notifications can reach the Playwright client
+   // after the input action completes. Verify the actual browser state and
+   // then wait for the client's URL notification; do not relax either assertion.
+   await page.waitForFunction(()=>location.hash===""&&location.search==="?source=atlas"&&
+     document.getElementById("mapZoomImage").dataset.selectedZone===""&&
+     [...document.querySelectorAll("[data-map-zone-detail]")].every(card=>card.hidden));
+   await page.waitForURL(url=>url.hash===""&&url.search==="?source=atlas");
+   assert.equal(await page.locator("[data-wz-fieldbook]:visible").count(),0);
    await page.locator("#mapSearch").fill("Eevee");assert.equal(await page.locator('[data-map-zone-button="19"]').isVisible(),true);
+   await page.locator('[data-map-zone-button="19"]').click();
+   assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
+   await page.waitForURL(url=>url.hash==="#wild-zone-19"&&url.search==="?source=atlas");
+   await page.evaluate(()=>{Object.defineProperty(navigator,"share",{configurable:true,value:async data=>{window.__at326SharedUrl=data.url;}});document.getElementById("atlasArticleShare").click();});
+   await page.waitForFunction(()=>window.__at326SharedUrl===location.href);
+   await page.locator('[data-map-pin="19"]').click();
+   assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
+   await page.goto(base+"/maps.html?source=atlas#map-key",{waitUntil:"load"});
+   await page.locator("#mapSearch").fill("not-a-real-at326-species");
+   assert.equal(await page.evaluate(()=>location.hash),"#map-key");
+   // The new rotating-Alpha disclosure must not steal the old item-record anchor.
+   await page.goto(base+"/sector-maps.html#wildzone-20",{waitUntil:"load"});
+   await page.locator("#wildzone-20 details.zone-records[open]").waitFor();
+   assert.equal(await page.locator("#wildzone-20 details.wz-alpha-pool[open]").count(),0);
+   await page.locator("#wildzone-20 details.zone-records > summary").screenshot({path:output+"/at326-zone20-records-"+kind+".png"});
+   await page.goto(base+"/sector-maps.html#map-lead-z20-01");
+   await page.locator("#wildzone-20 details.approx-clue-panel[open]").waitFor();
+   assert.equal(await page.locator("#map-lead-z20-01").isVisible(),true);
+   await page.goto(base+"/sector-maps.html#sector-vert-sector-1");
+   await page.locator("#sector-vert-sector-1 details.sector-clues[open]").waitFor();
    await page.goto(base+"/sector-maps.html#wildzone-12",{waitUntil:"load"});await check(12,"sector",true);
    await page.goto(base+"/atlas-explorer.html?place="+explorerZoneId(1),{waitUntil:"networkidle"});await check(1,"explorer",true);
    await page.locator('#aeFilters button[data-kind="zone"]').click();

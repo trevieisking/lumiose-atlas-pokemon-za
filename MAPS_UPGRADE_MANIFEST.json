@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 68,
+  "revision": 69,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-325 GitHub-first full map upgrade plan and private Workspace queue; G1–G5 implementation/release pending; final Workspace prompt blocked until verified full-scope GitHub release.",
+  "current_phase": "AT-326 G1: three confirmed review findings repaired on branch, exact-head tests pending; separate AT-320 route reconciliation and G2-G5 still pending.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4765,7 +4765,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "plan_checkpoint_only_full_upgrade_pending",
+    "status": "g1_review_branch_pending_validation",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4828,11 +4828,11 @@
     "phase_states": [
       {
         "id": "G0",
-        "state": "documentation_checkpoint"
+        "state": "documentation_and_private_queue_recorded"
       },
       {
         "id": "G1",
-        "state": "pending"
+        "state": "review_regressions_implemented_pending_validation"
       },
       {
         "id": "G2",
@@ -4862,15 +4862,15 @@
     "remaining_review_findings": [
       {
         "id": "AT325-R01",
-        "state": "source_confirmed_pending_fix"
+        "state": "implemented_on_review_branch_pending_validation"
       },
       {
         "id": "AT325-R02",
-        "state": "source_confirmed_pending_fix"
+        "state": "implemented_on_review_branch_pending_validation"
       },
       {
         "id": "AT325-R03",
-        "state": "source_confirmed_pending_fix"
+        "state": "implemented_on_review_branch_pending_validation"
       }
     ],
     "workspace_prompt": {
@@ -4884,5 +4884,27 @@
     },
     "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
     "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
+  },
+  "at_326_map_review_regressions": {
+    "status": "implemented_on_review_branch_pending_validation",
+    "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
+    "evidence": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
+    "findings": [
+      "AT325-R01",
+      "AT325-R02",
+      "AT325-R03"
+    ],
+    "files": [
+      "maps.js",
+      "sector-maps.js",
+      ".github/workflows/atlas-explorer.yml",
+      "tests/maps_recovered.test.mjs",
+      "tests/sector_map_directory.test.mjs",
+      "tests/wild_zone_fieldbook_browser.mjs"
+    ],
+    "geometry_changed": false,
+    "photos_changed": false,
+    "progress_changed": false,
+    "workspace_changed": false
   }
 }

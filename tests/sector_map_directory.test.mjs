@@ -119,6 +119,9 @@ const lookup=new Map();
 sectors.forEach((el,i)=>lookup.set("sector-"+slug(evidence.sectors[i].id),el));
 zones.forEach((el,i)=>lookup.set("wildzone-"+evidence.zones[i].number,el));
 for(const el of [...sectors,...zones])el.children["details"]=mk();
+for(const el of zones)el.children["details.zone-records"]=mk();
+zones[19].children[".approx-clue-panel"]=mk();
+const clue20=mk();lookup.set("map-lead-z20-01",clue20);
 const named={mapAtlasSearch:search,mapAtlasCount:status,mapAtlasEmpty:empty};
 const document={
  querySelectorAll(sel){return ({
@@ -141,9 +144,15 @@ search.value="wild zone 1";search.listeners.input();
 assert.equal(zones[0].hidden,false);
 assert.equal(zones[1].hidden,true);
 activeHash="#wildzone-20";events.hashchange();
-assert.equal(zones[19].children.details.open,true);
+assert.equal(zones[19].children["details.zone-records"].open,true);
+assert.equal(zones[19].children.details.open,false,"Zone 20 rotating Alpha pool must not be opened by the item-directory link");
 assert.equal(zones[19].scrolled,true);
 assert.equal(search.value,"");
+activeHash="#map-lead-z20-01";events.hashchange();
+assert.equal(zones[19].children[".approx-clue-panel"].open,true);
+assert.equal(clue20.scrolled,true);
+activeHash="#sector-"+slug(evidence.sectors[0].id);events.hashchange();
+assert.equal(sectors[0].children.details.open,true);
 assert.equal(readCount,1,"Filtering and navigation must not need repeated storage access");
 assert.equal(writeCount,0);
 console.log("PASS: 48 sector names, 20 original map centres and previews, 264 numbered item records, 100 exact Screw clues, zero invented item pins, 25-link menu and read-only mobile controls.");
