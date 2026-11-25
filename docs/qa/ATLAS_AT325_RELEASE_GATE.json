@@ -2,8 +2,8 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 68,
-  "ledger_revision": 76,
+  "manifest_revision": 69,
+  "ledger_revision": 77,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
@@ -34,7 +34,30 @@
     "existing_routes": 22,
     "registered_sector_boundaries": 0,
     "registered_wild_zone_boundaries": 0,
-    "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
+    "original_three_piece_set": "historical overview trio recovered and byte-verified; direct message identity and calibration remain unproven",
+    "historical_overview_recovery": {
+      "state": "historical_originals_recovered_and_visually_checked_calibration_pending",
+      "evidence": "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
+      "recovered_count": 3,
+      "matching_sha256_count": 3,
+      "decoded_format": "JPEG",
+      "decoded_dimensions": [
+        1536,
+        865
+      ],
+      "orientation": [
+        "south",
+        "center",
+        "north"
+      ],
+      "visual_chain": [
+        "W01↔W02: Wild Zones 5, 16, 2 and 11",
+        "W02↔W03: Wild Zones 3, 7, 8 and 19"
+      ],
+      "owner_exact_message_identity": "consistent_with_three_piece_description_not_named_in_message",
+      "originals_in_public_repository": false,
+      "geometry_added": 0
+    },
     "historical_candidate_overview_records": [
       {
         "id": "W01",
@@ -1463,10 +1486,10 @@
     {
       "id": "G2",
       "name": "Recover and calibrate owner-source map coverage",
-      "state": "pending",
+      "state": "historical_overview_recovery_verified_calibration_pending",
       "acceptance": [
         "Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.",
-        "Find owner three city-map pieces in authorized prior files or source archive; the historical W01–W03 manifest is a candidate provenance lead, not proof that it is the identical three-piece set. No bytes newly recovered. Check exact hashes, image dimensions, overlaps, north-up, zoom, distortion and source purpose.",
+        "Historical W01–W03 originals recovered with exact hashes, dimensions and observed overlap. Verify scale, perspective, north-up registration and coverage with independent landmarks before use; later intended set not explicitly named.",
         "For each pilot align using >=4 distributed noncollinear landmarks and independent held-out checks; record transform, residuals, uncertainty, original-image hashes and any obstructions. Do not stretch, invent, or replace original imagery. Reuse existing complete image collections to proceed even if older three images cannot be retrieved.",
         "Prioritize WZ5, WZ11, Vert1, Bleu7 and WZ14. Distinguish photograph coverage, registered labels, and calibrated boundaries. Use original game captures and reference text/images, not guesses. Work through all 68 areas and preserve existing XY."
       ]
