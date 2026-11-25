@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 77,
+  "revision": 78,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -205,7 +205,7 @@
       "dependencies": [
         "SM-05"
       ],
-      "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs"
+      "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs; compact independent item/Screw layers, accessible overlap handling and dense-marker QA per AT-333."
     },
     {
       "id": "SM-07",
@@ -5181,6 +5181,100 @@
     "source_placement_files_documented": true,
     "source_placement_payload_recovered": false,
     "calibration": null,
+    "workspace": "open_pending_AT325_G5_and_AT297"
+  },
+  "at_333_compact_collectible_layers": {
+    "id": "AT-333",
+    "status": "owner_approved_requirement_implementation_pending",
+    "baseline_main_sha": "c1c7b13b7cc4a137df0dd2d4fb554f2736c46fed",
+    "phase": "SM-06",
+    "release_gates": [
+      "AT-325 G4",
+      "AT-325 G5"
+    ],
+    "appearance": {
+      "shape": "small solid circular dots",
+      "proposed_visual_diameter_css_px": [
+        6,
+        8
+      ],
+      "proposed_selected_outline_diameter_css_px": [
+        10,
+        12
+      ],
+      "inverse_zoom": true,
+      "always_visible_labels": false,
+      "distinct_colours_and_text_legend": true,
+      "major_location_markers_unchanged": true
+    },
+    "layers": {
+      "independent": [
+        "items",
+        "colorful-screws"
+      ],
+      "proposed_initial_visibility": "both_off",
+      "allow_combined": true,
+      "search_and_directory_retained": true,
+      "empty_state": "no verified map points yet",
+      "preserve_other_layers_and_view_state": true
+    },
+    "interaction": {
+      "details": [
+        "stable original ID",
+        "name",
+        "quantity when known",
+        "floor and map scene",
+        "evidence",
+        "unlock requirements",
+        "written access directions",
+        "photos when available"
+      ],
+      "small_visual_large_enough_selection": true,
+      "overlap": "disambiguation chooser by record and floor; do not shift or merge true coordinates",
+      "keyboard_and_accessible_directory": true,
+      "hide_collected": "optional only via existing progress owner",
+      "filter_never_changes_progress": true
+    },
+    "eligibility": {
+      "verified_fixed_pickups_only": true,
+      "verified_native_xy_identity_scene_floor_and_route": true,
+      "unregistered_source_xy": false,
+      "random_or_reward_items": false,
+      "permanent_hyperspace_pins": false,
+      "unverified_entries_directory_only": true
+    },
+    "validation": {
+      "synthetic_minimum_records": 364,
+      "synthetic_data_test_only": true,
+      "independent_toggle_combinations": 4,
+      "overview_and_zoom_screenshots": [
+        "phone",
+        "desktop"
+      ],
+      "tests": [
+        "mixed layers",
+        "search and directory",
+        "keyboard and touch",
+        "coincident/nearby point choice",
+        "pan zoom rotation and compass",
+        "stable original progress",
+        "invalid coordinate rejection",
+        "no synthetic data in production",
+        "performance and layout"
+      ],
+      "status": "not_run"
+    },
+    "baseline": {
+      "major_marker_css_px": 40,
+      "original_item_records": 264,
+      "original_screw_ids": 100,
+      "approx_item_leads": 146,
+      "access_leads": 70,
+      "uncalibrated_screw_source_matches": 12,
+      "confirmed_item_pins": 0,
+      "confirmed_screw_pins": 0
+    },
+    "runtime_changed": false,
     "workspace": "open_pending_AT325_G5_and_AT297"
   }
 }
