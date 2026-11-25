@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 78,
+  "revision": 79,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -5276,5 +5276,33 @@
     },
     "runtime_changed": false,
     "workspace": "open_pending_AT325_G5_and_AT297"
+  },
+  "at_334_workspace_pickup_recovery": {
+    "id": "AT-334",
+    "status": "original_archive_recovered_physical_verification_pending",
+    "baseline_main_sha": "0a9557d2a014b645812a7c1c71b8e0b3444057ed",
+    "audit": "docs/qa/ATLAS_AT334_WORKSPACE_PICKUP_RECOVERY.md",
+    "register": "docs/qa/ATLAS_AT334_WORKSPACE_PICKUP_RECOVERY_REGISTER.json",
+    "counts": {
+      "archived_positions": 146,
+      "ordinary_item_marker_records": 144,
+      "screw_candidate_marker_records": 2,
+      "archive_to_saved_markup_matches": 146,
+      "numeric_height_values": 146,
+      "distinct_zones": 20,
+      "unique_name_zone_candidates": 111,
+      "one_item_multiple_marker_rows": 9,
+      "multiple_item_candidate_rows": 26,
+      "tm_area_text_crosschecks": 18,
+      "explicit_above_ground_legacy_floor_conflicts": 7,
+      "verified_physical_positions": 0,
+      "new_verified_native_pins": 0,
+      "new_numbered_screw_id_matches": 0
+    },
+    "source_data_sha256": "e76661e901bccd5fdac3eba577003429223f82f54767f956da023da316723fee",
+    "original_map_blob_matches": true,
+    "old_height_classifier_rejected": true,
+    "verified_production_pins": 0,
+    "workspace": "private_historical_archives_recovered_current_editor_access_and_AT325_G5_pending"
   }
 }
