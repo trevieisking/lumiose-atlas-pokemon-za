@@ -237,8 +237,11 @@
       "id": "bleu-sector-3",
       "kind": "sector",
       "label": "Bleu Sector 3",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B03-01",
+        "AR-B03-02"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -255,8 +258,12 @@
       "id": "bleu-sector-5",
       "kind": "sector",
       "label": "Bleu Sector 5",
-      "status": "not_started",
-      "lead_ids": [],
+      "status": "written_route_integrated_pending_review",
+      "lead_ids": [
+        "AR-B05-01",
+        "AR-B05-02",
+        "AR-B05-03"
+      ],
       "geometry_complete": false,
       "inventory_complete": false
     },
@@ -1942,19 +1949,138 @@
       "floor_exact": null,
       "geometry_status": "unregistered",
       "publish_new_pin": false
+    },
+    {
+      "id": "AR-B03-01",
+      "area": "bleu-sector-3",
+      "kind": "scaffold_course",
+      "landmark": "Southern scaffold / eastern building alcove",
+      "notes": "Raider King describes the early stair/ladder course and roll; regional list matches the southern #55 description. Altissimo records an alcove scaffold pickup; individual marker identity unresolved.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-3.html",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City"
+      ],
+      "candidate_original_screw_ids": [
+        55
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B03-02",
+      "area": "bleu-sector-3",
+      "kind": "glide_scaffold_course",
+      "landmark": "Northeast scaffold north of Café Woof",
+      "notes": "Raider King and StrategyWiki describe a glide approach; Altissimo explicitly requires Roto-Glide in the northeast. Original #56 is a candidate; no measured platform landing.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-3.html",
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City"
+      ],
+      "candidate_original_screw_ids": [
+        56
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B05-01",
+      "area": "bleu-sector-5",
+      "kind": "paired_scaffold_course",
+      "landmark": "Large platforming course southwest of Bleu Plaza",
+      "notes": "Raider King describes a first ladder climb and a roll to a second course. Nearby scaffold entries are independently corroborated, but no original #57/#58 crosswalk.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-5.html",
+        "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+      ],
+      "candidate_original_screw_ids": [
+        57,
+        58
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B05-02",
+      "area": "bleu-sector-5",
+      "kind": "waterway_rooftop_course",
+      "landmark": "Waterway southeast of scaffold area; western building complex roof",
+      "notes": "Raider King reports a waterway and ice crossing; Serebii confirms the general ice-bridge mechanic. Altissimo records a western-roof Screw; original #59 candidate only.",
+      "sources": [
+        "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+        "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-5.html",
+        "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves",
+        "https://www.serebii.net/legendsz-a/overworldobstacles.shtml"
+      ],
+      "candidate_original_screw_ids": [
+        59
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
+    },
+    {
+      "id": "AR-B05-03",
+      "area": "bleu-sector-5",
+      "kind": "optional_holovator_rooftop_lead",
+      "landmark": "Existing Bleu Sector 3 Side Mission 61 Holovator toward Wild Zone 12",
+      "notes": "StrategyWiki reports a rooftop route from the activated lift; existing owner photos confirm lift neighbourhood and roof arrival only. Does not establish a connected roof course or the same pickup as the waterway route.",
+      "sources": [
+        "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+        "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json"
+      ],
+      "candidate_original_screw_ids": [
+        59
+      ],
+      "canonical_screw_id": null,
+      "source_category_marker_id": null,
+      "source_xy": null,
+      "atlas_entrance_xy": null,
+      "atlas_exit_xy": null,
+      "floor_exact": null,
+      "geometry_status": "unregistered",
+      "publish_new_pin": false
     }
   ],
   "summary": {
     "areas_total": 68,
-    "sector_text_research_started": 11,
+    "sector_text_research_started": 13,
     "wild_zone_text_research_started": 0,
-    "route_course_leads": 45,
+    "route_course_leads": 50,
     "new_exact_ladder_pins": 0,
     "new_exact_scaffold_pins": 0,
     "new_exact_bridge_endpoints": 0,
     "fully_completed_areas": 0
   },
-  "next": "AT-294 Vert district written-route reconciliation: review all nine sectors, integrate useful existing research into player-facing directions, resolve overlapping boundary clues #1/#15/#16 and attainable Holovator/item evidence; then Bleu Sector 1. No routine ladder/scaffold coordinate calibration or exhaustive inventory.",
+  "next": "AT-315 review the two new Bleu routes, then investigate Bleu 2, 4, 6 and remaining sectors; retain exact-coordinate hold.",
   "at_288": {
     "date": "2026-11-24",
     "route_id": "vert4-courtyard-screws",
@@ -4254,7 +4380,7 @@
     }
   },
   "at_314_buddyvidz_video_library": {
-    "status": "review_pending_exact_head_ci_and_visual_qa",
+    "status": "github_deployed_verified",
     "channel": "https://www.youtube.com/@BuddyVidz-z8g",
     "channel_source": "authorized_vidiq_owner_channel_verified",
     "recording_focus": [
@@ -4281,7 +4407,59 @@
       "prior_run": 45607237651,
       "prior_failed_check": "AT-272 mobile journey mission 24 hash position",
       "fix": "static Journey channel panel; preserve hash navigation; require existing and added browser tests",
-      "status": "pending_validation"
+      "status": "resolved_in_exact_head_browser_checks"
+    },
+    "release": {
+      "pr": 151,
+      "reviewed_head": "96851cc4daa33c56f79ea320aa1468cffa57f4da",
+      "merged_sha": "3d2f8522abfaa3114b78919546a5100e164bfe9f",
+      "identical_tree": "ad80aab06ebef26361b223a180585d1004790393",
+      "atlas_run": 45618376044,
+      "recovered_guide_run": 45618376105,
+      "feedback_static_run": 45618376001,
+      "checks": "all_four_success",
+      "visual_artifact": 15024156325,
+      "visual_review": "Eight simulated phone/desktop screenshots reviewed in prior promotion turn",
+      "pages_run": 45619732651,
+      "pages_conclusion": "success",
+      "workspace": "v37 unchanged",
+      "content_reviewed_owner_clips": 0
     }
+  },
+  "at_315_bleu3_5_access_routes": {
+    "status": "review_only_not_deployed",
+    "baseline_main_sha": "3d2f8522abfaa3114b78919546a5100e164bfe9f",
+    "route_ids": [
+      "bleu3-woof-scaffold-courses",
+      "bleu5-plaza-scaffold-rooftop"
+    ],
+    "source_refs": {
+      "district": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/plus-moves",
+      "raider": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "b3": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-3.html",
+      "b5": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/bleu-sector-5.html",
+      "wiki": "https://strategywiki.org/wiki/Pok%C3%A9mon_Legends%3A_Z-A/Exploring_Lumiose_City",
+      "obstacles": "https://www.serebii.net/legendsz-a/overworldobstacles.shtml",
+      "gamespot": "https://www.gamespot.com/gallery/pokemon-legends-za-colorful-screw-locations/2900-7145/"
+    },
+    "existing_routes_preserved": 17,
+    "total_routes_proposed": 19,
+    "new_route_leads": 5,
+    "original_screw_clues_preserved": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "new_screw_ids": 0,
+    "new_exact_pins": 0,
+    "source_numbering_conflict": "Different external inventories group boundary pickups differently; no canonical crosswalk.",
+    "existing_owner_photo_reference": "bleu3-fav; orientation only, not certified roof connection",
+    "sector_xy_remain_null": true,
+    "private_checklist": "read metadata only; no writes",
+    "workspace": "unchanged_v37",
+    "youtube": "owner reports verification pending; no new upload queries, footage analysis, or channel changes this cycle",
+    "release_gate": "exact-head CI, actual phone/desktop browser screenshots, same-tree promotion and Pages deployment"
   }
 }
