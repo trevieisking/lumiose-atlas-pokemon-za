@@ -1304,6 +1304,16 @@ try{
       const photo=page.locator("#aeSelected .ae-source-map-reference img");
       await photo.scrollIntoViewIfNeeded();
       await page.waitForFunction(w=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth===w,width);
+      // naturalWidth alone can be available before an asynchronously decoded
+      // image is painted. Capture both the decoded element and the full view.
+      await photo.evaluate(async (img,w)=>{
+        await img.decode();
+        if(!img.complete||img.naturalWidth!==w||!img.naturalHeight)throw Error("AT-328 source photo decode failed");
+        await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+        const box=img.getBoundingClientRect();
+        if(box.width<1||box.height<1)throw Error("AT-328 source photo has no visible layout");
+      },width);
+      await photo.screenshot({path:output+"/at328-"+sector+"-decoded-photo-"+kind+".png"});
       await page.screenshot({path:output+"/at320-"+sector+"-source-"+kind+".png"});
       for(let n=1;n<=steps;n++){
         assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of "+steps));
