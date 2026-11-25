@@ -16,11 +16,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 69,
+  "revision": 70,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-326 G1: three confirmed review findings repaired on branch, exact-head tests pending; separate AT-320 route reconciliation and G2-G5 still pending.",
+  "current_phase": "AT-326 merged after exact-head validation; Pages verification pending. AT-327 four source image registration pilots recorded, G1 AT-320 reconciliation and G2-G5 incomplete.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4765,7 +4765,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "g1_review_branch_pending_validation",
+    "status": "g1_partial_merged_g2_pilot_research",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4832,11 +4832,11 @@
       },
       {
         "id": "G1",
-        "state": "review_regressions_implemented_pending_validation"
+        "state": "three_regressions_merged_pages_pending_at320_reconciliation_pending"
       },
       {
         "id": "G2",
-        "state": "pending"
+        "state": "four_candidate_photo_registrations_two_areas_no_production_geometry"
       },
       {
         "id": "G3",
@@ -4862,15 +4862,15 @@
     "remaining_review_findings": [
       {
         "id": "AT325-R01",
-        "state": "implemented_on_review_branch_pending_validation"
+        "state": "merged_main_exact_head_checks_passed_pages_pending"
       },
       {
         "id": "AT325-R02",
-        "state": "implemented_on_review_branch_pending_validation"
+        "state": "merged_main_exact_head_checks_passed_pages_pending"
       },
       {
         "id": "AT325-R03",
-        "state": "implemented_on_review_branch_pending_validation"
+        "state": "merged_main_exact_head_checks_passed_pages_pending"
       }
     ],
     "workspace_prompt": {
@@ -4886,7 +4886,7 @@
     "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
   },
   "at_326_map_review_regressions": {
-    "status": "implemented_on_review_branch_pending_validation",
+    "status": "merged_main_pages_verification_pending",
     "baseline_main_sha": "8b15a8b7afd8370291f90c846217d0aff2eef601",
     "evidence": "docs/qa/ATLAS_AT326_MAP_REVIEW_REGRESSIONS.md",
     "findings": [
@@ -4905,6 +4905,50 @@
     "geometry_changed": false,
     "photos_changed": false,
     "progress_changed": false,
-    "workspace_changed": false
+    "workspace_changed": false,
+    "release": {
+      "pr": 167,
+      "reviewed_head": "74e36ece129433a37a9dc13d571c6f6504993ddf",
+      "reviewed_tree": "d09bd0915b7484c543da2598d87976e750aaf3c9",
+      "first_failed_run": 45692791625,
+      "ci_runs": [
+        45693885162,
+        45693885482
+      ],
+      "ci_conclusion": "success",
+      "screenshot_artifact": 15059399203,
+      "visual_review": "Reviewed actual screenshots: Zone 20 item-panel open on phone/desktop, both photo layouts, both complete roster panels; original map overview. No visual regression identified in inspected samples.",
+      "merged_main": "eb711adf56a68b05e55d335586eb6b320d340203",
+      "merged_tree": "2cd6e4e78e11cd94e0e93ba39e68a7c343bd51e5",
+      "tree_delta_only": [
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+        "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+        "docs/qa/regenerate_at327_registration.py"
+      ],
+      "pages_run": 45694649336,
+      "pages_conclusion": "queued_at_checkpoint",
+      "live_direct_check": false
+    }
+  },
+  "at_327_owner_map_registration": {
+    "pr": 169,
+    "main_sha": "61596fac07f73809c3f3a23954997d1b4078c0b7",
+    "report": "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+    "register": "docs/qa/ATLAS_AT327_REGISTRATION_PILOTS.json",
+    "reproduce": "docs/qa/regenerate_at327_registration.py",
+    "source_recovery_run": 45693109903,
+    "source_artifact": 15059033948,
+    "source_pngs_actual_bytes_verified": 82,
+    "fit_frames": 4,
+    "areas_candidate": 2,
+    "holdout_rms_native_px": [
+      1.364,
+      1.401,
+      1.517,
+      1.8
+    ],
+    "verified_production_polygons": 0,
+    "new_verified_routes": 0,
+    "old_three_overview_files_recovered": 0
   }
 }
