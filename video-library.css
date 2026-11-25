@@ -1,0 +1,18 @@
+/* AT-317: scoped layout; the existing guide and map CSS are unchanged. */
+.vl-main .hero{margin-bottom:24px}
+.vl-notice{padding:16px 20px;margin-bottom:24px;border:1px solid #e1d5f0;border-radius:14px;background:#f8f5fc;overflow-wrap:anywhere}
+.vl-notice h2{font-size:1.2rem}.vl-notice p:last-child{margin-bottom:0}
+.vl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vl-card{background:#fff;border:1px solid #e4dfe9;border-radius:14px;padding:18px;min-width:0;overflow-wrap:anywhere;scroll-margin-top:16px}
+.vl-card h2{font-size:1.2rem;margin:9px 0}
+.vl-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:.85rem;color:#655a78}
+.vl-part{font-weight:800;color:#62469b}
+.vl-review{font-size:.85rem;color:#655a78}
+.vl-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.vl-actions button,.vl-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;max-width:100%;border:1px solid #c9bbe5;border-radius:9px;background:white;font:inherit;font-size:.9rem;font-weight:700;color:#62469b;text-decoration:none;cursor:pointer}
+.vl-actions button{background:#62469b;color:white;border-color:#62469b}
+.vl-actions button[hidden],.vl-player[hidden]{display:none}
+.vl-player{aspect-ratio:16/9;width:100%;min-width:0;margin-top:12px;background:#17141f;border-radius:8px;overflow:hidden}
+.vl-player iframe{display:block;width:100%;height:100%;border:0}
+.vl-footer{font-size:.8rem;color:#655a78;margin-top:22px!important}
+@media(max-width:680px){.vl-grid{grid-template-columns:minmax(0,1fr)}.vl-card{padding:14px}.vl-notice{padding:14px}.vl-actions>*{flex:1 1 130px}}

@@ -1213,7 +1213,8 @@ try{
       const callout=page.locator(".atlas-buddyvidz:visible");
       await callout.waitFor();
       assert.equal(await callout.count(),1);
-      const channel=callout.locator("a");
+      const channel=callout.locator('a[href="https://www.youtube.com/@BuddyVidz-z8g"]');
+      assert.equal(await callout.locator('a[href="video-library.html"]').count(),1);
       assert.equal(await channel.getAttribute("href"),"https://www.youtube.com/@BuddyVidz-z8g");
       assert.equal(await channel.getAttribute("target"),"_blank");
       assert.equal(await channel.getAttribute("rel"),"noopener noreferrer");
@@ -1261,6 +1262,35 @@ try{
       assert.equal(await photos.count(),5);
       await page.waitForFunction(()=>document.querySelector("#aeSelected .ae-photo-grid img")?.naturalWidth===1536);
     }
+    await page.close();
+  }
+  // AT-317: local proof of click-only embed wiring, not a claim of remote playback.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage();
+    let embeds=0;
+    await page.route("https://www.youtube-nocookie.com/**",route=>{embeds++;return route.fulfill({status:200,contentType:"text/html",body:"<p>Offline test player placeholder</p>"});});
+    await page.goto(base+"/video-library.html",{waitUntil:"load"});
+    assert.equal(await page.locator(".vl-card").count(),10);
+    assert.equal(await page.locator("iframe").count(),0);
+    assert.equal(embeds,0);
+    const expected=["QPk8pkauiKc","u8Kvca-8MCM","3dHtJMJifCY","AK-rMecP8So","BM3gEEmh4ug","1EAamrpLcME","AZg-8asWwEg","O0mtphoPx4g","JCzj2fvGzho","PFK9trYe1rA"];
+    assert.deepEqual(await page.locator(".vl-card").evaluateAll(cards=>cards.map(c=>c.dataset.videoId)),expected);
+    for(const [i,id] of expected.entries()){
+      const card=page.locator("#part-"+(i+1));
+      assert.equal(await card.locator("a").getAttribute("href"),"https://www.youtube.com/watch?v="+id);
+      assert.equal(await card.locator("button").getAttribute("aria-expanded"),"false");
+    }
+    await page.screenshot({path:output+"/at317-video-library-"+kind+".png"});
+    const first=page.locator("#part-1"),second=page.locator("#part-2");
+    await first.locator("button").click();await page.waitForFunction(()=>document.querySelector("iframe")?.src.endsWith("QPk8pkauiKc"));
+    assert.equal(await page.locator("iframe").count(),1);
+    await second.locator("button").click();await page.waitForFunction(()=>document.querySelector("iframe")?.src.endsWith("u8Kvca-8MCM"));
+    assert.equal(await page.locator("iframe").count(),1);
+    assert.equal(await first.locator("button").getAttribute("aria-expanded"),"false");
+    const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+    assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-317 overflow "+JSON.stringify(bounds));
+    await second.scrollIntoViewIfNeeded();await page.screenshot({path:output+"/at317-video-open-"+kind+".png"});
+    await second.locator("button").click();assert.equal(await page.locator("iframe").count(),0);
     await page.close();
   }
   await phoneContext.close();await desktopContext.close();

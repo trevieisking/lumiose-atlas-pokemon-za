@@ -16,7 +16,7 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 60,
+  "revision": 61,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
@@ -4544,5 +4544,43 @@
     "workspace": "unchanged_v37",
     "youtube": "owner reports verification pending; no new upload queries, footage analysis, or channel changes this cycle",
     "release_gate": "exact-head CI, actual phone/desktop browser screenshots, same-tree promotion and Pages deployment"
+  },
+  "at_317_buddyvidz_library": {
+    "status": "review_only_not_deployed",
+    "baseline_main_sha": "2b5f78954a7fc86d131f2ce6bc7a119a3f5186c4",
+    "prior_public_upload_register_ref": "526b586c3469cae211435c7b59ff4234ab65cc7d",
+    "route": "video-library.html",
+    "files": [
+      "video-library.html",
+      "video-library.css",
+      "video-library.js",
+      "atlas-guide-links.mjs",
+      "journey.html",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "video_ids": [
+      "QPk8pkauiKc",
+      "u8Kvca-8MCM",
+      "3dHtJMJifCY",
+      "AK-rMecP8So",
+      "BM3gEEmh4ug",
+      "1EAamrpLcME",
+      "AZg-8asWwEg",
+      "O0mtphoPx4g",
+      "JCzj2fvGzho",
+      "PFK9trYe1rA"
+    ],
+    "owner_supplied_order": true,
+    "prior_scene_reviewed_parts": [
+      6,
+      10
+    ],
+    "exact_step_pr_unchanged": 153,
+    "embed": "explicit click, youtube-nocookie.com, one iframe, no autoplay, external fallback",
+    "credits_spent_this_change": 0,
+    "storage_writes": false,
+    "workspace": "unchanged_v37",
+    "private_checklist": "read-only video status query; no writes",
+    "release_gate": "exact-head unit and desktop/phone browser checks, screenshot review, real remote playback check, Pages deploy"
   }
 }

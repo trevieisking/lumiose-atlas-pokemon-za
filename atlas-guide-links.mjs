@@ -47,7 +47,8 @@ export function installBuddyVidzChannel(host,topic){
   desc.textContent=topic==="alpha"?"Follow our Alpha-catching playthrough. Individual recordings will be linked to their Wild Zones after review.":"Follow our Pokémon Legends: Z-A playthrough. Individual mission and location videos will be added as they are recorded and checked.";
   copy.append(title,desc);
   const a=doc.createElement("a");a.href=BUDDYVIDZ_CHANNEL;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open BuddyVidz on YouTube";
-  callout.append(copy,a);
+  const library=doc.createElement("a");library.href="video-library.html";library.textContent="Browse video library";
+  callout.append(copy,library,a);
   const intro=host.querySelector(":scope > .hero, :scope > .page-intro, :scope > .ae-hero");
   if(intro)intro.insertAdjacentElement("afterend",callout);else host.prepend(callout);
 }
