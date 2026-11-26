@@ -1,0 +1,8 @@
+{
+  "status": "comparison code correction; source geometry not changed",
+  "first_attempt": "Direct Python mapping equality stopped on first geometry because Shapely mapping returns tuples and retained JSON returns lists.",
+  "first_area": "a01_z01_01",
+  "direct_python_equality": false,
+  "json_normalized_equality": true,
+  "correction": "Normalize only the replay result through JSON serialization before comparing retained JSON geometry. No coordinates, fits, source inputs or original outputs changed."
+}

@@ -1,0 +1,228 @@
+{
+  "id": "ATLAS-ORIGINAL-TEXTURE-NATIVE-INDEPENDENT-REVIEW-2026-11-26",
+  "reviewer": "geometry_evidence",
+  "date": "2026-11-26",
+  "decision": "approve_texture_to_native_registration_only",
+  "scope": "Registration of the retained original4096 map texture onto the unchanged1920 native raster. World-to-texture parameters, sector label/volume semantics, source decoding and runtime promotion are separate checks.",
+  "source_sha256": "2670c1454eb0b5bbe609b1aca3933d5e2ada9cdc6c209f68741375fd9aeea703",
+  "native_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "registration_file_sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915",
+  "fixed_holdout_packet_sha256": "f4b799067fd253cf4d5e7323ea95216308fa25823ee5c00138d19909e0c3439d",
+  "matrix": [
+    [
+      0.4524453760877522,
+      0.0005553122573539251,
+      27.639053630376765
+    ],
+    [
+      0.0002481832792931227,
+      0.4534362194534925,
+      30.070748457855114
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "observations": [
+    "All31 accepted SIFT control-patch pairs were individually inspected in six original-pixel panels. Distinct building, courtyard and canal arrangements correspond; the accepted pairs are not matching badge or gate decoration. SIFT keypoints are patch descriptors and are not necessarily physical corner coordinates.",
+    "Four manually picked architectural holdouts were fixed and supplied before registration fit, covering north, west, east and south extremes. The fitter excludes a140-native-pixel radius around each, fits only separate architecture descriptor inliers, and does not fit or prune manual holdouts.",
+    "The initial southern manual pair sat on the adjoining horizontal strokes. Original-pixel pair inspection corrected both to the intended lower bevel junction before any global fit or residual; the initial observations/panel remain. None of the four manual observations changed after fit.",
+    "All41 spatially screened descriptor candidates and their10 rejected RANSAC results are retained. One rejected pair has a final affine residual below2.5px but remains excluded by the original RANSAC mask; no selective re-admission was used.",
+    "Independent NumPy least-squares replay of the exact31 accepted controls reproduces the affine coefficients within machine precision; all four fixed heldout errors reproduce and stay within the unchanged3px observed raster-pick threshold.",
+    "The direct image correspondence supports the texture registration. Semantic sector-volume edges are visibly distinct from some painted architecture and green Wild Zone footprints; those edges were not used to fit this affine."
+  ],
+  "control_count": 31,
+  "screened_candidate_count": 41,
+  "rejected_ransac_candidate_count": 10,
+  "spatially_excluded_candidate_count": 84,
+  "control_row_indices_visualized": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    15,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32,
+    34,
+    35,
+    37,
+    38,
+    39,
+    40
+  ],
+  "fit_rms_px": 0.72891061904214,
+  "fit_max_px": 2.0523614418784817,
+  "independent_holdout_count": 4,
+  "independent_holdout_rms_px": 1.561397527990726,
+  "independent_holdout_max_px": 2.0008624115912745,
+  "independent_holdouts": [
+    {
+      "id": "GH-N",
+      "landmark": "North city entry street-notch upper-left corner",
+      "source_xy": [
+        2022,
+        100
+      ],
+      "native_xy": [
+        944,
+        77
+      ],
+      "region": "north",
+      "reason": "Distinct horizontal/vertical outer-wall junction; native target independently reviewed previously as WZ13 F1.",
+      "role": "reserved_independent_holdout",
+      "predicted_native_xy": [
+        942.5391353055471,
+        75.91619699393506
+      ],
+      "residual_px": 1.8189982439393138
+    },
+    {
+      "id": "GH-W",
+      "landmark": "Roof apex immediately southwest of Wild Zone14",
+      "source_xy": [
+        232.5,
+        1924
+      ],
+      "native_xy": [
+        133.5,
+        904.5
+      ],
+      "region": "west",
+      "reason": "Distinct short roof bevel apex outside the green zone; native target independently reviewed previously as WZ14 F2.",
+      "role": "reserved_independent_holdout",
+      "predicted_native_xy": [
+        133.9010243539281,
+        902.5397372988103
+      ],
+      "residual_px": 2.0008624115912745
+    },
+    {
+      "id": "GH-E",
+      "landmark": "Small eastern building northeast roof corner below Wild Zone6 and north of canal",
+      "source_xy": [
+        3846,
+        2378
+      ],
+      "native_xy": [
+        1769,
+        1108
+      ],
+      "region": "east",
+      "reason": "Grey roof junction is visible just below green gate decoration; source is bare original map texture. Gate icon is not the landmark.",
+      "role": "reserved_independent_holdout",
+      "predicted_native_xy": [
+        1769.0645026118593,
+        1109.2965912104216
+      ],
+      "residual_px": 1.2981946517681102
+    },
+    {
+      "id": "GH-S",
+      "landmark": "Southwestern roof block southeast lower bevel end west of main south street",
+      "source_xy": [
+        1989,
+        3871
+      ],
+      "native_xy": [
+        930,
+        1785
+      ],
+      "region": "south",
+      "reason": "Distinct bevel-to-horizontal lower roof junction west of Wild Zone1 and the main street; unoccluded in both maps.",
+      "role": "reserved_independent_holdout",
+      "first_source_xy": [
+        1987,
+        3870
+      ],
+      "first_native_xy": [
+        927,
+        1784
+      ],
+      "pre_fit_refinement": "The first pair panel placed both picks on the horizontal stroke just left of the lower bevel junction. Corrected to the actual stroke junction before any global registration fit or residual calculation. First pair panel and first observations retained.",
+      "predicted_native_xy": [
+        929.702520417133,
+        1785.8159905048387
+      ],
+      "residual_px": 0.8685243843495227
+    }
+  ],
+  "threshold_px": 3,
+  "declared_raster_digitization_tolerance_px": 3,
+  "threshold_interpretation": "Observed image registration/raster-pick tolerance, not statistical coverage or exact world/geography accuracy.",
+  "closest_fit_target_to_holdout_px": 281.17390435696245,
+  "replay_max_absolute_coefficient_difference": 0.0,
+  "source_and_review_artifacts": [
+    {
+      "path": "fixed-global-map-holdouts.json",
+      "sha256": "f4b799067fd253cf4d5e7323ea95216308fa25823ee5c00138d19909e0c3439d"
+    },
+    {
+      "path": "first-global-map-holdout-picks.json",
+      "sha256": "9af792760d10966da22e66e2064c4bc87c3502ef2472ee0ee00817089a14d8bd"
+    },
+    {
+      "path": "first-holdout-4.png",
+      "sha256": "149e852978983864669234973e4722e6e4081f9d0fdb3566116889f08c1d3c1d"
+    },
+    {
+      "path": "fixed-holdout-1.png",
+      "sha256": "5c6d61fd5f9351514195a68c14ce330e5606590ea10484928c12b5a03b04d92b"
+    },
+    {
+      "path": "fixed-holdout-2.png",
+      "sha256": "0c52b7e8d2fb95fff608c881609bfef4f359e38dd53fde26abafc86dd708595e"
+    },
+    {
+      "path": "fixed-holdout-3.png",
+      "sha256": "318d8a1498810f514c5f977c67e6693a814ac0fa4ff08883f965726d11495491"
+    },
+    {
+      "path": "fixed-holdout-4.png",
+      "sha256": "4485ae15fa1a9cb0e4bf2020797a80160455ae76c602a59a64f9c30cde9dfed3"
+    },
+    {
+      "path": "fit-controls-review-1.png",
+      "sha256": "60c8fa664944bbe7c4ff379a7b8672be21325aeb8b9abaf2641a422d0df09fc5"
+    },
+    {
+      "path": "fit-controls-review-2.png",
+      "sha256": "f7a32f5a1155f537ad2880ba961622b7ca3fb24ae971e32371feb28d46310770"
+    },
+    {
+      "path": "fit-controls-review-3.png",
+      "sha256": "19d964e7b7a54baf153b103b12629aa9c1a04133c1f165461f5a9c93b70916c5"
+    },
+    {
+      "path": "fit-controls-review-4.png",
+      "sha256": "58e6d5e4d0a19db80204a00239afc5b2e5a7f52f7a0ea86396c49097b018e00e"
+    },
+    {
+      "path": "fit-controls-review-5.png",
+      "sha256": "1db7ae677652e969646e33389a3764858c2276eb2b442f40e42c365d6eec1539"
+    },
+    {
+      "path": "fit-controls-review-6.png",
+      "sha256": "0a8956404e3e31fca77abd312397c515830f69e3968538ab250d3c08265afbd1"
+    }
+  ]
+}

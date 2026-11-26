@@ -1,0 +1,20 @@
+{
+  "status": "fixed_checks_not_used_in_either_fit",
+  "method": "Actual native corners independently selected from enlarged original pixel panels. The composed transform locates comparison crops only; selected target points are not projections. These native points are withheld from both the overview and closeup fits.",
+  "points": [
+    {"id":"NC1","source_point":"CF3","source_xy":[149,639],"native_xy":[679,186],"label":"western roof northwest corner","role":"architecture_holdout"},
+    {"id":"NC2","source_point":"CF4","source_xy":[146,726],"native_xy":[680,200],"label":"western roof lower-left bevel start","role":"architecture_holdout"},
+    {"id":"NC3","source_point":"CF5","source_xy":[1158,635],"native_xy":[847,169],"label":"eastern stub roof southwest corner","role":"architecture_holdout","limitation":"Grey corner lies immediately below the green gate decoration; source identity and the native grey-stroke junction were inspected separately."},
+    {"id":"NC4","source_point":"CF6","source_xy":[1294,801],"native_xy":[874.5,194],"label":"southeast hook roof outer bevel","role":"architecture_holdout"},
+    {"id":"NC5","source_point":"CB1","source_xy":[1255,224],"native_xy":[858,102],"label":"northeast green line approach","role":"border_holdout"},
+    {"id":"NC6","source_point":"CB2","source_xy":[146,385],"native_xy":[675,144],"label":"northwest green line approach","role":"border_holdout","first_pass_native_xy":[672,144],"first_pass_error_px":4.21338123716532,"correction":"Original-pixel grids show x672,y144 lies on the grey/brown wall-line junction outside the green approach. The green line turns into the gate at x675,y144. Source overview x456,y416 likewise lies outside the green turn and is corrected to x459,y416. No fit, control, matrix or source closeup point changed; the rejected original pair and error remain recorded."},
+    {"id":"NC7","source_point":"CB3","source_xy":[223,643],"native_xy":[692.5,185],"label":"southwest green corner","role":"border_holdout"}
+  ],
+  "overview_holdout_corrections": [
+    {"id":"H3","first_native_xy":[861,264],"reviewed_native_xy":[856,264],"reason":"Original pixel grids identify the vertical roof stroke at x856 and horizontal stroke at y264. The first x861 pick was on the horizontal stroke, five pixels right of the actual corner. Source remains x770,y622 and the fitted transform is unchanged."},
+    {"id":"B2","first_source_xy":[456,416],"reviewed_source_xy":[459,416],"first_native_xy":[672,144],"reviewed_native_xy":[675,144],"reason":"First picks followed the neighbouring grey/brown wall-line junction. Exact original pixels identify the green approach turn separately. Both original pairs are retained; neither was used for fitting."}
+  ],
+  "closeup_holdout_corrections": [
+    {"id":"CB2","first_overview_xy":[456,416],"reviewed_overview_xy":[459,416],"reason":"Same original-pixel green-line identity correction as overview B2; source closeup point and transform are unchanged."}
+  ]
+}

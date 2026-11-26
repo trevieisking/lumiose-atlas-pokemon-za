@@ -1,0 +1,342 @@
+{
+  "status": "first_manual_overview_fit_no_geometry",
+  "fit_success": true,
+  "method": "Unrobust projective least squares; seven fixed architecture controls only. Original roles and all holdouts retained.",
+  "source_to_native_matrix": [
+    [
+      0.6332610155676127,
+      -0.040948403590483476,
+      406.0448307642212
+    ],
+    [
+      0.007314859915827682,
+      0.587879640060047,
+      -104.42357288343858
+    ],
+    [
+      5.3385271072677845e-05,
+      -4.649119610518233e-05,
+      1.0
+    ]
+  ],
+  "metrics": {
+    "fit": {
+      "count": 7,
+      "rms_px": 0.7534704059542344,
+      "max_px": 1.1567136030400738
+    },
+    "architecture_holdout": {
+      "count": 5,
+      "rms_px": 2.1024825681591324,
+      "max_px": 3.2871137073823564
+    },
+    "border_holdout": {
+      "count": 3,
+      "rms_px": 2.187041530582902,
+      "max_px": 2.7060985721465047
+    }
+  },
+  "points": [
+    {
+      "id": "F1",
+      "label": "north wall street-notch upper-left corner",
+      "source_xy": [
+        921,
+        302
+      ],
+      "native_xy": [
+        944,
+        77
+      ],
+      "role": "architecture_holdout",
+      "first_planned_role": "fit",
+      "pre_fit_change": "Moved to held-out north architecture check before any new fit, to independently check the northern registration.",
+      "projected_native_xy": [
+        943.7598889163241,
+        77.14321656383594
+      ],
+      "residual_px": 0.2795788201222805
+    },
+    {
+      "id": "F2",
+      "label": "north wall street-notch lower-left corner",
+      "source_xy": [
+        920.5,
+        333.5
+      ],
+      "native_xy": [
+        943.5,
+        95
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        943.5671681252164,
+        95.16656192598592
+      ],
+      "residual_px": 0.1795951898944613
+    },
+    {
+      "id": "F3",
+      "label": "western roof northeast corner",
+      "source_xy": [
+        408,
+        500
+      ],
+      "native_xy": [
+        644.5,
+        193.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        644.8854984520805,
+        192.7830228881456
+      ],
+      "residual_px": 0.8140425268249204
+    },
+    {
+      "id": "F4",
+      "label": "western roof southeast corner",
+      "source_xy": [
+        429,
+        539
+      ],
+      "native_xy": [
+        657.5,
+        215.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        657.0595483526035,
+        216.0475287640038
+      ],
+      "residual_px": 0.7026986559726601
+    },
+    {
+      "id": "F5",
+      "label": "hook roof outer lower-left bend",
+      "source_xy": [
+        689,
+        621
+      ],
+      "native_xy": [
+        810.5,
+        263
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        810.5203458068368,
+        263.6041392830804
+      ],
+      "residual_px": 0.6044817823696366
+    },
+    {
+      "id": "F6",
+      "label": "hook roof outer lower-right corner",
+      "source_xy": [
+        753,
+        621
+      ],
+      "native_xy": [
+        849,
+        263
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        847.8568299647576,
+        263.1764897446931
+      ],
+      "residual_px": 1.1567136030400738
+    },
+    {
+      "id": "F7",
+      "label": "eastern curved pavement southeast corner",
+      "source_xy": [
+        865,
+        603
+      ],
+      "native_xy": [
+        912,
+        252.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        912.5660609933466,
+        251.82605478082195
+      ],
+      "residual_px": 0.8801290852150446
+    },
+    {
+      "id": "F8",
+      "label": "southwest courtyard lower corner",
+      "source_xy": [
+        603,
+        693
+      ],
+      "native_xy": [
+        759,
+        307.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        759.5445482669421,
+        307.39620263308973
+      ],
+      "residual_px": 0.5543525127634642
+    },
+    {
+      "id": "H1",
+      "label": "hook roof southwest tip",
+      "source_xy": [
+        526,
+        611
+      ],
+      "native_xy": [
+        714,
+        257.5
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        714.3531496185145,
+        258.70270302138607
+      ],
+      "residual_px": 1.253478843342853
+    },
+    {
+      "id": "H2",
+      "label": "hook roof inside southern bend",
+      "source_xy": [
+        637,
+        571
+      ],
+      "native_xy": [
+        778,
+        235.5
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        780.2300859384037,
+        234.16838416154408
+      ],
+      "residual_px": 2.597399475223745
+    },
+    {
+      "id": "H3",
+      "label": "southeast rectangle northwest corner",
+      "source_xy": [
+        770,
+        622
+      ],
+      "native_xy": [
+        861,
+        264
+      ],
+      "role": "architecture_holdout",
+      "provisional_source_xy": [
+        785,
+        625
+      ],
+      "pre_fit_correction": "The initial context crop was centered on the horizontal stroke, not the intended corner. The actual northwest corner is at x770,y622; corrected from the image before fitting.",
+      "projected_native_xy": [
+        857.7309081011707,
+        263.65626364424213
+      ],
+      "residual_px": 3.2871137073823564
+    },
+    {
+      "id": "H4",
+      "label": "northeast stub roof northeast bevel",
+      "source_xy": [
+        883,
+        399
+      ],
+      "native_xy": [
+        921,
+        132
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        922.5022855749562,
+        132.80270088564853
+      ],
+      "residual_px": 1.703288190689536
+    },
+    {
+      "id": "H5",
+      "label": "REJECTED north wall seam meets lower edge east of zone",
+      "source_xy": [
+        873,
+        339
+      ],
+      "native_xy": null,
+      "role": "rejected_not_identifiable",
+      "rejection": "The source seam is visible, but the original native raster does not identify the corresponding seam intersection reliably. Rejected before any fit; no projected point substituted."
+    },
+    {
+      "id": "B1",
+      "label": "northeast green line approach before gate square",
+      "source_xy": [
+        767,
+        342.5
+      ],
+      "native_xy": [
+        858,
+        102
+      ],
+      "role": "border_holdout",
+      "limitation": "Native approach is blurred and near a gate symbol; visual check needed at stated raster tolerance, not a physical boundary measurement.",
+      "projected_native_xy": [
+        856.3036846726227,
+        100.03255981491282
+      ],
+      "residual_px": 2.5977502904996608
+    },
+    {
+      "id": "B2",
+      "label": "northwest green line approach above gate square",
+      "source_xy": [
+        456,
+        416
+      ],
+      "native_xy": [
+        672,
+        144
+      ],
+      "role": "border_holdout",
+      "limitation": "Native approach is blurred and near a gate symbol; visual check needed at stated raster tolerance, not a physical boundary measurement.",
+      "projected_native_xy": [
+        674.4030461661707,
+        142.7556774512107
+      ],
+      "residual_px": 2.7060985721465047
+    },
+    {
+      "id": "B3",
+      "label": "REJECTED southeast green corner at east gate square",
+      "source_xy": [
+        772,
+        441
+      ],
+      "native_xy": null,
+      "role": "rejected_ui_occluded",
+      "rejection": "The gate square covers the intended corner, so a distinct non-UI native point cannot be picked. Rejected before fit."
+    },
+    {
+      "id": "B4",
+      "label": "southwest green corner",
+      "source_xy": [
+        487,
+        488
+      ],
+      "native_xy": [
+        692.5,
+        185
+      ],
+      "role": "border_holdout",
+      "projected_native_xy": [
+        692.1684078752912,
+        185.41014945855127
+      ],
+      "residual_px": 0.5274238480755155
+    }
+  ]
+}

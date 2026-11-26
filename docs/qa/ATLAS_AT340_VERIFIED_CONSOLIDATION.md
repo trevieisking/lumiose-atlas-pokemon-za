@@ -1,6 +1,6 @@
 # AT-340 — verified consolidation and release boundary
 
-26 November 2026 · Plan `ATLAS-MAPS-2026-11-21-V1` · Current Manifest 87 · Ledger 95
+26 November 2026 · Plan `ATLAS-MAPS-2026-11-21-V1` · Current Manifest 88 · Ledger 96
 
 ## Decision and scope
 
@@ -8,15 +8,15 @@
 
 This is one consolidated candidate for the verified improvements accumulated across the open Atlas PRs. Its starting main is `d7021a7af3973f18d54d07634e29c23cc78b0560`; the recovered shared-area source is PR202 head `426aa3b71814b560a42939e9a7cc8304fb4a454d`. The assistant makes the bounded promotion decision after the final combined head passes the checks below. The PR's release receipt must record its actual reviewed head/tree, merge, deployment and live checks; this document does not pre-certify those future events.
 
-The candidate now includes current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` after the separate PR202 merge, preserving its map-filter, exact-search and original-photo fixes. Wild Zone 04 adds a sixth reviewed selection outline; 62 boundaries and all 68 comprehensive roster reviews remain open. Fresh Sites metadata shows the separate original-site hotfix at **version 38**. This consolidation does not publish to that Site; the final full-upgrade prompt remains gated. All 128 local Node tests pass; final combined-head browser and visual checks are pending.
+The candidate includes current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` and preserves PR202’s map-filter, exact-search, original-photo and Helioptile fixes. Independent original-image reviews now support **seven selection outlines: Wild Zones 2, 3, 4, 5, 11, 13 and 16**. The two sector-source packets reconcile **45 numbered Walking tables / 484 species-form rows** into **747 attributed claims plus 272 preserved records**; source leads, conditions, Alpha uncertainty and disagreements remain explicit. **61 boundaries and all 68 comprehensive roster reviews remain open.** All **140 local Node tests** pass. The earlier exact head `3e17c260fc749e3ee5bad877470ee6035601064c` passed all required workflows and actual screenshot review; the final combined head still requires its own CI, visual review, merge and live checks. The separate original Site was observed at **version 38** after a filter/photo hotfix. This PR does not publish there, and the final full-upgrade prompt remains gated.
 
-**Full master-plan completion remains HOLD.** Six reviewed Wild Zone map-selection outlines are available, while 62 required boundaries and all 68 comprehensive encounter reviews remain open. A working search interface and attributed encounter rows do not resolve those evidence gaps. The full-scope approved SHA and executable Workspace publication prompt remain null. These are existing requirements, not new approval steps for the owner.
+**Full master-plan completion remains HOLD.** Seven reviewed Wild Zone map-selection outlines are available, while 61 required boundaries and all 68 comprehensive encounter reviews remain open. A working search interface and attributed encounter rows do not resolve those evidence gaps. The full-scope approved SHA and executable Workspace publication prompt remain null. These are existing requirements, not new approval steps for the owner.
 
 ## What is brought together
 
 - Shared area/species search, habitats, filters, selection, deep links and browser history across Explorer, Maps, the sector directory and the main guide map; fieldbook and Pokédex habitat links.
-- Six reviewed selection outlines for Wild Zones 02, 03, 04, 05, 11 and 16. The other areas remain searchable with their original photographs and honest incomplete-boundary labels.
-- The original 272 encounter rows plus 283 attributed claims. Encounter classes and source quality remain separate. Research leads and disputed claims do not become supported habitats.
+- Seven reviewed selection outlines for Wild Zones 02, 03, 04, 05, 11, 13 and 16. The other areas remain searchable with their original photographs and honest incomplete-boundary labels.
+- The original 272 encounter rows plus 747 attributed claims, including the two separately reviewed sector-source packets covering 45 numbered Walking tables. Encounter classes and source quality remain separate. Research leads and disputed claims do not become supported habitats.
 - PR196's displayed-label and exact Wild Zone collectible search fix, preserving the existing 264 item records, 100 Screw clues and independent progress store.
 - Verified salon missions 012/051, Side Mission 109 rewards and opponent levels, conservative Furfrou087 revisit guidance, the official current Vivillon gift link, and written sludge/Ice Beam guidance. [Content sources and decisions](ATLAS_CONTENT_CONSOLIDATION_2026-11-26.md).
 - PR3's corroborated Main Mission 01–10 route detail: 30 steps become 73, with current mission IDs, practical notes, later missions and progress/navigation preserved. Conflicting exact Pidgey level and TM051 reward claims are omitted. [Per-mission evidence and preservation check](ATLAS_PR003_EARLY_STORY_RECONCILIATION_2026-11-26.md).
@@ -45,7 +45,7 @@ The combined candidate must pass:
 - Actual screenshot review for the affected maps and guide views; no material console, overflow, missing-image or progress regression.
 - A fresh main/head review immediately before an expected-head merge, then verification of the exact Pages deployment and live bytes/behavior. Keep the reviewed tree and deployed merge distinct in the receipt.
 
-Local combined-candidate checks completed before publication: **128 Node tests passed after reconciliation with current main**, static validation passed for 17 sections / 647 page links / 1,431 image-script references / 578 captured resources, all eight original owner-crop byte and registration checks passed, generated `index.html` reproduced exactly, and `git diff --check` passed. Independent geometry/preservation review found no remaining must-fix issue in its bounded scope. Final GitHub browser CI, actual screenshots and deployment checks remain separate required release evidence.
+Local combined-candidate checks completed before publication: **140 Node tests passed after the seven-outline / 747-claim reconciliation**, static validation passed for 17 sections / 647 page links / 1,431 image-script references / 578 captured resources, all eight original owner-crop byte and registration checks passed, generated `index.html` reproduced exactly, and `git diff --check` passed. Independent geometry/preservation review found no remaining must-fix issue in its bounded scope. The earlier 3e17c260 checkpoint passed all required workflows and actual affected screenshot inspection; [its exact receipt](ATLAS_AT341_BROWSER_CHECKPOINT_2026-11-26.md) is historical evidence. Final combined-head CI, affected screenshots and deployment checks remain separate release requirements.
 
 Passing software tests verifies behavior and preservation. It does not establish unreviewed game geography or complete encounter rosters.
 

@@ -25,6 +25,17 @@ assert.ok(!fennekin.includes('href="https://'));
 const generatedFennekin=read('index.html').match(/<article class="side-quest" id="quest-8">([\s\S]*?)<\/article>/)?.[1];
 assert.equal(generatedFennekin,original.find(m=>Number(m[1])===8)?.[2],
   'Generated home guidance must match the corrected authored article');
+// Written-source correction: Montée is in Jaune Sector 1; preserve quest/progress key 11.
+const source11=original.find(m=>Number(m[1])===11)?.[2]||"";
+const home11=read("index.html").match(/<article class="side-quest" id="quest-11">([\s\S]*?)<\/article>/)?.[1]||"";
+for(const card of [source11,home11,forQuest(11)]){
+ assert.match(card,/<b>Start:<\/b> Jaune Sector 1/);
+ assert.match(card,/Challenge Montée in Jaune Sector 1\./);
+ assert.match(card,/two level 8 Kakuna, level 9 Kakuna and level 11 Beedrill/);
+ assert.doesNotMatch(card,/evolves during the battle/);
+ assert.doesNotMatch(card,/Rouge Sector 1/);
+ assert.match(card,/data-side-check="11"/);
+}
 const h03=forQuest(40),h04=forQuest(45);
 assert.match(h03,/data-verified-holovator="H-03"/);
 assert.match(h03,/Vert Pokémon Center/);

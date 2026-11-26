@@ -1,0 +1,238 @@
+{
+  "area_id": "wz-13",
+  "status": "approved",
+  "kind": "zone",
+  "coordinateSpace": "atlas-native-pixels",
+  "mapSha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          675.3952580009661,
+          141.50504417743073
+        ],
+        [
+          681.260408508185,
+          140.3215257022857
+        ],
+        [
+          691.4406881039317,
+          136.7256070094014
+        ],
+        [
+          701.5130711077811,
+          132.64618901253075
+        ],
+        [
+          711.5330745194241,
+          128.76199536813044
+        ],
+        [
+          721.5766934705784,
+          125.90807376882461
+        ],
+        [
+          731.5595471669486,
+          123.0714187816792
+        ],
+        [
+          741.4821854024011,
+          120.25187418127388
+        ],
+        [
+          751.3292600121378,
+          117.28361638111497
+        ],
+        [
+          761.165208869274,
+          114.82857748105904
+        ],
+        [
+          770.9438829502233,
+          112.38783428399768
+        ],
+        [
+          780.6995625659654,
+          110.28916002475307
+        ],
+        [
+          790.4863771910173,
+          109.01956546904006
+        ],
+        [
+          800.1517303910347,
+          107.10469795001042
+        ],
+        [
+          809.7993945438125,
+          105.52530480058563
+        ],
+        [
+          819.3953393815517,
+          103.95437848111791
+        ],
+        [
+          829.0510727647952,
+          103.36088144231942
+        ],
+        [
+          838.6408771398886,
+          102.6091591878357
+        ],
+        [
+          848.0875373291866,
+          101.05786920211528
+        ],
+        [
+          856.7336978876219,
+          99.8967217188321
+        ],
+        [
+          856.7482743946763,
+          102.64677961539749
+        ],
+        [
+          856.8584375725062,
+          128.7296514335119
+        ],
+        [
+          857.6764635436423,
+          151.61741317839332
+        ],
+        [
+          841.2531636477978,
+          155.625331279492
+        ],
+        [
+          812.7339185227149,
+          156.23520492676502
+        ],
+        [
+          783.616402853438,
+          184.48297909224686
+        ],
+        [
+          692.3517058825881,
+          184.6805678431241
+        ],
+        [
+          686.766102041143,
+          172.12555471792447
+        ],
+        [
+          676.4525610788675,
+          143.82015188466474
+        ],
+        [
+          675.3952580009661,
+          141.50504417743073
+        ]
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "claim": "Native map identity and independently picked architecture/perimeter targets. Its central badge occlusion is supplied by the registered original closeup.",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+      "claim": "Owner overview supplies seven architectural fit controls, eight stage holdouts and independent visible-footprint corroboration. Badge/cursor and Travel Here overlays are excluded.",
+      "sha256": "24e0b104100e13da41aac51e0d62c665b48347267379fe4a69c257455d60d7bf"
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+      "claim": "Owner closeup supplies the curved perimeter and observed gate approaches, seven closeup-to-overview architecture controls, nine local holdouts and seven separately checked native targets.",
+      "sha256": "e71f8608394c45f61891b55a5c844335c5a90159f306019ec26700bcd006f7f1"
+    }
+  ],
+  "registration": {
+    "method": "Two-stage architecture homography: seven controls in each stage, with separate local holdouts. Seven direct native checks validate the composed transform. Visible perimeter and three display closures reviewed separately.",
+    "control_count": 7,
+    "holdout_count": 7,
+    "control_count_semantics": "Seven per stage, fourteen total architecture correspondences; not fourteen direct native controls.",
+    "max_error_px": 2.5977502904996608,
+    "uncertainty_px": 3,
+    "threshold_px": 3,
+    "holdout_rms_px": 1.6539152818663307,
+    "holdout_max_px": 2.5260707519584686,
+    "border_holdout_count": 3,
+    "independent_architecture_holdout_count": 4,
+    "stage_metrics": {
+      "overview": {
+        "fit": {
+          "count": 7,
+          "rms_px": 0.7534704059542344,
+          "max_px": 1.1567136030400738
+        },
+        "architecture_holdout": {
+          "count": 5,
+          "rms_px": 1.697718808211314,
+          "max_px": 2.597399475223745
+        },
+        "border_holdout": {
+          "count": 3,
+          "rms_px": 1.8241692110114598,
+          "max_px": 2.5977502904996608
+        }
+      },
+      "closeup": {
+        "fit": {
+          "count": 7,
+          "rms_px": 0.5442196676615242,
+          "max_px": 0.9419484295640175
+        },
+        "architecture_holdout": {
+          "count": 4,
+          "rms_px": 1.056256441148203,
+          "max_px": 1.5791637165429309
+        },
+        "border_holdout": {
+          "count": 5,
+          "rms_px": 0.8016361283084523,
+          "max_px": 1.4786694566454703
+        }
+      },
+      "native": {
+        "architecture_holdout": {
+          "count": 4,
+          "rms_px": 1.286049013187847,
+          "max_px": 2.3723836957540465
+        },
+        "border_holdout": {
+          "count": 3,
+          "rms_px": 2.0438820954131343,
+          "max_px": 2.5260707519584686
+        }
+      }
+    },
+    "evidence_id": "WZ13-SELECTION-REVIEW-2026-11-26",
+    "evidence_path": "docs/qa/candidates/wz13-2026-11-26/selection-review-receipt.json"
+  },
+  "review": {
+    "boundary": true,
+    "registration": true,
+    "independent": true,
+    "occlusion": true
+  },
+  "notes": [
+    "Rendered map-selection footprint only; no physical, walking, floor, accessible-entrance, route, spawn or comprehensive encounter extent claim. Full area scope remains incomplete.",
+    "Three native pixels describes observed landmark/raster digitization tolerance, not a uniform confidence interval or bound on hidden edges. Stage and direct-native checks are reported separately to avoid double-counting correlated observations.",
+    "The native badge obscures central perimeter spans. The registered original closeup supplies those spans; its own cursor and badge are inside the footprint. No icon silhouette defines the outline.",
+    "Three entrance-symbol spans are explicit display closures between observed approaches. The southeast corner is obscured; a short diagonal closure is chosen without inventing a hidden corner. Its separate sensitivity diagnostic is retained in the receipt.",
+    "Original approximate marker center, source bytes, roster status and player data are unchanged. Raw failed descriptor matches and all original manual picks/corrections are retained."
+  ],
+  "independent_review": {
+    "date": "2026-11-26",
+    "reviewer": "geometry_evidence_original_image_review_with_root_visual_crosscheck",
+    "review_panel_path": "docs/qa/candidates/wz13-2026-11-26/source-perimeter-review.png",
+    "review_panel_sha256": "56aa2bdec4530bcf17551d137bc5464c0c076b7c67ba8e42ace7f9a867320b10",
+    "supplementary_review_panel_path": "docs/qa/candidates/wz13-2026-11-26/registered-source-review.png",
+    "supplementary_review_panel_sha256": "0e7955f67f239db9621e8b2cfb0be222a48c85c0b8a11dca43c167fe915708bf",
+    "decision": "approved_for_rendered_map_selection_only",
+    "review_receipt_path": "docs/qa/candidates/wz13-2026-11-26/selection-review-receipt.json",
+    "review_receipt_sha256": "41a061b6b19042a23476e63bca41cb15e3e2af683919266be6be1bd988ddb269"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "H2",
+  "decision": "correct_feature_identity_from_original_pixels_without_refit",
+  "source_xy_unchanged": [
+    596,
+    174
+  ],
+  "first_native_xy": [
+    180,
+    754
+  ],
+  "reviewed_native_xy": [
+    184.5,
+    752.5
+  ],
+  "first_error_px": 4.855321494808909,
+  "reason": "The original native pick x180,y754 falls in the light green gap west of the large roof. The enlarged native pixels show the sloping western roof outline rising to its junction with the top outline at approximately x184.5,y752.5. The source northwest roof corner is identifiable at x596,y174 and unchanged. The faint native line has finite raster uncertainty. This corrected target was chosen from the original-pixel grid before recomputing its residual; neither fitted controls nor matrix is changed.",
+  "evidence": [
+    "h2-native-pixel-grid.png",
+    "h2-source-pixel-grid.png",
+    "fixed-before-fit-3.png"
+  ],
+  "fit_changed": false
+}

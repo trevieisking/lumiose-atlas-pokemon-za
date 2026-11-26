@@ -248,7 +248,8 @@ try{
   await desktop.locator("#aeFilters button[data-kind='sector']").click();
   assert.ok(await desktop.locator("#aeResults button").count()>=1);
   await desktop.locator("#aeResults button").first().click();
-  assert.match(await desktop.locator("#aeSelected").textContent(),/no arbitrary pin|no precise mapped sector polygon/i);
+  assert.match(await desktop.locator("#aeSelected").textContent(),/no arbitrary sector pin is drawn/i);
+  assert.equal(await desktop.locator(".ae-pin[data-kind='sector']").count(),0,"A reviewed sector outline must not create a guessed sector point pin");
   assert.equal(errors.length,0,"Desktop JavaScript errors: "+errors.join(" | "));
   const phoneContext=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
   const phone=await phoneContext.newPage();
@@ -627,7 +628,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
     await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),sector);
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
     assert.equal(await page.locator(".ae-pin[data-kind='ladder']").count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
@@ -656,7 +657,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert4-courtyard-screws");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-4");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     for(const id of ["vert4-south","vert4-central","vert4-east"])
@@ -705,7 +706,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-5",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert5-scaffold-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-5");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -748,7 +749,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-6",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert6-racine-rooftop-courses");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-6");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(),21);
@@ -793,7 +794,7 @@ try{
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
     assert.equal(await page.locator("#aeCoverageSector").inputValue(),"vert-sector-9");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/District starting view only/);
     assert.equal(await page.locator('#aeRouteDetail a[href="MAPS_ACCESS_ROUTE_SURVEY.json"]').count(),1);
     assert.equal(await page.locator('#aeRouteDetail a[href="side-missions.html#quest-23"]').count(),1);
@@ -881,7 +882,7 @@ try{
   for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
     await page.goto(base+"/atlas-explorer.html?sector=vert-sector-3",{waitUntil:"load"});
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert3-cyclone-rooftop-courses");
-    assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+    assert.equal(await page.locator("#aeRouteSelect option").count(),43);
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').count(),1);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/orientation only, not certified roof connections/);
@@ -1162,7 +1163,7 @@ try{
     for(const [sector,route] of [["vert-sector-8","vert8-hotel-rooftop-courses"],["bleu-sector-1","bleu1-sewer-approaches"]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),43);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       for(let n=1;n<=7;n++){
         assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 7"));
@@ -1204,7 +1205,7 @@ try{
     for(const [sector,route,steps] of [["bleu-sector-3","bleu3-woof-scaffold-courses",6],["bleu-sector-5","bleu5-plaza-scaffold-rooftop",7]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),43);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
       assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=bleu3-fav"]').count(),1);
@@ -1235,7 +1236,7 @@ try{
     for(const [sector,route,steps,width] of [["bleu-sector-2","bleu2-wildzone5-roof-sweep",7,415],["bleu-sector-4","bleu4-southern-roof-from-bleu6",6,325],["bleu-sector-6","bleu6-plaza-scaffold-roofs",6,520]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),43);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
       const photo=page.locator("#aeSelected .ae-source-map-reference img");
@@ -1264,7 +1265,7 @@ try{
       ["bleu-sector-10","bleu10-estival-boulevard-scaffold",5,1290,null]]){
       await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
       await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
-      assert.equal(await page.locator("#aeRouteSelect option").count(),27);
+      assert.equal(await page.locator("#aeRouteSelect option").count(),43);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       assert.equal(await page.locator(".ae-pin[data-kind='scaffold']").count(),0);
       const photo=page.locator("#aeSelected .ae-source-map-reference img");
@@ -1300,6 +1301,55 @@ try{
       }
     }
     await page.close();
+  }
+  // Reviewed Rouge/Jaune approaches use the original route engine and photos.
+  // Exercise the material distinctions: conflicting ladder sides, mission lift
+  // identity, the separately located final course and the corrected quest link.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage(),errors=[];
+    page.on("pageerror",error=>errors.push(String(error)));
+    const progressKey="lumiose-atlas-reconstruction-v1";
+    const saved=JSON.stringify({sideCheck:{"11":true,"80":true},screw:{"29":true},futureField:{kept:"access-continuation"}});
+    await page.addInitScript(({key,value})=>localStorage.setItem(key,value),{key:progressKey,value:saved});
+    try{
+      for(const [sector,route,steps,required,photoId] of [
+        ["rouge-sector-4","rouge4-passage-ombrage-roof",4,["differ on the side","Sector 7","southern corner"],null],
+        ["jaune-sector-1","jaune1-park-kakuna-approach",4,["Montée","Jaune Sector 1"],null],
+        ["jaune-sector-7","jaune7-kizuna-hyper-beam-approach",5,["Side Mission 80","does not certify","mission-80 device"],"jaune7-hibernal"],
+        ["jaune-sector-8","jaune8-froakie-scaffold-approach",5,["30-second","40-second","50-second","Rouge Pokémon Center","Roto-Glide"],null]
+      ]){
+        await page.goto(base+"/atlas-explorer.html?sector="+sector,{waitUntil:"load"});
+        await page.waitForFunction(id=>document.getElementById("aeRouteSelect")?.value===id,route);
+        assert.equal(await page.locator("#aeRouteSelect option").count(),43);
+        let routeText=await page.locator("#aeRouteDetail").textContent();
+        assert.equal(await page.locator(".ae-pin[data-kind='sector'],.ae-pin[data-kind='scaffold']").count(),0);
+        const image=page.locator("#aeSelected .ae-source-map-reference img");
+        await image.scrollIntoViewIfNeeded();
+        await image.evaluate(img=>img.decode());
+        assert.ok(await image.evaluate(img=>img.complete&&img.naturalWidth>0));
+        for(let step=1;step<=steps;step++){
+          assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+step+" of "+steps));
+          assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
+          routeText+="\n"+await page.locator("#aeCurrentStep").textContent();
+          if(step<steps)await page.locator("#aeNextStep").click();
+        }
+        for(const text of required)assert.ok(routeText.includes(text),route+" visibly retains "+text);
+        assert.ok(await page.locator("#aeNextStep").isDisabled());
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,route+" fits "+kind);
+        await page.locator("#aeRouteDetail").scrollIntoViewIfNeeded();
+        await page.screenshot({path:output+"/at341-access-"+sector+"-"+kind+".png"});
+        if(photoId){
+          await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place='+photoId+'"]').click();
+          await page.waitForURL("**/atlas-explorer.html?place="+photoId);
+          const photo=page.locator("#aeSelected .ae-photo-grid img").first();
+          await photo.scrollIntoViewIfNeeded();await photo.evaluate(img=>img.decode());
+          assert.ok(await photo.evaluate(img=>img.complete&&img.naturalWidth>0));
+          await page.screenshot({path:output+"/at341-access-original-photo-"+kind+".png"});
+        }
+        assert.equal(await page.evaluate(key=>localStorage.getItem(key),progressKey),saved);
+      }
+      assert.deepEqual(errors,[]);
+    }finally{await page.close();}
   }
   // Place filters and layer switches must recover the reported sector ->
   // Holovator view without replacing a selected photo or changing saved progress.

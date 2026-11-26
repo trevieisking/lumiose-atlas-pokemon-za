@@ -1,0 +1,862 @@
+{
+  "status": "reviewed_correspondences_no_refit",
+  "overview_points": [
+    {
+      "id": "F1",
+      "label": "north wall street-notch upper-left corner",
+      "source_xy": [
+        921,
+        302
+      ],
+      "native_xy": [
+        944,
+        77
+      ],
+      "role": "architecture_holdout",
+      "first_planned_role": "fit",
+      "pre_fit_change": "Moved to held-out north architecture check before any new fit, to independently check the northern registration.",
+      "projected_native_xy": [
+        943.7598889163241,
+        77.14321656383594
+      ],
+      "residual_px": 0.2795788201222805
+    },
+    {
+      "id": "F2",
+      "label": "north wall street-notch lower-left corner",
+      "source_xy": [
+        920.5,
+        333.5
+      ],
+      "native_xy": [
+        943.5,
+        95
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        943.5671681252164,
+        95.16656192598592
+      ],
+      "residual_px": 0.1795951898944613
+    },
+    {
+      "id": "F3",
+      "label": "western roof northeast corner",
+      "source_xy": [
+        408,
+        500
+      ],
+      "native_xy": [
+        644.5,
+        193.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        644.8854984520805,
+        192.7830228881456
+      ],
+      "residual_px": 0.8140425268249204
+    },
+    {
+      "id": "F4",
+      "label": "western roof southeast corner",
+      "source_xy": [
+        429,
+        539
+      ],
+      "native_xy": [
+        657.5,
+        215.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        657.0595483526035,
+        216.0475287640038
+      ],
+      "residual_px": 0.7026986559726601
+    },
+    {
+      "id": "F5",
+      "label": "hook roof outer lower-left bend",
+      "source_xy": [
+        689,
+        621
+      ],
+      "native_xy": [
+        810.5,
+        263
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        810.5203458068368,
+        263.6041392830804
+      ],
+      "residual_px": 0.6044817823696366
+    },
+    {
+      "id": "F6",
+      "label": "hook roof outer lower-right corner",
+      "source_xy": [
+        753,
+        621
+      ],
+      "native_xy": [
+        849,
+        263
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        847.8568299647576,
+        263.1764897446931
+      ],
+      "residual_px": 1.1567136030400738
+    },
+    {
+      "id": "F7",
+      "label": "eastern curved pavement southeast corner",
+      "source_xy": [
+        865,
+        603
+      ],
+      "native_xy": [
+        912,
+        252.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        912.5660609933466,
+        251.82605478082195
+      ],
+      "residual_px": 0.8801290852150446
+    },
+    {
+      "id": "F8",
+      "label": "southwest courtyard lower corner",
+      "source_xy": [
+        603,
+        693
+      ],
+      "native_xy": [
+        759,
+        307.5
+      ],
+      "role": "fit",
+      "projected_native_xy": [
+        759.5445482669421,
+        307.39620263308973
+      ],
+      "residual_px": 0.5543525127634642
+    },
+    {
+      "id": "H1",
+      "label": "hook roof southwest tip",
+      "source_xy": [
+        526,
+        611
+      ],
+      "native_xy": [
+        714,
+        257.5
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        714.3531496185145,
+        258.70270302138607
+      ],
+      "residual_px": 1.253478843342853
+    },
+    {
+      "id": "H2",
+      "label": "hook roof inside southern bend",
+      "source_xy": [
+        637,
+        571
+      ],
+      "native_xy": [
+        778,
+        235.5
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        780.2300859384037,
+        234.16838416154408
+      ],
+      "residual_px": 2.597399475223745
+    },
+    {
+      "id": "H3",
+      "label": "southeast rectangle northwest corner",
+      "source_xy": [
+        770,
+        622
+      ],
+      "native_xy": [
+        856,
+        264
+      ],
+      "role": "architecture_holdout",
+      "provisional_source_xy": [
+        785,
+        625
+      ],
+      "pre_fit_correction": "The initial context crop was centered on the horizontal stroke, not the intended corner. The actual northwest corner is at x770,y622; corrected from the image before fitting.",
+      "projected_native_xy": [
+        857.7309081011707,
+        263.65626364424213
+      ],
+      "residual_px": 1.7647089099815019
+    },
+    {
+      "id": "H4",
+      "label": "northeast stub roof northeast bevel",
+      "source_xy": [
+        883,
+        399
+      ],
+      "native_xy": [
+        921,
+        132
+      ],
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        922.5022855749562,
+        132.80270088564853
+      ],
+      "residual_px": 1.703288190689536
+    },
+    {
+      "id": "H5",
+      "label": "REJECTED north wall seam meets lower edge east of zone",
+      "source_xy": [
+        873,
+        339
+      ],
+      "native_xy": null,
+      "role": "rejected_not_identifiable",
+      "rejection": "The source seam is visible, but the original native raster does not identify the corresponding seam intersection reliably. Rejected before any fit; no projected point substituted."
+    },
+    {
+      "id": "B1",
+      "label": "northeast green line approach before gate square",
+      "source_xy": [
+        767,
+        342.5
+      ],
+      "native_xy": [
+        858,
+        102
+      ],
+      "role": "border_holdout",
+      "limitation": "Native approach is blurred and near a gate symbol; visual check needed at stated raster tolerance, not a physical boundary measurement.",
+      "projected_native_xy": [
+        856.3036846726227,
+        100.03255981491282
+      ],
+      "residual_px": 2.5977502904996608
+    },
+    {
+      "id": "B2",
+      "label": "northwest green line approach above gate square",
+      "source_xy": [
+        459,
+        416
+      ],
+      "native_xy": [
+        675,
+        144
+      ],
+      "role": "border_holdout",
+      "limitation": "Native approach is blurred and near a gate symbol; visual check needed at stated raster tolerance, not a physical boundary measurement.",
+      "projected_native_xy": [
+        676.1856153453368,
+        142.75476359802707
+      ],
+      "residual_px": 1.7193886831943086
+    },
+    {
+      "id": "B3",
+      "label": "REJECTED southeast green corner at east gate square",
+      "source_xy": [
+        772,
+        441
+      ],
+      "native_xy": null,
+      "role": "rejected_ui_occluded",
+      "rejection": "The gate square covers the intended corner, so a distinct non-UI native point cannot be picked. Rejected before fit."
+    },
+    {
+      "id": "B4",
+      "label": "southwest green corner",
+      "source_xy": [
+        487,
+        488
+      ],
+      "native_xy": [
+        692.5,
+        185
+      ],
+      "role": "border_holdout",
+      "projected_native_xy": [
+        692.1684078752912,
+        185.41014945855127
+      ],
+      "residual_px": 0.5274238480755155
+    }
+  ],
+  "closeup_points": [
+    {
+      "id": "CF1",
+      "label": "REJECTED provisional northwest wall seam",
+      "source_xy": [
+        223,
+        362
+      ],
+      "overview_xy": null,
+      "role": "rejected_nonlandmark",
+      "rejection": "The proposed crop contains only the sloped green line, not a wall seam. It was rejected before fitting. CF7 and CF8 separately identify actual visible seam-foot junctions."
+    },
+    {
+      "id": "CF2",
+      "label": "northeast outer wall seam-foot junction",
+      "source_xy": [
+        929,
+        227
+      ],
+      "overview_xy": [
+        677,
+        350
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        677.2960229147965,
+        350.4131663356188
+      ],
+      "residual_overview_px": 0.508267633214326,
+      "residual_native_equivalent_px": 0.2945699708787493
+    },
+    {
+      "id": "CF3",
+      "label": "western roof northwest corner",
+      "source_xy": [
+        149,
+        639
+      ],
+      "overview_xy": [
+        465.5,
+        488.5
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        465.397732700659,
+        487.60393646970397
+      ],
+      "residual_overview_px": 0.9018805080724899,
+      "residual_native_equivalent_px": 0.5356736939576977
+    },
+    {
+      "id": "CF4",
+      "label": "western roof lower-left bevel start",
+      "source_xy": [
+        146,
+        726
+      ],
+      "overview_xy": [
+        466.5,
+        512.5
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        466.89118422080435,
+        513.2073845100814
+      ],
+      "residual_overview_px": 0.8083427117933352,
+      "residual_native_equivalent_px": 0.4778550538837804
+    },
+    {
+      "id": "CF5",
+      "label": "eastern stub roof southwest corner",
+      "source_xy": [
+        1158,
+        635
+      ],
+      "overview_xy": [
+        755,
+        461.5
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        755.0096333692496,
+        459.8890380184395
+      ],
+      "residual_overview_px": 1.61099078452869,
+      "residual_native_equivalent_px": 0.9419484295640175
+    },
+    {
+      "id": "CF6",
+      "label": "southeast hook roof outer bevel",
+      "source_xy": [
+        1294,
+        801
+      ],
+      "overview_xy": [
+        799,
+        502.5
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        798.8146881180145,
+        503.61390007513745
+      ],
+      "residual_overview_px": 1.1292094008624936,
+      "residual_native_equivalent_px": 0.6615438367046722
+    },
+    {
+      "id": "CF7",
+      "label": "northwest outer wall seam-foot junction",
+      "source_xy": [
+        255,
+        347
+      ],
+      "overview_xy": [
+        489,
+        400
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        488.434476471868,
+        400.26414603828744
+      ],
+      "residual_overview_px": 0.624171443125872,
+      "residual_native_equivalent_px": 0.3711579582668969
+    },
+    {
+      "id": "CF8",
+      "label": "northwest middle outer wall seam-foot junction",
+      "source_xy": [
+        371,
+        314
+      ],
+      "overview_xy": [
+        521,
+        388
+      ],
+      "role": "fit",
+      "projected_overview_xy": [
+        521.1562623003198,
+        388.0084286389111
+      ],
+      "residual_overview_px": 0.1564894515778076,
+      "residual_native_equivalent_px": 0.09217797024434697
+    },
+    {
+      "id": "CH1",
+      "label": "western roof lower-left bevel end",
+      "source_xy": [
+        173,
+        746
+      ],
+      "overview_xy": [
+        478,
+        519
+      ],
+      "role": "architecture_holdout",
+      "projected_overview_xy": [
+        475.4201162566629,
+        518.3374143390388
+      ],
+      "residual_overview_px": 2.6636103106960975,
+      "residual_native_equivalent_px": 1.5791637165429309
+    },
+    {
+      "id": "CH2",
+      "label": "hook roof inner northwest bevel",
+      "source_xy": [
+        996,
+        728
+      ],
+      "overview_xy": [
+        711,
+        491
+      ],
+      "role": "architecture_holdout",
+      "projected_overview_xy": [
+        712.6432727833761,
+        490.67065773240546
+      ],
+      "residual_overview_px": 1.6759510045967965,
+      "residual_native_equivalent_px": 0.9749660839416263
+    },
+    {
+      "id": "CH3",
+      "label": "hook roof inner northeast bevel",
+      "source_xy": [
+        1106,
+        737
+      ],
+      "overview_xy": [
+        742.5,
+        491
+      ],
+      "role": "architecture_holdout",
+      "projected_overview_xy": [
+        743.9499814432746,
+        490.3279148887801
+      ],
+      "residual_overview_px": 1.5981691345299671,
+      "residual_native_equivalent_px": 0.9295670038231425
+    },
+    {
+      "id": "CH4",
+      "label": "north middle outer wall seam-foot junction",
+      "source_xy": [
+        518,
+        282
+      ],
+      "overview_xy": [
+        562,
+        375
+      ],
+      "role": "architecture_holdout",
+      "projected_overview_xy": [
+        562.5394572624897,
+        375.40240770994086
+      ],
+      "residual_overview_px": 0.6730127064719645,
+      "residual_native_equivalent_px": 0.3928090563993936
+    },
+    {
+      "id": "CB1",
+      "label": "northeast green line approach",
+      "source_xy": [
+        1255,
+        224
+      ],
+      "overview_xy": [
+        767,
+        342.5
+      ],
+      "role": "border_holdout",
+      "projected_overview_xy": [
+        767.7497702696425,
+        342.2625021963512
+      ],
+      "residual_overview_px": 0.7864862770434876,
+      "residual_native_equivalent_px": 0.4509582612845771
+    },
+    {
+      "id": "CB2",
+      "label": "northwest green line approach",
+      "source_xy": [
+        146,
+        385
+      ],
+      "overview_xy": [
+        459,
+        416
+      ],
+      "role": "border_holdout",
+      "projected_overview_xy": [
+        457.6359440581994,
+        413.8863130148392
+      ],
+      "residual_overview_px": 2.5156154880266866,
+      "residual_native_equivalent_px": 1.4786694566454703
+    },
+    {
+      "id": "CB3",
+      "label": "southwest green corner",
+      "source_xy": [
+        223,
+        643
+      ],
+      "overview_xy": [
+        487,
+        488
+      ],
+      "role": "border_holdout",
+      "projected_overview_xy": [
+        487.2903994439143,
+        486.7740143797404
+      ],
+      "residual_overview_px": 1.259909749985725,
+      "residual_native_equivalent_px": 0.7522549388659859
+    },
+    {
+      "id": "CB4",
+      "label": "southern green bend",
+      "source_xy": [
+        752,
+        693
+      ],
+      "overview_xy": [
+        642,
+        487
+      ],
+      "role": "border_holdout",
+      "projected_overview_xy": [
+        642.1275738186584,
+        487.09938818396284
+      ],
+      "residual_overview_px": 0.16171917115336285,
+      "residual_native_equivalent_px": 0.0943034698787982
+    },
+    {
+      "id": "CB5",
+      "label": "southeast green notch",
+      "source_xy": [
+        944,
+        543
+      ],
+      "overview_xy": [
+        692,
+        440
+      ],
+      "role": "border_holdout",
+      "projected_overview_xy": [
+        691.8071724524157,
+        439.16898001169477
+      ],
+      "residual_overview_px": 0.8530982851173773,
+      "residual_native_equivalent_px": 0.4984927864376355
+    }
+  ],
+  "independent_native_checks": [
+    {
+      "id": "NC1",
+      "source_point": "CF3",
+      "source_xy": [
+        149,
+        639
+      ],
+      "native_xy": [
+        679,
+        186
+      ],
+      "label": "western roof northwest corner",
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        679.3182086346173,
+        185.23009492324567
+      ],
+      "residual_px": 0.8330729634054412
+    },
+    {
+      "id": "NC2",
+      "source_point": "CF4",
+      "source_xy": [
+        146,
+        726
+      ],
+      "native_xy": [
+        680,
+        200
+      ],
+      "label": "western roof lower-left bevel start",
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        679.9692945061049,
+        200.48223193998348
+      ],
+      "residual_px": 0.48320851740793025
+    },
+    {
+      "id": "NC3",
+      "source_point": "CF5",
+      "source_xy": [
+        1158,
+        635
+      ],
+      "native_xy": [
+        847,
+        169
+      ],
+      "label": "eastern stub roof southwest corner",
+      "role": "architecture_holdout",
+      "limitation": "Grey corner lies immediately below the green gate decoration; source identity and the native grey-stroke junction were inspected separately.",
+      "projected_native_xy": [
+        849.2585463624051,
+        168.27393338546233
+      ],
+      "residual_px": 2.3723836957540465
+    },
+    {
+      "id": "NC4",
+      "source_point": "CF6",
+      "source_xy": [
+        1294,
+        801
+      ],
+      "native_xy": [
+        874.5,
+        194
+      ],
+      "label": "southeast hook roof outer bevel",
+      "role": "architecture_holdout",
+      "projected_native_xy": [
+        874.4637486886452,
+        193.75778384410103
+      ],
+      "residual_px": 0.2449139109022177
+    },
+    {
+      "id": "NC5",
+      "source_point": "CB1",
+      "source_xy": [
+        1255,
+        224
+      ],
+      "native_xy": [
+        858,
+        102
+      ],
+      "label": "northeast green line approach",
+      "role": "border_holdout",
+      "projected_native_xy": [
+        856.7336978876219,
+        99.8967217188321
+      ],
+      "residual_px": 2.4550561231560004
+    },
+    {
+      "id": "NC6",
+      "source_point": "CB2",
+      "source_xy": [
+        146,
+        385
+      ],
+      "native_xy": [
+        675,
+        144
+      ],
+      "label": "northwest green line approach",
+      "role": "border_holdout",
+      "first_pass_native_xy": [
+        672,
+        144
+      ],
+      "first_pass_error_px": 4.21338123716532,
+      "correction": "Original-pixel grids show x672,y144 lies on the grey/brown wall-line junction outside the green approach. The green line turns into the gate at x675,y144. Source overview x456,y416 likewise lies outside the green turn and is corrected to x459,y416. No fit, control, matrix or source closeup point changed; the rejected original pair and error remain recorded.",
+      "projected_native_xy": [
+        675.3952580009661,
+        141.50504417743073
+      ],
+      "residual_px": 2.5260707519584686
+    },
+    {
+      "id": "NC7",
+      "source_point": "CB3",
+      "source_xy": [
+        223,
+        643
+      ],
+      "native_xy": [
+        692.5,
+        185
+      ],
+      "label": "southwest green corner",
+      "role": "border_holdout",
+      "projected_native_xy": [
+        692.3517058825881,
+        184.6805678431241
+      ],
+      "residual_px": 0.35217616061476514
+    }
+  ],
+  "corrections": {
+    "overview_holdout_corrections": [
+      {
+        "id": "H3",
+        "first_native_xy": [
+          861,
+          264
+        ],
+        "reviewed_native_xy": [
+          856,
+          264
+        ],
+        "reason": "Original pixel grids identify the vertical roof stroke at x856 and horizontal stroke at y264. The first x861 pick was on the horizontal stroke, five pixels right of the actual corner. Source remains x770,y622 and the fitted transform is unchanged."
+      },
+      {
+        "id": "B2",
+        "first_source_xy": [
+          456,
+          416
+        ],
+        "reviewed_source_xy": [
+          459,
+          416
+        ],
+        "first_native_xy": [
+          672,
+          144
+        ],
+        "reviewed_native_xy": [
+          675,
+          144
+        ],
+        "reason": "First picks followed the neighbouring grey/brown wall-line junction. Exact original pixels identify the green approach turn separately. Both original pairs are retained; neither was used for fitting."
+      }
+    ],
+    "closeup_holdout_corrections": [
+      {
+        "id": "CB2",
+        "first_overview_xy": [
+          456,
+          416
+        ],
+        "reviewed_overview_xy": [
+          459,
+          416
+        ],
+        "reason": "Same original-pixel green-line identity correction as overview B2; source closeup point and transform are unchanged."
+      }
+    ]
+  },
+  "matrices_unchanged": true,
+  "overview_metrics": {
+    "fit": {
+      "count": 7,
+      "rms_px": 0.7534704059542344,
+      "max_px": 1.1567136030400738
+    },
+    "architecture_holdout": {
+      "count": 5,
+      "rms_px": 1.697718808211314,
+      "max_px": 2.597399475223745
+    },
+    "border_holdout": {
+      "count": 3,
+      "rms_px": 1.8241692110114598,
+      "max_px": 2.5977502904996608
+    }
+  },
+  "closeup_metrics": {
+    "fit": {
+      "count": 7,
+      "rms_px": 0.5442196676615242,
+      "max_px": 0.9419484295640175
+    },
+    "architecture_holdout": {
+      "count": 4,
+      "rms_px": 1.056256441148203,
+      "max_px": 1.5791637165429309
+    },
+    "border_holdout": {
+      "count": 5,
+      "rms_px": 0.8016361283084523,
+      "max_px": 1.4786694566454703
+    }
+  },
+  "native_metrics": {
+    "architecture_holdout": {
+      "count": 4,
+      "rms_px": 1.286049013187847,
+      "max_px": 2.3723836957540465
+    },
+    "border_holdout": {
+      "count": 3,
+      "rms_px": 2.0438820954131343,
+      "max_px": 2.5260707519584686
+    }
+  }
+}

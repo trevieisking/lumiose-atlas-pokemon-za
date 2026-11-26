@@ -2,7 +2,7 @@
 
 ## AT-341 — current consolidated checkpoint
 
-Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md), [the verified consolidation contract](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md), and [PR204's exact release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Current manifest87 / ledger95 preserves the earlier AT-336 requirement/source inventory and records the disposition of all25 open source PRs. PR204 records the actual reviewed head, checks, promotion decision, merge and deployment as they occur. The complete map master plan remains unfinished; its full-release SHA and executable Workspace prompt remain unset under AT-325. Videos and YouTube remain paused. Fresh metadata shows the original Workspace at version38 after a separate filter/photo hotfix; this GitHub consolidation does not publish to it.
+Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md), [the verified consolidation contract](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md), and [PR204's exact release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Current manifest88 / ledger96 preserves the earlier AT-336 requirement/source inventory and records the disposition of the 25 source PRs in the original inventory. PR204 records the actual reviewed head, checks, promotion decision, merge and deployment as they occur. The complete map master plan remains unfinished; its full-release SHA and executable Workspace prompt remain unset under AT-325. Videos and YouTube remain paused. Fresh metadata shows the original Workspace at version38 after a separate filter/photo hotfix; this GitHub consolidation does not publish to it.
 
 ## START HERE — mandatory preflight for every development cycle
 

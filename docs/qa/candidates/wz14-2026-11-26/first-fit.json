@@ -1,0 +1,537 @@
+{
+  "status": "first_manual_architecture_fit_no_geometry",
+  "method": "Unrobust projective least squares on seven fixed architecture controls; five architecture and four perimeter heldouts unused in fitting.",
+  "source_to_native_matrix": [
+    [
+      0.2709363485320655,
+      0.013078977301195116,
+      23.632379557801816
+    ],
+    [
+      0.0123013097541169,
+      0.24478843521404833,
+      714.7104378247498
+    ],
+    [
+      3.614451318684262e-05,
+      -2.3462631057798556e-05,
+      1.0
+    ]
+  ],
+  "fit_success": true,
+  "metrics": {
+    "fit": {
+      "count": 7,
+      "rms_px": 0.7730004579383017,
+      "max_px": 1.1270685397878304
+    },
+    "architecture_holdout": {
+      "count": 5,
+      "rms_px": 2.714547547089312,
+      "max_px": 4.855321494808909
+    },
+    "border_holdout": {
+      "count": 4,
+      "rms_px": 1.2873319013863098,
+      "max_px": 1.7495373208983926
+    }
+  },
+  "points": [
+    {
+      "id": "F1",
+      "label": "northwest small roof northwest corner",
+      "role": "fit",
+      "source_xy": [
+        509,
+        161
+      ],
+      "native_xy": [
+        161,
+        750
+      ],
+      "provisional_source_xy": [
+        508,
+        163
+      ],
+      "first_pick_source_xy": [
+        511,
+        159
+      ],
+      "first_pick_native_xy": [
+        162,
+        747
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        161.28667327030186,
+        749.426078130193
+      ],
+      "residual_px": 0.6415355614058642
+    },
+    {
+      "id": "F2",
+      "label": "southwest outer building northwest corner",
+      "role": "fit",
+      "source_xy": [
+        368,
+        743
+      ],
+      "native_xy": [
+        133.5,
+        904.5
+      ],
+      "provisional_source_xy": [
+        344,
+        742
+      ],
+      "first_pick_source_xy": [
+        368,
+        736
+      ],
+      "first_pick_native_xy": [
+        132,
+        903
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        133.60663899927172,
+        904.8535786214507
+      ],
+      "residual_px": 0.3693097855630389
+    },
+    {
+      "id": "F3",
+      "label": "northeast hooked roof northwest corner",
+      "role": "fit",
+      "source_xy": [
+        1057,
+        383
+      ],
+      "native_xy": [
+        307,
+        798
+      ],
+      "provisional_source_xy": [
+        1043,
+        380
+      ],
+      "first_pick_source_xy": [
+        1054,
+        381
+      ],
+      "first_pick_native_xy": [
+        306,
+        797
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        306.0781836492254,
+        798.1462078688444
+      ],
+      "residual_px": 0.9333392338626804
+    },
+    {
+      "id": "F4",
+      "label": "northeast hooked roof northeast corner",
+      "role": "fit",
+      "source_xy": [
+        1245,
+        454
+      ],
+      "native_xy": [
+        355,
+        813.5
+      ],
+      "provisional_source_xy": [
+        1245,
+        450
+      ],
+      "first_pick_source_xy": [
+        1245,
+        451
+      ],
+      "first_pick_native_xy": [
+        355,
+        813
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        354.7027017719704,
+        813.2268946724889
+      ],
+      "residual_px": 0.40369884357584424
+    },
+    {
+      "id": "F5",
+      "label": "east separate roof northeast corner",
+      "role": "fit",
+      "source_xy": [
+        1421,
+        582
+      ],
+      "native_xy": [
+        400,
+        843
+      ],
+      "provisional_source_xy": [
+        1423,
+        582
+      ],
+      "first_pick_source_xy": [
+        1419,
+        579
+      ],
+      "first_pick_native_xy": [
+        400,
+        842
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        401.1202158528487,
+        842.8759035197679
+      ],
+      "residual_px": 1.1270685397878304
+    },
+    {
+      "id": "F6",
+      "label": "east separate roof southeast corner",
+      "role": "fit",
+      "source_xy": [
+        1372,
+        747
+      ],
+      "native_xy": [
+        393,
+        886.5
+      ],
+      "provisional_source_xy": [
+        1370,
+        742
+      ],
+      "first_pick_source_xy": [
+        1370,
+        742
+      ],
+      "first_pick_native_xy": [
+        390,
+        886
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        392.5407424092649,
+        886.0352395917968
+      ],
+      "residual_px": 0.6533909791855387
+    },
+    {
+      "id": "F7",
+      "label": "canal south embankment eastern notch",
+      "role": "fit",
+      "source_xy": [
+        1245,
+        331
+      ],
+      "native_xy": [
+        352,
+        781
+      ],
+      "provisional_source_xy": [
+        1243,
+        325
+      ],
+      "first_pick_source_xy": [
+        1241,
+        324
+      ],
+      "first_pick_native_xy": [
+        349,
+        779
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        352.1648438179465,
+        781.9360976073045
+      ],
+      "residual_px": 0.9505010335167738
+    },
+    {
+      "id": "H1",
+      "label": "northwest small roof southeast corner",
+      "role": "architecture_holdout",
+      "source_xy": [
+        546,
+        199
+      ],
+      "native_xy": [
+        171,
+        757
+      ],
+      "provisional_source_xy": [
+        545,
+        192
+      ],
+      "first_pick_source_xy": [
+        552,
+        199
+      ],
+      "first_pick_native_xy": [
+        173,
+        758
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        171.58132543692963,
+        758.709258788634
+      ],
+      "residual_px": 1.8054098897878865
+    },
+    {
+      "id": "H2",
+      "label": "northwest large roof northwest corner",
+      "role": "architecture_holdout",
+      "source_xy": [
+        596,
+        174
+      ],
+      "native_xy": [
+        180,
+        754
+      ],
+      "provisional_source_xy": [
+        592,
+        168
+      ],
+      "first_pick_source_xy": [
+        595,
+        167
+      ],
+      "first_pick_native_xy": [
+        179,
+        750
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        184.1706338312358,
+        751.5140474132227
+      ],
+      "residual_px": 4.855321494808909
+    },
+    {
+      "id": "H3",
+      "label": "hook roof inner southeast notch",
+      "role": "architecture_holdout",
+      "source_xy": [
+        1195,
+        631
+      ],
+      "native_xy": [
+        346,
+        858
+      ],
+      "provisional_source_xy": [
+        1175,
+        628
+      ],
+      "first_pick_source_xy": [
+        1178,
+        628
+      ],
+      "first_pick_native_xy": [
+        344,
+        857
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        345.83661926681157,
+        859.4734678440433
+      ],
+      "residual_px": 1.4824981454985886
+    },
+    {
+      "id": "H4",
+      "label": "hook roof inner northwest bevel",
+      "role": "architecture_holdout",
+      "source_xy": [
+        1087,
+        505
+      ],
+      "native_xy": [
+        317,
+        828
+      ],
+      "provisional_source_xy": [
+        1080,
+        505
+      ],
+      "first_pick_source_xy": [
+        1083,
+        500
+      ],
+      "first_pick_native_xy": [
+        310,
+        827
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        316.0719160797834,
+        828.9532647693871
+      ],
+      "residual_px": 1.3304335697505922
+    },
+    {
+      "id": "H5",
+      "label": "southern pale courtyard northwest corner",
+      "role": "architecture_holdout",
+      "source_xy": [
+        984,
+        716
+      ],
+      "native_xy": [
+        296,
+        887
+      ],
+      "provisional_source_xy": [
+        840,
+        710
+      ],
+      "first_pick_source_xy": [
+        984,
+        713
+      ],
+      "first_pick_native_xy": [
+        296,
+        886
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        294.07932026233647,
+        885.4659448023789
+      ],
+      "residual_px": 2.4581163528237666
+    },
+    {
+      "id": "B1",
+      "label": "northwest green corner",
+      "role": "border_holdout",
+      "source_xy": [
+        499,
+        124
+      ],
+      "native_xy": [
+        157,
+        740
+      ],
+      "provisional_source_xy": [
+        497,
+        120
+      ],
+      "first_pick_source_xy": [
+        498,
+        121
+      ],
+      "first_pick_native_xy": [
+        156,
+        739
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        158.06047010376807,
+        740.0086348282342
+      ],
+      "residual_px": 1.0605052575279823
+    },
+    {
+      "id": "B2",
+      "label": "northeast green bend",
+      "role": "border_holdout",
+      "source_xy": [
+        982,
+        326
+      ],
+      "native_xy": [
+        285,
+        784
+      ],
+      "provisional_source_xy": [
+        985,
+        310
+      ],
+      "first_pick_source_xy": [
+        984,
+        326
+      ],
+      "first_pick_native_xy": [
+        285,
+        784
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        285.9921422675344,
+        784.7401893682537
+      ],
+      "residual_px": 1.2378314020512386
+    },
+    {
+      "id": "B3",
+      "label": "southwest green corner",
+      "role": "border_holdout",
+      "source_xy": [
+        365,
+        708
+      ],
+      "native_xy": [
+        133,
+        895
+      ],
+      "provisional_source_xy": [
+        365,
+        710
+      ],
+      "first_pick_source_xy": [
+        362,
+        706
+      ],
+      "first_pick_native_xy": [
+        131,
+        893
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        132.23615105620996,
+        895.5724069094739
+      ],
+      "residual_px": 0.9545233778921368
+    },
+    {
+      "id": "B4",
+      "label": "southern green tip",
+      "role": "border_holdout",
+      "source_xy": [
+        547,
+        839
+      ],
+      "native_xy": [
+        183,
+        925
+      ],
+      "provisional_source_xy": [
+        549,
+        845
+      ],
+      "first_pick_source_xy": [
+        546,
+        838
+      ],
+      "first_pick_native_xy": [
+        182,
+        925
+      ],
+      "pre_fit_refinement": "Refined to visible stroke junction/centre from enlarged original-pixel first-pick panel before any architecture transform was fitted.",
+      "projected_native_xy": [
+        182.7921220877231,
+        926.7371435204967
+      ],
+      "residual_px": 1.7495373208983926
+    }
+  ]
+}

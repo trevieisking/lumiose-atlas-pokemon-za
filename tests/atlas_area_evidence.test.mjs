@@ -12,9 +12,18 @@ const reviewed=json('docs/qa/at339-encounters/atlas-area-evidence.json');
 const amendmentPath='docs/qa/encounter-review-2026-11-26/amendments.json';
 const amendments=json(amendmentPath);
 const originalReviewed=json(amendments.original_packet);
+const sectorReview=json('docs/qa/sector-reconciliation-2026-11-26/reconciliation.json');
+const sectorContinuation=json('docs/qa/sector-continuation-2026-11-26/reconciliation.json');
+const sectorCrossrefs=json('docs/qa/sector-wild-zone-crossrefs-2026-11-26/amendments.json');
+const amendmentCheckpoint=structuredClone(reviewed.areas);
+for(const patch of amendments.patches){
+  const target=amendmentCheckpoint.find(row=>row.area_id===patch.area_id);
+  if(patch.operation==='patch')Object.assign(target.encounters.find(row=>row.id===patch.encounter_id),structuredClone(patch.set));
+  else target.encounters.push(structuredClone(patch.row));
+}
 const observations=json('docs/qa/at339-encounters/owner-survey-observations.json').observations;
 const model=buildAreaModel({atlas:json('atlas-explorer-data.json'),rosters:wildZoneRecords,evidence});
-const extra=model.encounters.filter(row=>row.id.startsWith('g3-evidence-'));
+const extra=model.encounters.filter(row=>row.id.startsWith('g3-evidence-')||row.id.startsWith('g3-sector-20261126-'));
 const area=id=>model.areas.find(row=>row.id===id);
 const preserved=row=>row.evidenceStatus==='baseline_preserved'||row.originalEvidenceStatus==='baseline_preserved';
 const hash=(algorithm,bytes)=>crypto.createHash(algorithm).update(bytes).digest('hex');
@@ -54,29 +63,48 @@ test('the integrated register retains every reviewed area and additive claim wit
         target.encounters.push(structuredClone(patch.row));
       }
     }
-    assert.deepEqual(evidence.areas,expected,'Both historical and current reviewed packets reconstruct the merged runtime');
+    assert.deepEqual(expected,amendmentCheckpoint,'Both historical and current baselines reconstruct the immutable concurrent amendment checkpoint');
+    for(const review of [sectorReview,sectorContinuation]){
+      for(const update of review.updates){
+        const rows=expected.find(area=>area.area_id===update.area_id).encounters;
+        const index=rows.findIndex(row=>row.id===update.id);
+        assert.notEqual(index,-1,'A reconciliation must retain the original stable ID');
+        assert.equal(hash('sha256',Buffer.from(JSON.stringify(rows[index],null,2)+'\n')),update.before_sha256);
+        rows[index]=structuredClone(update.after);
+      }
+      for(const addition of review.additions){
+        expected.find(area=>area.area_id===addition.area_id).encounters.push(structuredClone(addition.row));
+      }
+    }
+    for(const patch of sectorCrossrefs.patches){
+      const index=expected.findIndex(row=>row.area_id===patch.area_id);
+      assert.deepEqual(expected[index],patch.before,'The scoped cross-reference applies only to its reviewed area metadata');
+      assert.deepEqual(patch.after.encounters,patch.before.encounters,'Cross-reference metadata cannot change encounter membership');
+      expected[index]=structuredClone(patch.after);
+    }
+    assert.deepEqual(evidence.areas,expected,'All independently reviewed encounter and metadata packets reconstruct the merged runtime');
   }
   assert.equal(amendments.patches.filter(row=>row.operation==='patch').length,49);
   assert.equal(amendments.patches.filter(row=>row.operation==='add').length,1);
   assert.deepEqual(sorted(evidence.areas.map(row=>row.area_id)),sorted(expectedIds));
   assert.equal(new Set(evidence.areas.map(row=>row.area_id)).size,68);
   const sourceRows=evidence.areas.flatMap(row=>row.encounters);
-  assert.equal(sourceRows.length,284);
-  assert.equal(new Set(sourceRows.map(row=>row.id)).size,284);
+  assert.equal(sourceRows.length,748);
+  assert.equal(new Set(sourceRows.map(row=>row.id)).size,748);
   assert.ok(reviewed.areas.flatMap(row=>row.encounters).every(old=>sourceRows.some(row=>row.id===old.id)),
     'All 283 original claims survive the bounded review');
   assert.deepEqual(sorted(extra.map(row=>row.id)),sorted(sourceRows.map(row=>row.id)));
-  assert.equal(model.encounters.length,556);
+  assert.equal(model.encounters.length,1020);
   assert.equal(model.encounters.filter(preserved).length,272);
   assert.deepEqual(model.issues,[]);
   assert.ok(extra.every(row=>row.sources.length&&row.sources.every(source=>source.href)));
   assert.ok(model.areas.every(row=>row.rosterStatus==='not_comprehensive'));
   const sectors=model.areas.filter(row=>row.kind==='sector');
   assert.equal(sectors.length,48);
-  assert.ok(sectors.every(row=>!row.geometry.eligible&&row.geometry.geometry===null));
+  assert.ok(sectors.every(row=>row.geometry.eligible&&row.geometry.representation==='source_area_footprint'));
   const encountersOnly=buildAreaModel({atlas:json('atlas-explorer-data.json'),rosters:wildZoneRecords,
     evidence:{...evidence,geometries:[]}});
-  assert.equal(encountersOnly.encounters.length,556);
+  assert.equal(encountersOnly.encounters.length,1020);
   assert.ok(encountersOnly.areas.every(row=>!row.geometry.eligible&&row.geometry.geometry===null),
     'An encounter claim or owner survey icon cannot supply missing boundary evidence');
 });
@@ -199,7 +227,7 @@ test('actual mission, gift, boss and unresolved Alpha claims stay separate from 
   assert.equal(special.filter(row=>row.encounterClass==='mission').length,12);
   assert.equal(special.filter(row=>row.encounterClass==='gift').length,1);
   assert.equal(special.filter(row=>row.encounterClass==='scripted_boss').length,6);
-  assert.equal(special.filter(row=>row.encounterClass==='unclassified_lead').length,66);
+  assert.equal(special.filter(row=>row.encounterClass==='unclassified_lead').length,83);
   for(const row of special){
     assert.equal(isRecordedHabitat(row),false,row.id);
     const results=selectAreaResults(model,{speciesId:row.speciesId});
@@ -218,7 +246,7 @@ test('actual mission, gift, boss and unresolved Alpha claims stay separate from 
 });
 
 test('every real source lead remains visible as research without silently authorizing a habitat',()=>{
-  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,112);
+  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,518);
   for(const row of leads){
     assert.equal(isRecordedHabitat(row),false,row.id);
     const result=selectAreaResults(model,{speciesId:row.speciesId});
@@ -270,7 +298,7 @@ test('five corroborated flower forms and the Fennekin gift retain separate evide
   assert.match(gift.condition.unlock,/Begin Main Mission 6.*Side Mission 008/);
   assert.match(gift.condition.notes.join(' '),/Branche.*level 14/);
   assert.equal(isRecordedHabitat(gift),false);
-  assert.equal(extra.filter(row=>row.evidenceStatus==='source_corroborated').length,24);
+  assert.equal(extra.filter(row=>row.evidenceStatus==='source_corroborated').length,82);
 });
 
 test('all 68 area review receipts distinguish performed source checks from comprehensive signoff',()=>{
@@ -281,7 +309,7 @@ test('all 68 area review receipts distinguish performed source checks from compr
   assert.deepEqual(sorted(sources.records.map(row=>row.area_id)),sorted(expectedIds.filter(id=>id.startsWith('wz-'))));
   const counts=(rows,key)=>rows.reduce((result,row)=>{result[row[key]]=(result[row[key]]||0)+1;return result;},{});
   for(const receipt of review.areas){
-    const runtime=evidence.areas.find(row=>row.area_id===receipt.area_id);
+    const runtime=amendmentCheckpoint.find(row=>row.area_id===receipt.area_id);
     assert.equal(receipt.claim_count,runtime.encounters.length);
     assert.deepEqual(receipt.evidence_status_counts,counts(runtime.encounters,'evidence_status'));
     assert.deepEqual(receipt.encounter_class_counts,counts(runtime.encounters,'encounter_class'));
@@ -341,7 +369,8 @@ test('the two sectors without sourced encounters retain explicit unknown coverag
   for(const row of empty){
     assert.equal(row.rosterStatus,'not_comprehensive');
     assert.match(row.notes.join(' '),/empty list means missing evidence, not no Pokémon/);
-    assert.equal(row.geometry.eligible,false);
+    assert.equal(row.geometry.eligible,true);
+    assert.equal(row.geometry.representation,'source_area_footprint','Separate source geometry does not supply an encounter roster');
     const result=selectAreaResults(model,{areaId:row.id});
     assert.equal(result.areas.length,1);assert.equal(result.areas[0].id,row.id);
     assert.deepEqual(result.encounters,[]);

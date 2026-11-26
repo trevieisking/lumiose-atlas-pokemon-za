@@ -1,0 +1,71 @@
+{
+  "status": "fixed_source_native_landmarks_before_global_registration_fit",
+  "reviewer": "geometry_evidence",
+  "source_path": "/workspace/scratch/dd7dfe1436cb/plan-audit/geometry-sources/sector-pilot/original-map-texture-4096.png",
+  "source_sha256": "2670c1454eb0b5bbe609b1aca3933d5e2ada9cdc6c209f68741375fd9aeea703",
+  "native_path": "maps/lumiose-game-map.jpg",
+  "native_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "method": "Four widely spread architectural correspondences independently identified in original pixels. No global transform or residual was used to choose or refine these points. Do not fit them. Native north and west targets were already observed in independent zone work; original texture counterparts are newly identified here. Source whole-map visual context and approximate scale only locate crops. Preserve first picks if a later check fails.",
+  "points": [
+    {
+      "id": "GH-N",
+      "landmark": "North city entry street-notch upper-left corner",
+      "source_xy": [
+        2022,
+        100
+      ],
+      "native_xy": [
+        944,
+        77
+      ],
+      "region": "north",
+      "reason": "Distinct horizontal/vertical outer-wall junction; native target independently reviewed previously as WZ13 F1.",
+      "role": "reserved_independent_holdout"
+    },
+    {
+      "id": "GH-W",
+      "landmark": "Roof apex immediately southwest of Wild Zone14",
+      "source_xy": [
+        232.5,
+        1924
+      ],
+      "native_xy": [
+        133.5,
+        904.5
+      ],
+      "region": "west",
+      "reason": "Distinct short roof bevel apex outside the green zone; native target independently reviewed previously as WZ14 F2.",
+      "role": "reserved_independent_holdout"
+    },
+    {
+      "id": "GH-E",
+      "landmark": "Small eastern building northeast roof corner below Wild Zone6 and north of canal",
+      "source_xy": [
+        3846,
+        2378
+      ],
+      "native_xy": [
+        1769,
+        1108
+      ],
+      "region": "east",
+      "reason": "Grey roof junction is visible just below green gate decoration; source is bare original map texture. Gate icon is not the landmark.",
+      "role": "reserved_independent_holdout"
+    },
+    {
+      "id": "GH-S",
+      "landmark": "Southwestern roof block southeast lower bevel end west of main south street",
+      "source_xy": [
+        1987,
+        3870
+      ],
+      "native_xy": [
+        927,
+        1784
+      ],
+      "region": "south",
+      "reason": "Distinct bevel-to-horizontal lower roof junction west of Wild Zone1 and the main street; unoccluded in both maps.",
+      "role": "reserved_independent_holdout"
+    }
+  ]
+}

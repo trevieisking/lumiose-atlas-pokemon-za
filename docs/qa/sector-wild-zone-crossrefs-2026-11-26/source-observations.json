@@ -1,0 +1,273 @@
+{
+  "id": "three-sector-wild-zone-source-scope-2026-11-26",
+  "reviewed_on": "2026-11-26",
+  "scope": "Positive source identities and scoped Wild Zone links. No new encounter, coordinate, habitat-membership or comprehensive-roster claim.",
+  "source_repository": "969981/ZA_Resources",
+  "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+  "publisher_declared_version": "2.0.2",
+  "schema_repository": "kwsch/pkNX",
+  "schema_commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+  "independent_json_repository": "Xzonn/PokemonLZA-pkNX",
+  "independent_json_commit": "eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f",
+  "original_binary_tables": [
+    {
+      "file": "pokemon_spawner_data_array.bin",
+      "git_blob_sha": "b11630478c746116b1074f12150d9a7c9c7a6e17",
+      "sha256": "611a5bb7e6d97e21494070cfc933d994021503f8f9b3d0591481082fce269e09",
+      "bytes": 1401772
+    },
+    {
+      "file": "encount_data_array.bin",
+      "git_blob_sha": "13d0f3d69cb9f064dab34d7b5c2646e0066e66e3",
+      "sha256": "4e080206c5f88707a1c01c2e3aa78d75ab362f3138e38c8677b2e90583446b49",
+      "bytes": 503348
+    }
+  ],
+  "original_scenes": [
+    {
+      "zone": "Wild Zone 10",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_scene/field/area/t1/sub_scene/t1_zone/t1_wild_a0202_w01/t1_wild_a0202_w01_pokemon_spawner_/t1_wild_a0202_w01_pokemon_spawner_0.trscn",
+      "source_blob": "3373744a3ce75b595c968a2bfc5dc6beaf3bc611",
+      "sha256": "2ce8cc2a0c87a4103b9958159d1f8970d5543fe5768530f9ca9fd4128acd2d2d",
+      "bytes": 48904,
+      "root_entries": 23
+    },
+    {
+      "zone": "Wild Zone 5",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_scene/field/area/t1/sub_scene/t1_zone/t1_wild_a0202_w02/t1_wild_a0202_w02_pokemon_spawner_/t1_wild_a0202_w02_pokemon_spawner_0.trscn",
+      "source_blob": "5a5dcec4f688757dabb199bec12276a82263f8d3",
+      "sha256": "4e9da2ce15cf56389532855d792af3fc060bba6fbf266a7ad1d7ac131e611148",
+      "bytes": 45888,
+      "root_entries": 21
+    },
+    {
+      "zone": "Wild Zone 16",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_scene/field/area/t1/sub_scene/t1_zone/t1_wild_a0203_w01/t1_wild_a0203_w01_pokemon_spawner_/t1_wild_a0203_w01_pokemon_spawner_0.trscn",
+      "source_blob": "27521adb6122f6888594c2cd52d4a2a92d1bc8f3",
+      "sha256": "1aa2b8df8da0a52eb405b79c941f80cf365f8745ffae7d9035c5f4a668d1f2ff",
+      "bytes": 37208,
+      "root_entries": 16
+    },
+    {
+      "zone": "Wild Zone 9",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_scene/field/area/t1/sub_scene/t1_zone/t1_wild_a0301_w02/t1_wild_a0301_w02_pokemon_spawner_/t1_wild_a0301_w02_pokemon_spawner_0.trscn",
+      "source_blob": "d3972017ec3a394e660b42f56e3d0d5e071b03d3",
+      "sha256": "9843596d3141a4a1f267a25a2234f9bd8c35018957b90b0902aeb5159fa57294",
+      "bytes": 55072,
+      "root_entries": 24
+    }
+  ],
+  "independent_comparison": {
+    "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+    "comparison_json_commit": "eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f",
+    "original_spawner_rows": 2211,
+    "original_encounter_rows": 1966,
+    "target_scene_objects": 82,
+    "joined_spawner_rows": 82,
+    "joined_encounter_rows": 39,
+    "spawner_projection_mismatches": [],
+    "encounter_projection_mismatches": [],
+    "fields_not_decoded": [
+      "Ai and Action fields",
+      "detailed entity stats and moves",
+      "trigger bodies if any"
+    ],
+    "time_weather_values": "numeric values preserved; no inferred legend"
+  },
+  "relationships": [
+    {
+      "area_id": "bleu-sector-2",
+      "related_area_id": "wz-05",
+      "sector_name_key": "PLACENAME_A02_z02_01",
+      "sector_collision_git_blob": "82f5adfef5d3fb9728e2a2130d8e591acf6115c3",
+      "sector_collision_sha256": "39dd1394bf18071dddf03f1eef4a4311630083c349489505fe0e03920fd040c6",
+      "zone_name_key": "PLACENAME_wild_a0202_w02",
+      "source_zone_id": "a0202_w02",
+      "source_sector_layer": 2,
+      "source_zone_layer": 7,
+      "written_relationship_source": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_2",
+      "zone_scene_objects": 21,
+      "zone_scene_origins_within_sector_xz": 9,
+      "matching_object_names": [
+        "spn_a0202_w02_v01_001",
+        "spn_a0202_w02_v01_011",
+        "spn_a0202_w02_v01_041",
+        "spn_a0202_w02_v01_051",
+        "spn_a0202_w02_v01_052",
+        "spn_a0202_w02_v01_061",
+        "spn_a0202_w02_v01_071",
+        "spn_a0202_w02_v01_094",
+        "spn_a0202_w02_v01_201"
+      ],
+      "sector_xz_overlap_fraction": 0.95969905,
+      "scope": "XZ counts describe projected source origins only. Y values remain in retained source faces; this is not a 3-D collision resolver, whole-sector roster, spawn extent, or absence proof."
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "related_area_id": "wz-10",
+      "sector_name_key": "PLACENAME_A02_z02_07",
+      "sector_collision_git_blob": "79fde181d66cd49e94a350cc3f31ec13e8fa7019",
+      "sector_collision_sha256": "fb7eabdb96856f56cee579a727ce537e24de278d4b3a138de18c166f9eaa4de8",
+      "zone_name_key": "PLACENAME_wild_a0202_w01",
+      "source_zone_id": "a0202_w01",
+      "source_sector_layer": 2,
+      "source_zone_layer": 7,
+      "written_relationship_source": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_10",
+      "zone_scene_objects": 23,
+      "zone_scene_origins_within_sector_xz": 23,
+      "matching_object_names": [
+        "spn_a0202_w01_v01_001",
+        "spn_a0202_w01_v01_002",
+        "spn_a0202_w01_v01_003",
+        "spn_a0202_w01_v01_011",
+        "spn_a0202_w01_v01_012",
+        "spn_a0202_w01_v01_021",
+        "spn_a0202_w01_v01_031",
+        "spn_a0202_w01_v01_032",
+        "spn_a0202_w01_v01_033",
+        "spn_a0202_w01_v01_051",
+        "spn_a0202_w01_v01_061",
+        "spn_a0202_w01_v01_062",
+        "spn_a0202_w01_v01_063",
+        "spn_a0202_w01_v01_064",
+        "spn_a0202_w01_v01_065",
+        "spn_a0202_w01_v01_066",
+        "spn_a0202_w01_v01_071",
+        "spn_a0202_w01_v01_081",
+        "spn_a0202_w01_v01_082",
+        "spn_a0202_w01_v01_083",
+        "spn_a0202_w01_v01_091",
+        "spn_a0202_w01_v01_101",
+        "spn_a0202_w01_v01_102"
+      ],
+      "sector_xz_overlap_fraction": 0.962153587,
+      "scope": "XZ counts describe projected source origins only. Y values remain in retained source faces; this is not a 3-D collision resolver, whole-sector roster, spawn extent, or absence proof."
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "related_area_id": "wz-09",
+      "sector_name_key": "PLACENAME_A03_z01_03",
+      "sector_collision_git_blob": "bf5f1dfb82c184b0838e98a5b0c25e39e1defaf6",
+      "sector_collision_sha256": "628455011ec925a2bc31252abd486a0fcad6f2d1b40fad8f33d341f1da380477",
+      "zone_name_key": "PLACENAME_wild_a0301_w02",
+      "source_zone_id": "a0301_w02",
+      "source_sector_layer": 2,
+      "source_zone_layer": 7,
+      "written_relationship_source": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_5",
+      "zone_scene_objects": 24,
+      "zone_scene_origins_within_sector_xz": 23,
+      "matching_object_names": [
+        "spn_a0301_w02_v01_001",
+        "spn_a0301_w02_v01_002",
+        "spn_a0301_w02_v01_005",
+        "spn_a0301_w02_v01_021",
+        "spn_a0301_w02_v01_022",
+        "spn_a0301_w02_v01_023",
+        "spn_a0301_w02_v01_024",
+        "spn_a0301_w02_v01_032",
+        "spn_a0301_w02_v01_033",
+        "spn_a0301_w02_v01_034",
+        "spn_a0301_w02_v01_061",
+        "spn_a0301_w02_v01_062",
+        "spn_a0301_w02_v01_063",
+        "spn_a0301_w02_v01_081",
+        "spn_a0301_w02_v01_082",
+        "spn_a0301_w02_v01_083",
+        "spn_a0301_w02_v01_091",
+        "spn_a0301_w02_v01_092",
+        "spn_a0301_w02_v01_101",
+        "spn_a0301_w02_v01_102",
+        "spn_a0301_w02_v01_103",
+        "spn_a0301_w02_v01_111",
+        "spn_a0301_w02_v01_201"
+      ],
+      "sector_xz_overlap_fraction": 0.807137874,
+      "scope": "XZ counts describe projected source origins only. Y values remain in retained source faces; this is not a 3-D collision resolver, whole-sector roster, spawn extent, or absence proof."
+    }
+  ],
+  "positive_alpha_class_example": {
+    "source_spawner_id": "id_spn_a0203_w01_v01_011_A",
+    "appearance": [
+      {
+        "ObjectName": "spn_a0203_w01_v01_011",
+        "CreateScenePath": "t1_wild_a0203_w01_pokemon_object",
+        "AdditionalFlagList": [
+          8
+        ],
+        "Zone": {
+          "ZoneId": "a0203_w01"
+        },
+        "Appearance": {
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      }
+    ],
+    "spawner_activation": [
+      {
+        "Element": [
+          {
+            "Param": [
+              {
+                "Condition": "force_condition",
+                "Op": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounter": {
+      "Id": "ect_a0203_w01_v01_z181_Alpha",
+      "DevNo": 181,
+      "MinLevel": 42,
+      "MaxLevel": 43,
+      "Sex": -1,
+      "FormNo": 0,
+      "Rare": 1073741823,
+      "TalentVNum": 0,
+      "OyabunAdditionalLevel": 10,
+      "OyabunProbability": 100.0
+    },
+    "encounter_selection": [
+      {
+        "EncountDataId": "ect_a0203_w01_v01_z181_Alpha",
+        "Weight": 100,
+        "MaxCount": 1,
+        "AdditionalLevel": 0,
+        "ShowMapIcon": 1,
+        "AppearedTimeCondition": 0,
+        "AppearedWeatherCondition": 0,
+        "TagList": [
+          "野生ポケ_WZ7章A"
+        ],
+        "ActivationConditionList": [
+          {
+            "Element": [
+              {
+                "Param": [
+                  {
+                    "Condition": "force_condition",
+                    "Op": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Repop": {
+          "AfterCaptured": 100,
+          "AfterDefeated": 100
+        }
+      }
+    ],
+    "conclusion": "The decoded WZ16 record is a 100%-Alpha Ampharos with base level42–43 plus10 Alpha levels. The existing ordinary claim remains disputed in runtime; this packet changes no class or status."
+  },
+  "classification_limits": [
+    "The exporter Location strings are not used for any sector association.",
+    "Time and weather numeric fields, activation flags, phase checks, weights and quantities remain distinct; no implicit unrestricted condition is inferred.",
+    "Original source scene origins and complete encounter quantities are different from a measured spawn-volume boundary.",
+    "The original overworld scene alone cannot establish absence: the four separately loaded zone scenes add82 source objects.",
+    "Unknown special encounters outside the documented source scope do not create a new exhaustive-absence gate for the finite G3 review."
+  ]
+}

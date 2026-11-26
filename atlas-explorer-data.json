@@ -3801,6 +3801,651 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "rouge2-galerie-roof-access",
+      "title": "Rouge Sector 2 — Galerie de la Lune roof",
+      "point_id": "rouge-sector-2",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A scaffold-and-ladder approach to the gallery roof and its Toxic TM.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the gallery",
+          "instruction": "Start near Centrico Pokémon Center and locate Galerie de la Lune in Rouge Sector 2.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Reach the roof ladder",
+          "instruction": "PokéJungle describes reaching the exterior roof ladder through a scaffolding course. Follow the visible scaffold connections to that ladder.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Search the northern roof",
+          "instruction": "Climb onto the roof and inspect its northern part for TM007 Toxic, as listed in the sector guide.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check the next connection",
+          "instruction": "The scaffold entrance and each intervening platform are not measured in Atlas. Confirm the visible ladder and landing before moving beyond this approach.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "rouge3-north-boulevard-roof-approach",
+      "title": "Rouge Sector 3 — North Boulevard roof approach",
+      "point_id": "rouge-sector-3",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the preserved North Boulevard lift photographs to orient a written approach toward the Sector 3 rooftops.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Compare the boulevard frontage",
+          "instruction": "Open the North Boulevard / Rouge Sector 3 photographs. The retained approach uses Wild Zones 18 and 13 as bearings for the inner building frontage.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Recognize the arrival",
+          "instruction": "The original gallery shows the gold lift at street level and a tiled rooftop arrival. Compare those views when choosing the lift.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Continue toward Sector 3",
+          "instruction": "Raider King describes returning toward Sector 3 from the North Boulevard lift. The independent sector list places a Colorful Screw on the middle building complex’s roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check onward roof links",
+          "instruction": "The photographs establish a local arrival, not a continuous route to every adjoining roof. Follow only connections visible in-game; the final roof connection remains unmeasured.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "north-boulevard-rouge3"
+      ]
+    },
+    {
+      "id": "rouge4-passage-ombrage-roof",
+      "title": "Rouge Sector 4 — Passage Ombragé roof",
+      "point_id": "rouge-sector-4",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Find the arcade’s exterior ladder and inspect the glass-covered middle of its roof.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find Passage Ombragé",
+          "instruction": "Locate the shopping arcade in Rouge Sector 4, between the Sector 3 and Sector 5 approaches.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Find an exterior ladder",
+          "instruction": "Written sources describe ladder access but differ on the side: Altissimo records access from Sector 7, while Raider King names a southern corner. Identify the actual ladder in-game.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Inspect the glass roof",
+          "instruction": "Once above the arcade, search the central skylight area. Altissimo and Gamer Guides both place a Colorful Screw on this roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Keep the entrance distinction",
+          "instruction": "A particular ladder side and a measured entrance have not been reconciled. The district map does not establish which roof edge is a safe return route.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "rouge5-looker-roof-approach",
+      "title": "Rouge Sector 5 — Looker Bureau roof approach",
+      "point_id": "rouge-sector-5",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Start with the existing Looker Bureau / Sushi High Roller lift gallery, then compare the published rooftop approach.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Approach from Rouge Plaza",
+          "instruction": "Use the original gallery to find the lift across the short street from Sushi High Roller, on the Looker Bureau side south of Dormez Bien Cemetery.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Compare the photographed landing",
+          "instruction": "Ride the visible lift and compare the original rooftop arrival image before continuing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Inspect the higher northern roof",
+          "instruction": "Raider King describes a roll from the northern high roof toward Looker Bureau’s roof. The sector guide independently records a screw on the western building complex.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check the gap first",
+          "instruction": "The photographs do not document that complete jump. Confirm the target roof and landing in-game; there is no measured jump line or return connection here.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "rouge5-looker"
+      ]
+    },
+    {
+      "id": "rouge6-ampharos-toxic-spikes-approach",
+      "title": "Rouge Sector 6 — Ampharos roof and Toxic Spikes",
+      "point_id": "rouge-sector-6",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Follow the Main Mission 23 roof approach through the lower scaffolding; Toxic Spikes lies along the documented route.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Approach the mission lift",
+          "instruction": "During Main Mission 23, head northwest from Hibernal Pokémon Center toward Naveen at the objective Holovator.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Complete the street encounter",
+          "instruction": "Complete Gwynn’s battle in that mission, then use the Holovator. The nearby original lift photographs provide additional street and roof orientation.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Follow the lower roof course",
+          "instruction": "Thonky describes crossing scaffolding on a lower part of the roof and continuing along the rooftops to TM089 Toxic Spikes. The sector table independently lists that TM on the northern building complex.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Confirm the next ascent",
+          "instruction": "The later lower-roof drop and ladder lead toward the Ampharos objective during the mission. Exact landings and the owner-photo device match are not independently registered.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "rouge6-east-sushi"
+      ]
+    },
+    {
+      "id": "rouge7-apartment-ladder-approach",
+      "title": "Rouge Sector 7 — Apartment block ladder (#65)",
+      "point_id": "rouge-sector-7",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A useful ladder approach from the battle-court area to the apartment roof in Side Mission 65.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the apartment request",
+          "instruction": "Look south of Wild Zone 13 for the battle-court area. Altissimo places Ante west of that court; Side Mission 65 becomes available during the Main Mission 20 sequence.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Climb beside Ante",
+          "instruction": "Thonky directs you up the ladder near Ante to reach the apartment roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Follow the rooftop objective",
+          "instruction": "During Side Mission 65, follow the Dedenne objective around the roof. The encounter belongs to the mission and is not a catchable ordinary spawn.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Keep other roofs separate",
+          "instruction": "This approach establishes one apartment-roof entry. The separate scaffold courses and nearby roofs still need individual connection and return-path checks.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "side_mission": 65
+    },
+    {
+      "id": "rouge8-courtyard-scaffold-approach",
+      "title": "Rouge Sector 8 — Western courtyard scaffolds",
+      "point_id": "rouge-sector-8",
+      "district": "Rouge",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the two courtyard blocks beside Hibernal Avenue to distinguish the scaffold course from the surrounding rooftops.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Identify the courtyard blocks",
+          "instruction": "Compare the original Sector 8 crop: two enclosed building blocks sit west of Hibernal Avenue. The written item list distinguishes their courtyards.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Find the western course",
+          "instruction": "The published course begins at a ladder on the northern side inside the western courtyard. Check the visible courtyard access before climbing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Use Roto-Glide for upper platforms",
+          "instruction": "The source tables mark the upper screw platforms as requiring Roto-Glide. Build height using the scaffold ladders, then compare each visible landing before crossing.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Treat further roofs as separate",
+          "instruction": "The sector also has courses and roofs beyond this courtyard. Their entrances, floor heights and continuous links are not fully recorded here.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "jaune1-park-kakuna-approach",
+      "title": "Jaune Sector 1 — Jaune Street park (#11)",
+      "point_id": "jaune-sector-1",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A ground-level approach to Montée in the grassy area north of Jaune Street.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Head east from Centrico",
+          "instruction": "From Centrico Pokémon Center, head east toward the grassy Jaune Sector 1 area northeast of Prism Tower.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Use the park paths",
+          "instruction": "The original crop shows Jaune Street beside the park paths. The sector guide places Montée under the central tree.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Find The Kakuna Master",
+          "instruction": "After Main Mission 7 begins, speak to Montée for Side Mission 11. This request is in Jaune Sector 1.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Use the image for orientation",
+          "instruction": "The crop identifies the park approach, not an exact NPC coordinate or a complete entrance survey. Follow the visible paths to the requester.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "side_mission": 11
+    },
+    {
+      "id": "jaune2-dojo-courtyard-approach",
+      "title": "Jaune Sector 2 — Justice Dojo western courtyard",
+      "point_id": "jaune-sector-2",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the rooftop ladder west of Justice Dojo to inspect the enclosed Sector 2 courtyard from above.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start west of Justice Dojo",
+          "instruction": "Find Jaune Sector 2 west of Justice Dojo, above Saison Canalside on the original district crop.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Climb the nearby roof ladder",
+          "instruction": "DualShockers independently describes a ladder west of the dojo leading to these rooftops.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Inspect the inner garden",
+          "instruction": "The written screw route descends from this rooftop into the inner garden. Altissimo independently places a screw in the enclosed western courtyard.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Check the landing and exit",
+          "instruction": "Inspect the garden below before dropping. A measured landing and a continuous return path have not been documented, so the map crop alone cannot confirm them.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "jaune3-camerupt-scaffold-approach",
+      "title": "Jaune Sector 3 — Camerupt scaffold approach",
+      "point_id": "jaune-sector-3",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "The documented Main Mission 12 ladder course reaches the northern building’s roof.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the northern building",
+          "instruction": "Use Jaune Plaza and the original Sector 3 crop as bearings. The published course is south of the sector’s northern building.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Follow the Main Mission 12 objective",
+          "instruction": "During Main Mission 12, meet Tarragon near Restaurant Le Wow, between Centrico and Hibernal Pokémon Centers. Complete the required battle before using the blocked course.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Climb the ladder course",
+          "instruction": "Thonky describes a Zinc and Colorful Screw along the ascent. Keep climbing the visible ladders toward the Camerupt roof; Altissimo independently lists those scaffold pickups.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Separate the southern roof",
+          "instruction": "Other Sector 3 roofs require a different approach, including Roto-Glide for the southern roof in the item table. This course does not verify every roof connection.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "jaune4-hibernal-roof-scaffold-approach",
+      "title": "Jaune Sector 4 — Hibernal Avenue roof and scaffold",
+      "point_id": "jaune-sector-4",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Compare the original Hibernal Avenue lift photographs, then inspect the scaffold below the roof.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the photographed lift",
+          "instruction": "From Hibernal Pokémon Center, follow the retained southwest approach along Hibernal Avenue. Compare the gold arrows beside the blue windows in the original gallery.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Compare the arrival image",
+          "instruction": "Use the lift and compare the broad tiled rooftop shown in the original photograph.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Inspect the avenue-side scaffold",
+          "instruction": "The Hibernal Avenue item list places a screw on the Sector 4 scaffold accessible from the roof. The independent walkthrough also describes descending to it from the lift’s roof.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Confirm a visible platform",
+          "instruction": "The exact drop and scaffold landing are not measured. Do not treat a neighboring roof or the web visible in the arrival photograph as a certified connection.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "jaune4-etoile"
+      ]
+    },
+    {
+      "id": "jaune5-western-courtyard-approach",
+      "title": "Jaune Sector 5 — Western enclosed courtyard",
+      "point_id": "jaune-sector-5",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A published roof approach reaches the small courtyard in the western building complex.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Use Jaune Plaza as the bearing",
+          "instruction": "The original Sector 5 image shows the area north of Jaune Plaza and west of Wild Zone 19. Find the small western building complex in that view.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Approach from Hibernal Avenue",
+          "instruction": "Raider King describes taking the Sector 4 Hibernal lift, then continuing southeast toward Sector 5. The existing Sector 4 gallery provides orientation for the starting area.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Look into the enclosed courtyard",
+          "instruction": "The sector list places a Colorful Screw inside this small western courtyard. Inspect the garden below from the roof before following the published descent.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Check the return route",
+          "instruction": "The written roof-to-garden approach is not a measured chain of roof connections. Exact drops and exits remain unknown; the photographs show only the nearby lift arrival.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "jaune4-etoile"
+      ]
+    },
+    {
+      "id": "jaune7-kizuna-hyper-beam-approach",
+      "title": "Jaune Sector 7 — Café Kizuna scaffold / Hyper Beam",
+      "point_id": "jaune-sector-7",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "One documented approach uses the Hibernal Avenue mission lift to reach the courtyard scaffolding behind Café Kizuna.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the Hibernal mission lift",
+          "instruction": "From Hibernal Pokémon Center, head northeast toward Amordél’s blocked Holovator. Side Mission 80 appears during Main Mission 26; follow its objective if the lift is still blocked.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Open this approach",
+          "instruction": "Complete Side Mission 80 to clear the Pokémon blocking this lift. Have Roto-Glide available before attempting the courtyard platforms.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Approach the courtyard from the roof",
+          "instruction": "The TM walkthrough approaches the inner garden behind Café Kizuna from the lift north of the café. Gamer Guides identifies the southern rooftop as the approach to the central scaffolding.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Reach the central platform",
+          "instruction": "Use a visible scaffold platform to line up a roll and Roto-Glide onto the central scaffold for TM044 Hyper Beam. The sector table independently confirms this placement and the glide requirement.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Keep the photo identity qualified",
+          "instruction": "The existing Hibernal Avenue gallery is useful for orientation. It does not certify that its lift is the mission-80 device or document every roof and platform connection.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "jaune7-hibernal"
+      ],
+      "side_mission": 80
+    },
+    {
+      "id": "jaune8-froakie-scaffold-approach",
+      "title": "Jaune Sector 8 — Froakie’s first scaffold courses (#9)",
+      "point_id": "jaune-sector-8",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Start near Jaune Pokémon Center and follow Surv’s timed scaffold challenges; the final course is in another district.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Meet Surv north of the Center",
+          "instruction": "After Main Mission 6 begins, look north of Jaune Pokémon Center near the grassy North Boulevard area for Surv’s Side Mission 9.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Complete the first ascent",
+          "instruction": "The first course has a 30-second limit. Run up the slopes, climb the ladder, and take care on the narrow walkway.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Follow the second objective",
+          "instruction": "Speak to Surv at the next objective for the 40-second course. Slow down on its narrow upper walkways if needed.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "street",
+          "title": "Return for the final course with Roto-Glide",
+          "instruction": "The final 50-second course is farther north near Rouge Pokémon Center, not wholly inside Jaune Sector 8. Thonky requires Roto-Glide for that stage.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Follow the current course marker",
+          "instruction": "This guide records the starting approach and stage distinction. It does not register every obstacle, jump or later-course entrance on the district map.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "side_mission": 9
+    },
+    {
+      "id": "jaune9-banette-courtyard-approach",
+      "title": "Jaune Sector 9 — Jaune Street courtyard",
+      "point_id": "jaune-sector-9",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A ground approach between the northern buildings reaches the Main Mission 18 courtyard.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start at Jaune Pokémon Center",
+          "instruction": "During Main Mission 18, leave Jaune Pokémon Center toward the southwest and follow the objective toward Sector 9.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "passage",
+          "title": "Go between the buildings",
+          "instruction": "Thonky directs you between the buildings to Naveen. Altissimo identifies the destination as the courtyard between the two small buildings along Jaune Street.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "courtyard",
+          "title": "Meet the courtyard objective",
+          "instruction": "Stay with the mission marker for the Rogue Mega Banette encounter. This ground-level courtyard is separate from the City Hall and scaffold roof pickups.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Keep the rooftop leads separate",
+          "instruction": "The shared Sector 9–12 map is an orientation image. It does not establish an entrance or ladder to every City Hall and neighboring roof.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "jaune11-jaune-street-roof-approach",
+      "title": "Jaune Sector 11 — Jaune Street lift and southern roof",
+      "point_id": "jaune-sector-11",
+      "district": "Jaune",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the existing Jaune Street lift gallery, then inspect the written Roto-Glide approach toward the southern roofs.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the raised terrace",
+          "instruction": "From Jaune Plaza, follow Jaune Street toward North Boulevard. Compare the original lift photograph: a raised stone terrace sits against a grey building beside a blond trainer.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Compare the arrival view",
+          "instruction": "Use the visible lift and compare the original wide tiled rooftop arrival.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Inspect the southern transfer",
+          "instruction": "The written route continues south and uses a roll with Roto-Glide to reach the higher roof. Independent item lists place a screw on the southern Sector 11 building complex.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Check each landing",
+          "instruction": "The owner gallery shows the arrival, not that full crossing. Confirm the target and landing in-game; do not merge the separate roof pickups or invent a measured jump line.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "related_photo_ids": [
+        "jaune11-street"
+      ]
     }
   ],
   "not_mapped": [

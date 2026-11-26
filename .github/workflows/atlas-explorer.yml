@@ -31,11 +31,32 @@ on:
       - atlas-area.css
       - tests/atlas_area_model.test.mjs
       - tests/atlas_area_evidence.test.mjs
+      - tests/atlas_sector_reconciliation.test.mjs
+      - tests/atlas_sector_continuation.test.mjs
+      - tests/atlas_access_continuation.test.mjs
+      - tests/atlas_sector_wild_zone_links.test.mjs
+      - scripts/reconcile_sector_encounters.py
+      - scripts/reconcile_remaining_sector_encounters.py
+      - 'docs/qa/sector-reconciliation-2026-11-26/**'
+      - 'docs/qa/sector-continuation-2026-11-26/**'
+      - 'docs/qa/access-continuation-2026-11-26/**'
+      - 'docs/qa/encounter-review-2026-11-26/**'
+      - 'docs/qa/sector-wild-zone-crossrefs-2026-11-26/**'
+      - docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json
+      - docs/qa/ATLAS_AT341_GEOMETRY_CONTINUATION.json
+      - docs/qa/ATLAS_AT341_SOURCE_AREA_APPROVAL.json
+      - docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json
+      - 'docs/qa/candidates/source-area-footprints-2026-11-26/**'
+      - 'docs/qa/candidates/original-ui-zone-outlines-2026-11-26/**'
+      - docs/qa/ATLAS_AT331_WILD_ZONE_ROUTE_RECONCILIATION_2026-11-26.md
       - tests/atlas_area_browser.mjs
       - 'docs/qa/ATLAS_AT339_*'
       - 'docs/qa/at339-encounters/**'
       - 'docs/qa/at339-geometry/**'
       - 'docs/qa/candidates/wz04-2026-11-26/**'
+      - 'docs/qa/candidates/wz13-2026-11-26/**'
+      - 'docs/qa/candidates/wz14-2026-11-26/**'
+      - 'docs/qa/candidates/wz20-2026-11-26/**'
       - atlas-collectibles.mjs
       - atlas-collectibles-ui.mjs
       - atlas-collectibles-data.json
@@ -82,7 +103,7 @@ jobs:
       - name: Syntax-check isolated map modules
         run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
-        run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
+        run: node --test tests/atlas_explorer.test.mjs tests/atlas_access_continuation.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Gate collectible coordinates, original identities and read-only progress
         run: node --test tests/atlas_collectibles.test.mjs tests/items_checkoff.test.mjs
       - name: Verify owner overview source bytes and keep research out of live geometry
@@ -90,7 +111,9 @@ jobs:
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Validate shared areas, habitat classes and boundary evidence gates
-        run: node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs
+        run: node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
+      - name: Verify attributed sector reconciliation and preservation
+        run: python3 scripts/reconcile_sector_encounters.py && python3 scripts/reconcile_remaining_sector_encounters.py
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
       - name: Reject broken local guide anchors and raw Markdown destinations across every page

@@ -1,0 +1,1329 @@
+{
+  "schema_version": 1,
+  "packet_id": "ATLAS-ACCESS-CONTINUATION-2026-11-26",
+  "review_date": "2026-11-26",
+  "baseline_head": "a459fdb0b5cf78008ec15ab7d7f87c779fd9400c",
+  "scope": "Rouge 2–8 and Jaune 1–12: all nineteen previously not-started access-survey rows. Written directions and original still images only.",
+  "not_claimed": [
+    "exhaustive ladder/scaffold/bridge/roof inventory",
+    "physical end-to-end traversal",
+    "exact entrance or landing geometry",
+    "new collectible identity",
+    "new encounter evidence",
+    "video review"
+  ],
+  "baseline": {
+    "route_ids": [
+      "cafe-cyclone",
+      "hotel-z-ladder",
+      "magenta-plaza-nw",
+      "rouge-plaza-west",
+      "jaune12-wz6",
+      "bleu7-south",
+      "vert7-holovator-power",
+      "jaune6-holovator-muscle",
+      "vert4-courtyard-screws",
+      "vert5-scaffold-courses",
+      "vert6-racine-rooftop-courses",
+      "vert9-vernal-rooftop-screw",
+      "vert1-scaffold-courses",
+      "vert2-southern-rooftop",
+      "vert3-cyclone-rooftop-courses",
+      "vert8-hotel-rooftop-courses",
+      "bleu1-sewer-approaches",
+      "bleu3-woof-scaffold-courses",
+      "bleu5-plaza-scaffold-rooftop",
+      "bleu2-wildzone5-roof-sweep",
+      "bleu6-plaza-scaffold-roofs",
+      "bleu4-southern-roof-from-bleu6",
+      "bleu7-aymlis-roof-scaffold-courses",
+      "bleu8-soleil-beldum-access",
+      "bleu9-soleil-scaffold-roof-leads",
+      "bleu10-estival-boulevard-scaffold"
+    ],
+    "routes_canonical_sha256": "2b85f3e659b483fc6a4d6d1bde634b9ddecb9273baa6fee58bf0bf33060f3c3b",
+    "non_route_explorer_canonical_sha256": "40da41abadcc9c554d821a5c48961d688598d607d418df188e33482f157eeb7d",
+    "lead_ids": [
+      "AR-V01-01",
+      "AR-V01-02",
+      "AR-V01-03",
+      "AR-V01-04",
+      "AR-V02-01",
+      "AR-V03-01",
+      "AR-V03-02",
+      "AR-V08-01",
+      "AR-R01-01",
+      "AR-R01-02",
+      "AR-V04-01",
+      "AR-V04-02",
+      "AR-V04-03",
+      "AR-V04-04",
+      "AR-V04-05",
+      "AR-V04-06",
+      "AR-V05-01",
+      "AR-V05-02",
+      "AR-V05-03",
+      "AR-V05-04",
+      "AR-V05-05",
+      "AR-V05-06",
+      "AR-V06-01",
+      "AR-V06-02",
+      "AR-V06-03",
+      "AR-V06-04",
+      "AR-V06-05",
+      "AR-V06-06",
+      "AR-V06-07",
+      "AR-V07-01",
+      "AR-V07-02",
+      "AR-V07-03",
+      "AR-V07-04",
+      "AR-V07-05",
+      "AR-V08-02",
+      "AR-V08-03",
+      "AR-V08-04",
+      "AR-V09-01",
+      "AR-V09-02",
+      "AR-V09-03",
+      "AR-V09-04",
+      "AR-V09-05",
+      "AR-B01-01",
+      "AR-B01-02",
+      "AR-B01-03",
+      "AR-B03-01",
+      "AR-B03-02",
+      "AR-B05-01",
+      "AR-B05-02",
+      "AR-B05-03",
+      "AR-B02-01",
+      "AR-B02-02",
+      "AR-B02-03",
+      "AR-B06-01",
+      "AR-B06-02",
+      "AR-B04-01",
+      "AR-B04-02",
+      "AR-M01-01",
+      "AR-M02-01",
+      "AR-M02-02",
+      "AR-M03-01",
+      "AR-M04-01",
+      "AR-M05-01",
+      "AR-M06-01",
+      "AR-M06-02",
+      "AR-M07-01",
+      "AR-M08-01",
+      "AR-M09-01",
+      "AR-M09-02",
+      "AR-WZ09-01",
+      "AR-B07-01",
+      "AR-B07-02",
+      "AR-B07-03",
+      "AR-B07-04",
+      "AR-B08-01",
+      "AR-B09-01",
+      "AR-B09-02",
+      "AR-B10-01"
+    ],
+    "leads_canonical_sha256": "044de2e24d86b4342b65bf8e226d18074cc9f18f04a3da97f0a5d826e3c6ccf6",
+    "untouched_coverage_canonical_sha256": "2ab84abeb7c0596cd79ff48bd147decae1ad73d95a707775653e2b65d860a9e1",
+    "historical_survey_sections_canonical_sha256": "36b56792e4f992e7d07338e43d46893f5b7a8a702a3776dd63ce5984944faf8c",
+    "canonical_hash_definition": "UTF-8 JSON with recursively sorted keys, no insignificant whitespace; array order retained.",
+    "historical_survey_keys": [
+      "read_first",
+      "schema_version",
+      "plan_id",
+      "batch",
+      "date",
+      "baseline_main_sha",
+      "scope",
+      "reference_map",
+      "external_inventory",
+      "scaffold_total",
+      "ladder_total",
+      "counts_are_not_canonical",
+      "visual_evidence",
+      "existing_baseline",
+      "method",
+      "next",
+      "at_288",
+      "at_289",
+      "at_290",
+      "at_291",
+      "at_292",
+      "at_293",
+      "owner_scope_at_294",
+      "at_295_video_references",
+      "at_294_vert_reconciliation",
+      "at_296_vert1_2",
+      "at_297_workspace_handoff",
+      "at_298_vert3",
+      "at_299_sector_labels",
+      "at_300_map_clarity",
+      "at_301_borderless_source_intake",
+      "at_302_sector_street_bearings",
+      "at_303_street_bearings_in_explorer",
+      "at_304_original_sector_street_image_library",
+      "at_305_deployment_evidence_reconciliation",
+      "at_306_owner_crop_source_recovery",
+      "at_307_release_checkpoint",
+      "at_309_owner_sector_source_completion",
+      "at_311_cross_page_map_video_references",
+      "at_313_vert8_bleu1_route_reconciliation",
+      "at_314_buddyvidz_video_library",
+      "at_315_bleu3_5_access_routes",
+      "at_319_written_first_policy",
+      "at_319_bleu2_4_6_written_routes",
+      "at_331_international_route_research",
+      "at_332_item_coordinate_sources",
+      "at_334_workspace_pickup_recovery",
+      "at_335_recovered_item_coordinate_pilot",
+      "at_320_bleu7_10_written_routes"
+    ]
+  },
+  "source_registry": [
+    {
+      "id": "pokejungle-tms",
+      "title": "PokéJungle — TM locations",
+      "url": "https://pokejungle.net/pokemon-legends-z-a/tm-list-locations/",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "raider-screws",
+      "title": "Raider King — authored Colorful Screw walkthrough",
+      "url": "https://raiderking.com/pokemon-legends-z-a-all-colorful-screws-locations/",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "raider-tms",
+      "title": "Raider King — authored TM walkthrough",
+      "url": "https://raiderking.com/pokemon-legends-z-a-all-tms-locations/",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "gg-screws",
+      "title": "Gamer Guides — individual collectible descriptions",
+      "url": "https://www.gamerguides.com/pokemon-legends-z-a/checklists/colorful-screw-locations/",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "gg-hyper-beam",
+      "title": "Gamer Guides — Hyper Beam access description",
+      "url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/hyper-beam",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "dualshockers-dojo",
+      "title": "DualShockers — Justice Dojo rooftop ladder",
+      "url": "https://www.dualshockers.com/pokemon-legends-z-a-where-find-panpour-pansage-and-pansear/",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-main12",
+      "title": "Thonky — Main Mission 12",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-12-a-rogue-mega-camerupt",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-main18",
+      "title": "Thonky — Main Mission 18",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-18-a-rogue-mega-banette",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-main23",
+      "title": "Thonky — Main Mission 23",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-23-a-rogue-mega-ampharos",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-main09",
+      "title": "Thonky — Main Mission 09",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-09-chase-that-mysterious-pokemon",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-side09",
+      "title": "Thonky — Side Mission 009",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-009-a-challenge-from-froakie",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-side11",
+      "title": "Thonky — Side Mission 011",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-011-the-kakuna-master",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-side65",
+      "title": "Thonky — Side Mission 065",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-065-apartment-block-eeriness",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "thonky-side80",
+      "title": "Thonky — Side Mission 080",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-080-a-shocking-territorial-dispute",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-hibernal",
+      "title": "Altissimo — Hibernal Avenue",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/hibernal-avenue.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "serebii-jaune",
+      "title": "Serebii — Jaune District, named Sector 1 subsection",
+      "url": "https://www.serebii.net/pokearth/lumiosecity/jaunedistrict.shtml",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-2",
+      "title": "Altissimo — Rouge Sector 2",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-2.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-3",
+      "title": "Altissimo — Rouge Sector 3",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-3.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-4",
+      "title": "Altissimo — Rouge Sector 4",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-4.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-5",
+      "title": "Altissimo — Rouge Sector 5",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-5.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-6",
+      "title": "Altissimo — Rouge Sector 6",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-6.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-7",
+      "title": "Altissimo — Rouge Sector 7",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-7.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-rouge-8",
+      "title": "Altissimo — Rouge Sector 8",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/rouge-sector-8.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-1",
+      "title": "Altissimo — Jaune Sector 1",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-1.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-2",
+      "title": "Altissimo — Jaune Sector 2",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-2.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-3",
+      "title": "Altissimo — Jaune Sector 3",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-3.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-4",
+      "title": "Altissimo — Jaune Sector 4",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-4.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-5",
+      "title": "Altissimo — Jaune Sector 5",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-5.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-6",
+      "title": "Altissimo — Jaune Sector 6",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-6.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-7",
+      "title": "Altissimo — Jaune Sector 7",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-7.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-8",
+      "title": "Altissimo — Jaune Sector 8",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-8.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-9",
+      "title": "Altissimo — Jaune Sector 9",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-9.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-10",
+      "title": "Altissimo — Jaune Sector 10",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-10.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-11",
+      "title": "Altissimo — Jaune Sector 11",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-11.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "alt-jaune-12",
+      "title": "Altissimo — Jaune Sector 12",
+      "url": "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-12.html",
+      "checked_on": "2026-11-26",
+      "kind": "published_written_guide"
+    },
+    {
+      "id": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "path": "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "52536af306b8a4a9025e73650a7161f29b8c54899dc5550198afeef999ed2f85"
+    },
+    {
+      "id": "MAPS_JAUNE11_JAUNE_STREET_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_JAUNE11_JAUNE_STREET_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "9f7078dd4f839caaffd0b730959d0dbb8a25678430e668a28668d8205210da30"
+    },
+    {
+      "id": "MAPS_JAUNE4_ACADEMIE_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_JAUNE4_ACADEMIE_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "c7d53ff96631d7e1f401fb91632908762e4519a93051cf01ed7d6faca78f0b17"
+    },
+    {
+      "id": "MAPS_JAUNE7_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_JAUNE7_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "77115b84818b48d67cdb417eeb8abba853b8702b4374d659e17543291a37cb32"
+    },
+    {
+      "id": "MAPS_NORTH_BOULEVARD_ROUGE3_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_NORTH_BOULEVARD_ROUGE3_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "e9e8252b4c6436d7f8a8ba0add9526e58ec8f80620e567e8feed3cb69862fdd8"
+    },
+    {
+      "id": "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "4469c8c903645322cf6808c58d55715a6c15d35eedf0152a2534e463432f7a7d"
+    },
+    {
+      "id": "MAPS_ROUGE6_EAST_OF_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "path": "MAPS_ROUGE6_EAST_OF_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "acee88b9bd5bb8f4cd32ed1671facea4d5c3acc89524325ff57a295715b05bce"
+    },
+    {
+      "id": "docs/qa/ATLAS_AT264_OWNER_HOLOVATOR_GALLERY_PROVENANCE_2026-11-22.md",
+      "path": "docs/qa/ATLAS_AT264_OWNER_HOLOVATOR_GALLERY_PROVENANCE_2026-11-22.md",
+      "kind": "retained_owner_or_mission_evidence_register",
+      "sha256": "1ff17d19243e0a15f3cefbe6015165ec81ff19ab99d5a506ebcf604044beac8c"
+    }
+  ],
+  "area_reviews": [
+    {
+      "area_id": "rouge-sector-2",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge2-galerie-roof-access"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R02-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-2",
+        "pokejungle-tms"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-2",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+        "sha256": "b535c70c9378f159ab74ced60f7202fb11ee4d2e46b7aaa0b75a63c339e01c6d",
+        "width": 220,
+        "height": 159,
+        "visible_labels": [
+          "Rouge Sector 2"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Galerie de la Lune roof / Toxic TM",
+      "unresolved": "The course is written-source guidance; its exact base, platforms and return path remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-3",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge3-north-boulevard-roof-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R03-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-3",
+        "raider-screws",
+        "MAPS_NORTH_BOULEVARD_ROUGE3_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-3",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+        "sha256": "69130576a4d84fe5f76d10a25c82a053f429a3fc77882ac73c37b4987fd844d8",
+        "width": 265,
+        "height": 235,
+        "visible_labels": [
+          "Rouge Sector 3"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "north-boulevard-rouge3"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-street-entrance.jpg",
+        "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "North Boulevard to Rouge Sector 3 rooftops",
+      "unresolved": "The written North Boulevard approach is not a certified continuous connection from the photographed landing to a particular pickup.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-4",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge4-passage-ombrage-roof"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R04-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-4",
+        "alt-rouge-7",
+        "raider-screws",
+        "gg-screws"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-4",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+        "sha256": "fa0f1576425c8d33b5270f71d38ad5636aa53fc3bac5b465747cf8a8f99ffed8",
+        "width": 250,
+        "height": 245,
+        "visible_labels": [
+          "Rouge Sector 4"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Passage Ombragé exterior ladder and skylight roof",
+      "unresolved": "Reported northern/Sector 7 and southern-corner ladder approaches are not collapsed into one verified entrance.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-5",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge5-looker-roof-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R05-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-5",
+        "raider-screws",
+        "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-5",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+        "sha256": "7dad792eca8b791558c34b5a29e2fe9c8efae601b72011414b45cf4bab90feff",
+        "width": 250,
+        "height": 210,
+        "visible_labels": [
+          "Rouge Sector 5"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "rouge5-looker"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-ground-entrance.jpg",
+        "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Looker Bureau / Sushi High Roller rooftop approach",
+      "unresolved": "The northern roof transfer is source-reported, not an owner-photographed continuous crossing.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-6",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge6-ampharos-toxic-spikes-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R06-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-6",
+        "thonky-main23",
+        "pokejungle-tms",
+        "MAPS_ROUGE6_EAST_OF_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-6",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+        "sha256": "127aecbe019c9c908acea5292cbe887446be69c912291890652de4d6821ec764",
+        "width": 362,
+        "height": 136,
+        "visible_labels": [
+          "Rouge Sector 6"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "rouge6-east-sushi"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-ground-entrance.jpg",
+        "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Main Mission 23 roof course / Toxic Spikes",
+      "unresolved": "Mission approach text is corroborated; exact lower-roof drops and a one-to-one owner-photo mission-device match remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-7",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge7-apartment-ladder-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R07-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-7",
+        "thonky-side65"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-7-north-boulevard",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+        "sha256": "fafef8190975b4ae65bc7396946377233c473d8bb59356c6ef9ce2416f3e51a2",
+        "width": 710,
+        "height": 210,
+        "visible_labels": [
+          "Rouge Sector 7",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Ante / battle-court apartment ladder",
+      "unresolved": "Only the documented apartment approach is reconciled; other Sector 7 courses are not an exhaustive inventory.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "rouge8-courtyard-scaffold-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-R08-20261126"
+      ],
+      "source_keys": [
+        "alt-rouge-8",
+        "raider-screws",
+        "gg-screws"
+      ],
+      "source_map": {
+        "crop_id": "rouge-sector-8-hibernal",
+        "image_path": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+        "sha256": "d860612a6d23607c09e98ba199fb3ecd7ad9f4c0feade140421fc0b1dd9b9ffb",
+        "width": 472,
+        "height": 395,
+        "visible_labels": [
+          "Rouge Sector 8",
+          "Hibernal Avenue"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Western Rouge Sector 8 courtyard scaffolding",
+      "unresolved": "Upper-platform Roto-Glide guidance is source-backed; exact courtyard entrance and platform geometry remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-1",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune1-park-kakuna-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J01-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-1",
+        "thonky-side11",
+        "serebii-jaune"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-1-jaune-street",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+        "sha256": "bdf45031e93f4301ea7272f782d677b27ca954596c8973ec13bce6879fbe1f8a",
+        "width": 265,
+        "height": 195,
+        "visible_labels": [
+          "Jaune Sector 1",
+          "Jaune Street"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Jaune Street grassy area / Montée",
+      "unresolved": "The park and requester are identified; exact path junctions and NPC coordinates are not mapped.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-2",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune2-dojo-courtyard-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J02-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-2",
+        "dualshockers-dojo",
+        "raider-screws"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-2",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+        "sha256": "8b86f78e130d6cab7417a08668acff2009b82fc84d7127e1506772c39c8f0c1c",
+        "width": 310,
+        "height": 175,
+        "visible_labels": [
+          "Jaune Sector 2"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Justice Dojo western ladder / enclosed courtyard",
+      "unresolved": "The roof-to-courtyard drop is source-reported; the exact landing, exit and original collectible identity remain unresolved.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune3-camerupt-scaffold-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J03-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-3",
+        "thonky-main12"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-3-plaza",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+        "sha256": "6a3537bab46b2e093dee5c8c75a00308cbb0c10f5ee4bcdd2e0537fb58c2cd0e",
+        "width": 495,
+        "height": 195,
+        "visible_labels": [
+          "Jaune Sector 3",
+          "Jaune Plaza"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Northern Jaune Sector 3 building / Main Mission 12 scaffolds",
+      "unresolved": "The mission ascent is documented; the separate southern-roof transfer and every intermediate platform remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-4",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune4-hibernal-roof-scaffold-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J04-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-4",
+        "alt-hibernal",
+        "raider-screws",
+        "MAPS_JAUNE4_ACADEMIE_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-4",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+        "sha256": "e2e6dd4f5af527d440dc28dfcd1b8e809fc501478011bf25408237a0281caabd",
+        "width": 234,
+        "height": 191,
+        "visible_labels": [
+          "Jaune Sector 4"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "jaune4-etoile"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-ground-entrance.jpg",
+        "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Jaune Sector 4 Hibernal Avenue lift / lower scaffold",
+      "unresolved": "The photograph shows the local arrival; the drop to a particular scaffold and onward web connection remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune5-western-courtyard-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J05-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-5",
+        "raider-screws",
+        "MAPS_JAUNE4_ACADEMIE_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-5",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+        "sha256": "02a1d70040d7f0b2a6fedd38ace58c611bb5b2910cd3de0987f0e8ff5e42be57",
+        "width": 1151,
+        "height": 754,
+        "visible_labels": [
+          "Jaune Sector 5",
+          "Jaune Plaza"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "jaune4-etoile"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-ground-entrance.jpg",
+        "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Western Jaune Sector 5 courtyard",
+      "unresolved": "The written descent is a lead, not proof of a continuous photographed Sector 4-to-5 roof route.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-6",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [],
+      "retained_route_ids": [
+        "jaune6-holovator-muscle"
+      ],
+      "retained_guide_refs": [
+        "side-missions.html#quest-56"
+      ],
+      "lead_ids": [
+        "AR-J06-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-6",
+        "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-6",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+        "sha256": "09e4232a8fb8c45f520bb257f90b4f57f5c4df231ca2741ae60eaa336c80943d",
+        "width": 220,
+        "height": 205,
+        "visible_labels": [
+          "Jaune Sector 6"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Médierà’s existing mission-56 lift route and southeast-of-plaza scaffold",
+      "unresolved": "The existing lift route is retained exactly. The separately reported plaza scaffold has no measured connection to that lift.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-7",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune7-kizuna-hyper-beam-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J07-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-7",
+        "alt-hibernal",
+        "thonky-side80",
+        "raider-tms",
+        "gg-hyper-beam",
+        "MAPS_HOLOVATOR_COORDINATE_VALIDATION.json",
+        "MAPS_JAUNE7_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-7-hibernal",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+        "sha256": "45bb22c18c7fe7ba27681909813d3890d9cc7b4d55be688bdf7ff20134000c3b",
+        "width": 465,
+        "height": 300,
+        "visible_labels": [
+          "Jaune Sector 7",
+          "Hibernal Avenue"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "jaune7-hibernal"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-ground-entrance.jpg",
+        "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Café Kizuna courtyard / TM044 Hyper Beam",
+      "unresolved": "This is one source-described approach, not an exclusive access requirement. The owner-photo lift is not equated with the mission-80 device.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-8",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune8-froakie-scaffold-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J08-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-8",
+        "thonky-side09"
+      ],
+      "source_map": {
+        "crop_id": "jaune-sector-8",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+        "sha256": "2a5e3ba639a4313a502409b63db46561051567766d1514050b7512d9bc28a545",
+        "width": 337,
+        "height": 165,
+        "visible_labels": [
+          "Jaune Sector 8"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Surv / Jaune Pokémon Center scaffold approach",
+      "unresolved": "Only the starting approach is assigned to Sector 8. The final course is elsewhere; no exhaustive platform route or floor plan is claimed.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-9",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune9-banette-courtyard-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J09-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-9",
+        "thonky-main18"
+      ],
+      "source_map": {
+        "crop_id": "jaune-9-10-11-12",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "width": 619,
+        "height": 833,
+        "visible_labels": [
+          "Jaune Sector 9",
+          "Jaune Sector 10",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Jaune Street courtyard / Main Mission 18",
+      "unresolved": "The courtyard approach is documented. City Hall and adjacent roof/scaffold courses remain separate, incomplete leads.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-10",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [],
+      "retained_route_ids": [],
+      "retained_guide_refs": [
+        "walkthrough.html#mission-9"
+      ],
+      "lead_ids": [
+        "AR-J10-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-10",
+        "thonky-main09"
+      ],
+      "source_map": {
+        "crop_id": "jaune-9-10-11-12",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "width": 619,
+        "height": 833,
+        "visible_labels": [
+          "Jaune Sector 9",
+          "Jaune Sector 10",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [],
+      "reviewed_owner_photo_paths": [],
+      "useful_approach": "Saison Canalside / Main Mission 09 roof approach",
+      "unresolved": "The retained story route follows Zygarde and the mission marker. No repeatable free-roam ladder or complete canal-roof connection is established by that scripted chase.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-11",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [
+        "jaune11-jaune-street-roof-approach"
+      ],
+      "retained_route_ids": [],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J11-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-11",
+        "raider-screws",
+        "gg-screws",
+        "MAPS_JAUNE11_JAUNE_STREET_OWNER_LIFT_SURVEY_2026-11-22.json"
+      ],
+      "source_map": {
+        "crop_id": "jaune-9-10-11-12",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "width": 619,
+        "height": 833,
+        "visible_labels": [
+          "Jaune Sector 9",
+          "Jaune Sector 10",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "jaune11-street"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-ground-entrance.jpg",
+        "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Jaune Street lift / southern Jaune Sector 11 roofs",
+      "unresolved": "The southern roll/glide transfer is written-source guidance. Exact roof identity, return path and original pickup-number matches remain unregistered.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    },
+    {
+      "area_id": "jaune-sector-12",
+      "review_status": "written_sources_and_original_images_reviewed",
+      "new_route_ids": [],
+      "retained_route_ids": [
+        "jaune12-wz6"
+      ],
+      "retained_guide_refs": [],
+      "lead_ids": [
+        "AR-J12-20261126"
+      ],
+      "source_keys": [
+        "alt-jaune-12",
+        "docs/qa/ATLAS_AT264_OWNER_HOLOVATOR_GALLERY_PROVENANCE_2026-11-22.md"
+      ],
+      "source_map": {
+        "crop_id": "jaune-9-10-11-12",
+        "image_path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "width": 619,
+        "height": 833,
+        "visible_labels": [
+          "Jaune Sector 9",
+          "Jaune Sector 10",
+          "Jaune Sector 11",
+          "Jaune Sector 12",
+          "Jaune Street",
+          "North Boulevard"
+        ],
+        "precision": "source_image_orientation_only",
+        "geographically_registered": false
+      },
+      "related_photo_ids": [
+        "jaune12-wz6"
+      ],
+      "reviewed_owner_photo_paths": [
+        "assets/atlas/holovators/jaune12-wild-zone-6/holovator-jaune12-wild-zone-6-ground-lift.jpg",
+        "assets/atlas/holovators/jaune12-wild-zone-6/holovator-jaune12-wild-zone-6-rooftop-arrival.jpg"
+      ],
+      "useful_approach": "Wild Zone 6 / North Boulevard existing lift approach",
+      "unresolved": "The existing hostile-Wild-Zone approach and original photographs are retained. A rooftop arrival does not verify every nearby roof link.",
+      "source_map_precision": "orientation_only",
+      "physical_traversal_verified": false,
+      "geometry_complete": false,
+      "inventory_complete": false
+    }
+  ],
+  "new_route_ids": [
+    "rouge2-galerie-roof-access",
+    "rouge3-north-boulevard-roof-approach",
+    "rouge4-passage-ombrage-roof",
+    "rouge5-looker-roof-approach",
+    "rouge6-ampharos-toxic-spikes-approach",
+    "rouge7-apartment-ladder-approach",
+    "rouge8-courtyard-scaffold-approach",
+    "jaune1-park-kakuna-approach",
+    "jaune2-dojo-courtyard-approach",
+    "jaune3-camerupt-scaffold-approach",
+    "jaune4-hibernal-roof-scaffold-approach",
+    "jaune5-western-courtyard-approach",
+    "jaune7-kizuna-hyper-beam-approach",
+    "jaune8-froakie-scaffold-approach",
+    "jaune9-banette-courtyard-approach",
+    "jaune11-jaune-street-roof-approach"
+  ],
+  "new_routes_canonical_sha256": "9a8a2409a40eeaaf93a2c89a06b7e77ee666ad36b5452cb41179cef4126924d5",
+  "new_lead_ids": [
+    "AR-R02-20261126",
+    "AR-R03-20261126",
+    "AR-R04-20261126",
+    "AR-R05-20261126",
+    "AR-R06-20261126",
+    "AR-R07-20261126",
+    "AR-R08-20261126",
+    "AR-J01-20261126",
+    "AR-J02-20261126",
+    "AR-J03-20261126",
+    "AR-J04-20261126",
+    "AR-J05-20261126",
+    "AR-J06-20261126",
+    "AR-J07-20261126",
+    "AR-J08-20261126",
+    "AR-J09-20261126",
+    "AR-J10-20261126",
+    "AR-J11-20261126",
+    "AR-J12-20261126"
+  ],
+  "summary": {
+    "areas_reviewed": 19,
+    "new_routes": 16,
+    "new_steps": 66,
+    "existing_routes_preserved": 26,
+    "routes_total": 42,
+    "new_leads": 19,
+    "existing_leads_preserved": 78,
+    "leads_total": 97,
+    "sector_rows_with_written_review": 48,
+    "wild_zone_rows_with_written_review": 20,
+    "fully_completed_area_inventories": 0,
+    "new_exact_pins": 0,
+    "new_collectible_ids": 0
+  },
+  "specific_source_limits": [
+    "Rouge Sector 4 ladder access is supported; guide descriptions name different sides. The runtime route retains that distinction and no entrance coordinate is chosen.",
+    "Mission 80 opens one documented Jaune Sector 7 approach; it is not asserted to be the only possible path or the device in the retained owner gallery.",
+    "External Colorful Screw numbering is not joined to the original 100 Atlas progress IDs. No candidate or canonical screw ID is assigned by this packet.",
+    "The last Froakie course is outside Jaune Sector 8 and requires Roto-Glide; only its starting approach belongs to this area review.",
+    "A story chase in Jaune Sector 10 does not prove repeatable free-roam roof access.",
+    "Jaune Sector 1 source initially failed to open directly but was recovered through the Hibernal Avenue source link; it was read successfully before authoring."
+  ],
+  "reviewed_owner_photo_sha256": {
+    "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-ground-entrance.jpg": "e5a3bec1c85e978494fbee03177ba4ca9bb73cd92ff7dff5ac33e22a023a8f41",
+    "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-rooftop-arrival.jpg": "5e4ea71aa88bf7fb138656773616430c1543fe1d2b74b4a29e13099832b73117",
+    "assets/atlas/holovators/jaune12-wild-zone-6/holovator-jaune12-wild-zone-6-ground-lift.jpg": "1be48dee84da95c57751802c38dc97f5f78abbc220d69f3011157441cd2192ab",
+    "assets/atlas/holovators/jaune12-wild-zone-6/holovator-jaune12-wild-zone-6-rooftop-arrival.jpg": "edd1009c4ae58c0e61647e7c703a68c9fb63abbab7f40439bab4652b0c6bbfd1",
+    "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-ground-entrance.jpg": "88c47c3e44e0aa81cd2db127b5589b7c345d059bf27fa4aed464bea5d2e06ce8",
+    "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-rooftop-arrival.jpg": "c1ebb7d0412c335e45ab4b9444658b688ab7773dad41e337e817ef8fc34b1019",
+    "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-ground-entrance.jpg": "5d7cb15e493b71d67a4dbb326b2604c5b9e53e31a111b5e3a5d8638430fee949",
+    "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-rooftop-arrival.jpg": "c6b47540ccdd798e8f56e5f461f91eeb708c4910064642b7dd0d53a1b9151810",
+    "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-rooftop-arrival.jpg": "2751b993b73b5aa58ed7f3cbca4764f16b88ace7b55eff8071e4df9d4037e96d",
+    "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-street-entrance.jpg": "45e8906688eddc2b751e102781ebcc50e677348f851ed1c2a836ea947e6a3c68",
+    "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-ground-entrance.jpg": "d308c8f55d72e5847ad95f0285baba23cf34211e7856eb52fde330fc1bab268a",
+    "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-rooftop-arrival.jpg": "0fa7a57ff57bb01a84d1e9dd10e14ada97264622e9bf67989638c8c3086f16f9",
+    "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-ground-entrance.jpg": "df7cc9010a810e5434a5df92b5e7608bc0520d9adaf5069a39c48aa2e595a1c5",
+    "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-rooftop-arrival.jpg": "f7532078b2114aeedf35ada8df9e97aef3f4cb0ec72cd0b82ea48a0d0c8f7f17"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "AT342-RESUMED-COMBINED-CANDIDATE",
+  "date": "2026-11-26",
+  "manifest_revision": 90,
+  "ledger_revision": 98,
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "pr": 204,
+  "remote_parent_at_recovery": "b788abb87ef32cb210747da420d95780c4a22583",
+  "protected_main_at_recovery": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+  "recovered_source": "docs/qa/at342-resume/recovered-local-commits.json",
+  "recovered_local_commit_count": 21,
+  "source_state": "Recovered combined sources, independent evidence and status-only eleven-outline approval; existing draft PR204 retained.",
+  "scope": {
+    "sector_footprints": 48,
+    "wild_zone_selection_outlines": 20,
+    "area_source_dispositions": 68,
+    "preserved_encounters": 272,
+    "attributed_claims": 748,
+    "total_encounters": 1020,
+    "routes": 42,
+    "route_steps": 217,
+    "access_leads": 97,
+    "new_exact_pickup_positions": 0
+  },
+  "validation": {
+    "local_node": {
+      "passed": 154,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs",
+      "log": "docs/qa/at342-resume/local-unit-tests.txt"
+    },
+    "static": {
+      "passed": true,
+      "sections": 17,
+      "page_links": 647,
+      "image_script_references": 1431,
+      "captured_resources": 578
+    },
+    "owner_crop_validator": "passed eight exact original crops and independent registrations",
+    "source_replays": [
+      "Sector reconciliation passed without writing runtime",
+      "Remaining-sector reconciliation passed without writing runtime",
+      "Eleven UI candidate replay passed byte-identically; 43 frozen native checks"
+    ],
+    "preserved_runtime_images": {
+      "count": 783,
+      "unchanged": true,
+      "receipt": "docs/qa/at342-resume/preserved-runtime-image-blobs.json"
+    },
+    "runtime_hashes": "docs/qa/at342-resume/runtime-file-hashes.json",
+    "fresh_independent_runtime_review": {
+      "framing_checks_passed": 408,
+      "model_areas": 68,
+      "eligible_geometries": 68,
+      "encounter_rows": 1020,
+      "model_issues": 0,
+      "finding": "Corrected the related-photo test selector from .aa-photo img to img.aa-photo; kept both decoding assertions."
+    },
+    "direct_preview": "Root checked WZ17 selection framing, rotation/north reset, Bleu2 sector selection and linked WZ5 original photo pair; live GitHub/browser-suite verification remains pending.",
+    "final_head_ci": "pending",
+    "final_screenshot_review": "pending",
+    "expected_head_merge": "pending",
+    "pages_deployment": "pending",
+    "deployed_live_checks": "pending"
+  },
+  "geometry_approval": "docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json",
+  "private_tracker_receipt": "docs/qa/ATLAS_AT342_TRACKER_RECEIPT.json",
+  "private_tracker_state": "verified guarded Manifest90 metadata update and fresh readback; no status promotion",
+  "requirement_dispositions": "docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json",
+  "all_67_requirements_preserved": true,
+  "broader_master_plan_complete": false,
+  "full_map_release_state": "candidate awaiting exact committed CI, screenshots, expected-head merge and live checks",
+  "original_workspace": {
+    "recorded_version": 38,
+    "changed_by_this_continuation": false,
+    "full_upgrade_pending": true
+  },
+  "final_workspace_prompt_ready": false,
+  "rollback": "Before promotion retain main7616af2a and PR204b788. After promotion revert the actual reviewed merge through a branch/PR, rerun affected checks and verify Pages. No storage migration or public database change to reverse."
+}

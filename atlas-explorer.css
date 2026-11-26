@@ -28,7 +28,7 @@
 .ae-separator{width:1px;height:25px;background:#d2cbd7;margin:0 3px}
 .ae-layers{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;min-width:0;border:0;margin:0;padding:8px 14px 12px;background:#faf8fd}
 .ae-layers legend{padding:9px 0 2px;font-size:14px;font-weight:850;color:#342750}
-.ae-layers label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 10px;border:1px solid #d4cae2;border-radius:9px;background:#fff;color:#413656;font-size:14px;font-weight:750;line-height:1.25;cursor:pointer}
+.ae-layers label{display:inline-flex;align-items:center;gap:6px;min-height:44px;max-width:100%;padding:8px 10px;border:1px solid #d4cae2;border-radius:9px;background:#fff;color:#413656;font-size:14px;font-weight:750;line-height:1.25;overflow-wrap:normal;cursor:pointer}
 .ae-layers input{width:17px;height:17px;margin:0;accent-color:#533580;flex:none;cursor:pointer}
 .ae-layers input:focus-visible{outline:3px solid #e6b562;outline-offset:2px}
 .ae-layers label:has(input:disabled){opacity:.66;cursor:not-allowed}

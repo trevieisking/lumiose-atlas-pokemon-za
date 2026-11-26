@@ -3,7 +3,7 @@
 import {
   MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project,
   constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart
+  coverageCellCentre, districtStart, frameBoundary
 } from "./atlas-explorer-geometry.mjs";
 import {wildZoneFieldbookMarkup,zoneSearchText} from "./wild-zone-fieldbook.mjs";
 import {appendGuidePanel,zoneLinks,sectorLinks} from "./atlas-guide-links.mjs";
@@ -179,7 +179,7 @@ function detailsFor(item){
   selectedPanel.replaceChildren();
   selectedPanel.append(tag(labels[item.kind]),tag(item.district||"Lumiose"));
   if(item.kind==="holovator")selectedPanel.append(tag("Approximate map pin · owner survey"));
-  if(item.kind==="sector")selectedPanel.append(tag("No precise mapped sector polygon"));
+  if(item.kind==="sector")selectedPanel.append(tag("Sector photographs · no exact pickup pins"));
   selectedPanel.append(element("h3","",item.name));
   if(item.area)selectedPanel.append(paragraph("Area: "+item.area));
   if(item.directions)selectedPanel.append(paragraph(item.directions));
@@ -190,7 +190,7 @@ function detailsFor(item){
     selectedPanel.append(link(item.link,"Open Wild Zone "+String(item.number).padStart(2,"0")+" and pickup notes"));
     appendGuidePanel(selectedPanel,"Wild Zone field guides",zoneLinks(item.number,"atlas-explorer.html").filter(x=>x.href!==item.link),"Photographs and written guides provide orientation, not measured pickup or entrance coordinates.");
   }else if(item.kind==="sector"){
-    selectedPanel.append(paragraph("This sector name is verified in the directory. Its exact map boundary is not independently traced, so no arbitrary pin is drawn."));
+    selectedPanel.append(paragraph("The original map crop and written directions identify this named sector. The shared area panel shows its reviewed outline when available; no arbitrary sector pin is drawn."));
     if(item.street_bearing?.confidence==="source_image_orientation_only"){
       selectedPanel.append(paragraph("Source-labelled street bearings (orientation only): "+item.street_bearing.text));
       selectedPanel.append(link("MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json","Read written street-bearing evidence"));
@@ -204,7 +204,7 @@ function detailsFor(item){
       img.width=photo.width;img.height=photo.height;
       img.alt="Original in-game map screenshot crop for "+item.name+": "+photo.visible_labels.join(", ")+". Reference only, not a registered map tile.";
       a.append(img);
-      figure.append(a,element("figcaption","",photo.visible_labels.join(" · ")+" · original screenshot crop for orientation only. No registered map XY, sector border or exact lift/pickup pin."));
+      figure.append(a,element("figcaption","",photo.visible_labels.join(" · ")+" · original screenshot crop for orientation only. No registered map XY, sector border or exact lift/pickup pin is derived from this photograph."));
       selectedPanel.append(figure);
       selectedPanel.append(link("MAPS_SECTOR_STREET_IMAGE_LIBRARY_2026-11-24.json","Review source image provenance"));
     }else if(item.pending_source_photo_evidence?.status==="verified_local_png_pending_binary_transfer"){
@@ -651,7 +651,13 @@ async function load(){
     areaUI=await installAreaInteractions({
       host:by("aeAreaPanel"),overlayHost:stage,eventHost:viewport,
       onSelection:syncSelection,
-      onAreaFocus:area=>{const record=recordMap.get(area.id);if(record)focusRecord(record);},
+      onAreaFocus:area=>{
+        if(area.geometry.eligible){
+          applyView(frameBoundary(area.geometry.geometry,view,dimensions()));
+          coverageMessage(area.name+": reviewed map outline. Overlapping areas and heights remain distinct; this is not a walking route.");
+        }else{const record=recordMap.get(area.id);if(record)focusRecord(record);}
+        viewport.scrollIntoView({behavior:'smooth',block:'center'});
+      },
       // Reuse the collection controller's exact screen-space hit test.
       canSelectBoundary:event=>!collectibleUI?.hasSelectablePointAt?.(event.clientX,event.clientY)
     });

@@ -6,12 +6,25 @@ import {createHash} from "node:crypto";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
   panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart
+  coverageCellCentre, districtStart, frameBoundary
 } from "../atlas-explorer-geometry.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
 const near=(a,b,tolerance=1e-5)=>assert.ok(Math.abs(a-b)<tolerance,String(a)+" != "+String(b));
+test('reviewed area focus frames every actual sector outline without changing geometry or rotation',()=>{
+  const rows=JSON.parse(read('atlas-area-evidence.json')).geometries.filter(row=>row.kind==='sector');
+  assert.equal(rows.length,48);
+  const before=JSON.stringify(rows);
+  for(const viewport of [{width:360,height:430},{width:1100,height:650}])for(const rotation of [0,45,120])for(const row of rows){
+    const next=frameBoundary(row.geometry,{zoom:1,rotation,panX:0,panY:0},viewport);
+    assert.equal(next.rotation,rotation);assert.ok(next.zoom>=.75&&next.zoom<=6);
+    const points=row.geometry.coordinates.flat(row.geometry.type==='Polygon'?1:2).map(p=>project(p,next,viewport));
+    assert.ok(points.every(p=>p.x>=0&&p.x<=viewport.width&&p.y>=0&&p.y<=viewport.height),row.area_id+' stays in the viewport at '+rotation+' degrees');
+  }
+  assert.equal(JSON.stringify(rows),before);
+  assert.deepEqual(frameBoundary({type:'Polygon',coordinates:[[[NaN,0]]]},startView(),{width:360,height:430}),startView());
+});
 test("AT-280 source-verified mission approach text never upgrades Holovator coordinates",()=>{
   const sommi=data.holovators.find(x=>x.id==="rouge-plaza-west");
   const terra=data.holovators.find(x=>x.id==="vernal-wz1");
@@ -229,8 +242,8 @@ test("first directly photographed Hotel Z ladder is not promoted as exact roof X
 });
 test("maze routes have known progression and evidence grade; no invented floor layouts",()=>{
   const ids=new Set([...data.holovators,...data.ladders,...data.sectors].map(x=>x.id));
-  assert.equal(data.routes.length,26);
-  assert.equal(new Set(data.routes.map(x=>x.id)).size,26);
+  assert.equal(data.routes.length,42);
+  assert.equal(new Set(data.routes.map(x=>x.id)).size,42);
   assert.deepEqual(data.routes.filter(r=>r.anchor_precision!=="district_only").map(r=>r.id),
     ["cafe-cyclone","hotel-z-ladder","magenta-plaza-nw","rouge-plaza-west","jaune12-wz6","bleu7-south"],
     "Keep all six existing owner approaches in the same order");
@@ -562,7 +575,7 @@ test("AT-267 navigates all 25 image regions and 48 sectors without fabricated po
 test("Written routes remain intact without supplementary media or storage writes",()=>{
   const route=data.routes.find(x=>x.id==="vert9-vernal-rooftop-screw");
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
-  assert.equal(data.routes.length,26);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.equal(data.routes.length,42);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
   assert.ok(data.routes.every(r=>r.steps.every(s=>!Object.hasOwn(s,"video_refs"))));
   assert.doesNotMatch(read("atlas-explorer.js"),/localStorage|sessionStorage|replaceState/);
   assert.ok(!fs.existsSync(path.join(root,"atlas-video-bookmark.mjs")));
@@ -599,7 +612,7 @@ test("AT-299 selected-sector name is an optional non-geographic viewport context
   assert.match(css,/\.ae-sector-context\{[^}]*pointer-events:none/);
   assert.match(css,/\.ae-sector-context\[hidden\]\{display:none\}/);
   assert.equal(data.sectors.length,48);assert.ok(data.sectors.every(s=>s.xy===null));
-  assert.equal(data.routes.length,26);assert.equal(data.holovators.length,21);
+  assert.equal(data.routes.length,42);assert.equal(data.holovators.length,21);
 });
 
 
@@ -673,7 +686,7 @@ test("AT-310: 42 byte-verified original-game PNG crops cover 48 sectors without 
   }
   assert.equal(data.zones.length,20);assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((s,h)=>s+h.photos.length,0),111);
-  assert.equal(data.routes.length,26);
+  assert.equal(data.routes.length,42);
   const html=read("atlas-explorer.html"),js=read("atlas-explorer.js");
   assert.match(html,/42 clean PNG map crops/);
   assert.match(js,/ae-source-map-reference/);
@@ -720,7 +733,7 @@ test("AT-310: all 19 accepted owner crops are registered and linked without muta
   assert.equal(data.zones.length,20);
   assert.equal(data.holovators.length,21);
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
-  assert.equal(data.routes.length,26);
+  assert.equal(data.routes.length,42);
 });
 
 test("AT-313: Vert 8 and Bleu 1 routes preserve the owner ladder and never add new coordinates",()=>{
@@ -765,7 +778,7 @@ test("AT-315: separate Bleu 3 and Bleu 5 written courses, no inferred collectibl
   assert.ok(leads.every(x=>x.canonical_screw_id===null&&x.atlas_entrance_xy===null&&x.atlas_exit_xy===null&&!x.publish_new_pin));
   const owner=data.holovators.find(x=>x.id==="bleu3-fav");
   assert.equal(owner.photos.length,5);assert.equal(owner.entrance_exact,false);assert.equal(owner.roof_exact,false);
-  assert.equal(data.routes.length,26);assert.ok(data.sectors.every(x=>x.xy===null));
+  assert.equal(data.routes.length,42);assert.ok(data.sectors.every(x=>x.xy===null));
 });
 
 test("AT-319: written-first Bleu 2, 4 and 6 routes use existing map photos without inventing pins or collection IDs",()=>{
@@ -797,7 +810,7 @@ test("AT-319: written-first Bleu 2, 4 and 6 routes use existing map photos witho
   assert.equal(leads.length,7);
   assert.ok(leads.every(x=>!x.publish_new_pin&&x.canonical_screw_id===null&&x.atlas_entrance_xy===null&&x.atlas_exit_xy===null));
   assert.deepEqual(survey.at_319_written_first_policy.held_prs,[153,154]);
-  assert.equal(data.routes.length,26);
+  assert.equal(data.routes.length,42);
 });
 
 test("AT-320: Bleu 7–10 photo-first written approaches preserve routes and all collection identities",()=>{
@@ -824,8 +837,45 @@ test("AT-320: Bleu 7–10 photo-first written approaches preserve routes and all
  assert.equal(receipt.new_screw_ids,0);assert.equal(receipt.new_item_ids,0);assert.equal(receipt.new_exact_pins,0);
  const leads=s.leads.filter(x=>/^AR-B(?:07|08|09|10)-/.test(x.id));
  assert.equal(leads.length,8);assert.ok(leads.every(x=>!x.publish_new_pin&&x.canonical_screw_id===null&&x.atlas_entrance_xy===null&&x.atlas_exit_xy===null));
- assert.equal(s.summary.route_course_leads,78);assert.equal(s.leads.length,78);
- assert.equal(new Set(s.leads.map(x=>x.id)).size,78);
- assert.equal(s.summary.sector_text_research_started,29);assert.equal(s.summary.wild_zone_text_research_started,1);
- assert.equal(s.coverage.length,68);assert.equal(data.routes.length,26);
+ assert.equal(s.summary.route_course_leads,97);assert.equal(s.leads.length,97);
+ assert.equal(new Set(s.leads.map(x=>x.id)).size,97);
+ assert.equal(s.summary.sector_text_research_started,48);assert.equal(s.summary.wild_zone_text_research_started,20);
+ assert.equal(s.coverage.length,68);assert.equal(data.routes.length,42);
+});
+
+test("AT-331: Wild Zone access review retains source identity and orientation-only photo evidence",()=>{
+ const survey=JSON.parse(read("MAPS_ACCESS_ROUTE_SURVEY.json"));
+ const source="docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json";
+ const tmAccess=JSON.parse(read(source));
+ const zones=survey.coverage.filter(x=>x.kind==="wild_zone");
+ assert.equal(zones.length,20);assert.equal(survey.summary.wild_zone_text_research_started,zones.length);
+ assert.equal(survey.summary.fully_completed_areas,0);
+ for(const area of zones){
+  const zone=Number(area.id.slice(3));
+  const tm=tmAccess.records.find(x=>x.zone===zone);
+  const review=area.written_guidance_review;
+  assert.ok(tm&&review,"Each researched Wild Zone must identify its retained evidence");
+  assert.equal(area.status,zone===9?"partial_international_text_research":"partial_text_research");
+  assert.equal(area.geometry_complete,false);assert.equal(area.inventory_complete,false);
+  assert.equal(review.scope,"existing_published_tm_note_and_original_photo_references");
+  assert.equal(review.source_record,source);assert.equal(review.original_item_id,tm.id);
+  assert.equal(tm.original_progress_key,tm.id);assert.equal(tm.verified_native_xy,null);
+  assert.equal(tm.verified_access_geometry,false);
+  assert.deepEqual(review.published_guide_refs,["items.html#item-"+tm.id,"sector-maps.html#wildzone-"+zone]);
+  for(const ref of review.published_guide_refs){
+   const [page,anchor]=ref.split("#");assert.ok(read(page).includes('id="'+anchor+'"'));
+  }
+  const photos=JSON.parse(read(review.original_photo_manifest)).records.filter(x=>x.zone===zone);
+  assert.deepEqual(photos.map(x=>x.kind),["overview","closeup"]);
+  assert.deepEqual(review.photo_refs,photos.map(x=>x.path));
+  assert.equal(review.photo_evidence,"original_map_orientation_only_not_traversal_proof");
+  assert.ok(fs.existsSync(path.join(root,review.review_receipt)));
+ }
+ const wz9=zones.find(x=>x.id==="wz-09");
+ assert.deepEqual(wz9.lead_ids,["AR-WZ09-01"]);
+ const scaffold=survey.leads.find(x=>x.id===wz9.lead_ids[0]);
+ assert.equal(scaffold.area,wz9.id);assert.equal(scaffold.publish_new_pin,false);
+ assert.deepEqual(scaffold.candidate_original_screw_ids,[91]);
+ assert.equal(scaffold.canonical_screw_id,null);
+ assert.equal(survey.leads.length,97);assert.equal(data.routes.length,42);
 });

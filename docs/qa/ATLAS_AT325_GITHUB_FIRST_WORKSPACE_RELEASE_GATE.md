@@ -1,6 +1,29 @@
 # AT-325 — Complete GitHub upgrade first; final Workspace handoff last
 
-**Current continuation: AT341 · Manifest89 / Ledger97.** Latest main `7616af2a204e0a09328a5ec9f2b6a0415bf67309` (PR205) and its verified release/tracker receipts are retained. PR204 carries seven reviewed selection outlines,284 additive encounter claims and the Mission008 correction;61 boundaries and full-scope G5/A0 remain open. All48 private planning rows are synchronized. Final combined-head browser validation and bounded deployment remain pending. The earlier release checkpoints below retain their original dates, scope and counts.
+<!-- AT342_CURRENT_90_98 -->
+## Current checkpoint — AT-342 / Manifest 90 / Ledger 98
+
+**26 November 2026: the combined source review is recovered; release validation is pending.** Continue in the existing [PR #204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Preserve main `7616af2a204e0a09328a5ec9f2b6a0415bf67309`, the earlier PR head `b788abb87ef32cb210747da420d95780c4a22583`, and the recovered combined work. Earlier green workflows prove their own heads; the new candidate still requires its own checks.
+
+Source review now covers **48 sector footprints and 20 Wild Zone selection outlines**. These have different meanings: overlapping sector projections and rendered zone-selection areas do not establish exact spawn extents, floor plans or traversable routes. Existing nine approved zone records are retained alongside eleven reviewed additions; source and hidden-gate qualifications remain visible.
+
+All **68 encounter areas have a finite source-review disposition**: 45 named sector tables, three qualified links to related Wild Zones, and 20 zone standard-table comparisons. **748 attributed claims plus 272 original records give 1,020 records.** The eight disputes, single-source leads and unknown conditions remain labelled; roster status stays `not_comprehensive`. G3 accepts conditions where established and explicitly labelled disputes, without claiming an exhaustive all-class inventory. Written/photo access review covers all 68 areas, with **42 routes, 217 steps and 97 leads**. No complete physical structure inventory or new exact pickup positions are claimed.
+
+[Recovery checkpoint](ATLAS_AT342_RESUME_CHECKPOINT.json) · [zone approval](ATLAS_AT341_UI_OUTLINE_APPROVAL.json) · [sector review](at341-independent-review-2026-11-26/sector-footprint-review.json) · [encounter dispositions](sector-wild-zone-crossrefs-2026-11-26/REVIEW.md) · [written approaches](access-continuation-2026-11-26/REVIEW.md).
+
+**Current gates:** G2/G3 source review is complete for those defined scopes. G0's **48-row Manifest 90 private-tracker synchronization is verified**, executed at **14:06:06 UTC** and read back at **14:06:43 UTC** on 26 November 2026; [the tracker receipt](ATLAS_AT342_TRACKER_RECEIPT.json) records the guarded update. All previous notes, GitHub statuses/proofs and Workspace fields were preserved; the counts remain 11 verified, 21 in progress and 16 open. This metadata receipt is not release proof. G1 preserves the released baseline and combined work. G4 awaits final mobile/desktop browser validation. G5 still requires current-head CI, actual screenshot review, expected-head merge, exact Pages deployment and live checks. **A0 remains blocked** until that release proof exists; the approved full-upgrade SHA and executable Workspace prompt remain unset.
+
+The original Workspace was last recorded at **version 38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after its separate filter/photo repair. This continuation makes no Workspace publication or parity claim. Preserve the 67 requirements, original maps/photos/IDs, progress, accounts, Supabase and feedback. Videos and YouTube remain paused. Optional unknown pickups, exhaustive access inventories and unrelated backlog do not add new release gates.
+
+**Completion boundary:** the wider base-game/Mega Dimension guide audit (`CHAT-FULL-GUIDE`), mission-depth audit (`CHAT-WALKTHROUGH-DEPTH`) and targeted city/roof Alpha review (`CHAT-CITY-ALPHAS`, including the unresolved Alpha Dratini disposition) are **not certified complete**. They remain required broader obligations, separate from the finite map-release assessment; a later map release must not be described as completion of all 67 historical requirements. See the [current requirement dispositions](ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json).
+
+<!-- END_AT342_CURRENT_90_98 -->
+
+## Historical progress snapshots and retained requirements
+
+The following entries preserve their original dates, counts and evidence. Their requirements remain in force; superseded progress and availability statements describe their recorded checkpoint, not the current candidate. The AT-342 section above controls the current source scope and pending release work.
+
+**Historical continuation: AT341 · Manifest89 / Ledger97 (26 November 2026).** Latest main `7616af2a204e0a09328a5ec9f2b6a0415bf67309` (PR205) and its verified release/tracker receipts are retained. PR204 carries seven reviewed selection outlines,284 additive encounter claims and the Mission008 correction;61 boundaries and full-scope G5/A0 remain open. All48 private planning rows are synchronized. Final combined-head browser validation and bounded deployment remain pending. The earlier release checkpoints below retain their original dates, scope and counts.
 
 ## AT-339 — current bounded release checkpoint
 

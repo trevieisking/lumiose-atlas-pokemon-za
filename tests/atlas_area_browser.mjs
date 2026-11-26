@@ -150,8 +150,8 @@ try{
       await page.locator(mapSelector).scrollIntoViewIfNeeded();
       await page.locator(mapSelector).screenshot({path:output+"/at339-measured-"+surface+"-"+device+".png"});
       await host.locator('[data-area-results] button[data-area-id="vert-sector-1"]').click();
-      assert.match(await host.locator("[data-area-detail]").textContent(),/not independently verified|awaiting verification/i);
-      assert.equal(await page.locator('[data-area-boundary="vert-sector-1"]').count(),0,"A sector label never becomes a polygon");
+      assert.match(await host.locator("[data-area-detail]").textContent(),/named sector area|overlap at different heights/i);
+      assert.equal(await page.locator('[data-area-boundary="vert-sector-1"].is-active').count(),1,"Only the separately reviewed source footprint supplies a sector outline");
       assert.ok(await host.locator('[data-area-detail] a[href="assets/atlas/sector-streets/vert/vert-1-saison-canal.png"]').count()>0,"Original photograph retained");
       assert.ok((await host.locator('.aa-source-notes').allTextContents()).join(' ').includes('pokemaps.net'),"Written reference attribution stays visible");
       assert.deepEqual(await host.locator('.aa-source-notes a').evaluateAll(nodes=>nodes.map(node=>node.getAttribute('href')).filter(href=>/^https?:|^\/\/|\.md(?:[?#]|$)/i.test(href))),[],"Evidence links keep player navigation inside Atlas guide/assets rather than external sites or raw Markdown");
@@ -471,9 +471,8 @@ try{
     await originalPhotoNode.dispose();
     await unchanged();
 
-    // Retain the current WZ11/WZ04 checks and add WZ20 only when production
-    // approves it. This runs before synthetic evidence interception.
-    for(const areaId of ["wz-11","wz-04",...productionIds.filter(id=>id==="wz-20")]){
+    // Capture the reviewed production outlines before synthetic evidence interception.
+    for(const areaId of register.geometries.filter(row=>row.kind==='zone'&&row.status==='approved').map(row=>row.area_id).sort()){
       await page.goto(base+"/atlas-explorer.html?area="+areaId,{waitUntil:"load"});
       const measuredPanel=await panel();
       await measuredPanel.locator('[data-area-focus="'+areaId+'"]').click();
@@ -481,7 +480,6 @@ try{
       assert.equal(await page.locator('[data-area-boundary="'+areaId+'"].is-active').count(),1);
       await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png"});
       await unchanged();
-      if(!["wz-04","wz-20"].includes(areaId))continue;
       const row=register.geometries.find(row=>row.area_id===areaId&&row.status==="approved");
       assert.ok(row,"Rendered new outline must have approved production evidence");
       const points=row.geometry.coordinates.flat(row.geometry.type==="Polygon"?1:2);
@@ -516,6 +514,100 @@ try{
       await unchanged();
       approvedZoneRenders.push({areaId,synthetic:false,selectedOriginalRecord:true,activeBoundary:true,renderedBounds,originalControls:true,originalPhotos:zone.photos.map(photo=>photo.path),mapScreenshot,photoScreenshot});
     }
+
+    // Real sector footprints retain their semantic limits and original photographs.
+    // Cover each district, an uneven-height mesh and overlap with a Wild Zone.
+    for(const areaId of ['vert-sector-1','bleu-sector-2','magenta-sector-5','rouge-sector-4','jaune-sector-6']){
+      await page.goto(base+'/atlas-explorer.html?area='+areaId,{waitUntil:'load'});
+      const host=await panel(),row=register.geometries.find(row=>row.area_id===areaId);
+      assert.equal(row.representation,'source_area_footprint');
+      assert.match(await host.locator('[data-area-detail]').textContent(),/named sector area.*overlap at different heights/s);
+      assert.doesNotMatch(await host.locator('[data-area-detail]').textContent(),/This outline follows the green zone/);
+      await host.locator('[data-area-focus="'+areaId+'"]').click();
+      await page.waitForFunction(()=>{const r=document.getElementById('aeViewport').getBoundingClientRect();return r.top>=-1&&r.bottom<=innerHeight+1;});
+      await page.locator('#aeViewport').scrollIntoViewIfNeeded();
+      const boundary=page.locator('[data-area-boundary="'+areaId+'"].is-active');
+      assert.equal(await boundary.count(),1);
+      const points=row.geometry.coordinates.flat(row.geometry.type==='Polygon'?1:2);
+      const expected={x:Math.min(...points.map(p=>p[0])),y:Math.min(...points.map(p=>p[1])),width:Math.max(...points.map(p=>p[0]))-Math.min(...points.map(p=>p[0])),height:Math.max(...points.map(p=>p[1]))-Math.min(...points.map(p=>p[1]))};
+      const actual=await boundary.evaluate(path=>{const b=path.getBBox();return{x:b.x,y:b.y,width:b.width,height:b.height};});
+      for(const name of Object.keys(expected))assert.ok(Math.abs(expected[name]-actual[name])<.01,areaId+' renders exact '+name);
+      assert.equal(await boundary.evaluate(path=>{const b=path.getBoundingClientRect(),v=document.getElementById('aeViewport').getBoundingClientRect();return b.left>=v.left-1&&b.right<=v.right+1&&b.top>=v.top-1&&b.bottom<=v.bottom+1;}),true,'Reviewed area focus frames the actual footprint');
+      assert.equal(await page.locator('.ae-pin[data-kind="sector"]').count(),0,'A footprint never becomes a guessed sector point pin');
+      await page.locator('#aeViewport').screenshot({path:output+'/at341-sector-'+areaId+'-'+device+'.png'});
+      const photo=page.locator('#aeSelected .ae-source-map-reference img');
+      await photo.scrollIntoViewIfNeeded();await photo.evaluate(img=>img.decode());
+      assert.ok(await photo.evaluate(img=>img.naturalWidth>0));
+      await host.locator('[data-area-detail]').screenshot({path:output+'/at341-sector-detail-'+areaId+'-'+device+'.png'});
+      await unchanged();
+    }
+
+    // Related area navigation is shared by all maps without copying a zone's
+    // roster into the sector or losing the original source-photo guide link.
+    for(const [surface,url,sector,zone] of [
+      ['explorer','atlas-explorer.html','bleu-sector-2','wz-05'],
+      ['explorer','atlas-explorer.html','bleu-sector-10','wz-10'],
+      ['explorer','atlas-explorer.html','magenta-sector-5','wz-09'],
+      ['standalone','maps.html','bleu-sector-10','wz-10'],
+      ['sectors','sector-maps.html','magenta-sector-5','wz-09'],
+      ['main','index.html','bleu-sector-2','wz-05']
+    ]){
+      await page.goto(base+'/'+url+'?source=at341-crossref&area='+sector,{waitUntil:'load'});
+      const host=await panel();
+      const original=host.locator('[data-area-detail] > a').filter({hasText:'Open original area guide and photographs'});
+      assert.equal(await original.count(),1);
+      assert.equal(await host.locator('[data-area-detail] .aa-encounter').count(),sector==='bleu-sector-2'?1:0,'The sector keeps its own direct encounter count');
+      const related=host.locator('[data-related-areas]');
+      assert.match(await related.textContent(),/Wild Zone/);
+      if(surface==='explorer')await related.screenshot({path:output+'/at341-related-'+sector+'-'+device+'.png'});
+      await related.locator('[data-related-area="'+zone+'"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('area'),zone);
+      assert.equal(new URL(page.url()).searchParams.get('source'),'at341-crossref');
+      assert.ok(await host.locator('[data-area-detail] .aa-encounter').count()>0);
+      const images=host.locator('[data-area-detail] img.aa-photo');assert.equal(await images.count(),2);
+      for(const img of await images.all()){await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());}
+      await page.goBack();await page.waitForFunction(id=>new URL(location.href).searchParams.get('area')===id,sector);
+      await page.reload({waitUntil:'load'});await panel();
+      assert.equal(await page.locator('[data-related-area="'+zone+'"]').count(),1,'Related navigation survives history and reload');
+      await unchanged();
+    }
+
+    // Use the actual overlapping Bleu6/Bleu8 source footprints, not a fabricated
+    // boundary. Rounded touch coordinates must remain inside both visible paths.
+    await page.goto(base+'/atlas-explorer.html?area=bleu-sector-6',{waitUntil:'load'});
+    const overlapPanel=await panel();
+    await overlapPanel.locator('[data-area-focus="bleu-sector-6"]').click();
+    await overlapPanel.locator('[data-area-clear]').click();
+    await page.locator('#aeViewport').scrollIntoViewIfNeeded();
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const overlapPoint=await page.locator('[data-area-overlay]').evaluate(svg=>{
+      const a=svg.querySelector('[data-area-boundary="bleu-sector-6"]'),b=svg.querySelector('[data-area-boundary="bleu-sector-8"]');
+      const av=a.getBBox(),bv=b.getBBox(),matrix=svg.getScreenCTM(),inverse=matrix.inverse();
+      const viewport=document.getElementById('aeViewport'),rect=viewport.getBoundingClientRect();
+      const controls=[...viewport.querySelectorAll('button,a,input,select,textarea')].map(node=>node.getBoundingClientRect()).filter(r=>r.width&&r.height);
+      let best=null;
+      for(let x=Math.max(av.x,bv.x)+2;x<Math.min(av.x+av.width,bv.x+bv.width);x+=4)for(let y=Math.max(av.y,bv.y)+2;y<Math.min(av.y+av.height,bv.y+bv.height);y+=4){
+        const p=svg.createSVGPoint();p.x=x;p.y=y;if(!a.isPointInFill(p)||!b.isPointInFill(p))continue;
+        const screen=p.matrixTransform(matrix);screen.x=Math.round(screen.x);screen.y=Math.round(screen.y);
+        const native=screen.matrixTransform(inverse);if(!a.isPointInFill(native)||!b.isPointInFill(native))continue;
+        if(screen.x<Math.max(rect.left+15,15)||screen.x>Math.min(rect.right-15,innerWidth-15)||screen.y<Math.max(rect.top+15,15)||screen.y>Math.min(rect.bottom-15,innerHeight-15))continue;
+        const target=document.elementFromPoint(screen.x,screen.y);if(!target||!viewport.contains(target)||target.closest('button,a,input,select,textarea'))continue;
+        const clearance=Math.min(...controls.map(r=>Math.hypot(Math.max(r.left-screen.x,0,screen.x-r.right),Math.max(r.top-screen.y,0,screen.y-r.bottom))));
+        if(clearance>=12&&(!best||clearance>best.clearance))best={x:screen.x,y:screen.y,clearance};
+      }
+      return best;
+    });
+    assert.ok(overlapPoint,'A real overlap has an unobstructed touch target');
+    await tap(overlapPoint);
+    await page.locator('[data-area-overlap-id="bleu-sector-6"]').waitFor({state:'visible'});
+    assert.equal(await page.locator('[data-area-overlap-id="bleu-sector-8"]').count(),1);
+    assert.equal(new URL(page.url()).searchParams.get('area'),null,'Overlapping footprints do not choose the first or nearest sector automatically');
+    await page.waitForFunction(()=>{const r=document.querySelector('[data-area-overlap-id="bleu-sector-6"]')?.getBoundingClientRect();return r&&r.top>=0&&r.bottom<=innerHeight;});
+    await page.locator('[data-area-detail]').screenshot({path:output+'/at341-real-sector-overlap-'+device+'.png'});
+    await page.locator('[data-area-overlap-id="bleu-sector-8"]').click();
+    assert.equal(new URL(page.url()).searchParams.get('area'),'bleu-sector-8');
+    assert.equal(await page.locator('[data-area-boundary="bleu-sector-8"].is-active').count(),1);
+    await unchanged();
 
     await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});await panel();
     const habitatLink=page.locator('[data-wz-fieldbook="1"] [data-atlas-species="pidgey"]').first();

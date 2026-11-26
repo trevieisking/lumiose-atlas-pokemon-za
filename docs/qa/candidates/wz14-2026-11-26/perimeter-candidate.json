@@ -1,0 +1,236 @@
+{
+  "status": "candidate_pending_independent_review",
+  "scope": "Rendered map-selection footprint only. North gate joins visible approaches for display; two small cursor-ring spans on the eastern line are corroborated by the overview.",
+  "source_vertices": [
+    [
+      499,
+      124
+    ],
+    [
+      685,
+      197
+    ],
+    [
+      816,
+      249
+    ],
+    [
+      974,
+      309
+    ],
+    [
+      982,
+      326
+    ],
+    [
+      844,
+      492
+    ],
+    [
+      815,
+      526
+    ],
+    [
+      786,
+      563
+    ],
+    [
+      753,
+      594
+    ],
+    [
+      547,
+      839
+    ],
+    [
+      365,
+      708
+    ],
+    [
+      372,
+      660
+    ],
+    [
+      383,
+      600
+    ],
+    [
+      393,
+      540
+    ],
+    [
+      404,
+      480
+    ],
+    [
+      416,
+      420
+    ],
+    [
+      430,
+      360
+    ],
+    [
+      445,
+      300
+    ],
+    [
+      462,
+      240
+    ],
+    [
+      478,
+      180
+    ]
+  ],
+  "native_vertices": [
+    [
+      158.06047010376807,
+      740.0086348282342
+    ],
+    [
+      207.61953277463525,
+      756.1339974267357
+    ],
+    [
+      242.24362506845134,
+      767.5468186565178
+    ],
+    [
+      283.63677683741884,
+      780.5124678479871
+    ],
+    [
+      285.9921422675344,
+      784.7401893682537
+    ],
+    [
+      253.92254519561158,
+      829.7938088925566
+    ],
+    [
+      247.09564922342807,
+      839.1317782365903
+    ],
+    [
+      240.29923505497885,
+      849.2859035063116
+    ],
+    [
+      232.33100317713166,
+      857.983618761046
+    ],
+    [
+      182.7921220877231,
+      926.7371435204967
+    ],
+    [
+      132.23615105621,
+      895.5724069094739
+    ],
+    [
+      133.32475240807494,
+      882.6471195818621
+    ],
+    [
+      135.2800740894335,
+      866.4978604557484
+    ],
+    [
+      136.96277811929065,
+      850.4252278858826
+    ],
+    [
+      138.9045876388442,
+      834.3914809662267
+    ],
+    [
+      141.1038970841949,
+      818.3981398094377
+    ],
+    [
+      143.82293219370078,
+      802.430119762484
+    ],
+    [
+      146.79491167481368,
+      786.5066899817307
+    ],
+    [
+      150.28066080707995,
+      770.6139178022064
+    ],
+    [
+      153.49053475782642,
+      754.7993792859238
+    ]
+  ],
+  "west_trace_method": "At fixed source y180..660 every60, scan x300:530 for first green-dominant pixel (G-R>25,G-B>15,G>50), then pick minimum unweighted RGB mean among next15 positions satisfying same rule. Review samples on original pixels; no circle/ellipse assumed.",
+  "west_trace_samples": [
+    {
+      "y": 180,
+      "first_green_x": 473,
+      "picked_line_x": 478
+    },
+    {
+      "y": 240,
+      "first_green_x": 455,
+      "picked_line_x": 462
+    },
+    {
+      "y": 300,
+      "first_green_x": 438,
+      "picked_line_x": 445
+    },
+    {
+      "y": 360,
+      "first_green_x": 423,
+      "picked_line_x": 430
+    },
+    {
+      "y": 420,
+      "first_green_x": 409,
+      "picked_line_x": 416
+    },
+    {
+      "y": 480,
+      "first_green_x": 397,
+      "picked_line_x": 404
+    },
+    {
+      "y": 540,
+      "first_green_x": 386,
+      "picked_line_x": 393
+    },
+    {
+      "y": 600,
+      "first_green_x": 375,
+      "picked_line_x": 383
+    },
+    {
+      "y": 660,
+      "first_green_x": 365,
+      "picked_line_x": 372
+    }
+  ],
+  "connectors": [
+    {
+      "from_vertex": 1,
+      "to_vertex": 2,
+      "name": "north gate opening",
+      "reason": "Straight display closure between observed approaches on either side of the two filled squares; decorations excluded; not an observed continuous physical line."
+    }
+  ],
+  "cursor_occlusion_spans": [
+    {
+      "from_vertex": 5,
+      "to_vertex": 6,
+      "reason": "Small northern red ring covers an otherwise straight green edge. Original overview shows this corresponding edge without the same cursor; visible closeup approaches and internal line agree."
+    },
+    {
+      "from_vertex": 7,
+      "to_vertex": 8,
+      "reason": "Small southern red ring covers a short portion of the same green edge. Overview exposes the corresponding line; its badge/cursor is farther south and is not used as an edge."
+    }
+  ]
+}

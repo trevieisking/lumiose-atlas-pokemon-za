@@ -1,0 +1,25 @@
+{
+  "reviewer": "root",
+  "date": "2026-11-26",
+  "observed_panels": [
+    "h2-native-pixel-grid.png",
+    "h2-correction-review.png",
+    "h2-matching-source-pair.png",
+    "source-perimeter-review.png",
+    "registered-native-panel.png",
+    "registered-closeup-panel.png",
+    "overview-east-line.png",
+    "landmark-review-1.png",
+    "landmark-review-2.png",
+    "landmark-review-3.png",
+    "landmark-review-4.png"
+  ],
+  "findings": [
+    "Original H2 target is in the lighter gap; corrected native junction is the NW corner of the same large interior roof shown in the source. Original failed pick/error must remain and fit must be unchanged.",
+    "The 20-vertex source trace follows the visible perimeter including the curved west side. Original overview exposes the corresponding eastern segment across the closeup cursor crossings. Native badge is not used as a boundary.",
+    "The single north entrance span is correctly a display closure. No physical or accessible-entrance claim is supported.",
+    "All four final landmark panels were directly viewed. F1-F7 and H1-H5 match visible architecture; B1-B4 are observed green perimeter bends. Residual labels match below the unchanged 3 px observed-pick threshold."
+  ],
+  "decision_at_review_time": "approved_for_rendered_map_selection_only_pending_replay_verification",
+  "subsequent_packet_verification": "The reproducible packet verifies all57 frozen hashes, exact fit replay with zero vertex shift, valid topology, and the unchanged runtime gate. Two rebuilds produced byte-identical receipt and record. Root retains canonical integration and exact-head release checks."
+}

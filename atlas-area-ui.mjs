@@ -38,7 +38,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
   const listen=(node,type,fn,options)=>{node.addEventListener(type,fn,options);cleanup.push(()=>node.removeEventListener(type,fn,options));};
   host.classList.add('atlas-area-ui');host.dataset.areaPanel='';
   const heading=make('h3','aa-title','Areas and Pokémon habitats');
-  const intro=make('p','aa-intro','Search area guides and Pokémon encounter records. Reviewed outlines follow the areas shown on the original game map.');
+  const intro=make('p','aa-intro','Search area guides and Pokémon encounter records. Reviewed outlines show named sectors and green Wild Zones; some areas overlap.');
   const drawer=make('details','aa-drawer');drawer.dataset.areaDrawer='';drawer.open=typeof matchMedia==='function'&&matchMedia('(min-width: 900px)').matches;
   drawer.append(make('summary','','Search all 68 areas and Pokémon'));
   const controls=make('div','aa-controls');
@@ -53,7 +53,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
   const toolbar=make('div','aa-toolbar'),clear=make('button','','Clear area and habitat selection');clear.type='button';clear.dataset.areaClear='';
   const direct=link('atlas-explorer.html','Link to this area or habitat selection');direct.dataset.areaLink='';toolbar.append(clear,direct);
   const boundaryLabel=make('label','aa-boundary-toggle','Reviewed map outlines'),boundaryToggle=make('input');boundaryToggle.type='checkbox';boundaryToggle.checked=true;boundaryToggle.dataset.areaBoundaries='';boundaryLabel.prepend(boundaryToggle);
-  const legend=make('p','aa-legend','Outlined area: reviewed map outline · Shaded area: selected area. These outlines do not show walking routes or exact Pokémon spawn locations. Areas awaiting verification remain in the directory.');legend.dataset.areaLegend='';
+  const legend=make('p','aa-legend','Purple outline: named sector · Blue outline: Wild Zone · Shaded area: current selection. Areas can overlap at different heights. These outlines do not show walking routes or exact Pokémon spawn locations. Areas awaiting verification remain in the directory.');legend.dataset.areaLegend='';
   const grids=make('div','aa-result-grid');
   const areaColumn=make('section'),speciesColumn=make('section');areaColumn.append(make('h4','','Matching areas'));speciesColumn.append(make('h4','','Pokémon'));
   const areaResults=make('div','aa-results'),speciesResults=make('div','aa-results');areaResults.dataset.areaResults='';speciesResults.dataset.speciesResults='';
@@ -98,9 +98,22 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
       const species=speciesById.get(selection.speciesId),sourceOnly=!['all','recorded','ordinary','fixed_alpha','rotating_alpha'].includes(selection.encounterClass);detail.append(make('h4','',species.name+(sourceOnly?' · source claims':' · recorded wild habitats')),make('p','',result.areas.length+' matching area records. '+(sourceOnly?'These source claims do not establish a repeatable wild habitat.':'A recorded habitat is not proof of a permanent spawn or of a measured boundary.')));
       if(!result.areas.length)detail.append(make('p','','No supported wild habitat matches these filters. Disputed, gift, trade, mission and boss claims do not establish a repeatable wild habitat.'));
     }else if(selection.areaId){
-      const area=byId.get(selection.areaId);detail.append(make('h4','',area.name),make('p','',area.geometry.eligible?'This outline follows the green zone shown on the original game map. It does not show a walking route or the exact places where Pokémon appear.':'This area’s outline is awaiting verification. Use its saved map centre and original photographs for orientation.'));
+      const area=byId.get(selection.areaId);
+      const outlineText=!area.geometry.eligible?'This area’s outline is awaiting verification. Use its saved map centre and original photographs for orientation.':area.geometry.representation==='source_area_footprint'?'This outline projects the game’s named sector area onto the map. Sectors can overlap at different heights, which can affect the in-game area name. It does not mark walls, walking routes or exact Pokémon spawn locations.':'This outline follows the green zone shown on the original game map. It does not show a walking route or the exact places where Pokémon appear.';
+      detail.append(make('h4','',area.name),make('p','',outlineText));
       detail.append(make('p','','The encounter roster is '+(area.rosterStatus==='unresolved'?'unresolved':'not comprehensive')+'. Missing conditions do not mean an encounter is available at all times.'));
       for(const note of area.notes)detail.append(make('p','aa-evidence-note',note));
+      if(area.relatedAreas.length){
+        const related=make('section','aa-related-areas');related.dataset.relatedAreas='';
+        related.append(make('h4','','Overlapping Wild Zone records'));
+        for(const record of area.relatedAreas){
+          const target=byId.get(record.areaId);if(!target)continue;
+          related.append(make('p','',record.note));
+          const jump=make('button','','Open '+target.name+' encounters and photographs');jump.type='button';jump.dataset.relatedArea=target.id;
+          jump.addEventListener('click',()=>selectArea(target.id,{focus:true}));related.append(jump);
+        }
+        detail.append(related);
+      }
       const original=safeAreaSourceHref(area.link);if(original)detail.append(link(original,'Open original area guide and photographs'));
       if(area.photos.length){
         const photos=make('div','aa-photo-links');
@@ -177,7 +190,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
       const matrix=svg.getScreenCTM();if(!matrix)return;const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const native=p.matrixTransform(matrix.inverse());
       const hits=approved.filter(a=>visibleBoundaryIds.has(a.id)&&containsPoint(a.geometry.geometry,[native.x,native.y]));
       if(hits.length===1)selectArea(hits[0].id,{focus:true});
-      else if(hits.length>1){drawer.open=true;detail.replaceChildren(make('h4','','Overlapping recorded areas'));for(const area of hits){const button=make('button','',area.name);button.type='button';button.dataset.areaOverlapId=area.id;button.addEventListener('click',()=>selectArea(area.id,{focus:true}));detail.append(button);}detail.focus({preventScroll:true});}
+      else if(hits.length>1){drawer.open=true;detail.replaceChildren(make('h4','','Overlapping recorded areas'),make('p','','Choose the area to explore. Sector heights and Wild Zone layers can overlap on this map.'));for(const area of hits){const button=make('button','',area.name);button.type='button';button.dataset.areaOverlapId=area.id;button.addEventListener('click',()=>selectArea(area.id,{focus:true}));detail.append(button);}detail.focus({preventScroll:true});detail.scrollIntoView({block:'nearest',behavior:'smooth'});}
     });
   }
   if(selection.areaId||selection.speciesId)drawer.open=true;render();

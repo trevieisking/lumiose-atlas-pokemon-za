@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-26T13:13:06.904310+00:00",
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "pr": 204,
+  "head": "b788abb87ef32cb210747da420d95780c4a22583",
+  "tree": "5fb953d1b54bd66ab81f19334ed7b4d14d910e61",
+  "status": "PASS_BOUNDED_BROWSER_AND_VISUAL_REVIEW",
+  "scope": "Exact-head GitHub Actions artifacts and bounded visual preservation review; no runtime changes or promotion mutation",
+  "workflowRuns": {
+    "map": 45825211129,
+    "recoveredAndFashion": 45825211083,
+    "headerFeedback": 45825211206
+  },
+  "verifiedJobs": {
+    "atlasUnit": {
+      "id": 139927488205,
+      "conclusion": "success"
+    },
+    "sharedAreaStep": {
+      "jobId": 139927489196,
+      "step": 6,
+      "conclusion": "success"
+    },
+    "fashionBrowser": {
+      "id": 139927487748,
+      "conclusion": "success"
+    },
+    "recoveredArticles": {
+      "id": 139927488159,
+      "conclusion": "success"
+    },
+    "atlasBrowser": {
+      "id": 139927489196,
+      "conclusion": "success",
+      "sharedAreaStep": 6,
+      "originalExplorerStep": 7,
+      "collectiblesStep": 8,
+      "allTwentyPhotoPanelsStep": 9,
+      "artifactUploadStep": 10
+    },
+    "headerFeedback": {
+      "id": 139927488531,
+      "conclusion": "success",
+      "workflowRun": 45825211206
+    }
+  },
+  "artifacts": [
+    {
+      "id": 15120351344,
+      "name": "fashion-phone-desktop-preview",
+      "runId": 45825211083,
+      "head": "b788abb87ef32cb210747da420d95780c4a22583",
+      "sha256": "051e73ca9fa36a3f94eeb2a13ce1990b5277284b0eb6ec2822572cf9fed16d5d",
+      "downloadHashVerified": true,
+      "fileCount": 6,
+      "zipPath": "downloads/fashion-b788abb8.zip"
+    },
+    {
+      "id": 15120521984,
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "runId": 45825211129,
+      "head": "b788abb87ef32cb210747da420d95780c4a22583",
+      "sha256": "e44f07395152aad98bbb86f768538c89debe1ecde05696cabab59adf8cf89a16",
+      "downloadHashVerified": true,
+      "fileCount": 239,
+      "zipPath": "downloads/map-b788abb8.zip"
+    }
+  ],
+  "visualReviews": [
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "clothing-guide-desktop.png",
+      "retainedPath": "reviewed/fashion/clothing-guide-desktop.png",
+      "sha256": "30a71ee583bac5085151e9ba23b152802422334e5e239e65fc7a2e4a54834ef9",
+      "view": "full captured screenshot",
+      "finding": "Retained guide header, navigation, typography and responsive layout are readable in the captured viewport."
+    },
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "clothing-guide-phone.png",
+      "retainedPath": "reviewed/fashion/clothing-guide-phone.png",
+      "sha256": "d44e9f6cfbef401977ec0d636651425cbcc31ec1099d96a3d5742b6afd2df3af",
+      "view": "full captured screenshot",
+      "finding": "Retained guide header, navigation, typography and responsive layout are readable in the captured viewport."
+    },
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "hair-beauty-guide-desktop.png",
+      "retainedPath": "reviewed/fashion/hair-beauty-guide-desktop.png",
+      "sha256": "d068791ad91a25bf9cc24d4056b9622972bd5d4714d37c68db00ca87b449a04e",
+      "view": "full captured screenshot",
+      "finding": "Retained guide header, navigation, typography and responsive layout are readable in the captured viewport."
+    },
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "hair-beauty-guide-phone.png",
+      "retainedPath": "reviewed/fashion/hair-beauty-guide-phone.png",
+      "sha256": "61aee3a6fe4a2035c59b3b265a255e36c99e49296baf52d4a6ac4a59b9c013b8",
+      "view": "full captured screenshot",
+      "finding": "Retained guide header, navigation, typography and responsive layout are readable in the captured viewport."
+    },
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "mission-008-desktop.png",
+      "retainedPath": "reviewed/fashion/mission-008-desktop.png",
+      "sha256": "9bf4b276a2afd6470751b6d2284f7475efb281f1cc92d5b2b26bd6126b5a19da",
+      "view": "full captured screenshot",
+      "finding": "No blocking layout defect observed. Mission008 includes readable corrected giver, instructions, reward and local guide/map navigation."
+    },
+    {
+      "artifact": "fashion-phone-desktop-preview",
+      "sourcePath": "mission-008-phone.png",
+      "retainedPath": "reviewed/fashion/mission-008-phone.png",
+      "sha256": "35b0010892382921d9ea5af875fa36101e7ae13a26b130161874c61c4e9634c4",
+      "view": "full captured screenshot",
+      "finding": "No blocking layout defect observed. Mission008 includes readable corrected giver, instructions, reward and local guide/map navigation."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-measured-selected-wz04-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-measured-selected-wz04-phone.png",
+      "sha256": "1749162f8a6adfda26c4f1af9c655ccc3a3621617f0fb98ee165ec0c9ae72a51",
+      "view": "full captured screenshot",
+      "finding": "Correct numbered selected zone is visible with its approved outline on the original map. Source landmarks, other original zone markers and compass remain visible."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-measured-selected-wz04-desktop.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-measured-selected-wz04-desktop.png",
+      "sha256": "f763eaefdb56110b704532f40024318a93e4d1b8a66ace616f636cad8957c22c",
+      "view": "full captured screenshot",
+      "finding": "Correct numbered selected zone is visible with its approved outline on the original map. Source landmarks, other original zone markers and compass remain visible."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-measured-selected-wz20-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-measured-selected-wz20-phone.png",
+      "sha256": "0db97d194412fec719fe5c73780692a4c9dae2b8aa24c37dda1776d58b938038",
+      "view": "full captured screenshot",
+      "finding": "Correct numbered selected zone is visible with its approved outline on the original map. Source landmarks, other original zone markers and compass remain visible."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-measured-selected-wz20-desktop.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-measured-selected-wz20-desktop.png",
+      "sha256": "15e70cbc10bda5e56a9bd756df5e84249c2d6806bd41526a7c5360a236202c2b",
+      "view": "full captured screenshot",
+      "finding": "Correct numbered selected zone is visible with its approved outline on the original map. Source landmarks, other original zone markers and compass remain visible."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-approved-wz04-photos-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-approved-wz04-photos-phone.png",
+      "sha256": "07208a903696b8d9984c122509d2dfe2efc6ef9de806491b3298717c687e085b",
+      "view": "full captured screenshot",
+      "finding": "Both original overview and close-up photographs render with readable captions and full-size link prompts."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-approved-wz04-photos-desktop.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-approved-wz04-photos-desktop.png",
+      "sha256": "40417f5eb0c9323f0553f125ab2708c020e2a16f491cbd89d1c2f3b38a09c2e9",
+      "view": "full captured screenshot",
+      "finding": "Both original overview and close-up photographs render with readable captions and full-size link prompts."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-approved-wz20-photos-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-approved-wz20-photos-phone.png",
+      "sha256": "7e2f76a7f0b6294b4454b539ece267391550fd301c06c02c9ea87d022645bce4",
+      "view": "full captured screenshot",
+      "finding": "Both original overview and close-up photographs render with readable captions and full-size link prompts."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-approved-wz20-photos-desktop.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-approved-wz20-photos-desktop.png",
+      "sha256": "09162b39c92ecbf040d725132cbd0d1b7b97274d4b4a08f3b61d0b5bf0f9b7d1",
+      "view": "full captured screenshot",
+      "finding": "Both original overview and close-up photographs render with readable captions and full-size link prompts."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-explorer-controls-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-explorer-controls-phone.png",
+      "sha256": "c59038d2d708acbcbb17f8a49c00a67f67cf4bd9c42f99aece77c4e080677932",
+      "view": "full captured screenshot",
+      "finding": "Area search, district and encounter-class controls are visible and readable. Actual browser actions and global no-overflow assertions passed."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-main-controls-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-main-controls-phone.png",
+      "sha256": "2b86a4dcbd6c7b617ca5cf7fe1c8fe396393fe1edcbfeca5e96ab13d45abfb1c",
+      "view": "full captured screenshot",
+      "finding": "Area search, district and encounter-class controls are visible and readable. Actual browser actions and global no-overflow assertions passed."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-standalone-controls-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-standalone-controls-phone.png",
+      "sha256": "e63f0540d12338d18bc96f3762a679427f17ebb3f8f091a4a1d7f132ae44a982",
+      "view": "full captured screenshot",
+      "finding": "Area search, district and encounter-class controls are visible and readable. Actual browser actions and global no-overflow assertions passed."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-sectors-controls-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-sectors-controls-phone.png",
+      "sha256": "cec6c711b74d08bf772c67ecb3d3a5c5b97440e3daaf7de951cdba2a22c2d15d",
+      "view": "full captured screenshot",
+      "finding": "Area search, district and encounter-class controls are visible and readable. Actual browser actions and global no-overflow assertions passed."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-explorer-habitats-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-explorer-habitats-phone.png",
+      "sha256": "1126a066a0ec08bf32cca87c8d819ae3022788a334d03e430958a09e456438d4",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-explorer-habitats-desktop.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-explorer-habitats-desktop.png",
+      "sha256": "6c5bc5acc6e8f4ff5c12c368204dbdd7a23341fbebbbc6106758236edf3f54e4",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-main-habitats-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-main-habitats-phone.png",
+      "sha256": "b9fd4dd9db63010765d054d59b173d0c8346c6454cc8e341a12413bd341e029a",
+      "view": "full captured screenshot",
+      "finding": "Habitat controls and result content render. A sticky main-site navigation band overlaps part of this taller-than-viewport element capture; working control access is established by the passing browser clicks and separate controls screenshot."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-standalone-habitats-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-standalone-habitats-phone.png",
+      "sha256": "9a3fd9767c8fa9efaf0f6ddeec8b8af7403929be9fb10a2f92fbdb0ff7c2ff19",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-areas/at339-sectors-habitats-phone.png",
+      "retainedPath": "reviewed/map/atlas-areas/at339-sectors-habitats-phone.png",
+      "sha256": "b19ddb69b5d16efcaa4807fda44a5b9c1a81bbd3e490a8bdd642a3c3a6e1ec64",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/place-layer-recovery-phone.png",
+      "retainedPath": "reviewed/map/atlas-explorer/place-layer-recovery-phone.png",
+      "sha256": "f94e242c03dcecec255b9cdfe8ba9c9dcb56a44a3ae94aed56acd35649983eae",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/place-layer-recovery-desktop.png",
+      "retainedPath": "reviewed/map/atlas-explorer/place-layer-recovery-desktop.png",
+      "sha256": "b69f9fa7346c42fedb883ff6a391f78e43626de4b38711a5d3704f6042dfa063",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/place-photo-details-phone.png",
+      "retainedPath": "reviewed/map/atlas-explorer/place-photo-details-phone.png",
+      "sha256": "41fe8c9cbe5e098c7d7e4d5f28241690c71a360643825fe3c8ec439fbebf16d7",
+      "view": "full captured screenshot",
+      "finding": "The photo/details control brings the retained selected sector heading into view. This viewport screenshot does not show the full photograph; photo-node preservation is supported separately by the passing browser assertions and source-photo screenshot."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/place-photo-details-desktop.png",
+      "retainedPath": "reviewed/map/atlas-explorer/place-photo-details-desktop.png",
+      "sha256": "34575a1014776a5a531b0c53c2283880ca0349920cba0331988dd94df2d6252c",
+      "view": "full captured screenshot",
+      "finding": "The photo/details control brings the retained selected sector heading into view. This viewport screenshot does not show the full photograph; photo-node preservation is supported separately by the passing browser assertions and source-photo screenshot."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/at311-jaune-5-explorer-photo-and-links-phone.png",
+      "retainedPath": "reviewed/map/atlas-explorer/at311-jaune-5-explorer-photo-and-links-phone.png",
+      "sha256": "691aba89799744425aa10dbf4962061223c0c810720a4f44cf481e6fdc707824",
+      "view": "full captured screenshot",
+      "finding": "No blocking visual regression observed in the captured controls, content or map."
+    },
+    {
+      "artifact": "atlas-explorer-mobile-desktop-preview",
+      "sourcePath": "atlas-explorer/atlas-mobile.png",
+      "retainedPath": "reviewed/map/atlas-explorer/atlas-mobile.png",
+      "sha256": "cfba9d4777a3c846d7ca688d4dcf071b99108d7bac6031c8d0f8c8fe3ebac241",
+      "view": {
+        "kind": "analysis crop from retained full original",
+        "bounds": {
+          "left": 0,
+          "top": 860,
+          "right": 390,
+          "bottom": 2030
+        },
+        "derivative": "phone-controls-analysis-crop.png"
+      },
+      "finding": "Phone camera mode, zoom, rotation, North, Reset, layer controls, filter recovery actions and compass render legibly. Disabled Scaffolding label has a cosmetic mid-word wrap."
+    }
+  ],
+  "limitations": [
+    "Manual inspection covered29 screenshot views, not all245 extracted artifact files. One retained full phone screenshot was inspected through the explicitly recorded analysis crop.",
+    "The main-page tall habitat element screenshot contains its sticky navigation band at the captured scroll offset. It is not a clean standalone panel capture; separate control screenshots and successful browser interactions provide additional evidence.",
+    "The View photos and details viewport captures show the selected heading, while the full photo falls below the viewport. The exact photo DOM retention checks passed; original source photographs are visible in the dedicated photo screenshots.",
+    "These are Chromium CI phone/desktop viewport and native touch simulations, not new physical-device or private-cloud-browser sessions.",
+    "Geometry/source factual approval and encounter-guide research were performed by their assigned reviewers. This review checks the exact approved runtime rendering and preservation behavior, and does not expand those evidence scopes.",
+    "Synthetic fixture fields describe isolated gesture/collection test data. The new production zone render entries explicitly say synthetic:false; no fixture has been promoted to production.",
+    "Head/main freshness, merging, deployment and live verification remain the parent release owner's responsibility."
+  ],
+  "ciReceiptPath": "ci-receipts.json",
+  "machineReceipts": [
+    {
+      "path": "reviewed/map/atlas-areas/at339-browser-proof.json",
+      "sha256": "bdd8cd6fa51302eebed31c38bed80551a347406e87372bd0e92d4344f933ab15"
+    },
+    {
+      "path": "reviewed/map/atlas-collectibles/at338-browser-proof.json",
+      "sha256": "80ef5ef2f00155f14328530ab5d664d8e756049feb23d09e680def2bf91d5790"
+    }
+  ],
+  "inspectedScreenshotCount": 29,
+  "blockingFindings": [],
+  "cosmeticObservations": [
+    {
+      "subject": "Phone disabled Scaffolding label",
+      "observation": "The label wraps between Scaffoldin and g at the captured phone width. It remains correctly disabled with its no-verified-pins explanation, and the browser asserts no page overflow.",
+      "severity": "nonblocking"
+    },
+    {
+      "subject": "Explorer shared search field alignment",
+      "observation": "The field reaches the panel right edge instead of sharing the select controls' inset. The same alignment is present in the earlier reviewed d1d artifact. Search interaction passes and no page overflow is reported.",
+      "severity": "nonblocking"
+    }
+  ],
+  "conclusions": [
+    "All three workflows associated with this exact head completed successfully: map, recovered article/fashion and header feedback.",
+    "Both map and fashion ZIPs match their GitHub SHA256 digests; 245 artifact files were extracted, and 29 actual screenshot PNGs are retained with individual hashes.",
+    "Production WZ04 and WZ20 render on phone and desktop with correct selected IDs, sole active path, original map, native geometry bounds, enabled original controls and both decoded full-size-linked source photographs.",
+    "Four shared map surfaces retain history/reload, pending legacy selection, route and collectible state, original photo DOM and exact original progress bytes; no storage writes or uncaught page errors were reported.",
+    "Native phone touch used unobstructed starts (55,232) and (283,232), retained control clearance and passed independent zoom and rotation assertions. Desktop gesture and original Explorer checks also passed.",
+    "The collectible proof retains all 47 original major marker nodes on both devices; its 364 dense records are isolated test fixtures, and productionPins remains 0. Invalid-coordinate and unavailable-register checks passed.",
+    "Mission008 renders the corrected Branche instructions, waterway/tunnel/north-ladder route, complete reward, mission-reward qualification, read-only progress and local guide/map links on phone and desktop.",
+    "No blocking visual regression was found in the inspected sample. This supports the bounded candidate release assessment; it does not certify the entire master plan or a live deployment."
+  ]
+}

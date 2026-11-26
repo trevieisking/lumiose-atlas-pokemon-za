@@ -1,0 +1,37 @@
+{
+  "first_successful_metadata_sha256": "b709c83e879bf5f470c2866561a40d6c72623adb3e755e36600be02aa1e1814e",
+  "current_source_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+  "first_contour_sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c",
+  "attempts": [
+    {
+      "stage": "Initial raw map_zone_pane schema probe",
+      "outcome": "Asserted when field1 was tentatively read as a string; no identity map or contour output was produced.",
+      "resolution": "Original vtable/field inspection showed field1 uint32 visible ID, field2 pane string."
+    },
+    {
+      "stage": "Second schema probe",
+      "outcome": "Omitted integer default was not handled for battle-only rows; no candidate output produced.",
+      "resolution": "FlatBuffer omitted field1 reads default0. All20 wild IDs are nonzero and match raw English labels;12 battle rows excluded."
+    },
+    {
+      "stage": "First successful original placement",
+      "outcome": "Retained by hash; all20 explicit pane/ordinary texture joins established.",
+      "resolution": "Later added directly joined P_zone_04 glow records and formal pixel-center correction. These were determined from original metadata before native validation."
+    },
+    {
+      "stage": "Pixel convention",
+      "outcome": "Integer pixel centers mapped by offset+scale*index+(scale-1)/2.",
+      "resolution": "19 unit-scale corrections are zero; WZ13 x is -0.0135135135135135 source map pixels. WZ13 is not promoted from this source."
+    },
+    {
+      "stage": "First fixed contour candidate",
+      "outcome": "All20 valid source rings;43 reserved new-zone checks pass without any contour, threshold, simplification, transform or target tuning.",
+      "resolution": "Only11 missing outlines are candidates for additive promotion; all9 existing photo-approved outlines preserved."
+    },
+    {
+      "stage": "Independent source art discrepancy",
+      "outcome": "Original WZ13 glow east ridge differs from original ordinary stroke by about7.5 source pixels at rows100/120; native photo comparison maximum5.619 px retained.",
+      "resolution": "No WZ13 replacement; no universal equivalence of glow and ordinary source art is claimed. Full source perimeter review is required separately for every proposed new outline."
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "id": "AT341-WZ13-WZ14-CONTINUATION",
+  "date": "2026-11-26",
+  "scope": "Two additional independently reviewed rendered selection outlines; prior six-outline and WZ20 receipts retained byte-for-byte.",
+  "previous_packets": [
+    {
+      "path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "sha256": "e1af71628fe84b53d14ccb424ebcf8f5b194f34895ebab1a52d3b807f89e434b"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+      "sha256": "68a9819c650b94be51e439b33d9bec931a4b71d01b442cc05d856e0caf9d84ad"
+    }
+  ],
+  "approved": [
+    {
+      "evidence_id": "WZ13-SELECTION-REVIEW-2026-11-26",
+      "area_id": "wz-13",
+      "registration": {
+        "overview_to_native_matrix": [
+          [
+            0.6332610155676127,
+            -0.040948403590483476,
+            406.0448307642212
+          ],
+          [
+            0.007314859915827682,
+            0.587879640060047,
+            -104.42357288343858
+          ],
+          [
+            5.3385271072677845e-05,
+            -4.649119610518233e-05,
+            1
+          ]
+        ],
+        "closeup_to_overview_matrix": [
+          [
+            0.3031100606372322,
+            0.0139151083655914,
+            404.868207967312
+          ],
+          [
+            -0.013801632146529092,
+            0.2749226049440693,
+            307.20154247822956
+          ],
+          [
+            2.6404506744555e-05,
+            -2.792762431857425e-05,
+            1
+          ]
+        ],
+        "composed_closeup_to_native_matrix": [
+          [
+            0.2017551184948421,
+            -0.013685275479162984,
+            645.1227391052001
+          ],
+          [
+            -0.008590757848165495,
+            0.16344116825355814,
+            78.55952830641667
+          ],
+          [
+            4.2913141941246585e-05,
+            -3.9675350229177e-05,
+            1
+          ]
+        ],
+        "first_fit_matrices_unchanged": true,
+        "controls_per_stage": {
+          "overview_to_native": 7,
+          "closeup_to_overview": 7
+        },
+        "holdout_accounting": "Seven direct native checks; stage-specific checks reported separately, not added as independent samples.",
+        "metrics": {
+          "overview": {
+            "fit": {
+              "count": 7,
+              "rms_px": 0.7534704059542344,
+              "max_px": 1.1567136030400738
+            },
+            "architecture_holdout": {
+              "count": 5,
+              "rms_px": 1.697718808211314,
+              "max_px": 2.597399475223745
+            },
+            "border_holdout": {
+              "count": 3,
+              "rms_px": 1.8241692110114598,
+              "max_px": 2.5977502904996608
+            }
+          },
+          "closeup": {
+            "fit": {
+              "count": 7,
+              "rms_px": 0.5442196676615242,
+              "max_px": 0.9419484295640175
+            },
+            "architecture_holdout": {
+              "count": 4,
+              "rms_px": 1.056256441148203,
+              "max_px": 1.5791637165429309
+            },
+            "border_holdout": {
+              "count": 5,
+              "rms_px": 0.8016361283084523,
+              "max_px": 1.4786694566454703
+            }
+          },
+          "native": {
+            "architecture_holdout": {
+              "count": 4,
+              "rms_px": 1.286049013187847,
+              "max_px": 2.3723836957540465
+            },
+            "border_holdout": {
+              "count": 3,
+              "rms_px": 2.0438820954131343,
+              "max_px": 2.5260707519584686
+            }
+          }
+        },
+        "direct_native_combined": {
+          "count": 7,
+          "rms_px": 1.6539152818663307,
+          "max_px": 2.5260707519584686
+        },
+        "threshold_px": 3,
+        "declared_raster_digitization_tolerance_px": 3,
+        "original_fit_replay_max_vertex_difference_px": 7.75991130207635e-07,
+        "candidate_projection_difference_max_px": 1.1368683772161603e-13
+      },
+      "native_trace": {
+        "method": "Twenty-nine original closeup perimeter vertices through two frozen architecture registrations; three explicit display closures, including the qualified southeast corner.",
+        "accepted_display_connector_segments": [
+          {
+            "from_vertex": 20,
+            "to_vertex": 21,
+            "name": "northeast gate opening",
+            "selection_review_decision": "accepted_for_rendered_map_selection_only",
+            "selection_review_reason": "Joins the two visible northeast green-line approaches across the entrance icon. The approaches support a near-straight display closure; no continuous hidden physical line is asserted.",
+            "native_endpoint_distance_px": 26.083104458747542
+          },
+          {
+            "from_vertex": 22,
+            "to_vertex": 23,
+            "name": "southeast gate opening",
+            "selection_review_decision": "accepted_for_rendered_map_selection_only",
+            "selection_review_reason": "Joins the visible southeast vertical and lower green-line approaches across two entrance squares. The actual intervening corner is obscured. This short diagonal is an explicit display closure, not a newly observed hidden corner or a game-world boundary.",
+            "native_endpoint_distance_px": 16.905270981973633
+          },
+          {
+            "from_vertex": 27,
+            "to_vertex": 28,
+            "name": "western gate opening",
+            "selection_review_decision": "accepted_for_rendered_map_selection_only",
+            "selection_review_reason": "Joins the two visible western green-line approaches across the entrance icon; the filled square and arrow decorations are excluded. This is a display closure, not an accessible entrance or route claim.",
+            "native_endpoint_distance_px": 30.125818772834094
+          }
+        ],
+        "southeast_closure_sensitivity": {
+          "method": "Diagnostic intersection of the two visible straight approach strokes. Not an observed point, not adopted as a vertex, and not evidence of the hidden physical corner.",
+          "diagnostic_source_intersection": [
+            1220.0971639950678,
+            562.0411837237978
+          ],
+          "diagnostic_native_intersection": [
+            857.8070573856553,
+            155.2713323041966
+          ],
+          "distance_from_display_connector_px": 3.580706815411129,
+          "interpretation": "The approximately 3.58 px alternative-corner distance describes a display convention choice. It is not an observed registration error. The receipt does not claim the hidden southeast edge lies within the 3 px landmark tolerance."
+        }
+      },
+      "review": {
+        "date": "2026-11-26",
+        "reviewer": "geometry_evidence_original_image_review_with_root_visual_crosscheck",
+        "review_panel_path": "docs/qa/candidates/wz13-2026-11-26/source-perimeter-review.png",
+        "review_panel_sha256": "56aa2bdec4530bcf17551d137bc5464c0c076b7c67ba8e42ace7f9a867320b10",
+        "supplementary_review_panel_path": "docs/qa/candidates/wz13-2026-11-26/registered-source-review.png",
+        "supplementary_review_panel_sha256": "0e7955f67f239db9621e8b2cfb0be222a48c85c0b8a11dca43c167fe915708bf",
+        "decision": "approved_for_rendered_map_selection_only",
+        "review_receipt_path": "docs/qa/candidates/wz13-2026-11-26/selection-review-receipt.json",
+        "review_receipt_sha256": "41a061b6b19042a23476e63bca41cb15e3e2af683919266be6be1bd988ddb269"
+      },
+      "source_paths": [
+        {
+          "path": "maps/lumiose-game-map.jpg",
+          "claim": "Native map identity and independently picked architecture/perimeter targets. Its central badge occlusion is supplied by the registered original closeup.",
+          "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+          "claim": "Owner overview supplies seven architectural fit controls, eight stage holdouts and independent visible-footprint corroboration. Badge/cursor and Travel Here overlays are excluded.",
+          "sha256": "24e0b104100e13da41aac51e0d62c665b48347267379fe4a69c257455d60d7bf"
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+          "claim": "Owner closeup supplies the curved perimeter and observed gate approaches, seven closeup-to-overview architecture controls, nine local holdouts and seven separately checked native targets.",
+          "sha256": "e71f8608394c45f61891b55a5c844335c5a90159f306019ec26700bcd006f7f1"
+        }
+      ],
+      "topology_and_source_check": {
+        "unique_vertex_count": 29,
+        "finite": true,
+        "in_native_bounds": true,
+        "self_intersections": [],
+        "area_native_px2": 10316.31662407214
+      },
+      "candidate_geometry_path": "docs/qa/candidates/wz13-2026-11-26/perimeter-candidate.json",
+      "candidate_geometry_sha256": "d93b9d5c23245528381829e6960aa0398d6eb57ad5a2ffa4f74fb83550a6e1da",
+      "production_geometry_sha256": "24e5fd7afc1d2d9fd4fdeacb40192ff89885b9312b766e7aa6f0c37132fd4a2a",
+      "retained_failed_trials": true
+    },
+    {
+      "evidence_id": "WZ14-SELECTION-REVIEW-2026-11-26",
+      "area_id": "wz-14",
+      "registration": {
+        "source_to_native_matrix": [
+          [
+            0.2709363485320655,
+            0.013078977301195116,
+            23.632379557801816
+          ],
+          [
+            0.0123013097541169,
+            0.24478843521404833,
+            714.7104378247498
+          ],
+          [
+            3.614451318684262e-05,
+            -2.3462631057798556e-05,
+            1.0
+          ]
+        ],
+        "original_matrix_unchanged": true,
+        "metrics": {
+          "fit": {
+            "count": 7,
+            "rms_px": 0.7730004579383017,
+            "max_px": 1.1270685397878304
+          },
+          "architecture_holdout": {
+            "count": 5,
+            "rms_px": 1.6941239438476103,
+            "max_px": 2.4581163528237666
+          },
+          "border_holdout": {
+            "count": 4,
+            "rms_px": 1.2873319013863098,
+            "max_px": 1.7495373208983926
+          }
+        },
+        "combined_holdouts": {
+          "count": 9,
+          "rms_px": 1.526767587017184,
+          "max_px": 2.4581163528237666
+        },
+        "threshold_px": 3,
+        "declared_raster_digitization_tolerance_px": 3,
+        "original_fit_replay_max_vertex_difference_px": 0.0,
+        "candidate_projection_difference_max_px": 0.0
+      },
+      "native_trace": {
+        "method": "Twenty original closeup perimeter vertices through the unchanged architecture registration; one explicit northern gate display closure.",
+        "accepted_display_connector_segments": [
+          {
+            "from_vertex": 1,
+            "to_vertex": 2,
+            "name": "north gate opening",
+            "reason": "Straight display closure between observed approaches on either side of the two filled squares; decorations excluded; not an observed continuous physical line.",
+            "selection_review_decision": "accepted_for_rendered_map_selection_only",
+            "selection_review_reason": "The original closeup and overview expose both northern green-line approaches. Their short straight connection closes the rendered footprint across the entrance squares. Squares/arrows do not define geometry, and no continuous hidden physical boundary or traversable entrance is claimed.",
+            "native_endpoint_distance_px": 36.45655298562466
+          }
+        ],
+        "reviewed_cursor_occlusions": [
+          {
+            "from_vertex": 5,
+            "to_vertex": 6,
+            "reason": "Small northern red ring covers an otherwise straight green edge. Original overview shows this corresponding edge without the same cursor; visible closeup approaches and internal line agree."
+          },
+          {
+            "from_vertex": 7,
+            "to_vertex": 8,
+            "reason": "Small southern red ring covers a short portion of the same green edge. Overview exposes the corresponding line; its badge/cursor is farther south and is not used as an edge."
+          }
+        ]
+      },
+      "review": {
+        "date": "2026-11-26",
+        "reviewer": "geometry_evidence_original_image_review_with_root_visual_crosscheck",
+        "review_panel_path": "docs/qa/candidates/wz14-2026-11-26/source-perimeter-review.png",
+        "review_panel_sha256": "2d59343353b1e8b3ebd64b758836c9f333c403f5e36cb52e1a27ba315d78c80d",
+        "supplementary_review_panel_path": "docs/qa/candidates/wz14-2026-11-26/h2-matching-source-pair.png",
+        "supplementary_review_panel_sha256": "404e45bb6e6e38f9cbf787142c58b8d4a8829b420717ed39a4ac6f41c245102a",
+        "decision": "approved_for_rendered_map_selection_only",
+        "review_receipt_path": "docs/qa/candidates/wz14-2026-11-26/selection-review-receipt.json",
+        "review_receipt_sha256": "dbf58896362f821cc79c1396c06aacfe82c0377a1782f4a6233a86ce25ec1d3f"
+      },
+      "source_paths": [
+        {
+          "path": "maps/lumiose-game-map.jpg",
+          "claim": "Native map identity and independently selected architecture/perimeter targets. Large badge occlusions are supplied by original owner images.",
+          "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-closeup.png",
+          "claim": "Original owner closeup supplies seven architecture controls, nine heldout checks, west-curve samples and visible perimeter/gate approaches. Badge and cursor decorations are excluded.",
+          "sha256": "325b67133a926c57c0ff7416002a51444c468d752222da06232accda84ecf579"
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+          "claim": "Original owner overview corroborates zone identity, north/west footprint and the eastern line partly crossed by the closeup cursor. Its own badge/Travel Here overlays are excluded; it is not fitted calibration.",
+          "sha256": "771712e2edcf21f53115d6e280c09b894a358911cf6e49ac69896935075ba854"
+        }
+      ],
+      "topology_and_source_check": {
+        "unique_vertex_count": 20,
+        "finite": true,
+        "in_native_bounds": true,
+        "self_intersections": [],
+        "area_native_px2": 16343.15443263646
+      },
+      "candidate_geometry_path": "docs/qa/candidates/wz14-2026-11-26/perimeter-candidate.json",
+      "candidate_geometry_sha256": "0ad8376cb383c707eb18b42707e13709aa1ce6352df491749e1e42095741e24e",
+      "production_geometry_sha256": "d91c373d747fdfc16bca8100348b7cd5dc6c9e262ef03dd4bff2c7f8de81ca1a",
+      "retained_failed_trials": true,
+      "root_replay": {
+        "result": "pass",
+        "receipt_sha256": "dbf58896362f821cc79c1396c06aacfe82c0377a1782f4a6233a86ce25ec1d3f",
+        "record_sha256": "a933bf454b9e38a51168b5b59a078a6b36653a4949fd9b49665e15a0a50ff93f",
+        "vertex_difference_px": 0.0,
+        "output_bytes_unchanged": true
+      }
+    }
+  ],
+  "full_scope_signoff": false
+}
