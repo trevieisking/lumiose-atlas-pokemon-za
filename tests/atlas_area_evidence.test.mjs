@@ -11,6 +11,7 @@ const evidence=json('atlas-area-evidence.json');
 const reviewed=json('docs/qa/at339-encounters/atlas-area-evidence.json');
 const amendmentPath='docs/qa/encounter-review-2026-11-26/amendments.json';
 const amendments=json(amendmentPath);
+const wz09=json('docs/qa/encounter-review-2026-11-26/wz09-meowstic-followup.json');
 const originalReviewed=json(amendments.original_packet);
 const observations=json('docs/qa/at339-encounters/owner-survey-observations.json').observations;
 const model=buildAreaModel({atlas:json('atlas-explorer-data.json'),rosters:wildZoneRecords,evidence});
@@ -53,6 +54,12 @@ test('the integrated register retains every reviewed area and additive claim wit
         assert.equal(patch.row.id,patch.encounter_id);
         target.encounters.push(structuredClone(patch.row));
       }
+    }
+    for(const patch of wz09.patches) {
+      const row=expected.find(area=>area.area_id===wz09.area_id).encounters.find(row=>row.id===patch.id);
+      assert.equal(row.evidence_status,'source_lead');
+      assert.deepEqual(Object.keys(patch.set).sort(),['condition','evidence_status','notes','sources']);
+      Object.assign(row,structuredClone(patch.set));
     }
     assert.deepEqual(evidence.areas,expected,'Both historical and current reviewed packets reconstruct the merged runtime');
   }
@@ -218,7 +225,7 @@ test('actual mission, gift, boss and unresolved Alpha claims stay separate from 
 });
 
 test('every real source lead remains visible as research without silently authorizing a habitat',()=>{
-  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,112);
+  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,110);
   for(const row of leads){
     assert.equal(isRecordedHabitat(row),false,row.id);
     const result=selectAreaResults(model,{speciesId:row.speciesId});
@@ -270,7 +277,7 @@ test('five corroborated flower forms and the Fennekin gift retain separate evide
   assert.match(gift.condition.unlock,/Begin Main Mission 6.*Side Mission 008/);
   assert.match(gift.condition.notes.join(' '),/Branche.*level 14/);
   assert.equal(isRecordedHabitat(gift),false);
-  assert.equal(extra.filter(row=>row.evidenceStatus==='source_corroborated').length,24);
+  assert.equal(extra.filter(row=>row.evidenceStatus==='source_corroborated').length,26);
 });
 
 test('all 68 area review receipts distinguish performed source checks from comprehensive signoff',()=>{
@@ -282,11 +289,13 @@ test('all 68 area review receipts distinguish performed source checks from compr
   const counts=(rows,key)=>rows.reduce((result,row)=>{result[row[key]]=(result[row[key]]||0)+1;return result;},{});
   for(const receipt of review.areas){
     const runtime=evidence.areas.find(row=>row.area_id===receipt.area_id);
+    const reviewedRows=runtime.encounters.map(row=>wz09.patches.some(patch=>patch.id===row.id)
+      ? {...row,evidence_status:'source_lead'} : row);
     assert.equal(receipt.claim_count,runtime.encounters.length);
-    assert.deepEqual(receipt.evidence_status_counts,counts(runtime.encounters,'evidence_status'));
+    assert.deepEqual(receipt.evidence_status_counts,counts(reviewedRows,'evidence_status'));
     assert.deepEqual(receipt.encounter_class_counts,counts(runtime.encounters,'encounter_class'));
     for(const [key,status] of [['unresolved_source_claim_ids','source_lead'],['disputed_claim_ids','disputed']]){
-      assert.deepEqual(sorted(receipt[key]),sorted(runtime.encounters.filter(row=>row.evidence_status===status).map(row=>row.id)));
+      assert.deepEqual(sorted(receipt[key]),sorted(reviewedRows.filter(row=>row.evidence_status===status).map(row=>row.id)));
     }
     assert.equal(receipt.comprehensive_roster_signoff,false);
     assert.equal(receipt.review.record_coverage_review_performed,true);
@@ -348,4 +357,21 @@ test('the two sectors without sourced encounters retain explicit unknown coverag
   }
   assert.ok(area('wz-09').encounters.length>0&&area('wz-10').encounters.length>0,
     'Nearby zone records remain separate instead of being cloned into the empty sectors');
+});
+
+test('Wild Zone 9 shows two sourced fixed Alpha Meowstic forms at the same rooftop, without a new pin',()=>{
+  const selection=selectAreaResults(model,{areaId:'wz-09',speciesId:'meowstic',encounterClass:'fixed_alpha'});
+  for(const [form,time] of [['Female','day'],['Male','night']]){
+    const row=selection.encounters.find(row=>row.form===form);
+    assert.equal(row?.evidenceStatus,'source_corroborated');
+    assert.equal(row.condition.time,time+' (source-corroborated)');
+    assert.equal(row.condition.floor,'central rooftop (source-corroborated)');
+    assert.equal(row.condition.weather,null);
+    assert.match(row.condition.notes.join(' '),/41–42.*ladder/);
+    const original=wildZoneRecords.find(zone=>zone.number===9).fixedAlphas.find(row=>row.condition.includes(form));
+    assert.equal(original.name,'Meowstic');
+    assert.match(original.condition,/Central rooftop/);
+  }
+  assert.equal(selection.encounters.filter(preserved).length,2);
+  assert.equal(area('wz-09').geometry.eligible,false);
 });

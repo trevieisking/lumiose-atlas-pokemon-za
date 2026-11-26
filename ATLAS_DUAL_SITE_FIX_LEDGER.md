@@ -981,3 +981,7 @@ Owner recalls earlier large Workspace pins and wants assistant-led verification 
 ### AT-335 — Recovered item-coordinate comparison pilot (25 November 2026)
 
 AT-334 recovery merged; all 146 old ID/zone/name/XY/height tuples independently fingerprint-checked against actual v35/v37 archives. [Pilot](docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md) and [register](docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json): six fit pairs, five held-out, two excluded diagnostics; RMS 2.765/5.308 native px, held-out max 6.669px, leave-zone-out error up to 48.16px. Strong candidate map agreement but no independently verified physical calibration. WZ4 six raw 75.9 values contradict universal rooftop interpretation. #91 source marker 236385 is a promising match to old 8715 (2.691px); 8808 unresolved, 13 source Screw references total. No new canonical assignments, floor claims or native pins. Preserve AT-334 register, all 146 leads, 264/100 collection keys, 70 access leads, AT-333 design, original runtime and Workspace. Manifest revision 80; ledger revision 88. G1–G5 unchanged.
+
+### Wild Zone 9 fixed Alpha form follow-up
+
+[Source receipt](docs/qa/encounter-review-2026-11-26/wz09-meowstic-followup.json). Female by day and male at night, Lv. 41–42, on the same central rooftop. Both original encounter IDs remain; no map geometry, progress or original Workspace change. Pending candidate validation and exact release.

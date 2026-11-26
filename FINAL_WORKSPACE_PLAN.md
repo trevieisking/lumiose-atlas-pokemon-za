@@ -58,6 +58,8 @@ The latest unmerged PR204 source reconciles the actual PR202 main merge and incl
 
 Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. That source-intake packet did not approve production boundaries or pickup positions. AT-339 approved five map-selection outlines; the concurrent WZ04 supplemental review adds the sixth and AT-341 adds WZ20 as the seventh. Both WZ04 reviews remain preserved. Historical candidate snapshots remain preserved.
 
+Follow-up encounter evidence: [Wild Zone 9 fixed Alpha Meowstic](docs/qa/encounter-review-2026-11-26/wz09-meowstic-followup.json) corroborates female by day and male at night on the same central rooftop. Neither form adds a pin or closes the complete zone roster.
+
 ## Workspace handoff record
 
 | What carries forward | Where to find it |
