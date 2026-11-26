@@ -1,0 +1,43 @@
+{
+  "id": "AT342-COMBINED-FINAL-INTEGRATION",
+  "date": "2026-11-26",
+  "prior_remote_head": "377fb91e03f2fea64237f0de031995b26090f468",
+  "prior_remote_tree": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+  "reviewed_proposal_head": "52cbac5d25bd586b12009a3daa170df550a84a48",
+  "reviewed_proposal_tree": "89350f1777f05f55b5f6752d1a8fc8aeae35f706",
+  "integration_method": "Applied the 17 unique reviewed files only after matching each complete prior blob to the proposal base; retained root checkpoint, scroll receipt and runtime inventory. The 12px chooser CSS already matched.",
+  "problem": "The actual phone Rouge Sector 4 screenshot showed its northern outline under the existing selected-sector card.",
+  "correction": "Frame reviewed sector outlines between actual visible context/guidance rectangles with 12px clearance; keep existing zero-inset zone behavior, rotation, zoom/pan constraints and every source coordinate.",
+  "other_corrections": [
+    "Three remaining source-map descriptions",
+    "Strict two-card copy preservation amendment",
+    "Frozen UI outline replay in CI",
+    "Current source inventory and bounded Dratini-review pointers"
+  ],
+  "validation": {
+    "node_passed": 155,
+    "node_failed": 0,
+    "node_log": "docs/qa/at342-resume/combined-final-unit-tests.txt",
+    "static_passed": true,
+    "owner_crop_checks": 8,
+    "sector_replays_passed": true,
+    "frozen_ui_replay": {
+      "outlines": 11,
+      "vertices": 832,
+      "checks": 43,
+      "passed": true
+    },
+    "prior_framing_cases": 288,
+    "inset_rotation_cases": 960,
+    "independent_code_review": "No blocking defect; combined browser screenshots required"
+  },
+  "preservation": {
+    "tracked_images_unchanged_from_prior_candidate": 900,
+    "coordinates_encounters_items_unchanged": true,
+    "all_67_requirement_records_unchanged": true,
+    "existing_scroll_diagnostics_and_assertions_retained": true,
+    "workspace_or_runtime_supabase_changed": false
+  },
+  "release_status": "Awaiting exact combined-head CI, screenshots, expected-head merge, exact deployment and live verification",
+  "created_at": "2026-11-26T14:48:19.424624+00:00"
+}

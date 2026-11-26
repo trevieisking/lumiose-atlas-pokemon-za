@@ -1,0 +1,263 @@
+{
+  "id": "AT342-F030-MISC-GUIDE-VISUAL-REVIEW",
+  "reviewed_at_utc": "2026-11-26T14:56:32Z",
+  "recorded_at_utc": "2026-11-26T14:57:13.785481+00:00",
+  "reviewer": "audit_plan subagent",
+  "candidate_head": "f030c4ae3e33259105bf351885c386f6b53900d9",
+  "candidate_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+  "candidate_association": "Exact head/tree supplied by the release owner; this receipt hashes and visually inspects the six files in the supplied final artifact directory. It does not independently query GitHub.",
+  "scope": "Bounded visual review of six changed miscellaneous-guide PNGs for visible text readability, containment and new horizontal clipping; not whole-page content accuracy or complete guide acceptance.",
+  "method": "Manually viewed all six actual current PNGs, manually compared four prior renders, and read-only compared dimensions/pixel differences for all six prior counterparts.",
+  "overall_result": "pass_bounded_visual_scope",
+  "screenshots_reviewed": 6,
+  "blocking_visual_findings": [],
+  "screenshots": [
+    {
+      "filename": "at270-mission37-main-guide-phone.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at270-mission37-main-guide-phone.png",
+      "sha256": "68befc3f94168cbebfb99059b8bbaa493375c0bfe887c76f0b39c7acbaa45fcb",
+      "bytes": 86350,
+      "dimensions": [
+        390,
+        844
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Phone viewport of the expanded Mission 37 written route",
+      "observations": [
+        "Visible numbered route steps, bold lead-ins and paragraph lines remain readable and inside the route card.",
+        "No horizontal clipping of the visible guide text was observed; the lower continuation is ordinary viewport cropping.",
+        "The entire body below y=112 is pixel-identical to the prior screenshot; the changed pixels are in the header Share control."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at270-mission37-main-guide-phone.png",
+        "prior_sha256": "426663e8d4c993eb3a7b1a795f6f320ff42eb732f5cd7aea8076a0bba1e11c68",
+        "prior_dimensions": [
+          390,
+          844
+        ],
+        "same_dimensions": true,
+        "prior_render_manually_viewed": true,
+        "pixel_difference_bbox": [
+          217,
+          9,
+          264,
+          41
+        ],
+        "body_below_y112_pixel_identical": true,
+        "body_difference_bbox_relative_to_y112": null
+      }
+    },
+    {
+      "filename": "at277-filtered-mission3-phone.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at277-filtered-mission3-phone.png",
+      "sha256": "a815f4477f9c3eb97f6b8bbd8355505e37a782bbdfb370d300ba21c4b6864697",
+      "bytes": 98358,
+      "dimensions": [
+        390,
+        844
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Phone viewport showing Mission 03 header and expanded route",
+      "observations": [
+        "The Mission 03 title, checkbox, Close guide control, numbered steps and visible paragraphs are readable and contained.",
+        "A small vertical scroll/paint offset changes the rendered body relative to the prior screenshot; the text remains within the card with no new horizontal truncation.",
+        "Content partially outside the top/bottom viewport is a capture-position limitation, not proof that the full guide or filter behavior was audited."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at277-filtered-mission3-phone.png",
+        "prior_sha256": "88b1efe4cfa882404d59939b70bed8a68f9f6876f9f4df40842d7d43b962acbe",
+        "prior_dimensions": [
+          390,
+          844
+        ],
+        "same_dimensions": true,
+        "prior_render_manually_viewed": true,
+        "pixel_difference_bbox": [
+          2,
+          112,
+          388,
+          844
+        ],
+        "body_below_y112_pixel_identical": false,
+        "body_difference_bbox_relative_to_y112": [
+          2,
+          0,
+          388,
+          732
+        ]
+      }
+    },
+    {
+      "filename": "at277-filtered-quest22-desktop.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at277-filtered-quest22-desktop.png",
+      "sha256": "88e721d6cbf14c33b401d131bb394e3c3f2fe6d28db5db0ae3101f86bcc86486",
+      "bytes": 133856,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Desktop viewport of the two-column side-mission list, including #22 A Call from Mable",
+      "observations": [
+        "Both columns of numbered mission rows, checkboxes and Field notes controls are readable and remain inside the content area.",
+        "The fixed left navigation and visible list show no new overlap or horizontal clipping.",
+        "The body below y=112 is pixel-identical to the prior screenshot; differences are header Share text paint.",
+        "This screenshot displays the list including #22; its filename alone is not evidence that filtering semantics were verified."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at277-filtered-quest22-desktop.png",
+        "prior_sha256": "cb0f0d8601e6c745ce65267b29e4b7e0558bee6e5dfc6db67ba187f80e2a0f7f",
+        "prior_dimensions": [
+          1440,
+          900
+        ],
+        "same_dimensions": true,
+        "prior_render_manually_viewed": true,
+        "pixel_difference_bbox": [
+          1208,
+          26,
+          1253,
+          37
+        ],
+        "body_below_y112_pixel_identical": true,
+        "body_difference_bbox_relative_to_y112": null
+      }
+    },
+    {
+      "filename": "at326-zone20-records-phone.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at326-zone20-records-phone.png",
+      "sha256": "097195eed13bc91fe6e291913ae0b6c97a4280ee26930b0a727550ef027e9c9a",
+      "bytes": 4061,
+      "dimensions": [
+        359,
+        45
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Disclosure-summary element crop only; not a complete phone viewport",
+      "observations": [
+        "The complete label Read all 66 source-numbered item records and disclosure arrow are legible within the 359-pixel crop width.",
+        "The current crop is 359x45 pixels; the prior crop is 359x44. The one-pixel height difference does not cut off the visible label.",
+        "This establishes the summary-label rendering only; it does not establish all expanded records, the surrounding page layout or the accuracy of the count."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at326-zone20-records-phone.png",
+        "prior_sha256": "39e53dfa2eb3da3025dad492511a3f5945245f3738257baa0c5afe200d35d8cd",
+        "prior_dimensions": [
+          359,
+          44
+        ],
+        "same_dimensions": false,
+        "prior_render_manually_viewed": false
+      }
+    },
+    {
+      "filename": "phone-dlc-contained.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/phone-dlc-contained.png",
+      "sha256": "caf28d19c009877e1b3761516c52bc0707e578c18131f9c2910ec9a238ead7e2",
+      "bytes": 70964,
+      "dimensions": [
+        393,
+        852
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Phone viewport of the Mega Dimension page introduction and three visible step cards",
+      "observations": [
+        "The coverage notice, Beyond the city you know heading, introductory text and visible Make a donut / Survey the zone / Push the story cards fit within the page width.",
+        "Heading wrapping and body line lengths are readable; the visible card borders and padding remain contained.",
+        "The navigation strip shows a partial item at its left edge, consistent with the existing horizontally scrolling navigation; this is not a clipped body-content claim.",
+        "Pixel differences below the header are confined to a small left-edge portion of the coverage notice; the primary hero and step-card body remain unchanged."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/phone-dlc-contained.png",
+        "prior_sha256": "3d0db912d662343efa213ecd5c1978471c11c958d34d8f5688d853ccb7879061",
+        "prior_dimensions": [
+          393,
+          852
+        ],
+        "same_dimensions": true,
+        "prior_render_manually_viewed": false,
+        "pixel_difference_bbox": [
+          14,
+          9,
+          267,
+          177
+        ],
+        "body_below_y112_pixel_identical": false,
+        "body_difference_bbox_relative_to_y112": [
+          14,
+          14,
+          24,
+          65
+        ]
+      }
+    },
+    {
+      "filename": "phone-ranked-battles-contained.png",
+      "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/phone-ranked-battles-contained.png",
+      "sha256": "40685d7b51c1bfbba58f73213fcd4de135026826e22da518196cb903d8dd4c00",
+      "bytes": 79806,
+      "dimensions": [
+        393,
+        852
+      ],
+      "actual_render_manually_viewed": true,
+      "result": "pass_bounded_visual_scope",
+      "material_readability_regression_observed": false,
+      "horizontal_body_content_clipping_observed": false,
+      "scope": "Phone viewport of the Ranked Battles introduction, Online requirement card and start of step 01",
+      "observations": [
+        "The visible heading, description, requirement card and first step remain contained and legible at the captured size.",
+        "The pale/muted presentation is also present in the prior image; the whole body below y=112 is pixel-identical, with only header Share-control paint differences.",
+        "No new horizontal clipping is visible. This is not a measured contrast/WCAG assessment or a verification of the displayed season dates."
+      ],
+      "comparison": {
+        "prior_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/phone-ranked-battles-contained.png",
+        "prior_sha256": "43b634a2e1107645830c3dc476366c9df0b853ab672530ca007944345302d900",
+        "prior_dimensions": [
+          393,
+          852
+        ],
+        "same_dimensions": true,
+        "prior_render_manually_viewed": true,
+        "pixel_difference_bbox": [
+          220,
+          9,
+          267,
+          41
+        ],
+        "body_below_y112_pixel_identical": true,
+        "body_difference_bbox_relative_to_y112": null
+      }
+    }
+  ],
+  "limitations": [
+    "The Zone 20 image is only a disclosure-summary element crop, not a complete viewport.",
+    "Only visible screenshot content is assessed; full-page scrolling, interactive behavior, DOM overflow metrics and formal contrast/accessibility measurements were not performed in this review.",
+    "Partially visible navigation-strip items and content beyond top/bottom capture edges are not evidence of horizontal body clipping.",
+    "No guide factual accuracy, displayed dates, inventory completeness, filter semantics or broader master-plan completion is certified by these images.",
+    "Earlier 377fb91 screenshots are comparison evidence only; they do not replace current-head CI or current release proof.",
+    "The six separately covered identical fashion-guide images were outside this review."
+  ],
+  "mutations": {
+    "repository_code_changed": false,
+    "repository_docs_changed": false,
+    "remote_changed": false,
+    "screenshots_changed": false,
+    "only_output_file_written": "/workspace/scratch/e3816c743f42/final-misc-visual-review.json"
+  }
+}

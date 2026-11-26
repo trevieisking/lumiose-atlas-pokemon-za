@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "receipt_type": "final_candidate_directory_visual_review",
+  "created_at_utc": "2026-11-26T14:57:34.467723+00:00",
+  "reviewer_agent": "/root/geometry_review",
+  "candidate": {
+    "pull_request": 204,
+    "head_sha": "f030c4ae3e33259105bf351885c386f6b53900d9",
+    "tree_sha": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "map_ci_run_id": "45842781652",
+    "source_directory": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer",
+    "artifact_id": null,
+    "artifact_identity_limit": "This additional directory assignment supplied an extracted path and current head, not a separate map-artifact ID/digest. Do not substitute the separate areas-artifact ID or digest.",
+    "ci_status": "All jobs PASS reported by root; no remote status query made by this reviewer."
+  },
+  "decision": {
+    "status": "PASS",
+    "scope": "Eleven explicitly assigned changed directory/source-photo/roster/TM captures at exact current head; every original directly inspected.",
+    "blocking_findings": [],
+    "nonblocking_findings": [],
+    "no_visual_blocker_for_root_promotion_assessment": true,
+    "is_overall_release_approval": false
+  },
+  "method": {
+    "direct_visual_tool": "tools.view_image",
+    "current_original_pngs_directly_viewed": 11,
+    "current_files_different_from_prior377fb91": 11,
+    "current_files_carried_forward_without_inspection": 0,
+    "hash_and_dimension_method": "Read existing bytes using hashlib.sha256; dimensions using PIL.Image. No screenshot transformations or rewrites.",
+    "old_capture_handling": "Prior377fb91 hashes and dimensions recorded for comparison. All current captures were viewed directly; prior screenshots were not used as a substitute.",
+    "tests_run": false,
+    "repository_edits_performed": false,
+    "browser_or_network_calls_performed": false,
+    "remote_mutations_performed": false,
+    "only_written_artifact": "/workspace/scratch/e3816c743f42/release-review-f030c4a/final-directory-visual-review.json",
+    "historical_receipts_modified": false
+  },
+  "images": [
+    {
+      "filename": "at311-jaune-5-directory-links-phone.png",
+      "relative_path": "map/atlas-explorer/at311-jaune-5-directory-links-phone.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at311-jaune-5-directory-links-phone.png",
+      "sha256": "8d968cefae4ffe94b05386489c1f327376eff544a5317150cb6534ca3e89997a",
+      "width_px": 326,
+      "height_px": 178,
+      "size_bytes": 18642,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at311-jaune-5-directory-links-phone.png",
+      "previous_sha256": "ecedb22b62dd23667e6e3ed3d46b231db60cd1a174e56ac49edcdfee111b9be0",
+      "previous_dimensions_px": [
+        326,
+        161
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "element/card crop",
+      "observed_findings": [
+        "Both related-sector links are visible and wrap within their separate buttons.",
+        "The qualification about original photographs, reviewed named-sector footprints and unknown pickup/roof/floor/route precision is readable and contained."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "at321-sector-wz12-desktop-photos.png",
+      "relative_path": "map/atlas-explorer/at321-sector-wz12-desktop-photos.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at321-sector-wz12-desktop-photos.png",
+      "sha256": "69a07959cd827116a942ae259b2081fd65252b3bd8ace2b39f5e2e946c21065a",
+      "width_px": 487,
+      "height_px": 672,
+      "size_bytes": 348844,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at321-sector-wz12-desktop-photos.png",
+      "previous_sha256": "92d2c4ac76bf6acae923d4b704b690a07c42970133d1896f083d82b36d29f5f7",
+      "previous_dimensions_px": [
+        487,
+        672
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "element/card crop",
+      "observed_findings": [
+        "Both original Wild Zone12 source images render: the overview with encounter card and the detailed Aymlis Park close-up.",
+        "Photo captions and full-size links fit the desktop element width without visible clipping."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "at321-sector-wz12-desktop-roster.png",
+      "relative_path": "map/atlas-explorer/at321-sector-wz12-desktop-roster.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at321-sector-wz12-desktop-roster.png",
+      "sha256": "18666e3b8f0d6d63c3e3c17ac4d37ad79ccbeb28a9655016d12fef10eb297fe1",
+      "width_px": 517,
+      "height_px": 1235,
+      "size_bytes": 419942,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at321-sector-wz12-desktop-roster.png",
+      "previous_sha256": "f0d848732c0133ba92612fe328d85fd8490719fa8198b16f8486f7ee73a1362e",
+      "previous_dimensions_px": [
+        517,
+        1236
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "element/card crop",
+      "observed_findings": [
+        "The complete captured Wild Zone12 card is readable, with its title, both original photographs and captions.",
+        "Ten preserved-species links wrap inside the panel; incomplete-roster/disputed-class qualification and current-evidence link remain visible.",
+        "Abomasnow and Avalugg fixed-Alpha cards fit the row, and the original-capture versus reader-progress/pin qualification is visible at the bottom."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "at321-sector-wz12-phone-photos.png",
+      "relative_path": "map/atlas-explorer/at321-sector-wz12-phone-photos.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at321-sector-wz12-phone-photos.png",
+      "sha256": "4c2ad8c63b12b2dbb4fe42125816ef0306d2ab9e356614f5fed6c173e6001bda",
+      "width_px": 329,
+      "height_px": 494,
+      "size_bytes": 185245,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at321-sector-wz12-phone-photos.png",
+      "previous_sha256": "a8b24af5384fb8607cdc28e85539047ffd57308c25cf99a628f20bed294f4624",
+      "previous_dimensions_px": [
+        329,
+        495
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "element/card crop",
+      "observed_findings": [
+        "Both original Wild Zone12 source images render on phone and stay inside the photo cards.",
+        "Captions wrap safely and each card retains its full-size link."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "at321-sector-wz12-phone-roster.png",
+      "relative_path": "map/atlas-explorer/at321-sector-wz12-phone-roster.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/at321-sector-wz12-phone-roster.png",
+      "sha256": "7876a895c2145d6647fd9cfe1834a6fc3ec728e8e32eb5eaf370e7969161e56e",
+      "width_px": 359,
+      "height_px": 1283,
+      "size_bytes": 253707,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at321-sector-wz12-phone-roster.png",
+      "previous_sha256": "9392c6bd4999846b1ea63dd3f778b6e6ce97f1d4b8b2cc0e76e0915cafbd4d17",
+      "previous_dimensions_px": [
+        359,
+        1283
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "element/card crop",
+      "observed_findings": [
+        "The captured Wild Zone12 card fits phone width with readable title, source photos and captions.",
+        "Species links wrap over multiple rows; Alpha cards stack without horizontal overflow.",
+        "Incomplete-roster/source-class qualifications, current-evidence link and original-capture/progress disclaimer remain readable through the bottom of the card."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "desktop-at302-sector-street-bearings.png",
+      "relative_path": "map/atlas-explorer/desktop-at302-sector-street-bearings.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/desktop-at302-sector-street-bearings.png",
+      "sha256": "f121f3d4527fed7ed9c219e066c449971ad366a542a250f6c535925c6b2cb15a",
+      "width_px": 1440,
+      "height_px": 900,
+      "size_bytes": 111291,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/desktop-at302-sector-street-bearings.png",
+      "previous_sha256": "bcd3b4974f1c7a298d7d7a5f418a9d66f04756338c100d006ff526fb39d68e42",
+      "previous_dimensions_px": [
+        1440,
+        900
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "The expanded source-leads panel and street-bearing callout fit the desktop directory column.",
+        "Orientation-only and unverified pickup/entrance/roof-exit qualifications are readable; visible Screw clue rows fit their cards.",
+        "This bearings capture shows the original-source caption; the actual Bleu7 image is separately visible in the dedicated desktop-at304 source-image capture."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "desktop-at304-source-image-bleu7.png",
+      "relative_path": "map/atlas-explorer/desktop-at304-source-image-bleu7.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/desktop-at304-source-image-bleu7.png",
+      "sha256": "1a92a61288dd1fe282c187a00cdabe7bd54182a2d57fe769f05ae5e84790d663",
+      "width_px": 1440,
+      "height_px": 900,
+      "size_bytes": 197420,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/desktop-at304-source-image-bleu7.png",
+      "previous_sha256": "4c357b81c9a56f210b4217b9d3c343e6db149b2587d6cb3b3474955a5aa9352c",
+      "previous_dimensions_px": [
+        1440,
+        900
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "The actual Bleu Sector7 source-map image renders in the directory card, with visible Bleu Sector5/Bleu Sector7/Aymlis Park/South Boulevard context.",
+        "Source caption and orientation-only bearing notes wrap inside the same column.",
+        "The visible expanded panel and first Screw clue row remain contained; surrounding white space comes from the other directory columns being shorter in this scrolled view."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "desktop-tm-access-sector-maps.png",
+      "relative_path": "map/atlas-explorer/desktop-tm-access-sector-maps.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/desktop-tm-access-sector-maps.png",
+      "sha256": "7ac55367ffe7469f3cbff6f8cefc0642513484761f4394013dd0d731cd3336a9",
+      "width_px": 1280,
+      "height_px": 900,
+      "size_bytes": 189976,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/desktop-tm-access-sector-maps.png",
+      "previous_sha256": "3e4117b273c8858d3159be0544c7827c284279750f74e5de0aed43086d0911b3",
+      "previous_dimensions_px": [
+        1280,
+        900
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "The visible Zone17/Zone18 item cards remain contained in two desktop columns.",
+        "TM062 and TM065 written access directions wrap inside their cards; collection status text does not collide with the directions.",
+        "Zone17 map/notes/Alpha/checklist links and the approximate-pickup qualification fit the field-notes panel."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "phone-at302-sector-street-bearings.png",
+      "relative_path": "map/atlas-explorer/phone-at302-sector-street-bearings.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/phone-at302-sector-street-bearings.png",
+      "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae",
+      "width_px": 393,
+      "height_px": 852,
+      "size_bytes": 165107,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/phone-at302-sector-street-bearings.png",
+      "previous_sha256": "5208260b468aaa7aa6bf3d1dbbaa149ff7a043e1b4e385700fa97fe79c430f18",
+      "previous_dimensions_px": [
+        393,
+        852
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "The actual Vert Sector1 source-map image is visible within the phone card.",
+        "Source caption and orientation-only bearing callout remain contained and distinguish Saison Canal from Saison-Canalside.",
+        "The first visible Screw clue retains its identifier and unverified-coordinate qualification without horizontal overflow."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "phone-at304-source-image-vert1.png",
+      "relative_path": "map/atlas-explorer/phone-at304-source-image-vert1.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/phone-at304-source-image-vert1.png",
+      "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae",
+      "width_px": 393,
+      "height_px": 852,
+      "size_bytes": 165107,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/phone-at304-source-image-vert1.png",
+      "previous_sha256": "5208260b468aaa7aa6bf3d1dbbaa149ff7a043e1b4e385700fa97fe79c430f18",
+      "previous_dimensions_px": [
+        393,
+        852
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "The actual Vert Sector1/Saison Canal source image renders within the phone directory card.",
+        "The source-caption, orientation-only bearing text and visible Screw clue remain readable and contained."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    },
+    {
+      "filename": "phone-tm-access-sector-maps.png",
+      "relative_path": "map/atlas-explorer/phone-tm-access-sector-maps.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map/atlas-explorer/phone-tm-access-sector-maps.png",
+      "sha256": "ac54480a982d0a25c9f9ef9598f39797c951c18589096d692de3807153558d2b",
+      "width_px": 393,
+      "height_px": 852,
+      "size_bytes": 72640,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/phone-tm-access-sector-maps.png",
+      "previous_sha256": "a55a2bae0585e1fd6e97b661d9c97ade212c0fbfe80dc2d19f0a286cec383523",
+      "previous_dimensions_px": [
+        393,
+        852
+      ],
+      "identical_to_377fb91": false,
+      "review_method": "Direct visual inspection of this actual current PNG using tools.view_image; not approved by prior-image identity.",
+      "capture_scope": "scrolled page viewport",
+      "observed_findings": [
+        "Visible Zone18 item cards fit the phone width.",
+        "The long TM065 access paragraph wraps inside its card and retains written-source/exact-pin-unverified qualifications.",
+        "Collection status labels remain separate from item prose; the surrounding Rare Candy/Iron/Carbos cards show no horizontal clipping."
+      ],
+      "decision": "PASS_FOR_CAPTURED_CONTENT",
+      "blocking_findings": [],
+      "nonblocking_findings": []
+    }
+  ],
+  "shared_findings": [
+    "Actual original WZ12 overview and close-up photos render in both phone and desktop photo/roster captures.",
+    "Dedicated source-image captures show the Bleu7 desktop and Vert1 phone map images, with readable source and orientation qualifications.",
+    "Visible links, species chips, Alpha cards, collection statuses and long access directions remain contained at their captured widths.",
+    "The inspected copy keeps source-precision, roster-completeness, encounter-class and original-capture/player-progress limitations visible.",
+    "No broken source-photo rendering, horizontal text/button clipping or overlapping prose/status controls was observed in the reviewed captured content."
+  ],
+  "limits": [
+    "This is a bounded pre-merge screenshot review, not complete release approval, deployment proof or live-site verification.",
+    "All11 current images differ from377fb91. This receipt records direct inspection of current pixels; it does not claim the differences are exclusively text or exhaustively characterize every changed pixel.",
+    "Six screenshots are scrolled page viewports. Content cut at their top or bottom is outside the captured viewport; whole pages and below-fold controls are not certified.",
+    "The at311/at321 screenshots are card or element crops and do not show all surrounding page layout.",
+    "This review checks rendered readability, responsive containment and actual source-image presence; it does not independently fact-check game claims, certify complete rosters, verify source geometry, or infer precise pickups/routes.",
+    "Screenshot-visible links and controls were not clicked; tests, gestures, keyboard behavior and performance were not rerun.",
+    "The directory review does not replace the separate final-geometry-visual-review.json or its narrower framing/identity limits.",
+    "Historical377fb91 and82f710d receipts remain unchanged.",
+    "No original Workspace source, publication or parity verification was performed."
+  ]
+}

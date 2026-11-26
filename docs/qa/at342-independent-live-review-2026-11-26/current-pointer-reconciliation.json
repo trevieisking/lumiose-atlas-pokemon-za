@@ -1,0 +1,722 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-26T15:27:53.583347+00:00",
+  "scope": "Four current documentation-pointer corrections only. No runtime, source-data, original receipt, private tracker or Workspace mutation; no commit or remote action.",
+  "documentation_base_main": "c7f54accbe0a5243e14ee672e1b2ed88d313f4bc",
+  "approved_runtime_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "tested_source_sha": "f030c4ae3e33259105bf351885c386f6b53900d9",
+  "approved_runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+  "pages_run": 45844017622,
+  "canonical_evidence_inputs": [
+    {
+      "path": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+      "sha256": "750539ff2f13540b66d8d261394b8da496a67668d0be5d921f83c7c4009d6e8a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json",
+      "sha256": "cbb89ed2a7e19b7def05470315faba2155dd207cba61d70d44743fe37d4c816b",
+      "unchanged": true
+    },
+    {
+      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "base_main_sha256": "3c25550506e29c0a7f5a8e21ca2fc49f9463aa4256ee68f8cba41a97ba474cac",
+      "before_this_followup_sha256": "9819de87b47610f2d5984e880ed82602f4852ef2519f3129f72a6e65cc1a46b8",
+      "after_sha256": "5012d3bc91b1800cf63dfd01993d786380e97f80fa7ba0978044e0cc0ceceffd"
+    },
+    {
+      "path": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "base_main_sha256": "6473b270d8e9e59184cb86d4d23e47608b408fb7ba0dab019a7e48bbb7873624",
+      "before_this_followup_sha256": "ead20e7e0b78261e721aa31d38ba1a38f7719f30f48c09eca1b75253fb4936f7",
+      "after_sha256": "9913d9af299df2d7765f289dd5a70a7da1eb387acb685c03dd03aadf34066193"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+      "base_main_sha256": "66193865d03ca48ddf3b8b3b311e1e3fad737a15a6c3d0195e0489dca9c8ba6d",
+      "before_this_followup_sha256": "66193865d03ca48ddf3b8b3b311e1e3fad737a15a6c3d0195e0489dca9c8ba6d",
+      "after_sha256": "29c2ec3cb447387ff10e2057e811ff0953c38867b36b6a0bc6b4dcae7886a2f9"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_RESUME_CHECKPOINT.json",
+      "base_main_sha256": "2d1d3f5fae2c809b9f100afaeaa3690f23a176ba8a260a4eb28acf28b9bbcc69",
+      "before_this_followup_sha256": "2d1d3f5fae2c809b9f100afaeaa3690f23a176ba8a260a4eb28acf28b9bbcc69",
+      "after_sha256": "d4cf3d4d7f640de2983b97e0c06ada30457973dd2a858aa25c4b3b122ed88b62"
+    }
+  ],
+  "prior_uncommitted_index_proposal_receipt": "docs/qa/at342-independent-live-review-2026-11-26/current-index-survey-reconciliation.json",
+  "prior_proposal_receipt_scope": "Retained unchanged as evidence of the first draft. This receipt supersedes its after-file hashes only because the two tracker links now use the actual committed RELEASE_TRACKER_RECEIPT filename.",
+  "index_followup": {
+    "README.md": "One tracker receipt link corrected; no other bytes changed in this follow-up.",
+    "MAPS_ACCESS_ROUTE_SURVEY.json": "Only current_completion_checkpoint.private_tracker_receipt corrected in this follow-up; original two-field survey reconciliation and all source facts remain preserved."
+  },
+  "checkpoint_changes": [
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+      "changed_existing_top_level_fields": [
+        "manifest_revision",
+        "ledger_revision",
+        "observed_main_sha",
+        "observed_pr_head",
+        "stage",
+        "full_release_sha",
+        "workspace_prompt_ready",
+        "required_remaining",
+        "workstreams",
+        "release_policy",
+        "status",
+        "source_completion_checkpoint",
+        "private_tracker_observation",
+        "failure_scope",
+        "final_candidate",
+        "latest_main_reconciliation",
+        "superseding_checkpoint",
+        "prior_sync_receipt_scope",
+        "completed_current_private_sync"
+      ],
+      "new_top_level_fields": [
+        "supabase_manifest_91_sync",
+        "current_release_evidence",
+        "historical_current_checkpoint_90_98"
+      ],
+      "historical_snapshot": "historical_current_checkpoint_90_98",
+      "all_replaced_current_fields_preserved": true,
+      "restoring_changed_fields_reproduces_original_file_bytes": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_RESUME_CHECKPOINT.json",
+      "changed_existing_top_level_fields": [
+        "manifest_revision",
+        "ledger_revision",
+        "source_state",
+        "validation",
+        "private_tracker_receipt",
+        "private_tracker_state",
+        "full_map_release_state",
+        "original_workspace",
+        "final_workspace_prompt_ready",
+        "rollback"
+      ],
+      "new_top_level_fields": [
+        "final_workspace_prompt",
+        "current_release_evidence",
+        "broader_requirement_scope",
+        "historical_current_checkpoint_90_98"
+      ],
+      "historical_snapshot": "historical_current_checkpoint_90_98.checkpoint",
+      "entire_original_checkpoint_preserved": true,
+      "snapshot_reproduces_original_file_bytes": true
+    }
+  ],
+  "protected_history_and_acceptance_subtrees": [
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_297_workspace_handoff",
+        "historical_v37_release"
+      ],
+      "sha256": "9eb1de5857c46100255e7fba9fe37913a41620f600a5afb3de7a9aca351764cd"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_319_written_first_policy",
+        "historical_policy_before_2026_11_26"
+      ],
+      "sha256": "567bcb5efc3e3fc2615a99061c508187340705493fc84f590ac9198a575ec7a0"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_325_github_first_workspace_gate",
+        "owner_photo_inventory",
+        "historical_candidate_overview_records"
+      ],
+      "sha256": "a8a200016497058dc37405511e8ce3c117ef729d0efd7e224eeca961ec763212"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_339_release_checkpoint",
+        "historical_candidate_state"
+      ],
+      "sha256": "6727c58c8d5e5171881f51dfe5fb6bdafab79ed6ce5e73dc531969e0f9372107"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_339_release_checkpoint",
+        "historical_current_text"
+      ],
+      "sha256": "c2f91a7199102b62a9a6fa3de1c7634bbf5042a42b1766484f3455e61f82c3fc"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "at_339_release_checkpoint",
+        "private_feature_metadata_pre_execution_snapshot"
+      ],
+      "sha256": "59b7bc1e8a0ab4eac7b7993ba0b5590f83bf24f15f2b802769bdd285eeaf9cd6"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "historical_current_checkpoint_89_97"
+      ],
+      "sha256": "a067f0c447ac2f68f08acb4df68d607a636fa43738e892529741a79cabea88fa"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "historical_current_checkpoint_89_97",
+        "at_325_github_first_workspace_gate",
+        "owner_photo_inventory",
+        "historical_candidate_overview_records"
+      ],
+      "sha256": "a8a200016497058dc37405511e8ce3c117ef729d0efd7e224eeca961ec763212"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "source_inventory",
+        "historical_candidate_overview_records"
+      ],
+      "sha256": "a8a200016497058dc37405511e8ce3c117ef729d0efd7e224eeca961ec763212"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        0,
+        "acceptance"
+      ],
+      "sha256": "7e2c2efff2518f3fcdddd317bb82b729de13740b482382f27dd79c0ff22ecfa4"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        1,
+        "acceptance"
+      ],
+      "sha256": "d857f9bc734a4cfcad5b26964a0309f4494501448aee7f792d09c8296ffec465"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        2,
+        "acceptance"
+      ],
+      "sha256": "b864537b374d3fc7b5936d56d67d6968eb319180b665b604e98e356cfa4d09ca"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        3,
+        "acceptance"
+      ],
+      "sha256": "06c71a671015ce2eb5273c7ececa6d495efa013f0607b1cfcd69cecefd904739"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        4,
+        "acceptance"
+      ],
+      "sha256": "968f9a258cda6dc2eb85f3983940d4cda5d67b1e83e5131ae4199fa91b5c067a"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        5,
+        "acceptance"
+      ],
+      "sha256": "9555be55926b5d28885847c0069b0af764fd7556205225f2798dafcfc28a9789"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        6,
+        "acceptance"
+      ],
+      "sha256": "e7c91e1c52d9c44a8a384c22d64cae55f1106a0ce6b2f1082a18d36973fb4890"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        7,
+        "acceptance"
+      ],
+      "sha256": "0370b2e5b598a832970d11581523004a32aca6302f9217f219356c3d5896043e"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history"
+      ],
+      "sha256": "111e7246ef92cb6adad120d8a39f95dee1c5077db1149ddfbf0dcf9a7f460348"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        0,
+        "acceptance"
+      ],
+      "sha256": "7e2c2efff2518f3fcdddd317bb82b729de13740b482382f27dd79c0ff22ecfa4"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        1,
+        "acceptance"
+      ],
+      "sha256": "d857f9bc734a4cfcad5b26964a0309f4494501448aee7f792d09c8296ffec465"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        2,
+        "acceptance"
+      ],
+      "sha256": "b864537b374d3fc7b5936d56d67d6968eb319180b665b604e98e356cfa4d09ca"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        3,
+        "acceptance"
+      ],
+      "sha256": "06c71a671015ce2eb5273c7ececa6d495efa013f0607b1cfcd69cecefd904739"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        4,
+        "acceptance"
+      ],
+      "sha256": "968f9a258cda6dc2eb85f3983940d4cda5d67b1e83e5131ae4199fa91b5c067a"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        5,
+        "acceptance"
+      ],
+      "sha256": "9555be55926b5d28885847c0069b0af764fd7556205225f2798dafcfc28a9789"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        6,
+        "acceptance"
+      ],
+      "sha256": "e7c91e1c52d9c44a8a384c22d64cae55f1106a0ce6b2f1082a18d36973fb4890"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        0,
+        "phases",
+        7,
+        "acceptance"
+      ],
+      "sha256": "0370b2e5b598a832970d11581523004a32aca6302f9217f219356c3d5896043e"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        0,
+        "acceptance"
+      ],
+      "sha256": "7e2c2efff2518f3fcdddd317bb82b729de13740b482382f27dd79c0ff22ecfa4"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        1,
+        "acceptance"
+      ],
+      "sha256": "d857f9bc734a4cfcad5b26964a0309f4494501448aee7f792d09c8296ffec465"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        2,
+        "acceptance"
+      ],
+      "sha256": "b864537b374d3fc7b5936d56d67d6968eb319180b665b604e98e356cfa4d09ca"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        3,
+        "acceptance"
+      ],
+      "sha256": "06c71a671015ce2eb5273c7ececa6d495efa013f0607b1cfcd69cecefd904739"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        4,
+        "acceptance"
+      ],
+      "sha256": "968f9a258cda6dc2eb85f3983940d4cda5d67b1e83e5131ae4199fa91b5c067a"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        5,
+        "acceptance"
+      ],
+      "sha256": "9555be55926b5d28885847c0069b0af764fd7556205225f2798dafcfc28a9789"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        6,
+        "acceptance"
+      ],
+      "sha256": "e7c91e1c52d9c44a8a384c22d64cae55f1106a0ce6b2f1082a18d36973fb4890"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phase_state_history",
+        1,
+        "phases",
+        7,
+        "acceptance"
+      ],
+      "sha256": "0370b2e5b598a832970d11581523004a32aca6302f9217f219356c3d5896043e"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "at339_release_checkpoint",
+        "private_feature_metadata_pre_execution_snapshot"
+      ],
+      "sha256": "b79f0bb51ccfb5b4e70acae21e8026d27e981bd9076eeed6ac3a033ed5b6ee5e"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "historical_current_checkpoint_89_97"
+      ],
+      "sha256": "8543f782f10b65f8bdfdd3227257babc31cc053de8496f076f94252f294bd4ee"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "historical_private_feature_metadata_88"
+      ],
+      "sha256": "b6f22b091c96e4e0563b8be60a85540463d7b97e810ab52e2b0b1e409327d6a8"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+      "path": [
+        "historical_initial_observation"
+      ],
+      "sha256": "c9f02f4f41df4de4cd4a69a298aabf0e7ee97908f6cd00d80b002e53c2af6fb7"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+      "path": [
+        "historical_current_checkpoint_89_97"
+      ],
+      "sha256": "2b3524ed2b9cbf421841e6b22f40e08ae92ade369f553b4214da9e8465a3eee1"
+    },
+    {
+      "file": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
+      "path": [
+        "historical_current_checkpoint_89_97"
+      ],
+      "sha256": "6ae598fa19c63f47d51e512dc2ec7b3cd5127c2c17489ae65b86bdd5c6b4ec95"
+    }
+  ],
+  "all_40_protected_subtrees_unchanged": true,
+  "requirements": {
+    "path": "docs/consolidation/2026-11-26/requirements.json",
+    "count": 67,
+    "sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+    "unchanged": true
+  },
+  "preserved_scope": {
+    "sector_footprints": 48,
+    "wild_zone_selection_outlines": 20,
+    "finite_area_dispositions": 68,
+    "routes": 42,
+    "written_steps": 217,
+    "access_leads": 97,
+    "encounter_rows": 1020,
+    "roster_status": "not_comprehensive",
+    "broader_historical_master_complete": false,
+    "original_workspace_recorded_version": 38,
+    "original_workspace_upgrade_or_parity_claimed": false,
+    "workspace_A1_A7_pending": true
+  },
+  "tracker_data_scope": {
+    "source": "docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json",
+    "observed_from_committed_receipt_only": true,
+    "rows": 48,
+    "github_status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "database_operation_performed": false
+  },
+  "validation": {
+    "json_parse": "PASS",
+    "original_checkpoint_reconstruction": "PASS",
+    "all_40_historical_acceptance_hashes": "PASS",
+    "original_67_requirement_bytes": "PASS",
+    "immutable_release_tracker_and_prompt_bytes": "PASS",
+    "new_tests_run": false,
+    "scoped_git_diff_check": "PASS",
+    "exactly_four_authorized_tracked_files_changed": "PASS",
+    "readme_original_top_and_remaining_history": "PASS",
+    "survey_original_source_field_byte_reconstruction": "PASS",
+    "all_23_owner_release_files_unchanged": "PASS",
+    "all_67_disposition_ids_once_only": "PASS",
+    "coverage_mapping_actions_rules_unchanged": "PASS",
+    "original_phase_acceptances_unchanged": "PASS",
+    "six_release_evidence_references_hash_match": "PASS"
+  },
+  "commit_performed": false,
+  "owner_release_documentation": {
+    "owner_commit": "ea9d0a5a82e8790d649fc784885435d283cc5efe",
+    "merged_documentation_main": "c7f54accbe0a5243e14ee672e1b2ed88d313f4bc",
+    "original_changed_file_count": 23,
+    "all_23_imported_files_unchanged": true
+  },
+  "original_phase_acceptance_values": [
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        0,
+        "acceptance"
+      ],
+      "sha256": "020a48f99b7dadfb1dc6b343b82642be4eddc76a32c27e531efbdd1a9fd350c7"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        1,
+        "acceptance"
+      ],
+      "sha256": "3ccf1cdee591b95778d8abd47974cbb2f08460b54e0d50187b6b88e96ca17a67"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        2,
+        "acceptance"
+      ],
+      "sha256": "4daddf444c67076c356a0b1f4424c65a530dd4f074e7dee0020b73412fc6e631"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        3,
+        "acceptance"
+      ],
+      "sha256": "e83d1a8fb0f9f91a48880d5801ef8679d8c5063e1dc4b47998624d425aedfb5e"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        4,
+        "acceptance"
+      ],
+      "sha256": "1340347f981fc16244acf6ce80034456224ab611fc94677e9080d788ed16bdba"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        5,
+        "acceptance"
+      ],
+      "sha256": "1e84ffb54d00bb72ba4aad50e24ccf17b95631aa54487f47bee933454e1f4f8f"
+    },
+    {
+      "file": "MAPS_UPGRADE_MANIFEST.json",
+      "path": [
+        "phases",
+        6,
+        "acceptance"
+      ],
+      "sha256": "e6a6db5016044af6c3872e50dec67aa03e07ba5afa36fc42c3c846f6a4ea16a7"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        0,
+        "acceptance"
+      ],
+      "sha256": "7e2c2efff2518f3fcdddd317bb82b729de13740b482382f27dd79c0ff22ecfa4"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        1,
+        "acceptance"
+      ],
+      "sha256": "d857f9bc734a4cfcad5b26964a0309f4494501448aee7f792d09c8296ffec465"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        2,
+        "acceptance"
+      ],
+      "sha256": "b864537b374d3fc7b5936d56d67d6968eb319180b665b604e98e356cfa4d09ca"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        3,
+        "acceptance"
+      ],
+      "sha256": "06c71a671015ce2eb5273c7ececa6d495efa013f0607b1cfcd69cecefd904739"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        4,
+        "acceptance"
+      ],
+      "sha256": "968f9a258cda6dc2eb85f3983940d4cda5d67b1e83e5131ae4199fa91b5c067a"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        5,
+        "acceptance"
+      ],
+      "sha256": "9555be55926b5d28885847c0069b0af764fd7556205225f2798dafcfc28a9789"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        6,
+        "acceptance"
+      ],
+      "sha256": "e7c91e1c52d9c44a8a384c22d64cae55f1106a0ce6b2f1082a18d36973fb4890"
+    },
+    {
+      "file": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "path": [
+        "phases",
+        7,
+        "acceptance"
+      ],
+      "sha256": "0370b2e5b598a832970d11581523004a32aca6302f9217f219356c3d5896043e"
+    }
+  ],
+  "coverage_preservation_sha256": {
+    "mapping": "572ceb57a2bd38f3123d088759f8a59fa20049fc0dce062f5d94716b284eff43",
+    "actions": "d599a06af7531fa3139417b9156e0feb5de5b209fc5c1fe722d700e0d1710682",
+    "rules": "785b4be1aa24b98a08274e7416f164c165a633a4ef898142b5094b3533a61143"
+  },
+  "release_evidence_hash_checks": [
+    {
+      "key": "screenshot_review",
+      "path": "docs/qa/ATLAS_AT342_SCREENSHOT_REVIEW.json",
+      "sha256": "2811fc14346eadce79aa16f167ce24e0a7524504fea26b6a65107cd755e6c720"
+    },
+    {
+      "key": "live_byte_proof",
+      "path": "docs/qa/ATLAS_AT342_LIVE_FILE_PROOF.json",
+      "sha256": "a9e4bbf3b544296060c860707085cc7ce721e6ffcd36d82ffc0d52b559f0f921"
+    },
+    {
+      "key": "live_browser_proof",
+      "path": "docs/qa/ATLAS_AT342_LIVE_BROWSER_PROOF.json",
+      "sha256": "e7ae36ad471e7de044a5e598091cb66cf4bbc49a15f339a86723b6e7e3814666"
+    },
+    {
+      "key": "tracker_receipt",
+      "path": "docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json",
+      "sha256": "cbb89ed2a7e19b7def05470315faba2155dd207cba61d70d44743fe37d4c816b"
+    },
+    {
+      "key": "runtime_inventory",
+      "path": "docs/qa/at342-resume/runtime-file-hashes.json",
+      "sha256": "17b584733a450e56b5c2c3d6ef2bcf2d069eba0f1f25d2ea4184b723c30ae3f1"
+    },
+    {
+      "key": "workspace_prompt",
+      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
+    }
+  ],
+  "final_reviewed_at_utc": "2026-11-26T15:28:52.356630+00:00"
+}

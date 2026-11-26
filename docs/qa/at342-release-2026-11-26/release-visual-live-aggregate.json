@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "id": "AT342-RELEASE-VISUAL-AND-LIVE-AGGREGATE",
+  "recorded_at_utc": "2026-11-26T15:05:56.508583+00:00",
+  "compiled_by": "/root/runtime_review for the release coordinator",
+  "status": "PASS_FOR_DOCUMENTED_GITHUB_RELEASE_SCOPE",
+  "release_identity": {
+    "repository": "trevieisking/lumiose-atlas-pokemon-za",
+    "pull_request": 204,
+    "tested_head": "f030c4ae3e33259105bf351885c386f6b53900d9",
+    "tested_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "merged_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "merged_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "merge_tree_matches_reviewed": true,
+    "merged_at": "2026-11-26T14:56:21Z",
+    "pages_run_id": 45844017622,
+    "pages_completed_at": "2026-11-26T14:57:51Z",
+    "site_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/"
+  },
+  "scope": "The finite reviewed Interactive Map 2.0 GitHub release, exact deployed-file parity and documented CUA live checks. This package does not alter a canonical gate, tracker, runtime file or original Workspace status.",
+  "release_proofs": {
+    "ci": {
+      "path": "candidate/ci-run-summary.json",
+      "sha256": "d5d0de64c74157bbb9c293e1a509e43dc630dcc184bf24eb46cfa3186225e54a",
+      "bytes": 11707
+    },
+    "merge": {
+      "path": "candidate/merge-receipt.json",
+      "sha256": "6e7d146a61818fbd906ae696bfc2f63d91599726bd766c422402f2b58c9853a4",
+      "bytes": 901
+    },
+    "pages": {
+      "path": "candidate/pages-receipt.json",
+      "sha256": "891a21936394bb1b4ddd1873214988c75a54ce495c33f9e234d6d4e0b1bb0d93",
+      "bytes": 472
+    },
+    "live_http": {
+      "path": "candidate/live-http.json",
+      "sha256": "a5916ed332b02c65ff09e75c9161dfa11ce794341d4326121f355d04cd624422",
+      "bytes": 18084
+    },
+    "live_browser": {
+      "path": "live-browser-observations.json",
+      "sha256": "45233a84b43b3339c774b0e218d2b8669d842f964ad0cd02f899a2dc466e1629",
+      "bytes": 3984
+    },
+    "tested_change_inventory": {
+      "path": "candidate/tested-change-inventory.json",
+      "sha256": "777b1da7ba6549ea2c7f8300cecca7474524e3da0c4ba1ee283f51f3f077ba65",
+      "bytes": 105578
+    }
+  },
+  "validation_summary": {
+    "successful_candidate_workflows": 3,
+    "candidate_map_workflow_run_id": 45842781652,
+    "map_jobs": [
+      "atlas-unit",
+      "atlas-areas-browser",
+      "atlas-browser"
+    ],
+    "all_candidate_map_jobs_successful": true,
+    "full_local_node_tests": 155,
+    "focused_code_review_tests": 48,
+    "native_outline_replay_cases": 11,
+    "unit_and_replay_count_provenance": "Counts are inherited from the unchanged exact-tree integration/code-review receipts; no tests were rerun while packaging.",
+    "live_http_matched_files": 35,
+    "live_http_mismatches": 0,
+    "live_http_errors": 0,
+    "live_http_status_all_200": true,
+    "live_http_checked_at": "2026-11-26T14:58:54.284657+00:00",
+    "live_jaune7_gallery_complete_and_visible": true
+  },
+  "primary_reviews_with_actual_sha256": [
+    {
+      "path": "candidate/final-code-review.json",
+      "sha256": "671964a70e28e90c348cd50df35afde7fbaa28da92fc2d9795585e01d4bec168",
+      "bytes": 15184
+    },
+    {
+      "path": "candidate/final-geometry-visual-review.json",
+      "sha256": "0969aff3a7f0e98eaa9cd5cbe2a2b03699568868adf6ab9c741d99860b377abb",
+      "bytes": 93746
+    },
+    {
+      "path": "candidate/final-directory-visual-review.json",
+      "sha256": "fb67ea416457bdba223a864b22d2832d58639037592d591b07ba7f53122ccde8",
+      "bytes": 19931
+    },
+    {
+      "path": "candidate/final-misc-visual-review.json",
+      "sha256": "cde4299b8aa8ff52ebb73af3a7691145d6d64ef75e804c056d47cb3c5e2b852a",
+      "bytes": 12664
+    },
+    {
+      "path": "candidate/final-runtime-visual-review.json",
+      "sha256": "f89daaeafc6d3bcaee0f3ff7edb6f36cf4c35af88861324913378d3801dc20cd",
+      "bytes": 37789
+    },
+    {
+      "path": "candidate/fashion-image-comparison.json",
+      "sha256": "57695154a9845faa8d3eb58a63364755732edf2d80a1f35a374db73c533c5a25",
+      "bytes": 1268
+    }
+  ],
+  "browser_proofs": [
+    {
+      "path": "candidate/areas/at339-browser-proof.json",
+      "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+      "bytes": 30999
+    },
+    {
+      "path": "candidate/map/atlas-collectibles/at338-browser-proof.json",
+      "sha256": "99d38ccc67f62c94c36bc2d6a5f1379290fd940b2efe0ac7045e484d92f22129",
+      "bytes": 5428
+    }
+  ],
+  "changed_png_review_reconciliation": {
+    "changed_from_377fb91": 32,
+    "directly_reviewed_current_pngs": 32,
+    "missing_assigned_reviews": [],
+    "assignment_counts": {
+      "geometry": 10,
+      "directory": 11,
+      "misc_guides": 6,
+      "runtime": 5
+    },
+    "files": [
+      {
+        "path": "areas/at339-standalone-habitats-desktop.png",
+        "reviewer_scope": "runtime",
+        "sha256": "cb20d83a03289420a963221f7c224cd4577b05fffd32c9bb490c7fffd5f10882"
+      },
+      {
+        "path": "areas/at341-sector-bleu-sector-2-desktop.png",
+        "reviewer_scope": "geometry",
+        "sha256": "028d85f9ab8eaeeaf959f926fa1af88b9b502d01ce892b78669290f9db590e04"
+      },
+      {
+        "path": "areas/at341-sector-bleu-sector-2-phone.png",
+        "reviewer_scope": "geometry",
+        "sha256": "45050da9e6e8940554dbaf24eb76161255d29fe406335e86adb7bec9333db424"
+      },
+      {
+        "path": "areas/at341-sector-jaune-sector-6-desktop.png",
+        "reviewer_scope": "geometry",
+        "sha256": "b93b277a10c803d2de329226b8d539893481dbfeb54ed08ffcf5c27d79d751a3"
+      },
+      {
+        "path": "areas/at341-sector-jaune-sector-6-phone.png",
+        "reviewer_scope": "geometry",
+        "sha256": "7ca842b6d732e9760ba39316fd360a089e5613d31d70f11d3bcbeb1e9366728e"
+      },
+      {
+        "path": "areas/at341-sector-magenta-sector-5-desktop.png",
+        "reviewer_scope": "geometry",
+        "sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db"
+      },
+      {
+        "path": "areas/at341-sector-magenta-sector-5-phone.png",
+        "reviewer_scope": "geometry",
+        "sha256": "903efeeeec0d9196cb8a4dc4090f9bba3ae4ca276c3eee2d4919ca8f59a191d7"
+      },
+      {
+        "path": "areas/at341-sector-rouge-sector-4-desktop.png",
+        "reviewer_scope": "geometry",
+        "sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e"
+      },
+      {
+        "path": "areas/at341-sector-rouge-sector-4-phone.png",
+        "reviewer_scope": "geometry",
+        "sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd"
+      },
+      {
+        "path": "areas/at341-sector-vert-sector-1-desktop.png",
+        "reviewer_scope": "geometry",
+        "sha256": "7afc4a536d895ef6b2d7c7fe31e96b5629aac124f4f4bf776b2167c1dba54079"
+      },
+      {
+        "path": "areas/at341-sector-vert-sector-1-phone.png",
+        "reviewer_scope": "geometry",
+        "sha256": "a8d907e6a4cb8e16efbc4574ee05800e2f619efeecd429c40923305d0bb98659"
+      },
+      {
+        "path": "map/atlas-explorer/at270-mission37-main-guide-phone.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "68befc3f94168cbebfb99059b8bbaa493375c0bfe887c76f0b39c7acbaa45fcb"
+      },
+      {
+        "path": "map/atlas-explorer/at277-filtered-mission3-phone.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "a815f4477f9c3eb97f6b8bbd8355505e37a782bbdfb370d300ba21c4b6864697"
+      },
+      {
+        "path": "map/atlas-explorer/at277-filtered-quest22-desktop.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "88e721d6cbf14c33b401d131bb394e3c3f2fe6d28db5db0ae3101f86bcc86486"
+      },
+      {
+        "path": "map/atlas-explorer/at311-jaune-5-directory-links-phone.png",
+        "reviewer_scope": "directory",
+        "sha256": "8d968cefae4ffe94b05386489c1f327376eff544a5317150cb6534ca3e89997a"
+      },
+      {
+        "path": "map/atlas-explorer/at321-sector-wz12-desktop-photos.png",
+        "reviewer_scope": "directory",
+        "sha256": "69a07959cd827116a942ae259b2081fd65252b3bd8ace2b39f5e2e946c21065a"
+      },
+      {
+        "path": "map/atlas-explorer/at321-sector-wz12-desktop-roster.png",
+        "reviewer_scope": "directory",
+        "sha256": "18666e3b8f0d6d63c3e3c17ac4d37ad79ccbeb28a9655016d12fef10eb297fe1"
+      },
+      {
+        "path": "map/atlas-explorer/at321-sector-wz12-phone-photos.png",
+        "reviewer_scope": "directory",
+        "sha256": "4c2ad8c63b12b2dbb4fe42125816ef0306d2ab9e356614f5fed6c173e6001bda"
+      },
+      {
+        "path": "map/atlas-explorer/at321-sector-wz12-phone-roster.png",
+        "reviewer_scope": "directory",
+        "sha256": "7876a895c2145d6647fd9cfe1834a6fc3ec728e8e32eb5eaf370e7969161e56e"
+      },
+      {
+        "path": "map/atlas-explorer/at326-zone20-records-phone.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "097195eed13bc91fe6e291913ae0b6c97a4280ee26930b0a727550ef027e9c9a"
+      },
+      {
+        "path": "map/atlas-explorer/at341-access-original-photo-desktop.png",
+        "reviewer_scope": "runtime",
+        "sha256": "586a78d1f2b253ee1a8c320da7ccf6785940f668788a16dd02cb21b7915f2add"
+      },
+      {
+        "path": "map/atlas-explorer/at341-access-original-photo-phone.png",
+        "reviewer_scope": "runtime",
+        "sha256": "f6a23dc81b496f108d4e0ff7d00996e64b3dca91c9ee95e076676bdb1e148b10"
+      },
+      {
+        "path": "map/atlas-explorer/atlas-owner-photos.png",
+        "reviewer_scope": "runtime",
+        "sha256": "e026164822b6ecc58dfa82015648524e00a584ed553c5d2fbcaab2f5c34e2525"
+      },
+      {
+        "path": "map/atlas-explorer/desktop-at302-sector-street-bearings.png",
+        "reviewer_scope": "directory",
+        "sha256": "f121f3d4527fed7ed9c219e066c449971ad366a542a250f6c535925c6b2cb15a"
+      },
+      {
+        "path": "map/atlas-explorer/desktop-at304-source-image-bleu7.png",
+        "reviewer_scope": "directory",
+        "sha256": "1a92a61288dd1fe282c187a00cdabe7bd54182a2d57fe769f05ae5e84790d663"
+      },
+      {
+        "path": "map/atlas-explorer/desktop-tm-access-sector-maps.png",
+        "reviewer_scope": "directory",
+        "sha256": "7ac55367ffe7469f3cbff6f8cefc0642513484761f4394013dd0d731cd3336a9"
+      },
+      {
+        "path": "map/atlas-explorer/phone-at302-sector-street-bearings.png",
+        "reviewer_scope": "directory",
+        "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae"
+      },
+      {
+        "path": "map/atlas-explorer/phone-at304-source-image-vert1.png",
+        "reviewer_scope": "directory",
+        "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae"
+      },
+      {
+        "path": "map/atlas-explorer/phone-dlc-contained.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "caf28d19c009877e1b3761516c52bc0707e578c18131f9c2910ec9a238ead7e2"
+      },
+      {
+        "path": "map/atlas-explorer/phone-ranked-battles-contained.png",
+        "reviewer_scope": "misc_guides",
+        "sha256": "40685d7b51c1bfbba58f73213fcd4de135026826e22da518196cb903d8dd4c00"
+      },
+      {
+        "path": "map/atlas-explorer/phone-tm-access-sector-maps.png",
+        "reviewer_scope": "directory",
+        "sha256": "ac54480a982d0a25c9f9ef9598f39797c951c18589096d692de3807153558d2b"
+      },
+      {
+        "path": "map/atlas-explorer/place-photo-details-desktop.png",
+        "reviewer_scope": "runtime",
+        "sha256": "65200d21263e1d4c2888351c786024bd8edbd2bb7425aacd341b5fc5f3cfbdab"
+      }
+    ]
+  },
+  "unchanged_image_evidence": {
+    "runtime_captures_carried_by_exact_hash": 16,
+    "zone_maps_compared_by_exact_hash": 40,
+    "sector_details_compared_by_exact_hash": 10,
+    "fashion_captures_compared_by_exact_hash": 6,
+    "qualification": "These are scoped comparison counts from separate receipts, not a sum of newly inspected screenshots. Five phone sector-detail images in the geometry comparison were not independently viewed in the prior 377 review; identical bytes do not create a new visual review."
+  },
+  "preservation_evidence": {
+    "approved_production_area_ids": 68,
+    "approved_zone_photo_pairs_per_device": 20,
+    "original_place_markers": 47,
+    "production_collectible_positions": 0,
+    "dense_test_fixture_records": 364,
+    "progress_storage_writes_in_recorded_cases": 0,
+    "shared_area_page_errors": [],
+    "evidence_scope": "CI covers original image/record identity, pending-intent/history/selection behavior, layers, gestures, overlap choice, source-failure fallbacks and original local-progress bytes. The 364 collectible positions are isolated fixtures, not live map coordinates."
+  },
+  "retained_sector_frame_pngs": {
+    "count": 10,
+    "bytes": 3595578,
+    "scope": "Five sampled sectors, one phone-emulation and one desktop map-canvas crop each, from the exact final candidate artifact. These are CI screenshots, not deployed CUA screenshots.",
+    "files": [
+      {
+        "path": "screenshots/sector-framing/at341-sector-bleu-sector-2-phone.png",
+        "sha256": "45050da9e6e8940554dbaf24eb76161255d29fe406335e86adb7bec9333db424",
+        "bytes": 210019
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-jaune-sector-6-phone.png",
+        "sha256": "7ca842b6d732e9760ba39316fd360a089e5613d31d70f11d3bcbeb1e9366728e",
+        "bytes": 208339
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-magenta-sector-5-phone.png",
+        "sha256": "903efeeeec0d9196cb8a4dc4090f9bba3ae4ca276c3eee2d4919ca8f59a191d7",
+        "bytes": 187540
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-rouge-sector-4-phone.png",
+        "sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd",
+        "bytes": 209929
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-vert-sector-1-phone.png",
+        "sha256": "a8d907e6a4cb8e16efbc4574ee05800e2f619efeecd429c40923305d0bb98659",
+        "bytes": 197993
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-bleu-sector-2-desktop.png",
+        "sha256": "028d85f9ab8eaeeaf959f926fa1af88b9b502d01ce892b78669290f9db590e04",
+        "bytes": 537722
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-jaune-sector-6-desktop.png",
+        "sha256": "b93b277a10c803d2de329226b8d539893481dbfeb54ed08ffcf5c27d79d751a3",
+        "bytes": 492475
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-magenta-sector-5-desktop.png",
+        "sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db",
+        "bytes": 450778
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-rouge-sector-4-desktop.png",
+        "sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e",
+        "bytes": 604302
+      },
+      {
+        "path": "screenshots/sector-framing/at341-sector-vert-sector-1-desktop.png",
+        "sha256": "7afc4a536d895ef6b2d7c7fe31e96b5629aac124f4f4bf776b2167c1dba54079",
+        "bytes": 496481
+      }
+    ]
+  },
+  "artifact_archive_provenance": [
+    {
+      "id": 15130116199,
+      "name": "atlas-areas-mobile-desktop-preview",
+      "size_in_bytes": 31776963,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15130116199",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15130116199/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:53:13Z",
+      "expires_at": "2026-12-06T14:53:11Z",
+      "updated_at": "2026-11-26T14:53:13Z",
+      "digest": "sha256:ddcf1c5954bc8dbcf879af3f693834fcc038f0f9cc4f0cd3fd97dfacb111215d",
+      "workflow_run": {
+        "id": 45842781652,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "f030c4ae3e33259105bf351885c386f6b53900d9"
+      }
+    },
+    {
+      "id": 15128353733,
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "size_in_bytes": 62788965,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128353733",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128353733/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:53:33Z",
+      "expires_at": "2026-12-06T14:53:30Z",
+      "updated_at": "2026-11-26T14:53:33Z",
+      "digest": "sha256:36e68c683a5f326c23e8584c470d99e9b89394c26e57a189490e66e5531faaeb",
+      "workflow_run": {
+        "id": 45842781652,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "f030c4ae3e33259105bf351885c386f6b53900d9"
+      }
+    },
+    {
+      "id": 15128572711,
+      "name": "fashion-phone-desktop-preview",
+      "size_in_bytes": 659981,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128572711",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128572711/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:49:38Z",
+      "expires_at": "2026-12-06T14:49:37Z",
+      "updated_at": "2026-11-26T14:49:38Z",
+      "digest": "sha256:3d72c7eae56d12f99dd9096cffe473333b00396ef4aee27201ff3de7f4f01be8",
+      "workflow_run": {
+        "id": 45842781725,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "f030c4ae3e33259105bf351885c386f6b53900d9"
+      }
+    }
+  ],
+  "historical_support_with_actual_sha256": [
+    {
+      "path": "historical/377fb91/areas/at339-browser-proof.json",
+      "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+      "bytes": 30999
+    },
+    {
+      "path": "historical/377fb91/map/atlas-collectibles/at338-browser-proof.json",
+      "sha256": "99d38ccc67f62c94c36bc2d6a5f1379290fd940b2efe0ac7045e484d92f22129",
+      "bytes": 5428
+    },
+    {
+      "path": "historical/377fb91/ci-run-summary.json",
+      "sha256": "cb7beee14fc38064ece85861d706116298d3017d9fb4413e4ed9a84089f99d34",
+      "bytes": 11914
+    },
+    {
+      "path": "historical/377fb91/fashion-image-comparison.json",
+      "sha256": "7802d465788682d0f10622985324189d5d4b9bf6cbaa469f5fc5c32a635b3ca4",
+      "bytes": 1346
+    },
+    {
+      "path": "historical/377fb91/final-geometry-visual-review.json",
+      "sha256": "f33c4e11fe06e779da67dc408b95f714606792b0786e0480126f6db4b70e434d",
+      "bytes": 66036
+    },
+    {
+      "path": "historical/377fb91/final-runtime-visual-review.json",
+      "sha256": "bc5cf7f6e2ba648dd655f49ba0de12635955c17ad86b1f6115351d542771f472",
+      "bytes": 17445
+    },
+    {
+      "path": "historical/377fb91/premerge-review.json",
+      "sha256": "d85ab325e71944d001bc0fa751e22f23f9fd719061a5ba7a79e3e4d0557c1d7f",
+      "bytes": 2647
+    },
+    {
+      "path": "historical/377fb91/tested-change-inventory.json",
+      "sha256": "bdb759001600d75ea3e93c96946a06f309dcfc4e0bb56fd21cf8c03d047cb8d0",
+      "bytes": 104154
+    },
+    {
+      "path": "historical/82f710d/preliminary-visual-review.json",
+      "sha256": "b5bf86f0100018fedde489fb2eb1f6c1781a70d3f983900e263459cc9b8f2177",
+      "bytes": 33965
+    },
+    {
+      "path": "historical/82f710d/fashion-visual-review.json",
+      "sha256": "c3f80589ceba7173b62fe2ee1e1184bbc29ce7125580cbac31c6d5b115c35678",
+      "bytes": 1932
+    }
+  ],
+  "source_checkpoint_support_with_actual_sha256": [
+    {
+      "path": "source-checkpoint/ATLAS_AT342_FINAL_INTEGRATION.json",
+      "sha256": "383804029d1ed6960a69bd2a1ba7dde4574bad09bb529eef731c6f5e285fe159",
+      "bytes": 2151
+    },
+    {
+      "path": "source-checkpoint/combined-final-unit-tests.txt",
+      "sha256": "d2f9b67aaa71651a17e5c5c47aec6b3ff294f1fab2eb9f3ce4bb1b295b9bf4f2",
+      "bytes": 18529
+    },
+    {
+      "path": "source-checkpoint/runtime-file-hashes.json",
+      "sha256": "17b584733a450e56b5c2c3d6ef2bcf2d069eba0f1f25d2ea4184b723c30ae3f1",
+      "bytes": 2223
+    }
+  ],
+  "historical_preservation": "All copied receipts and PNGs retain original bytes. Earlier candidate decisions, incomplete-gallery observations, source paths and proof references remain historical evidence. They were not rewritten into final-release approvals. The final candidate/merge/Pages/live chain above is authoritative for this package.",
+  "resolved_prior_limit": {
+    "issue": "Both final-candidate access-gallery screenshots showed only the first of five Jaune 7 photos painted.",
+    "resolution": "The coordinator subsequently observed all five complete 1536×865 images and directly viewed all five in one deployed-browser viewport after View photos and details. All five source JPG response bytes also matched the reviewed source.",
+    "historical_screenshots_relabelled_or_changed": false,
+    "live_screenshot_files_available": false
+  },
+  "limits": [
+    "CI phone/touch coverage is browser emulation; no physical phone, tablet or native Safari/iOS test is claimed.",
+    "The root coordinator directly reviewed three live CUA screenshots, but no screenshot files were saved; this package contains observations, not those pixels.",
+    "The last-ten-entry log sample is not an overall zero-console-errors claim.",
+    "No account operation, Supabase mutation or public-data mutation was performed; live account/database behavior is not newly certified.",
+    "Static reviews are bounded by crops and visible content. They do not certify all 48 sector details, all 68 area panels, complete encounter rosters, every guide page or full accessibility/performance.",
+    "Broader full-guide, walkthrough-depth and city-Alpha obligations remain separate; this map release does not mark the entire master plan complete.",
+    "Original Workspace A1–A7 access/export/adaptation/publication checks remain separate. This package is not proof of original Workspace publication or parity.",
+    "Only ten selected current sector-frame PNGs are copied. Other image hashes and CI artifact IDs/digests remain recorded; full artifact ZIPs and original source-asset libraries are not duplicated."
+  ],
+  "mutation_scope": {
+    "new_repository_directory_only": "docs/qa/at342-release-2026-11-26",
+    "runtime_changed": false,
+    "canonical_gate_or_plan_changed": false,
+    "tracker_changed": false,
+    "remote_changed": false
+  }
+}

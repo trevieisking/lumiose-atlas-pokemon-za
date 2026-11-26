@@ -1,0 +1,1106 @@
+{
+  "schema_version": 1,
+  "receipt_type": "final_candidate_geometry_visual_review",
+  "created_at_utc": "2026-11-26T14:48:42.624410+00:00",
+  "reviewer_agent": "/root/geometry_review",
+  "candidate": {
+    "pull_request": 204,
+    "head_sha": "377fb91e03f2fea64237f0de031995b26090f468",
+    "tree_sha": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+    "map_ci_run_id": "45841333148",
+    "area_artifact_id": "15128421851",
+    "artifact_zip_sha256": "711a69d616e867b321702096cee3d834f4f80e7828121986626872ee2d6cacf6",
+    "artifact_zip_digest_verification": "Verified by root before supplying this extraction; not independently repeated by the screenshot reviewer.",
+    "all_three_workflows_green": "Reported by root; no network request or independent CI status lookup performed in this review.",
+    "artifact_directory": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas",
+    "png_files_present": 132
+  },
+  "decision": {
+    "status": "PASS_WITH_NONBLOCKING_OBSERVATIONS",
+    "scope": "Final-candidate screenshot review only: 20 desktop selected-zone maps, five desktop sector maps, five desktop sector details, plus exact-image carry-forward of 20 phone selected-zone maps.",
+    "blocking_visual_findings": [],
+    "nonblocking_visual_findings_count": 2,
+    "no_visual_blocker_for_root_promotion_assessment": true,
+    "is_overall_release_approval": false,
+    "does_not_establish": "Merge, deployment, live-site validation or original Workspace publication; root retains the complete promotion decision."
+  },
+  "method": {
+    "direct_visual_tool": "tools.view_image",
+    "desktop_original_pngs_directly_viewed": 30,
+    "desktop_zone_originals_directly_viewed": 20,
+    "desktop_sector_map_originals_directly_viewed": 5,
+    "desktop_sector_detail_originals_directly_viewed": 5,
+    "phone_originals_carried_forward_by_exact_sha256": 20,
+    "phone_originals_requiring_new_visual_review": 0,
+    "contact_sheets_used_for_this_final_review": false,
+    "hash_and_dimension_method": "Read existing bytes with hashlib.sha256 and dimensions with PIL.Image; no image was rewritten.",
+    "proof_json_handling": "Read existing artifact JSON and inspect its relevant recorded counts/flags; no tests were run.",
+    "test_source_read": "Read existing screenshot-capture statements in tests/atlas_area_browser.mjs to establish map-canvas and selected-detail element scope.",
+    "repository_edits_performed": false,
+    "tests_run_by_this_reviewer": false,
+    "network_or_remote_mutations_performed": false,
+    "only_written_artifact": "/workspace/scratch/e3816c743f42/release-review-377fb91/final-geometry-visual-review.json"
+  },
+  "desktop_zone_images": [
+    {
+      "filename": "at339-measured-selected-wz01-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz01-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz01-desktop.png",
+      "sha256": "4bd50c965f52d7a1cdc1573ea98264bd3f1d95d8dc79a99933d3e92a81943119",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 392961,
+      "zone_number": 1,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete narrow outline is visible with clear margins, numbered badge and controls.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz02-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz02-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz02-desktop.png",
+      "sha256": "98b659ec2b59fe03d36ad1af29f0df86c90737e598abf3f6bdff477cde1ed80f",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 497858,
+      "zone_number": 2,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete circular outline is visible and framed, with a legible selected badge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz03-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz03-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz03-desktop.png",
+      "sha256": "30067834b56ed52b9fe6baf769c4708f44444ad1f5b410e6199dd84fc4759e27",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 511310,
+      "zone_number": 3,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete circular outline is visible and framed, with a legible selected badge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz04-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz04-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz04-desktop.png",
+      "sha256": "fd8e9ad32e86583ecab5611f9f5093411d46606c380a9fcfd97b01fa7510c422",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 446219,
+      "zone_number": 4,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete rectangular selection outline, including its small edge notches, is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz05-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz05-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz05-desktop.png",
+      "sha256": "965e960dfa81cce1c08c6ee371becd94d57b9de6c5913323d8805fe065700ef5",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 511877,
+      "zone_number": 5,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete large irregular outline is inside the viewport, clear of the compass and bottom instruction.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz06-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz06-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz06-desktop.png",
+      "sha256": "9e4cc2b7b1ae2085b111af251098b5d5250cf2b2775a68c90754a1d5300ea951",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 400416,
+      "zone_number": 6,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete tall outline is inside the viewport, including both northern and southern ends.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz07-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz07-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz07-desktop.png",
+      "sha256": "4b1610ae54613f6790bc8844a01051bb8f9eb2cede00580370a7a3222000ff6f",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 508057,
+      "zone_number": 7,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete circular outline is visible and framed, with a legible selected badge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz08-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz08-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz08-desktop.png",
+      "sha256": "6577bcba5be8a183f3311de406dfdc304ab8cdbba5303eb590a5fcd08c28d160",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 497154,
+      "zone_number": 8,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete circular outline is visible and framed, with a legible selected badge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz09-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz09-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz09-desktop.png",
+      "sha256": "ef263b01ed14bc1eb85d7b6259ce9401ea3f7f342961e4627223c5668ef32ad6",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 415730,
+      "zone_number": 9,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete notched outline is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz10-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz10-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz10-desktop.png",
+      "sha256": "26a8424a27f8e1c0b7062755f43a984115c901c3d1668dd705c09e22eb65b9a3",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 477047,
+      "zone_number": 10,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete angled outline and its protrusions are visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz11-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz11-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz11-desktop.png",
+      "sha256": "893357269e083c8a9ee23e4e986891101ff2d5d61a659074ca354412589ae6c6",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 525714,
+      "zone_number": 11,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete irregular outline is visible, including the detailed southern edge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz12-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz12-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz12-desktop.png",
+      "sha256": "79ac76757a97f4ee06bd291f282f9a872a96f825dd424f7b7f51eb0e9f0ad6bd",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 497948,
+      "zone_number": 12,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete stepped outline is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz13-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz13-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz13-desktop.png",
+      "sha256": "f3c0650de3d79c28d9bfc382823c9d068a96bc56125dd2517705b7b44cd08002",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 327646,
+      "zone_number": 13,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete narrow outline is visible; the selected badge and map-edge context remain legible.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz14-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz14-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz14-desktop.png",
+      "sha256": "6ee26fc112e188d74197165b1ea73e68dcff911111417c05115576143ff80354",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 384601,
+      "zone_number": 14,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete wedge-shaped outline is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz15-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz15-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz15-desktop.png",
+      "sha256": "07b2df8145cd9f6efddb9dcc9111b3a2807f5931dcfda229a30cef32b88e0ae9",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 393603,
+      "zone_number": 15,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete narrow irregular outline is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz16-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz16-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz16-desktop.png",
+      "sha256": "8e79604aa283dc3e4274e2a3d1e233d0422b5a3948aef481879c5b9e755c3dbe",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 514117,
+      "zone_number": 16,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete circular outline is visible and framed, with a legible selected badge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz17-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz17-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz17-desktop.png",
+      "sha256": "8c19cd7cb6825b855f7b41ded6460ccc89f8a30f68d310b2561dfd4b640336da",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 540292,
+      "zone_number": 17,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Both lobes and the displayed connection are visible and framed; this does not establish physical walkability.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz18-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz18-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz18-desktop.png",
+      "sha256": "3e6766412371815c16ff82ba3e65a8a7d7a32764b9acfe9870d3105be1c048c6",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 406254,
+      "zone_number": 18,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete angular outline is visible and framed beside the map edge.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz19-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz19-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz19-desktop.png",
+      "sha256": "3a39367be8b3c857c685c7a494321d646c5709cf14d7328b6e72056d7e4a4c1c",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 516772,
+      "zone_number": 19,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete notched outline is visible and framed.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at339-measured-selected-wz20-desktop.png",
+      "relative_path": "areas/at339-measured-selected-wz20-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz20-desktop.png",
+      "sha256": "5f0113c43e2d78ddae5a4af4c8dc55f4257d69a8e769d319e99caf42e629b266",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 471157,
+      "zone_number": 20,
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image. Every desktop original was emitted and examined; some calls were grouped.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Complete large circular outline is visible with margins on every side.",
+        "Native map imagery, translucent fill, selected badge, north compass and lower gesture instruction are visible."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    }
+  ],
+  "desktop_sector_map_images": [
+    {
+      "filename": "at341-sector-bleu-sector-2-desktop.png",
+      "relative_path": "areas/at341-sector-bleu-sector-2-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-bleu-sector-2-desktop.png",
+      "sha256": "8dc5479b527adf83f9e813b03c89d492312b7338d621032189d54dfd3d014dad",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 488513,
+      "area_id": "bleu-sector-2",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Purple sector footprint is fully inside the map viewport and unobscured by the upper-left information card.",
+        "Native map, district-start qualification, sector name, compass and gesture hint are readable."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-jaune-sector-6-desktop.png",
+      "relative_path": "areas/at341-sector-jaune-sector-6-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-jaune-sector-6-desktop.png",
+      "sha256": "2883c17cac438eb45d5cfec558e569cf4c51c8b42199514c3620ec8ad9c71966",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 494608,
+      "area_id": "jaune-sector-6",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Purple irregular sector footprint is fully inside the map viewport and unobscured by the upper-left information card.",
+        "Native map, district-start qualification, sector name, compass and gesture hint are readable."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-magenta-sector-5-desktop.png",
+      "relative_path": "areas/at341-sector-magenta-sector-5-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-magenta-sector-5-desktop.png",
+      "sha256": "3ccb69a5610bf799ed30e2d75cfe298c14c28c56b6aa9354912c39baa24c8060",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 427760,
+      "area_id": "magenta-sector-5",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Purple sector footprint is inside the map viewport; the fixed upper-left information card covers a short upper/northwest outline segment.",
+        "This is information-overlay occlusion, not viewport overflow or a blank map. The rest of the selected shape and native map are readable.",
+        "Do not describe every outline pixel as unobscured."
+      ],
+      "decision": "PASS_WITH_NONBLOCKING_OVERLAY_OCCLUSION",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-rouge-sector-4-desktop.png",
+      "relative_path": "areas/at341-sector-rouge-sector-4-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-rouge-sector-4-desktop.png",
+      "sha256": "1b65c2044488d5448113049534b9e4eafdab4f17b9b8103058500a14b0a343da",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 511378,
+      "area_id": "rouge-sector-4",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Purple sector footprint is inside the map viewport; the fixed upper-left information card covers part of its upper/northwest end.",
+        "This is information-overlay occlusion, not viewport overflow or a blank map. The rest of the selected shape and native map are readable.",
+        "Do not describe every outline pixel as unobscured."
+      ],
+      "decision": "PASS_WITH_NONBLOCKING_OVERLAY_OCCLUSION",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-vert-sector-1-desktop.png",
+      "relative_path": "areas/at341-sector-vert-sector-1-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-vert-sector-1-desktop.png",
+      "sha256": "022c466899ff99887a78f69297159d40b7e16c5b784ed1920c188a3c2a1803ea",
+      "width_px": 837,
+      "height_px": 568,
+      "size_bytes": 497876,
+      "area_id": "vert-sector-1",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "desktop map-canvas element crop",
+      "observed_findings": [
+        "Purple sector footprint is fully inside the map viewport and unobscured by the upper-left information card.",
+        "The orientation-only text identifies south of Saison Canal and distinguishes Saison-Canalside on the opposite side. Compass and gesture hint remain readable."
+      ],
+      "decision": "PASS",
+      "blocking_findings": []
+    }
+  ],
+  "desktop_sector_detail_images": [
+    {
+      "filename": "at341-sector-detail-bleu-sector-2-desktop.png",
+      "relative_path": "areas/at341-sector-detail-bleu-sector-2-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-detail-bleu-sector-2-desktop.png",
+      "sha256": "78bea6d8c0577aac8a201d4689c4da65c12f41786b36c8bb9ee53e18c0f66c9b",
+      "width_px": 422,
+      "height_px": 1501,
+      "size_bytes": 265529,
+      "area_id": "bleu-sector-2",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "selected-area detail element screenshot; not the surrounding full page or necessarily every roster entry",
+      "observed_findings": [
+        "Heading and footprint/height/non-route/non-spawn qualifications are readable.",
+        "Non-comprehensive roster and condition limitations remain visible.",
+        "The related Wild Zone 5 text/button, original area-guide link, decoded Bleu Sector 2 source image, full-size link and map-focus button fit the panel width.",
+        "The initial Bellsprout entry is visibly labelled an unclassified research lead with missing conditions."
+      ],
+      "decision": "PASS_FOR_VISIBLE_DETAIL_CONTENT",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-detail-jaune-sector-6-desktop.png",
+      "relative_path": "areas/at341-sector-detail-jaune-sector-6-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-detail-jaune-sector-6-desktop.png",
+      "sha256": "913c696ea4071b6479629e0e23e263d4011c36395b4b370ddf469df9de875d0b",
+      "width_px": 422,
+      "height_px": 1168,
+      "size_bytes": 179512,
+      "area_id": "jaune-sector-6",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "selected-area detail element screenshot; not the surrounding full page or necessarily every roster entry",
+      "observed_findings": [
+        "Heading and footprint/height/non-route/non-spawn qualifications are readable.",
+        "The original area-guide link, decoded Jaune Sector 6 source image, full-size link and map-focus button fit the panel width.",
+        "The initial Bunnelby entry is visibly labelled an unclassified research lead; missing conditions and separation of story/static encounters remain stated."
+      ],
+      "decision": "PASS_FOR_VISIBLE_DETAIL_CONTENT",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-detail-magenta-sector-5-desktop.png",
+      "relative_path": "areas/at341-sector-detail-magenta-sector-5-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-detail-magenta-sector-5-desktop.png",
+      "sha256": "9101ca0798c0250e22c7541584bc05741a7e157624e5368e0b4dc62cba253534",
+      "width_px": 422,
+      "height_px": 1264,
+      "size_bytes": 214700,
+      "area_id": "magenta-sector-5",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "selected-area detail element screenshot; not the surrounding full page or necessarily every roster entry",
+      "observed_findings": [
+        "Heading and footprint/height/non-route/non-spawn qualifications are readable.",
+        "The text explicitly says no sector roster is verified and an empty list means missing evidence, not absence of Pokemon.",
+        "The related Wild Zone 9 text/button, original area-guide link, decoded Magenta Sector 5 image, full-size link and map-focus button fit the panel width.",
+        "The final empty-selection message and reference to original guide clues are readable."
+      ],
+      "decision": "PASS_FOR_VISIBLE_DETAIL_CONTENT",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-detail-rouge-sector-4-desktop.png",
+      "relative_path": "areas/at341-sector-detail-rouge-sector-4-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-detail-rouge-sector-4-desktop.png",
+      "sha256": "aebe68c87c4668e29c3a00cb26bf799681abf7174b14625501479911ba5afdd5",
+      "width_px": 422,
+      "height_px": 1168,
+      "size_bytes": 184879,
+      "area_id": "rouge-sector-4",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "selected-area detail element screenshot; not the surrounding full page or necessarily every roster entry",
+      "observed_findings": [
+        "Heading and footprint/height/non-route/non-spawn qualifications are readable.",
+        "The original area-guide link, decoded Rouge Sector 4 source image, full-size link and map-focus button fit the panel width.",
+        "The visible initial Riolu entry is labelled ordinary encounter with a written-source cross-check and explicitly retains differing source-reported levels."
+      ],
+      "decision": "PASS_FOR_VISIBLE_DETAIL_CONTENT",
+      "blocking_findings": []
+    },
+    {
+      "filename": "at341-sector-detail-vert-sector-1-desktop.png",
+      "relative_path": "areas/at341-sector-detail-vert-sector-1-desktop.png",
+      "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-sector-detail-vert-sector-1-desktop.png",
+      "sha256": "64cb85f428e67fc9805f697f1174ee487a1c18846b783c3929f415da4d26622d",
+      "width_px": 422,
+      "height_px": 1169,
+      "size_bytes": 201034,
+      "area_id": "vert-sector-1",
+      "review_method": "Direct visual inspection of this actual PNG using tools.view_image.",
+      "capture_scope": "selected-area detail element screenshot; not the surrounding full page or necessarily every roster entry",
+      "observed_findings": [
+        "Heading and footprint/height/non-route/non-spawn qualifications are readable.",
+        "The original area-guide link, decoded Vert Sector 1 source image, full-size link and map-focus button fit the panel width.",
+        "The source photo visibly distinguishes Saison Canal and Saison-Canalside.",
+        "The initial Bellsprout entry is visibly labelled an unclassified research lead, with condition and area-membership limitations."
+      ],
+      "decision": "PASS_FOR_VISIBLE_DETAIL_CONTENT",
+      "blocking_findings": []
+    }
+  ],
+  "phone_zone_hash_carry_forward": {
+    "prior_receipt_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/preliminary-visual-review.json",
+    "prior_receipt_sha256": "b5bf86f0100018fedde489fb2eb1f6c1781a70d3f983900e263459cc9b8f2177",
+    "prior_head_sha": "82f710dd6fc3a585a48e5daf3104fad28e6e765f",
+    "comparison": "Each final PNG hash equals both the prior receipt hash and a fresh SHA-256 of the earlier original PNG.",
+    "identical": 20,
+    "changed": 0,
+    "missing": 0,
+    "images": [
+      {
+        "filename": "at339-measured-selected-wz01-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz01-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz01-phone.png",
+        "sha256": "7de65494b30108ecf240cf1b8b78dfd5c77b2bc58f8cc36a31e8c43dcf64c8a5",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 163501,
+        "zone_number": 1,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz01-phone.png",
+        "prior_original_sha256": "7de65494b30108ecf240cf1b8b78dfd5c77b2bc58f8cc36a31e8c43dcf64c8a5",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete narrow outline visible; selected badge and controls legible."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz02-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz02-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz02-phone.png",
+        "sha256": "927c828ddc4acfbf4e2f9fb6dfd0d336c6265dfc869c2c8ee27a4adfa1b93a02",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 224149,
+        "zone_number": 2,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz02-phone.png",
+        "prior_original_sha256": "927c828ddc4acfbf4e2f9fb6dfd0d336c6265dfc869c2c8ee27a4adfa1b93a02",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete circular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz03-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz03-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz03-phone.png",
+        "sha256": "81ae66d5b70d254a652837c4cde5973b2dd8d10f901e15bba0f4715b9e151850",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 218880,
+        "zone_number": 3,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz03-phone.png",
+        "prior_original_sha256": "81ae66d5b70d254a652837c4cde5973b2dd8d10f901e15bba0f4715b9e151850",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete circular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz04-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz04-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz04-phone.png",
+        "sha256": "885c5927bc3027337386a84926d60a5a4a0b28ca6025803b3d59e9c3f6f22682",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 196243,
+        "zone_number": 4,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz04-phone.png",
+        "prior_original_sha256": "885c5927bc3027337386a84926d60a5a4a0b28ca6025803b3d59e9c3f6f22682",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete rectangular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz05-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz05-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz05-phone.png",
+        "sha256": "87d1c8c00c6799dd0859804cc611fbb759f2069750748eaea307b448e1a3d896",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 232084,
+        "zone_number": 5,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz05-phone.png",
+        "prior_original_sha256": "87d1c8c00c6799dd0859804cc611fbb759f2069750748eaea307b448e1a3d896",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete irregular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz06-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz06-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz06-phone.png",
+        "sha256": "5c7349e5228d8c170969beee58f684fb1ad53a2fe9f2f1f2918473cb43198230",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 179973,
+        "zone_number": 6,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz06-phone.png",
+        "prior_original_sha256": "5c7349e5228d8c170969beee58f684fb1ad53a2fe9f2f1f2918473cb43198230",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete tall outline visible; no clipping at map edge."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz07-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz07-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz07-phone.png",
+        "sha256": "359d461a86f6108edaebc970548fef50c646eab69ca42f383f4f845231a08ffa",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 229820,
+        "zone_number": 7,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz07-phone.png",
+        "prior_original_sha256": "359d461a86f6108edaebc970548fef50c646eab69ca42f383f4f845231a08ffa",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete circular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz08-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz08-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz08-phone.png",
+        "sha256": "5bd41d9817f4cf390393ea562c202a102fd681f3cefc26f2baba24a8995dd7d5",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 224804,
+        "zone_number": 8,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz08-phone.png",
+        "prior_original_sha256": "5bd41d9817f4cf390393ea562c202a102fd681f3cefc26f2baba24a8995dd7d5",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete circular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz09-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz09-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz09-phone.png",
+        "sha256": "e07895cae9a5e121e122e3fc317021ec4147203f92d4604a49cffa19f29a39ca",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 202243,
+        "zone_number": 9,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz09-phone.png",
+        "prior_original_sha256": "e07895cae9a5e121e122e3fc317021ec4147203f92d4604a49cffa19f29a39ca",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete notched outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz10-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz10-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz10-phone.png",
+        "sha256": "43929c03ed488cee16bd3be6245d3a1e91f13e0d87183b2d18bde64be2e4912e",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 217011,
+        "zone_number": 10,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz10-phone.png",
+        "prior_original_sha256": "43929c03ed488cee16bd3be6245d3a1e91f13e0d87183b2d18bde64be2e4912e",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete angled outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz11-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz11-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz11-phone.png",
+        "sha256": "e863e66460a5e10ac6ebd9b50bb419098c24f057ce28148d3c2fc06f1fcc536f",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 228171,
+        "zone_number": 11,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz11-phone.png",
+        "prior_original_sha256": "e863e66460a5e10ac6ebd9b50bb419098c24f057ce28148d3c2fc06f1fcc536f",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete irregular outline visible, including its detailed southern edge."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz12-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz12-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz12-phone.png",
+        "sha256": "5242ee3946fe6e18aede01e1da99f92baca8ad8a0933824c6ca1a0e002e6ec80",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 197724,
+        "zone_number": 12,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz12-phone.png",
+        "prior_original_sha256": "5242ee3946fe6e18aede01e1da99f92baca8ad8a0933824c6ca1a0e002e6ec80",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete stepped outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz13-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz13-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz13-phone.png",
+        "sha256": "9b8bb256e098748479c6aef3abd6b1a0842fd3ecdde8cc01693a3e7d42c91f8c",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 132043,
+        "zone_number": 13,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz13-phone.png",
+        "prior_original_sha256": "9b8bb256e098748479c6aef3abd6b1a0842fd3ecdde8cc01693a3e7d42c91f8c",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete narrow outline visible; selected badge fits within the available view."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz14-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz14-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz14-phone.png",
+        "sha256": "b9bd5a3544b9a1f758ddda1a9f12422baf3fe2566f33155e2a3e27b967448e8d",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 193329,
+        "zone_number": 14,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz14-phone.png",
+        "prior_original_sha256": "b9bd5a3544b9a1f758ddda1a9f12422baf3fe2566f33155e2a3e27b967448e8d",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete wedge-shaped outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz15-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz15-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz15-phone.png",
+        "sha256": "a3d000d6a79abd25f76bd597f4499fd40f4eeb207391391ce77a8bb065d91270",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 173209,
+        "zone_number": 15,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz15-phone.png",
+        "prior_original_sha256": "a3d000d6a79abd25f76bd597f4499fd40f4eeb207391391ce77a8bb065d91270",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete narrow, irregular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz16-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz16-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz16-phone.png",
+        "sha256": "7906294f7cfa7e34b3f50112ecd31ec763c77a8cfa2129797c3a4d5f0b4e09a7",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 224130,
+        "zone_number": 16,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz16-phone.png",
+        "prior_original_sha256": "7906294f7cfa7e34b3f50112ecd31ec763c77a8cfa2129797c3a4d5f0b4e09a7",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete circular outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz17-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz17-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz17-phone.png",
+        "sha256": "fb000422add27f96f398d16509a7c8204532c966965544beded828e88d97ff64",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 237027,
+        "zone_number": 17,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz17-phone.png",
+        "prior_original_sha256": "fb000422add27f96f398d16509a7c8204532c966965544beded828e88d97ff64",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Both lobes and their displayed connection visible; selected badge legible. No walkability conclusion follows from the displayed connection."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz18-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz18-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz18-phone.png",
+        "sha256": "850d504314c316ab798457a771c3bd30a344dee7d8d8e03164b7f6badb1814a1",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 172126,
+        "zone_number": 18,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz18-phone.png",
+        "prior_original_sha256": "850d504314c316ab798457a771c3bd30a344dee7d8d8e03164b7f6badb1814a1",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete angular outline visible; no clipping at map edge."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz19-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz19-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz19-phone.png",
+        "sha256": "5d0885b1607ba0cd8f1954d4441ae7b5bfbd539fa1edc9d221eb0bff6cbed0da",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 225730,
+        "zone_number": 19,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz19-phone.png",
+        "prior_original_sha256": "5d0885b1607ba0cd8f1954d4441ae7b5bfbd539fa1edc9d221eb0bff6cbed0da",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete notched outline visible and framed."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      },
+      {
+        "filename": "at339-measured-selected-wz20-phone.png",
+        "relative_path": "areas/at339-measured-selected-wz20-phone.png",
+        "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-measured-selected-wz20-phone.png",
+        "sha256": "4ed67451f327a850a3ed84273ea3144923111f1822a908156051c41cc5f22c48",
+        "width_px": 343,
+        "height_px": 478,
+        "size_bytes": 203622,
+        "zone_number": 20,
+        "review_method": "Exact SHA-256 equality to an individually visually inspected first-head PNG; direct image inspection was not repeated for this identical final-artifact file.",
+        "capture_scope": "static phone map-canvas crop",
+        "prior_original_path": "/workspace/scratch/e3816c743f42/release-review-82f710d/map/atlas-areas/at339-measured-selected-wz20-phone.png",
+        "prior_original_sha256": "4ed67451f327a850a3ed84273ea3144923111f1822a908156051c41cc5f22c48",
+        "prior_receipt_sha256_matches": true,
+        "sha256_matches_prior_original": true,
+        "carried_forward_findings": [
+          "Complete large circular outline visible with margin on every side."
+        ],
+        "decision": "PASS_BY_EXACT_IMAGE_IDENTITY",
+        "blocking_findings": []
+      }
+    ]
+  },
+  "browser_proof_reference": {
+    "filename": "at339-browser-proof.json",
+    "absolute_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-browser-proof.json",
+    "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+    "scope": "AT-339 shared areas and habitats",
+    "production_boundary_identity_count": 68,
+    "device_summaries": [
+      {
+        "device": "phone",
+        "viewport_width": 393,
+        "viewport_height": 852,
+        "approved_zone_render_records": 20,
+        "all_recorded_zone_renders_active": true,
+        "all_recorded_zone_renders_original_record_selected": true,
+        "all_recorded_zone_controls_present": true,
+        "original_progress_bytes_preserved_reported": true,
+        "storage_writes_reported": 0,
+        "page_errors_reported": []
+      },
+      {
+        "device": "desktop",
+        "viewport_width": 1440,
+        "viewport_height": 900,
+        "approved_zone_render_records": 20,
+        "all_recorded_zone_renders_active": true,
+        "all_recorded_zone_renders_original_record_selected": true,
+        "all_recorded_zone_controls_present": true,
+        "original_progress_bytes_preserved_reported": true,
+        "storage_writes_reported": 0,
+        "page_errors_reported": []
+      }
+    ],
+    "interpretation": "Artifact-reported evidence, not a fresh execution. 68 boundary identities do not mean 48 sector detail pages were visually inspected; direct detail sampling is five sectors and all20 zone selections."
+  },
+  "shared_observed_findings": [
+    "All20 desktop zone selected outlines are visibly complete inside their map crops, with legible numbered badges and native map imagery.",
+    "The desktop zone compass and bottom gesture hint do not obscure the selected outlines.",
+    "All20 final phone zone images are byte-identical to previously individually reviewed originals; the earlier bounded static-crop findings carry forward.",
+    "Five desktop sector maps display their named-sector qualification, native imagery and distinct purple footprints. Three are unobscured by the information card; two have the recorded nonblocking information-card occlusion.",
+    "Five desktop detail captures show readable semantic limitations, decoded original source-map photos, full-size links and map-focus controls. Related zone references remain qualified rather than silently copied as sector rosters.",
+    "No blank native-map load, missing selected outline, unreadable selected badge, broken source-photo rendering or horizontal text/button clipping was observed in the reviewed captures."
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "magenta-sector-5-fixed-information-overlay",
+      "severity": "nonblocking",
+      "filename": "at341-sector-magenta-sector-5-desktop.png",
+      "sha256": "3ccb69a5610bf799ed30e2d75cfe298c14c28c56b6aa9354912c39baa24c8060",
+      "observation": "Purple sector footprint is inside the map viewport; the fixed upper-left information card covers a short upper/northwest outline segment.",
+      "impact": "A short portion of the selected outline is under the fixed information card; the selected map remains legible and its geometry is inside the viewport. Full unobscured-outline visibility is not claimed.",
+      "root_independent_review": "Root separately directly viewed the same capture and agreed this is bounded nonblocking overlay occlusion; root reports map remains manipulable. This reviewer did not perform live gesture interaction."
+    },
+    {
+      "id": "rouge-sector-4-fixed-information-overlay",
+      "severity": "nonblocking",
+      "filename": "at341-sector-rouge-sector-4-desktop.png",
+      "sha256": "1b65c2044488d5448113049534b9e4eafdab4f17b9b8103058500a14b0a343da",
+      "observation": "Purple sector footprint is inside the map viewport; the fixed upper-left information card covers part of its upper/northwest end.",
+      "impact": "A short portion of the selected outline is under the fixed information card; the selected map remains legible and its geometry is inside the viewport. Full unobscured-outline visibility is not claimed.",
+      "root_independent_review": "Root separately directly viewed the same capture and agreed this is bounded nonblocking overlay occlusion; root reports map remains manipulable. This reviewer did not perform live gesture interaction."
+    }
+  ],
+  "limits": [
+    "This receipt is a bounded visual gate for exact candidate377fb91e03f2fea64237f0de031995b26090f468, not approval or proof of merge/deployment/live release.",
+    "Of132 artifact PNGs,30 desktop originals were directly visually reviewed and20 phone zone originals were checked for exact identity to a previous direct review. Remaining artifact images are outside this assigned review.",
+    "All20 Wild Zone selections were reviewed; only five representative desktop sector maps/details were reviewed. Do not claim visual review of all48 sector detail panels.",
+    "Map images are837×568 desktop element crops or343×478 phone element crops. The surrounding full-page layout and external controls are not established by these images.",
+    "Detail screenshots are element captures of varying heights; visible text/photos/buttons and initial roster content were inspected. They do not certify every further roster entry or content beyond the captured region.",
+    "Magenta Sector5 and Rouge Sector4 fixed information cards obscure short upper outline segments. This is explicitly accepted as nonblocking and must not be described as fully unobscured geometry.",
+    "Static screenshots do not independently establish clicking, scrolling, pinch, drag, rotation, north reset, keyboard interaction or live performance. The existing CI proof is referenced separately; no interactions/tests were rerun.",
+    "Rendered outlines are selection/sector-footprint representations. Thick strokes and native badges conceal some source pixels; this review does not repeat geometric calibration or establish physical walls, floor plans, routes, spawn positions or encounter availability.",
+    "WZ17 displayed connectivity is not proof of walkability. Source qualifications and approximate/unknown evidence remain applicable.",
+    "No guide screenshots are part of this area-artifact receipt; earlier six-guide findings require their own final-artifact identity evidence.",
+    "No original Workspace inspection, publication or parity verification was performed."
+  ]
+}

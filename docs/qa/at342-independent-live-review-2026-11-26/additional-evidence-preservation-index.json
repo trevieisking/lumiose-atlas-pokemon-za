@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "scope": "Preserve complete original40-file release-review packet plus two historical preparation drafts; original manifest and evidence bytes remain unchanged.",
+  "canonical_release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+  "canonical_workspace_prompt": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+  "historical_draft_limits": [
+    "historical/workspace-prompt-draft-e381.md uses an earlier24-input adaptation allowance; the current canonical prompt treats24 runtime hashes as a sample and preserves the full compatible upgrade inventory.",
+    "historical/prepare-release-documents-original.py is an unexecuted earlier preparation helper; final canonical Manifest91 was completed by PR206. Do not run it against current records."
+  ],
+  "files": [
+    {
+      "path": "INDEX.md",
+      "bytes": 4450,
+      "sha256": "c41b6d744a778136a06933ab82baaf645537a86862bfea89e2cdeec70edccf0f"
+    },
+    {
+      "path": "candidate/areas/at339-browser-proof.json",
+      "bytes": 30999,
+      "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4"
+    },
+    {
+      "path": "candidate/ci-run-summary.json",
+      "bytes": 11707,
+      "sha256": "d5d0de64c74157bbb9c293e1a509e43dc630dcc184bf24eb46cfa3186225e54a"
+    },
+    {
+      "path": "candidate/fashion-image-comparison.json",
+      "bytes": 1268,
+      "sha256": "57695154a9845faa8d3eb58a63364755732edf2d80a1f35a374db73c533c5a25"
+    },
+    {
+      "path": "candidate/final-code-review.json",
+      "bytes": 15184,
+      "sha256": "671964a70e28e90c348cd50df35afde7fbaa28da92fc2d9795585e01d4bec168"
+    },
+    {
+      "path": "candidate/final-directory-visual-review.json",
+      "bytes": 19931,
+      "sha256": "fb67ea416457bdba223a864b22d2832d58639037592d591b07ba7f53122ccde8"
+    },
+    {
+      "path": "candidate/final-geometry-visual-review.json",
+      "bytes": 93746,
+      "sha256": "0969aff3a7f0e98eaa9cd5cbe2a2b03699568868adf6ab9c741d99860b377abb"
+    },
+    {
+      "path": "candidate/final-misc-visual-review.json",
+      "bytes": 12664,
+      "sha256": "cde4299b8aa8ff52ebb73af3a7691145d6d64ef75e804c056d47cb3c5e2b852a"
+    },
+    {
+      "path": "candidate/final-runtime-visual-review.json",
+      "bytes": 37789,
+      "sha256": "f89daaeafc6d3bcaee0f3ff7edb6f36cf4c35af88861324913378d3801dc20cd"
+    },
+    {
+      "path": "candidate/live-http.json",
+      "bytes": 18084,
+      "sha256": "a5916ed332b02c65ff09e75c9161dfa11ce794341d4326121f355d04cd624422"
+    },
+    {
+      "path": "candidate/map/atlas-collectibles/at338-browser-proof.json",
+      "bytes": 5428,
+      "sha256": "99d38ccc67f62c94c36bc2d6a5f1379290fd940b2efe0ac7045e484d92f22129"
+    },
+    {
+      "path": "candidate/merge-receipt.json",
+      "bytes": 901,
+      "sha256": "6e7d146a61818fbd906ae696bfc2f63d91599726bd766c422402f2b58c9853a4"
+    },
+    {
+      "path": "candidate/pages-receipt.json",
+      "bytes": 472,
+      "sha256": "891a21936394bb1b4ddd1873214988c75a54ce495c33f9e234d6d4e0b1bb0d93"
+    },
+    {
+      "path": "candidate/tested-change-inventory.json",
+      "bytes": 105578,
+      "sha256": "777b1da7ba6549ea2c7f8300cecca7474524e3da0c4ba1ee283f51f3f077ba65"
+    },
+    {
+      "path": "historical/377fb91/areas/at339-browser-proof.json",
+      "bytes": 30999,
+      "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4"
+    },
+    {
+      "path": "historical/377fb91/ci-run-summary.json",
+      "bytes": 11914,
+      "sha256": "cb7beee14fc38064ece85861d706116298d3017d9fb4413e4ed9a84089f99d34"
+    },
+    {
+      "path": "historical/377fb91/fashion-image-comparison.json",
+      "bytes": 1346,
+      "sha256": "7802d465788682d0f10622985324189d5d4b9bf6cbaa469f5fc5c32a635b3ca4"
+    },
+    {
+      "path": "historical/377fb91/final-geometry-visual-review.json",
+      "bytes": 66036,
+      "sha256": "f33c4e11fe06e779da67dc408b95f714606792b0786e0480126f6db4b70e434d"
+    },
+    {
+      "path": "historical/377fb91/final-runtime-visual-review.json",
+      "bytes": 17445,
+      "sha256": "bc5cf7f6e2ba648dd655f49ba0de12635955c17ad86b1f6115351d542771f472"
+    },
+    {
+      "path": "historical/377fb91/map/atlas-collectibles/at338-browser-proof.json",
+      "bytes": 5428,
+      "sha256": "99d38ccc67f62c94c36bc2d6a5f1379290fd940b2efe0ac7045e484d92f22129"
+    },
+    {
+      "path": "historical/377fb91/premerge-review.json",
+      "bytes": 2647,
+      "sha256": "d85ab325e71944d001bc0fa751e22f23f9fd719061a5ba7a79e3e4d0557c1d7f"
+    },
+    {
+      "path": "historical/377fb91/tested-change-inventory.json",
+      "bytes": 104154,
+      "sha256": "bdb759001600d75ea3e93c96946a06f309dcfc4e0bb56fd21cf8c03d047cb8d0"
+    },
+    {
+      "path": "historical/82f710d/fashion-visual-review.json",
+      "bytes": 1932,
+      "sha256": "c3f80589ceba7173b62fe2ee1e1184bbc29ce7125580cbac31c6d5b115c35678"
+    },
+    {
+      "path": "historical/82f710d/preliminary-visual-review.json",
+      "bytes": 33965,
+      "sha256": "b5bf86f0100018fedde489fb2eb1f6c1781a70d3f983900e263459cc9b8f2177"
+    },
+    {
+      "path": "historical/prepare-release-documents-original.py",
+      "bytes": 58242,
+      "sha256": "308fb2efa3d564c017d3634b96dfe9de800ba5d6a413ae75b1db7fae17212f48"
+    },
+    {
+      "path": "historical/workspace-prompt-draft-e381.md",
+      "bytes": 25056,
+      "sha256": "36befc807c1c0eafc970b75a3c285673f566d368d43f7a31e9ab99e450306451"
+    },
+    {
+      "path": "live-browser-observations.json",
+      "bytes": 3984,
+      "sha256": "45233a84b43b3339c774b0e218d2b8669d842f964ad0cd02f899a2dc466e1629"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 15893,
+      "sha256": "b2e71e50a4e47a7c74a1991e15b893f589dd120166457a9d54f7368eaf873a1c"
+    },
+    {
+      "path": "release-visual-live-aggregate.json",
+      "bytes": 22584,
+      "sha256": "0a9b85826b85b00710227f16f45e8e397d1c1289ff97554f61bfa2cf2ec8bbd3"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-bleu-sector-2-desktop.png",
+      "bytes": 537722,
+      "sha256": "028d85f9ab8eaeeaf959f926fa1af88b9b502d01ce892b78669290f9db590e04"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-bleu-sector-2-phone.png",
+      "bytes": 210019,
+      "sha256": "45050da9e6e8940554dbaf24eb76161255d29fe406335e86adb7bec9333db424"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-jaune-sector-6-desktop.png",
+      "bytes": 492475,
+      "sha256": "b93b277a10c803d2de329226b8d539893481dbfeb54ed08ffcf5c27d79d751a3"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-jaune-sector-6-phone.png",
+      "bytes": 208339,
+      "sha256": "7ca842b6d732e9760ba39316fd360a089e5613d31d70f11d3bcbeb1e9366728e"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-magenta-sector-5-desktop.png",
+      "bytes": 450778,
+      "sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-magenta-sector-5-phone.png",
+      "bytes": 187540,
+      "sha256": "903efeeeec0d9196cb8a4dc4090f9bba3ae4ca276c3eee2d4919ca8f59a191d7"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-rouge-sector-4-desktop.png",
+      "bytes": 604302,
+      "sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-rouge-sector-4-phone.png",
+      "bytes": 209929,
+      "sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-vert-sector-1-desktop.png",
+      "bytes": 496481,
+      "sha256": "7afc4a536d895ef6b2d7c7fe31e96b5629aac124f4f4bf776b2167c1dba54079"
+    },
+    {
+      "path": "screenshots/sector-framing/at341-sector-vert-sector-1-phone.png",
+      "bytes": 197993,
+      "sha256": "a8d907e6a4cb8e16efbc4574ee05800e2f619efeecd429c40923305d0bb98659"
+    },
+    {
+      "path": "source-checkpoint/ATLAS_AT342_FINAL_INTEGRATION.json",
+      "bytes": 2151,
+      "sha256": "383804029d1ed6960a69bd2a1ba7dde4574bad09bb529eef731c6f5e285fe159"
+    },
+    {
+      "path": "source-checkpoint/combined-final-unit-tests.txt",
+      "bytes": 18529,
+      "sha256": "d2f9b67aaa71651a17e5c5c47aec6b3ff294f1fab2eb9f3ce4bb1b295b9bf4f2"
+    },
+    {
+      "path": "source-checkpoint/runtime-file-hashes.json",
+      "bytes": 2223,
+      "sha256": "17b584733a450e56b5c2c3d6ef2bcf2d069eba0f1f25d2ea4184b723c30ae3f1"
+    }
+  ]
+}

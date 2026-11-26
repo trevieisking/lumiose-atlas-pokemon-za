@@ -1,8 +1,29 @@
 # Lumiose Atlas — The Free Online Player’s Guide for Pokémon Legends: Z-A
 
+## AT-342 — current GitHub release / Manifest 91 / Ledger 99
+
+The finite **Interactive Map 2.0 GitHub release is merged, deployed and live verified**. [PR #204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204) tested source `f030c4ae3e33259105bf351885c386f6b53900d9` and merged as `223762bd1a21c2e72c592e975499d13c4195ae07`, with the same reviewed tree `0288e63d1d52fe5f95dc76e0c01631715310e54a`. [Pages run 45844017622](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45844017622) deployed that merge successfully.
+
+Read the [current release handoff](ATLAS_RELEASE_HANDOFF.md), [Manifest 91](MAPS_UPGRADE_MANIFEST.json), [Ledger 99](ATLAS_DUAL_SITE_FIX_LEDGER.md) and [exact release receipt](docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json) for the current scope and proof. The [private planning receipt](docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json) records the separate guarded metadata synchronization; it is not evidence of an original-Workspace publication.
+
+The reviewed scope includes **48 sector footprints, 20 Wild Zone selection outlines and 68 finite encounter-area dispositions**, with **42 written routes, 217 steps and 97 retained access leads**. Selection outlines and written approaches do not certify exact spawn extents, floors, every traversable path or a complete ladder/scaffold inventory. Unknown conditions, source disputes and incomplete rosters remain labelled.
+
+The [original 67-requirement register](docs/consolidation/2026-11-26/requirements.json) is preserved. Broader full-guide, mission-depth and city/roof Alpha obligations remain open; the [targeted Dratini review](docs/qa/ATLAS_AT342_CITY_ALPHA_DRATINI_REVIEW.md) is complete with its recorded limits. The **original Workspace remains separate**, last recorded at **version 38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`. The [single Workspace prompt](WORKSPACE_MAP2_RELEASE_PROMPT.md) pins the approved release and retains A1–A7 source/access reconfirmation, backup, compatibility, preview, publication and independent live checks. This GitHub release does not certify that original Site's upgrade or parity. Preserve its URL, progress and integrations; videos and YouTube remain paused.
+
+<!-- AT342_README_PRE_RELEASE_HISTORY -->
+<details>
+<summary>Historical pre-release entry — Manifest 88 / Ledger 96</summary>
+
 ## AT-341 — current consolidated checkpoint
 
 Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md), [the verified consolidation contract](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md), and [PR204's exact release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Current manifest88 / ledger96 preserves the earlier AT-336 requirement/source inventory and records the disposition of the 25 source PRs in the original inventory. PR204 records the actual reviewed head, checks, promotion decision, merge and deployment as they occur. The complete map master plan remains unfinished; its full-release SHA and executable Workspace prompt remain unset under AT-325. Videos and YouTube remain paused. Fresh metadata shows the original Workspace at version38 after a separate filter/photo hotfix; this GitHub consolidation does not publish to it.
+
+Original current-status routing text, retained as history:
+
+The material below preserves the earlier reconstruction and recovery records, including their then-current counts and access limitations. Use the AT-340 links above for current release status; these older statements are not fresh completion or deployment claims.
+
+</details>
+<!-- END_AT342_README_PRE_RELEASE_HISTORY -->
 
 ## START HERE — mandatory preflight for every development cycle
 
@@ -10,7 +31,7 @@ Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md), [the veri
 
 ## Historical source-recovery checkpoints
 
-The material below preserves the earlier reconstruction and recovery records, including their then-current counts and access limitations. Use the AT-340 links above for current release status; these older statements are not fresh completion or deployment claims.
+The material below preserves the earlier reconstruction and recovery records, including their then-current counts and access limitations. Use the AT-342 release references above for current release status; these older statements are not fresh completion or deployment claims.
 
 **Description:** A free, illustrated guide to Pokémon Legends: Z-A, including story walkthroughs, side missions, Wild Zone maps, Pokédex entries, items, Alpha Pokémon, rewards, shiny-hunting guidance and Mega Dimension DLC. This independently reconstructed edition is being completed and verified section by section.
 
