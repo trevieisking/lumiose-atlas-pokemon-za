@@ -22,7 +22,7 @@ The original Workspace was last recorded at **version 38**, source `6f7808db2d3c
 3. Merge the exact reviewed head, verify its Pages deployment and live behavior, and record rollback plus the final approved commit/tree.
 4. After G0–G5 are supported, provide one Workspace prompt pinned to that release. Reconfirm the original source, take a backup, apply compatible bounded changes, preview/test, then publish and verify separately.
 
-**Completion boundary:** the wider base-game/Mega Dimension guide audit (`CHAT-FULL-GUIDE`), mission-depth audit (`CHAT-WALKTHROUGH-DEPTH`) and targeted city/roof Alpha review (`CHAT-CITY-ALPHAS`, including the unresolved Alpha Dratini disposition) are **not certified complete**. They remain required broader obligations, separate from the finite map-release assessment; a later map release must not be described as completion of all 67 historical requirements. See the [current requirement dispositions](docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json).
+**Completion boundary:** the wider base-game/Mega Dimension guide audit (`CHAT-FULL-GUIDE`), mission-depth audit (`CHAT-WALKTHROUGH-DEPTH`) and targeted city/roof Alpha review (`CHAT-CITY-ALPHAS`, including the wider rooftop inventory; the [six-sector Dratini follow-up](docs/qa/ATLAS_AT342_CITY_ALPHA_DRATINI_FOLLOWUP.json) is staged separately) are **not certified complete**. They remain required broader obligations, separate from the finite map-release assessment; a later map release must not be described as completion of all 67 historical requirements. See the [current requirement dispositions](docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json).
 
 <!-- END_AT342_CURRENT_90_98 -->
 

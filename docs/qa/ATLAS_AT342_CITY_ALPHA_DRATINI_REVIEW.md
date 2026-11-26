@@ -38,3 +38,7 @@ The current model has `fixed_alpha` and `rotating_alpha`, but no `random_alpha` 
 Exact coordinates remain unknown. No new encounter pin, inferred floor coordinate or permanent Hyperspace marker is approved. No direct in-game encounter or owner-photo verification was performed here. Written sources were read without opening videos. A StrategyWiki playthrough returned HTTP 403 and contributes no relied-on passage.
 
 The **broader city and rooftop Alpha route inventory remains open**. This targeted review neither certifies all city Alpha locations nor expands the current 68-area map release into a new acceptance requirement.
+
+## Follow-up: six sectors corroborated
+
+[Follow-up data and route evidence](ATLAS_AT342_CITY_ALPHA_DRATINI_FOLLOWUP.json) supersede the earlier Jaune 5 Alpha-unknown disposition and identify Alpha variants in all six named sectors. This supplements the historical observations rather than changing the original receipt or the six ordinary habitat rows. The [Alpha fieldbook](../../alphas.html#alpha-dratini-rooftops) presents the bounded written routes. The broader city inventory stays open.

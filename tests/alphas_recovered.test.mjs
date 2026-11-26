@@ -79,3 +79,21 @@ controls.alphaZoneSearch.value="";
 controls.alphaZoneSearch.events.input();
 assert.equal(controls.alphaZoneStatus.textContent,"Showing 20 of 20 Wild Zones");
 console.log("PASS: 20 source zone cards and 38 fixed targets, complete 67-entry saved pool, filters/search, 25 link menu and no network writes.");
+
+const cityRecord=JSON.parse(read('docs/qa/ATLAS_AT342_CITY_ALPHA_DRATINI_FOLLOWUP.json'));
+const dratiniCard=html.match(/<article class="step-card" id="alpha-dratini-rooftops">([\s\S]*?)<\/article>/)?.[1];
+assert.ok(dratiniCard);
+for(const term of ["Lv. 38–39","Lv. 28–29","not guaranteed","Restaurant Le Nah","Café Kizuna","Hibernal Pokémon Center","Roto-Glide","Bleu 9, Jaune 3, Magenta 8 and Rouge 8","not exact pins"]){
+  assert.ok(dratiniCard.includes(term),term);
+}
+assert.match(source,/href="alphas.html#alpha-dratini-rooftops"/);
+assert.deepEqual(Object.fromEntries(cityRecord.locations.map(row=>[row.area_id,row.location_key])),{
+  "bleu-sector-9":47,"jaune-sector-3":86,"jaune-sector-5":88,"magenta-sector-8":63,"rouge-sector-8":79,"vert-sector-6":24
+});
+assert.ok(cityRecord.locations.every(row=>row.ordinary.join()=== "28,29" && row.alpha.join()==="38,39"));
+const cityData=JSON.parse(read('atlas-area-evidence.json'));
+const speciesRows=cityData.areas.flatMap(a=>a.encounters.filter(r=>r.species==='Dratini').map(r=>({...r,area:a.area_id})));
+assert.equal(speciesRows.length,6);
+for(const row of speciesRows)assert.equal(row.encounter_class,'ordinary');
+assert.equal(cityRecord.limits.new_pins,0);
+assert.equal(cityRecord.limits.complete_city_alpha_audit,false);
