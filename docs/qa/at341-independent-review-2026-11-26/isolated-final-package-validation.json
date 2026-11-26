@@ -1,0 +1,156 @@
+{
+  "id": "AT341-INDEPENDENT-ISOLATED-FINAL-PACKAGE-VALIDATION",
+  "observed_at": "2026-11-26T14:00:33.582989+00:00",
+  "tested_commit": "8c1dff2ff2a769c5129bfb603cbb22a132f6ac3c",
+  "tested_tree": "5d412733da4fa2fc0683bb7030a3b22ce820f43c",
+  "base": "a19f1f2fc0535511dac4349573d2442dad40570e",
+  "result": "PASS_LOCAL_CHECKPOINT",
+  "scope": "This isolated source/test checkpoint is offered to the active integration owner. It does not authorize an untested combined release or constitute CI, merge, deployment, live or Workspace proof. Canonical plans and Supabase remain owned by the resumed release session.",
+  "node_tests": {
+    "command": "node --test tests/*.test.mjs",
+    "test_files": 42,
+    "tests": 154,
+    "passed": 154,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "log_sha256": "b806e43af6e8643025def839d24e38c8cc264b69c71e17a0a0a8d418c21c54ca"
+  },
+  "source_and_static_checks": [
+    {
+      "command": "python3 tests/validate_static.py",
+      "result": "PASS",
+      "counts": {
+        "sections": 17,
+        "page_links": 647,
+        "image_script_references": 1431,
+        "captured_resources": 578
+      }
+    },
+    {
+      "command": "python3 tests/validate_owner_overview_evidence.py",
+      "result": "PASS",
+      "exact_owner_crops": 8
+    },
+    {
+      "command": "python3 scripts/reconcile_sector_encounters.py",
+      "result": "PASS",
+      "reviewed_numbered_sections": 16,
+      "reviewed_walking_rows": 172
+    },
+    {
+      "command": "python3 scripts/reconcile_remaining_sector_encounters.py",
+      "result": "PASS",
+      "additional_numbered_sections": 29,
+      "additional_walking_rows": 312
+    },
+    {
+      "command": "python3 docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py",
+      "result": "PASS_EXACT_NO_WRITE_REPLAY",
+      "candidates": 11,
+      "closed_ring_vertices": 832,
+      "frozen_native_checks": 43,
+      "maximum_sampled_native_error_px": 2.0984617749247665,
+      "candidate_sha256": "3f4f9d0436e254d770a4f7e928416bae89e95fc5395ee9b4709ef4cf5ea3e5d8"
+    }
+  ],
+  "preservation": {
+    "date": "2026-11-26T13:59:46.377780+00:00",
+    "baseline": "a19f1f2fc0535511dac4349573d2442dad40570e",
+    "candidate_commit": "f823125258e6a630cd2b01b87f840607da67dcd7",
+    "protected_files": [
+      {
+        "path": "maps/lumiose-game-map.jpg",
+        "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "bytes": 411683
+      },
+      {
+        "path": "atlas-explorer-data.json",
+        "sha256": "21b1b37838890442855be2337acfeeca4a8225e139f4e7d92cfe5f9cc2d8869f",
+        "bytes": 201031
+      },
+      {
+        "path": "items-data.js",
+        "sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "bytes": 103398
+      },
+      {
+        "path": "src/sections/sidequests.html",
+        "sha256": "b59bb78ef61afae9f88f726e3b5c0dd5ebbfc919dc9e5b186a45191f7933683f",
+        "bytes": 157901
+      },
+      {
+        "path": "index.html",
+        "sha256": "da91792c084231c4de4257a821d937cb98d675eebd430058e81b69fe81e1541f",
+        "bytes": 1261614
+      },
+      {
+        "path": "side-missions.html",
+        "sha256": "66ad6327e663b5d11fb5901fff7d088c598502b6c3c0d580114fbfd309add09c",
+        "bytes": 229607
+      },
+      {
+        "path": "docs/consolidation/2026-11-26/requirements.json",
+        "sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+        "bytes": 59243
+      },
+      {
+        "path": "docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+        "sha256": "0b0c0df69b3bd6e0f785f30a98ce6c159f855138d3d893bfd1be511ee9a827e5",
+        "bytes": 18148
+      },
+      {
+        "path": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+        "sha256": "738561d87677c273bffe25416b3c5e245e866373e7c32de42de329e37275e0b1",
+        "bytes": 5499
+      },
+      {
+        "path": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+        "sha256": "a80d7578ccae7ae7ddc6294f51a546829f7cb3045bf5ea747771dd212b598535",
+        "bytes": 5182
+      },
+      {
+        "path": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+        "sha256": "68a9819c650b94be51e439b33d9bec931a4b71d01b442cc05d856e0caf9d84ad",
+        "bytes": 12664
+      },
+      {
+        "path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+        "sha256": "e1af71628fe84b53d14ccb424ebcf8f5b194f34895ebab1a52d3b807f89e434b",
+        "bytes": 234656
+      }
+    ],
+    "prior_geometries_exactly_preserved": 57,
+    "current_geometries": 68,
+    "all_non_geometry_evidence_exactly_preserved": true,
+    "original_asset_directories_changed_files": [],
+    "excluded_private_or_raw_asset_files_found": [],
+    "status": "PASS",
+    "scope": "Isolated source and preservation checkpoint; final release owner tree/CI/live proof remains separate."
+  },
+  "runtime_evidence_sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92",
+  "coverage": {
+    "reviewed_area_geometries": 68,
+    "sector_footprints": 48,
+    "wild_zone_selection_outlines": 20,
+    "model_encounters": 1020,
+    "previous_geometry_records_preserved": 57,
+    "new_exact_pickup_pins": 0
+  },
+  "copy_amendment": {
+    "commit": "e501525a24ea1d957fa400bb225c394208323e50",
+    "files": 4,
+    "replacements": 71,
+    "html_markup_ids_attributes_and_links_unchanged": true,
+    "subsequent_strict_test_amendment": "8c1dff2ff2a769c5129bfb603cbb22a132f6ac3c",
+    "frozen_cross_reference_packet_unchanged": true
+  },
+  "pending": [
+    "Actual final combined owner tree and current-head CI",
+    "Actual final phone/desktop browser artifact review",
+    "Expected-head merge and exact Pages deployment",
+    "Live published byte and visible UI verification",
+    "Current canonical plan and private tracker release reconciliation",
+    "Separate future original-Workspace adaptation"
+  ]
+}
