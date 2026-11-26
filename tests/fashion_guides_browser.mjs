@@ -25,6 +25,31 @@ try {
   await context.route("**/*",route=>route.request().url().startsWith(host+"/")?route.continue():route.abort());
   const page=await context.newPage();
   const errors=[];page.on("pageerror",error=>errors.push(String(error)));
+
+  await page.goto(base+"shops.html",{waitUntil:"load"});
+  const styleSection=page.locator("#fashion-subguides");
+  assert.ok(await styleSection.isVisible());
+  assert.equal(await page.locator("[data-style-kind='arcade']").count(),5);
+  assert.equal(await page.locator("[data-style-boutique]").count(),41);
+  assert.equal(await page.locator("[data-style-kind='salon']").count(),5);
+  assert.ok(await page.locator('a[href="clothing-guide.html"]').count()>0);
+  assert.ok(await page.locator('a[href="hair-beauty-guide.html"]').count()>0);
+  const styleSearch=page.locator("#styleSearch");
+  await styleSearch.fill("Naptime");
+  assert.equal(await page.locator("[data-style-card]:visible").count(),1);
+  assert.ok(await page.locator('[data-style-kind="arcade"]:visible details').evaluate(el=>el.open),"Matching boutique arcade must open on search");
+  assert.match(await page.locator("#styleResultStatus").innerText(),/1 shopping arcade/);
+  await styleSearch.fill("Coiffure Clips");
+  assert.equal(await page.locator("[data-style-card]:visible").count(),1);
+  assert.equal(await page.locator("[data-style-kind='salon']:visible h3").innerText(),"Coiffure Clips");
+  await styleSearch.fill("invalid-style-qqqq");
+  assert.ok(await page.locator("#styleNoResults").isVisible());
+  await styleSearch.fill("");
+  assert.equal(await page.locator("[data-style-card]:visible").count(),10);
+  assert.ok((await page.locator("#styleResultStatus").innerText()).includes("5 shopping arcades and 5 salons"));
+  const styleOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+  assert.ok(styleOverflow<=1,kind+" Shops style directory horizontal overflow "+styleOverflow);
+  await styleSection.screenshot({path:output+"/shops-style-directory-"+kind+".png"});
   for(const [file,anchor,selector,count] of [["clothing-guide.html","accessory-prices","[data-fashion-boutique]",41],["hair-beauty-guide.html","furfrou","[data-fashion-salon]",5]]){
    await page.goto(base+"shops.html",{waitUntil:"load"});
    const treasure=page.locator("#treasure-pocket details");
