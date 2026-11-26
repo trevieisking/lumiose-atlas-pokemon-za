@@ -533,6 +533,19 @@ try{
       const actual=await boundary.evaluate(path=>{const b=path.getBBox();return{x:b.x,y:b.y,width:b.width,height:b.height};});
       for(const name of Object.keys(expected))assert.ok(Math.abs(expected[name]-actual[name])<.01,areaId+' renders exact '+name);
       assert.equal(await boundary.evaluate(path=>{const b=path.getBoundingClientRect(),v=document.getElementById('aeViewport').getBoundingClientRect();return b.left>=v.left-1&&b.right<=v.right+1&&b.top>=v.top-1&&b.bottom<=v.bottom+1;}),true,'Reviewed area focus frames the actual footprint');
+      const visibleFit=await boundary.evaluate(path=>{
+        const bounds=path.getBoundingClientRect(),viewport=document.getElementById('aeViewport');
+        const v=viewport.getBoundingClientRect(),context=document.getElementById('aeSectorContext'),card=context.getBoundingClientRect();
+        const guidance=viewport.querySelector('.ae-map-guidance'),guide=guidance.getBoundingClientRect();
+        const transform=new DOMMatrix(getComputedStyle(document.getElementById('aeStage')).transform);
+        const strokeMargin=Number.parseFloat(getComputedStyle(path).strokeWidth)/2*Math.max(1,Math.hypot(transform.a,transform.b));
+        return {strokeMargin,contextVisible:!context.hidden&&card.width>0&&card.height>0&&getComputedStyle(context).visibility==='visible',
+          left:bounds.left-strokeMargin-v.left,right:v.right-bounds.right-strokeMargin,
+          belowContext:bounds.top-strokeMargin-card.bottom,aboveGuidance:guide.top-bounds.bottom-strokeMargin};
+      });
+      assert.equal(visibleFit.contextVisible,true,'The selected sector context remains visible');
+      assert.ok(visibleFit.left>=0&&visibleFit.right>=0&&visibleFit.belowContext>=0&&visibleFit.aboveGuidance>=0,
+        areaId+' entire outline and stroke clear the context card, map edges and guidance: '+JSON.stringify(visibleFit));
       assert.equal(await page.locator('.ae-pin[data-kind="sector"]').count(),0,'A footprint never becomes a guessed sector point pin');
       await page.locator('#aeViewport').screenshot({path:output+'/at341-sector-'+areaId+'-'+device+'.png'});
       const photo=page.locator('#aeSelected .ae-source-map-reference img');

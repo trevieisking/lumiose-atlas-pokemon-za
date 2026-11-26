@@ -37,15 +37,37 @@ test('three sector cross-references preserve every existing encounter and the ex
   assert.equal(hash(canonical(evidence.areas.map(a=>({area_id:a.area_id,encounters:a.encounters})))),packet.original_encounters_canonical_sha256);
 });
 
-test('original sector guide cards gain only a usable internal Wild Zone link',()=>{
+test('original sector guide cards retain exact Wild Zone links and reviewed outline summary amendments',()=>{
   const html=read('sector-maps.html');
+  // Later verified outlines amend only these summaries; preserve the frozen link-only receipt.
+  const summaryAmendments={
+    'bleu-sector-10':{
+      before:'<summary>Sector map and item pins awaiting evidence</summary>',
+      after:'<summary>Sector map available; item pins awaiting evidence</summary>',
+      card_sha256:'3ca7165f48aa8f7d6d206e7c1a6e3373ab257b461ba3c2bb34a6b29dad5900eb'
+    },
+    'magenta-sector-5':{
+      before:'<summary>Sector map and item pins awaiting evidence</summary>',
+      after:'<summary>Sector map available; item pins awaiting evidence</summary>',
+      card_sha256:'96888cc8411e796ec5d9e9f8fc175446795aba6a80fe093f2c698bbe1ee76550'
+    }
+  };
   assert.equal(packet.guide_cards.length,3);
   for(const card of packet.guide_cards){
     const match=html.match(new RegExp('<article\\b[^>]*\\bid="sector-'+card.area_id+'"[^>]*>.*?<\\/article>','s'));
     assert.ok(match,card.area_id);
     assert.equal(match[0].split(card.insertion).length,2);
-    assert.equal(hash(match[0]),card.candidate_card_sha256);
-    assert.equal(hash(match[0].replace(card.insertion,'')),card.original_card_sha256);
+    let preservedCard=match[0];
+    const amendment=summaryAmendments[card.area_id];
+    if(amendment){
+      assert.equal(hash(preservedCard),amendment.card_sha256,card.area_id+' exact amended card');
+      assert.equal(preservedCard.split(amendment.after).length,2,card.area_id+' exactly one amended summary');
+      assert.equal(preservedCard.includes(amendment.before),false,card.area_id+' old summary is replaced');
+      preservedCard=preservedCard.replace(amendment.after,amendment.before);
+      assert.equal(preservedCard.split(amendment.before).length,2,card.area_id+' exactly one restored summary');
+    }
+    assert.equal(hash(preservedCard),card.candidate_card_sha256);
+    assert.equal(hash(preservedCard.replace(card.insertion,'')),card.original_card_sha256);
     const url=new URL(card.href,'https://atlas.invalid/');
     assert.equal(url.pathname,'/sector-maps.html');
     assert.equal(url.searchParams.get('area'),card.target_area_id);

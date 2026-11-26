@@ -62,14 +62,21 @@
     "expected_head_merge": "pending",
     "pages_deployment": "pending",
     "deployed_live_checks": "pending",
-    "runtime_file_hash_count": 23,
+    "runtime_file_hash_count": 24,
     "overlap_scroll_correction": "docs/qa/ATLAS_AT342_OVERLAP_SCROLL_CORRECTION.json",
     "scroll_correction_local_node": {
       "passed": 154,
       "failed": 0,
       "command": "node --test tests/*.test.mjs",
       "log": "docs/qa/at342-resume/scroll-correction-unit-tests.txt"
-    }
+    },
+    "combined_final_node": {
+      "passed": 155,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs",
+      "log": "docs/qa/at342-resume/combined-final-unit-tests.txt"
+    },
+    "visible_framing_integration": "docs/qa/ATLAS_AT342_FINAL_INTEGRATION.json"
   },
   "geometry_approval": "docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json",
   "private_tracker_receipt": "docs/qa/ATLAS_AT342_TRACKER_RECEIPT.json",

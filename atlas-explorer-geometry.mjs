@@ -75,9 +75,9 @@ export function centreOn([x, y], view, viewport) {
   const where = project([x, y], { ...view, panX: 0, panY: 0 }, viewport);
   return constrain({ ...view, panX: viewport.width / 2 - where.x, panY: viewport.height / 2 - where.y }, viewport);
 }
-/* Fit a reviewed area outline in the current camera orientation. This changes
-   only the viewport, never a source record's saved centre or coordinates. */
-export function frameBoundary(geometry, view, viewport) {
+/* Fit a reviewed area outline in the current camera orientation, reserving any
+   screen-space labels. This never changes saved centres or source coordinates. */
+export function frameBoundary(geometry, view, viewport, insets = {}) {
   const points=geometry?.type==='Polygon'?geometry.coordinates?.flat(1):geometry?.type==='MultiPolygon'?geometry.coordinates?.flat(2):[];
   if(!Array.isArray(points)||points.length<4||!points.every(p=>Array.isArray(p)&&p.length===2&&p.every(n=>Number.isFinite(n)&&n>=0&&n<=MAP_SIZE)))return constrain(view,viewport);
   const xs=points.map(p=>p[0]),ys=points.map(p=>p[1]);
@@ -85,9 +85,15 @@ export function frameBoundary(geometry, view, viewport) {
   const angle=wrapRotation(view.rotation)*RADIANS,c=Math.cos(angle),s=Math.sin(angle);
   const rotated=points.map(([x,y])=>[(x-centre[0])*c-(y-centre[1])*s,(x-centre[0])*s+(y-centre[1])*c]);
   const halfWidth=Math.max(...rotated.map(p=>Math.abs(p[0]))),halfHeight=Math.max(...rotated.map(p=>Math.abs(p[1])));
+  const top=clamp(Number.isFinite(insets?.top)?insets.top:0,0,Math.max(0,viewport.height-1));
+  const bottom=clamp(Number.isFinite(insets?.bottom)?insets.bottom:0,0,Math.max(0,viewport.height-top-1));
+  const availableHeight=viewport.height-top-bottom;
   const scale=stageBase(viewport)/MAP_SIZE;
-  const zoom=clamp(Math.min(viewport.width*.72/(Math.max(1,halfWidth*2)*scale),viewport.height*.72/(Math.max(1,halfHeight*2)*scale)),MIN_ZOOM,MAX_ZOOM);
-  return centreOn(centre,{...view,zoom},viewport);
+  const zoom=clamp(Math.min(viewport.width*.72/(Math.max(1,halfWidth*2)*scale),availableHeight*.72/(Math.max(1,halfHeight*2)*scale)),MIN_ZOOM,MAX_ZOOM);
+  const where=project(centre,{...view,zoom,panX:0,panY:0},viewport);
+  // Target the available rectangle before clamping; a prior centreOn clamp
+  // would lose part of the requested offset near the native map's edge.
+  return constrain({...view,zoom,panX:viewport.width/2-where.x,panY:top+availableHeight/2-where.y},viewport);
 }
 export function normaliseRoute(route, pointIds) {
   if (!route || typeof route.id !== "string" || !pointIds.has(route.point_id) || !Array.isArray(route.steps) || !route.steps.length) return false;
