@@ -2,6 +2,7 @@
   "read_first": {
     "binding": true,
     "read_order": [
+      "FINAL_WORKSPACE_PLAN.md",
       "ATLAS_RELEASE_HANDOFF.md",
       "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
       "MAPS_UPGRADE_MANIFEST.json",
@@ -17,11 +18,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 81,
+  "revision": 82,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-336 reconciled all accessible plans, PRs, chats and ledgers; PR188 media removal merged. AT-320/328 reconciliation and AT-325 G2–G5 remain open; final executable Workspace prompt blocked.",
+  "current_phase": "AT-337 completes the simple five-action plan and current-base four-route packet; all67 requirements retained. G2/G3 evidence, G4 interactions and G5 full release remain open; executable Workspace prompt blocked.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4818,7 +4819,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "AT336_consolidated_G1_G2_partial_G3_G5_open",
+    "status": "AT337_plan_complete_G1_route_packet_G2_G5_open",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4884,11 +4885,11 @@
     "phase_states": [
       {
         "id": "G0",
-        "state": "consolidated_documentation_private_metadata_sync_pending"
+        "state": "prior_consolidation_merged_private_metadata_reconciled"
       },
       {
         "id": "G1",
-        "state": "partial"
+        "state": "current_base_route_packet_requires_exact_release_receipt"
       },
       {
         "id": "G2",
@@ -4941,7 +4942,8 @@
     },
     "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
     "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes.",
-    "current_consolidation": "docs/consolidation/2026-11-26/manifest.json"
+    "current_consolidation": "docs/consolidation/2026-11-26/manifest.json",
+    "current_completion_plan": "FINAL_WORKSPACE_PLAN.md"
   },
   "at_326_map_review_regressions": {
     "status": "github_pages_deployed_exact_sha_verified",
@@ -5431,5 +5433,28 @@
       "AT-316/317 video work",
       "AT-319 permission to retain active previously deployed video links"
     ]
+  },
+  "at_337_completion_plan": {
+    "id": "AT-337",
+    "date": "2026-11-26",
+    "plan": "FINAL_WORKSPACE_PLAN.md",
+    "coverage": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
+    "manifest_revision": 82,
+    "ledger_revision": 90,
+    "planning_status": "complete",
+    "implementation_status": "in_progress",
+    "source_baseline_sha": "2a3e03942d102ad283be6c749241ac0d7ba36fc6",
+    "route_source_pr": 156,
+    "route_source_head": "a9e906cdce710a67ca960e363a087160cd08dc5d",
+    "route_evidence": "docs/qa/ATLAS_AT337_BLEU_ROUTE_RECONCILIATION.md",
+    "candidate_routes": 26,
+    "candidate_access_leads": 78,
+    "older_records_preserved": true,
+    "old_branch_merged_wholesale": false,
+    "runtime_change_scope": "four written routes plus8research leads only; no geometry/pins/media/progress changes",
+    "full_scope_github_release_sha": null,
+    "executable_workspace_prompt": null,
+    "workspace_changed": false,
+    "prior_G0_receipt": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/190"
   }
 }

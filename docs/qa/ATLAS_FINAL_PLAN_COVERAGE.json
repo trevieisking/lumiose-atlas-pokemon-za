@@ -1,0 +1,731 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-26",
+  "source_repository_commit": "2a3e03942d102ad283be6c749241ac0d7ba36fc6",
+  "source_requirements_path": "docs/consolidation/2026-11-26/requirements.json",
+  "source_file_sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+  "coverage": {
+    "source_records": 67,
+    "mapped_records": 67,
+    "unique_mapped_ids": 67,
+    "omitted_ids": [],
+    "invented_ids": []
+  },
+  "status": "planning_complete_implementation_in_progress",
+  "rules": [
+    "No new gates; retain AT325 G0–G5 before A0 and AT297 for independent Workspace work.",
+    "67 requirements are all preserved; preservation is not a claim that all are implemented or new blockers.",
+    "All current feature, data, privacy, no-video and source-evidence constraints remain binding."
+  ],
+  "actions": [
+    {
+      "id": "action_1_reconcile_work",
+      "requirement_count": 19,
+      "requirement_ids": [
+        "CHAT-SCOPE-CONSOLIDATION",
+        "CHAT-NO-VIDEO",
+        "AT-311-314",
+        "AT-315",
+        "AT-319",
+        "AT-320-328",
+        "AT-330-CLOTHING",
+        "AT-330-BEAUTY",
+        "AT-330-ECONOMY",
+        "AT-330-FUTURE",
+        "CHAT-FULL-GUIDE",
+        "CHAT-WALKTHROUGH-DEPTH",
+        "CHAT-TM-DIRECTIONS",
+        "PR-002-BRANDING",
+        "PR-005-PROGRESS-BACKUP",
+        "PR-177-MISSION109",
+        "PR-187-FURFROU087",
+        "ISSUE-007-TRADING",
+        "ISSUE-008-CONTEXTUAL-LINKS"
+      ]
+    },
+    {
+      "id": "action_2_map_and_encounter_evidence",
+      "requirement_count": 27,
+      "requirement_ids": [
+        "HYPERSPACE-DYNAMIC",
+        "AT-294",
+        "AT-300",
+        "AT-301",
+        "AT-302-307",
+        "AT-309-310",
+        "AT-321",
+        "AT-322-GEOMETRY",
+        "AT-322-ROUTES",
+        "AT-322-RIGHTS",
+        "AT-323",
+        "AT-324",
+        "AT-327",
+        "AT-329",
+        "AT-331",
+        "AT-332",
+        "AT-334",
+        "AT-335",
+        "CHAT-CITY-ALPHAS",
+        "CHAT-ALL-WILD-ZONE-IMAGES",
+        "CHAT-NO-REPLAY",
+        "PR-166-HISTORICAL-OVERVIEWS",
+        "PR-171-WZ11-SOUTH-EDGE",
+        "PR-172-WZ18-ROSTER",
+        "PR-184-ARCHIVE-VARIANTS",
+        "PR-186-WZ2-GREAT-BALLS",
+        "PR-189-TM-SOURCE-CAVEATS"
+      ]
+    },
+    {
+      "id": "action_3_interactive_map_and_collectibles",
+      "requirement_count": 9,
+      "requirement_ids": [
+        "MAP-GESTURES",
+        "AT-299",
+        "AT-322-INDEX",
+        "AT-333-SYMBOLS",
+        "AT-333-FILTERS",
+        "AT-333-ACCESSIBILITY",
+        "AT-333-PROGRESS",
+        "CHAT-NUMBERING",
+        "CHAT-NAVIGATION"
+      ]
+    },
+    {
+      "id": "action_4_github_validation_and_release",
+      "requirement_count": 8,
+      "requirement_ids": [
+        "MAP-AUDIT-FIRST",
+        "AT-326",
+        "AT-330-TYPES",
+        "AT-333-QA",
+        "CHAT-READABILITY",
+        "CHAT-LEGENDARY",
+        "CHAT-HOME",
+        "CHAT-FEEDBACK"
+      ]
+    },
+    {
+      "id": "action_5_workspace_prompt_and_release",
+      "requirement_count": 4,
+      "requirement_ids": [
+        "AT-297",
+        "AT-325",
+        "CHAT-HOSTING",
+        "CHAT-ORIGINAL-RECOVERY"
+      ]
+    }
+  ],
+  "mapping": [
+    {
+      "requirement_id": "CHAT-SCOPE-CONSOLIDATION",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "current_request",
+      "source_requirement_text_sha256": "66c2405bc2036a47272b385ae5d3e7d2902ed660ab8bc6d9c44c74ea00a5c5c5",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-NO-VIDEO",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "current_request",
+      "source_requirement_text_sha256": "88fab82d9ad2f4ae5affe927337aa79d33f1c15a40329a113d2873a955cf26fe",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Binding pause and reviewed removal; do not revive historical optional-video instructions."
+    },
+    {
+      "requirement_id": "MAP-AUDIT-FIRST",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "binding_current_instruction",
+      "source_requirement_text_sha256": "aefe8b78b943228b5b54fd31d924927d5e6f33f9b5ab039fa953c36acf31772f",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "MAP-GESTURES",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "binding_current_instruction",
+      "source_requirement_text_sha256": "4d7afd3b212ce291b7ab3962171eaa9b052b19f725c3cbc550b9c06772f30036",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "HYPERSPACE-DYNAMIC",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "binding_current_instruction",
+      "source_requirement_text_sha256": "bb076e929d3836773195c7e6492c3c111fd6c3a9cc9674305b766d653ea8d04d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-294",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "controlling_owner_scope",
+      "source_requirement_text_sha256": "6f1018a69b59d5f9689ced608e880703b5b101938b82054b34c094bbaf20e547",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-297",
+      "primary_action": "action_5_workspace_prompt_and_release",
+      "source_status": "original_workspace_separate_gate",
+      "source_requirement_text_sha256": "cf1fbbdd3d2ceb09a81b2871c3de95bda3c3536ddabf7dbbf0286a277b8d4ce4",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-299",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "implementation_status_reconcile",
+      "source_requirement_text_sha256": "215c8576868d8cd146a1d9b624ac4f30733339597020c5f03855a36fe80bcda2",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-300",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "implementation_status_reconcile",
+      "source_requirement_text_sha256": "4aa734fe7a5eebbce7671752a9f835c4e8f96112b7acceb0a506d1a7e1cd7549",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-301",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "binding_source_policy",
+      "source_requirement_text_sha256": "d765a5091f9708f63e015e030735870a96e3588b266813801915b2d9aef8db8a",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-302-307",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "github_release_evidence_recorded",
+      "source_requirement_text_sha256": "6467efa0a5a0dd1603a0c12ff17003a7dcc84676084cf9ed6d5eb9c42fdf9e0a",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-309-310",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "github_pages_deployed_recorded",
+      "source_requirement_text_sha256": "8e2667c1523049722b76f0ba45ce6e30f86514396e83104b85b1aa2d95bfdd9d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-311-314",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "partially_superseded_by_2026_11_26_pause",
+      "source_requirement_text_sha256": "52ae275a9cd0c7e95ca235087011e7050bc9ff3700388bdec98f9a85484d474c",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-315",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "github_pages_deployed_recorded",
+      "source_requirement_text_sha256": "577f370c9279f1ff264430bbe4975e9c6934de7d827a07fc42f8c8b3deae4746",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-319",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "non_video_requirement_retained_video_clause_superseded",
+      "source_requirement_text_sha256": "515545d11b4d2991c7a4acdcf2ddf5f85108bc701ad33e163af9a1c437af6cec",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-320-328",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "g1_dependency_pending",
+      "source_requirement_text_sha256": "f52cf223b6aeb6bfb4bf491107478dafa7ddcad71207553d7faa5d3832d8b0ab",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-321",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "github_merge_and_pages_recorded",
+      "source_requirement_text_sha256": "be1a303c22c3ba563753eafbf80c5750abdd0400dc64cb3859b484af7dfc560a",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-322-INDEX",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "future_runtime_requirement",
+      "source_requirement_text_sha256": "7c47cb38dd48cace43ca8dc984efed051027f756c893fa319e1ce2bb8d931953",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-322-GEOMETRY",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "zero_production_polygons_recorded",
+      "source_requirement_text_sha256": "77474245b9f848d7b3d6dc1db5bc8b5c98344de788bcfe834e6efaa15c4b84f2",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-322-ROUTES",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "future_runtime_requirement",
+      "source_requirement_text_sha256": "7afbefdf1ff3d119db487e2a9254ce8f065a40f237c158ff83ca2d803dde6ccd",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-322-RIGHTS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "binding_research_policy",
+      "source_requirement_text_sha256": "f9d67df8c06f3457feae849fa9f26c8869f919536bef0e7e8495510639c187fd",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-323",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "research_only",
+      "source_requirement_text_sha256": "e14f1541f0c0daec904d86f2a0fe9c9e8ed5ce7386ff7f63ed90c5e9d6933971",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-324",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "research_only",
+      "source_requirement_text_sha256": "48c29a2927b7570cc471a120d31f61ca795e07d74048d88ac17f5f5462e0500b",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-325",
+      "primary_action": "action_5_workspace_prompt_and_release",
+      "source_status": "g1_partial_g2_pilot_g3_g4_g5_pending_a0_blocked",
+      "source_requirement_text_sha256": "d5824082296b0cd23a9c7a674a13f100605a3b366a730565907b84126cddd9af",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-326",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "merged_and_pages_recorded",
+      "source_requirement_text_sha256": "1c8ec406de601810d6bdd930546ec04b79f84092cc9c8376286e962d323d1c57",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-327",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "candidate_registration_only",
+      "source_requirement_text_sha256": "28957da4d353f92049c4e7ace95cd213bac9c53bd1e7a8f894d23608d5f89593",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-329",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "sources_merged_calibration_pending",
+      "source_requirement_text_sha256": "0c4a7e863e274eef71401c90511249f8bbe2d37dd95a37f57b8f483759768105",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-330-CLOTHING",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "merged_pages_deployed_live_verification_pending",
+      "source_requirement_text_sha256": "ae41fad2f425832e7bf8ad881c6a4fb76f424aacc8cdce3f67c084f26bcad1b1",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "AT-330-BEAUTY",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "merged_pages_deployed_live_verification_pending",
+      "source_requirement_text_sha256": "1b25abca50a055196e11fd2bab4d387d2fc48fdcbfa8606d3b191fc01eaae58d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "AT-330-ECONOMY",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "merged_pages_deployed_live_verification_pending",
+      "source_requirement_text_sha256": "eb8fd8f087d7f2dca9686b0feb61d4e2870fcf9c2dc34eef8fdbf5264ab5c16d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "AT-330-TYPES",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "existing_feature_protection",
+      "source_requirement_text_sha256": "fbc98f77370632338cda0b3237e5b221e144fe70f4673f9da8f9eb487db323fe",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-330-FUTURE",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "deferred_outside_current_scope",
+      "source_requirement_text_sha256": "f1b99cc368c0060c1e2979a9e05cee33dc319b429ef689be76314c28ba6b1e00",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Retain the idea or branding objective; new hosting/DNS and separate games remain deferred."
+    },
+    {
+      "requirement_id": "AT-331",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "partial_research_42_areas_not_started",
+      "source_requirement_text_sha256": "40703521825ffa71c88a7b9c8283e098d1f0a40922bf33ec453399222f92833f",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-332",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "zero_new_exact_native_pins",
+      "source_requirement_text_sha256": "9ca006ab55747c694e7b472c03d46b1a47fabd72c5f82f38ba428dcbe697ae54",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-333-SYMBOLS",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "implementation_pending_coordinate_gates",
+      "source_requirement_text_sha256": "800b93cd9c9bc569bfef57f103230fa60bae13dc88804bf644a9990192f3ec81",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-333-FILTERS",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "implementation_pending_coordinate_gates",
+      "source_requirement_text_sha256": "1df7a86b9e7ca988bd114ba7fe3a646b1db3e5bf746723e87aac10ceaaee5c13",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-333-ACCESSIBILITY",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "implementation_pending_coordinate_gates",
+      "source_requirement_text_sha256": "e5e2cfa6c118f24d6e9d76e5cd6b95b941115c43cbf68e44727be5053499a4e6",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-333-PROGRESS",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "binding_progress_and_eligibility",
+      "source_requirement_text_sha256": "3656324949142502ea44c1b3d602ea7edca63c2d66e18227780dc1442b12d07c",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-333-QA",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "not_run",
+      "source_requirement_text_sha256": "fefd8e5b8ace423b8011e5c90696fca13d398d1e65bd8bad1e1c85f815409de8",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-334",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "source_recovery_merged_no_verified_physical_pins",
+      "source_requirement_text_sha256": "b10ee7dc9c9775120bf033448a8fca3b898ea7f5f3e47cc59694f482715e45bc",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "AT-335",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "research_candidate_only_zero_new_pins",
+      "source_requirement_text_sha256": "d763d53746f4211992780e2ce28c19c32c518e028e5ba220cdb841592a57297e",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-FULL-GUIDE",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "ongoing_full_guide_audit_not_certified_complete",
+      "source_requirement_text_sha256": "870011675e2c285c78336aa46a8c09412549bde5f23c53cd9b00dc9d5758d671",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "CHAT-WALKTHROUGH-DEPTH",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "numerous_historical_audit_findings_must_be_reconciled",
+      "source_requirement_text_sha256": "51a46f3a355614077ff6e83392c980771fc74fe78386b947c88a3f674e212d7b",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "CHAT-CITY-ALPHAS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "requested_completion_not_established_by_source_recovery",
+      "source_requirement_text_sha256": "1cd3a14cfca1e6adbab1cf0a63b9a17a8e420f8794315d0c8a3f8dfd838f32e9",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-NUMBERING",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "111_candidate_matches_35_ambiguous_not_exact_location_verification",
+      "source_requirement_text_sha256": "c4cd2b40af548296e90bfa56c3409a61c0aaea054f79d56a999861159b15dd08",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-NAVIGATION",
+      "primary_action": "action_3_interactive_map_and_collectibles",
+      "source_status": "preserve_and_reconcile_local_crosslinks",
+      "source_requirement_text_sha256": "ff444b3cfd04b6f33351ec8a76a17b86732017f06fd7f032d50aff47612f8450",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-HOSTING",
+      "primary_action": "action_5_workspace_prompt_and_release",
+      "source_status": "binding_preservation_constraint",
+      "source_requirement_text_sha256": "d2f7cdfd2614c0a84b014efcef369a0c6f300a36f37dc857824233ca57711c10",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-READABILITY",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "prior_fix_to_preserve_actual_live_status_separate",
+      "source_requirement_text_sha256": "f69baadbc015bbbb6e3c64824f9270225efdf8d1a3a93f3dc54f994fda29a8d7",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-LEGENDARY",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "historical_github_PR33_merge_and_deployment_report_not_new_workspace_parity",
+      "source_requirement_text_sha256": "8b6d5532cfd7eba0aed69a4564c7487d3aa567e4164cced6aeefcdf1e3cfa5c0",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-HOME",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "historical_queued_chat_superseded_by_main_recovery_evidence",
+      "source_requirement_text_sha256": "bc7f6c4076d979be3b50c7757fb66866551856dd9b36568a0da0483ed62300f8",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-FEEDBACK",
+      "primary_action": "action_4_github_validation_and_release",
+      "source_status": "preserve_existing_work_no_new_feedback_scope",
+      "source_requirement_text_sha256": "685478953604fdcace28a0be3721ac5ee1f24d4fe16f8404c2d280aa08680346",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-ORIGINAL-RECOVERY",
+      "primary_action": "action_5_workspace_prompt_and_release",
+      "source_status": "recovered_archives_and_historical_release_present_current_workspace_gate_required",
+      "source_requirement_text_sha256": "2197fb18e782afa7bcd98260e5aaa19207a282b6e579f2217cd4e8874435db58",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-ALL-WILD-ZONE-IMAGES",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "main_sources_present_do_not_repeat_old_upload_hold",
+      "source_requirement_text_sha256": "cf1cd853bdd6276fa2cb3b945e4162a2f93a50d692c9b606480f035f157a3e40",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-NO-REPLAY",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "continue_evidence_recovery_without_inventing_coordinates",
+      "source_requirement_text_sha256": "0f3391e092e70cf6b5d2f6966263ae3d9d656b7fe6df514679c2d7946d786378",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "CHAT-TM-DIRECTIONS",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "github_merged_pages_deployed_workspace_pending",
+      "source_requirement_text_sha256": "c282b71dce644f18448c254687d08a0f564d2cfd11024dac41e92f5959fefe97",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-002-BRANDING",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "deferred_optional",
+      "source_requirement_text_sha256": "0c38e912ec74dc7d587bc9079ca9ea75a17cf183c7860463cacc10ef6abf55d9",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Retain the idea or branding objective; new hosting/DNS and separate games remain deferred."
+    },
+    {
+      "requirement_id": "PR-005-PROGRESS-BACKUP",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "unmerged_candidate",
+      "source_requirement_text_sha256": "a89e3055907c97f61da512b1c81a1ea7b4ea0280cc9953fcc2126495ee3100da",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "PR-166-HISTORICAL-OVERVIEWS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "unmerged_research_preserved",
+      "source_requirement_text_sha256": "5ff0499e48336dc88f0f06a96c2c90255d4026ef32fca18755586992bbdcf05b",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-171-WZ11-SOUTH-EDGE",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "unmerged_research_preserved",
+      "source_requirement_text_sha256": "7577544abff803033d88bb3a10fc65115700b0c9cced971bc229cda8460f5356",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-172-WZ18-ROSTER",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "unmerged_research_preserved",
+      "source_requirement_text_sha256": "5e37725dca511968bd715e7f2ccb32329407ffcdd072a64934c777297b34808d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-177-MISSION109",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "unmerged_editorial_candidate",
+      "source_requirement_text_sha256": "5305ae05a53cf96c8b1a3b9472bded5061ab58c27ac1512b2e3b2caa07266d3d",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "PR-184-ARCHIVE-VARIANTS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "overlapping_research_preserved",
+      "source_requirement_text_sha256": "4195def66812d6d616439d5ee60d30003a141c3327ff872cb624d01e8774abc7",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-186-WZ2-GREAT-BALLS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "unmerged_research_preserved",
+      "source_requirement_text_sha256": "dc20dbe91580707ebf26376ea9c1e80dddfae8ae0deb76a1337077d166c75dbe",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "PR-187-FURFROU087",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "unmerged_editorial_candidate",
+      "source_requirement_text_sha256": "ebc6e87fe5f66c4017dbe1f278df287872cab18e6f7c83778d42210e5070e789",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "PR-189-TM-SOURCE-CAVEATS",
+      "primary_action": "action_2_map_and_encounter_evidence",
+      "source_status": "overlapping_research_preserved",
+      "source_requirement_text_sha256": "e5600a0ae72cca2b12f2a8c6dbbf1db9ff34e66888db4adfb7854377981b1690",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Carry existing evidence, feature or acceptance requirement into the named action; use its original scope and status, without inventing verification."
+    },
+    {
+      "requirement_id": "ISSUE-007-TRADING",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "future_backlog_preserved",
+      "source_requirement_text_sha256": "e6141300d1a961c0fd3eeae92051dd143f7cdd6a971b2e9a8f85971d0c3fe094",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    },
+    {
+      "requirement_id": "ISSUE-008-CONTEXTUAL-LINKS",
+      "primary_action": "action_1_reconcile_work",
+      "source_status": "future_backlog_preserved",
+      "source_requirement_text_sha256": "75b9932b00d0dc6ce25d43683fff39ee50c3d8c57892bbd388f9d968c23a735f",
+      "inclusion_means_complete": false,
+      "new_gate_added": false,
+      "interpretation": "Preserve existing implemented content and retain remaining separately scoped backlog. Source retention is mandatory; completing every optional expansion is not newly made a Map2.0 release gate."
+    }
+  ],
+  "tracking": "AT-337",
+  "plan": "FINAL_WORKSPACE_PLAN.md",
+  "manifest_revision": 82,
+  "ledger_revision": 90,
+  "workspace_prompt_ready": false,
+  "approved_full_scope_github_sha": null,
+  "final_executable_workspace_prompt": null
+}

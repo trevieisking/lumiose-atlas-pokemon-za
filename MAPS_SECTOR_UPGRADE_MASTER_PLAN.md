@@ -1,6 +1,16 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
-## AT-336 — current consolidated checkpoint
+## AT-337 — simple completion plan and current route reconciliation
+
+**26 November 2026 · Manifest 82 / Ledger 90.** Read [FINAL_WORKSPACE_PLAN.md](FINAL_WORKSPACE_PLAN.md) for the five-action completion plan. Its [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json) assigns all 67 recovered requirements without dropping sources or adding new release gates. The detailed AT-336 source archive remains intact.
+
+The bounded current-base route packet carries PR156's four Bleu 7–10 approaches and 23 steps, plus eight research leads: **26 routes / 78 leads**, with all prior 22 routes / 70 leads and the no-video release preserved. [Route validation and release boundary](docs/qa/ATLAS_AT337_BLEU_ROUTE_RECONCILIATION.md). This is an integration candidate until its exact review, merge and deployment receipt is recorded; the older PR is not merged wholesale.
+
+PR190's actual merge `2a3e03942d102ad283be6c749241ac0d7ba36fc6`, successful [Pages run45735835584](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45735835584) and completed private checklist reconciliation establish the prior G0 consolidation. The current plan is complete; required boundary/encounter evidence, shared interactions, compact collectible layers and full release validation remain open. AT-325 still requires G0–G5 before the final executable Workspace prompt; approved full-scope SHA and prompt remain null. Original Workspace remains separate and unmodified.
+
+Videos and YouTube remain paused. Existing map controls, photos, guide content, progress, accounts, feedback and Supabase connections are preserved. Optional guide expansions and deferred projects remain recorded; their inclusion does not create new mandatory map-release work.
+
+## AT-336 — prior source consolidation checkpoint
 
 **26 November 2026 · Manifest81 / Ledger89.** Start with [the consolidated release handoff](ATLAS_RELEASE_HANDOFF.md) and its [complete67-requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md). All176 repository PRs,13 issues/74 comments,108 current source files,326 historical AT IDs and unique source documents from19 remaining open PRs are preserved in the [dated source manifest](docs/consolidation/2026-11-26/manifest.json). Chat recovery is explicitly bounded to accessible results; no complete-history claim is made.
 
@@ -14,11 +24,11 @@
 
 ## START HERE — mandatory preflight for every development cycle
 
-**Read these first, in order, before any research or code change:** [Consolidated handoff](ATLAS_RELEASE_HANDOFF.md) · [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
+**Read these first, in order, before any research or code change:** [Simple completion plan](FINAL_WORKSPACE_PLAN.md) · [Consolidated handoff](ATLAS_RELEASE_HANDOFF.md) · [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
 
 
 **Plan ID:** `ATLAS-MAPS-2026-11-21-V1`  
-**Status:** Owner-approved plan; current revision81 consolidates planning and release evidence. Full Map 2.0 implementation remains open. Subsequent runtime changes require bounded, separately tested PRs.
+**Status:** Owner-approved plan; current revision82 completes the five-action plan and carries the bounded Bleu route reconciliation. Full Map 2.0 implementation remains open; runtime promotion requires its own reviewed release evidence.
 **Repository:** `trevieisking/lumiose-atlas-pokemon-za` (Edition B, independent reconstruction)  
 **Primary tracker:** [GitHub issue #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28)  
 **Structured manifest:** [`MAPS_UPGRADE_MANIFEST.json`](MAPS_UPGRADE_MANIFEST.json)  

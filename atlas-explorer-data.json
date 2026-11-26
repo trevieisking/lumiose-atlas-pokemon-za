@@ -3597,6 +3597,210 @@
       "known_floor_plan": false,
       "roof_exit_xy": null,
       "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu7-aymlis-roof-scaffold-courses",
+      "title": "Bleu Sector 7 — Aymlis Park roofs and boulevard scaffolds",
+      "point_id": "bleu-sector-7",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Four distinct search courses around Aymlis Park, the eastern and western building blocks and South Boulevard. Use the existing sector map and separate five-photo South Boulevard Holovator gallery. Existing collection numbers are candidates, not measured pickup positions.",
+      "related_photo_ids": [
+        "bleu7-south"
+      ],
+      "steps": [
+        {
+          "space": "street",
+          "title": "Start at Bleu Pokémon Center",
+          "instruction": "Find Bleu Pokémon Center, then use the Aymlis Park and South Boulevard labels on the original map to distinguish the northern building approach from the outer-boulevard courses.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Northern scaffold and rooftop loop",
+          "instruction": "South of Aymlis Park, inspect the scaffolding at the northern side of the building. Climb its ramps and ladders, then cross to the neighbouring scaffold with a controlled roll if the platform is reachable. A separate published roof approach follows the building perimeter anticlockwise. Check the visible roof path; #52 and #53 are candidate clues, not a confirmed order.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ladder",
+          "title": "Ladders near Nouveau Café Truck No. 2",
+          "instruction": "Return to the southern frontage near Nouveau Café Truck No. 2. Look east of the truck for the two-ladder approach described by a published guide. Climb both, then descend to the lower level with the purple pickup if visible. Follow the accessible roof perimeter for a separate pickup. The east and west roof identity crosswalk is still unresolved.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Eastern roof and Vernal Avenue",
+          "instruction": "For the eastern building block, use a visibly connected roof or Roto-Glide after the rooftop tutorial behind Hotel Z, around Main Missions 15–16. Inspect the northeastern edge. Return to street level to find the separate Vernal Avenue scaffold; follow its walkways to the end. #48 and #49 describe eastern scaffold and roof leads; do not tick either on sight of a different pickup.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Two outer-boulevard pickups",
+          "instruction": "Return to South Boulevard below Sector 7. Find the larger roadside scaffold course. Use the right-hand ladders to reach the upper path, traverse its three connecting bridges, then look for the upper pickup. A lower pickup is reported off the side; inspect the platform before dropping. The original #50 and #51 west-of-lab height clues are possible matches, not confirmed IDs.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Optional repaired lift — Mission 45",
+          "instruction": "The existing Bleu 7 South Boulevard lift guide has five owner photographs. After starting Main Mission 19, talk to Durstin and give him a drink such as Fresh Water or Lemonade to restore the Holovator. Use the separately documented lift route rather than treating it as a proven shortcut to any of these Screw pickups.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Keep the six original clues separate",
+          "instruction": "Retain #48–53 and the original item checklist. The regional inventories use different numbering and boundaries. Exact scaffold bases, roof junctions, lift-to-pickup connections and individual collection matches remain unverified.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu8-soleil-beldum-access",
+      "title": "Bleu Sector 8 — Café Soleil and the Beldum Blockade",
+      "point_id": "bleu-sector-8",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "Use the photographed gold Holovator as a neighbourhood landmark and the in-game quest marker to locate the actual Beldum Blockade. The physical identity of the photographed lift and the mission lift has not been established.",
+      "side_mission": 92,
+      "related_photo_ids": [
+        "bleu8-soleil"
+      ],
+      "steps": [
+        {
+          "space": "street",
+          "title": "Orient from Café Soleil",
+          "instruction": "Use the Bleu Sector 8 map crop and start at Café Soleil on the South Boulevard side. Follow the outer boulevard toward the southwest frontage of Sector 8.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Compare the five owner photographs",
+          "instruction": "Look for the permanent gold triple-chevron lift near blue-glass windows and the roadside grass strip. Open the existing Café Soleil gallery to compare its approach and arrival. A photograph of this device is not proof that it is the Mission 92 device.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Find Aimant and the Beldum quest marker",
+          "instruction": "After completing Main Mission 30 and beginning Main Mission 31, locate Side Mission 92, The Beldum Blockade, on South Boulevard. Follow the in-game objective marker to Aimant and the four Beldum, even if it points to a different lift from the photographed one.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Clear the blockade",
+          "instruction": "Defeat the four Beldum. A Ground-type area attack is a useful option against their Steel typing. Complete the dialogue and use the mission-confirmed Holovator only once access is restored. Rewards include the Rocky Helmet and Full Restore.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Use the arrival as orientation only",
+          "instruction": "Compare the roof arrival with the existing photo gallery if the device matches in game. The precise mission device, rooftop connection and any linked item pickup are not individually verified. No new roof pin or collection ID is assigned.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu9-soleil-scaffold-roof-leads",
+      "title": "Bleu Sector 9 — Café Soleil scaffold and roof items",
+      "point_id": "bleu-sector-9",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "A distinct scaffold opposite Café Soleil and separate courtyard/roof item leads around the Sector 9 building complex. The existing Sector 8 lift photographs are nearby orientation only.",
+      "related_photo_ids": [
+        "bleu8-soleil"
+      ],
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find Café Soleil",
+          "instruction": "Use the source map showing Café Soleil just south of Sector 9 and South Boulevard to the west. Locate the climbing structure on the opposite side of the boulevard, rather than the lift along Sector 8.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Climb the roadside scaffold",
+          "instruction": "Begin at the left-hand end of the scaffold as viewed from its approach. Climb the visible ramps or ladders to its high walkway. Walk carefully over the narrow connecting bridge.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "roof",
+          "title": "Use Roto-Glide for the upper platform",
+          "instruction": "From the high walkway, glide to the raised platform when the landing is visible, then use the final ladder on the right. If Roto-Glide is not unlocked, return after the rooftop Roto-Glide tutorial behind Hotel Z during the Main Mission 15–16 sequence. Do not rely on an unintended wall-clipping shortcut.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Find the purple pickup opposite the café",
+          "instruction": "Inspect the top for the Colourful Screw. Its landmark matches the existing #64 clue, but check the actual pickup before ticking. The map location remains district-level.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Separate courtyard and roof item search",
+          "instruction": "On returning to the Sector 9 complex, the published item inventory places Protein in its courtyard, Carbos on Café Soleil's roof, Calcium and Ultra Ball on eastern roofs, Leaf Stone on a western roof and Exp. Candy M to the north. Use only visible, accessible ladders or an unlocked lift; the approach to each item has not been matched.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Preserve the original collection records",
+          "instruction": "The photographed Sector 8 lift is not a certified connection to these roofs or the opposite scaffold. #64 is retained as the matching regional clue; no exact entrance, new pickup ID or mapped roof connection has been established.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
+    },
+    {
+      "id": "bleu10-estival-boulevard-scaffold",
+      "title": "Bleu Sector 10 — Estival Avenue lower scaffold",
+      "point_id": "bleu-sector-10",
+      "district": "Bleu",
+      "risk": "normal",
+      "anchor_precision": "district_only",
+      "description": "An outer-boulevard scaffold west of Sector 10, near the Estival Avenue junction. The lower pickup is hidden beneath the walkway, not at the highest point.",
+      "steps": [
+        {
+          "space": "street",
+          "title": "Find the Estival Avenue junction",
+          "instruction": "Use the original Sector 10 map: Estival Avenue lies to the north, South Boulevard to the west and Espace Vide to the east. Head toward the South Boulevard junction and look for the scaffold on the outer street.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Climb the accessible end",
+          "instruction": "Start on the right-hand climbing side described in the published route, then cross the upper walkway until you can see the lower platform at the far end.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Descend to the lower walkway",
+          "instruction": "Walk carefully off the upper edge onto the visible lower platform; follow the ramp beneath the main scaffold instead of trying to reach its highest point.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "scaffold",
+          "title": "Search under the scaffold",
+          "instruction": "Look beneath the upper walkway for the purple pickup. Independent sources describe the lower scaffold west of Wild Zone 10 and near the Estival Avenue/South Boulevard corner. This is consistent with the existing #65 clue.",
+          "evidence": "guide_crosscheck"
+        },
+        {
+          "space": "ground",
+          "title": "Confirm before ticking #65",
+          "instruction": "The source crop identifies the district only, not the exact scaffold base or pickup point. Keep the existing #65 collection record and do not create another number or claim a measured pin.",
+          "evidence": "unverified"
+        }
+      ],
+      "known_floor_plan": false,
+      "roof_exit_xy": null,
+      "source_record": "MAPS_ACCESS_ROUTE_SURVEY.json"
     }
   ],
   "not_mapped": [

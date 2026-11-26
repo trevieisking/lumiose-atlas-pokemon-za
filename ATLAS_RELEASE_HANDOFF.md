@@ -1,10 +1,12 @@
 # Pokémon Atlas — consolidated release handoff
 
+**Current simple plan:** [FINAL_WORKSPACE_PLAN.md](FINAL_WORKSPACE_PLAN.md), AT-337 / Manifest82 / Ledger90. All67 requirements are mapped, and the current-base Bleu7–10 route reconciliation is carried in its bounded packet. The source-consolidation snapshot below is preserved as dated evidence; it is not a claim that later GitHub changes reached Workspace.
+
 26 November 2026 · **AT-336** · Plan `ATLAS-MAPS-2026-11-21-V1` · Manifest **81** · Ledger **89**
 
 **The accessible plans, chat decisions, GitHub PRs and ledgers are brought together here. Videos and YouTube are paused. The full Interactive Map 2.0 release still has unfinished implementation and validation, so its final executable Workspace prompt remains gated by AT-325.**
 
-This is the current entry point. The existing [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md), [manifest](MAPS_UPGRADE_MANIFEST.json) and [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) retain their filenames and historical evidence. The [consolidation manifest](docs/consolidation/2026-11-26/manifest.json) binds the source inventory, requirements, PR decisions and release conditions. Older statements are historical when they conflict with the decisions and fresh observations below; they are not instructions to restore obsolete features.
+This is the detailed source-consolidation entry point. The existing [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md), [manifest](MAPS_UPGRADE_MANIFEST.json) and [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) retain their filenames and historical evidence. The [consolidation manifest](docs/consolidation/2026-11-26/manifest.json) binds the source inventory, requirements, PR decisions and release conditions. Older statements are historical when they conflict with the decisions and fresh observations below; they are not instructions to restore obsolete features.
 
 ## What was reconciled
 
