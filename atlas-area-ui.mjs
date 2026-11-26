@@ -71,7 +71,17 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
   }
   function showSources(row,parent){
     if(!row.sources.length)return;const details=make('details','aa-source-notes');details.append(make('summary','','Evidence and conditions'));
-    for(const source of row.sources){const p=make('p','',source.claim);if(source.href)p.append(document.createTextNode(' '),link(source.href,'Source'));details.append(p);}parent.append(details);
+    for(const source of row.sources){
+      const p=make('p','',source.claim);
+      if(source.href){
+        // Player navigation stays inside Atlas. Full external references remain
+        // in the evidence register; Markdown source records are not guide pages.
+        if(source.href.startsWith('https://'))p.append(document.createTextNode(' Reference: '+new URL(source.href).hostname.replace(/^www\./,'')));
+        else if(/\.md(?:[?#]|$)/i.test(source.href))p.append(document.createTextNode(' Atlas evidence: '+source.href.split('/').at(-1)));
+        else p.append(document.createTextNode(' '),link(source.href,'Source'));
+      }
+      details.append(p);
+    }parent.append(details);
   }
   function renderEncounter(row){
     const item=make('li','aa-encounter');item.dataset.areaEncounterId=row.id;item.dataset.encounterClass=row.encounterClass;item.dataset.encounterEvidence=row.evidenceStatus;

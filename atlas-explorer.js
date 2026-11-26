@@ -292,7 +292,12 @@ function selectRecord(item,focus=true){
   }
   if(focus)focusRecord(item);
   syncSectorContext();
-  if(!syncingArea&&(item.kind==="zone"||item.kind==="sector"))areaUI?.selectArea(item.id,{history:true,focus:false});
+  if(!syncingArea&&areaUI){
+    if(item.kind==="zone"||item.kind==="sector")areaUI.selectArea(item.id,{history:true,focus:false});
+    // An explicit access-record choice supersedes the older area selection.
+    // Keep this record's photos and route when shared controls render again.
+    else areaUI.clear({history:"replace"});
+  }
   const route=routes.find(r=>r.point_id===item.id);
   if(route&&!syncingArea)chooseRoute(route.id);
 }

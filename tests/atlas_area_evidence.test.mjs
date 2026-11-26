@@ -77,7 +77,7 @@ test('all twenty owner-photo receipts match original bytes and only their 140 ob
   assert.equal(observations.find(row=>row.area_id==='wz-18').git_blob_sha1,'b520201cb772c4d716036fb8066f35fd3d82cf5b');
 });
 
-test('the seven actual disputes cannot become supported encounters in their disputed class',()=>{
+test('the seven actual disputes cannot become supported encounters through a legacy union',()=>{
   const expected=[
     ['wz-07','Gastly','ordinary'],
     ['wz-15','Banette','ordinary'],
@@ -103,6 +103,20 @@ test('the seven actual disputes cannot become supported encounters in their disp
     'An ordinary Mawile dispute must not erase the separate fixed Alpha');
   assert.ok(selectAreaResults(model,{speciesId:'banette',encounterClass:'fixed_alpha'}).areas.some(row=>row.id==='wz-15'));
   assert.ok(selectAreaResults(model,{speciesId:'talonflame',encounterClass:'rotating_alpha'}).areas.some(row=>row.id==='wz-20'));
+  for(const [speciesId,areaId] of [['gastly','wz-07'],['noibat','wz-15'],['trevenant','wz-15']]){
+    for(const encounterClass of ['all','recorded','ordinary']){
+      assert.ok(!selectAreaResults(model,{speciesId,encounterClass}).areas.some(row=>row.id===areaId),
+        speciesId+' cannot regain '+areaId+' through the '+encounterClass+' filter');
+    }
+    assert.ok(selectAreaResults(model,{speciesId}).relatedClaims.some(row=>row.areaId===areaId&&row.encounterClass==='recorded'&&row.originalEvidenceStatus==='baseline_preserved'),
+      'The old union row remains visible with its current dispute');
+  }
+  for(const [speciesId,areaId] of [['mawile','wz-17'],['banette','wz-15']]){
+    const results=selectAreaResults(model,{speciesId});
+    assert.ok(results.areas.some(row=>row.id===areaId),'Separate supported Alpha membership survives');
+    assert.ok(results.encounters.some(row=>row.areaId===areaId&&row.encounterClass==='fixed_alpha'));
+    assert.ok(!results.encounters.some(row=>row.areaId===areaId&&row.encounterClass==='recorded'));
+  }
 });
 
 test('combined area and species links keep research claims within the requested area',()=>{
@@ -114,7 +128,7 @@ test('combined area and species links keep research claims within the requested 
     const selection=readAreaSelection('atlas-explorer.html?area='+areaId+'&species=gastly');
     assert.equal(selection.areaId,areaId);assert.equal(selection.speciesId,'gastly');
     const result=selectAreaResults(model,selection);
-    assert.equal(result.relatedClaims.length,1,'This area has one reviewed Gastly dispute');
+    assert.equal(result.relatedClaims.length,areaId==='wz-07'?2:1,'Retain the current dispute and any affected original union row');
     assert.ok(result.relatedClaims.every(row=>row.areaId===areaId&&row.evidenceStatus==='disputed'));
     assert.ok(result.encounters.every(row=>row.areaId===areaId));
     assert.ok(result.areas.every(row=>row.id===areaId));

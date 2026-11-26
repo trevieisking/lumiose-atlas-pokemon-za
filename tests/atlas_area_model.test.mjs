@@ -109,6 +109,18 @@ test('a targeted dispute retains its original row but excludes that class from h
   assert.ok(selectAreaResults(m,{speciesId:'pidgey'}).relatedClaims.some(e=>e.id===preserved.id));
 });
 
+test('an ordinary dispute qualifies the old unclassified union without erasing an independent Alpha',()=>{
+  const evidence=baseline();evidence.areas=[{area_id:'wz-01',encounters:[evidenceRow({id:'test-disputed-ordinary',evidence_status:'disputed'})]}];
+  const m=build(evidence),rows=m.encounters.filter(e=>e.areaId==='wz-01'&&e.speciesId==='pidgey');
+  const original=rows.find(e=>e.encounterClass==='recorded'),alpha=rows.find(e=>e.encounterClass==='fixed_alpha');
+  assert.equal(original.evidenceStatus,'disputed');assert.equal(original.originalEvidenceStatus,'baseline_preserved');
+  assert.equal(alpha.evidenceStatus,'baseline_preserved');
+  const all=selectAreaResults(m,{speciesId:'pidgey'});
+  assert.ok(all.areas.some(a=>a.id==='wz-01'));assert.ok(all.encounters.some(e=>e.id===alpha.id));
+  assert.ok(!all.encounters.some(e=>e.id===original.id));assert.ok(all.relatedClaims.some(e=>e.id===original.id));
+  assert.ok(!selectAreaResults(m,{speciesId:'pidgey',encounterClass:'recorded'}).areas.some(a=>a.id==='wz-01'));
+});
+
 test('approved polygons, holes and separate pieces retain exact native coordinates without deriving centres',()=>{
   const value=approved();value.geometry.coordinates.push(square(920,920,20));
   const before=JSON.stringify(value),result=evaluateAreaGeometry(area('wz-01'),freeze(value),AREA_MAP);

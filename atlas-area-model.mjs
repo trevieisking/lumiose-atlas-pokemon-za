@@ -131,7 +131,10 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
           encounterIds.add(row.id);area.encounters.push(row);
         }
         const disputes=area.encounters.filter(row=>row.evidenceStatus==='disputed');
-        for(const row of area.encounters)if(row.evidenceStatus==='baseline_preserved'&&disputes.some(d=>d.speciesId===row.speciesId&&(d.encounterClass===row.encounterClass||d.encounterClass==='unclassified_lead'))){row.originalEvidenceStatus=row.evidenceStatus;row.evidenceStatus='disputed';row.notes.push('A current source claim disputes this preserved fieldbook entry.');}
+        // The legacy union has no encounter class. It cannot independently
+        // rescue an ordinary membership claim that the current evidence disputes.
+        // Separate fixed/rotating Alpha rows retain their own class evidence.
+        for(const row of area.encounters)if(row.evidenceStatus==='baseline_preserved'&&disputes.some(d=>d.speciesId===row.speciesId&&(d.encounterClass===row.encounterClass||d.encounterClass==='unclassified_lead'||row.encounterClass==='recorded'&&d.encounterClass==='ordinary'))){row.originalEvidenceStatus=row.evidenceStatus;row.evidenceStatus='disputed';row.notes.push('A current source claim disputes this preserved fieldbook entry.');}
       }
       const geometries=geometryRows.filter(row=>row?.area_id===area.id);
       area.geometry=geometries.length>1?fail("duplicate_boundary_evidence"):evaluateAreaGeometry(area,geometries[0],mapContext||null);

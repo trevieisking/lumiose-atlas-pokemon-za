@@ -1,6 +1,6 @@
 # Pokémon Atlas final completion plan
 
-26 November 2026 · Manifest 85 · Ledger 93
+26 November 2026 · Manifest 86 · Ledger 94
 
 **Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
@@ -12,7 +12,7 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 ## Current implementation
 
-[AT-339](docs/qa/ATLAS_AT339_SHARED_AREAS.md) recovers shared area/species search, linked habitats and selection across the four map views. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with 63 boundaries and all comprehensive encounter-roster reviews still open. Phone/desktop validation and GitHub release are pending; the original Workspace remains unchanged.
+[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) combines the shared area/species search and habitat work with the verified content from the outstanding PRs, including 73 written steps for Main Missions 01–10. Independent review fixes preserve disputed-habitat labels, explicitly chosen Holovator photos, local evidence navigation and honest approximate-map wording. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with **63 boundaries and all 68 comprehensive encounter-roster reviews still open**. Final combined-head phone/desktop validation and bounded GitHub release are pending; the original Workspace remains unchanged.
 
 ## Three remaining work packages
 

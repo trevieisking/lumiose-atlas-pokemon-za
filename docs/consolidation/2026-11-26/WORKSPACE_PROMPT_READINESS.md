@@ -1,5 +1,9 @@
 # Final Workspace prompt — preparation and release conditions
 
+## Current AT-340 checkpoint
+
+Manifest86 / Ledger94 consolidates all 25 open PR dispositions and the verified shared-interaction/content improvements in one candidate. See [the current consolidation](../../qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md). Final combined-head tests, visual review, merge and live verification are pending. The original Site was freshly observed at version37 and remains unchanged. There are still 63 unresolved boundaries and no comprehensive area-roster signoff, so the full-scope approved SHA and final executable publication prompt remain null. The historical contract below remains applicable; bounded promotion must not be reported as full master-plan completion.
+
 26 November 2026 · AT-336 · Plan ATLAS-MAPS-2026-11-21-V1
 
 **The consolidation packet is prepared. The executable final Workspace deployment prompt is intentionally not issued.** AT-325 requires the full GitHub upgrade to pass G0–G5 first. This document is the content contract for that eventual prompt; it is not an instruction to publish a partial release or pull a moving branch.

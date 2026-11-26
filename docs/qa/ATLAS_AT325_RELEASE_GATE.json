@@ -2,13 +2,13 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 83,
-  "ledger_revision": 91,
+  "manifest_revision": 86,
+  "ledger_revision": 94,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "G0_G1_reconciled_AT333_verified_AT339_shared_G4_candidate_G2_G3_partial_G5_open",
+  "current_state": "AT340_combined_bounded_candidate_pending_final_CI_visual_release_G2_G3_incomplete_full_G5_A0_open",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -1312,7 +1312,12 @@
       "registration_evidence": null,
       "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
       "navigation_review": "pending_evidence_review",
-      "ready_for_verified_highlight": false
+      "ready_for_verified_highlight": false,
+      "source_observation_2026_11_26": {
+        "evidence": "docs/qa/ATLAS_WZ14_OWNER_SURVEY_CROSSCHECK.md",
+        "scope": "seven displayed survey species, Electrical Substation and adjacent Magenta Sector 6; no complete boundary or comprehensive roster approval",
+        "production_geometry_approved": false
+      }
     },
     {
       "atlas_id": "wz-15",
@@ -1451,7 +1456,7 @@
     {
       "id": "G0",
       "name": "Plan, inventory, and private Workspace queue",
-      "state": "documentation_and_private_queue_recorded",
+      "state": "source_and_requirement_records_reconciled_current_release_tracker_update_pending",
       "acceptance": [
         "Record owner direction: finish GitHub before writing or submitting final Workspace prompt.",
         "Reconcile AT-321–324 evidence, review findings, exact source inventory, master plan, manifest, ledger and private checklist.",
@@ -1461,7 +1466,7 @@
     {
       "id": "G1",
       "name": "Protect current live map and reconcile existing branches",
-      "state": "three_regressions_deployed_at320_reconciliation_pending",
+      "state": "prior_route_release_verified_25_PR_selective_consolidation_candidate",
       "acceptance": [
         "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
         "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
@@ -1471,7 +1476,7 @@
     {
       "id": "G2",
       "name": "Recover and calibrate owner-source map coverage",
-      "state": "four_zone_and_three_city_overview_candidate_registrations_no_production_geometry",
+      "state": "owner_source_bytes_preserved_five_zone_selection_outlines_reviewed_63_boundaries_open",
       "acceptance": [
         "Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.",
         "Find owner three city-map pieces in authorized prior files or source archive; the historical W01–W03 manifest is a candidate provenance lead, not proof that it is the identical three-piece set. No bytes newly recovered. Check exact hashes, image dimensions, overlaps, north-up, zoom, distortion and source purpose.",
@@ -1482,7 +1487,7 @@
     {
       "id": "G3",
       "name": "Verified boundary and encounter systems",
-      "state": "pending",
+      "state": "partial_attributed_encounters_no_comprehensive_roster_signoff",
       "acceptance": [
         "Independently validate geometry for all 48 sectors and 20 Wild Zones before marking full map scope complete; where evidence fails, leave explicit unresolved geometry and block final full-scope handoff. Never claim a centre is a polygon or borrow third-party map code or pixels.",
         "Keep separate native geometry layers for city district/sector, overlapping Wild Zones, spawn extent, floors/interiors and route segments. WZ5 overlaps two Bleu sectors/street; WZ11 spans Saison Canal/Jaune+Vert; verify WZ14 disputed district.",
@@ -1493,7 +1498,7 @@
     {
       "id": "G4",
       "name": "Interactive Atlas 2.0 implementation",
-      "state": "pending",
+      "state": "shared_interactions_candidate_pending_final_combined_head_browser_review",
       "acceptance": [
         "One shared data/geometry/encounter layer for Explorer and all existing map views; retain old links, markers, data, menus and progress.",
         "Click an independently verified sector or zone to highlight correct boundary; click a species to reveal all verified habitats. Clear selection, filters, legend, deep links, mobile drawer and desktop panel.",
@@ -1504,7 +1509,7 @@
     {
       "id": "G5",
       "name": "GitHub full-scope validation and deployment",
-      "state": "pending",
+      "state": "full_scope_blocked_by_remaining_G2_G3_requirements",
       "acceptance": [
         "Review current main and exact PR head, scope, diff, source and progress contracts; preserve 48/20, 42/40 photos, 111 Holovator photos/21 approximate records, 264 item records, 100 screw IDs, 146 item leads, original maps and guide features.",
         "All 68 boundary and roster records, route review and required map interactions meet approved acceptance. Unresolved mandatory requirements block full-scope completion; optional unverified details remain explicitly labelled and must not mislead.",
@@ -1759,7 +1764,7 @@
     "historical_baseline_and_area_records_preserved": true
   },
   "current_completion_plan": {
-    "tracking": "AT-339",
+    "tracking": "AT-340",
     "date": "2026-11-26",
     "plan": "FINAL_WORKSPACE_PLAN.md",
     "coverage": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
@@ -1768,7 +1773,7 @@
     "G0_prior_receipt": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/190",
     "G1_route_packet": "docs/qa/ATLAS_AT337_BLEU_ROUTE_RECONCILIATION.md",
     "G2_G3": "partial_five_reviewed_zone_map_outlines_63_boundaries_and_all_comprehensive_rosters_open",
-    "G4": "shared_area_habitat_interactions_implemented_exact_head_browser_release_pending",
+    "G4": "shared_interactions_and_review_fixes_implemented_combined_head_browser_release_pending",
     "G5": "full_scope_validation_merge_deployment_live_checks_open",
     "A0": "blocked_until_G5_verified",
     "approved_full_scope_sha": null,
@@ -1781,12 +1786,13 @@
     "collectible_production_verified_points": 0,
     "collectible_release_receipt": "docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json",
     "collectible_framework_status": "github_merged_deployed_live_verified",
-    "manifest_revision": 85,
-    "ledger_revision": 93,
+    "manifest_revision": 86,
+    "ledger_revision": 94,
     "shared_area_evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
     "reviewed_zone_map_outlines": 5,
     "approved_sector_boundaries": 0,
-    "comprehensive_rosters": 0
+    "comprehensive_rosters": 0,
+    "current_consolidation_evidence": "docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md"
   },
   "at339": {
     "status": "candidate_pending_exact_head_browser_and_release",
@@ -1805,5 +1811,31 @@
     "evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
     "historical_area_checkpoint_preserved": true,
     "workspace_unchanged": true
+  },
+  "at340": {
+    "id": "AT-340",
+    "date": "2026-11-26",
+    "manifest_revision": 86,
+    "ledger_revision": 94,
+    "baseline_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
+    "source_pr_202_head": "426aa3b71814b560a42939e9a7cc8304fb4a454d",
+    "status": "candidate_pending_combined_head_CI_visual_review_merge_and_live_checks",
+    "evidence": "docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md",
+    "pr_dispositions": "docs/qa/ATLAS_AT340_PR_DISPOSITIONS.json",
+    "content_evidence": "docs/qa/ATLAS_CONTENT_CONSOLIDATION_2026-11-26.md",
+    "early_story_evidence": "docs/qa/ATLAS_PR003_EARLY_STORY_RECONCILIATION_2026-11-26.md",
+    "geometry_audit": "docs/qa/ATLAS_RELEASE_GEOMETRY_AUDIT_2026-11-26.json",
+    "open_prs_reviewed": 25,
+    "requirements_preserved": 67,
+    "early_story_steps": 73,
+    "reviewed_zone_selection_outlines": 5,
+    "remaining_area_boundaries": 63,
+    "comprehensive_rosters": 0,
+    "production_new_pickup_positions": 0,
+    "workspace_observed_version": 37,
+    "workspace_changed": false,
+    "full_scope_signoff": false,
+    "approved_full_scope_sha": null,
+    "final_workspace_prompt": null
   }
 }

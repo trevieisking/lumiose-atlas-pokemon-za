@@ -14,7 +14,13 @@ const saved=JSON.stringify({check:{"1":true},sideCheck:{"61":true},legendCheck:{
 const register=JSON.parse(fs.readFileSync("atlas-area-evidence.json","utf8"));
 const productionIds=(register.geometries||[]).filter(row=>row.status==="approved").map(row=>row.area_id);
 const proof={scope:"AT-339 shared areas and habitats",productionBoundaryIds:productionIds,devices:[],syntheticFixtureOnly:true};
-const fixture={schemaVersion:1,map:AREA_MAP,areas:[],geometries:[{
+const fixture={schemaVersion:1,map:AREA_MAP,areas:[{area_id:"wz-01",encounters:[{
+  id:"fixture-source-navigation",species:"Pidgey",encounter_class:"ordinary",evidence_status:"source_corroborated",
+  sources:[
+    {url:"https://www.serebii.net/legendsz-a/wildzones.shtml",claim:"Synthetic written citation display check."},
+    {path:"docs/qa/fixture-only-written-record.md",claim:"Synthetic local Markdown citation display check."}
+  ]
+}]}],geometries:[{
   area_id:"wz-01",kind:"zone",status:"approved",coordinateSpace:"atlas-native-pixels",mapSha256:AREA_MAP.sha256,
   geometry:{type:"Polygon",coordinates:[[[700,700],[1220,700],[1220,1220],[700,1220],[700,700]]]},
   sources:[{path:AREA_MAP.path,sha256:AREA_MAP.sha256,claim:"Synthetic browser fixture only; not geographic evidence"}],
@@ -115,7 +121,7 @@ try{
       await host.locator("[data-area-class]").selectOption("fixed_alpha");
       assert.deepEqual(await areaIds(),["wz-01"],"Fixed Alpha Pidgey must not borrow another zone's ordinary roster");
       const locations=await host.locator('[data-area-detail] [data-encounter-area]').evaluateAll(nodes=>nodes.map(node=>({id:node.dataset.encounterArea,text:node.textContent})));
-      assert.ok(locations.length>0&&locations.every(row=>row.id==="wz-01"&&row.text.includes("Wild Zone 1")),"Every displayed condition identifies its own encounter area");
+      assert.ok(locations.length>0&&locations.every(row=>row.id==="wz-01"&&row.text==="Area: Wild Zone 01"),"Every displayed condition identifies its own canonical encounter area");
       assert.equal(new URL(page.url()).searchParams.get("source"),"at339","Unrelated query preserved");
       await host.screenshot({path:output+"/at339-"+surface+"-habitats-"+device+".png"});
       await host.locator("[data-area-clear]").click();
@@ -127,6 +133,8 @@ try{
       assert.match(await host.locator("[data-area-detail]").textContent(),/not independently verified|awaiting verification/i);
       assert.equal(await page.locator('[data-area-boundary="vert-sector-1"]').count(),0,"A sector label never becomes a polygon");
       assert.ok(await host.locator('[data-area-detail] a[href="assets/atlas/sector-streets/vert/vert-1-saison-canal.png"]').count()>0,"Original photograph retained");
+      assert.ok((await host.locator('.aa-source-notes').allTextContents()).join(' ').includes('pokemaps.net'),"Written reference attribution stays visible");
+      assert.deepEqual(await host.locator('.aa-source-notes a').evaluateAll(nodes=>nodes.map(node=>node.getAttribute('href')).filter(href=>/^https?:|^\/\/|\.md(?:[?#]|$)/i.test(href))),[],"Evidence links keep player navigation inside Atlas guide/assets rather than external sites or raw Markdown");
       await host.locator("[data-area-clear]").click();
       await host.locator('[data-area-results] button[data-area-id="wz-01"]').click();
       await host.locator("[data-area-clear]").click();
@@ -141,7 +149,8 @@ try{
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
-        assert.match(await page.locator("[data-area-detail]").textContent(),/Wild Zone 2\b/,"Original marker selection must survive reload");
+        assert.equal(await page.locator("[data-area-detail] > h4").first().textContent(),"Wild Zone 02","Original marker selection must survive reload");
+        assert.equal(await page.locator('[data-area-results] [data-area-id="wz-02"]').getAttribute('aria-pressed'),'true');
         if(surface==="standalone"){
           await page.locator("#mapSearch").fill("Wild Zone 20");
           await page.waitForFunction(()=>!new URL(location.href).searchParams.has("area"));
@@ -204,6 +213,29 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("collectible"),"screw:29");
     assert.equal(new URL(page.url()).searchParams.get("source"),"selection-sync");
     await unchanged();
+
+    // Once loaded, an explicit Holovator choice must supersede the old area
+    // exactly as it does during delayed startup. A later shared render cannot
+    // restore the old zone or replace the chosen photograph/route cursor.
+    await page.goto(base+"/atlas-explorer.html?area=wz-02&collectible=screw%3A29&source=access-selection",{waitUntil:"load"});
+    const accessPanel=await panel();await explorerSelection("wz-02");
+    await page.locator('#aeFilters [data-kind="holovator"]').click();
+    await page.locator('#aeResults [data-record-id="vert-cyclone"]').click();
+    const accessTitle=await page.locator('#aeSelected > h3').textContent();
+    const accessPhoto=await page.locator('#aeSelected img').first().elementHandle();
+    assert.ok(accessPhoto,"The selected access record retains its original photograph");
+    await page.locator('#aeNextStep').click();
+    const accessProgress=await page.locator('#aeRouteProgress').textContent();
+    assert.equal(new URL(page.url()).searchParams.get('area'),null,"Explicit non-area selection clears the superseded area query");
+    await accessPanel.locator('[data-area-boundaries]').uncheck();
+    await accessPanel.locator('[data-area-boundaries]').check();
+    await accessPanel.locator('[data-area-search]').fill('Pidgey');
+    assert.equal(await page.locator('#aeSelected > h3').textContent(),accessTitle);
+    assert.equal(await page.locator('#aeResults [data-record-id="vert-cyclone"]').getAttribute('aria-pressed'),'true');
+    assert.equal(await accessPhoto.evaluate(node=>node.isConnected&&node===document.querySelector('#aeSelected img')),true);
+    assert.equal(await page.locator('#aeRouteProgress').textContent(),accessProgress);
+    assert.equal(new URL(page.url()).searchParams.get('collectible'),'screw:29');
+    await accessPhoto.dispose();await unchanged();
 
     // Original map controls remain authoritative while optional evidence is
     // pending. The latest history entry must also supersede any queued click.
@@ -454,6 +486,11 @@ try{
     await tap(point);
     await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-01");
     const syntheticPanel=await panel();
+    const sourceFixture=syntheticPanel.locator('[data-area-encounter-id="fixture-source-navigation"]');
+    assert.equal(await sourceFixture.count(),1,"Synthetic citation record is actually displayed");
+    assert.match(await sourceFixture.textContent(),/Reference: serebii\.net/);
+    assert.match(await sourceFixture.textContent(),/Atlas evidence: fixture-only-written-record\.md/);
+    assert.equal(await sourceFixture.locator('.aa-source-notes a').count(),0,"External and raw Markdown sources remain attribution, not navigation");
     await syntheticPanel.screenshot({path:output+"/at339-synthetic-boundary-"+device+".png"});
     await syntheticPanel.locator("[data-area-clear]").click();
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();

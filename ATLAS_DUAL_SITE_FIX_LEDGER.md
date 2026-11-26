@@ -1,5 +1,13 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## AT-340 — one verified consolidation candidate
+
+**26 November 2026 · Manifest 86 / Ledger 94.** The combined candidate includes shared area/habitat navigation, the exact collectible-search correction, verified salon/quest/gift/written-route additions and restored Main Mission 01–10 detail. Independent review repaired disputed habitat leakage, stale Holovator selection, outbound evidence links and misleading pickup wording. [Scope, sources, validation and rollback](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md); [all 25 open PR dispositions](docs/qa/ATLAS_AT340_PR_DISPOSITIONS.json).
+
+**Bounded release validation is pending on the final combined head. Full master-plan completion remains HOLD:** five reviewed selection outlines, 63 boundaries and all 68 comprehensive encounter reviews still open. No new pickup coordinates are approved. Original photos, IDs, routes, progress, Supabase and feedback are preserved. Original Workspace is still version37; its full-release SHA and executable publication prompt remain unset. Videos and YouTube remain paused.
+
+The entries below preserve the earlier checkpoints; use AT-340 and its eventual exact PR/deployment receipt for the current consolidation status.
+
 ## AT-339 — shared areas and Pokémon habitats
 
 **26 November 2026 · Manifest 85 / Ledger 93 · Candidate awaiting exact-commit browser validation and release.** Recovered the interrupted area/habitat implementation and reconciled it with PR200's newly merged owner-crop evidence. One read-only model covers **48 sectors and 20 Wild Zones**, with **272 preserved encounter rows plus 283 attributed additional claims**. All rosters remain incomplete; ordinary, fixed Alpha, rotating Alpha, gift, mission, boss, disputed and research records retain their different meanings.
