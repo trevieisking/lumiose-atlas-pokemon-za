@@ -486,16 +486,49 @@ try {
       await layers(page, true, true);
       await page.locator("#aeViewport").scrollIntoViewIfNeeded();
       await settle(page);
-      const gesture = await page.evaluate(() => {
-        const box = document.querySelector("#aeViewport").getBoundingClientRect();
-        for (const fraction of [.45, .3, .6, .22, .7]) {
-          const y = box.y + box.height * fraction;
-          const x1 = box.x + box.width * .28, x2 = box.x + box.width * .72;
-          if ([x1, x2].every(x => !document.elementFromPoint(x, y)?.closest("button,a,input,select")))
-            return { x1, x2, y };
+      const gesture = await page.evaluate(deviceName => {
+        const viewport = document.querySelector("#aeViewport");
+        const box = viewport.getBoundingClientRect();
+        const visible = { left: Math.max(0, box.left), right: Math.min(innerWidth, box.right),
+          top: Math.max(0, box.top), bottom: Math.min(innerHeight, box.bottom) };
+        // Keep both starts and the subsequent real touch moves inside the visible
+        // map. Fixed fractions can all land on the original 40px major markers
+        // on a phone; those markers must retain their pointer priority.
+        const bounds = { left: Math.ceil(visible.left + 30), right: Math.floor(visible.right - 34),
+          top: Math.ceil(visible.top + 44), bottom: Math.floor(visible.bottom - 46) };
+        const separation = Math.min(180, (visible.right - visible.left) * .45);
+        const blocked = new Map();
+        let tested = 0, free = 0;
+        const diagnostics = () => ({ device: deviceName,
+          viewport: { x: box.x, y: box.y, width: box.width, height: box.height },
+          window: { width: innerWidth, height: innerHeight }, visible, bounds,
+          minimumSeparation: separation, testedPoints: tested, unobstructedPoints: free,
+          obstructingHits: [...blocked].sort((a, b) => b[1] - a[1]).slice(0, 12)
+        });
+        for (let y = bounds.top; y <= bounds.bottom; y += 12) {
+          const row = [];
+          for (let x = bounds.left; x <= bounds.right; x += 12) {
+            tested++;
+            const hit = document.elementFromPoint(x, y);
+            const control = hit?.closest("button,a,input,select,textarea,[role='button']");
+            if (hit && viewport.contains(hit) && !control) { row.push(x); free++; }
+            else {
+              const node = control || hit;
+              const reason = !node ? "outside document" : !viewport.contains(hit) ? "outside map: " + node.tagName
+                : node.tagName + " " + (node.id || node.getAttribute("aria-label") || node.className).toString().slice(0, 100);
+              blocked.set(reason, (blocked.get(reason) || 0) + 1);
+            }
+          }
+          if (row.length > 1 && row.at(-1) - row[0] >= separation)
+            return { x1: row[0], x2: row.at(-1), y, diagnostics: diagnostics() };
         }
-        throw Error("No unobstructed gesture start on the original map");
-      });
+        return { diagnostics: diagnostics() };
+      }, name);
+      console.log("AT338_GESTURE_HIT_TEST " + JSON.stringify(gesture));
+      if (!Number.isFinite(gesture.x1) || !Number.isFinite(gesture.x2)) {
+        await page.screenshot({ path: output + "/at338-gesture-hit-failure-" + name + ".png" });
+        assert.fail(name + ": no separated unobstructed gesture starts: " + JSON.stringify(gesture.diagnostics));
+      }
       const beforePan = await page.locator("#aeStage").getAttribute("style");
       if (device.hasTouch) {
         const session = await context.newCDPSession(page);
@@ -516,6 +549,7 @@ try {
         await page.mouse.up();
         await page.waitForFunction(before => document.querySelector("#aeStage").getAttribute("style") !== before, beforePan);
         await page.locator("#aeTurnRight").click();
+        await page.waitForFunction(() => document.querySelector("#aePositionReadout").textContent.includes("45°"));
       }
       assert.equal(await page.locator("#aeCollectibleChooser").isVisible(), false,
         "Pan or multitouch must never be mistaken for collectible selection");
@@ -558,7 +592,7 @@ try {
       assert.equal(await page.locator(".ae-pin[data-kind='holovator']").count(), 21);
       await assertProgressUntouched(page, initialRaw, name + " deep links");
       assert.deepEqual(errors, [], name + " JavaScript errors");
-      results.devices[name] = { combinations, overview, zoomed, selectedOutline, overviewChoices, zoomedChoices,
+      results.devices[name] = { combinations, overview, zoomed, selectedOutline, overviewChoices, zoomedChoices, gesture,
         stableOriginalMajorMarkers: originalMajorMarkers, repeatedFullPinCount: 364,
         originalPinNodesRetained: true, noHorizontalOverflow: true };
     } finally { await context.close(); }
