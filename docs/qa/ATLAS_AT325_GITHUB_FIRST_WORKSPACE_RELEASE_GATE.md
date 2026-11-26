@@ -1,5 +1,9 @@
 # AT-325 — Complete GitHub upgrade first; final Workspace handoff last
 
+## AT-337 — completion plan
+
+[The simple final Workspace plan](../../FINAL_WORKSPACE_PLAN.md) now assigns all67 recovered requirements to five actions. This packet also carries the current-base Bleu7–10 route reconciliation. See its separate exact-head release evidence; it does not certify G2–G5 or authorize A0. Prior G0 consolidation and private metadata reconciliation completed in PR190. The dated historical evidence and all68 area rows below remain intact.
+
 ## AT-336 — current consolidated checkpoint
 
 The26 November [consolidated handoff](../../ATLAS_RELEASE_HANDOFF.md) and [snapshot manifest](../consolidation/2026-11-26/manifest.json) now reconcile the whole source programme. Historical gate descriptions below retain their date/baseline: the three AT-326 regression fixes were subsequently merged/deployed; PR156 route work remains open; source registration pilots and both overview sets remain research. Original v37 source/deployment metadata is freshly confirmed. Active video/YouTube features were removed in GitHub PR188 and are paused in the next handoff.
