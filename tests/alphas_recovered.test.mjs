@@ -127,3 +127,9 @@ assert.ok(dragonair);
 for (const clause of ["Restaurant Le Nah","instead of Dratini","Lv. 30–32","Lv. 40–42","Neither Alpha is guaranteed","walkthrough.html#rank-obedience"])
   assert.ok(dragonair.includes(clause),"Dragonair route lost qualification: "+clause);
 assert.equal((html.match(/id="alpha-dragonair-rooftop"/g)||[]).length,1);
+
+/* Canal and roof are separate Alpha route observations. */
+const rainAlpha=cityAlphaCard("alpha-goomy-sliggoo-canal");
+assert.ok(rainAlpha);
+for(const clause of ["Rainy night near Jaune Sector 2","Justice Dojo","Saison Canal","Alpha Goomy (Lv. 49)","Alpha Sliggoo (Lv. 53)","not guaranteed","Daytime rain alternative","side-missions.html#quest-4","Main Mission 6",'href="#alphaZone20Pool"',"does not require rain"])
+  assert.ok(rainAlpha.includes(clause),"Missing route qualification: "+clause);
