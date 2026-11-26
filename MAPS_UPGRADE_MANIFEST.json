@@ -22,7 +22,7 @@
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-337 completes the simple five-action plan and current-base four-route packet; all67 requirements retained. G2/G3 evidence, G4 interactions and G5 full release remain open; executable Workspace prompt blocked.",
+  "current_phase": "AT-337 simple plan complete; G1 Bleu7–10 routes merged, Pages deployed and live checked in PR191. G2/G3 evidence, G4 interactions and G5 full release remain open; final executable Workspace prompt blocked.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4819,7 +4819,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "AT337_plan_complete_G1_route_packet_G2_G5_open",
+    "status": "AT337_G0_G1_reconciled_G2_G5_open",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4889,7 +4889,7 @@
       },
       {
         "id": "G1",
-        "state": "current_base_route_packet_requires_exact_release_receipt"
+        "state": "required_route_reconciliation_verified_PR191"
       },
       {
         "id": "G2",
@@ -4905,7 +4905,7 @@
       },
       {
         "id": "G5",
-        "state": "blocked_by_G1_G4"
+        "state": "blocked_by_G2_G4"
       },
       {
         "id": "A0",
@@ -5455,6 +5455,10 @@
     "full_scope_github_release_sha": null,
     "executable_workspace_prompt": null,
     "workspace_changed": false,
-    "prior_G0_receipt": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/190"
+    "prior_G0_receipt": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/190",
+    "route_release_receipt": "docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json",
+    "route_reconciliation_status": "github_merged_deployed_live_verified",
+    "github_route_merge": "dba74e27af1d7bdfed0795d5209b8cf38f4daf25",
+    "github_pages_run": 45737663295
   }
 }

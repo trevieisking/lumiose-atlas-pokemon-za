@@ -1,6 +1,6 @@
 # Pokémon Atlas — consolidated release handoff
 
-**Current simple plan:** [FINAL_WORKSPACE_PLAN.md](FINAL_WORKSPACE_PLAN.md), AT-337 / Manifest82 / Ledger90. All67 requirements are mapped, and the current-base Bleu7–10 route reconciliation is carried in its bounded packet. The source-consolidation snapshot below is preserved as dated evidence; it is not a claim that later GitHub changes reached Workspace.
+**Current simple plan:** [FINAL_WORKSPACE_PLAN.md](FINAL_WORKSPACE_PLAN.md), AT-337 / Manifest82 / Ledger90. All67 requirements are mapped, and the current-base Bleu7–10 route reconciliation is merged/deployed in PR191, with [exact release proof](docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json). The source-consolidation snapshot below is preserved as dated evidence; it is not a claim that later GitHub changes reached Workspace.
 
 26 November 2026 · **AT-336** · Plan `ATLAS-MAPS-2026-11-21-V1` · Manifest **81** · Ledger **89**
 
