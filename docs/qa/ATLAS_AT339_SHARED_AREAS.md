@@ -52,6 +52,8 @@ PR201 merged during validation. The corrected run checked out merge preview `564
 
 After the startup-intent fixes across all four surfaces, the combined current-main tree again passed all **78 focused Node checks**, static/link validation and the eight-crop source validator. No source encounter or geometry records changed in those corrections. The final CI run must include the delayed-evidence cases and every original browser suite before promotion.
 
+Head `426aa3b71814b560a42939e9a7cc8304fb4a454d` passed all three existing browser suites in [run 45813710134](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45813710134). The first new habitat assertion then exposed two stale display-name expectations: the preserved source uses `Wild Zone 01` and `Wild Zone 02`. The test now requires the exact original location label and restored detail heading, retaining strict area-ID attribution. This changes no runtime data, displayed names or encounter classification.
+
 Before promotion: inspect the exact final commit's workflow results, browser proof and screenshots; resolve failures; recheck main and PR heads; merge with the expected reviewed SHA; verify its exact Pages deployment and live files/behavior. The release receipt will record these observations separately from this candidate report. No claim of physical-device or in-game verification follows from browser emulation.
 
 ## Preservation, rollback and next work

@@ -115,7 +115,8 @@ try{
       await host.locator("[data-area-class]").selectOption("fixed_alpha");
       assert.deepEqual(await areaIds(),["wz-01"],"Fixed Alpha Pidgey must not borrow another zone's ordinary roster");
       const locations=await host.locator('[data-area-detail] [data-encounter-area]').evaluateAll(nodes=>nodes.map(node=>({id:node.dataset.encounterArea,text:node.textContent})));
-      assert.ok(locations.length>0&&locations.every(row=>row.id==="wz-01"&&row.text.includes("Wild Zone 1")),"Every displayed condition identifies its own encounter area");
+      assert.ok(locations.length>0,"Fixed Alpha Pidgey exposes its encounter-area attribution");
+      for(const row of locations)assert.deepEqual(row,{id:"wz-01",text:"Area: Wild Zone 01"},"Every displayed condition identifies its own encounter area by its preserved source name");
       assert.equal(new URL(page.url()).searchParams.get("source"),"at339","Unrelated query preserved");
       await host.screenshot({path:output+"/at339-"+surface+"-habitats-"+device+".png"});
       await host.locator("[data-area-clear]").click();
@@ -141,7 +142,7 @@ try{
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
-        assert.match(await page.locator("[data-area-detail]").textContent(),/Wild Zone 2\b/,"Original marker selection must survive reload");
+        assert.equal(await page.locator("[data-area-detail] > h4").textContent(),"Wild Zone 02","Original marker selection must survive reload with its preserved source name");
         if(surface==="standalone"){
           await page.locator("#mapSearch").fill("Wild Zone 20");
           await page.waitForFunction(()=>!new URL(location.href).searchParams.has("area"));
