@@ -2,8 +2,8 @@
   "id": "AT-325",
   "date": "2026-11-26",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 91,
-  "ledger_revision": 99,
+  "manifest_revision": 92,
+  "ledger_revision": 100,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
@@ -3539,5 +3539,119 @@
       "exact_current_head_validation": "pending"
     }
   },
-  "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json"
+  "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+  "current_planning": {
+    "tracking": "AT-343",
+    "date": "2026-11-26",
+    "manifest_revision": 92,
+    "ledger_revision": 100,
+    "status": "owner_item_rule_retracted_bounded_relative_alignment_locally_supported_no_production_change",
+    "evidence_report": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
+    "evidence_note": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md",
+    "latest_conclusion": "Trev reports many crosses with no ball present and retracts the general cross-equals-item rule. The number of empty crosses is unspecified; no universal item relationship or precise grid semantics is established.",
+    "initial_report_history": {
+      "trev_cumulative_matches_reported": 8,
+      "trev_breakdown": [
+        5,
+        3
+      ],
+      "unique_combined_match_count": null,
+      "duplicate_or_overlap_status": "not_established",
+      "initial_no_failure_report": "Historical statement superseded by the later empty-cross report; not an accuracy estimate.",
+      "typical_reported_method": "Item often found first and then compared with its X; not a blind prospective test.",
+      "further_matches_reported": 2,
+      "further_reporter_identity": "Unconfirmed; the original wording does not establish a distinct reporter named Kay.",
+      "attribution_qualification": "Trev reported eight cumulative matches, then two further matches were reported. Separate reporter identity and unique-location overlap are unconfirmed."
+    },
+    "visual_grid_semantics": "Map-relative lattice locally supported for one Vert pair; item meaning, real/game units and global origin remain unconfirmed.",
+    "new_verified_pins": 0,
+    "new_native_coordinates": 0,
+    "runtime_changed": false,
+    "approved_release_unchanged": true,
+    "original_67_requirement_ids_and_acceptance_unchanged": true,
+    "tracker": {
+      "receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
+      "manifest_revision": 92,
+      "row_count": 48,
+      "github_status_counts_unchanged": {
+        "verified": 17,
+        "in_progress": 15,
+        "open": 16
+      },
+      "initial_AT332_note_executed_at": "2026-11-26T15:30:35.67812Z",
+      "counterreport_AT332_note_executed_at": "2026-11-26T15:31:43.772416Z",
+      "readback_authority": "The separate tracker receipt records the actual guarded readback; this planning addendum supplies no readback timestamp.",
+      "all_existing_github_proof_preserved": true,
+      "all_workspace_fields_preserved": true
+    },
+    "secondary_research_purpose": {
+      "purpose": "Use the regular marks as a secondary relative image-alignment check after unique architecture establishes correspondence.",
+      "status": "bounded_one_pair_feasibility_locally_supported_no_production_approval",
+      "bounded_alignment_feasibility_supported": true,
+      "anchoring": "The strict Vert overlap and separate local HUD comparison support a map-relative reference lattice rather than a fixed screen overlay, only within this tested pair.",
+      "measurement_units": "Unknown real/game units; no conversion to in-game distance or Atlas-native coordinates is approved.",
+      "original_base_map_pixels": [
+        1920,
+        1920
+      ],
+      "original_base_map_unchanged": true,
+      "alignment_approved": false,
+      "alignment_approval_scope": "This flag refers to production or Atlas-native alignment, not the separately supported bounded relative-photo feasibility result.",
+      "new_coordinate_promotion": false,
+      "pair_count": 1,
+      "pilot_evidence": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.json",
+      "replay_script": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.py",
+      "architecture_fit": {
+        "candidate_feature_correspondences": 197,
+        "inlier_feature_correspondences": 97,
+        "distinct_source_inlier_locations": 82,
+        "count_qualification": "Feature correspondences and rounded source locations, not unique named landmarks.",
+        "rms_original_photo_pixels": 1.7321170844490605
+      },
+      "inside_actual_inlier_hull_holdouts": [
+        {
+          "name": "Vert5 roof cross",
+          "residual_original_photo_pixels": 3.5652048170458097
+        },
+        {
+          "name": "east canal cross",
+          "residual_original_photo_pixels": 4.28400241003484
+        }
+      ],
+      "outside_hull_extrapolation_diagnostics": [
+        {
+          "name": "eastern street cross",
+          "residual_original_photo_pixels": 17.097543509312402
+        },
+        {
+          "name": "South Boulevard edge cross",
+          "residual_original_photo_pixels": 28.642145149265776
+        }
+      ],
+      "hud_comparison_scope": "Local fixed-HUD similarity model,not full-screen camera calibration;supporting check only.",
+      "limits": [
+        "Only one Vert photograph pair; no citywide or all-zoom calibration.",
+        "An unnumbered periodic lattice has whole-cell ambiguity and no unique global origin.",
+        "Residuals are original-photograph pixels, not certified native1920-map or ground accuracy.",
+        "The larger outside-hull errors prevent claiming uniform accuracy beyond the supported overlap.",
+        "No native1920 transform, global calibration, new item/structure coordinates, item pins or production promotion."
+      ]
+    }
+  },
+  "approved_release_baseline": {
+    "tracking": "AT-342",
+    "manifest_revision": 91,
+    "ledger_revision": 99,
+    "runtime_merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+    "workspace_prompt": {
+      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
+    },
+    "scope": "Approved finite Map2.0 runtime release; unchanged by the AT343 research addendum."
+  },
+  "latest_evidence_addendum": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
+  "latest_evidence_summary": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md",
+  "current_phase_assessment_scope": "Approved AT342 runtime-release snapshot at Manifest91/Ledger99, merge223762bd1a21c2e72c592e975499d13c4195ae07. Its G0–G5/A0 decisions and original acceptance remain unchanged. Current planning92/100 records the separate AT343 research correction and bounded one-pair feasibility; it grants no new production calibration, coordinates or pins."
 }
