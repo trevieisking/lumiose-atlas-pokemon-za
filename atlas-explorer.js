@@ -19,6 +19,7 @@ const layerToggleByKind=new Map(layerToggles.map(input=>[input.dataset.layer,inp
 const layerVisible=kind=>layerToggleByKind.get(kind)?.checked!==false;
 const needle=by("aeNeedle"),zoomLabel=by("aeZoomLabel"),readout=by("aePositionReadout");
 const count=by("aeCount"),stats=by("aeStats"),noResults=by("aeNoResults");
+const placeLayerStatus=by("aePlaceLayerStatus"),showPlaceDetails=by("aeShowPlaceDetails");
 if(!viewport||!stage||!layer||!resultList||!selectedPanel||!routePicker)throw Error("Atlas Explorer page markup missing");
 const element=(tag,cls,value)=>{
   const out=document.createElement(tag);
@@ -286,6 +287,7 @@ function selectRecord(item,focus=true){
   // Shared initialization and layer changes may reconcile the same selection.
   // Preserve its loaded photographs, open disclosures and focused links.
   if(selectedId!==item.id){selectedId=item.id;detailsFor(item);}
+  if(showPlaceDetails)showPlaceDetails.disabled=false;
   for(const [id,pin] of pinMap)pin.setAttribute("aria-pressed",String(id===selectedId));
   for(const button of resultList.querySelectorAll("[data-record-id]")){
     button.setAttribute("aria-pressed",String(button.dataset.recordId===selectedId));
@@ -296,12 +298,47 @@ function selectRecord(item,focus=true){
   const route=routes.find(r=>r.point_id===item.id);
   if(route&&!syncingArea)chooseRoute(route.id);
 }
-function match(item){
-  const query=search.value.trim().toLocaleLowerCase();
-  if(activeKind!=="all"&&item.kind!==activeKind)return false;
+const foldPlaceText=value=>plain(value).normalize("NFD").replace(/\p{M}/gu,"").toLocaleLowerCase().replace(/\s+/g," ").trim();
+function matchesPlaceSearch(item){
+  const query=foldPlaceText(search.value);
   if(!query)return true;
-  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),item.kind==="zone"?zoneSearchText(item.number):"",labels[item.kind]]
-    .some(value=>plain(value).toLocaleLowerCase().includes(query));
+  const fields=[item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),item.kind==="zone"?zoneSearchText(item.number):"",labels[item.kind]].map(foldPlaceText);
+  const zoneNumbers=[...query.matchAll(/\bwild zone 0*(\d+)\b/g)].map(match=>Number(match[1]));
+  if(zoneNumbers.length){
+    // Saved zone names are zero padded. Other places may legitimately mention
+    // a nearby zone, but Zone 2 must never match Zone 20 by substring alone.
+    const mentioned=new Set(item.kind==="zone"?[Number(item.number)]:fields.flatMap(value=>[...value.matchAll(/\bwild zone 0*(\d+)\b/g)].map(match=>Number(match[1]))));
+    if(!zoneNumbers.every(number=>mentioned.has(number)))return false;
+    const remaining=query.replace(/\bwild zone 0*\d+\b/g,"").replace(/\s+/g," ").trim();
+    return !remaining||fields.some(value=>value.includes(remaining));
+  }
+  return fields.some(value=>value.includes(query));
+}
+function match(item){
+  return (activeKind==="all"||item.kind===activeKind)&&matchesPlaceSearch(item);
+}
+function updatePlaceLayerStatus(matches){
+  if(!placeLayerStatus)return;
+  const visible=[...pinMap.values()].filter(pin=>!pin.hidden).length;
+  const matchingPins=matches.filter(item=>pinMap.has(item.id)).length;
+  const category=activeKind==="all"?"All places":labels[activeKind]||activeKind;
+  const query=search.value.trim();
+  let text=visible+" of "+pinMap.size+" documented place markers visible. Category: "+category+". "+(query?"Search: “"+query+"”.":"No place search.");
+  if(!visible){
+    if(matches.length&&!matchingPins)text+=" Matching entries have no mapped position; their photos and details remain available in the directory.";
+    else if(!matchingPins)text+=" No place markers match these filters. Clear place filters or enable a place layer to reveal its markers.";
+    else text+=" The matching place layers are switched off.";
+  }
+  placeLayerStatus.textContent=text;
+}
+function changePlaceLayer(input){
+  const kind=input.dataset.layer;
+  if(input.checked&&["zone","holovator","ladder","landmark","scaffold"].includes(kind)){
+    if(activeKind!=="all"&&activeKind!==kind)activeKind="all";
+    const candidates=records.filter(item=>item.kind===kind&&pinMap.has(item.id));
+    if(candidates.length&&!candidates.some(matchesPlaceSearch))search.value="";
+  }
+  drawList();
 }
 function drawList(){
   resultList.replaceChildren();
@@ -328,6 +365,7 @@ function drawList(){
   for(const b of filters)b.setAttribute("aria-pressed",String(b.dataset.kind===activeKind));
   count.textContent=matches.length+" of "+records.length+" documented city entries";
   noResults.hidden=matches.length!==0;
+  updatePlaceLayerStatus(matches);
   syncSectorContext();
 }
 function createPins(){
@@ -442,6 +480,15 @@ function setupNavigation(){
   });
   by("aeOriginal").addEventListener("click",()=>setStyle(false));
   by("aeTint").addEventListener("click",()=>setStyle(true));
+  by("aeClearPlaceFilters")?.addEventListener("click",()=>{
+    activeKind="all";search.value="";drawList();
+  });
+  showPlaceDetails?.addEventListener("click",()=>{
+    if(!selectedId)return;
+    const heading=selectedPanel.querySelector(":scope > h3");
+    if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+    selectedPanel.scrollIntoView({behavior:"smooth",block:"start"});
+  });
   viewport.addEventListener("pointerdown",event=>{
     if(event.target.closest("button, a, input, select")||(event.pointerType==="mouse"&&event.button!==0))return;
     pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
@@ -589,6 +636,7 @@ async function load(){
         const previous=recordMap.get(selectedId);
         if(previous?.kind!=="zone"&&previous?.kind!=="sector")return;
         selectedId=null;coverageSector.value="";
+        if(showPlaceDetails)showPlaceDetails.disabled=true;
         selectedPanel.replaceChildren(element("h3","","Select a map pin or place"),paragraph("Tap a marker to see original pictures, local directions and whether a route has actually been checked."));
         for(const pin of pinMap.values())pin.setAttribute("aria-pressed","false");
         for(const button of resultList.querySelectorAll("[data-record-id]"))button.setAttribute("aria-pressed","false");
@@ -615,7 +663,7 @@ async function load(){
 setupNavigation();
 window.addEventListener("popstate",()=>{if(!areaUI)pendingAreaSelection=null;});
 filters.forEach(b=>b.addEventListener("click",()=>{activeKind=b.dataset.kind||"all";drawList();}));
-layerToggles.forEach(input=>input.addEventListener("change",drawList));
+layerToggles.forEach(input=>input.addEventListener("change",()=>changePlaceLayer(input)));
 search.addEventListener("input",drawList);
 routePicker.addEventListener("change",()=>{
   if(routePicker.value)chooseRoute(routePicker.value);

@@ -27,7 +27,10 @@
 .atlas-area-ui .aa-detail{border-top:1px solid #e1d9e9;margin-top:12px;padding-top:5px;overflow-wrap:anywhere}
 .atlas-area-ui .aa-detail>p,.atlas-area-ui .aa-detail>a{font-size:1rem;line-height:1.6}
 .atlas-area-ui .aa-detail>a{display:block;margin:8px 0}
-.atlas-area-ui .aa-photo-links{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;font-size:.875rem}
+.atlas-area-ui .aa-photo-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0;font-size:.875rem}
+.atlas-area-ui .aa-photo-link{display:block;min-width:0;border:1px solid #d6cbe4;border-radius:8px;overflow:hidden;background:#faf8fd}
+.atlas-area-ui .aa-photo{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#e9eced}
+.atlas-area-ui .aa-photo-caption{display:block;padding:8px;line-height:1.5}
 .atlas-area-ui .aa-encounter-list{list-style:none;margin:12px 0;padding:3px;max-height:310px;overflow:auto;display:grid;gap:7px}
 .atlas-area-ui .aa-encounter{border:1px solid #ded5e7;border-radius:8px;padding:9px;background:#faf8fd}
 .atlas-area-ui .aa-encounter p{font-size:1rem;margin:6px 0;line-height:1.55}
@@ -46,4 +49,4 @@
 .aa-geometry-overlay path.is-active[data-area-kind=sector]{fill:#9d50b538;stroke:#70358d}
 .aa-geometry-overlay path.is-muted{opacity:.28}
 @media(min-width:1100px){.atlas-area-ui .aa-controls{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1.4fr)}}
-@media(max-width:600px){.atlas-area-ui{padding:11px}.atlas-area-ui .aa-result-grid{gap:7px}.atlas-area-ui .aa-results{max-height:186px}.atlas-area-ui .aa-drawer[open]{max-height:76vh;overflow:auto;padding:0 3px 6px}.atlas-area-ui .aa-toolbar{align-items:stretch;flex-direction:column}.atlas-area-ui .aa-title{font-size:1rem}.atlas-area-ui .aa-close{position:sticky;bottom:0;background:#f3ecfb;width:100%;text-align:center}}
+@media(max-width:600px){.atlas-area-ui{padding:11px}.atlas-area-ui .aa-result-grid{gap:7px}.atlas-area-ui .aa-results{max-height:186px}.atlas-area-ui .aa-drawer[open]{padding:0 3px 6px}.atlas-area-ui .aa-toolbar{align-items:stretch;flex-direction:column}.atlas-area-ui .aa-title{font-size:1rem}.atlas-area-ui .aa-close{background:#f3ecfb;width:100%;text-align:center}}

@@ -83,7 +83,12 @@
     <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
     <label><input type="checkbox" data-layer="item"> Items</label>
     <label><input type="checkbox" data-layer="screw"> Colorful Screws</label>
-    <span class="ae-layer-hint">Show several layers together; search results stay available even when a pin layer is hidden.</span>
+    <span class="ae-layer-hint">Switches show Atlas markers. Symbols printed on the original game map stay visible. The Sector names switch shows the selected sector label.</span>
+    <span class="ae-layer-hint ae-place-layer-status" id="aePlaceLayerStatus" role="status" aria-live="polite">Loading place markers…</span>
+    <div class="ae-place-actions">
+      <button type="button" id="aeClearPlaceFilters">Clear place filters</button>
+      <button type="button" id="aeShowPlaceDetails" aria-controls="aeSelected" disabled>View photos and details</button>
+    </div>
     <span class="ae-layer-hint" id="aeCollectibleStatus" role="status" aria-live="polite">Loading item and Screw locations…</span>
     <a class="ae-collection-guide" href="items.html">Open the original item and Screw checklists</a>
   </fieldset>

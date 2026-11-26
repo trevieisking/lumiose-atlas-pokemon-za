@@ -115,6 +115,13 @@ try{
       assert.deepEqual((await page.locator("[data-area-boundary]").evaluateAll(nodes=>nodes.map(n=>n.dataset.areaBoundary))).sort(),[...productionIds].sort());
       if(surface==="standalone")assert.equal(await page.locator("#mapZoomImage").getAttribute("data-selected-zone"),"2","Legacy zone fragment preserved");
       await host.locator("[data-area-search]").fill("Pidgey");
+      if(device==="phone"){
+        // Capture the actual mobile controls before a result selection scrolls
+        // into its detail, independently of the habitat/result evidence below.
+        const controls=host.locator(".aa-controls");
+        await controls.scrollIntoViewIfNeeded();
+        await controls.screenshot({path:output+"/at339-"+surface+"-controls-phone.png"});
+      }
       await host.locator('[data-species-results] button[data-species-id="pidgey"]').click();
       const pidgey=await areaIds();assert.ok(pidgey.includes("wz-01")&&pidgey.includes("wz-05"),"All preserved Pidgey habitats are reachable");
       await host.locator("[data-area-class]").selectOption("fixed_alpha");
@@ -272,7 +279,7 @@ try{
           history.pushState(history.state,"",initial);
         },{empty,initial});
         await page.locator('#mapZones [data-select-zone="3"]').click();
-        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail .rebuild-zone-detail > h3")?.textContent==="Wild Zone 03");
+        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail > .rebuild-zone-detail > h3")?.textContent==="Wild Zone 03");
         assert.equal(new URL(page.url()).searchParams.get("area"),"wz-03","Original main-map choice updates its shared URL before evidence arrives");
         assert.equal(new URL(page.url()).hash,"#maps");
         assert.equal(await page.locator('[data-area-panel]').count(),0);
@@ -282,11 +289,11 @@ try{
         release();const host=await panel();
         if(action==="back"){
           assert.equal(page.url(),empty,"Late initialization must not replay a choice superseded by Back");
-          assert.equal(await page.locator("#mapZoneDetail .rebuild-zone-detail > h3").count(),0);
+          assert.equal(await page.locator("#mapZoneDetail > .rebuild-zone-detail > h3").count(),0);
           assert.equal(await host.locator('[data-area-results] [aria-pressed="true"]').count(),0);
           await page.goForward();await page.waitForURL(url=>url.searchParams.get("area")==="wz-03");
         }
-        assert.equal(await page.locator("#mapZoneDetail .rebuild-zone-detail > h3").textContent(),"Wild Zone 03");
+        assert.equal(await page.locator("#mapZoneDetail > .rebuild-zone-detail > h3").textContent(),"Wild Zone 03");
         assert.equal(await host.locator('[data-area-results] [data-area-id="wz-03"]').getAttribute("aria-pressed"),"true");
         assert.deepEqual(await areaIds(),["wz-03"]);
         const final=new URL(page.url());

@@ -27,14 +27,20 @@
 .ae-value{min-width:50px;text-align:center;font-size:13px;color:#42365c;font-variant-numeric:tabular-nums}
 .ae-separator{width:1px;height:25px;background:#d2cbd7;margin:0 3px}
 .ae-layers{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;min-width:0;border:0;margin:0;padding:8px 14px 12px;background:#faf8fd}
-.ae-layers legend{padding:9px 0 2px;font-size:12px;font-weight:850;color:#342750}
-.ae-layers label{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #d4cae2;border-radius:9px;background:#fff;color:#413656;font-size:12px;font-weight:750;line-height:1.25;cursor:pointer}
+.ae-layers legend{padding:9px 0 2px;font-size:14px;font-weight:850;color:#342750}
+.ae-layers label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 10px;border:1px solid #d4cae2;border-radius:9px;background:#fff;color:#413656;font-size:14px;font-weight:750;line-height:1.25;cursor:pointer}
 .ae-layers input{width:17px;height:17px;margin:0;accent-color:#533580;flex:none;cursor:pointer}
 .ae-layers input:focus-visible{outline:3px solid #e6b562;outline-offset:2px}
 .ae-layers label:has(input:disabled){opacity:.66;cursor:not-allowed}
 .ae-layers input:disabled{cursor:not-allowed}
-.ae-layers small{font-size:10px;font-weight:600}
-.ae-layer-hint{flex-basis:100%;font-size:11px;line-height:1.45;color:#62576e}
+.ae-layers small{font-size:12px;font-weight:600}
+.ae-layer-hint{flex-basis:100%;font-size:14px;line-height:1.5;color:#62576e}
+.ae-place-layer-status{color:#39294f;font-weight:700}
+.ae-place-actions{display:flex;flex-wrap:wrap;gap:8px;flex-basis:100%}
+.ae-place-actions button{min-height:44px;max-width:100%;padding:9px 12px;border:1px solid #b6a4ca;border-radius:8px;background:#fff;color:#47315f;font-size:14px;font-weight:750;line-height:1.4;text-align:left;overflow-wrap:anywhere}
+.ae-place-actions button:disabled{color:#746d7c;border-color:#d9d2e1;background:#f3f0f6;cursor:default}
+.ae-place-actions button:focus-visible{outline:3px solid #e9b953;outline-offset:2px}
+#aeSelected>h3:focus-visible{outline:3px solid #e9b953;outline-offset:4px}
 .ae-map-shell{background:linear-gradient(#7c969c,#90b3b3);padding:0}
 .ae-map-viewport{height:clamp(390px,63vh,760px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;overscroll-behavior:contain;background:#90abb0}
 .ae-map-viewport.ae-dragging{cursor:grabbing}

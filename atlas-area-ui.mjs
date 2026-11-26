@@ -92,7 +92,19 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
       detail.append(make('p','','The encounter roster is '+(area.rosterStatus==='unresolved'?'unresolved':'not comprehensive')+'. Missing conditions do not mean an encounter is available at all times.'));
       for(const note of area.notes)detail.append(make('p','aa-evidence-note',note));
       const original=safeAreaSourceHref(area.link);if(original)detail.append(link(original,'Open original area guide and photographs'));
-      if(area.photos.length){const photos=make('div','aa-photo-links');for(const [i,p] of area.photos.entries())if(localPhoto(p.path))photos.append(link(p.path,'Original area photograph '+(i+1)));detail.append(photos);}
+      if(area.photos.length){
+        const photos=make('div','aa-photo-links');
+        for(const [i,p] of area.photos.entries())if(localPhoto(p.path)){
+          const title=p.kind==='overview'?'Area overview and encounter card':p.kind==='closeup'?'Detailed area close-up':p.kind==='orientation'?'Original map reference':'Original area photograph '+(i+1);
+          const photoLink=link(p.path);photoLink.className='aa-photo-link';photoLink.setAttribute('aria-label','Open '+area.name+' — '+title+' at full resolution');
+          const photo=make('img','aa-photo');photo.src=p.path;photo.alt=area.name+' — '+title;photo.loading='lazy';photo.decoding='async';
+          if(Number.isFinite(p.width)&&p.width>0)photo.width=p.width;
+          if(Number.isFinite(p.height)&&p.height>0)photo.height=p.height;
+          photoLink.append(photo,make('span','aa-photo-caption',title+' · Open full size'));
+          photos.append(photoLink);
+        }
+        detail.append(photos);
+      }
       if(onAreaFocus){const focus=make('button','',typeof areaFocusLabel==='string'?areaFocusLabel:area.kind==='sector'&&!area.geometry.eligible?'Show district starting view':area.geometry.eligible?'Show this area on the map':'Show saved zone centre');focus.type='button';focus.dataset.areaFocus=area.id;focus.addEventListener('click',()=>onAreaFocus(area));detail.append(focus);}
     }else{detail.append(make('h4','','Choose an area or Pokémon'),make('p','','Area records retain original photographs and written approaches. Choose a Pokémon to find its recorded wild habitats across all areas.'));return;}
     const rows=make('ul','aa-encounter-list');for(const row of result.encounters)rows.append(renderEncounter(row));
@@ -107,7 +119,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
     areaResults.replaceChildren();speciesResults.replaceChildren();
     for(const area of result.areas){const button=make('button');button.type='button';button.dataset.areaId=area.id;button.setAttribute('aria-pressed',String(selection.areaId===area.id));button.append(make('strong','',area.name),make('small','',area.district+' · '+(area.geometry.eligible?'Reviewed map outline':'Outline awaiting verification')));button.addEventListener('click',()=>selectArea(area.id,{focus:true}));areaResults.append(button);}
     const shownSpecies=selection.speciesId?[speciesById.get(selection.speciesId)]:result.species;
-    for(const species of shownSpecies){const button=make('button');button.type='button';button.dataset.speciesId=species.id;button.setAttribute('aria-pressed',String(selection.speciesId===species.id));button.append(make('strong','',species.name),make('small','',species.areaIds.length+' recorded area'+(species.areaIds.length===1?'':'s')));button.addEventListener('click',()=>selectSpecies(species.id,{focus:true}));speciesResults.append(button);}
+    for(const species of shownSpecies){const button=make('button');button.type='button';button.dataset.speciesId=species.id;button.setAttribute('aria-pressed',String(selection.speciesId===species.id));button.append(make('strong','',species.name),make('small','',species.areaIds.length+' recorded area'+(species.areaIds.length===1?'':'s')+' total'));button.addEventListener('click',()=>selectSpecies(species.id,{focus:true}));speciesResults.append(button);}
     if(!result.areas.length)areaResults.append(make('p','','No matching area records.'));
     if(!shownSpecies.length)speciesResults.append(make('p','','No recorded species match.'));
     status.textContent=result.areas.length+' of 68 areas · '+result.encounters.length+' encounter records · '+approved.length+' reviewed map outlines.';
