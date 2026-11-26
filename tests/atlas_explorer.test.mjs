@@ -6,9 +6,8 @@ import {createHash} from "node:crypto";
 import {
   MAP_SIZE, stageBase, startView, project, unproject, constrain,
   panBy, changeAround, centreOn, wrapRotation, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart, routeVideoUrl
+  coverageCellCentre, districtStart
 } from "../atlas-explorer-geometry.mjs";
-import {VIDEO_BOOKMARK_KEY,validVideoBookmark,saveVideoBookmark,readVideoBookmark,forgetVideoBookmark} from "../atlas-video-bookmark.mjs";
 const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
@@ -560,41 +559,21 @@ test("AT-267 navigates all 25 image regions and 48 sectors without fabricated po
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
 
-test("AT-295 optional video references are timestamped, labelled, safe and do not establish map geometry",()=>{
+test("Written routes remain intact without supplementary media or storage writes",()=>{
   const route=data.routes.find(x=>x.id==="vert9-vernal-rooftop-screw");
-  const refs=route.steps.flatMap((s,i)=>(s.video_refs||[]).map(v=>[i,v]));
-  assert.deepEqual(refs.map(([i,v])=>[i,v.video_id,v.start_seconds,v.verification]),[[1,"IuvITD247zU",59,"publisher_chapter"],[3,"5-dLjd4o8Rc",694,"numbering_candidate"],[5,"PKw9fyChBVg",377,"publisher_chapter"]]);
-  for(const [i,v] of refs){const url=new URL(routeVideoUrl(v));assert.equal(url.origin,"https://www.youtube.com");assert.equal(url.pathname,"/watch");assert.equal(url.searchParams.get("v"),v.video_id);assert.equal(url.searchParams.get("t"),v.start_seconds+"s");assert.equal(route.steps[i].evidence,"guide_crosscheck");}
-  const v=refs[0][1];
-  for(const invalid of [null,{...v,video_id:"javascript:alert(1)"},{...v,video_id:"abc&evil.com"},{...v,start_seconds:-1},{...v,start_seconds:1.5},{...v,verification:"frame_verified"},{...v,creator:""}])assert.equal(routeVideoUrl(invalid),null);
-  assert.match(refs[1][1].note,/regional clue is #2.*unconfirmed/);
   assert.equal(route.roof_exit_xy,null);assert.equal(route.known_floor_plan,false);assert.equal(route.steps.at(-1).evidence,"unverified");
   assert.equal(data.routes.length,22);assert.equal(data.holovators.length,21);assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+  assert.ok(data.routes.every(r=>r.steps.every(s=>!Object.hasOwn(s,"video_refs"))));
+  assert.doesNotMatch(read("atlas-explorer.js"),/localStorage|sessionStorage|replaceState/);
+  assert.ok(!fs.existsSync(path.join(root,"atlas-video-bookmark.mjs")));
 });
 
-test("AT-295 video return uses one private key, preserves unrelated state and tolerates blocked storage",()=>{
-  const b={version:1,routeId:"vert9-vernal-rooftop-screw",stepIndex:3,stepTitle:"Rooftop Screw #2 — Holovator approach",videoId:"5-dLjd4o8Rc",selectedId:"vert-sector-9",filter:"sector",search:"",hiddenLayers:["ladder"],sector:"vert-sector-9",coverageArea:"",coverageText:"District starting view",tint:false,view:{zoom:2.4,rotation:45,panX:12,panY:-24},stageSize:400,anchorTop:350};
-  assert.ok(validVideoBookmark(b));
-  for(const invalid of [null,{...b,version:2},{...b,stepIndex:-1},{...b,videoId:"javascript:alert(1)"},{...b,view:{...b.view,panX:Infinity}},{...b,stageSize:0}])assert.equal(validVideoBookmark(invalid),false);
-  const values=new Map([["existing-progress","unchanged"]]);
-  const host={history:{state:{other:"preserved"},replaceState(value){this.state=value;}},localStorage:{setItem(k,v){values.set(k,v);},getItem(k){return values.get(k)||null;},removeItem(k){values.delete(k);}}};
-  assert.equal(saveVideoBookmark(host,b),true);assert.deepEqual(readVideoBookmark(host,false),b);assert.equal(host.history.state.other,"preserved");
-  host.history.state=null;assert.equal(readVideoBookmark(host,false),null);assert.deepEqual(readVideoBookmark(host,true),b);
-  forgetVideoBookmark(host);assert.equal(readVideoBookmark(host,true),null);assert.equal(values.get("existing-progress"),"unchanged");assert.equal(values.has(VIDEO_BOOKMARK_KEY),false);
-  const denied={history:{state:null,replaceState(){throw Error("blocked");}},get localStorage(){throw Error("blocked");}};
-  assert.equal(saveVideoBookmark(denied,b),false);assert.equal(readVideoBookmark(denied,true),null);assert.doesNotThrow(()=>forgetVideoBookmark(denied));
-  const module=read("atlas-video-bookmark.mjs");assert.doesNotMatch(module,/fetch\s*\(|supabase\.|sessionStorage\s*\./i);
-});
-
-test("AT-296 Vert 1 and 2 written approaches retain all prior routes and use candidate chapter metadata",()=>{
+test("AT-296 Vert 1 and 2 written approaches retain all prior routes and uncertain pickup identities",()=>{
   const a=data.routes.find(r=>r.id==="vert1-scaffold-courses"),b=data.routes.find(r=>r.id==="vert2-southern-rooftop");
   assert.equal(a.point_id,"vert-sector-1");assert.equal(b.point_id,"vert-sector-2");
   assert.equal(a.steps.length,6);assert.equal(b.steps.length,4);
   for(const r of [a,b]){assert.equal(r.anchor_precision,"district_only");assert.equal(r.roof_exit_xy,null);assert.equal(r.known_floor_plan,false);assert.equal(r.steps.at(-1).evidence,"unverified");}
-  assert.deepEqual(a.steps.flatMap(s=>(s.video_refs||[]).map(v=>routeVideoUrl(v))),["https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=30s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=46s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s"]);
-  assert.equal(routeVideoUrl(b.steps[2].video_refs[0]),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=82s");
   assert.match(a.steps[1].instruction,/#10 and #11.*candidates/);assert.match(b.steps[2].instruction,/Roto-Glide.*difficult running-roll/);
-  assert.ok([a,b].flatMap(r=>r.steps.flatMap(s=>s.video_refs||[])).every(v=>v.verification==="numbering_candidate"));
   assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
 });
 
@@ -603,8 +582,6 @@ test("AT-298 Vert 3 rooftop guidance preserves owner route and uncertain identit
   const r=data.routes.find(x=>x.id==="vert3-cyclone-rooftop-courses");
   assert.equal(r.point_id,"vert-sector-3");assert.equal(r.anchor_precision,"district_only");assert.equal(r.steps.length,6);
   assert.deepEqual(r.related_photo_ids,["vert-cyclone"]);assert.equal(r.roof_exit_xy,null);assert.equal(r.known_floor_plan,false);
-  assert.deepEqual(r.steps.flatMap(s=>(s.video_refs||[]).map(v=>routeVideoUrl(v))),["https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=138s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=181s","https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=238s"]);
-  assert.ok(r.steps.flatMap(s=>s.video_refs||[]).every(v=>v.verification==="numbering_candidate"));
   assert.match(r.steps[1].instruction,/Do not tick both/);assert.match(r.steps[4].instruction,/#15 separate from the west-rooftops clue #14/);assert.match(r.steps[5].instruction,/#16, not another name for #15/);
   const original=data.routes.find(x=>x.id==="cafe-cyclone");assert.equal(original.steps.length,5);assert.match(original.steps[1].instruction,/archway/);
   assert.equal(data.holovators.find(x=>x.id==="vert-cyclone").photos.length,6);assert.equal(data.holovators.length,21);assert.equal(data.ladders.length,1);assert.equal(data.counts.colorful_screws_preserved_in_existing_pages,100);
@@ -756,8 +733,6 @@ test("AT-313: Vert 8 and Bleu 1 routes preserve the owner ladder and never add n
   assert.equal(b.side_mission,57);assert.equal(b.risk,"hostile_wild_pokemon");
   assert.match(b.steps[2].instruction,/Alpha Whirlipede/);
   assert.match(b.steps[4].instruction,/4,500 Pokédollars, one Fire Stone and one Charcoal/);
-  assert.equal(routeVideoUrl(b.steps[0].video_refs[0]),"https://www.youtube.com/watch?v=DYB6AtF6dpo&t=0s");
-  assert.equal(routeVideoUrl({...b.steps[0].video_refs[0],start_seconds:5}),null);
   for(const r of [v,b]){assert.equal(r.anchor_precision,"district_only");assert.equal(r.known_floor_plan,false);assert.equal(r.roof_exit_xy,null);assert.equal(r.steps.at(-1).evidence,"unverified");}
   assert.equal(data.ladders.length,1);assert.equal(data.routes.find(x=>x.id==="hotel-z-ladder").steps.length,5);
   assert.ok(data.sectors.every(x=>x.xy===null));assert.equal(data.holovators.length,21);

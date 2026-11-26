@@ -1,20 +1,18 @@
 /* Lumiose Atlas Explorer — one read-only, source-aligned 2D city-map viewport.
-   No user tracking, database, external SDK, or game-state write. Only an explicit video click saves a private navigation bookmark. */
+   No user tracking, database, external SDK, or game-state write. */
 import {
   MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project,
   constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin,
-  coverageCellCentre, districtStart, routeVideoUrl
+  coverageCellCentre, districtStart
 } from "./atlas-explorer-geometry.mjs";
-import {saveVideoBookmark,readVideoBookmark,forgetVideoBookmark} from "./atlas-video-bookmark.mjs";
 import {wildZoneFieldbookMarkup,zoneSearchText} from "./wild-zone-fieldbook.mjs";
-import {appendGuidePanel,zoneLinks,zoneVideos,sectorLinks,screwVideo,sideVideo,buddyVidzClips} from "./atlas-guide-links.mjs";
+import {appendGuidePanel,zoneLinks,sectorLinks} from "./atlas-guide-links.mjs";
 const by = id => document.getElementById(id);
 const viewport=by("aeViewport"),stage=by("aeStage"),layer=by("aeMapPins");
 const resultList=by("aeResults"),selectedPanel=by("aeSelected"),search=by("aeSearch");
 const routePicker=by("aeRouteSelect"),routeDetail=by("aeRouteDetail");
 const routeProgress=by("aeRouteProgress"),currentStep=by("aeCurrentStep");
 const prevStep=by("aePrevStep"),nextStep=by("aeNextStep"),showRouteMap=by("aeShowRouteMap");
-const bookmarkNotice=by("aeVideoBookmarkNotice"),forgetBookmark=by("aeForgetVideoBookmark");
 const filters=Array.from(document.querySelectorAll("[data-kind]"));
 const layerToggles=Array.from(document.querySelectorAll("#aeLayers [data-layer]"));
 const layerToggleByKind=new Map(layerToggles.map(input=>[input.dataset.layer,input]));
@@ -186,7 +184,7 @@ function detailsFor(item){
     selectedPanel.append(paragraph("This source-saved Wild Zone centre is for orientation, not an exact item, ladder or interior entrance."));
     selectedPanel.insertAdjacentHTML("beforeend",wildZoneFieldbookMarkup(item.number));
     selectedPanel.append(link(item.link,"Open Wild Zone "+String(item.number).padStart(2,"0")+" and pickup notes"));
-    appendGuidePanel(selectedPanel,"Wild Zone field guides",[...zoneLinks(item.number,"atlas-explorer.html").filter(x=>x.href!==item.link),...zoneVideos(item.number),...buddyVidzClips("alpha_zone",item.number)],"Video links cover encounters and hunting; not measured pickup or entrance coordinates.");
+    appendGuidePanel(selectedPanel,"Wild Zone field guides",zoneLinks(item.number,"atlas-explorer.html").filter(x=>x.href!==item.link),"Photographs and written guides provide orientation, not measured pickup or entrance coordinates.");
   }else if(item.kind==="sector"){
     selectedPanel.append(paragraph("This sector name is verified in the directory. Its exact map boundary is not independently traced, so no arbitrary pin is drawn."));
     if(item.street_bearing?.confidence==="source_image_orientation_only"){
@@ -213,7 +211,7 @@ function detailsFor(item){
     }
     selectedPanel.append(link(item.link,"Open this sector's original clues"));
     const sectorMatch=item.id.match(/^(vert|bleu|magenta|rouge|jaune)-sector-(\d+)$/);
-    if(sectorMatch)appendGuidePanel(selectedPanel,"Sector field guides",[...sectorLinks(sectorMatch[1],Number(sectorMatch[2]),"atlas-explorer.html").filter(x=>x.href!==item.link),screwVideo(sectorMatch[1])],"Creator colour chapter only; Atlas Screw numbering and exact map geometry are not verified by this video.");
+    if(sectorMatch)appendGuidePanel(selectedPanel,"Sector field guides",sectorLinks(sectorMatch[1],Number(sectorMatch[2]),"atlas-explorer.html").filter(x=>x.href!==item.link),"Sector guides preserve original clues; exact pickup and roof coordinates are not verified.");
   }else if(item.kind==="holovator"){
     selectedPanel.append(paragraph("The physical lift is in the owner's field survey. The symbol on this 1920px overview is an approximate approach lead, not a measured door or roof landing."));
     if(item.photos?.length){
@@ -238,7 +236,7 @@ function detailsFor(item){
       selectedPanel.append(paragraph("Original survey images for this location are not yet hosted in GitHub. No broken or replacement artwork is shown."));
     }
     selectedPanel.append(link("maps.html","Open the original Wild Zone city map"));
-    if(item.id==="bleu3-fav")appendGuidePanel(selectedPanel,"My Favorite Holovator · Side Mission 61",[ {href:"side-missions.html#quest-61",label:"Written mission solution"},sideVideo(61)],"The original owner photographs and approximate approach map remain the location evidence.");
+    if(item.id==="bleu3-fav")appendGuidePanel(selectedPanel,"My Favorite Holovator · Side Mission 61",[{href:"side-missions.html#quest-61",label:"Written mission solution"}],"The original owner photographs and approximate approach map remain the location evidence.");
   }else if(item.kind==="ladder"){
     selectedPanel.append(paragraph("The real ladder was photographed at ground level; its exact rooftop landing and onward path remain unverified."));
     if(item.source_record)selectedPanel.append(link(item.source_record,"Read original Hotel Z ladder survey evidence"));
@@ -348,52 +346,6 @@ function chooseRoute(id){
   routeId=id;stepIndex=0;routePicker.value=id;
   renderRoute();
 }
-/* Save only on intentional video activation. Native links still open if storage is unavailable. */
-function rememberVideo(video,anchor,route,step){
-  const bookmark={version:1,routeId:route.id,stepIndex,stepTitle:step.title,videoId:video.video_id,
-    selectedId,filter:activeKind,search:search.value.slice(0,200),
-    hiddenLayers:layerToggles.filter(input=>!input.checked).map(input=>input.dataset.layer),
-    sector:coverageSector.value,coverageArea:coverageGrid.querySelector('[aria-pressed="true"]')?.dataset.area||"",
-    coverageText:coverageStatus.textContent,tint,view:{...view},stageSize:stageBase(dimensions()),
-    anchorTop:anchor.getBoundingClientRect().top};
-  if(saveVideoBookmark(window,bookmark)){
-    bookmarkNotice.textContent="Video place saved on this device. Return to this guide to continue.";
-    forgetBookmark.hidden=false;
-  }else{
-    bookmarkNotice.textContent="The guide stays open in this tab; browser storage is unavailable.";
-  }
-}
-function restoreVideoBookmark(bookmark){
-  if(!bookmark)return false;
-  const route=routes.find(r=>r.id===bookmark.routeId);
-  const step=route?.steps[bookmark.stepIndex];
-  if(!step||step.title!==bookmark.stepTitle||
-     !step.video_refs?.some(v=>v.video_id===bookmark.videoId&&routeVideoUrl(v)))return false;
-  const selected=recordMap.get(bookmark.selectedId);
-  if(selected)selectRecord(selected,false);
-  activeKind=filters.some(b=>b.dataset.kind===bookmark.filter)?bookmark.filter:"all";
-  search.value=bookmark.search;
-  for(const input of layerToggles)if(!input.disabled)input.checked=!bookmark.hiddenLayers.includes(input.dataset.layer);
-  drawList();
-  coverageSector.value=[...coverageSector.options].some(o=>o.value===bookmark.sector)?bookmark.sector:"";
-  coverageMessage(bookmark.coverageText,bookmark.coverageArea);
-  setStyle(bookmark.tint);
-  const ratio=stageBase(dimensions())/bookmark.stageSize;
-  applyView({...bookmark.view,panX:bookmark.view.panX*ratio,panY:bookmark.view.panY*ratio});
-  routeId=route.id;stepIndex=bookmark.stepIndex;routePicker.value=routeId;renderRoute();
-  bookmarkNotice.textContent="Resumed your saved video step. Your game progress is unchanged.";
-  forgetBookmark.hidden=false;
-  // Anchor-relative scrolling survives lazy images and different screen heights better than a raw page Y.
-  const anchor=[...currentStep.querySelectorAll("[data-video-id]")].find(a=>a.dataset.videoId===bookmark.videoId);
-  if(anchor){
-    try{history.scrollRestoration="manual";}catch(_){}
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      const targetTop=Math.max(0,Math.min(window.innerHeight-60,bookmark.anchorTop));
-      window.scrollTo({left:0,top:window.scrollY+anchor.getBoundingClientRect().top-targetTop,behavior:"instant"});
-    }));
-  }
-  return true;
-}
 function renderRoute(){
   const route=routes.find(x=>x.id===routeId);
   if(!route)return;
@@ -432,20 +384,6 @@ function renderRoute(){
     paragraph(step.instruction),
     element("div","ae-evidence-status",evidenceText[step.evidence]||"Needs independent verification")
   );
-  const videoRefs=Array.isArray(step.video_refs)?step.video_refs: [];
-  for(const video of videoRefs){
-    const url=routeVideoUrl(video);
-    if(!url)continue;
-    const card=element("div","ae-route-video");
-    const time=Math.floor(video.start_seconds/60)+":"+String(video.start_seconds%60).padStart(2,"0");
-    const status=video.verification==="numbering_candidate"?"Candidate video match":video.verification==="publisher_video"?"Creator-listed mission video":"Publisher-listed video chapter";
-    const anchor=link(url,"Watch "+video.title+" ("+time+") on YouTube",true);
-    anchor.dataset.videoId=video.video_id;
-    anchor.addEventListener("click",()=>rememberVideo(video,anchor,route,step));
-    anchor.addEventListener("auxclick",event=>{if(event.button===1)rememberVideo(video,anchor,route,step);});
-    card.append(element("strong","",status),paragraph("Creator: "+video.creator+" · Footage not frame-verified"),anchor,paragraph(video.note));
-    currentStep.append(card);
-  }
   prevStep.disabled=stepIndex===0;
   nextStep.disabled=stepIndex===route.steps.length-1;
   showRouteMap.disabled=!isPoint(item?.xy)&&!districtOnly;
@@ -606,21 +544,13 @@ async function load(){
   const requestedSector=recordMap.get(requested.get("sector"));
   // Existing ?sector= links keep working; only registered place IDs can select records.
   const deepLinked=requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
-  const explicitDestination=requested.has("place")||requested.has("sector")||!!window.location.hash;
-  const resumed=restoreVideoBookmark(readVideoBookmark(window,!explicitDestination));
-  if(!resumed&&deepLinked){
+  if(deepLinked){
     activeKind=deepLinked.kind;drawList();selectRecord(deepLinked,true);
   }
-  if(!resumed&&readVideoBookmark(window,true)){forgetBookmark.hidden=false;}
   stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · "+routes.length+" documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
 }
 setupNavigation();
-forgetBookmark.addEventListener("click",()=>{
-  forgetVideoBookmark(window);
-  forgetBookmark.hidden=true;
-  bookmarkNotice.textContent="Saved video place cleared. Your current route and game progress have not changed.";
-});
 filters.forEach(b=>b.addEventListener("click",()=>{activeKind=b.dataset.kind||"all";drawList();}));
 layerToggles.forEach(input=>input.addEventListener("change",drawList));
 search.addEventListener("input",drawList);

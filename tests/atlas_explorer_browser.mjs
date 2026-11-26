@@ -804,18 +804,12 @@ try{
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Main Mission 10.*Terra.*level 28 Diggersby/);
-    const missionVideo=page.locator('#aeCurrentStep .ae-route-video a');
-    assert.equal(await missionVideo.getAttribute("href"),"https://www.youtube.com/watch?v=IuvITD247zU&t=59s");
-    assert.equal(await missionVideo.getAttribute("target"),"_blank");
-    assert.equal(await missionVideo.getAttribute("rel"),"noopener noreferrer");
-    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/TheLandOGaming.*not frame-verified/);
+    assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
     await page.locator("#aeNextStep").click();
     assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
     assert.match(await page.locator("#aeCurrentStep").textContent(),/visible ladder.*does not establish a safe crossing/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Rooftop Screw #2.*Roto-Glide/);
-    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t=694s");
-    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*Archive 64.*unconfirmed/);
     assert.equal(await page.locator('iframe[src*="youtube"]').count(),0);
     await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
@@ -824,8 +818,6 @@ try{
     assert.match(await page.locator("#aeCurrentStep").textContent(),/Alternative alley ladder.*purple sludge/);
     await page.locator("#aeNextStep").click();
     assert.match(await page.locator("#aeCurrentStep").textContent(),/TM019 Power Gem.*Vert 5\/9 sector label/);
-    assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=PKw9fyChBVg&t=377s");
-    assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Quick Guides.*not frame-verified/);
     const step=await page.locator("#aeRouteProgress").textContent();
     await page.locator("#aeShowRouteMap").click();
     assert.equal(await page.locator("#aeRouteProgress").textContent(),step);
@@ -846,71 +838,37 @@ try{
   assert.equal(errors.length,0,"AT-293 desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-293 phone JS errors: "+mobileErrors.join(" | "));
 
-  // AT-295: real click, intercepted YouTube tab, same-entry reload and fresh-tab return.
+  // Media paused: a stale navigation bookmark cannot override explicit map links.
   for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
-    const context=page.context();
-    await context.route("https://www.youtube.com/**",request=>request.fulfill({status:200,contentType:"text/html",body:"<p>Intercepted video for offline test</p>"}));
-    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-9",{waitUntil:"load"});
-    await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="vert9-vernal-rooftop-screw");
-    await page.locator("#aeZoomIn").click();
-    await page.locator("#aeTurnRight").click();
-    await page.locator("#aeViewport").press("ArrowLeft");
-    await page.locator("#aeLayers [data-layer='ladder']").uncheck();
-    for(let i=0;i<3;i++)await page.locator("#aeNextStep").click();
-    const video=page.locator("#aeCurrentStep .ae-route-video a");
-    await video.scrollIntoViewIfNeeded();
-    const originalTransform=await page.locator("#aeStage").evaluate(el=>el.style.transform);
-    const originalStep=await page.locator("#aeRouteProgress").textContent();
-    await page.evaluate(()=>localStorage.setItem("atlas-bookmark-regression-sentinel","untouched"));
-    const popupPromise=page.waitForEvent("popup");
-    await video.click();
-    const popup=await popupPromise;
-    // A popup may initially report about:blank. Wait for the actual expected navigation.
-    await popup.waitForURL(url=>url.origin==="https://www.youtube.com"&&url.pathname==="/watch"&&url.searchParams.get("v")==="5-dLjd4o8Rc"&&url.searchParams.get("t")==="694s",{waitUntil:"domcontentloaded",timeout:15000});
-    await popup.close();
-    assert.equal(await page.locator("#aeRouteProgress").textContent(),originalStep);
-    const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem("lumiose-atlas:video-return:v1")));
-    assert.equal(saved.stepIndex,3);assert.equal(saved.videoId,"5-dLjd4o8Rc");
-    await page.reload({waitUntil:"load"});
-    await page.waitForFunction(()=>document.getElementById("aeVideoBookmarkNotice").textContent.includes("Resumed"));
-    await page.waitForFunction(expected=>document.getElementById("aeStage").style.transform===expected,originalTransform);
-    assert.equal(await page.locator("#aeRouteProgress").textContent(),originalStep);
-    assert.equal(await page.locator("#aeLayers [data-layer='ladder']").isChecked(),false);
-    await page.waitForFunction(top=>Math.abs(document.querySelector("#aeCurrentStep .ae-route-video a").getBoundingClientRect().top-Math.max(0,Math.min(innerHeight-60,top)))<25,saved.anchorTop);
-    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-    await page.screenshot({path:output+"/at295-video-return-"+device+".png",fullPage:false});
-    const reopened=await context.newPage();
-    await reopened.goto(base+"/atlas-explorer.html",{waitUntil:"load"});
-    await reopened.waitForFunction(()=>document.getElementById("aeVideoBookmarkNotice").textContent.includes("Resumed"));
-    assert.equal(await reopened.locator("#aeRouteProgress").textContent(),originalStep);
-    assert.equal(await reopened.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
-    await reopened.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
-    await reopened.waitForFunction(()=>document.getElementById("aeCoverageSector").value==="vert-sector-4");
-    assert.notEqual(await reopened.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
-    await reopened.locator("#aeForgetVideoBookmark").click();
-    assert.equal(await reopened.evaluate(()=>localStorage.getItem("lumiose-atlas:video-return:v1")),null);
-    assert.equal(await reopened.evaluate(()=>localStorage.getItem("atlas-bookmark-regression-sentinel")),"untouched");
-    await reopened.goto(base+"/atlas-explorer.html",{waitUntil:"load"});
-    await reopened.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"));
-    assert.equal(await reopened.locator("#aeRouteSelect").inputValue(),"");
-    await reopened.close();
-    await context.unroute("https://www.youtube.com/**");
+    await page.goto(base+"/atlas-explorer.html",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeStats").textContent.includes("21 owner-surveyed"));
+    const preserved=await page.evaluate(()=>{
+      localStorage.setItem("lumiose-atlas:video-return:v1","legacy-navigation-sentinel");
+      localStorage.setItem("atlas-bookmark-regression-sentinel","untouched");
+      return localStorage.getItem("lumiose-atlas:video-return:v1");
+    });
+    await page.goto(base+"/atlas-explorer.html?sector=vert-sector-4",{waitUntil:"load"});
+    await page.waitForFunction(()=>document.getElementById("aeCoverageSector").value==="vert-sector-4");
+    assert.notEqual(await page.locator("#aeRouteSelect").inputValue(),"vert9-vernal-rooftop-screw");
+    assert.equal(await page.locator("#aeVideoBookmarkNotice,#aeForgetVideoBookmark,.ae-route-video").count(),0);
+    assert.equal(await page.evaluate(()=>localStorage.getItem("lumiose-atlas:video-return:v1")),preserved);
+    assert.equal(await page.evaluate(()=>localStorage.getItem("atlas-bookmark-regression-sentinel")),"untouched");
   }
-  assert.equal(errors.length,0,"AT-295 desktop errors: "+errors.join(" | "));
-  assert.equal(mobileErrors.length,0,"AT-295 phone errors: "+mobileErrors.join(" | "));
+  assert.equal(errors.length,0,"Written guide desktop errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"Written guide phone errors: "+mobileErrors.join(" | "));
 
-  // AT-296: independent district-only approaches, candidate chapters and existing map controls.
+  // AT-296: independent district-only written approaches and existing map controls.
   for(const [page,device] of [[phone,"phone"],[desktop,"desktop"]]){
-    for(const [sector,id,steps,refs] of [[1,"vert1-scaffold-courses",6,[[2,30],[3,46],[5,82]]],[2,"vert2-southern-rooftop",4,[[3,82]]]]){
+    for(const [sector,id,steps] of [[1,"vert1-scaffold-courses",6],[2,"vert2-southern-rooftop",4]]){
       await page.goto(base+"/atlas-explorer.html?sector=vert-sector-"+sector,{waitUntil:"load"});
       await page.waitForFunction(expected=>document.getElementById("aeRouteSelect")?.value===expected,id);
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       for(let n=1;n<=steps;n++){
         assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of "+steps));
-        const ref=refs.find(x=>x[0]===n);
-        const links=page.locator("#aeCurrentStep .ae-route-video a");
-        assert.equal(await links.count(),ref?1:0);
-        if(ref){assert.equal(await links.getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t="+ref[1]+"s");assert.equal(await links.getAttribute("target"),"_blank");assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*not frame-verified/);await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:output+"/at296-vert"+sector+"-step"+n+"-"+device+".png",fullPage:false});}
+        assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
+        await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
+        assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+        if(n===2||n===steps)await page.screenshot({path:output+"/at296-vert"+sector+"-step"+n+"-"+device+".png",fullPage:false});
         if(n<steps)await page.locator("#aeNextStep").click();
       }
       assert.ok(await page.locator("#aeNextStep").isDisabled());
@@ -927,15 +885,10 @@ try{
     assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
     assert.equal(await page.locator('#aeRouteDetail a[href="atlas-explorer.html?place=vert-cyclone"]').count(),1);
     assert.match(await page.locator("#aeRouteDetail").textContent(),/orientation only, not certified roof connections/);
-    const times={2:138,4:181,5:238};
     for(let n=1;n<=6;n++){
       assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 6"));
-      const links=page.locator("#aeCurrentStep .ae-route-video a");
-      assert.equal(await links.count(),times[n]?1:0);
-      if(times[n]){
-        assert.equal(await links.getAttribute("href"),"https://www.youtube.com/watch?v=5-dLjd4o8Rc&t="+times[n]+"s");
-        assert.equal(await links.getAttribute("target"),"_blank");
-        assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Candidate video match.*not frame-verified/);
+      assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
+      if(n===2||n===4||n===5){
         await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();
         await page.screenshot({path:output+"/at298-vert3-step"+n+"-"+device+".png",fullPage:false});
       }
@@ -1158,7 +1111,7 @@ try{
   await at310Directory.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
   assert.equal(await explorerPhoto.getAttribute("src"),directoryPhotoSrc);
   await explorerPanel.locator('.atlas-guide-links a[href="items.html#sector-jaune-5"]').waitFor();
-  assert.equal(await explorerPanel.locator(".atlas-guide-links a.atlas-guide-video").count(),1);
+  assert.equal(await explorerPanel.locator(".atlas-guide-links a.atlas-guide-video").count(),0);
   const combinedWidth=await at310Directory.evaluate(()=>({view:document.documentElement.clientWidth,document:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
   assert.ok(combinedWidth.document<=combinedWidth.view+1&&combinedWidth.body<=combinedWidth.view+1,JSON.stringify(combinedWidth));
   await explorerPanel.screenshot({path:output+"/at311-jaune-5-explorer-photo-and-links-phone.png"});
@@ -1181,14 +1134,13 @@ try{
     await guide.goto(base+"/alphas.html#zone-3",{waitUntil:"load"});
     const alpha=guide.locator("#zone-3 .atlas-guide-links");
     await alpha.waitFor();
-    assert.equal(await alpha.locator("a.atlas-guide-video").count(),2);
-    assert.equal(await alpha.locator("a.atlas-guide-video").first().getAttribute("href"),"https://www.youtube.com/watch?v=iQeOi4sjLB4&t=202s");
+    assert.equal(await alpha.locator("a.atlas-guide-video").count(),0);
     await alpha.scrollIntoViewIfNeeded();
     await alpha.screenshot({path:output+"/at311-alpha-zone3-"+kind+".png"});
     await guide.goto(base+"/side-missions.html#quest-61",{waitUntil:"load"});
     const mission=guide.locator("#quest-61 .atlas-guide-links");
     await mission.waitFor();
-    assert.equal(await mission.locator("a.atlas-guide-video").getAttribute("href"),"https://www.youtube.com/watch?v=oNzm9uQOCcs");
+    assert.equal(await mission.locator("a.atlas-guide-video").count(),0);
     assert.equal(await mission.locator('a[href="atlas-explorer.html?place=bleu3-fav"]').count(),1);
     await mission.scrollIntoViewIfNeeded();await mission.screenshot({path:output+"/at311-mission61-"+kind+".png"});
     await mission.locator('a[href="atlas-explorer.html?place=bleu3-fav"]').click();
@@ -1200,11 +1152,11 @@ try{
     await guide.goto(base+"/atlas-explorer.html?place=wz-03",{waitUntil:"load"});
     const selected=guide.locator("#aeSelected .atlas-guide-links");
     await selected.waitFor();
-    assert.equal(await selected.locator("a.atlas-guide-video").count(),2);
+    assert.equal(await selected.locator("a.atlas-guide-video").count(),0);
     await selected.scrollIntoViewIfNeeded();await selected.screenshot({path:output+"/at311-explorer-zone3-"+kind+".png"});
     await guide.close();
   }
-  // AT-313: actual new approaches and video/mission navigation on phone and desktop.
+  // AT-313: written approaches and local mission navigation on phone and desktop.
   for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
     const page=await context.newPage();
     for(const [sector,route] of [["vert-sector-8","vert8-hotel-rooftop-courses"],["bleu-sector-1","bleu1-sewer-approaches"]]){
@@ -1214,10 +1166,7 @@ try{
       assert.equal(await page.locator(".ae-pin[data-kind='sector']").count(),0);
       for(let n=1;n<=7;n++){
         assert.match(await page.locator("#aeRouteProgress").textContent(),new RegExp("Step "+n+" of 7"));
-        if(sector==="bleu-sector-1"&&n===1){
-          assert.equal(await page.locator("#aeCurrentStep .ae-route-video a").getAttribute("href"),"https://www.youtube.com/watch?v=DYB6AtF6dpo&t=0s");
-          assert.match(await page.locator("#aeCurrentStep .ae-route-video").textContent(),/Creator-listed mission video.*not frame-verified/);
-        }
+        assert.equal(await page.locator("#aeCurrentStep .ae-route-video").count(),0);
         const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
         assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1);
         if(n===1||n===5){await page.locator("#aeCurrentStep").scrollIntoViewIfNeeded();await page.screenshot({path:output+"/at313-"+sector+"-step"+n+"-"+kind+".png"});}
@@ -1227,35 +1176,24 @@ try{
     }
     await page.goto(base+"/side-missions.html#quest-57",{waitUntil:"load"});
     const panel=page.locator("#quest-57 .atlas-guide-links");await panel.waitFor();
-    assert.equal(await panel.locator("a.atlas-guide-video").getAttribute("href"),"https://www.youtube.com/watch?v=DYB6AtF6dpo");
+    assert.equal(await panel.locator("a.atlas-guide-video").count(),0);
     await panel.locator('a[href="atlas-explorer.html?sector=bleu-sector-1"]').click();
     await page.waitForURL("**/atlas-explorer.html?sector=bleu-sector-1");
     await page.waitForFunction(()=>document.getElementById("aeRouteSelect")?.value==="bleu1-sewer-approaches");
     await page.close();
   }
-  // AT-314: channel is a normal external link, not an invented published video.
+  // Public guide surfaces have no channel, player, external media or bookmark controls.
   for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
     const page=await context.newPage();
-    for(const url of ["index.html#home","index.html#walkthrough","index.html#alphas","index.html#maps","walkthrough.html","alphas.html","maps.html","atlas-explorer.html?place=wz-03","sector-maps.html","journey.html"]){
+    for(const url of ["index.html#home","index.html#walkthrough","index.html#alphas","index.html#maps","walkthrough.html","alphas.html","maps.html","atlas-explorer.html?place=wz-03","sector-maps.html","journey.html","items.html","side-missions.html","shiny-hunting.html","hyperspace-maps.html","mega-dimension.html"]){
       await page.goto(base+"/"+url,{waitUntil:"load"});
-      const callout=page.locator(".atlas-buddyvidz:visible");
-      await callout.waitFor();
-      assert.equal(await callout.count(),1);
-      const channel=callout.locator("a");
-      assert.equal(await channel.getAttribute("href"),"https://www.youtube.com/@BuddyVidz-z8g");
-      assert.equal(await channel.getAttribute("target"),"_blank");
-      assert.equal(await channel.getAttribute("rel"),"noopener noreferrer");
-      assert.match(await callout.textContent(),/will be (linked|added)/);
+      const forbidden='a[href*="youtube.com"],a[href*="youtu.be"],a[href*="youtube-nocookie.com"],a[href*="maestro.tv"],a[href*="mux.com"],.atlas-buddyvidz,.atlas-guide-video,.ae-route-video,#aeVideoBookmarkNotice,#aeForgetVideoBookmark,video,iframe';
+      assert.equal(await page.locator(forbidden).count(),0,url+" "+kind);
       const bounds=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
-      assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"AT-314 overflow "+url+JSON.stringify(bounds));
+      assert.ok(bounds.scroll<=bounds.width+1&&bounds.body<=bounds.width+1,"Media-free overflow "+url+JSON.stringify(bounds));
       if(url==="journey.html"){
         await page.goto(base+"/journey.html#journey-mission-24",{waitUntil:"load"});
         await page.waitForFunction(()=>{const rect=document.getElementById("journey-mission-24")?.getBoundingClientRect();return rect&&rect.top>=-20&&rect.top<160;});
-        assert.equal(await page.locator(".atlas-buddyvidz").count(),1);
-      }
-      if(url==="index.html#home"||url==="walkthrough.html"||url==="alphas.html"){
-        await callout.scrollIntoViewIfNeeded();
-        await callout.screenshot({path:output+"/at314-"+url.replace(/[^a-z0-9]/gi,"-")+"-"+kind+".png"});
       }
     }
     await page.close();
