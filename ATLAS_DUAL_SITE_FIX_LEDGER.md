@@ -1,5 +1,7 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+[Next candidate: Wild Zone 20 cell pilot, Racine Screw timing and Workspace request](docs/qa/atlas-grid-and-screw-followup-2026-11-26/README.md). No new live pins; the previous release is unchanged.
+
 ## Start here: consolidated GitHub candidate (Manifest 96 / Ledger 104)
 
 [Scope, evidence and open pull requests](docs/qa/atlas-workspace-consolidation-2026-11-26/README.md) · [Next Workspace handoff](docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md) · [Approved Map 2.0 prompt](WORKSPACE_MAP2_RELEASE_PROMPT.md)
