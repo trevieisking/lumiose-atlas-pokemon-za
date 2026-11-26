@@ -1,6 +1,6 @@
 # Pokémon Atlas final completion plan
 
-26 November 2026 · Manifest 83 · Ledger 91
+26 November 2026 · Manifest 84 · Ledger 92
 
 **Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
@@ -17,6 +17,19 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 2. **Finish shared map interactions.** Complete area/species highlights, habitat links, filters, selection, deep links and phone/desktop panels across the existing map views. Retain written/photo approaches and the completed Item/Screw framework. **Done when:** all remaining G4 interactions work with existing IDs, links and progress intact. Unverified pickups stay in the directory; empty verified layers explain their status. A complete pickup survey is not a release requirement.
 
 3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
+
+Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. No production boundaries or pickup positions were approved.
+
+## Workspace handoff record
+
+| What carries forward | Where to find it |
+|---|---|
+| All recovered requirements and their disposition | [Requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json) |
+| Original images and map evidence | [Map manifest](MAPS_UPGRADE_MANIFEST.json), [eight new crop receipts](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md), and [existing overview source log](assets/atlas/city-overview/manifest.json) |
+| GitHub versus original Workspace status | [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) and [original source handoff](WORKSPACE_ACCESS_HANDOFF.md) |
+| Release decision, exact commit and rollback | [Release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) and [release handoff](ATLAS_RELEASE_HANDOFF.md) |
+
+**Readiness: not ready to apply in Workspace.** The directory and switches are already live on GitHub Pages. The new photos improve calibration but do not approve any area boundaries or pickup coordinates. The shared map interactions and phone/desktop release checks are still open. Do not copy an unmerged branch or historical PR into Workspace.
 
 ## Final Workspace prompt
 

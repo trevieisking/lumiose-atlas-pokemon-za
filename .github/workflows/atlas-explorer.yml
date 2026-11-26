@@ -40,6 +40,10 @@ on:
       - maps.html
       - maps.js
       - 'assets/atlas/wild-zones/**'
+      - 'assets/atlas/city-overview/owner-crops-2026-11-26/**'
+      - docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.json
+      - docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json
+      - tests/validate_owner_overview_evidence.py
       - wild-zone-fieldbook.mjs
       - wild-zone-fieldbook.css
       - tests/wild_zone_fieldbook.test.mjs
@@ -67,6 +71,8 @@ jobs:
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Gate collectible coordinates, original identities and read-only progress
         run: node --test tests/atlas_collectibles.test.mjs tests/items_checkoff.test.mjs
+      - name: Verify owner overview source bytes and keep research out of live geometry
+        run: python3 tests/validate_owner_overview_evidence.py
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged

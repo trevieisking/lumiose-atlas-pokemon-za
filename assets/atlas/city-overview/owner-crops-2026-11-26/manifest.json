@@ -1,0 +1,4733 @@
+{
+  "title": "Owner-cropped early-game Lumiose overview sources",
+  "date": "2026-11-26",
+  "status": "candidate_G2_source_registration_not_production",
+  "baseline_main_sha": "ee87bd2234d394e2dbc4197eb26610e6367e352b",
+  "basemap": {
+    "path": "maps/lumiose-game-map.jpg",
+    "size": [
+      1920,
+      1920
+    ],
+    "git_blob_sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca"
+  },
+  "source_policy": "Exact owner JPEG bytes. No metadata added, recrop, resampling, retouching, or replacement of earlier assets.",
+  "fit_policy": "Approximate translation from multiscale high-pass cross-correlation, then local normalized patch matches and a least-squares affine fit. Training and holdouts selected from alternating source grid cells. Holdout residuals are image-pixel agreement with the Atlas basemap, not surveyed position accuracy.",
+  "limitations": [
+    "Early-game map UI, icons and player cursor are not position evidence. No new fixed markers, sector/Wild Zone boundaries, floor geometry, or routes.",
+    "Do not infer missing/unlocked zones or a complete verified area from coverage. Pixel error varies spatially; 12.5 px maximum held-out residual. Review independently named map landmarks around each area before production use.",
+    "No change to live basemap, player paths, stored progress, feedback or original Workspace site."
+  ],
+  "records": [
+    {
+      "source_name": "1000028696.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+      "area_in_view": "Northern rim",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1049,
+      "bytes": 503015,
+      "sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+      "git_blob_sha": "321f55d97fae0012fb201701f5f4d9e8b907d707",
+      "candidate_registration": {
+        "file": "1000028696.jpg",
+        "candidate_affine": [
+          [
+            1.038383477,
+            0.002883036,
+            29.933110654
+          ],
+          [
+            0.005023863,
+            1.046372313,
+            -60.898150946
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              882,
+              145
+            ],
+            "base_xy": [
+              946,
+              93
+            ],
+            "patch_score": 0.8969,
+            "residual_px": 2.2662
+          },
+          {
+            "source_xy": [
+              1146,
+              145
+            ],
+            "base_xy": [
+              1225,
+              95
+            ],
+            "patch_score": 0.6911,
+            "residual_px": 4.9229
+          },
+          {
+            "source_xy": [
+              750,
+              257
+            ],
+            "base_xy": [
+              807,
+              211
+            ],
+            "patch_score": 0.7877,
+            "residual_px": 2.5845
+          },
+          {
+            "source_xy": [
+              1146,
+              369
+            ],
+            "base_xy": [
+              1225,
+              330
+            ],
+            "patch_score": 0.8738,
+            "residual_px": 4.1312
+          },
+          {
+            "source_xy": [
+              222,
+              481
+            ],
+            "base_xy": [
+              261,
+              446
+            ],
+            "patch_score": 0.7897,
+            "residual_px": 2.6166
+          },
+          {
+            "source_xy": [
+              750,
+              481
+            ],
+            "base_xy": [
+              806,
+              447
+            ],
+            "patch_score": 0.761,
+            "residual_px": 4.1895
+          },
+          {
+            "source_xy": [
+              354,
+              593
+            ],
+            "base_xy": [
+              397,
+              563
+            ],
+            "patch_score": 0.8314,
+            "residual_px": 2.7573
+          },
+          {
+            "source_xy": [
+              882,
+              593
+            ],
+            "base_xy": [
+              944,
+              567
+            ],
+            "patch_score": 0.7639,
+            "residual_px": 4.5869
+          },
+          {
+            "source_xy": [
+              1146,
+              593
+            ],
+            "base_xy": [
+              1223,
+              568
+            ],
+            "patch_score": 0.85,
+            "residual_px": 2.976
+          },
+          {
+            "source_xy": [
+              486,
+              705
+            ],
+            "base_xy": [
+              534,
+              680
+            ],
+            "patch_score": 0.9055,
+            "residual_px": 2.7292
+          },
+          {
+            "source_xy": [
+              750,
+              705
+            ],
+            "base_xy": [
+              807,
+              682
+            ],
+            "patch_score": 0.8629,
+            "residual_px": 4.0192
+          },
+          {
+            "source_xy": [
+              1278,
+              705
+            ],
+            "base_xy": [
+              1361,
+              684
+            ],
+            "patch_score": 0.8715,
+            "residual_px": 2.1302
+          },
+          {
+            "source_xy": [
+              90,
+              817
+            ],
+            "base_xy": [
+              131,
+              791
+            ],
+            "patch_score": 0.7862,
+            "residual_px": 6.2825
+          },
+          {
+            "source_xy": [
+              354,
+              817
+            ],
+            "base_xy": [
+              400,
+              795
+            ],
+            "patch_score": 0.8573,
+            "residual_px": 0.7764
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              1222,
+              801
+            ],
+            "patch_score": 0.8675,
+            "residual_px": 1.2846
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              1497,
+              801
+            ],
+            "patch_score": 0.8166,
+            "residual_px": 0.5951
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              1770,
+              801
+            ],
+            "patch_score": 0.8662,
+            "residual_px": 1.4995
+          },
+          {
+            "source_xy": [
+              222,
+              929
+            ],
+            "base_xy": [
+              267,
+              910
+            ],
+            "patch_score": 0.822,
+            "residual_px": 4.4981
+          },
+          {
+            "source_xy": [
+              1014,
+              929
+            ],
+            "base_xy": [
+              1085,
+              917
+            ],
+            "patch_score": 0.8,
+            "residual_px": 0.8987
+          },
+          {
+            "source_xy": [
+              1542,
+              929
+            ],
+            "base_xy": [
+              1633,
+              917
+            ],
+            "patch_score": 0.893,
+            "residual_px": 2.0874
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              1014,
+              145
+            ],
+            "base_xy": [
+              1082,
+              93
+            ],
+            "patch_score": 0.8611,
+            "residual_px": 3.1851
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              945,
+              210
+            ],
+            "patch_score": 0.7709,
+            "residual_px": 2.8881
+          },
+          {
+            "source_xy": [
+              1146,
+              257
+            ],
+            "base_xy": [
+              1225,
+              211
+            ],
+            "patch_score": 0.7515,
+            "residual_px": 5.1511
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              806,
+              329
+            ],
+            "patch_score": 0.7456,
+            "residual_px": 3.7846
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              1364,
+              331
+            ],
+            "patch_score": 0.8787,
+            "residual_px": 5.9826
+          },
+          {
+            "source_xy": [
+              354,
+              481
+            ],
+            "base_xy": [
+              396,
+              446
+            ],
+            "patch_score": 0.8559,
+            "residual_px": 3.4274
+          },
+          {
+            "source_xy": [
+              882,
+              481
+            ],
+            "base_xy": [
+              945,
+              447
+            ],
+            "patch_score": 0.819,
+            "residual_px": 2.1801
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              1224,
+              448
+            ],
+            "patch_score": 0.8986,
+            "residual_px": 2.6977
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              1500,
+              450
+            ],
+            "patch_score": 0.7777,
+            "residual_px": 4.5878
+          },
+          {
+            "source_xy": [
+              222,
+              593
+            ],
+            "base_xy": [
+              262,
+              562
+            ],
+            "patch_score": 0.8255,
+            "residual_px": 1.2945
+          },
+          {
+            "source_xy": [
+              486,
+              593
+            ],
+            "base_xy": [
+              533,
+              564
+            ],
+            "patch_score": 0.8492,
+            "residual_px": 3.8346
+          },
+          {
+            "source_xy": [
+              750,
+              593
+            ],
+            "base_xy": [
+              806,
+              566
+            ],
+            "patch_score": 0.8744,
+            "residual_px": 5.1529
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              1084,
+              567
+            ],
+            "patch_score": 0.8174,
+            "residual_px": 2.3731
+          },
+          {
+            "source_xy": [
+              1542,
+              593
+            ],
+            "base_xy": [
+              1637,
+              568
+            ],
+            "patch_score": 0.8787,
+            "residual_px": 4.2207
+          },
+          {
+            "source_xy": [
+              90,
+              705
+            ],
+            "base_xy": [
+              129,
+              677
+            ],
+            "patch_score": 0.8596,
+            "residual_px": 3.5883
+          },
+          {
+            "source_xy": [
+              354,
+              705
+            ],
+            "base_xy": [
+              399,
+              679
+            ],
+            "patch_score": 0.8061,
+            "residual_px": 0.6991
+          },
+          {
+            "source_xy": [
+              618,
+              705
+            ],
+            "base_xy": [
+              670,
+              681
+            ],
+            "patch_score": 0.8837,
+            "residual_px": 3.8475
+          },
+          {
+            "source_xy": [
+              882,
+              705
+            ],
+            "base_xy": [
+              944,
+              683
+            ],
+            "patch_score": 0.8618,
+            "residual_px": 4.212
+          },
+          {
+            "source_xy": [
+              1146,
+              705
+            ],
+            "base_xy": [
+              1223,
+              684
+            ],
+            "patch_score": 0.875,
+            "residual_px": 1.7871
+          },
+          {
+            "source_xy": [
+              1410,
+              705
+            ],
+            "base_xy": [
+              1498,
+              684
+            ],
+            "patch_score": 0.8673,
+            "residual_px": 1.9175
+          },
+          {
+            "source_xy": [
+              222,
+              817
+            ],
+            "base_xy": [
+              264,
+              794
+            ],
+            "patch_score": 0.7014,
+            "residual_px": 1.623
+          },
+          {
+            "source_xy": [
+              750,
+              817
+            ],
+            "base_xy": [
+              807,
+              798
+            ],
+            "patch_score": 0.8667,
+            "residual_px": 4.0835
+          },
+          {
+            "source_xy": [
+              1014,
+              817
+            ],
+            "base_xy": [
+              1084,
+              801
+            ],
+            "patch_score": 0.8004,
+            "residual_px": 2.2673
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              1634,
+              801
+            ],
+            "patch_score": 0.8769,
+            "residual_px": 0.9026
+          },
+          {
+            "source_xy": [
+              90,
+              929
+            ],
+            "base_xy": [
+              133,
+              908
+            ],
+            "patch_score": 0.8396,
+            "residual_px": 7.8285
+          },
+          {
+            "source_xy": [
+              354,
+              929
+            ],
+            "base_xy": [
+              402,
+              911
+            ],
+            "patch_score": 0.8402,
+            "residual_px": 2.6618
+          },
+          {
+            "source_xy": [
+              1146,
+              929
+            ],
+            "base_xy": [
+              1222,
+              918
+            ],
+            "patch_score": 0.8821,
+            "residual_px": 1.2183
+          },
+          {
+            "source_xy": [
+              1410,
+              929
+            ],
+            "base_xy": [
+              1496,
+              918
+            ],
+            "patch_score": 0.8989,
+            "residual_px": 0.7788
+          }
+        ],
+        "fit_rms_px": 3.2625,
+        "held_out_rms_px": 3.5599,
+        "held_out_max_px": 7.8285,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              618,
+              369
+            ],
+            "base_xy": [
+              660,
+              317
+            ],
+            "patch_score": 0.916,
+            "residual_px": 17.0248
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028697.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028697.jpg",
+      "area_in_view": "South and lower centre",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1034,
+      "bytes": 536604,
+      "sha256": "306e66975b45768e67735bc7b1510628301c2a6b71cb4f97fe5115e966ef2d8d",
+      "git_blob_sha": "9cec376751c70d0ab55e1dd8ed071cdddc4daef6",
+      "candidate_registration": {
+        "file": "1000028697.jpg",
+        "candidate_affine": [
+          [
+            1.04632129,
+            -0.012541394,
+            -230.753491503
+          ],
+          [
+            0.008377711,
+            1.047322402,
+            834.086466861
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              882,
+              145
+            ],
+            "base_xy": [
+              687,
+              991
+            ],
+            "patch_score": 0.6939,
+            "residual_px": 4.0304
+          },
+          {
+            "source_xy": [
+              1410,
+              145
+            ],
+            "base_xy": [
+              1244,
+              996
+            ],
+            "patch_score": 0.8477,
+            "residual_px": 2.1646
+          },
+          {
+            "source_xy": [
+              1938,
+              145
+            ],
+            "base_xy": [
+              1796,
+              1002
+            ],
+            "patch_score": 0.8809,
+            "residual_px": 0.8222
+          },
+          {
+            "source_xy": [
+              750,
+              257
+            ],
+            "base_xy": [
+              547,
+              1109
+            ],
+            "patch_score": 0.9079,
+            "residual_px": 3.8017
+          },
+          {
+            "source_xy": [
+              1014,
+              257
+            ],
+            "base_xy": [
+              826,
+              1110
+            ],
+            "patch_score": 0.7657,
+            "residual_px": 2.0064
+          },
+          {
+            "source_xy": [
+              1278,
+              257
+            ],
+            "base_xy": [
+              1105,
+              1113
+            ],
+            "patch_score": 0.859,
+            "residual_px": 2.0183
+          },
+          {
+            "source_xy": [
+              1542,
+              257
+            ],
+            "base_xy": [
+              1380,
+              1116
+            ],
+            "patch_score": 0.8889,
+            "residual_px": 0.574
+          },
+          {
+            "source_xy": [
+              1806,
+              257
+            ],
+            "base_xy": [
+              1656,
+              1119
+            ],
+            "patch_score": 0.8236,
+            "residual_px": 0.6992
+          },
+          {
+            "source_xy": [
+              354,
+              369
+            ],
+            "base_xy": [
+              138,
+              1226
+            ],
+            "patch_score": 0.9156,
+            "residual_px": 3.8834
+          },
+          {
+            "source_xy": [
+              1146,
+              369
+            ],
+            "base_xy": [
+              964,
+              1230
+            ],
+            "patch_score": 0.8711,
+            "residual_px": 0.3325
+          },
+          {
+            "source_xy": [
+              1410,
+              369
+            ],
+            "base_xy": [
+              1242,
+              1233
+            ],
+            "patch_score": 0.8284,
+            "residual_px": 2.1647
+          },
+          {
+            "source_xy": [
+              1674,
+              369
+            ],
+            "base_xy": [
+              1516,
+              1236
+            ],
+            "patch_score": 0.8696,
+            "residual_px": 1.4363
+          },
+          {
+            "source_xy": [
+              1938,
+              369
+            ],
+            "base_xy": [
+              1792,
+              1238
+            ],
+            "patch_score": 0.8561,
+            "residual_px": 1.2764
+          },
+          {
+            "source_xy": [
+              750,
+              481
+            ],
+            "base_xy": [
+              545,
+              1345
+            ],
+            "patch_score": 0.8773,
+            "residual_px": 3.08
+          },
+          {
+            "source_xy": [
+              1278,
+              481
+            ],
+            "base_xy": [
+              1103,
+              1349
+            ],
+            "patch_score": 0.8529,
+            "residual_px": 2.6252
+          },
+          {
+            "source_xy": [
+              1542,
+              481
+            ],
+            "base_xy": [
+              1378,
+              1351
+            ],
+            "patch_score": 0.8685,
+            "residual_px": 1.3783
+          },
+          {
+            "source_xy": [
+              1806,
+              481
+            ],
+            "base_xy": [
+              1652,
+              1354
+            ],
+            "patch_score": 0.771,
+            "residual_px": 1.3419
+          },
+          {
+            "source_xy": [
+              618,
+              593
+            ],
+            "base_xy": [
+              409,
+              1461
+            ],
+            "patch_score": 0.879,
+            "residual_px": 0.8788
+          },
+          {
+            "source_xy": [
+              882,
+              593
+            ],
+            "base_xy": [
+              683,
+              1464
+            ],
+            "patch_score": 0.8758,
+            "residual_px": 2.2158
+          },
+          {
+            "source_xy": [
+              1410,
+              593
+            ],
+            "base_xy": [
+              1238,
+              1468
+            ],
+            "patch_score": 0.8747,
+            "residual_px": 1.3598
+          },
+          {
+            "source_xy": [
+              750,
+              705
+            ],
+            "base_xy": [
+              544,
+              1579
+            ],
+            "patch_score": 0.8578,
+            "residual_px": 1.1767
+          },
+          {
+            "source_xy": [
+              1278,
+              705
+            ],
+            "base_xy": [
+              1099,
+              1584
+            ],
+            "patch_score": 0.8224,
+            "residual_px": 1.6321
+          },
+          {
+            "source_xy": [
+              1542,
+              705
+            ],
+            "base_xy": [
+              1373,
+              1585
+            ],
+            "patch_score": 0.8165,
+            "residual_px": 0.9097
+          },
+          {
+            "source_xy": [
+              618,
+              817
+            ],
+            "base_xy": [
+              409,
+              1694
+            ],
+            "patch_score": 0.7968,
+            "residual_px": 3.4981
+          },
+          {
+            "source_xy": [
+              882,
+              817
+            ],
+            "base_xy": [
+              682,
+              1697
+            ],
+            "patch_score": 0.865,
+            "residual_px": 0.1998
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              958,
+              1700
+            ],
+            "patch_score": 0.8658,
+            "residual_px": 0.6557
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              1233,
+              1701
+            ],
+            "patch_score": 0.8152,
+            "residual_px": 1.4282
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              1507,
+              1702
+            ],
+            "patch_score": 0.9218,
+            "residual_px": 3.9611
+          },
+          {
+            "source_xy": [
+              1014,
+              929
+            ],
+            "base_xy": [
+              819,
+              1814
+            ],
+            "patch_score": 0.8894,
+            "residual_px": 1.604
+          },
+          {
+            "source_xy": [
+              1278,
+              929
+            ],
+            "base_xy": [
+              1095,
+              1817
+            ],
+            "patch_score": 0.7447,
+            "residual_px": 0.7832
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              1542,
+              145
+            ],
+            "base_xy": [
+              1382,
+              998
+            ],
+            "patch_score": 0.8833,
+            "residual_px": 1.4357
+          },
+          {
+            "source_xy": [
+              1806,
+              145
+            ],
+            "base_xy": [
+              1658,
+              1001
+            ],
+            "patch_score": 0.9127,
+            "residual_px": 0.9191
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              686,
+              1109
+            ],
+            "patch_score": 0.8619,
+            "residual_px": 3.3119
+          },
+          {
+            "source_xy": [
+              1146,
+              257
+            ],
+            "base_xy": [
+              965,
+              1111
+            ],
+            "patch_score": 0.9374,
+            "residual_px": 1.8523
+          },
+          {
+            "source_xy": [
+              1410,
+              257
+            ],
+            "base_xy": [
+              1243,
+              1114
+            ],
+            "patch_score": 0.8603,
+            "residual_px": 1.9731
+          },
+          {
+            "source_xy": [
+              1938,
+              257
+            ],
+            "base_xy": [
+              1794,
+              1120
+            ],
+            "patch_score": 0.8535,
+            "residual_px": 0.5553
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              546,
+              1227
+            ],
+            "patch_score": 0.8701,
+            "residual_px": 3.3639
+          },
+          {
+            "source_xy": [
+              1014,
+              369
+            ],
+            "base_xy": [
+              825,
+              1229
+            ],
+            "patch_score": 0.7673,
+            "residual_px": 0.5901
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              1104,
+              1231
+            ],
+            "patch_score": 0.8822,
+            "residual_px": 2.1975
+          },
+          {
+            "source_xy": [
+              1542,
+              369
+            ],
+            "base_xy": [
+              1379,
+              1234
+            ],
+            "patch_score": 0.8472,
+            "residual_px": 1.0927
+          },
+          {
+            "source_xy": [
+              354,
+              481
+            ],
+            "base_xy": [
+              137,
+              1342
+            ],
+            "patch_score": 0.7689,
+            "residual_px": 3.5897
+          },
+          {
+            "source_xy": [
+              618,
+              481
+            ],
+            "base_xy": [
+              409,
+              1344
+            ],
+            "patch_score": 0.8587,
+            "residual_px": 1.2866
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              1240,
+              1350
+            ],
+            "patch_score": 0.8199,
+            "residual_px": 1.5114
+          },
+          {
+            "source_xy": [
+              1674,
+              481
+            ],
+            "base_xy": [
+              1514,
+              1353
+            ],
+            "patch_score": 0.8536,
+            "residual_px": 1.3572
+          },
+          {
+            "source_xy": [
+              750,
+              593
+            ],
+            "base_xy": [
+              545,
+              1463
+            ],
+            "patch_score": 0.7054,
+            "residual_px": 2.2051
+          },
+          {
+            "source_xy": [
+              1278,
+              593
+            ],
+            "base_xy": [
+              1101,
+              1468
+            ],
+            "patch_score": 0.7735,
+            "residual_px": 2.927
+          },
+          {
+            "source_xy": [
+              1542,
+              593
+            ],
+            "base_xy": [
+              1376,
+              1469
+            ],
+            "patch_score": 0.8676,
+            "residual_px": 1.2053
+          },
+          {
+            "source_xy": [
+              1410,
+              705
+            ],
+            "base_xy": [
+              1235,
+              1585
+            ],
+            "patch_score": 0.9247,
+            "residual_px": 1.03
+          },
+          {
+            "source_xy": [
+              1674,
+              705
+            ],
+            "base_xy": [
+              1509,
+              1586
+            ],
+            "patch_score": 0.8541,
+            "residual_px": 2.9844
+          },
+          {
+            "source_xy": [
+              750,
+              817
+            ],
+            "base_xy": [
+              555,
+              1701
+            ],
+            "patch_score": 0.6969,
+            "residual_px": 12.3061
+          },
+          {
+            "source_xy": [
+              1014,
+              817
+            ],
+            "base_xy": [
+              821,
+              1699
+            ],
+            "patch_score": 0.8668,
+            "residual_px": 1.2778
+          },
+          {
+            "source_xy": [
+              1278,
+              817
+            ],
+            "base_xy": [
+              1094,
+              1701
+            ],
+            "patch_score": 0.7725,
+            "residual_px": 2.2652
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              1370,
+              1702
+            ],
+            "patch_score": 0.8602,
+            "residual_px": 2.5177
+          },
+          {
+            "source_xy": [
+              882,
+              929
+            ],
+            "base_xy": [
+              681,
+              1813
+            ],
+            "patch_score": 0.7829,
+            "residual_px": 1.5394
+          },
+          {
+            "source_xy": [
+              1146,
+              929
+            ],
+            "base_xy": [
+              956,
+              1815
+            ],
+            "patch_score": 0.8238,
+            "residual_px": 1.7844
+          },
+          {
+            "source_xy": [
+              1410,
+              929
+            ],
+            "base_xy": [
+              1231,
+              1816
+            ],
+            "patch_score": 0.7011,
+            "residual_px": 3.4396
+          }
+        ],
+        "fit_rms_px": 2.1186,
+        "held_out_rms_px": 3.1904,
+        "held_out_max_px": 12.3061,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              1806,
+              705
+            ],
+            "base_xy": [
+              1666,
+              1565
+            ],
+            "patch_score": 0.8846,
+            "residual_px": 27.638
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028698.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028698.jpg",
+      "area_in_view": "Central cross-city strip",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1029,
+      "bytes": 593840,
+      "sha256": "df34942c5d740adfb64b0e1c242e646e59d1cf3c0934cf392220513f9f761054",
+      "git_blob_sha": "4b685ac773973712d024985c9cab7bac12dbc0b7",
+      "candidate_registration": {
+        "file": "1000028698.jpg",
+        "candidate_affine": [
+          [
+            1.041452773,
+            -0.009063542,
+            -108.382713982
+          ],
+          [
+            0.00784422,
+            1.049260913,
+            476.823652564
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              882,
+              145
+            ],
+            "base_xy": [
+              804,
+              634
+            ],
+            "patch_score": 0.8609,
+            "residual_px": 5.2169
+          },
+          {
+            "source_xy": [
+              1410,
+              145
+            ],
+            "base_xy": [
+              1360,
+              639
+            ],
+            "patch_score": 0.8806,
+            "residual_px": 1.6165
+          },
+          {
+            "source_xy": [
+              1278,
+              257
+            ],
+            "base_xy": [
+              1221,
+              755
+            ],
+            "patch_score": 0.8347,
+            "residual_px": 1.6783
+          },
+          {
+            "source_xy": [
+              1542,
+              257
+            ],
+            "base_xy": [
+              1498,
+              758
+            ],
+            "patch_score": 0.8385,
+            "residual_px": 2.8514
+          },
+          {
+            "source_xy": [
+              1806,
+              257
+            ],
+            "base_xy": [
+              1772,
+              760
+            ],
+            "patch_score": 0.8284,
+            "residual_px": 1.9594
+          },
+          {
+            "source_xy": [
+              882,
+              369
+            ],
+            "base_xy": [
+              801,
+              870
+            ],
+            "patch_score": 0.7944,
+            "residual_px": 5.9062
+          },
+          {
+            "source_xy": [
+              1674,
+              369
+            ],
+            "base_xy": [
+              1634,
+              879
+            ],
+            "patch_score": 0.8808,
+            "residual_px": 2.9903
+          },
+          {
+            "source_xy": [
+              222,
+              481
+            ],
+            "base_xy": [
+              121,
+              985
+            ],
+            "patch_score": 0.6947,
+            "residual_px": 3.0789
+          },
+          {
+            "source_xy": [
+              486,
+              481
+            ],
+            "base_xy": [
+              391,
+              987
+            ],
+            "patch_score": 0.8438,
+            "residual_px": 2.9267
+          },
+          {
+            "source_xy": [
+              1278,
+              481
+            ],
+            "base_xy": [
+              1220,
+              993
+            ],
+            "patch_score": 0.8645,
+            "residual_px": 2.2891
+          },
+          {
+            "source_xy": [
+              1806,
+              481
+            ],
+            "base_xy": [
+              1769,
+              997
+            ],
+            "patch_score": 0.7666,
+            "residual_px": 1.5816
+          },
+          {
+            "source_xy": [
+              618,
+              593
+            ],
+            "base_xy": [
+              527,
+              1105
+            ],
+            "patch_score": 0.8975,
+            "residual_px": 3.0707
+          },
+          {
+            "source_xy": [
+              1146,
+              593
+            ],
+            "base_xy": [
+              1080,
+              1110
+            ],
+            "patch_score": 0.9337,
+            "residual_px": 1.9912
+          },
+          {
+            "source_xy": [
+              1410,
+              593
+            ],
+            "base_xy": [
+              1356,
+              1112
+            ],
+            "patch_score": 0.9004,
+            "residual_px": 2.3108
+          },
+          {
+            "source_xy": [
+              222,
+              705
+            ],
+            "base_xy": [
+              123,
+              1216
+            ],
+            "patch_score": 0.86,
+            "residual_px": 6.959
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              940,
+              1226
+            ],
+            "patch_score": 0.9105,
+            "residual_px": 1.9543
+          },
+          {
+            "source_xy": [
+              1542,
+              705
+            ],
+            "base_xy": [
+              1491,
+              1229
+            ],
+            "patch_score": 0.7158,
+            "residual_px": 0.3814
+          },
+          {
+            "source_xy": [
+              1806,
+              705
+            ],
+            "base_xy": [
+              1764,
+              1230
+            ],
+            "patch_score": 0.8155,
+            "residual_px": 2.2114
+          },
+          {
+            "source_xy": [
+              618,
+              817
+            ],
+            "base_xy": [
+              528,
+              1337
+            ],
+            "patch_score": 0.8299,
+            "residual_px": 1.9251
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              1077,
+              1344
+            ],
+            "patch_score": 0.8553,
+            "residual_px": 1.183
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              1353,
+              1342
+            ],
+            "patch_score": 0.6816,
+            "residual_px": 3.1485
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              1625,
+              1346
+            ],
+            "patch_score": 0.8306,
+            "residual_px": 2.8679
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              1014,
+              145
+            ],
+            "base_xy": [
+              944,
+              635
+            ],
+            "patch_score": 0.7776,
+            "residual_px": 3.0243
+          },
+          {
+            "source_xy": [
+              1278,
+              145
+            ],
+            "base_xy": [
+              1222,
+              637
+            ],
+            "patch_score": 0.8665,
+            "residual_px": 2.1177
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              802,
+              751
+            ],
+            "patch_score": 0.7494,
+            "residual_px": 6.3234
+          },
+          {
+            "source_xy": [
+              1146,
+              257
+            ],
+            "base_xy": [
+              1082,
+              753
+            ],
+            "patch_score": 0.8454,
+            "residual_px": 2.5972
+          },
+          {
+            "source_xy": [
+              1674,
+              257
+            ],
+            "base_xy": [
+              1635,
+              760
+            ],
+            "patch_score": 0.8872,
+            "residual_px": 2.3518
+          },
+          {
+            "source_xy": [
+              486,
+              369
+            ],
+            "base_xy": [
+              390,
+              869
+            ],
+            "patch_score": 0.7751,
+            "residual_px": 4.5755
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              663,
+              870
+            ],
+            "patch_score": 0.783,
+            "residual_px": 6.3635
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              1221,
+              875
+            ],
+            "patch_score": 0.847,
+            "residual_px": 2.0033
+          },
+          {
+            "source_xy": [
+              1542,
+              369
+            ],
+            "base_xy": [
+              1497,
+              878
+            ],
+            "patch_score": 0.865,
+            "residual_px": 3.3914
+          },
+          {
+            "source_xy": [
+              354,
+              481
+            ],
+            "base_xy": [
+              256,
+              985
+            ],
+            "patch_score": 0.7358,
+            "residual_px": 0.7083
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              1358,
+              994
+            ],
+            "patch_score": 0.8573,
+            "residual_px": 2.6986
+          },
+          {
+            "source_xy": [
+              1674,
+              481
+            ],
+            "base_xy": [
+              1632,
+              996
+            ],
+            "patch_score": 0.8414,
+            "residual_px": 1.9099
+          },
+          {
+            "source_xy": [
+              486,
+              593
+            ],
+            "base_xy": [
+              391,
+              1104
+            ],
+            "patch_score": 0.8236,
+            "residual_px": 1.8045
+          },
+          {
+            "source_xy": [
+              750,
+              593
+            ],
+            "base_xy": [
+              663,
+              1106
+            ],
+            "patch_score": 0.8453,
+            "residual_px": 4.4651
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              941,
+              1109
+            ],
+            "patch_score": 0.9139,
+            "residual_px": 2.3812
+          },
+          {
+            "source_xy": [
+              1278,
+              593
+            ],
+            "base_xy": [
+              1218,
+              1111
+            ],
+            "patch_score": 0.8473,
+            "residual_px": 2.0909
+          },
+          {
+            "source_xy": [
+              1806,
+              593
+            ],
+            "base_xy": [
+              1767,
+              1115
+            ],
+            "patch_score": 0.7995,
+            "residual_px": 1.8011
+          },
+          {
+            "source_xy": [
+              618,
+              705
+            ],
+            "base_xy": [
+              527,
+              1221
+            ],
+            "patch_score": 0.8818,
+            "residual_px": 1.8882
+          },
+          {
+            "source_xy": [
+              882,
+              705
+            ],
+            "base_xy": [
+              801,
+              1225
+            ],
+            "patch_score": 0.7339,
+            "residual_px": 3.1804
+          },
+          {
+            "source_xy": [
+              1146,
+              705
+            ],
+            "base_xy": [
+              1078,
+              1227
+            ],
+            "patch_score": 0.8072,
+            "residual_px": 1.6315
+          },
+          {
+            "source_xy": [
+              1410,
+              705
+            ],
+            "base_xy": [
+              1354,
+              1228
+            ],
+            "patch_score": 0.8368,
+            "residual_px": 0.5048
+          },
+          {
+            "source_xy": [
+              486,
+              817
+            ],
+            "base_xy": [
+              392,
+              1334
+            ],
+            "patch_score": 0.8198,
+            "residual_px": 4.2149
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              1489,
+              1345
+            ],
+            "patch_score": 0.8601,
+            "residual_px": 1.6252
+          },
+          {
+            "source_xy": [
+              1806,
+              817
+            ],
+            "base_xy": [
+              1762,
+              1347
+            ],
+            "patch_score": 0.8455,
+            "residual_px": 3.3153
+          }
+        ],
+        "fit_rms_px": 3.1151,
+        "held_out_rms_px": 3.154,
+        "held_out_max_px": 6.3635,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              1146,
+              145
+            ],
+            "base_xy": [
+              1071,
+              628
+            ],
+            "patch_score": 0.8206,
+            "residual_px": 16.2224
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028699.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028699.jpg",
+      "area_in_view": "West rim",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1021,
+      "bytes": 408681,
+      "sha256": "d3a61b00b8e04c902649989e337e2e7bff060962f478ce8bf9e333d845d17480",
+      "git_blob_sha": "eea625d66b9c6d65e59f87ba5e7c1bb9bdc1fecd",
+      "candidate_registration": {
+        "file": "1000028699.jpg",
+        "candidate_affine": [
+          [
+            1.037088171,
+            -0.013499837,
+            -993.601642808
+          ],
+          [
+            0.007976966,
+            1.046040019,
+            222.434930723
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              1806,
+              257
+            ],
+            "base_xy": [
+              876,
+              507
+            ],
+            "patch_score": 0.8589,
+            "residual_px": 1.3294
+          },
+          {
+            "source_xy": [
+              1146,
+              369
+            ],
+            "base_xy": [
+              188,
+              615
+            ],
+            "patch_score": 0.8906,
+            "residual_px": 3.2042
+          },
+          {
+            "source_xy": [
+              1410,
+              369
+            ],
+            "base_xy": [
+              464,
+              619
+            ],
+            "patch_score": 0.833,
+            "residual_px": 0.7307
+          },
+          {
+            "source_xy": [
+              1674,
+              369
+            ],
+            "base_xy": [
+              738,
+              622
+            ],
+            "patch_score": 0.8525,
+            "residual_px": 0.5451
+          },
+          {
+            "source_xy": [
+              1938,
+              369
+            ],
+            "base_xy": [
+              1011,
+              625
+            ],
+            "patch_score": 0.8794,
+            "residual_px": 1.1549
+          },
+          {
+            "source_xy": [
+              1542,
+              481
+            ],
+            "base_xy": [
+              601,
+              737
+            ],
+            "patch_score": 0.791,
+            "residual_px": 2.0988
+          },
+          {
+            "source_xy": [
+              1806,
+              481
+            ],
+            "base_xy": [
+              872,
+              740
+            ],
+            "patch_score": 0.9046,
+            "residual_px": 0.8863
+          },
+          {
+            "source_xy": [
+              1674,
+              593
+            ],
+            "base_xy": [
+              735,
+              856
+            ],
+            "patch_score": 0.8086,
+            "residual_px": 0.5292
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              47,
+              970
+            ],
+            "patch_score": 0.7119,
+            "residual_px": 2.5077
+          },
+          {
+            "source_xy": [
+              1278,
+              705
+            ],
+            "base_xy": [
+              323,
+              971
+            ],
+            "patch_score": 0.8852,
+            "residual_px": 1.1624
+          },
+          {
+            "source_xy": [
+              1542,
+              705
+            ],
+            "base_xy": [
+              598,
+              973
+            ],
+            "patch_score": 0.8421,
+            "residual_px": 2.0908
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              459,
+              1088
+            ],
+            "patch_score": 0.8545,
+            "residual_px": 1.3693
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              731,
+              1090
+            ],
+            "patch_score": 0.7727,
+            "residual_px": 0.6075
+          },
+          {
+            "source_xy": [
+              1938,
+              817
+            ],
+            "base_xy": [
+              1003,
+              1091
+            ],
+            "patch_score": 0.834,
+            "residual_px": 2.7057
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              1146,
+              257
+            ],
+            "base_xy": [
+              190,
+              496
+            ],
+            "patch_score": 0.7944,
+            "residual_px": 4.6355
+          },
+          {
+            "source_xy": [
+              1674,
+              257
+            ],
+            "base_xy": [
+              740,
+              504
+            ],
+            "patch_score": 0.8753,
+            "residual_px": 1.1647
+          },
+          {
+            "source_xy": [
+              1938,
+              257
+            ],
+            "base_xy": [
+              1014,
+              507
+            ],
+            "patch_score": 0.8616,
+            "residual_px": 1.2251
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              327,
+              617
+            ],
+            "patch_score": 0.9127,
+            "residual_px": 1.6287
+          },
+          {
+            "source_xy": [
+              1806,
+              369
+            ],
+            "base_xy": [
+              874,
+              623
+            ],
+            "patch_score": 0.8607,
+            "residual_px": 0.4329
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              187,
+              733
+            ],
+            "patch_score": 0.7208,
+            "residual_px": 2.2242
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              463,
+              736
+            ],
+            "patch_score": 0.8956,
+            "residual_px": 1.1516
+          },
+          {
+            "source_xy": [
+              1674,
+              481
+            ],
+            "base_xy": [
+              737,
+              739
+            ],
+            "patch_score": 0.7096,
+            "residual_px": 1.0116
+          },
+          {
+            "source_xy": [
+              1938,
+              481
+            ],
+            "base_xy": [
+              1010,
+              741
+            ],
+            "patch_score": 0.8968,
+            "residual_px": 0.2217
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              48,
+              851
+            ],
+            "patch_score": 0.7279,
+            "residual_px": 2.008
+          },
+          {
+            "source_xy": [
+              1278,
+              593
+            ],
+            "base_xy": [
+              324,
+              853
+            ],
+            "patch_score": 0.8061,
+            "residual_px": 0.2194
+          },
+          {
+            "source_xy": [
+              1410,
+              705
+            ],
+            "base_xy": [
+              453,
+              974
+            ],
+            "patch_score": 0.9044,
+            "residual_px": 6.8051
+          },
+          {
+            "source_xy": [
+              1674,
+              705
+            ],
+            "base_xy": [
+              733,
+              973
+            ],
+            "patch_score": 0.8177,
+            "residual_px": 0.2488
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              595,
+              1089
+            ],
+            "patch_score": 0.9098,
+            "residual_px": 0.5631
+          },
+          {
+            "source_xy": [
+              1806,
+              817
+            ],
+            "base_xy": [
+              867,
+              1090
+            ],
+            "patch_score": 0.8056,
+            "residual_px": 1.9857
+          }
+        ],
+        "fit_rms_px": 1.7164,
+        "held_out_rms_px": 2.4392,
+        "held_out_max_px": 6.8051,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              1806,
+              705
+            ],
+            "base_xy": [
+              869,
+              960
+            ],
+            "patch_score": 0.8624,
+            "residual_px": 14.3255
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028700.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+      "area_in_view": "Eastern and northeastern rim",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1046,
+      "bytes": 480007,
+      "sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+      "git_blob_sha": "601945cb13646e7b7cd61fb0688deab1e47e7fd4",
+      "candidate_registration": {
+        "file": "1000028700.jpg",
+        "candidate_affine": [
+          [
+            1.034924521,
+            0.004907361,
+            467.023761828
+          ],
+          [
+            0.011991418,
+            1.043488436,
+            79.640760271
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              750,
+              257
+            ],
+            "base_xy": [
+              1245,
+              353
+            ],
+            "patch_score": 0.7558,
+            "residual_px": 3.8464
+          },
+          {
+            "source_xy": [
+              354,
+              369
+            ],
+            "base_xy": [
+              835,
+              471
+            ],
+            "patch_score": 0.8022,
+            "residual_px": 2.0765
+          },
+          {
+            "source_xy": [
+              618,
+              369
+            ],
+            "base_xy": [
+              1107,
+              472
+            ],
+            "patch_score": 0.8812,
+            "residual_px": 1.4214
+          },
+          {
+            "source_xy": [
+              222,
+              481
+            ],
+            "base_xy": [
+              700,
+              586
+            ],
+            "patch_score": 0.8151,
+            "residual_px": 1.9773
+          },
+          {
+            "source_xy": [
+              750,
+              481
+            ],
+            "base_xy": [
+              1243,
+              590
+            ],
+            "patch_score": 0.8881,
+            "residual_px": 2.6361
+          },
+          {
+            "source_xy": [
+              90,
+              593
+            ],
+            "base_xy": [
+              567,
+              701
+            ],
+            "patch_score": 0.8228,
+            "residual_px": 4.1969
+          },
+          {
+            "source_xy": [
+              882,
+              593
+            ],
+            "base_xy": [
+              1381,
+              709
+            ],
+            "patch_score": 0.8536,
+            "residual_px": 1.7373
+          },
+          {
+            "source_xy": [
+              222,
+              705
+            ],
+            "base_xy": [
+              701,
+              817
+            ],
+            "patch_score": 0.7799,
+            "residual_px": 1.2282
+          },
+          {
+            "source_xy": [
+              750,
+              705
+            ],
+            "base_xy": [
+              1243,
+              824
+            ],
+            "patch_score": 0.7942,
+            "residual_px": 3.6886
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              1521,
+              829
+            ],
+            "patch_score": 0.8166,
+            "residual_px": 1.8948
+          },
+          {
+            "source_xy": [
+              1278,
+              705
+            ],
+            "base_xy": [
+              1798,
+              831
+            ],
+            "patch_score": 0.8898,
+            "residual_px": 4.8974
+          },
+          {
+            "source_xy": [
+              882,
+              817
+            ],
+            "base_xy": [
+              1382,
+              944
+            ],
+            "patch_score": 0.7218,
+            "residual_px": 2.2231
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              1658,
+              947
+            ],
+            "patch_score": 0.8419,
+            "residual_px": 1.4393
+          },
+          {
+            "source_xy": [
+              486,
+              929
+            ],
+            "base_xy": [
+              973,
+              1051
+            ],
+            "patch_score": 0.8715,
+            "residual_px": 4.1705
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              750,
+              145
+            ],
+            "base_xy": [
+              1246,
+              237
+            ],
+            "patch_score": 0.7813,
+            "residual_px": 3.5965
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              1384,
+              353
+            ],
+            "patch_score": 0.8603,
+            "residual_px": 6.1294
+          },
+          {
+            "source_xy": [
+              222,
+              369
+            ],
+            "base_xy": [
+              699,
+              469
+            ],
+            "patch_score": 0.8403,
+            "residual_px": 1.7006
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              1244,
+              472
+            ],
+            "patch_score": 0.836,
+            "residual_px": 1.9709
+          },
+          {
+            "source_xy": [
+              1014,
+              369
+            ],
+            "base_xy": [
+              1523,
+              473
+            ],
+            "patch_score": 0.8722,
+            "residual_px": 6.1141
+          },
+          {
+            "source_xy": [
+              90,
+              481
+            ],
+            "base_xy": [
+              566,
+              584
+            ],
+            "patch_score": 0.7224,
+            "residual_px": 3.7302
+          },
+          {
+            "source_xy": [
+              354,
+              481
+            ],
+            "base_xy": [
+              835,
+              587
+            ],
+            "patch_score": 0.8741,
+            "residual_px": 1.4107
+          },
+          {
+            "source_xy": [
+              618,
+              481
+            ],
+            "base_xy": [
+              1107,
+              588
+            ],
+            "patch_score": 0.7864,
+            "residual_px": 2.1934
+          },
+          {
+            "source_xy": [
+              882,
+              481
+            ],
+            "base_xy": [
+              1382,
+              590
+            ],
+            "patch_score": 0.8263,
+            "residual_px": 2.1434
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              1662,
+              592
+            ],
+            "patch_score": 0.7852,
+            "residual_px": 7.3725
+          },
+          {
+            "source_xy": [
+              486,
+              593
+            ],
+            "base_xy": [
+              970,
+              705
+            ],
+            "patch_score": 0.8839,
+            "residual_px": 3.0005
+          },
+          {
+            "source_xy": [
+              750,
+              593
+            ],
+            "base_xy": [
+              1243,
+              707
+            ],
+            "patch_score": 0.7999,
+            "residual_px": 3.1557
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              1521,
+              710
+            ],
+            "patch_score": 0.8494,
+            "residual_px": 1.7544
+          },
+          {
+            "source_xy": [
+              1278,
+              593
+            ],
+            "base_xy": [
+              1799,
+              713
+            ],
+            "patch_score": 0.8187,
+            "residual_px": 6.4767
+          },
+          {
+            "source_xy": [
+              354,
+              705
+            ],
+            "base_xy": [
+              836,
+              818
+            ],
+            "patch_score": 0.8259,
+            "residual_px": 1.7619
+          },
+          {
+            "source_xy": [
+              618,
+              705
+            ],
+            "base_xy": [
+              1107,
+              822
+            ],
+            "patch_score": 0.7673,
+            "residual_px": 3.1481
+          },
+          {
+            "source_xy": [
+              1146,
+              705
+            ],
+            "base_xy": [
+              1660,
+              830
+            ],
+            "patch_score": 0.8521,
+            "residual_px": 3.622
+          },
+          {
+            "source_xy": [
+              1014,
+              817
+            ],
+            "base_xy": [
+              1521,
+              946
+            ],
+            "patch_score": 0.7766,
+            "residual_px": 1.7592
+          },
+          {
+            "source_xy": [
+              90,
+              929
+            ],
+            "base_xy": [
+              571,
+              1046
+            ],
+            "patch_score": 0.8683,
+            "residual_px": 7.5063
+          },
+          {
+            "source_xy": [
+              354,
+              929
+            ],
+            "base_xy": [
+              838,
+              1048
+            ],
+            "patch_score": 0.7137,
+            "residual_px": 5.2868
+          },
+          {
+            "source_xy": [
+              618,
+              929
+            ],
+            "base_xy": [
+              1109,
+              1054
+            ],
+            "patch_score": 0.799,
+            "residual_px": 3.2719
+          },
+          {
+            "source_xy": [
+              882,
+              929
+            ],
+            "base_xy": [
+              1381,
+              1058
+            ],
+            "patch_score": 0.8752,
+            "residual_px": 3.7528
+          },
+          {
+            "source_xy": [
+              1146,
+              929
+            ],
+            "base_xy": [
+              1657,
+              1061
+            ],
+            "patch_score": 0.8406,
+            "residual_px": 1.8839
+          }
+        ],
+        "fit_rms_px": 2.9242,
+        "held_out_rms_px": 4.0656,
+        "held_out_max_px": 7.5063,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              354,
+              593
+            ],
+            "base_xy": [
+              825,
+              688
+            ],
+            "patch_score": 0.7874,
+            "residual_px": 18.5192
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028701.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028701.jpg",
+      "area_in_view": "South and southeast",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1026,
+      "bytes": 484442,
+      "sha256": "3268f3853dbdc552d45c54a41ac11a805c9b4c1bcb2b99e7fc86392fd74076ca",
+      "git_blob_sha": "dcb3c28695ae736b36c9334c0c06d38ae303cf5b",
+      "candidate_registration": {
+        "file": "1000028701.jpg",
+        "candidate_affine": [
+          [
+            1.038686763,
+            -0.007414841,
+            185.493343303
+          ],
+          [
+            0.008625647,
+            1.045743923,
+            879.190822977
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              882,
+              145
+            ],
+            "base_xy": [
+              1098,
+              1037
+            ],
+            "patch_score": 0.8238,
+            "residual_px": 2.9155
+          },
+          {
+            "source_xy": [
+              1146,
+              145
+            ],
+            "base_xy": [
+              1376,
+              1039
+            ],
+            "patch_score": 0.8793,
+            "residual_px": 2.1152
+          },
+          {
+            "source_xy": [
+              1410,
+              145
+            ],
+            "base_xy": [
+              1651,
+              1043
+            ],
+            "patch_score": 0.8643,
+            "residual_px": 2.0335
+          },
+          {
+            "source_xy": [
+              750,
+              257
+            ],
+            "base_xy": [
+              959,
+              1154
+            ],
+            "patch_score": 0.8913,
+            "residual_px": 3.6268
+          },
+          {
+            "source_xy": [
+              1014,
+              257
+            ],
+            "base_xy": [
+              1236,
+              1155
+            ],
+            "patch_score": 0.8705,
+            "residual_px": 1.8798
+          },
+          {
+            "source_xy": [
+              1278,
+              257
+            ],
+            "base_xy": [
+              1513,
+              1158
+            ],
+            "patch_score": 0.7708,
+            "residual_px": 2.1966
+          },
+          {
+            "source_xy": [
+              1542,
+              257
+            ],
+            "base_xy": [
+              1788,
+              1162
+            ],
+            "patch_score": 0.92,
+            "residual_px": 2.8581
+          },
+          {
+            "source_xy": [
+              354,
+              369
+            ],
+            "base_xy": [
+              551,
+              1271
+            ],
+            "patch_score": 0.7653,
+            "residual_px": 2.9279
+          },
+          {
+            "source_xy": [
+              618,
+              369
+            ],
+            "base_xy": [
+              822,
+              1272
+            ],
+            "patch_score": 0.826,
+            "residual_px": 3.1085
+          },
+          {
+            "source_xy": [
+              882,
+              369
+            ],
+            "base_xy": [
+              1096,
+              1273
+            ],
+            "patch_score": 0.7696,
+            "residual_px": 2.8969
+          },
+          {
+            "source_xy": [
+              1146,
+              369
+            ],
+            "base_xy": [
+              1375,
+              1275
+            ],
+            "patch_score": 0.8016,
+            "residual_px": 1.9082
+          },
+          {
+            "source_xy": [
+              222,
+              481
+            ],
+            "base_xy": [
+              416,
+              1385
+            ],
+            "patch_score": 0.8096,
+            "residual_px": 3.597
+          },
+          {
+            "source_xy": [
+              354,
+              593
+            ],
+            "base_xy": [
+              550,
+              1503
+            ],
+            "patch_score": 0.8574,
+            "residual_px": 1.3627
+          },
+          {
+            "source_xy": [
+              882,
+              593
+            ],
+            "base_xy": [
+              1094,
+              1508
+            ],
+            "patch_score": 0.7597,
+            "residual_px": 3.3929
+          },
+          {
+            "source_xy": [
+              1146,
+              593
+            ],
+            "base_xy": [
+              1372,
+              1511
+            ],
+            "patch_score": 0.7707,
+            "residual_px": 1.8858
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              1232,
+              1626
+            ],
+            "patch_score": 0.9305,
+            "residual_px": 1.7013
+          },
+          {
+            "source_xy": [
+              1278,
+              705
+            ],
+            "base_xy": [
+              1508,
+              1628
+            ],
+            "patch_score": 0.8501,
+            "residual_px": 0.6107
+          },
+          {
+            "source_xy": [
+              354,
+              817
+            ],
+            "base_xy": [
+              551,
+              1733
+            ],
+            "patch_score": 0.8602,
+            "residual_px": 5.2968
+          },
+          {
+            "source_xy": [
+              618,
+              817
+            ],
+            "base_xy": [
+              822,
+              1737
+            ],
+            "patch_score": 0.8489,
+            "residual_px": 2.0047
+          },
+          {
+            "source_xy": [
+              882,
+              817
+            ],
+            "base_xy": [
+              1093,
+              1741
+            ],
+            "patch_score": 0.8824,
+            "residual_px": 2.5629
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              1369,
+              1744
+            ],
+            "patch_score": 0.9199,
+            "residual_px": 0.9474
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              750,
+              145
+            ],
+            "base_xy": [
+              960,
+              1037
+            ],
+            "patch_score": 0.9449,
+            "residual_px": 3.4457
+          },
+          {
+            "source_xy": [
+              1014,
+              145
+            ],
+            "base_xy": [
+              1234,
+              1037
+            ],
+            "patch_score": 0.9391,
+            "residual_px": 4.4613
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              1097,
+              1154
+            ],
+            "patch_score": 0.8435,
+            "residual_px": 3.1239
+          },
+          {
+            "source_xy": [
+              1146,
+              257
+            ],
+            "base_xy": [
+              1375,
+              1156
+            ],
+            "patch_score": 0.9136,
+            "residual_px": 2.1252
+          },
+          {
+            "source_xy": [
+              1410,
+              257
+            ],
+            "base_xy": [
+              1651,
+              1160
+            ],
+            "patch_score": 0.7974,
+            "residual_px": 2.866
+          },
+          {
+            "source_xy": [
+              222,
+              369
+            ],
+            "base_xy": [
+              416,
+              1270
+            ],
+            "patch_score": 0.6952,
+            "residual_px": 4.0167
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              958,
+              1272
+            ],
+            "patch_score": 0.8924,
+            "residual_px": 3.8003
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              1513,
+              1276
+            ],
+            "patch_score": 0.859,
+            "residual_px": 2.8026
+          },
+          {
+            "source_xy": [
+              1542,
+              369
+            ],
+            "base_xy": [
+              1787,
+              1280
+            ],
+            "patch_score": 0.8432,
+            "residual_px": 3.0577
+          },
+          {
+            "source_xy": [
+              354,
+              481
+            ],
+            "base_xy": [
+              550,
+              1386
+            ],
+            "patch_score": 0.7706,
+            "residual_px": 0.8425
+          },
+          {
+            "source_xy": [
+              618,
+              481
+            ],
+            "base_xy": [
+              821,
+              1388
+            ],
+            "patch_score": 0.8899,
+            "residual_px": 2.8749
+          },
+          {
+            "source_xy": [
+              882,
+              481
+            ],
+            "base_xy": [
+              1095,
+              1390
+            ],
+            "patch_score": 0.9004,
+            "residual_px": 3.055
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              1374,
+              1392
+            ],
+            "patch_score": 0.823,
+            "residual_px": 1.7399
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              1649,
+              1394
+            ],
+            "patch_score": 0.8414,
+            "residual_px": 2.5498
+          },
+          {
+            "source_xy": [
+              222,
+              593
+            ],
+            "base_xy": [
+              416,
+              1501
+            ],
+            "patch_score": 0.8102,
+            "residual_px": 4.3214
+          },
+          {
+            "source_xy": [
+              486,
+              593
+            ],
+            "base_xy": [
+              685,
+              1504
+            ],
+            "patch_score": 0.8663,
+            "residual_px": 1.0235
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              1233,
+              1510
+            ],
+            "patch_score": 0.8877,
+            "residual_px": 2.3464
+          },
+          {
+            "source_xy": [
+              354,
+              705
+            ],
+            "base_xy": [
+              551,
+              1618
+            ],
+            "patch_score": 0.7394,
+            "residual_px": 3.3863
+          },
+          {
+            "source_xy": [
+              882,
+              705
+            ],
+            "base_xy": [
+              1093,
+              1625
+            ],
+            "patch_score": 0.8646,
+            "residual_px": 3.5188
+          },
+          {
+            "source_xy": [
+              1146,
+              705
+            ],
+            "base_xy": [
+              1370,
+              1627
+            ],
+            "patch_score": 0.7977,
+            "residual_px": 0.9035
+          },
+          {
+            "source_xy": [
+              486,
+              817
+            ],
+            "base_xy": [
+              686,
+              1735
+            ],
+            "patch_score": 0.8256,
+            "residual_px": 3.2713
+          },
+          {
+            "source_xy": [
+              750,
+              817
+            ],
+            "base_xy": [
+              957,
+              1739
+            ],
+            "patch_score": 0.8543,
+            "residual_px": 1.7806
+          },
+          {
+            "source_xy": [
+              1014,
+              817
+            ],
+            "base_xy": [
+              1231,
+              1743
+            ],
+            "patch_score": 0.8534,
+            "residual_px": 1.8012
+          },
+          {
+            "source_xy": [
+              1278,
+              817
+            ],
+            "base_xy": [
+              1506,
+              1745
+            ],
+            "patch_score": 0.916,
+            "residual_px": 0.9694
+          }
+        ],
+        "fit_rms_px": 2.6702,
+        "held_out_rms_px": 2.8711,
+        "held_out_max_px": 4.4613,
+        "rejected_fit_points": []
+      }
+    },
+    {
+      "source_name": "1000028702.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028702.jpg",
+      "area_in_view": "South and southwest",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1056,
+      "bytes": 541674,
+      "sha256": "551db92213d2122df7f6f97f00cdbf7bbe58b0c41f62e0fe1caeb30ebc1257d2",
+      "git_blob_sha": "94e85bb4c6883cea22f54d3de18a3394db093f04",
+      "candidate_registration": {
+        "file": "1000028702.jpg",
+        "candidate_affine": [
+          [
+            1.034928122,
+            -0.012141413,
+            -368.167392665
+          ],
+          [
+            0.007135791,
+            1.032931945,
+            810.766183547
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              1674,
+              145
+            ],
+            "base_xy": [
+              1363,
+              972
+            ],
+            "patch_score": 0.7804,
+            "residual_px": 0.6684
+          },
+          {
+            "source_xy": [
+              1938,
+              145
+            ],
+            "base_xy": [
+              1635,
+              975
+            ],
+            "patch_score": 0.8732,
+            "residual_px": 0.989
+          },
+          {
+            "source_xy": [
+              750,
+              257
+            ],
+            "base_xy": [
+              402,
+              1080
+            ],
+            "patch_score": 0.8762,
+            "residual_px": 3.3106
+          },
+          {
+            "source_xy": [
+              1278,
+              257
+            ],
+            "base_xy": [
+              953,
+              1084
+            ],
+            "patch_score": 0.935,
+            "residual_px": 2.1311
+          },
+          {
+            "source_xy": [
+              1542,
+              257
+            ],
+            "base_xy": [
+              1224,
+              1087
+            ],
+            "patch_score": 0.8493,
+            "residual_px": 0.6171
+          },
+          {
+            "source_xy": [
+              882,
+              369
+            ],
+            "base_xy": [
+              538,
+              1197
+            ],
+            "patch_score": 0.8251,
+            "residual_px": 2.4759
+          },
+          {
+            "source_xy": [
+              1410,
+              369
+            ],
+            "base_xy": [
+              1089,
+              1202
+            ],
+            "patch_score": 0.8037,
+            "residual_px": 2.399
+          },
+          {
+            "source_xy": [
+              1674,
+              369
+            ],
+            "base_xy": [
+              1360,
+              1205
+            ],
+            "patch_score": 0.8894,
+            "residual_px": 1.1505
+          },
+          {
+            "source_xy": [
+              486,
+              481
+            ],
+            "base_xy": [
+              130,
+              1311
+            ],
+            "patch_score": 0.8077,
+            "residual_px": 1.035
+          },
+          {
+            "source_xy": [
+              750,
+              481
+            ],
+            "base_xy": [
+              401,
+              1314
+            ],
+            "patch_score": 0.8005,
+            "residual_px": 1.5805
+          },
+          {
+            "source_xy": [
+              1806,
+              481
+            ],
+            "base_xy": [
+              1493,
+              1323
+            ],
+            "patch_score": 0.8192,
+            "residual_px": 3.2524
+          },
+          {
+            "source_xy": [
+              1146,
+              593
+            ],
+            "base_xy": [
+              812,
+              1433
+            ],
+            "patch_score": 0.8529,
+            "residual_px": 2.0318
+          },
+          {
+            "source_xy": [
+              1410,
+              593
+            ],
+            "base_xy": [
+              1085,
+              1435
+            ],
+            "patch_score": 0.8112,
+            "residual_px": 1.9882
+          },
+          {
+            "source_xy": [
+              1674,
+              593
+            ],
+            "base_xy": [
+              1363,
+              1431
+            ],
+            "patch_score": 0.8332,
+            "residual_px": 7.2636
+          },
+          {
+            "source_xy": [
+              750,
+              705
+            ],
+            "base_xy": [
+              400,
+              1545
+            ],
+            "patch_score": 0.8693,
+            "residual_px": 0.851
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              673,
+              1548
+            ],
+            "patch_score": 0.8597,
+            "residual_px": 1.8079
+          },
+          {
+            "source_xy": [
+              1542,
+              705
+            ],
+            "base_xy": [
+              1218,
+              1551
+            ],
+            "patch_score": 0.8015,
+            "residual_px": 1.5194
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              1081,
+              1666
+            ],
+            "patch_score": 0.8572,
+            "residual_px": 1.2772
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              1350,
+              1666
+            ],
+            "patch_score": 0.8565,
+            "residual_px": 4.426
+          },
+          {
+            "source_xy": [
+              1014,
+              929
+            ],
+            "base_xy": [
+              672,
+              1777
+            ],
+            "patch_score": 0.8862,
+            "residual_px": 2.1152
+          },
+          {
+            "source_xy": [
+              1278,
+              929
+            ],
+            "base_xy": [
+              943,
+              1779
+            ],
+            "patch_score": 0.7884,
+            "residual_px": 0.5163
+          },
+          {
+            "source_xy": [
+              1542,
+              929
+            ],
+            "base_xy": [
+              1215,
+              1779
+            ],
+            "patch_score": 0.8459,
+            "residual_px": 2.7532
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              750,
+              145
+            ],
+            "base_xy": [
+              403,
+              963
+            ],
+            "patch_score": 0.8449,
+            "residual_px": 4.3648
+          },
+          {
+            "source_xy": [
+              1542,
+              145
+            ],
+            "base_xy": [
+              1227,
+              970
+            ],
+            "patch_score": 0.8332,
+            "residual_px": 1.8784
+          },
+          {
+            "source_xy": [
+              882,
+              257
+            ],
+            "base_xy": [
+              540,
+              1080
+            ],
+            "patch_score": 0.9054,
+            "residual_px": 2.9453
+          },
+          {
+            "source_xy": [
+              1410,
+              257
+            ],
+            "base_xy": [
+              1089,
+              1085
+            ],
+            "patch_score": 0.8671,
+            "residual_px": 1.6573
+          },
+          {
+            "source_xy": [
+              1674,
+              257
+            ],
+            "base_xy": [
+              1361,
+              1089
+            ],
+            "patch_score": 0.8891,
+            "residual_px": 0.8448
+          },
+          {
+            "source_xy": [
+              486,
+              369
+            ],
+            "base_xy": [
+              131,
+              1196
+            ],
+            "patch_score": 0.834,
+            "residual_px": 0.9106
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              401,
+              1196
+            ],
+            "patch_score": 0.8376,
+            "residual_px": 2.8474
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              952,
+              1201
+            ],
+            "patch_score": 0.9085,
+            "residual_px": 2.0098
+          },
+          {
+            "source_xy": [
+              1542,
+              369
+            ],
+            "base_xy": [
+              1224,
+              1203
+            ],
+            "patch_score": 0.8535,
+            "residual_px": 0.7923
+          },
+          {
+            "source_xy": [
+              882,
+              481
+            ],
+            "base_xy": [
+              537,
+              1314
+            ],
+            "patch_score": 0.8548,
+            "residual_px": 1.802
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              813,
+              1316
+            ],
+            "patch_score": 0.7475,
+            "residual_px": 1.0033
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              1087,
+              1319
+            ],
+            "patch_score": 0.8638,
+            "residual_px": 2.2063
+          },
+          {
+            "source_xy": [
+              1674,
+              481
+            ],
+            "base_xy": [
+              1358,
+              1321
+            ],
+            "patch_score": 0.8872,
+            "residual_px": 1.5202
+          },
+          {
+            "source_xy": [
+              1938,
+              481
+            ],
+            "base_xy": [
+              1628,
+              1324
+            ],
+            "patch_score": 0.8512,
+            "residual_px": 4.4881
+          },
+          {
+            "source_xy": [
+              750,
+              593
+            ],
+            "base_xy": [
+              400,
+              1429
+            ],
+            "patch_score": 0.8373,
+            "residual_px": 0.901
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              674,
+              1432
+            ],
+            "patch_score": 0.8636,
+            "residual_px": 1.4703
+          },
+          {
+            "source_xy": [
+              1542,
+              593
+            ],
+            "base_xy": [
+              1221,
+              1436
+            ],
+            "patch_score": 0.7834,
+            "residual_px": 1.776
+          },
+          {
+            "source_xy": [
+              618,
+              705
+            ],
+            "base_xy": [
+              265,
+              1543
+            ],
+            "patch_score": 0.8225,
+            "residual_px": 2.1773
+          },
+          {
+            "source_xy": [
+              882,
+              705
+            ],
+            "base_xy": [
+              536,
+              1546
+            ],
+            "patch_score": 0.8235,
+            "residual_px": 0.7274
+          },
+          {
+            "source_xy": [
+              1410,
+              705
+            ],
+            "base_xy": [
+              1083,
+              1550
+            ],
+            "patch_score": 0.8913,
+            "residual_px": 1.0684
+          },
+          {
+            "source_xy": [
+              1674,
+              705
+            ],
+            "base_xy": [
+              1353,
+              1551
+            ],
+            "patch_score": 0.8604,
+            "residual_px": 2.7435
+          },
+          {
+            "source_xy": [
+              1938,
+              705
+            ],
+            "base_xy": [
+              1622,
+              1553
+            ],
+            "patch_score": 0.8096,
+            "residual_px": 6.9661
+          },
+          {
+            "source_xy": [
+              750,
+              817
+            ],
+            "base_xy": [
+              400,
+              1660
+            ],
+            "patch_score": 0.7857,
+            "residual_px": 1.891
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              1216,
+              1666
+            ],
+            "patch_score": 0.8976,
+            "residual_px": 1.8018
+          },
+          {
+            "source_xy": [
+              1806,
+              817
+            ],
+            "base_xy": [
+              1485,
+              1667
+            ],
+            "patch_score": 0.9501,
+            "residual_px": 6.0193
+          },
+          {
+            "source_xy": [
+              1146,
+              929
+            ],
+            "base_xy": [
+              807,
+              1778
+            ],
+            "patch_score": 0.8551,
+            "residual_px": 0.6817
+          },
+          {
+            "source_xy": [
+              1410,
+              929
+            ],
+            "base_xy": [
+              1078,
+              1779
+            ],
+            "patch_score": 0.8514,
+            "residual_px": 2.295
+          }
+        ],
+        "fit_rms_px": 2.5703,
+        "held_out_rms_px": 2.703,
+        "held_out_max_px": 6.9661,
+        "rejected_fit_points": [
+          {
+            "source_xy": [
+              618,
+              369
+            ],
+            "base_xy": [
+              281,
+              1191
+            ],
+            "patch_score": 0.7981,
+            "residual_px": 15.0375
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "1000028703.jpg",
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028703.jpg",
+      "area_in_view": "West and northwest",
+      "format": "JPEG",
+      "width": 2048,
+      "height": 1032,
+      "bytes": 511794,
+      "sha256": "b3176b2c2b9d8ee739903c4265073bf94041fd2a03734ff72335f7ca05963a82",
+      "git_blob_sha": "1fd010c44dfb229cef94afd9cced687d3f657dea",
+      "candidate_registration": {
+        "file": "1000028703.jpg",
+        "candidate_affine": [
+          [
+            1.03980999,
+            -0.010680269,
+            -622.4726315
+          ],
+          [
+            0.008291978,
+            1.043361298,
+            203.370769113
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "fit_points": [
+          {
+            "source_xy": [
+              1674,
+              145
+            ],
+            "base_xy": [
+              1118,
+              369
+            ],
+            "patch_score": 0.8095,
+            "residual_px": 1.4544
+          },
+          {
+            "source_xy": [
+              1938,
+              145
+            ],
+            "base_xy": [
+              1392,
+              372
+            ],
+            "patch_score": 0.8471,
+            "residual_px": 1.5408
+          },
+          {
+            "source_xy": [
+              1014,
+              257
+            ],
+            "base_xy": [
+              428,
+              478
+            ],
+            "patch_score": 0.7659,
+            "residual_px": 2.2403
+          },
+          {
+            "source_xy": [
+              1278,
+              257
+            ],
+            "base_xy": [
+              702,
+              475
+            ],
+            "patch_score": 0.8826,
+            "residual_px": 7.3029
+          },
+          {
+            "source_xy": [
+              1806,
+              257
+            ],
+            "base_xy": [
+              1253,
+              488
+            ],
+            "patch_score": 0.7942,
+            "residual_px": 1.5437
+          },
+          {
+            "source_xy": [
+              882,
+              369
+            ],
+            "base_xy": [
+              288,
+              595
+            ],
+            "patch_score": 0.8876,
+            "residual_px": 2.7842
+          },
+          {
+            "source_xy": [
+              1146,
+              369
+            ],
+            "base_xy": [
+              566,
+              597
+            ],
+            "patch_score": 0.753,
+            "residual_px": 1.1788
+          },
+          {
+            "source_xy": [
+              1410,
+              369
+            ],
+            "base_xy": [
+              842,
+              600
+            ],
+            "patch_score": 0.8691,
+            "residual_px": 2.2824
+          },
+          {
+            "source_xy": [
+              1674,
+              369
+            ],
+            "base_xy": [
+              1115,
+              604
+            ],
+            "patch_score": 0.7838,
+            "residual_px": 1.9109
+          },
+          {
+            "source_xy": [
+              1938,
+              369
+            ],
+            "base_xy": [
+              1388,
+              606
+            ],
+            "patch_score": 0.7781,
+            "residual_px": 1.725
+          },
+          {
+            "source_xy": [
+              750,
+              481
+            ],
+            "base_xy": [
+              149,
+              711
+            ],
+            "patch_score": 0.8466,
+            "residual_px": 3.2782
+          },
+          {
+            "source_xy": [
+              1542,
+              481
+            ],
+            "base_xy": [
+              978,
+              719
+            ],
+            "patch_score": 0.7909,
+            "residual_px": 2.4318
+          },
+          {
+            "source_xy": [
+              1806,
+              481
+            ],
+            "base_xy": [
+              1250,
+              721
+            ],
+            "patch_score": 0.7887,
+            "residual_px": 0.8472
+          },
+          {
+            "source_xy": [
+              882,
+              593
+            ],
+            "base_xy": [
+              286,
+              831
+            ],
+            "patch_score": 0.8337,
+            "residual_px": 2.8084
+          },
+          {
+            "source_xy": [
+              1410,
+              593
+            ],
+            "base_xy": [
+              840,
+              834
+            ],
+            "patch_score": 0.772,
+            "residual_px": 2.6833
+          },
+          {
+            "source_xy": [
+              1674,
+              593
+            ],
+            "base_xy": [
+              1112,
+              836
+            ],
+            "patch_score": 0.7891,
+            "residual_px": 0.1678
+          },
+          {
+            "source_xy": [
+              750,
+              705
+            ],
+            "base_xy": [
+              149,
+              948
+            ],
+            "patch_score": 0.7082,
+            "residual_px": 2.9665
+          },
+          {
+            "source_xy": [
+              1014,
+              705
+            ],
+            "base_xy": [
+              426,
+              951
+            ],
+            "patch_score": 0.9141,
+            "residual_px": 4.0007
+          },
+          {
+            "source_xy": [
+              1146,
+              817
+            ],
+            "base_xy": [
+              563,
+              1067
+            ],
+            "patch_score": 0.8663,
+            "residual_px": 3.0868
+          },
+          {
+            "source_xy": [
+              1410,
+              817
+            ],
+            "base_xy": [
+              836,
+              1068
+            ],
+            "patch_score": 0.8237,
+            "residual_px": 1.1826
+          },
+          {
+            "source_xy": [
+              1674,
+              817
+            ],
+            "base_xy": [
+              1108,
+              1069
+            ],
+            "patch_score": 0.7868,
+            "residual_px": 1.5947
+          },
+          {
+            "source_xy": [
+              1938,
+              817
+            ],
+            "base_xy": [
+              1381,
+              1071
+            ],
+            "patch_score": 0.9323,
+            "residual_px": 3.0779
+          },
+          {
+            "source_xy": [
+              750,
+              929
+            ],
+            "base_xy": [
+              149,
+              1178
+            ],
+            "patch_score": 0.7406,
+            "residual_px": 1.7674
+          },
+          {
+            "source_xy": [
+              1014,
+              929
+            ],
+            "base_xy": [
+              424,
+              1181
+            ],
+            "patch_score": 0.8578,
+            "residual_px": 2.0282
+          },
+          {
+            "source_xy": [
+              1278,
+              929
+            ],
+            "base_xy": [
+              698,
+              1182
+            ],
+            "patch_score": 0.8524,
+            "residual_px": 1.9663
+          },
+          {
+            "source_xy": [
+              1542,
+              929
+            ],
+            "base_xy": [
+              970,
+              1184
+            ],
+            "patch_score": 0.8166,
+            "residual_px": 1.7486
+          },
+          {
+            "source_xy": [
+              1806,
+              929
+            ],
+            "base_xy": [
+              1242,
+              1185
+            ],
+            "patch_score": 0.8615,
+            "residual_px": 4.379
+          }
+        ],
+        "held_out_points": [
+          {
+            "source_xy": [
+              1806,
+              145
+            ],
+            "base_xy": [
+              1255,
+              370
+            ],
+            "patch_score": 0.8898,
+            "residual_px": 1.1827
+          },
+          {
+            "source_xy": [
+              1410,
+              257
+            ],
+            "base_xy": [
+              843,
+              482
+            ],
+            "patch_score": 0.8267,
+            "residual_px": 2.4091
+          },
+          {
+            "source_xy": [
+              1674,
+              257
+            ],
+            "base_xy": [
+              1117,
+              486
+            ],
+            "patch_score": 0.8852,
+            "residual_px": 1.6876
+          },
+          {
+            "source_xy": [
+              750,
+              369
+            ],
+            "base_xy": [
+              149,
+              594
+            ],
+            "patch_score": 0.8595,
+            "residual_px": 4.4828
+          },
+          {
+            "source_xy": [
+              1014,
+              369
+            ],
+            "base_xy": [
+              428,
+              595
+            ],
+            "patch_score": 0.8235,
+            "residual_px": 1.7798
+          },
+          {
+            "source_xy": [
+              1278,
+              369
+            ],
+            "base_xy": [
+              705,
+              598
+            ],
+            "patch_score": 0.8053,
+            "residual_px": 2.715
+          },
+          {
+            "source_xy": [
+              1542,
+              369
+            ],
+            "base_xy": [
+              979,
+              602
+            ],
+            "patch_score": 0.715,
+            "residual_px": 2.1949
+          },
+          {
+            "source_xy": [
+              1806,
+              369
+            ],
+            "base_xy": [
+              1245,
+              614
+            ],
+            "patch_score": 0.885,
+            "residual_px": 12.4712
+          },
+          {
+            "source_xy": [
+              1146,
+              481
+            ],
+            "base_xy": [
+              565,
+              714
+            ],
+            "patch_score": 0.819,
+            "residual_px": 1.2282
+          },
+          {
+            "source_xy": [
+              1410,
+              481
+            ],
+            "base_xy": [
+              841,
+              717
+            ],
+            "patch_score": 0.8526,
+            "residual_px": 2.4791
+          },
+          {
+            "source_xy": [
+              1014,
+              593
+            ],
+            "base_xy": [
+              426,
+              832
+            ],
+            "patch_score": 0.867,
+            "residual_px": 1.5704
+          },
+          {
+            "source_xy": [
+              1278,
+              593
+            ],
+            "base_xy": [
+              703,
+              834
+            ],
+            "patch_score": 0.8442,
+            "residual_px": 3.2121
+          },
+          {
+            "source_xy": [
+              1806,
+              593
+            ],
+            "base_xy": [
+              1248,
+              838
+            ],
+            "patch_score": 0.699,
+            "residual_px": 1.4404
+          },
+          {
+            "source_xy": [
+              882,
+              705
+            ],
+            "base_xy": [
+              287,
+              949
+            ],
+            "patch_score": 0.832,
+            "residual_px": 2.7482
+          },
+          {
+            "source_xy": [
+              1938,
+              705
+            ],
+            "base_xy": [
+              1382,
+              956
+            ],
+            "patch_score": 0.779,
+            "residual_px": 3.3014
+          },
+          {
+            "source_xy": [
+              750,
+              817
+            ],
+            "base_xy": [
+              149,
+              1062
+            ],
+            "patch_score": 0.772,
+            "residual_px": 0.3413
+          },
+          {
+            "source_xy": [
+              1014,
+              817
+            ],
+            "base_xy": [
+              425,
+              1066
+            ],
+            "patch_score": 0.9364,
+            "residual_px": 2.5641
+          },
+          {
+            "source_xy": [
+              1542,
+              817
+            ],
+            "base_xy": [
+              973,
+              1068
+            ],
+            "patch_score": 0.9013,
+            "residual_px": 0.9992
+          },
+          {
+            "source_xy": [
+              1806,
+              817
+            ],
+            "base_xy": [
+              1239,
+              1068
+            ],
+            "patch_score": 0.9053,
+            "residual_px": 8.1824
+          },
+          {
+            "source_xy": [
+              882,
+              929
+            ],
+            "base_xy": [
+              275,
+              1183
+            ],
+            "patch_score": 0.7407,
+            "residual_px": 10.1801
+          },
+          {
+            "source_xy": [
+              1146,
+              929
+            ],
+            "base_xy": [
+              561,
+              1182
+            ],
+            "patch_score": 0.8765,
+            "residual_px": 1.7792
+          },
+          {
+            "source_xy": [
+              1674,
+              929
+            ],
+            "base_xy": [
+              1105,
+              1184
+            ],
+            "patch_score": 0.8653,
+            "residual_px": 4.1191
+          },
+          {
+            "source_xy": [
+              1938,
+              929
+            ],
+            "base_xy": [
+              1378,
+              1186
+            ],
+            "patch_score": 0.701,
+            "residual_px": 5.4815
+          }
+        ],
+        "fit_rms_px": 2.7202,
+        "held_out_rms_px": 4.5227,
+        "held_out_max_px": 12.4712,
+        "rejected_fit_points": []
+      }
+    }
+  ]
+}
