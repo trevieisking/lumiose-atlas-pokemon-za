@@ -1,0 +1,220 @@
+{
+  "id": "ATLAS-CROSS-GRID-DOCS-ONLY-RELEASE-FINALIZATION",
+  "recorded_at": "2026-11-26T20:14:02.879224+00:00",
+  "runtime_merge_commit": "9e27f81c89727274a25555bf190605afc870995f",
+  "runtime_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+  "manifest_revision": 97,
+  "ledger_revision": 105,
+  "scope": "Release documentation and one Pages QA-directory exclusion; no application runtime, tests, workflows, source-image, Git-ref, database or Site changes.",
+  "protected_sealed_file_sha256": {
+    "WORKSPACE_MAP2_RELEASE_PROMPT.md": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea",
+    "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md": "21a163784ef55b3a6d0cbf37791f8b034e3e1824a393aee0b0cfdbe3550c9562",
+    "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json": "750539ff2f13540b66d8d261394b8da496a67668d0be5d921f83c7c4009d6e8a",
+    "docs/consolidation/2026-11-26/requirements.json": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+    "maps/lumiose-game-map.jpg": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "atlas-explorer-data.json": "ca584c71793d658d349db697eef26279917c944d2f7f4f7b2a0153979044b57a",
+    "atlas-collectibles-data.json": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc"
+  },
+  "released_runtime_file_sha256": {
+    "atlas-explorer.html": "c8638ede64c8b3d144940a3fa92a9f509dc8f5090a8d708c6057083bff0fecbb",
+    "atlas-explorer.js": "24c37d4691c6e8f2c2a686846c99c87491e68c91348da4b9747089732964714f",
+    "atlas-explorer.css": "41f5373021f96272e7932515f643bafa245cb49829f1943b0813c8cc3b235f37",
+    "atlas-explorer-geometry.mjs": "0d83e1fa04fbca00a6761dbbbecc32555dd9618617aad30028a3528b3dde0b69",
+    "atlas-cross-grid.mjs": "aa79564d644c70488d7282d2638e977f38a6c67aff337beb0f54436ec250412a",
+    "atlas-cross-grid-ui.mjs": "adca497d4392b9cd3d7d176f9f8bdee8830035db911c0e78a273580bdb9e118d",
+    "atlas-cross-grid.json": "f4e851f22e52ca9aec6889221bda0ea762fbd185404a00b1a62952bae7dcb2e5",
+    "atlas-explorer-data.json": "ca584c71793d658d349db697eef26279917c944d2f7f4f7b2a0153979044b57a",
+    "maps/lumiose-game-map.jpg": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+  },
+  "immutable_candidate_files_sha256": {
+    "docs/qa/atlas-cross-grid-2026-11-26/PRESERVATION_REVIEW.json": "c376cd255c6f7c7dace627ca7d68f0cd92458bccfa1e6d3adb71281e7547388e",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-grid-registration.json": "aa92337f37ec4fd039bbd40d64fe846da9946395ca6136d8795b21e78408a588",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-grid-replay-result.json": "09f0337eb24887b0542ba10c5b2d00a05d4f120dda7b6cf9536d3301b407b294",
+    "docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json": "2e385a2ff73adf100cdd6dea03e643db9e8d80c2db57433fb1d25c8bd688322b",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-grid-evidence-overlay.jpg": "b36b53cf55b55b90a7766e82e925444ba6d689f48da2c4ffbe195845855a97b3",
+    "docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json": "b6b1e577b5684c04574645d7b2aa82d977a099612bc0eb7a55ae0592d6adc2b1",
+    "docs/qa/atlas-cross-grid-2026-11-26/replay_native_grid_calibration.py": "9f4e0454671b6a3fde140d559091a8f77316568c328a8cd9110af7fa90c7c5d1",
+    "docs/qa/atlas-cross-grid-2026-11-26/independent-calibration-review.json": "ddff710b587261a6e63cd7e2635a389d3478d40c46f2dfafbd57e07eb712e158",
+    "docs/qa/atlas-cross-grid-2026-11-26/UNIT_TESTS.txt": "bd53bdaca6cf52ed7200f01b2448dd40f20db18b24dc565deeeccfe4795f978f",
+    "docs/qa/atlas-cross-grid-2026-11-26/REQUEST_AND_HANDOFF.md": "b3717382968003c2f0de771eec742759ba5a22c7d2aade75e2d380452cf57825",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-grid-calibration.json": "e43205f384439a0f2eddc9c3bae1e5e92a285e30ebd0156be76a1e6e13649231",
+    "docs/qa/atlas-cross-grid-2026-11-26/ARCHIVE_REMOTE_PROVENANCE.json": "3efbe2cf53145770621e65f3ba653bf6319b171caf824769d8f401de59fb45b1",
+    "docs/qa/atlas-cross-grid-2026-11-26/LOCAL_VALIDATION.json": "cd4eb0681bb6fe2533aefa59f5ac49cf9dd3538c3f0cb06ff901ffee0d45ead9",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-interior-candidates.jpg": "bf7ef8c3793a8951c7eb9c5957d24e4bc6aeebab0fcc6126878896449c3990e3",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-edge-candidates.jpg": "8dd179cb651556efc9d45e7adb9f7eb9b3f48bf01f30367e8097f32a34f11859",
+    "docs/qa/atlas-cross-grid-2026-11-26/native-grid-cross-crops.jpg": "060507ea9c50c3fc0864565f33bc964e372eb3d4bef8c39da2119d997900ed21",
+    "docs/qa/atlas-cross-grid-2026-11-26/NATIVE_GRID_EVIDENCE.md": "56959bddcf0c07c76a88e5a03776394480a25172bcdc772b6f57bb347b877e9d"
+  },
+  "original_requirement_mapping_and_phase_release_snapshots_preserved": true,
+  "candidate_state_preserved": "docs/qa/atlas-cross-grid-release-2026-11-26/CANDIDATE_STATE.json",
+  "generated_docs": [
+    {
+      "path": "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "sha256": "58f869482e5966c4f5ad5b72ed7214189b23f91c4056d77ea395a8b6561b13d0"
+    },
+    {
+      "path": "ATLAS_RELEASE_HANDOFF.md",
+      "sha256": "5e074081f8b3270e5fd577d7bb1b0d5ae24272739514366fcc357de06af5ed08"
+    },
+    {
+      "path": "FINAL_WORKSPACE_PLAN.md",
+      "sha256": "92de3026437b5a34b9f3b8faf85d6279dd29beb2f24dfd9a5decc33019648844"
+    },
+    {
+      "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "sha256": "5af710e2d65bd2f1b42b27de50c9cf8062537966040d46a49fb1be30b94b7055"
+    },
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json",
+      "sha256": "32563e9640b5bcdb8b50b3ef0259c9a3137f65a932b74cd5a5b869fa5cdc0162"
+    },
+    {
+      "path": "WORKSPACE_ACCESS_HANDOFF.md",
+      "sha256": "3ec698ef2c2f61e464f2acbe5a626974baf2139c4d5d4aa4863f02a5fa6fc7da"
+    },
+    {
+      "path": "_config.yml",
+      "sha256": "221a40830591f60e6787a135f278f32835c827822cafba96ed2f27f7474cb665"
+    },
+    {
+      "path": "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md",
+      "sha256": "81d0ac4c58f5fc56c5cd748ed64958a24b0b7b133725098b20ed4b3c04dfe01f"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
+      "sha256": "58c4ce4fcec1c39ffa35e1347d20789b15142897a0a52bddb8b06bd11f955dbc"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "sha256": "a50bde153f1ba3a7bd45cd47203690b25acf2b6daab2791fa9e49a1a4df57c9f"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json",
+      "sha256": "8541a8232822fea4e244462c60c71dae8c87d45db258195096081dce3eb525d6"
+    },
+    {
+      "path": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
+      "sha256": "1e815c81b61a045f4e6e5df4a1923330ace9293f74a22a35279417cc04dd6179"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/CANDIDATE_STATE.json",
+      "sha256": "d69c990b442316ed72cdeb921a963ddb7f03e1b3b374483d86509e7255ec5837"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/CHECKPOINT.json",
+      "sha256": "8f2b7bf10f790815dad1a740101878124493c56129b03668c42d108d74378590"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/CI_PROOF.json",
+      "sha256": "5237babbcc34052f06b7587bb0bd328eee8f672ee59bd53944648a24a0958478"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/DEPLOYMENT_PROOF.json",
+      "sha256": "8f5eeb0f1bb3645e192e2e55cff1df41942b54775ade58232af7048feb4a40c9"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/GRID_BROWSER_PROOF.json",
+      "sha256": "fdb971eb676f4b4ae823d69b79ced79940150f8b7e7a8cd49d9c90f6704f2cb5"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/LIVE_ASSET_HASHES.json",
+      "sha256": "a9e29b875f2163533706ea0ac62f5a98133b0d0e67a7e89e22579e046f4c5592"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/LIVE_VERIFICATION.json",
+      "sha256": "733168c6065dcbaedd50f1b8cec1ada0ce19afb8902ecf127fc8e6cdcc0e1878"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/PAGES_VISUAL_REVIEW.json",
+      "sha256": "0f9bb49723f3a7a64443aaed505733e058a7aea7aacdd47b9fe49015814b1b8d"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json",
+      "sha256": "c1fff3e92e4984e56d1c392d900885a5f240de9accc656d18fe081fc18c569c6"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/REQUEST_AND_HANDOFF.md",
+      "sha256": "baef4147a4dc77510e328cb4253c1a2b4ef3bf6f99f0a558e75189cd8718fb04"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/TRACKER_RELEASE_RECEIPT.json",
+      "sha256": "85be18619bca451cd83f3018088a7a2f1249ca0eadffe4a6a9fd3ee01dda9750"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/VISUAL_REVIEW.json",
+      "sha256": "7a308001d08b99c7bef45721a66a156975865d32ba5f5d2e14844244d027eb54"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/WORKSPACE_CROSS_GRID_RELEASE_PROMPT.md",
+      "sha256": "5ccf77cc00209a18ac470cad279f5c56613db111f6f03eebe3021ca1b04c7922"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-cross-grid-edge.png",
+      "sha256": "f9b64119b8937593a96d4d84ea6ec2dbf469ae3d3013a6f8fac60a3c9ccd06ce"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-cross-grid-i9.png",
+      "sha256": "0c284ffc89fa368e1490817760113b20fee72244cf7a4e992bc7ac8ad3b5e5b9"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-rotated-extreme-pan.png",
+      "sha256": "f85126a136f75ff9320324b91af6037930fd3e4f02250bd04c8ccc90fef92062"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-cross-grid-edge.png",
+      "sha256": "1f77a4267be5697dca6034789f2165b15aacb15641773651d43c58332058f658"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-cross-grid-i9.png",
+      "sha256": "07c20a0511a4f62092257fd32425a86761e9a216eebc4d81cd40d475718f013d"
+    },
+    {
+      "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-rotated-extreme-pan.png",
+      "sha256": "346c086f6ac635ac989f4c9c8f87ce639b273449343444b6202967d44b86cfe8"
+    }
+  ],
+  "release_evidence_input_sha256": "bf5d3ffc49b0de15766cae614b225d86d2a042479cf86f2a48dce7f69621ab87",
+  "original_workspace_published": false,
+  "automatic_followup_CI_not_bypassed": true,
+  "release_packet_Pages_exclusion": {
+    "path": "_config.yml",
+    "added_unquoted_exclusion": "docs/qa/atlas-cross-grid-release-2026-11-26",
+    "before_sha256": "2c0afcde85f1aa43fa880e0696afddde647137c7c2caddbc6b4909ff282b0805",
+    "after_sha256": "221a40830591f60e6787a135f278f32835c827822cafba96ed2f27f7474cb665",
+    "all_previous_bytes_and_exclusions_preserved": true,
+    "preserved_quoted_exclusion_count": 8,
+    "preserved_quoted_exclusions": [
+      "  - 'docs/qa/SIDE_MISSIONS_121_140_SOURCE_AUDIT_2026-11-21.md'",
+      "  - 'docs/consolidation/2026-11-26/PULL_REQUEST_LEDGER.md'",
+      "  - 'docs/consolidation/2026-11-26/branch-sources/pr-186/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md'",
+      "  - 'ATLAS_DUAL_SITE_FIX_LEDGER.md'",
+      "  - 'docs/consolidation/2026-11-26/branch-sources/pr-001/docs/qa/SITEWIDE_AUDIT_2026-11-21.md'",
+      "  - 'docs/qa/ATLAS_AT314_BUDDYVIDZ_VIDEO_GUIDE.md'",
+      "  - 'MAPS_SECTOR_UPGRADE_MASTER_PLAN.md'",
+      "  - 'docs/qa/at343-owner-item-crosses/full-frame-2026-11-26'"
+    ],
+    "followup_Pages_CI_expected_and_required": true
+  },
+  "tracker_release_note_update": {
+    "status": "verified_guarded_update_and_fresh_readback",
+    "manifest_revision": 97,
+    "ledger_revision": 105,
+    "row_count": 48,
+    "appended_note_count": 2,
+    "guard_passed": true,
+    "all_48_existing_rows_and_business_fields_preserved": true,
+    "prior_notes_statuses_release_proofs_and_all_Workspace_fields_preserved": true,
+    "executed_at": "2026-11-26T20:13:04.127216+00:00",
+    "readback_at": "2026-11-26 20:13:30.591286+00",
+    "snapshot_after_md5": "030797e84adb56ad1438534570f2a1e9",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "receipt": "docs/qa/atlas-cross-grid-release-2026-11-26/TRACKER_RELEASE_RECEIPT.json",
+    "receipt_sha256": "85be18619bca451cd83f3018088a7a2f1249ca0eadffe4a6a9fd3ee01dda9750"
+  },
+  "database_writes_performed_by_this_script": false
+}

@@ -1,0 +1,363 @@
+{
+  "runtime_head": "473068ac10b2025ec31f78144f0002c1bd63976d",
+  "runtime_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+  "runs": [
+    {
+      "id": 45888011639,
+      "name": "Validate rotatable Lumiose Atlas Explorer",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d",
+      "head_branch": "feat/atlas-cross-grid-recovery-20261126",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 168,
+      "run_attempt": 1,
+      "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888011639",
+      "created_at": "2026-11-26T20:01:55Z",
+      "updated_at": "2026-11-26T20:07:14Z"
+    },
+    {
+      "id": 45888011506,
+      "name": "Validate photo-only GitHub Pages output",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d",
+      "head_branch": "feat/atlas-cross-grid-recovery-20261126",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 6,
+      "run_attempt": 1,
+      "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888011506",
+      "created_at": "2026-11-26T20:01:55Z",
+      "updated_at": "2026-11-26T20:02:27Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 140143444481,
+      "name": "atlas-areas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45888011639,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency, without changing package files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Confirm system Chrome is available for offline-style browser smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify shared habitats, all map views and original progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Attach shared-area screenshot and failure diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "id": 140143444861,
+      "name": "atlas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45888011639,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency, without changing package files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Confirm system Chrome is available for offline-style browser smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify real map and stepwise routes on desktop and phone",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify compact layers with isolated dense fixtures and unchanged player progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify optional cross grid, rotated edge panning and preserved map controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify all 20 Wild Zone photo panels and four map surfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Attach screenshot QA evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 140143444872,
+      "name": "atlas-unit",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45888011639,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Syntax-check isolated map modules",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check source counts, actual photos and rotation/floor-route evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify native cross-grid calibration contract and bounded references",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Gate collectible coordinates, original identities and read-only progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify owner overview source bytes and keep research out of live geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify original Wild Zone photo pairs and roster parity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Validate shared areas, habitat classes and boundary evidence gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Verify attributed sector reconciliation and preservation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Keep all 20 DLC deep links valid and all 14 original mission steps unchanged",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Reject broken local guide anchors and raw Markdown destinations across every page",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Validate native coverage destination and original 25-link menu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Protect existing guide, checkmarks and map references",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Verify all recovered original sector photographs and historical source bytes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": 140143444872,
+      "name": "atlas-unit",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d"
+    },
+    {
+      "id": 140143444861,
+      "name": "atlas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d"
+    },
+    {
+      "id": 140143444481,
+      "name": "atlas-areas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d"
+    },
+    {
+      "id": 140143443862,
+      "name": "pages-content",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 15151045100,
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "sha256": "2f06632a61f1ec1e656ecb3f6d30be934c200d0cec4054d562af3ded97414519"
+    },
+    {
+      "id": 15150935645,
+      "name": "atlas-areas-mobile-desktop-preview",
+      "sha256": "ab5c4072646ed3763aad8daf74e9f65f00a6d4853a278a2e22914d060af65ca8"
+    },
+    {
+      "id": 15150875171,
+      "name": "atlas-pages-archive-phone-desktop",
+      "sha256": "a1918fe09ef9c9e560e4894eb1bd2c4e8bd227582a32fff7e1176feb71f3e804"
+    }
+  ]
+}

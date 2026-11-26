@@ -1,0 +1,51 @@
+{
+  "id": "ATLAS-CROSS-GRID-TRACKER-RELEASE-NOTES",
+  "status": "verified_guarded_update_and_fresh_readback",
+  "manifest_revision": 97,
+  "ledger_revision": 105,
+  "preflight": {
+    "read_at": "2026-11-26T20:12:32.315464+00:00",
+    "row_count": 48,
+    "snapshot_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2"
+  },
+  "execution": {
+    "row_count": 48,
+    "executed_at": "2026-11-26T20:13:04.127216+00:00",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "guard_passed": true,
+    "rows_updated": 2,
+    "snapshot_md5": "030797e84adb56ad1438534570f2a1e9",
+    "note_rows_changed": 2,
+    "all_other_notes_preserved": true,
+    "all_business_fields_preserved": true,
+    "all_prior_note_prefixes_preserved": true
+  },
+  "readback": {
+    "readback_at": "2026-11-26 20:13:30.591286+00",
+    "row_count": 48,
+    "min_revision": 97,
+    "max_revision": 97,
+    "snapshot_md5": "030797e84adb56ad1438534570f2a1e9",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "release_notes_present": true
+  },
+  "scope": "Append two release notes and update their timestamps in the existing private Atlas tracker. Preserve manifest97, all48 rows, all prior notes and all statuses, release fields and Workspace fields.",
+  "changed_field_counts": {
+    "verification_note": 2,
+    "updated_at": 2
+  },
+  "new_rows": 0,
+  "deleted_rows": 0,
+  "schema_or_player_or_feedback_changes": false,
+  "new_notes": {
+    "AT-300-MAP-DETAIL-CLARITY": "[Released source archive and map grid — 2026-11-26; Manifest97/Ledger105] PR212 is merged at9e27f81c89727274a25555bf190605afc870995f with exact reviewed treeeb53180daca2eeed013e1cef99b615b63e264894. All26 supplied JPEG originals (43,603,649bytes) are now retained in main:8 reused and18 restored from the existing GitHub archive.60 preservation checks pass; all933 existing image blobs and protected guides/data/progress/feedback remain unchanged. Exact-head Explorer CI45888011639 and Pages-build validation45888011506 succeeded; six newgrid phone/desktop screenshots were independently reviewed with no blocking render defect. Matching Pages deployment45888982903 succeeded. Nine live runtime/data/map files match the released bytes; live controls and HotelZ's three-photo panel were checked. Evidence: https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/212 and https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888982903 . Original Workspace remains unchanged and requires its separate scoped import/preview; all-city source seam completeness and broader master-plan duties are not marked complete.",
+    "AT-332-ITEM-COORDINATE-SOURCES": "[Released native reference grid — 2026-11-26; Manifest97/Ledger105] Optional atlas-native-cross-grid-v1 is live in PR212 merge9e27f81c89727274a25555bf190605afc870995f, reviewed head473068ac10b2025ec31f78144f0002c1bd63976d/treeeb53180daca2eeed013e1cef99b615b63e264894. A1–R18 references, fractions, versioned copied links, sharp labels and bounded diagonal panning passed134 local unit tests and exact-head phone/desktop browser CI. Phone checks use Chromium touch emulation, not a physical handset. Both device proofs report zero storage writes, preserved IDs, valid edge probes and working original maps during isolated grid failures. Live I9 25%east75%south survives rotation/north reset and URL reload; clippedR18 and its dashed-extension explanation were checked. Native calibration limits remain those in independent-calibration-review.json: sampled crossings only, no universal citywide bound; central-photo fits apply within their validated control hulls. No new exact item/structure/Hyperspace pins and no feet/metres/counted-step conversion from60. Existing marker accuracy and original Workspace status remain unchanged. Evidence: https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888011639 ."
+  },
+  "private_prior_row_contents_omitted": true
+}

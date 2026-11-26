@@ -1,0 +1,53 @@
+{
+  "review": "Independent visual inspection of supplied Pages CI map screenshots",
+  "date": "2026-11-26",
+  "reviewer": "map_source_audit",
+  "provided_ci_context": {
+    "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d",
+    "tree_sha": "eb53180daca2eeed013e1cef99b615b63e264894",
+    "run_id": "45888011506",
+    "job_id": "140143443862",
+    "job_name": "pages-content",
+    "job_pass_reported_by_parent": true,
+    "ci_status_independently_queried": false
+  },
+  "screenshots": [
+    {
+      "file": "phone-map.png",
+      "sha256": "b7248b638c29dedc296dde800d9124ed1493ff4a3fc36552b57e2104e9384150",
+      "dimensions": [
+        343,
+        478
+      ]
+    },
+    {
+      "file": "desktop-map.png",
+      "sha256": "8b1637bb97352862c41147363e909229821ff2513ab6e23eb19ddde3fbc4fa78",
+      "dimensions": [
+        837,
+        568
+      ]
+    }
+  ],
+  "conclusion": "Rendered map, marker layers, compass and instruction hint are present and contained in both supplied map-viewport crops. No blank map, broken-image placeholder or obvious clipped compass/hint is visible. Phone fit-all marker density remains a readability limitation.",
+  "observations": {
+    "phone": [
+      "Native circular city image is loaded and fits within the viewport.",
+      "Compass is fully visible at top right and the bottom instruction hint is fully visible.",
+      "At this whole-city zoom, many large marker circles overlap one another and obscure portions of zone numbers and underlying map detail. This screenshot cannot establish how legibility changes after zooming or filtering."
+    ],
+    "desktop": [
+      "City image is centred with surrounding space and occupies most viewport height.",
+      "Zone circles and transport markers are generally more separated than in the phone crop; some overlap and obscured map detail remain.",
+      "Compass and bottom instruction hint are contained and readable."
+    ]
+  },
+  "limits": [
+    "Supplied images are map-viewport crops; page-level horizontal overflow, surrounding navigation and layouts are not visible.",
+    "No before-change screenshot was supplied, so visual preservation against a baseline is not independently established by this review.",
+    "Static screenshots cannot verify pinch/drag/rotation, keyboard controls, filters, marker popups, persistence, Supabase connections or coordinate accuracy.",
+    "No newly toggled cross-grid overlay or coordinate panel is visible in these two screenshots; their rendering requires the later screenshots."
+  ],
+  "blocking_render_defect_observed": false,
+  "functional_approval": false
+}

@@ -1,0 +1,234 @@
+{
+  "review_kind": "Independent visual review of six saved CI browser screenshots",
+  "reviewed_utc": "2026-11-26T20:09:42.501465+00:00",
+  "reviewer": "map_source_audit",
+  "result": "PASS_WITH_OBSERVED_LIMITS",
+  "blocking_render_defect_observed": false,
+  "repository_mutated": false,
+  "scope": "Appearance and readability in saved screenshot states only; automated proof is recorded separately.",
+  "parent_reported_ci": {
+    "head": "473068ac10b2025ec31f78144f0002c1bd63976d",
+    "all_ci": "PASS",
+    "independently_fetched_ci_status": false
+  },
+  "local_review_context": {
+    "head": "473068ac10b2025ec31f78144f0002c1bd63976d",
+    "tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+    "test_harness": "tests/atlas_cross_grid_browser.mjs",
+    "test_harness_sha256": "df167bf157ff940fa8aadd9df0cd73700f931dd86f12db819f0c2dda5b8f6d64"
+  },
+  "artifact_proof": {
+    "filename": "proof.json",
+    "sha256": "fdb971eb676f4b4ae823d69b79ced79940150f8b7e7a8cd49d9c90f6704f2cb5",
+    "reported_result": "PASS"
+  },
+  "capture_method": {
+    "source": "Reviewed tests/atlas_cross_grid_browser.mjs and proof.json.",
+    "browser": "Playwright Chromium, headless; Chrome channel unless ATLAS_CHROME_EXECUTABLE overrides executable.",
+    "page": "Locally served atlas-explorer.html in CI at http://127.0.0.1:18771.",
+    "screenshots": "Viewport screenshots, not full page.",
+    "phone": {
+      "viewport_css_px": [
+        393,
+        852
+      ],
+      "device_scale_factor": 1,
+      "is_mobile": true,
+      "has_touch": true,
+      "gesture_method": "CDP Input.dispatchTouchEvent with two touch points"
+    },
+    "desktop": {
+      "viewport_css_px": [
+        1280,
+        900
+      ],
+      "device_scale_factor": 1,
+      "is_mobile": false,
+      "has_touch": false,
+      "gesture_method": "Playwright mouse drag and wheel"
+    },
+    "extreme_pan": "Test sets 6x zoom and 45 degrees clockwise, then presses ArrowLeft and ArrowUp 75 times each.",
+    "physical_device_testing": false,
+    "browser_brand_version_not_recorded_in_proof": true
+  },
+  "screenshots": [
+    {
+      "filename": "phone-cross-grid-i9.png",
+      "sha256": "07c20a0511a4f62092257fd32425a86761e9a216eebc4d81cd40d475718f013d",
+      "dimensions_px": [
+        393,
+        852
+      ],
+      "visually_viewed": true
+    },
+    {
+      "filename": "phone-cross-grid-edge.png",
+      "sha256": "1f77a4267be5697dca6034789f2165b15aacb15641773651d43c58332058f658",
+      "dimensions_px": [
+        393,
+        852
+      ],
+      "visually_viewed": true
+    },
+    {
+      "filename": "phone-rotated-extreme-pan.png",
+      "sha256": "346c086f6ac635ac989f4c9c8f87ce639b273449343444b6202967d44b86cfe8",
+      "dimensions_px": [
+        393,
+        852
+      ],
+      "visually_viewed": true
+    },
+    {
+      "filename": "desktop-cross-grid-i9.png",
+      "sha256": "0c284ffc89fa368e1490817760113b20fee72244cf7a4e992bc7ac8ad3b5e5b9",
+      "dimensions_px": [
+        1280,
+        900
+      ],
+      "visually_viewed": true
+    },
+    {
+      "filename": "desktop-cross-grid-edge.png",
+      "sha256": "f9b64119b8937593a96d4d84ea6ec2dbf469ae3d3013a6f8fac60a3c9ccd06ce",
+      "dimensions_px": [
+        1280,
+        900
+      ],
+      "visually_viewed": true
+    },
+    {
+      "filename": "desktop-rotated-extreme-pan.png",
+      "sha256": "f85126a136f75ff9320324b91af6037930fd3e4f02250bd04c8ccc90fef92062",
+      "dimensions_px": [
+        1280,
+        900
+      ],
+      "visually_viewed": true
+    }
+  ],
+  "visual_observations": [
+    {
+      "state": "I9, phone and desktop",
+      "observed": [
+        "Selected orange cell is coherent with the surrounding rendered grid and central crosshair.",
+        "Readout visibly says I9, 50% east, 50% south.",
+        "Neighbouring cell labels and compass are legible; desktop selected cell subdivisions are visible.",
+        "Native central city imagery is visible beneath the overlay."
+      ],
+      "limits": [
+        "Selected cell label is partly overlapped by the centre crosshair; the separate readout remains clear.",
+        "The underlying map is raster imagery and becomes visibly blurred at this zoom.",
+        "The screenshots alone do not resolve all faint source crosses sufficiently for independent subpixel calibration."
+      ]
+    },
+    {
+      "state": "Clipped R18 edge, phone and desktop",
+      "observed": [
+        "Orange selected region and probe are visibly within the map viewport at the clipped bottom-right edge.",
+        "Readout visibly says R18, 21% east, 18% south.",
+        "Partial rightmost column and bottom row are visibly narrower than complete cells.",
+        "Lower extension grid lines appear dashed; the map ends below and to the right of the selected partial region."
+      ],
+      "limits": [
+        "The crosshair overlaps part of the selected R18 label; separate readout is readable.",
+        "The Edge extension confidence text is outside these captured viewport portions, so its readability is not visually verified here."
+      ]
+    },
+    {
+      "state": "45-degree extreme diagonal pan, phone and desktop",
+      "observed": [
+        "A diagonal strip of map and overlay remains visible at the lower right; the viewport is not entirely empty.",
+        "Most of the viewport is background at this deliberately extreme pan.",
+        "Compass is rotated and the position readout visibly says 45 degrees clockwise.",
+        "The coordinate readout says to move the centre cross onto the grid."
+      ],
+      "limits": [
+        "The capture demonstrates remaining intersection, not a comfortably centred city view.",
+        "The screenshots do not independently prove recovery gestures or continuous camera behaviour."
+      ]
+    },
+    {
+      "state": "Surrounding visible page",
+      "observed": [
+        "Phone reference text wraps within its panel without visible horizontal overflow.",
+        "Desktop side panel controls and reference readout remain contained and readable.",
+        "Compass and bottom drag/zoom instruction remain visible.",
+        "Partial neighbouring grid labels at map-viewport boundaries are clipped with the map content."
+      ],
+      "limits": [
+        "These are scrolled viewport captures; content above and below is not reviewed.",
+        "No baseline screenshot comparison was available for unchanged appearance assertions."
+      ]
+    }
+  ],
+  "automated_results_separate_from_visual_review": {
+    "source": "proof.json produced by test harness; these claims were not established by static visual inspection.",
+    "devices": [
+      {
+        "name": "phone",
+        "width": 393,
+        "height": 852,
+        "mobile": true,
+        "rotatedExtremeVisibleArea": 16870.38201089736,
+        "gridDefaultOff": true,
+        "edgeTargetVerified": true,
+        "gestureVerified": true,
+        "originalIdsPreserved": true,
+        "storageWrites": 0
+      },
+      {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900,
+        "mobile": false,
+        "rotatedExtremeVisibleArea": 16844.999407048163,
+        "gridDefaultOff": true,
+        "edgeTargetVerified": true,
+        "gestureVerified": true,
+        "originalIdsPreserved": true,
+        "storageWrites": 0
+      }
+    ],
+    "failure_cases": [
+      {
+        "device": "phone",
+        "failure": "http-error",
+        "originalMapOperational": true,
+        "storageWrites": 0
+      },
+      {
+        "device": "phone",
+        "failure": "invalid-grid",
+        "originalMapOperational": true,
+        "storageWrites": 0
+      },
+      {
+        "device": "desktop",
+        "failure": "http-error",
+        "originalMapOperational": true,
+        "storageWrites": 0
+      },
+      {
+        "device": "desktop",
+        "failure": "invalid-grid",
+        "originalMapOperational": true,
+        "storageWrites": 0
+      }
+    ],
+    "reviewed_harness_assertions": [
+      "Grid polygon follows actual rendered map to less than 1 CSS pixel in checked states, including rotation.",
+      "No horizontal page overflow after the interaction sequences.",
+      "Clipped edge target and selected-edge-point probe are visible.",
+      "Original IDs, immutable pin attributes and fixture storage values are preserved.",
+      "Grid availability failure fixtures leave original map operational."
+    ]
+  },
+  "observed_blockers": [],
+  "nonblocking_observations": [
+    "Centre crosshair overlaps selected cell text; separate reference readout supplies the same coordinate.",
+    "High zoom exposes raster-image blur.",
+    "Extreme camera clamp retains a small map strip while allowing most of the viewport to show background."
+  ],
+  "approval_scope": "Visual gate only. This report does not independently approve deployment, calibrate physical distances, validate real-device touch behaviour, or establish Supabase behaviour."
+}

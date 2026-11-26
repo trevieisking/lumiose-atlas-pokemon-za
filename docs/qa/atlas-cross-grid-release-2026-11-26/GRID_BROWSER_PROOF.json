@@ -1,0 +1,56 @@
+{
+  "scope": "Optional native cross grid and rotated camera regression",
+  "devices": [
+    {
+      "name": "phone",
+      "width": 393,
+      "height": 852,
+      "mobile": true,
+      "rotatedExtremeVisibleArea": 16870.38201089736,
+      "gridDefaultOff": true,
+      "edgeTargetVerified": true,
+      "gestureVerified": true,
+      "originalIdsPreserved": true,
+      "storageWrites": 0
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "mobile": false,
+      "rotatedExtremeVisibleArea": 16844.999407048163,
+      "gridDefaultOff": true,
+      "edgeTargetVerified": true,
+      "gestureVerified": true,
+      "originalIdsPreserved": true,
+      "storageWrites": 0
+    }
+  ],
+  "failureCases": [
+    {
+      "device": "phone",
+      "failure": "http-error",
+      "originalMapOperational": true,
+      "storageWrites": 0
+    },
+    {
+      "device": "phone",
+      "failure": "invalid-grid",
+      "originalMapOperational": true,
+      "storageWrites": 0
+    },
+    {
+      "device": "desktop",
+      "failure": "http-error",
+      "originalMapOperational": true,
+      "storageWrites": 0
+    },
+    {
+      "device": "desktop",
+      "failure": "invalid-grid",
+      "originalMapOperational": true,
+      "storageWrites": 0
+    }
+  ],
+  "result": "PASS"
+}

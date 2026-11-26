@@ -1,0 +1,222 @@
+{
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "runtime": {
+    "pull_request": 212,
+    "branch": "feat/atlas-cross-grid-recovery-20261126",
+    "reviewed_head": "473068ac10b2025ec31f78144f0002c1bd63976d",
+    "reviewed_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+    "merged": true,
+    "merge_commit": "9e27f81c89727274a25555bf190605afc870995f",
+    "merge_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+    "merged_at": "2026-11-26T20:09:41Z"
+  },
+  "ci": {
+    "all_required_checks_passed": true,
+    "required_workflow_names": [
+      "Validate rotatable Lumiose Atlas Explorer",
+      "Validate photo-only GitHub Pages output"
+    ],
+    "runs": [
+      {
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "run_id": 45888011639,
+        "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888011639"
+      },
+      {
+        "name": "Validate photo-only GitHub Pages output",
+        "run_id": 45888011506,
+        "head_sha": "473068ac10b2025ec31f78144f0002c1bd63976d",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888011506",
+        "artifact_id": 15150875171,
+        "artifact_sha256": "a1918fe09ef9c9e560e4894eb1bd2c4e8bd227582a32fff7e1176feb71f3e804"
+      }
+    ],
+    "evidence_files": [
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/CI_PROOF.json",
+        "sha256": "5237babbcc34052f06b7587bb0bd328eee8f672ee59bd53944648a24a0958478",
+        "kind": "report"
+      },
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/GRID_BROWSER_PROOF.json",
+        "sha256": "fdb971eb676f4b4ae823d69b79ced79940150f8b7e7a8cd49d9c90f6704f2cb5",
+        "kind": "report"
+      },
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/PAGES_VISUAL_REVIEW.json",
+        "sha256": "0f9bb49723f3a7a64443aaed505733e058a7aea7aacdd47b9fe49015814b1b8d",
+        "kind": "report"
+      }
+    ]
+  },
+  "qa": {
+    "desktop": {
+      "status": "pass",
+      "reviewed_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+      "screenshots_reviewed": true,
+      "screenshot_count": 3,
+      "method": "GitHub Actions headless Chromium desktop1280x900CSSpx with mouse/wheel input and independent saved-screenshot review; additional managed-preview CUA desktop checks.",
+      "evidence_files": [
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-cross-grid-i9.png",
+          "sha256": "0c284ffc89fa368e1490817760113b20fee72244cf7a4e992bc7ac8ad3b5e5b9",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-cross-grid-edge.png",
+          "sha256": "f9b64119b8937593a96d4d84ea6ec2dbf469ae3d3013a6f8fac60a3c9ccd06ce",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/desktop-rotated-extreme-pan.png",
+          "sha256": "f85126a136f75ff9320324b91af6037930fd3e4f02250bd04c8ccc90fef92062",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/VISUAL_REVIEW.json",
+          "sha256": "7a308001d08b99c7bef45721a66a156975865d32ba5f5d2e14844244d027eb54",
+          "kind": "report"
+        }
+      ]
+    },
+    "mobile": {
+      "status": "pass",
+      "reviewed_tree": "eb53180daca2eeed013e1cef99b615b63e264894",
+      "screenshots_reviewed": true,
+      "screenshot_count": 3,
+      "method": "GitHub Actions headless Chromium phone emulation,393x852CSSpx,hasTouch with real CDP two-finger input; saved screenshots independently reviewed; no physical-device claim.",
+      "evidence_files": [
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-cross-grid-i9.png",
+          "sha256": "07c20a0511a4f62092257fd32425a86761e9a216eebc4d81cd40d475718f013d",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-cross-grid-edge.png",
+          "sha256": "1f77a4267be5697dca6034789f2165b15aacb15641773651d43c58332058f658",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/screens/phone-rotated-extreme-pan.png",
+          "sha256": "346c086f6ac635ac989f4c9c8f87ce639b273449343444b6202967d44b86cfe8",
+          "kind": "screenshot"
+        },
+        {
+          "path": "docs/qa/atlas-cross-grid-release-2026-11-26/VISUAL_REVIEW.json",
+          "sha256": "7a308001d08b99c7bef45721a66a156975865d32ba5f5d2e14844244d027eb54",
+          "kind": "report"
+        }
+      ]
+    },
+    "blocking_findings": []
+  },
+  "deployment": {
+    "run_id": 45888982903,
+    "head_sha": "9e27f81c89727274a25555bf190605afc870995f",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45888982903",
+    "site_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/",
+    "completed_at": "2026-11-26T20:10:42Z",
+    "evidence_files": [
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/DEPLOYMENT_PROOF.json",
+        "sha256": "8f5eeb0f1bb3645e192e2e55cff1df41942b54775ade58232af7048feb4a40c9",
+        "kind": "report"
+      }
+    ]
+  },
+  "live": {
+    "status": "pass",
+    "source_commit": "9e27f81c89727274a25555bf190605afc870995f",
+    "verified_at": "2026-11-26T20:12:27Z",
+    "evidence_files": [
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/LIVE_VERIFICATION.json",
+        "sha256": "733168c6065dcbaedd50f1b8cec1ada0ce19afb8902ecf127fc8e6cdcc0e1878",
+        "kind": "report"
+      },
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/LIVE_ASSET_HASHES.json",
+        "sha256": "a9e29b875f2163533706ea0ac62f5a98133b0d0e67a7e89e22579e046f4c5592",
+        "kind": "report"
+      }
+    ]
+  },
+  "rollback_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec",
+  "tracker_release_update": {
+    "summary": {
+      "status": "verified_guarded_update_and_fresh_readback",
+      "manifest_revision": 97,
+      "ledger_revision": 105,
+      "row_count": 48,
+      "appended_note_count": 2,
+      "guard_passed": true,
+      "all_48_existing_rows_and_business_fields_preserved": true,
+      "prior_notes_statuses_release_proofs_and_all_Workspace_fields_preserved": true,
+      "executed_at": "2026-11-26T20:13:04.127216+00:00",
+      "readback_at": "2026-11-26 20:13:30.591286+00",
+      "snapshot_after_md5": "030797e84adb56ad1438534570f2a1e9",
+      "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+      "status_counts": {
+        "open": 16,
+        "verified": 17,
+        "in_progress": 15
+      },
+      "receipt": "docs/qa/atlas-cross-grid-release-2026-11-26/TRACKER_RELEASE_RECEIPT.json",
+      "receipt_sha256": "85be18619bca451cd83f3018088a7a2f1249ca0eadffe4a6a9fd3ee01dda9750"
+    },
+    "evidence_files": [
+      {
+        "path": "docs/qa/atlas-cross-grid-release-2026-11-26/TRACKER_RELEASE_RECEIPT.json",
+        "sha256": "85be18619bca451cd83f3018088a7a2f1249ca0eadffe4a6a9fd3ee01dda9750",
+        "kind": "report"
+      }
+    ]
+  },
+  "id": "ATLAS-CROSS-GRID-RELEASE-RECEIPT",
+  "recorded_at": "2026-11-26T20:14:02.879224+00:00",
+  "manifest_revision": 97,
+  "ledger_revision": 105,
+  "decision": "PROMOTED_GITHUB",
+  "original_workspace_published": false,
+  "broader_master_plan_complete": false,
+  "workspace_prompt": "docs/qa/atlas-cross-grid-release-2026-11-26/WORKSPACE_CROSS_GRID_RELEASE_PROMPT.md",
+  "immutable_candidate_checkpoint": "docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json",
+  "runtime_file_sha256": {
+    "atlas-explorer.html": "c8638ede64c8b3d144940a3fa92a9f509dc8f5090a8d708c6057083bff0fecbb",
+    "atlas-explorer.js": "24c37d4691c6e8f2c2a686846c99c87491e68c91348da4b9747089732964714f",
+    "atlas-explorer.css": "41f5373021f96272e7932515f643bafa245cb49829f1943b0813c8cc3b235f37",
+    "atlas-explorer-geometry.mjs": "0d83e1fa04fbca00a6761dbbbecc32555dd9618617aad30028a3528b3dde0b69",
+    "atlas-cross-grid.mjs": "aa79564d644c70488d7282d2638e977f38a6c67aff337beb0f54436ec250412a",
+    "atlas-cross-grid-ui.mjs": "adca497d4392b9cd3d7d176f9f8bdee8830035db911c0e78a273580bdb9e118d",
+    "atlas-cross-grid.json": "f4e851f22e52ca9aec6889221bda0ea762fbd185404a00b1a62952bae7dcb2e5",
+    "atlas-explorer-data.json": "ca584c71793d658d349db697eef26279917c944d2f7f4f7b2a0153979044b57a",
+    "maps/lumiose-game-map.jpg": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+  },
+  "documentation_followup_scope": "Documentation and one Pages QA-directory exclusion; application runtime is unchanged. Automatic checks remain required.",
+  "release_packet_Pages_exclusion": {
+    "path": "_config.yml",
+    "added_unquoted_exclusion": "docs/qa/atlas-cross-grid-release-2026-11-26",
+    "before_sha256": "2c0afcde85f1aa43fa880e0696afddde647137c7c2caddbc6b4909ff282b0805",
+    "after_sha256": "221a40830591f60e6787a135f278f32835c827822cafba96ed2f27f7474cb665",
+    "all_previous_bytes_and_exclusions_preserved": true,
+    "preserved_quoted_exclusion_count": 8,
+    "preserved_quoted_exclusions": [
+      "  - 'docs/qa/SIDE_MISSIONS_121_140_SOURCE_AUDIT_2026-11-21.md'",
+      "  - 'docs/consolidation/2026-11-26/PULL_REQUEST_LEDGER.md'",
+      "  - 'docs/consolidation/2026-11-26/branch-sources/pr-186/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md'",
+      "  - 'ATLAS_DUAL_SITE_FIX_LEDGER.md'",
+      "  - 'docs/consolidation/2026-11-26/branch-sources/pr-001/docs/qa/SITEWIDE_AUDIT_2026-11-21.md'",
+      "  - 'docs/qa/ATLAS_AT314_BUDDYVIDZ_VIDEO_GUIDE.md'",
+      "  - 'MAPS_SECTOR_UPGRADE_MASTER_PLAN.md'",
+      "  - 'docs/qa/at343-owner-item-crosses/full-frame-2026-11-26'"
+    ],
+    "followup_Pages_CI_expected_and_required": true
+  }
+}
