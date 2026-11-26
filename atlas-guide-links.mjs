@@ -44,7 +44,7 @@ export function locationLinks(text){
   return dedupe(links);
 }
 
-const SECTOR_NOTE="Sector maps and photographs provide orientation, not measured boundaries or exact pickup or roof coordinates.";
+const SECTOR_NOTE="Original sector photographs and reviewed named-sector footprints identify map areas. They do not establish exact pickup, roof or floor coordinates, or verify walking routes.";
 export function appendGuidePanel(host,title,links,note=""){
   const local=dedupe(links.filter(item=>item&&typeof item.href==="string"&&!item.external&&/^[a-z0-9-]+\.html(?:[?#][a-zA-Z0-9_=&%.-]+)?$/.test(item.href)));
   if(!host||!local.length||host.querySelector(":scope > .atlas-guide-links"))return null;

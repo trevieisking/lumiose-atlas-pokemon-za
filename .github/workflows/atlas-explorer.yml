@@ -48,6 +48,7 @@ on:
       - docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json
       - 'docs/qa/candidates/source-area-footprints-2026-11-26/**'
       - 'docs/qa/candidates/original-ui-zone-outlines-2026-11-26/**'
+      - 'docs/qa/at341-independent-review-2026-11-26/**'
       - docs/qa/ATLAS_AT331_WILD_ZONE_ROUTE_RECONCILIATION_2026-11-26.md
       - tests/atlas_area_browser.mjs
       - 'docs/qa/ATLAS_AT339_*'
@@ -111,7 +112,9 @@ jobs:
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Validate shared areas, habitat classes and boundary evidence gates
-        run: node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
+        run: |
+          node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
+          python3 docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py
       - name: Verify attributed sector reconciliation and preservation
         run: python3 scripts/reconcile_sector_encounters.py && python3 scripts/reconcile_remaining_sector_encounters.py
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged

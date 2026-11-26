@@ -653,7 +653,15 @@ async function load(){
       onSelection:syncSelection,
       onAreaFocus:area=>{
         if(area.geometry.eligible){
-          applyView(frameBoundary(area.geometry.geometry,view,dimensions()));
+          const insets={top:0,bottom:0};
+          const viewportBounds=viewport.getBoundingClientRect(),contextBounds=sectorContext.getBoundingClientRect();
+          if(area.kind==='sector'&&!sectorContext.hidden&&contextBounds.width>0&&contextBounds.height>0&&getComputedStyle(sectorContext).visibility==='visible'){
+            // Reserve the existing labels plus clearance for the selected stroke.
+            insets.top=Math.max(0,contextBounds.bottom-viewportBounds.top)+12;
+            const guidance=viewport.querySelector('.ae-map-guidance'),guidanceBounds=guidance?.getBoundingClientRect();
+            if(guidanceBounds?.width>0&&guidanceBounds.height>0&&getComputedStyle(guidance).visibility==='visible')insets.bottom=Math.max(0,viewportBounds.bottom-guidanceBounds.top)+12;
+          }
+          applyView(frameBoundary(area.geometry.geometry,view,dimensions(),insets));
           coverageMessage(area.name+": reviewed map outline. Overlapping areas and heights remain distinct; this is not a walking route.");
         }else{const record=recordMap.get(area.id);if(record)focusRecord(record);}
         viewport.scrollIntoView({behavior:'smooth',block:'center'});

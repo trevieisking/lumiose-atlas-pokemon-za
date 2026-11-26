@@ -25,6 +25,26 @@ test('reviewed area focus frames every actual sector outline without changing ge
   assert.equal(JSON.stringify(rows),before);
   assert.deepEqual(frameBoundary({type:'Polygon',coordinates:[[[NaN,0]]]},startView(),{width:360,height:430}),startView());
 });
+test('sector framing clears reserved context and guidance at phone and desktop sizes',()=>{
+  const rows=JSON.parse(read('atlas-area-evidence.json')).geometries.filter(row=>row.kind==='sector');
+  assert.equal(rows.length,48);
+  const before=JSON.stringify(rows);
+  for(const {viewport,insets} of [
+    {viewport:{width:343,height:360},insets:{top:130,bottom:45}},
+    {viewport:{width:343,height:478},insets:{top:132,bottom:54}},
+    {viewport:{width:390,height:430},insets:{top:180,bottom:56}},
+    {viewport:{width:1100,height:650},insets:{top:132,bottom:54}}
+  ])for(const rotation of [0,45,120,225,315])for(const row of rows){
+    const view={zoom:4,rotation,panX:83,panY:-47},viewBefore={...view};
+    assert.deepEqual(frameBoundary(row.geometry,view,viewport,{top:0,bottom:0}),frameBoundary(row.geometry,view,viewport));
+    const next=frameBoundary(row.geometry,view,viewport,insets);
+    assert.equal(next.rotation,rotation);assert.ok(next.zoom>=.75&&next.zoom<=6);
+    const points=row.geometry.coordinates.flat(row.geometry.type==='Polygon'?1:2).map(p=>project(p,next,viewport));
+    assert.ok(points.every(p=>p.x>=0&&p.x<=viewport.width&&p.y>=insets.top&&p.y<=viewport.height-insets.bottom),row.area_id+' clears labels at '+viewport.width+'×'+viewport.height+' / '+rotation+' degrees');
+    assert.deepEqual(view,viewBefore);
+  }
+  assert.equal(JSON.stringify(rows),before);
+});
 test("AT-280 source-verified mission approach text never upgrades Holovator coordinates",()=>{
   const sommi=data.holovators.find(x=>x.id==="rouge-plaza-west");
   const terra=data.holovators.find(x=>x.id==="vernal-wz1");
