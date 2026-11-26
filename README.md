@@ -1,13 +1,16 @@
 # Lumiose Atlas — The Free Online Player’s Guide for Pokémon Legends: Z-A
 
-## AT-336 — current consolidated checkpoint
+## AT-341 — current consolidated checkpoint
 
-Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md): all accessible chat decisions, canonical plans/manifest/ledgers,176 PRs and13 issues are reconciled with source provenance and unfinished work. Current manifest81 / ledger89. Videos and YouTube are paused; PR188 removed active integrations from GitHub while retaining written/photo guides. The original Workspace remains separately verified at version37; the final full-upgrade Workspace prompt is still gated by AT-325.
+Start with [Pokémon Atlas release handoff](ATLAS_RELEASE_HANDOFF.md), [the verified consolidation contract](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md), and [PR204's exact release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Current manifest88 / ledger96 preserves the earlier AT-336 requirement/source inventory and records the disposition of the 25 source PRs in the original inventory. PR204 records the actual reviewed head, checks, promotion decision, merge and deployment as they occur. The complete map master plan remains unfinished; its full-release SHA and executable Workspace prompt remain unset under AT-325. Videos and YouTube remain paused. Fresh metadata shows the original Workspace at version38 after a separate filter/photo hotfix; this GitHub consolidation does not publish to it.
 
 ## START HERE — mandatory preflight for every development cycle
 
 **Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
 
+## Historical source-recovery checkpoints
+
+The material below preserves the earlier reconstruction and recovery records, including their then-current counts and access limitations. Use the AT-340 links above for current release status; these older statements are not fresh completion or deployment claims.
 
 **Description:** A free, illustrated guide to Pokémon Legends: Z-A, including story walkthroughs, side missions, Wild Zone maps, Pokédex entries, items, Alpha Pokémon, rewards, shiny-hunting guidance and Mega Dimension DLC. This independently reconstructed edition is being completed and verified section by section.
 

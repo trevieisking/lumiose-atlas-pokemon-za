@@ -1,0 +1,452 @@
+{
+  "id": "AT341-ROOT-REMAINING-UI-OUTLINES",
+  "date": "2026-11-26",
+  "decision": "APPROVE_SCOPED_MAP_SELECTION_OUTLINES_11",
+  "source_candidate": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/native-ui-outline-candidates.json",
+  "source_candidate_sha256": "3f4f9d0436e254d770a4f7e928416bae89e95fc5395ee9b4709ef4cf5ea3e5d8",
+  "scope": "Add exactly eleven original-UI selection outlines; preserve all nine photo-reviewed zones and 48 source-area sector footprints. No physical wall, route, entrance or spawn-extent claim.",
+  "root_review": {
+    "no_write_candidate_replay": "passed; byte-identical eleven wrappers",
+    "independent_reviewer": "Fresh independent review in resumed session: all 20 artifact hashes, nine full prior zone records and 48 sectors preserved; all eleven approved copies pass production evaluator in memory.",
+    "visual_review": "Root directly inspected both complete owner-native overlay panels, covering all eleven zones. Visible green strokes and retained closures match the scoped selection use.",
+    "native_checks": 43,
+    "native_rms_px": 0.9776701444858085,
+    "native_max_px": 2.0984617749247665,
+    "source_gate_intervals": 43,
+    "source_gate_max_source_px": 12.083045959472656,
+    "source_gate_limit": "Separate one-way ordinary-mask diagnostic, not a native calibration bound. All flagged intervals classified as gate-symbol openings. WZ17 selection connection is not a traversability statement.",
+    "new_raw_source_decode_claimed": false
+  },
+  "preserved_records": [
+    {
+      "area_id": "wz-02",
+      "record_sha256": "ae07e7212ec32b72cc2ffaa264e1b07795944b0974de3f96322f15468facfe16"
+    },
+    {
+      "area_id": "wz-03",
+      "record_sha256": "31fdb3c1a462eaa9418b5a83ab790781d18b879fa813e4caba0f44f00ff7ba63"
+    },
+    {
+      "area_id": "wz-16",
+      "record_sha256": "b38f3cf6a0b56e866a9000330e47880e8ee7db4e21df2d9452d0ab419781ae2c"
+    },
+    {
+      "area_id": "wz-05",
+      "record_sha256": "fd6e1b9b004c2681273ab9955145bca97f7f9acef4fc312cb42074acc00289a6"
+    },
+    {
+      "area_id": "wz-11",
+      "record_sha256": "006b4ee6640b5c51252a1a8edef1e20e0635327b8ed7e654be4783717d90a9e7"
+    },
+    {
+      "area_id": "wz-04",
+      "record_sha256": "fcca457a7c11ec574c325f2c9a72b36d0b59ba9fc135d602fef79ef3f57d9f39"
+    },
+    {
+      "area_id": "wz-13",
+      "record_sha256": "d0b2f2511990d18614da2b26db01866c2c38776fc3beadc971f6b8b9c71bd06e"
+    },
+    {
+      "area_id": "wz-20",
+      "record_sha256": "bde7c40d429f4970721d43008195220319e674b8abc8de102e1afc906f39e5ea"
+    },
+    {
+      "area_id": "wz-14",
+      "record_sha256": "cbf5fe314471ad9126b577af0d75a3a58940877d38ba3f113c263beef9d05238"
+    },
+    {
+      "area_id": "vert-sector-1",
+      "record_sha256": "4b91aa3d8bbf16f3d91c2b2f1b28b80184e0cf272baa6293f5e19714a2ba15c2"
+    },
+    {
+      "area_id": "vert-sector-3",
+      "record_sha256": "687dccccc06015ab023631fb2e5a1e3c3bd9ef9b7c12ce65922e252551b86a9e"
+    },
+    {
+      "area_id": "vert-sector-6",
+      "record_sha256": "b26b1cb11c24fd01701752b5486aff290846fa93c6d765753e8599bd0bd27eeb"
+    },
+    {
+      "area_id": "vert-sector-7",
+      "record_sha256": "5c7dd8034ff10351dd221910f2417d0a0cae04e57a2ea2831c8cf50a0ec80459"
+    },
+    {
+      "area_id": "vert-sector-2",
+      "record_sha256": "ef3a321dcf380c714b23d26d57b8dce8e163ee08c60ba76d6afe7f748a373ee9"
+    },
+    {
+      "area_id": "vert-sector-4",
+      "record_sha256": "bcf8bdbe7b1e925409718187c347d44f66ca8f569e009564b4a6683862c5375b"
+    },
+    {
+      "area_id": "vert-sector-5",
+      "record_sha256": "99f34058980886271cb40de58216e3eba99d03770e12b27d4e0eb6b011bd89e4"
+    },
+    {
+      "area_id": "vert-sector-8",
+      "record_sha256": "9a35239e413dd4cfb781e6a37897911a2e51fc455d14efc611d245277a9d462e"
+    },
+    {
+      "area_id": "vert-sector-9",
+      "record_sha256": "5a4da1df75877c5bb6664df0de3d630217d505266e155b7b7b54388ee327b36c"
+    },
+    {
+      "area_id": "bleu-sector-1",
+      "record_sha256": "ef130cfcb07d0784137fbe6b87871daa61a905bafd1eda3e5263d2324bed9527"
+    },
+    {
+      "area_id": "bleu-sector-3",
+      "record_sha256": "94de6c3907b7fa462844aa4a760b3ba92fbfb9eb14651cbc8a74fbcc0bd9ef4d"
+    },
+    {
+      "area_id": "bleu-sector-5",
+      "record_sha256": "beda231aa41f6ad86fa9b925ca34edb6455c9cd988e4eac4823eddfac46d8345"
+    },
+    {
+      "area_id": "bleu-sector-7",
+      "record_sha256": "8490fbf8c9383d5b8caecec5bcb988cd65ad6731b1610b64524977a664f201a4"
+    },
+    {
+      "area_id": "bleu-sector-2",
+      "record_sha256": "ed3e15e24faa9ac498c3294820548621c0d45b6ec62498b776b8610ecb98b11e"
+    },
+    {
+      "area_id": "bleu-sector-4",
+      "record_sha256": "19a336b02f5c1b8e9f50be4fbebe776b8e8c606e11d56ed48815d68173e919e9"
+    },
+    {
+      "area_id": "bleu-sector-6",
+      "record_sha256": "d7487803ac7e75ce4a8567711b19f09564b6d5b09061560b5ea6a3724157e9eb"
+    },
+    {
+      "area_id": "bleu-sector-8",
+      "record_sha256": "39c54b6fa80ce1e9bc3025238e3ac29a2261193f4f2321c06accf42ccb87706b"
+    },
+    {
+      "area_id": "bleu-sector-9",
+      "record_sha256": "876ac04a4f534b06f72df7c6b39f9e39fe2f741f510c3a75bdee7e5c719b24b8"
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "record_sha256": "7dbfab2bcfe35dc22e9894dec6c0897e95406467b8d258abbb74f075e6348560"
+    },
+    {
+      "area_id": "magenta-sector-1",
+      "record_sha256": "c4cc3be17efe7f763e792cd091a8e98df8e808a87e39b88606b59fe4877b2b1d"
+    },
+    {
+      "area_id": "magenta-sector-3",
+      "record_sha256": "2e152a3aba03787990efc6aa4f8cdc1bb16b39b30acbee84a152ced91e863b8b"
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "record_sha256": "3bbfd4100de3bdc35ef6dd6ab428667485c2e3cd97c5d64a8b2487f33144eb22"
+    },
+    {
+      "area_id": "magenta-sector-6",
+      "record_sha256": "2b783eff1e2e2900e7efce40afa6ccba2a4c4f6e3f7557c8597104331755037a"
+    },
+    {
+      "area_id": "magenta-sector-2",
+      "record_sha256": "cdd5f777624d4a35538550ffefd7de5940d51c21949c8a2489048d5ab0796507"
+    },
+    {
+      "area_id": "magenta-sector-4",
+      "record_sha256": "9db0c488646b69d979ec67603551633af992f1c24d121c835fb05dfa41fd700b"
+    },
+    {
+      "area_id": "magenta-sector-7",
+      "record_sha256": "f6d0c1c20b99b1771acebdcfe16ef8bd705e5722c51a63f163e4fe3227ff700c"
+    },
+    {
+      "area_id": "magenta-sector-8",
+      "record_sha256": "3f87e9b108b3255b7080bb572a505dbddd58a14cd62683be8a2f520816820305"
+    },
+    {
+      "area_id": "magenta-sector-9",
+      "record_sha256": "978979151d559d59c403650193ade968a77bc5f916c50d2bc18e6941183f6a2c"
+    },
+    {
+      "area_id": "rouge-sector-1",
+      "record_sha256": "2e9cef6e980d0538c46a47349509d6be97a50c1e3b6b52faf43f053383041909"
+    },
+    {
+      "area_id": "rouge-sector-3",
+      "record_sha256": "b5db9d80d91ca57c09e9457dd50e11849590c379e5e886dbaeca2f56e8aa1975"
+    },
+    {
+      "area_id": "rouge-sector-4",
+      "record_sha256": "b84172039d4e3a23030dcd8dff49734c2f08a2ac71a904290ba9f2637817d852"
+    },
+    {
+      "area_id": "rouge-sector-5",
+      "record_sha256": "6ad6df5f16e1c8382c99b10b807b6f902437d7ed508f0ac002c203dddca3eeb0"
+    },
+    {
+      "area_id": "rouge-sector-7",
+      "record_sha256": "0b99a9ddf8fae6aa4f60c82a281aed2f23aa1fb819ecf6b8da0ed2db979868a3"
+    },
+    {
+      "area_id": "rouge-sector-2",
+      "record_sha256": "526112762eeb0eeef4fb162d1644d931a562bd76648fa3f7d7f4ec4e290eac71"
+    },
+    {
+      "area_id": "rouge-sector-6",
+      "record_sha256": "8953f2dffdbf649c7597b69ec6a569987ea635ae6c56e2f30157e0485163143d"
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "record_sha256": "4068e69d996252ffbf3eb46cb70bffb297e2f900adfc1fd27f6b98e3f7f890a8"
+    },
+    {
+      "area_id": "jaune-sector-1",
+      "record_sha256": "934d238b429bdac3a768f9c85f95ce8eedc054875113d2084a9dad82fd36c587"
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "record_sha256": "15f7bea89a3af7b49b9f8bbe676fb3b47fb7b8ee396b946740c72cb4e9811045"
+    },
+    {
+      "area_id": "jaune-sector-4",
+      "record_sha256": "4d5f94c9ae9af49aae8ab980bff93d8aa73eff70488fa3fd4430c3771f6cc287"
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "record_sha256": "52a0c43175c4b128cc9a0269f1977aa8079cf1e825320be1c9132d8003046cf3"
+    },
+    {
+      "area_id": "jaune-sector-7",
+      "record_sha256": "f035805ca6c551a95e1a1c51055468d9984380a1a7b3c73455be83ee9bf45885"
+    },
+    {
+      "area_id": "jaune-sector-8",
+      "record_sha256": "c50545216abec5b46a1d2b215e475cc5f8fd8db513c8ed59f6e1265563d378e7"
+    },
+    {
+      "area_id": "jaune-sector-2",
+      "record_sha256": "79ac11d65815f480292713f404fb02ac0bf87eaadeb8eb4d8b42bd07984cc23e"
+    },
+    {
+      "area_id": "jaune-sector-6",
+      "record_sha256": "e94604faa6209d84a7e05477e86027889cde861724a5135e63bd2c03e3fff32f"
+    },
+    {
+      "area_id": "jaune-sector-9",
+      "record_sha256": "1b8d611c86170fbd569e262c5a63084e1a6dcd6d15686154a403489475114517"
+    },
+    {
+      "area_id": "jaune-sector-10",
+      "record_sha256": "c5c4eafa54e860c0e10cadfcf915d37522c5a411b9fbdc80acf506ac0955e391"
+    },
+    {
+      "area_id": "jaune-sector-11",
+      "record_sha256": "fadeff0c6fba05ece21eda48386d0e81d26d84f52d77df187ac1ab55329e8247"
+    },
+    {
+      "area_id": "jaune-sector-12",
+      "record_sha256": "ef13050b3be37dff2b9a2e7b560a62adeead098d6967b54a4ffb4375d559380f"
+    }
+  ],
+  "approved": [
+    {
+      "area_id": "wz-01",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "b5ad7af61f20f36b3a8b07a06ef0d3af7fcf68a686d5b9b5ae289227fe325a5f",
+      "production_record_sha256": "94f61abe32dc46924b68cdfd5d02489584493e0c1ad646fb39ef21fb0d3b61c7",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-06",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "be0eda3f21366930ee55698a5f3481902e76a0a4d85b1ebbf84dfde522570195",
+      "production_record_sha256": "715c630325e2aadbbf8a8e5f8bf7135ddbe279e62fefb7d60821ca441232b211",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-07",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "8bf7232ff6ae38b485602419e6d814af16c03a73fbd7631f5cbbcbe4f83d569f",
+      "production_record_sha256": "dec698aa24bee2ed319e791f08e6462875933827b0bcb31c48b463e5f6c285fa",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-08",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "acd3683a6459accd37ccad6683483f7129ecd20d96e05b181ea6bc5ea66b2ace",
+      "production_record_sha256": "66019d0828bce4c50e63ba49492bbbe77db4f74dfe090e8a340e4a2201ec9c00",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-09",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "0bc181159195ccb4775b2dbe3cb3c5bb083039a9335d6a8911f9637f53a3977e",
+      "production_record_sha256": "6bb06171ff135b1687213c04bc9f2cf01c50b5a8bc45fc51170003019023167b",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-10",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "940dcfc446f5d543823113d01d7d4ce6c3a0c5314e39105634fedea52236ef52",
+      "production_record_sha256": "4a0b5671bd07f64ca473ce99676d7314d3072d1082678b7aefeb3e4ef03476d0",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+        "review_panel_sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-12",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "a1831a5759168f48f9b75f49c57566e0dbf2266765b6cd0d3b3c37f320455f32",
+      "production_record_sha256": "9ac4be2f62d45c863a72e85c9de68f3e7082aa7b71529e92ecec34ad2862b8b2",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+        "review_panel_sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-15",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "d740bbcca1d13c5d4e13bc8991bed207f85ae3bb4e2c8de9c1776744db1117f9",
+      "production_record_sha256": "8636b0a87237c6654b9c2a4a11577cffe7d1983b0f87bba7dc51ba4ecf8a933b",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+        "review_panel_sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-17",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "1536693db4b8b5f4d3d00a2593ac34f3a0fd8cdd81d4ad7faa060f9e8ff80425",
+      "production_record_sha256": "18b83f77d040112b9bd7c0cb2ba10fea06beb4c45a33c8906cca6a7d61fb571d",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+        "review_panel_sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-18",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "0e465d817d65a55883d943256e42f15442c08d894011c11a5760d80500eb0189",
+      "production_record_sha256": "801e4bf531d1fdd8ac899dcf0cf6d1ed0e1076bdee4d8b38ee78118b5b5bccdb",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+        "review_panel_sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    },
+    {
+      "area_id": "wz-19",
+      "representation": "map_selection_outline",
+      "production_geometry_sha256": "c4ee32dfb95dc4b8f39769ddf97962c8879544465caea71975fbdd6116381185",
+      "production_record_sha256": "739d22b0817d80b1abd8ae19d34a62e9a4b2668046786e9b916bfdb84cc52711",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+        "review_panel_sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+        "review_receipt_path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/independent-ui-contour-review.json",
+        "review_receipt_sha256": "b59f6b091a355b8845451b71bb5903393763f37f6905f4f271783d45e25f6e82"
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+          "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012"
+        }
+      ]
+    }
+  ],
+  "release_validation": "Pending exact combined-head browser/CI, expected-head merge and live verification.",
+  "production_evidence_sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92"
+}

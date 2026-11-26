@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "review_id": "AT341_UI_SOURCE_INTERVALS_INDEPENDENT_REVIEW",
+  "reviewed_at_utc": "2026-11-26T13:46:21.214352+00:00",
+  "reviewer": "Independent geometry review agent /root/geometry_completion",
+  "scope": {
+    "new_zone_ids": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      15,
+      17,
+      18,
+      19
+    ],
+    "excluded_existing_zone_ids": [
+      2,
+      3,
+      4,
+      5,
+      11,
+      13,
+      14,
+      16,
+      20
+    ],
+    "task": "Classify every enumerated source-ridge interval farther than three source pixels from the ordinary opaque source stroke for the eleven new zone candidates.",
+    "excluded_counterexample": "The previously identified WZ13 source/ordinary discrepancy belongs to the existing nine and is outside this supplement. Nothing here changes or overrides its prior evidence or geometry.",
+    "representation": "Rendered map selection footprint only."
+  },
+  "observed_checkout_context": {
+    "runtime-review": {
+      "head": "248f6de1acf4d27c308bc24e900d8385885c780b",
+      "tree": "54180175b1fa6264847e8b424ff239f48561d687",
+      "scope": "Read-only observed checkout context; this supplement approves hash-bound candidate evidence, not an unobserved future runtime commit."
+    },
+    "atlas-release": {
+      "head": "a19f1f2fc0535511dac4349573d2442dad40570e",
+      "tree": "7bb78df66a3f2a233f8a6380253f9fd7065fa168",
+      "scope": "Read-only observed checkout context; this supplement approves hash-bound candidate evidence, not an unobserved future runtime commit."
+    }
+  },
+  "inputs": {
+    "packet_directory": "/workspace/scratch/dd7dfe1436cb/runtime-review/docs/qa/candidates/original-ui-zone-outlines-2026-11-26",
+    "private_research_directory": "/workspace/scratch/dd7dfe1436cb/plan-audit/geometry-sources/sector-pilot",
+    "source_interval_json": {
+      "file": "validation/source-difference-intervals-first.json",
+      "sha256": "9e5870887449fe8a84733f776841e20a8b6f22e5c945de1a097243a14788cd07",
+      "matches_private_research_copy": true
+    },
+    "candidate_json": {
+      "file": "original-ui-contour-candidates-first.json",
+      "sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c"
+    },
+    "diagnostic_script": {
+      "file": "review_ui_source_differences.py",
+      "sha256": "4670ddfc7e231aa9e814ba8e3145194e356a4f3bd181caffcf344226d7676bd5",
+      "read_only_code_inspection": true,
+      "executed_in_this_supplement": false
+    },
+    "placement_facts": {
+      "file": "original-ui-placement-facts.json",
+      "sha256": "ff4d3036f860acd62500fdeb20b031b6e1106ad76274c78bd7f1fddba6daaa80"
+    },
+    "source_provenance": {
+      "file": "source-provenance.json",
+      "sha256": "0b00ecb4c07910a2f36d9ca346dbc54671ab9d1a4c0a9e65f3d6f2ef2663bbd1"
+    },
+    "preceding_independent_audit": {
+      "file": "at341-ui-outlines-independent-review.json",
+      "sha256": "64a316774a9b84e6016a8c4766d89c3740c04a8d97bfaac66bd48d88adda3831",
+      "relationship": "Supplement only; preserves the preceding source identity, placement, topology, nine-record preservation and 43 frozen native visible-check findings."
+    }
+  },
+  "method": {
+    "visual_review": "Displayed and inspected all eleven full private diagnostic PNG panels, each showing the ordinary source RGBA composited over gray at 2x, the flagged ridge as blue dots, magenta boxes and exact interval IDs. All interval locations were individually classified.",
+    "source_png_scope": "Ordinary source art was visually reviewed through these annotated composites. Separate ordinary/glow/ridge PNGs were read for dimensions and hashes; no separate unannotated source display was necessary because every flagged opening was clear in the panel.",
+    "diagnostic_interpretation": "The supplied diagnostic tests every external derived-ridge contour pixel against R<=35 and alpha>=230 in the ordinary source PNG, retaining contiguous distances strictly greater than 3 source pixels. The annotation labels do not constitute conclusions; this supplement supplies the visual classification.",
+    "lightweight_integrity_checks": "Confirmed packet/private diagnostic JSON byte equality, exact candidate hash linkage, all 43 interval IDs, point and distance counts, bounding boxes, maxima and >3 predicates. These are checks of retained records, not an independent rerun of the distance transform or contour extraction.",
+    "no_retuning": true,
+    "no_contour_or_transform_change": true,
+    "no_full_pipeline_or_archive_decode": true,
+    "no_checkout_or_remote_writes": true,
+    "private_art_handling": "No recovered source PNGs or annotated source panels were copied into this receipt, a checkout or an external publication. This receipt contains findings and hashes only."
+  },
+  "summary": {
+    "zones_reviewed": 11,
+    "panels_visually_inspected": 11,
+    "intervals_reviewed": 43,
+    "source_gate_symbol_opening_closures": 43,
+    "unqualified_ordinary_boundary_discrepancies_found": 0,
+    "unresolved_flagged_intervals": 0,
+    "total_ridge_points_in_supplied_diagnostic": 14089,
+    "flagged_ridge_points": 689,
+    "maximum_flagged_source_distance_px": 12.083045959472656,
+    "maximum_interval_id": "WZ10-S01",
+    "native_visible_checks_are_separate": "These 43 source intervals are a different set from the previously reviewed 43 frozen native visible green-stroke checks (maximum 2.09846177492477 native pixels). Counts happen to match."
+  },
+  "decision": {
+    "status": "ACCEPT_BOUNDED_SOURCE_INTERVAL_CLASSIFICATIONS",
+    "finding": "All enumerated over-threshold intervals for the eleven new candidates fall in visible ordinary-sprite gate openings between gate-end blocks and arrow ornaments. No reviewed flagged interval follows a displaced continuous ordinary boundary stroke.",
+    "allowed_inference": "The source glow closes each interface-symbol opening into the rendered selection footprint; this classification resolves the specific pending source-interval visual-review question for these exact candidate and input hashes.",
+    "conditions": [
+      "Final runtime must contain these exact reviewed eleven candidates and preserve the existing nine geometry records.",
+      "Final committed packaging, runtime checks and CI remain the integration owner's gate.",
+      "Keep ordinary/glow source distinctions, all measured distances and source-occlusion qualifications in the persisted evidence."
+    ],
+    "limitations": [
+      "The three-source-pixel threshold is a diagnostic against an ordinary dark opaque sprite mask, not a universal three-native-pixel accuracy statement.",
+      "The maximum 12.083045959472656 source-pixel discrepancy is retained; acceptance does not lower it or relabel it as below threshold.",
+      "This classifies every interval enumerated by the retained full-ridge diagnostic. It is not an independently rerun bidirectional contour-distance proof or a guarantee about every hidden edge in the native rendered map.",
+      "WZ17's connected source selection footprint and gate closures do not prove a traversable physical path or connection.",
+      "No new physical boundary, encounter, route, spawn, navigation-access or completion claim is authorized.",
+      "The existing nine outlines, including WZ13, were excluded and were not refit, replaced or reapproved by this supplement."
+    ]
+  },
+  "zones": [
+    {
+      "zone": 1,
+      "total_ridge_points_in_diagnostic": 1671,
+      "diagnostic_max_distance_source_px": 12.0,
+      "panel": {
+        "file": "ui-contour-review/private-wz01-source-difference-intervals.png",
+        "sha256": "baf31b471d7d623f268c5d54159ec2eeeb1d48a8cf52117cb9c66f73178abba3",
+        "dimensions": [
+          1484,
+          500
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-1-rgba.png",
+          "sha256": "5499e036eb1a7b1c3e67c74d509a46a8225673c95f0d1b40db8c5e7b23a2a0fc",
+          "dimensions": [
+            742,
+            250
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-1-glow-alpha.png",
+          "sha256": "416aa032bee2f30ef8c6a29e76e62887dec4a551d1d3d2e85e5ff673d8a53997",
+          "dimensions": [
+            742,
+            250
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-1-derived-ridge.png",
+          "sha256": "386dd3eb7fa7cdeb91f349b229b15b19813a76eef8e83869ec87d43ab3599b48",
+          "dimensions": [
+            742,
+            250
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ01-S01",
+          "source_bbox": [
+            379,
+            23,
+            385,
+            25
+          ],
+          "ridge_point_count": 7,
+          "max_distance_source_px": 6.324555397033691,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Short opening at the upper-right bend of the northern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ01-S02",
+          "source_bbox": [
+            83,
+            57,
+            103,
+            58
+          ],
+          "ridge_point_count": 21,
+          "max_distance_source_px": 12.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Horizontal opening near the western end of the northern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ01-S03",
+          "source_bbox": [
+            255,
+            200,
+            257,
+            213
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.049875259399414,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Vertical opening at the southern inward step. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ01-S04",
+          "source_bbox": [
+            696,
+            75,
+            701,
+            89
+          ],
+          "ridge_point_count": 15,
+          "max_distance_source_px": 9.848857879638672,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Sloping opening at the far eastern end. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 6,
+      "total_ridge_points_in_diagnostic": 1740,
+      "diagnostic_max_distance_source_px": 12.0,
+      "panel": {
+        "file": "ui-contour-review/private-wz06-source-difference-intervals.png",
+        "sha256": "0f5795b3a3e8791bb4d62ebacbcd8e28246cf491106d45f648f0ee9ff12bd2a3",
+        "dimensions": [
+          920,
+          1240
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-6-rgba.png",
+          "sha256": "5475b4049cd6903434e3f819ee46c00c6fa1e87bbbb3e2609f0cb1e0ffe19411",
+          "dimensions": [
+            460,
+            620
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-6-glow-alpha.png",
+          "sha256": "03d609aa74eaafb43e8a29173f8996c00862ed4be1f64997abaa762ae41f48e0",
+          "dimensions": [
+            460,
+            620
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-6-derived-ridge.png",
+          "sha256": "fde6340fdd6fe4d0fa8075cc55cd96d4edf5cd4402bcba1596d55ee0b188f4d7",
+          "dimensions": [
+            460,
+            620
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ06-S01",
+          "source_bbox": [
+            109,
+            542,
+            122,
+            547
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.198039054870605,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "First opening on the southwest sloping edge before the small step. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ06-S02",
+          "source_bbox": [
+            138,
+            574,
+            146,
+            577
+          ],
+          "ridge_point_count": 9,
+          "max_distance_source_px": 7.6157732009887695,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Second opening on the southwest sloping edge after the small step. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ06-S03",
+          "source_bbox": [
+            327,
+            491,
+            344,
+            496
+          ],
+          "ridge_point_count": 18,
+          "max_distance_source_px": 11.180339813232422,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening on the southeast-facing sloping base. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ06-S04",
+          "source_bbox": [
+            357,
+            21,
+            373,
+            21
+          ],
+          "ridge_point_count": 17,
+          "max_distance_source_px": 12.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Horizontal opening on the northern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 7,
+      "total_ridge_points_in_diagnostic": 880,
+      "diagnostic_max_distance_source_px": 12.0,
+      "panel": {
+        "file": "ui-contour-review/private-wz07-source-difference-intervals.png",
+        "sha256": "75639f65293b621595d83f123e3dd406f1834fc8ecf7f4508fe3020579f8760f",
+        "dimensions": [
+          692,
+          692
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-7-rgba.png",
+          "sha256": "84ba593665fcf51fdefc4d88a4d863061239b72278f6d81e646129f55641f4f6",
+          "dimensions": [
+            346,
+            346
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-7-glow-alpha.png",
+          "sha256": "7e66995baaa5b405bb951da294051c4971924660b2f14939b877e716575a7039",
+          "dimensions": [
+            346,
+            346
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-7-derived-ridge.png",
+          "sha256": "10c0a84f08d80950ca3abf103aa08b16a02a7a35d4d1bb904924e4210d2d5d94",
+          "dimensions": [
+            346,
+            346
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ07-S01",
+          "source_bbox": [
+            56,
+            49,
+            69,
+            62
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 11.180339813232422,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Northwest opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ07-S02",
+          "source_bbox": [
+            16,
+            173,
+            19,
+            196
+          ],
+          "ridge_point_count": 24,
+          "max_distance_source_px": 12.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Western opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ07-S03",
+          "source_bbox": [
+            168,
+            320,
+            188,
+            321
+          ],
+          "ridge_point_count": 21,
+          "max_distance_source_px": 11.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Southern opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ07-S04",
+          "source_bbox": [
+            314,
+            205,
+            322,
+            228
+          ],
+          "ridge_point_count": 24,
+          "max_distance_source_px": 11.180339813232422,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Southeast opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ07-S05",
+          "source_bbox": [
+            264,
+            40,
+            278,
+            52
+          ],
+          "ridge_point_count": 15,
+          "max_distance_source_px": 11.180339813232422,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Northeast opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 8,
+      "total_ridge_points_in_diagnostic": 900,
+      "diagnostic_max_distance_source_px": 11.704699516296387,
+      "panel": {
+        "file": "ui-contour-review/private-wz08-source-difference-intervals.png",
+        "sha256": "7fb08e6b0d327ac23ee8f6ae1c40e8d552583d9cc26f908dd23eb930ba6594f7",
+        "dimensions": [
+          680,
+          680
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-8-rgba.png",
+          "sha256": "7272d7f809eb68c132fc993f19b4e6927b802e66c2655d959b32adbe02b3b90e",
+          "dimensions": [
+            340,
+            340
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-8-glow-alpha.png",
+          "sha256": "5a72ec803a307d5695c4c7ab62dc9b8fcb19fb4d50725a0f77c289f016932591",
+          "dimensions": [
+            340,
+            340
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-8-derived-ridge.png",
+          "sha256": "673b551731f564b8aa8e0adffb93b5370667427cbb2b0e4864671c365178016b",
+          "dimensions": [
+            340,
+            340
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ08-S01",
+          "source_bbox": [
+            15,
+            206,
+            24,
+            230
+          ],
+          "ridge_point_count": 25,
+          "max_distance_source_px": 11.704699516296387,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Southwest opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ08-S02",
+          "source_bbox": [
+            316,
+            104,
+            323,
+            127
+          ],
+          "ridge_point_count": 24,
+          "max_distance_source_px": 9.219544410705566,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Northeast opening on the circular perimeter. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 9,
+      "total_ridge_points_in_diagnostic": 1573,
+      "diagnostic_max_distance_source_px": 10.440306663513184,
+      "panel": {
+        "file": "ui-contour-review/private-wz09-source-difference-intervals.png",
+        "sha256": "9ff056e663cc87f87ced32ae4e47cccf836be15556d14bb5afc481fac1682e80",
+        "dimensions": [
+          1160,
+          1120
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-9-rgba.png",
+          "sha256": "bf90e501829057cbdfe43238130aefb98397aba152be7e673b8de20f621f8bc2",
+          "dimensions": [
+            580,
+            560
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-9-glow-alpha.png",
+          "sha256": "988c9ca891ac286407b31a2cd5c31b2e6aaddf530f0df14ace33588544b843b4",
+          "dimensions": [
+            580,
+            560
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-9-derived-ridge.png",
+          "sha256": "5403d15d6c112736abe76b0b4c5a0bb4e0e94f905b9f9673168465165727ad5a",
+          "dimensions": [
+            580,
+            560
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ09-S01",
+          "source_bbox": [
+            93,
+            57,
+            113,
+            84
+          ],
+          "ridge_point_count": 28,
+          "max_distance_source_px": 10.440306663513184,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Long diagonal opening immediately below the northwest tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ09-S02",
+          "source_bbox": [
+            246,
+            461,
+            259,
+            466
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 9.848857879638672,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Western opening on the southern sloping edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ09-S03",
+          "source_bbox": [
+            358,
+            424,
+            371,
+            428
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.198039054870605,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Eastern opening on the southern sloping edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ09-S04",
+          "source_bbox": [
+            542,
+            145,
+            544,
+            155
+          ],
+          "ridge_point_count": 11,
+          "max_distance_source_px": 8.246211051940918,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Short opening at the northeast corner of the eastern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 10,
+      "total_ridge_points_in_diagnostic": 1579,
+      "diagnostic_max_distance_source_px": 12.083045959472656,
+      "panel": {
+        "file": "ui-contour-review/private-wz10-source-difference-intervals.png",
+        "sha256": "05b10d60b41c17bdf509378535636a1619d3bce06197b6a93a610d313b270946",
+        "dimensions": [
+          1140,
+          940
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-10-rgba.png",
+          "sha256": "78ac2a2eecec35644e680e10b03b833aa8eec5df901372c2a6b5884029e63948",
+          "dimensions": [
+            570,
+            470
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-10-glow-alpha.png",
+          "sha256": "a89a3d3c3c612aafd8e0ac4b80a992b01e5bcf241c8dacc96ae88fee24c705aa",
+          "dimensions": [
+            570,
+            470
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-10-derived-ridge.png",
+          "sha256": "9b7b4823caac58149af7abd9a7d2ab0a52ba70ddb932e069bb85e20cf1088ef9",
+          "dimensions": [
+            570,
+            470
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ10-S01",
+          "source_bbox": [
+            74,
+            320,
+            90,
+            356
+          ],
+          "ridge_point_count": 37,
+          "max_distance_source_px": 12.083045959472656,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Long opening on the southwest diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ10-S02",
+          "source_bbox": [
+            544,
+            151,
+            550,
+            168
+          ],
+          "ridge_point_count": 18,
+          "max_distance_source_px": 11.180339813232422,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening between the two steps on the eastern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 12,
+      "total_ridge_points_in_diagnostic": 1644,
+      "diagnostic_max_distance_source_px": 11.0,
+      "panel": {
+        "file": "ui-contour-review/private-wz12-source-difference-intervals.png",
+        "sha256": "672876fb0396c94722199c4f99c6eaa64679b4aa86dddeef92a40b115eddc117",
+        "dimensions": [
+          1080,
+          960
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-12-rgba.png",
+          "sha256": "49acbeff38d25041268d05c3a2cc649b468022c5a6fac27325183036741d4b14",
+          "dimensions": [
+            540,
+            480
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-12-glow-alpha.png",
+          "sha256": "f0fb5d6681fc77b37efa3b75004faea93304581f992e0cb79c2ccbbd79a27ec6",
+          "dimensions": [
+            540,
+            480
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-12-derived-ridge.png",
+          "sha256": "918aa7516e71794180838669b8865fdb0343843dd3d14e005c5c6cddbcd9f242",
+          "dimensions": [
+            540,
+            480
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ12-S01",
+          "source_bbox": [
+            132,
+            128,
+            140,
+            141
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.630146026611328,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Upper opening on the northwest diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ12-S02",
+          "source_bbox": [
+            60,
+            282,
+            65,
+            290
+          ],
+          "ridge_point_count": 9,
+          "max_distance_source_px": 7.6157732009887695,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Lower opening on the western diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ12-S03",
+          "source_bbox": [
+            450,
+            442,
+            475,
+            442
+          ],
+          "ridge_point_count": 26,
+          "max_distance_source_px": 11.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Horizontal opening on the southeast bottom edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ12-S04",
+          "source_bbox": [
+            497,
+            120,
+            497,
+            139
+          ],
+          "ridge_point_count": 20,
+          "max_distance_source_px": 10.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Vertical opening near the northern end of the eastern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ12-S05",
+          "source_bbox": [
+            361,
+            42,
+            390,
+            42
+          ],
+          "ridge_point_count": 30,
+          "max_distance_source_px": 10.198039054870605,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Long horizontal opening on the northern edge east of the small notch. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ12-S06",
+          "source_bbox": [
+            201,
+            36,
+            215,
+            36
+          ],
+          "ridge_point_count": 15,
+          "max_distance_source_px": 11.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Horizontal opening near the northwest top corner. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 15,
+      "total_ridge_points_in_diagnostic": 972,
+      "diagnostic_max_distance_source_px": 11.313708305358887,
+      "panel": {
+        "file": "ui-contour-review/private-wz15-source-difference-intervals.png",
+        "sha256": "6127f32e1c0259bf0f58aa5be5baf064a994c97845403d4284119b9c992df6ef",
+        "dimensions": [
+          824,
+          820
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-15-rgba.png",
+          "sha256": "93ccf76df276d525a1beffd4dd4f255982ffb86200323dd946426a62eed49080",
+          "dimensions": [
+            412,
+            410
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-15-glow-alpha.png",
+          "sha256": "539ba2000154e1660545f818599fd06165b9d0b109dd0be5e921669c50643e8c",
+          "dimensions": [
+            412,
+            410
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-15-derived-ridge.png",
+          "sha256": "3b42b29d4a3cc971fbea8269a1dc9c92f65dd4ebe92c9b5eb3c9d3b632b25168",
+          "dimensions": [
+            412,
+            410
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ15-S01",
+          "source_bbox": [
+            35,
+            43,
+            44,
+            55
+          ],
+          "ridge_point_count": 13,
+          "max_distance_source_px": 10.816654205322266,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening at the northwest tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ15-S02",
+          "source_bbox": [
+            46,
+            167,
+            54,
+            176
+          ],
+          "ridge_point_count": 10,
+          "max_distance_source_px": 9.219544410705566,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening on the western inward step. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ15-S03",
+          "source_bbox": [
+            101,
+            283,
+            113,
+            295
+          ],
+          "ridge_point_count": 13,
+          "max_distance_source_px": 11.313708305358887,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening on the southwest diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ15-S04",
+          "source_bbox": [
+            362,
+            356,
+            374,
+            365
+          ],
+          "ridge_point_count": 13,
+          "max_distance_source_px": 10.630146026611328,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening at the southeast tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 17,
+      "total_ridge_points_in_diagnostic": 1062,
+      "diagnostic_max_distance_source_px": 11.661903381347656,
+      "panel": {
+        "file": "ui-contour-review/private-wz17-source-difference-intervals.png",
+        "sha256": "e4bbf8b671669fd7b69ab127b38060cdae18fff4de1b6aac2d291c8f90ffc0d5",
+        "dimensions": [
+          660,
+          860
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-17-rgba.png",
+          "sha256": "bd3f6284fded13580283cf7fc00bbd6aed5f710cbc0a9941833da50749a05d41",
+          "dimensions": [
+            330,
+            430
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-17-glow-alpha.png",
+          "sha256": "2cfa93310f3d416393f700110d31751956d561b889f1bdecf6e30178f5465319",
+          "dimensions": [
+            330,
+            430
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-17-derived-ridge.png",
+          "sha256": "3e3dcc34a599fb25ef84a82b62a44467e61d56b72dd2e71a83ac172b565dd724",
+          "dimensions": [
+            330,
+            430
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ17-S01",
+          "source_bbox": [
+            220,
+            29,
+            224,
+            36
+          ],
+          "ridge_point_count": 8,
+          "max_distance_source_px": 7.211102485656738,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Short opening on the north-pointing inward step. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ17-S02",
+          "source_bbox": [
+            110,
+            59,
+            121,
+            67
+          ],
+          "ridge_point_count": 12,
+          "max_distance_source_px": 8.9442720413208,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening on the northwest diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ17-S03",
+          "source_bbox": [
+            58,
+            396,
+            66,
+            406
+          ],
+          "ridge_point_count": 11,
+          "max_distance_source_px": 9.433980941772461,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening at the southwest end of the lower lobe. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ17-S04",
+          "source_bbox": [
+            275,
+            75,
+            286,
+            91
+          ],
+          "ridge_point_count": 17,
+          "max_distance_source_px": 11.661903381347656,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening on the northeast diagonal edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 18,
+      "total_ridge_points_in_diagnostic": 891,
+      "diagnostic_max_distance_source_px": 11.313708305358887,
+      "panel": {
+        "file": "ui-contour-review/private-wz18-source-difference-intervals.png",
+        "sha256": "984268550a4d5529a232bf07b2ee6da29e8f9c48710309709bc9748647c97762",
+        "dimensions": [
+          760,
+          740
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-18-rgba.png",
+          "sha256": "aad09e376fd80fc85f3ce8665b9f78180d374f78d97f8bcbc9c9c2e31042604b",
+          "dimensions": [
+            380,
+            370
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-18-glow-alpha.png",
+          "sha256": "5aec20086392dd0a3f9a0f44998ac2733b175149b25de4d7a80fa0b2f53313a6",
+          "dimensions": [
+            380,
+            370
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-18-derived-ridge.png",
+          "sha256": "0518d64bae3c79315e9b80f01e18bd93a499b3fc1a006ff1479a9626f096bbb6",
+          "dimensions": [
+            380,
+            370
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ18-S01",
+          "source_bbox": [
+            32,
+            275,
+            47,
+            289
+          ],
+          "ridge_point_count": 16,
+          "max_distance_source_px": 11.313708305358887,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening at the southwest tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ18-S02",
+          "source_bbox": [
+            167,
+            273,
+            174,
+            280
+          ],
+          "ridge_point_count": 8,
+          "max_distance_source_px": 8.062257766723633,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "First opening on the lower zigzag edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ18-S03",
+          "source_bbox": [
+            237,
+            296,
+            243,
+            303
+          ],
+          "ridge_point_count": 8,
+          "max_distance_source_px": 8.485280990600586,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Second opening on the lower zigzag edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ18-S04",
+          "source_bbox": [
+            347,
+            289,
+            352,
+            293
+          ],
+          "ridge_point_count": 6,
+          "max_distance_source_px": 6.4031243324279785,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Short opening at the southeast tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ18-S05",
+          "source_bbox": [
+            268,
+            163,
+            277,
+            175
+          ],
+          "ridge_point_count": 13,
+          "max_distance_source_px": 10.0,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening below the upper eastern inward corner. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ18-S06",
+          "source_bbox": [
+            278,
+            47,
+            289,
+            61
+          ],
+          "ridge_point_count": 15,
+          "max_distance_source_px": 11.313708305358887,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening at the northeast tip. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    },
+    {
+      "zone": 19,
+      "total_ridge_points_in_diagnostic": 1177,
+      "diagnostic_max_distance_source_px": 10.198039054870605,
+      "panel": {
+        "file": "ui-contour-review/private-wz19-source-difference-intervals.png",
+        "sha256": "4c5f1188569b277c840e64c1eae2a035dcfea61adf2c5ad9995208574731e2f7",
+        "dimensions": [
+          800,
+          860
+        ],
+        "visually_inspected": true
+      },
+      "source_images": {
+        "rgba": {
+          "file": "ui-zone-textures/wild-zone-19-rgba.png",
+          "sha256": "ca3ba89962b0772882e71f80a55da4b8281b57aa0d047b72bdc400d1a2e50ea0",
+          "dimensions": [
+            400,
+            430
+          ],
+          "mode": "RGBA",
+          "separately_displayed_in_this_supplement": false
+        },
+        "glow-alpha": {
+          "file": "ui-zone-textures/wild-zone-19-glow-alpha.png",
+          "sha256": "01918434d926ed1eddb13e041ce44e53837959e901cb3bdec4ac25915b998732",
+          "dimensions": [
+            400,
+            430
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        },
+        "derived-ridge": {
+          "file": "ui-zone-textures/wild-zone-19-derived-ridge.png",
+          "sha256": "ff3cad84b6b260023e2c1a8d16197c17be33ad3a880a669b7269d902005a0405",
+          "dimensions": [
+            400,
+            430
+          ],
+          "mode": "L",
+          "separately_displayed_in_this_supplement": false
+        }
+      },
+      "interval_findings": [
+        {
+          "id": "WZ19-S01",
+          "source_bbox": [
+            182,
+            325,
+            187,
+            338
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.198039054870605,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening below the western inward corner. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        },
+        {
+          "id": "WZ19-S02",
+          "source_bbox": [
+            277,
+            41,
+            283,
+            54
+          ],
+          "ridge_point_count": 14,
+          "max_distance_source_px": 10.198039054870605,
+          "classification": "source_gate_symbol_opening_closure",
+          "visual_finding": "Opening near the northern end of the eastern edge. The flagged blue ridge lies within the gap between the ordinary sprite's two black gate-end blocks, flanked by arrow ornaments; no continuous ordinary perimeter stroke occupies that opening.",
+          "confidence": "clear in the inspected source diagnostic panel",
+          "disposition": "Accept as a source-glow closure for rendered map selection only; retain the measured source-stroke discrepancy."
+        }
+      ]
+    }
+  ]
+}

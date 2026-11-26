@@ -1,0 +1,113 @@
+{
+  "id": "AT341-UI-OUTLINES-INDEPENDENT-REVIEW-2026-11-26",
+  "date": "2026-11-26",
+  "reviewer": "delegated_independent_geometry_agent_geometry_completion",
+  "decision": "NO_GEOMETRY_BLOCKER_TO_ELEVEN_SCOPED_ORIGINAL_UI_SELECTION_OUTLINES",
+  "scope": "The eleven exact first-contour records reviewed here are suitable for rendered map selection, conditional on final packaged/runtime records matching this evidence and passing final committed runtime and CI checks. No physical, walking, accessible-entrance, spawn, encounter-extent or full-release approval is granted.",
+  "packet_checkout": "/workspace/scratch/dd7dfe1436cb/runtime-review",
+  "packet_directory": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26",
+  "observed_packet_checkout_commit": "248f6de1acf4d27c308bc24e900d8385885c780b",
+  "observed_packet_checkout_tree": "54180175b1fa6264847e8b424ff239f48561d687",
+  "packet_working_state": "New untracked evidence directory was actively being packaged. This checkout has an older six-zone runtime dataset; its runtime data must not replace the release checkout.",
+  "release_preservation_snapshot": {
+    "checkout": "/workspace/scratch/dd7dfe1436cb/atlas-release",
+    "observed_commit": "a19f1f2fc0535511dac4349573d2442dad40570e",
+    "observed_tree": "7bb78df66a3f2a233f8a6380253f9fd7065fa168",
+    "comparison_base_commit": "cffbf6077682e2c1cfacad2603e7d9c6a94147ef",
+    "existing_zone_ids": [2, 3, 4, 5, 11, 13, 14, 16, 20],
+    "all_nine_entire_geometry_records_deep_equal": true,
+    "new_eleven_already_present_in_release_runtime_at_review": false
+  },
+  "reviewed_evidence_hashes": [
+    {"path": "source-provenance.json", "sha256": "0b00ecb4c07910a2f36d9ca346dbc54671ab9d1a4c0a9e65f3d6f2ef2663bbd1"},
+    {"path": "original-ui-placement-facts.json", "sha256": "ff4d3036f860acd62500fdeb20b031b6e1106ad76274c78bd7f1fddba6daaa80"},
+    {"path": "original-ui-contour-candidates-first.json", "sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c"},
+    {"path": "first-ui-contour-independent-checks.json", "sha256": "92c8437e76b36ed02cbdfd1127500cbb40a635dfcc2467f0d11e02b29cd7760b"},
+    {"path": "validation/native-green-checks-fixed.json", "sha256": "3d26c83a812675804eb97dfccc3d77302f9c5904cd351cc226a16d5bfb85f62c"},
+    {"path": "owner-native-new-ui-contours-1.png", "sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc"},
+    {"path": "owner-native-new-ui-contours-2.png", "sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e"}
+  ],
+  "source_identity_and_placement": {
+    "public_repository": "969981/ZA_Resources",
+    "public_source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+    "publisher_declared_version": "2.0.2",
+    "provenance_limit": "Third-party publication of original game resources. Content hashes and source joins are verified; official-publisher endorsement is not claimed.",
+    "full_retained_decoded_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+    "original_raw_assets_verified_by_sha256_git_blob_and_byte_count": ["place_name.dat", "place_name.tbl", "map_field_00.arc", "map_top_00.arc", "map_zone_pane.bin"],
+    "raw_identity_table_rows_independently_read": 32,
+    "wild_zone_numeric_id_name_key_pane_english_label_joins_verified": 20,
+    "battle_only_rows_excluded": 12,
+    "text_table_detail": "Original AHTB has 285 keys: 284 DAT text records and a trailing msg_place_name_max sentinel. All twenty Wild Zone identities resolve within the text records.",
+    "source_material_and_placement_facts_match_retained_full_metadata": true,
+    "fixed_texture_to_original_map_offsets_scales_and_pixel_center_corrections_recomputed": true,
+    "new_zone_unit_texture_scale_count": 11,
+    "common_ancestor_zoom": [0.8125, 0.8125],
+    "zoom_scope": "Shared base-map/zone ancestor cancels in original-map pixel coordinates; zone placement is not fitted to visible green contours.",
+    "unchanged_raster_registration_sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915",
+    "native_map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "new_source_artifact_checks": "For all eleven proposed zones, existing decoded ordinary RGBA and glow-alpha image dimensions and raw pixel SHA256 values exactly match the retained metadata. No recovered artwork was emitted or published.",
+    "decoded_source_artifact_zone_count": 11,
+    "mapping": [
+      {"zone": 1, "zone_id": "a0102_w01", "texture_number": 2, "closed_ring_vertices": 149},
+      {"zone": 6, "zone_id": "a0502_w01", "texture_number": 17, "closed_ring_vertices": 125},
+      {"zone": 7, "zone_id": "a0303_w01", "texture_number": 11, "closed_ring_vertices": 68},
+      {"zone": 8, "zone_id": "a0503_w01", "texture_number": 19, "closed_ring_vertices": 62},
+      {"zone": 9, "zone_id": "a0301_w02", "texture_number": 9, "closed_ring_vertices": 81},
+      {"zone": 10, "zone_id": "a0202_w01", "texture_number": 5, "closed_ring_vertices": 97},
+      {"zone": 12, "zone_id": "a0201_w01", "texture_number": 4, "closed_ring_vertices": 34},
+      {"zone": 15, "zone_id": "a0501_w01", "texture_number": 15, "closed_ring_vertices": 34},
+      {"zone": 17, "zone_id": "a0101_w01", "texture_number": 1, "closed_ring_vertices": 59},
+      {"zone": 18, "zone_id": "a0302_w01", "texture_number": 10, "closed_ring_vertices": 31},
+      {"zone": 19, "zone_id": "a0501_w02", "texture_number": 16, "closed_ring_vertices": 92}
+    ],
+    "mapping_convention": "Pane is L_w_ followed by the recorded zone_id. Explicit material joins identify ordinary map_zone_NN^t and glow map_zone_glow_NN^s; texture suffixes are not assumed to equal visible zone numbers."
+  },
+  "geometry_and_frozen_native_checks": {
+    "first_source_packet_zone_count": 20,
+    "new_zone_ids": [1, 6, 7, 8, 9, 10, 12, 15, 17, 18, 19],
+    "new_polygon_count": 11,
+    "new_closed_ring_vertex_count": 832,
+    "all_new_polygons_valid_single_without_holes": true,
+    "all_native_vertices_finite_and_within_1920_map_bounds": true,
+    "source_to_native_projection_max_recomputation_difference_px": 2.2737367544323206e-13,
+    "fixed_native_rgb_scans_reproduced": 43,
+    "check_count_by_zone": {"1": 4, "6": 4, "7": 4, "8": 3, "9": 4, "10": 4, "12": 4, "15": 4, "17": 4, "18": 4, "19": 4},
+    "scan_verification": "Every retained sample RGB value matches the unchanged native JPEG. Recomputed green eligibility and median minimum-red-channel picks reproduce every fixed native target; no projected contour is used to choose those targets.",
+    "point_to_fixed_contour_rms_px": 0.9776701444858091,
+    "point_to_fixed_contour_max_px": 2.09846177492477,
+    "threshold_px": 3,
+    "metric_scope": "Distance from each independently frozen visible native stroke-centre sample to the fixed source-derived contour. Sample coverage is not a universal hidden-edge, physical-boundary or game-world confidence bound.",
+    "source_derivation_reviewed": "Directly joined original P_zone_04 glow ridge, fixed half-intensity threshold 128, two-pass Zhang-Suen thinning and at most 0.75 source-pixel simplification. The derivation reads no native validation points.",
+    "no_transform_threshold_contour_or_simplification_tuning_from_43_checks": true,
+    "native_pick_correction": "WZ09 UI09-N4 scan window was recentered on the visible stroke before projection. The first pick remains preserved; the corrected owner-native panel was directly viewed."
+  },
+  "visual_review": {
+    "delegated_reviewer_panels_viewed": ["owner-native-new-ui-contours-1.png", "owner-native-new-ui-contours-2.png", "validation/wz09-native-pick-correction-review.png"],
+    "delegated_finding": "All eleven contours agree with visible owner-native green edges. No visible topology or alignment blocker was found within rendered-selection scope.",
+    "root_corroboration": "Root separately reported direct inspection of both owner-native-new-ui-contours panels covering all eleven zones, with no visible topology/alignment blocker for rendered selection. Root expressly withheld approval of later dynamic runtime until exact committed records and CI are checked."
+  },
+  "representation_and_occlusion_limits": [
+    "Digitized original UI selection perimeter only; no physical collision, traversability, route, accessible-entrance, spawn or encounter-extent claim.",
+    "The continuous original glow layer supplies the selection perimeter through gate openings; decorative gate bars and arrows are excluded.",
+    "Glow and ordinary rendered strokes are not universally identical. The retained WZ13 source/photo discrepancy remains disclosed, and none of the nine prior photo-derived outlines is replaced.",
+    "WZ17's narrow connection under the native badge is a source UI selection connection. It must not be presented as a traversable connection or safe path.",
+    "43 passing visible-stroke checks do not prove a universal three-pixel bound on every hidden edge or source-layer discrepancy."
+  ],
+  "packaging_status_at_last_read": {
+    "first_source_packet_status": "fixed source UI perimeter candidates; independent native validation and review pending",
+    "native_ui_outline_candidates_wrapper_present": false,
+    "validation_independent_ui_contour_review_present": false,
+    "later_dynamic_files_implicitly_approved": false,
+    "required_final_check": "Final packaged wrapper must remain additive for these eleven IDs, use the reviewed coordinates, retain all nine existing whole geometry records, preserve source/occlusion limitations and pass committed runtime/model/browser/visual/CI checks."
+  },
+  "review_execution_limits": {
+    "small_original_identity_and_english_tables_read_independently": true,
+    "existing_decoded_image_artifacts_read_for_hash_verification_only": true,
+    "archive_or_texture_decoder_rerun": false,
+    "expensive_full_pipeline_run": false,
+    "new_external_fetches": false,
+    "checkout_or_remote_edits": false,
+    "recovered_artwork_published": false
+  },
+  "material_identity_placement_topology_or_visible_alignment_mismatch_found": false
+}

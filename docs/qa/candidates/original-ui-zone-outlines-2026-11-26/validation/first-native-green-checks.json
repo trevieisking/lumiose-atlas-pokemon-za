@@ -1,0 +1,7544 @@
+{
+  "status": "native picks before any projected UI contour; pending visual acceptance",
+  "native_map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "zones": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    17,
+    18,
+    19
+  ],
+  "checks": [
+    {
+      "id": "UI01-N1",
+      "zone": 1,
+      "seed_native_xy": [
+        978,
+        1755
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        978.0,
+        1755.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            972,
+            1755
+          ],
+          "rgb": [
+            233,
+            239,
+            225
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            973,
+            1755
+          ],
+          "rgb": [
+            234,
+            240,
+            226
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            974,
+            1755
+          ],
+          "rgb": [
+            232,
+            238,
+            226
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            975,
+            1755
+          ],
+          "rgb": [
+            215,
+            244,
+            222
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            976,
+            1755
+          ],
+          "rgb": [
+            151,
+            226,
+            187
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            977,
+            1755
+          ],
+          "rgb": [
+            77,
+            174,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            978,
+            1755
+          ],
+          "rgb": [
+            72,
+            169,
+            118
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            979,
+            1755
+          ],
+          "rgb": [
+            136,
+            229,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            980,
+            1755
+          ],
+          "rgb": [
+            132,
+            220,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            981,
+            1755
+          ],
+          "rgb": [
+            142,
+            229,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            982,
+            1755
+          ],
+          "rgb": [
+            147,
+            227,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            983,
+            1755
+          ],
+          "rgb": [
+            149,
+            226,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            984,
+            1755
+          ],
+          "rgb": [
+            152,
+            225,
+            170
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI01-N2",
+      "zone": 1,
+      "seed_native_xy": [
+        1060,
+        1723
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1060.0,
+        1724.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1060,
+            1717
+          ],
+          "rgb": [
+            249,
+            246,
+            229
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1060,
+            1718
+          ],
+          "rgb": [
+            247,
+            250,
+            229
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1060,
+            1719
+          ],
+          "rgb": [
+            238,
+            252,
+            227
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1060,
+            1720
+          ],
+          "rgb": [
+            214,
+            245,
+            214
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1721
+          ],
+          "rgb": [
+            184,
+            231,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1722
+          ],
+          "rgb": [
+            187,
+            254,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1723
+          ],
+          "rgb": [
+            111,
+            199,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1724
+          ],
+          "rgb": [
+            59,
+            169,
+            108
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1725
+          ],
+          "rgb": [
+            88,
+            215,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1726
+          ],
+          "rgb": [
+            106,
+            246,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1727
+          ],
+          "rgb": [
+            117,
+            244,
+            177
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1728
+          ],
+          "rgb": [
+            146,
+            235,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1060,
+            1729
+          ],
+          "rgb": [
+            159,
+            227,
+            176
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI01-N3",
+      "zone": 1,
+      "seed_native_xy": [
+        1030,
+        1784
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1030.0,
+        1784.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1030,
+            1778
+          ],
+          "rgb": [
+            148,
+            232,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1779
+          ],
+          "rgb": [
+            144,
+            233,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1780
+          ],
+          "rgb": [
+            137,
+            231,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1781
+          ],
+          "rgb": [
+            136,
+            235,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1782
+          ],
+          "rgb": [
+            125,
+            228,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1783
+          ],
+          "rgb": [
+            106,
+            211,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1784
+          ],
+          "rgb": [
+            62,
+            166,
+            113
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1785
+          ],
+          "rgb": [
+            103,
+            201,
+            152
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1786
+          ],
+          "rgb": [
+            157,
+            242,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1787
+          ],
+          "rgb": [
+            177,
+            247,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1788
+          ],
+          "rgb": [
+            195,
+            245,
+            216
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1789
+          ],
+          "rgb": [
+            202,
+            236,
+            212
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1030,
+            1790
+          ],
+          "rgb": [
+            199,
+            220,
+            203
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI01-N4",
+      "zone": 1,
+      "seed_native_xy": [
+        1240,
+        1736
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1240.0,
+        1736.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1240,
+            1730
+          ],
+          "rgb": [
+            216,
+            211,
+            189
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1240,
+            1731
+          ],
+          "rgb": [
+            207,
+            217,
+            190
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1240,
+            1732
+          ],
+          "rgb": [
+            189,
+            216,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1733
+          ],
+          "rgb": [
+            185,
+            230,
+            191
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1734
+          ],
+          "rgb": [
+            160,
+            219,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1735
+          ],
+          "rgb": [
+            104,
+            176,
+            128
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1736
+          ],
+          "rgb": [
+            87,
+            170,
+            118
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1737
+          ],
+          "rgb": [
+            120,
+            209,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1738
+          ],
+          "rgb": [
+            146,
+            236,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1739
+          ],
+          "rgb": [
+            152,
+            245,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1740
+          ],
+          "rgb": [
+            156,
+            249,
+            194
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1741
+          ],
+          "rgb": [
+            157,
+            247,
+            193
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1240,
+            1742
+          ],
+          "rgb": [
+            153,
+            243,
+            189
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI06-N1",
+      "zone": 6,
+      "seed_native_xy": [
+        1831,
+        925
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1830.0,
+        925.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1825,
+            925
+          ],
+          "rgb": [
+            171,
+            223,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1826,
+            925
+          ],
+          "rgb": [
+            161,
+            246,
+            187
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1827,
+            925
+          ],
+          "rgb": [
+            143,
+            252,
+            185
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1828,
+            925
+          ],
+          "rgb": [
+            128,
+            249,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1829,
+            925
+          ],
+          "rgb": [
+            84,
+            199,
+            130
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1830,
+            925
+          ],
+          "rgb": [
+            70,
+            158,
+            98
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1831,
+            925
+          ],
+          "rgb": [
+            169,
+            229,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1832,
+            925
+          ],
+          "rgb": [
+            190,
+            218,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1833,
+            925
+          ],
+          "rgb": [
+            205,
+            215,
+            181
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1834,
+            925
+          ],
+          "rgb": [
+            215,
+            214,
+            184
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1835,
+            925
+          ],
+          "rgb": [
+            219,
+            212,
+            184
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1836,
+            925
+          ],
+          "rgb": [
+            223,
+            209,
+            183
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1837,
+            925
+          ],
+          "rgb": [
+            228,
+            206,
+            183
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI06-N2",
+      "zone": 6,
+      "seed_native_xy": [
+        1831,
+        980
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1830.0,
+        980.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1825,
+            980
+          ],
+          "rgb": [
+            187,
+            255,
+            208
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1826,
+            980
+          ],
+          "rgb": [
+            182,
+            251,
+            204
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1827,
+            980
+          ],
+          "rgb": [
+            168,
+            251,
+            199
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1828,
+            980
+          ],
+          "rgb": [
+            137,
+            245,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1829,
+            980
+          ],
+          "rgb": [
+            99,
+            215,
+            150
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1830,
+            980
+          ],
+          "rgb": [
+            46,
+            156,
+            93
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1831,
+            980
+          ],
+          "rgb": [
+            136,
+            219,
+            165
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1832,
+            980
+          ],
+          "rgb": [
+            176,
+            208,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1833,
+            980
+          ],
+          "rgb": [
+            198,
+            197,
+            169
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1834,
+            980
+          ],
+          "rgb": [
+            212,
+            190,
+            167
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1835,
+            980
+          ],
+          "rgb": [
+            216,
+            188,
+            167
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1836,
+            980
+          ],
+          "rgb": [
+            214,
+            189,
+            167
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1837,
+            980
+          ],
+          "rgb": [
+            216,
+            188,
+            167
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI06-N3",
+      "zone": 6,
+      "seed_native_xy": [
+        1655,
+        1090
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1655.0,
+        1090.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1649,
+            1090
+          ],
+          "rgb": [
+            201,
+            201,
+            167
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1650,
+            1090
+          ],
+          "rgb": [
+            199,
+            215,
+            176
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1651,
+            1090
+          ],
+          "rgb": [
+            192,
+            228,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1652,
+            1090
+          ],
+          "rgb": [
+            187,
+            246,
+            192
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1653,
+            1090
+          ],
+          "rgb": [
+            141,
+            221,
+            160
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1654,
+            1090
+          ],
+          "rgb": [
+            77,
+            174,
+            107
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1655,
+            1090
+          ],
+          "rgb": [
+            66,
+            173,
+            103
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1656,
+            1090
+          ],
+          "rgb": [
+            112,
+            224,
+            152
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1657,
+            1090
+          ],
+          "rgb": [
+            129,
+            241,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1658,
+            1090
+          ],
+          "rgb": [
+            137,
+            240,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1659,
+            1090
+          ],
+          "rgb": [
+            142,
+            234,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1660,
+            1090
+          ],
+          "rgb": [
+            155,
+            237,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1661,
+            1090
+          ],
+          "rgb": [
+            161,
+            232,
+            174
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI06-N4",
+      "zone": 6,
+      "seed_native_xy": [
+        1715,
+        1148
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1715.0,
+        1151.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1715,
+            1142
+          ],
+          "rgb": [
+            133,
+            210,
+            164
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1143
+          ],
+          "rgb": [
+            129,
+            207,
+            159
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1144
+          ],
+          "rgb": [
+            123,
+            201,
+            153
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1145
+          ],
+          "rgb": [
+            126,
+            205,
+            157
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1146
+          ],
+          "rgb": [
+            129,
+            211,
+            162
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1147
+          ],
+          "rgb": [
+            134,
+            218,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1148
+          ],
+          "rgb": [
+            147,
+            235,
+            185
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1149
+          ],
+          "rgb": [
+            155,
+            244,
+            196
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1150
+          ],
+          "rgb": [
+            128,
+            220,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1151
+          ],
+          "rgb": [
+            91,
+            179,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1152
+          ],
+          "rgb": [
+            101,
+            180,
+            133
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1153
+          ],
+          "rgb": [
+            159,
+            226,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1715,
+            1154
+          ],
+          "rgb": [
+            206,
+            255,
+            219
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI07-N1",
+      "zone": 7,
+      "seed_native_xy": [
+        558,
+        758
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        558.0,
+        758.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            558,
+            752
+          ],
+          "rgb": [
+            252,
+            235,
+            225
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            558,
+            753
+          ],
+          "rgb": [
+            248,
+            234,
+            221
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            558,
+            754
+          ],
+          "rgb": [
+            244,
+            243,
+            225
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            558,
+            755
+          ],
+          "rgb": [
+            234,
+            248,
+            225
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            558,
+            756
+          ],
+          "rgb": [
+            222,
+            255,
+            228
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            757
+          ],
+          "rgb": [
+            165,
+            214,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            758
+          ],
+          "rgb": [
+            98,
+            163,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            759
+          ],
+          "rgb": [
+            105,
+            178,
+            135
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            760
+          ],
+          "rgb": [
+            156,
+            233,
+            187
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            761
+          ],
+          "rgb": [
+            176,
+            249,
+            204
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            762
+          ],
+          "rgb": [
+            193,
+            255,
+            213
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            763
+          ],
+          "rgb": [
+            198,
+            249,
+            208
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            558,
+            764
+          ],
+          "rgb": [
+            203,
+            239,
+            201
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI07-N2",
+      "zone": 7,
+      "seed_native_xy": [
+        628,
+        820
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        628.0,
+        820.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            622,
+            820
+          ],
+          "rgb": [
+            158,
+            223,
+            189
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            623,
+            820
+          ],
+          "rgb": [
+            146,
+            212,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            624,
+            820
+          ],
+          "rgb": [
+            127,
+            193,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            625,
+            820
+          ],
+          "rgb": [
+            149,
+            226,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            626,
+            820
+          ],
+          "rgb": [
+            141,
+            239,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            627,
+            820
+          ],
+          "rgb": [
+            120,
+            229,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            628,
+            820
+          ],
+          "rgb": [
+            56,
+            163,
+            109
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            629,
+            820
+          ],
+          "rgb": [
+            97,
+            189,
+            140
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            630,
+            820
+          ],
+          "rgb": [
+            165,
+            227,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            631,
+            820
+          ],
+          "rgb": [
+            210,
+            246,
+            218
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            632,
+            820
+          ],
+          "rgb": [
+            220,
+            235,
+            216
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            633,
+            820
+          ],
+          "rgb": [
+            227,
+            231,
+            216
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            634,
+            820
+          ],
+          "rgb": [
+            224,
+            232,
+            217
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI07-N3",
+      "zone": 7,
+      "seed_native_xy": [
+        512,
+        885
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        512.0,
+        884.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            512,
+            879
+          ],
+          "rgb": [
+            152,
+            236,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            880
+          ],
+          "rgb": [
+            148,
+            242,
+            192
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            881
+          ],
+          "rgb": [
+            136,
+            232,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            882
+          ],
+          "rgb": [
+            124,
+            213,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            883
+          ],
+          "rgb": [
+            106,
+            189,
+            145
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            884
+          ],
+          "rgb": [
+            94,
+            171,
+            129
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            885
+          ],
+          "rgb": [
+            104,
+            176,
+            136
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            886
+          ],
+          "rgb": [
+            144,
+            210,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            887
+          ],
+          "rgb": [
+            184,
+            245,
+            211
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            888
+          ],
+          "rgb": [
+            188,
+            243,
+            211
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            889
+          ],
+          "rgb": [
+            189,
+            238,
+            209
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            890
+          ],
+          "rgb": [
+            187,
+            229,
+            205
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            512,
+            891
+          ],
+          "rgb": [
+            204,
+            235,
+            217
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI07-N4",
+      "zone": 7,
+      "seed_native_xy": [
+        495,
+        800
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        493.0,
+        800.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            489,
+            800
+          ],
+          "rgb": [
+            218,
+            242,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            490,
+            800
+          ],
+          "rgb": [
+            214,
+            248,
+            223
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            491,
+            800
+          ],
+          "rgb": [
+            195,
+            246,
+            215
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            492,
+            800
+          ],
+          "rgb": [
+            126,
+            194,
+            157
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            493,
+            800
+          ],
+          "rgb": [
+            82,
+            168,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            494,
+            800
+          ],
+          "rgb": [
+            107,
+            205,
+            158
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            495,
+            800
+          ],
+          "rgb": [
+            116,
+            218,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            496,
+            800
+          ],
+          "rgb": [
+            137,
+            232,
+            192
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            497,
+            800
+          ],
+          "rgb": [
+            182,
+            255,
+            234
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            498,
+            800
+          ],
+          "rgb": [
+            157,
+            242,
+            209
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            499,
+            800
+          ],
+          "rgb": [
+            113,
+            194,
+            162
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            500,
+            800
+          ],
+          "rgb": [
+            124,
+            200,
+            170
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            501,
+            800
+          ],
+          "rgb": [
+            138,
+            213,
+            183
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI08-N1",
+      "zone": 8,
+      "seed_native_xy": [
+        1366,
+        740
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1366.0,
+        741.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1366,
+            734
+          ],
+          "rgb": [
+            240,
+            251,
+            234
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1366,
+            735
+          ],
+          "rgb": [
+            241,
+            250,
+            231
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1366,
+            736
+          ],
+          "rgb": [
+            251,
+            250,
+            232
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1366,
+            737
+          ],
+          "rgb": [
+            241,
+            244,
+            225
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1366,
+            738
+          ],
+          "rgb": [
+            229,
+            253,
+            229
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            739
+          ],
+          "rgb": [
+            186,
+            231,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            740
+          ],
+          "rgb": [
+            112,
+            180,
+            143
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            741
+          ],
+          "rgb": [
+            91,
+            174,
+            132
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            742
+          ],
+          "rgb": [
+            130,
+            219,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            743
+          ],
+          "rgb": [
+            167,
+            252,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            744
+          ],
+          "rgb": [
+            179,
+            251,
+            211
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            745
+          ],
+          "rgb": [
+            191,
+            252,
+            211
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1366,
+            746
+          ],
+          "rgb": [
+            204,
+            250,
+            211
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI08-N2",
+      "zone": 8,
+      "seed_native_xy": [
+        1292,
+        805
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1292.0,
+        805.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1286,
+            805
+          ],
+          "rgb": [
+            215,
+            232,
+            214
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1287,
+            805
+          ],
+          "rgb": [
+            228,
+            236,
+            221
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1288,
+            805
+          ],
+          "rgb": [
+            236,
+            232,
+            220
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1289,
+            805
+          ],
+          "rgb": [
+            225,
+            236,
+            219
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1290,
+            805
+          ],
+          "rgb": [
+            184,
+            235,
+            204
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1291,
+            805
+          ],
+          "rgb": [
+            113,
+            202,
+            158
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1292,
+            805
+          ],
+          "rgb": [
+            48,
+            173,
+            115
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1293,
+            805
+          ],
+          "rgb": [
+            79,
+            217,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1294,
+            805
+          ],
+          "rgb": [
+            113,
+            236,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1295,
+            805
+          ],
+          "rgb": [
+            144,
+            251,
+            197
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1296,
+            805
+          ],
+          "rgb": [
+            159,
+            245,
+            196
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1297,
+            805
+          ],
+          "rgb": [
+            159,
+            237,
+            189
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1298,
+            805
+          ],
+          "rgb": [
+            161,
+            239,
+            191
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI08-N3",
+      "zone": 8,
+      "seed_native_xy": [
+        1415,
+        868
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1415.0,
+        868.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1415,
+            862
+          ],
+          "rgb": [
+            173,
+            251,
+            201
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            863
+          ],
+          "rgb": [
+            171,
+            253,
+            204
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            864
+          ],
+          "rgb": [
+            165,
+            255,
+            206
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            865
+          ],
+          "rgb": [
+            151,
+            245,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            866
+          ],
+          "rgb": [
+            131,
+            223,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            867
+          ],
+          "rgb": [
+            113,
+            199,
+            152
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            868
+          ],
+          "rgb": [
+            103,
+            182,
+            137
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            869
+          ],
+          "rgb": [
+            119,
+            190,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            870
+          ],
+          "rgb": [
+            165,
+            225,
+            189
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            871
+          ],
+          "rgb": [
+            210,
+            255,
+            228
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            872
+          ],
+          "rgb": [
+            209,
+            249,
+            222
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            873
+          ],
+          "rgb": [
+            231,
+            255,
+            236
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1415,
+            874
+          ],
+          "rgb": [
+            237,
+            254,
+            236
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI09-N1",
+      "zone": 9,
+      "seed_native_xy": [
+        300,
+        1003
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        300.0,
+        1002.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            300,
+            997
+          ],
+          "rgb": [
+            235,
+            207,
+            186
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            300,
+            998
+          ],
+          "rgb": [
+            220,
+            213,
+            185
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            300,
+            999
+          ],
+          "rgb": [
+            204,
+            221,
+            185
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            300,
+            1000
+          ],
+          "rgb": [
+            164,
+            216,
+            168
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1001
+          ],
+          "rgb": [
+            141,
+            220,
+            163
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1002
+          ],
+          "rgb": [
+            74,
+            174,
+            110
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1003
+          ],
+          "rgb": [
+            75,
+            189,
+            120
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1004
+          ],
+          "rgb": [
+            131,
+            245,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1005
+          ],
+          "rgb": [
+            144,
+            253,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1006
+          ],
+          "rgb": [
+            153,
+            252,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1007
+          ],
+          "rgb": [
+            160,
+            250,
+            189
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1008
+          ],
+          "rgb": [
+            178,
+            255,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            300,
+            1009
+          ],
+          "rgb": [
+            175,
+            248,
+            195
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI09-N2",
+      "zone": 9,
+      "seed_native_xy": [
+        144,
+        1090
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        141.0,
+        1090.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            138,
+            1090
+          ],
+          "rgb": [
+            211,
+            255,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            139,
+            1090
+          ],
+          "rgb": [
+            157,
+            218,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            140,
+            1090
+          ],
+          "rgb": [
+            100,
+            178,
+            126
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            141,
+            1090
+          ],
+          "rgb": [
+            95,
+            191,
+            128
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            142,
+            1090
+          ],
+          "rgb": [
+            120,
+            231,
+            163
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            143,
+            1090
+          ],
+          "rgb": [
+            141,
+            248,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            144,
+            1090
+          ],
+          "rgb": [
+            151,
+            237,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            145,
+            1090
+          ],
+          "rgb": [
+            153,
+            227,
+            168
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            146,
+            1090
+          ],
+          "rgb": [
+            155,
+            223,
+            166
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            147,
+            1090
+          ],
+          "rgb": [
+            163,
+            226,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            148,
+            1090
+          ],
+          "rgb": [
+            171,
+            228,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            149,
+            1090
+          ],
+          "rgb": [
+            172,
+            226,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            150,
+            1090
+          ],
+          "rgb": [
+            168,
+            225,
+            172
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI09-N3",
+      "zone": 9,
+      "seed_native_xy": [
+        180,
+        1182
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        180.0,
+        1183.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            180,
+            1176
+          ],
+          "rgb": [
+            177,
+            235,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1177
+          ],
+          "rgb": [
+            162,
+            220,
+            161
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1178
+          ],
+          "rgb": [
+            166,
+            225,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1179
+          ],
+          "rgb": [
+            165,
+            233,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1180
+          ],
+          "rgb": [
+            149,
+            227,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1181
+          ],
+          "rgb": [
+            136,
+            226,
+            164
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1182
+          ],
+          "rgb": [
+            106,
+            207,
+            141
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1183
+          ],
+          "rgb": [
+            61,
+            162,
+            102
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1184
+          ],
+          "rgb": [
+            132,
+            226,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1185
+          ],
+          "rgb": [
+            171,
+            249,
+            209
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1186
+          ],
+          "rgb": [
+            203,
+            255,
+            225
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1187
+          ],
+          "rgb": [
+            219,
+            253,
+            226
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            180,
+            1188
+          ],
+          "rgb": [
+            236,
+            248,
+            228
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI09-N4",
+      "zone": 9,
+      "seed_native_xy": [
+        350,
+        1060
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        356.0,
+        1060.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            344,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            346,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            347,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            348,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            349,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            350,
+            1060
+          ],
+          "rgb": [
+            168,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            351,
+            1060
+          ],
+          "rgb": [
+            167,
+            227,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            352,
+            1060
+          ],
+          "rgb": [
+            164,
+            229,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            353,
+            1060
+          ],
+          "rgb": [
+            166,
+            227,
+            170
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            354,
+            1060
+          ],
+          "rgb": [
+            175,
+            221,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            355,
+            1060
+          ],
+          "rgb": [
+            172,
+            226,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            356,
+            1060
+          ],
+          "rgb": [
+            155,
+            236,
+            177
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI10-N1",
+      "zone": 10,
+      "seed_native_xy": [
+        345,
+        1189
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        345.0,
+        1185.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            345,
+            1183
+          ],
+          "rgb": [
+            158,
+            238,
+            187
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1184
+          ],
+          "rgb": [
+            76,
+            186,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1185
+          ],
+          "rgb": [
+            70,
+            189,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1186
+          ],
+          "rgb": [
+            108,
+            214,
+            152
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1187
+          ],
+          "rgb": [
+            149,
+            240,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1188
+          ],
+          "rgb": [
+            159,
+            238,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1189
+          ],
+          "rgb": [
+            161,
+            231,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1190
+          ],
+          "rgb": [
+            163,
+            232,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1191
+          ],
+          "rgb": [
+            159,
+            228,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1192
+          ],
+          "rgb": [
+            158,
+            231,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1193
+          ],
+          "rgb": [
+            155,
+            232,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1194
+          ],
+          "rgb": [
+            153,
+            234,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            345,
+            1195
+          ],
+          "rgb": [
+            153,
+            233,
+            174
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI10-N2",
+      "zone": 10,
+      "seed_native_xy": [
+        195,
+        1270
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        192.0,
+        1270.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            189,
+            1270
+          ],
+          "rgb": [
+            202,
+            255,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            190,
+            1270
+          ],
+          "rgb": [
+            148,
+            224,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            191,
+            1270
+          ],
+          "rgb": [
+            103,
+            190,
+            139
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            192,
+            1270
+          ],
+          "rgb": [
+            83,
+            181,
+            120
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            193,
+            1270
+          ],
+          "rgb": [
+            111,
+            210,
+            145
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            194,
+            1270
+          ],
+          "rgb": [
+            139,
+            229,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            195,
+            1270
+          ],
+          "rgb": [
+            145,
+            227,
+            165
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            196,
+            1270
+          ],
+          "rgb": [
+            147,
+            218,
+            158
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            197,
+            1270
+          ],
+          "rgb": [
+            155,
+            218,
+            161
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            198,
+            1270
+          ],
+          "rgb": [
+            161,
+            219,
+            161
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            199,
+            1270
+          ],
+          "rgb": [
+            160,
+            215,
+            158
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            200,
+            1270
+          ],
+          "rgb": [
+            163,
+            216,
+            162
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            201,
+            1270
+          ],
+          "rgb": [
+            163,
+            216,
+            162
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI10-N3",
+      "zone": 10,
+      "seed_native_xy": [
+        390,
+        1298
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        390.0,
+        1297.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            390,
+            1292
+          ],
+          "rgb": [
+            164,
+            233,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1293
+          ],
+          "rgb": [
+            155,
+            228,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1294
+          ],
+          "rgb": [
+            149,
+            226,
+            170
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1295
+          ],
+          "rgb": [
+            142,
+            230,
+            170
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1296
+          ],
+          "rgb": [
+            93,
+            193,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1297
+          ],
+          "rgb": [
+            75,
+            175,
+            113
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1298
+          ],
+          "rgb": [
+            116,
+            203,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1299
+          ],
+          "rgb": [
+            176,
+            248,
+            202
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1300
+          ],
+          "rgb": [
+            196,
+            251,
+            212
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1301
+          ],
+          "rgb": [
+            205,
+            244,
+            213
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1302
+          ],
+          "rgb": [
+            222,
+            246,
+            222
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            390,
+            1303
+          ],
+          "rgb": [
+            227,
+            238,
+            221
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            390,
+            1304
+          ],
+          "rgb": [
+            240,
+            244,
+            230
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI10-N4",
+      "zone": 10,
+      "seed_native_xy": [
+        260,
+        1362
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        260.0,
+        1362.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            260,
+            1356
+          ],
+          "rgb": [
+            145,
+            221,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1357
+          ],
+          "rgb": [
+            150,
+            228,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1358
+          ],
+          "rgb": [
+            150,
+            228,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1359
+          ],
+          "rgb": [
+            142,
+            224,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1360
+          ],
+          "rgb": [
+            122,
+            208,
+            163
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1361
+          ],
+          "rgb": [
+            91,
+            178,
+            136
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1362
+          ],
+          "rgb": [
+            81,
+            166,
+            125
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1363
+          ],
+          "rgb": [
+            116,
+            194,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1364
+          ],
+          "rgb": [
+            160,
+            232,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1365
+          ],
+          "rgb": [
+            186,
+            247,
+            214
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1366
+          ],
+          "rgb": [
+            196,
+            245,
+            216
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1367
+          ],
+          "rgb": [
+            205,
+            240,
+            216
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            260,
+            1368
+          ],
+          "rgb": [
+            207,
+            228,
+            209
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI12-N1",
+      "zone": 12,
+      "seed_native_xy": [
+        800,
+        1486
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        800.0,
+        1486.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            800,
+            1480
+          ],
+          "rgb": [
+            199,
+            198,
+            180
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            800,
+            1481
+          ],
+          "rgb": [
+            192,
+            199,
+            181
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            800,
+            1482
+          ],
+          "rgb": [
+            188,
+            207,
+            185
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            800,
+            1483
+          ],
+          "rgb": [
+            174,
+            210,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1484
+          ],
+          "rgb": [
+            157,
+            214,
+            181
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1485
+          ],
+          "rgb": [
+            111,
+            186,
+            147
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1486
+          ],
+          "rgb": [
+            76,
+            167,
+            123
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1487
+          ],
+          "rgb": [
+            116,
+            216,
+            166
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1488
+          ],
+          "rgb": [
+            143,
+            246,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1489
+          ],
+          "rgb": [
+            155,
+            255,
+            198
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1490
+          ],
+          "rgb": [
+            162,
+            255,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1491
+          ],
+          "rgb": [
+            170,
+            253,
+            201
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            800,
+            1492
+          ],
+          "rgb": [
+            180,
+            252,
+            204
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI12-N2",
+      "zone": 12,
+      "seed_native_xy": [
+        718,
+        1575
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        720.0,
+        1575.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            712,
+            1575
+          ],
+          "rgb": [
+            241,
+            231,
+            221
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            713,
+            1575
+          ],
+          "rgb": [
+            255,
+            255,
+            243
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            714,
+            1575
+          ],
+          "rgb": [
+            247,
+            255,
+            242
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            715,
+            1575
+          ],
+          "rgb": [
+            217,
+            242,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            716,
+            1575
+          ],
+          "rgb": [
+            208,
+            247,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            717,
+            1575
+          ],
+          "rgb": [
+            212,
+            255,
+            232
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            718,
+            1575
+          ],
+          "rgb": [
+            182,
+            242,
+            208
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            719,
+            1575
+          ],
+          "rgb": [
+            125,
+            200,
+            159
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            720,
+            1575
+          ],
+          "rgb": [
+            76,
+            173,
+            122
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            721,
+            1575
+          ],
+          "rgb": [
+            93,
+            196,
+            141
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            722,
+            1575
+          ],
+          "rgb": [
+            127,
+            226,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            723,
+            1575
+          ],
+          "rgb": [
+            153,
+            246,
+            193
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            724,
+            1575
+          ],
+          "rgb": [
+            161,
+            248,
+            197
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI12-N3",
+      "zone": 12,
+      "seed_native_xy": [
+        790,
+        1654
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        790.0,
+        1654.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            790,
+            1648
+          ],
+          "rgb": [
+            182,
+            233,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1649
+          ],
+          "rgb": [
+            182,
+            240,
+            202
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1650
+          ],
+          "rgb": [
+            174,
+            247,
+            202
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1651
+          ],
+          "rgb": [
+            172,
+            255,
+            207
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1652
+          ],
+          "rgb": [
+            145,
+            239,
+            187
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1653
+          ],
+          "rgb": [
+            109,
+            206,
+            153
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1654
+          ],
+          "rgb": [
+            63,
+            151,
+            100
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1655
+          ],
+          "rgb": [
+            148,
+            221,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1656
+          ],
+          "rgb": [
+            169,
+            220,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1657
+          ],
+          "rgb": [
+            183,
+            213,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            790,
+            1658
+          ],
+          "rgb": [
+            197,
+            203,
+            177
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            790,
+            1659
+          ],
+          "rgb": [
+            203,
+            195,
+            174
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            790,
+            1660
+          ],
+          "rgb": [
+            212,
+            194,
+            174
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI12-N4",
+      "zone": 12,
+      "seed_native_xy": [
+        909,
+        1648
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        908.0,
+        1648.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            903,
+            1648
+          ],
+          "rgb": [
+            187,
+            255,
+            209
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            904,
+            1648
+          ],
+          "rgb": [
+            186,
+            252,
+            206
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            905,
+            1648
+          ],
+          "rgb": [
+            173,
+            249,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            906,
+            1648
+          ],
+          "rgb": [
+            154,
+            253,
+            196
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            907,
+            1648
+          ],
+          "rgb": [
+            106,
+            216,
+            155
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            908,
+            1648
+          ],
+          "rgb": [
+            60,
+            168,
+            108
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            909,
+            1648
+          ],
+          "rgb": [
+            102,
+            185,
+            133
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            910,
+            1648
+          ],
+          "rgb": [
+            134,
+            165,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            911,
+            1648
+          ],
+          "rgb": [
+            204,
+            200,
+            175
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            912,
+            1648
+          ],
+          "rgb": [
+            215,
+            187,
+            165
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            913,
+            1648
+          ],
+          "rgb": [
+            227,
+            189,
+            168
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            914,
+            1648
+          ],
+          "rgb": [
+            230,
+            192,
+            169
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            915,
+            1648
+          ],
+          "rgb": [
+            226,
+            189,
+            163
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI15-N1",
+      "zone": 15,
+      "seed_native_xy": [
+        1500,
+        294
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1500.0,
+        292.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1500,
+            288
+          ],
+          "rgb": [
+            188,
+            209,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            289
+          ],
+          "rgb": [
+            169,
+            207,
+            166
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            290
+          ],
+          "rgb": [
+            142,
+            195,
+            149
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            291
+          ],
+          "rgb": [
+            111,
+            181,
+            129
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            292
+          ],
+          "rgb": [
+            89,
+            177,
+            119
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            293
+          ],
+          "rgb": [
+            94,
+            192,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            294
+          ],
+          "rgb": [
+            118,
+            220,
+            157
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            295
+          ],
+          "rgb": [
+            139,
+            241,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            296
+          ],
+          "rgb": [
+            152,
+            246,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            297
+          ],
+          "rgb": [
+            165,
+            253,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            298
+          ],
+          "rgb": [
+            177,
+            255,
+            201
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            299
+          ],
+          "rgb": [
+            178,
+            251,
+            198
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1500,
+            300
+          ],
+          "rgb": [
+            173,
+            243,
+            191
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI15-N2",
+      "zone": 15,
+      "seed_native_xy": [
+        1480,
+        377
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1480.0,
+        379.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1480,
+            371
+          ],
+          "rgb": [
+            205,
+            236,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            372
+          ],
+          "rgb": [
+            194,
+            238,
+            213
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            373
+          ],
+          "rgb": [
+            165,
+            220,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            374
+          ],
+          "rgb": [
+            141,
+            209,
+            168
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            375
+          ],
+          "rgb": [
+            135,
+            213,
+            165
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            376
+          ],
+          "rgb": [
+            137,
+            224,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            377
+          ],
+          "rgb": [
+            140,
+            231,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            378
+          ],
+          "rgb": [
+            114,
+            205,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            379
+          ],
+          "rgb": [
+            80,
+            169,
+            113
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            380
+          ],
+          "rgb": [
+            85,
+            170,
+            115
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            381
+          ],
+          "rgb": [
+            114,
+            194,
+            141
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            382
+          ],
+          "rgb": [
+            150,
+            228,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            383
+          ],
+          "rgb": [
+            191,
+            255,
+            213
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI15-N3",
+      "zone": 15,
+      "seed_native_xy": [
+        1595,
+        441
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1595.0,
+        439.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1595,
+            435
+          ],
+          "rgb": [
+            153,
+            252,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            436
+          ],
+          "rgb": [
+            138,
+            239,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            437
+          ],
+          "rgb": [
+            115,
+            219,
+            158
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            438
+          ],
+          "rgb": [
+            92,
+            196,
+            135
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            439
+          ],
+          "rgb": [
+            81,
+            181,
+            121
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            440
+          ],
+          "rgb": [
+            89,
+            180,
+            121
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            441
+          ],
+          "rgb": [
+            116,
+            199,
+            143
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            442
+          ],
+          "rgb": [
+            155,
+            225,
+            171
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            443
+          ],
+          "rgb": [
+            182,
+            242,
+            191
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            444
+          ],
+          "rgb": [
+            190,
+            237,
+            191
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            445
+          ],
+          "rgb": [
+            189,
+            226,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            446
+          ],
+          "rgb": [
+            194,
+            222,
+            181
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1595,
+            447
+          ],
+          "rgb": [
+            210,
+            222,
+            186
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI15-N4",
+      "zone": 15,
+      "seed_native_xy": [
+        1620,
+        415
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1620.0,
+        411.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1620,
+            409
+          ],
+          "rgb": [
+            120,
+            189,
+            135
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            410
+          ],
+          "rgb": [
+            91,
+            170,
+            113
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            411
+          ],
+          "rgb": [
+            90,
+            175,
+            116
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            412
+          ],
+          "rgb": [
+            106,
+            197,
+            136
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            413
+          ],
+          "rgb": [
+            126,
+            222,
+            159
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            414
+          ],
+          "rgb": [
+            140,
+            239,
+            175
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            415
+          ],
+          "rgb": [
+            149,
+            248,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            416
+          ],
+          "rgb": [
+            161,
+            255,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            417
+          ],
+          "rgb": [
+            159,
+            247,
+            189
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            418
+          ],
+          "rgb": [
+            162,
+            241,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            419
+          ],
+          "rgb": [
+            164,
+            237,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            420
+          ],
+          "rgb": [
+            165,
+            233,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            421
+          ],
+          "rgb": [
+            162,
+            232,
+            180
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI17-N1",
+      "zone": 17,
+      "seed_native_xy": [
+        1418,
+        1447
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1418.0,
+        1447.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1418,
+            1441
+          ],
+          "rgb": [
+            173,
+            225,
+            177
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1442
+          ],
+          "rgb": [
+            165,
+            229,
+            177
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1443
+          ],
+          "rgb": [
+            152,
+            229,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1444
+          ],
+          "rgb": [
+            134,
+            225,
+            164
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1445
+          ],
+          "rgb": [
+            108,
+            214,
+            150
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1446
+          ],
+          "rgb": [
+            82,
+            199,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1447
+          ],
+          "rgb": [
+            67,
+            186,
+            120
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1448
+          ],
+          "rgb": [
+            70,
+            186,
+            121
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1449
+          ],
+          "rgb": [
+            98,
+            206,
+            146
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1450
+          ],
+          "rgb": [
+            137,
+            232,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1451
+          ],
+          "rgb": [
+            172,
+            250,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1452
+          ],
+          "rgb": [
+            199,
+            255,
+            214
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1418,
+            1453
+          ],
+          "rgb": [
+            213,
+            255,
+            221
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI17-N2",
+      "zone": 17,
+      "seed_native_xy": [
+        1520,
+        1467
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1520.0,
+        1466.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1520,
+            1461
+          ],
+          "rgb": [
+            161,
+            255,
+            195
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1462
+          ],
+          "rgb": [
+            132,
+            246,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1463
+          ],
+          "rgb": [
+            131,
+            253,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1464
+          ],
+          "rgb": [
+            123,
+            245,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1465
+          ],
+          "rgb": [
+            103,
+            219,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1466
+          ],
+          "rgb": [
+            75,
+            174,
+            110
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1467
+          ],
+          "rgb": [
+            91,
+            172,
+            114
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1468
+          ],
+          "rgb": [
+            155,
+            213,
+            163
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1469
+          ],
+          "rgb": [
+            191,
+            229,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1470
+          ],
+          "rgb": [
+            192,
+            216,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1520,
+            1471
+          ],
+          "rgb": [
+            203,
+            213,
+            179
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1520,
+            1472
+          ],
+          "rgb": [
+            215,
+            212,
+            181
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1520,
+            1473
+          ],
+          "rgb": [
+            220,
+            209,
+            181
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI17-N3",
+      "zone": 17,
+      "seed_native_xy": [
+        1398,
+        1549
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1398.0,
+        1551.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1398,
+            1543
+          ],
+          "rgb": [
+            182,
+            242,
+            214
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1544
+          ],
+          "rgb": [
+            173,
+            237,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1545
+          ],
+          "rgb": [
+            167,
+            236,
+            207
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1546
+          ],
+          "rgb": [
+            165,
+            240,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1547
+          ],
+          "rgb": [
+            166,
+            247,
+            215
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1548
+          ],
+          "rgb": [
+            160,
+            245,
+            214
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1549
+          ],
+          "rgb": [
+            143,
+            230,
+            198
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1550
+          ],
+          "rgb": [
+            122,
+            208,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1551
+          ],
+          "rgb": [
+            108,
+            194,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1552
+          ],
+          "rgb": [
+            112,
+            198,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1553
+          ],
+          "rgb": [
+            125,
+            209,
+            185
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1554
+          ],
+          "rgb": [
+            148,
+            227,
+            205
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1398,
+            1555
+          ],
+          "rgb": [
+            169,
+            242,
+            222
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI17-N4",
+      "zone": 17,
+      "seed_native_xy": [
+        1441,
+        1570
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1441.0,
+        1568.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1441,
+            1564
+          ],
+          "rgb": [
+            148,
+            238,
+            177
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1565
+          ],
+          "rgb": [
+            153,
+            255,
+            192
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1566
+          ],
+          "rgb": [
+            141,
+            255,
+            192
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1567
+          ],
+          "rgb": [
+            114,
+            234,
+            172
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1568
+          ],
+          "rgb": [
+            75,
+            188,
+            134
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1569
+          ],
+          "rgb": [
+            87,
+            186,
+            139
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1570
+          ],
+          "rgb": [
+            126,
+            208,
+            168
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1571
+          ],
+          "rgb": [
+            171,
+            236,
+            202
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1572
+          ],
+          "rgb": [
+            200,
+            244,
+            219
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1573
+          ],
+          "rgb": [
+            221,
+            248,
+            229
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1441,
+            1574
+          ],
+          "rgb": [
+            238,
+            250,
+            238
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1441,
+            1575
+          ],
+          "rgb": [
+            239,
+            242,
+            233
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1441,
+            1576
+          ],
+          "rgb": [
+            240,
+            240,
+            230
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI18-N1",
+      "zone": 18,
+      "seed_native_xy": [
+        330,
+        365
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        330.0,
+        362.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            330,
+            359
+          ],
+          "rgb": [
+            188,
+            219,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            360
+          ],
+          "rgb": [
+            159,
+            208,
+            161
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            361
+          ],
+          "rgb": [
+            119,
+            183,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            362
+          ],
+          "rgb": [
+            92,
+            173,
+            115
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            363
+          ],
+          "rgb": [
+            105,
+            196,
+            135
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            364
+          ],
+          "rgb": [
+            126,
+            225,
+            161
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            365
+          ],
+          "rgb": [
+            136,
+            238,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            366
+          ],
+          "rgb": [
+            145,
+            247,
+            182
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            367
+          ],
+          "rgb": [
+            156,
+            255,
+            193
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            368
+          ],
+          "rgb": [
+            149,
+            254,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            369
+          ],
+          "rgb": [
+            153,
+            255,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            370
+          ],
+          "rgb": [
+            155,
+            254,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            330,
+            371
+          ],
+          "rgb": [
+            155,
+            246,
+            185
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI18-N2",
+      "zone": 18,
+      "seed_native_xy": [
+        434,
+        311
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        434.0,
+        312.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            434,
+            305
+          ],
+          "rgb": [
+            185,
+            255,
+            210
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            306
+          ],
+          "rgb": [
+            178,
+            255,
+            207
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            307
+          ],
+          "rgb": [
+            153,
+            242,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            308
+          ],
+          "rgb": [
+            140,
+            238,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            309
+          ],
+          "rgb": [
+            141,
+            245,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            310
+          ],
+          "rgb": [
+            128,
+            236,
+            174
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            311
+          ],
+          "rgb": [
+            107,
+            215,
+            153
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            312
+          ],
+          "rgb": [
+            69,
+            171,
+            108
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            313
+          ],
+          "rgb": [
+            88,
+            182,
+            122
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            314
+          ],
+          "rgb": [
+            123,
+            202,
+            145
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            315
+          ],
+          "rgb": [
+            155,
+            222,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            316
+          ],
+          "rgb": [
+            182,
+            231,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            434,
+            317
+          ],
+          "rgb": [
+            192,
+            229,
+            186
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI18-N3",
+      "zone": 18,
+      "seed_native_xy": [
+        440,
+        413
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        440.0,
+        415.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            440,
+            407
+          ],
+          "rgb": [
+            189,
+            246,
+            205
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            408
+          ],
+          "rgb": [
+            184,
+            230,
+            193
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            409
+          ],
+          "rgb": [
+            193,
+            233,
+            196
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            410
+          ],
+          "rgb": [
+            197,
+            239,
+            201
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            411
+          ],
+          "rgb": [
+            192,
+            248,
+            203
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            412
+          ],
+          "rgb": [
+            177,
+            251,
+            200
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            413
+          ],
+          "rgb": [
+            148,
+            241,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            414
+          ],
+          "rgb": [
+            103,
+            218,
+            153
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            415
+          ],
+          "rgb": [
+            77,
+            192,
+            125
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            416
+          ],
+          "rgb": [
+            94,
+            188,
+            126
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            417
+          ],
+          "rgb": [
+            129,
+            208,
+            151
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            418
+          ],
+          "rgb": [
+            162,
+            229,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            440,
+            419
+          ],
+          "rgb": [
+            180,
+            232,
+            184
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI18-N4",
+      "zone": 18,
+      "seed_native_xy": [
+        452,
+        378
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        452.0,
+        377.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            452,
+            372
+          ],
+          "rgb": [
+            221,
+            226,
+            194
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            452,
+            373
+          ],
+          "rgb": [
+            199,
+            225,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            374
+          ],
+          "rgb": [
+            160,
+            214,
+            165
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            375
+          ],
+          "rgb": [
+            120,
+            204,
+            145
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            376
+          ],
+          "rgb": [
+            64,
+            178,
+            109
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            377
+          ],
+          "rgb": [
+            49,
+            185,
+            109
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            378
+          ],
+          "rgb": [
+            53,
+            202,
+            121
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            379
+          ],
+          "rgb": [
+            78,
+            229,
+            148
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            380
+          ],
+          "rgb": [
+            109,
+            252,
+            173
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            381
+          ],
+          "rgb": [
+            130,
+            255,
+            186
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            382
+          ],
+          "rgb": [
+            142,
+            255,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            383
+          ],
+          "rgb": [
+            153,
+            251,
+            190
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            452,
+            384
+          ],
+          "rgb": [
+            175,
+            252,
+            200
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI19-N1",
+      "zone": 19,
+      "seed_native_xy": [
+        1510,
+        531
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1510.0,
+        532.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1510,
+            525
+          ],
+          "rgb": [
+            243,
+            240,
+            223
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1510,
+            526
+          ],
+          "rgb": [
+            239,
+            236,
+            219
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1510,
+            527
+          ],
+          "rgb": [
+            230,
+            238,
+            215
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1510,
+            528
+          ],
+          "rgb": [
+            230,
+            255,
+            228
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            529
+          ],
+          "rgb": [
+            213,
+            255,
+            220
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            530
+          ],
+          "rgb": [
+            163,
+            222,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            531
+          ],
+          "rgb": [
+            106,
+            180,
+            131
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            532
+          ],
+          "rgb": [
+            95,
+            184,
+            130
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            533
+          ],
+          "rgb": [
+            117,
+            217,
+            157
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            534
+          ],
+          "rgb": [
+            137,
+            243,
+            181
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            535
+          ],
+          "rgb": [
+            144,
+            253,
+            188
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            536
+          ],
+          "rgb": [
+            144,
+            249,
+            183
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1510,
+            537
+          ],
+          "rgb": [
+            146,
+            246,
+            182
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI19-N2",
+      "zone": 19,
+      "seed_native_xy": [
+        1483,
+        610
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1484.0,
+        610.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1477,
+            610
+          ],
+          "rgb": [
+            250,
+            249,
+            229
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1478,
+            610
+          ],
+          "rgb": [
+            242,
+            252,
+            228
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1479,
+            610
+          ],
+          "rgb": [
+            230,
+            255,
+            227
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1480,
+            610
+          ],
+          "rgb": [
+            221,
+            255,
+            229
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1481,
+            610
+          ],
+          "rgb": [
+            188,
+            251,
+            206
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1482,
+            610
+          ],
+          "rgb": [
+            142,
+            222,
+            169
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1483,
+            610
+          ],
+          "rgb": [
+            95,
+            191,
+            130
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1484,
+            610
+          ],
+          "rgb": [
+            82,
+            188,
+            122
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1485,
+            610
+          ],
+          "rgb": [
+            111,
+            225,
+            153
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1486,
+            610
+          ],
+          "rgb": [
+            139,
+            255,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1487,
+            610
+          ],
+          "rgb": [
+            142,
+            253,
+            177
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1488,
+            610
+          ],
+          "rgb": [
+            145,
+            238,
+            167
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1489,
+            610
+          ],
+          "rgb": [
+            157,
+            237,
+            168
+          ],
+          "green_candidate": true
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI19-N3",
+      "zone": 19,
+      "seed_native_xy": [
+        1580,
+        683
+      ],
+      "scan_axis": "y",
+      "half_window_px": 6,
+      "native_xy": [
+        1580.0,
+        685.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1580,
+            677
+          ],
+          "rgb": [
+            167,
+            235,
+            178
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            678
+          ],
+          "rgb": [
+            163,
+            238,
+            179
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            679
+          ],
+          "rgb": [
+            158,
+            242,
+            180
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            680
+          ],
+          "rgb": [
+            149,
+            248,
+            181
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            681
+          ],
+          "rgb": [
+            139,
+            246,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            682
+          ],
+          "rgb": [
+            134,
+            248,
+            176
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            683
+          ],
+          "rgb": [
+            127,
+            243,
+            170
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            684
+          ],
+          "rgb": [
+            98,
+            210,
+            138
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            685
+          ],
+          "rgb": [
+            70,
+            175,
+            106
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            686
+          ],
+          "rgb": [
+            97,
+            194,
+            127
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            687
+          ],
+          "rgb": [
+            161,
+            239,
+            181
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            688
+          ],
+          "rgb": [
+            187,
+            228,
+            184
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1580,
+            689
+          ],
+          "rgb": [
+            204,
+            221,
+            185
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    },
+    {
+      "id": "UI19-N4",
+      "zone": 19,
+      "seed_native_xy": [
+        1619,
+        630
+      ],
+      "scan_axis": "x",
+      "half_window_px": 6,
+      "native_xy": [
+        1614.0,
+        630.0
+      ],
+      "pick_method": "Median location among the minimum-red channel eligible green pixels on the predeclared 13-pixel horizontal/vertical scan. Eligible means G-R>20 and G-B>5. Native-image-only choice; no projected UI or fit used.",
+      "scan_samples": [
+        {
+          "native_xy": [
+            1613,
+            630
+          ],
+          "rgb": [
+            92,
+            216,
+            146
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1614,
+            630
+          ],
+          "rgb": [
+            65,
+            190,
+            122
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1615,
+            630
+          ],
+          "rgb": [
+            75,
+            183,
+            125
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1616,
+            630
+          ],
+          "rgb": [
+            174,
+            242,
+            201
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1617,
+            630
+          ],
+          "rgb": [
+            203,
+            248,
+            217
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1618,
+            630
+          ],
+          "rgb": [
+            222,
+            255,
+            232
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1619,
+            630
+          ],
+          "rgb": [
+            228,
+            255,
+            231
+          ],
+          "green_candidate": true
+        },
+        {
+          "native_xy": [
+            1620,
+            630
+          ],
+          "rgb": [
+            227,
+            245,
+            223
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1621,
+            630
+          ],
+          "rgb": [
+            229,
+            236,
+            218
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1622,
+            630
+          ],
+          "rgb": [
+            237,
+            235,
+            220
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1623,
+            630
+          ],
+          "rgb": [
+            246,
+            240,
+            226
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1624,
+            630
+          ],
+          "rgb": [
+            253,
+            245,
+            232
+          ],
+          "green_candidate": false
+        },
+        {
+          "native_xy": [
+            1625,
+            630
+          ],
+          "rgb": [
+            254,
+            246,
+            233
+          ],
+          "green_candidate": false
+        }
+      ],
+      "review_status": "pending independent visual check before projection",
+      "purpose": "held-out rendered green-stroke check; never fit"
+    }
+  ]
+}

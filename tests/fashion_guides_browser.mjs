@@ -1,4 +1,4 @@
-/* Real browser checks for fashion subguides. No network or actual feedback writes. */
+/* Real browser checks for fashion subguides and the corrected Fennekin mission. No network or actual feedback writes. */
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
@@ -58,10 +58,23 @@ try {
    await page.evaluate(()=>{location.hash="main";});
    await page.waitForFunction(expected=>new URL(document.getElementById("atlasArticleFeedback").href).searchParams.get("page")===expected,prefix+file+"#main");
   }
+  await page.goto(base+"side-missions.html#quest-8",{waitUntil:"load"});
+  const fennekin=page.locator('#quest-8');
+  await page.waitForFunction(()=>document.querySelector('#quest-8 details.side-route').open);
+  const instructions=await fennekin.innerText();
+  assert.ok(instructions.includes('Branche')&&!instructions.includes('Jardin'));
+  assert.ok(instructions.includes('Water-type attack')&&instructions.includes('ladder at the north end'));
+  assert.ok(instructions.includes('₽1,200')&&instructions.includes('Fennekin (Lv. 14)'));
+  assert.ok(await fennekin.locator('input[data-side-check="8"]').isDisabled());
+  assert.equal(await fennekin.locator('a[href="index.html#sidequests:quest-8"]').count(),1);
+  assert.equal(await fennekin.locator('a[href^="http"]').count(),0);
+  const missionOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+  assert.ok(missionOverflow<=1,kind+' mission 008 horizontal overflow '+missionOverflow);
+  await fennekin.screenshot({path:output+'/mission-008-'+kind+'.png'});
   assert.deepEqual(errors,[],kind+" browser exceptions");
   await context.close();
  }
- console.log("PASS: clothing and beauty on phone and desktop, 41 boutiques, five salons, navigation and feedback origin round-trips.");
+ console.log("PASS: clothing, beauty and corrected mission 008 on phone and desktop, 41 boutiques, five salons, navigation and feedback origin round-trips.");
 }finally{
  if(browser)await browser.close();
  server.kill();

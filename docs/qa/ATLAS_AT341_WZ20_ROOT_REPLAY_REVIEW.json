@@ -1,0 +1,45 @@
+{
+  "id": "AT341-root-WZ20-replay-review",
+  "date": "2026-11-26",
+  "decision": "APPROVE_EXISTING_REVIEWED_SELECTION_OUTLINE",
+  "source_remote_head": "b788abb87ef32cb210747da420d95780c4a22583",
+  "scope": "Independent review of the existing WZ20 green map-selection outline; no source or runtime geometry replacement.",
+  "visual_review": {
+    "viewed": [
+      "registered-source-review.png",
+      "primary-landmark-review.png",
+      "closeup-landmark-review.png"
+    ],
+    "observation": "The whole map, overview and closeup show the same rendered green circle. Architecture controls, independent holdouts, masked gates and icon-obscured spans remain explicitly separated. The modeled circular closures support map selection, not physical walking routes."
+  },
+  "exact_replay": {
+    "command": "python3 docs/qa/candidates/wz20-2026-11-26/reproduce.py",
+    "opencv_version": "4.13.0",
+    "all_generated_files_byte_identical": true,
+    "git_diff_empty": true,
+    "candidate_geometry_sha256": "ff4333353e94722609967a1b698a83274004adcddb56f2b451c1f75983dcbec9",
+    "runtime_geometry_record_sha256": "cefcc400d3b5d67bd28338e587f41df98530d99057899529c692008f04e82aff",
+    "primary_holdout_max_native_px": 2.1921931269812664,
+    "closeup_source_trace_max_native_px": 2.9032565734149554,
+    "log_sha256": "5c96b40e5518e6e683848192dc953bf4f91567f41c1fb8462356f31fdd6abf14"
+  },
+  "cross_version_trial": {
+    "opencv_version": "5.1.0",
+    "changed_outputs": [
+      "docs/qa/candidates/wz20-2026-11-26/candidate-evidence.json",
+      "docs/qa/candidates/wz20-2026-11-26/candidate-geometry.json",
+      "docs/qa/candidates/wz20-2026-11-26/closeup-original-review.png",
+      "docs/qa/candidates/wz20-2026-11-26/overview-original-review.png",
+      "docs/qa/candidates/wz20-2026-11-26/registered-source-review.png"
+    ],
+    "max_vertex_to_other_boundary_distance_px": 0.06133238503293035,
+    "matching_point_index_max_delta_px": 3.6467108467768865,
+    "original_geometry_sha256": "ff4333353e94722609967a1b698a83274004adcddb56f2b451c1f75983dcbec9",
+    "replayed_geometry_sha256": "4c3fadbeb9a0e4351a77c70fb4e71b8d97ca6540d6d28e0116bb3ae2c6051e7f",
+    "original_approved_bytes_preserved": true,
+    "scope": "Cross-version numerical replay only; original approved production polygon retained."
+  },
+  "cross_version_interpretation": "OpenCV 5.1.0 changes the ellipse sampling phase and floating-point output. It is not a byte-identical replay. The original approved outputs were restored, then reproduced exactly with the original OpenCV 4.13.0 dependency. No cross-version outputs were promoted.",
+  "preservation": "Existing candidate evidence, all failed trials, source photographs, approved geometry and production IDs remain unchanged.",
+  "release_validation": "The final combined PR head still requires its own CI, actual browser screenshot review, merge and live checks."
+}

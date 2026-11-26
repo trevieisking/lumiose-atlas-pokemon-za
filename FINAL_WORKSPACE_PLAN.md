@@ -1,6 +1,40 @@
 # Pokémon Atlas final completion plan
 
-26 November 2026 · Manifest 88 · Ledger 96
+<!-- AT342_CURRENT_90_98 -->
+## Current checkpoint — AT-342 / Manifest 90 / Ledger 98
+
+**26 November 2026: the combined source review is recovered; release validation is pending.** Continue in the existing [PR #204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Preserve main `7616af2a204e0a09328a5ec9f2b6a0415bf67309`, the earlier PR head `b788abb87ef32cb210747da420d95780c4a22583`, and the recovered combined work. Earlier green workflows prove their own heads; the new candidate still requires its own checks.
+
+Source review now covers **48 sector footprints and 20 Wild Zone selection outlines**. These have different meanings: overlapping sector projections and rendered zone-selection areas do not establish exact spawn extents, floor plans or traversable routes. Existing nine approved zone records are retained alongside eleven reviewed additions; source and hidden-gate qualifications remain visible.
+
+All **68 encounter areas have a finite source-review disposition**: 45 named sector tables, three qualified links to related Wild Zones, and 20 zone standard-table comparisons. **748 attributed claims plus 272 original records give 1,020 records.** The eight disputes, single-source leads and unknown conditions remain labelled; roster status stays `not_comprehensive`. G3 accepts conditions where established and explicitly labelled disputes, without claiming an exhaustive all-class inventory. Written/photo access review covers all 68 areas, with **42 routes, 217 steps and 97 leads**. No complete physical structure inventory or new exact pickup positions are claimed.
+
+[Recovery checkpoint](docs/qa/ATLAS_AT342_RESUME_CHECKPOINT.json) · [zone approval](docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json) · [sector review](docs/qa/at341-independent-review-2026-11-26/sector-footprint-review.json) · [encounter dispositions](docs/qa/sector-wild-zone-crossrefs-2026-11-26/REVIEW.md) · [written approaches](docs/qa/access-continuation-2026-11-26/REVIEW.md).
+
+**Current gates:** G2/G3 source review is complete for those defined scopes. G0's **48-row Manifest 90 private-tracker synchronization is verified**, executed at **14:06:06 UTC** and read back at **14:06:43 UTC** on 26 November 2026; [the tracker receipt](docs/qa/ATLAS_AT342_TRACKER_RECEIPT.json) records the guarded update. All previous notes, GitHub statuses/proofs and Workspace fields were preserved; the counts remain 11 verified, 21 in progress and 16 open. This metadata receipt is not release proof. G1 preserves the released baseline and combined work. G4 awaits final mobile/desktop browser validation. G5 still requires current-head CI, actual screenshot review, expected-head merge, exact Pages deployment and live checks. **A0 remains blocked** until that release proof exists; the approved full-upgrade SHA and executable Workspace prompt remain unset.
+
+The original Workspace was last recorded at **version 38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after its separate filter/photo repair. This continuation makes no Workspace publication or parity claim. Preserve the 67 requirements, original maps/photos/IDs, progress, accounts, Supabase and feedback. Videos and YouTube remain paused. Optional unknown pickups, exhaustive access inventories and unrelated backlog do not add new release gates.
+
+### Finish the current release
+
+1. **Recorded:** the guarded Manifest 90 private planning sync and fresh readback; retain the receipt while final runtime/release checks proceed.
+2. Test the assembled candidate and inspect the actual phone/desktop screenshots, including all selected boundaries, related-zone links, routes, filters and preserved progress.
+3. Merge the exact reviewed head, verify its Pages deployment and live behavior, and record rollback plus the final approved commit/tree.
+4. After G0–G5 are supported, provide one Workspace prompt pinned to that release. Reconfirm the original source, take a backup, apply compatible bounded changes, preview/test, then publish and verify separately.
+
+**Completion boundary:** the wider base-game/Mega Dimension guide audit (`CHAT-FULL-GUIDE`), mission-depth audit (`CHAT-WALKTHROUGH-DEPTH`) and broader city/roof Alpha route inventory (`CHAT-CITY-ALPHAS`) are **not certified complete** and remain required broader obligations, separate from the finite map-release assessment. The [targeted Alpha Dratini review](docs/qa/ATLAS_AT342_CITY_ALPHA_DRATINI_REVIEW.md) is complete with labelled limits; the broader `CHAT-CITY-ALPHAS` obligation remains **open**. A later map release must not be described as completion of all 67 historical requirements. See the [current requirement dispositions](docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json).
+
+<!-- END_AT342_CURRENT_90_98 -->
+
+## Historical progress snapshots and retained requirements
+
+The following entries preserve their original dates, counts and evidence. Their requirements remain in force; superseded progress and availability statements describe their recorded checkpoint, not the current candidate. The AT-342 section above controls the current source scope and pending release work.
+
+**Historical continuation: AT341 · Manifest89 / Ledger97 (26 November 2026).** Latest main `7616af2a204e0a09328a5ec9f2b6a0415bf67309` (PR205) and its verified release/tracker receipts are retained. PR204 carries seven reviewed selection outlines,284 additive encounter claims and the Mission008 correction;61 boundaries and full-scope G5/A0 remain open. All48 private planning rows are synchronized. Final combined-head browser validation and bounded deployment remain pending. The earlier release checkpoints below retain their original dates, scope and counts.
+
+**Concurrent work preserved:** current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` and PR204 head `3e17c260fc749e3ee5bad877470ee6035601064c` include separately completed map-filter/search/photo fixes and a WZ04 review. This continuation retains them and the PR202 release receipts, then adds the independently reviewed WZ20/encounter/guide amendments. The original Workspace is recorded at **version38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after a separate three-file hotfix; this continuation makes no Workspace change. Manifest89/Ledger97 follow the separate Manifest88/Ledger96 release reconciliation.
+
+26 November 2026 · Manifest 89 · Ledger 97
 
 **Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
@@ -10,7 +44,17 @@
 
 The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json) and [364-record Item/Screw directory and layer framework](docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json) are live on GitHub Pages. The framework is tested; **zero new production pickup positions are claimed**.
 
-## Current implementation
+## Historical implementation checkpoint — Manifest 89
+
+[AT-341](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) integrates the final reviewed amendments into [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). The preceding exact head passed all browser suites and actual screenshot review. The combined candidate adds independently reviewed WZ04/WZ20 selection outlines, attributed encounter conditions and a corrected Mission008 guide; its own final CI, screenshots, merge and live verification are still pending.
+
+There are now **seven reviewed selection outlines and61 unresolved boundaries (48 sectors /13 Wild Zones)**. All20 Wild Zone standard tables have been compared, with source disagreements and unknown conditions recorded; full comprehensive roster signoff is still open. The immutable encounter baseline,140 photo receipts and272 original rows remain intact. Current totals are284 additive claims /556 rows. [Geometry decisions](docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json) and [encounter/guide review](docs/qa/encounter-review-2026-11-26/REVIEW.md) preserve exact evidence and limits.
+
+[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) retains the25 PR dispositions, shared area/species navigation and verified content including73 steps for Main Missions01–10. Private planning records are synchronized at each durable checkpoint without resetting prior deployment proof. The original Workspace remains unchanged.
+
+### Preserved prior release — AT339 / Manifest88 / Ledger96
+
+The following is the exact prior-release checkpoint; the current AT341 candidate above supersedes its remaining-count snapshot.
 
 <!-- AT339_RELEASE_88_96 -->
 
@@ -34,7 +78,7 @@ The runtime candidate remains historical Manifest85/Ledger93; this release recei
 
 The latest unmerged PR204 source reconciles the actual PR202 main merge and includes newer WZ04 evidence. This checkpoint neither imports nor approves that candidate geometry. PR202 production remains at five outlines. The retained WZ04 HOLD packet describes the earlier candidate; it is not a blanket rejection of the newer PR204 evidence, which requires its own exact-candidate review.
 
-## Three remaining work packages
+## Historical remaining-work snapshot — Manifest 89
 
 1. **Verify the map and encounter data.** Complete source registration, boundaries and encounter records for **48 sectors and 20 Wild Zones**, using existing images and research. Record conditions, unlocks, Alpha distinctions and uncertainty. **Done when:** all 68 required records meet the existing G2/G3 criteria, with calibration and source evidence; no mandatory boundary or encounter requirement remains unresolved.
 
@@ -42,7 +86,7 @@ The latest unmerged PR204 source reconciles the actual PR202 main merge and incl
 
 3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
 
-Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. That source-intake packet did not approve production boundaries or pickup positions. The separate AT-339 review above supports five map-selection outlines only.
+Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. That source-intake packet did not approve production boundaries or pickup positions. AT-339 approved five map-selection outlines; the concurrent WZ04 supplemental review adds the sixth and AT-341 adds WZ20 as the seventh. Both WZ04 reviews remain preserved. Historical candidate snapshots remain preserved.
 
 ## Workspace handoff record
 
@@ -53,11 +97,11 @@ Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](
 | GitHub versus original Workspace status | [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) and [original source handoff](WORKSPACE_ACCESS_HANDOFF.md) |
 | Release decision, exact commit and rollback | [Release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) and [release handoff](ATLAS_RELEASE_HANDOFF.md) |
 
-**Readiness: not ready to apply in Workspace.** The directory/layer framework and bounded AT339 shared interactions are live on GitHub Pages. Five rendered map outlines are reviewed; 63 boundaries, all comprehensive encounter rosters and full-upgrade G5 remain open. This complete-upgrade gate does not prevent the separately authorized existing-site filter/photo repair with its own bounded evidence. Do not copy an unmerged branch or historical PR into Workspace.
+**Readiness: the full Workspace prompt remains gated.** The directory/layer framework is already live on GitHub Pages. The reviewed shared-interaction and content candidate has seven supported outlines, with61 boundary gaps and the remaining comprehensive content obligations recorded. Complete the existing full-scope gates before issuing the final executable Workspace prompt. The pending bounded PR is not a claim that the whole master plan is complete.
 
 ## Final Workspace prompt
 
-After Package 3 passes, issue **one prompt pinned to the exact approved GitHub release**. Target the existing original Workspace project and URL. Reconfirm its actual source, take a backup, adapt compatible changes, independently preview/test, publish and verify. Keep evidence for the two sites separate under [AT-297](WORKSPACE_ACCESS_HANDOFF.md). **Version 37** remains the retained source baseline; **version 38** is the latest published and live-browser-verified bounded filter/photo repair, recorded in its [separate hotfix receipt](docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json). The approved full-upgrade commit and executable prompt remain unset until the [release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) passes.
+After Package 3 passes, issue **one prompt pinned to the exact approved GitHub release**. Target the existing original Workspace project and URL. Reconfirm its actual source, take a backup, adapt compatible changes, independently preview/test, publish and verify. Keep evidence for the two sites separate under [AT-297](WORKSPACE_ACCESS_HANDOFF.md). Workspace was last observed at **version 38**; the approved full-upgrade commit and executable prompt remain unset until the [release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) passes.
 
 ## Preserve throughout
 

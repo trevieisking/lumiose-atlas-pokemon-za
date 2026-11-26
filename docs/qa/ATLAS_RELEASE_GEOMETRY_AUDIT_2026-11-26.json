@@ -1,0 +1,815 @@
+{
+  "id": "ATLAS-RELEASE-GEOMETRY-AUDIT-2026-11-26",
+  "date": "2026-11-26",
+  "audited_source_commit": "426aa3b71814b560a42939e9a7cc8304fb4a454d",
+  "decision": "HOLD_FULL_SCOPE_GEOMETRY_COMPLETION",
+  "scope": "Independent source inventory and runtime selection-gating audit; no new boundary approval, calibrated geometry, encounter verification, route or pickup position.",
+  "counts": {
+    "sectors": 48,
+    "sector_photos_unique": 42,
+    "zone_records": 20,
+    "approved_zone_outlines": 5,
+    "approved_sector_outlines": 0,
+    "remaining_required_boundaries": 63,
+    "sectors_with_non_null_xy": 0,
+    "rosters_marked_comprehensive": 0
+  },
+  "approved_outline_ids": [
+    "wz-02",
+    "wz-03",
+    "wz-16",
+    "wz-05",
+    "wz-11"
+  ],
+  "approved_source_hashes": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "expected_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "actual_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-02-overview.png",
+      "expected_sha256": "d0e27a90128eec6321eab091fd098bdba6d12cc869b716b55730406f4b23487f",
+      "actual_sha256": "d0e27a90128eec6321eab091fd098bdba6d12cc869b716b55730406f4b23487f",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-02-closeup.png",
+      "expected_sha256": "22cb8f4cf662e1504adaf7ba2706cf8a3e96e7728074f2b3c9f66bbafc79b48b",
+      "actual_sha256": "22cb8f4cf662e1504adaf7ba2706cf8a3e96e7728074f2b3c9f66bbafc79b48b",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-03-overview.png",
+      "expected_sha256": "63946ab0aa155a1852cbde4943904eed932067e9ddfffad52be287d22492e5c7",
+      "actual_sha256": "63946ab0aa155a1852cbde4943904eed932067e9ddfffad52be287d22492e5c7",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-03-closeup.png",
+      "expected_sha256": "b0b60db9bcb7599d2c4ef90fdb96552383018a55133321f5767e0d95d11ccc60",
+      "actual_sha256": "b0b60db9bcb7599d2c4ef90fdb96552383018a55133321f5767e0d95d11ccc60",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-16-overview.png",
+      "expected_sha256": "a9bca31d1da537b790ef88fcd0f79a3b9bdf20ad59b8c7437290c3b49f7af415",
+      "actual_sha256": "a9bca31d1da537b790ef88fcd0f79a3b9bdf20ad59b8c7437290c3b49f7af415",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-16-closeup.png",
+      "expected_sha256": "3e65045e59631a6172063f55a52a2104eabdbdb8ef913cca155faddbe284e63e",
+      "actual_sha256": "3e65045e59631a6172063f55a52a2104eabdbdb8ef913cca155faddbe284e63e",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-05-overview.png",
+      "expected_sha256": "041d7774dafb2a2b8636c20fcc71268b2460399d20bbe7eb643d41bf05aba843",
+      "actual_sha256": "041d7774dafb2a2b8636c20fcc71268b2460399d20bbe7eb643d41bf05aba843",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-05-closeup.png",
+      "expected_sha256": "c970f04cc400ce8bfca46676b32a92bdc8ac433b364e51273dedd2e6293816a7",
+      "actual_sha256": "c970f04cc400ce8bfca46676b32a92bdc8ac433b364e51273dedd2e6293816a7",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+      "expected_sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c",
+      "actual_sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-11-closeup.png",
+      "expected_sha256": "580caa7e3b217969bd3bf2e044466434a304d2af633a3261a807db3711278e0a",
+      "actual_sha256": "580caa7e3b217969bd3bf2e044466434a304d2af633a3261a807db3711278e0a",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+      "expected_sha256": "f4dd643b2b10ace15657d9aee0d754ba2591d051aad19ab6f5a5b750e52cf5cb",
+      "actual_sha256": "f4dd643b2b10ace15657d9aee0d754ba2591d051aad19ab6f5a5b750e52cf5cb",
+      "matches": true
+    }
+  ],
+  "sector_photo_checks": [
+    {
+      "area_id": "vert-sector-1",
+      "path": "assets/atlas/sector-streets/vert/vert-1-saison-canal.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-2",
+      "path": "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-3",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-4",
+      "path": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-5",
+      "path": "assets/atlas/sector-streets/vert/vert-4-5.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-6",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-7",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-8",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "vert-sector-9",
+      "path": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-1",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-2",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-3",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-4",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-5",
+      "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-6",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-7",
+      "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-8",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-9",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "path": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-1",
+      "path": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-2",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-3",
+      "path": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-4",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-4.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-5.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-6",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-7",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-7.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-8",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-8.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "magenta-sector-9",
+      "path": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-1",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-2",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-3",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-4",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-5",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-6",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-7",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "path": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-1",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-2",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-4",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-6",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-7",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-8",
+      "path": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-9",
+      "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-10",
+      "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-11",
+      "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    },
+    {
+      "area_id": "jaune-sector-12",
+      "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+      "sha256_matches": true,
+      "xy": null,
+      "geographically_registered": false
+    }
+  ],
+  "runtime_findings": [
+    {
+      "path": "atlas-explorer-data.json",
+      "result": "No sector coordinates, polygon or geometry: all 48 xy values null. Original source photographs retained as orientation references."
+    },
+    {
+      "path": "atlas-explorer.js",
+      "result": "5x5 coverage buttons navigate image cells with row/column labels; district views explicitly labelled starting views, not verified sector centres or borders."
+    },
+    {
+      "path": "atlas-area-model.mjs",
+      "result": "evaluateAreaGeometry requires approved status, matching map SHA, complete review, fit/holdout criteria, source hashes and valid geometry; missing records remain ineligible."
+    },
+    {
+      "path": "atlas-area-ui.mjs",
+      "result": "Only eligible approved geometries are drawn or hit-tested; unavailable outlines and habitat claims are separately labelled."
+    }
+  ],
+  "raw_registration_warning": "The original descriptor candidate file contains many false matches. These are preserved failed/candidate trials, not approved calibration. Selected low fit RMS cannot establish independent accuracy. The five reviewed approvals have separate curated evidence.",
+  "raw_registration_frames": [
+    {
+      "zone": 1,
+      "view": "overview",
+      "fit_inliers": 21,
+      "holdout_candidates": 13,
+      "holdout_within_3px": 4,
+      "holdout_all_median_px": 388.78864247315886
+    },
+    {
+      "zone": 1,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 12,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 299.16429324799105
+    },
+    {
+      "zone": 2,
+      "view": "overview",
+      "fit_inliers": 29,
+      "holdout_candidates": 15,
+      "holdout_within_3px": 3,
+      "holdout_all_median_px": 515.9403627994261
+    },
+    {
+      "zone": 2,
+      "view": "closeup",
+      "fit_inliers": 7,
+      "holdout_candidates": 12,
+      "holdout_within_3px": 2,
+      "holdout_all_median_px": 499.84892034684265
+    },
+    {
+      "zone": 3,
+      "view": "overview",
+      "fit_inliers": 20,
+      "holdout_candidates": 20,
+      "holdout_within_3px": 7,
+      "holdout_all_median_px": 273.725185858564
+    },
+    {
+      "zone": 3,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 4,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 226.64368653566135
+    },
+    {
+      "zone": 4,
+      "view": "overview",
+      "fit_inliers": 12,
+      "holdout_candidates": 14,
+      "holdout_within_3px": 2,
+      "holdout_all_median_px": 714.0943508501811
+    },
+    {
+      "zone": 4,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 13,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 846.3735041594466
+    },
+    {
+      "zone": 5,
+      "view": "overview",
+      "fit_inliers": 8,
+      "holdout_candidates": 27,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 746.9308844214526
+    },
+    {
+      "zone": 5,
+      "view": "closeup",
+      "fit_inliers": 7,
+      "holdout_candidates": 6,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1332.0053344441003
+    },
+    {
+      "zone": 6,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 12,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 613.7922760113692
+    },
+    {
+      "zone": 6,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 6,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 921.7280260109776
+    },
+    {
+      "zone": 7,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 11,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1084.3838948812022
+    },
+    {
+      "zone": 7,
+      "view": "closeup",
+      "fit_inliers": 4,
+      "holdout_candidates": 1,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 2023.0567597635313
+    },
+    {
+      "zone": 8,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 691.9739959432557
+    },
+    {
+      "zone": 8,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 3,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 718.1710249649657
+    },
+    {
+      "zone": 9,
+      "view": "overview",
+      "fit_inliers": 7,
+      "holdout_candidates": 11,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 933.7138755741819
+    },
+    {
+      "zone": 9,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 9,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1036.0229401605302
+    },
+    {
+      "zone": 10,
+      "view": "overview",
+      "fit_inliers": 6,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 826.0955277275752
+    },
+    {
+      "zone": 10,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 2,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 755.4207833303396
+    },
+    {
+      "zone": 11,
+      "view": "overview",
+      "fit_inliers": 10,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 1,
+      "holdout_all_median_px": 841.7238217895592
+    },
+    {
+      "zone": 11,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 11,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 468.21158251587514
+    },
+    {
+      "zone": 12,
+      "view": "overview",
+      "fit_inliers": 8,
+      "holdout_candidates": 19,
+      "holdout_within_3px": 3,
+      "holdout_all_median_px": 756.3459047451263
+    },
+    {
+      "zone": 12,
+      "view": "closeup",
+      "fit_inliers": 12,
+      "holdout_candidates": 13,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1012.7751727146962
+    },
+    {
+      "zone": 13,
+      "view": "overview",
+      "fit_inliers": 11,
+      "holdout_candidates": 25,
+      "holdout_within_3px": 4,
+      "holdout_all_median_px": 783.827844743023
+    },
+    {
+      "zone": 13,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 888.5055733607915
+    },
+    {
+      "zone": 14,
+      "view": "overview",
+      "fit_inliers": 6,
+      "holdout_candidates": 17,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 607.054230184522
+    },
+    {
+      "zone": 14,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 10,
+      "holdout_within_3px": 1,
+      "holdout_all_median_px": 708.3696927288577
+    },
+    {
+      "zone": 15,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 4,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 599.9832420125163
+    },
+    {
+      "zone": 15,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 13,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1672.055775122525
+    },
+    {
+      "zone": 16,
+      "view": "overview",
+      "fit_inliers": 31,
+      "holdout_candidates": 36,
+      "holdout_within_3px": 10,
+      "holdout_all_median_px": 605.7444841363282
+    },
+    {
+      "zone": 16,
+      "view": "closeup",
+      "fit_inliers": 9,
+      "holdout_candidates": 9,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 562.4356682926709
+    },
+    {
+      "zone": 17,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1485.8742453307523
+    },
+    {
+      "zone": 17,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 9,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 769.2752687081556
+    },
+    {
+      "zone": 18,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 17,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1187.8758912040125
+    },
+    {
+      "zone": 18,
+      "view": "closeup",
+      "fit_inliers": 6,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 627.5838194318154
+    },
+    {
+      "zone": 19,
+      "view": "overview",
+      "fit_inliers": 5,
+      "holdout_candidates": 7,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1531.4640742033007
+    },
+    {
+      "zone": 19,
+      "view": "closeup",
+      "fit_inliers": 5,
+      "holdout_candidates": 13,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1009.2817351231768
+    },
+    {
+      "zone": 20,
+      "view": "overview",
+      "fit_inliers": 6,
+      "holdout_candidates": 11,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 834.3451595784845
+    },
+    {
+      "zone": 20,
+      "view": "closeup",
+      "fit_inliers": 8,
+      "holdout_candidates": 11,
+      "holdout_within_3px": 0,
+      "holdout_all_median_px": 1224.560970313798
+    }
+  ],
+  "wild_zone_04_candidate": {
+    "source_worktree": "/workspace/scratch/f71b63b46829/atlas-wz04-candidate",
+    "relative_directory": "docs/qa/candidates/wz04-2026-11-26",
+    "independent_review_decision": "HOLD_closed_production_polygon_retain_observed_segments_and_registration",
+    "fit_rms_px": 1.0261018477352803,
+    "architecture_holdout_rms_px": 1.587967035579548,
+    "border_holdout_rms_px": 0.8563820079037809,
+    "unresolved": "Three short gate-symbol crossings remain interpreted connectors; southwest architecture holdout is unavailable in native image. Candidate remains unapproved.",
+    "reviewed_panels": [
+      "registered-source-review.png",
+      "landmark-review.png"
+    ]
+  },
+  "external_reference_checks": [
+    {
+      "url": "https://www.bisafans.de/routendex/illumina-city/",
+      "purpose": "Sector directory reference; does not itself provide calibrated 48-sector polygons."
+    },
+    {
+      "url": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-1.php",
+      "purpose": "Named location and attributed encounter lead; no complete calibrated polygon established."
+    },
+    {
+      "url": "https://media.bisafans.de/19c15b5/routendex/illumina-city/verte-bezirk-1/verte-bezirk-1.jpg",
+      "purpose": "Existing highlighted-sector image lead remains a third-party reference, not copied production geometry."
+    },
+    {
+      "url": "https://www.serebii.net/pokearth/lumiosecity/",
+      "purpose": "Regional spawn reference warns that point symbols may represent spheres/boxes and overlapping spawns; not proof of sector perimeter geometry."
+    },
+    {
+      "url": "https://www.serebii.net/pokearth/lumiosecity/vertdistrict.shtml",
+      "purpose": "Area/species reference; no 48-sector calibration completed from it."
+    }
+  ],
+  "production_edits": false,
+  "final_workspace_prompt_eligible": false,
+  "completion_requirement": "Complete named-source boundary and comprehensive encounter reviews for the remaining areas, preserving uncertainty; current tested interaction release may be considered separately but cannot be called full master-plan completion."
+}

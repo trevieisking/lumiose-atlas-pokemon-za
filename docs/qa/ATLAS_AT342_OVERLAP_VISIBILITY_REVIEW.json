@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-26T14:39:33.243798+00:00",
+  "reviewed_failed_head": "994d436dd0e3e1d979b8277c9ea3722d3f3d545b",
+  "workflow_run": 45840376832,
+  "shared_browser_job": 139980139385,
+  "artifact": {
+    "id": 15127601909,
+    "sha256": "aa5883aab340783774d1b4643717cff2c0230a603cafe93dce675633debb5bf3",
+    "diagnostic_json_sha256": "612bee09fdb8cedb1c0becc411129bc09042d5ee496839528c9526121458ee4e",
+    "viewport_png_sha256": "622fa4ddb32613c333e2c822fabd907aed53e9171ee4b77e58c2af86be82b1f7",
+    "viewport_png_visually_reviewed": true
+  },
+  "observed": {
+    "viewport_width": 393,
+    "viewport_height": 852,
+    "document_scroll_y": 4882,
+    "buttons": {
+      "bleu-sector-6": {
+        "x": 54,
+        "y": 808.453125,
+        "top": 808.453125,
+        "right": 171.796875,
+        "bottom": 852.453125,
+        "left": 54,
+        "width": 117.796875,
+        "height": 44
+      },
+      "bleu-sector-8": {
+        "x": 171.796875,
+        "y": 808.453125,
+        "top": 808.453125,
+        "right": 289.59375,
+        "bottom": 852.453125,
+        "left": 171.796875,
+        "width": 117.796875,
+        "height": 44
+      }
+    },
+    "detail": {
+      "x": 54,
+      "y": 674.28125,
+      "top": 674.28125,
+      "right": 339,
+      "bottom": 852.453125,
+      "left": 54,
+      "width": 285,
+      "height": 178.171875
+    },
+    "ancestor_scrolls": [
+      {
+        "tag": "section",
+        "id": "",
+        "class_name": "aa-detail",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "details",
+        "id": "",
+        "class_name": "aa-drawer",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "section",
+        "id": "aeAreaPanel",
+        "class_name": "atlas-area-ui",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "aside",
+        "id": "",
+        "class_name": "ae-card ae-search-card",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "class_name": "ae-grid",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "main",
+        "id": "main",
+        "class_name": "atlas-article-main atlas-explorer",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "body",
+        "id": "",
+        "class_name": "atlas-article",
+        "scroll_top": 0,
+        "scroll_left": 0
+      },
+      {
+        "tag": "html",
+        "id": "",
+        "class_name": null,
+        "scroll_top": 4882,
+        "scroll_left": 0
+      }
+    ]
+  },
+  "diagnosis": "Both buttons and the complete chooser are rendered; nearest bottom alignment leaves their fractional bottom at852.453125px against an852px viewport after integer document scrolling. The strict full-visibility gate correctly detects the remaining0.453125px. There is no evidence of a missing chooser, incorrect overlap, automatic sector selection or large ancestor offset.",
+  "correction": {
+    "file": "atlas-area.css",
+    "selector": ".atlas-area-ui .aa-detail",
+    "property": "scroll-margin-block-end",
+    "value": "12px",
+    "reason": "Provide explicit12px clearance at the nearest-scroll end edge for the complete choice and focus ring; use the same bounded logical-property correction independently committed by the active release owner.",
+    "normal_scroll_and_click_preserved": true,
+    "strict_viewport_assertion_preserved": true,
+    "failure_diagnostics_preserved": true,
+    "equivalent_owner_local_commit": "06d2044988f08544452246cf497886a01ba11d4e"
+  },
+  "validation_scope": {
+    "diff_check": "PASS",
+    "browser_script_syntax": "PASS",
+    "prior_same_runtime_node_tests": 155,
+    "new_combined_browser_ci": "PENDING",
+    "new_corrected_viewport_screenshot": "PENDING"
+  },
+  "limits": [
+    "This source correction requires fresh combined-head browser verification.",
+    "The earlier155-test result covers the camera/copy/plan code before this CSS-only correction and owner diagnostic merge.",
+    "PR204/main and private tracker remain under the active release owner."
+  ]
+}

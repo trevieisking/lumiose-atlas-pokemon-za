@@ -1,0 +1,34 @@
+{
+  "id": "AT342-TRACKER-CHECKPOINT-90",
+  "date": "2026-11-26",
+  "status": "verified_guarded_metadata_update_and_fresh_readback",
+  "schema": "atlas_internal",
+  "table": "feature_checklist",
+  "operation": "Update 48 existing manifest revisions and append recovered-candidate metadata to six existing rows; no insert/delete or status promotion",
+  "before_snapshot_at": "2026-11-26T13:57:48.307648+00:00",
+  "executed_at": "2026-11-26T14:06:06.051067+00:00",
+  "readback_at": "2026-11-26T14:06:43.145308+00:00",
+  "row_count": 48,
+  "manifest_revision": 90,
+  "status_counts": {
+    "verified": 11,
+    "in_progress": 21,
+    "open": 16
+  },
+  "expected_before_fingerprint": "ef3b9e206ece380d5b0a25ceafad8578",
+  "protected_before_after_fingerprint": "3f3b0ab181eead827405433a9495337a",
+  "all_previous_notes_preserved": true,
+  "all_github_statuses_unchanged": true,
+  "all_github_proof_fields_unchanged": true,
+  "all_workspace_fields_unchanged": true,
+  "schema_or_public_player_feedback_data_changed": false,
+  "stage_notes_appended_to": [
+    "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+    "AT-339-SHARED-AREAS",
+    "AT-340-VERIFIED-CONSOLIDATION",
+    "AT-341-COMPLETION-CHECKPOINT",
+    "AT-341-ENCOUNTER-REVIEW",
+    "AT-341-ZONE-OUTLINES"
+  ],
+  "release_state": "Combined candidate awaiting final exact-head CI, screenshot review, expected-head merge and deployed live validation; this is not release or original Workspace proof."
+}

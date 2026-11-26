@@ -1,0 +1,917 @@
+{
+  "status": "diagnostic fixed original UI placement; no source fit and no closed contour approval",
+  "native_target_packet_sha256": "3d26c83a812675804eb97dfccc3d77302f9c5904cd351cc226a16d5bfb85f62c",
+  "original_ui_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+  "raster_registration_sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915",
+  "source_mask": "original R<64 and G>200; opaque dark stroke core; includes gate decorations outside sampled visible-line windows",
+  "pixel_coordinate_convention": "Both original textures and calibration use pixel-center index coordinates. UI pixel j maps to offset+scale*j+(scale-1)/2 before affine. No pixel-center correction at unit scale.",
+  "metric_scope": "Distance from each frozen observed native stroke-center sample to the nearest fixed projected original opaque-stroke pixel center. Source stroke has finite thickness; this is not a global centerline error bound or gate topology approval.",
+  "count": 43,
+  "rms_px": 0.4783026352975349,
+  "max_px": 1.389157850673982,
+  "checks": [
+    {
+      "id": "UI01-N1",
+      "zone": 1,
+      "native_xy": [
+        978.0,
+        1755.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        21.0,
+        115.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        978.0764144250223,
+        1755.0088831928856
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.07692902876896973,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI01-N2",
+      "zone": 1,
+      "native_xy": [
+        1060.0,
+        1724.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        202.0,
+        48.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1059.9318215756628,
+        1724.6735776630535
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.6770193244728798,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI01-N3",
+      "zone": 1,
+      "native_xy": [
+        1030.0,
+        1784.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        136.0,
+        181.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1030.1442832840992,
+        1784.9642147539348
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.9749501309174805,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI01-N4",
+      "zone": 1,
+      "native_xy": [
+        1240.0,
+        1736.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        600.0,
+        75.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1240.0200746895368,
+        1737.0151325334566
+      ],
+      "distance_to_opaque_stroke_pixel_px": 1.0153310069342076,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI06-N1",
+      "zone": 6,
+      "native_xy": [
+        1830.0,
+        925.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        434.0,
+        90.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1829.4661709188752,
+        924.7813064522754
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.576888512340955,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI06-N2",
+      "zone": 6,
+      "native_xy": [
+        1830.0,
+        980.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        435.0,
+        212.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1829.98636439036,
+        980.1007734088807
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.10169173903370723,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI06-N3",
+      "zone": 6,
+      "native_xy": [
+        1655.0,
+        1090.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        47.0,
+        455.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1654.5724993468493,
+        1090.1894796237139
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.4676102396729511,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI06-N4",
+      "zone": 6,
+      "native_xy": [
+        1715.0,
+        1151.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        180.0,
+        589.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1714.8221462090057,
+        1150.9829414066278
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.1786699935044339,
+      "stroke_pixel_rg": [
+        55,
+        255
+      ]
+    },
+    {
+      "id": "UI07-N1",
+      "zone": 7,
+      "native_xy": [
+        558.0,
+        758.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        171.0,
+        8.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        557.8914198260999,
+        758.1262551174835
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.16652329823470008,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI07-N2",
+      "zone": 7,
+      "native_xy": [
+        628.0,
+        820.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        327.0,
+        144.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        628.5484209627894,
+        819.8322975547281
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.5734890256813625,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI07-N3",
+      "zone": 7,
+      "native_xy": [
+        512.0,
+        884.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        69.0,
+        286.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        511.8963682726935,
+        884.1562094310665
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.18745911889967495,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI07-N4",
+      "zone": 7,
+      "native_xy": [
+        493.0,
+        800.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        28.0,
+        101.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        493.24337508548524,
+        800.2603333177194
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.3563774242986581,
+      "stroke_pixel_rg": [
+        7,
+        255
+      ]
+    },
+    {
+      "id": "UI08-N1",
+      "zone": 8,
+      "native_xy": [
+        1366.0,
+        741.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        172.0,
+        4.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1365.9372043407886,
+        740.8854978956148
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.1305910667864921,
+      "stroke_pixel_rg": [
+        15,
+        255
+      ]
+    },
+    {
+      "id": "UI08-N2",
+      "zone": 8,
+      "native_xy": [
+        1292.0,
+        805.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        9.0,
+        146.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1292.2674623790292,
+        805.232987183486
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.35470995456104615,
+      "stroke_pixel_rg": [
+        47,
+        255
+      ]
+    },
+    {
+      "id": "UI08-N3",
+      "zone": 8,
+      "native_xy": [
+        1415.0,
+        868.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        279.0,
+        284.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1414.504347014237,
+        867.8741949534771
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.5113695259070113,
+      "stroke_pixel_rg": [
+        3,
+        255
+      ]
+    },
+    {
+      "id": "UI09-N1",
+      "zone": 9,
+      "native_xy": [
+        300.0,
+        1002.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        399.0,
+        107.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        300.2963134505376,
+        1001.9334767142653
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.3036889996598879,
+      "stroke_pixel_rg": [
+        37,
+        255
+      ]
+    },
+    {
+      "id": "UI09-N2",
+      "zone": 9,
+      "native_xy": [
+        141.0,
+        1090.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        46.0,
+        301.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        140.69082626948767,
+        1089.8124945906525
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.3615890957613232,
+      "stroke_pixel_rg": [
+        11,
+        255
+      ]
+    },
+    {
+      "id": "UI09-N3",
+      "zone": 9,
+      "native_xy": [
+        180.0,
+        1183.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        132.0,
+        506.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        179.71496762579193,
+        1182.7882633406377
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.35507163680668674,
+      "stroke_pixel_rg": [
+        28,
+        255
+      ]
+    },
+    {
+      "id": "UI09-N4",
+      "zone": 9,
+      "native_xy": [
+        359.0,
+        1060.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        528.0,
+        235.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        358.7328469347989,
+        1060.0053284473413
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.26720619865081685,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI10-N1",
+      "zone": 10,
+      "native_xy": [
+        345.0,
+        1185.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        375.0,
+        42.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        344.4073057707632,
+        1184.6923469321143
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.6677850399268457,
+      "stroke_pixel_rg": [
+        22,
+        255
+      ]
+    },
+    {
+      "id": "UI10-N2",
+      "zone": 10,
+      "native_xy": [
+        192.0,
+        1270.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        38.0,
+        230.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        192.03761273357318,
+        1269.854718424249
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.1500714962260187,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI10-N3",
+      "zone": 10,
+      "native_xy": [
+        390.0,
+        1297.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        475.0,
+        290.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        389.7895608193621,
+        1297.1693476845098
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.2701171727165493,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI10-N4",
+      "zone": 10,
+      "native_xy": [
+        260.0,
+        1362.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        188.0,
+        433.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        260.0171475349789,
+        1361.9394984652022
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.06288460597590502,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI12-N1",
+      "zone": 12,
+      "native_xy": [
+        800.0,
+        1486.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        268.0,
+        38.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        799.9360814539249,
+        1486.0236690282022
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.06816013078328222,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI12-N2",
+      "zone": 12,
+      "native_xy": [
+        720.0,
+        1575.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        92.0,
+        236.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        720.4156470894366,
+        1575.7603602228382
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.8665507321742386,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI12-N3",
+      "zone": 12,
+      "native_xy": [
+        790.0,
+        1654.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        246.0,
+        408.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        790.1877487152153,
+        1653.78961019385
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.28198129476412465,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI12-N4",
+      "zone": 12,
+      "native_xy": [
+        908.0,
+        1648.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        508.0,
+        395.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        908.7212181908608,
+        1647.9599633601294
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.7223286034490279,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI15-N1",
+      "zone": 15,
+      "native_xy": [
+        1500.0,
+        292.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        107.0,
+        51.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1500.2161672801585,
+        292.0575992538866
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.2237095596067044,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI15-N2",
+      "zone": 15,
+      "native_xy": [
+        1480.0,
+        379.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        62.0,
+        243.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1479.9627453096214,
+        379.106185141389
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.11253086779639958,
+      "stroke_pixel_rg": [
+        10,
+        255
+      ]
+    },
+    {
+      "id": "UI15-N3",
+      "zone": 15,
+      "native_xy": [
+        1595.0,
+        439.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        316.0,
+        375.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1594.9571720538813,
+        439.0228046621905
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.04852098088833634,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI15-N4",
+      "zone": 15,
+      "native_xy": [
+        1620.0,
+        411.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        371.0,
+        313.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1619.8072383787517,
+        410.92340913643505
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.20742035340802856,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI17-N1",
+      "zone": 17,
+      "native_xy": [
+        1418.0,
+        1447.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        70.0,
+        124.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1417.9281530234048,
+        1446.9137362952629
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.11226493130469539,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI17-N2",
+      "zone": 17,
+      "native_xy": [
+        1520.0,
+        1466.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        297.0,
+        167.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1520.6571318223905,
+        1466.4678313361626
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.8066525838884718,
+      "stroke_pixel_rg": [
+        52,
+        255
+      ]
+    },
+    {
+      "id": "UI17-N3",
+      "zone": 17,
+      "native_xy": [
+        1398.0,
+        1551.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        26.0,
+        354.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1398.1482782947348,
+        1551.1931467052773
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.2434996970202261,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI17-N4",
+      "zone": 17,
+      "native_xy": [
+        1441.0,
+        1568.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        123.0,
+        393.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1442.0571369532836,
+        1568.9012330420549
+      ],
+      "distance_to_opaque_stroke_pixel_px": 1.389157850673982,
+      "stroke_pixel_rg": [
+        24,
+        255
+      ]
+    },
+    {
+      "id": "UI18-N1",
+      "zone": 18,
+      "native_xy": [
+        330.0,
+        362.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        54.0,
+        208.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        329.82660805329056,
+        362.1515993451001
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.23031962273865633,
+      "stroke_pixel_rg": [
+        5,
+        255
+      ]
+    },
+    {
+      "id": "UI18-N2",
+      "zone": 18,
+      "native_xy": [
+        434.0,
+        312.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        284.0,
+        97.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        433.8274048929072,
+        311.8772611399999
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.2117873904331572,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI18-N3",
+      "zone": 18,
+      "native_xy": [
+        440.0,
+        415.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        297.0,
+        324.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        439.83525066446737,
+        414.8105093385735
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.2510957075027117,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI18-N4",
+      "zone": 18,
+      "native_xy": [
+        452.0,
+        377.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        324.0,
+        240.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        452.004629589219,
+        376.72856785302105
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.27147162560742955,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI19-N1",
+      "zone": 19,
+      "native_xy": [
+        1510.0,
+        532.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        122.0,
+        58.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1510.0112803621414,
+        531.9305711936493
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.07033921894171288,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI19-N2",
+      "zone": 19,
+      "native_xy": [
+        1484.0,
+        610.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        64.0,
+        230.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1483.8649622573166,
+        609.907206309451
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.1638470657495173,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI19-N3",
+      "zone": 19,
+      "native_xy": [
+        1580.0,
+        685.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        276.0,
+        397.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1579.876119134898,
+        685.6836698133943
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.6948027651679419,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "UI19-N4",
+      "zone": 19,
+      "native_xy": [
+        1614.0,
+        630.0
+      ],
+      "nearest_opaque_stroke_source_pixel_xy": [
+        352.0,
+        274.0
+      ],
+      "nearest_projected_stroke_pixel_xy": [
+        1614.1936643099127,
+        629.929876749841
+      ],
+      "distance_to_opaque_stroke_pixel_px": 0.20596877226130558,
+      "stroke_pixel_rg": [
+        0,
+        255
+      ]
+    }
+  ]
+}

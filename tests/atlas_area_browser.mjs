@@ -7,6 +7,7 @@ import {spawn} from "node:child_process";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 import {AREA_MAP} from "../atlas-area-model.mjs";
+import {wildZoneRecord} from "../wild-zone-fieldbook.mjs";
 
 const base="http://127.0.0.1:18769",output="test-artifacts/atlas-areas";
 const key="lumiose-atlas-reconstruction-v1";
@@ -14,7 +15,13 @@ const saved=JSON.stringify({check:{"1":true},sideCheck:{"61":true},legendCheck:{
 const register=JSON.parse(fs.readFileSync("atlas-area-evidence.json","utf8"));
 const productionIds=(register.geometries||[]).filter(row=>row.status==="approved").map(row=>row.area_id);
 const proof={scope:"AT-339 shared areas and habitats",productionBoundaryIds:productionIds,devices:[],syntheticFixtureOnly:true};
-const fixture={schemaVersion:1,map:AREA_MAP,areas:[],geometries:[{
+const fixture={schemaVersion:1,map:AREA_MAP,areas:[{area_id:"wz-01",encounters:[{
+  id:"fixture-source-navigation",species:"Pidgey",encounter_class:"ordinary",evidence_status:"source_corroborated",
+  sources:[
+    {url:"https://www.serebii.net/legendsz-a/wildzones.shtml",claim:"Synthetic written citation display check."},
+    {path:"docs/qa/fixture-only-written-record.md",claim:"Synthetic local Markdown citation display check."}
+  ]
+}]}],geometries:[{
   area_id:"wz-01",kind:"zone",status:"approved",coordinateSpace:"atlas-native-pixels",mapSha256:AREA_MAP.sha256,
   geometry:{type:"Polygon",coordinates:[[[700,700],[1220,700],[1220,1220],[700,1220],[700,700]]]},
   sources:[{path:AREA_MAP.path,sha256:AREA_MAP.sha256,claim:"Synthetic browser fixture only; not geographic evidence"}],
@@ -48,7 +55,7 @@ try{
       window.__areaStorageWrites=[];
       for(const method of ["setItem","removeItem","clear"]){const original=Storage.prototype[method];Storage.prototype[method]=function(...args){window.__areaStorageWrites.push([method,...args]);return original.apply(this,args);};}
     },{key,saved});
-    const page=await context.newPage(),errors=[];
+    const page=await context.newPage(),errors=[],approvedZoneRenders=[];
     page.on("pageerror",error=>errors.push(String(error)));
     async function panel(){
       const host=page.locator("[data-area-panel]");await host.waitFor({state:"attached"});
@@ -78,17 +85,23 @@ try{
     async function unobstructedFixturePoint(){
       return page.locator("[data-area-overlay]").evaluate(svg=>{
         const viewport=document.getElementById("aeViewport"),rect=viewport.getBoundingClientRect();
+        const matrix=svg.getScreenCTM();if(!matrix)throw Error("Synthetic boundary has no screen transform");
+        const inverse=matrix.inverse(),margin=12;
+        const controls=[...viewport.querySelectorAll("button,a,input,select,textarea")].map(node=>({node,box:node.getBoundingClientRect()}))
+          .filter(({node,box})=>box.width&&box.height&&getComputedStyle(node).visibility!=="hidden"&&box.right>Math.max(rect.left,0)&&box.left<Math.min(rect.right,innerWidth)&&box.bottom>Math.max(rect.top,0)&&box.top<Math.min(rect.bottom,innerHeight));
+        let best=null;
+        // A point just outside a round pin can be rounded/adjusted onto that pin
+        // by real touch input. Keep a CSS-pixel gap from every visible control.
         for(let x=750;x<=1150;x+=50)for(let y=750;y<=1150;y+=50){
-          const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(svg.getScreenCTM());
-          // Mobile Chromium may retarget a touch to a nearby button even when
-          // the exact centre hit is clear. Use a full touch-sized patch.
-          const clear=[-18,0,18].every(dx=>[-18,0,18].every(dy=>{
-            const target=document.elementFromPoint(q.x+dx,q.y+dy);
-            return target&&viewport.contains(target)&&!target.closest("button,a,input,select,textarea");
-          }));
-          if(q.x>rect.left+20&&q.x<rect.right-70&&q.y>rect.top+20&&q.y<rect.bottom-45&&clear)return{x:q.x,y:q.y};
+          const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(matrix);
+          q.x=Math.round(q.x);q.y=Math.round(q.y);const native=q.matrixTransform(inverse);
+          const target=document.elementFromPoint(q.x,q.y);
+          if(q.x<=Math.max(rect.left+15,margin)||q.x>=Math.min(rect.right-70,innerWidth-margin)||q.y<=Math.max(rect.top+15,margin)||q.y>=Math.min(rect.bottom-45,innerHeight-margin)||native.x<=700||native.x>=1220||native.y<=700||native.y>=1220||!target||!viewport.contains(target)||target.closest("button,a,input,select,textarea"))continue;
+          const clearance=Math.min(...controls.map(({box})=>Math.hypot(Math.max(box.left-q.x,0,q.x-box.right),Math.max(box.top-q.y,0,q.y-box.bottom))));
+          if(clearance>=margin&&(!best||clearance>best.clearance))best={x:q.x,y:q.y,native:[native.x,native.y],clearance};
         }
-        throw Error("No visible unobstructed point inside the synthetic boundary");
+        if(best)return best;
+        throw Error("No visible point inside the synthetic boundary has 12px clearance from map controls");
       });
     }
     async function tap(point){
@@ -137,9 +150,11 @@ try{
       await page.locator(mapSelector).scrollIntoViewIfNeeded();
       await page.locator(mapSelector).screenshot({path:output+"/at339-measured-"+surface+"-"+device+".png"});
       await host.locator('[data-area-results] button[data-area-id="vert-sector-1"]').click();
-      assert.match(await host.locator("[data-area-detail]").textContent(),/not independently verified|awaiting verification/i);
-      assert.equal(await page.locator('[data-area-boundary="vert-sector-1"]').count(),0,"A sector label never becomes a polygon");
+      assert.match(await host.locator("[data-area-detail]").textContent(),/named sector area|overlap at different heights/i);
+      assert.equal(await page.locator('[data-area-boundary="vert-sector-1"].is-active').count(),1,"Only the separately reviewed source footprint supplies a sector outline");
       assert.ok(await host.locator('[data-area-detail] a[href="assets/atlas/sector-streets/vert/vert-1-saison-canal.png"]').count()>0,"Original photograph retained");
+      assert.ok((await host.locator('.aa-source-notes').allTextContents()).join(' ').includes('pokemaps.net'),"Written reference attribution stays visible");
+      assert.deepEqual(await host.locator('.aa-source-notes a').evaluateAll(nodes=>nodes.map(node=>node.getAttribute('href')).filter(href=>/^https?:|^\/\/|\.md(?:[?#]|$)/i.test(href))),[],"Evidence links keep player navigation inside Atlas guide/assets rather than external sites or raw Markdown");
       await host.locator("[data-area-clear]").click();
       await host.locator('[data-area-results] button[data-area-id="wz-01"]').click();
       await host.locator("[data-area-clear]").click();
@@ -154,7 +169,8 @@ try{
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
-        assert.equal(await page.locator("[data-area-detail] > h4").textContent(),"Wild Zone 02","Original marker selection must survive reload with its preserved source name");
+        assert.equal(await page.locator("[data-area-detail] > h4").first().textContent(),"Wild Zone 02","Original marker selection must survive reload");
+        assert.equal(await page.locator('[data-area-results] [data-area-id="wz-02"]').getAttribute('aria-pressed'),'true');
         if(surface==="standalone"){
           await page.locator("#mapSearch").fill("Wild Zone 20");
           await page.waitForFunction(()=>!new URL(location.href).searchParams.has("area"));
@@ -217,6 +233,29 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("collectible"),"screw:29");
     assert.equal(new URL(page.url()).searchParams.get("source"),"selection-sync");
     await unchanged();
+
+    // Once loaded, an explicit Holovator choice must supersede the old area
+    // exactly as it does during delayed startup. A later shared render cannot
+    // restore the old zone or replace the chosen photograph/route cursor.
+    await page.goto(base+"/atlas-explorer.html?area=wz-02&collectible=screw%3A29&source=access-selection",{waitUntil:"load"});
+    const accessPanel=await panel();await explorerSelection("wz-02");
+    await page.locator('#aeFilters [data-kind="holovator"]').click();
+    await page.locator('#aeResults [data-record-id="vert-cyclone"]').click();
+    const accessTitle=await page.locator('#aeSelected > h3').textContent();
+    const accessPhoto=await page.locator('#aeSelected img').first().elementHandle();
+    assert.ok(accessPhoto,"The selected access record retains its original photograph");
+    await page.locator('#aeNextStep').click();
+    const accessProgress=await page.locator('#aeRouteProgress').textContent();
+    assert.equal(new URL(page.url()).searchParams.get('area'),null,"Explicit non-area selection clears the superseded area query");
+    await accessPanel.locator('[data-area-boundaries]').uncheck();
+    await accessPanel.locator('[data-area-boundaries]').check();
+    await accessPanel.locator('[data-area-search]').fill('Pidgey');
+    assert.equal(await page.locator('#aeSelected > h3').textContent(),accessTitle);
+    assert.equal(await page.locator('#aeResults [data-record-id="vert-cyclone"]').getAttribute('aria-pressed'),'true');
+    assert.equal(await accessPhoto.evaluate(node=>node.isConnected&&node===document.querySelector('#aeSelected img')),true);
+    assert.equal(await page.locator('#aeRouteProgress').textContent(),accessProgress);
+    assert.equal(new URL(page.url()).searchParams.get('collectible'),'screw:29');
+    await accessPhoto.dispose();await unchanged();
 
     // Original map controls remain authoritative while optional evidence is
     // pending. The latest history entry must also supersede any queued click.
@@ -432,12 +471,183 @@ try{
     await originalPhotoNode.dispose();
     await unchanged();
 
-    await page.goto(base+"/atlas-explorer.html?area=wz-11",{waitUntil:"load"});
-    const measuredPanel=await panel();
-    await measuredPanel.locator('[data-area-focus="wz-11"]').click();
-    await page.locator("#aeViewport").scrollIntoViewIfNeeded();
-    assert.equal(await page.locator('[data-area-boundary="wz-11"].is-active').count(),1);
-    await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-wz11-"+device+".png"});
+    // Capture the reviewed production outlines before synthetic evidence interception.
+    for(const areaId of register.geometries.filter(row=>row.kind==='zone'&&row.status==='approved').map(row=>row.area_id).sort()){
+      await page.goto(base+"/atlas-explorer.html?area="+areaId,{waitUntil:"load"});
+      const measuredPanel=await panel();
+      await measuredPanel.locator('[data-area-focus="'+areaId+'"]').click();
+      await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+      assert.equal(await page.locator('[data-area-boundary="'+areaId+'"].is-active').count(),1);
+      await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png"});
+      await unchanged();
+      const row=register.geometries.find(row=>row.area_id===areaId&&row.status==="approved");
+      assert.ok(row,"Rendered new outline must have approved production evidence");
+      const points=row.geometry.coordinates.flat(row.geometry.type==="Polygon"?1:2);
+      const xs=points.map(point=>point[0]),ys=points.map(point=>point[1]);
+      const expectedBounds={x:Math.min(...xs),y:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};
+      await explorerSelection(areaId);
+      const boundary=page.locator('[data-area-boundary="'+areaId+'"].is-active');
+      assert.equal(await page.locator('[data-area-boundary].is-active').count(),1,"Only the selected production area is active");
+      assert.ok(await boundary.isVisible(),"Selected production outline is visible");
+      const renderedBounds=await boundary.evaluate(node=>{const b=node.getBBox();return{x:b.x,y:b.y,width:b.width,height:b.height};});
+      for(const key of Object.keys(expectedBounds))assert.ok(Math.abs(renderedBounds[key]-expectedBounds[key])<0.01,"Rendered "+areaId+" "+key+" matches the approved native geometry");
+      assert.equal(await measuredPanel.locator('[data-area-results] [data-area-id="'+areaId+'"]').getAttribute("aria-pressed"),"true");
+      assert.equal(new URL(page.url()).searchParams.get("area"),areaId);
+      for(const control of ["aeZoomIn","aeZoomOut","aeTurnLeft","aeTurnRight","aeNorth","aeReset","aeRose"]){
+        assert.ok(await page.locator("#"+control).isVisible(),control+" remains visible with "+areaId);
+        assert.ok(await page.locator("#"+control).isEnabled(),control+" remains enabled with "+areaId);
+      }
+      assert.equal(await page.locator("#aeMapImage").getAttribute("src"),AREA_MAP.path,"The original map stays behind the approved outline");
+      const zone=wildZoneRecord(Number(areaId.slice(3)));
+      const photos=page.locator('#aeSelected [data-wz-fieldbook="'+zone.number+'"] .wz-photo-pair');
+      assert.equal(await photos.locator("img").count(),zone.photos.length,"Original photograph pair is retained");
+      for(const [index,photo] of zone.photos.entries()){
+        const img=photos.locator("img").nth(index);
+        assert.equal(await img.getAttribute("src"),photo.path);
+        assert.equal(await img.locator("..").getAttribute("href"),photo.path,"Full-size original photograph remains accessible");
+        await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());
+        assert.equal(await img.evaluate(node=>node.naturalWidth),photo.width,"Original photograph decodes at its recorded width");
+      }
+      const mapScreenshot="at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png";
+      const photoScreenshot="at339-approved-"+areaId.replace("-","")+"-photos-"+device+".png";
+      await photos.screenshot({path:output+"/"+photoScreenshot});
+      await unchanged();
+      approvedZoneRenders.push({areaId,synthetic:false,selectedOriginalRecord:true,activeBoundary:true,renderedBounds,originalControls:true,originalPhotos:zone.photos.map(photo=>photo.path),mapScreenshot,photoScreenshot});
+    }
+
+    // Real sector footprints retain their semantic limits and original photographs.
+    // Cover each district, an uneven-height mesh and overlap with a Wild Zone.
+    for(const areaId of ['vert-sector-1','bleu-sector-2','magenta-sector-5','rouge-sector-4','jaune-sector-6']){
+      await page.goto(base+'/atlas-explorer.html?area='+areaId,{waitUntil:'load'});
+      const host=await panel(),row=register.geometries.find(row=>row.area_id===areaId);
+      assert.equal(row.representation,'source_area_footprint');
+      assert.match(await host.locator('[data-area-detail]').textContent(),/named sector area.*overlap at different heights/s);
+      assert.doesNotMatch(await host.locator('[data-area-detail]').textContent(),/This outline follows the green zone/);
+      await host.locator('[data-area-focus="'+areaId+'"]').click();
+      await page.waitForFunction(()=>{const r=document.getElementById('aeViewport').getBoundingClientRect();return r.top>=-1&&r.bottom<=innerHeight+1;});
+      await page.locator('#aeViewport').scrollIntoViewIfNeeded();
+      const boundary=page.locator('[data-area-boundary="'+areaId+'"].is-active');
+      assert.equal(await boundary.count(),1);
+      const points=row.geometry.coordinates.flat(row.geometry.type==='Polygon'?1:2);
+      const expected={x:Math.min(...points.map(p=>p[0])),y:Math.min(...points.map(p=>p[1])),width:Math.max(...points.map(p=>p[0]))-Math.min(...points.map(p=>p[0])),height:Math.max(...points.map(p=>p[1]))-Math.min(...points.map(p=>p[1]))};
+      const actual=await boundary.evaluate(path=>{const b=path.getBBox();return{x:b.x,y:b.y,width:b.width,height:b.height};});
+      for(const name of Object.keys(expected))assert.ok(Math.abs(expected[name]-actual[name])<.01,areaId+' renders exact '+name);
+      assert.equal(await boundary.evaluate(path=>{const b=path.getBoundingClientRect(),v=document.getElementById('aeViewport').getBoundingClientRect();return b.left>=v.left-1&&b.right<=v.right+1&&b.top>=v.top-1&&b.bottom<=v.bottom+1;}),true,'Reviewed area focus frames the actual footprint');
+      const visibleFit=await boundary.evaluate(path=>{
+        const bounds=path.getBoundingClientRect(),viewport=document.getElementById('aeViewport');
+        const v=viewport.getBoundingClientRect(),context=document.getElementById('aeSectorContext'),card=context.getBoundingClientRect();
+        const guidance=viewport.querySelector('.ae-map-guidance'),guide=guidance.getBoundingClientRect();
+        const transform=new DOMMatrix(getComputedStyle(document.getElementById('aeStage')).transform);
+        const strokeMargin=Number.parseFloat(getComputedStyle(path).strokeWidth)/2*Math.max(1,Math.hypot(transform.a,transform.b));
+        return {strokeMargin,contextVisible:!context.hidden&&card.width>0&&card.height>0&&getComputedStyle(context).visibility==='visible',
+          left:bounds.left-strokeMargin-v.left,right:v.right-bounds.right-strokeMargin,
+          belowContext:bounds.top-strokeMargin-card.bottom,aboveGuidance:guide.top-bounds.bottom-strokeMargin};
+      });
+      assert.equal(visibleFit.contextVisible,true,'The selected sector context remains visible');
+      assert.ok(visibleFit.left>=0&&visibleFit.right>=0&&visibleFit.belowContext>=0&&visibleFit.aboveGuidance>=0,
+        areaId+' entire outline and stroke clear the context card, map edges and guidance: '+JSON.stringify(visibleFit));
+      assert.equal(await page.locator('.ae-pin[data-kind="sector"]').count(),0,'A footprint never becomes a guessed sector point pin');
+      await page.locator('#aeViewport').screenshot({path:output+'/at341-sector-'+areaId+'-'+device+'.png'});
+      const photo=page.locator('#aeSelected .ae-source-map-reference img');
+      await photo.scrollIntoViewIfNeeded();await photo.evaluate(img=>img.decode());
+      assert.ok(await photo.evaluate(img=>img.naturalWidth>0));
+      await host.locator('[data-area-detail]').screenshot({path:output+'/at341-sector-detail-'+areaId+'-'+device+'.png'});
+      await unchanged();
+    }
+
+    // Related area navigation is shared by all maps without copying a zone's
+    // roster into the sector or losing the original source-photo guide link.
+    for(const [surface,url,sector,zone] of [
+      ['explorer','atlas-explorer.html','bleu-sector-2','wz-05'],
+      ['explorer','atlas-explorer.html','bleu-sector-10','wz-10'],
+      ['explorer','atlas-explorer.html','magenta-sector-5','wz-09'],
+      ['standalone','maps.html','bleu-sector-10','wz-10'],
+      ['sectors','sector-maps.html','magenta-sector-5','wz-09'],
+      ['main','index.html','bleu-sector-2','wz-05']
+    ]){
+      const relatedUrl=new URL(url,base+'/');
+      relatedUrl.searchParams.set('source','at341-crossref');
+      relatedUrl.searchParams.set('area',sector);
+      if(surface==='main')relatedUrl.hash='maps';
+      await page.goto(relatedUrl.href,{waitUntil:'load'});
+      const host=await panel();
+      const original=host.locator('[data-area-detail] > a').filter({hasText:'Open original area guide and photographs'});
+      assert.equal(await original.count(),1);
+      assert.equal(await host.locator('[data-area-detail] .aa-encounter').count(),sector==='bleu-sector-2'?1:0,'The sector keeps its own direct encounter count');
+      const related=host.locator('[data-related-areas]');
+      assert.match(await related.textContent(),/Wild Zone/);
+      if(surface==='explorer')await related.screenshot({path:output+'/at341-related-'+sector+'-'+device+'.png'});
+      const relatedControl=related.locator('[data-related-area="'+zone+'"]');
+      assert.ok(await relatedControl.isVisible(),surface+' related-area control is visible before navigation');
+      await relatedControl.click();
+      assert.equal(new URL(page.url()).searchParams.get('area'),zone);
+      assert.equal(new URL(page.url()).searchParams.get('source'),'at341-crossref');
+      assert.ok(await host.locator('[data-area-detail] .aa-encounter').count()>0);
+      const images=host.locator('[data-area-detail] img.aa-photo');assert.equal(await images.count(),2);
+      for(const img of await images.all()){await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());}
+      await page.goBack();await page.waitForFunction(id=>new URL(location.href).searchParams.get('area')===id,sector);
+      await page.reload({waitUntil:'load'});await panel();
+      assert.equal(await page.locator('[data-related-area="'+zone+'"]').count(),1,'Related navigation survives history and reload');
+      await unchanged();
+    }
+
+    // Use the actual overlapping Bleu6/Bleu8 source footprints, not a fabricated
+    // boundary. Rounded touch coordinates must remain inside both visible paths.
+    await page.goto(base+'/atlas-explorer.html?area=bleu-sector-6',{waitUntil:'load'});
+    const overlapPanel=await panel();
+    await overlapPanel.locator('[data-area-focus="bleu-sector-6"]').click();
+    await overlapPanel.locator('[data-area-clear]').click();
+    await page.locator('#aeViewport').scrollIntoViewIfNeeded();
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const overlapPoint=await page.locator('[data-area-overlay]').evaluate(svg=>{
+      const a=svg.querySelector('[data-area-boundary="bleu-sector-6"]'),b=svg.querySelector('[data-area-boundary="bleu-sector-8"]');
+      const av=a.getBBox(),bv=b.getBBox(),matrix=svg.getScreenCTM(),inverse=matrix.inverse();
+      const viewport=document.getElementById('aeViewport'),rect=viewport.getBoundingClientRect();
+      const controls=[...viewport.querySelectorAll('button,a,input,select,textarea')].map(node=>node.getBoundingClientRect()).filter(r=>r.width&&r.height);
+      let best=null;
+      for(let x=Math.max(av.x,bv.x)+2;x<Math.min(av.x+av.width,bv.x+bv.width);x+=4)for(let y=Math.max(av.y,bv.y)+2;y<Math.min(av.y+av.height,bv.y+bv.height);y+=4){
+        const p=svg.createSVGPoint();p.x=x;p.y=y;if(!a.isPointInFill(p)||!b.isPointInFill(p))continue;
+        const screen=p.matrixTransform(matrix);screen.x=Math.round(screen.x);screen.y=Math.round(screen.y);
+        const native=screen.matrixTransform(inverse);if(!a.isPointInFill(native)||!b.isPointInFill(native))continue;
+        if(screen.x<Math.max(rect.left+15,15)||screen.x>Math.min(rect.right-15,innerWidth-15)||screen.y<Math.max(rect.top+15,15)||screen.y>Math.min(rect.bottom-15,innerHeight-15))continue;
+        const target=document.elementFromPoint(screen.x,screen.y);if(!target||!viewport.contains(target)||target.closest('button,a,input,select,textarea'))continue;
+        const clearance=Math.min(...controls.map(r=>Math.hypot(Math.max(r.left-screen.x,0,screen.x-r.right),Math.max(r.top-screen.y,0,screen.y-r.bottom))));
+        if(clearance>=12&&(!best||clearance>best.clearance))best={x:screen.x,y:screen.y,clearance};
+      }
+      return best;
+    });
+    assert.ok(overlapPoint,'A real overlap has an unobstructed touch target');
+    await tap(overlapPoint);
+    await page.locator('[data-area-overlap-id="bleu-sector-6"]').waitFor({state:'visible'});
+    assert.equal(await page.locator('[data-area-overlap-id="bleu-sector-8"]').count(),1);
+    assert.equal(new URL(page.url()).searchParams.get('area'),null,'Overlapping footprints do not choose the first or nearest sector automatically');
+    try{
+      await page.waitForFunction(()=>{const r=document.querySelector('[data-area-overlap-id="bleu-sector-6"]')?.getBoundingClientRect();return r&&r.top>=0&&r.bottom<=innerHeight;});
+    }catch(error){
+      const diagnosticBase=output+'/at341-real-sector-overlap-failure-'+device;
+      try{
+        const geometry=await page.evaluate(()=>{
+          const rect=node=>{if(!node)return null;const r=node.getBoundingClientRect();return{x:r.x,y:r.y,top:r.top,right:r.right,bottom:r.bottom,left:r.left,width:r.width,height:r.height};};
+          const identify=node=>node?{tag:node.tagName.toLowerCase(),id:node.id,className:node.getAttribute('class')}:null;
+          const detail=document.querySelector('[data-area-detail]'),ancestors=[];
+          for(let node=detail;node;node=node.parentElement){
+            const style=getComputedStyle(node);
+            ancestors.push({...identify(node),rect:rect(node),clientWidth:node.clientWidth,clientHeight:node.clientHeight,scrollWidth:node.scrollWidth,scrollHeight:node.scrollHeight,scrollLeft:node.scrollLeft,scrollTop:node.scrollTop,overflowX:style.overflowX,overflowY:style.overflowY,scrollBehavior:style.scrollBehavior,scrollMarginTop:style.scrollMarginTop,scrollMarginBottom:style.scrollMarginBottom,scrollPaddingTop:style.scrollPaddingTop,scrollPaddingBottom:style.scrollPaddingBottom});
+          }
+          const visual=window.visualViewport;
+          return{url:location.href,innerWidth,innerHeight,scrollX,scrollY,visualViewport:visual?{width:visual.width,height:visual.height,offsetLeft:visual.offsetLeft,offsetTop:visual.offsetTop,pageLeft:visual.pageLeft,pageTop:visual.pageTop,scale:visual.scale}:null,scrollingElement:identify(document.scrollingElement),activeElement:identify(document.activeElement),buttons:Object.fromEntries(['bleu-sector-6','bleu-sector-8'].map(id=>[id,rect(document.querySelector('[data-area-overlap-id="'+id+'"]'))])),detail:rect(detail),mapViewport:rect(document.getElementById('aeViewport')),ancestors};
+        });
+        fs.writeFileSync(diagnosticBase+'.json',JSON.stringify({device,overlapPoint,error:{name:error.name,message:error.message},...geometry},null,2)+'\n');
+      }catch(diagnosticError){console.error('Could not save overlap geometry diagnostics:',diagnosticError);}
+      // Capture the failed viewport without scrolling the chooser into view.
+      try{await page.screenshot({path:diagnosticBase+'.png',fullPage:false});}
+      catch(diagnosticError){console.error('Could not save overlap viewport screenshot:',diagnosticError);}
+      throw error;
+    }
+    await page.locator('[data-area-detail]').screenshot({path:output+'/at341-real-sector-overlap-'+device+'.png'});
+    await page.locator('[data-area-overlap-id="bleu-sector-8"]').click();
+    assert.equal(new URL(page.url()).searchParams.get('area'),'bleu-sector-8');
+    assert.equal(await page.locator('[data-area-boundary="bleu-sector-8"].is-active').count(),1);
     await unchanged();
 
     await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});await panel();
@@ -458,21 +668,46 @@ try{
     assert.match(await page.locator("[data-area-status]").textContent(),/No verified boundary/i);
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
 
-    async function hideUnrelatedFixturePins(){
-      for(const layer of ["zone","holovator","ladder","landmark","sector-label"]){
-        const toggle=page.locator('#aeLayers [data-layer="'+layer+'"]');
-        await toggle.uncheck();
-      }
-    }
     // Verify the actual overlay and tap/pan behaviour with an explicitly synthetic polygon.
     await page.route("**/atlas-area-evidence.json",route=>route.fulfill({status:200,contentType:"application/json",body:JSON.stringify(fixture)}));
-    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});await panel();await hideUnrelatedFixturePins();
+    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});await panel();
     await page.locator('[data-area-boundary="wz-01"]').waitFor({state:"attached"});
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();
     const point=await unobstructedFixturePoint();
-    await tap(point);
-    await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-01");
+    const tapDiagnostic=phase=>page.evaluate(({point,phase})=>{
+      const describe=node=>node?{tag:node.tagName,id:node.id||null,label:node.closest?.("button,a,input,select,textarea")?.getAttribute("aria-label")||null}:null;
+      const types=["pointerdown","pointerup","pointercancel","click"];
+      if(phase==="before"){
+        const audit={events:[]};
+        audit.record=event=>audit.events.push({type:event.type,x:event.clientX,y:event.clientY,pointerType:event.pointerType||null,target:describe(event.target)});
+        window.__atlasAreaTapAudit=audit;for(const type of types)document.addEventListener(type,audit.record,true);
+      }
+      const viewport=document.getElementById("aeViewport"),svg=document.querySelector("[data-area-overlay]"),box=viewport.getBoundingClientRect();
+      const p=svg.createSVGPoint();p.x=point.x;p.y=point.y;const native=p.matrixTransform(svg.getScreenCTM().inverse());
+      const result={phase,point,url:location.href,target:describe(document.elementFromPoint(point.x,point.y)),native:[native.x,native.y],viewport:{x:box.x,y:box.y,width:box.width,height:box.height},window:{width:innerWidth,height:innerHeight},selectedTitle:document.querySelector("#aeSelected > h3")?.textContent,events:window.__atlasAreaTapAudit?.events||[]};
+      if(phase==="after"){
+        for(const type of types)document.removeEventListener(type,window.__atlasAreaTapAudit.record,true);
+        delete window.__atlasAreaTapAudit;
+      }
+      return result;
+    },{point,phase});
+    console.log("AT339 synthetic tap",device,JSON.stringify(await tapDiagnostic("before")));
+    try{
+      await tap(point);
+      await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-01");
+    }catch(error){
+      await page.screenshot({path:output+"/at339-synthetic-boundary-tap-failure-"+device+".png"}).catch(screenshotError=>console.error("Synthetic tap failure screenshot:",String(screenshotError)));
+      throw error;
+    }finally{
+      const diagnostic=await tapDiagnostic("after").catch(error=>({phase:"after",url:page.url(),diagnosticError:String(error)}));
+      console.log("AT339 synthetic tap",device,JSON.stringify(diagnostic));
+    }
     const syntheticPanel=await panel();
+    const sourceFixture=syntheticPanel.locator('[data-area-encounter-id="fixture-source-navigation"]');
+    assert.equal(await sourceFixture.count(),1,"Synthetic citation record is actually displayed");
+    assert.match(await sourceFixture.textContent(),/Reference: serebii\.net/);
+    assert.match(await sourceFixture.textContent(),/Atlas evidence: fixture-only-written-record\.md/);
+    assert.equal(await sourceFixture.locator('.aa-source-notes a').count(),0,"External and raw Markdown sources remain attribution, not navigation");
     await syntheticPanel.screenshot({path:output+"/at339-synthetic-boundary-"+device+".png"});
     await syntheticPanel.locator("[data-area-clear]").click();
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();
@@ -481,21 +716,41 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("area"),null,"Dragging an overlay must not select a boundary");
     if(device==="phone"){
       await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
       const touch=await page.locator("#aeViewport").evaluate(node=>{
         const r=node.getBoundingClientRect();
-        const left=Math.max(0,r.left)+34,right=Math.min(innerWidth,r.right)-38;
-        const top=Math.max(0,r.top)+46,bottom=Math.min(innerHeight,r.bottom)-48;
-        for(let y=top;y<=bottom;y+=12){
-          const free=[];
-          for(let x=left;x<=right;x+=12){
-            const hit=document.elementFromPoint(x,y);
-            if(hit&&node.contains(hit)&&!hit.closest("button,a,input,select,textarea"))free.push(x);
+        const visible={left:Math.max(0,r.left),right:Math.min(innerWidth,r.right),top:Math.max(0,r.top),bottom:Math.min(innerHeight,r.bottom)};
+        // Reuse the collectible suite's adaptive visible-window scan. Reserve
+        // room for both real diagonal moves and preserve major-pin priority.
+        const bounds={left:Math.ceil(visible.left+30),right:Math.floor(visible.right-34),top:Math.ceil(visible.top+44),bottom:Math.floor(visible.bottom-46)};
+        const separation=Math.min(180,(visible.right-visible.left)*.45),margin=12;
+        const controls=[...node.querySelectorAll("button,a,input,select,textarea,[role='button']")].map(control=>({control,box:control.getBoundingClientRect()}))
+          .filter(({control,box})=>box.width&&box.height&&getComputedStyle(control).visibility!=="hidden"&&box.right>visible.left&&box.left<visible.right&&box.bottom>visible.top&&box.top<visible.bottom);
+        const blocked=new Map();let tested=0,free=0;
+        const diagnostics=()=>({viewport:{x:r.x,y:r.y,width:r.width,height:r.height},window:{width:innerWidth,height:innerHeight},visible,bounds,minimumSeparation:separation,minimumControlClearance:margin,testedPoints:tested,unobstructedPoints:free,obstructingHits:[...blocked].sort((a,b)=>b[1]-a[1]).slice(0,6)});
+        for(let y=bounds.top;y<=bounds.bottom;y+=12){
+          const row=[];
+          for(let x=bounds.left;x<=bounds.right;x+=12){
+            tested++;const hit=document.elementFromPoint(x,y),control=hit?.closest("button,a,input,select,textarea,[role='button']");
+            const clearance=Math.min(...controls.map(({box})=>Math.hypot(Math.max(box.left-x,0,x-box.right),Math.max(box.top-y,0,y-box.bottom))));
+            if(hit&&node.contains(hit)&&!control&&clearance>=margin){row.push({x,clearance,target:hit.id||hit.tagName});free++;}
+            else{
+              const target=control||hit;
+              const reason=!target?"outside document":!node.contains(hit)?"outside map: "+target.tagName:control?(control.id||control.getAttribute("aria-label")||control.tagName):"within 12px of map control";
+              blocked.set(reason,(blocked.get(reason)||0)+1);
+            }
           }
-          if(free.length>1&&free.at(-1)-free[0]>=150)return{x1:free[0],x2:free.at(-1),y};
+          if(row.length>1&&row.at(-1).x-row[0].x>=separation)return{x1:row[0].x,x2:row.at(-1).x,y,starts:[row[0],row.at(-1)],diagnostics:diagnostics()};
         }
-        throw Error("No separated unobstructed and visible touch gesture starts");
+        return{diagnostics:diagnostics()};
       });
+      console.log("AT339 touch pair",device,JSON.stringify(touch));
+      if(!Number.isFinite(touch.x1)||!Number.isFinite(touch.x2)){
+        await page.screenshot({path:output+"/at339-touch-pair-failure-"+device+".png"}).catch(error=>console.error("Touch pair failure screenshot:",String(error)));
+        assert.fail("No separated unobstructed real touch gesture starts: "+JSON.stringify(touch.diagnostics));
+      }
       const beforeZoom=await page.locator("#aeZoomLabel").textContent();
+      const beforeRotation=await page.locator("#aePositionReadout").textContent();
       const session=await context.newCDPSession(page),p=(x,y,id)=>({x:Math.round(x),y:Math.round(y),id});
       try{
         await session.send("Input.dispatchTouchEvent",{type:"touchStart",touchPoints:[p(touch.x1,touch.y,1),p(touch.x2,touch.y,2)]});
@@ -503,10 +758,11 @@ try{
         await session.send("Input.dispatchTouchEvent",{type:"touchEnd",touchPoints:[]});
       }finally{await session.detach();}
       await page.waitForFunction(before=>document.getElementById("aeZoomLabel").textContent!==before,beforeZoom);
+      await page.waitForFunction(before=>document.getElementById("aePositionReadout").textContent!==before,beforeRotation);
       assert.equal(new URL(page.url()).searchParams.get("area"),null,"A two-finger pinch/rotation must not select a boundary");
     }
     // Both paint and hit testing must respect the visible layer and filters.
-    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});const fixturePanel=await panel();await hideUnrelatedFixturePins();
+    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});const fixturePanel=await panel();
     await fixturePanel.locator("[data-area-boundaries]").uncheck();
     assert.equal(await page.locator('[data-area-boundary="wz-01"]').isVisible(),false);
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();await tap(await unobstructedFixturePoint());
@@ -532,7 +788,7 @@ try{
     await page.unroute("**/items-data.js");await page.unroute("**/atlas-collectibles-data.json");
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
     assert.deepEqual(errors,[],"No uncaught runtime errors on "+device);
-    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,pendingLegacyIntentPreserved:true,pendingHistorySupersedesIntent:true,pendingExplorerRecordPreserved:true,pendingMainChoiceAndFiltersPreserved:true,pendingSectorAnchorsPreserved:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
+    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,pendingLegacyIntentPreserved:true,pendingHistorySupersedesIntent:true,pendingExplorerRecordPreserved:true,pendingMainChoiceAndFiltersPreserved:true,pendingSectorAnchorsPreserved:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,approvedZoneRenders,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
     await context.close();
   }
   fs.writeFileSync(output+"/at339-browser-proof.json",JSON.stringify(proof,null,2)+"\n");

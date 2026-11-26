@@ -1,0 +1,10 @@
+{
+  "status": "review-check correction; source names and assets unchanged",
+  "first_attempt": "After JSON tuple/list normalization, a new assertion incorrectly assumed the AHTB table used standard UTF-8 FNV-1a to hash display-name keys; it failed on the first key.",
+  "name": "PLACENAME_A01_z01_01",
+  "unverified_algorithm_guess_result": "F1EAB579B5A18B34",
+  "original_table_value": "43B66ACBC2556894",
+  "decision": "Reject the unverified algorithm assumption. Read the original AHTB uint64 key hash, index, and UTF-8 name fields directly, and join the original English DAT text by that index.",
+  "change_to_source_data": "none",
+  "subsequent_replay": "All48 original names, English labels, Git blob IDs, file SHA256, full XYZ face lists and projected rings match exactly."
+}

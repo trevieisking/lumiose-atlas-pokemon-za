@@ -1,0 +1,658 @@
+{
+  "head": "b788abb87ef32cb210747da420d95780c4a22583",
+  "tree": "5fb953d1b54bd66ab81f19334ed7b4d14d910e61",
+  "capturedAt": "2026-11-26T13:12:33.426Z",
+  "runs": [
+    {
+      "id": 45825211206,
+      "name": "Validate Atlas header feedback button",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 31,
+      "jobs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211206/jobs",
+      "logs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211206/logs",
+      "workflow_id": 426055378
+    },
+    {
+      "id": 45825211083,
+      "name": "Validate recovered Atlas article pages",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 150,
+      "jobs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211083/jobs",
+      "logs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211083/logs",
+      "workflow_id": 426120696
+    },
+    {
+      "id": 45825211129,
+      "name": "Validate rotatable Lumiose Atlas Explorer",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 160,
+      "jobs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211129/jobs",
+      "logs_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45825211129/logs",
+      "workflow_id": 426977891
+    }
+  ],
+  "mapJobs": [
+    {
+      "id": 139927488205,
+      "name": "atlas-unit",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45825211129,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Syntax-check isolated map modules",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check source counts, actual photos and rotation/floor-route evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Gate collectible coordinates, original identities and read-only progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify owner overview source bytes and keep research out of live geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify original Wild Zone photo pairs and roster parity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Validate shared areas, habitat classes and boundary evidence gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Keep all 20 DLC deep links valid and all 14 original mission steps unchanged",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Reject broken local guide anchors and raw Markdown destinations across every page",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Validate native coverage destination and original 25-link menu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Protect existing guide, checkmarks and map references",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27
+        }
+      ]
+    },
+    {
+      "id": 139927489196,
+      "name": "atlas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45825211129,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency, without changing package files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Confirm system Chrome is available for offline-style browser smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify shared habitats, all map views and original progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify real map and stepwise routes on desktop and phone",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify compact layers with isolated dense fixtures and unchanged player progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify all 20 Wild Zone photo panels and four map surfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Attach screenshot QA evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    }
+  ],
+  "articleJobs": [
+    {
+      "id": 139927487748,
+      "name": "fashion-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45825211083,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check system Chrome",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify fashion guide phone and desktop layout and feedback navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Attach fashion preview screenshots",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "id": 139927488159,
+      "name": "recovered-articles",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45825211083,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Verify article JS syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Verify original PDF reward order, menu, safe local state and navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify shiny calculator JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify Shiny hunting article, links and odds estimator",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify Complete Journey JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Verify full 46-page Journey route and search controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Check restored Royale script syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Verify 10 promotion teams, illustrations and search navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Verify boss guide JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Verify boss PDF data, 25-link menu and offline filters",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Check complete type chart JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Test 18-type PDF fidelity, 324 matchups and offline calculator",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Check Alpha fieldbook JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Compare 20 source zone cards, Zone 20 pool and search behaviour",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Validate shops catalog and planner JavaScript",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Verify 190 PDF shop entries, currencies and offline calculators",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Verify clothing and beauty subguides, counts and shared navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Check maps interaction JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        },
+        {
+          "name": "Verify 20 map pins, saved item and Alpha clues, navigation and zoom",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22
+        },
+        {
+          "name": "Check Item Atlas interaction and source-data JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23
+        },
+        {
+          "name": "Compare all 264 PDF items, 100 screws and 48 verified sector names",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Verify 364 checkboxes share existing guide progress without resetting other data",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        },
+        {
+          "name": "Check Legendary route and artwork data JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26
+        },
+        {
+          "name": "Verify 25 exact original Legendary cards and shared progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27
+        },
+        {
+          "name": "Check Pokémon HOME catalogue and search JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28
+        },
+        {
+          "name": "Verify 364 original PDF entries, 256 local artworks, 108 disclosed fallbacks and safe registration tracker",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29
+        },
+        {
+          "name": "Verify PDF-backed Online Rewards source, images, menu and mobile navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30
+        },
+        {
+          "name": "Verify PDF-backed Ranked Battles page, Season X table and mobile navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Reject broken local guide anchors and raw Markdown destinations across every page",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Verify coverage HTML, original 25-link menu, generated-source parity and no raw Markdown navigation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        },
+        {
+          "name": "Verify 42 source mission guides, no progress writes, navigation and mobile layout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Check all 48 Walkthrough to Complete Journey mission links and untouched player progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Check Mission 24-25 original story, types, full teams and untouched player progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Verify Mission 37 Ivor/Gwynn three-Mega guidance and 17-section rebuild parity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        },
+        {
+          "name": "Verify all 203 saved side quests, EX links, filters, and read-only progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38
+        },
+        {
+          "name": "Verify source-exact 14 Mega Dimension DLC mission routes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39
+        },
+        {
+          "name": "Validate sector map directory JavaScript syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 40
+        },
+        {
+          "name": "Verify 48 sectors, 20 source-positioned Wild Zones, 264 numbered items, 100 source Screws and read-only progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41
+        },
+        {
+          "name": "Verify ten player-supplied screenshot district landmark anchors and no false item pins",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 42
+        },
+        {
+          "name": "Verify 146 numbered source-saved approximate map leads without inventing confirmed pins",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 43
+        },
+        {
+          "name": "Verify final Hyperspace Maps navigation without missing-map fabrication or source loss",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44
+        },
+        {
+          "name": "Verify existing 17-section static site remains unchanged and valid",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45
+        },
+        {
+          "name": "Guard against feedback form regression",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 91
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 92
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 93
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 15120521984,
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "size_in_bytes": 67807429,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15120521984",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15120521984/zip",
+      "expired": false,
+      "created_at": "2026-11-26T13:08:51Z",
+      "expires_at": "2026-12-06T13:08:48Z",
+      "updated_at": "2026-11-26T13:08:51Z",
+      "digest": "sha256:e44f07395152aad98bbb86f768538c89debe1ecde05696cabab59adf8cf89a16",
+      "workflow_run": {
+        "id": 45825211129,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "b788abb87ef32cb210747da420d95780c4a22583"
+      }
+    },
+    {
+      "id": 15120351344,
+      "name": "fashion-phone-desktop-preview",
+      "size_in_bytes": 659981,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15120351344",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15120351344/zip",
+      "expired": false,
+      "created_at": "2026-11-26T13:02:50Z",
+      "expires_at": "2026-12-06T13:02:49Z",
+      "updated_at": "2026-11-26T13:02:50Z",
+      "digest": "sha256:051e73ca9fa36a3f94eeb2a13ce1990b5277284b0eb6ec2822572cf9fed16d5d",
+      "workflow_run": {
+        "id": 45825211083,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "b788abb87ef32cb210747da420d95780c4a22583"
+      }
+    }
+  ],
+  "mapLogExcerpts": [
+    "2026-11-26T13:03:30.6339162Z AT339 touch pair phone {\"x1\":55,\"x2\":283,\"y\":232,\"starts\":[{\"x\":55,\"clearance\":131.02222050333677,\"target\":\"aeViewport\"},{\"x\":283,\"clearance\":21,\"target\":\"aeViewport\"}],\"diagnostics\":{\"viewport\":{\"x\":25,\"y\":187.203125,\"width\":343,\"height\":477.109375},\"window\":{\"width\":393,\"height\":852},\"visible\":{\"left\":25,\"right\":368,\"top\":187.203125,\"bottom\":664.3125},\"bounds\":{\"left\":55,\"right\":334,\"top\":232,\"bottom\":618},\"minimumSeparation\":154.35,\"minimumControlClearance\":12,\"testedPoints\":24,\"unobstructedPoints\":20,\"obstructingHits\":[[\"aeRose\",3],[\"within 12px of map control\",1]]}}",
+    "2026-11-26T13:04:26.9328557Z PASS AT-339: shared habitats on four maps, legacy marker/history/reload, original photos, Pokédex links, evidence fallback, isolated touch/mouse boundary gestures, visible-layer hit gates, collectible priority and unchanged progress on phone/desktop.",
+    "2026-11-26T13:07:06.3492274Z ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained",
+    "2026-11-26T13:07:30.7309595Z AT338_GESTURE_HIT_TEST {\"x1\":84,\"x2\":804,\"y\":274,\"diagnostics\":{\"device\":\"desktop\",\"viewport\":{\"x\":53.796875,\"y\":229.71875,\"width\":835.859375,\"height\":567},\"window\":{\"width\":1440,\"height\":900},\"visible\":{\"left\":53.796875,\"right\":889.65625,\"top\":229.71875,\"bottom\":796.71875},\"bounds\":{\"left\":84,\"right\":855,\"top\":274,\"bottom\":750},\"minimumSeparation\":180,\"testedPoints\":65,\"unobstructedPoints\":58,\"obstructingHits\":[[\"BUTTON aeRose\",4],[\"BUTTON Wild Zone 13; saved zone centre\",3]]}}",
+    "2026-11-26T13:08:08.2204405Z AT338_GESTURE_HIT_TEST {\"x1\":55,\"x2\":295,\"y\":231,\"diagnostics\":{\"device\":\"phone\",\"viewport\":{\"x\":25,\"y\":186.15625,\"width\":340,\"height\":472.625},\"window\":{\"width\":390,\"height\":844},\"visible\":{\"left\":25,\"right\":365,\"top\":186.15625,\"bottom\":658.78125},\"bounds\":{\"left\":55,\"right\":331,\"top\":231,\"bottom\":612},\"minimumSeparation\":153,\"testedPoints\":24,\"unobstructedPoints\":21,\"obstructingHits\":[[\"BUTTON aeRose\",3]]}}",
+    "2026-11-26T13:08:48.2627526Z PASS AT-321: 20 Explorer selections, original PNG pairs, full-size links, 15/67 Zone 20 lists, standalone/map directory/main views on desktop and phone."
+  ]
+}
+

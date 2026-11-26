@@ -1,0 +1,254 @@
+{
+  "source_repository": "969981/ZA_Resources",
+  "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+  "publisher_declared_version": "2.0.2",
+  "source_kind": "Third-party publication of original game resources, joined and spatially checked against original Atlas evidence.",
+  "assets": [
+    {
+      "local_file": "place_name.dat",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ik_message/dat/English/common/place_name.dat",
+      "git_blob_sha": "acea749cd1696432602b2f6c2c7927376225141f",
+      "bytes": 10740,
+      "sha256": "8c89e02178ea38f65fd23b113e671b421c789260d7bf2420a540466ad600e2ee"
+    },
+    {
+      "local_file": "place_name.tbl",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ik_message/dat/English/common/place_name.tbl",
+      "git_blob_sha": "9bfc53e0449e7b31d7eb4baed75084924e89f725",
+      "bytes": 9008,
+      "sha256": "0b580b8b20833cc24903321f970f10be4f18ae91cdfe8cd77b18071c62d0131c"
+    },
+    {
+      "local_file": "map_field_00.arc",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ui/data/map/map_field_00.arc",
+      "git_blob_sha": "c067f2c4a48b0c818c95de4296b86fb492801ddf",
+      "bytes": 8471308,
+      "sha256": "106583a2ed4b79da4a5715786af3970b7cc02396156e2cf42bb243703cd359dd"
+    },
+    {
+      "local_file": "map_top_00.arc",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ui/data/map/map_top_00.arc",
+      "git_blob_sha": "d9a2d9a63ce70164fbaa6fabbefadae7ddd769ee",
+      "bytes": 29304484,
+      "sha256": "ab2de2eb569a37201015d58aab3e35fb928ef94d5b830c9fb4ba6479688e40f1"
+    },
+    {
+      "local_file": "map_zone_pane.bin",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/exl/map_zone_pane/map_zone_pane/map_zone_pane.bin",
+      "git_blob_sha": "b5f29183228524e699acfb1ccdb791e24c4497dd",
+      "bytes": 1784,
+      "sha256": "f0aa382770c0122820058b4f13619f48064b2ea78112526e21c26daaf235bcdb"
+    }
+  ],
+  "required_map_top_members": [
+    {
+      "name": "timg/__Combined.bntx",
+      "bytes": 27136136,
+      "sha256": "6608e9653a3daf66ddcae60845f424c2624a46d9e65aa658018893fd59023723"
+    },
+    {
+      "name": "blyt/map_zone_00.bflyt",
+      "bytes": 4432,
+      "sha256": "6b6ab76b04cd516195ae93d6570509fb3495aa255ebaf7732cc9a88d3cb822eb"
+    },
+    {
+      "name": "blyt/map_top_00.bflyt",
+      "bytes": 144600,
+      "sha256": "a4a9e5d0db233dec7df4ef7a19618f844d9a31797df7db5d74c34a91b1caff99"
+    }
+  ],
+  "layout_reader_references": [
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/Panes/PAN1.cs",
+      "git_blob_sha": "fcc7cec7f90b6829566151bed8cf630827a5d9c4",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/Panes/PAN1.cs"
+    },
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/Panes/PRT1.cs",
+      "git_blob_sha": "69ab664b617822390f19de4df82c2ce55320ec44",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/Panes/PRT1.cs"
+    },
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/Panes/PIC1.cs",
+      "git_blob_sha": "c649caa69c0d583a2445794ae0714617c84dd832",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/Panes/PIC1.cs"
+    },
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/MAT1.cs",
+      "git_blob_sha": "9ca8ddbdb9631131879e1efdc030007f3b2bd629",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/MAT1.cs"
+    },
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/Materials/TextureRef.cs",
+      "git_blob_sha": "c4d14ceb8952aa4eb184bfbb9a30c30a48ae3021",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/Materials/TextureRef.cs"
+    }
+  ],
+  "passive_format_helper": {
+    "repository": "nibinemui/Lumiose-Toolkit",
+    "commit": "ab9604880df0011f76e89fcf54356b883fb0792b",
+    "path": "za_formats.py",
+    "git_blob_sha": "39334cf3e7ee719a6bff78d42d5b79f3995d5d15",
+    "bytes": 16660,
+    "sha256": "cbf6fd742b9615bcd21ff9ee2aab8cd8a9a40a0d9bfcf60ee607b83946b78d29",
+    "url": "https://github.com/nibinemui/Lumiose-Toolkit/blob/ab9604880df0011f76e89fcf54356b883fb0792b/za_formats.py",
+    "research_copy_sha256": "dd068b555ee9c5fcbd338f05f062fe2d3b47e5719f616b59bd50fbfae7662c7a",
+    "research_copy_note": "Fetch text was saved with one extra trailing LF; removing exactly that LF reproduces the independently verified original Git blob. No code content changed. Only passive buffer readers are imported; helper is not shipped."
+  },
+  "source_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+  "first_source_contour_sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c",
+  "existing_raster_registration": "../source-area-footprints-2026-11-26/texture-native-registration.json",
+  "existing_raster_review": "../source-area-footprints-2026-11-26/calibration/independent-texture-native-review.json",
+  "independent_native_observations_sha256": "3d26c83a812675804eb97dfccc3d77302f9c5904cd351cc226a16d5bfb85f62c",
+  "scratch_private_diagnostics": [
+    {
+      "name": "private-source-contours-1.png",
+      "bytes": 404840,
+      "sha256": "b8bcd2cf0f51361099a9341aa9f64df105c83b8a7fa249b6f55153f6dff1bd55",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-source-contours-2.png",
+      "bytes": 388728,
+      "sha256": "1eae54693528de8448d9307467a1f000c5c6e1f9dc341c8917ec01f194d4dfcb",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-source-contours-3.png",
+      "bytes": 351260,
+      "sha256": "9961daa44a00af69e974165cc46fd9a06b203da2a745d441107062282336fb9c",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz01-source-difference-intervals.png",
+      "bytes": 89969,
+      "sha256": "baf31b471d7d623f268c5d54159ec2eeeb1d48a8cf52117cb9c66f73178abba3",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz02-source-difference-intervals.png",
+      "bytes": 101840,
+      "sha256": "408d35a945e01f33cfddc96368c96ddb6a8dc232790c07410932c37888e42347",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz03-source-difference-intervals.png",
+      "bytes": 82032,
+      "sha256": "430bf2c9c7b6837fad2118c147e2c24a6250b595d1d06adc2469bae3734699ac",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz04-source-difference-intervals.png",
+      "bytes": 19925,
+      "sha256": "37646eb0fbe4a5f1ad4bd2e0b035948e68123ae5ce1eff43ab2a58fbf93e1086",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz05-source-difference-intervals.png",
+      "bytes": 113962,
+      "sha256": "2e456c2cad07a02fd1b4fc84c398e4d5604d235f4daedd94a357168436cfae9d",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz06-source-difference-intervals.png",
+      "bytes": 97710,
+      "sha256": "0f5795b3a3e8791bb4d62ebacbcd8e28246cf491106d45f648f0ee9ff12bd2a3",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz07-source-difference-intervals.png",
+      "bytes": 81219,
+      "sha256": "75639f65293b621595d83f123e3dd406f1834fc8ecf7f4508fe3020579f8760f",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz08-source-difference-intervals.png",
+      "bytes": 70868,
+      "sha256": "7fb08e6b0d327ac23ee8f6ae1c40e8d552583d9cc26f908dd23eb930ba6594f7",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz09-source-difference-intervals.png",
+      "bytes": 126951,
+      "sha256": "9ff056e663cc87f87ced32ae4e47cccf836be15556d14bb5afc481fac1682e80",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz10-source-difference-intervals.png",
+      "bytes": 118677,
+      "sha256": "05b10d60b41c17bdf509378535636a1619d3bce06197b6a93a610d313b270946",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz11-source-difference-intervals.png",
+      "bytes": 126455,
+      "sha256": "baf76745398e9054fbcc7a213ae92b92375615ba1b6a04841b494599cae9b857",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz12-source-difference-intervals.png",
+      "bytes": 66027,
+      "sha256": "672876fb0396c94722199c4f99c6eaa64679b4aa86dddeef92a40b115eddc117",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz13-source-difference-intervals.png",
+      "bytes": 50596,
+      "sha256": "7c09b655f6a4e9d549b7eadb6dfac26a899ee52d347fc5fd0e35ea229969ad3b",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz14-source-difference-intervals.png",
+      "bytes": 85096,
+      "sha256": "7a503aa503432fbc6a09218cc847943e30006b2e378d7760c1b5ad085a425d07",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz15-source-difference-intervals.png",
+      "bytes": 114684,
+      "sha256": "6127f32e1c0259bf0f58aa5be5baf064a994c97845403d4284119b9c992df6ef",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz16-source-difference-intervals.png",
+      "bytes": 75966,
+      "sha256": "989f02d9d17e58407c14bc7d921b03df54ad9d52a7ceda70127a2df37472bf3b",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz17-source-difference-intervals.png",
+      "bytes": 115224,
+      "sha256": "e4bbf8b671669fd7b69ab127b38060cdae18fff4de1b6aac2d291c8f90ffc0d5",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz18-source-difference-intervals.png",
+      "bytes": 111638,
+      "sha256": "984268550a4d5529a232bf07b2ee6da29e8f9c48710309709bc9748647c97762",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz19-source-difference-intervals.png",
+      "bytes": 90876,
+      "sha256": "4c5f1188569b277c840e64c1eae2a035dcfea61adf2c5ad9995208574731e2f7",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    },
+    {
+      "name": "private-wz20-source-difference-intervals.png",
+      "bytes": 134149,
+      "sha256": "7e3f97b0679200be69108f653763c8851df54c34343a844785a0f3cb632df7b6",
+      "retention": "Scratch research only; contains recovered original artwork and is not shipped."
+    }
+  ],
+  "rights_scope": "No recovered original artwork, game binary, full external database, or wholesale external code is included. This packet retains derived perimeter coordinates, bounded source facts, exact provenance, own replay code and owner-native diagnostics."
+}

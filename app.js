@@ -296,7 +296,7 @@
     detail.replaceChildren();
     const wrap=document.createElement('div');wrap.className='rebuild-zone-detail';
     const title=document.createElement('h3');title.textContent=`Wild Zone ${String(zone).padStart(2,'0')}`;wrap.appendChild(title);
-    const intro=document.createElement('p');intro.textContent='Recovered zone overview. Use the numbered map pin and checklist; pins marked approximate are not exact coordinates.';wrap.appendChild(intro);
+    const intro=document.createElement('p');intro.textContent='Recovered zone overview. Zone markers provide orientation; item clues do not certify exact pickup coordinates.';wrap.appendChild(intro);
     const h=document.createElement('h4');h.textContent='Pokémon field notes';wrap.appendChild(h);
     const ul=document.createElement('ul');names.forEach(name=>{const li=document.createElement('li');li.textContent=name;ul.appendChild(li);});wrap.appendChild(ul);
     const pick=document.createElement('h4');pick.textContent='Item checklist preview';wrap.appendChild(pick);

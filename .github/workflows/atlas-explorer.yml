@@ -31,10 +31,33 @@ on:
       - atlas-area.css
       - tests/atlas_area_model.test.mjs
       - tests/atlas_area_evidence.test.mjs
+      - tests/atlas_sector_reconciliation.test.mjs
+      - tests/atlas_sector_continuation.test.mjs
+      - tests/atlas_access_continuation.test.mjs
+      - tests/atlas_sector_wild_zone_links.test.mjs
+      - scripts/reconcile_sector_encounters.py
+      - scripts/reconcile_remaining_sector_encounters.py
+      - 'docs/qa/sector-reconciliation-2026-11-26/**'
+      - 'docs/qa/sector-continuation-2026-11-26/**'
+      - 'docs/qa/access-continuation-2026-11-26/**'
+      - 'docs/qa/encounter-review-2026-11-26/**'
+      - 'docs/qa/sector-wild-zone-crossrefs-2026-11-26/**'
+      - docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json
+      - docs/qa/ATLAS_AT341_GEOMETRY_CONTINUATION.json
+      - docs/qa/ATLAS_AT341_SOURCE_AREA_APPROVAL.json
+      - docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json
+      - 'docs/qa/candidates/source-area-footprints-2026-11-26/**'
+      - 'docs/qa/candidates/original-ui-zone-outlines-2026-11-26/**'
+      - 'docs/qa/at341-independent-review-2026-11-26/**'
+      - docs/qa/ATLAS_AT331_WILD_ZONE_ROUTE_RECONCILIATION_2026-11-26.md
       - tests/atlas_area_browser.mjs
       - 'docs/qa/ATLAS_AT339_*'
       - 'docs/qa/at339-encounters/**'
       - 'docs/qa/at339-geometry/**'
+      - 'docs/qa/candidates/wz04-2026-11-26/**'
+      - 'docs/qa/candidates/wz13-2026-11-26/**'
+      - 'docs/qa/candidates/wz14-2026-11-26/**'
+      - 'docs/qa/candidates/wz20-2026-11-26/**'
       - atlas-collectibles.mjs
       - atlas-collectibles-ui.mjs
       - atlas-collectibles-data.json
@@ -81,7 +104,7 @@ jobs:
       - name: Syntax-check isolated map modules
         run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
-        run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
+        run: node --test tests/atlas_explorer.test.mjs tests/atlas_access_continuation.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Gate collectible coordinates, original identities and read-only progress
         run: node --test tests/atlas_collectibles.test.mjs tests/items_checkoff.test.mjs
       - name: Verify owner overview source bytes and keep research out of live geometry
@@ -89,7 +112,11 @@ jobs:
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Validate shared areas, habitat classes and boundary evidence gates
-        run: node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs
+        run: |
+          node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
+          python3 docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py
+      - name: Verify attributed sector reconciliation and preservation
+        run: python3 scripts/reconcile_sector_encounters.py && python3 scripts/reconcile_remaining_sector_encounters.py
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
       - name: Reject broken local guide anchors and raw Markdown destinations across every page
@@ -98,6 +125,30 @@ jobs:
         run: node --test tests/coverage_navigation.test.mjs
       - name: Protect existing guide, checkmarks and map references
         run: python3 tests/validate_static.py
+  atlas-areas-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium smoke dependency, without changing package files
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Confirm system Chrome is available for offline-style browser smoke
+        id: chrome
+        run: command -v google-chrome || command -v google-chrome-stable
+      - name: Verify shared habitats, all map views and original progress
+        if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
+        run: node tests/atlas_area_browser.mjs
+      - name: Attach shared-area screenshot and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-areas-mobile-desktop-preview
+          path: test-artifacts/atlas-areas/
+          if-no-files-found: ignore
+          retention-days: 10
   atlas-browser:
     runs-on: ubuntu-latest
     timeout-minutes: 18
@@ -112,6 +163,7 @@ jobs:
         id: chrome
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
+        if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/atlas_explorer_browser.mjs
       - name: Verify compact layers with isolated dense fixtures and unchanged player progress
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
@@ -119,9 +171,6 @@ jobs:
       - name: Verify all 20 Wild Zone photo panels and four map surfaces
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/wild_zone_fieldbook_browser.mjs
-      - name: Verify shared habitats, all map views and original progress
-        if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
-        run: node tests/atlas_area_browser.mjs
       - name: Attach screenshot QA evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -130,6 +179,5 @@ jobs:
           path: |
             test-artifacts/atlas-explorer/
             test-artifacts/atlas-collectibles/
-            test-artifacts/atlas-areas/
           if-no-files-found: ignore
           retention-days: 10

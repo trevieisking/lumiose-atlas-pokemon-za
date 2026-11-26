@@ -1,0 +1,654 @@
+{
+  "id": "ATLAS-ORIGINAL-UI-OUTLINES-INDEPENDENT-REVIEW-2026-11-26",
+  "reviewed_at_utc": "2026-11-26T13:51:28.266022+00:00",
+  "reviewer": "Independent geometry review agent /root/geometry_completion",
+  "decision": "APPROVE_SCOPED_ORIGINAL_UI_OUTLINES_11",
+  "decision_scope": "Source identity, placement, rendered selection geometry, fixed native visible checks and source gate-interval classifications for the eleven exact frozen candidates. Runtime/root integration and release approval remain pending.",
+  "candidate_status": "candidate_pending_root_review",
+  "root_runtime_approval": "NOT_GRANTED_BY_THIS_RECEIPT",
+  "new_zone_ids": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    17,
+    18,
+    19
+  ],
+  "preserve_existing_zone_ids": [
+    2,
+    3,
+    4,
+    5,
+    11,
+    13,
+    14,
+    16,
+    20
+  ],
+  "native_map": {
+    "path": "maps/lumiose-game-map.jpg",
+    "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "dimensions": [
+      1920,
+      1920
+    ]
+  },
+  "integration_baseline": {
+    "commit": "a19f1f2fc0535511dac4349573d2442dad40570e",
+    "tree": "7bb78df66a3f2a233f8a6380253f9fd7065fa168",
+    "geometry_count": 57,
+    "existing_zone_count": 9,
+    "source_area_footprint_count": 48
+  },
+  "input_bytes_preserved": {
+    "snapshot": "PACKAGING_INPUT_SNAPSHOT.json",
+    "snapshot_sha256": "77e65b3cb5ae59eaa99a5d2110e2804b8df199a80bdab7607184f475d4b1459c",
+    "files_checked": 33,
+    "all_sha256_and_byte_counts_match": true,
+    "source_outputs_or_scripts_modified": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/PACKAGING_INPUT_SNAPSHOT.json",
+      "sha256": "77e65b3cb5ae59eaa99a5d2110e2804b8df199a80bdab7607184f475d4b1459c",
+      "bytes": 5986
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/source-provenance.json",
+      "sha256": "0b00ecb4c07910a2f36d9ca346dbc54671ab9d1a4c0a9e65f3d6f2ef2663bbd1",
+      "bytes": 12737
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/original-ui-placement-facts.json",
+      "sha256": "ff4d3036f860acd62500fdeb20b031b6e1106ad76274c78bd7f1fddba6daaa80",
+      "bytes": 84168
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/original-ui-contour-candidates-first.json",
+      "sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c",
+      "bytes": 383189
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/first-ui-contour-independent-checks.json",
+      "sha256": "92c8437e76b36ed02cbdfd1127500cbb40a635dfcc2467f0d11e02b29cd7760b",
+      "bytes": 157529
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/native-green-checks-fixed.json",
+      "sha256": "3d26c83a812675804eb97dfccc3d77302f9c5904cd351cc226a16d5bfb85f62c",
+      "bytes": 150738
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/source-difference-intervals-first.json",
+      "sha256": "9e5870887449fe8a84733f776841e20a8b6f22e5c945de1a097243a14788cd07",
+      "bytes": 177854
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/preserve-existing-nine.json",
+      "sha256": "b99627f9359180084dc6ff9c62d9bae259ed59e5bfe5bf7e6fbf9b92013b8326",
+      "bytes": 1497
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/attempt-history.json",
+      "sha256": "c4d5880c5f8afcb2ab27861de0d2c794960238dadb4313a9b8be5c212344edd4",
+      "bytes": 2346
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/validation/existing-nine-photo-ui-diagnostics.json",
+      "sha256": "d414c35d1ad864ad77fddfcb05ebb69558595f0227c7c6382841b149858fd7d6",
+      "bytes": 12201
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-1.png",
+      "sha256": "0ab3023a8a6185c7de19e79245e3640e57cb76859bd44b1a9f6b3cc347f4e4bc",
+      "bytes": 931326
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/owner-native-new-ui-contours-2.png",
+      "sha256": "88da14dc99ea7151de8063aa95286516cc96186fafdd1cf36769d52ccea5de7e",
+      "bytes": 729796
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py",
+      "sha256": "fb032acb4e89d9fe0a4f0de2e8f44a554e341b8bd9dc7413a5f067eb3100819f",
+      "bytes": 6374
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_source_ui.py",
+      "sha256": "2d712331935190b27660d5ddee35ad404f017a4c63b861522cc025bf2dc4d9e3",
+      "bytes": 3583
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/README.md",
+      "sha256": "a9553900ea46f9924c7dc23eb734abbaa5ec043c53211a4a479e9a4218d420a5",
+      "bytes": 12058
+    },
+    {
+      "path": "docs/qa/candidates/source-area-footprints-2026-11-26/texture-native-registration.json",
+      "sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915",
+      "bytes": 36833
+    },
+    {
+      "path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-texture-native-review.json",
+      "sha256": "ba602cea3e653145aec895c5048bbb7aa2a7ed30d5a72ad27d48fc89773e6140",
+      "bytes": 8219
+    },
+    {
+      "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-outline-review.json",
+      "sha256": "64a316774a9b84e6016a8c4766d89c3740c04a8d97bfaac66bd48d88adda3831",
+      "bytes": 10104
+    },
+    {
+      "path": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+      "sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012",
+      "bytes": 58131
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/native-ui-outline-candidates.json",
+      "sha256": "3f4f9d0436e254d770a4f7e928416bae89e95fc5395ee9b4709ef4cf5ea3e5d8",
+      "bytes": 105400
+    }
+  ],
+  "source_identity": {
+    "source_repository": "969981/ZA_Resources",
+    "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+    "publisher_declared_version": "2.0.2",
+    "source_kind": "Third-party publication of original game resources, joined and spatially checked against original Atlas evidence.",
+    "pinned_original_asset_count": 5,
+    "independently_read_identity_rows": 32,
+    "verified_wild_numeric_id_name_key_pane_english_label_joins": 20,
+    "battle_only_rows_excluded": 12,
+    "source_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+    "first_source_contour_sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c",
+    "source_material_join": "P_zone_00 ordinary sprite and P_zone_04 glow are joined explicitly; texture numbers are not visible zone numbers.",
+    "english_table_sentinel": "285 AHTB keys = 284 English DAT records plus trailing msg_place_name_max.",
+    "independent_verification_receipt": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-outline-review.json",
+    "raw_asset_identity_and_decoded_png_hash_checks_previously_performed": true,
+    "new_archive_or_texture_decode_during_packaging": false
+  },
+  "placement_and_derivation": {
+    "path": "original texture pixel centre -> explicit source UI pane/material placement -> original 4096 map pixels -> unchanged reviewed architecture affine -> native 1920 map pixels",
+    "source_transform_recomputed_for_zone_count": 20,
+    "new_unit_scale_zone_count": 11,
+    "shared_ancestor_zoom": [
+      0.8125,
+      0.8125
+    ],
+    "zoom_cancels_in_original_map_coordinates": true,
+    "pixel_convention": "offset+scale*index+(scale-1)/2",
+    "fixed_glow_threshold": 128,
+    "thinning": "two-pass Zhang-Suen",
+    "simplification_max_source_px": 0.75,
+    "no_native_check_fit_or_parameter_retuning": true,
+    "new_polygon_count": 11,
+    "closed_ring_vertex_count": 832,
+    "single_polygons_without_holes": true,
+    "prior_independent_projection_max_difference_px": 2.2737367544323206e-13,
+    "no_sector_collision_mesh_or_world_transform_used": true
+  },
+  "architecture_registration": {
+    "path": "docs/qa/candidates/source-area-footprints-2026-11-26/texture-native-registration.json",
+    "sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915",
+    "approval_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-texture-native-review.json",
+    "approval_sha256": "ba602cea3e653145aec895c5048bbb7aa2a7ed30d5a72ad27d48fc89773e6140",
+    "approval_decision": "approve_texture_to_native_registration_only",
+    "control_count": 31,
+    "independent_architecture_holdout_count": 4,
+    "fit_rms_px": 0.72891061904214,
+    "fit_max_px": 2.0523614418784817,
+    "independent_holdout_rms_px": 1.561397527990726,
+    "independent_holdout_max_px": 2.0008624115912745,
+    "threshold_px": 3,
+    "declared_raster_digitization_uncertainty_px": 3,
+    "wrapper_count_semantics": "Each record uses the same 31 shared architecture controls; its holdout_count combines 4 shared architecture holdouts with that zone's separately frozen 3 or 4 native visible-stroke samples.",
+    "wrapper_max_error_semantics": "Maximum of shared architecture fit maximum, shared architecture holdout maximum and this zone's native visible-check maximum.",
+    "scope": "Observed raster registration/digitization; no universal hidden-edge, source-stroke or physical-boundary bound."
+  },
+  "native_visible_validation": {
+    "fixed_observations_sha256": "3d26c83a812675804eb97dfccc3d77302f9c5904cd351cc226a16d5bfb85f62c",
+    "candidate_sha256": "89ef1c4b7fd43f90dc343f7d3034b1b98fd331b28ba4e7855763818097b7650c",
+    "sample_count": 43,
+    "each_saved_rgb_scan_and_median_pick_independently_verified": true,
+    "rms_native_px": 0.9776701444858091,
+    "max_native_px": 2.09846177492477,
+    "threshold_native_px": 3,
+    "scope": "Frozen visible native green-stroke samples to the fixed perimeter, never used to fit it.",
+    "retained_correction": "WZ09 UI09-N4 native-only scan window recentered on actual visible stroke before projection; first pick and correction panel retained."
+  },
+  "source_gate_interval_validation": {
+    "diagnostic_sha256": "9e5870887449fe8a84733f776841e20a8b6f22e5c945de1a097243a14788cd07",
+    "independent_receipt": "docs/qa/at341-independent-review-2026-11-26/remaining-ui-source-interval-review.json",
+    "independent_receipt_sha256": "cc219883b99ff4f92cc9f1b53b186e2ad2d322ecf371bdd35392193443695012",
+    "source_threshold_px": 3,
+    "total_ridge_points_in_diagnostic": 14089,
+    "flagged_ridge_points": 689,
+    "interval_count": 43,
+    "private_source_panels_visually_reviewed": 11,
+    "gate_opening_closure_count": 43,
+    "unqualified_continuous_boundary_discrepancy_count": 0,
+    "unresolved_flagged_interval_count": 0,
+    "max_source_distance_px": 12.083045959472656,
+    "max_interval_id": "WZ10-S01",
+    "finding": "Every flagged interval lies in a visible ordinary-sprite gate opening between gate-end blocks and arrow ornaments; the original glow supplies its selection closure.",
+    "scope": "One-way ridge-to-ordinary-opaque-mask diagnostic and per-interval visual classification; this is separate from the 43 native checks, and the 12.083 source-pixel maximum is retained."
+  },
+  "existing_nine_preservation": {
+    "receipt": "preserve-existing-nine.json",
+    "hash_convention": "SHA256 of sorted-key compact UTF-8 JSON record with ensure_ascii=False; includes all record fields.",
+    "records": [
+      {
+        "area_id": "wz-02",
+        "full_record_sha256": "3b563f66e62ccdf5d1bca10b57f21b67563643ab8f9c03772d5c6ed126d3029b",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-03",
+        "full_record_sha256": "457d6387e6ee618f13a4f32b2c518f87b88013a56aaa1f6eb6f8bb3225be69d1",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-16",
+        "full_record_sha256": "8d86a6cbf68dc3769fb1134ebce85c0e120971b5d8bd8038138d22645f033368",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-05",
+        "full_record_sha256": "b3b1f3d59a3a5f7a9adb986f4643e3846cd4afe83339194659048729bb05291f",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-11",
+        "full_record_sha256": "21aacc7a41aadb5f8cb9ac6e2c769233974752ee59fe673909cf3357c74c48c0",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-04",
+        "full_record_sha256": "623d6284388835c36967dcd80c641ef04d2cd39e846893fd8b5772e1b5a95d76",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-13",
+        "full_record_sha256": "8b6a39810f5f1516c27f4640e98fe1995b52a8bdd7392ed297f63f8eb7e2afcb",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-20",
+        "full_record_sha256": "50e1cc5c5bcab4672af6838c0b1b4b2daafde09edd1c9f023f66a3ae4cde5853",
+        "baseline_match": true
+      },
+      {
+        "area_id": "wz-14",
+        "full_record_sha256": "8a788bdc78a5164b110917066ab0b71bc6134318e6fe77b373a7a8e77a6696ff",
+        "baseline_match": true
+      }
+    ],
+    "baseline_all_match": true,
+    "runtime_file_written_by_packager": false,
+    "required_again_after_integration": true
+  },
+  "visual_review": {
+    "owner_native_panels": [
+      "owner-native-new-ui-contours-1.png",
+      "owner-native-new-ui-contours-2.png"
+    ],
+    "prior_independent_direct_review": true,
+    "root_reported_direct_review": true,
+    "private_source_panel_count": 11,
+    "private_source_panel_hashes_recorded_in_interval_receipt": true,
+    "finding": "No visible topology/alignment blocker for the eleven rendered selection footprints; all enumerated source deviations classified as gate openings."
+  },
+  "per_zone": [
+    {
+      "area_id": "wz-01",
+      "zone": 1,
+      "zone_id": "a0102_w01",
+      "name_key": "PLACENAME_wild_a0102_w01",
+      "pane_name": "L_w_a0102_w01",
+      "ordinary_texture": "map_zone_02^t",
+      "glow_texture": "map_zone_glow_02^s",
+      "closed_ring_vertices": 149,
+      "native_visible_check_ids": [
+        "UI01-N1",
+        "UI01-N2",
+        "UI01-N3",
+        "UI01-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.580486653388422,
+      "source_interval_ids": [
+        "WZ01-S01",
+        "WZ01-S02",
+        "WZ01-S03",
+        "WZ01-S04"
+      ],
+      "source_gate_interval_count": 4,
+      "source_gate_interval_max_source_px": 12.0,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-06",
+      "zone": 6,
+      "zone_id": "a0502_w01",
+      "name_key": "PLACENAME_wild_a0502_w01",
+      "pane_name": "L_w_a0502_w01",
+      "ordinary_texture": "map_zone_17^t",
+      "glow_texture": "map_zone_glow_17^s",
+      "closed_ring_vertices": 125,
+      "native_visible_check_ids": [
+        "UI06-N1",
+        "UI06-N2",
+        "UI06-N3",
+        "UI06-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.980603281909118,
+      "source_interval_ids": [
+        "WZ06-S01",
+        "WZ06-S02",
+        "WZ06-S03",
+        "WZ06-S04"
+      ],
+      "source_gate_interval_count": 4,
+      "source_gate_interval_max_source_px": 12.0,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-07",
+      "zone": 7,
+      "zone_id": "a0303_w01",
+      "name_key": "PLACENAME_wild_a0303_w01",
+      "pane_name": "L_w_a0303_w01",
+      "ordinary_texture": "map_zone_11^t",
+      "glow_texture": "map_zone_glow_11^s",
+      "closed_ring_vertices": 68,
+      "native_visible_check_ids": [
+        "UI07-N1",
+        "UI07-N2",
+        "UI07-N3",
+        "UI07-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.341106205779021,
+      "source_interval_ids": [
+        "WZ07-S01",
+        "WZ07-S02",
+        "WZ07-S03",
+        "WZ07-S04",
+        "WZ07-S05"
+      ],
+      "source_gate_interval_count": 5,
+      "source_gate_interval_max_source_px": 12.0,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-08",
+      "zone": 8,
+      "zone_id": "a0503_w01",
+      "name_key": "PLACENAME_wild_a0503_w01",
+      "pane_name": "L_w_a0503_w01",
+      "ordinary_texture": "map_zone_19^t",
+      "glow_texture": "map_zone_glow_19^s",
+      "closed_ring_vertices": 62,
+      "native_visible_check_ids": [
+        "UI08-N1",
+        "UI08-N2",
+        "UI08-N3"
+      ],
+      "native_visible_check_count": 3,
+      "native_visible_check_max_px": 1.4487589103908955,
+      "source_interval_ids": [
+        "WZ08-S01",
+        "WZ08-S02"
+      ],
+      "source_gate_interval_count": 2,
+      "source_gate_interval_max_source_px": 11.704699516296387,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-09",
+      "zone": 9,
+      "zone_id": "a0301_w02",
+      "name_key": "PLACENAME_wild_a0301_w02",
+      "pane_name": "L_w_a0301_w02",
+      "ordinary_texture": "map_zone_09^t",
+      "glow_texture": "map_zone_glow_09^s",
+      "closed_ring_vertices": 81,
+      "native_visible_check_ids": [
+        "UI09-N1",
+        "UI09-N2",
+        "UI09-N3",
+        "UI09-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.0539878012711663,
+      "source_interval_ids": [
+        "WZ09-S01",
+        "WZ09-S02",
+        "WZ09-S03",
+        "WZ09-S04"
+      ],
+      "source_gate_interval_count": 4,
+      "source_gate_interval_max_source_px": 10.440306663513184,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-10",
+      "zone": 10,
+      "zone_id": "a0202_w01",
+      "name_key": "PLACENAME_wild_a0202_w01",
+      "pane_name": "L_w_a0202_w01",
+      "ordinary_texture": "map_zone_05^t",
+      "glow_texture": "map_zone_glow_05^s",
+      "closed_ring_vertices": 97,
+      "native_visible_check_ids": [
+        "UI10-N1",
+        "UI10-N2",
+        "UI10-N3",
+        "UI10-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.4532454625591682,
+      "source_interval_ids": [
+        "WZ10-S01",
+        "WZ10-S02"
+      ],
+      "source_gate_interval_count": 2,
+      "source_gate_interval_max_source_px": 12.083045959472656,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-12",
+      "zone": 12,
+      "zone_id": "a0201_w01",
+      "name_key": "PLACENAME_wild_a0201_w01",
+      "pane_name": "L_w_a0201_w01",
+      "ordinary_texture": "map_zone_04^t",
+      "glow_texture": "map_zone_glow_04^s",
+      "closed_ring_vertices": 34,
+      "native_visible_check_ids": [
+        "UI12-N1",
+        "UI12-N2",
+        "UI12-N3",
+        "UI12-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.1737114147154013,
+      "source_interval_ids": [
+        "WZ12-S01",
+        "WZ12-S02",
+        "WZ12-S03",
+        "WZ12-S04",
+        "WZ12-S05",
+        "WZ12-S06"
+      ],
+      "source_gate_interval_count": 6,
+      "source_gate_interval_max_source_px": 11.0,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-15",
+      "zone": 15,
+      "zone_id": "a0501_w01",
+      "name_key": "PLACENAME_wild_a0501_w01",
+      "pane_name": "L_w_a0501_w01",
+      "ordinary_texture": "map_zone_15^t",
+      "glow_texture": "map_zone_glow_15^s",
+      "closed_ring_vertices": 34,
+      "native_visible_check_ids": [
+        "UI15-N1",
+        "UI15-N2",
+        "UI15-N3",
+        "UI15-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 0.982463828022971,
+      "source_interval_ids": [
+        "WZ15-S01",
+        "WZ15-S02",
+        "WZ15-S03",
+        "WZ15-S04"
+      ],
+      "source_gate_interval_count": 4,
+      "source_gate_interval_max_source_px": 11.313708305358887,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-17",
+      "zone": 17,
+      "zone_id": "a0101_w01",
+      "name_key": "PLACENAME_wild_a0101_w01",
+      "pane_name": "L_w_a0101_w01",
+      "ordinary_texture": "map_zone_01^t",
+      "glow_texture": "map_zone_glow_01^s",
+      "closed_ring_vertices": 59,
+      "native_visible_check_ids": [
+        "UI17-N1",
+        "UI17-N2",
+        "UI17-N3",
+        "UI17-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 2.09846177492477,
+      "source_interval_ids": [
+        "WZ17-S01",
+        "WZ17-S02",
+        "WZ17-S03",
+        "WZ17-S04"
+      ],
+      "source_gate_interval_count": 4,
+      "source_gate_interval_max_source_px": 11.661903381347656,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-18",
+      "zone": 18,
+      "zone_id": "a0302_w01",
+      "name_key": "PLACENAME_wild_a0302_w01",
+      "pane_name": "L_w_a0302_w01",
+      "ordinary_texture": "map_zone_10^t",
+      "glow_texture": "map_zone_glow_10^s",
+      "closed_ring_vertices": 31,
+      "native_visible_check_ids": [
+        "UI18-N1",
+        "UI18-N2",
+        "UI18-N3",
+        "UI18-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 0.9906681570410621,
+      "source_interval_ids": [
+        "WZ18-S01",
+        "WZ18-S02",
+        "WZ18-S03",
+        "WZ18-S04",
+        "WZ18-S05",
+        "WZ18-S06"
+      ],
+      "source_gate_interval_count": 6,
+      "source_gate_interval_max_source_px": 11.313708305358887,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    },
+    {
+      "area_id": "wz-19",
+      "zone": 19,
+      "zone_id": "a0501_w02",
+      "name_key": "PLACENAME_wild_a0501_w02",
+      "pane_name": "L_w_a0501_w02",
+      "ordinary_texture": "map_zone_16^t",
+      "glow_texture": "map_zone_glow_16^s",
+      "closed_ring_vertices": 92,
+      "native_visible_check_ids": [
+        "UI19-N1",
+        "UI19-N2",
+        "UI19-N3",
+        "UI19-N4"
+      ],
+      "native_visible_check_count": 4,
+      "native_visible_check_max_px": 1.09085839604014,
+      "source_interval_ids": [
+        "WZ19-S01",
+        "WZ19-S02"
+      ],
+      "source_gate_interval_count": 2,
+      "source_gate_interval_max_source_px": 10.198039054870605,
+      "review_status": "source_and_native_evidence_accepted_runtime_root_review_pending"
+    }
+  ],
+  "limits": [
+    "Rendered map selection outlines only; no collision, physical boundary, route, traversability, accessible entrance, spawn or encounter extent claim.",
+    "All 43 native visible checks are samples, not proof that every hidden edge or every source discrepancy is within three native pixels.",
+    "The 43 source gate intervals use source-pixel distances; retain the measured 12.083045959472656 maximum rather than calling it within three pixels.",
+    "WZ17's source UI connection under the native badge does not establish a traversable connection or safe path.",
+    "Original glow and ordinary strokes are not universally identical. The WZ13 counterexample is retained and excluded; none of the nine existing outlines is replaced.",
+    "Original resource publication provenance is third-party; pinned hashes do not imply official publisher endorsement.",
+    "Recovered artwork, original binaries and external decoder source remain outside Atlas.",
+    "This receipt neither changes runtime approval nor closes encounter, master-plan, deployment or live-release gates."
+  ],
+  "reproducibility": {
+    "native_replay_command": "python3 -B replay_native_ui_candidates.py",
+    "native_replay_default": "read-only exact-byte comparison",
+    "native_replay_result": {
+      "status": "PASS",
+      "command": "python3 -B docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py",
+      "execution_scope": "Standard-library-only no-write replay after candidate creation; exact candidate bytes reproduced.",
+      "python_version": "3.12.14",
+      "count": 11,
+      "vertices": 832,
+      "checks": 43,
+      "native_check_rms_px": 0.9776701444858085,
+      "native_check_max_px": 2.0984617749247665,
+      "candidate_sha256": "3f4f9d0436e254d770a4f7e928416bae89e95fc5395ee9b4709ef4cf5ea3e5d8",
+      "floating_point_note": "Standard-library segment replay differs from the frozen vectorized metrics only at floating-point roundoff; each retained check matched within the unchanged 1e-9 assertion."
+    },
+    "raw_source_replay_script": "replay_source_ui.py",
+    "full_archive_texture_replay_run_for_this_packaging": false,
+    "raw_replay_inputs": "Exact pinned assets and separately obtained pinned passive buffer reader; recovered outputs must be outside Atlas.",
+    "source_output_and_script_bytes_preserved": true
+  },
+  "runtime_gate_validation": {
+    "model": "atlas-area-model.mjs:evaluateAreaGeometry",
+    "pending_status_expected_reason": "boundary_not_approved",
+    "check_result": "PASS",
+    "root_integration_and_final_ci_required": true,
+    "model_sha256": "d92a72823e01e68e586c947d87dd8761d09a8eb260d32f0ff0691a6579f0ce90",
+    "node_version": "v24.22.3",
+    "pending_candidates_rejected": 11,
+    "in_memory_status_approved_records_schema_topology_eligible": 11,
+    "in_memory_representation": "map_selection_outline",
+    "stored_statuses_changed": false,
+    "interpretation": "Pending wrappers all fail closed; in-memory approved copies pass identity/map/source/review/registration/topology evaluation. This is schema/topology verification, not root approval."
+  },
+  "candidate_file": {
+    "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/native-ui-outline-candidates.json",
+    "sha256": "3f4f9d0436e254d770a4f7e928416bae89e95fc5395ee9b4709ef4cf5ea3e5d8",
+    "count": 11,
+    "vertices": 832,
+    "status_for_all_records": "candidate_pending_root_review",
+    "exact_output_of_unchanged_replay_script": true
+  }
+}

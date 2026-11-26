@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-26",
+  "scope": "Packaging portability only; frozen original independent review stays unchanged.",
+  "original_decoder_sha256": "f59fa490617069c507864d5e9678259a71e47394ee961a8221c31428b80fc071",
+  "packaged_decoder_sha256": "3b7b7efc8ba0869eda0affe7dd65ea626395b572154dd2c46fed6e760b8355a8",
+  "only_removed_line": "sys.path.insert(0, str(Path(__file__).resolve().parent.parent/'python-deps'))",
+  "all_other_decoder_bytes_identical": true,
+  "reason": "Published replay accepts its environment via PYTHONPATH; it must not assume a scratch sibling python-deps directory.",
+  "root_raw_replay": "PASS all48 raw hashes, original identities/layer/SRT, exact perimeters and fullXYZ face hashes with packaged decoder.",
+  "independent_review": "calibration/independent-sector-footprint-review.json"
+}

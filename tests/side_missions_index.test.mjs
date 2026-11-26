@@ -11,6 +11,31 @@ assert.equal(original.length,203,"The archived guide must retain 200 numbered an
 assert.equal(recovered.length,203,"Every original quest must be restored exactly once");
 // AT-281: verified side-mission route addenda supplement, never overwrite, archived 203 quest records.
 const forQuest=n=>recovered.find(m=>Number(m[1])===n)?.[4]||"";
+// Mission 008: confirmed giver, usable access directions and complete reward; keep the original key.
+const fennekin=forQuest(8);
+assert.ok(fennekin.includes('Branche'));
+assert.ok(!fennekin.includes('Jardin'));
+assert.ok(fennekin.includes('Water-type attack'));
+assert.ok(fennekin.includes('tunnel to the southeast'));
+assert.ok(fennekin.includes('ladder at the north end'));
+assert.ok(fennekin.includes('Revitalizing Twig'));
+assert.ok(fennekin.includes('₽1,200, Exp. Candy XS ×3, Exp. Candy S ×1 and Fennekin (Lv. 14)'));
+assert.ok(fennekin.includes('data-side-check="8"'));
+assert.ok(!fennekin.includes('href="https://'));
+const generatedFennekin=read('index.html').match(/<article class="side-quest" id="quest-8">([\s\S]*?)<\/article>/)?.[1];
+assert.equal(generatedFennekin,original.find(m=>Number(m[1])===8)?.[2],
+  'Generated home guidance must match the corrected authored article');
+// Written-source correction: Montée is in Jaune Sector 1; preserve quest/progress key 11.
+const source11=original.find(m=>Number(m[1])===11)?.[2]||"";
+const home11=read("index.html").match(/<article class="side-quest" id="quest-11">([\s\S]*?)<\/article>/)?.[1]||"";
+for(const card of [source11,home11,forQuest(11)]){
+ assert.match(card,/<b>Start:<\/b> Jaune Sector 1/);
+ assert.match(card,/Challenge Montée in Jaune Sector 1\./);
+ assert.match(card,/two level 8 Kakuna, level 9 Kakuna and level 11 Beedrill/);
+ assert.doesNotMatch(card,/evolves during the battle/);
+ assert.doesNotMatch(card,/Rouge Sector 1/);
+ assert.match(card,/data-side-check="11"/);
+}
 const h03=forQuest(40),h04=forQuest(45);
 assert.match(h03,/data-verified-holovator="H-03"/);
 assert.match(h03,/Vert Pokémon Center/);

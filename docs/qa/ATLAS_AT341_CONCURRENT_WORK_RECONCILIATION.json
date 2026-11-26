@@ -1,0 +1,176 @@
+{
+  "id": "AT341-CONCURRENT-WORK-RECONCILIATION",
+  "date": "2026-11-26",
+  "source_evidence": {
+    "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "retained_release_receipt_commit": "74975108bca6bb488ebcb9e86e908d7b90efe8ed",
+    "main_release": "PR202 separately merged map-filter recovery, exact place/accent/number search, original inline photographs and WZ14 source guidance. These changes are retained.",
+    "source_packet_policy": "Retain the concurrent current AT339 source packet and explicitly archive the earlier amendment baseline; do not overwrite either review history.",
+    "wz04_policy": "Preserve the concurrent six-outline production record and its separate review; the additional root WZ04 supplement remains corroborating evidence. WZ20 is the seventh outline.",
+    "workspace_observed_version": 38,
+    "workspace_source": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+    "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
+    "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
+  },
+  "resolved_plan_fields": [
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json/at_341_completion_checkpoint/status",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_state",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "AT341_final_candidate_seven_selection_outlines_61_boundaries_remaining_full_G5_A0_open",
+      "concurrent": "AT341_current_main_reconciled_six_outlines_PR204_CI_pending_G2_G3_full_G5_A0_open"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/G2_G3",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "partial_seven_reviewed_zone_selection_outlines_61_boundaries_and_comprehensive_roster_signoffs_open",
+      "concurrent": "partial_six_reviewed_zone_map_outlines_62_boundaries_and_all_comprehensive_rosters_open"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/reviewed_zone_map_outlines",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 7,
+      "concurrent": 6
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/at341/stage",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/at341/required_remaining/wild_zone_boundaries",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 13,
+      "concurrent": 14
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json/stage",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json/required_remaining/wild_zone_boundaries",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 13,
+      "concurrent": 14
+    }
+  ],
+  "original_main_and_pr_history_preserved": true,
+  "final_checks": {
+    "local_node_tests": 131,
+    "failed": 0,
+    "static": "passed",
+    "source_hashes": "passed",
+    "remote_exact_head_CI": "pending"
+  },
+  "latest_main_reconciliation": {
+    "main": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+    "main_pr": 205,
+    "prior_candidate": "a0b12854b2478ec400fb11eb53db2b8b21b91555",
+    "scope": "Documentation/release receipt reconciliation only; all runtime bytes remain identical to a0b12854.",
+    "reason": "GitHub correctly blocked PR CI while the new main documentation conflicted with the candidate plans.",
+    "preserved": "All PR205 release/tracker/Workspace receipts, prior statuses and full historical source records.",
+    "validation": "Fresh exact-head CI and review still required."
+  },
+  "second_plan_conflicts": [
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json/revision",
+      "current_candidate": 89,
+      "prior_release": 88,
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json/current_phase",
+      "current_candidate": "AT-341 final candidate: seven independently reviewed rendered zone outlines and bounded encounter/Mission008 corrections; final combined-head CI pending. Full G2/G3/G5/A0 remain open.",
+      "prior_release": "AT339 bounded place-layer/search/photo repairs and shared areas/habitats are merged, deployed and live-verified; five reviewed map-selection outlines and 283 attributed claims. Current documentation checkpoint88/96 preserves runtime candidate85/93 and PR204's unmerged 86/94 and 87/95 source records by immutable reference. G2/G3 remain partial; 63 boundaries and all comprehensive rosters, full-scope G5/A0 and the complete Workspace upgrade remain open. Original-Site v38 has its separate three-file filter/photo receipt and cannot advance those full-upgrade gates. Guarded synchronization of five existing private metadata rows to revision88 was executed and verified by fresh readback at 2026-11-26T12:47:34Z; all five broader features remain in progress, all 41 unrelated rows are unchanged, and the 46-row totals remain 16 open/19 in_progress/11 verified.",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json/non_destructive_release_policy/checkpoint_scope",
+      "current_candidate": "AT-341: preserve all original behavior, repair the demonstrated test setup failure, retain source evidence and synchronize private planning metadata. No public database or Workspace changes.",
+      "prior_release": "Manifest88/Ledger96 release-receipt documentation only; AT339 runtime changed in the separately verified Manifest85/Ledger93 candidate. No SQL or original Workspace action is performed by this checkpoint.",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/manifest_revision",
+      "current_candidate": 89,
+      "prior_release": 88,
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/ledger_revision",
+      "current_candidate": 97,
+      "prior_release": 96,
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_state",
+      "current_candidate": "AT341_final_candidate_seven_selection_outlines_61_boundaries_remaining_full_G5_A0_open",
+      "prior_release": "AT339_G0_G1_verified_G2_G3_partial_G4_bounded_verified_G5_A0_open",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G0/state",
+      "current_candidate": "canonical_records_checkpointed_private_metadata_reconciled_in_progress",
+      "prior_release": "verified_prior_consolidation_plan_and_AT339_private_metadata_sync",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G1/state",
+      "current_candidate": "prior_route_release_verified_25_PR_selective_consolidation_candidate",
+      "prior_release": "verified_required_PR191_routes_and_AT339_current_base_reconciliation",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G2/state",
+      "current_candidate": "owner_sources_preserved_seven_zone_selection_outlines_reviewed_61_boundaries_open",
+      "prior_release": "partial_five_reviewed_zone_outlines_63_boundaries_open",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G3/state",
+      "current_candidate": "20_published_standard_roster_comparisons_performed_conditions_amended_comprehensive_scope_open",
+      "prior_release": "partial_283_additive_claims_68_comprehensive_rosters_open",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G4/state",
+      "current_candidate": "shared_interactions_implemented_bounded_validation_tracked_by_PR204",
+      "prior_release": "bounded_shared_area_habitat_behavior_verified_full_scope_acceptance_open",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/phases/G5/state",
+      "current_candidate": "full_scope_blocked_by_remaining_G2_G3_requirements",
+      "prior_release": "open_full_scope_coverage_validation_and_signoff_required",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/G4",
+      "current_candidate": "shared_interactions_and_review_fixes_implemented_release_validation_tracked_by_PR204",
+      "prior_release": "bounded_shared_area_habitat_behavior_verified_full_scope_acceptance_open",
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/manifest_revision",
+      "current_candidate": 89,
+      "prior_release": 88,
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/ledger_revision",
+      "current_candidate": 97,
+      "prior_release": 96,
+      "resolution": "Retain newer candidate value and keep separate verified prior-release evidence."
+    }
+  ]
+}

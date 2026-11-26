@@ -1,0 +1,574 @@
+{
+  "id": "AT341-root-source-area-footprints",
+  "date": "2026-11-26",
+  "decision": "APPROVE_SCOPED_SOURCE_AREA_FOOTPRINTS",
+  "source_candidate": "docs/qa/candidates/source-area-footprints-2026-11-26/native-sector-footprint-candidates.json",
+  "source_candidate_sha256": "a2e1c6d6e15f68770ed52ea1d45f93ae7777ef35c94ef0aeed2bbd65219e3e00",
+  "scope": "All48 named sector source footprints projected into the unchanged native map. This is a map-selection layer; source heights and overlaps remain distinct from physical walls, walking routes, encounter extents and rendered green Wild Zone boundaries.",
+  "root_review": {
+    "raw_source_replay": {
+      "sectors": 48,
+      "raw_asset_hashes": true,
+      "original_name_and_layer_joins": true,
+      "exact_XZ_perimeters": true,
+      "full_XYZ_face_hashes": true,
+      "tree_bounds_max_delta": 0
+    },
+    "native_candidate_replay": {
+      "byte_identical": true,
+      "vertices": 784
+    },
+    "initial_raw_replay_attempt": "Wrong scratch input directory failed with FileNotFoundError; no data modified. Replayed successfully against the retained sector-pilot/public-assets directory.",
+    "visual_review": "Root directly viewed the all48 owner-map overlay, four independently reserved source/native holdout pairs, two accepted architecture-control panels, local WZ04/WZ13/WZ14 source-mesh versus green-layer panels, and the committed owner-native calibration/diagnostic panels. The independent reviewer separately viewed all31 control pairs.",
+    "independent_review_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+    "independent_review_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0",
+    "raster_registration": {
+      "fit_controls": 31,
+      "independent_holdouts": 4,
+      "max_holdout_native_px": 2.0008624115912745,
+      "metric_scope": "Original raster-to-native architecture only; no uniform semantic or physical edge accuracy claim."
+    },
+    "retained_discrepancies": "All13 fixed world/green checks remain recorded, including WZ13 NE7.070528px/SW7.364568px and WZ14 NE3.032210px. No refit, hidden rejection or replacement of approved photo outlines.",
+    "topology": "48 unchanged valid closed source perimeters; 47 projected sector-pair overlaps preserved; original Y ranges and Layer2 retained in source receipts.",
+    "source_publication": "No recovered game textures, original scene/mesh binaries, full decoded XYZ payloads or copied external code are shipped."
+  },
+  "approved": [
+    {
+      "area_id": "vert-sector-1",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "4df5fdee3e1f12010ae383ccc1931aba812ef1e8779e72930b31e4e431ed11f3",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-3",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "0c7dd2ece51225c7c55756db96304e876b3d5860aa4c3c9882ef49639583d1db",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-6",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "bff904aebf0fee4066d8c6c9cd34a9e0e53e6efd840009f2635863b7b4d80001",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-7",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "b4ae72440d4240ba2b757280016f5f93b90a2c9911364f4d4bf478a6b0ecf19e",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-2",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "b5742fc811183e28df67a223e2a684944dc087a9bb93ef9754ac9550684d3966",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-4",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "b0bc2df430a4e0a875bec80bde1141b36f49b2ff16f99acc8474ed86f8eec4ef",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-5",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "bb64c897621657b8fafa83e28e4769aca9f5c2ceeb4ca966b3ea4cf47d838f5f",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-8",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "435b61d056f25067a9721c9dd2cd0741fcd3d220ae92b1e28981db46ff37cc46",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "vert-sector-9",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "fb4eeb470c44d857eb38996882e0b934780958cca9102165a4a09e3bf7d63d0e",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-1",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "8ebad57183643b580a8b9a4378d93989090f40d37fe290f5b8262c9be530dd18",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-3",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "97ba818274b45585996f060e64da245b3b9c41173ea1e360632cf211f230e049",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-5",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "a5ad8cc7047865dd37720237c2d491b8d79a799c25de66d9e277676d93917b52",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-7",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "0bc79366af9da354b9534b31aee5f6ca0e0802faea1429da01b47f586108b437",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-2",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "36254ddb65f2433ecf8533a42ab91cc5be7966e2301972ecb370054326f859f2",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-4",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "14c817988724eb7ebde02ee1cd4560e282ed9f8d7af1ec8791d22796fbda2131",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-6",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "404a7cfa443137d4af58175be18e10af80e4d02caf41b690322cb90560186d8f",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-8",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "4d814fadb03e2e295ef987bd21130b6947ebdfae4b8175c305af9fc91c4c50d8",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-9",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "56b334ef29dbed15e4b07b45d4fe9c194192c45df7e71c980acfb357688af620",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "11c99cf8dc8e10d76a8f254322403d16c7a1beed2454b99565f292f1dbc1cb6a",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-1",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "1af78303a220983a4b99aa600a324862c39246b3cbfa4ef32a7b7019e5484a5c",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-3",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "7e357f5b1426567d0da7621c823f33f9d16ea2ca5c603480d24e99bc6761ba85",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "84ff7d4a2b92ec4158c1aef4576912abaa7eeb8c7c812650c6a01028461ac637",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-6",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "528f0cbcdd94169b17f7a04878f55a07ad55489373709923d1a153006a6910df",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-2",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "2abfbd5473a2623565dc7b45d2364caa24a5f73225bd34457bec7a0439f2bb89",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-4",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "289f61b4d58c648732b17aaab730f681dbf55d5a198c0bfe9e9c613a3c28b6a3",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-7",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "95ee81c652084e4249f2c1c09d08cf3ab2457fe49060fcdbd1a0d0ad35253275",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-8",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "d9bf1db7e92e8ef5128fa75d753b25ce3d5525d90524b7a4914843ce927a26b9",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "magenta-sector-9",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "667b0865534dc772ea56412c5f5447fb7bf857a867668cded3bd42079ad8ffb9",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-1",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "43c129546a646940e2c09da3537d3f33f520586dc6aba28fe7c75d9744bf61f3",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-3",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "3f01de3e468d5dcad6cf22c5640f910fb5e29442db5bba7497beae57335ef904",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-4",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "a1b2ca8bd092a4433bdc297e01192b5e170104cd54ac77e3771a34f467c1013f",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-5",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "15ac6995a7368dcf6771d5eb9fc70d2ab28319ef41913b3b8f0907edb0e56649",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-7",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "7ac63ba1050590b58d297585d47a4b6140ac19435842b6d702d99811e59035f5",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-2",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "85974fa076feaa9b8a5a64bde96e7ce952ad8681c2577f847a8786a232e8d8e5",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-6",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "7505a54a488f3e25e3644b008748708137cf123d01b564b9a590d7be9e755bd5",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "f7ffd7c7155c1db570618ba582558a124b8e0162812c2211de1ab9a65609f6c7",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-1",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "341ccf1a3f54e4a03b220142f50e8ca849f5ea510b17278a8d3ef5137ef8d30e",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "2e0e9b6fd19de742a2bfe11fea9842a95040f14b8ec652bd60de285487aea822",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-4",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "05b5d4b3aa35a3213c37ac864f21c8727570557bc7dd80c8073f989af305acd1",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "66ad738bab9d19f8f306d908a1edd81070c616c764a6611d0cdc9801eca14735",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-7",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "830c2797b2185b7b1fc2c871796478f179d250d6f448865a21c30825a34a2b72",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-8",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "c67c142fd19292edf21024a44044d1c52fb902fd5cc2e65aa2d4d364bb9a7b94",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-2",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "2c23017243703abeba8f869aff8f3fdd27280726f0145e1334081f3618386b71",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-6",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "69c6f8f154b71fda7d7d73af8ce6fcb9b320ffe99bba5ea6a0372560b0490bd5",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-9",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "a463c65fd4892d1da191f888d920f3163d4e1a2fbb80ee64a13a465c729eb6e9",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-10",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "0cf5e3d019046200fdc836181209c5a9f93b7919ce8712604301c32e0f75b995",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-11",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "9329f909267550f621007f3af3ed41594281d161c58a5cda9217f25471d33462",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    },
+    {
+      "area_id": "jaune-sector-12",
+      "representation": "source_area_footprint",
+      "production_geometry_sha256": "878118387721eb40e0929230fed6573a0f5384b1f51a84f10e9915591b3729b7",
+      "review": {
+        "review_panel_path": "docs/qa/candidates/source-area-footprints-2026-11-26/all48-registered-texture-native-candidate.png",
+        "review_panel_sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d",
+        "review_receipt_path": "docs/qa/candidates/source-area-footprints-2026-11-26/calibration/independent-sector-footprint-review.json",
+        "review_receipt_sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+      }
+    }
+  ],
+  "preservation": {
+    "existing_nine_zone_geometries_unchanged": true,
+    "all_encounter_records_unchanged": true,
+    "original_map_and_photos_unchanged": true,
+    "source_candidates_still_nonapproved": true,
+    "source_area_identities_unchanged": true,
+    "no_new_item_or_sector_point_pins": true
+  },
+  "release_validation": "Integrated source approval only. Final combined-head tests, actual phone/desktop screenshot review, merge and live deployment remain required."
+}

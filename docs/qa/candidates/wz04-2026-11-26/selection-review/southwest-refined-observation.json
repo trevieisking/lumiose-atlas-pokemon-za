@@ -1,0 +1,19 @@
+{
+  "id": "WZ04-INDEPENDENT-SW-CORNER-2026-11-26",
+  "status": "fixed_image_feature_before_projection_check",
+  "source_path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+  "native_path": "maps/lumiose-game-map.jpg",
+  "landmark": "Lower southeast roof corner of the stepped building west of Rouge Street, southwest of Wild Zone 04; independent intersection of its vertical and horizontal roof-outline strokes.",
+  "source_xy": [56, 672],
+  "native_xy": [928, 349],
+  "role": "new_independent_architecture_holdout",
+  "method": "The initial manual source [60,666] was rejected after viewing its enlarged panel because it fell on the vertical edge above the corner, despite a low residual. The replacement uses original-image stroke minima independently in each image, with no homography input: source median luminance across y658:667,x50:70 gives vertical x56; source y665:679,x40:55 gives horizontal y672. Native median luminance across y341:347,x918:936 gives vertical x928; native y345:356,x918:926 gives horizontal y349. Half-open pixel windows; source and target choices fixed before projecting this replacement. No fitted control, transform, or candidate vertex changed.",
+  "first_attempt": {
+    "source_xy": [60, 666],
+    "native_xy": [927, 350],
+    "residual_px": 1.4099914800184337,
+    "decision": "reject_as_corner_observation",
+    "reason": "The source crosshair is visibly above the horizontal stroke; low residual cannot validate the wrong landmark."
+  },
+  "limitations": "Stroke centres differ with raster rendering, blur and perspective. This is an independent image correspondence, not a physical-geography measurement or uniform confidence interval."
+}

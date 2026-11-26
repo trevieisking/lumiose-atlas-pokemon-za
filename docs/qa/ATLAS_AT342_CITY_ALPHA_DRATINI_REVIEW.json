@@ -1,0 +1,204 @@
+{
+  "id": "ATLAS-AT342-CITY-ALPHA-DRATINI-REVIEW",
+  "accessed_on": "2026-11-26",
+  "requirement_id": "CHAT-CITY-ALPHAS",
+  "requirement_source": "docs/consolidation/2026-11-26/REQUIREMENTS.md",
+  "requirement_text": "Audit city/rooftop Alpha encounters, especially Alpha Dratini, and associated route/unlock conditions; unverified precise coordinates remain unknown.",
+  "requirement_state": "targeted_dratini_review_complete_with_labelled_limits; broader_city_alpha_route_inventory_open",
+  "broader_requirement_complete": false,
+  "scope": "Targeted written-source review of Alpha Dratini and its relationship to six existing ordinary rooftop records. This sidecar evidence does not change runtime encounter classes, guides, geometry, release approval or the broader city Alpha obligation.",
+  "decision": "Corroborated random Alpha Dratini report at Restaurant Le Nah roof, Vert Sector 6; retain narrower location reports, source disagreements and unknown coordinates for other roofs.",
+  "runtime_observation": {
+    "path": "atlas-area-evidence.json",
+    "sha256_at_review": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92",
+    "ordinary_dratini_records": 6,
+    "alpha_dratini_records": 0,
+    "all_six_existing_evidence_statuses": "source_corroborated",
+    "runtime_changed_by_this_review": false,
+    "observation_is_release_approval": false
+  },
+  "classification_limits": {
+    "runtime_class_added": false,
+    "existing_classes_preserved": true,
+    "existing_model_has_random_alpha_class": false,
+    "do_not_coerce_to": ["fixed_alpha", "rotating_alpha"],
+    "reason": "A random Alpha variant at a normal rooftop spawn is neither a guaranteed fixed Alpha nor the separately modeled Wild Zone 20 rotating pool.",
+    "absence_inference": "An ordinary record or omission from a guaranteed-Alpha table does not establish Alpha absence.",
+    "exact_coordinates": null,
+    "new_pins": 0,
+    "new_spawn_probability": null
+  },
+  "sources": [
+    {
+      "id": "official-alpha-behaviour",
+      "url": "https://legends.pokemon.com/en-gb/news/adventure",
+      "title": "Making the Most of Your Adventure",
+      "source_type": "official_pokemon",
+      "published_on": "2025-07-22",
+      "accessed_on": "2026-11-26",
+      "supports": "General Alpha appearance and aggressive behaviour only.",
+      "does_not_support": "Dratini-specific location, probability or unlock."
+    },
+    {
+      "id": "gamesradar-alpha-dratini",
+      "url": "https://www.gamesradar.com/games/pokemon/pokemon-legends-z-a-dratini/",
+      "title": "Pokemon Legends: Z-A Alpha Dratini location",
+      "source_type": "authored_written_gameplay_guide",
+      "author": "Joel Franey",
+      "accessed_on": "2026-11-26",
+      "supports": "Reported Alpha Dratini on Restaurant Le Nah roof south of Wild Zone 6; level 38; revisits may be needed."
+    },
+    {
+      "id": "vgc-dratini",
+      "url": "https://www.videogameschronicle.com/guide/pokemon-legends-z-a-dratini-location/",
+      "title": "Pokemon Legends Z-A Dratini Location",
+      "source_type": "authored_written_gameplay_guide",
+      "author": "Jordan Middler",
+      "published_on": "2025-11-17",
+      "accessed_on": "2026-11-26",
+      "supports": "Restaurant roof route and chance of an Alpha variant; ordinary Jaune Sector 3 roof route requiring Roto-Glide."
+    },
+    {
+      "id": "game8-alpha-dratini",
+      "url": "https://game8.jp/pokemon-legends-z-a/731378",
+      "title": "Alpha Dratini appearance locations and capture guide (Japanese)",
+      "source_type": "specialist_written_gameplay_guide",
+      "displayed_updated_on": "2026-03-12",
+      "accessed_on": "2026-11-26",
+      "supports": "Five rooftop Alpha reports explicitly labeled random, with location-specific reported levels and conditions; adjacent-building ladder and roll/glide route to the restaurant."
+    },
+    {
+      "id": "gamewith-alpha-dratini",
+      "url": "https://gamewith.jp/pokemon-za/525173",
+      "title": "Alpha Dratini appearance locations and capture guide (Japanese)",
+      "source_type": "specialist_written_gameplay_guide",
+      "displayed_updated_on": "2026-11-24",
+      "accessed_on": "2026-11-26",
+      "supports": "Random Alpha reports, levels 38-39; restaurant available early; Rouge Sector 8 hunting route after Roto-Glide acquisition during Main Mission 16."
+    },
+    {
+      "id": "altema-alpha-dratini",
+      "url": "https://altema.jp/legendsza/oyabunminiryu",
+      "title": "Alpha Dratini locations and hunting guide (Japanese)",
+      "source_type": "specialist_written_gameplay_guide",
+      "displayed_updated_on": "2026-01-01",
+      "accessed_on": "2026-11-26",
+      "supports": "Restaurant and Magenta Sector 8 Alpha reports; prose describes random Alpha generation.",
+      "limitations": "Magenta 8 caption calls the appearance fixed, conflicting with later random-generation prose. It reports all weather, conflicting with Game8's sunny report. Its probability is not adopted."
+    },
+    {
+      "id": "bulbapedia-alpha-unlock",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Alpha_Pok%C3%A9mon",
+      "title": "Alpha Pokemon",
+      "source_type": "community_reference",
+      "accessed_on": "2026-11-26",
+      "supports": "General Lumiose Alpha appearance after Main Mission 05.",
+      "does_not_support": "A rooftop-specific survey requirement or Dratini-specific probability."
+    },
+    {
+      "id": "powerpyx-restaurant-route",
+      "url": "https://www.powerpyx.com/pokemon-legends-z-a-dratini-location/",
+      "title": "Pokemon Legends Z-A Dratini Location",
+      "source_type": "written_gameplay_guide",
+      "published_on": "2025-10-14",
+      "accessed_on": "2026-11-26",
+      "supports": "Restaurant roof access by ladder and a running midair roll; ordinary daytime encounter report.",
+      "does_not_support": "Alpha-exclusive conditions or a mandatory Roto-Glide unlock for this route."
+    }
+  ],
+  "locations": [
+    {
+      "area_id": "vert-sector-6",
+      "existing_record_id": "g3-evidence-vert-sector-6-dratini-ordinary",
+      "existing_class": "ordinary",
+      "landmark": "Restaurant Le Nah roof",
+      "alpha_disposition": "source_corroborated_random_alpha_report",
+      "sources": ["gamesradar-alpha-dratini", "vgc-dratini", "game8-alpha-dratini", "gamewith-alpha-dratini", "altema-alpha-dratini"],
+      "level_reports": {"gamesradar": "38", "game8": "39", "gamewith": "38-39"},
+      "certified_exact_level": null,
+      "route": "Climb an adjacent building's ladder and cross to the restaurant roof. Game8, VGC and PowerPyx describe a roll or rolling jump; Roto-Glide is an alternative, not an established universal prerequisite.",
+      "condition_limit": "Game8 reports daytime and sun. Treat these as attributed observations, not certified exclusive conditions.",
+      "exact_coordinates": null
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "existing_record_id": "g3-sector-20261126-rouge-sector-8-dratini-walking",
+      "existing_class": "ordinary",
+      "landmark": "Rouge Sector 8 rooftop",
+      "alpha_disposition": "source_corroborated_random_alpha_report",
+      "sources": ["game8-alpha-dratini", "gamewith-alpha-dratini"],
+      "level_reports": {"game8": "39", "gamewith": "38-39"},
+      "route": "GameWith recommends its described Rouge 8 hunting route after Roto-Glide, obtained during Main Mission 16.",
+      "condition_limit": "Game8 reports daytime and sun. The Roto-Glide instruction concerns access on the described route, not an independently established spawn unlock.",
+      "exact_coordinates": null
+    },
+    {
+      "area_id": "magenta-sector-8",
+      "existing_record_id": "g3-sector-20261126-magenta-sector-8-dratini-walking",
+      "existing_class": "ordinary",
+      "landmark": "Magenta Sector 8 rooftop, called Rose 8 in the Japanese guides",
+      "alpha_disposition": "alpha_presence_supported_class_caption_and_weather_disagreement_retained",
+      "sources": ["game8-alpha-dratini", "altema-alpha-dratini"],
+      "level_reports": {"game8": "38"},
+      "classification_disagreement": "Game8 labels the Alpha random. Altema's caption says fixed appearance but its later explanation says Dratini becomes Alpha randomly. Do not promote this caption to fixed_alpha.",
+      "weather_disagreement": "Game8 reports day/night in sun; Altema describes day/night in both sun and rain. No exclusive weather requirement is certified.",
+      "exact_coordinates": null
+    },
+    {
+      "area_id": "bleu-sector-9",
+      "existing_record_id": "g3-evidence-bleu-sector-9-dratini-ordinary",
+      "existing_class": "ordinary",
+      "landmark": "Bleu Sector 9 rooftop; the existing ordinary route distinguishes the Bleu 6 construction approach",
+      "alpha_disposition": "single_source_specific_random_alpha_report",
+      "sources": ["game8-alpha-dratini"],
+      "level_reports": {"game8": "39"},
+      "condition_limit": "Game8 reports daytime and sun. Independent numbered-sector Alpha corroboration remains open. An ordinary level-28 example in GamesRadar is not evidence against a possible Alpha.",
+      "exact_coordinates": null
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "existing_record_id": "g3-evidence-jaune-sector-3-dratini-ordinary",
+      "existing_class": "ordinary",
+      "landmark": "Rooftop west of Wild Zone 8",
+      "alpha_disposition": "source_reported_alpha_roof_with_inferred_sector_join",
+      "sources": ["game8-alpha-dratini", "vgc-dratini"],
+      "level_reports": {"game8": "39"},
+      "inference": "Game8 names the roof west of Wild Zone 8 for an Alpha; VGC identifies the ordinary rooftop route as Jaune Sector 3. The sector association is a written-landmark inference, not a verified coordinate.",
+      "route": "VGC explicitly requires Roto-Glide for its described Jaune 3 approach. Preserve the existing record's source-reported Main Mission 16 acquisition note.",
+      "condition_limit": "Game8 reports daytime and sun. No exclusive time/weather restriction is certified by this review.",
+      "exact_coordinates": null
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "existing_record_id": "g3-evidence-jaune-sector-5-dratini-targeted-sector-membership",
+      "existing_class": "ordinary",
+      "landmark": "Existing ordinary rooftop report west of Wild Zone 19",
+      "alpha_disposition": "not_established_by_this_targeted_review",
+      "sources": [],
+      "condition_limit": "Retain the ordinary claim and its existing qualifications. Do not infer Alpha presence or absence from other rooftops, generic district reports or missing table entries.",
+      "exact_coordinates": null
+    }
+  ],
+  "general_unlock": {
+    "source": "bulbapedia-alpha-unlock",
+    "reported_condition": "Complete Main Mission 05, The City in the Shadow of Prism Tower, for Alpha appearances throughout Lumiose.",
+    "classification": "attributed_general_system_condition",
+    "rooftop_specific_survey_requirement_established": false
+  },
+  "review_limits": [
+    "No official Dratini-specific rooftop source was found in this bounded search; the official source supports general Alpha behaviour only.",
+    "No direct in-game encounter, owner photograph or coordinate registration was performed in this review.",
+    "Written guides provide evidence of reported location and class; exact level, exclusive conditions and occurrence probability are not certified.",
+    "Source pages were read as prose; video links and embedded players were not opened or analyzed.",
+    "StrategyWiki's referenced playthrough could not be opened because it returned HTTP 403; no inaccessible passage is used as corroboration.",
+    "The complete city Alpha route inventory remains open; this targeted receipt does not add or silently redefine a Map 2.0 release gate."
+  ],
+  "validation": {
+    "six_existing_dratini_ids_and_ordinary_classes_read_back": true,
+    "runtime_model_and_guides_modified": false,
+    "exact_coordinates_or_new_pins_added": false,
+    "new_class_added": false,
+    "github_or_supabase_mutation_performed_by_reviewer": false,
+    "videos_used": false
+  }
+}

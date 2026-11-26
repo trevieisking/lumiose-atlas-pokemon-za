@@ -1,0 +1,25 @@
+{
+  "status": "fixed_manual_observations_before_first_closeup_fit",
+  "source": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+  "target": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+  "method": "Seven independently identified architectural controls register the closeup to the overview. Four architecture and five green-perimeter checks are withheld. The initial border-derived context transform only located comparison crops and will not become production calibration. All final points and roles below are fixed before fitting. Three outer-wall seam-foot junctions and four roof corners provide distributed controls; no icons, text, gate squares or boundary vertices are fitted. Source/target coordinates are approximate line-centre picks from original pixels.",
+  "points": [
+    {"id":"CF1","label":"REJECTED provisional northwest wall seam","source_xy":[223,362],"overview_xy":null,"role":"rejected_nonlandmark","rejection":"The proposed crop contains only the sloped green line, not a wall seam. It was rejected before fitting. CF7 and CF8 separately identify actual visible seam-foot junctions."},
+    {"id":"CF2","label":"northeast outer wall seam-foot junction","source_xy":[929,227],"overview_xy":[677,350],"role":"fit"},
+    {"id":"CF3","label":"western roof northwest corner","source_xy":[149,639],"overview_xy":[465.5,488.5],"role":"fit"},
+    {"id":"CF4","label":"western roof lower-left bevel start","source_xy":[146,726],"overview_xy":[466.5,512.5],"role":"fit"},
+    {"id":"CF5","label":"eastern stub roof southwest corner","source_xy":[1158,635],"overview_xy":[755,461.5],"role":"fit"},
+    {"id":"CF6","label":"southeast hook roof outer bevel","source_xy":[1294,801],"overview_xy":[799,502.5],"role":"fit"},
+    {"id":"CF7","label":"northwest outer wall seam-foot junction","source_xy":[255,347],"overview_xy":[489,400],"role":"fit"},
+    {"id":"CF8","label":"northwest middle outer wall seam-foot junction","source_xy":[371,314],"overview_xy":[521,388],"role":"fit"},
+    {"id":"CH1","label":"western roof lower-left bevel end","source_xy":[173,746],"overview_xy":[478,519],"role":"architecture_holdout"},
+    {"id":"CH2","label":"hook roof inner northwest bevel","source_xy":[996,728],"overview_xy":[711,491],"role":"architecture_holdout"},
+    {"id":"CH3","label":"hook roof inner northeast bevel","source_xy":[1106,737],"overview_xy":[742.5,491],"role":"architecture_holdout"},
+    {"id":"CH4","label":"north middle outer wall seam-foot junction","source_xy":[518,282],"overview_xy":[562,375],"role":"architecture_holdout"},
+    {"id":"CB1","label":"northeast green line approach","source_xy":[1255,224],"overview_xy":[767,342.5],"role":"border_holdout"},
+    {"id":"CB2","label":"northwest green line approach","source_xy":[146,385],"overview_xy":[456,416],"role":"border_holdout"},
+    {"id":"CB3","label":"southwest green corner","source_xy":[223,643],"overview_xy":[487,488],"role":"border_holdout"},
+    {"id":"CB4","label":"southern green bend","source_xy":[752,693],"overview_xy":[642,487],"role":"border_holdout"},
+    {"id":"CB5","label":"southeast green notch","source_xy":[944,543],"overview_xy":[692,440],"role":"border_holdout"}
+  ]
+}

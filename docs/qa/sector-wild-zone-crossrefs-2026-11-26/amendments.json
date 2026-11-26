@@ -1,0 +1,231 @@
+{
+  "id": "three-sector-wild-zone-crossrefs-2026-11-26",
+  "reviewed_on": "2026-11-26",
+  "review_base": "cffbf6077682e2c1cfacad2603e7d9c6a94147ef",
+  "scope": "Only notes/related_areas on three existing sectors and an internal guide link in each corresponding original sector card.",
+  "baseline_evidence_sha256": "392492a5337ffd90f8fc554a7b6913a8d8a51f65ed3bdc27806eb02f2272f840",
+  "baseline_guide_sha256": "3cdbcf0998197b54af5dc71c6c4294038ba5db864dc5360e4957bff748c9a5c0",
+  "source_observations_sha256": "ff802d84c5e86711fb217181f3f795cc86837fa1d73249a6348b9370dc72318b",
+  "encounter_count_before": 748,
+  "encounter_count_after": 748,
+  "original_encounters_canonical_sha256": "bdc55c2cb2f43b58301d969b17daf5133a18f4ff9ad9627597d8711545f6bf74",
+  "patches": [
+    {
+      "operation": "replace_area_metadata",
+      "area_id": "bleu-sector-2",
+      "before": {
+        "area_id": "bleu-sector-2",
+        "roster_status": "not_comprehensive",
+        "encounters": [
+          {
+            "id": "g3-evidence-bleu-sector-2-bellsprout-sector-membership",
+            "species": "Bellsprout",
+            "encounter_class": "unclassified_lead",
+            "form": null,
+            "condition": {
+              "time": null,
+              "weather": null,
+              "floor": null,
+              "unlock": null,
+              "notes": []
+            },
+            "evidence_status": "source_lead",
+            "sources": [
+              {
+                "url": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+                "claim": "Species page names this sector; scope recorded in AT322."
+              },
+              {
+                "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+                "claim": "Area membership review and source limitations."
+              }
+            ],
+            "notes": [
+              "This is partial area-membership evidence, not a complete sector roster or an exact spawn position."
+            ]
+          }
+        ],
+        "notes": [
+          "This sector roster is not comprehensive. Only the individually sourced claims below have been reviewed.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat.",
+          "Wild Zone 5 overlaps these numbered sectors and the street between them. Its roster is not automatically a whole-sector roster."
+        ]
+      },
+      "after": {
+        "area_id": "bleu-sector-2",
+        "roster_status": "not_comprehensive",
+        "encounters": [
+          {
+            "id": "g3-evidence-bleu-sector-2-bellsprout-sector-membership",
+            "species": "Bellsprout",
+            "encounter_class": "unclassified_lead",
+            "form": null,
+            "condition": {
+              "time": null,
+              "weather": null,
+              "floor": null,
+              "unlock": null,
+              "notes": []
+            },
+            "evidence_status": "source_lead",
+            "sources": [
+              {
+                "url": "https://pokemaps.net/maps/lza/lumiose/bellsprout",
+                "claim": "Species page names this sector; scope recorded in AT322."
+              },
+              {
+                "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+                "claim": "Area membership review and source limitations."
+              }
+            ],
+            "notes": [
+              "This is partial area-membership evidence, not a complete sector roster or an exact spawn position."
+            ]
+          }
+        ],
+        "notes": [
+          "This sector roster is not comprehensive. Only the individually sourced claims below have been reviewed.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat.",
+          "Wild Zone 5 overlaps these numbered sectors and the street between them. Its roster is not automatically a whole-sector roster.",
+          "Use the related Wild Zone 5 encounter guide for its documented roster and conditions."
+        ],
+        "related_areas": [
+          {
+            "area_id": "wz-05",
+            "relationship": "overlapping_wild_zone",
+            "note": "Wild Zone 5 covers most of Bleu Sector 2 and also extends into Bleu Sector 1 and Bleu Street. Its own encounter guide records the zone’s Pokémon and conditions."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_2",
+          "claim": "The named sector contains the identified Wild Zone over much of its area."
+        },
+        {
+          "path": "docs/qa/sector-wild-zone-crossrefs-2026-11-26/source-observations.json",
+          "claim": "Pinned original scene, binary-table and named-mesh review supports a scoped cross-reference without whole-sector roster promotion."
+        }
+      ]
+    },
+    {
+      "operation": "replace_area_metadata",
+      "area_id": "bleu-sector-10",
+      "before": {
+        "area_id": "bleu-sector-10",
+        "roster_status": "not_comprehensive",
+        "encounters": [],
+        "notes": [
+          "This sector roster is not comprehensive. No encounter roster has been verified here; an empty list means missing evidence, not no Pokémon.",
+          "Reviewed sector pages place Wild Zone 10 over much of Bleu Sector 10. They do not establish a separate complete outdoor roster or prove there are no encounters outside the zone.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat."
+        ]
+      },
+      "after": {
+        "area_id": "bleu-sector-10",
+        "roster_status": "not_comprehensive",
+        "encounters": [],
+        "notes": [
+          "This sector roster is not comprehensive. No encounter roster has been verified here; an empty list means missing evidence, not no Pokémon.",
+          "Reviewed sector pages place Wild Zone 10 over much of Bleu Sector 10. They do not establish a separate complete outdoor roster or prove there are no encounters outside the zone.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat.",
+          "Use the related Wild Zone 10 encounter guide for its documented roster and conditions."
+        ],
+        "related_areas": [
+          {
+            "area_id": "wz-10",
+            "relationship": "overlapping_wild_zone",
+            "note": "Wild Zone 10 occupies much of Bleu Sector 10 once it opens. Its encounter guide records the zone’s Pokémon and conditions; separate encounters outside the zone remain individually qualified."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Bleu_Sector_10",
+          "claim": "The named sector contains the identified Wild Zone over much of its area."
+        },
+        {
+          "path": "docs/qa/sector-wild-zone-crossrefs-2026-11-26/source-observations.json",
+          "claim": "Pinned original scene, binary-table and named-mesh review supports a scoped cross-reference without whole-sector roster promotion."
+        }
+      ]
+    },
+    {
+      "operation": "replace_area_metadata",
+      "area_id": "magenta-sector-5",
+      "before": {
+        "area_id": "magenta-sector-5",
+        "roster_status": "not_comprehensive",
+        "encounters": [],
+        "notes": [
+          "This sector roster is not comprehensive. No encounter roster has been verified here; an empty list means missing evidence, not no Pokémon.",
+          "Reviewed sector pages place Wild Zone 9 over most of Magenta Sector 5. The zone roster is not copied into the sector; separate outdoor availability remains unverified.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat."
+        ]
+      },
+      "after": {
+        "area_id": "magenta-sector-5",
+        "roster_status": "not_comprehensive",
+        "encounters": [],
+        "notes": [
+          "This sector roster is not comprehensive. No encounter roster has been verified here; an empty list means missing evidence, not no Pokémon.",
+          "Reviewed sector pages place Wild Zone 9 over most of Magenta Sector 5. The zone roster is not copied into the sector; separate outdoor availability remains unverified.",
+          "Sector identity, boundary, walking route, and species encounter evidence are separate. A nearby Wild Zone does not prove the entire sector is a habitat.",
+          "Use the related Wild Zone 9 encounter guide for its documented roster and conditions."
+        ],
+        "related_areas": [
+          {
+            "area_id": "wz-09",
+            "relationship": "overlapping_wild_zone",
+            "note": "Wild Zone 9 occupies most of Magenta Sector 5 once it opens. Use its encounter guide for the Pokémon and conditions documented in that part of the sector."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_5",
+          "claim": "The named sector contains the identified Wild Zone over much of its area."
+        },
+        {
+          "path": "docs/qa/sector-wild-zone-crossrefs-2026-11-26/source-observations.json",
+          "claim": "Pinned original scene, binary-table and named-mesh review supports a scoped cross-reference without whole-sector roster promotion."
+        }
+      ]
+    }
+  ],
+  "guide_cards": [
+    {
+      "area_id": "bleu-sector-2",
+      "target_area_id": "wz-05",
+      "href": "sector-maps.html?area=wz-05#wildzone-5",
+      "original_card_sha256": "932f23fea57244ea94f73656d41944d452cbdc061ab86b2cb15e30603c888825",
+      "candidate_card_sha256": "333e265a8a919e9a6cbb1d66b424db3999941f1716b51b0964c7555f6e5633fd",
+      "insertion": "<p class=\"sector-evidence\" data-sector-wild-zone-link=\"bleu-sector-2\">Wild Zone 5 covers most of Bleu Sector 2 and also extends into Bleu Sector 1 and Bleu Street. Its own encounter guide records the zone’s Pokémon and conditions. <a href=\"sector-maps.html?area=wz-05#wildzone-5\">Wild Zone 5 Pokémon and conditions</a></p>"
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "target_area_id": "wz-10",
+      "href": "sector-maps.html?area=wz-10#wildzone-10",
+      "original_card_sha256": "4221ca44cdf8eeb3400ae53e5bc912783e8f5658adb1c25175e44a96c4fc066f",
+      "candidate_card_sha256": "9371296c0f6146706c70c9ded7f9dffe0c978813762ef2c41d7f6445b3438068",
+      "insertion": "<p class=\"sector-evidence\" data-sector-wild-zone-link=\"bleu-sector-10\">Wild Zone 10 occupies much of Bleu Sector 10 once it opens. Its encounter guide records the zone’s Pokémon and conditions; separate encounters outside the zone remain individually qualified. <a href=\"sector-maps.html?area=wz-10#wildzone-10\">Wild Zone 10 Pokémon and conditions</a></p>"
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "target_area_id": "wz-09",
+      "href": "sector-maps.html?area=wz-09#wildzone-9",
+      "original_card_sha256": "b1f8a1eda945eaea6e04226b4566e6dc967a876bca7039880d598b40c08c4343",
+      "candidate_card_sha256": "4150bb3cc5f35fa65899af6cf51d0bd80387b570a7b28720fdf0924452ea1861",
+      "insertion": "<p class=\"sector-evidence\" data-sector-wild-zone-link=\"magenta-sector-5\">Wild Zone 9 occupies most of Magenta Sector 5 once it opens. Use its encounter guide for the Pokémon and conditions documented in that part of the sector. <a href=\"sector-maps.html?area=wz-09#wildzone-9\">Wild Zone 9 Pokémon and conditions</a></p>"
+    }
+  ],
+  "model_ui_owner": "release integrator; this packet does not change shared model or rendering code",
+  "preservation": [
+    "all68 original area IDs",
+    "all748 existing additive encounter objects",
+    "all272 existing fieldbook records",
+    "all existing map geometry",
+    "all original sector guide card bytes except the explicit inserted paragraph",
+    "all progress and collectible IDs"
+  ]
+}

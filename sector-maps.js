@@ -125,7 +125,7 @@
       a.className="sector-open-city-map";
       a.href="atlas-explorer.html?sector="+encodeURIComponent(id.slice("sector-".length));
       a.textContent="Open this sector's district map";
-      a.setAttribute("aria-label","Open the district map near "+heading.textContent+"; exact sector boundary not yet verified");
+      a.setAttribute("aria-label","Open the district map, original photographs and shared area outline for "+heading.textContent);
       heading.insertAdjacentElement("afterend",a);
     }
   }

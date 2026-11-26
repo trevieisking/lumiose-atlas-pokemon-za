@@ -1,0 +1,491 @@
+{
+  "id": "independent-48-sector-source-footprint-projection-2026-11-26",
+  "date": "2026-11-26",
+  "reviewer": "geometry_evidence",
+  "decision": "APPROVE_SCOPED_SOURCE_AREA_FOOTPRINT_PROJECTION",
+  "scope": "The unchanged 48 source named-area XZ mesh footprints may be projected into the Atlas native map using the fixed published world-to-texture formula followed by the independently approved original-texture-to-native affine. This approval applies to displayed semantic source-area footprints, with original source heights, layer and overlaps retained in evidence.",
+  "not_approved_claims": [
+    "Exclusive partition of the city",
+    "Pixel-identical replacement of rendered green Wild Zone layers",
+    "Uniform 3 px collider-to-green or physical-boundary accuracy",
+    "Walkable, spawn, encounter, rooftop, or physical collision extents",
+    "Exact game place-name classification without source layer/type/height resolution",
+    "A full master-plan, production runtime, or final CI signoff"
+  ],
+  "fixed_world_mapping": {
+    "formula": [
+      "u = 78 - 3.94*x",
+      "v = 78 - 3.94*z"
+    ],
+    "source_repository": "kwsch/pkNX",
+    "source_commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+    "source_files": [
+      "pkNX.WinForms/Subforms/Gen9a/Map/Info/TransformUI9a.cs",
+      "pkNX.WinForms/Subforms/Gen9a/Map/Info/MapTransform.cs"
+    ],
+    "method": "Direct evaluation of published constants and ConvertX/ConvertZ; no fit to zones or semantic boundaries.",
+    "original_layout_corroboration": {
+      "source_repository": "969981/ZA_Resources",
+      "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+      "archive_member": "blyt/map_field_00.bflyt",
+      "member_sha256": "82470fc446f4592349d98ae1090e802752cb3d220c8898e14b2920beba6b761a",
+      "pane": "N_map_range_00",
+      "byte_offset": 1772,
+      "translation_rotation_scale_size": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        3940.0,
+        3940.0
+      ],
+      "proves": "Original UI range of 3940 by 3940, zero translation/rotation and unit scale for this pane.",
+      "does_not_alone_prove": "World Scale=1000 and Offset=500; these remain explicit published map-transform parameters, corroborated by the dispersed diagnostic checks."
+    }
+  },
+  "coordinate_composition": {
+    "published_world_to_texture": [
+      [
+        -3.94,
+        0.0,
+        78.0
+      ],
+      [
+        0.0,
+        -3.94,
+        78.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "texture_to_native": [
+      [
+        0.4524453760877522,
+        0.0005553122573539251,
+        27.639053630376765
+      ],
+      [
+        0.0002481832792931227,
+        0.4534362194534925,
+        30.070748457855114
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "composed_world_to_native": [
+      [
+        -1.7826347817857437,
+        -0.002187930293974465,
+        62.973107321295046
+      ],
+      [
+        -0.0009778421204149036,
+        -1.7865387046467605,
+        65.4581318710124
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "native_map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+  },
+  "raster_registration": {
+    "independent_receipt": "independent-texture-native-review.json",
+    "independent_receipt_sha256": "ba602cea3e653145aec895c5048bbb7aa2a7ed30d5a72ad27d48fc89773e6140",
+    "fit_control_count": 31,
+    "reserved_manual_architecture_holdout_count": 4,
+    "holdouts_changed_after_fit": false,
+    "rms_px": 1.561397527990726,
+    "max_px": 2.0008624115912745,
+    "threshold_px": 3,
+    "metric_scope": "Observed original raster-to-Atlas architectural alignment only; not a uniform bound on semantic source edges or hidden borders.",
+    "visual_review": "All31 accepted original architectural patch pairs and all4 separately reserved full-resolution holdout pairs were directly viewed. No displayed badges were used as boundary evidence."
+  },
+  "source_replay": {
+    "count": 48,
+    "unique_labels": 48,
+    "unique_area_names": 48,
+    "all_layer_values": [
+      2
+    ],
+    "all_git_blob_and_sha256_checks": true,
+    "full_xyz_faces_and_projected_rings_equal": true,
+    "original_AHTB_name_and_English_DAT_joins_equal": true,
+    "max_mesh_vs_tree_bound_delta_world_units": 0.0,
+    "method_limitation": "Independent execution and review of retained decoder against raw hashes, original label table and face/ring outputs; this does not claim a second independent implementation of the whole binary decoder.",
+    "trial_history": [
+      "independent-sector-replay-first-attempt.json",
+      "independent-sector-replay-second-attempt.json"
+    ]
+  },
+  "overlap_and_height_semantics": {
+    "pair_count_above_area_0_0001": 47,
+    "examples": [
+      {
+        "a": "Bleu Sector 6",
+        "b": "Bleu Sector 8",
+        "area_world_xz": 2172.147587451604,
+        "a_world_y_range": [
+          -18.947265625,
+          -18.947265625
+        ],
+        "b_world_y_range": [
+          -15.759765625,
+          -15.7109375
+        ]
+      },
+      {
+        "a": "Jaune Sector 9",
+        "b": "Jaune Sector 11",
+        "area_world_xz": 1851.2245250900608,
+        "a_world_y_range": [
+          -12.5,
+          -12.5
+        ],
+        "b_world_y_range": [
+          -25.0,
+          -25.0
+        ]
+      },
+      {
+        "a": "Jaune Sector 7",
+        "b": "Jaune Sector 8",
+        "area_world_xz": 1847.90513905023,
+        "a_world_y_range": [
+          -17.5,
+          -17.5
+        ],
+        "b_world_y_range": [
+          -25.0,
+          -25.0
+        ]
+      },
+      {
+        "a": "Jaune Sector 11",
+        "b": "Jaune Sector 12",
+        "area_world_xz": 1589.1576376884243,
+        "a_world_y_range": [
+          -25.0,
+          -25.0
+        ],
+        "b_world_y_range": [
+          -12.0,
+          -12.0
+        ]
+      },
+      {
+        "a": "Jaune Sector 4",
+        "b": "Jaune Sector 5",
+        "area_world_xz": 1392.9739701320377,
+        "a_world_y_range": [
+          -15.0,
+          -15.0
+        ],
+        "b_world_y_range": [
+          -20.0,
+          -20.0
+        ]
+      },
+      {
+        "a": "Jaune Sector 5",
+        "b": "Jaune Sector 8",
+        "area_world_xz": 1278.6585341265215,
+        "a_world_y_range": [
+          -20.0,
+          -20.0
+        ],
+        "b_world_y_range": [
+          -25.0,
+          -25.0
+        ]
+      }
+    ],
+    "review": "The source footprints are preserved as authored. Their source Y values differ and the published area resolver considers layer, area type and floor distance. No flattening into an exclusive partition, edge snapping or overlap subtraction is approved."
+  },
+  "world_to_rendered_green_diagnostics": {
+    "fixed_checks": 13,
+    "zones": [
+      2,
+      3,
+      4,
+      13,
+      14,
+      16
+    ],
+    "role": "Corroborating geography and coordinate frame only; source collider and green display edges are not presumed equivalent.",
+    "all_results_retained": true,
+    "mapping_changed_after_checks": false,
+    "checks": [
+      {
+        "id": "W04-NW",
+        "residual_px": 2.6840072211115635
+      },
+      {
+        "id": "W04-NE",
+        "residual_px": 2.9933074624098053
+      },
+      {
+        "id": "W04-SE",
+        "residual_px": 2.2627106962461716
+      },
+      {
+        "id": "W13-NW",
+        "residual_px": 2.7283535647794244
+      },
+      {
+        "id": "W13-NE",
+        "residual_px": 7.070527550121739
+      },
+      {
+        "id": "W13-SW",
+        "residual_px": 7.364567976841499
+      },
+      {
+        "id": "W14-NW",
+        "residual_px": 1.9386621279204856
+      },
+      {
+        "id": "W14-NE",
+        "residual_px": 3.0322100580554023
+      },
+      {
+        "id": "W14-SW",
+        "residual_px": 2.9878100469601687
+      },
+      {
+        "id": "W14-S",
+        "residual_px": 1.9373334812117486
+      },
+      {
+        "id": "W02-derived-center",
+        "residual_px": 1.248427176357892
+      },
+      {
+        "id": "W03-derived-center",
+        "residual_px": 0.5487700065555216
+      },
+      {
+        "id": "W16-derived-center",
+        "residual_px": 2.8387513962708812
+      }
+    ],
+    "exceeding_3px": [
+      {
+        "id": "W13-NE",
+        "residual_px": 7.070527550121739
+      },
+      {
+        "id": "W13-SW",
+        "residual_px": 7.364567976841499
+      },
+      {
+        "id": "W14-NE",
+        "residual_px": 3.0322100580554023
+      }
+    ],
+    "discrepancy_review": "Local registered original-base-map, collider-projection and native-green-layer panels show WZ13 source mesh following the unmarked map footprint while its rendered green layer differs at NE and SW. WZ04 and WZ14 also retain their finite source-versus-display offsets. No failed comparison is silently excluded, retargeted, or used to refit. Original UI-layer geometry is a separate pending review."
+  },
+  "visual_review": {
+    "viewed_source_panels": [
+      "all48-registered-texture-native-candidate.png",
+      "world-texture-zone-crosscheck.png"
+    ],
+    "viewed_independent_panels": [
+      "world-zone-13-diagnostic.png",
+      "world-zone-04-diagnostic.png",
+      "world-zone-14-diagnostic.png"
+    ],
+    "observation": "All48 source projections lie in plausible named-sector regions across the map. The visible sector polygons overlap one another and underlie Wild Zones in places, consistent with source semantics; plausibility is corroboration, not the authority for names or coordinates."
+  },
+  "integration_requirements": [
+    "Retain original source identities, public commit and content hashes.",
+    "Retain full source XYZ/layer/overlap evidence even though the interactive selection footprint is 2D.",
+    "Use scoped wording that describes source area footprints; do not imply physical/spawn edges or an exclusive partition.",
+    "Preserve existing photo-derived Wild Zone outlines and photos; source colliders do not replace them under this receipt.",
+    "Run the root-owned runtime/model checks and exact-head visual/CI gates after integration."
+  ],
+  "frozen_sources": [
+    {
+      "path": "TransformUI9a.cs",
+      "sha256": "e6fa86deb3fdae966722dd80269744c355ab5dc5cd4a3c892d32425d125536c5"
+    },
+    {
+      "path": "MapTransform.cs",
+      "sha256": "9f7442b9c28b53049f3a2a2e4c688f663d3151b8b208e7f176c7d35a698ff13e"
+    },
+    {
+      "path": "LumioseMap.cs",
+      "sha256": "69fdd6674171355f479a198daed7edb82a0c6ca2403d24e121a3d5949590c189"
+    },
+    {
+      "path": "World9a.cs",
+      "sha256": "9431419f5de848aa6ea308cc8b8f2b52d8b4b45846b5cf6f4b724c471d01fcfe"
+    },
+    {
+      "path": "PAN1.cs",
+      "sha256": "98bb2337a60a66f0421fc73ade6dbbc0730853985f5579aedc701770810fb097"
+    },
+    {
+      "path": "decode_sector_meshes.py",
+      "sha256": "f59fa490617069c507864d5e9678259a71e47394ee961a8221c31428b80fc071"
+    },
+    {
+      "path": "inspect_havok.py",
+      "sha256": "f21e32453c5387cce537842d0ef24b593083ec56c8c6e9d5f633851e4c8a9994"
+    },
+    {
+      "path": "inspect_scene.py",
+      "sha256": "0ff90fd0619e0a4513ab61206e69822dea10da64b1a02852dd08b03f1395bc3c"
+    },
+    {
+      "path": "PhiveConvert.Shape.cs",
+      "sha256": "b9425488cbeca25b650ed93fa367c7c3c22ae22282e2631824954f5fa9bc0654"
+    },
+    {
+      "path": "MeshShapeBuilder.cpp",
+      "sha256": "ad0998b3a1edab43d07d6f0cf4a3ad10d09d430db9159c1c16ec8c148850bb63"
+    },
+    {
+      "path": "za_formats_reference.py",
+      "sha256": "dd068b555ee9c5fcbd338f05f062fe2d3b47e5719f616b59bd50fbfae7662c7a"
+    },
+    {
+      "path": "sector-name-crosswalk.json",
+      "sha256": "3d453f0fc0314710715a88c3d633b651feb29bc33422b3231cd117b7410e7a8f"
+    },
+    {
+      "path": "decoded-original-subarea-identities.json",
+      "sha256": "3a2de42e58280f8199dcdc0245b6e5c6ac8b55bc2145ac2382f17ba8e2debb3c"
+    },
+    {
+      "path": "public-sector-assets-receipt.json",
+      "sha256": "96741cf5555169236b81bf20eba2122a93e7edbb1f0779ce446a7b470e9ff2c8"
+    },
+    {
+      "path": "decoded-sector-candidates.json",
+      "sha256": "7d8118fcbefaee776066c3059585ad9baf260da64ba55cd426b190dbf288724e"
+    },
+    {
+      "path": "texture-native-registration.json",
+      "sha256": "63ea9e0b7b7d1e440776fae9cb0fdef8c774243c435139d09cfac5a220246915"
+    },
+    {
+      "path": "world-native-composition-candidate.json",
+      "sha256": "afb9cb4774155c74639703304a240da8b8789baff3d2eb33d24325e5e749cfd2"
+    },
+    {
+      "path": "crosscheck-zone-candidates.json",
+      "sha256": "19006f15aa55d21bae441474c7c6ffc4eb70559c5661e3df0bc13ecae4baa677"
+    },
+    {
+      "path": "original-map-layout-range-receipt.json",
+      "sha256": "91a3e108471e8c725af7c83f23d959bfbfc8611c71ce5c1c88342898d1f4da77"
+    },
+    {
+      "path": "map-texture-decode-receipt.json",
+      "sha256": "d4a7ab640849af6090806129b26422db4ebd62a29f62815b7fff70f59b377bef"
+    },
+    {
+      "path": "original-map-texture-4096.png",
+      "sha256": "2670c1454eb0b5bbe609b1aca3933d5e2ada9cdc6c209f68741375fd9aeea703"
+    },
+    {
+      "path": "public-assets/map_field_00.arc",
+      "sha256": "106583a2ed4b79da4a5715786af3970b7cc02396156e2cf42bb243703cd359dd"
+    },
+    {
+      "path": "public-assets/field_sub_area_array.bin",
+      "sha256": "25d9da0770f4b054553621d67d118c997b18f121d23c30b58b4ee81e1eaa6665"
+    },
+    {
+      "path": "public-assets/place_name.tbl",
+      "sha256": "0b580b8b20833cc24903321f970f10be4f18ae91cdfe8cd77b18071c62d0131c"
+    },
+    {
+      "path": "public-assets/place_name.dat",
+      "sha256": "8c89e02178ea38f65fd23b113e671b421c789260d7bf2420a540466ad600e2ee"
+    },
+    {
+      "path": "all48-registered-texture-native-candidate.png",
+      "sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d"
+    },
+    {
+      "path": "world-texture-zone-crosscheck.png",
+      "sha256": "b706968e40610e9bc6048c91d49cc9e33c59400b58ceececf8261fc442f309a1"
+    }
+  ],
+  "frozen_review_inputs": [
+    {
+      "path": "independent-texture-native-review.json",
+      "sha256": "ba602cea3e653145aec895c5048bbb7aa2a7ed30d5a72ad27d48fc89773e6140"
+    },
+    {
+      "path": "fixed-global-map-holdouts.json",
+      "sha256": "f4b799067fd253cf4d5e7323ea95216308fa25823ee5c00138d19909e0c3439d"
+    },
+    {
+      "path": "first-global-map-holdout-picks.json",
+      "sha256": "9af792760d10966da22e66e2064c4bc87c3502ef2472ee0ee00817089a14d8bd"
+    },
+    {
+      "path": "first-world-crosscheck-selection.json",
+      "sha256": "f5bcb1ae66114ffc3c7d4e35f929b0f4a9cbe45e833ace3bd44027abc180a9de"
+    },
+    {
+      "path": "fixed-world-map-crosschecks.json",
+      "sha256": "5925a0d0c5a3116a5019c274cd458b9577f61aa22e753dba0d1c1a39bf1349b3"
+    },
+    {
+      "path": "world-map-crosscheck-results.json",
+      "sha256": "67ef79e9e638b28f23739b934a491759ae95c6a23e2528d34b7bbfeb0dc00ecb"
+    },
+    {
+      "path": "independent-sector-source-replay.json",
+      "sha256": "e19d753078ac6a473234d9014f19d0f2ef21570c15918ce2729d577f53d2bc31"
+    },
+    {
+      "path": "independent-sector-replay-first-attempt.json",
+      "sha256": "bcdc7ca2fb4f1c332eab2247f8101940a23ad30316d423b25a1f96fed97accb4"
+    },
+    {
+      "path": "independent-sector-replay-second-attempt.json",
+      "sha256": "6e37de6f2ba7c6c7d244e41bda5837a6aed9f036db78b28c12f34032d7ae0587"
+    },
+    {
+      "path": "world-zone-13-diagnostic.png",
+      "sha256": "e5128d89df78098d9a4e131de1cb77e1d26128d28d364dc20b1e340bd8d6ad43"
+    },
+    {
+      "path": "world-zone-04-diagnostic.png",
+      "sha256": "1ed1b07825a73544e1a73971cd4294c5765d5a8a43d31e3b56aca29878c0bfbb"
+    },
+    {
+      "path": "world-zone-14-diagnostic.png",
+      "sha256": "d908d7070b45d8441a4aa903e73597b7ea88f95942e48ddd32fadeb4bb73dd3c"
+    },
+    {
+      "path": "render_world_diagnostics.py",
+      "sha256": "43ad4b77183fcdd105aa661f53a13dfd0c6e308760fcc6a29764749322aa83f8"
+    },
+    {
+      "path": "replay_sector_sources_independently.py",
+      "sha256": "e8e4fbb4ead4435d1dd406afb3f29235b87bd0a98ae0c6d2b9b230e8aaff7995"
+    },
+    {
+      "path": "build_scoped_sector_review.py",
+      "sha256": "f1133888a0a66e3bebde3a6f6272de5297cfc9736b0058d64f3ad587d6b50c25"
+    }
+  ]
+}

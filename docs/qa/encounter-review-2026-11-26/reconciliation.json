@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "reconciled_on": "2026-11-26",
+  "common_baseline_commit": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "our_review_commit": "628b1231089c47b5f4c3c45974503f6dd4a74ec6",
+  "concurrent_remote_commit": "3e17c260fc749e3ee5bad877470ee6035601064c",
+  "original_packet_archive": "docs/qa/encounter-review-2026-11-26/atlas-area-evidence.e003f5f.original.json",
+  "original_packet_sha256": "39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f",
+  "current_packet_path": "docs/qa/at339-encounters/atlas-area-evidence.json",
+  "current_packet_sha256": "aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed",
+  "current_packet_preserved_byte_for_byte": true,
+  "overlapping_claim_ids": [
+    "g3-evidence-wz-14-helioptile-ordinary"
+  ],
+  "decision": "Keep latest Helioptile daytime and clear-skies guidance, every latest citation, equipment/level notes and bounded uncertainty; retain the prior header-decoding and schedule-evidence caveats. Other 48 amended existing rows and the one added Ampharos dispute remain identical to our reviewed commit.",
+  "current_helioptile_fields": {
+    "time": "daytime (source-corroborated)",
+    "weather": "clear skies (source-corroborated)",
+    "sources": [
+      "assets/atlas/wild-zones/wild-zone-14-overview.png",
+      "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14",
+      "https://gamewith.jp/pokemon-za/524504",
+      "https://www.powerpyx.com/pokemon-legends-z-a-helioptile-location/",
+      "https://pente.koro-pokemon.com/legendsz-a/map-wild-zone-14.shtml",
+      "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14"
+    ]
+  },
+  "runtime_geometries_equal_remote": true,
+  "geometry_reconciliation_owned_by": "root",
+  "runtime_guide_files_equal_our_review_commit": [
+    "src/sections/sidequests.html",
+    "side-missions.html",
+    "index.html"
+  ],
+  "original_claim_ids_retained": 283,
+  "owner_photo_claims_retained": 140,
+  "baseline_rows_retained": 272,
+  "additive_claims": 284,
+  "model_rows": 556,
+  "comprehensive_roster_signoffs": 0,
+  "canonical_plans_modified": false,
+  "remote_modified": false
+}

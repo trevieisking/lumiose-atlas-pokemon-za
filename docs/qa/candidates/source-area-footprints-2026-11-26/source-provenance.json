@@ -1,0 +1,279 @@
+{
+  "status": "reviewed source evidence; runtime integration requires root review",
+  "source_repository": "969981/ZA_Resources",
+  "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+  "publisher_declared_version": "2.0.2",
+  "source_kind": "third-party publication of original game-resource assets; identity and spatial alignment independently checked",
+  "source_url": "https://github.com/969981/ZA_Resources/tree/e44a63db22a9f295d43c34db3f67695d31ae8e7a/Unpack/v2.0.2/romfs/arc/data.trpfs/virtual",
+  "shared_assets": [
+    {
+      "local_file": "t1_field_area_0.trscn",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_scene/field/area/t1/sub_scene/t1_field_area_/t1_field_area_0.trscn",
+      "git_blob_sha": "36c62aad62e539f8a0b32930f053ee6a31084466",
+      "bytes": 64584,
+      "sha256": "eac34b00110159b94a72e9788363d5087735a4a794ba58d8ce4549be591ea68e"
+    },
+    {
+      "local_file": "field_sub_area_array.bin",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/world/ik_data/field/area/field_sub_area/field_sub_area_array.bin",
+      "git_blob_sha": "46779a9391133ba2cd3602396b73738eccbd5841",
+      "bytes": 25476,
+      "sha256": "25d9da0770f4b054553621d67d118c997b18f121d23c30b58b4ee81e1eaa6665"
+    },
+    {
+      "local_file": "place_name.dat",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ik_message/dat/English/common/place_name.dat",
+      "git_blob_sha": "acea749cd1696432602b2f6c2c7927376225141f",
+      "bytes": 10740,
+      "sha256": "8c89e02178ea38f65fd23b113e671b421c789260d7bf2420a540466ad600e2ee"
+    },
+    {
+      "local_file": "place_name.tbl",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ik_message/dat/English/common/place_name.tbl",
+      "git_blob_sha": "9bfc53e0449e7b31d7eb4baed75084924e89f725",
+      "bytes": 9008,
+      "sha256": "0b580b8b20833cc24903321f970f10be4f18ae91cdfe8cd77b18071c62d0131c"
+    },
+    {
+      "local_file": "map_field_00.arc",
+      "source_path": "Unpack/v2.0.2/romfs/arc/data.trpfs/virtual/ui/data/map/map_field_00.arc",
+      "git_blob_sha": "c067f2c4a48b0c818c95de4296b86fb492801ddf",
+      "bytes": 8471308,
+      "sha256": "106583a2ed4b79da4a5715786af3970b7cc02396156e2cf42bb243703cd359dd"
+    }
+  ],
+  "sector_asset_receipt": "public-sector-assets-receipt.json",
+  "public_decoder_references": [
+    {
+      "repository": "kwsch/pkNX",
+      "commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+      "path": "pkNX.WinForms/Subforms/Gen9a/Map/Info/TransformUI9a.cs",
+      "git_blob_sha": "2c43360346be3a0d441fb977cb5b38dd32bcae60",
+      "url": "https://github.com/kwsch/pkNX/blob/3bc649eea311ab1f249af43a562f8d70fe90ed9b/pkNX.WinForms/Subforms/Gen9a/Map/Info/TransformUI9a.cs",
+      "claim": "Fixed published 4096,3940,1000,-1,500 map transform constants; lines18\u201323."
+    },
+    {
+      "repository": "kwsch/pkNX",
+      "commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+      "path": "pkNX.WinForms/Subforms/Gen9a/Map/Info/MapTransform.cs",
+      "git_blob_sha": "c74261b94d19d6de132fbb687117d718499a691b",
+      "url": "https://github.com/kwsch/pkNX/blob/3bc649eea311ab1f249af43a562f8d70fe90ed9b/pkNX.WinForms/Subforms/Gen9a/Map/Info/MapTransform.cs",
+      "claim": "ConvertX/ConvertZ formula; lines7\u20138."
+    },
+    {
+      "repository": "kwsch/pkNX",
+      "commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+      "path": "pkNX.WinForms/Subforms/Gen9a/Map/Info/LumioseMap.cs",
+      "git_blob_sha": "e15a624ace9c4a29e20376282b69cfcb82379fdf",
+      "url": "https://github.com/kwsch/pkNX/blob/3bc649eea311ab1f249af43a562f8d70fe90ed9b/pkNX.WinForms/Subforms/Gen9a/Map/Info/LumioseMap.cs",
+      "claim": "Scene SRT, source area layers, overlaps and closest-floor policy. Its AABB leaves are not used as candidate perimeter geometry."
+    },
+    {
+      "repository": "kwsch/pkNX",
+      "commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+      "path": "pkNX.Structures/Havok/HavokCollision.cs",
+      "git_blob_sha": null,
+      "url": "https://github.com/kwsch/pkNX/blob/3bc649eea311ab1f249af43a562f8d70fe90ed9b/pkNX.Structures/Havok/HavokCollision.cs",
+      "claim": "Self-describing Havok tagfile/type/index structure."
+    },
+    {
+      "repository": "kwsch/pkNX",
+      "commit": "3bc649eea311ab1f249af43a562f8d70fe90ed9b",
+      "path": "FlatBuffers/ZA/World/Schemas/Area/FieldAreaInfo.fbs",
+      "git_blob_sha": "6631e2340c2e3ec4c06978a87f4a364e729010f7",
+      "url": "https://github.com/kwsch/pkNX/blob/3bc649eea311ab1f249af43a562f8d70fe90ed9b/FlatBuffers/ZA/World/Schemas/Area/FieldAreaInfo.fbs",
+      "claim": "Original SubAreaName field25;2.0 inserted Runerigus bool preserved."
+    },
+    {
+      "repository": "nvnprogram/HoianViewer",
+      "commit": "8a1eeb215a65ddc74d7cb9f07f2cf0c707f9d4d1",
+      "path": "PlayerViewer/Phive/PhiveConvert.Shape.cs",
+      "git_blob_sha": null,
+      "url": "https://github.com/nvnprogram/HoianViewer/blob/8a1eeb215a65ddc74d7cb9f07f2cf0c707f9d4d1/PlayerViewer/Phive/PhiveConvert.Shape.cs",
+      "claim": "Float32 sentinel; triangle/quad primitive field order."
+    },
+    {
+      "repository": "nvnprogram/PhiveConverter",
+      "commit": "03faf4be678a42d18b1786bef6321b52dfbcd10b",
+      "path": "source/fivex/MeshShapeBuilder.cpp",
+      "git_blob_sha": null,
+      "url": "https://github.com/nvnprogram/PhiveConverter/blob/03faf4be678a42d18b1786bef6321b52dfbcd10b/source/fivex/MeshShapeBuilder.cpp",
+      "claim": "Quantized vertex offsets and inverse scale."
+    },
+    {
+      "repository": "nibinemui/Lumiose-Toolkit",
+      "commit": "ab9604880df0011f76e89fcf54356b883fb0792b",
+      "path": "za_formats.py",
+      "git_blob_sha": null,
+      "url": "https://github.com/nibinemui/Lumiose-Toolkit/blob/ab9604880df0011f76e89fcf54356b883fb0792b/za_formats.py",
+      "claim": "Pure buffer readers used for original message and texture calibration in scratch; no external source file is copied into this packet."
+    },
+    {
+      "repository": "KillzXGaming/Switch-Toolbox",
+      "commit": "2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051",
+      "path": "File_Format_Library/FileFormats/Layout/CAFE/Panes/PAN1.cs",
+      "git_blob_sha": "fcc7cec7f90b6829566151bed8cf630827a5d9c4",
+      "url": "https://github.com/KillzXGaming/Switch-Toolbox/blob/2899b5d0f1d555f2e6f2d41a28c5bd459b4d6051/File_Format_Library/FileFormats/Layout/CAFE/Panes/PAN1.cs",
+      "claim": "BFLYT pane field order for direct original3940\u00d73940 map-range corroboration."
+    }
+  ],
+  "scratch_diagnostic_artifacts": [
+    {
+      "name": "first-holdout-4.png",
+      "sha256": "149e852978983864669234973e4722e6e4081f9d0fdb3566116889f08c1d3c1d",
+      "bytes": 12138,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-1.png",
+      "sha256": "60c8fa664944bbe7c4ff379a7b8672be21325aeb8b9abaf2641a422d0df09fc5",
+      "bytes": 67657,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-2.png",
+      "sha256": "f7a32f5a1155f537ad2880ba961622b7ca3fb24ae971e32371feb28d46310770",
+      "bytes": 63500,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-3.png",
+      "sha256": "19d964e7b7a54baf153b103b12629aa9c1a04133c1f165461f5a9c93b70916c5",
+      "bytes": 70141,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-4.png",
+      "sha256": "58e6d5e4d0a19db80204a00239afc5b2e5a7f52f7a0ea86396c49097b018e00e",
+      "bytes": 59978,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-5.png",
+      "sha256": "1db7ae677652e969646e33389a3764858c2276eb2b442f40e42c365d6eec1539",
+      "bytes": 64499,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fit-controls-review-6.png",
+      "sha256": "0a8956404e3e31fca77abd312397c515830f69e3968538ab250d3c08265afbd1",
+      "bytes": 9002,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fixed-holdout-1.png",
+      "sha256": "5c6d61fd5f9351514195a68c14ce330e5606590ea10484928c12b5a03b04d92b",
+      "bytes": 10396,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fixed-holdout-2.png",
+      "sha256": "0c52b7e8d2fb95fff608c881609bfef4f359e38dd53fde26abafc86dd708595e",
+      "bytes": 14981,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fixed-holdout-3.png",
+      "sha256": "318d8a1498810f514c5f977c67e6693a814ac0fa4ff08883f965726d11495491",
+      "bytes": 15810,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "fixed-holdout-4.png",
+      "sha256": "4485ae15fa1a9cb0e4bf2020797a80160455ae76c602a59a64f9c30cde9dfed3",
+      "bytes": 12094,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-east-context.png",
+      "sha256": "f3b57fbc84308fd5a2f0d96bf8e329383ee20b3ae78cc220e68f2f63bb30016f",
+      "bytes": 219860,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-east-pixels.png",
+      "sha256": "304e45297aababb94e2533259863b52acfe6154655f90dcfb1beaccc3a002b8a",
+      "bytes": 36341,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-north.png",
+      "sha256": "0abc3ee3eadaef0a054116066518acc5a9a636c49fd5c2c7702aefb5f2b9419d",
+      "bytes": 46413,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-south-context.png",
+      "sha256": "e602be757acc133de96fa45c1dddf103c30c62b828a0c1f681748941e18dba7c",
+      "bytes": 240396,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-south-pixels.png",
+      "sha256": "ab37e9ed5620ad62adaaa7f7a81bbaa8570c4f8cb825d404a5bd43d8ab41da95",
+      "bytes": 18024,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "native-west.png",
+      "sha256": "35ca917b69bc732eabe2085729d69ea6c4c0ec8fa09026e3907f6792bffc01e2",
+      "bytes": 22883,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "texture-east-pixels.png",
+      "sha256": "7689a4eede37ad3f972323f0764e8b4e106fe1c2334198d3119ab41b3984374a",
+      "bytes": 28913,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "texture-north.png",
+      "sha256": "fea42a1b0553bd580c3ca304cd1525fe1e229755853a2158a1604e25c6f5c7aa",
+      "bytes": 20685,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "texture-south-pixels.png",
+      "sha256": "b0eaac8130c00911c8d275f26cfe813cfe80a174f84961bb4f3a55b91544e8c1",
+      "bytes": 14757,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "texture-west.png",
+      "sha256": "90d0873baad3d45f45be6408d399566977983a0cf7ad2e8424ebfc1774269d17",
+      "bytes": 49930,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "world-crosscheck-compact.png",
+      "sha256": "695c90b637d62b2dea5154f54820b34016e0024d0fd4c8b597f57bbf3ee8deec",
+      "bytes": 1525012,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "world-zone-04-diagnostic.png",
+      "sha256": "1ed1b07825a73544e1a73971cd4294c5765d5a8a43d31e3b56aca29878c0bfbb",
+      "bytes": 159906,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "world-zone-13-diagnostic.png",
+      "sha256": "e5128d89df78098d9a4e131de1cb77e1d26128d28d364dc20b1e340bd8d6ad43",
+      "bytes": 166548,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    },
+    {
+      "name": "world-zone-14-diagnostic.png",
+      "sha256": "d908d7070b45d8441a4aa903e73597b7ea88f95942e48ddd32fadeb4bb73dd3c",
+      "bytes": 217956,
+      "retention": "scratch research only; not shipped because panels may contain recovered source artwork"
+    }
+  ],
+  "rights_scope": "No external texture/scene/mesh binary, complete decoded XYZ mesh, or wholesale external code is included. Derived area perimeter facts and owner-native overlays are the deliverables.",
+  "limitations": [
+    "These are source area mesh XZ projections, not exclusive district partitions, a complete 3-D collision engine, rendered green Wild Zone outlines, or spawn/catchable/roster claims.",
+    "Height/layer overlaps remain;47 source sector pairs overlap in XZ.",
+    "The3px calibration threshold applies to original texture\u2192native architecture, not universal collider\u2192green-border identity.",
+    "All13 independent world-frame diagnostics remain, includingWZ13 NE7.0705px/SW7.3646px andWZ14 NE3.0322px; no world transform was fitted to those points."
+  ]
+}

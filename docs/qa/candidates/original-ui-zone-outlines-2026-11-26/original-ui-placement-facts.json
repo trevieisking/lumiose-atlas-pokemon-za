@@ -1,0 +1,4292 @@
+{
+  "status": "Direct original UI identity and placement facts; source artwork remains outside Atlas.",
+  "source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+  "full_decoded_metadata_sha256": "b12e249dadea61ce97a2ea7d65b69defa448ad9db70fc7ec2e50f27373daab3f",
+  "original_map_texture_size": [
+    4096,
+    4096
+  ],
+  "base_quad_size": [
+    10240,
+    10240
+  ],
+  "base_material_scale": [
+    2.5,
+    2.5
+  ],
+  "common_zoom": [
+    0.8125,
+    0.8125
+  ],
+  "common_zoom_scope": "Identical shared ancestor of base-map and zone panes; cancels in original map pixel coordinates.",
+  "records": [
+    {
+      "zone": 1,
+      "area_id": "wz-01",
+      "label": "Wild Zone 1",
+      "zone_id": "a0102_w01",
+      "name_key": "PLACENAME_wild_a0102_w01",
+      "pane_name": "L_w_a0102_w01",
+      "source_pane_translation": [
+        398.0,
+        -1765.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        742.0,
+        250.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 107,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 13,
+            "name": "map_zone_02^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            28.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 111,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 44,
+            "name": "map_zone_glow_02^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_02^t",
+        "width": 742,
+        "height": 250,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "557729e206eaccb834369927b235424bce9d4efbff21dd15e6c33bb2a49dc55e"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_02^s",
+        "width": 742,
+        "height": 250,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "e5802b9a8b2d6b6e1e0ed41f6ac43a518a6e489ad9d3dbd76c1857b5f397f022"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          2075.0,
+          3688.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 2,
+      "area_id": "wz-02",
+      "label": "Wild Zone 2",
+      "zone_id": "a0103_w01",
+      "name_key": "PLACENAME_wild_a0103_w01",
+      "pane_name": "L_w_a0103_w01",
+      "source_pane_translation": [
+        511.0,
+        -701.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        500.0,
+        520.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 114,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 14,
+            "name": "map_zone_03^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            58.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 118,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 45,
+            "name": "map_zone_glow_03^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_03^t",
+        "width": 500,
+        "height": 520,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "fe31895791ab8aa2c5968b7d92c114f05025dd71295ad7679ed675def7a0851e"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_03^s",
+        "width": 500,
+        "height": 520,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "362564683ae9d00e1b3e1928ed28d367ede77dc50815aefe92124b2d9317134d"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          2309.0,
+          2489.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 3,
+      "area_id": "wz-03",
+      "label": "Wild Zone 3",
+      "zone_id": "a0403_w01",
+      "name_key": "PLACENAME_wild_a0403_w01",
+      "pane_name": "L_w_a0403_w01",
+      "source_pane_translation": [
+        2.0,
+        936.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        380.0,
+        410.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 191,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 25,
+            "name": "map_zone_14^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 195,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 56,
+            "name": "map_zone_glow_14^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_14^t",
+        "width": 380,
+        "height": 410,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "fbdc939775a528d85e3bd92f3ed1f6a2521986173e7318d11609d50fa849ed12"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_14^s",
+        "width": 380,
+        "height": 410,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "183d34642b169f98c7c68e4d4120d56135116300a119f368f8bb6e66510f8f34"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1860.0,
+          907.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 4,
+      "area_id": "wz-04",
+      "label": "Wild Zone 4",
+      "zone_id": "a0402_w01",
+      "name_key": "PLACENAME_wild_a0402_w01",
+      "pane_name": "L_w_a0402_w01",
+      "source_pane_translation": [
+        295.0,
+        1486.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        520.0,
+        320.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 184,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 24,
+            "name": "map_zone_13^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            28.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 188,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 55,
+            "name": "map_zone_glow_13^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_13^t",
+        "width": 520,
+        "height": 320,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "918258d3e465e2eedce589674c295378f9cb4b6b85d8443403d022fd06b30790"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_13^s",
+        "width": 520,
+        "height": 320,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "3a1d4d03ae46ea76c8b3aa178a0306481383a80123dd05253b94df9eeb567f36"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          2083.0,
+          402.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 5,
+      "area_id": "wz-05",
+      "label": "Wild Zone 5",
+      "zone_id": "a0202_w02",
+      "name_key": "PLACENAME_wild_a0202_w02",
+      "pane_name": "L_w_a0202_w02",
+      "source_pane_translation": [
+        -365.0,
+        -414.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        660.0,
+        600.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 135,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 17,
+            "name": "map_zone_06^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            58.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 139,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 48,
+            "name": "map_zone_glow_06^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_06^t",
+        "width": 660,
+        "height": 600,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "8e95964e4f0638ac1cfddac5bfe5e38f58174ebf97a3e553d5db9a4d85f8df2a"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_06^s",
+        "width": 660,
+        "height": 600,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "34ab3593b483eeca5438e60ae06e4e31eb9a5d1a40303780ed56251429b23dd6"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1353.0,
+          2162.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 6,
+      "area_id": "wz-06",
+      "label": "Wild Zone 6",
+      "zone_id": "a0502_w01",
+      "name_key": "PLACENAME_wild_a0502_w01",
+      "pane_name": "L_w_a0502_w01",
+      "source_pane_translation": [
+        1728.0,
+        -143.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        460.0,
+        620.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 212,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 28,
+            "name": "map_zone_17^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 216,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 59,
+            "name": "map_zone_glow_17^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_17^t",
+        "width": 460,
+        "height": 620,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "3d57c262228f0741aeb708d3c92e6d5898bec860527879963468f38fafb8bfd7"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_17^s",
+        "width": 460,
+        "height": 620,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "ee891f46387353f030e158923827e0137200f86de7f8e0479ad55b74cfc79307"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          3546.0,
+          1881.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 7,
+      "area_id": "wz-07",
+      "label": "Wild Zone 7",
+      "zone_id": "a0303_w01",
+      "name_key": "PLACENAME_wild_a0303_w01",
+      "pane_name": "L_w_a0303_w01",
+      "source_pane_translation": [
+        -876.0,
+        278.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        346.0,
+        346.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 170,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 22,
+            "name": "map_zone_11^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            28.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 174,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 53,
+            "name": "map_zone_glow_11^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_11^t",
+        "width": 346,
+        "height": 346,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "c3402e07edb085fc43ee99bb3c969d0a8568b5a34e20c5432901f0764ce86ef4"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_11^s",
+        "width": 346,
+        "height": 346,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "7894fa9b0cb1f7137078b771f767114001ec6e753f7272d40d20353d9690fcbf"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          999.0,
+          1597.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 8,
+      "area_id": "wz-08",
+      "label": "Wild Zone 8",
+      "zone_id": "a0503_w01",
+      "name_key": "PLACENAME_wild_a0503_w01",
+      "pane_name": "L_w_a0503_w01",
+      "source_pane_translation": [
+        906.0,
+        316.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        340.0,
+        340.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 226,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 30,
+            "name": "map_zone_19^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            36.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 230,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 61,
+            "name": "map_zone_glow_19^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_19^t",
+        "width": 340,
+        "height": 340,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "c918f5b9c85353b0a052b52c77870538b993b39498c766ebd5467f19980e950f"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_19^s",
+        "width": 340,
+        "height": 340,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "769e3765b89bd2de57348995835cc3a800045624e1bb7ae8b42c213d37ec72a6"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          2784.0,
+          1562.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 9,
+      "area_id": "wz-09",
+      "label": "Wild Zone 9",
+      "zone_id": "a0301_w02",
+      "name_key": "PLACENAME_wild_a0301_w02",
+      "pane_name": "L_w_a0301_w02",
+      "source_pane_translation": [
+        -1557.0,
+        -268.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        580.0,
+        560.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 156,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 20,
+            "name": "map_zone_09^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            68.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 160,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 51,
+            "name": "map_zone_glow_09^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_09^t",
+        "width": 580,
+        "height": 560,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "791f6a1ae8dfdf5f0b7c628febeb525d67bb1ff667c6bf838ea3b9762bfc9fb5"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_09^s",
+        "width": 580,
+        "height": 560,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "101171274b7518319e0413ecccc31017e9d8f497a78942d1bb8ebcfa725c9ce6"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          201.0,
+          2036.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 10,
+      "area_id": "wz-10",
+      "label": "Wild Zone 10",
+      "zone_id": "a0202_w01",
+      "name_key": "PLACENAME_wild_a0202_w01",
+      "pane_name": "L_w_a0202_w01",
+      "source_pane_translation": [
+        -1441.0,
+        -691.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        570.0,
+        470.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 128,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 16,
+            "name": "map_zone_05^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            58.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 132,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 47,
+            "name": "map_zone_glow_05^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_05^t",
+        "width": 570,
+        "height": 470,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "61fa4b1419981228906053db46fb88d782e461ba681c26de9e3f558eb97182ab"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_05^s",
+        "width": 570,
+        "height": 470,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "601c596790f0f5d3a830921b91caf13b0f94cfc12bec95f3199e899ba198c1a9"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          322.0,
+          2504.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 11,
+      "area_id": "wz-11",
+      "label": "Wild Zone 11",
+      "zone_id": "a0502_w02",
+      "name_key": "PLACENAME_wild_a0502_w02",
+      "pane_name": "L_w_a0502_w02",
+      "source_pane_translation": [
+        1379.0,
+        -394.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        530.0,
+        440.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 219,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 29,
+            "name": "map_zone_18^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            38.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 223,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 60,
+            "name": "map_zone_glow_18^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_18^t",
+        "width": 530,
+        "height": 440,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "edde0e02d37ada776743e171a67f68ab3795ad6a420a06caa129433a558fd117"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_18^s",
+        "width": 530,
+        "height": 440,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "ac8bf40766250862b2071b2512e9c31daefc01827b060961177087eb070e0f36"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          3162.0,
+          2222.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 12,
+      "area_id": "wz-12",
+      "label": "Wild Zone 12",
+      "zone_id": "a0201_w01",
+      "name_key": "PLACENAME_wild_a0201_w01",
+      "pane_name": "L_w_a0201_w01",
+      "source_pane_translation": [
+        -343.0,
+        -1364.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        540.0,
+        480.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 121,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 15,
+            "name": "map_zone_04^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            58.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 125,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 46,
+            "name": "map_zone_glow_04^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_04^t",
+        "width": 540,
+        "height": 480,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "67598deb83721196a17eb4ad1cb26392f3a6126c17869c5ee4008d33469d38ae"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_04^s",
+        "width": 540,
+        "height": 480,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "bd7ae8d3645dfcea3cf2382e83414bcb349d4504f9188959f41d32cd6a73e627"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1435.0,
+          3172.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 13,
+      "area_id": "wz-13",
+      "label": "Wild Zone 13",
+      "zone_id": "a0401_w01",
+      "name_key": "PLACENAME_wild_a0401_w01",
+      "pane_name": "L_w_a0401_w01",
+      "source_pane_translation": [
+        -413.0,
+        1805.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        432.0,
+        220.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 177,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 23,
+            "name": "map_zone_12^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            18.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 181,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 54,
+            "name": "map_zone_glow_12^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_12^t",
+        "width": 444,
+        "height": 220,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "9bd3db7603b60f81edcd38a097acb3f3152e031d7dc9523937c0f96192ba8f31"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_12^s",
+        "width": 444,
+        "height": 220,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "fde4b321e533415828fc04d903560c15084b4b2f4b307461c220a1f899b6da4b"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1419.0,
+          133.0
+        ],
+        "scale": [
+          0.972972972972973,
+          1.0
+        ],
+        "pixel_center_correction": [
+          -0.013513513513513487,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 14,
+      "area_id": "wz-14",
+      "label": "Wild Zone 14",
+      "zone_id": "a0301_w01",
+      "name_key": "PLACENAME_wild_a0301_w01",
+      "pane_name": "L_w_a0301_w01",
+      "source_pane_translation": [
+        -1649.0,
+        280.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        360.0,
+        436.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 149,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 19,
+            "name": "map_zone_08^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 153,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 50,
+            "name": "map_zone_glow_08^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_08^t",
+        "width": 360,
+        "height": 436,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "112a43b07cbdd1ac69014daf6e2ba2f85367e4257452e2bee5ecb6aae14b6dca"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_08^s",
+        "width": 360,
+        "height": 436,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "88ebbbb596f27b7faee058bd0fcc8a2c2aab35aba94506761ec391923796169f"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          219.0,
+          1550.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 15,
+      "area_id": "wz-15",
+      "label": "Wild Zone 15",
+      "zone_id": "a0501_w01",
+      "name_key": "PLACENAME_wild_a0501_w01",
+      "pane_name": "L_w_a0501_w01",
+      "source_pane_translation": [
+        1305.0,
+        1318.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        412.0,
+        410.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 198,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 26,
+            "name": "map_zone_15^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 202,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 57,
+            "name": "map_zone_glow_15^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_15^t",
+        "width": 412,
+        "height": 410,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "62e40ec6445eba2730aba5987c47a28609fa8260c692fd8ebbe3f0cc4cd3d4aa"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_15^s",
+        "width": 412,
+        "height": 410,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "467b1ee45abd96dce63b36a29e47b93afd822eeb3711359ad72226724f0c35d3"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          3147.0,
+          525.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 16,
+      "area_id": "wz-16",
+      "label": "Wild Zone 16",
+      "zone_id": "a0203_w01",
+      "name_key": "PLACENAME_wild_a0203_w01",
+      "pane_name": "L_w_a0203_w01",
+      "source_pane_translation": [
+        -554.0,
+        -764.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        360.0,
+        360.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 142,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 18,
+            "name": "map_zone_07^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 146,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 49,
+            "name": "map_zone_glow_07^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_07^t",
+        "width": 360,
+        "height": 360,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "8bf396890673f2d33ef026b6d19092d3fcd55b41910f195ab5a7b654fd956c40"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_07^s",
+        "width": 360,
+        "height": 360,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "96ee62ac7a10e0621df89a59811b2d0cd433ff0adc14c78a0cbe7ed3948a124e"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1314.0,
+          2632.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 17,
+      "area_id": "wz-17",
+      "label": "Wild Zone 17",
+      "zone_id": "a0101_w01",
+      "name_key": "PLACENAME_wild_a0101_w01",
+      "pane_name": "L_w_a0101_w01",
+      "source_pane_translation": [
+        1116.0,
+        -1166.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        330.0,
+        430.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 100,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 12,
+            "name": "map_zone_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            38.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 104,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 43,
+            "name": "map_zone_glow_01^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_01^t",
+        "width": 330,
+        "height": 430,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "fc6aecb18bba2bb201718d3739ea72678a4b1fdb25bba8676208f148edd67cdd"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_01^s",
+        "width": 330,
+        "height": 430,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "2e6986fdd24b5a93a792cf639c735a286cb43b15f9dea91eaa74b7b2f5166c82"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          2999.0,
+          2999.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 18,
+      "area_id": "wz-18",
+      "label": "Wild Zone 18",
+      "zone_id": "a0302_w01",
+      "name_key": "PLACENAME_wild_a0302_w01",
+      "pane_name": "L_w_a0302_w01",
+      "source_pane_translation": [
+        -1245.0,
+        1339.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        380.0,
+        370.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 163,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 21,
+            "name": "map_zone_10^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 167,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 52,
+            "name": "map_zone_glow_10^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_10^t",
+        "width": 380,
+        "height": 370,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "cbc947edadb0074c19c25014ec161ff0dadf48667446ad2ab3f02fe5912435ac"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_10^s",
+        "width": 380,
+        "height": 370,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "7cdb74acb050f90fd53616947d327fc8e7bf59b1ac9002915f8941c4d8755064"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          613.0,
+          524.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 19,
+      "area_id": "wz-19",
+      "label": "Wild Zone 19",
+      "zone_id": "a0501_w02",
+      "name_key": "PLACENAME_wild_a0501_w02",
+      "pane_name": "L_w_a0501_w02",
+      "source_pane_translation": [
+        1305.0,
+        786.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        400.0,
+        430.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          255,
+          0
+        ],
+        "uv_sets": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "ordinary_material": {
+        "index": 205,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 9,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 27,
+            "name": "map_zone_16^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            38.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 209,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 58,
+            "name": "map_zone_glow_16^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_16^t",
+        "width": 400,
+        "height": 430,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "8a7af36afb0592a6b6688f8066da437cb0fb3fcb1ca398d69e4eb0a2296e7b4b"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_16^s",
+        "width": 400,
+        "height": 430,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "9dabb86b9afca43d47c04ea2cb6a92b82dc9b136e1d7cc77d0b84c5d0d894fe5"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          3153.0,
+          1047.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    },
+    {
+      "zone": 20,
+      "area_id": "wz-20",
+      "label": "Wild Zone 20",
+      "zone_id": "a0601_w01",
+      "name_key": "PLACENAME_wild_a0601_w01",
+      "pane_name": "L_w_a0601_w01",
+      "source_pane_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_pane_scale": [
+        1.0,
+        1.0
+      ],
+      "source_pane_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "picture_size": [
+        600.0,
+        600.0
+      ],
+      "picture_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "flags": [
+          1,
+          0,
+          77,
+          0
+        ]
+      },
+      "ordinary_material": {
+        "index": 0,
+        "name": "P_zone_00",
+        "flags": 32959,
+        "black_rgba": [
+          0,
+          183,
+          99,
+          0
+        ],
+        "white_rgba": [
+          76,
+          255,
+          158,
+          255
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "name": "common_wt_16px_00^r",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          },
+          {
+            "index": 1,
+            "name": "map_ptn_01^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 5
+          },
+          {
+            "index": 2,
+            "name": "map_zone_00^t",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            3.119999885559082,
+            1.440000057220459,
+            0.0,
+            7.679999828338623,
+            4.320000171661377
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            58.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "glow_material": {
+        "index": 2,
+        "name": "P_zone_04",
+        "flags": 21,
+        "black_rgba": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "white_rgba": [
+          27,
+          160,
+          76,
+          255
+        ],
+        "textures": [
+          {
+            "index": 3,
+            "name": "map_zone_glow_00^s",
+            "wrap_filter_s": 4,
+            "wrap_filter_t": 4
+          }
+        ],
+        "texture_transforms": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "texture": {
+        "name": "map_zone_00^t",
+        "width": 600,
+        "height": 600,
+        "format": "BC5_UNORM",
+        "component_selectors": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "decoded_rgba_sha256": "a837b2144d7ad856731e8c332db043035d607b3f936ef7a25dfd5b98e3929a9a"
+      },
+      "glow_texture": {
+        "name": "map_zone_glow_00^s",
+        "width": 600,
+        "height": 600,
+        "format": "BC4_UNORM",
+        "component_selectors": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "decoded_alpha_sha256": "7434bab13f480d68a6757de46f63e367fc0f121521d971a1e393623e5193c592"
+      },
+      "fixed_texture_to_original_map": {
+        "offset": [
+          1748.0,
+          1748.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "pixel_center_correction": [
+          0.0,
+          0.0
+        ],
+        "convention": "Pixel-center indices in both texture and original4096 image; offset+scale*index+(scale-1)/2."
+      }
+    }
+  ]
+}

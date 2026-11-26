@@ -48,14 +48,18 @@ Sources:
 
 ## WZ5 — TM040 Bullet Seed (original ID `5-7`)
 
-Bullet Seed: Take the northwestern stairs down to the canal passage and climb the ladder to the rooftops. Search the southern roof in the Bleu Sector 1 area.
+Bullet Seed: Take the northwestern stairs down to the canal passage. Clear the purple sludge with Water Gun or Confusion, then climb the ladder and look on the southern rooftop in Bleu Sector 1.
 
-**Evidence limits:** Lower passage and roof corroborated; precise entrance and ladder are not mapped.
+**Evidence limits:** Written sources corroborate the canal sludge, ladder and rooftop. Exact entrance, ladder and pickup coordinates are not mapped.
 
 Sources:
 - https://gamepedia.jp/pokemon-legends-z-a/archives/8209
 - https://www.psypokes.com/plza/tm.php
 - https://pokejungle.net/pokemon-legends-z-a/tm-list-locations/
+- https://raiderking.com/pokemon-legends-z-a-all-tms-locations/
+- https://gamewith.jp/pokemon-za/524657
+- https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/
+- https://bulbapedia.bulbagarden.net/wiki/Obstruction#Sludge_piles
 
 ## WZ6 — TM041 Water Pulse (original ID `6-6`)
 
@@ -105,15 +109,16 @@ Sources:
 
 ## WZ10 — TM034 Night Slash (original ID `10-7`)
 
-Night Slash: Use the ladder on the southeastern side and travel west over the roofs. Look for the sludge obstruction. Try a Water attack; another guide recommends Confusion.
+Night Slash: Take the ladder on the southeastern side and head west across the rooftops. Clear the purple sludge with Water Gun or Confusion, then collect the TM.
 
-**Evidence limits:** Water versus Confusion recommendations differ; no exclusive move requirement or exact roof geometry asserted.
+**Evidence limits:** Water Gun and Confusion both clear sludge. No exact ladder, rooftop route geometry or pickup coordinates are verified.
 
 Sources:
 - https://gamepedia.jp/pokemon-legends-z-a/archives/8209
 - https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html
 - https://raiderking.com/pokemon-legends-z-a-all-tms-locations/
 - https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/
+- https://bulbapedia.bulbagarden.net/wiki/Obstruction#Sludge_piles
 
 ## WZ11 — TM063 Psychic (original ID `11-9`)
 
@@ -233,3 +238,7 @@ Sources:
 - https://nightlygamingbinge.com/pokemon-legends-z-a-tm-guide/
 
 Validation: both player-facing HTML pages reduce exactly to main's original bytes when the added notes are stripped. WZ5 also appears in its existing sector list, so 21 sector-map note instances and 20 Item Atlas notes. Tests enforce unchanged keys, null pins, source hints, full 20-zone coverage and phone/desktop bounds. Screenshot excerpts are emitted into CI logs as well as artifacts to make visual inspection possible without the archive reader. No player data, feedback, Workspace, Stream Bandit or map assets changed.
+
+## Main Mission 19 — Clawitzer Fountain fallback
+
+A Pokémon with Ice Beam already available can target the fountain without collecting TM013. Vanillite learns the move at Lv. 35, so it can be equipped via Change Moves if eligible. Keep TM013 as the alternative. Sources: [PowerPyx’s walkthrough](https://www.powerpyx.com/pokemon-legends-z-a-how-to-get-ice-beam/), [RotomLabs’ learnset](https://rotomlabs.net/dex/legends-z-a/vanillite), and [Pokéxperto’s mission steps](https://www.pokexperto.net/index2.php?mision=19&seccion=switch%2Fleyendas_za%2Fmision_principal).

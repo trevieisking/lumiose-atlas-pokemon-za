@@ -1,0 +1,157 @@
+{
+  "area_id": "wz-14",
+  "status": "approved",
+  "kind": "zone",
+  "coordinateSpace": "atlas-native-pixels",
+  "mapSha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          158.06047010376807,
+          740.0086348282342
+        ],
+        [
+          207.61953277463525,
+          756.1339974267357
+        ],
+        [
+          242.24362506845134,
+          767.5468186565178
+        ],
+        [
+          283.63677683741884,
+          780.5124678479871
+        ],
+        [
+          285.9921422675344,
+          784.7401893682537
+        ],
+        [
+          253.92254519561158,
+          829.7938088925566
+        ],
+        [
+          247.09564922342807,
+          839.1317782365903
+        ],
+        [
+          240.29923505497885,
+          849.2859035063116
+        ],
+        [
+          232.33100317713166,
+          857.983618761046
+        ],
+        [
+          182.7921220877231,
+          926.7371435204967
+        ],
+        [
+          132.23615105621,
+          895.5724069094739
+        ],
+        [
+          133.32475240807494,
+          882.6471195818621
+        ],
+        [
+          135.2800740894335,
+          866.4978604557484
+        ],
+        [
+          136.96277811929065,
+          850.4252278858826
+        ],
+        [
+          138.9045876388442,
+          834.3914809662267
+        ],
+        [
+          141.1038970841949,
+          818.3981398094377
+        ],
+        [
+          143.82293219370078,
+          802.430119762484
+        ],
+        [
+          146.79491167481368,
+          786.5066899817307
+        ],
+        [
+          150.28066080707995,
+          770.6139178022064
+        ],
+        [
+          153.49053475782642,
+          754.7993792859238
+        ],
+        [
+          158.06047010376807,
+          740.0086348282342
+        ]
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "claim": "Native map identity and independently selected architecture/perimeter targets. Large badge occlusions are supplied by original owner images.",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-14-closeup.png",
+      "claim": "Original owner closeup supplies seven architecture controls, nine heldout checks, west-curve samples and visible perimeter/gate approaches. Badge and cursor decorations are excluded.",
+      "sha256": "325b67133a926c57c0ff7416002a51444c468d752222da06232accda84ecf579"
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+      "claim": "Original owner overview corroborates zone identity, north/west footprint and the eastern line partly crossed by the closeup cursor. Its own badge/Travel Here overlays are excluded; it is not fitted calibration.",
+      "sha256": "771712e2edcf21f53115d6e280c09b894a358911cf6e49ac69896935075ba854"
+    }
+  ],
+  "registration": {
+    "method": "Seven-control architecture homography; five architecture and four perimeter holdouts. Original-pixel correction of one heldout roof corner leaves the fit unchanged. Visible curve, cursor occlusions and north display closure reviewed.",
+    "control_count": 7,
+    "holdout_count": 9,
+    "max_error_px": 2.4581163528237666,
+    "uncertainty_px": 3,
+    "threshold_px": 3,
+    "fit_rms_px": 0.7730004579383017,
+    "holdout_rms_px": 1.526767587017184,
+    "holdout_max_px": 2.4581163528237666,
+    "border_holdout_count": 4,
+    "independent_architecture_holdout_count": 5,
+    "independent_architecture_rms_px": 1.6941239438476103,
+    "independent_architecture_max_px": 2.4581163528237666,
+    "evidence_id": "WZ14-SELECTION-REVIEW-2026-11-26",
+    "evidence_path": "docs/qa/candidates/wz14-2026-11-26/selection-review-receipt.json"
+  },
+  "review": {
+    "boundary": true,
+    "registration": true,
+    "independent": true,
+    "occlusion": true
+  },
+  "notes": [
+    "Rendered map-selection footprint only; no physical, walking, floor, accessible-entrance, route, spawn or complete encounter-extent claim. Full area scope remains incomplete.",
+    "Three native pixels is observed raster/manual digitization tolerance, not a statistical confidence interval or guarantee about hidden game-world edges.",
+    "Original closeup supplies the curved west side and corners. Its two short eastern cursor-ring crossings are checked against visible approaches/internal line and the matching original overview. Native badge silhouette is excluded.",
+    "One northern gate-symbol span is an explicit display closure between observed approaches. No continuous hidden physical line or accessible entrance is asserted.",
+    "The failed first H2 pick/error and original fit are retained. Only the demonstrably misplaced heldout target was corrected from original pixel identity; no control, fitted matrix or perimeter candidate changed.",
+    "Existing approximate marker center, original source bytes, player state and roster status are unchanged."
+  ],
+  "independent_review": {
+    "date": "2026-11-26",
+    "reviewer": "geometry_evidence_original_image_review_with_root_visual_crosscheck",
+    "review_panel_path": "docs/qa/candidates/wz14-2026-11-26/source-perimeter-review.png",
+    "review_panel_sha256": "2d59343353b1e8b3ebd64b758836c9f333c403f5e36cb52e1a27ba315d78c80d",
+    "supplementary_review_panel_path": "docs/qa/candidates/wz14-2026-11-26/h2-matching-source-pair.png",
+    "supplementary_review_panel_sha256": "404e45bb6e6e38f9cbf787142c58b8d4a8829b420717ed39a4ac6f41c245102a",
+    "decision": "approved_for_rendered_map_selection_only",
+    "review_receipt_path": "docs/qa/candidates/wz14-2026-11-26/selection-review-receipt.json",
+    "review_receipt_sha256": "dbf58896362f821cc79c1396c06aacfe82c0377a1782f4a6233a86ce25ec1d3f"
+  }
+}

@@ -43,20 +43,53 @@ test('shared model preserves 68 original areas, every original centre and all di
   assert.ok(Object.isFrozen(m.areas[0]));assert.throws(()=>{m.areas[0].id='changed';},TypeError);
 });
 
-test('production renders only the independently reviewed boundary subset on the unchanged native map',()=>{
-  const expected=['wz-02','wz-03','wz-05','wz-11','wz-16'];
+test('production renders all 68 independently reviewed selection footprints on the unchanged native map',()=>{
+  const expected=[...atlas.sectors.map(row=>row.id),...Array.from({length:20},(_,i)=>'wz-'+String(i+1).padStart(2,'0'))].sort();
   assert.deepEqual(production.geometries.map(row=>row.area_id).sort(),expected);assert.deepEqual(production.map,AREA_MAP);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+AREA_MAP.path,import.meta.url))).digest('hex'),AREA_MAP.sha256);
   const current=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production});
-  const receipt=JSON.parse(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json'));
+  const previousReceipt=JSON.parse(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json'));
+  const amendmentReceipt=JSON.parse(read('docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json'));
+  assert.equal(crypto.createHash('sha256').update(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json')).digest('hex'),amendmentReceipt.previous_packet_sha256);
+  const continuationReceipt=JSON.parse(read('docs/qa/ATLAS_AT341_GEOMETRY_CONTINUATION.json'));
+  for(const source of continuationReceipt.previous_packets){
+    assert.equal(crypto.createHash('sha256').update(read(source.path)).digest('hex'),source.sha256);
+  }
+  const sectorReceipt=JSON.parse(read('docs/qa/ATLAS_AT341_SOURCE_AREA_APPROVAL.json'));
+  assert.equal(crypto.createHash('sha256').update(read(sectorReceipt.source_candidate)).digest('hex'),sectorReceipt.source_candidate_sha256);
+  const sectorCandidates=JSON.parse(read(sectorReceipt.source_candidate)).geometries;
+  assert.equal(sectorCandidates.length,48);
+  for(const candidate of sectorCandidates){
+    assert.equal(candidate.status,'candidate_pending_root_review');
+    assert.deepEqual(production.geometries.find(row=>row.area_id===candidate.area_id),{...candidate,status:'approved'},'Reviewed source coordinates and provenance remain exact');
+  }
+  const uiReceipt=JSON.parse(read('docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json'));
+  assert.equal(crypto.createHash('sha256').update(read(uiReceipt.source_candidate)).digest('hex'),uiReceipt.source_candidate_sha256);
+  const uiCandidates=JSON.parse(read(uiReceipt.source_candidate)).geometries;
+  assert.equal(uiCandidates.length,11);
+  for(const candidate of uiCandidates){
+    assert.equal(candidate.status,'candidate_pending_root_review');
+    assert.deepEqual(production.geometries.find(row=>row.area_id===candidate.area_id),{...candidate,status:'approved'},'Only approval status changes on the reviewed UI selection candidates');
+  }
+  assert.equal(uiReceipt.preserved_records.length,57);
+  for(const record of uiReceipt.preserved_records){
+    const actual=production.geometries.find(row=>row.area_id===record.area_id);
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(actual)).digest('hex'),record.record_sha256,'All nine earlier zones and 48 sectors remain exact');
+  }
+  const receipt={approved:[...previousReceipt.approved,...amendmentReceipt.approved,...continuationReceipt.approved,...sectorReceipt.approved,...uiReceipt.approved]};
   assert.equal(current.areas.length,68);assert.deepEqual(current.areas.filter(a=>a.geometry.eligible).map(a=>a.id).sort(),expected);
   assert.deepEqual(receipt.approved.map(row=>row.area_id).sort(),expected);
   assert.ok(current.areas.filter(a=>!expected.includes(a.id)).every(a=>!a.geometry.eligible&&a.geometry.geometry===null));
+  assert.equal(current.areas.filter(a=>a.geometry.representation==='source_area_footprint').length,48);
   for(const geometry of production.geometries){
     const review=receipt.approved.find(row=>row.area_id===geometry.area_id);
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(geometry.geometry)).digest('hex'),review.production_geometry_sha256);
     assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+review.review.review_panel_path,import.meta.url))).digest('hex'),review.review.review_panel_sha256);
+    for(const [pathKey,hashKey] of [['supplementary_review_panel_path','supplementary_review_panel_sha256'],['review_receipt_path','review_receipt_sha256']]){
+      if(review.review[pathKey])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+review.review[pathKey],import.meta.url))).digest('hex'),review.review[hashKey]);
+    }
     for(const source of geometry.sources)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+source.path,import.meta.url))).digest('hex'),source.sha256);
+    for(const artifact of review.artifacts||[])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+artifact.path,import.meta.url))).digest('hex'),artifact.sha256);
   }
 });
 
@@ -100,6 +133,16 @@ test('additive source rows keep conditions and sources; unsupported and non-wild
   assert.equal(selectAreaResults(m,{speciesId:'talonflame',encounterClass:'ordinary'}).areas.length,0);
 });
 
+test('overlapping-area links retain separate rosters and reject invalid or duplicate destinations',()=>{
+  const evidence=baseline(),valid={area_id:'wz-10',relationship:'overlapping_wild_zone',note:'The named sector overlaps the zone; the two rosters remain distinct.'};
+  evidence.areas=[{area_id:'bleu-sector-10',encounters:[],related_areas:[valid,{...valid},{...valid,area_id:'wz-99'},{...valid,area_id:'javascript:alert(1)'},{...valid,area_id:'bleu-sector-10'},{...valid,relationship:'same_habitat'},{...valid,area_id:'wz-05',note:''}]}];
+  const before=JSON.stringify(evidence),m=build(freeze(evidence)),sector=m.areas.find(a=>a.id==='bleu-sector-10');
+  assert.deepEqual(sector.relatedAreas,[{areaId:'wz-10',relationship:valid.relationship,note:valid.note}]);
+  assert.deepEqual(sector.encounters,[]);assert.equal(m.encounters.length,272);
+  for(const species of m.species)assert.ok(!species.areaIds.includes('bleu-sector-10'),'Cross-reference cannot clone a zone habitat');
+  assert.equal(JSON.stringify(evidence),before);assert.ok(Object.isFrozen(sector.relatedAreas));
+});
+
 test('a targeted dispute retains its original row but excludes that class from habitat results',()=>{
   const evidence=baseline();evidence.areas=[{area_id:'wz-01',encounters:[evidenceRow({id:'test-disputed-fixed',encounter_class:'fixed_alpha',evidence_status:'disputed'})]}];
   const m=build(evidence),preserved=m.encounters.find(e=>e.id==='wz-01:fixed_alpha:0');
@@ -107,6 +150,18 @@ test('a targeted dispute retains its original row but excludes that class from h
   assert.equal(selectAreaResults(m,{speciesId:'pidgey',encounterClass:'fixed_alpha'}).areas.length,0);
   assert.equal(m.encounters.filter(e=>e.encounterClass==='fixed_alpha'&&e.originalEvidenceStatus!=='new').length,39);
   assert.ok(selectAreaResults(m,{speciesId:'pidgey'}).relatedClaims.some(e=>e.id===preserved.id));
+});
+
+test('an ordinary dispute qualifies the old unclassified union without erasing an independent Alpha',()=>{
+  const evidence=baseline();evidence.areas=[{area_id:'wz-01',encounters:[evidenceRow({id:'test-disputed-ordinary',evidence_status:'disputed'})]}];
+  const m=build(evidence),rows=m.encounters.filter(e=>e.areaId==='wz-01'&&e.speciesId==='pidgey');
+  const original=rows.find(e=>e.encounterClass==='recorded'),alpha=rows.find(e=>e.encounterClass==='fixed_alpha');
+  assert.equal(original.evidenceStatus,'disputed');assert.equal(original.originalEvidenceStatus,'baseline_preserved');
+  assert.equal(alpha.evidenceStatus,'baseline_preserved');
+  const all=selectAreaResults(m,{speciesId:'pidgey'});
+  assert.ok(all.areas.some(a=>a.id==='wz-01'));assert.ok(all.encounters.some(e=>e.id===alpha.id));
+  assert.ok(!all.encounters.some(e=>e.id===original.id));assert.ok(all.relatedClaims.some(e=>e.id===original.id));
+  assert.ok(!selectAreaResults(m,{speciesId:'pidgey',encounterClass:'recorded'}).areas.some(a=>a.id==='wz-01'));
 });
 
 test('approved polygons, holes and separate pieces retain exact native coordinates without deriving centres',()=>{

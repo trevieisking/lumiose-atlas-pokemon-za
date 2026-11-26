@@ -20,6 +20,10 @@ test("AT-321 all 40 original PNGs, complete records and exact two photo panels",
    assert.ok(maps.includes(markup),"Standalone markup drift: "+z.number);
    assert.ok(sectors.includes(markup),"Directory markup drift: "+z.number);
    assert.equal((markup.match(/<img /g)||[]).length,2);
+   assert.ok(markup.includes('aria-label="Preserved species records"'));
+   assert.doesNotMatch(markup,/catchable Pokémon|Catchable Pokémon/,'Saved sightings must not be relabelled confirmed catches');
+   assert.ok(markup.includes('href="atlas-explorer.html?area=wz-'+String(z.number).padStart(2,'0')+'"'),'Each original roster links to the current evidence for its own area');
+   assert.match(markup,z.number===20?/roster is not comprehensive/:/roster is incomplete, and some entries are disputed/);
    assert.ok(zoneSearchText(z.number).includes(z.species[0]));
    for(const p of z.photos){
      const f=source.find(x=>x.zone===z.number&&x.kind===p.kind);
@@ -38,4 +42,16 @@ test("AT-321 all 40 original PNGs, complete records and exact two photo panels",
  assert.equal(wildZoneFieldbookMarkup(21),"");assert.equal(wildZoneFieldbookMarkup("<script>"),"");
  assert.match(read("app.js"),/import\('\.\/wild-zone-fieldbook\.mjs'\)/);
  assert.match(read("atlas-explorer.js"),/wildZoneFieldbookMarkup\(item\.number\)/);
+});
+
+test('disputed sightings stay preserved without being presented as confirmed catches',()=>{
+ const saved=JSON.parse(read('docs/qa/at339-encounters/baseline-wild-zone-records.json'));
+ assert.deepEqual(wildZoneRecords,saved,'All original species, Alpha conditions and photo records remain unchanged');
+ for(const [number,names] of [[7,['Gastly']],[15,['Noibat','Trevenant']]]){
+   const markup=wildZoneFieldbookMarkup(number);
+   for(const name of names)assert.ok(markup.includes('>'+name+'</a>'),'Preserve '+name+' as a recorded sighting');
+   assert.match(markup,/Preserved species records · incomplete roster/);
+   assert.match(markup,/some entries are disputed/);
+   assert.ok(markup.includes('data-wz-current-evidence="'+number+'"'));
+ }
 });

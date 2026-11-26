@@ -9,9 +9,21 @@ const read=path=>fs.readFileSync(new URL('../'+path,import.meta.url),'utf8');
 const json=path=>JSON.parse(read(path));
 const evidence=json('atlas-area-evidence.json');
 const reviewed=json('docs/qa/at339-encounters/atlas-area-evidence.json');
+const amendmentPath='docs/qa/encounter-review-2026-11-26/amendments.json';
+const amendments=json(amendmentPath);
+const originalReviewed=json(amendments.original_packet);
+const sectorReview=json('docs/qa/sector-reconciliation-2026-11-26/reconciliation.json');
+const sectorContinuation=json('docs/qa/sector-continuation-2026-11-26/reconciliation.json');
+const sectorCrossrefs=json('docs/qa/sector-wild-zone-crossrefs-2026-11-26/amendments.json');
+const amendmentCheckpoint=structuredClone(reviewed.areas);
+for(const patch of amendments.patches){
+  const target=amendmentCheckpoint.find(row=>row.area_id===patch.area_id);
+  if(patch.operation==='patch')Object.assign(target.encounters.find(row=>row.id===patch.encounter_id),structuredClone(patch.set));
+  else target.encounters.push(structuredClone(patch.row));
+}
 const observations=json('docs/qa/at339-encounters/owner-survey-observations.json').observations;
 const model=buildAreaModel({atlas:json('atlas-explorer-data.json'),rosters:wildZoneRecords,evidence});
-const extra=model.encounters.filter(row=>row.id.startsWith('g3-evidence-'));
+const extra=model.encounters.filter(row=>row.id.startsWith('g3-evidence-')||row.id.startsWith('g3-sector-20261126-'));
 const area=id=>model.areas.find(row=>row.id===id);
 const preserved=row=>row.evidenceStatus==='baseline_preserved'||row.originalEvidenceStatus==='baseline_preserved';
 const hash=(algorithm,bytes)=>crypto.createHash(algorithm).update(bytes).digest('hex');
@@ -25,25 +37,74 @@ const expectedIds=[
 test('the integrated register retains every reviewed area and additive claim without claiming completion',()=>{
   assert.equal(hash('sha256',Buffer.from(read('docs/qa/at339-encounters/atlas-area-evidence.json'))),
     'aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed',
-    'The independently reviewed source packet must not silently change with runtime data');
-  assert.deepEqual(evidence.areas,reviewed.areas);
+    'The current reviewed packet, including concurrent Helioptile guidance, must remain intact');
+  assert.equal(hash('sha256',Buffer.from(read(amendments.original_packet))),
+    '39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f',
+    'The original e003 packet is archived byte-for-byte rather than replacing the current packet');
+  assert.equal(hash('sha256',Buffer.from(read(amendmentPath))),
+    'd353470f891507099acd84f9fcf78d57aafacfcc1b84d536186902f2f5263f49',
+    'Runtime amendments must match the separately reviewed source receipt');
+  for(const packet of [reviewed,originalReviewed]){
+    const expected=structuredClone(packet.areas),patchedIds=new Set();
+    for(const patch of amendments.patches){
+      assert.ok(!patchedIds.has(patch.encounter_id));patchedIds.add(patch.encounter_id);
+      const target=expected.find(row=>row.area_id===patch.area_id);assert.ok(target);
+      const existing=target.encounters.find(row=>row.id===patch.encounter_id);
+      if(patch.operation==='patch'){
+        assert.ok(existing,'An amendment cannot silently create a new identity');
+        assert.ok(Object.keys(patch.set).every(key=>['condition','sources','notes','evidence_status'].includes(key)),
+          'Existing species, forms, classes and IDs remain immutable');
+        Object.assign(existing,structuredClone(patch.set));
+      }else{
+        assert.equal(patch.operation,'add');assert.equal(existing,undefined);
+        assert.equal(patch.area_id,'wz-16');
+        assert.equal(patch.encounter_id,'g3-evidence-wz-16-ampharos-ordinary-disputed');
+        assert.equal(patch.row.id,patch.encounter_id);
+        target.encounters.push(structuredClone(patch.row));
+      }
+    }
+    assert.deepEqual(expected,amendmentCheckpoint,'Both historical and current baselines reconstruct the immutable concurrent amendment checkpoint');
+    for(const review of [sectorReview,sectorContinuation]){
+      for(const update of review.updates){
+        const rows=expected.find(area=>area.area_id===update.area_id).encounters;
+        const index=rows.findIndex(row=>row.id===update.id);
+        assert.notEqual(index,-1,'A reconciliation must retain the original stable ID');
+        assert.equal(hash('sha256',Buffer.from(JSON.stringify(rows[index],null,2)+'\n')),update.before_sha256);
+        rows[index]=structuredClone(update.after);
+      }
+      for(const addition of review.additions){
+        expected.find(area=>area.area_id===addition.area_id).encounters.push(structuredClone(addition.row));
+      }
+    }
+    for(const patch of sectorCrossrefs.patches){
+      const index=expected.findIndex(row=>row.area_id===patch.area_id);
+      assert.deepEqual(expected[index],patch.before,'The scoped cross-reference applies only to its reviewed area metadata');
+      assert.deepEqual(patch.after.encounters,patch.before.encounters,'Cross-reference metadata cannot change encounter membership');
+      expected[index]=structuredClone(patch.after);
+    }
+    assert.deepEqual(evidence.areas,expected,'All independently reviewed encounter and metadata packets reconstruct the merged runtime');
+  }
+  assert.equal(amendments.patches.filter(row=>row.operation==='patch').length,49);
+  assert.equal(amendments.patches.filter(row=>row.operation==='add').length,1);
   assert.deepEqual(sorted(evidence.areas.map(row=>row.area_id)),sorted(expectedIds));
   assert.equal(new Set(evidence.areas.map(row=>row.area_id)).size,68);
   const sourceRows=evidence.areas.flatMap(row=>row.encounters);
-  assert.equal(sourceRows.length,283);
-  assert.equal(new Set(sourceRows.map(row=>row.id)).size,283);
+  assert.equal(sourceRows.length,748);
+  assert.equal(new Set(sourceRows.map(row=>row.id)).size,748);
+  assert.ok(reviewed.areas.flatMap(row=>row.encounters).every(old=>sourceRows.some(row=>row.id===old.id)),
+    'All 283 original claims survive the bounded review');
   assert.deepEqual(sorted(extra.map(row=>row.id)),sorted(sourceRows.map(row=>row.id)));
-  assert.equal(model.encounters.length,555);
+  assert.equal(model.encounters.length,1020);
   assert.equal(model.encounters.filter(preserved).length,272);
   assert.deepEqual(model.issues,[]);
   assert.ok(extra.every(row=>row.sources.length&&row.sources.every(source=>source.href)));
   assert.ok(model.areas.every(row=>row.rosterStatus==='not_comprehensive'));
   const sectors=model.areas.filter(row=>row.kind==='sector');
   assert.equal(sectors.length,48);
-  assert.ok(sectors.every(row=>!row.geometry.eligible&&row.geometry.geometry===null));
+  assert.ok(sectors.every(row=>row.geometry.eligible&&row.geometry.representation==='source_area_footprint'));
   const encountersOnly=buildAreaModel({atlas:json('atlas-explorer-data.json'),rosters:wildZoneRecords,
     evidence:{...evidence,geometries:[]}});
-  assert.equal(encountersOnly.encounters.length,555);
+  assert.equal(encountersOnly.encounters.length,1020);
   assert.ok(encountersOnly.areas.every(row=>!row.geometry.eligible&&row.geometry.geometry===null),
     'An encounter claim or owner survey icon cannot supply missing boundary evidence');
 });
@@ -77,32 +138,33 @@ test('all twenty owner-photo receipts match original bytes and only their 140 ob
   assert.equal(observations.find(row=>row.area_id==='wz-18').git_blob_sha1,'b520201cb772c4d716036fb8066f35fd3d82cf5b');
 });
 
-test('Wild Zone 14 separates Helioptile source guidance from photo membership and fixed Alpha',()=>{
+test('Wild Zone 14 retains concurrent Helioptile source guidance separately from photo membership and fixed Alpha',()=>{
   const result=selectAreaResults(model,readAreaSelection('atlas-explorer.html?area=wz-14&species=helioptile&encounter=ordinary'));
   const row=result.encounters.find(row=>row.id==='g3-evidence-wz-14-helioptile-ordinary');
-  assert.ok(row);
-  assert.equal(row.evidenceStatus,'owner_survey_correlated');
+  assert.ok(row);assert.equal(row.evidenceStatus,'owner_survey_correlated');
   assert.equal(row.condition.time,'daytime (source-corroborated)');
   assert.equal(row.condition.weather,'clear skies (source-corroborated)');
-  assert.equal(row.condition.floor,null);
-  assert.equal(row.condition.unlock,null);
+  assert.equal(row.condition.floor,null);assert.equal(row.condition.unlock,null);
   assert.match(row.condition.notes.join(' '),/37–38.*not verified/);
-  assert.ok(row.sources.some(source=>source.href==='assets/atlas/wild-zones/wild-zone-14-overview.png'));
-  assert.ok(row.sources.some(source=>source.href.startsWith('https://gamewith.jp/')));
-  assert.ok(row.sources.some(source=>source.href.startsWith('https://www.powerpyx.com/')));
+  assert.match(row.condition.notes.join(' '),/not its spawn schedule/);
+  const current=reviewed.areas.find(area=>area.area_id==='wz-14').encounters.find(row=>row.id==='g3-evidence-wz-14-helioptile-ordinary');
+  for(const source of current.sources){
+    assert.ok(row.sources.some(retained=>retained.href===(source.url||source.path)&&retained.claim===source.claim),
+      'Every current source citation and claim survives the reconciliation');
+  }
   for(const other of area('wz-14').encounters.filter(row=>['Emolga','Onix'].includes(row.species))){
-    assert.equal(other.condition.time,null);
-    assert.equal(other.condition.weather,null);
+    assert.equal(other.condition.time,null);assert.equal(other.condition.weather,null);
   }
   assert.ok(area('wz-14').encounters.some(row=>row.species==='Excadrill'&&row.encounterClass==='fixed_alpha'&&preserved(row)));
 });
 
-test('the seven actual disputes cannot become supported encounters in their disputed class',()=>{
+test('the seven retained disputes and newly documented ordinary Ampharos conflict cannot authorize habitats',()=>{
   const expected=[
     ['wz-07','Gastly','ordinary'],
     ['wz-15','Banette','ordinary'],
     ['wz-15','Noibat','ordinary'],
     ['wz-15','Trevenant','ordinary'],
+    ['wz-16','Ampharos','ordinary'],
     ['wz-17','Mawile','ordinary'],
     ['wz-17','Talonflame','unclassified_lead'],
     ['wz-18','Gastly','unclassified_lead']
@@ -123,6 +185,20 @@ test('the seven actual disputes cannot become supported encounters in their disp
     'An ordinary Mawile dispute must not erase the separate fixed Alpha');
   assert.ok(selectAreaResults(model,{speciesId:'banette',encounterClass:'fixed_alpha'}).areas.some(row=>row.id==='wz-15'));
   assert.ok(selectAreaResults(model,{speciesId:'talonflame',encounterClass:'rotating_alpha'}).areas.some(row=>row.id==='wz-20'));
+  for(const [speciesId,areaId] of [['gastly','wz-07'],['noibat','wz-15'],['trevenant','wz-15']]){
+    for(const encounterClass of ['all','recorded','ordinary']){
+      assert.ok(!selectAreaResults(model,{speciesId,encounterClass}).areas.some(row=>row.id===areaId),
+        speciesId+' cannot regain '+areaId+' through the '+encounterClass+' filter');
+    }
+    assert.ok(selectAreaResults(model,{speciesId}).relatedClaims.some(row=>row.areaId===areaId&&row.encounterClass==='recorded'&&row.originalEvidenceStatus==='baseline_preserved'),
+      'The old union row remains visible with its current dispute');
+  }
+  for(const [speciesId,areaId] of [['mawile','wz-17'],['banette','wz-15'],['ampharos','wz-16']]){
+    const results=selectAreaResults(model,{speciesId});
+    assert.ok(results.areas.some(row=>row.id===areaId),'Separate supported Alpha membership survives');
+    assert.ok(results.encounters.some(row=>row.areaId===areaId&&row.encounterClass==='fixed_alpha'));
+    assert.ok(!results.encounters.some(row=>row.areaId===areaId&&row.encounterClass==='recorded'));
+  }
 });
 
 test('combined area and species links keep research claims within the requested area',()=>{
@@ -134,7 +210,7 @@ test('combined area and species links keep research claims within the requested 
     const selection=readAreaSelection('atlas-explorer.html?area='+areaId+'&species=gastly');
     assert.equal(selection.areaId,areaId);assert.equal(selection.speciesId,'gastly');
     const result=selectAreaResults(model,selection);
-    assert.equal(result.relatedClaims.length,1,'This area has one reviewed Gastly dispute');
+    assert.equal(result.relatedClaims.length,areaId==='wz-07'?2:1,'Retain the current dispute and any affected original union row');
     assert.ok(result.relatedClaims.every(row=>row.areaId===areaId&&row.evidenceStatus==='disputed'));
     assert.ok(result.encounters.every(row=>row.areaId===areaId));
     assert.ok(result.areas.every(row=>row.id===areaId));
@@ -151,7 +227,7 @@ test('actual mission, gift, boss and unresolved Alpha claims stay separate from 
   assert.equal(special.filter(row=>row.encounterClass==='mission').length,12);
   assert.equal(special.filter(row=>row.encounterClass==='gift').length,1);
   assert.equal(special.filter(row=>row.encounterClass==='scripted_boss').length,6);
-  assert.equal(special.filter(row=>row.encounterClass==='unclassified_lead').length,66);
+  assert.equal(special.filter(row=>row.encounterClass==='unclassified_lead').length,83);
   for(const row of special){
     assert.equal(isRecordedHabitat(row),false,row.id);
     const results=selectAreaResults(model,{speciesId:row.speciesId});
@@ -170,7 +246,7 @@ test('actual mission, gift, boss and unresolved Alpha claims stay separate from 
 });
 
 test('every real source lead remains visible as research without silently authorizing a habitat',()=>{
-  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,118);
+  const leads=extra.filter(row=>row.evidenceStatus==='source_lead');assert.equal(leads.length,518);
   for(const row of leads){
     assert.equal(isRecordedHabitat(row),false,row.id);
     const result=selectAreaResults(model,{speciesId:row.speciesId});
@@ -181,6 +257,74 @@ test('every real source lead remains visible as research without silently author
   assert.equal(alpha.evidenceStatus,'source_corroborated');
   assert.equal(alpha.encounterClass,'unclassified_lead');
   assert.equal(isRecordedHabitat(alpha),false,'Corroborating an Alpha without its type does not establish fixed or rotating habitat');
+});
+
+test('reviewed conditions retain their source scope and do not upgrade photographs into schedule proof',()=>{
+  assert.equal(amendments.new_time_condition_ids.length,30);
+  for(const id of amendments.new_time_condition_ids){
+    const row=extra.find(row=>row.id===id);assert.ok(row,id);
+    assert.equal(row.evidenceStatus,'owner_survey_correlated');
+    assert.match(row.condition.time,/^(day|daytime|night) \(source-(reported|corroborated)\)$/);
+    assert.match(row.condition.notes.join(' '),/not its spawn schedule/);
+  }
+  const find=(areaId,species)=>extra.find(row=>row.areaId===areaId&&row.species===species&&row.encounterClass==='ordinary'&&row.form===null);
+  assert.equal(find('wz-02','Staryu').condition.time,'night (source-reported)');
+  assert.equal(find('wz-13','Scyther').condition.time,'night (source-corroborated)');
+  assert.equal(find('wz-14','Helioptile').condition.weather,'clear skies (source-corroborated)');
+  assert.match(find('wz-14','Helioptile').condition.notes.join(' '),/full weather-icon rules are not verified/);
+  assert.match(find('wz-17','Skarmory').condition.weather,/not rain.*other weather not exhaustively verified/);
+  assert.equal(find('wz-19','Drampa').condition.time,'morning (source-corroborated)',
+    'A broader day flag must not overwrite the previously established morning restriction');
+  assert.match(find('wz-18','Noibat').condition.floor,/rooftop \(source-reported\)/);
+  assert.match(find('wz-18','Noibat').condition.unlock,/Rank B/);
+  assert.equal(find('wz-01','Pichu').condition.time,null,
+    'Unamended conditions stay unknown instead of implying unrestricted availability');
+});
+
+test('five corroborated flower forms and the Fennekin gift retain separate evidence and encounter meaning',()=>{
+  assert.equal(amendments.promoted_form_ids.length,5);
+  for(const id of amendments.promoted_form_ids){
+    const row=extra.find(row=>row.id===id);assert.ok(row);
+    assert.equal(row.evidenceStatus,'source_corroborated');assert.equal(row.encounterClass,'ordinary');
+    assert.ok(row.form);assert.ok(row.sources.some(source=>source.href.startsWith('https://rotomlabs.net/')));
+  }
+  for(const form of ['Blue Flower','White Flower']){
+    const row=extra.find(row=>row.areaId==='wz-03'&&row.species==='Flabébé'&&row.form===form);
+    assert.equal(row.evidenceStatus,'source_lead');assert.equal(isRecordedHabitat(row),false);
+    assert.match(row.notes.join(' '),/nearby does not establish inside/);
+  }
+  const gift=extra.find(row=>row.encounterClass==='gift');
+  assert.equal(gift.evidenceStatus,'source_corroborated');
+  assert.match(gift.condition.unlock,/Begin Main Mission 6.*Side Mission 008/);
+  assert.match(gift.condition.notes.join(' '),/Branche.*level 14/);
+  assert.equal(isRecordedHabitat(gift),false);
+  assert.equal(extra.filter(row=>row.evidenceStatus==='source_corroborated').length,82);
+});
+
+test('all 68 area review receipts distinguish performed source checks from comprehensive signoff',()=>{
+  const review=json('docs/qa/encounter-review-2026-11-26/area-review.json');
+  const sources=json('docs/qa/encounter-review-2026-11-26/source-review.json');
+  assert.equal(review.areas.length,68);assert.equal(sources.records.length,20);
+  assert.deepEqual(sorted(review.areas.map(row=>row.area_id)),sorted(expectedIds));
+  assert.deepEqual(sorted(sources.records.map(row=>row.area_id)),sorted(expectedIds.filter(id=>id.startsWith('wz-'))));
+  const counts=(rows,key)=>rows.reduce((result,row)=>{result[row[key]]=(result[row[key]]||0)+1;return result;},{});
+  for(const receipt of review.areas){
+    const runtime=amendmentCheckpoint.find(row=>row.area_id===receipt.area_id);
+    assert.equal(receipt.claim_count,runtime.encounters.length);
+    assert.deepEqual(receipt.evidence_status_counts,counts(runtime.encounters,'evidence_status'));
+    assert.deepEqual(receipt.encounter_class_counts,counts(runtime.encounters,'encounter_class'));
+    for(const [key,status] of [['unresolved_source_claim_ids','source_lead'],['disputed_claim_ids','disputed']]){
+      assert.deepEqual(sorted(receipt[key]),sorted(runtime.encounters.filter(row=>row.evidence_status===status).map(row=>row.id)));
+    }
+    assert.equal(receipt.comprehensive_roster_signoff,false);
+    assert.equal(receipt.review.record_coverage_review_performed,true);
+    assert.ok(receipt.remaining_scope.length);
+    assert.equal(receipt.review.external_source_review,receipt.area_id.startsWith('wz-')
+      ?'fresh_Bulbapedia_and_Serebii_standard_tables_compared'
+      :'existing_AT339_evidence_retained_not_all_sector_links_reopened_in_this_pass');
+  }
+  assert.equal(review.comprehensive_roster_signoffs,0);
+  assert.equal(review.boundary_or_route_signoff_supplied,false);
 });
 
 test('Wild Zone 20 preserves both ordinary and rotating membership for overlapping species',()=>{
@@ -225,7 +369,8 @@ test('the two sectors without sourced encounters retain explicit unknown coverag
   for(const row of empty){
     assert.equal(row.rosterStatus,'not_comprehensive');
     assert.match(row.notes.join(' '),/empty list means missing evidence, not no Pokémon/);
-    assert.equal(row.geometry.eligible,false);
+    assert.equal(row.geometry.eligible,true);
+    assert.equal(row.geometry.representation,'source_area_footprint','Separate source geometry does not supply an encounter roster');
     const result=selectAreaResults(model,{areaId:row.id});
     assert.equal(result.areas.length,1);assert.equal(result.areas[0].id,row.id);
     assert.deepEqual(result.encounters,[]);

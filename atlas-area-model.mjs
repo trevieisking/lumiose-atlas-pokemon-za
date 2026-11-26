@@ -79,7 +79,8 @@ export function evaluateAreaGeometry(area,record,mapContext=AREA_MAP){
       !['max_error_px','uncertainty_px','threshold_px'].every(k=>Number.isFinite(r[k])&&r[k]>=0)||r.threshold_px<=0||r.max_error_px>r.threshold_px||r.uncertainty_px>r.threshold_px)return fail("registration_incomplete");
     if(!Array.isArray(record.sources)||!record.sources.length||record.sources.length>32||!record.sources.every(s=>object(s)&&typeof s.path==="string"&&/^(?:assets\/atlas\/|maps\/)[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(s.path)&&!s.path.split('/').includes('..')&&/^[a-f0-9]{64}$/.test(s.sha256)&&string(s.claim)))return fail("source_evidence_incomplete");
     if(!validGeometry(record.geometry))return fail("invalid_polygon");
-    return freeze({eligible:true,reason:"approved_native_boundary",geometry:copy(record.geometry),uncertaintyPx:r.uncertainty_px});
+    return freeze({eligible:true,reason:"approved_native_boundary",geometry:copy(record.geometry),uncertaintyPx:r.uncertainty_px,
+      representation:record.representation==='source_area_footprint'?'source_area_footprint':'map_selection_outline'});
   }catch{return fail("malformed_geometry");}
 }
 
@@ -114,7 +115,7 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
       if(kind==='zone'&&(!z||!Array.isArray(z.species)||!Array.isArray(z.fixedAlphas)||!Array.isArray(z.rotatingAlphas)))throw Error("incomplete_roster");
       const area={id:source.id,kind,number:kind==='zone'?source.number:null,name:source.name,district:source.district,xy:kind==='zone'&&point(source.xy)?[...source.xy]:null,precision:source.precision||"orientation_only",link:source.link,
         photos:z?copy(z.photos||[]):source.source_map_reference?[{kind:'orientation',path:source.source_map_reference.image_path,width:source.source_map_reference.width,height:source.source_map_reference.height}]:[],
-        encounters:[],geometry:fail("boundary_not_verified"),notes:[],rosterStatus:kind==='zone'?"not_comprehensive":"unresolved"};
+        encounters:[],geometry:fail("boundary_not_verified"),notes:[],relatedAreas:[],rosterStatus:kind==='zone'?"not_comprehensive":"unresolved"};
       if(z){
         z.species.forEach((name,i)=>{if(!string(name,120))throw Error("invalid_species");area.encounters.push(encounter(area,name,i,z.number===20?'ordinary':'recorded'));});
         z.fixedAlphas.forEach((row,i)=>{if(!string(row?.name,120)||!string(row.condition))throw Error("invalid_fixed_alpha");area.encounters.push(encounter(area,row.name,i,'fixed_alpha',[row.condition]));});
@@ -125,13 +126,24 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
       if(extras.length>1)issues.push("Duplicate encounter evidence for "+area.id);
       if(extras.length===1){
         const extra=extras[0];area.notes=noteList(extra.notes);area.rosterStatus=string(extra.roster_status,120)?extra.roster_status:area.rosterStatus;
+        if(Array.isArray(extra.related_areas)){
+          const relatedIds=new Set();
+          for(const related of extra.related_areas){
+            if(!object(related)||!areaIdValid(related.area_id)||related.area_id===area.id||related.relationship!=='overlapping_wild_zone'||!related.area_id.startsWith('wz-')||!string(related.note,1000)||relatedIds.has(related.area_id))continue;
+            relatedIds.add(related.area_id);
+            area.relatedAreas.push({areaId:related.area_id,relationship:related.relationship,note:related.note.trim()});
+          }
+        }
         if(Array.isArray(extra.encounters))for(const sourceRow of extra.encounters){
           const row=evidenceEncounter(sourceRow,area);
           if(!row||encounterIds.has(row.id)){issues.push("Rejected duplicate or malformed encounter for "+area.id);continue;}
           encounterIds.add(row.id);area.encounters.push(row);
         }
         const disputes=area.encounters.filter(row=>row.evidenceStatus==='disputed');
-        for(const row of area.encounters)if(row.evidenceStatus==='baseline_preserved'&&disputes.some(d=>d.speciesId===row.speciesId&&(d.encounterClass===row.encounterClass||d.encounterClass==='unclassified_lead'))){row.originalEvidenceStatus=row.evidenceStatus;row.evidenceStatus='disputed';row.notes.push('A current source claim disputes this preserved fieldbook entry.');}
+        // The legacy union has no encounter class. It cannot independently
+        // rescue an ordinary membership claim that the current evidence disputes.
+        // Separate fixed/rotating Alpha rows retain their own class evidence.
+        for(const row of area.encounters)if(row.evidenceStatus==='baseline_preserved'&&disputes.some(d=>d.speciesId===row.speciesId&&(d.encounterClass===row.encounterClass||d.encounterClass==='unclassified_lead'||row.encounterClass==='recorded'&&d.encounterClass==='ordinary'))){row.originalEvidenceStatus=row.evidenceStatus;row.evidenceStatus='disputed';row.notes.push('A current source claim disputes this preserved fieldbook entry.');}
       }
       const geometries=geometryRows.filter(row=>row?.area_id===area.id);
       area.geometry=geometries.length>1?fail("duplicate_boundary_evidence"):evaluateAreaGeometry(area,geometries[0],mapContext||null);

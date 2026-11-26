@@ -1,0 +1,211 @@
+{
+  "id": "AT-341-GEOMETRY-INDEPENDENT-REVIEW",
+  "date": "2026-11-26",
+  "reviewed_candidate_base": "d1d7322e6341cd91016f576161c55da682e06834",
+  "scope": "WZ20 added to the reconciled six-outline candidate; additional independent WZ04 evidence retained without changing its concurrent production record.",
+  "previous_approved_geometry_packet": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+  "previous_packet_sha256": "e1af71628fe84b53d14ccb424ebcf8f5b194f34895ebab1a52d3b807f89e434b",
+  "approved": [
+    {
+      "area_id": "wz-20",
+      "evidence_id": "AT341-WZ20-RENDERED-SELECTION-REVIEW",
+      "decision": "APPROVE_RENDERED_SELECTION_ONLY",
+      "source_candidate": "docs/qa/candidates/wz20-2026-11-26/candidate-evidence.json",
+      "supplement": null,
+      "historical_hold_preserved": null,
+      "production_geometry_sha256": "cefcc400d3b5d67bd28338e587f41df98530d99057899529c692008f04e82aff",
+      "geometry_file_sha256": "ff4333353e94722609967a1b698a83274004adcddb56f2b451c1f75983dcbec9",
+      "review": {
+        "reviewer": "root_release_review",
+        "date": "2026-11-26",
+        "boundary": true,
+        "registration": true,
+        "independent": true,
+        "occlusion": true,
+        "review_panel_path": "docs/qa/candidates/wz20-2026-11-26/registered-source-review.png",
+        "review_panel_sha256": "5a40290d3c191e1197804b854bc3c5cc033111f7a252dc7ae01e5d3883b87ebf",
+        "observations": [
+          "Reviewed as a near-circular rendered map-selection footprint, corroborated by both original owner views.",
+          "Small gate and Centrico Plaza icon spans use the documented circular continuation. These modeled closures do not establish walkable connections, floors, spawn extents or a continuous physical barrier.",
+          "The closeup transform is composed through the primary overview calibration; its architectural residual is not a separate estimate of total absolute map error."
+        ],
+        "visual_inspection": "Inspected the unchanged native map, both original WZ20 photographs, all primary and auxiliary landmark panels and the registered three-source perimeter comparison. The curve follows the visible green stroke and the masked spans match the documented interface obstructions."
+      },
+      "independently_reproduced": {
+        "result": "pass",
+        "command": "PYTHONPATH=/workspace/scratch/d158a14f0daf/audit/execution-geometry/deps python docs/qa/candidates/wz20-2026-11-26/reproduce.py",
+        "outputs_unchanged": true,
+        "source_hashes_verified": true
+      },
+      "registration": {
+        "method": "Six architectural overview controls and five withheld architectural checks; native green-rim fit with alternate withheld rays; independently traced overview and closeup rims. Gate/icon masks are explicit.",
+        "control_count": 6,
+        "holdout_count": 5,
+        "max_error_px": 2.9032565734149554,
+        "uncertainty_px": 3,
+        "threshold_px": 3,
+        "evidence_id": "AT341-WZ20-RENDERED-SELECTION-REVIEW",
+        "evidence_path": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+        "scope": "Three native pixels is a rendered-raster/manual-pick tolerance, not a physical distance, route guarantee, or a bound on every unobserved pixel."
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/candidate-evidence.json",
+          "sha256": "3c23e7f58f7f8a161ed59aeb55467421d40224467b12d574fced6d294804897d"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/candidate-geometry.json",
+          "sha256": "ff4333353e94722609967a1b698a83274004adcddb56f2b451c1f75983dcbec9"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/manual-observations.json",
+          "sha256": "19583fb0ca613617e08c407fe5973c22707b172b85cd1eacfa2b35cf2d13f8fe"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/registered-source-review.png",
+          "sha256": "5a40290d3c191e1197804b854bc3c5cc033111f7a252dc7ae01e5d3883b87ebf"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/primary-landmark-review.png",
+          "sha256": "1633bd8546739a863e4b8596b0b26aed344b8d089b169da9736f2a1f8fc6ba4e"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/closeup-landmark-review.png",
+          "sha256": "7caf95137a4f0c75b92527f2eef4edff35f4d10fd47faffe66a8c344fb50adb4"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/overview-original-review.png",
+          "sha256": "17bf79b0e7b446efd1d05bb5cce8a4bd7abfcbefb8250ea80aabb925cee692e8"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/closeup-original-review.png",
+          "sha256": "6c36dc3422e19344f032940d45409d38a208949752b9d3f2e63d04bf876d438e"
+        },
+        {
+          "path": "docs/qa/candidates/wz20-2026-11-26/reproduce.py",
+          "sha256": "9b9a8225bc27249f249d2e4e50e26de6eb674a80f39543fe2f418ae8d6956e83"
+        }
+      ],
+      "limitations": [
+        "Reviewed as a near-circular rendered map-selection footprint, corroborated by both original owner views.",
+        "Small gate and Centrico Plaza icon spans use the documented circular continuation. These modeled closures do not establish walkable connections, floors, spawn extents or a continuous physical barrier.",
+        "The closeup transform is composed through the primary overview calibration; its architectural residual is not a separate estimate of total absolute map error."
+      ]
+    }
+  ],
+  "approved_total": 7,
+  "remaining": {
+    "sector_boundaries": 48,
+    "wild_zone_boundaries": 13,
+    "total_boundaries": 61
+  },
+  "full_g2_g3_complete": false,
+  "full_g5_a0_complete": false,
+  "original_assets_modified": false,
+  "coordinates_or_progress_modified": false,
+  "release_status": "candidate_pending_final_exact_head_CI_and_live_verification",
+  "initial_five_outline_packet": {
+    "commit": "d1d7322e6341cd91016f576161c55da682e06834",
+    "path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+    "sha256": "233c271528c7d0523fb17ae9255c2c97b1c59b484cf9ebc8945d12e62ceff5e1"
+  },
+  "concurrent_wz04_approval_preserved": {
+    "commit": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "evidence": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+    "policy": "Use the existing concurrent WZ04 production record unchanged; retain this independent supplementary review as additional original-image evidence."
+  },
+  "supporting_reviews": [
+    {
+      "area_id": "wz-04",
+      "evidence_id": "AT341-WZ04-RENDERED-SELECTION-REVIEW",
+      "decision": "APPROVE_RENDERED_SELECTION_ONLY",
+      "source_candidate": "docs/qa/candidates/wz04-2026-11-26/candidate-evidence.json",
+      "supplement": "docs/qa/candidates/wz04-2026-11-26/AT341-supplement.json",
+      "historical_hold_preserved": "docs/qa/candidates/wz04-2026-11-26/independent-review.json",
+      "production_geometry_sha256": "00f1fa2d2930fa71f890fd663f969b7d814acc8f7e293f9d2c91934cd57fac7e",
+      "geometry_file_sha256": "82ef3e4c1d408c6442e05b709202278dc33ebcfb8eeb07fd60ccca7be1c160cd",
+      "review": {
+        "reviewer": "root_release_review",
+        "date": "2026-11-26",
+        "boundary": true,
+        "registration": true,
+        "independent": true,
+        "occlusion": true,
+        "review_panel_path": "docs/qa/candidates/wz04-2026-11-26/registered-source-review.png",
+        "review_panel_sha256": "42808cf221f9702334afcbb3cc91a58fecfc98ebf69168cf48d522f15b9a34a0",
+        "observations": [
+          "The earlier independent HOLD is preserved. This later approval uses the new southwest architectural holdout and explicit inspection of all three selection-only gate closures.",
+          "The west and south closures follow the visible inner notch shoulders. The west alternative outer chord differs by up to 3.1895114557848516 native pixels; that alternative is not claimed to be equivalent within three pixels.",
+          "Gate symbols and arrows are excluded as interface decoration. Connections close the selection footprint only; no hidden physical barrier, entrance route, floor, spawn or traversal claim is made.",
+          "The original six controls and every projected candidate vertex remain unchanged; the previous rejected plain pavement-edge check and failed observations remain in the source packet."
+        ],
+        "visual_inspection": "Inspected the unchanged native map, original WZ04 closeup, full calibration panel, registered source comparison, new southwest roof-corner crop and all three original/native gate crops. The previously missing southwest corner is visible outside the red cursor. The observed inset shoulders support the chosen selection closure, without certifying hidden geometry."
+      },
+      "independently_reproduced": {
+        "result": "pass",
+        "command": "PYTHONPATH=/workspace/scratch/d158a14f0daf/audit/execution-geometry/deps python docs/qa/candidates/wz04-2026-11-26/AT341-supplement-reproduce.py",
+        "outputs_unchanged": true,
+        "source_hashes_verified": true
+      },
+      "registration": {
+        "method": "Unchanged six-architecture-control projective fit; four withheld architectural corners including the newly identified southwest roof corner, and five separate border checks. Three gate-icon selection closures explicitly reviewed.",
+        "control_count": 6,
+        "holdout_count": 4,
+        "max_error_px": 1.81262105353095,
+        "uncertainty_px": 3,
+        "threshold_px": 3,
+        "evidence_id": "AT341-WZ04-RENDERED-SELECTION-REVIEW",
+        "evidence_path": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+        "scope": "Three native pixels is a rendered-raster/manual-pick tolerance, not a physical distance, route guarantee, or a bound on every unobserved pixel."
+      },
+      "artifacts": [
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/candidate-evidence.json",
+          "sha256": "6581ec9e50c05d39fc73bd4509c3c4f6142f8b5457857fbb39f44066ceeb71ad"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/AT341-candidate-geometry.json",
+          "sha256": "82ef3e4c1d408c6442e05b709202278dc33ebcfb8eeb07fd60ccca7be1c160cd"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/manual-observations.json",
+          "sha256": "91f38e7eacb91d5f8541bb52884c7ce8d5994a14458d5970837ca1d9a60b186a"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/registered-source-review.png",
+          "sha256": "42808cf221f9702334afcbb3cc91a58fecfc98ebf69168cf48d522f15b9a34a0"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/landmark-review.png",
+          "sha256": "5b2e76ad76f8a585403e6b54a48f71cba4df47929c2cbe6e7252feda1523195d"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/AT341-supplement.json",
+          "sha256": "07ece1385bf92cb0e7bf182b3c01faf3f3680d923117c4bdb5d8cbf1833c0be2"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/AT341-southwest-holdout-review.png",
+          "sha256": "0431ece67bbd078acef48cd7de73ee4d89ceecb88b3607720ed9f229205bbce0"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/AT341-gate-interpretation-review.png",
+          "sha256": "96e415481f7fee7012bf6cdc5eb6193ada5b1598ec170b6f053ca9a765731003"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/AT341-supplement-reproduce.py",
+          "sha256": "a9472d5bbf872d49590a19fef20ffcf88399815f848032ff58082d0e475077ff"
+        },
+        {
+          "path": "docs/qa/candidates/wz04-2026-11-26/independent-review.json",
+          "sha256": "0bb921ca78f4e600073661efbec213a7784a27b96d33d7ff3e9097f7917ed151"
+        }
+      ],
+      "limitations": [
+        "The earlier independent HOLD is preserved. This later approval uses the new southwest architectural holdout and explicit inspection of all three selection-only gate closures.",
+        "The west and south closures follow the visible inner notch shoulders. The west alternative outer chord differs by up to 3.1895114557848516 native pixels; that alternative is not claimed to be equivalent within three pixels.",
+        "Gate symbols and arrows are excluded as interface decoration. Connections close the selection footprint only; no hidden physical barrier, entrance route, floor, spawn or traversal claim is made.",
+        "The original six controls and every projected candidate vertex remain unchanged; the previous rejected plain pavement-edge check and failed observations remain in the source packet."
+      ]
+    }
+  ]
+}
