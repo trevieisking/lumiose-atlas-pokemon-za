@@ -621,7 +621,29 @@ try{
     await page.locator('[data-area-overlap-id="bleu-sector-6"]').waitFor({state:'visible'});
     assert.equal(await page.locator('[data-area-overlap-id="bleu-sector-8"]').count(),1);
     assert.equal(new URL(page.url()).searchParams.get('area'),null,'Overlapping footprints do not choose the first or nearest sector automatically');
-    await page.waitForFunction(()=>{const r=document.querySelector('[data-area-overlap-id="bleu-sector-6"]')?.getBoundingClientRect();return r&&r.top>=0&&r.bottom<=innerHeight;});
+    try{
+      await page.waitForFunction(()=>{const r=document.querySelector('[data-area-overlap-id="bleu-sector-6"]')?.getBoundingClientRect();return r&&r.top>=0&&r.bottom<=innerHeight;});
+    }catch(error){
+      const diagnosticBase=output+'/at341-real-sector-overlap-failure-'+device;
+      try{
+        const geometry=await page.evaluate(()=>{
+          const rect=node=>{if(!node)return null;const r=node.getBoundingClientRect();return{x:r.x,y:r.y,top:r.top,right:r.right,bottom:r.bottom,left:r.left,width:r.width,height:r.height};};
+          const identify=node=>node?{tag:node.tagName.toLowerCase(),id:node.id,className:node.getAttribute('class')}:null;
+          const detail=document.querySelector('[data-area-detail]'),ancestors=[];
+          for(let node=detail;node;node=node.parentElement){
+            const style=getComputedStyle(node);
+            ancestors.push({...identify(node),rect:rect(node),clientWidth:node.clientWidth,clientHeight:node.clientHeight,scrollWidth:node.scrollWidth,scrollHeight:node.scrollHeight,scrollLeft:node.scrollLeft,scrollTop:node.scrollTop,overflowX:style.overflowX,overflowY:style.overflowY,scrollBehavior:style.scrollBehavior,scrollMarginTop:style.scrollMarginTop,scrollMarginBottom:style.scrollMarginBottom,scrollPaddingTop:style.scrollPaddingTop,scrollPaddingBottom:style.scrollPaddingBottom});
+          }
+          const visual=window.visualViewport;
+          return{url:location.href,innerWidth,innerHeight,scrollX,scrollY,visualViewport:visual?{width:visual.width,height:visual.height,offsetLeft:visual.offsetLeft,offsetTop:visual.offsetTop,pageLeft:visual.pageLeft,pageTop:visual.pageTop,scale:visual.scale}:null,scrollingElement:identify(document.scrollingElement),activeElement:identify(document.activeElement),buttons:Object.fromEntries(['bleu-sector-6','bleu-sector-8'].map(id=>[id,rect(document.querySelector('[data-area-overlap-id="'+id+'"]'))])),detail:rect(detail),mapViewport:rect(document.getElementById('aeViewport')),ancestors};
+        });
+        fs.writeFileSync(diagnosticBase+'.json',JSON.stringify({device,overlapPoint,error:{name:error.name,message:error.message},...geometry},null,2)+'\n');
+      }catch(diagnosticError){console.error('Could not save overlap geometry diagnostics:',diagnosticError);}
+      // Capture the failed viewport without scrolling the chooser into view.
+      try{await page.screenshot({path:diagnosticBase+'.png',fullPage:false});}
+      catch(diagnosticError){console.error('Could not save overlap viewport screenshot:',diagnosticError);}
+      throw error;
+    }
     await page.locator('[data-area-detail]').screenshot({path:output+'/at341-real-sector-overlap-'+device+'.png'});
     await page.locator('[data-area-overlap-id="bleu-sector-8"]').click();
     assert.equal(new URL(page.url()).searchParams.get('area'),'bleu-sector-8');
