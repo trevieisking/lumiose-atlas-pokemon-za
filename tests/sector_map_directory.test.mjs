@@ -262,3 +262,24 @@ for(const row of at309.accepted){
  assert.ok(section.includes(row.orientation_text));
  assert.ok(section.includes('<img src="'+row.expected_future_asset_path+'"'));
 }
+
+// Supplemental source-cross-checked TM directions: preserve the original row and progress key.
+const tmAccess=JSON.parse(read("docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json"));
+assert.equal(tmAccess.verified_new_native_pins,0);
+assert.equal(tmAccess.records.length,4);
+const itemPage=read("items.html");
+for(const entry of tmAccess.records){
+  const item=evidence.zones[entry.zone-1].items.find(r=>r.id===entry.id);
+  assert.equal(item.name,entry.tm);assert.equal(item.pin,null);
+  assert.equal(entry.original_progress_key,item.id);assert.equal(entry.verified_native_xy,null);
+  assert.equal(entry.verified_access_geometry,false);assert.ok(entry.sources.length>=2);
+  const expected='data-tm-access="'+entry.id+'">Access guide (written-source cross-check; exact pin unverified): '+entry.note+'</span>';
+  for(const [html,marker,progress] of [[page,'data-record-ref="'+entry.id+'"','data-progress-item="'+entry.id+'"'],[itemPage,'id="item-'+entry.id+'"','data-atlas-pickup="'+entry.id+'"']]){
+    const at=html.indexOf(marker),end=html.indexOf("</li>",at);
+    assert.ok(at>=0&&end>at);const row=html.slice(at,end);
+    assert.ok(row.includes(progress));assert.ok(row.includes(expected));
+    assert.ok(row.includes('<span>'+clean(item.hint)+'</span>'));
+  }
+}
+assert.equal((page.match(/data-tm-access="/g)||[]).length,4);
+assert.equal((itemPage.match(/data-tm-access="/g)||[]).length,4);
