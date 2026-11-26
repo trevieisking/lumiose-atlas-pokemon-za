@@ -48,6 +48,19 @@ try{
       assert.equal(await page.evaluate(()=>localStorage.getItem('lumiose-atlas-reconstruction-v1')),saved,'Original saved state unchanged');
       await link.screenshot({path:output+'/'+device+'-'+id+'.png'});
     }
+    // Original 48-sector clue directory: the owner's reported tiny-map location.
+    await page.goto(base+'/sector-maps.html#sector-jaune-sector-2',{waitUntil:'domcontentloaded'});
+    const card=page.locator('#sector-jaune-sector-2');
+    await card.locator('details.sector-clues > summary').click();
+    const directoryImage=card.locator('.sector-context-image');
+    await directoryImage.waitFor({state:'attached',timeout:15000});
+    await directoryImage.scrollIntoViewIfNeeded();
+    await directoryImage.evaluate(async img=>{if(!img.complete)await new Promise((resolve,reject)=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',reject,{once:true});});});
+    assert.equal(await directoryImage.getAttribute('src'),sectorContextFor('jaune-sector-2').path);
+    assert.equal(await page.locator('[data-sector-card] .sector-context-photo').count(),48);
+    assert.ok(await card.locator('.sector-context-detail .sector-source-map').count(),'The pre-existing 310px Jaune 2 crop is preserved');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)<=1);
+    await card.locator('.sector-context-photo').screenshot({path:output+'/'+device+'-jaune-sector-2-directory.png'});
     await page.goto(base+'/atlas-explorer.html?area=wz-01',{waitUntil:'domcontentloaded'});
     await page.locator('[data-area-detail] .aa-photo-links .aa-photo').first().waitFor({state:'attached'});
     assert.equal(await page.locator('.aa-context-image').count(),0,'Wild Zone galleries are not replaced by sector context');
