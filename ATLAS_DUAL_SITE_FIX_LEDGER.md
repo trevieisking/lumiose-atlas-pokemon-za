@@ -1,5 +1,15 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## AT-341 — completion and preservation checkpoint
+
+**26 November 2026 · Manifest 87 / Ledger 95.** Continuation of [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Exact head `e003f5ffa8629c7a9c52da1bbd7bd78b9103354d` passed the existing Explorer, collectible and 20-zone photo suites, but its new two-finger test could not find clear starting points after a drag. A bounded test correction retains real touch input, every existing control/assertion, and adds an explicit rotation check. New exact-head browser validation, screenshot review, merge and live verification are pending.
+
+The private Supabase planning preflight preserved all 43 previous rows and added explicit AT-339/340 records, producing 45 rows at Manifest86 before this checkpoint. Every previous deployed-feature and original-Workspace proof was retained. The next synchronization records this Manifest87 checkpoint; it does not mark unfinished work verified. [Durable checkpoint and evidence gaps](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json).
+
+**Full master-plan G5/A0 remains open:** 48 sector boundaries, 15 additional Wild Zone boundaries and 68 comprehensive encounter signoffs still require evidence. Original sources, paused-media policy and all 67 requirements remain preserved. Encounter-condition and geometry reviews continue using existing evidence. The original Workspace is not changed by this GitHub continuation.
+
+Earlier sections below are dated history. This checkpoint and its actual PR/deployment evidence control current status; no historical approval is silently rewritten.
+
 ## AT-340 — one verified consolidation candidate
 
 **26 November 2026 · Manifest 86 / Ledger 94.** The combined candidate includes shared area/habitat navigation, the exact collectible-search correction, verified salon/quest/gift/written-route additions and restored Main Mission 01–10 detail. Independent review repaired disputed habitat leakage, stale Holovator selection, outbound evidence links and misleading pickup wording. [Scope, sources, validation and rollback](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md); [all 25 open PR dispositions](docs/qa/ATLAS_AT340_PR_DISPOSITIONS.json).

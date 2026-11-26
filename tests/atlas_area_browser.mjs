@@ -536,14 +536,36 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("area"),null,"Dragging an overlay must not select a boundary");
     if(device==="phone"){
       const touch=await page.locator("#aeViewport").evaluate(node=>{
-        const r=node.getBoundingClientRect();
-        for(const fraction of [.6,.7,.45,.35]){
-          const y=r.top+r.height*fraction,x1=r.left+r.width*.3,x2=r.left+r.width*.7;
-          if([x1,x2].every(x=>{const target=document.elementFromPoint(x,y);return target&&node.contains(target)&&!target.closest("button,a,input,select");}))return{x1,x2,y};
+        const r=node.getBoundingClientRect(),margin=12,travel=20;
+        const left=Math.ceil(Math.max(r.left,0)+margin+travel),right=Math.floor(Math.min(r.right,innerWidth)-margin-travel);
+        const top=Math.ceil(Math.max(r.top,0)+margin+travel),bottom=Math.floor(Math.min(r.bottom,innerHeight)-margin-travel);
+        const controls=[...node.querySelectorAll("button,a,input,select,textarea")].map(control=>({control,box:control.getBoundingClientRect()}))
+          .filter(({control,box})=>box.width&&box.height&&getComputedStyle(control).visibility!=="hidden")
+          .map(({box})=>box);
+        const clearance=(x,y)=>{
+          const target=document.elementFromPoint(x,y);
+          if(!target||!node.contains(target)||target.closest("button,a,input,select,textarea"))return -1;
+          return Math.min(...controls.map(box=>Math.hypot(Math.max(box.left-x,0,x-box.right),Math.max(box.top-y,0,y-box.bottom))));
+        };
+        let best=null;
+        // The preceding real drag moves the original pins. Search the visible
+        // map for two integer touch points instead of assuming four fixed rows
+        // still offer an unobstructed pair. Keep every original control active.
+        for(let y=top;y<=bottom;y+=8){
+          const points=[];
+          for(let x=left;x<=right;x+=8){const gap=clearance(x,y);if(gap>=margin)points.push({x,gap});}
+          for(const a of points)for(const b of points){
+            if(b.x-a.x<100)continue;
+            const gap=Math.min(a.gap,b.gap);
+            if(!best||gap>best.clearance)best={x1:a.x,x2:b.x,y,clearance:gap};
+          }
         }
-        throw Error("No unobstructed real touch gesture start");
+        if(best)return best;
+        throw Error("No visible two-finger start has 100px separation and 12px control clearance");
       });
+      console.log("AT339 synthetic two-finger start",device,JSON.stringify(touch));
       const beforeZoom=await page.locator("#aeZoomLabel").textContent();
+      const beforeRotation=await page.locator("#aePositionReadout").textContent();
       const session=await context.newCDPSession(page),p=(x,y,id)=>({x:Math.round(x),y:Math.round(y),id});
       try{
         await session.send("Input.dispatchTouchEvent",{type:"touchStart",touchPoints:[p(touch.x1,touch.y,1),p(touch.x2,touch.y,2)]});
@@ -551,6 +573,7 @@ try{
         await session.send("Input.dispatchTouchEvent",{type:"touchEnd",touchPoints:[]});
       }finally{await session.detach();}
       await page.waitForFunction(before=>document.getElementById("aeZoomLabel").textContent!==before,beforeZoom);
+      await page.waitForFunction(before=>document.getElementById("aePositionReadout").textContent!==before,beforeRotation);
       assert.equal(new URL(page.url()).searchParams.get("area"),null,"A two-finger pinch/rotation must not select a boundary");
     }
     // Both paint and hit testing must respect the visible layer and filters.

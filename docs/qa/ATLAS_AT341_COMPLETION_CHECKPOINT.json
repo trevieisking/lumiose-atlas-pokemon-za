@@ -1,0 +1,63 @@
+{
+  "id": "AT-341",
+  "date": "2026-11-26",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "manifest_revision": 87,
+  "ledger_revision": 95,
+  "scope": "Continuous completion, evidence review and durable GitHub/Supabase synchronization",
+  "observed_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
+  "observed_pr_head": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "pr": 204,
+  "stage": "bounded_touch_test_fix_pending_exact_head_CI",
+  "failed_run": 45818952302,
+  "failure": "Four fixed test coordinate pairs were all obstructed after the preceding drag; no two-finger event dispatched",
+  "correction": "Find a visible real touch pair with 12px control clearance and 100px separation; retain all original controls and assertions and require rotation-readout change",
+  "runtime_change_for_failure": false,
+  "full_upgrade_complete": false,
+  "full_release_sha": null,
+  "workspace_prompt_ready": false,
+  "workspace_publication": false,
+  "supabase_preflight": {
+    "before": 43,
+    "after": 45,
+    "all_at_revision_86": true,
+    "preserved_status_and_deployment_fields": true,
+    "recorded_at": "2026-11-26T12:30:37.735162Z",
+    "historical_revision": 86,
+    "new_rows": [
+      "AT-339-SHARED-AREAS",
+      "AT-340-VERIFIED-CONSOLIDATION"
+    ],
+    "scope": "Private planning metadata only",
+    "preserved": "Original feature notes, deployed GitHub proofs, original Workspace proofs and report/player records"
+  },
+  "required_remaining": {
+    "sector_boundaries": 48,
+    "wild_zone_boundaries": 15,
+    "comprehensive_roster_signoffs": 68,
+    "exact_new_pickup_points": 0,
+    "scope_note": "Current existing release criteria retained; no completion inferred from passing code tests"
+  },
+  "workstreams": [
+    "Correct and re-run actual touch/browser validation",
+    "Audit remaining original-image geometry evidence",
+    "Add verified encounter conditions and per-area evidence coverage",
+    "Reconcile all current plan fields and private tracker after each meaningful checkpoint"
+  ],
+  "limitations": {
+    "local_browser": "Chromium binary unavailable; standard download denied by network policy",
+    "cloud_preview": "Automatic approval review rejected private project rendering to cloud browser; no bypass",
+    "verification_route": "Existing exact-head GitHub Actions with actual screenshot artifact review"
+  },
+  "preservation": {
+    "original_assets": true,
+    "player_progress": true,
+    "existing_markers_and_routes": true,
+    "accounts": true,
+    "public_database": true,
+    "feedback": true,
+    "workspace": true,
+    "no_videos": true
+  },
+  "release_policy": "Promote only the fully tested reviewed bounded change. Full master-plan G5/A0 remain open until mandatory data evidence is actually satisfied."
+}

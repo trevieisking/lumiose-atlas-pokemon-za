@@ -2,13 +2,13 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 86,
-  "ledger_revision": 94,
+  "manifest_revision": 87,
+  "ledger_revision": 95,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "AT340_bounded_consolidation_status_in_PR204_G2_G3_incomplete_full_G5_A0_open",
+  "current_state": "AT341_completion_in_progress_PR204_test_fix_pending_G2_G3_full_G5_A0_open",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -1456,7 +1456,7 @@
     {
       "id": "G0",
       "name": "Plan, inventory, and private Workspace queue",
-      "state": "source_and_requirement_records_reconciled_current_release_tracker_update_pending",
+      "state": "canonical_records_checkpointed_private_metadata_reconciled_in_progress",
       "acceptance": [
         "Record owner direction: finish GitHub before writing or submitting final Workspace prompt.",
         "Reconcile AT-321–324 evidence, review findings, exact source inventory, master plan, manifest, ledger and private checklist.",
@@ -1764,7 +1764,7 @@
     "historical_baseline_and_area_records_preserved": true
   },
   "current_completion_plan": {
-    "tracking": "AT-340",
+    "tracking": "AT-341",
     "date": "2026-11-26",
     "plan": "FINAL_WORKSPACE_PLAN.md",
     "coverage": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
@@ -1786,14 +1786,15 @@
     "collectible_production_verified_points": 0,
     "collectible_release_receipt": "docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json",
     "collectible_framework_status": "github_merged_deployed_live_verified",
-    "manifest_revision": 86,
-    "ledger_revision": 94,
+    "manifest_revision": 87,
+    "ledger_revision": 95,
     "shared_area_evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
     "reviewed_zone_map_outlines": 5,
     "approved_sector_boundaries": 0,
     "comprehensive_rosters": 0,
     "current_consolidation_evidence": "docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md",
-    "bounded_release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+    "bounded_release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+    "current_checkpoint": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json"
   },
   "at339": {
     "status": "candidate_pending_exact_head_browser_and_release",
@@ -1839,5 +1840,16 @@
     "approved_full_scope_sha": null,
     "final_workspace_prompt": null,
     "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+  },
+  "at341": {
+    "checkpoint": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+    "stage": "bounded_touch_test_fix_pending_exact_head_CI",
+    "required_remaining": {
+      "sector_boundaries": 48,
+      "wild_zone_boundaries": 15,
+      "comprehensive_roster_signoffs": 68,
+      "exact_new_pickup_points": 0,
+      "scope_note": "Current existing release criteria retained; no completion inferred from passing code tests"
+    }
   }
 }

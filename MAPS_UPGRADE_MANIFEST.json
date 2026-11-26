@@ -18,11 +18,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 86,
+  "revision": 87,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-340 verified consolidation tracked by PR204; use its exact release receipt for CI, visual review, merge, Pages and live outcomes. Shared interactions, verified content and independent review fixes are implemented. G2/G3 remain partial; full-scope G5/A0 remain open.",
+  "current_phase": "AT-341 continues PR204: real-touch test correction and exact-head validation pending; private planning records synchronized. Geometry/encounter evidence review continues; full G2/G3/G5/A0 remain open.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -154,7 +154,7 @@
     "protected_code_labs_writer_used": false,
     "supabase_private_feature_metadata_update_planned": true,
     "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
-    "checkpoint_scope": "Manifest85/Ledger93 bounded AT339 runtime candidate; source records, original progress, Workspace and public database contracts remain preserved."
+    "checkpoint_scope": "AT-341: preserve all original behavior, repair the demonstrated test setup failure, retain source evidence and synchronize private planning metadata. No public database or Workspace changes."
   },
   "phases": [
     {
@@ -5588,5 +5588,13 @@
     "approved_full_scope_sha": null,
     "final_workspace_prompt": null,
     "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+  },
+  "at_341_completion_checkpoint": {
+    "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+    "status": "bounded_touch_test_fix_pending_exact_head_CI",
+    "manifest_revision": 87,
+    "ledger_revision": 95,
+    "full_implementation_complete": false,
+    "supabase_private_planning_sync": "45 rows verified at Manifest86; Manifest87 checkpoint synchronization follows"
   }
 }
