@@ -1,0 +1,28 @@
+{
+  "observed_on": "2026-11-26",
+  "scope": "owner-only planning metadata, no report text, player records or credentials exported",
+  "row_count": 38,
+  "paused_video_item_ids": [
+    "AT-295-CLEAR-BOOKMARK",
+    "AT-295-SMART-RETURN",
+    "AT-295-VIDEO-MISSION23",
+    "AT-295-VIDEO-POWERGEM",
+    "AT-295-VIDEO-SCREW2",
+    "AT-295-VIDEO-STANDARD",
+    "AT-296-VIDEO-V1-ALLEY",
+    "AT-296-VIDEO-V1-COURTYARD",
+    "AT-296-VIDEO-V1-PLAZA",
+    "AT-296-VIDEO-V2-ROOF",
+    "AT-298-VIDEO-V3-BOUNDARY",
+    "AT-298-VIDEO-V3-CYCLONE",
+    "AT-298-VIDEO-V3-ROOF"
+  ],
+  "workspace_claims_verified_count": 0,
+  "known_reconciliation_gaps": [
+    "AT-297 access stage older than recovered v37 proof",
+    "AT-321 failed-head stage older than merged validated release",
+    "AT-326 review-regression stage older than merge/deployment proof",
+    "Old video rows still historically verified; latest owner pause must supersede"
+  ],
+  "source": "authenticated SELECT of atlas_internal.feature_checklist"
+}

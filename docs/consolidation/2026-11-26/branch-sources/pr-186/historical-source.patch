@@ -1,0 +1,98 @@
+diff --git a/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json b/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json
+index 50b9282..76ac65d 100644
+--- a/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json
++++ b/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json
+@@ -466,5 +466,69 @@
+     "original_264_100_keys_preserved": true,
+     "no_new_native_pins": true,
+     "workspace_untouched": true
++  },
++  "wild_zone_2_great_ball_diagnostic": {
++    "archive_id": 8258,
++    "existing_atlas_item": {
++      "id": "2-5",
++      "number": "02-06"
++    },
++    "status": "east_preferred_archive_candidate_physical_verification_pending",
++    "fit_control_policy": "Use only the original AT-335 fit rows; all Wild Zone 2 items excluded.",
++    "east": {
++      "source_xy": [
++        12301,
++        13155
++      ],
++      "source_marker_id": 234554,
++      "route": "Southeast approach via Rock Smash."
++    },
++    "west": {
++      "source_xy": [
++        11325,
++        13081
++      ],
++      "route": "Separate southwest bank pickup at the foot of a large rock."
++    },
++    "distance_to_archived_display_point_native_px": [
++      {
++        "omitted_fit_zone": null,
++        "east": 4.741,
++        "west": 121.099
++      },
++      {
++        "omitted_fit_zone": 3,
++        "east": 4.205,
++        "west": 120.759
++      },
++      {
++        "omitted_fit_zone": 4,
++        "east": 4.532,
++        "west": 120.827
++      },
++      {
++        "omitted_fit_zone": 9,
++        "east": 8.003,
++        "west": 123.272
++      },
++      {
++        "omitted_fit_zone": 17,
++        "east": 40.185,
++        "west": 146.099
++      }
++    ],
++    "direct_evidence": {
++      "owner_closeup_path": "assets/atlas/wild-zones/wild-zone-02-closeup.png",
++      "owner_closeup_git_blob": "fb043aece8e1968b4fa8d9e21858890f57fc3b75",
++      "visible_landmarks": "Three fixed bridge spans cross the water to/from the central island; no labelled Great Ball or Swift pickup visible.",
++      "swift_footage_lead": "https://www.youtube.com/watch?v=t-n2eBPRqbA&t=528s",
++      "swift_pickup_frame_verified": false
++    },
++    "sources": [
++      "https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball",
++      "https://www.pokebip.com/page/jeux-video/legendes-pokemon-z-a/guide-des-lieux/zone-sauvage-2"
++    ],
++    "production_pin": null,
++    "progress_changes": false
+   }
+ }
+diff --git a/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md b/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md
+index 3f5ba8f..a7278c6 100644
+--- a/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md
++++ b/docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md
+@@ -35,3 +35,19 @@ All six old WZ4 values are 75.9; cemetery descriptions put the items among grave
+ [Regional list](https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/information/all-colorful-screw-locations) and [coordinate database](https://www.gamerguides.com/pokemon-legends-z-a/database/items/other-items/colorful-screw) share literal marker ID 236385 (display heading 236386), XY (4741,10842). The candidate fit projects it close to archived ID 8715 (2.691px separation versus 64.217px for 8808). This sample was not used to fit. Both marker URLs and thumbnail unavailable; no final identity, height or physical verification. Keep both old records, original 100 Screw IDs and original zone item keys. This is the 13th external Screw source reference, not a 13th confirmed Atlas pin.
+ 
+ Next: independently verify distributed permanent landmarks and candidate identities, check residuals per district, compare all 146 against descriptive/visual evidence, resolve 35 ambiguous matches, reconcile 100 Screw numbers, continue international routes, then AT-333 small filtered collectible layers and G4/G5 testing. No user request for repeated screenshots; no runtime, original Workspace, assets or player data modified. [Structured evidence](ATLAS_AT335_PICKUP_COORDINATE_PILOT.json).
++
++## Wild Zone 2: distinguish the two Great Balls
++
++The eastern pickup consistently fits archived marker 8258 better than the separate western pickup. Distances below are to the archived display point, not measured errors from physical gameplay positions. Both candidates stayed out of the fit.
++
++| Fit | East | West |
++| --- | ---: | ---: |
++| All original fit rows | 4.741 px | 121.099 px |
++| Omit Wild Zone 3 | 4.205 px | 120.759 px |
++| Omit Wild Zone 4 | 4.532 px | 120.827 px |
++| Omit Wild Zone 9 | 8.003 px | 123.272 px |
++| Omit Wild Zone 17 | 40.185 px | 146.099 px |
++
++[Gamer Guides](https://www.gamerguides.com/pokemon-legends-z-a/database/items/poke-balls/great-ball) lists two source positions. [Pokébip’s field guide](https://www.pokebip.com/page/jeux-video/legendes-pokemon-z-a/guide-des-lieux/zone-sauvage-2) describes two routes: the east pickup beyond the southeast Rock Smash obstacle and the west pickup below a large southwest rock. Prefer the east match for archive research only. Keep the west as its own discovery lead; do not reuse the existing collection key.
++
++The [original Zone 2 close-up](../../assets/atlas/wild-zones/wild-zone-02-closeup.png) shows three usable fixed bridge spans around the central island but no labelled pickup. Use their endpoints and the shoreline bends as alignment landmarks, not the session cursor or the zone badge. TM027 Swift, described by Pokébip between trees on the central island and [pictured in the GameSpot guide listing](https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/), is the next visual proof candidate. The [08:48 gameplay chapter](https://www.youtube.com/watch?v=t-n2eBPRqbA&t=528s) and original still were not jointly registered. No exact pickup XY, floor approval, production transform, collection change or public pin.

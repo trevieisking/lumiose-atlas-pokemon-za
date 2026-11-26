@@ -1,0 +1,47 @@
+{
+  "number": 189,
+  "title": "Atlas — Research seven more Wild Zone TM routes",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/189",
+  "origin_head_ref": "research/atlas-tm-access-batch2-20261126",
+  "origin_head_sha": "11c6e2f5877d1880237dfa2471d5d053f5533ca0",
+  "observed_base_ref": "main",
+  "observed_base_sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4",
+  "git_diff_merge_base_sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4",
+  "disposition": "retain_overlapping_research_candidate",
+  "consolidation_note": "Seven TM research records overlap all20 player-facing notes in188; preserve source provenance/caveats, especially Night Slash move discrepancy. No exact pins or physically verified routes; avoid duplicate collection records.",
+  "all_changed_paths": [
+    "docs/qa/ATLAS_TM_ACCESS_RESEARCH_BATCH2_2026-11-26.json"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/qa/ATLAS_TM_ACCESS_RESEARCH_BATCH2_2026-11-26.json",
+      "change_status": "A",
+      "origin_head_sha": "11c6e2f5877d1880237dfa2471d5d053f5533ca0",
+      "origin_git_blob_sha1": "bf253a4129fa3bdc2ee5cb1664a422f074997a01",
+      "origin_bytes": 10210,
+      "origin_sha256": "41ff18dee36ae446763d994043db453b63501c6657c1cc7e10bde0a22bf8fa35",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/11c6e2f5877d1880237dfa2471d5d053f5533ca0/docs/qa/ATLAS_TM_ACCESS_RESEARCH_BATCH2_2026-11-26.json",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-189/docs/qa/ATLAS_TM_ACCESS_RESEARCH_BATCH2_2026-11-26.json",
+        "bytes": 10210,
+        "sha256": "41ff18dee36ae446763d994043db453b63501c6657c1cc7e10bde0a22bf8fa35"
+      },
+      "patch_path": "pr-189/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-189/historical-source.patch",
+    "bytes": 10729,
+    "sha256": "bc8e199b0e345dafb3fd1d99c127114b38e7e7b3e17d2c89ad821c51941f1541"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "Research only, separate from PR #188. Seven original TM IDs and archive candidates checked against the saved ledger; English/Japanese written descriptions cross-checked. Explicitly retain the Night Slash obstacle-move discrepancy, no guessed route geometry or exact pins. Structured record is ready for later player-facing integration. No existing files or live systems changed."
+}

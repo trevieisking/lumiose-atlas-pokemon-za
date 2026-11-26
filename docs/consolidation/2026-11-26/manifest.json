@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "AT-336",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "date": "2026-11-26",
+  "manifest_revision": 81,
+  "ledger_revision": 89,
+  "documentation_baseline_sha": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+  "scope": "Reconcile planning and release evidence only; application media removal shipped separately in PR188. No blanket PR merge or Workspace publication.",
+  "entrypoint": "ATLAS_RELEASE_HANDOFF.md",
+  "requirements": "requirements.json",
+  "pull_requests": "pull-requests.json",
+  "issues": "issues.json",
+  "branch_dispositions": "branch-dispositions.json",
+  "historical_at_index": "historical-at-index.json",
+  "main_source_index": "main-source-index.json",
+  "workspace_observation": "workspace-observation.json",
+  "media_release_evidence": "media-release-evidence.json",
+  "workspace_prompt_readiness": "WORKSPACE_PROMPT_READINESS.md",
+  "gates": [
+    {
+      "id": "G0",
+      "state": "consolidated_documentation_private_metadata_sync_pending",
+      "remaining": "Complete reviewed documentation merge and bounded private planning metadata synchronization; keep chat-search scope and historical gaps explicit."
+    },
+    {
+      "id": "G1",
+      "state": "partial",
+      "remaining": "Preserve the3 AT-326 fixes and media removal; reconcile PR156 routes against current main and validate exact head/screenshots; selectively assess other retained runtime candidates without whole-branch regressions."
+    },
+    {
+      "id": "G2",
+      "state": "research_partial",
+      "remaining": "Retain both historical W01–W03 and later AT-329 sources; calibrate with independent held-out landmarks, uncertainty and source hashes. Registration pilots are not production boundaries."
+    },
+    {
+      "id": "G3",
+      "state": "open",
+      "remaining": "Complete independently supported boundary/encounter records for48 sectors and20 zones; resolve or explicitly bound roster/identity/unlock conflicts. No verified production polygon set yet."
+    },
+    {
+      "id": "G4",
+      "state": "open",
+      "remaining": "Implement shared geometry/encounter highlighting, linked habitats and verified routes plus AT-333 compact independent collectible layers. Preserve all existing controls and progress; no guessed production points."
+    },
+    {
+      "id": "G5",
+      "state": "blocked_by_G1_G4",
+      "remaining": "Review complete candidate diff and all mandatory requirements; exact-head static/unit/image/link and mobile/desktop visual tests, expected-head merge, exact Pages deploy, independent live checks and rollback. No approved full-scope SHA yet."
+    },
+    {
+      "id": "A0",
+      "state": "blocked_until_G5_verified",
+      "remaining": "Generate one final executable Workspace prompt only after G0–G5 pass; exact approved release SHA, tree, path allowlist, evidence, limitations and rollback must be populated."
+    },
+    {
+      "id": "A1-A7",
+      "state": "new_release_pending_A0",
+      "remaining": "v37 is historical passed release plus freshly confirmed source/deploy metadata. Reconfirm source/access, backup/rollback, preservation, bounded adapted patch, preview, publish and live checks for the next release."
+    }
+  ],
+  "video_policy": {
+    "state": "paused_removed_from_github_runtime",
+    "active_in_handoff": false,
+    "youtube_channels": false,
+    "new_video_research": false,
+    "video_only_prs_closed_unmerged": [
+      153,
+      154
+    ],
+    "historical_research_and_original_uploads_retained": true,
+    "resume_requires_new_owner_direction": true
+  },
+  "workspace_prompt": {
+    "allowed_to_generate_executable": false,
+    "allowed_to_send_or_execute": false,
+    "approved_full_scope_github_sha": null,
+    "approved_full_scope_tree": null,
+    "reviewed_workspace_patch_allowlist": null,
+    "final_prompt_path": null,
+    "reason": "AT-325 G1–G5 remain incomplete; requested consolidation is complete preparation, not full-upgrade approval."
+  },
+  "counts": {
+    "requirements": 67,
+    "historical_at_ids": 326,
+    "main_source_files": 108,
+    "repository_prs": 176,
+    "repository_issues": 13,
+    "issue_comments": 74,
+    "open_prs_after_media_merge": 19
+  },
+  "coverage_limit": "All repository PRs/issues at the snapshot were enumerated. Accessible chat decisions were recovered with bounded search; completeness of unavailable/unreturned historical chats is not asserted.",
+  "branch_source_archive": {
+    "path": "branch-sources/SOURCE_MANIFEST.json",
+    "open_prs": 19,
+    "full_source_documents": 26,
+    "inert_historical_patches": 18,
+    "origin_file_records": 53,
+    "verified_captured_files": 82,
+    "runtime_imported": false
+  }
+}

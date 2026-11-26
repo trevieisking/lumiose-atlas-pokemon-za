@@ -1,0 +1,51 @@
+# Lumiose Atlas — early walkthrough research and connected-guide audit
+**Research checkpoint:** 21 November 2026  
+**GitHub branch:** `content/early-story-linked-playthrough-2026-11-21`  
+**Work type:** Verified, original-language expansion of story missions **01–10** and first-pass crosslinks across the guide.  
+**Truth status:** These ten mission narratives have been expanded and spot-checked against documented gameplay. This is **not** a game-wide or frame-by-frame factual certification.
+
+## Source comparison by mission
+
+| Mission | New substantive content | Sources checked | Remaining uncertainty |
+|---:|---|---|---|
+| 01 | Gare arrival, Pancham pursuit, choice of three starters, Backpacker Andi's Lv4 Pancham, real-time controls and ₽192 | [Serebii 01](https://www.serebii.net/legendsz-a/mainmissions/getyourtravelbagback.shtml), [Thonky 01](https://www.thonky.com/pokemon-legends-z-a/main-mission-01-get-your-travel-bag-back) | Opening map coordinates not independently measured |
+| 02 | Brigitte's Cleffa/Bunnelby (both Lv4), red boundary interaction, hotel check-in and Room 202 (2F) | [Thonky 02](https://www.thonky.com/pokemon-legends-z-a/main-mission-02-escape-from-the-battle-zone), [Bulbapedia task objectives](https://bulbapedia.bulbagarden.net/wiki/Task_(Legends:_Z-A)) | Corridor directions come from one detailed route description |
+| 03 | Team MZ/dodge/dash, two Lv5 starter battles, Gare Pokémon Center, Fletchling/Bunnelby catching, five species, Lab 3F, first reward TM004 Rock Smash | [Thonky 03](https://www.thonky.com/pokemon-legends-z-a/main-mission-03-a-new-life-in-lumiose-city), [Serebii 03](https://www.serebii.net/legendsz-a/mainmissions/anewlifeinlumiosecity.shtml), [Bulbapedia tasks](https://bulbapedia.bulbagarden.net/wiki/Task_(Legends:_Z-A)) | Wild Zone access/roof geometry still approximate in the saved map |
+| 04 | Battle Zone ticket, Lida/Naveen gifts, three Trainers, Zach team and promotion | [Thonky 04](https://www.thonky.com/pokemon-legends-z-a/main-mission-04-battling-in-the-z-a-royale), [Serebii 04](https://www.serebii.net/legendsz-a/mainmissions/battlinginthez-aroyale.shtml) | **Conflict:** Zach's Pidgey is Lv8 in Thonky versus Lv9 on Serebii; guide deliberately does not assert one |
+| 05 | Rooftop path/first Mega Shards, Red Canari Plush, Zone 2/3 pickups, Josée battle (Machop Lv10, Meditite Lv11), Emma's required three side requests, Emma's Mareep | [Thonky 05](https://www.thonky.com/pokemon-legends-z-a/main-mission-05-the-city-in-the-shadow-of-prism-tower), [Serebii 05](https://www.serebii.net/legendsz-a/mainmissions/thecityintheshadowofprismtower.shtml), [Bulbapedia side requests](https://bulbapedia.bulbagarden.net/wiki/Side_Mission) | Side request #002 Potion quantity and #003 Revive quantity disagree across sources; do not invent final numbers |
+| 06 | New side requests 004–009, Bonus Cards, Yvon's Lv15/Lv15/Lv16 roster and Rank X reward | [Thonky 06](https://www.thonky.com/pokemon-legends-z-a/main-mission-06-reaching-rank-x), [Serebii Rank X](https://www.serebii.net/legendsz-a/mainmissions/reachingrankx.shtml) | Bonus Card terms/mechanics should be checked against live version as needed |
+| 07 | Naveen's Lv16/Lv16/Lv17 team, requests 010–016, Xavi's Lv20–21 team and Hibernal route | [Thonky 07](https://www.thonky.com/pokemon-legends-z-a/main-mission-07-reaching-rank-w), [Serebii Rank W](https://www.serebii.net/legendsz-a/mainmissions/reachingrankw.shtml) | Precise court/door access deserves later map QA |
+| 08 | Lida's Lv22/Lv22/Lv23 team, Mable request 022 preconditions, Restaurant Le Nah and three Lv24 monkeys | [Thonky 08](https://www.thonky.com/pokemon-legends-z-a/main-mission-08-reaching-rank-v), [Serebii Rank V](https://www.serebii.net/legendsz-a/mainmissions/reachingrankv.shtml), [Bulbapedia Request 022](https://bulbapedia.bulbagarden.net/wiki/Side_Mission) | The choice of Kanto starter is mission-dependent; check timing and exact menu in a game capture |
+| 09 | Scripted Zygarde chase, borrowed Lucario, Mega Power orbs and dodging Absol, Absol/Absolite reward | [Thonky 09](https://www.thonky.com/pokemon-legends-z-a/main-mission-09-chase-that-mysterious-pokemon), [Serebii 09](https://www.serebii.net/legendsz-a/mainmissions/chasethatmysteriouspokemon.shtml) | Boss animation labels and exact attack names merit in-game capture |
+| 10 | Absolite practice match, new Zones 7–10 and side requests, Dedenne guards, Vinnie roster/Rank F, shard exchange and three Rogue Mega cases | [Thonky 10](https://www.thonky.com/pokemon-legends-z-a/main-mission-10-the-secrets-of-mega-evolution), [Serebii 10](https://www.serebii.net/legendsz-a/mainmissions/thesecretsofmegaevolution.shtml) | **TM051 Safeguard:** walkthrough describes a reward after Vinnie, but Serebii TM index places it at Magenta Sector 7; excluded pending in-game verification |
+
+**Source-use rule:** The guide writes these events in its own words, does not reproduce a source's prose, and routes readers to our own pages rather than sending them outside. Citations belong in this editorial register/credits.
+
+## Connected-guide integration
+
+**First pass complete in this branch:**
+
+- Every one of **42** main mission cards now offers sequential previous/next navigation, plus relevant maps, items, starters, Pokédex, Mable, side missions, Rogue Mega bosses, Royale, legends or DLC links.
+- The **side missions, maps, items, bosses, Pokédex, Mega Dimension, legends and berries** sections now include contextual links to their related topics and the relevant main-story checkpoint.
+- Mission deep links now reveal a mission even if an earlier search or category filter had hidden it; this only resets the search/filter when required.
+- The built `index.html` and corresponding editable `src/sections/*.html` were modified together. The original artwork, zone pins, standalone placeholders and Supabase are unchanged.
+
+**Source-integrity checks performed through GitHub:**
+
+- All 42 numbered mission articles remain in order with their progress markers.
+- All **203** side/EX mission entries and **232** saved Lumiose Pokédex cards remain present.
+- All 42 mission linkbars and 8 section linkbars are present in both source and compiled homepage.
+- All `index.html#view:anchor` targets in the new guide link system resolve to existing IDs.
+- JavaScript deep-link patch passed a local Node syntax check against the verified baseline application source.
+- Original static validator passed on the unchanged reconstruction baseline. **The modified branch still needs a full runtime/browser smoke test before merge or release.**
+
+## What remains incomplete
+
+- Story missions **11–42** need Canari/Ivor-level wording, route specifics, battle rosters, rewards and source review.
+- All 200 numbered side missions and EX1–EX3 need level/reward/route audits, with crosslinks from the main story and game systems.
+- Maps must distinguish street-level, roof, ladder, scaffold, Holovator, entrance and random-drop locations; approximate pins must remain labelled.
+- The Hyperspace Pokédex and 19 standalone routes are not fully recovered; Mable's Research replacement is separately staged in draft PR #1.
+- Supabase Atlas ratings/reports/interactions already exist in the Stream Bandit project. No database schema, RLS, public submissions, records, credentials or application connections were changed here.
+- Publishing and domain routing remain separate: no Render, no IONOS DNS edits, no changes to Stream Bandit main/TCG or the original `chatgpt.site` URL.
+
+**Editorial priority:** Continue Missions 11–20 next; preserve existing notes and prove corrections before considering any draft PR for publication.

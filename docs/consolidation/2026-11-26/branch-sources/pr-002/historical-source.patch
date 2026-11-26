@@ -1,0 +1,102 @@
+diff --git a/docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md b/docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md
+new file mode 100644
+index 0000000..4a0f655
+--- /dev/null
++++ b/docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md
+@@ -0,0 +1,57 @@
++# Brand ownership and Stream Bandit database architecture
++
++**Owner direction — 21 November 2026**  
++**Status:** Agreed brand hierarchy and proposed integration policy. **No database writes, credentials, production DNS, or original ChatGPT Site changes authorised by this document.**
++
++## Brand relationship — preserve in every future design
++
++- **Chatterfriends** — overarching label / parent brand.
++- **Stream Bandit** — a Chatterfriends product and entertainment/community/gaming platform.
++- **Lumiose Atlas** — Pokémon Legends: Z-A guide **within Stream Bandit**, built for players' enjoyment and game time.
++- Do **not** describe Stream Bandit as the parent of Chatterfriends, and do **not** present Lumiose Atlas as an unrelated company.
++- Preserve Lumiose Atlas's existing LA compass identity and substantive user-facing description. When a footer or acknowledgement is introduced, use an accurate attribution such as **“Lumiose Atlas — a Stream Bandit gaming guide, part of Chatterfriends.”** Avoid changing the visible logo or branding without reviewing the result.
++
++## Hosting and platform choices — user confirmed
++
++- **No Render hosting** for this guide or Stream Bandit. The previous Render-backed social platform was retired because the cost was unacceptable; do not reintroduce Render as a default dependency or deployment.
++- **Supabase is preferred** for the shared Stream Bandit data platform, using the existing project and isolated Atlas tables with appropriate RLS and grants. The owner's approximate budget preference is not a guaranteed current price.
++- Use the GitHub repository for version-controlled source; IONOS-managed DNS and a separately validated static host can present the guide under Chatterfriends/Stream Bandit without disturbing the main site.
++- Keep the name **Chatterfriends**; do not confuse it with the old name **Chatternet**.
++
++## Code and hosting: separate deployment, shared family
++
++- Editable guide source: `trevieisking/lumiose-atlas-pokemon-za` (independent repository so edits to the guide cannot accidentally modify the Stream Bandit main site or TCG).
++- Main platform: `trevieisking/stream-bandit`; its `CNAME` currently points to `chatterfriendsstreambandit.co.uk`.
++- Proposed future guide URL: `guide.chatterfriendsstreambandit.co.uk`; **not yet configured**. Use a dedicated subdomain without repointing the main Stream Bandit domain.
++- Preserve the old public ChatGPT Site URL and its existing audience while the rebuilt guide is under audit. Never claim an IONOS DNS change could take ownership of a `chatgpt.site` domain.
++
++## Shared Stream Bandit database — verified, read-only
++
++The existing **Stream Bandit** Supabase project (EU London region) includes these **public-schema Atlas-specific tables**:
++
++| Table | Existing purpose | Read-only observation |
++|---|---|---|
++| `atlas_interactions` | Page interactions and click/view tracking | Table exists; row-level security enabled |
++| `atlas_ratings` | Guide ratings (1–5) | Table exists; row-level security enabled |
++| `atlas_reports` | Player feedback and correction reports | Table exists; row-level security enabled |
++
++These facts were checked against the connected Supabase **metadata only** on 21 November 2026. No user-submitted record contents were read, and **no SQL mutations were made**. RLS being enabled does not by itself prove the policies are appropriate for public visitors.
++
++**Intended architecture:** the rebuilt Lumiose Atlas should use **the same existing Stream Bandit Supabase project**, with Atlas-specific tables and correctly scoped permissions; it should **not** create a parallel Supabase project or modify unrelated Stream Bandit, TCG, Code Labs or other product tables.
++
++## Mandatory safe integration gates
++
++1. Inspect existing Atlas column contracts, RLS policies, public grants and API access **read-only** before writing client code.
++2. Establish the existing public site’s ratings/form semantics, spam safeguards and displayed averages, without exposing message contents or PII.
++3. Use only a publishable/anon key in client code, never `service_role` or privileged keys. No secrets in GitHub.
++4. Preserve existing records. Never delete old ratings, reports or interactions to make a test pass; any data cleanup needs separate evidence and user approval.
++5. Keep separate Atlas table namespaces; avoid direct coupling to Stream Bandit authentication, TCG matches, rewards or creator functions unless explicitly designed and tested.
++6. Verify CORS, rate limiting, abuse handling, mobile rating display and form submission/visibility; test staging before a live connection.
++7. Do not apply migrations, change RLS or connect the public rebuilt site until the data flow and permissions are reviewed.
++8. Record exactly which guide deployment, GitHub commit and Supabase interface version have been tested before any public cutover.
++
++## Priority
++
++Make the guide **accurate for real playthroughs** (Canari/Ivor-level mission detail) and preserve the visitors of the existing site. Integration and branded URL follow once independent verification passes.
++
++**Source of these ownership instructions:** user statement in this conversation, 21 November 2026. Database/project evidence from read-only connected Supabase metadata; domain and repository evidence from connected GitHub.
+diff --git a/docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md b/docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md
+new file mode 100644
+index 0000000..a76fca3
+--- /dev/null
++++ b/docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md
+@@ -0,0 +1,33 @@
++# Hosting Lumiose Atlas through Stream Bandit + IONOS — staging plan
++
++**Status:** Design only. No IONOS DNS, GitHub Pages custom-domain settings, original ChatGPT Site, main Stream Bandit repository or Supabase settings have been changed.
++
++## Known facts
++
++**Brand ownership:** Chatterfriends is the overarching label; Stream Bandit is a Chatterfriends platform; Lumiose Atlas is a Stream Bandit gaming guide. The guide is intended to reuse **the existing Stream Bandit Supabase project**, not establish a separate database. This does not authorise modifying the connection, permissions or data. Full record: [`docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md`](../architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md).
++
++
++- Stream Bandit repository: `trevieisking/stream-bandit`; its `CNAME` file declares `chatterfriendsstreambandit.co.uk` for the existing home page. **Do not edit, rename, or repoint this root domain.**
++- Guide repository: `trevieisking/lumiose-atlas-pokemon-za`, using GitHub Pages from `main` at the repository root. Recovered static site is a reconstruction under accuracy audit.
++- Old ChatGPT Site: `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/#home`; this name is controlled by the ChatGPT Site platform, **not** by IONOS or GitHub. A separate DNS entry cannot take over this address.
++- Proposed distinct guide address (NOT active): `https://guide.chatterfriendsstreambandit.co.uk/`.
++- The original guide's Supabase ratings, reports and submissions are **not connected** to the GitHub reconstruction. Do not migrate or rewrite database records without independent schema/RLS review.
++
++## Safe configuration sequence — only after the guide is reviewed
++
++1. Ensure the guide homepage, 19 standalone routes, all mission links, images, maps, navigation and phone layout work independently; check `README.md`, `RECOVERY_STATUS.md` and the QA register.
++2. Confirm control of `chatterfriendsstreambandit.co.uk` in IONOS Domains & SSL, determine whether IONOS currently hosts its nameservers and whether the hostname `guide` is unused. **Do not edit `@`, `www`, wildcard, mail or Stream Bandit application records.**
++3. In the guide repository’s **Settings → Pages → Custom domain**, save `guide.chatterfriendsstreambandit.co.uk` *before* pointing DNS. GitHub's UI will create the guide repository `CNAME` file for branch-based publication.
++4. In the **domain's authoritative DNS provider** (IONOS if it manages nameservers), create a **single new CNAME**: hostname `guide`; target `trevieisking.github.io` (without scheme or `/lumiose-atlas-pokemon-za`). Never point this record at the Stream Bandit root. Do not overwrite an existing `guide` record without checking who uses it.
++5. Verify resolution and ownership, HTTPS availability, and that `https://guide.chatterfriendsstreambandit.co.uk/` serves the guide while `https://chatterfriendsstreambandit.co.uk/` still serves the original Stream Bandit homepage.
++6. Update the guide's Open Graph `og:image`, `og:url` and Twitter image URLs to the **validated canonical subdomain**; test the card at Meta Sharing Debugger. Current provisional sharing metadata points to the GitHub Pages preview and uses the saved 512×512 `atlas-logo.png` asset.
++7. Preserve the old `chatgpt.site` website while users still follow that URL. Existing posts and links cannot be silently moved by DNS; redirecting requires editable control of the original Site, and may not be possible with current access.
++8. Only publish the new subdomain broadly after all pages and integrations pass acceptance checks. The original site and main Stream Bandit domain must remain usable throughout.
++
++## References
++
++- GitHub Pages custom domain: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
++- IONOS subdomain CNAME instructions: https://www.ionos.com/help/domains/configuring-cname-records-for-subdomains/configuring-a-cname-record-for-a-subdomain/
++- Meta Sharing Debugger: https://developers.facebook.com/tools/debug/
++
++**Safety gate:** Do not deploy, change DNS, change the old site, or touch Supabase while work is under fact-check. Release decision should be evidence-based.

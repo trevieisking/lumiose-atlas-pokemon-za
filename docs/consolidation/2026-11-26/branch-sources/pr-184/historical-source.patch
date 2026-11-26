@@ -1,0 +1,4801 @@
+diff --git a/ATLAS_DUAL_SITE_FIX_LEDGER.md b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+index 774af1a..591b44e 100644
+--- a/ATLAS_DUAL_SITE_FIX_LEDGER.md
++++ b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+@@ -5,7 +5,7 @@
+ **Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
+ 
+ 
+-**Revision:** 86 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
++**Revision:** 87 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+ **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
+ 
+ **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
+@@ -867,3 +867,7 @@ Owner requires hundreds of item markers to appear as very small balls, not large
+ - **Scale validation:** test hundreds of eligible points using synthetic fixtures confined to tests (at least 364 distinct records; not a claim that all 264 current item records plus 100 Screws are fixed outdoor pickups). Test both collectible toggles in all four combinations, mixed layers, search, touch, keyboard and selection/overlap, pan/pinch/two-finger rotation/desktop controls/north reset, deep links and stable collection keys. Inspect actual phone/desktop screenshots at overview and zoom. No performance regression or obstruction of major location markers; exclude invalid coordinates and random content; prove production data contains no synthetic coordinates. Use existing QA and separate GitHub and Workspace verification gates.
+ 
+ Baseline inspection: `atlas-explorer.css` uses 40px existing markers and inverse-zoom sizing; `atlas-explorer.js` has separate layer visibility and search categories but no fixed item/Screw pin records; `items-data.js` records 264 original item entries, 100 stable Screw IDs and zero confirmed item/Screw pins. Preserve 146 approximate item leads, 70 route research leads, all existing map/progress assets, and AT-332's 12 uncalibrated source references. No runtime changes in this checkpoint; implementation and test evidence remain pending coordinate verification and G1–G5. Manifest revision 78; ledger revision 86.
++
++### AT-334 — Actual Workspace item-pin source recovery and candidate crosswalk (25 November 2026)
++
++Owner recalled original oversized Workspace item pins. Recovered actual v35/v37 Library source archives read-only; identical `map-items.json` bytes contain 146 unique old item IDs, city-image X/Y and height. Original 1920px JPG blob matches current preserved base map. Canonical parity check includes all 146 marker identities, zone, names, positions and height values against 155 saved GitHub occurrences (9 duplicates). [Audit](docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md) · [Structured research register](docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json). All 146 have candidate original catalogue matches: 111 exclusive single candidates, 9 shared single candidates, 24 multiple candidates, 2 separate Screw identities unresolved. No automatic progress-key joins. Cross-checked all 18 unique TM destination descriptions, identified unsafe old absolute-height classification (TM103 rooftop despite -10.6; TM027 ground despite 76.5). Two Gamer Guides TM source XY pairs are promising but insufficient to validate conversion. Serebii provenance lead not definitive. Reuse original archive data rather than repeat owner item surveys; retain AT-332 exact-coordinate and AT-333 compact-layer gates. No new exact native pickup pins, no runtime, progress, source-image or Workspace changes. Manifest revision 79; ledger revision 87.
+diff --git a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+index 685ce87..5a6222e 100644
+--- a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
++++ b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+@@ -1418,3 +1418,7 @@ Owner requires hundreds of item markers to appear as very small balls, not large
+ - **Scale validation:** test hundreds of eligible points using synthetic fixtures confined to tests (at least 364 distinct records; not a claim that all 264 current item records plus 100 Screws are fixed outdoor pickups). Test both collectible toggles in all four combinations, mixed layers, search, touch, keyboard and selection/overlap, pan/pinch/two-finger rotation/desktop controls/north reset, deep links and stable collection keys. Inspect actual phone/desktop screenshots at overview and zoom. No performance regression or obstruction of major location markers; exclude invalid coordinates and random content; prove production data contains no synthetic coordinates. Use existing QA and separate GitHub and Workspace verification gates.
+ 
+ Baseline inspection: `atlas-explorer.css` uses 40px existing markers and inverse-zoom sizing; `atlas-explorer.js` has separate layer visibility and search categories but no fixed item/Screw pin records; `items-data.js` records 264 original item entries, 100 stable Screw IDs and zero confirmed item/Screw pins. Preserve 146 approximate item leads, 70 route research leads, all existing map/progress assets, and AT-332's 12 uncalibrated source references. No runtime changes in this checkpoint; implementation and test evidence remain pending coordinate verification and G1–G5. Manifest revision 78; ledger revision 86.
++
++### AT-334 — Actual Workspace item-pin source recovery and candidate crosswalk (25 November 2026)
++
++Owner recalled original oversized Workspace item pins. Recovered actual v35/v37 Library source archives read-only; identical `map-items.json` bytes contain 146 unique old item IDs, city-image X/Y and height. Original 1920px JPG blob matches current preserved base map. Canonical parity check includes all 146 marker identities, zone, names, positions and height values against 155 saved GitHub occurrences (9 duplicates). [Audit](docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md) · [Structured research register](docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json). All 146 have candidate original catalogue matches: 111 exclusive single candidates, 9 shared single candidates, 24 multiple candidates, 2 separate Screw identities unresolved. No automatic progress-key joins. Cross-checked all 18 unique TM destination descriptions, identified unsafe old absolute-height classification (TM103 rooftop despite -10.6; TM027 ground despite 76.5). Two Gamer Guides TM source XY pairs are promising but insufficient to validate conversion. Serebii provenance lead not definitive. Reuse original archive data rather than repeat owner item surveys; retain AT-332 exact-coordinate and AT-333 compact-layer gates. No new exact native pickup pins, no runtime, progress, source-image or Workspace changes. Manifest revision 79; ledger revision 87.
+diff --git a/MAPS_UPGRADE_MANIFEST.json b/MAPS_UPGRADE_MANIFEST.json
+index 406b01c..570953c 100644
+--- a/MAPS_UPGRADE_MANIFEST.json
++++ b/MAPS_UPGRADE_MANIFEST.json
+@@ -16,7 +16,7 @@
+     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
+   },
+   "id": "ATLAS-MAPS-2026-11-21-V1",
+-  "revision": 78,
++  "revision": 79,
+   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
+   "created_at": "2026-11-21",
+   "status": "owner_approved_source_first_access_survey_in_progress",
+@@ -5276,5 +5276,28 @@
+     },
+     "runtime_changed": false,
+     "workspace": "open_pending_AT325_G5_and_AT297"
++  },
++  "at_334_workspace_item_pin_recovery": {
++    "id": "AT-334",
++    "status": "actual_original_archive_recovered_research_only",
++    "baseline_main_sha": "0a9557d2a014b645812a7c1c71b8e0b3444057ed",
++    "audit": "docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md",
++    "register": "docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json",
++    "counts": {
++      "recovered_legacy_markers": 146,
++      "source_data_parity_markers": 146,
++      "unique_tm_location_checks": 18,
++      "archived_screw_leads": 2,
++      "exclusive_single_candidate": 111,
++      "shared_single_candidate": 9,
++      "multiple_candidates": 24,
++      "unresolved_screw_id": 2,
++      "new_verified_native_pins": 0
++    },
++    "archive_v35_v37_map_items_identical": true,
++    "map_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
++    "unsafe_legacy_height_rule": true,
++    "source_coordinate_transform": null,
++    "workspace": "open_pending_AT325_G5_and_AT297"
+   }
+ }
+diff --git a/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md b/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md
+new file mode 100644
+index 0000000..0517909
+--- /dev/null
++++ b/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md
+@@ -0,0 +1,19 @@
++# AT-334 — Recover the actual old Workspace item pin data
++
++25 November 2026. The owner recalled that the Workspace guide previously displayed large Poké Ball markers. Actual v37 and original v35 source ZIPs were recovered from the owner's Library, read-only. Their original `map-items.json` bytes match (SHA-256 e76661e901bccd5fdac3eba577003429223f82f54767f956da023da316723fee). Both contain 146 named points with original ID, zone, normalized city-image X/Y, icon and numerical height. The archived native city JPG has the same Git blob ID as our preserved original 1920px image. This establishes the original rendering coordinate space, not the physical accuracy of each pickup. The GitHub source contains 155 occurrences and 146 distinct IDs. Reconstructed canonical tuples, including the recovered height values, match the independently computed archive checksum. The original archive and code are not copied to the public repo; retain only the existing marker evidence in the structured research register.
++
++## Candidate reconciliation
++
++All 146 archived names match at least one nonreward/non-hidden-outcome candidate in the same zone. 111 have an exclusive single candidate, nine share a single candidate with another old pin, 24 have several candidates, two are Colorful Screw leads requiring separate canonical 100-Screw reconciliation. 152 distinct ledger candidates overall; no automatic collection-key join. 264 item records include gifts/rewards/hidden outcomes and do not represent 264 fixed pins. Old data is not an exhaustive item catalogue. Treat every candidate as unverified until route, scene, identity and physical point evidence agrees.
++
++## Height and unique TM checks
++
++The old app inferred rooftop when height exceeded 40 and underground/lower when negative. This conflicts with actual published locations. TM103 is on a roof but its archived value is -10.6, while TM027 is on the central island with value 76.5. Keep every original height as raw evidence with unknown units and datum, never infer actual floor from that threshold. All 18 archived TM identities have matching unique name/zone checklist candidates and independently researched destination descriptions (the primary [move guide](https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html) plus other sources including [TM054 guide](https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/)). See the register for per-record notes and limits. No pixel or physical floor validation claimed. Existing two Screw leads (8715 and 8808) both match only the single zone-list screw entry, so do not collapse them or assign canonical numbers.
++
++## Source coordinate pilot
++
++Two public Gamer Guides records (TM079 Hurricane, [source](https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/hurricane), XY 14609/6645; TM054 Draco Meteor, [source](https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/draco-meteor), XY 9668/9723) offer same-item comparison candidates. Other pages failed to expose a coordinate or were inaccessible. Do not fit a citywide transform from two approximate pairs. Source map layers and exact marker IDs remain unconfirmed; preserve old AT-332 references. Serebii is a strong original-data provenance lead because the archive uses its item icon references and the [Wild Zone 1 table](https://www.serebii.net/pokearth/lumiosecity/wildzone1.shtml) matches the original catalogue; its [interactive city map](https://www.serebii.net/pokearth/lumiosecity/) has item and Screw layers. Raw data download was unavailable, and the exact original extraction method remains unproven. No new third-party bulk import.
++
++## Release status
++
++Recovery research only. No map UI change, no fresh permanent marker, no new or changed player collection key, no database service change, no Workspace publication. AT-333 compact independent layers remain required for verified fixed pickups. Use the old archive and independently verified evidence first, without asking the owner to repeat every item in-game. [Research register](ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json).
+diff --git a/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json b/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json
+new file mode 100644
+index 0000000..023657e
+--- /dev/null
++++ b/docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json
+@@ -0,0 +1,4695 @@
++{
++  "id": "AT-334",
++  "date": "2026-11-25",
++  "status": "actual_original_archive_recovered_research_only",
++  "baseline_main_sha": "0a9557d2a014b645812a7c1c71b8e0b3444057ed",
++  "archive": {
++    "v37_filename": "lumiose-atlas-workspace-v37-source.zip",
++    "v37_sha256": "1a35949ff538dc42287a0ba9a32037023fa0362ff849857c16ed0c66b7aa64f7",
++    "v35_filename": "lumiose-atlas-original-site-v35-source.zip",
++    "v35_sha256": "cedaaa087f820f43ffea40b2ef73f7e87b4b005c12359878b63ae1bea5187bc1",
++    "path": "dist/map-items.json",
++    "v35_path": "lumiose-atlas-original-site-v35/dist/map-items.json",
++    "source_sha256": "e76661e901bccd5fdac3eba577003429223f82f54767f956da023da316723fee",
++    "identical_v35_v37_bytes": true,
++    "source_rows": 146,
++    "archived_map_path": "dist/maps/lumiose-game-map.jpg",
++    "map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
++    "map_git_blob": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
++    "map_size": [
++      1920,
++      1920
++    ],
++    "canonical_tuple_sha256": "754d6fd9085984e357be8323ce5ac3fc1cf32c82edced2396f9b8f608b9222ec",
++    "canonical_tuple_fnv1a32": "31f5a07e",
++    "canonical_format": "sort by integer ID; newline-delimited id|zone|name|round(x*100)|round(y*100)|round(height*10); no final newline",
++    "archive_scope": "only recovered existing public marker identity/coordinates and height values; original source ZIP, third-party icon URLs, hosting config, credentials, player data and other code not republished"
++  },
++  "parity": {
++    "github_source": "src/sections/walkthrough.html",
++    "github_blob": "d7d2a9105a0ea7b647799aa3f84e81c7f35c1084",
++    "marker_occurrences": 155,
++    "unique_markers": 146,
++    "duplicate_occurrences": 9,
++    "canonical_tuple_check": "passed against original archive checksum including heights",
++    "candidate_counts": {
++      "exclusive_single_candidate": 111,
++      "shared_single_candidate": 9,
++      "multiple_candidates": 24,
++      "screw_separate_id_unresolved": 2
++    },
++    "records_with_any_candidate": 146,
++    "distinct_candidate_ledger_ids": 152,
++    "confirmed_canonical_joins": 0
++  },
++  "source_provenance": {
++    "all_original_icon_urls_host": "www.serebii.net",
++    "zone_items_example": "Wild Zone 1 list matches Serebii item names/methods/quantities",
++    "serebii_public_map": "https://www.serebii.net/pokearth/lumiosecity/",
++    "serebii_zone_sample": "https://www.serebii.net/pokearth/lumiosecity/wildzone1.shtml",
++    "finding": "Serebii is strong provenance lead; exact original map-coordinate extraction method, raw data IDs and height units not established. Public rendered map category list accessible; raw page download unavailable. Do not attribute full placement dataset with certainty or copy third-party database."
++  },
++  "height_audit": {
++    "legacy_rule": "height > 40 rooftop, height < 0 lower/underground, otherwise street (original dist/app.js)",
++    "range": [
++      -61.6,
++      107.8
++    ],
++    "bucket_counts": {
++      "negative": 16,
++      "zero_to_40": 26,
++      "above_40": 104
++    },
++    "status": "unsafe_absolute_floor_heuristic_do_not_reuse",
++    "examples": [
++      {
++        "marker": 8021,
++        "item": "TM062",
++        "height": -0.4,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8227,
++        "item": "TM103",
++        "height": -10.6,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8248,
++        "item": "TM027",
++        "height": 76.5,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8263,
++        "item": "TM013",
++        "height": 78.9,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8358,
++        "item": "TM040",
++        "height": 22.8,
++        "old_label": "ground",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8429,
++        "item": "TM034",
++        "height": -17.9,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8462,
++        "item": "TM076",
++        "height": 75.7,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8469,
++        "item": "TM079",
++        "height": 55.1,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8478,
++        "item": "TM052",
++        "height": -7.9,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8664,
++        "item": "TM063",
++        "height": 78.4,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8722,
++        "item": "TM039",
++        "height": 75.8,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8774,
++        "item": "TM018",
++        "height": -9.4,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 8921,
++        "item": "TM092",
++        "height": 75.2,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 8984,
++        "item": "TM081",
++        "height": 75.8,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 9038,
++        "item": "TM072",
++        "height": 75.9,
++        "old_label": "roof",
++        "reported_level": "ground"
++      },
++      {
++        "marker": 9127,
++        "item": "TM022",
++        "height": -27.4,
++        "old_label": "lower",
++        "reported_level": "roof"
++      },
++      {
++        "marker": 9145,
++        "item": "TM054",
++        "height": 74.7,
++        "old_label": "roof",
++        "reported_level": "ground"
++      }
++    ],
++    "warning": "These are conflicts with published location descriptions, not calibrated world-height values. No new global height formula or absolute floor inference."
++  },
++  "tm_coordinate_pilot": {
++    "source_pairs": [
++      {
++        "legacy_marker": 8469,
++        "tm": "TM079",
++        "source_xy": [
++          14609,
++          6645
++        ],
++        "source_display_id": 236949,
++        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/hurricane",
++        "source_marker_id": null
++      },
++      {
++        "legacy_marker": 9145,
++        "tm": "TM054",
++        "source_xy": [
++          9668,
++          9723
++        ],
++        "source_display_id": 236989,
++        "source_url": "https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/draco-meteor",
++        "source_marker_id": null
++      }
++    ],
++    "same_unique_item_text": true,
++    "eligible_exact_calibration_controls": 0,
++    "reason": "Two source-position pairs and approximate archived pin positions are insufficient for independently validated affine registration. Six other opened TM pages lacked coordinates or returned cache misses. Need verified permanent landmarks/holdouts, not a fit to unverified positions.",
++    "transform": null
++  },
++  "records": [
++    {
++      "legacy_marker_id": 8021,
++      "zone": 17,
++      "name": "TM062",
++      "archived_city_percent": [
++        76.43,
++        76.12
++      ],
++      "archived_height_value": -0.4,
++      "archived_map_pixel_xy": [
++        1467.456,
++        1461.504
++      ],
++      "candidate_records": [
++        {
++          "id": "17-6",
++          "number": "17-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Flamethrower",
++        "reported_level": "roof",
++        "directions": "Southeast roof; near Alpha Mawile.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Part_18"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8026,
++      "zone": 17,
++      "name": "Potion",
++      "archived_city_percent": [
++        75.82,
++        77.27
++      ],
++      "archived_height_value": 76.4,
++      "archived_map_pixel_xy": [
++        1455.744,
++        1483.584
++      ],
++      "candidate_records": [
++        {
++          "id": "17-5",
++          "number": "17-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8028,
++      "zone": 17,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        74.29,
++        73.66
++      ],
++      "archived_height_value": 76.2,
++      "archived_map_pixel_xy": [
++        1426.368,
++        1414.272
++      ],
++      "candidate_records": [
++        {
++          "id": "17-2",
++          "number": "17-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8029,
++      "zone": 17,
++      "name": "Big Nugget",
++      "archived_city_percent": [
++        75.88,
++        76.94
++      ],
++      "archived_height_value": -0.7,
++      "archived_map_pixel_xy": [
++        1456.896,
++        1477.248
++      ],
++      "candidate_records": [
++        {
++          "id": "17-4",
++          "number": "17-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8088,
++      "zone": 17,
++      "name": "Max Revive",
++      "archived_city_percent": [
++        75.07,
++        73.96
++      ],
++      "archived_height_value": 55.8,
++      "archived_map_pixel_xy": [
++        1441.344,
++        1420.032
++      ],
++      "candidate_records": [
++        {
++          "id": "17-3",
++          "number": "17-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8110,
++      "zone": 17,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        79.03,
++        75.38
++      ],
++      "archived_height_value": 55.2,
++      "archived_map_pixel_xy": [
++        1517.376,
++        1447.296
++      ],
++      "candidate_records": [
++        {
++          "id": "17-1",
++          "number": "17-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8111,
++      "zone": 17,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        77.18,
++        73.67
++      ],
++      "archived_height_value": 55.1,
++      "archived_map_pixel_xy": [
++        1481.856,
++        1414.464
++      ],
++      "candidate_records": [
++        {
++          "id": "17-2",
++          "number": "17-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8112,
++      "zone": 17,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        75.8,
++        79.08
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        1455.36,
++        1518.336
++      ],
++      "candidate_records": [
++        {
++          "id": "17-0",
++          "number": "17-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8122,
++      "zone": 1,
++      "name": "Potion",
++      "archived_city_percent": [
++        59,
++        89.38
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        1132.8,
++        1716.096
++      ],
++      "candidate_records": [
++        {
++          "id": "1-9",
++          "number": "01-10",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8151,
++      "zone": 1,
++      "name": "Poke Ball",
++      "archived_city_percent": [
++        61.82,
++        90.31
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1186.944,
++        1733.952
++      ],
++      "candidate_records": [
++        {
++          "id": "1-3",
++          "number": "01-04",
++          "kind": "landmark"
++        },
++        {
++          "id": "1-6",
++          "number": "01-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8152,
++      "zone": 1,
++      "name": "Potion",
++      "archived_city_percent": [
++        56.1,
++        89.12
++      ],
++      "archived_height_value": 72.2,
++      "archived_map_pixel_xy": [
++        1077.12,
++        1711.104
++      ],
++      "candidate_records": [
++        {
++          "id": "1-9",
++          "number": "01-10",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8174,
++      "zone": 1,
++      "name": "Poke Ball",
++      "archived_city_percent": [
++        58.95,
++        87.53
++      ],
++      "archived_height_value": 12.4,
++      "archived_map_pixel_xy": [
++        1131.84,
++        1680.576
++      ],
++      "candidate_records": [
++        {
++          "id": "1-3",
++          "number": "01-04",
++          "kind": "landmark"
++        },
++        {
++          "id": "1-6",
++          "number": "01-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8208,
++      "zone": 1,
++      "name": "Poke Ball",
++      "archived_city_percent": [
++        55.12,
++        94.21
++      ],
++      "archived_height_value": 75.2,
++      "archived_map_pixel_xy": [
++        1058.304,
++        1808.832
++      ],
++      "candidate_records": [
++        {
++          "id": "1-3",
++          "number": "01-04",
++          "kind": "landmark"
++        },
++        {
++          "id": "1-6",
++          "number": "01-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8224,
++      "zone": 1,
++      "name": "Revive",
++      "archived_city_percent": [
++        57.58,
++        90.63
++      ],
++      "archived_height_value": -10.6,
++      "archived_map_pixel_xy": [
++        1105.536,
++        1740.096
++      ],
++      "candidate_records": [
++        {
++          "id": "1-5",
++          "number": "01-06",
++          "kind": "landmark"
++        },
++        {
++          "id": "1-7",
++          "number": "01-08",
++          "kind": "zone_only"
++        },
++        {
++          "id": "1-8",
++          "number": "01-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8227,
++      "zone": 1,
++      "name": "TM103",
++      "archived_city_percent": [
++        58.63,
++        88.99
++      ],
++      "archived_height_value": -10.6,
++      "archived_map_pixel_xy": [
++        1125.696,
++        1708.608
++      ],
++      "candidate_records": [
++        {
++          "id": "1-10",
++          "number": "01-11",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Work Up",
++        "reported_level": "roof",
++        "directions": "Western roof via pond-side ladder; clear rocks.",
++        "prerequisite": "Rock Smash",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.pockettactics.com/pokemon-legends-z-a/wild-zone-1"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8240,
++      "zone": 1,
++      "name": "Revive",
++      "archived_city_percent": [
++        54.52,
++        92.23
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1046.784,
++        1770.816
++      ],
++      "candidate_records": [
++        {
++          "id": "1-5",
++          "number": "01-06",
++          "kind": "landmark"
++        },
++        {
++          "id": "1-7",
++          "number": "01-08",
++          "kind": "zone_only"
++        },
++        {
++          "id": "1-8",
++          "number": "01-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8248,
++      "zone": 2,
++      "name": "TM027",
++      "archived_city_percent": [
++        63.41,
++        66.89
++      ],
++      "archived_height_value": 76.5,
++      "archived_map_pixel_xy": [
++        1217.472,
++        1284.288
++      ],
++      "candidate_records": [
++        {
++          "id": "2-0",
++          "number": "02-01",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Swift",
++        "reported_level": "ground",
++        "directions": "Central island, beside lake.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://allthings.how/pokemon-legends-z-a-wild-zone-2-every-spawn-and-where-to-find-them/"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8249,
++      "zone": 2,
++      "name": "Potion",
++      "archived_city_percent": [
++        65.91,
++        64.51
++      ],
++      "archived_height_value": 76.1,
++      "archived_map_pixel_xy": [
++        1265.472,
++        1238.592
++      ],
++      "candidate_records": [
++        {
++          "id": "2-3",
++          "number": "02-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8257,
++      "zone": 2,
++      "name": "Heal Ball",
++      "archived_city_percent": [
++        58.55,
++        64.91
++      ],
++      "archived_height_value": 76.5,
++      "archived_map_pixel_xy": [
++        1124.16,
++        1246.272
++      ],
++      "candidate_records": [
++        {
++          "id": "2-1",
++          "number": "02-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8258,
++      "zone": 2,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        64.71,
++        69.8
++      ],
++      "archived_height_value": 76.5,
++      "archived_map_pixel_xy": [
++        1242.432,
++        1340.16
++      ],
++      "candidate_records": [
++        {
++          "id": "2-5",
++          "number": "02-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8262,
++      "zone": 12,
++      "name": "Paralyze Heal",
++      "archived_city_percent": [
++        42.65,
++        84.02
++      ],
++      "archived_height_value": 95.8,
++      "archived_map_pixel_xy": [
++        818.88,
++        1613.184
++      ],
++      "candidate_records": [
++        {
++          "id": "12-4",
++          "number": "12-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8263,
++      "zone": 12,
++      "name": "TM013",
++      "archived_city_percent": [
++        42.04,
++        78.41
++      ],
++      "archived_height_value": 78.9,
++      "archived_map_pixel_xy": [
++        807.168,
++        1505.472
++      ],
++      "candidate_records": [
++        {
++          "id": "12-10",
++          "number": "12-11",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Ice Beam",
++        "reported_level": "ground",
++        "directions": "Battle court; clear rocks.",
++        "prerequisite": "Rock Smash",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8312,
++      "zone": 12,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        42.95,
++        79.32
++      ],
++      "archived_height_value": 78.8,
++      "archived_map_pixel_xy": [
++        824.64,
++        1522.944
++      ],
++      "candidate_records": [
++        {
++          "id": "12-9",
++          "number": "12-10",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8344,
++      "zone": 12,
++      "name": "Repeat Ball",
++      "archived_city_percent": [
++        43.94,
++        82.52
++      ],
++      "archived_height_value": 81.6,
++      "archived_map_pixel_xy": [
++        843.648,
++        1584.384
++      ],
++      "candidate_records": [
++        {
++          "id": "12-5",
++          "number": "12-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8345,
++      "zone": 12,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        46.84,
++        81.22
++      ],
++      "archived_height_value": 81.6,
++      "archived_map_pixel_xy": [
++        899.328,
++        1559.424
++      ],
++      "candidate_records": [
++        {
++          "id": "12-1",
++          "number": "12-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8346,
++      "zone": 12,
++      "name": "Dive Ball",
++      "archived_city_percent": [
++        45.75,
++        77.62
++      ],
++      "archived_height_value": 81.6,
++      "archived_map_pixel_xy": [
++        878.4,
++        1490.304
++      ],
++      "candidate_records": [
++        {
++          "id": "12-0",
++          "number": "12-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8349,
++      "zone": 12,
++      "name": "Nest Ball",
++      "archived_city_percent": [
++        40.43,
++        80.79
++      ],
++      "archived_height_value": 81.5,
++      "archived_map_pixel_xy": [
++        776.256,
++        1551.168
++      ],
++      "candidate_records": [
++        {
++          "id": "12-8",
++          "number": "12-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8350,
++      "zone": 12,
++      "name": "Ice Stone",
++      "archived_city_percent": [
++        40.65,
++        82.08
++      ],
++      "archived_height_value": 96.1,
++      "archived_map_pixel_xy": [
++        780.48,
++        1575.936
++      ],
++      "candidate_records": [
++        {
++          "id": "12-6",
++          "number": "12-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8354,
++      "zone": 10,
++      "name": "Revive",
++      "archived_city_percent": [
++        16.75,
++        62.36
++      ],
++      "archived_height_value": 0.4,
++      "archived_map_pixel_xy": [
++        321.6,
++        1197.312
++      ],
++      "candidate_records": [
++        {
++          "id": "10-3",
++          "number": "10-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8355,
++      "zone": 10,
++      "name": "Nugget",
++      "archived_city_percent": [
++        15.01,
++        67.52
++      ],
++      "archived_height_value": -8.8,
++      "archived_map_pixel_xy": [
++        288.192,
++        1296.384
++      ],
++      "candidate_records": [
++        {
++          "id": "10-9",
++          "number": "10-10",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8356,
++      "zone": 10,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        11.7,
++        66.84
++      ],
++      "archived_height_value": 0.4,
++      "archived_map_pixel_xy": [
++        224.64,
++        1283.328
++      ],
++      "candidate_records": [
++        {
++          "id": "10-0",
++          "number": "10-01",
++          "kind": "zone_only"
++        },
++        {
++          "id": "10-11",
++          "number": "10-12",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8358,
++      "zone": 5,
++      "name": "TM040",
++      "archived_city_percent": [
++        41.16,
++        64.07
++      ],
++      "archived_height_value": 22.8,
++      "archived_map_pixel_xy": [
++        790.272,
++        1230.144
++      ],
++      "candidate_records": [
++        {
++          "id": "5-7",
++          "number": "05-08",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Bullet Seed",
++        "reported_level": "roof",
++        "directions": "Eastern complex southwest roof; canal approach.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8360,
++      "zone": 5,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        38.32,
++        56.92
++      ],
++      "archived_height_value": 74,
++      "archived_map_pixel_xy": [
++        735.744,
++        1092.864
++      ],
++      "candidate_records": [
++        {
++          "id": "5-21",
++          "number": "05-22",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-22",
++          "number": "05-23",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8361,
++      "zone": 5,
++      "name": "Revive",
++      "archived_city_percent": [
++        38.61,
++        61.18
++      ],
++      "archived_height_value": 70.5,
++      "archived_map_pixel_xy": [
++        741.312,
++        1174.656
++      ],
++      "candidate_records": [
++        {
++          "id": "5-3",
++          "number": "05-04",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-4",
++          "number": "05-05",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-16",
++          "number": "05-17",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-20",
++          "number": "05-21",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8362,
++      "zone": 5,
++      "name": "Luxury Ball",
++      "archived_city_percent": [
++        43.18,
++        58.95
++      ],
++      "archived_height_value": 107.8,
++      "archived_map_pixel_xy": [
++        829.056,
++        1131.84
++      ],
++      "candidate_records": [
++        {
++          "id": "5-15",
++          "number": "05-16",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8364,
++      "zone": 5,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        43.59,
++        61.9
++      ],
++      "archived_height_value": 32,
++      "archived_map_pixel_xy": [
++        836.928,
++        1188.48
++      ],
++      "candidate_records": [
++        {
++          "id": "5-9",
++          "number": "05-10",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-17",
++          "number": "05-18",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-19",
++          "number": "05-20",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8380,
++      "zone": 10,
++      "name": "Hyper Potion",
++      "archived_city_percent": [
++        14.45,
++        69.02
++      ],
++      "archived_height_value": 73.8,
++      "archived_map_pixel_xy": [
++        277.44,
++        1325.184
++      ],
++      "candidate_records": [
++        {
++          "id": "10-4",
++          "number": "10-05",
++          "kind": "zone_only"
++        },
++        {
++          "id": "10-6",
++          "number": "10-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8387,
++      "zone": 10,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        14.35,
++        62.44
++      ],
++      "archived_height_value": 76,
++      "archived_map_pixel_xy": [
++        275.52,
++        1198.848
++      ],
++      "candidate_records": [
++        {
++          "id": "10-2",
++          "number": "10-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8429,
++      "zone": 10,
++      "name": "TM034",
++      "archived_city_percent": [
++        16.52,
++        65.91
++      ],
++      "archived_height_value": -17.9,
++      "archived_map_pixel_xy": [
++        317.184,
++        1265.472
++      ],
++      "candidate_records": [
++        {
++          "id": "10-7",
++          "number": "10-08",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Night Slash",
++        "reported_level": "roof",
++        "directions": "Central rooftop; remove obstacle.",
++        "prerequisite": "Confusion",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8431,
++      "zone": 5,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        39,
++        56.88
++      ],
++      "archived_height_value": -0.8,
++      "archived_map_pixel_xy": [
++        748.8,
++        1092.096
++      ],
++      "candidate_records": [
++        {
++          "id": "5-21",
++          "number": "05-22",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-22",
++          "number": "05-23",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8432,
++      "zone": 5,
++      "name": "Revive",
++      "archived_city_percent": [
++        42.3,
++        55.02
++      ],
++      "archived_height_value": 73.9,
++      "archived_map_pixel_xy": [
++        812.16,
++        1056.384
++      ],
++      "candidate_records": [
++        {
++          "id": "5-3",
++          "number": "05-04",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-4",
++          "number": "05-05",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-16",
++          "number": "05-17",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-20",
++          "number": "05-21",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8433,
++      "zone": 5,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        41.46,
++        57.23
++      ],
++      "archived_height_value": -17.9,
++      "archived_map_pixel_xy": [
++        796.032,
++        1098.816
++      ],
++      "candidate_records": [
++        {
++          "id": "5-9",
++          "number": "05-10",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-17",
++          "number": "05-18",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-19",
++          "number": "05-20",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8434,
++      "zone": 5,
++      "name": "Leaf Stone",
++      "archived_city_percent": [
++        41.19,
++        58.41
++      ],
++      "archived_height_value": 8.5,
++      "archived_map_pixel_xy": [
++        790.848,
++        1121.472
++      ],
++      "candidate_records": [
++        {
++          "id": "5-18",
++          "number": "05-19",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8435,
++      "zone": 5,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        39.99,
++        58.78
++      ],
++      "archived_height_value": 71,
++      "archived_map_pixel_xy": [
++        767.808,
++        1128.576
++      ],
++      "candidate_records": [
++        {
++          "id": "5-9",
++          "number": "05-10",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-17",
++          "number": "05-18",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-19",
++          "number": "05-20",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8436,
++      "zone": 5,
++      "name": "Zinc",
++      "archived_city_percent": [
++        43.11,
++        63.58
++      ],
++      "archived_height_value": 95.9,
++      "archived_map_pixel_xy": [
++        827.712,
++        1220.736
++      ],
++      "candidate_records": [
++        {
++          "id": "5-8",
++          "number": "05-09",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8438,
++      "zone": 5,
++      "name": "Paralyze Heal",
++      "archived_city_percent": [
++        45.9,
++        58.69
++      ],
++      "archived_height_value": 76.2,
++      "archived_map_pixel_xy": [
++        881.28,
++        1126.848
++      ],
++      "candidate_records": [
++        {
++          "id": "5-1",
++          "number": "05-02",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-13",
++          "number": "05-14",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8454,
++      "zone": 10,
++      "name": "Dive Ball",
++      "archived_city_percent": [
++        15.71,
++        66.55
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        301.632,
++        1277.76
++      ],
++      "candidate_records": [
++        {
++          "id": "10-8",
++          "number": "10-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8456,
++      "zone": 10,
++      "name": "Quick Ball",
++      "archived_city_percent": [
++        13.63,
++        65.01
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        261.696,
++        1248.192
++      ],
++      "candidate_records": [
++        {
++          "id": "10-1",
++          "number": "10-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8458,
++      "zone": 5,
++      "name": "Timer Ball",
++      "archived_city_percent": [
++        44.33,
++        58.06
++      ],
++      "archived_height_value": 60.6,
++      "archived_map_pixel_xy": [
++        851.136,
++        1114.752
++      ],
++      "candidate_records": [
++        {
++          "id": "5-11",
++          "number": "05-12",
++          "kind": "sector_area"
++        },
++        {
++          "id": "5-14",
++          "number": "05-15",
++          "kind": "landmark"
++        },
++        {
++          "id": "5-24",
++          "number": "05-25",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8459,
++      "zone": 5,
++      "name": "Max Revive",
++      "archived_city_percent": [
++        46.03,
++        59.33
++      ],
++      "archived_height_value": 93.7,
++      "archived_map_pixel_xy": [
++        883.776,
++        1139.136
++      ],
++      "candidate_records": [
++        {
++          "id": "5-12",
++          "number": "05-13",
++          "kind": "sector_area"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8460,
++      "zone": 16,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        33.35,
++        66.34
++      ],
++      "archived_height_value": 76.8,
++      "archived_map_pixel_xy": [
++        640.32,
++        1273.728
++      ],
++      "candidate_records": [
++        {
++          "id": "16-8",
++          "number": "16-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8461,
++      "zone": 16,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        38.34,
++        70.73
++      ],
++      "archived_height_value": 78.2,
++      "archived_map_pixel_xy": [
++        736.128,
++        1358.016
++      ],
++      "candidate_records": [
++        {
++          "id": "16-3",
++          "number": "16-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8462,
++      "zone": 16,
++      "name": "TM076",
++      "archived_city_percent": [
++        38.62,
++        64.38
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        741.504,
++        1236.096
++      ],
++      "candidate_records": [
++        {
++          "id": "16-1",
++          "number": "16-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Liquidation",
++        "reported_level": "ground",
++        "directions": "North grassy perimeter.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.gamespot.com/gallery/pokemon-legends-za-tm-technical-machine-locations/2900-7146/"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8463,
++      "zone": 16,
++      "name": "Quick Ball",
++      "archived_city_percent": [
++        37.19,
++        68.97
++      ],
++      "archived_height_value": 82.3,
++      "archived_map_pixel_xy": [
++        714.048,
++        1324.224
++      ],
++      "candidate_records": [
++        {
++          "id": "16-4",
++          "number": "16-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8464,
++      "zone": 16,
++      "name": "Luxury Ball",
++      "archived_city_percent": [
++        39.25,
++        68.21
++      ],
++      "archived_height_value": 82.3,
++      "archived_map_pixel_xy": [
++        753.6,
++        1309.632
++      ],
++      "candidate_records": [
++        {
++          "id": "16-2",
++          "number": "16-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8465,
++      "zone": 16,
++      "name": "Big Pearl",
++      "archived_city_percent": [
++        36.98,
++        65.72
++      ],
++      "archived_height_value": 82.3,
++      "archived_map_pixel_xy": [
++        710.016,
++        1261.824
++      ],
++      "candidate_records": [
++        {
++          "id": "16-7",
++          "number": "16-08",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8466,
++      "zone": 16,
++      "name": "Heal Ball",
++      "archived_city_percent": [
++        35.38,
++        67.28
++      ],
++      "archived_height_value": 82.1,
++      "archived_map_pixel_xy": [
++        679.296,
++        1291.776
++      ],
++      "candidate_records": [
++        {
++          "id": "16-6",
++          "number": "16-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8467,
++      "zone": 16,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        36.85,
++        67.72
++      ],
++      "archived_height_value": 81.9,
++      "archived_map_pixel_xy": [
++        707.52,
++        1300.224
++      ],
++      "candidate_records": [
++        {
++          "id": "16-5",
++          "number": "16-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8469,
++      "zone": 19,
++      "name": "TM079",
++      "archived_city_percent": [
++        79.44,
++        28.13
++      ],
++      "archived_height_value": 55.1,
++      "archived_map_pixel_xy": [
++        1525.248,
++        540.096
++      ],
++      "candidate_records": [
++        {
++          "id": "19-8",
++          "number": "19-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Hurricane",
++        "reported_level": "ground",
++        "directions": "North path between hedges.",
++        "prerequisite": "Ember",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/hurricane"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8478,
++      "zone": 15,
++      "name": "TM052",
++      "archived_city_percent": [
++        78.04,
++        18.9
++      ],
++      "archived_height_value": -7.9,
++      "archived_map_pixel_xy": [
++        1498.368,
++        362.88
++      ],
++      "candidate_records": [
++        {
++          "id": "15-4",
++          "number": "15-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Earth Power",
++        "reported_level": "roof",
++        "directions": "Café Ultimo roof.",
++        "prerequisite": "Roto-Glide; check Side Mission 80 access",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.rpgsite.net/guide/18734-pokemon-legends-z-a-tm-list-where-to-find-them"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8495,
++      "zone": 19,
++      "name": "Super Potion",
++      "archived_city_percent": [
++        79.4,
++        34.88
++      ],
++      "archived_height_value": 28.6,
++      "archived_map_pixel_xy": [
++        1524.48,
++        669.696
++      ],
++      "candidate_records": [
++        {
++          "id": "19-7",
++          "number": "19-08",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8539,
++      "zone": 19,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        80.56,
++        28.87
++      ],
++      "archived_height_value": 51.7,
++      "archived_map_pixel_xy": [
++        1546.752,
++        554.304
++      ],
++      "candidate_records": [
++        {
++          "id": "19-1",
++          "number": "19-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8540,
++      "zone": 19,
++      "name": "Nugget",
++      "archived_city_percent": [
++        82.54,
++        29.86
++      ],
++      "archived_height_value": 51.4,
++      "archived_map_pixel_xy": [
++        1584.768,
++        573.312
++      ],
++      "candidate_records": [
++        {
++          "id": "19-2",
++          "number": "19-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8543,
++      "zone": 19,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        77.36,
++        29.97
++      ],
++      "archived_height_value": 52.5,
++      "archived_map_pixel_xy": [
++        1485.312,
++        575.424
++      ],
++      "candidate_records": [
++        {
++          "id": "19-0",
++          "number": "19-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8574,
++      "zone": 15,
++      "name": "Nugget",
++      "archived_city_percent": [
++        80.62,
++        18.06
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1547.904,
++        346.752
++      ],
++      "candidate_records": [
++        {
++          "id": "15-1",
++          "number": "15-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8576,
++      "zone": 15,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        77.99,
++        16.89
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        1497.408,
++        324.288
++      ],
++      "candidate_records": [
++        {
++          "id": "15-0",
++          "number": "15-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8578,
++      "zone": 15,
++      "name": "Timer Ball",
++      "archived_city_percent": [
++        77.92,
++        20.01
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1496.064,
++        384.192
++      ],
++      "candidate_records": [
++        {
++          "id": "15-3",
++          "number": "15-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8579,
++      "zone": 15,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        83.32,
++        21.94
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1599.744,
++        421.248
++      ],
++      "candidate_records": [
++        {
++          "id": "15-6",
++          "number": "15-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8580,
++      "zone": 19,
++      "name": "Quick Ball",
++      "archived_city_percent": [
++        82.98,
++        32.51
++      ],
++      "archived_height_value": 39.9,
++      "archived_map_pixel_xy": [
++        1593.216,
++        624.192
++      ],
++      "candidate_records": [
++        {
++          "id": "19-3",
++          "number": "19-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8581,
++      "zone": 19,
++      "name": "Luxury Ball",
++      "archived_city_percent": [
++        78.32,
++        33.04
++      ],
++      "archived_height_value": 47.1,
++      "archived_map_pixel_xy": [
++        1503.744,
++        634.368
++      ],
++      "candidate_records": [
++        {
++          "id": "19-5",
++          "number": "19-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8582,
++      "zone": 19,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        81,
++        35.35
++      ],
++      "archived_height_value": 36,
++      "archived_map_pixel_xy": [
++        1555.2,
++        678.72
++      ],
++      "candidate_records": [
++        {
++          "id": "19-6",
++          "number": "19-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8583,
++      "zone": 19,
++      "name": "Repeat Ball",
++      "archived_city_percent": [
++        81.93,
++        31.69
++      ],
++      "archived_height_value": 35.9,
++      "archived_map_pixel_xy": [
++        1573.056,
++        608.448
++      ],
++      "candidate_records": [
++        {
++          "id": "19-4",
++          "number": "19-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8593,
++      "zone": 11,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        79.5,
++        62.68
++      ],
++      "archived_height_value": 81.6,
++      "archived_map_pixel_xy": [
++        1526.4,
++        1203.456
++      ],
++      "candidate_records": [
++        {
++          "id": "11-4",
++          "number": "11-05",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8598,
++      "zone": 6,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        92.41,
++        53.47
++      ],
++      "archived_height_value": -17.6,
++      "archived_map_pixel_xy": [
++        1774.272,
++        1026.624
++      ],
++      "candidate_records": [
++        {
++          "id": "6-2",
++          "number": "06-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8623,
++      "zone": 6,
++      "name": "Super Potion",
++      "archived_city_percent": [
++        87.7,
++        54.87
++      ],
++      "archived_height_value": 30.6,
++      "archived_map_pixel_xy": [
++        1683.84,
++        1053.504
++      ],
++      "candidate_records": [
++        {
++          "id": "6-4",
++          "number": "06-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8650,
++      "zone": 6,
++      "name": "Super Potion",
++      "archived_city_percent": [
++        87.73,
++        50.68
++      ],
++      "archived_height_value": -61.6,
++      "archived_map_pixel_xy": [
++        1684.416,
++        973.056
++      ],
++      "candidate_records": [
++        {
++          "id": "6-4",
++          "number": "06-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8664,
++      "zone": 11,
++      "name": "TM063",
++      "archived_city_percent": [
++        82.65,
++        56.07
++      ],
++      "archived_height_value": 78.4,
++      "archived_map_pixel_xy": [
++        1586.88,
++        1076.544
++      ],
++      "candidate_records": [
++        {
++          "id": "11-9",
++          "number": "11-10",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Psychic",
++        "reported_level": "ground",
++        "directions": "Northern brambles.",
++        "prerequisite": "Ember",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8668,
++      "zone": 6,
++      "name": "Pearl",
++      "archived_city_percent": [
++        89,
++        55.35
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        1708.8,
++        1062.72
++      ],
++      "candidate_records": [
++        {
++          "id": "6-5",
++          "number": "06-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8669,
++      "zone": 6,
++      "name": "Super Potion",
++      "archived_city_percent": [
++        92.95,
++        55.28
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1784.64,
++        1061.376
++      ],
++      "candidate_records": [
++        {
++          "id": "6-4",
++          "number": "06-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8684,
++      "zone": 11,
++      "name": "Net Ball",
++      "archived_city_percent": [
++        82.41,
++        62.92
++      ],
++      "archived_height_value": 87.6,
++      "archived_map_pixel_xy": [
++        1582.272,
++        1208.064
++      ],
++      "candidate_records": [
++        {
++          "id": "11-3",
++          "number": "11-04",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8686,
++      "zone": 11,
++      "name": "Max Potion",
++      "archived_city_percent": [
++        79.13,
++        56.33
++      ],
++      "archived_height_value": 96.4,
++      "archived_map_pixel_xy": [
++        1519.296,
++        1081.536
++      ],
++      "candidate_records": [
++        {
++          "id": "11-10",
++          "number": "11-11",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8689,
++      "zone": 11,
++      "name": "Dive Ball",
++      "archived_city_percent": [
++        84.64,
++        56.58
++      ],
++      "archived_height_value": 77,
++      "archived_map_pixel_xy": [
++        1625.088,
++        1086.336
++      ],
++      "candidate_records": [
++        {
++          "id": "11-1",
++          "number": "11-02",
++          "kind": "landmark"
++        },
++        {
++          "id": "11-8",
++          "number": "11-09",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8698,
++      "zone": 8,
++      "name": "TM036",
++      "archived_city_percent": [
++        70.79,
++        42.08
++      ],
++      "archived_height_value": 29.3,
++      "archived_map_pixel_xy": [
++        1359.168,
++        807.936
++      ],
++      "candidate_records": [
++        {
++          "id": "8-3",
++          "number": "08-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Rock Tomb",
++        "reported_level": "ground",
++        "directions": "Plaza centre.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8699,
++      "zone": 8,
++      "name": "Heal Ball",
++      "archived_city_percent": [
++        69.31,
++        42.74
++      ],
++      "archived_height_value": 29.4,
++      "archived_map_pixel_xy": [
++        1330.752,
++        820.608
++      ],
++      "candidate_records": [
++        {
++          "id": "8-2",
++          "number": "08-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8700,
++      "zone": 8,
++      "name": "Hyper Potion",
++      "archived_city_percent": [
++        72.74,
++        43.19
++      ],
++      "archived_height_value": 29.2,
++      "archived_map_pixel_xy": [
++        1396.608,
++        829.248
++      ],
++      "candidate_records": [
++        {
++          "id": "8-1",
++          "number": "08-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8701,
++      "zone": 8,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        73.01,
++        41.7
++      ],
++      "archived_height_value": 29.2,
++      "archived_map_pixel_xy": [
++        1401.792,
++        800.64
++      ],
++      "candidate_records": [
++        {
++          "id": "8-0",
++          "number": "08-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8702,
++      "zone": 8,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        70.05,
++        38.98
++      ],
++      "archived_height_value": 29,
++      "archived_map_pixel_xy": [
++        1344.96,
++        748.416
++      ],
++      "candidate_records": [
++        {
++          "id": "8-0",
++          "number": "08-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "shared_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8709,
++      "zone": 9,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        9.09,
++        54.53
++      ],
++      "archived_height_value": 70.3,
++      "archived_map_pixel_xy": [
++        174.528,
++        1046.976
++      ],
++      "candidate_records": [
++        {
++          "id": "9-4",
++          "number": "09-05",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-12",
++          "number": "09-13",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8710,
++      "zone": 9,
++      "name": "Revive",
++      "archived_city_percent": [
++        13.16,
++        57.7
++      ],
++      "archived_height_value": 70,
++      "archived_map_pixel_xy": [
++        252.672,
++        1107.84
++      ],
++      "candidate_records": [
++        {
++          "id": "9-15",
++          "number": "09-16",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8712,
++      "zone": 9,
++      "name": "Paralyze Heal",
++      "archived_city_percent": [
++        16.04,
++        54.66
++      ],
++      "archived_height_value": 70.2,
++      "archived_map_pixel_xy": [
++        307.968,
++        1049.472
++      ],
++      "candidate_records": [
++        {
++          "id": "9-23",
++          "number": "09-24",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8713,
++      "zone": 9,
++      "name": "Big Pearl",
++      "archived_city_percent": [
++        12.04,
++        54.26
++      ],
++      "archived_height_value": 14.9,
++      "archived_map_pixel_xy": [
++        231.168,
++        1041.792
++      ],
++      "candidate_records": [
++        {
++          "id": "9-2",
++          "number": "09-03",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-3",
++          "number": "09-04",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-20",
++          "number": "09-21",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8714,
++      "zone": 9,
++      "name": "Protein",
++      "archived_city_percent": [
++        15.42,
++        59.09
++      ],
++      "archived_height_value": -9.4,
++      "archived_map_pixel_xy": [
++        296.064,
++        1134.528
++      ],
++      "candidate_records": [
++        {
++          "id": "9-18",
++          "number": "09-19",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8715,
++      "zone": 9,
++      "name": "Colorful Screw",
++      "archived_city_percent": [
++        15.97,
++        54.95
++      ],
++      "archived_height_value": 39.1,
++      "archived_map_pixel_xy": [
++        306.624,
++        1055.04
++      ],
++      "candidate_records": [
++        {
++          "id": "9-22",
++          "number": "09-23",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "screw_separate_id_unresolved",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8717,
++      "zone": 14,
++      "name": "Luxury Ball",
++      "archived_city_percent": [
++        7.74,
++        41.64
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        148.608,
++        799.488
++      ],
++      "candidate_records": [
++        {
++          "id": "14-2",
++          "number": "14-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8718,
++      "zone": 14,
++      "name": "Max Revive",
++      "archived_city_percent": [
++        8.43,
++        43.99
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        161.856,
++        844.608
++      ],
++      "candidate_records": [
++        {
++          "id": "14-3",
++          "number": "14-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8719,
++      "zone": 14,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        8.12,
++        45.51
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        155.904,
++        873.792
++      ],
++      "candidate_records": [
++        {
++          "id": "14-4",
++          "number": "14-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8722,
++      "zone": 14,
++      "name": "TM039",
++      "archived_city_percent": [
++        9.71,
++        47.68
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        186.432,
++        915.456
++      ],
++      "candidate_records": [
++        {
++          "id": "14-6",
++          "number": "14-07",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Discharge",
++        "reported_level": "ground",
++        "directions": "South of southeast building; break rocks.",
++        "prerequisite": "Rock Smash",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8725,
++      "zone": 14,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        10.97,
++        45.06
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        210.624,
++        865.152
++      ],
++      "candidate_records": [
++        {
++          "id": "14-5",
++          "number": "14-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8774,
++      "zone": 9,
++      "name": "TM018",
++      "archived_city_percent": [
++        15.35,
++        58.12
++      ],
++      "archived_height_value": -9.4,
++      "archived_map_pixel_xy": [
++        294.72,
++        1115.904
++      ],
++      "candidate_records": [
++        {
++          "id": "9-17",
++          "number": "09-18",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Power-Up Punch",
++        "reported_level": "roof",
++        "directions": "Eastern complex southwest roof.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8775,
++      "zone": 9,
++      "name": "Pearl",
++      "archived_city_percent": [
++        16.34,
++        55.76
++      ],
++      "archived_height_value": 22.1,
++      "archived_map_pixel_xy": [
++        313.728,
++        1070.592
++      ],
++      "candidate_records": [
++        {
++          "id": "9-21",
++          "number": "09-22",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8776,
++      "zone": 9,
++      "name": "Timer Ball",
++      "archived_city_percent": [
++        9.39,
++        56.39
++      ],
++      "archived_height_value": 6.1,
++      "archived_map_pixel_xy": [
++        180.288,
++        1082.688
++      ],
++      "candidate_records": [
++        {
++          "id": "9-5",
++          "number": "09-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8777,
++      "zone": 9,
++      "name": "Nest Ball",
++      "archived_city_percent": [
++        15.44,
++        56.94
++      ],
++      "archived_height_value": 25.9,
++      "archived_map_pixel_xy": [
++        296.448,
++        1093.248
++      ],
++      "candidate_records": [
++        {
++          "id": "9-0",
++          "number": "09-01",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-19",
++          "number": "09-20",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8782,
++      "zone": 9,
++      "name": "Nugget",
++      "archived_city_percent": [
++        9.99,
++        53.75
++      ],
++      "archived_height_value": 54.3,
++      "archived_map_pixel_xy": [
++        191.808,
++        1032
++      ],
++      "candidate_records": [
++        {
++          "id": "9-1",
++          "number": "09-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8783,
++      "zone": 9,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        9.22,
++        55.99
++      ],
++      "archived_height_value": 37.9,
++      "archived_map_pixel_xy": [
++        177.024,
++        1075.008
++      ],
++      "candidate_records": [
++        {
++          "id": "9-7",
++          "number": "09-08",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-10",
++          "number": "09-11",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8784,
++      "zone": 9,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        9.13,
++        58.91
++      ],
++      "archived_height_value": 54.3,
++      "archived_map_pixel_xy": [
++        175.296,
++        1131.072
++      ],
++      "candidate_records": [
++        {
++          "id": "9-11",
++          "number": "09-12",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8785,
++      "zone": 9,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        10.79,
++        58.19
++      ],
++      "archived_height_value": 54.4,
++      "archived_map_pixel_xy": [
++        207.168,
++        1117.248
++      ],
++      "candidate_records": [
++        {
++          "id": "9-8",
++          "number": "09-09",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-13",
++          "number": "09-14",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8786,
++      "zone": 9,
++      "name": "Full Heal",
++      "archived_city_percent": [
++        10.54,
++        58.67
++      ],
++      "archived_height_value": 4.9,
++      "archived_map_pixel_xy": [
++        202.368,
++        1126.464
++      ],
++      "candidate_records": [
++        {
++          "id": "9-4",
++          "number": "09-05",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-12",
++          "number": "09-13",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8794,
++      "zone": 9,
++      "name": "Hyper Potion",
++      "archived_city_percent": [
++        14.04,
++        56.27
++      ],
++      "archived_height_value": 62,
++      "archived_map_pixel_xy": [
++        269.568,
++        1080.384
++      ],
++      "candidate_records": [
++        {
++          "id": "9-16",
++          "number": "09-17",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8800,
++      "zone": 9,
++      "name": "Zinc",
++      "archived_city_percent": [
++        11,
++        58.43
++      ],
++      "archived_height_value": 21.4,
++      "archived_map_pixel_xy": [
++        211.2,
++        1121.856
++      ],
++      "candidate_records": [
++        {
++          "id": "9-14",
++          "number": "09-15",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8801,
++      "zone": 9,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        9.16,
++        59.17
++      ],
++      "archived_height_value": 21.3,
++      "archived_map_pixel_xy": [
++        175.872,
++        1136.064
++      ],
++      "candidate_records": [
++        {
++          "id": "9-7",
++          "number": "09-08",
++          "kind": "zone_only"
++        },
++        {
++          "id": "9-10",
++          "number": "09-11",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "multiple_candidates",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8802,
++      "zone": 9,
++      "name": "Calcium",
++      "archived_city_percent": [
++        9.65,
++        56.1
++      ],
++      "archived_height_value": 54.3,
++      "archived_map_pixel_xy": [
++        185.28,
++        1077.12
++      ],
++      "candidate_records": [
++        {
++          "id": "9-6",
++          "number": "09-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8808,
++      "zone": 9,
++      "name": "Colorful Screw",
++      "archived_city_percent": [
++        13.91,
++        52.41
++      ],
++      "archived_height_value": -45.1,
++      "archived_map_pixel_xy": [
++        267.072,
++        1006.272
++      ],
++      "candidate_records": [
++        {
++          "id": "9-22",
++          "number": "09-23",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "screw_separate_id_unresolved",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8820,
++      "zone": 18,
++      "name": "Big Nugget",
++      "archived_city_percent": [
++        20.23,
++        18.99
++      ],
++      "archived_height_value": 75.6,
++      "archived_map_pixel_xy": [
++        388.416,
++        364.608
++      ],
++      "candidate_records": [
++        {
++          "id": "18-2",
++          "number": "18-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8849,
++      "zone": 18,
++      "name": "Burn Heal",
++      "archived_city_percent": [
++        21.78,
++        14.64
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        418.176,
++        281.088
++      ],
++      "candidate_records": [
++        {
++          "id": "18-0",
++          "number": "18-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8905,
++      "zone": 18,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        20.27,
++        20.87
++      ],
++      "archived_height_value": 25.2,
++      "archived_map_pixel_xy": [
++        389.184,
++        400.704
++      ],
++      "candidate_records": [
++        {
++          "id": "18-6",
++          "number": "18-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8916,
++      "zone": 18,
++      "name": "Quick Ball",
++      "archived_city_percent": [
++        21.6,
++        20.14
++      ],
++      "archived_height_value": -1,
++      "archived_map_pixel_xy": [
++        414.72,
++        386.688
++      ],
++      "candidate_records": [
++        {
++          "id": "18-5",
++          "number": "18-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8918,
++      "zone": 18,
++      "name": "Hyper Potion",
++      "archived_city_percent": [
++        18.38,
++        18.85
++      ],
++      "archived_height_value": 76.1,
++      "archived_map_pixel_xy": [
++        352.896,
++        361.92
++      ],
++      "candidate_records": [
++        {
++          "id": "18-3",
++          "number": "18-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8919,
++      "zone": 7,
++      "name": "Net Ball",
++      "archived_city_percent": [
++        28.4,
++        40
++      ],
++      "archived_height_value": 75.2,
++      "archived_map_pixel_xy": [
++        545.28,
++        768
++      ],
++      "candidate_records": [
++        {
++          "id": "7-0",
++          "number": "07-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8921,
++      "zone": 7,
++      "name": "TM092",
++      "archived_city_percent": [
++        29.42,
++        43.05
++      ],
++      "archived_height_value": 75.2,
++      "archived_map_pixel_xy": [
++        564.864,
++        826.56
++      ],
++      "candidate_records": [
++        {
++          "id": "7-4",
++          "number": "07-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Dazzling Gleam",
++        "reported_level": "ground",
++        "directions": "East of central monument.",
++        "prerequisite": "Ember",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8923,
++      "zone": 7,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        28.76,
++        44.97
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        552.192,
++        863.424
++      ],
++      "candidate_records": [
++        {
++          "id": "7-3",
++          "number": "07-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8924,
++      "zone": 7,
++      "name": "Dive Ball",
++      "archived_city_percent": [
++        27.93,
++        42.54
++      ],
++      "archived_height_value": 75.4,
++      "archived_map_pixel_xy": [
++        536.256,
++        816.768
++      ],
++      "candidate_records": [
++        {
++          "id": "7-1",
++          "number": "07-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8984,
++      "zone": 13,
++      "name": "TM081",
++      "archived_city_percent": [
++        39.37,
++        8.45
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        755.904,
++        162.24
++      ],
++      "candidate_records": [
++        {
++          "id": "13-3",
++          "number": "13-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "X-Scissor",
++        "reported_level": "ground",
++        "directions": "Southern grassy strip.",
++        "prerequisite": "Ember",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8985,
++      "zone": 13,
++      "name": "Big Pearl",
++      "archived_city_percent": [
++        41.39,
++        7.46
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        794.688,
++        143.232
++      ],
++      "candidate_records": [
++        {
++          "id": "13-1",
++          "number": "13-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8995,
++      "zone": 13,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        40.77,
++        8.85
++      ],
++      "archived_height_value": 71.3,
++      "archived_map_pixel_xy": [
++        782.784,
++        169.92
++      ],
++      "candidate_records": [
++        {
++          "id": "13-2",
++          "number": "13-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8996,
++      "zone": 13,
++      "name": "Hyper Potion",
++      "archived_city_percent": [
++        38.82,
++        9.3
++      ],
++      "archived_height_value": 71.3,
++      "archived_map_pixel_xy": [
++        745.344,
++        178.56
++      ],
++      "candidate_records": [
++        {
++          "id": "13-4",
++          "number": "13-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 8997,
++      "zone": 13,
++      "name": "Ultra Ball",
++      "archived_city_percent": [
++        37.58,
++        9.03
++      ],
++      "archived_height_value": 71.4,
++      "archived_map_pixel_xy": [
++        721.536,
++        173.376
++      ],
++      "candidate_records": [
++        {
++          "id": "13-5",
++          "number": "13-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9021,
++      "zone": 13,
++      "name": "Luxury Ball",
++      "archived_city_percent": [
++        39.04,
++        6.65
++      ],
++      "archived_height_value": 71.4,
++      "archived_map_pixel_xy": [
++        749.568,
++        127.68
++      ],
++      "candidate_records": [
++        {
++          "id": "13-7",
++          "number": "13-08",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9023,
++      "zone": 13,
++      "name": "Dive Ball",
++      "archived_city_percent": [
++        37.6,
++        7.11
++      ],
++      "archived_height_value": 75.5,
++      "archived_map_pixel_xy": [
++        721.92,
++        136.512
++      ],
++      "candidate_records": [
++        {
++          "id": "13-6",
++          "number": "13-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9033,
++      "zone": 4,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        55.23,
++        12.51
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1060.416,
++        240.192
++      ],
++      "candidate_records": [
++        {
++          "id": "4-8",
++          "number": "04-09",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9034,
++      "zone": 4,
++      "name": "Revive",
++      "archived_city_percent": [
++        58.73,
++        13.19
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1127.616,
++        253.248
++      ],
++      "candidate_records": [
++        {
++          "id": "4-7",
++          "number": "04-08",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9036,
++      "zone": 4,
++      "name": "Net Ball",
++      "archived_city_percent": [
++        53.52,
++        13.1
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1027.584,
++        251.52
++      ],
++      "candidate_records": [
++        {
++          "id": "4-9",
++          "number": "04-10",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9038,
++      "zone": 4,
++      "name": "TM072",
++      "archived_city_percent": [
++        56.01,
++        18.08
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1075.392,
++        347.136
++      ],
++      "candidate_records": [
++        {
++          "id": "4-2",
++          "number": "04-03",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Fire Spin",
++        "reported_level": "ground",
++        "directions": "South of southern monument.",
++        "prerequisite": "Ember",
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9119,
++      "zone": 4,
++      "name": "Dusk Ball",
++      "archived_city_percent": [
++        55.17,
++        16.05
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1059.264,
++        308.16
++      ],
++      "candidate_records": [
++        {
++          "id": "4-3",
++          "number": "04-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9120,
++      "zone": 4,
++      "name": "Heal Ball",
++      "archived_city_percent": [
++        57.75,
++        16.69
++      ],
++      "archived_height_value": 75.9,
++      "archived_map_pixel_xy": [
++        1108.8,
++        320.448
++      ],
++      "candidate_records": [
++        {
++          "id": "4-4",
++          "number": "04-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9127,
++      "zone": 3,
++      "name": "TM022",
++      "archived_city_percent": [
++        47.43,
++        27.74
++      ],
++      "archived_height_value": -27.4,
++      "archived_map_pixel_xy": [
++        910.656,
++        532.608
++      ],
++      "candidate_records": [
++        {
++          "id": "3-7",
++          "number": "03-08",
++          "kind": "landmark"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Aerial Ace",
++        "reported_level": "roof",
++        "directions": "Western monument roof; interior stairs.",
++        "prerequisite": null,
++        "sources": [
++          "https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html",
++          "https://www.pockettactics.com/pokemon-legends-z-a/wild-zone-3"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9128,
++      "zone": 3,
++      "name": "Great Ball",
++      "archived_city_percent": [
++        46.97,
++        29.9
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        901.824,
++        574.08
++      ],
++      "candidate_records": [
++        {
++          "id": "3-4",
++          "number": "03-05",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9129,
++      "zone": 3,
++      "name": "Super Potion",
++      "archived_city_percent": [
++        47.68,
++        24.6
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        915.456,
++        472.32
++      ],
++      "candidate_records": [
++        {
++          "id": "3-6",
++          "number": "03-07",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9135,
++      "zone": 3,
++      "name": "Antidote",
++      "archived_city_percent": [
++        51.58,
++        29.73
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        990.336,
++        570.816
++      ],
++      "candidate_records": [
++        {
++          "id": "3-2",
++          "number": "03-03",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9136,
++      "zone": 3,
++      "name": "Paralyze Heal",
++      "archived_city_percent": [
++        52.75,
++        27.76
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        1012.8,
++        532.992
++      ],
++      "candidate_records": [
++        {
++          "id": "3-1",
++          "number": "03-02",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9137,
++      "zone": 3,
++      "name": "Nest Ball",
++      "archived_city_percent": [
++        51.97,
++        24.88
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        997.824,
++        477.696
++      ],
++      "candidate_records": [
++        {
++          "id": "3-0",
++          "number": "03-01",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9138,
++      "zone": 3,
++      "name": "Pearl",
++      "archived_city_percent": [
++        46.39,
++        28.75
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        890.688,
++        552
++      ],
++      "candidate_records": [
++        {
++          "id": "3-5",
++          "number": "03-06",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9139,
++      "zone": 3,
++      "name": "Revive",
++      "archived_city_percent": [
++        50.6,
++        31.17
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        971.52,
++        598.464
++      ],
++      "candidate_records": [
++        {
++          "id": "3-3",
++          "number": "03-04",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9145,
++      "zone": 20,
++      "name": "TM054",
++      "archived_city_percent": [
++        47.7,
++        47.91
++      ],
++      "archived_height_value": 74.7,
++      "archived_map_pixel_xy": [
++        915.84,
++        919.872
++      ],
++      "candidate_records": [
++        {
++          "id": "20-65",
++          "number": "20-66",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": {
++        "move": "Draco Meteor",
++        "reported_level": "ground",
++        "directions": "Construction area by container.",
++        "prerequisite": "Postgame Wild Zone 20",
++        "sources": [
++          "https://pokemongohub.net/post/guide/all-tm-locations-in-pokemon-legends-z-a/",
++          "https://www.gamerguides.com/pokemon-legends-z-a/database/items/tms-1/draco-meteor",
++          "https://www.pokemon-france.com/en/guides/pokemon-legends-z-a/wild-zones/"
++        ],
++        "confidence": "published_text_location_not_pixel_verified",
++        "source_zone_match": true
++      },
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9148,
++      "zone": 20,
++      "name": "Rare Candy",
++      "archived_city_percent": [
++        51.33,
++        47.52
++      ],
++      "archived_height_value": 75.8,
++      "archived_map_pixel_xy": [
++        985.536,
++        912.384
++      ],
++      "candidate_records": [
++        {
++          "id": "20-61",
++          "number": "20-62",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9149,
++      "zone": 20,
++      "name": "Bottle Cap",
++      "archived_city_percent": [
++        46,
++        49.4
++      ],
++      "archived_height_value": 74.7,
++      "archived_map_pixel_xy": [
++        883.2,
++        948.48
++      ],
++      "candidate_records": [
++        {
++          "id": "20-59",
++          "number": "20-60",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    },
++    {
++      "legacy_marker_id": 9152,
++      "zone": 20,
++      "name": "Big Nugget",
++      "archived_city_percent": [
++        51.22,
++        51.6
++      ],
++      "archived_height_value": 75.7,
++      "archived_map_pixel_xy": [
++        983.424,
++        990.72
++      ],
++      "candidate_records": [
++        {
++          "id": "20-60",
++          "number": "20-61",
++          "kind": "zone_only"
++        }
++      ],
++      "candidate_status": "exclusive_single_candidate",
++      "canonical_item_id": null,
++      "canonical_screw_id": null,
++      "reported_access": null,
++      "verified_atlas_xy": null,
++      "verified_floor": null,
++      "publish_new_pin": false
++    }
++  ],
++  "counts": {
++    "recovered_legacy_markers": 146,
++    "source_data_parity_markers": 146,
++    "unique_tm_location_checks": 18,
++    "archived_screw_leads": 2,
++    "exclusive_single_candidate": 111,
++    "shared_single_candidate": 9,
++    "multiple_candidates": 24,
++    "unresolved_screw_id": 2,
++    "new_verified_native_pins": 0
++  },
++  "preservation": {
++    "original_item_records": 264,
++    "original_screw_ids": 100,
++    "archived_leads": 146,
++    "access_leads": 70,
++    "prior_12_screw_source_refs": true,
++    "original_map": true,
++    "existing_progress": true,
++    "no_runtime_change": true,
++    "workspace_unchanged": true
++  },
++  "next": "Prioritize matching the 18 unique TM positions against independent source visuals and additional lawful coordinate pairs; compare owner photo library and preserve scene/floor and route evidence. Then resolve 111 exclusive ordinary candidates and 33 competing candidates by location descriptions, plus two separately numbered Screw clues. No all-item manual survey or duplicate photos required; keep remaining unseen fixed pickups in research queue."
++}

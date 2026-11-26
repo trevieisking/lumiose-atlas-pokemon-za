@@ -1,0 +1,104 @@
+{
+  "number": 1,
+  "title": "Audit: benchmark all 42 main missions and rebuild Mable's Research",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1",
+  "origin_head_ref": "audit/2026-11-21-main-story-research",
+  "origin_head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+  "observed_base_ref": "main",
+  "observed_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "git_diff_merge_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "disposition": "retain_unique_audit_requirements",
+  "consolidation_note": "Mable recovery superseded in main by #16; preserve all-42-mission depth and 17-section audit discrepancy requirements. Reconcile unique audit notes, never replace current mable-research.html with old branch.",
+  "all_changed_paths": [
+    "README.md",
+    "RECOVERY_STATUS.md",
+    "docs/qa/MAIN_STORY_AUDIT_2026-11-21.md",
+    "docs/qa/SITEWIDE_AUDIT_2026-11-21.md",
+    "mable-research.html",
+    "tests/validate_static.py"
+  ],
+  "source_files": [
+    {
+      "original_path": "README.md",
+      "change_status": "M",
+      "origin_head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+      "origin_git_blob_sha1": "2c5294e5db4d1339d23bb4ea3a98885e468bba19",
+      "origin_bytes": 6092,
+      "origin_sha256": "723e828e7a6400f6ede66e89f8d32efb8d53ce6396f1870a82e314b9a8ca5485",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/b3d868db17afc87c5c94830f257ac2988be262e2/README.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "2d8439cd9b92503235ef85e7fe02163f3f308e69",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-001/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "RECOVERY_STATUS.md",
+      "change_status": "M",
+      "origin_head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+      "origin_git_blob_sha1": "edc73bcfc1a4533e6a4b1b0a71c59120d902fd2d",
+      "origin_bytes": 5845,
+      "origin_sha256": "88342252eedd48ceba05ec669068bd8e14737c83a2d83e156676518edcfef408",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/b3d868db17afc87c5c94830f257ac2988be262e2/RECOVERY_STATUS.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "aebd30fea894ffc1e9eaad8cc997b910bf541084",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-001/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "docs/qa/MAIN_STORY_AUDIT_2026-11-21.md",
+      "change_status": "A",
+      "origin_head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+      "origin_git_blob_sha1": "98fc08506d169ad4b66943b360dd5b57b5b3e8bc",
+      "origin_bytes": 14483,
+      "origin_sha256": "8d362ce5c60058ff18e073980d71e35f3ae55a8407e913f803689a0d62c44eb5",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/b3d868db17afc87c5c94830f257ac2988be262e2/docs/qa/MAIN_STORY_AUDIT_2026-11-21.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-001/docs/qa/MAIN_STORY_AUDIT_2026-11-21.md",
+        "bytes": 14483,
+        "sha256": "8d362ce5c60058ff18e073980d71e35f3ae55a8407e913f803689a0d62c44eb5"
+      },
+      "patch_path": "pr-001/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "docs/qa/SITEWIDE_AUDIT_2026-11-21.md",
+      "change_status": "A",
+      "origin_head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+      "origin_git_blob_sha1": "bd96d1a9ae889136b72fe4f29f1eb19e17816573",
+      "origin_bytes": 8203,
+      "origin_sha256": "83de90483da7b265430e8873e34678ade7d220cff6a1598fe89bcaae78ed378e",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/b3d868db17afc87c5c94830f257ac2988be262e2/docs/qa/SITEWIDE_AUDIT_2026-11-21.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-001/docs/qa/SITEWIDE_AUDIT_2026-11-21.md",
+        "bytes": 8203,
+        "sha256": "83de90483da7b265430e8873e34678ade7d220cff6a1598fe89bcaae78ed378e"
+      },
+      "patch_path": "pr-001/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-001/historical-source.patch",
+    "bytes": 25735,
+    "sha256": "32a75a2d7478b51f3959fa263b6c99aee190d7d674e986b1579c7c5b0b8b6f31"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Purpose\nResume the Pokémon Legends: Z-A guide fact-check, using the detailed Canari and Ivor walkthroughs as the editorial benchmark.\n\n## This bounded patch\n- Replaces the Mable's Research placeholder with an independently researched and usable level 2–50 rewards page, keeping the guide's shared navigation and Back to Walkthrough links.\n- Records an **all-42-mission content-depth inventory** and source-checked discrepancy register in `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md`.\n- Records the **17-section whole-site inventory** and cross-source verification plan in `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`.\n- Notes the editorial checkpoint in README and recovery status.\n\n## Sources checked\nOfficial Pokémon Mable/gameplay pages; Serebii main missions, Mable rewards, Canari, Ivor, mission 25, side request 2; Bulbapedia quest classification and research; Thonky detailed walkthroughs; PowerPyx reward inventory.\n\n## Review evidence\n- 49 consecutive Mable rewards verified in source; 3 Gold Bottle Caps at Lv48, Master Ball at 49, Shiny Charm at 50.\n- Shared navigation retained; all requisite direct links and 49 reward-row IDs checked; no duplicate IDs.\n- 42-row audit and 17-section inventory validated.\n- Existing `src/sections`, generated `index.html`, map, asset manifest and Supabase were **not changed**.\n\n## Boundaries / NOT DONE\nThis is a **first-pass audit**, not a claim that every quest, pickup, game mechanic or DLC page has been fact-checked. The next task is to correct main story missions 1–42 and regenerate the homepage with tests. Do not conflate original ChatGPT Site with this reconstruction. No database, DNS, original site, live URL, or backend write. Preview branch should remain separate pending page verification.\n"
+}

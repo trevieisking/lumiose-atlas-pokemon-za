@@ -1,0 +1,158 @@
+diff --git a/ATLAS_DUAL_SITE_FIX_LEDGER.md b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+index ef81304..ffbbe84 100644
+--- a/ATLAS_DUAL_SITE_FIX_LEDGER.md
++++ b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+@@ -5,7 +5,7 @@
+ **Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
+ 
+ 
+-**Revision:** 65 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
++**Revision:** 66 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+ **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
+ 
+ **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
+@@ -610,6 +610,8 @@ Recovered active PR #133 after chat interruption. [Validation 45417601078](https
+ 
+ ## AT-297 — Original Workspace access, export and safe upgrade policy (24 November 2026)
+ 
++**25 November 2026 · Workspace v37 verified.** Original Workspace source commit `1ac2c20002451d295dc4f8e80068297682fcdc4b` was independently published and checked on the existing live origin. Version 35 remains the rehearsed rollback checkpoint. The scoped upgrade covers the interactive map, 48 sector entries and 42 photos, 21 Holovators and 111 photos, reference links, mission corrections and responsive layouts. Supabase records and the independent GitHub Pages release were preserved. [Gate receipts and live checks](docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md).
++
+ Owner-approved: [canonical Workspace request and seven safety gates](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy). Review access on 25 November if the original editor becomes available; access is not yet verified. Keep the original ChatGPT Site and its URL, source, Supabase integration and saved progress intact. GitHub and Codespaces remain independent development/testing environments; no automatic link or deployment to the original Site. Inspect the actual original source, obtain a private sanitized source export and rollback checkpoint, audit actual progress keys and stable IDs, and transfer only compatible individually verified upgrades. Preserve existing progress in place; user-controlled progress export/restore must be separately audited and tested, not an automatic cross-origin migration. Draft PR #5 remains unmerged. Owner tests published pages, not development PRs. Original Site gates A1–A7 remain open. Manifest revision 43; ledger revision 51. Private checklist identity AT-297-HANDOFF-PROTOCOL. No original Site access, export or publication claimed.
+ 
+ **AT-296 publication reconciled:** PR #133 exact reviewed head `e876de0fda8cd565609ed66b2c42ceb5a3037473`; [CI 45420440439](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45420440439) success; eight mobile/desktop screenshots reviewed (artifact 14933772897); merged SHA `e5b9c531e6e08e2977ef9ddd283dc3ba23b18db3` with identical reviewed tree; [Pages 45421532730](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45421532730) success. Six AT-296 Supabase rows GitHub verified, Workspace open. Direct live HTTP inspection unavailable; verification uses exact tree, CI, preview and deployment evidence. Fourteen routes and seven video references live. Next Vert 3, Vert 8, Bleu 1.
+diff --git a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+index 4a6c0e6..fe83716 100644
+--- a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
++++ b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+@@ -1124,6 +1124,8 @@ Recovered active PR #133 after chat interruption. [Validation 45417601078](https
+ 
+ ## AT-297 — Original Workspace access, export and safe upgrade policy (24 November 2026)
+ 
++**25 November 2026 · Workspace v37 verified.** Original Workspace source commit `1ac2c20002451d295dc4f8e80068297682fcdc4b` was independently published and checked on the existing live origin. Version 35 remains the rehearsed rollback checkpoint. The scoped upgrade covers the interactive map, 48 sector entries and 42 photos, 21 Holovators and 111 photos, reference links, mission corrections and responsive layouts. Supabase records and the independent GitHub Pages release were preserved. [Gate receipts and live checks](docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md).
++
+ Owner-approved: [canonical Workspace request and seven safety gates](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy). Review access on 25 November if the original editor becomes available; access is not yet verified. Keep the original ChatGPT Site and its URL, source, Supabase integration and saved progress intact. GitHub and Codespaces remain independent development/testing environments; no automatic link or deployment to the original Site. Inspect the actual original source, obtain a private sanitized source export and rollback checkpoint, audit actual progress keys and stable IDs, and transfer only compatible individually verified upgrades. Preserve existing progress in place; user-controlled progress export/restore must be separately audited and tested, not an automatic cross-origin migration. Draft PR #5 remains unmerged. Owner tests published pages, not development PRs. Original Site gates A1–A7 remain open. Manifest revision 43; ledger revision 51. Private checklist identity AT-297-HANDOFF-PROTOCOL. No original Site access, export or publication claimed.
+ 
+ **AT-296 publication reconciled:** PR #133 exact reviewed head `e876de0fda8cd565609ed66b2c42ceb5a3037473`; [CI 45420440439](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45420440439) success; eight mobile/desktop screenshots reviewed (artifact 14933772897); merged SHA `e5b9c531e6e08e2977ef9ddd283dc3ba23b18db3` with identical reviewed tree; [Pages 45421532730](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45421532730) success. Six AT-296 Supabase rows GitHub verified, Workspace open. Direct live HTTP inspection unavailable; verification uses exact tree, CI, preview and deployment evidence. Fourteen routes and seven video references live. Next Vert 3, Vert 8, Bleu 1.
+diff --git a/MAPS_UPGRADE_MANIFEST.json b/MAPS_UPGRADE_MANIFEST.json
+index 6ca5439..8fd1526 100644
+--- a/MAPS_UPGRADE_MANIFEST.json
++++ b/MAPS_UPGRADE_MANIFEST.json
+@@ -16,7 +16,7 @@
+     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
+   },
+   "id": "ATLAS-MAPS-2026-11-21-V1",
+-  "revision": 57,
++  "revision": 58,
+   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
+   "created_at": "2026-11-21",
+   "status": "owner_approved_source_first_access_survey_in_progress",
+@@ -2947,7 +2947,7 @@
+     "id": "AT-297",
+     "date": "2026-11-24",
+     "owner_approved": true,
+-    "status": "documented_pending_authorized_workspace_access",
++    "status": "workspace_v37_deployed_and_live_verified",
+     "review_date": "2026-11-25",
+     "handoff": "WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy",
+     "checklist_id": "AT-297-HANDOFF-PROTOCOL",
+@@ -2960,35 +2960,45 @@
+     "gates": [
+       {
+         "requirement": "A1 authorized original source access",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A2 verified source export and rollback",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A3 progress and integration audit",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A4 compare actual A source with verified B and prepare bounded patch",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A5 isolated preview and regression tests",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A6 independent safe publication through original editor",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       },
+       {
+         "requirement": "A7 live verification and checklist evidence",
+-        "status": "open"
++        "status": "verified_for_v37_scope"
+       }
+     ],
+     "owner_testing": "Live guide only; assistant handles development review.",
+-    "no_changes_to_a_now": true
++    "no_changes_to_a_now": false,
++    "workspace_release": {
++      "version": 37,
++      "source_sha": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
++      "comparison_github_sha": "ca62d68f2e052bb5b7d584957be114cd6318d8d7",
++      "date": "2026-11-25",
++      "rollback_version": 35,
++      "evidence": "docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md",
++      "scope": "Interactive map, 48-sector photo library, Holovator gallery, map and video crosslinks, scoped mission corrections, responsive layouts",
++      "supabase_database_changes": false
++    }
+   },
+   "at_298_vert3": {
+     "id": "AT-298",
+diff --git a/WORKSPACE_ACCESS_HANDOFF.md b/WORKSPACE_ACCESS_HANDOFF.md
+index d8db993..932adbb 100644
+--- a/WORKSPACE_ACCESS_HANDOFF.md
++++ b/WORKSPACE_ACCESS_HANDOFF.md
+@@ -2,6 +2,8 @@
+ 
+ ## AT-297 — Workspace source access, export and safe upgrade policy
+ 
++**25 November 2026 · Workspace v37 verified.** Original Workspace source commit `1ac2c20002451d295dc4f8e80068297682fcdc4b` was independently published and checked on the existing live origin. Version 35 remains the rehearsed rollback checkpoint. The scoped upgrade covers the interactive map, 48 sector entries and 42 photos, 21 Holovators and 111 photos, reference links, mission corrections and responsive layouts. Supabase records and the independent GitHub Pages release were preserved. [Gate receipts and live checks](docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md).
++
+ **Owner-approved 24 November 2026.** Review access on 25 November if the original editor becomes available. Access is not yet verified. The original ChatGPT Site (A) and GitHub guide (B) must remain independent. Codespaces may be used for isolated development; no automatic repository synchronization or deployment connection to A.
+ 
+ ### Current Workspace request
+diff --git a/docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md b/docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md
+new file mode 100644
+index 0000000..bef4dea
+--- /dev/null
++++ b/docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md
+@@ -0,0 +1,28 @@
++# AT-297 Workspace version 37 release evidence
++
++25 November 2026 · ATLAS-MAPS-2026-11-21-V1
++
++**Original Workspace version 37 passed the scoped release checks.** The original public origin and project were retained. The independent GitHub comparator remains `ca62d68f2e052bb5b7d584957be114cd6318d8d7` ([Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45556857970)).
++
++| Gate | Evidence |
++| --- | --- |
++| A1 · Editable source | The owner-authorized original source checkout matched the deployed v35 revision `7f4fe1a5932353eac98ac9946ae7b980e8986ad6`. |
++| A2 · Restore and backup | Verified the backup ZIP and inventory, restored all 962 source hashes, and produced a 951-file v35 deployment package. The isolated same-origin rollback from the candidate to v35 and back retained the same three synthetic story checkmarks. The original saved v35 is the production rollback checkpoint. |
++| A3 · Compatibility | The existing progress keys, IDs, map and artwork, Supabase files, feedback client, styles and owner admin page passed byte-level or scoped contract preservation checks. Synthetic progress and toggles survived reloads. Mobile rating and report submission passed against a local fixture with external connections blocked. |
++| A4 · Scoped patches | `6d0c55f` mission corrections, `f906b5a` sector photos, `47cc0b5` interactive map and lift galleries, `1b76dab` guide links, `8472f28` responsive fixes, `18b300d` build scripts and source checks, `1ac2c20` live canonical-route compatibility. |
++| A5 · Preview | Five source regression tests passed. The browser preview passed 190 layouts across 320, 393, 768, 1024 and 1440 px. Map controls, filters, compass, keyboard pan and simulated pointer drag, pinch and rotation passed. The browser decoded all sector images and the five Side Mission 61 photos. The final route fix passed the preview on extensionless article URLs. |
++| A6 · Publish | Version 37 contains the tested commit `1ac2c20002451d295dc4f8e80068297682fcdc4b`, tree `c680b737a8e8fc4f2c866892444ab84ae2b58069` and a 1,114-file static package. The original Workspace deployment succeeded with environment revision 0. |
++| A7 · Live check | The live directory displayed 48 sector links and 42 distinct photos. The Jaune 5 link opened its sector in the interactive map. The live map displayed 21 approximate Holovator markers, and the #61 route displayed five photographs and the verified reward and directions. Live rotation and north reset worked. The 42-story-mission walkthrough retained 25 menu links and showed corrections for 24, 25 and 37. Wild Zone 3 rendered its timestamped encounter and hunting links. |
++
++Version 36’s live check exposed the Workspace host’s extensionless article redirects. Version 37 recognizes both route forms and restores the article cross-links on the canonical URLs.
++
++All 42 sector PNGs and 111 Holovator JPEGs match the verified GitHub source files byte for byte. The map includes 15 documented approaches. Existing precise and approximate reference records keep their original coordinates and evidence labels. There are no new permanent Hyperspace or scaffold pins.
++
++The browser device widths and touch contacts were simulated. Live checks were read-only. No production feedback was submitted, no player data was accessed, and no Supabase database or checklist rows were changed.
++
++**Verified live pages**
++
++- [Interactive Lumiose Atlas and Side Mission 61 photographs](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/atlas-explorer?place=bleu3-fav)
++- [Sector map gallery](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/sector-maps?v=37#jaune-5)
++- [Walkthrough and Mission 24](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/walkthrough?v=37#mission-24)
++- [Side Mission 61](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/side-missions?v=37#quest-61)

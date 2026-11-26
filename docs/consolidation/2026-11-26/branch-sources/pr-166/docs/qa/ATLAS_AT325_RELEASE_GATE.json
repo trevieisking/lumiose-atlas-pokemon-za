@@ -1,0 +1,1569 @@
+{
+  "id": "AT-325",
+  "date": "2026-11-25",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "manifest_revision": 69,
+  "ledger_revision": 77,
+  "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
+  "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
+  "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
+  "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
+  "current_state": "planning_and_private_queue_checkpoint_only",
+  "source_inventory": {
+    "base_map": {
+      "path": "maps/lumiose-game-map.jpg",
+      "native_size": [
+        1920,
+        1920
+      ],
+      "git_blob_sha": "b951a877aea400564b1c4c6495b0cd41247bd8ca",
+      "bytes": 411683
+    },
+    "sector_count": 48,
+    "sector_pngs": 42,
+    "wild_zone_count": 20,
+    "wild_zone_pngs": 40,
+    "verified_photo_blob_and_byte_matches": 82,
+    "sector_reference_coverage": 48,
+    "wild_zone_pair_coverage": 20,
+    "holovator_photo_count": 111,
+    "holovator_research_entries": 21,
+    "existing_item_records": 264,
+    "colorful_screw_ids": 100,
+    "approximate_item_leads": 146,
+    "existing_routes": 22,
+    "registered_sector_boundaries": 0,
+    "registered_wild_zone_boundaries": 0,
+    "original_three_piece_set": "historical overview trio recovered and byte-verified; direct message identity and calibration remain unproven",
+    "historical_overview_recovery": {
+      "state": "historical_originals_recovered_and_visually_checked_calibration_pending",
+      "evidence": "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
+      "recovered_count": 3,
+      "matching_sha256_count": 3,
+      "decoded_format": "JPEG",
+      "decoded_dimensions": [
+        1536,
+        865
+      ],
+      "orientation": [
+        "south",
+        "center",
+        "north"
+      ],
+      "visual_chain": [
+        "W01↔W02: Wild Zones 5, 16, 2 and 11",
+        "W02↔W03: Wild Zones 3, 7, 8 and 19"
+      ],
+      "owner_exact_message_identity": "consistent_with_three_piece_description_not_named_in_message",
+      "originals_in_public_repository": false,
+      "geometry_added": 0
+    },
+    "historical_candidate_overview_records": [
+      {
+        "id": "W01",
+        "uploaded_basename": "1000027197.heic",
+        "width": 1536,
+        "height": 865,
+        "sha256": "b0ebb7e7f77c63920dd9aa98d51e83bcfed770b72577db801e7075e4900918ec",
+        "file_committed_to_repo": false
+      },
+      {
+        "id": "W02",
+        "uploaded_basename": "1000027198.heic",
+        "width": 1536,
+        "height": 865,
+        "sha256": "f0419f4a67b91e5d5ef82bd5894e52d452652f438b01e5e1b8a194ff51054b9a",
+        "file_committed_to_repo": false
+      },
+      {
+        "id": "W03",
+        "uploaded_basename": "1000027199.heic",
+        "width": 1536,
+        "height": 865,
+        "sha256": "78311ae15c8ffd0b9d8db396699371bb86cc3b90a3ad2cbde914b28f6ac18886",
+        "file_committed_to_repo": false
+      }
+    ],
+    "historical_candidate_manifest": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
+    "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration."
+  },
+  "prior_research": {
+    "at322": {
+      "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+      "coverage": {
+        "sectors_total": 48,
+        "wild_zones_total": 20,
+        "area_records_tracked": 68,
+        "sector_pages_reviewed": 3,
+        "sectors_with_some_evidence": 36,
+        "wild_zones_with_some_evidence": 5,
+        "extra_place_pages_reviewed": 2,
+        "species_pages_sampled": 15,
+        "complete_pokemaps_area_rosters": 0,
+        "actual_pokemaps_screenshots": 0,
+        "verified_polygons": 0,
+        "verified_walkable_routes": 0
+      }
+    },
+    "at323": {
+      "path": "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+      "counts": {
+        "sectors": 48,
+        "wild_zones": 20,
+        "bisafans_sector_names": 47,
+        "bisafans_linked_sectors": 45,
+        "archive_sector_filename_leads": 32,
+        "visually_reviewed_published_boundary_images": 3,
+        "new_verified_polygons": 0,
+        "new_verified_routes": 0,
+        "new_image_files": 0
+      }
+    },
+    "at324": {
+      "path": "docs/qa/ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json",
+      "counts": {
+        "sectors": 48,
+        "wild_zones": 20,
+        "unique_game_location_ids": 68,
+        "prior_german_directory_gaps_with_text_references": 3,
+        "new_source_findings": 10,
+        "new_published_reference_images_visually_reviewed": 1,
+        "new_verified_polygons": 0,
+        "new_verified_routes": 0,
+        "new_binary_images": 0
+      }
+    },
+    "access_survey": {
+      "path": "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "summary": {
+        "areas_total": 68,
+        "sector_text_research_started": 16,
+        "wild_zone_text_research_started": 0,
+        "route_course_leads": 57,
+        "new_exact_ladder_pins": 0,
+        "new_exact_scaffold_pins": 0,
+        "new_exact_bridge_endpoints": 0,
+        "fully_completed_areas": 0
+      }
+    },
+    "remaining_source_disagreements": [
+      "Gastly WZ7/18, Talonflame/Pyroar WZ17, WZ19 unlock and conditional Drampa, WZ14 district, sewer gate/approach identity, WZ15 floor/spawn, static versus gift/boss/rotation records; use existing detailed registers."
+    ]
+  },
+  "existing_release": {
+    "at321": {
+      "pr": 160,
+      "reviewed_head": "2faef6b25d4f4d7abfae00001a7e35163a78fb41",
+      "merge_sha": "344a84050a26a50f899752ab61693bc1190e985b",
+      "ci_runs": [
+        45678803670,
+        45678804312,
+        45678804365
+      ],
+      "pages_run": 45679413635,
+      "ci_conclusion": "success",
+      "pages_conclusion": "success",
+      "current_main_pages_run": 45680305852,
+      "current_main_pages_conclusion": "success",
+      "live_direct_check_in_this_checkpoint": false,
+      "review_findings": [
+        {
+          "id": "AT325-R01",
+          "source": "PR #160 review and current maps.js selectZone/openHash",
+          "problem": "Selecting another Wild Zone from standalone map/directory leaves old #wild-zone-N fragment; reload or shared link may reopen stale selection.",
+          "required": "Synchronize selection and clearing to validated fragment without dropping unrelated query/fragment behavior or resetting filters on internal clicks. Test open deep link, change zone, reload, copy URL, filter-clear and back/forward where supported.",
+          "state": "source_confirmed_pending_fix"
+        },
+        {
+          "id": "AT325-R02",
+          "source": "PR #160 review and current .github/workflows/atlas-explorer.yml paths",
+          "problem": "40 source Wild Zone images and batch manifests do not trigger dedicated Atlas validation on photo-only PRs.",
+          "required": "Add assets/atlas/wild-zones/** and maps.js to pull-request path scope; protect actual bytes, dimensions, hash, references and unchanged existing test requirements.",
+          "state": "source_confirmed_pending_fix"
+        },
+        {
+          "id": "AT325-R03",
+          "source": "PR #160 review and current sector-maps.js openDirectHash",
+          "problem": "Generic first details selector now selects Zone 20 Alpha pool instead of original item-record panel.",
+          "required": "Use explicitly named existing item-record disclosure for Wild Zone anchors without changing ordinary sector behavior or #map-lead deep links. Add browser regression for #wildzone-20 and saved numbered clue panel.",
+          "state": "source_confirmed_pending_fix"
+        }
+      ],
+      "status": "deployed_with_outstanding_review_followup"
+    },
+    "at320": {
+      "pr": 156,
+      "head": "2f16e5bd6efddc5454c60b2024d00db1cdbdebf0",
+      "status": "separate_pending_reconciliation"
+    },
+    "workspace": {
+      "last_documented_version": 37,
+      "evidence_pr": 149,
+      "evidence_head": "e826d100f0eb540f73e58274273a0d1c3c5cecb7",
+      "source_sha": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
+      "status": "historical_evidence_reviewed_in_open_documentation_PR; not newly verified or authorized for this upgrade"
+    }
+  },
+  "areas": [
+    {
+      "atlas_id": "vert-sector-1",
+      "name": "Vert Sector 1",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-1-saison-canal.png"
+      ],
+      "game_location_index_reference": 21,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-2",
+      "name": "Vert Sector 2",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png"
+      ],
+      "game_location_index_reference": 27,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-3",
+      "name": "Vert Sector 3",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-sector-3.png"
+      ],
+      "game_location_index_reference": 22,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-4",
+      "name": "Vert Sector 4",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-4-5.png"
+      ],
+      "game_location_index_reference": 28,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-5",
+      "name": "Vert Sector 5",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-4-5.png"
+      ],
+      "game_location_index_reference": 29,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-6",
+      "name": "Vert Sector 6",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-sector-6.png"
+      ],
+      "game_location_index_reference": 24,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-7",
+      "name": "Vert Sector 7",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-sector-7.png"
+      ],
+      "game_location_index_reference": 25,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-8",
+      "name": "Vert Sector 8",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-sector-8.png"
+      ],
+      "game_location_index_reference": 30,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "vert-sector-9",
+      "name": "Vert Sector 9",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/vert/vert-sector-9.png"
+      ],
+      "game_location_index_reference": 31,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-1",
+      "name": "Bleu Sector 1",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png"
+      ],
+      "game_location_index_reference": 37,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-2",
+      "name": "Bleu Sector 2",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png"
+      ],
+      "game_location_index_reference": 42,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-3",
+      "name": "Bleu Sector 3",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-3.png"
+      ],
+      "game_location_index_reference": 38,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-4",
+      "name": "Bleu Sector 4",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png"
+      ],
+      "game_location_index_reference": 43,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-5",
+      "name": "Bleu Sector 5",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png"
+      ],
+      "game_location_index_reference": 40,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-6",
+      "name": "Bleu Sector 6",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png"
+      ],
+      "game_location_index_reference": 45,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-7",
+      "name": "Bleu Sector 7",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png"
+      ],
+      "game_location_index_reference": 41,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-8",
+      "name": "Bleu Sector 8",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-8.png"
+      ],
+      "game_location_index_reference": 46,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-9",
+      "name": "Bleu Sector 9",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-9.png"
+      ],
+      "game_location_index_reference": 47,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "bleu-sector-10",
+      "name": "Bleu Sector 10",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/bleu/bleu-sector-10.png"
+      ],
+      "game_location_index_reference": 48,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-1",
+      "name": "Magenta Sector 1",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png"
+      ],
+      "game_location_index_reference": 54,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-2",
+      "name": "Magenta Sector 2",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-2.png"
+      ],
+      "game_location_index_reference": 59,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-3",
+      "name": "Magenta Sector 3",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png"
+      ],
+      "game_location_index_reference": 55,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-4",
+      "name": "Magenta Sector 4",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-4.png"
+      ],
+      "game_location_index_reference": 60,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-5",
+      "name": "Magenta Sector 5",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-5.png"
+      ],
+      "game_location_index_reference": 56,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-6",
+      "name": "Magenta Sector 6",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png"
+      ],
+      "game_location_index_reference": 57,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-7",
+      "name": "Magenta Sector 7",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-7.png"
+      ],
+      "game_location_index_reference": 61,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-8",
+      "name": "Magenta Sector 8",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-8.png"
+      ],
+      "game_location_index_reference": 63,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "magenta-sector-9",
+      "name": "Magenta Sector 9",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/magenta/magenta-sector-9.png"
+      ],
+      "game_location_index_reference": 64,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-1",
+      "name": "Rouge Sector 1",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-1.png"
+      ],
+      "game_location_index_reference": 70,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-2",
+      "name": "Rouge Sector 2",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-2.png"
+      ],
+      "game_location_index_reference": 75,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-3",
+      "name": "Rouge Sector 3",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-3.png"
+      ],
+      "game_location_index_reference": 71,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-4",
+      "name": "Rouge Sector 4",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-4.png"
+      ],
+      "game_location_index_reference": 72,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-5",
+      "name": "Rouge Sector 5",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-5.png"
+      ],
+      "game_location_index_reference": 73,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-6",
+      "name": "Rouge Sector 6",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-6.png"
+      ],
+      "game_location_index_reference": 77,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-7",
+      "name": "Rouge Sector 7",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png"
+      ],
+      "game_location_index_reference": 74,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "rouge-sector-8",
+      "name": "Rouge Sector 8",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png"
+      ],
+      "game_location_index_reference": 79,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-1",
+      "name": "Jaune Sector 1",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png"
+      ],
+      "game_location_index_reference": 85,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-2",
+      "name": "Jaune Sector 2",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-2.png"
+      ],
+      "game_location_index_reference": 91,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-3",
+      "name": "Jaune Sector 3",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png"
+      ],
+      "game_location_index_reference": 86,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-4",
+      "name": "Jaune Sector 4",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-4.png"
+      ],
+      "game_location_index_reference": 87,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-5",
+      "name": "Jaune Sector 5",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-5.png"
+      ],
+      "game_location_index_reference": 88,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-6",
+      "name": "Jaune Sector 6",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-6.png"
+      ],
+      "game_location_index_reference": 93,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-7",
+      "name": "Jaune Sector 7",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png"
+      ],
+      "game_location_index_reference": 89,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-8",
+      "name": "Jaune Sector 8",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-sector-8.png"
+      ],
+      "game_location_index_reference": 90,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-9",
+      "name": "Jaune Sector 9",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png"
+      ],
+      "game_location_index_reference": 94,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-10",
+      "name": "Jaune Sector 10",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png"
+      ],
+      "game_location_index_reference": 95,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-11",
+      "name": "Jaune Sector 11",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png"
+      ],
+      "game_location_index_reference": 96,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "jaune-sector-12",
+      "name": "Jaune Sector 12",
+      "kind": "sector",
+      "owner_image_paths": [
+        "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png"
+      ],
+      "game_location_index_reference": 97,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blob and byte count against AT-304 library",
+      "source_geometry_status": "orientation_only_unregistered",
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "pending_conditions_and_area_membership",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-01",
+      "name": "Wild Zone 01",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-01-overview.png",
+        "assets/atlas/wild-zones/wild-zone-01-closeup.png"
+      ],
+      "game_location_index_reference": 194,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1140,
+        1761
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-02",
+      "name": "Wild Zone 02",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-02-overview.png",
+        "assets/atlas/wild-zones/wild-zone-02-closeup.png"
+      ],
+      "game_location_index_reference": 195,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1175,
+        1269
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-03",
+      "name": "Wild Zone 03",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-03-overview.png",
+        "assets/atlas/wild-zones/wild-zone-03-closeup.png"
+      ],
+      "game_location_index_reference": 206,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        954,
+        536
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-04",
+      "name": "Wild Zone 04",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-04-overview.png",
+        "assets/atlas/wild-zones/wild-zone-04-closeup.png"
+      ],
+      "game_location_index_reference": 205,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1081,
+        284
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-05",
+      "name": "Wild Zone 05",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-05-overview.png",
+        "assets/atlas/wild-zones/wild-zone-05-closeup.png"
+      ],
+      "game_location_index_reference": 198,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        795,
+        1119
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-06",
+      "name": "Wild Zone 06",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-06-overview.png",
+        "assets/atlas/wild-zones/wild-zone-06-closeup.png"
+      ],
+      "game_location_index_reference": 209,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1745,
+        995
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-07",
+      "name": "Wild Zone 07",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-07-overview.png",
+        "assets/atlas/wild-zones/wild-zone-07-closeup.png"
+      ],
+      "game_location_index_reference": 203,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        561,
+        835
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-08",
+      "name": "Wild Zone 08",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-08-overview.png",
+        "assets/atlas/wild-zones/wild-zone-08-closeup.png"
+      ],
+      "game_location_index_reference": 211,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1380,
+        820
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-09",
+      "name": "Wild Zone 09",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-09-overview.png",
+        "assets/atlas/wild-zones/wild-zone-09-closeup.png"
+      ],
+      "game_location_index_reference": 201,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        250,
+        1069
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-10",
+      "name": "Wild Zone 10",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-10-overview.png",
+        "assets/atlas/wild-zones/wild-zone-10-closeup.png"
+      ],
+      "game_location_index_reference": 197,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        309,
+        1281
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-11",
+      "name": "Wild Zone 11",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-11-overview.png",
+        "assets/atlas/wild-zones/wild-zone-11-closeup.png"
+      ],
+      "game_location_index_reference": 210,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1580,
+        1135
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-12",
+      "name": "Wild Zone 12",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-12-overview.png",
+        "assets/atlas/wild-zones/wild-zone-12-closeup.png"
+      ],
+      "game_location_index_reference": 196,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        801,
+        1571
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-13",
+      "name": "Wild Zone 13",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-13-overview.png",
+        "assets/atlas/wild-zones/wild-zone-13-closeup.png"
+      ],
+      "game_location_index_reference": 204,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        776,
+        144
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-14",
+      "name": "Wild Zone 14",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-14-overview.png",
+        "assets/atlas/wild-zones/wild-zone-14-closeup.png"
+      ],
+      "game_location_index_reference": 200,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        209,
+        801
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-15",
+      "name": "Wild Zone 15",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-15-overview.png",
+        "assets/atlas/wild-zones/wild-zone-15-closeup.png"
+      ],
+      "game_location_index_reference": 207,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1546,
+        346
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-16",
+      "name": "Wild Zone 16",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-16-overview.png",
+        "assets/atlas/wild-zones/wild-zone-16-closeup.png"
+      ],
+      "game_location_index_reference": 199,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        710,
+        1294
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-17",
+      "name": "Wild Zone 17",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-17-overview.png",
+        "assets/atlas/wild-zones/wild-zone-17-closeup.png"
+      ],
+      "game_location_index_reference": 193,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1471,
+        1480
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-18",
+      "name": "Wild Zone 18",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-18-overview.png",
+        "assets/atlas/wild-zones/wild-zone-18-closeup.png"
+      ],
+      "game_location_index_reference": 202,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        390,
+        361
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-19",
+      "name": "Wild Zone 19",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-19-overview.png",
+        "assets/atlas/wild-zones/wild-zone-19-closeup.png"
+      ],
+      "game_location_index_reference": 208,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        1549,
+        601
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    },
+    {
+      "atlas_id": "wz-20",
+      "name": "Wild Zone 20",
+      "kind": "wild_zone",
+      "owner_image_paths": [
+        "assets/atlas/wild-zones/wild-zone-20-overview.png",
+        "assets/atlas/wild-zones/wild-zone-20-closeup.png"
+      ],
+      "game_location_index_reference": 212,
+      "identity_source": "AT-324 published community index; not coordinate evidence",
+      "photo_inventory": "verified Git blobs and byte counts against AT-321 source manifests",
+      "source_geometry_status": "approximate_saved_centre_only",
+      "existing_centre": [
+        950,
+        960
+      ],
+      "geometry": null,
+      "registration_evidence": null,
+      "encounter_review": "AT-321 roster deployed; conditions, exceptions and disputes require reconciliation",
+      "navigation_review": "pending_evidence_review",
+      "ready_for_verified_highlight": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "G0",
+      "name": "Plan, inventory, and private Workspace queue",
+      "state": "documentation_checkpoint",
+      "acceptance": [
+        "Record owner direction: finish GitHub before writing or submitting final Workspace prompt.",
+        "Reconcile AT-321–324 evidence, review findings, exact source inventory, master plan, manifest, ledger and private checklist.",
+        "No duplicate photography requests or unverified geometry."
+      ]
+    },
+    {
+      "id": "G1",
+      "name": "Protect current live map and reconcile existing branches",
+      "state": "pending",
+      "acceptance": [
+        "Repair the three confirmed AT-321 review findings with tests; ensure previous exact-head failure is not forgotten and scope is bounded.",
+        "Review AT-320 PR #156 at exact head, reconcile current plan/manifest/ledger and route records without reverting newer work; promote only if independently validated.",
+        "Keep unrelated PRs #149, #153, #154 and all other work separate; do not reset existing progress or review evidence."
+      ]
+    },
+    {
+      "id": "G2",
+      "name": "Recover and calibrate owner-source map coverage",
+      "state": "historical_overview_recovery_verified_calibration_pending",
+      "acceptance": [
+        "Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.",
+        "Historical W01–W03 originals recovered with exact hashes, dimensions and observed overlap. Verify scale, perspective, north-up registration and coverage with independent landmarks before use; later intended set not explicitly named.",
+        "For each pilot align using >=4 distributed noncollinear landmarks and independent held-out checks; record transform, residuals, uncertainty, original-image hashes and any obstructions. Do not stretch, invent, or replace original imagery. Reuse existing complete image collections to proceed even if older three images cannot be retrieved.",
+        "Prioritize WZ5, WZ11, Vert1, Bleu7 and WZ14. Distinguish photograph coverage, registered labels, and calibrated boundaries. Use original game captures and reference text/images, not guesses. Work through all 68 areas and preserve existing XY."
+      ]
+    },
+    {
+      "id": "G3",
+      "name": "Verified boundary and encounter systems",
+      "state": "pending",
+      "acceptance": [
+        "Independently validate geometry for all 48 sectors and 20 Wild Zones before marking full map scope complete; where evidence fails, leave explicit unresolved geometry and block final full-scope handoff. Never claim a centre is a polygon or borrow third-party map code or pixels.",
+        "Keep separate native geometry layers for city district/sector, overlapping Wild Zones, spawn extent, floors/interiors and route segments. WZ5 overlaps two Bleu sectors/street; WZ11 spans Saison Canal/Jaune+Vert; verify WZ14 disputed district.",
+        "Validate searchable catchable Pokémon per area including conditions, form, time, weather, floor, unlock and encounter class where established. Preserve AT-321 38 fixed Alpha rows and separate WZ20 15 ordinary + 67 rotating candidates; resolve or explicitly label disputed WZ7/17/18/19 entries. Never convert gift, boss, trade or quest into repeatable wild catch.",
+        "Retain AT-324 identity lookup as separate non-coordinate data; use international references as evidence, not bulk imported data."
+      ]
+    },
+    {
+      "id": "G4",
+      "name": "Interactive Atlas 2.0 implementation",
+      "state": "pending",
+      "acceptance": [
+        "One shared data/geometry/encounter layer for Explorer and all existing map views; retain old links, markers, data, menus and progress.",
+        "Click an independently verified sector or zone to highlight correct boundary; click a species to reveal all verified habitats. Clear selection, filters, legend, deep links, mobile drawer and desktop panel.",
+        "Retain pan/zoom, mobile two-finger rotation and pinch, desktop controls, north reset, keyboard access, accessible controls and map state. Use precise geometry only when proved; preserve orientation/written directions for uncertain areas.",
+        "Written photo-led approaches across all 68 areas; existing verified Holovator/ladder/scaffold routes and markers preserved. Only show a drawn path when connected traversable street/roof/floor/door segments, prerequisites and direction are confirmed; no fabricated ladder/scaffold/bridge inventory. Never permanently mark random Hyperspace or nightly Battle Zones."
+      ]
+    },
+    {
+      "id": "G5",
+      "name": "GitHub full-scope validation and deployment",
+      "state": "pending",
+      "acceptance": [
+        "Review current main and exact PR head, scope, diff, source and progress contracts; preserve 48/20, 42/40 photos, 111 Holovator photos/21 approximate records, 264 item records, 100 screw IDs, 146 item leads, original maps and guide features.",
+        "All 68 boundary and roster records, route review and required map interactions meet approved acceptance. Unresolved mandatory requirements block full-scope completion; optional unverified details remain explicitly labelled and must not mislead.",
+        "Pass exact-head unit/static, photo SHA-256/dimensions, link and browser checks on mobile/desktop; inspect genuine screenshots and resolve material review findings. Record exact SHA, test results, screenshot artifacts and independent live checks.",
+        "Expected-head merge, verify exact Pages deployment and read-only live checks on deployed version. Store tested patch list and approved full-scope release SHA, tree, source evidence and rollback instructions. No GitHub deploy to original Workspace."
+      ]
+    },
+    {
+      "id": "A0",
+      "name": "Final Workspace prompt",
+      "state": "blocked_until_G5_verified",
+      "acceptance": [
+        "Only after complete GitHub release and G0–G5 signoff, generate one final consolidated Workspace prompt with actual exact approved release SHA, changed files, required features, validation evidence, unresolved optional limitations and AT identifiers. Do not generate a ready-to-run prompt now or instruct Workspace to pull latest main indiscriminately.",
+        "Reference this release gate and AT-297. Require original project/source, verified inventory and rollback, compatible bounded patches, original URL, source-specific progress and Supabase contract preservation. Exclude secrets and player data. No new site or automatic sync.",
+        "Workspace applies only compatible tested GitHub changes, previews and validates independently, publishes through authorized original editor, then records its actual version and proof. No change until authorized access/source confirmed."
+      ]
+    },
+    {
+      "id": "A1-A7",
+      "name": "Independent original Workspace release and verification",
+      "state": "blocked_until_A0",
+      "acceptance": [
+        "Reconfirm actual Workspace source/version, access and source export/rollback before edit; v37 is historical evidence from PR #149, not a new verified access grant or guarantee of current version.",
+        "Perform AT-297 A1–A7: authorized editor access, backup/rollback, progress/Supabase audit, bounded compatibility patch, isolated preview, authorized publication on existing URL, independent phone/desktop live checks.",
+        "Keep all saved progress, database, ratings, feedback, existing maps, artwork, menus, links, route behavior and public origin. Never replace original Site with GitHub reconstruction or touch public data to simulate verification.",
+        "Update private checklist with exact Workspace release reference, evidence and timestamp only after actual original-site validation. Preserve both-site distinction."
+      ]
+    }
+  ],
+  "workspace_prompt": {
+    "state": "blocked",
+    "required_approved_github_release_sha": null,
+    "required_exact_deployment_evidence": null,
+    "required_full_scope_signoff": null,
+    "final_prompt_path": null,
+    "allowed_to_send_or_execute": false,
+    "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
+  },
+  "preservation": {
+    "runtime_changed": false,
+    "public_database_changed": false,
+    "player_progress_changed": false,
+    "feedback_changed": false,
+    "workspace_changed": false,
+    "other_prs_changed": false
+  }
+}

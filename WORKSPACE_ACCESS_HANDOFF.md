@@ -1,5 +1,11 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+## AT-336 — current consolidated checkpoint
+
+26 November2026: [the consolidated release handoff](ATLAS_RELEASE_HANDOFF.md) supersedes stale source-access and release-status statements below. Fresh Sites metadata confirms original version37/source `1ac2c20002451d295dc4f8e80068297682fcdc4b`, owner access and successful associated deployment. Historical v37 source/release evidence from PR149 is preserved; the original Site was not edited in this checkpoint. Videos/YouTube are paused, with GitHub runtime removal in PR188. Full Map2.0 GitHub G0–G5 and the next independent Workspace A1–A7 release remain incomplete. Do not issue an executable final Workspace prompt or replace the original Site from this preparation packet.
+
+The earlier dated material below is historical context. Keep original progress, sources, photographs, feedback, Supabase and URL intact; reconcile exact current-source evidence before the next release.
+
 ## AT-325 — Current release-order instruction (25 November 2026)
 
 **Do not run a Workspace upgrade prompt yet.** Owner requires the full approved Interactive Map 2.0 upgrade to be finished, tested, merged and verified on GitHub Pages first. Follow [AT-325 ordered gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [machine-readable release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json); the final approved release SHA, validation packet and prompt remain unset. After G5 is verified, prepare **one** consolidated final prompt pinned to the exact approved release and AT identifiers. Reconfirm access and actual original Workspace source/version, export/rollback and compatibility under AT-297 before any publication. The historical version 37 release record is in [PR #149](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/149), not new permission or confirmation of the currently live version. Preserve original Site URL, design, existing progress, feedback, Supabase integration, maps and guides; do not create a replacement site or automatically sync the repository. No prompt generated or submitted at this checkpoint. Historical prompts below are source-access policy context, not permission to apply the incomplete upgrade now.

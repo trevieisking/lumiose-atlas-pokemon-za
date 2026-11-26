@@ -1,5 +1,11 @@
 # Lumiose Atlas — GitHub-only lift research handoff (22 November 2026)
 
+## AT-336 — current consolidated checkpoint
+
+26 November2026: [the consolidated release handoff](ATLAS_RELEASE_HANDOFF.md) supersedes stale source-access and release-status statements below. Fresh Sites metadata confirms original version37/source `1ac2c20002451d295dc4f8e80068297682fcdc4b`, owner access and successful associated deployment. Historical v37 source/release evidence from PR149 is preserved; the original Site was not edited in this checkpoint. Videos/YouTube are paused, with GitHub runtime removal in PR188. Full Map2.0 GitHub G0–G5 and the next independent Workspace A1–A7 release remain incomplete. Do not issue an executable final Workspace prompt or replace the original Site from this preparation packet.
+
+The earlier dated material below is historical context. Keep original progress, sources, photographs, feedback, Supabase and URL intact; reconcile exact current-source evidence before the next release.
+
 **Current handover:** Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
 
 **Purpose:** GitHub source first; the owner will arrange permissions for the original ChatGPT live Site **later**. Do not assume a GitHub PR merge updates or grants write access to the original ChatGPT Site. Do not redeploy or replace it now.

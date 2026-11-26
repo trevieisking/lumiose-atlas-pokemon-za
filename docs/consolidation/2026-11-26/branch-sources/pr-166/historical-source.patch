@@ -1,0 +1,204 @@
+diff --git a/ATLAS_DUAL_SITE_FIX_LEDGER.md b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+index 3abc869..ee99666 100644
+--- a/ATLAS_DUAL_SITE_FIX_LEDGER.md
++++ b/ATLAS_DUAL_SITE_FIX_LEDGER.md
+@@ -5,7 +5,7 @@
+ **Read these first, in order, before any research or code change:** [Master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [Manifest](MAPS_UPGRADE_MANIFEST.json) · [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [Access survey](MAPS_ACCESS_ROUTE_SURVEY.json) · private Supabase `atlas_internal.feature_checklist` and `atlas_internal.report_resolution_queue` ([feedback protocol](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md)). Read current main **and** any active development PR at its exact head; do not use stale conversation summaries as authority. Follow linked plans and check current site-specific evidence. At each checkpoint synchronize the plan, manifest, ledger and relevant private checklist rows; keep links/purpose/route step, revision, status and evidence current. GitHub and Workspace remain separate until independently deployed and verified. Never claim a feature is live from a branch or a passing test alone. Preserve existing progress, maps, photographs, feedback and original Workspace. Stop promotion on missing, failed or contradictory evidence. Map source images must follow the [AT-301 JPEG/PNG crop and provenance register](MAPS_BORDERLESS_SOURCE_REGISTER_2026-11-24.json). Before original Site access or changes, read [Workspace access and safe upgrade policy](WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy).
+ 
+ 
+-**Revision:** 76 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
++**Revision:** 77 · **Opened:** 21 November 2026 · **Maintained in:** `trevieisking/lumiose-atlas-pokemon-za`
+ **Owner goal:** Keep the original ChatGPT Workspace Site and the independent GitHub/IONOS edition at the same verified content and feature standard. This ledger tracks differences; it **does not claim that the two sites are already synchronized**.
+ 
+ **22 Nov 2026 owner feedback tracker update — AT-259:** The original report table now has a separate, **private Supabase resolution tracker** with independent GitHub/Workspace verification and evidence. Read the current protocol and SQL query in [ATLAS_FEEDBACK_RESOLUTION_TRACKER.md](docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md). As of creation, #13/#14/#18 remain OPEN on both sites; owner test #19 is **GitHub VERIFIED / Workspace OPEN** after PR #84. All four reports are retained. Older historical checkpoints describing only #13/#14 are not the current inventory; the SQL queue is authoritative. Neither the ChatGPT Site nor player progress was modified.
+@@ -781,7 +781,7 @@ Read the [audit](docs/qa/ATLAS_AT324_INTERNATIONAL_LOCATION_AUDIT.md) and [68-ar
+ 
+ ## AT-325 — Owner-approved GitHub-first completion and final Workspace handoff (25 November 2026)
+ 
+-**Read [the ordered release gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [the 68-area release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json) before any new map implementation.** Owner confirms the original city map was sent in three pieces along with all sector and Wild Zone images. Exact baseline `069611db5a9e02788ce812b5e49f8c0522ae2360`: 42/42 sector PNGs, 40/40 Wild Zone PNGs match manifest Git blobs and byte counts; 48/48 sector reference paths and 20/20 original photo pairs present. Historical three overview records and hashes located, exact original three-piece bytes not yet recovered; reuse existing material and do not request duplicate photographs. 0/68 independently registered boundary polygons. Prior AT-322/323/324 research and source disagreements preserved; all 68 area identities and 20 Wild Zone geographic notes available. See linked registers for conditions, geometry and source limits.
++**Read [the ordered release gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [the 68-area release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json) before any new map implementation.** Owner confirms the original city map was sent in three pieces along with all sector and Wild Zone images. Exact baseline `069611db5a9e02788ce812b5e49f8c0522ae2360`: 42/42 sector PNGs, 40/40 Wild Zone PNGs match manifest Git blobs and byte counts; 48/48 sector reference paths and 20/20 original photo pairs present. Recovered the byte-identical historical W01–W03 owner photos. They are overlapping south, center and north views, consistent with the three-piece description; the message does not identify filenames. All three decoded as 1536×865 JPEGs despite .heic filenames. Photo overlap and visible landmarks are orientation evidence, not calibration or boundaries. [See the recovery evidence](docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md). Reuse existing material and do not request duplicate photographs. 0/68 independently registered boundary polygons. Prior AT-322/323/324 research and source disagreements preserved; all 68 area identities and 20 Wild Zone geographic notes available. See linked registers for conditions, geometry and source limits.
+ 
+ **Current GitHub evidence:** AT-321 PR #160 exact tested head `2faef6b25d4f4d7abfae00001a7e35163a78fb41` merged `344a84050a26a50f899752ab61693bc1190e985b`, exact Pages run 45679413635 success; baseline main Pages run 45680305852 success. Direct live check not repeated. Three still-present review findings now mandatory first fixes: stale standalone zone hash, missing Wild Zone asset CI path coverage, Zone 20 wrong deep-link disclosure. AT-320 PR #156 remains separate; reconcile newer plan and data safely before promotion. Historical AT-297 Workspace v37 release is documented on open PR #149; not evidence of current editor access or new parity.
+ 
+diff --git a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+index c9478af..696d652 100644
+--- a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
++++ b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+@@ -1334,7 +1334,7 @@ Read the [audit](docs/qa/ATLAS_AT324_INTERNATIONAL_LOCATION_AUDIT.md) and [68-ar
+ 
+ ## AT-325 — Owner-approved GitHub-first completion and final Workspace handoff (25 November 2026)
+ 
+-**Read [the ordered release gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [the 68-area release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json) before any new map implementation.** Owner confirms the original city map was sent in three pieces along with all sector and Wild Zone images. Exact baseline `069611db5a9e02788ce812b5e49f8c0522ae2360`: 42/42 sector PNGs, 40/40 Wild Zone PNGs match manifest Git blobs and byte counts; 48/48 sector reference paths and 20/20 original photo pairs present. Historical three overview records and hashes located, exact original three-piece bytes not yet recovered; reuse existing material and do not request duplicate photographs. 0/68 independently registered boundary polygons. Prior AT-322/323/324 research and source disagreements preserved; all 68 area identities and 20 Wild Zone geographic notes available. See linked registers for conditions, geometry and source limits.
++**Read [the ordered release gates](docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md) and [the 68-area release register](docs/qa/ATLAS_AT325_RELEASE_GATE.json) before any new map implementation.** Owner confirms the original city map was sent in three pieces along with all sector and Wild Zone images. Exact baseline `069611db5a9e02788ce812b5e49f8c0522ae2360`: 42/42 sector PNGs, 40/40 Wild Zone PNGs match manifest Git blobs and byte counts; 48/48 sector reference paths and 20/20 original photo pairs present. Recovered the byte-identical historical W01–W03 owner photos. They are overlapping south, center and north views, consistent with the three-piece description; the message does not identify filenames. All three decoded as 1536×865 JPEGs despite .heic filenames. Photo overlap and visible landmarks are orientation evidence, not calibration or boundaries. [See the recovery evidence](docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md). Reuse existing material and do not request duplicate photographs. 0/68 independently registered boundary polygons. Prior AT-322/323/324 research and source disagreements preserved; all 68 area identities and 20 Wild Zone geographic notes available. See linked registers for conditions, geometry and source limits.
+ 
+ **Current GitHub evidence:** AT-321 PR #160 exact tested head `2faef6b25d4f4d7abfae00001a7e35163a78fb41` merged `344a84050a26a50f899752ab61693bc1190e985b`, exact Pages run 45679413635 success; baseline main Pages run 45680305852 success. Direct live check not repeated. Three still-present review findings now mandatory first fixes: stale standalone zone hash, missing Wild Zone asset CI path coverage, Zone 20 wrong deep-link disclosure. AT-320 PR #156 remains separate; reconcile newer plan and data safely before promotion. Historical AT-297 Workspace v37 release is documented on open PR #149; not evidence of current editor access or new parity.
+ 
+diff --git a/MAPS_UPGRADE_MANIFEST.json b/MAPS_UPGRADE_MANIFEST.json
+index a3a8fe6..1cd37a5 100644
+--- a/MAPS_UPGRADE_MANIFEST.json
++++ b/MAPS_UPGRADE_MANIFEST.json
+@@ -16,7 +16,7 @@
+     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
+   },
+   "id": "ATLAS-MAPS-2026-11-21-V1",
+-  "revision": 68,
++  "revision": 69,
+   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
+   "created_at": "2026-11-21",
+   "status": "owner_approved_source_first_access_survey_in_progress",
+@@ -4795,7 +4795,30 @@
+       "existing_routes": 22,
+       "registered_sector_boundaries": 0,
+       "registered_wild_zone_boundaries": 0,
+-      "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
++      "original_three_piece_set": "historical overview trio recovered and byte-verified; direct message identity and calibration remain unproven",
++        "historical_overview_recovery": {
++          "state": "historical_originals_recovered_and_visually_checked_calibration_pending",
++          "evidence": "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
++          "recovered_count": 3,
++          "matching_sha256_count": 3,
++          "decoded_format": "JPEG",
++          "decoded_dimensions": [
++            1536,
++            865
++          ],
++          "orientation": [
++            "south",
++            "center",
++            "north"
++          ],
++          "visual_chain": [
++            "W01↔W02: Wild Zones 5, 16, 2 and 11",
++            "W02↔W03: Wild Zones 3, 7, 8 and 19"
++          ],
++          "owner_exact_message_identity": "consistent_with_three_piece_description_not_named_in_message",
++          "originals_in_public_repository": false,
++          "geometry_added": 0
++        },
+       "historical_candidate_overview_records": [
+         {
+           "id": "W01",
+@@ -4836,7 +4859,7 @@
+       },
+       {
+         "id": "G2",
+-        "state": "pending"
++        "state": "historical_overview_recovery_verified_calibration_pending"
+       },
+       {
+         "id": "G3",
+diff --git a/docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md b/docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md
+index eaeec18..64150ed 100644
+--- a/docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md
++++ b/docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md
+@@ -7,7 +7,7 @@ Main `069611db5a9e02788ce812b5e49f8c0522ae2360`, tree `512fe997ea19f15703503f37c
+ 
+ - Original native 1920 × 1920 map remains `maps/lumiose-game-map.jpg`.
+ - **42/42** sector crop blobs and **40/40** Wild Zone photo blobs match saved Git SHA and byte counts. All **48/48** sector references resolve, **20/20** Wild Zones have two originals. Source library and four batch manifests retained. No new pixel-level decode or geometry claims here. Existing 111 Holovator photographs and 21 approximate research entries, 264 item records, 100 Screw IDs, 146 approximate item leads and original 22 map routes preserved.
+-- The owner reports having sent the city in three pieces. Earlier W01–W03 overview records have exact names and hashes in [owner wide-photo register](../../MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json), but their original bytes have not been recovered in this session and their identity as the precise three-piece set is not yet established. Recover from authorized prior uploads/archive and compare. Do not stop all useful work if the 82 existing committed images suffice; do not ask for duplicate images now.
++- Recovered the byte-identical historical W01–W03 owner photos. They are overlapping south, center and north views, consistent with the three-piece description; the message does not identify filenames. All three decoded as 1536×865 JPEGs despite .heic filenames. Photo overlap and visible landmarks are orientation evidence, not calibration or boundaries. [Private-original recovery and alignment sensitivity](ATLAS_AT325_OVERVIEW_RECOVERY.md). Reuse existing files; do not request duplicate photos.
+ - All 68 area IDs and published identity leads are catalogued. **0/68 verified boundary polygons** at this checkpoint. Source photographs and community game IDs are not measured geographic geometry. All area geometry fields remain null in the release gate.
+ - [AT-322 PokéMaps register](ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json) records 15 species-reference samples, 36 sectors and 5 zones with partial leads, not a complete roster or a screenshot survey.
+ - [AT-323 boundary register](ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json) records all 20 Wild Zone geography notes, 45/48 German sector links, 32 archive filename leads and three published reference pictures reviewed; [AT-324 crosswalk](ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json) records 68 source-published identities, ten findings, alternate descriptions for the three missing directory sectors and an additional Jaune district picture. Image downloads remain unavailable; no new external image bytes or verified polygons. Preserve uncertainty, attribution, and all research notes rather than overwriting data.
+@@ -51,9 +51,9 @@ Evidence: PR #160 review and current sector-maps.js openDirectHash. Pending fix.
+ - [ ] Keep unrelated PRs #149, #153, #154 and all other work separate; do not reset existing progress or review evidence.
+ 
+ ### G2 — Recover and calibrate owner-source map coverage
+-**State:** pending
++**State:** Historical source recovery verified; calibration pending
+ - [ ] Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.
+-- [ ] Find owner three city-map pieces in authorized prior files or source archive; the historical W01–W03 manifest is a candidate provenance lead, not proof that it is the identical three-piece set. No bytes newly recovered. Check exact hashes, image dimensions, overlaps, north-up, zoom, distortion and source purpose.
++- [x] Recover W01–W03 and verify historical hashes, dimensions and overlap. Still verify north-up registration, scale, perspective, and exact coverage as part of the pilot.
+ - [ ] For each pilot align using >=4 distributed noncollinear landmarks and independent held-out checks; record transform, residuals, uncertainty, original-image hashes and any obstructions. Do not stretch, invent, or replace original imagery. Reuse existing complete image collections to proceed even if older three images cannot be retrieved.
+ - [ ] Prioritize WZ5, WZ11, Vert1, Bleu7 and WZ14. Distinguish photograph coverage, registered labels, and calibrated boundaries. Use original game captures and reference text/images, not guesses. Work through all 68 areas and preserve existing XY.
+ 
+diff --git a/docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md b/docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md
+new file mode 100644
+index 0000000..bbd2ffd
+--- /dev/null
++++ b/docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md
+@@ -0,0 +1,24 @@
++# AT-325 G2 — Private overview recovery and historical alignment sensitivity
++
++25 November 2026. These three originals were recovered from the owner's November 21 upload batch. The image bytes remain private. See the [historical register](../../MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json) for exact SHA-256 and filename provenance.
++
++| Frame | Original bytes | Verified decoding | Visible city coverage |
++| --- | ---: | --- | --- |
++| W01 | 284,011 | JPEG, 1536 × 865 | Southern city rim and Wild Zones 1, 12, 16, 17; extends north into the overlap with W02. |
++| W02 | 359,422 | JPEG, 1536 × 865 | Central Prism Tower plaza and mid-city; overlaps W01 at Wild Zones 5, 16, 2 and 11, and W03 at Wild Zones 3, 7, 8 and 19. |
++| W03 | 264,497 | JPEG, 1536 × 865 | Northern city rim and Wild Zones 13, 18, 4, 15; extends south into the overlap with W02. |
++
++All full-file hashes exactly match the historical originals. The south/center/north chain is consistent with the owner's description of a city map in three pieces, but the later message does not name the files. Do not treat this as proof of seamless perimeter coverage, one-to-one pixel scale, constant north-up/frame geometry or verified boundaries. TV framing, perspective, lens effects, overlays and position markers are visible and must not become geographic controls. Preserve the original base map and complete existing crop libraries.
++
++## Historical sensitivity diagnostic (not independent calibration)
++
++Re-fit the archived approximate controls with ordinary least squares. Convert archived 1280 preview targets to 1920 native pixels by ×1.5. The leave-one-out column is the maximum Euclidean prediction error for a control omitted from its own fit. It compares old approximate picks only; it does not validate new locations.
++
++| Frame | Historical controls | In-sample RMS, px | Worst omitted control, px |
++| --- | ---: | ---: | --- |
++| W04 | 6 | 5.8 | 22.0, Bleu Pokémon Center |
++| W05 | 4 | 0.6 | 34.1, Wild Zone 11 |
++| W06 / W07 | 3 each | Not used | Insufficient controls for this affine check |
++| W10 | 5 | 4.2 | 16.7, Wild Zone 1 |
++
++For the next pilot, re-pick stable street junctions, canal/bridge corners and architectural edges on the originals and native map, retain at least four distributed noncollinear fitting points plus separate near-edge and near-center holdouts, and report unexplained residuals. In-sample RMS alone does not qualify a frame. No new coordinates, geometry, boundary polygons, overlays, or gameplay changes are authorized by this receipt. G2 calibration and downstream release gates remain open.
+diff --git a/docs/qa/ATLAS_AT325_RELEASE_GATE.json b/docs/qa/ATLAS_AT325_RELEASE_GATE.json
+index 38b7b52..63a9db5 100644
+--- a/docs/qa/ATLAS_AT325_RELEASE_GATE.json
++++ b/docs/qa/ATLAS_AT325_RELEASE_GATE.json
+@@ -2,8 +2,8 @@
+   "id": "AT-325",
+   "date": "2026-11-25",
+   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+-  "manifest_revision": 68,
+-  "ledger_revision": 76,
++  "manifest_revision": 69,
++  "ledger_revision": 77,
+   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
+   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
+   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
+@@ -34,7 +34,30 @@
+     "existing_routes": 22,
+     "registered_sector_boundaries": 0,
+     "registered_wild_zone_boundaries": 0,
+-    "original_three_piece_set": "owner reports sent; recover exact original bytes from authorized prior files/archive, not yet retrieved in this session",
++    "original_three_piece_set": "historical overview trio recovered and byte-verified; direct message identity and calibration remain unproven",
++    "historical_overview_recovery": {
++      "state": "historical_originals_recovered_and_visually_checked_calibration_pending",
++      "evidence": "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
++      "recovered_count": 3,
++      "matching_sha256_count": 3,
++      "decoded_format": "JPEG",
++      "decoded_dimensions": [
++        1536,
++        865
++      ],
++      "orientation": [
++        "south",
++        "center",
++        "north"
++      ],
++      "visual_chain": [
++        "W01↔W02: Wild Zones 5, 16, 2 and 11",
++        "W02↔W03: Wild Zones 3, 7, 8 and 19"
++      ],
++      "owner_exact_message_identity": "consistent_with_three_piece_description_not_named_in_message",
++      "originals_in_public_repository": false,
++      "geometry_added": 0
++    },
+     "historical_candidate_overview_records": [
+       {
+         "id": "W01",
+@@ -1463,10 +1486,10 @@
+     {
+       "id": "G2",
+       "name": "Recover and calibrate owner-source map coverage",
+-      "state": "pending",
++      "state": "historical_overview_recovery_verified_calibration_pending",
+       "acceptance": [
+         "Use all existing 42 sector PNGs, 40 Wild Zone PNGs and original 1920x1920 base map first; 48/48 and 20/20 references are complete.",
+-        "Find owner three city-map pieces in authorized prior files or source archive; the historical W01–W03 manifest is a candidate provenance lead, not proof that it is the identical three-piece set. No bytes newly recovered. Check exact hashes, image dimensions, overlaps, north-up, zoom, distortion and source purpose.",
++        "Historical W01–W03 originals recovered with exact hashes, dimensions and observed overlap. Verify scale, perspective, north-up registration and coverage with independent landmarks before use; later intended set not explicitly named.",
+         "For each pilot align using >=4 distributed noncollinear landmarks and independent held-out checks; record transform, residuals, uncertainty, original-image hashes and any obstructions. Do not stretch, invent, or replace original imagery. Reuse existing complete image collections to proceed even if older three images cannot be retrieved.",
+         "Prioritize WZ5, WZ11, Vert1, Bleu7 and WZ14. Distinguish photograph coverage, registered labels, and calibrated boundaries. Use original game captures and reference text/images, not guesses. Work through all 68 areas and preserve existing XY."
+       ]

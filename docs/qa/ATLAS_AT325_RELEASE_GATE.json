@@ -2,8 +2,8 @@
   "id": "AT-325",
   "date": "2026-11-25",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 73,
-  "ledger_revision": 81,
+  "manifest_revision": 81,
+  "ledger_revision": 89,
   "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
@@ -1541,7 +1541,8 @@
     "required_full_scope_signoff": null,
     "final_prompt_path": null,
     "allowed_to_send_or_execute": false,
-    "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
+    "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site.",
+    "readiness_contract": "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md"
   },
   "preservation": {
     "runtime_changed": true,
@@ -1704,5 +1705,57 @@
     "registration_geometry_changed": false,
     "source_notes": "Actual upload WebP bytes preserved under correct extension. Original source SHA-256 hashes match AT-329 manifest; native RGB crops exactly reproduce previously merged PNGs. No second set of crops, no live map replacement.",
     "baseline_main_sha": "c7749d479ef0d793de7c44340d42f4e271633983"
+  },
+  "current_consolidation": {
+    "date": "2026-11-26",
+    "tracking": "AT-336",
+    "manifest": "docs/consolidation/2026-11-26/manifest.json",
+    "handoff": "ATLAS_RELEASE_HANDOFF.md",
+    "phase_states": [
+      {
+        "id": "G0",
+        "state": "consolidated_documentation_private_metadata_sync_pending",
+        "remaining": "Complete reviewed documentation merge and bounded private planning metadata synchronization; keep chat-search scope and historical gaps explicit."
+      },
+      {
+        "id": "G1",
+        "state": "partial",
+        "remaining": "Preserve the3 AT-326 fixes and media removal; reconcile PR156 routes against current main and validate exact head/screenshots; selectively assess other retained runtime candidates without whole-branch regressions."
+      },
+      {
+        "id": "G2",
+        "state": "research_partial",
+        "remaining": "Retain both historical W01–W03 and later AT-329 sources; calibrate with independent held-out landmarks, uncertainty and source hashes. Registration pilots are not production boundaries."
+      },
+      {
+        "id": "G3",
+        "state": "open",
+        "remaining": "Complete independently supported boundary/encounter records for48 sectors and20 zones; resolve or explicitly bound roster/identity/unlock conflicts. No verified production polygon set yet."
+      },
+      {
+        "id": "G4",
+        "state": "open",
+        "remaining": "Implement shared geometry/encounter highlighting, linked habitats and verified routes plus AT-333 compact independent collectible layers. Preserve all existing controls and progress; no guessed production points."
+      },
+      {
+        "id": "G5",
+        "state": "blocked_by_G1_G4",
+        "remaining": "Review complete candidate diff and all mandatory requirements; exact-head static/unit/image/link and mobile/desktop visual tests, expected-head merge, exact Pages deploy, independent live checks and rollback. No approved full-scope SHA yet."
+      },
+      {
+        "id": "A0",
+        "state": "blocked_until_G5_verified",
+        "remaining": "Generate one final executable Workspace prompt only after G0–G5 pass; exact approved release SHA, tree, path allowlist, evidence, limitations and rollback must be populated."
+      },
+      {
+        "id": "A1-A7",
+        "state": "new_release_pending_A0",
+        "remaining": "v37 is historical passed release plus freshly confirmed source/deploy metadata. Reconfirm source/access, backup/rollback, preservation, bounded adapted patch, preview, publish and live checks for the next release."
+      }
+    ],
+    "source_snapshot_baseline": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+    "historical_pr149_v37_receipt_preserved": true,
+    "no_video_policy": "All active videos/YouTube paused; prior clip-retention exceptions superseded",
+    "historical_baseline_and_area_records_preserved": true
   }
 }

@@ -1,5 +1,11 @@
 # AT-325 — Complete GitHub upgrade first; final Workspace handoff last
 
+## AT-336 — current consolidated checkpoint
+
+The26 November [consolidated handoff](../../ATLAS_RELEASE_HANDOFF.md) and [snapshot manifest](../consolidation/2026-11-26/manifest.json) now reconcile the whole source programme. Historical gate descriptions below retain their date/baseline: the three AT-326 regression fixes were subsequently merged/deployed; PR156 route work remains open; source registration pilots and both overview sets remain research. Original v37 source/deployment metadata is freshly confirmed. Active video/YouTube features were removed in GitHub PR188 and are paused in the next handoff.
+
+G1/G2 remain partial, G3/G4 open and G5 unsigned. A0 remains blocked: the [readiness contract](../consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md) is preparation only, with full-scope approved SHA and final executable prompt still null. All68 area rows and existing evidence remain intact. Latest phase observations are in `current_consolidation` in the JSON register, without falsifying historical states.
+
 **Owner direction, 25 November 2026:** update the master plan and private Supabase Workspace tracking with the accumulated findings first. Finish, test and deploy the approved GitHub upgrade before producing a single final Workspace prompt. Reuse the owner-supplied three city-map pieces, every sector map and every Wild Zone map; do not request duplicate photographs. This is a release-control checkpoint, not implementation or a ready-to-execute Workspace prompt.
 
 ## Evidence at exact baseline

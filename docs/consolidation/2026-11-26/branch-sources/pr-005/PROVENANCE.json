@@ -1,0 +1,91 @@
+{
+  "number": 5,
+  "title": "Protect player progress: JSON backup, old-site exporter and safe import",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5",
+  "origin_head_ref": "feat/safe-progress-backup-transfer-2026-11-21",
+  "origin_head_sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a",
+  "observed_base_ref": "feat/numbered-map-pins-ticklists-2026-11-21",
+  "observed_base_sha": "263f7faa3ddf8588cc73dae97577087d7a92df93",
+  "git_diff_merge_base_sha": "263f7faa3ddf8588cc73dae97577087d7a92df93",
+  "disposition": "retain_optional_migration_candidate",
+  "consolidation_note": "PR base is #4's branch. Preserve merge-only JSON backup, preview/recovery copy,634-key manifest and multi-tab retention requirements. Original-host exporter/runtime compatibility untested; current no-replacement strategy means not a forced cross-site migration.",
+  "all_changed_paths": [
+    "README.md",
+    "RECOVERY_STATUS.md",
+    "app.js",
+    "docs/qa/PROGRESS_MIGRATION_2026-11-21.md",
+    "index.html",
+    "map-numbering.js",
+    "progress-backup.css",
+    "progress-backup.html",
+    "progress-backup.js",
+    "progress-keys.js",
+    "src/sections/home.html",
+    "src/template.html",
+    "tests/validate_backup.py"
+  ],
+  "source_files": [
+    {
+      "original_path": "README.md",
+      "change_status": "M",
+      "origin_head_sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a",
+      "origin_git_blob_sha1": "234f48fece35ffeb1fba7e04700d3ff01b762554",
+      "origin_bytes": 6856,
+      "origin_sha256": "d5bbc2fb1537a3a5c6f60ad773999ac4fc391ec1df162c5d0b564edab8e95de3",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c7db966c6a8955801f4ca6beb2c4fc15c837880a/README.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "2d8439cd9b92503235ef85e7fe02163f3f308e69",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-005/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "RECOVERY_STATUS.md",
+      "change_status": "M",
+      "origin_head_sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a",
+      "origin_git_blob_sha1": "8cc3a72473ec4a6b00e13cf3b4ea542536610d02",
+      "origin_bytes": 5997,
+      "origin_sha256": "2cd6cd9c874462e3b4ed828170a2339b0f1b6f76f7d26168bbc078ccc76f1b07",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c7db966c6a8955801f4ca6beb2c4fc15c837880a/RECOVERY_STATUS.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "aebd30fea894ffc1e9eaad8cc997b910bf541084",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-005/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "docs/qa/PROGRESS_MIGRATION_2026-11-21.md",
+      "change_status": "A",
+      "origin_head_sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a",
+      "origin_git_blob_sha1": "b9be334b1c249d5db33678788234e41a3dde7310",
+      "origin_bytes": 4743,
+      "origin_sha256": "d5067be042c643c56ff64a2af24cf25e6a820531e83da6fe701377bd8eadae6f",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c7db966c6a8955801f4ca6beb2c4fc15c837880a/docs/qa/PROGRESS_MIGRATION_2026-11-21.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-005/docs/qa/PROGRESS_MIGRATION_2026-11-21.md",
+        "bytes": 4743,
+        "sha256": "d5067be042c643c56ff64a2af24cf25e6a820531e83da6fe701377bd8eadae6f"
+      },
+      "patch_path": "pr-005/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-005/historical-source.patch",
+    "bytes": 8114,
+    "sha256": "066111ec984617b1907c7102a216cca8d711563ebfa2de22c2d316ec13afab6a"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Goal\nPreserve players' real progress when they eventually leave the existing ChatGPT Site for the independently reconstructed Lumiose Atlas guide. **Never erase or reset a player's checkmarks during migration.**\n\n## Verified source basis\nSaved original-site MHTML contains the five checkbox attributes and **634 unique IDs** (42 story, 203 side/EX, 25 legendary, 264 unique item pickups, 100 screws). Its 976 DOM checkboxes include duplicate item controls. The original executable JS/localStorage format is **unavailable**. No automatic cross-origin transfer is possible.\n\n## Implementation\n- Visible **Backup & Restore** link in the guide's shared sidebar, homepage and footer; matching standalone page with original menu and Back to Walkthrough.\n- Versioned JSON export of the reconstructed guide's completed checklists, including unmapped-numbered-pin progress and safely held future IDs. Files stay on the user's device (no network uploads).\n- **Voluntary old-site exporter bookmarklet** downloadable/copyable from the page. It runs only on the original hostname and reads the five known *currently checked checkbox* families rather than guessing storage keys or querying Supabase. It produces the same JSON format.\n- Import file validation, strict known-key manifest, preview of existing/new checked items, explicit confirmation, **merge-only completed status**, recovery snapshot stored before any mutation, and a downloadable recovery copy.\n- Preserve other guide tabs' progress when imports occur by syncing on localStorage events. No destructive replace action.\n- Add source-integrity checker `tests/validate_backup.py` and `docs/qa/PROGRESS_MIGRATION_2026-11-21.md`.\n\n## Source verification performed\n- Generated `index.html` matches the 17 editable section files + `src/template.html` exactly.\n- All **634 exact source checklist IDs** match the new manifest.\n- Preserved **42** story missions, **203** side/EX records, **232** Pokédex cards, original images and item-map geometry.\n- All required backup controls and script resources present. Source check confirms **no fetch/XHR/beacon calls or credentials**, and pre-import recovery write precedes progress modification.\n\n## Release gates: NOT DONE\n- **Browser/phone acceptance still required** for JSON export and re-import, duplicate import, malformed JSON rejection, multi-tab sync, and rollback after blocked storage.\n- **Original ChatGPT Site bookmarklet compatibility not yet tested** against its currently published runtime or Android browser security restrictions. Do not promise users a guaranteed old-site export before testing.\n- Do not merge this dependent PR until PR #3 and PR #4 have been reviewed/merged in order and the actual data-migration tests pass.\n\n## Strict non-impact\nNo original ChatGPT Site editor, original URL, original progress storage, Stream Bandit main/TCG, GitHub Pages `main`, IONOS DNS, Supabase records/policies, Render or user credentials were touched."
+}
