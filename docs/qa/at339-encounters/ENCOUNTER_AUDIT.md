@@ -21,7 +21,7 @@ The original WZ1–19 species unions have an unspecified encounter class (`recor
 
 Preflight: **68 areas; 555 model rows = 272 preserved + 283 additive; zero parser issues; zero unusable source links; zero special encounters or source leads incorrectly admitted as supported wild habitats; zero approved geometry; zero complete rosters.** All 20 original images match both their baseline Git blobs and the recorded SHA256 hashes. The current `wildZoneRecords` object matches the baseline in every field and array order.
 
-Register SHA256: `39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f`.
+Register SHA256: `aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed`.
 
 Owner-observation JSON SHA256: `b2016ecf99665ffb2036ac4739dc1b04e36fbacf53b3678821d775e023a59004`.
 
@@ -43,6 +43,10 @@ Owner-observation JSON SHA256: `b2016ecf99665ffb2036ac4739dc1b04e36fbacf53b36788
 | Disputed | 7 | Sources disagree about area membership or a particular encounter class. |
 
 `null` time, weather, floor, unlock, or form means unknown. It does not mean unrestricted availability. Source-qualified text remains qualified even when area membership is corroborated. No encounter row is marked `verified`.
+
+## WZ14: ordinary Helioptile
+
+The owner survey photo establishes species membership, not weather or timing. [GameWith](https://gamewith.jp/pokemon-za/524504), a [first-hand PowerPyx catch report](https://www.powerpyx.com/pokemon-legends-z-a-helioptile-location/) and [Pokéxperto](https://www.pokexperto.net/index2.php?seccion=switch%2Fleyendas_za%2Fzona_salvaje14) support checking Wild Zone 14 on a clear day. The ordinary level range is 37–38. Search around the Electrical Substation equipment; no precise site or complete weather-icon rule is asserted. The written reports don't justify a night-only rule for Onix or Emolga. The fixed Alpha Excadrill remains separate and unchanged.
 
 ## Original owner photographs: all 20 observations
 

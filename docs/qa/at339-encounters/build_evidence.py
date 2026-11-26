@@ -288,6 +288,19 @@ for row in areas['wz-15']['encounters']:
         row['condition']['notes'].append('A roof/lift approach involving Side Mission 80 is reported; this is not verified as a universal encounter prerequisite.')
 areas['wz-15']['notes'].append('Some ordinary-roster and roof-access claims differ between guides. Fixed Alpha Banette and Gourgeist must not be relabelled as ordinary merely because they appear in the species union.')
 
+# WZ14 survey membership and written timing/weather evidence serve separate purposes.
+for row in areas['wz-14']['encounters']:
+    if row['id'] == 'g3-evidence-wz-14-helioptile-ordinary':
+        row['condition']['time'] = 'daytime (source-corroborated)'
+        row['condition']['weather'] = 'clear skies (source-corroborated)'
+        row['condition']['notes'].append('Check around the Electrical Substation equipment in daytime under clear skies. Published ordinary levels are 37–38. An exact spawn point and the full weather-icon rules are not verified.')
+        row['sources'] += [
+            src('https://gamewith.jp/pokemon-za/524504', 'Lists ordinary levels 37–38 and distinguishes clear skies from less-clear weather in daytime.'),
+            src('https://www.powerpyx.com/pokemon-legends-z-a-helioptile-location/', 'Independent first-hand catch guide reports sunny daytime and an approach by a small building.'),
+            src('https://pente.koro-pokemon.com/legendsz-a/map-wild-zone-14.shtml', 'Independent ordinary encounter table lists daytime and sunny weather.'),
+        ]
+        row['notes'].append('The survey icon shows membership; the written references support the daytime clear-sky guidance, not a fixed point.')
+
 # The observable progression event is clearer than an isolated mission number.
 unlock_sources = [
     src('https://www.thonky.com/pokemon-legends-z-a/main-mission-31-a-summons-from-vinnie', 'After promotion to Rank B, Wild Zones 18 and 19 are available.'),
