@@ -34,7 +34,17 @@ test('three sector cross-references preserve every existing encounter and the ex
   }
   assert.equal(packet.encounter_count_before,748);
   assert.equal(packet.encounter_count_after,748);
-  assert.equal(hash(canonical(evidence.areas.map(a=>({area_id:a.area_id,encounters:a.encounters})))),packet.original_encounters_canonical_sha256);
+  const historical=structuredClone(evidence.areas.map(a=>({area_id:a.area_id,encounters:a.encounters})));
+  const followup=json('docs/qa/encounter-review-2026-11-26/wz09-meowstic-followup.json');
+  const baseline=json('docs/qa/at339-encounters/atlas-area-evidence.json').areas.find(a=>a.area_id===followup.area_id);
+  const rows=historical.find(a=>a.area_id===followup.area_id).encounters;
+  for(const patch of followup.patches){
+    const i=rows.findIndex(row=>row.id===patch.id);
+    assert.ok(i>=0);
+    const firstAmendment=json('docs/qa/encounter-review-2026-11-26/amendments.json').patches.find(p=>p.encounter_id===patch.id);
+    rows[i]={...baseline.encounters.find(row=>row.id===patch.id),...firstAmendment?.set};
+  }
+  assert.equal(hash(canonical(historical)),packet.original_encounters_canonical_sha256);
 });
 
 test('original sector guide cards retain exact Wild Zone links and reviewed outline summary amendments',()=>{

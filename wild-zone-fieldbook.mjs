@@ -331,11 +331,11 @@ export const wildZoneRecords = [
     "fixedAlphas": [
       {
         "name": "Meowstic",
-        "condition": "Lv. 41–42 · Night"
+        "condition": "Lv. 41–42 · Night · Male · Central rooftop"
       },
       {
         "name": "Meowstic",
-        "condition": "Lv. 41–42 · Day"
+        "condition": "Lv. 41–42 · Day · Female · Central rooftop"
       },
       {
         "name": "Manectric",

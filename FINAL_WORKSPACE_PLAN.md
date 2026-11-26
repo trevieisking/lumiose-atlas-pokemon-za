@@ -1,5 +1,13 @@
 # Pokémon Atlas final completion plan
 
+## Start here: consolidated GitHub candidate (Manifest 96 / Ledger 104)
+
+[Scope, evidence and open pull requests](docs/qa/atlas-workspace-consolidation-2026-11-26/README.md) · [Next Workspace handoff](docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md) · [Approved Map 2.0 prompt](WORKSPACE_MAP2_RELEASE_PROMPT.md)
+
+Four verified runtime improvements are staged together: all 42 after-mission obedience notes, the Hotel Z ladder gallery, six chance-Alpha Dratini sectors and two rooftop approaches, and Wild Zone 9 day/night Alpha Meowstic. The four full-frame source copies, Wild Zone 2 pickup pilot and seven Screw identity leads are QA evidence only. Preserve originals, all collection keys and existing filters; videos and YouTube stay out of the player site.
+
+The GitHub candidate is **not** the original Workspace upgrade. The previously approved exact Map 2.0 SHA, checksums and limited prompt remain authoritative until a verified replacement release. Exact collectible placements, comprehensive guide/roster audits, and original-Site A1–A7 remain open. The following earlier checkpoints are retained for their dated evidence and are not overwritten by this package.
+
 <!-- AT343_VIDEO_CURRENT_PLANNING_95_103 -->
 ## Latest planning evidence — AT-343 video follow-up / Manifest 95 / Ledger 103
 
