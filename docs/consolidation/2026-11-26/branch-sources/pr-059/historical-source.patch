@@ -1,0 +1,244 @@
+diff --git a/holovator-research-preview.html b/holovator-research-preview.html
+new file mode 100644
+index 0000000..d07a013
+--- /dev/null
++++ b/holovator-research-preview.html
+@@ -0,0 +1,154 @@
++<!doctype html>
++<html lang="en">
++<head>
++<meta charset="utf-8">
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<meta name="robots" content="noindex,nofollow">
++<title>Holovator Map — Research Preview · Lumiose Atlas</title>
++<style>
++:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#eeeefa;background:#0f1524;font-synthesis:none}
++*{box-sizing:border-box}
++body{margin:0;min-width:300px}
++header{background:#171d31;border-bottom:1px solid #384257;padding:18px clamp(16px,3vw,40px)}
++header .heading{max-width:1450px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
++h1{margin:4px 0 3px;font-size:clamp(24px,2.7vw,38px);letter-spacing:-.035em}
++h2{margin:0;font-size:18px}
++.eyebrow{font-size:11px;color:#aab8d8;letter-spacing:.15em;font-weight:900}
++.summary{max-width:1450px;margin:16px auto 0;padding:0 clamp(16px,2vw,24px);font-size:14px;line-height:1.65;color:#cad4e7}
++.summary strong{color:#ffe2a0}
++.tag{display:inline-flex;align-items:center;border:1px solid #c0a15c;background:#3d311f;color:#ffe6a3;font-weight:850;font-size:12px;border-radius:999px;padding:8px 12px}
++.back{color:#d4ddf6;text-decoration:none;font-weight:750;font-size:13px;white-space:nowrap}
++.back:hover,.back:focus-visible{text-decoration:underline}
++.layout{max-width:1450px;margin:20px auto 45px;padding:0 clamp(12px,2vw,24px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.65fr);gap:20px;align-items:start}
++.panel{background:#1a2236;border:1px solid #394356;border-radius:18px;min-width:0;overflow:hidden;box-shadow:0 18px 50px #0003}
++.map-heading{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
++.small{font-size:12px;color:#bdc9dd;line-height:1.5}
++.map-scroll{overflow:auto;max-height:75vh;overscroll-behavior:contain;background:#c6dce3;scrollbar-color:#69758e #d1dbe8;position:relative}
++.map-scroll:focus-visible{outline:3px solid #ffd58a;outline-offset:-3px}
++.map-stage{position:relative;width:100%;min-width:680px;aspect-ratio:1}
++.map-stage img{display:block;width:100%;height:100%;object-fit:fill}
++.map-pin{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;border:3px dashed #efbd55;border-radius:50%;background:#2a2540;color:#ffe2a0;width:42px;height:42px;min-width:42px;min-height:42px;box-shadow:0 2px 5px #18233499,0 0 0 2px #f6d88366;cursor:pointer;z-index:1;touch-action:manipulation}
++.map-pin.owner-ground{border:3px solid #f9d386;background:#214f3e;color:#fff1b2;box-shadow:0 0 0 4px #3caa8b77,0 3px 10px #142232bb}
++.map-pin svg{width:21px;height:25px;fill:none;stroke:currentColor;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
++.map-pin:hover,.map-pin:focus-visible,.map-pin[aria-pressed="true"]{background:#f8d981;color:#171b2b;border-style:solid;outline:3px solid #fff;outline-offset:3px;z-index:3}
++.map-pin[hidden]{display:none}
++.map-caption{padding:11px 16px;color:#c7cfdf;font-size:12px;border-top:1px solid #394356;line-height:1.5}
++.panel-body{padding:17px}
++.controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
++.controls button{border:1px solid #5c657a;border-radius:999px;background:#222d44;color:#e7e8ef;padding:9px 13px;cursor:pointer;font-weight:800;font-size:12px;min-height:42px}
++.controls button[aria-pressed="true"]{background:#f7d98e;color:#1f2332;border-color:#f7d98e}
++.controls button:focus-visible,.list-item:focus-visible{outline:3px solid #ffdf9f;outline-offset:2px}
++.field{display:block;margin:12px 0 15px;font-size:12px;font-weight:750;color:#e1e4ed}
++.field input{display:block;width:100%;padding:12px 13px;border-radius:10px;border:1px solid #627087;color:#f6f7ff;background:#101827;font:inherit;font-size:15px;margin-top:7px}
++.item-list{max-height:335px;overflow:auto;display:grid;gap:7px;padding-right:3px}
++.list-item{width:100%;border:1px solid #424d65;border-radius:11px;background:#242f45;color:#f2f3fa;text-align:left;cursor:pointer;padding:11px 13px;display:flex;gap:11px;align-items:center}
++.list-item[hidden]{display:none}
++.list-item[aria-pressed="true"]{background:#443d34;border-color:#e3b960}
++.list-icon{flex:0 0 30px;width:30px;height:30px;border-radius:50%;border:2px dashed #f8d98e;display:grid;place-items:center;color:#ffe9ae;font-size:15px;font-weight:900}
++.list-item strong{display:block;font-size:13px;line-height:1.3}
++.list-item small{display:block;margin-top:4px;color:#bec9dc;font-size:12px}
++.detail{margin-top:16px;border:1px solid #5c5547;background:#292d39;border-radius:13px;padding:15px;min-height:170px}
++.detail h3{margin:5px 0 8px;font-size:20px}
++.detail p{margin:8px 0;color:#d8ddeb;font-size:13px;line-height:1.6}
++.detail strong{color:#ffe6b0}
++.detail a{color:#ffe6b0}
++.detail .eyebrow{color:#ffe2a0}
++.note{font-size:12px;color:#aebcce;border-top:1px solid #45516a;padding-top:11px;margin-top:15px;line-height:1.6}
++.pending{margin-top:16px;background:#151c2c;border-radius:13px;padding:14px;color:#b9c5d7;font-size:12px;line-height:1.6}
++.pending b{color:#e5e9f2}
++.empty{padding:16px;color:#b9c5d7;font-size:13px}
++[hidden]{display:none!important}
++@media(max-width:950px){.layout{grid-template-columns:1fr}.map-scroll{max-height:58vh}.item-list{max-height:250px}}
++@media(prefers-reduced-motion:no-preference){.map-pin{transition:transform .12s,background .12s}.map-pin:hover{transform:translate(-50%,-50%) scale(1.1)}}
++</style>
++</head>
++<body>
++<header><div class="heading"><div><div class="eyebrow">LUMIOSE ATLAS · VISUAL LAB</div><h1>Holovator locations <span style="color:#ffe2a0">⤊</span></h1><div class="small">Research preview · Existing city map · No player progress changes</div></div><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="tag">APPROXIMATE RESEARCH DOTS</span><a class="back" href="ladder-research-preview.html">🪜 Ladder 001 survey</a><a class="back" href="maps.html">← Existing map room</a></div></div></header>
++<div class="summary"><strong>Research mode only:</strong> sixteen research locations are displayed, including two owner-photographed ground entrances: Side Mission #61 and the southern Café Classe/Vernal Pokémon Center lift. The other fourteen markers are photograph-derived map-symbol leads. The external map reports 23 Holovators; those devices are not yet individually reconciled. The yellow dotted markers below are visually approximate and <strong>must not be used as exact directions</strong>. This page is an isolated preview; the live Atlas and its existing Wild Zone markers remain unchanged.</div>
++<main class="layout">
++<section class="panel" aria-labelledby="map-title">
++<div class="map-heading"><div><h2 id="map-title">Lumiose City · in-game map</h2><span class="small">Tap a yellow double-chevron to read its evidence</span></div><button type="button" id="reset" style="background:#f3d48b;border:0;border-radius:9px;padding:10px 12px;font-weight:850;cursor:pointer">Reset selection</button></div>
++<div id="map-scroll" class="map-scroll" tabindex="0" role="region" aria-label="Scrollable in-game city map with approximate Holovator research symbols">
++<div id="map-stage" class="map-stage">
++<img src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Original Lumiose city square image from the existing guide, with research overlay markers" draggable="false">
++</div></div>
++<div class="map-caption">Yellow dashed circles = provisional icon-area estimates; <strong>solid yellow-green ring</strong> = owner photographed the actual lift at the map position (still approximate; roof exit missing). Pin positions use original 1920 × 1920 image-pixel coordinates. On phones, drag the map area to explore.</div>
++</section>
++<aside class="panel"><div class="panel-body">
++<h2>Research locations</h2>
++<div class="small" id="count" role="status" aria-live="polite"></div>
++<div id="filters" class="controls" aria-label="Filter research map">
++<button type="button" data-filter="all" aria-pressed="true">All leads</button>
++<button type="button" data-filter="mission" aria-pressed="false">Mission-linked</button>
++<button type="button" data-filter="other" aria-pressed="false">Other symbols</button>
++</div>
++<label class="field" for="search">Search by area or mission<input id="search" type="search" autocomplete="off" placeholder="Try Café Gallant, #40, Bleu…"></label>
++<div id="list" class="item-list" aria-label="Research marker directory"></div>
++<p id="empty" class="empty" hidden>No matching research leads.</p>
++<section id="detail" class="detail" aria-live="polite"><span class="eyebrow">SELECT A YELLOW PIN</span><h3>Holovator research</h3><p>Choose a marked area to see its mission or landmark and the evidence still missing.</p></section>
++<div class="pending"><b>Unverified candidates:</b> Mission #4 west of Rouge Plaza now has a repeated photo-symbol match, but older positions conflict. Mission #92 near Café Soleil has only one owner photo. The Jaune Sector 4 icon appears in two photos but its Atlas-image alignment is less precise. Missions #56 and #61 remain unpinned. None are confirmed physical entrances; the reported 23 devices are still being reconciled.</div>
++<div class="pending"><b>Correct icon legend:</b> yellow double chevrons = Holovator lifts; red Poké Ball circles = Pokémon Centers; the red outlined ring = player position and its blue triangle = facing direction; black/gold and black/pink circles are Hyperspace DLC markers, not Holovators. Physical ladders have a separate survey layer starting with <a href="ladder-research-preview.html" style="color:#ffe6a3">Hotel Z Ladder 001</a>.</div><p class="note">Read-only research display. No Supabase connection, tracking, saved progress, feedback requests, data writes or third-party map artwork. The owner's private photos have not been published. The actual lift-entry facades, rooftop exit levels and 23 individual source-category marker IDs must be verified before a production map layer can ship.</p>
++</div></aside>
++</main>
++<script>
++(()=>{"use strict";
++const pins=[
++{id:"r-004",title:"Rouge Plaza — west edge",area:"West of Wild Zone 3, Rouge Sector 1",kind:"mission",mission:4,x:832,y:580,route:"Sommi repairs the Holovator after a battle; this icon lies in the mission neighbourhood.",evidence:"The same yellow symbol appears in owner W06 and W07 with matching camera-pan offsets. Earlier P08/P09 Atlas-image estimates conflict.",remaining:"Confirm this is Sommi's street-facing building entrance and find the roof landing, rather than choose an old conflicting estimate."},
++{id:"r-023",title:"Vernal Avenue",area:"Northwest of Wild Zone 1",kind:"mission",mission:23,x:964,y:1666,route:"Terra's Diggersby quest opens nearby rooftop access.",evidence:"Owner W04/W10 repeated yellow symbol; mission map agrees by street block.",remaining:"Match the exact courtyard entrance and roof landing."},
++{id:"r-040",title:"Vert Sector 7",area:"South Boulevard, southwest of Racine Construction",kind:"mission",mission:40,x:1486,y:1524,route:"Élec repairs the lift; rooftop route towards Colorful Screw and Iron Defense.",evidence:"Two owner photo symbols and an independent mission map of the same block.",remaining:"Match Élec's photographed building face to this precise symbol."},
++{id:"r-045",title:"Aymis Park / South Boulevard",area:"Below Wild Zone 12",kind:"mission",mission:45,x:708,y:1706,route:"Durstin repairs the lift; rooftop route towards Iron Head.",evidence:"Two overlapping owner photos agree in approximate city-map position.",remaining:"Verify street entrance, floor and exact roof landing."},
++{id:"r-061",title:"My Favorite Holovator — Bleu Sector 3",area:"Southeast of Bleu Plaza, north of Aymlis Park / Wild Zone 12, near Café Woof",kind:"mission",mission:61,x:765,y:1396,photoGround:true,route:"From Bleu Plaza travel east/southeast into Bleu Sector 3. The glowing lift stands beside the short southwest building projection above the north side of Aymlis Park; approach from the public street. A Rust Syndicate grunt guards it if the mission is incomplete.",evidence:"Owner supplied FIVE original photos: district overview, two north-up ground position maps, street-level glowing lift, and rooftop scene showing the character on a luminous arrival pad. Rooftop photo also shows Prism Tower to the right and park/fountain below left. Registration of ground ring to historic W04 and W10 gives city JPG estimates (762.3,1395.7) and (769.1,1396.9). Owner identifies roof scene as after the same lift.",remaining:"Ground image position is approximate (765,1396), not exact to one pixel. Rooftop was photographed but no full-map roof red-ring image was provided: rooftop X/Y, floor and stable external 23-device category ID remain unverified. No additional roof pin is plotted."},
++{id:"r-071",title:"Magenta Sector 2",area:"Autumnal Avenue, northeast of Wild Zone 7",kind:"mission",mission:71,x:739,y:740,route:"Chuckie's Alpha Watchog blocks the lift until cleared.",evidence:"Owner PHOTO-C05 symbol and independent mission-area map.",remaining:"Match the photographed lift beside the taxi and actual owner icon."},
++{id:"r-092",title:"Café Soleil / Bleu Sector 8",area:"South-western ring, close to South Boulevard",kind:"mission",mission:92,x:352,y:1496,route:"The Beldum Blockade mission restores a lift in the broader Bleu Sector 8 neighbourhood.",evidence:"One yellow icon in owner W10 at photo (63,453); its Atlas JPG estimate (352,1496) is uncalibrated at street-entry level.",remaining:"Find a second photo or source Holovator category marker and confirm this is Aimant's entrance and rooftop exit."},
++{id:"r-080",title:"Hibernal Avenue",area:"West of Wild Zone 15",kind:"mission",mission:80,x:1189,y:392,route:"Battle Manectric and Ampharos; restored lift leads to rooftop routes.",evidence:"Three approximate owner-photo projections in the same street area.",remaining:"Confirm exact facade, rooftop exit and sector boundary."},
++{id:"r-cyclone",title:"Café Cyclone / Coulant Waterway",area:"Narrow building east/southeast of Vert Plaza, near Café Cyclone",kind:"other",x:1299,y:1337,route:"Yellow double-chevron shown beside Café Cyclone / Coulant Waterway. Independent guides describe nearby courtyard Holovator rooftop access.",evidence:"The same yellow lift symbol appears in three new north-up owner photos VP-A, VP-B and VP-C. Image-matched against earlier W04 (source-register close-up correction).",remaining:"Verify ground-floor façade, device ID and actual rooftop exit. Do not confuse the black round icon by Vert Plaza with a lift."},
++{id:"r-vert4-east",title:"Vert Sector 4 — east-side lift",area:"Eastern/right edge of Vert Sector 4 block, southwest of Wild Zone 2 / Vert Plaza",kind:"other",x:1055,y:1383,route:"Separate yellow lift chevron above/northeast of the Café Classe lower lift; do not place it inside the green Vert Plaza circle.",evidence:"Two new north-locked photos VP-A and VP-C independently show this distinct symbol. W04 landmark-linked source image estimate approximately (1055,1383).",remaining:"Confirm the entrance and roof exit, and match it to a unique source Holovator category marker."},
++{id:"r-vert4-south",title:"Vernal Pokémon Center — south Café Classe lift",area:"East of Aymlis Park / Wild Zone 12, south of Café Classe, near Vernal Avenue Pokémon Center",kind:"other",x:943,y:1466,photoGround:true,route:"On the street east of Aymlis Park near the Vernal Avenue Pokémon Center, south of Café Classe, look for the yellow triple-chevron Holovator against the building wall. Owner photographed the street lift and its rooftop arrival.",evidence:"Five new clean game photographs 1000027372–7376 show the physical ground lift, wider/mid/close player position maps, and the rooftop with Vert District text. Independent photo-to-original JPG estimates (943.1,1468.2) via W04 and (951.2,1471.8) via W10. The older screenshot VP-C same spot (256,741) matches prior WIDE-C13 yellow chevron (257,737). This is new photo validation of an EXISTING provisional lift, not an additional one.",remaining:"The original Atlas pin stays APPROXIMATE at (943,1466), not exact to one image pixel. Upper rooftop scene is photographed but no north-up full rooftop map XY/floor has been verified; no individually recovered external 23-category device ID. Five image assets are not yet uploaded to GitHub."},
++{id:"r-classe",title:"Vert Sector 4 / Café Classe",area:"Lower southwestern side of Vert Sector 4 near Café Classe; southwest of Vert Plaza",kind:"other",x:1010,y:1420,route:"Yellow double-chevron immediately beside Café Classe and beneath the other Vert Sector 4 chevron. Two separate lifts are visible on this block.",evidence:"Owner north-up close-ups VP-A and VP-C show the same lower western symbol. Map-image position recalibrated via W04 landmarks from (948,1470) to approximately (1010,1420).",remaining:"Confirm this specific building entrance and rooftop landing; city-image pixels remain approximate."},
++{id:"r-sushi",title:"Sushi High Roller",area:"Across the street from Looker Bureau, Rouge area",kind:"other",x:917,y:405,route:"Guide describes Holovator access towards Looker Bureau rooftop.",evidence:"Owner PHOTO-C12 and W07 place a yellow symbol in this neighbourhood.",remaining:"Verify exact lift and rooftop path, sector boundary."},
++{id:"r-jaune04",title:"Jaune Sector 4 — Académie Étoile",area:"East of Académie Étoile, north-west of Wild Zone 8",kind:"other",x:1225,y:550,route:"A yellow Holovator map symbol is visible next to the Jaune Sector 4 road grid.",evidence:"The same icon is in owner W06 (544,418) and W07 (1157,524), but their Atlas-image projections differ by about 50 pixels.",remaining:"Calibrate the icon position and confirm a physical entrance, floor and roof destination."},
++{id:"r-gallant",title:"Café Gallant",area:"Estival Avenue / Magenta Sector 3",kind:"other",x:578,y:1025,route:"Guide describes a Holovator by Café Gallant and a roof bridge.",evidence:"Yellow symbol independently seen on W08 and W09; two four-control fits.",remaining:"Match the physical entrance and source category marker ID."},
++{id:"r-espace",title:"Espace Vide",area:"Estival Avenue / northern Bleu Sector 4",kind:"other",x:477,y:1130,route:"Guide describes the Holovator north of Bleu Sector 4's western building complex.",evidence:"Separate yellow symbol seen on W08 and W09, distinct from Café Gallant.",remaining:"Verify lift facade, precise category marker and rooftop exit."}
++];
++const stage=document.getElementById("map-stage"),scroller=document.getElementById("map-scroll"),list=document.getElementById("list"),detail=document.getElementById("detail"),search=document.getElementById("search"),count=document.getElementById("count"),empty=document.getElementById("empty"),filters=[...document.querySelectorAll("[data-filter]")];
++const mapPins=new Map(),listButtons=new Map(); let chosen=null,mode="all";
++for(const p of pins){
++ const b=document.createElement("button");b.type="button";b.className="map-pin"+(p.photoGround?" owner-ground":"");b.style.left=(p.x/1920*100)+"%";b.style.top=(p.y/1920*100)+"%";b.setAttribute("aria-label","Research Holovator near "+p.title+", approximate map position");b.setAttribute("aria-pressed","false");
++ b.innerHTML='<svg aria-hidden="true" viewBox="0 0 32 32"><path d="M7 15 16 6l9 9M7 25l9-9 9 9"/></svg>';
++ b.addEventListener("click",()=>choose(p.id,false));stage.appendChild(b);mapPins.set(p.id,b);
++ const row=document.createElement("button");row.type="button";row.className="list-item";row.setAttribute("aria-pressed","false");
++ const icon=document.createElement("span");icon.className="list-icon";icon.textContent="⌃";
++ const body=document.createElement("span"),strong=document.createElement("strong"),small=document.createElement("small");strong.textContent=p.title;small.textContent=(p.mission?"Side Mission #"+p.mission+" · ":"")+p.area;body.append(strong,small);row.append(icon,body);
++ row.addEventListener("click",()=>choose(p.id,true));list.appendChild(row);listButtons.set(p.id,row);
++}
++function choose(id,scrollToMap){
++ chosen=id;const p=pins.find(q=>q.id===id);
++ for(const [k,b] of mapPins)b.setAttribute("aria-pressed",String(k===id));
++ for(const [k,b] of listButtons)b.setAttribute("aria-pressed",String(k===id));
++ detail.replaceChildren();
++ const eyebrow=document.createElement("span");eyebrow.className="eyebrow";eyebrow.textContent=p.photoGround?"OWNER-PHOTOGRAPHED ENTRANCE · APPROX MAP XY":"APPROXIMATE SYMBOL · ENTRANCE NOT VERIFIED";
++ const heading=document.createElement("h3");heading.textContent=p.title;
++ const loc=document.createElement("p");loc.textContent=(p.mission?"Side Mission #"+p.mission+" · ":"")+p.area;
++ const route=document.createElement("p");route.textContent=p.route;
++ const evidence=document.createElement("p");evidence.textContent="Evidence: "+p.evidence;
++ const missing=document.createElement("p");missing.textContent="Still needed: "+p.remaining;
++ const coords=document.createElement("p");coords.textContent="Research image XY: "+p.x+", "+p.y+" (1920 px city map). NOT an exact entrance.";
++ detail.append(eyebrow,heading,loc,route,evidence,missing,coords);
++ if(scrollToMap){const b=mapPins.get(id),cx=(p.x/1920)*stage.offsetWidth,cy=(p.y/1920)*stage.offsetHeight;scroller.scrollTo({left:Math.max(0,cx-scroller.clientWidth/2),top:Math.max(0,cy-scroller.clientHeight/2),behavior:"smooth"});}
++}
++function refresh(){
++ const q=search.value.trim().toLocaleLowerCase();let visible=0;
++ for(const p of pins){const on=(mode==="all"||p.kind===mode)&&(!q||(p.title+" "+p.area+" "+p.mission+" "+p.route).toLocaleLowerCase().includes(q));mapPins.get(p.id).hidden=!on;listButtons.get(p.id).hidden=!on;if(on)visible++;}
++ for(const b of filters)b.setAttribute("aria-pressed",String(b.dataset.filter===mode));
++ count.textContent=visible+" of "+pins.length+" research locations shown; 2 owner-photographed ground entrances with rooftop scenes (#61 and Café Classe south); 0 precisely georeferenced rooftop exits or fully matched external device IDs.";
++ empty.hidden=visible>0;
++ if(chosen&&mapPins.get(chosen).hidden){chosen=null;for(const [k,b] of mapPins)b.setAttribute("aria-pressed","false");for(const [k,b] of listButtons)b.setAttribute("aria-pressed","false");detail.innerHTML="<span class='eyebrow'>FILTERED RESEARCH</span><h3>Select a visible pin</h3><p>The current filter hides the previously selected symbol.</p>";}
++}
++for(const button of filters)button.addEventListener("click",()=>{mode=button.dataset.filter;refresh()});
++search.addEventListener("input",refresh);
++document.getElementById("reset").addEventListener("click",()=>{chosen=null;mode="all";search.value="";for(const b of mapPins.values())b.setAttribute("aria-pressed","false");for(const b of listButtons.values())b.setAttribute("aria-pressed","false");detail.innerHTML="<span class='eyebrow'>SELECT A YELLOW PIN</span><h3>Holovator research</h3><p>Choose a marked area to see its mission or landmark and the evidence still missing.</p>";refresh()});
++refresh();
++})();
++</script>
++</body>
++</html>
+diff --git a/ladder-research-preview.html b/ladder-research-preview.html
+new file mode 100644
+index 0000000..b76d8e8
+--- /dev/null
++++ b/ladder-research-preview.html
+@@ -0,0 +1,78 @@
++<!doctype html>
++<html lang="en">
++<head>
++<meta charset="utf-8">
++<meta name="viewport" content="width=device-width,initial-scale=1">
++<meta name="robots" content="noindex,nofollow">
++<title>Ladder 001 · Hotel Z — Lumiose Atlas research</title>
++<style>
++:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#edf3fd;background:#101827}
++*{box-sizing:border-box}
++body{margin:0;min-width:310px}
++header{padding:18px clamp(15px,3vw,36px);background:#18243a;border-bottom:1px solid #384b66}
++.header-inner{max-width:1310px;margin:auto;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
++h1{margin:4px 0;font-size:clamp(24px,3vw,38px)}
++h2{font-size:20px;margin:0 0 10px}
++.eyebrow{font-size:12px;font-weight:900;letter-spacing:.11em;color:#f7d78e}
++.sub{font-size:13px;color:#bdc9dd;line-height:1.5}
++nav{display:flex;gap:10px;flex-wrap:wrap}
++nav a{color:#e2ebff;font-size:13px;text-decoration:none;border:1px solid #63748f;padding:10px;border-radius:9px;font-weight:800}
++nav a:hover,nav a:focus-visible{text-decoration:underline;outline:2px solid #ffd78d}
++main{max-width:1310px;padding:16px;margin:auto}
++.warning{padding:13px 15px;background:#2b2e35;border:1px solid #9c8151;border-radius:12px;line-height:1.6;font-size:13px;color:#f0deb8;margin-bottom:14px}
++.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.65fr);gap:16px;align-items:start}
++.panel{background:#1b2a40;border:1px solid #3c5170;border-radius:15px;overflow:hidden;min-width:0}
++.panel-head{padding:14px 16px;border-bottom:1px solid #3c5170}
++.map-scroll{max-height:75vh;overflow:auto;background:#b9d1de;overscroll-behavior:contain}
++.map-scroll:focus-visible{outline:3px solid #f4cb7e;outline-offset:-3px}
++.map{width:100%;min-width:680px;aspect-ratio:1;position:relative}
++.map img{width:100%;height:100%;display:block}
++.ladder-pin{position:absolute;left:62.6042%;top:81.0417%;width:48px;height:48px;transform:translate(-50%,-50%);background:#14314c;color:#ffecb8;border:3px dashed #f0c66c;border-radius:50%;font-size:22px;cursor:pointer;box-shadow:0 0 0 3px #213b5c77;display:grid;place-items:center}
++.ladder-pin:hover,.ladder-pin:focus-visible,.ladder-pin[aria-pressed="true"]{outline:3px solid white;outline-offset:2px;background:#ffdf98;color:#132237;border-style:solid}
++.map-foot{padding:13px 16px;border-top:1px solid #3c5170;font-size:12px;line-height:1.6;color:#d1deee}
++.info{padding:17px}
++.kicker{font-weight:900;color:#f5cc7b;letter-spacing:.1em;font-size:11px}
++.detail{padding:14px;background:#233752;border-radius:12px;margin:14px 0}
++.detail p,.info p{font-size:13px;line-height:1.7;color:#d7e3f3}
++.detail strong{color:#ffe1a6}
++.step{display:flex;gap:12px;align-items:start;margin:11px 0;font-size:13px;line-height:1.6;color:#e0e9fa}
++.step-num{display:grid;place-items:center;background:#ffdb96;color:#132337;min-width:28px;height:28px;border-radius:50%;font-weight:900}
++.legend{border-top:1px solid #435772;margin-top:18px;padding-top:15px}
++.legend div{font-size:12px;color:#d1deee;line-height:1.75}
++.note{font-size:12px;line-height:1.6;color:#aabed7;margin:14px 0}
++@media(max-width:920px){.layout{grid-template-columns:1fr}.map-scroll{max-height:57vh}}
++</style>
++</head>
++<body>
++<header><div class="header-inner">
++<div><div class="eyebrow">LUMIOSE ATLAS · SEPARATE LADDER SURVEY</div><h1>🪜 Ladder 001 — Hotel Z</h1><div class="sub">Vert Sector 8 · First owner-positioned physical ladder · Research preview only</div></div>
++<nav><a href="holovator-research-preview.html">Holovator research</a><a href="maps.html">Existing guide map</a></nav>
++</div></header>
++<main>
++<div class="warning"><strong>Not a live map pin.</strong> The owner photographed a silver wall ladder and stood at its base for two north-up game-map images. This provisional marker follows the red player-position ring, not an official in-game ladder icon. Photo-to-map location is approximate; the rooftop landing has not yet been surveyed.</div>
++<div class="layout">
++<section class="panel" aria-labelledby="map-title"><div class="panel-head"><h2 id="map-title">Hotel Z on the original Lumiose City map</h2><div class="sub">Tap the amber/blue ladder symbol. On a phone, scroll the map to reach the lower-right Hotel Z area.</div></div>
++<div class="map-scroll" role="region" tabindex="0" aria-label="Scrollable original city map with first provisional ladder pin">
++<div class="map"><img src="maps/lumiose-game-map.jpg" alt="Original Lumiose City guide map with one provisional ladder marker near Hotel Z" width="1920" height="1920" draggable="false"><button id="ladder-l001" type="button" class="ladder-pin" aria-pressed="false" aria-label="Show Ladder 001 Hotel Z location details">🪜</button></div>
++</div><div class="map-foot">Blue/amber outlined ladder = our separately surveyed ladder. Yellow two-chevron icons = Holovators and are <strong>not</strong> represented by this ladder layer. Approx original image XY: <strong>(1202,1556)</strong> of 1920 × 1920.</div></section>
++<aside class="panel"><div class="info">
++<div class="kicker">OWNER-MARKED PHYSICAL LADDER</div><h2>Hotel Z · Right of the front doors</h2>
++<p>Stand outside Hotel Z and face its entrance. Go into the passage on your <strong>right</strong>, towards the narrow walled courtyard. The tall pale metal ladder stands vertically against an ivy-covered wall, with bushes at its base.</p>
++<div class="detail" id="details" aria-live="polite"><strong>Map position: approximately X 1202, Y 1556.</strong><p>The red ring in the owner's two uploaded map screenshots centres on this location, and the close-up image shows the same spot. The avatar was standing at the ladder; map-symbol centre may be slightly offset from the actual foot.</p></div>
++<h2>Directions from Hotel Z</h2>
++<div class="step"><span class="step-num">1</span><span>Face the hotel's front entrance doors.</span></div>
++<div class="step"><span class="step-num">2</span><span>Take the passage to the <strong>right</strong> of the hotel and enter the small courtyard.</span></div>
++<div class="step"><span class="step-num">3</span><span>Look for the <strong>silver ladder</strong> fixed to a tall wall with ivy and shrubs.</span></div>
++<div class="step"><span class="step-num">4</span><span>Climb to the upper rooftop approach; the exact landing and subsequent climbs are to be documented separately.</span></div>
++<div class="legend"><h2>Correct game-map legend</h2>
++<div>📍 Red outlined ring = your position. The blue arrow shows the way your character is facing.</div>
++<div>🟨 Yellow double chevrons = Holovators / lifts.</div>
++<div>🔴 Red Poké Ball circles = Pokémon Centers.</div>
++<div>🌀 Other dark black/pink round symbols = Hyperspace DLC locations, not Holovators (exact category varies).</div>
++<div>🪜 L001 amber/blue research symbol = our own first ladder location, not a native game-map icon.</div></div>
++<p class="note"><strong>Unverified:</strong> exact rooftop exit pixel, further ladders, full roof route, availability gates. Physical ladder photographed and player-positioned, but individual map pixels are approximate. No photos uploaded to the public repository, no database writes, no changes to existing map routes.</p>
++</div></aside>
++</div></main>
++<script>
++(()=>{"use strict";const b=document.getElementById("ladder-l001"),d=document.getElementById("details");b.addEventListener("click",()=>{const active=b.getAttribute("aria-pressed")==="true";b.setAttribute("aria-pressed",String(!active));d.style.outline=active?"none":"2px solid #ffd88b";d.scrollIntoView({block:"nearest",behavior:"smooth"});});})();
++</script></body></html>

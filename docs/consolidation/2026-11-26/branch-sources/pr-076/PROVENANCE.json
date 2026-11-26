@@ -1,0 +1,109 @@
+{
+  "number": 76,
+  "title": "Atlas: owner-surveyed Holovator photo map (21 approximate research entries)",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/76",
+  "origin_head_ref": "feat/owner-holovator-photo-fieldbook-20261122",
+  "origin_head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+  "observed_base_ref": "main",
+  "observed_base_sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8",
+  "git_diff_merge_base_sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8",
+  "disposition": "superseded_prototype_preserve_evidence",
+  "consolidation_note": "21-entry90-photo standalone Holovator fieldbook superseded by #77 and later111-photo releases. Keep catalogue policy/source provenance; do not overwrite current Explorer, plan or photo counts.",
+  "all_changed_paths": [
+    ".github/workflows/validate-recovered-articles.yml",
+    "MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "MAPS_UPGRADE_MANIFEST.json",
+    "docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md",
+    "holovator-map.css",
+    "holovator-map.html",
+    "holovator-map.js",
+    "maps.html",
+    "sector-maps.html",
+    "tests/owner_holovator_fieldbook.test.mjs"
+  ],
+  "source_files": [
+    {
+      "original_path": "MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
+      "change_status": "A",
+      "origin_head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+      "origin_git_blob_sha1": "b91994fb2d980f55af36411ae750d3a9861417f8",
+      "origin_bytes": 47004,
+      "origin_sha256": "5ea31afa839d6b989466146ff397243a8b7137fec2a21be69fefabe7cbe181b1",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/268b72125e644d68eb03c4c53a1f8d98b7372808/MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-076/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "change_status": "M",
+      "origin_head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+      "origin_git_blob_sha1": "25ba38d8f3fdf988960de29a38f65362f5a03f8b",
+      "origin_bytes": 201731,
+      "origin_sha256": "d7725a79b0951163fbedb14981dcf978ea6775bd55c609a59edc4b5837c3fcb1",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/268b72125e644d68eb03c4c53a1f8d98b7372808/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "e24b28e628f629391868be676c37fa103114ac6d",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-076/historical-source.patch",
+      "at_ids": [
+        "AT-238",
+        "AT-256"
+      ]
+    },
+    {
+      "original_path": "MAPS_UPGRADE_MANIFEST.json",
+      "change_status": "M",
+      "origin_head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+      "origin_git_blob_sha1": "c691bf2f7c6fd5d3d1eb3723e3a76578ffdccc11",
+      "origin_bytes": 76469,
+      "origin_sha256": "211d0e6a8fdaace407e5f569fe2ed4353088bb8e5493300753dce901fdb29aa9",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/268b72125e644d68eb03c4c53a1f8d98b7372808/MAPS_UPGRADE_MANIFEST.json",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "27a09e97b8935b702d7d2e2ff8ff6891da5a9ca8",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-076/historical-source.patch",
+      "at_ids": [
+        "AT-238"
+      ]
+    },
+    {
+      "original_path": "docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md",
+      "change_status": "A",
+      "origin_head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+      "origin_git_blob_sha1": "aba5ac0b0063c23dea3ad9e2a5d1c10db29ae73a",
+      "origin_bytes": 3493,
+      "origin_sha256": "b6ed9a0df8b8d2acf9ffb2b56e07c64a0befb98c537f65ae60e8edf294ddf3c3",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/268b72125e644d68eb03c4c53a1f8d98b7372808/docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-076/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-076/historical-source.patch",
+    "bytes": 64325,
+    "sha256": "6fc252b940aeb9f5690b96475c3b9f881bc0d31f5e2821350793782593a3ebc5"
+  },
+  "at_ids": [
+    "AT-238",
+    "AT-256"
+  ],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Goal\nPreserve the owner's 22 November firsthand Pokémon Legends: Z-A Holovator survey and make a usable, zoomable read-only map on the **independent GitHub edition**, without modifying the original ChatGPT-hosted Site.\n\n## Already merged / evidence\n- PR #75 merged 85 verified genuine binary JPG photo assets to main, in addition to five Jaune 11 JPGs already present: 90 hosted original photographs, not 90 devices.\n- The same 85-file import was verified by SHA1/size before merge.\n- Owner survey photos distinguish **permanent gold triple-chevron Holovators** from day-changing DLC Hyperspace portals.\n\n## Changes in this draft PR\n- Structured 21-entry owner-survey catalog: `MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json`, with location clues, approach directions, research-only 1920px city image points and exact GitHub JPG asset paths.\n- Add `holovator-map.html` / `.js` / `.css`: original 1920x1920 Lumiose City map, photo-backed lift pins, district/landmark search, zoom/pan, original photographs where **actually hosted**, and prominent inexact-position warnings.\n- Add a single link to this dedicated page from `maps.html` and `sector-maps.html`, without changing their 20 Wild Zone positions, 48 sectors or numbered item/screw data.\n- Add a regression test and checkpoint the mapping master plan + `MAPS_UPGRADE_MANIFEST.json` revision 22.\n\n## Evidence limits / blockers\n- All 21 map dots are **approximate**; none is an authoritative exact pixel or roof X/Y. The external list of 23 Holovators has **not** been fully identity-matched.\n- 11 recent original photos (WZ6: 5; Café Cyclone courtyard: 6) are only in the locally verified binary-transfer ZIP, **not yet in GitHub**. The viewer does not use broken image paths for these.\n- Ten older photos for #61 Bleu3 and Vert4 south are documented in survey JSON but are also not yet GitHub-hosted.\n- The Rouge5 return visit is a repeat of the same physical lift and is not counted as a second location.\n- This draft awaits tests and visual QA before being considered for merge; additional source-to-map registration required for precise permanent pins.\n\n## Safeguards\n**No** changes to the original ChatGPT Site, Supabase, player ratings/feedback/saved progress, original city JPG, core walkthrough/game logic, or DLC dynamic icons. No use of Repo Desk, CG Repair Lab, Code God, or Writer. This PR is not a deployment or authorization to overwrite the live guide.\n\n## Next chunk\nCheck the new fieldbook test plus existing static/map regression suite; reconcile any geometry ambiguities; attach 11+10 photo binaries using a verified binary route; only then consider ready-for-review/merge with green checks.\n\n## Final owner-survey archive and climbing-policy update (22 Nov 2026)\n- **Owner field survey closed for lifts found and unlocked**; this is not the same as independently verifying all reported 23 device IDs. No duplicate for the Rouge 5 return visit.\n- **Ladders/scaffolding:** the owner's game map does not show every climb as a map marker. A dedicated visible fieldbook section and `docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md` explain walking/roof routes, but do **not** invent exact ladder/scaffold pins.\n- **Two integrity-checked local handoff archives:** `lumiose-atlas-holovator-github-ready-complete-2026-11-22.zip` (96 JPGs; SHA256 `83a4731f32f9b7e04c5a42a2e5ee56bbdecee6b127a554a46dde253ebc040c85`), and `lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip` (11 JPGs; SHA256 `48431ce208a6b6f5a955e1dfb5c52dc114ee09d4464da4746aba3799f91b827b`). The older combined provenance archive has 218 entries. **These archives are ChatGPT handoff attachments, not committed GitHub binaries.**\n- The previously imported 90 photo JPGs remain unchanged. The last 11 photo binaries are still **pending direct GitHub upload**, as are 10 earlier owner-source photos. Missing photos must not be linked as if hosted.\n- Updated `MAPS_SECTOR_UPGRADE_MASTER_PLAN.md` and `MAPS_UPGRADE_MANIFEST.json` (revision 23), plus a regression assertion for the visible no-invented-pins policy.\n- **Do not merge/publish** until these checks are green, real image assets are present, fieldbook counts reflect the actual host state and manual mobile/desktop map QA is done. Original ChatGPT Site, Supabase, feedback, ratings and player progress remain untouched.\n"
+}

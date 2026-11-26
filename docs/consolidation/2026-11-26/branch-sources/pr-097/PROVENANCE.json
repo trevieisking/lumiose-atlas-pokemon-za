@@ -1,0 +1,82 @@
+{
+  "number": 97,
+  "title": "AT-266 — plan source-first recovery of original Workspace map close-ups",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/97",
+  "origin_head_ref": "docs/atlas-at266-original-site-closeup-source-recovery-20261122",
+  "origin_head_sha": "be9d047c8de15a8f52946b129e4040c06f14c8a1",
+  "observed_base_ref": "main",
+  "observed_base_sha": "c0b9015fc9527794d46f8bbc1e56d51f0c7752fb",
+  "git_diff_merge_base_sha": "c0b9015fc9527794d46f8bbc1e56d51f0c7752fb",
+  "disposition": "superseded_recovery_plan_preserve_gates",
+  "consolidation_note": "Original close-up recovery broadly delivered by #144/#146/#148; retain image-vs-CSS distinction, distributed-landmark registration and uncertainty/test requirements. Source recovery does not certify exact boundaries.",
+  "all_changed_paths": [
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md"
+  ],
+  "source_files": [
+    {
+      "original_path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "change_status": "M",
+      "origin_head_sha": "be9d047c8de15a8f52946b129e4040c06f14c8a1",
+      "origin_git_blob_sha1": "253ff8498e518daf38b0bebf24c5723a3d2f5961",
+      "origin_bytes": 215176,
+      "origin_sha256": "283a16b70a75737fa676630a88b59bf45c7bd143efe75cb2266c676f5fd12eef",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/be9d047c8de15a8f52946b129e4040c06f14c8a1/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "e24b28e628f629391868be676c37fa103114ac6d",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-097/historical-source.patch",
+      "at_ids": [
+        "AT-238",
+        "AT-256",
+        "AT-262",
+        "AT-263",
+        "AT-264",
+        "AT-265",
+        "AT-266"
+      ]
+    },
+    {
+      "original_path": "docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md",
+      "change_status": "A",
+      "origin_head_sha": "be9d047c8de15a8f52946b129e4040c06f14c8a1",
+      "origin_git_blob_sha1": "3183447ffc7a7b05f11d5e0f892b12368dd20ca1",
+      "origin_bytes": 6911,
+      "origin_sha256": "d25be52d15278fe82463fef831987513230978bfbf71d2abb3e58b08b0d3c57c",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/be9d047c8de15a8f52946b129e4040c06f14c8a1/docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-097/docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md",
+        "bytes": 6911,
+        "sha256": "d25be52d15278fe82463fef831987513230978bfbf71d2abb3e58b08b0d3c57c"
+      },
+      "patch_path": "pr-097/historical-source.patch",
+      "at_ids": [
+        "AT-266"
+      ]
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-097/historical-source.patch",
+    "bytes": 10455,
+    "sha256": "e1d883fe7442da05ec41da840f940f764cc183904e9f637cbd8a1cab167cf3ac"
+  },
+  "at_ids": [
+    "AT-238",
+    "AT-256",
+    "AT-262",
+    "AT-263",
+    "AT-264",
+    "AT-265",
+    "AT-266"
+  ],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## AT-266 — original Workspace map close-up recovery (documentation only)\n\n### Why\nThe owner can see additional map views in the protected original ChatGPT Workspace guide (Edition A), but they are not directly accessible here. The GitHub reconstruction's 48 sector entries and 20 Wild Zone previews currently use the same 1920 × 1920 city image; enlargement alone cannot substantiate a precise street/roof/pickup coordinate.\n\n### Exact scope\n- Append evidence-led AT-266 next steps to existing `MAPS_SECTOR_UPGRADE_MASTER_PLAN.md`.\n- Add `docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md` with owner-assisted original-asset export or screenshot, image-vs-CSS crop identification, ≥3 landmark registration, uncertainty labelling, single-region pilot and guarded release checklist.\n- First owner capture: Bleu Sector 3 / My Favorite Holovator #61 (already has five owner-verified gallery photos). No new photo or coordinate claimed captured.\n\n### Protection / gates\n- **Zero runtime code, image assets, coordinates, sectors, marker, backend, Supabase, feedback, player-progress or original Workspace modifications.** Existing independent GitHub Pages unchanged.\n- **Do not promote as a mapping feature or claim close-up recovery** until the owner supplies real image material and its registration can be validated on a distinct implementation PR with regression, mobile and desktop tests.\n- Keep 48 sectors, 20 Wild Zones, 21 researched approximate Holovator records and 111 original gallery photos; no permanent moving DLC Hyperspace pins.\n- Parent evidence and acceptance issue: #28.\n\nThis PR is intentionally **DRAFT** and documentation-only."
+}

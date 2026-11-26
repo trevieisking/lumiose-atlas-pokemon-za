@@ -1,0 +1,1233 @@
+diff --git a/MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json b/MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json
+new file mode 100644
+index 0000000..b91994f
+--- /dev/null
++++ b/MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json
+@@ -0,0 +1,1038 @@
++{
++  "schema_version": 1,
++  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
++  "date": "2026-11-22",
++  "title": "Owner-field-surveyed fixed Holovators, not DLC Hyperspace portals",
++  "status": "GitHub independent edition: 21 owner-survey entries; map positions still approximate",
++  "source": "Owner original 22 Nov 2026 gameplay pictures and map screenshots, plus earlier source research estimates where clearly labelled",
++  "geometry_source": "maps/lumiose-game-map.jpg 1920x1920; each entry has research-only approximate native pixel XY",
++  "map_accuracy_warning": "The yellow pin is a neighbourhood-level projected position. Do not claim a precisely surveyed device pixel, height, rooftop exit, 23-device ID or ladder coordinate.",
++  "counts": {
++    "survey_entries": 21,
++    "physically_distinct_23_category_ids_reconciled": 0,
++    "photo_assets_committed_main": 90,
++    "final_11_jpgs_in_local_zip_only": 11,
++    "source_photographs_for_two_older_surveys_not_in_repo": 10,
++    "known_repeat_visit_groups_collapsed": 1
++  },
++  "important_restrictions": [
++    "This is a fixed Holovator layer, never Hyperspace rotating portals.",
++    "Use original owner JPEG screenshot evidence, not image generated replacements.",
++    "No edits to Supabase, progress, feedback, ratings or original ChatGPT Site.",
++    "Preserve 48 sectors and 20 Wild Zones, keep ladders for later.",
++    "Evidential survey entries do not prove 21 unique entries in external 23-category Holovator database."
++  ],
++  "locations": [
++    {
++      "id": "vert4-central",
++      "title": "Vert Sector 4 — central Café Classe",
++      "district": "Vert",
++      "area": "Vert Sector 4",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1010,
++          1420
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Café Classe, inspect the central Vert Sector 4 building front and its permanent yellow chevrons. Use the ground photograph and map close-up to distinguish this entrance from the east and south Vert 4 lifts.",
++      "source_record": "MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json",
++      "photo_group": "vert4-cafe-classe-central",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-ground-entrance.jpg",
++          "source": "1000027377.heic",
++          "sha256": "bf9a4ccf56103ed2ac1c6cfa68fc9745049bcec49ee230351e395fd1d4bfdf5f"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-wide-city-map.jpg",
++          "source": "1000027378.heic",
++          "sha256": "e88651d6a4810fb59fc46c6dea950068ec75b22f55ca4f53d23f674165ce83c6"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-neighbourhood-map.jpg",
++          "source": "1000027379.heic",
++          "sha256": "6e56f416dd421f68599704c69d1cc7d33d398eaee3582b7606df9dc6c8cbd33a"
++        },
++        {
++          "role": "close-player-map",
++          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-close-player-map.jpg",
++          "source": "1000027380.heic",
++          "sha256": "e82a431f608219786b194c86cdd2a7b91c2dcd0a60616c53c1154910e63aa882"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/vert4-cafe-classe-central/holovator-vert4-cafe-classe-central-rooftop-arrival.jpg",
++          "source": "1000027381.heic",
++          "sha256": "439056373cacca6056a1080cb7b2c825c5b35d5caa6935c633aeebbdd42fdd68"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "vert4-east",
++      "title": "Vert Sector 4 — eastern lift",
++      "district": "Vert",
++      "area": "Vert Sector 4",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1055,
++          1383
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Café Classe and its Pokémon Center, go northeast around the block to the east-side building courtyard; look for the fixed yellow lift.",
++      "source_record": "MAPS_VERT4_EAST_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "vert4-east",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground",
++          "path": "assets/atlas/holovators/vert4-east/holovator-vert4-east-ground.jpg",
++          "source": "1000027382.heic",
++          "sha256": "7d957c32b2660dde1e96ea27aebfeb7ca01e33a650348d665ad9c3429236275e"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/vert4-east/holovator-vert4-east-wide-map.jpg",
++          "source": "1000027383.heic",
++          "sha256": "d2274b7c1c82c8ce9c387e935c4e70b7141615fad15f410db65811239c590241"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/vert4-east/holovator-vert4-east-neighbourhood-map.jpg",
++          "source": "1000027384.heic",
++          "sha256": "ba56d8fff007db02e67a7f94cf81dad758134de80f3304e961955750b5300b20"
++        },
++        {
++          "role": "position-map",
++          "path": "assets/atlas/holovators/vert4-east/holovator-vert4-east-position-map.jpg",
++          "source": "1000027385.heic",
++          "sha256": "e89ffc7b8e3d2efd17f39a12a50855e645edf616c9ad7ae17dd46603150f9b8f"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/vert4-east/holovator-vert4-east-rooftop-arrival.jpg",
++          "source": "1000027386.heic",
++          "sha256": "aa01e9ff67ce579993b69c6917b13133b754d077f01a96e90105555bc7c64ce3"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "vernal-wz1",
++      "title": "Vernal Avenue / Wild Zone 1",
++      "district": "Vert",
++      "area": "Vernal Avenue",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          964,
++          1666
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From the Pokémon Research Lab or north edge of Wild Zone 1, move northwest to Vernal Avenue and inspect the recessed lift against the building wall.",
++      "source_record": "MAPS_VERNAL_WZ1_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "vernal-wz1",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground",
++          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-ground.jpg",
++          "source": "1000027387.heic",
++          "sha256": "637b641bd1773abdf9b594a026df89bb4f544dd823185287d153fcadcdd7e328"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-wide-map.jpg",
++          "source": "1000027388.heic",
++          "sha256": "f608754628af0e5654fabc86dfa81a080323a53aa38b9d5e614c571aa32e54f5"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-neighbourhood-map.jpg",
++          "source": "1000027389.heic",
++          "sha256": "7c63109d24ccdada1bd4c362e752f66291f3b4fdc1bfbb90b2e9ef1c3b84528e"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-close-map.jpg",
++          "source": "1000027390.heic",
++          "sha256": "4e44ec77f6d9a8f5692c40fd6a6e2d1234a41669ce75d8bc03e4ba231a66a9b6"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/vernal-wz1/holovator-vernal-wz1-rooftop-arrival.jpg",
++          "source": "1000027391.heic",
++          "sha256": "ec2d2dc0270791322db4350d563921263ee0f7ab149433b87899b1fac1992c57"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "bleu7-south",
++      "title": "Bleu Sector 7 — South Boulevard",
++      "district": "Bleu",
++      "area": "Bleu Sector 7",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          708,
++          1706
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Nouveau Café (Truck No. 2) or the Bleu Pokémon Center, follow South Boulevard along Bleu Sector 7's southern frontage and find the gold lift beside the buildings.",
++      "source_record": "MAPS_BLEU7_SOUTH_BOULEVARD_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "bleu7-south-boulevard",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground",
++          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-ground.jpg",
++          "source": "1000027392.heic",
++          "sha256": "71bd69f09b624f80f533f1c64dd3096702860b3adddf800298b25eb43eaedefe"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-wide-map.jpg",
++          "source": "1000027393.heic",
++          "sha256": "35c427b22fa077d29ed4884d05869d7c4ff2be7cd13104418c08ea3ac5f1b28d"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-neighbourhood-map.jpg",
++          "source": "1000027394.heic",
++          "sha256": "e915f3cac06679f803287e64ed43d63e5511acc7ade91765f69300d7945bcbd6"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-close-map.jpg",
++          "source": "1000027395.heic",
++          "sha256": "f324ddbd6278a9edafa02beec58d1e3523f0cc914ad7ad678e0f54131ef63b34"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/bleu7-south-boulevard/holovator-bleu7-south-boulevard-rooftop-arrival.jpg",
++          "source": "1000027396.heic",
++          "sha256": "a09a64fd1ef11e7c9559ce7391429816f5ad37cc56bbcdeee8c6117b7044fa08"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "bleu8-soleil",
++      "title": "Bleu Sector 8 — Café Soleil",
++      "district": "Bleu",
++      "area": "Bleu Sector 8",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          352,
++          1496
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Café Soleil go southeast toward the South Boulevard frontage of Bleu Sector 8. Look for gold chevrons against the blue-glass windows.",
++      "source_record": "MAPS_BLEU8_CAFE_SOLEIL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "bleu8-cafe-soleil",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entry",
++          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-ground-entry.jpg",
++          "source": "1000027397.heic",
++          "sha256": "089f3c8403e4900f7da60d6b959bf985e550a332329b2059975c6aa97f66ee83"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-wide-map.jpg",
++          "source": "1000027398.heic",
++          "sha256": "fc7452388e3454024701c7a0c7faa454d8a0734797f9ab0d610e523fae1c4332"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-neighbourhood-map.jpg",
++          "source": "1000027399.heic",
++          "sha256": "f56c38d2329e00987447ff71329979696d56d2327b2b2bfecfe8d48327e3e4d9"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-close-map.jpg",
++          "source": "1000027400.heic",
++          "sha256": "bdb743756c3ebd79cb9560f4b8d9541e6c398084cc89f27687415b657d5e4dec"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/bleu8-cafe-soleil/holovator-bleu8-cafe-soleil-rooftop-arrival.jpg",
++          "source": "1000027401.heic",
++          "sha256": "02e4a9f41304c73c872868565e7a922a5d286fbbd5b0dc18774fb1f6652d6020"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "bleu4-espace",
++      "title": "Espace Vide / Bleu Sector 4",
++      "district": "Bleu",
++      "area": "Bleu Sector 4",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          477,
++          1130
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Café Rouleau follow Estival Avenue toward Espace Vide; the lift is by the modern dark-glazed building at the northwest edge of Bleu Sector 4.",
++      "source_record": "MAPS_BLEU4_ESPACE_VIDE_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "bleu4-espace-vide",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground",
++          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-ground.jpg",
++          "source": "1000027402.heic",
++          "sha256": "88fd72fdedd61e9463086097f4470fb855d219dfd7b73225dba3db7e5ed6578a"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-wide-map.jpg",
++          "source": "1000027403.heic",
++          "sha256": "74c7a10d383d0ffc2d10aec3d0fd8e27ec738161ef8a69b7ff61ce6bfa52e83d"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-neighbourhood-map.jpg",
++          "source": "1000027404.heic",
++          "sha256": "472a25390b564cb536a2950adac7cf42182bb1fc31bb0b01fb433e9e21729626"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-close-map.jpg",
++          "source": "1000027405.heic",
++          "sha256": "8c77119b44f5956e6491d7561cd41fd2eaa0c2e281ec0b0959d4484f8035cb1b"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/bleu4-espace-vide/holovator-bleu4-espace-vide-rooftop-arrival.jpg",
++          "source": "1000027406.heic",
++          "sha256": "f92862d2fcb692726ef5aecb4334a926664cedfb5f63abd55575389692f48182"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "cafe-gallant",
++      "title": "Café Gallant — Estival Avenue",
++      "district": "Bleu",
++      "area": "Estival Avenue / Bleu Sector 4",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          578,
++          1025
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Espace Vide continue northeast along Estival Avenue toward Café Gallant, looking along the northern building frontage for the gold chevrons.",
++      "source_record": "MAPS_CAFE_GALLANT_ESTIVAL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "cafe-gallant",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground",
++          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-ground.jpg",
++          "source": "1000027407.heic",
++          "sha256": "2b329f00a4ddaa66ce2ef5065195697a9ceebdd24a13999368cf71b8f4da3b0e"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-wide-map.jpg",
++          "source": "1000027408.heic",
++          "sha256": "e3270c2136146c7f0b7f34c9d309ab2d0d829f9f980624b58ed420e97e1bc05e"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-neighbourhood-map.jpg",
++          "source": "1000027409.heic",
++          "sha256": "f8c452d26c40c3b2205f47561156f0c6ae6724345ae81d881c855c5c9efe543d"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-close-map.jpg",
++          "source": "1000027410.heic",
++          "sha256": "3558cf5a2d5633895244b7cefe0bd54b2bb86d5f4dd83341096a979b3bd6f415"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/cafe-gallant/holovator-cafe-gallant-rooftop-arrival.jpg",
++          "source": "1000027411.heic",
++          "sha256": "b86624e819d282be55d8e1f76c2a470b437f7601e585d620ec13e9dcf27146ee"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "magenta-plaza-nw",
++      "title": "Magenta Plaza — northwestern terrace",
++      "district": "Magenta",
++      "area": "Magenta Plaza",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          491,
++          737
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Magenta Plaza walk to the curved northwest edge. Take the broad staircase on the right of the raised café terrace to reach the lift.",
++      "source_record": "MAPS_MAGENTA_PLAZA_NW_TERRACE_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "magenta-plaza-terrace",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-terrace",
++          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-ground-terrace.jpg",
++          "source": "1000027461.heic",
++          "sha256": "5b58bd34fefaa2db8fcb4931f6a8fefe34c16d41bdf5052df5e92917a47b73cc"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-wide-city-map.jpg",
++          "source": "1000027463.heic",
++          "sha256": "08c92bc8b35d2c4f4006f2578318a2fa57cd0a75b569296c42d1f9b03b52b0e9"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-neighbourhood-map.jpg",
++          "source": "1000027464.heic",
++          "sha256": "f9801b41528947d8c6c5a2592cea4f52f2e7ac2ebed5b076979fcb55065cefdc"
++        },
++        {
++          "role": "close-player-map",
++          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-close-player-map.jpg",
++          "source": "1000027465.heic",
++          "sha256": "f33c2b8b32b9e884e6cf7269391c30807691e7159542b3b42fc723fd30b8b338"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/magenta-plaza-terrace/holovator-magenta-plaza-terrace-rooftop-arrival.jpg",
++          "source": "1000027466.heic",
++          "sha256": "77b6513e22324ca79cb780edf9de632dc448f3ed53f5db43739ee6fca409b751"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "magenta8-canal",
++      "title": "Magenta Sector 8 — Saison Canal",
++      "district": "Magenta",
++      "area": "Magenta Sector 8",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          262,
++          704
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From the Magenta Sector 8 Pokémon Center stay on the north bank of Saison Canal, following Magenta Street east toward the Lumiose Sewers travel marker.",
++      "source_record": "MAPS_MAGENTA8_SAISON_CANAL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "magenta8-saison-canal",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-canal-street",
++          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-ground-canal-street.jpg",
++          "source": "1000027468.heic",
++          "sha256": "3dfa45e3ed987e2dd48dc9d7237a6c4f50af014fb390f8d64f1aad0bf22cf759"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-wide-city-map.jpg",
++          "source": "1000027469.heic",
++          "sha256": "6cd1e44e63d7e8048190b364fa40229592a44397f433ec1a45a99289f0a24296"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-neighbourhood-map.jpg",
++          "source": "1000027470.heic",
++          "sha256": "9fe0150d63275fc0797c9d4221d37f61b0e56b992a99830ed5d3af1836a527cf"
++        },
++        {
++          "role": "close-player-map",
++          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-close-player-map.jpg",
++          "source": "1000027471.heic",
++          "sha256": "b4e14a17ab735a575744909a71c191b3c4a5859846f00f83e61b3a31e800ac5b"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/magenta8-saison-canal/holovator-magenta8-saison-canal-rooftop-arrival.jpg",
++          "source": "1000027472.heic",
++          "sha256": "13f83d9103a942d4383fe70dac057ddcc990c23c412f98dcc48cf41c530457fa"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "lysandre-autumnal",
++      "title": "Lysandre Café — Autumnal Avenue",
++      "district": "Magenta",
++      "area": "Autumnal Avenue",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          739,
++          740
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "Near Lysandre Café, inspect the building frontage on the northeastern side of Autumnal Avenue, close to Rouge Sector 1.",
++      "source_record": "MAPS_LYSANDRE_CAFE_AUTUMNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "lysandre-cafe-autumnal",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-lumi-cab",
++          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-ground-lumi-cab.jpg",
++          "source": "1000027473.heic",
++          "sha256": "069fb4081137ce34d0f8518fb99713b46aca23bf9678061dd21f79a15d2565a0"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-wide-map.jpg",
++          "source": "1000027474.heic",
++          "sha256": "691bf6d2eac03d382bd7f20b81672aca1c2a44abe428133bb066b65f756a4607"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-neighbourhood-map.jpg",
++          "source": "1000027475.heic",
++          "sha256": "bb30e961b777b55554bd5b2a9e004a5cfd6968d764ee9fad6820e2b1101d0eb7"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-close-map.jpg",
++          "source": "1000027476.heic",
++          "sha256": "07703077a8563e0d21fa504a7ee2aef36eee818ac966057f1696a6d703498fd5"
++        },
++        {
++          "role": "rooftop-cafe-arrival",
++          "path": "assets/atlas/holovators/lysandre-cafe-autumnal/holovator-lysandre-cafe-autumnal-rooftop-cafe-arrival.jpg",
++          "source": "1000027477.heic",
++          "sha256": "6dc5b068e790e4a69d71998c7091a57de07c6bdc47004daf8a6daeaa48c11358"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "rouge-plaza-west",
++      "title": "Rouge Plaza — Sommi's lift",
++      "district": "Rouge",
++      "area": "Rouge Sector 1",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          832,
++          580
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "Go to the western edge of Rouge Plaza, west of Wild Zone 3. Find the blue-shuttered facade and the worker by the permanent lift. Its mission activation may require a battle.",
++      "source_record": "MAPS_ROUGE_PLAZA_WEST_SOMMI_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "rouge-plaza-west",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-facade-sommi",
++          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-ground-facade-sommi.jpg",
++          "source": "1000027478.heic",
++          "sha256": "860c3050665dc0b96736771efe61d3bbce68b58c94077e95b9642890b94d3187"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-wide-city-map.jpg",
++          "source": "1000027479.heic",
++          "sha256": "31305ca3c0cd9c8c50b2b2496dbbe52a5cadff54e5163bf8634b51362d74a1ba"
++        },
++        {
++          "role": "rouge-plaza-neighbourhood-map",
++          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-rouge-plaza-neighbourhood-map.jpg",
++          "source": "1000027480.heic",
++          "sha256": "84404863d7e64a7c06c02a3f5c609c5672d419aafc6c1c4721ae79cc01e5cb15"
++        },
++        {
++          "role": "rouge-plaza-close-map",
++          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-rouge-plaza-close-map.jpg",
++          "source": "1000027481.heic",
++          "sha256": "ad89e6a827dffb067d2187765411dcf6190331fb9aa67516a9b16dc097267d13"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/rouge-plaza-west/holovator-rouge-plaza-west-rooftop-arrival.jpg",
++          "source": "1000027482.heic",
++          "sha256": "fc6a0b5a6c1f16aeb5eaf8fe4240950e7f074c1096a6243504e4ad7affc62f05"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "rouge5-looker",
++      "title": "Looker Bureau / Sushi High Roller",
++      "district": "Rouge",
++      "area": "Rouge Sector 5",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          917,
++          405
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From the north side of Rouge Plaza head toward Looker Bureau. Find the lift on the west building wall across the short north-south street from Sushi High Roller, south of Dormez Bien Cemetery.",
++      "source_record": "MAPS_ROUGE5_LOOKER_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "rouge5-looker-sushi-high-roller",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-ground-entrance.jpg",
++          "source": "1000027483.heic",
++          "sha256": "d308c8f55d72e5847ad95f0285baba23cf34211e7856eb52fde330fc1bab268a"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-wide-city-map.jpg",
++          "source": "1000027484.heic",
++          "sha256": "dabd698a777b3f343a8e985db44b473653a13ec55e6c6cdc4dc58c7b73e94591"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-neighbourhood-map.jpg",
++          "source": "1000027485.heic",
++          "sha256": "1f6285994e57041be8de72171d04179252cb05c492e753673324a5292ad3174d"
++        },
++        {
++          "role": "close-up-map",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-close-up-map.jpg",
++          "source": "1000027486.heic",
++          "sha256": "412b396cbf68d9b1421f9255ee9bc4a8e284b3cbb4f02b7e98afc250d0285d42"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/holovator-rouge5-looker-sushi-high-roller-rooftop-arrival.jpg",
++          "source": "1000027487.heic",
++          "sha256": "0fa7a57ff57bb01a84d1e9dd10e14ada97264622e9bf67989638c8c3086f16f9"
++        },
++        {
++          "role": "ground-entrance-alternate",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-ground-entrance-alternate.jpg",
++          "source": "1000027494.heic",
++          "sha256": "b16ab104ddd14e904d416b11ab59fc024f67e2bde43ec25ab774de28228aafc8"
++        },
++        {
++          "role": "neighbourhood-map-revisit",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-neighbourhood-map-revisit.jpg",
++          "source": "1000027495.heic",
++          "sha256": "99bc1053b770617cbef04b02ab1d802a550ce7afd480c428f79cf1c801f6346b"
++        },
++        {
++          "role": "close-map-revisit",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-close-map-revisit.jpg",
++          "source": "1000027496.heic",
++          "sha256": "bf393a7ed032f061b654a9a77437206141fe2625fa8b9350e3b80abf027e76da"
++        },
++        {
++          "role": "wide-city-map-revisit",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-wide-city-map-revisit.jpg",
++          "source": "1000027497.heic",
++          "sha256": "a4c2ee13534fbdc3176e0efb04ceca14e75194ab2bb7c1a7a1363d596940346d"
++        },
++        {
++          "role": "rooftop-arrival-revisit",
++          "path": "assets/atlas/holovators/rouge5-looker-sushi-high-roller/alternates/holovator-rouge5-looker-sushi-rooftop-arrival-revisit.jpg",
++          "source": "1000027498.heic",
++          "sha256": "9dca492f294078aadcea2cadac39f5cdf073d8626793eeaf80ea8d9e97cd2ba0"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "north-boulevard-rouge3",
++      "title": "North Boulevard — Rouge Sector 3",
++      "district": "Rouge",
++      "area": "North Boulevard / Rouge Sector 3",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          534,
++          249
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From the northwestern inner city, use Wild Zone 18 and Wild Zone 13 as map bearings. Inspect the long building frontage just inside North Boulevard for the gold lift.",
++      "source_record": "MAPS_NORTH_BOULEVARD_ROUGE3_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "north-boulevard-rouge3-wz13-18",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "street-entrance",
++          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-street-entrance.jpg",
++          "source": "1000027489.heic",
++          "sha256": "45e8906688eddc2b751e102781ebcc50e677348f851ed1c2a836ea947e6a3c68"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-wide-city-map.jpg",
++          "source": "1000027490.heic",
++          "sha256": "00a99aaad455afa9bf85a0abfffee8a64c9d788da9d57739c60b9cd66637fcb8"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-neighbourhood-map.jpg",
++          "source": "1000027491.heic",
++          "sha256": "f17820cc39ea896674c76a81a5f72f1698485b242bd79639981cbe4a28f0a5f4"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-close-map.jpg",
++          "source": "1000027492.heic",
++          "sha256": "1ce74cda7239dde340d8394445fa86df0c04c3acc5104c9635a540491feef548"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/north-boulevard-rouge3-wz13-18/holovator-north-boulevard-rouge3-wz13-18-rooftop-arrival.jpg",
++          "source": "1000027493.heic",
++          "sha256": "2751b993b73b5aa58ed7f3cbca4764f16b88ace7b55eff8071e4df9d4037e96d"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "rouge6-east-sushi",
++      "title": "East of Sushi High Roller",
++      "district": "Rouge",
++      "area": "Rouge Sector 6",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1189,
++          406
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "Continue east from Sushi High Roller along the south edge of Dormez Bien Cemetery. Before the Hibernal Avenue junction find the gold lift along the building frontage.",
++      "source_record": "MAPS_ROUGE6_EAST_OF_SUSHI_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "rouge6-east-sushi-high-roller",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-ground-entrance.jpg",
++          "source": "1000027499.heic",
++          "sha256": "df7cc9010a810e5434a5df92b5e7608bc0520d9adaf5069a39c48aa2e595a1c5"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-wide-city-map.jpg",
++          "source": "1000027500.heic",
++          "sha256": "f00814ffe80fa1577cf53a8da0983660b3d91ef88b131ca263569f418db29202"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-neighbourhood-map.jpg",
++          "source": "1000027501.heic",
++          "sha256": "9ef7aa1ed2d31bcd34023ffe15b40fda4d802dbcaca983aa7ab94e56e2b50e38"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-close-map.jpg",
++          "source": "1000027502.heic",
++          "sha256": "24e2e6078e918a8553e6006dda6bc13f243becd7e72df90fecf087bd5f43d3c7"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/rouge6-east-sushi-high-roller/holovator-rouge6-east-sushi-high-roller-rooftop-arrival.jpg",
++          "source": "1000027503.heic",
++          "sha256": "f7532078b2114aeedf35ada8df9e97aef3f4cb0ec72cd0b82ea48a0d0c8f7f17"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "jaune7-hibernal",
++      "title": "Jaune Sector 7 — Hibernal Avenue",
++      "district": "Jaune",
++      "area": "Jaune Sector 7",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1389,
++          367
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "Follow Hibernal Avenue northeast from Café Kizuna toward Café Ultimo. The separate lift is against the east/right building frontage.",
++      "source_record": "MAPS_JAUNE7_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "jaune7-hibernal-avenue",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-ground-entrance.jpg",
++          "source": "1000027504.heic",
++          "sha256": "5d7cb15e493b71d67a4dbb326b2604c5b9e53e31a111b5e3a5d8638430fee949"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-wide-map.jpg",
++          "source": "1000027506.heic",
++          "sha256": "c7fac6904c0f9fd9f39c724b515fb5955e38773eaa5ecff02a4e01a267974fd4"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-neighbourhood-map.jpg",
++          "source": "1000027507.heic",
++          "sha256": "903033af7f7f889f44b57f4b3a91856385ad7fcc75117ecf390d3cc8243c002c"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-close-map.jpg",
++          "source": "1000027508.heic",
++          "sha256": "c6d1853fb76cf0db60e280433726fee77c501d9f69725d21c996f1bcddd7bc7c"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-rooftop-arrival.jpg",
++          "source": "1000027509.heic",
++          "sha256": "c6b47540ccdd798e8f56e5f461f91eeb708c4910064642b7dd0d53a1b9151810"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "jaune4-etoile",
++      "title": "Jaune Sector 4 — Académie Étoile",
++      "district": "Jaune",
++      "area": "Jaune Sector 4",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1260,
++          584
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From the Pokémon Center northeast of Académie Étoile, follow Hibernal Avenue southwest to the triangular Jaune Sector 4 building. Find the arrows by the blue windows.",
++      "source_record": "MAPS_JAUNE4_ACADEMIE_HIBERNAL_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "jaune4-academie-etoile-hibernal",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-ground-entrance.jpg",
++          "source": "1000027510.heic",
++          "sha256": "88c47c3e44e0aa81cd2db127b5589b7c345d059bf27fa4aed464bea5d2e06ce8"
++        },
++        {
++          "role": "wide-map",
++          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-wide-map.jpg",
++          "source": "1000027511.heic",
++          "sha256": "d59d64d65d23f65cee9dc8ddb3bd57653192c9617b46d4081a97cf4f9cd59ff9"
++        },
++        {
++          "role": "neighbourhood-map",
++          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-neighbourhood-map.jpg",
++          "source": "1000027512.heic",
++          "sha256": "00bd520d6185ace858da776b0fff526a2c55d1aad3cd7f3684d193f318473640"
++        },
++        {
++          "role": "close-map",
++          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-close-map.jpg",
++          "source": "1000027513.heic",
++          "sha256": "87634e9aaed986483546249b8fd08094dbd6fbaaf47dce323d1dce9bcc7163d1"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/jaune4-academie-etoile-hibernal/holovator-jaune4-academie-etoile-hibernal-rooftop-arrival.jpg",
++          "source": "1000027514.heic",
++          "sha256": "c1ebb7d0412c335e45ab4b9444658b688ab7773dad41e337e817ef8fc34b1019"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "jaune11-street",
++      "title": "Jaune Sector 11 — Jaune Street",
++      "district": "Jaune",
++      "area": "Jaune Sector 11",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1664,
++          723
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Jaune Plaza follow Jaune Street east toward North Boulevard. Just south of Wild Zone 19 find the raised stone terrace against the grey-blue window building, beside a blond trainer.",
++      "source_record": "MAPS_JAUNE11_JAUNE_STREET_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": "jaune11-jaune-street-wz19",
++      "photo_status": "committed_main",
++      "photos": [
++        {
++          "role": "ground-entrance",
++          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-ground-entrance.jpg",
++          "source": "1000027515.heic",
++          "sha256": "e5a3bec1c85e978494fbee03177ba4ca9bb73cd92ff7dff5ac33e22a023a8f41"
++        },
++        {
++          "role": "wide-city-map",
++          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-wide-city-map.jpg",
++          "source": "1000027517.heic",
++          "sha256": "44ac389e07f0e489edb1ff9020d77fd83f6135e0d6d27561ad1269953505a7b0"
++        },
++        {
++          "role": "labelled-neighbourhood-map",
++          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-labelled-neighbourhood-map.jpg",
++          "source": "1000027518.heic",
++          "sha256": "1a271d0149e0a6c2c99ff7fde6775792ac70174ffe990ceffdd17cc939d07e70"
++        },
++        {
++          "role": "close-up-map",
++          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-close-up-map.jpg",
++          "source": "1000027519.heic",
++          "sha256": "7520325ca58f52f34a4ee4470f1166d2ed49c92064edfc0850071bcb6e9d40cb"
++        },
++        {
++          "role": "rooftop-arrival",
++          "path": "assets/atlas/holovators/jaune11-jaune-street-wz19/holovator-jaune11-jaune-street-rooftop-arrival.jpg",
++          "source": "1000027520.heic",
++          "sha256": "5e4ea71aa88bf7fb138656773616430c1543fe1d2b74b4a29e13099832b73117"
++        }
++      ],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "jaune12-wz6",
++      "title": "Inside Wild Zone 6 — North Boulevard",
++      "district": "Jaune",
++      "area": "Jaune Sector 12 / Wild Zone 6",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1727,
++          1014
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "Enter Wild Zone 6 from North Boulevard near Café Bataille. Look for the gold chevrons on the building frontage. Wild Houndour and Houndoom attack nearby: protect your team while reaching the lift.",
++      "source_record": null,
++      "photo_group": "jaune12-wild-zone-6",
++      "photo_status": "final_11_in_zip_not_yet_uploaded",
++      "photos": [],
++      "pending_photo_filenames": [
++        "1000027521.heic",
++        "1000027522.heic",
++        "1000027523.heic",
++        "1000027524.heic",
++        "1000027525.heic"
++      ]
++    },
++    {
++      "id": "vert-cyclone",
++      "title": "Café Cyclone — concealed courtyard",
++      "district": "Vert",
++      "area": "Coulant Waterway / Vert Sector 5",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          1299,
++          1337
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "At Café Cyclone near Coulant Waterway, enter the broad covered stone archway. Walk into the grassy inner courtyard. The permanent gold Holovator is on the far wall. Use it to reach the green-panelled rooftop.",
++      "source_record": null,
++      "photo_group": "vert-cafe-cyclone",
++      "photo_status": "final_11_in_zip_not_yet_uploaded",
++      "photos": [],
++      "pending_photo_filenames": [
++        "1000027526.heic",
++        "1000027527.heic",
++        "1000027528.heic",
++        "1000027529.heic",
++        "1000027530.heic",
++        "1000027531.heic"
++      ]
++    },
++    {
++      "id": "bleu3-fav",
++      "title": "My Favorite Holovator — Bleu Sector 3",
++      "district": "Bleu",
++      "area": "Bleu Sector 3",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          765,
++          1396
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "From Bleu Plaza head east/southeast into Bleu Sector 3, north of Aymlis Park. The lift stands against the short building frontage; the associated mission may have a guarding trainer.",
++      "source_record": "MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json",
++      "photo_group": null,
++      "photo_status": "older_owner_evidence_not_imported",
++      "photos": [],
++      "pending_photo_filenames": []
++    },
++    {
++      "id": "vert4-south",
++      "title": "Café Classe south — Vernal Pokémon Center",
++      "district": "Vert",
++      "area": "Vert Sector 4 / Sector 9",
++      "map": {
++        "source_image": "maps/lumiose-game-map.jpg",
++        "native_xy_approx": [
++          943,
++          1466
++        ],
++        "precision": "APPROXIMATE image-registration / landmark lead; NOT an exact doorway coordinate",
++        "research_only": true
++      },
++      "directions": "At the Vernal Avenue Pokémon Center and Café Classe, find the lift along the east-side building wall immediately south of the café beside Aymlis Park. This is separate from the eastern Vert 4 doorway.",
++      "source_record": "MAPS_VERT_CAFE_CLASSE_SOUTH_OWNER_LIFT_SURVEY_2026-11-22.json",
++      "photo_group": null,
++      "photo_status": "older_owner_evidence_not_imported",
++      "photos": [],
++      "pending_photo_filenames": []
++    }
++  ]
++}
+diff --git a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+index 2e731d8..25ba38d 100644
+--- a/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
++++ b/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md
+@@ -836,3 +836,27 @@ The new close map 7375 matches map 7374 at **175 inliers / 0.64px RMS**, close r
+ **Actual binary asset upload improvement:** All five phone uploads are REAL **image/jpeg 1536×865 bytes** despite `.heic` extension. Created `.jpg` aliases using **bit-identical copying**, not re-encoding; all original SHA256 and Git JPEG blob SHA1 values in [the field survey](MAPS_JAUNE11_JAUNE_STREET_OWNER_LIFT_SURVEY_2026-11-22.json). **All five JPEG binaries uploaded into GitHub** using base64 Git blob API and byte-verified against local Git blob SHA1; committed in this PR under `assets/atlas/holovators/jaune11-jaune-street-wz19/` (not merely filename/JSON references). No outside TV bezel visible in these five; **0 crops**. Original files preserved within optional ZIP `lumiose-atlas-jaune11-street-holovator18-github-jpgs.zip` SHA256 `a7d1d1d98244cf31c0cb1fb7033a6587fd29d04b6cca9c5b7afc89a8a10fef4c`. Unlike earlier owner groups, this new group has physical JPG files present in GitHub. Earlier owner survey image binaries remain untransferred and should not be claimed uploaded here.
+ 
+ **Safe scope:** 5 new binary JPGs, owner survey JSON, three ledgers and this appended plan section. No HTML/CSS/JS/app build config, live ChatGPT Site or GitHub Pages map runtime, moving DLC portals, source city JPG, existing map pins, reward/feedback/Supabase/player progress or other pending PR changed. This is owner evidence and asset storage, not a public pin or walkthrough release.
++
++
++## 22 November 2026 — owner field-survey checkpoint (rev 22)
++
++**State:** Photo survey consolidation is complete as a bounded **GitHub-only research/visual map stage**. This section does not authorize changing the original ChatGPT Site, claiming exact device coordinates, resetting feedback or progress, or overwriting the existing 20-Wild-Zone / 48-sector data.
++
++- **Firsthand physical fieldwork:** 21 player-visited lift-location entries have been assembled into [the owner survey catalog](MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json). Their street directions and map-neighbourhood records are owner-provided, not solely third-party guide guesses. The Rouge Sector 5 return visit is grouped with its original location, **not** counted twice.
++- **Actual image assets on main:** [PR #75](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/75) merged 85 original player JPGs at SHA `b59cba56834c44fad8bb6fa0e16fb336dbbdddb8`. Alongside five previously merged Jaune 11 images, this is **90 genuine binary JPGs**, with image hash/size evidence in `MAPS_OWNER_HOLOVATOR_85_JPG_IMPORT_2026-11-22.json`. These are photo files, **not** 90 different Holovators.
++- **Additional confirmed fieldwork, images pending:** The next 11 owner photos (five for **Jaune Sector 12 / Wild Zone 6**, six for **the Café Cyclone covered-arch courtyard**) are prepared in `lumiose-atlas-holovator-final-11-github-ready.zip` but are **not GitHub-hosted yet**. Ten older source photographs (five for **My Favorite Holovator, Bleu Sector 3, mission #61**, and five for **the Café Classe south / Vernal Pokémon Center** lift) remain to be imported.
++- **Independent new interactive map (separate review branch):** `holovator-map.html` + `holovator-map.js` + `holovator-map.css` show photo-backed entrances, search by landmark/district, zoomable original `maps/lumiose-game-map.jpg`, written directions and galleries **only where the JPG is actually hosted**. Existing `maps.html` and `sector-maps.html` have only an additive link.
++- **Map-point accuracy gate:** The 21 page dots are explicitly **approximate landmark-aligned research positions** on a 1,920 × 1,920 image. Photos verify physical lift access but **do not prove precise device pixels, roof X/Y, floor heights or their relationship to all 23 independent external Holovator category IDs**. Publish no claim that the 23 are reconciled; keep unavailable images absent rather than broken.
++- **Fixed versus dynamic markers:** Permanent yellow upward-chevron Holovators may be mapped; black/gold or black/pink DLC Hyperspace portals are day-dependent, **not** static Holovators. Ladders and scaffold map dots are deferred.
++- **Next safe chunk:** Validate the isolated fieldbook, preserve all original map/item regression tests, open PR; do not merge to main until checks are green and the independent photo-map view is reviewed. Later import 11+10 remaining JPGs with binary verification, improve source-to-city-map geometric registration, and only then consider permanent precision-labelled layers on existing guide maps.
++
++**Progress ledger:** `MAPS_UPGRADE_MANIFEST.json` revision 22, `owner_holovator_fieldwork_checkpoint_2026_11_22`. Existing original site and its Supabase/feedback/player data remain unchanged.
++
++
++### Owner final Holovator ZIP handoff and no-speculation ladder policy (2026-11-22)
++
++- Owner survey is **complete for all permanent gold-chevron lifts personally found/unlocked**, not proof that all externally listed 23 device IDs have been uniquely matched. Keep the 21 owner fieldbook entries as research-level locations with photo-backed approach directions, not precision GPS/pixel pins.
++- ZIP integrity verified: original combined survey archive (218 entries); flattened GitHub-ready archive (96 verified JPEGs); delta archive for last 11 JPEGs (5 Wild Zone 6; 6 Cafe Cyclone). GitHub main contains 90 owner photo JPGs; the 11 final JPGs and 10 earlier source images are **not** yet hosted. Do not point live galleries at missing files.
++- Owner requests **no invented ladder or scaffold pins**: in-game maps do not individually identify such climbs. Write photo-supported walking/climbing directions where verified; leave other roof passages explicitly unverified. Rotating Hyperspace distortions remain separate from permanent Holovators.
++- Photo import and policy manifest: `docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md`; pending archive `lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip`; stable draft PR #76. No main/live/Workspace/Supabase/feedback/player-progress change from this checkpoint.
++
+diff --git a/MAPS_UPGRADE_MANIFEST.json b/MAPS_UPGRADE_MANIFEST.json
+index f91c9ac..c691bf2 100644
+--- a/MAPS_UPGRADE_MANIFEST.json
++++ b/MAPS_UPGRADE_MANIFEST.json
+@@ -1,10 +1,10 @@
+ {
+   "id": "ATLAS-MAPS-2026-11-21-V1",
+-  "revision": 21,
++  "revision": 23,
+   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
+   "created_at": "2026-11-21",
+   "status": "owner_approved_mapping_plan_with_source_coordinate_validation_in_progress",
+-  "current_phase": "SM-01 in progress: 10 original photos inspected; 6 manually registered to native 1920px Atlas city JPG, 11 approximate source-image icon projections, 2 cross-photo pair corroborations, 0 verified device entrance/roof exact pins",
++  "current_phase": "Owner firsthand Holovator fieldwork consolidated: 21 surveyed map entries, 90 real JPEG screenshot assets merged on GitHub main, isolated zoom/search/photo viewer in review branch. Pin/image registration and 23-source-device crosswalk still provisional; final 11 JPGs await binary GitHub transfer. The original ChatGPT-hosted site remains unchanged.",
+   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
+   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
+@@ -1796,5 +1796,99 @@
+       "copying_of_original_owner_photos": false,
+       "site_code_changed": false
+     }
+-  ]
++  ],
++  "owner_holovator_fieldwork_checkpoint_2026_11_22": {
++    "status": "checkpoint_saved_on_independent_GitHub_edition_branch_NOT_live_site",
++    "evidence_date": "2026-11-22",
++    "source": "Owner's firsthand gameplay photo survey of permanent yellow-chevron fixed Holovators in Lumiose City",
++    "repository": "trevieisking/lumiose-atlas-pokemon-za",
++    "binary_photo_import_merged": {
++      "pr": 75,
++      "merge_sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8",
++      "total_committed_jpgs": 90,
++      "verified_by_tree_blob_sha_size": true,
++      "main_import_count": 85,
++      "previous_Jaune11_count": 5,
++      "image_inventory": "MAPS_OWNER_HOLOVATOR_85_JPG_IMPORT_2026-11-22.json",
++      "tv_frame_policy": "Only seven minimally cropped bottom edges; originals retained"
++    },
++    "isolated_fieldbook": {
++      "branch": "feat/owner-holovator-photo-fieldbook-20261122",
++      "files": [
++        "MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
++        "holovator-map.html",
++        "holovator-map.js",
++        "holovator-map.css",
++        "tests/owner_holovator_fieldbook.test.mjs"
++      ],
++      "existing_page_changes": [
++        "maps.html: additive link only",
++        "sector-maps.html: additive link only"
++      ],
++      "entry_count": 21,
++      "entries_with_genuine_repo_jpg_galleries": 17,
++      "gallery_jpg_count": 90,
++      "kind": "fixed_infrastructure_owner_photo_evidence",
++      "coords": "approximate 1920x1920 original city image research locations; not precise device entrance or roof coordinates",
++      "device_category_ids_individually_matched": 0,
++      "external_source_claimed_total_not_published_as_verified": 23,
++      "rouge5_repeat_visit_counted_once": true,
++      "live_chatgpt_site_changed": false,
++      "supabase_or_progress_changed": false
++    },
++    "final_11_photo_package": {
++      "source_photo_count": 11,
++      "distinct_location_groups": 2,
++      "groups": [
++        "Jaune Sector 12 / Wild Zone 6 / North Boulevard",
++        "Vert Café Cyclone / Coulant Waterway concealed courtyard"
++      ],
++      "binary_import_status": "local ZIP verified, NOT yet in GitHub",
++      "archive_name": "lumiose-atlas-holovator-final-11-github-ready.zip",
++      "exact_map_coordinates_verified": false
++    },
++    "older_photos_remaining_unpublished": {
++      "source_photo_count": 10,
++      "distinct_groups": 2,
++      "groups": [
++        "My Favorite Holovator — Bleu Sector 3, Side Mission 61",
++        "Café Classe south — Vernal Pokémon Center"
++      ],
++      "status": "owner survey JSONs exist; JPG assets not in GitHub"
++    },
++    "preserved": {
++      "original_chatgpt_guide": true,
++      "existing_independent_guide_routes": true,
++      "existing_map_image": true,
++      "wild_zone_pin_count": 20,
++      "city_sector_count": 48,
++      "item_record_count": 264,
++      "screw_clue_count": 100,
++      "dynamic_hyperspace_portals_as_fixed_pins": false,
++      "ladders_deferred": true
++    },
++    "next_chunk": "Run/verify fieldbook test and static build without editing original data; open a bounded PR. Later independently transfer final 11 JPGs and remaining 10 older owner JPGs using a verified binary-capable route. Only merge site viewer once CI and visual QA are green; never infer precise roof coordinates."
++  },
++  "owner_holovator_navigation_policy_2026_11_22": {
++    "owner_survey_status": "complete_for_personally_discovered_and_unlocked_fixed_holovators_not_exhaustively_reconciled_external_23",
++    "existing_survey_entries": 21,
++    "main_github_owner_jpeg_count": 90,
++    "verified_flat_zip_jpeg_count": 96,
++    "archive_evidence_entry_count": 218,
++    "new_missing_github_jpg_count": 11,
++    "earlier_unhosted_jpg_count": 10,
++    "new_photo_groups": [
++      "Jaune Sector 12 Wild Zone 6",
++      "Vert Cafe Cyclone courtyard"
++    ],
++    "grounded_navigation_policy": "Explain ladders and scaffolds in route prose only; no exact in-game map icons or speculative pins",
++    "dynamic_hyperspace_fixed_pin_count": 0,
++    "docs": "docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md",
++    "github_import_delta_zip": "lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip",
++    "branch": "feat/owner-holovator-photo-fieldbook-20261122",
++    "pr": 76,
++    "original_chatgpt_site_untouched": true,
++    "main_untouched": true,
++    "all_new_binary_photos_committed": false
++  }
+ }
+diff --git a/docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md b/docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md
+new file mode 100644
+index 0000000..aba5ac0
+--- /dev/null
++++ b/docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md
+@@ -0,0 +1,33 @@
++# Lumiose Holovator field survey — closure and climbing guidance
++
++**Date:** 2026-11-22  
++**Evidence:** original owner gameplay photographs and in-game map captures  
++**Tracking:** Atlas mapping master plan `ATLAS-MAPS-2026-11-21-V1`; draft PR #76
++
++## What today's fieldwork establishes
++
++The owner walked Lumiose City and photographed every **permanent gold-chevron Holovator** they could find and unlock. The survey is complete from the owner's perspective, but it does **not** prove that every independently catalogued lift identity has been matched. Keep the existing 21 research entries and avoid turning approximate city-image coordinates into exact device/roof coordinates.
++
++Each documented lift should be explained with the real ground-level entrance, a wide map, a closer neighbourhood/position map, and rooftop arrival photographs where available. The observed lift inside **Wild Zone 6** requires a clear hostile-Pokémon warning. The **Café Cyclone** lift is approached by passing through the large covered arch into the enclosed grassy courtyard; the lift is at the far building wall.
++
++## Ladders and scaffolding: directions, not invented pins
++
++The owner's in-game map screenshots do **not** individually label every ladder, climbable scaffold or rooftop connection. For that reason, do not populate the guide with speculative ladder or scaffold markers.
++
++When a particular climb is independently supported, describe it in an ordinary route card: find the correct street entrance, courtyard or rooftop, inspect the photographed nearby walls and raised platforms, use only the visible accessible ascent, and follow the clearly connected walkable roofs. Distinguish **photographed route**, **inferred route** and **not yet verified**. Do not invent roof crossings, heights or item pickup positions.
++
++A fixed lift is distinct from a ladder or scaffold, and all three differ from moving **DLC Hyperspace distortions**, which must never be treated as permanent map locations.
++
++## Image inventory and GitHub handoff
++
++- **90** genuine owner JPEGs already merged into GitHub `main` through PRs #74 and #75; this is a photo count, **not** a lift count.
++- **11** more genuine JPEGs (five Wild Zone 6; six Café Cyclone) are ready locally but **not yet uploaded to GitHub**. Their precise future paths and checksums are in `lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip`.
++- **10** older photos covering two recorded survey groups remain unavailable as hosted JPGs. Do not render broken links for them.
++- The owner survey's combined archival ZIP has **218 entries**, including original uploads and photo-provenance manifests. A flattened, repository-path-ready bundle has **96** JPEGs, of which 11 need new import.
++- A return visit near Looker Bureau/Sushi High Roller is preserved as **alternate evidence** for the same fixed Holovator rather than an extra device.
++
++The packages are handoff files, not automatic GitHub commits. Only mark an image as published after its bytes exist at the claimed repository path and its hash/signature have been verified.
++
++## Publication safety
++
++Keep this work on the independent GitHub edition's **draft PR #76** while its map/gallery behavior and tests are reviewed. Do not modify the original ChatGPT Site, its URL, Supabase, feedback, ratings, saved progress, 20 Wild Zone positions, 48 sector index or existing item routes. Any eventual merge requires green checks, file/path verification and practical mobile/desktop visual review.

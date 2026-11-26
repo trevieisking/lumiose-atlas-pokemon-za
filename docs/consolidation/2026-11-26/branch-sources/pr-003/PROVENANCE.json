@@ -1,0 +1,77 @@
+{
+  "number": 3,
+  "title": "Expand early story missions 01–10 and connect guide sections",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/3",
+  "origin_head_ref": "content/early-story-linked-playthrough-2026-11-21",
+  "origin_head_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+  "observed_base_ref": "main",
+  "observed_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "git_diff_merge_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "disposition": "retain_runtime_candidate",
+  "consolidation_note": "Preserve expanded missions 01–10 and all-42 related links as candidate; current main includes later link fixes and M24/25/37 changes. Port only unique prose/link improvements with non-loss diff, regenerate index, validate. No whole stale branch merge.",
+  "all_changed_paths": [
+    "README.md",
+    "app.js",
+    "docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md",
+    "index.html",
+    "reconstruction.css",
+    "src/sections/berries.html",
+    "src/sections/bosses.html",
+    "src/sections/dimension.html",
+    "src/sections/items.html",
+    "src/sections/legends.html",
+    "src/sections/maps.html",
+    "src/sections/pokedex.html",
+    "src/sections/sidequests.html",
+    "src/sections/walkthrough.html",
+    "tests/validate_static.py"
+  ],
+  "source_files": [
+    {
+      "original_path": "README.md",
+      "change_status": "M",
+      "origin_head_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+      "origin_git_blob_sha1": "091fc3095c756ba1c1b826ea06137a79f18f1759",
+      "origin_bytes": 6231,
+      "origin_sha256": "b1f616379524094551c589037511ddd31376c41d368ce0e2014d9d9c7d3ff271",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4d65520593a438b03b96c5e3621989f76c4d8d4f/README.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "2d8439cd9b92503235ef85e7fe02163f3f308e69",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-003/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md",
+      "change_status": "A",
+      "origin_head_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+      "origin_git_blob_sha1": "162367d9e67f21c597c17edf068ccf89e869b5aa",
+      "origin_bytes": 7691,
+      "origin_sha256": "e53e9d67f1769bfd678947164a3a69d5e03327addf27c854a0d1064c726c2154",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4d65520593a438b03b96c5e3621989f76c4d8d4f/docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-003/docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md",
+        "bytes": 7691,
+        "sha256": "e53e9d67f1769bfd678947164a3a69d5e03327addf27c854a0d1064c726c2154"
+      },
+      "patch_path": "pr-003/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-003/historical-source.patch",
+    "bytes": 9461,
+    "sha256": "d79c0321c5a74e843e2b0020125cd82b6910d2c2e2e521b6c7a04cdc7e866f0b"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Goal\nMake Lumiose Atlas practical for a real Pokémon Legends: Z-A playthrough, using the detailed Canari/Ivor guides as the standard and **adding depth without deleting recovered content**.\n\n## Implemented\n- Expanded Mission **01–10** into more complete, originally phrased playthroughs, covering starters, barriers, Hotel Z, Mable TM004, Battle Zone matches, mandatory Emma requests, promotion teams, the Zygarde chase, Absol and the Mega Evolution cases.\n- Connected all **42** mission cards with previous/next navigation and relevant map, item, battle, Pokédex, sidequest and DLC links.\n- Connected **8 additional game sections** to related content and story unlocks: side quests, maps, items, Rogue Mega bosses, Pokédex, Mega Dimension, legendary Pokémon and berries.\n- Fixed a deep-link bug where an earlier mission filter could hide the requested mission.\n- Added style isolated in `reconstruction.css`; kept original images, saved map geometry and page structure unchanged.\n- Added documented gameplay source comparison and conflicting claims in `docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md`.\n- Extended static test checks for the 42 mission crosslinks and eight contextual section panels.\n\n## Source cross-check\nOfficial/recorded mission objective lists (Bulbapedia), Serebii main missions, Thonky detailed walkthroughs and relevant sidequest sources were reviewed for 01–10. No external guide passages copied. Zach's Pidgey level and some sidequest reward quantities conflict in sources; the page flags uncertainty rather than inventing it.\n\n## Non-loss / safety evidence\n- **42 / 42** mission cards and progress markers retained.\n- **203 / 203** side+EX entries retained.\n- **232 / 232** recovered Pokédex cards retained.\n- No Pokémon art, map pin, original website, Stream Bandit main/TCG, Supabase or domain changes.\n- New homepage and editable section sources changed together.\n- Source-derived app.js patch passed local Node syntax check; core site static validator passed on unchanged reconstruction baseline.\n- **Branch-specific browser/device smoke test and runtime static validator remain required before merge or release.**\n- Draft PR: **do not merge or publish until verification**. PR #1 (Mable research) and PR #2 (social sharing/hosting brand) are separate staged work and should be reconciled before any final release.\n\n## Next audit\nMissions 11–20, then 21–30, 31–42, plus 200 side/3 EX tasks, accurate rooftop/ladder/Holovator maps, live reward validity, and DLC/Hyperspace Pokédex.\n"
+}

@@ -1,0 +1,56 @@
+{
+  "number": 4,
+  "title": "Number Wild Zone map items and link them with tick lists",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/4",
+  "origin_head_ref": "feat/numbered-map-pins-ticklists-2026-11-21",
+  "origin_head_sha": "263f7faa3ddf8588cc73dae97577087d7a92df93",
+  "observed_base_ref": "content/early-story-linked-playthrough-2026-11-21",
+  "observed_base_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+  "git_diff_merge_base_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+  "disposition": "retain_runtime_candidate_dependency",
+  "consolidation_note": "PR base is #3's branch, not main. 146 numbered approximate points;111 candidate links/35 ambiguous; preserve264 IDs. Candidate numbering/controller not verified deployed. Reconcile with AT333 compact dots and AT334 source crosswalk; do not certify positions from name/zone match.",
+  "all_changed_paths": [
+    "app.js",
+    "docs/qa/MAP_PIN_NUMBERING_2026-11-21.md",
+    "index.html",
+    "map-numbering.js",
+    "map-pin-index.js",
+    "reconstruction.css",
+    "src/sections/items.html",
+    "src/sections/maps.html",
+    "src/template.html",
+    "tests/validate_static.py"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/qa/MAP_PIN_NUMBERING_2026-11-21.md",
+      "change_status": "A",
+      "origin_head_sha": "263f7faa3ddf8588cc73dae97577087d7a92df93",
+      "origin_git_blob_sha1": "e16c5d130bfea01df268682d7031e5190915b421",
+      "origin_bytes": 4318,
+      "origin_sha256": "d46dac0a1b5910baeb137b7fa33cb579d0df055b9fcabb1c30b77a3a81fe4663",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/263f7faa3ddf8588cc73dae97577087d7a92df93/docs/qa/MAP_PIN_NUMBERING_2026-11-21.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-004/docs/qa/MAP_PIN_NUMBERING_2026-11-21.md",
+        "bytes": 4318,
+        "sha256": "d46dac0a1b5910baeb137b7fa33cb579d0df055b9fcabb1c30b77a3a81fe4663"
+      },
+      "patch_path": "pr-004/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-004/historical-source.patch",
+    "bytes": 4570,
+    "sha256": "8619c5a296f0702bed660aecb09b328328537b199f4ed9c023accf0bb3c2b46a"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Goal\nA player should see item **#07** on a Wild Zone map, identify **#07** in the nearby mapped-pickup tick list, tap **Find #07** to focus the location, and tick that item without confusing it with another pickup.\n\n## Implementation\n- Index **146 unique recorded map pins across all 20 Wild Zones** with stable per-zone #01, #02 etc. labels, preserving the original approximate coordinates and item names.\n- Selected-zone city overlay + **enlarged numbered close-up** cloned from the recovered mission map, to distinguish overlapping pins without fabricating positions. Find #NN expands the close-up and focuses the matching pin.\n- Display a **matching numbered mapped-item tick list** for each selected zone, with accessible pin buttons and checkboxes.\n- Show **Item 01** etc. on every original item checklist row (264 original entries untouched). Display **Map #NN** only when name/zone match is uniquely attributable to an original entry.\n- Sync the **111 uniquely matched** map/checklist pairs through existing progress state. The **35 ambiguous** pins retain distinct device-local tracking and display *Map match unverified* instead of guessing.\n- Keep vendor rewards, random drops, and other unmapped entries in the original checklist without inventing map markers.\n- Improve map panel's item location preview, mobile labels, legend/explanation and CSS.\n- Add an index manifest, controller, audit document and regression checks; update `src/template.html`, editable section files and generated `index.html` together.\n\n## Evidence\n- Code-level audit: **20/20** zones, **146/146** IDs unique, **111** unambiguous matches, **35** flagged, **264** source checklist IDs preserved, all map coordinates within valid recorded ranges.\n- Preserved **42** missions, **203** side/EX tasks and **232** recovered Pokédex cards.\n- Local Chromium interaction tests: Zone 1 displays 8 numbered pins/rows; Zone 2 displays 4; map checkbox synchronises with original checklist where uniquely matched; Find #NN expands and focuses the original numbered close-up. Desktop and phone static renders created without JS errors.\n- **Still required before merge:** integrated branch CI/static test, manual phone/browser QA, and in-game verification of the 35 ambiguous matches and approximate roof/ground locations.\n\n## Dependence / no-loss rule\nThis branch is built **on top of draft PR #3**, so base this PR on `content/early-story-linked-playthrough-2026-11-21`. Merge in dependency order only after verification, or rebase carefully with exact changes and preserving all current source.\nNo writes to Supabase, no DNS/Render changes, no changes to Stream Bandit/TCG, and no change to the existing live ChatGPT Site or current `main` preview."
+}

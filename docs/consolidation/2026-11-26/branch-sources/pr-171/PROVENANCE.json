@@ -1,0 +1,101 @@
+{
+  "number": 171,
+  "title": "AT-327 research — Cross-check Wild Zone 11’s southern edge with Vert 6",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/171",
+  "origin_head_ref": "docs/at327-vert6-zone11-south-evidence",
+  "origin_head_sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d",
+  "observed_base_ref": "main",
+  "observed_base_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
+  "git_diff_merge_base_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
+  "disposition": "retain_research_candidate",
+  "consolidation_note": "WZ11 south edge/Vert6 eight-control affine and six withheld checks; no complete perimeter or approved production geometry. Append evidence to current register, not infer68-area completion.",
+  "all_changed_paths": [
+    "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+    "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.json",
+    "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+      "change_status": "M",
+      "origin_head_sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d",
+      "origin_git_blob_sha1": "f81640f3ec03bd9b259ef210192f105f1b904d93",
+      "origin_bytes": 4460,
+      "origin_sha256": "b34d4289e77db9851fdb1a9f593b72f2bb2f824eea8dc695b783133c5e529631",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d/docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "33ae356267c86f7eac16408127dec242cfbf5014",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-171/docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+        "bytes": 4460,
+        "sha256": "b34d4289e77db9851fdb1a9f593b72f2bb2f824eea8dc695b783133c5e529631"
+      },
+      "patch_path": "pr-171/historical-source.patch",
+      "at_ids": [
+        "AT-325",
+        "AT-326",
+        "AT-327"
+      ]
+    },
+    {
+      "original_path": "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.json",
+      "change_status": "A",
+      "origin_head_sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d",
+      "origin_git_blob_sha1": "92c385b6b000c47ae3cab941c6a4bc168c275e76",
+      "origin_bytes": 5059,
+      "origin_sha256": "828fe645ed4b9f685f4fa39701d12de8a7253d890ce54b56f3ebb7280228b19e",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d/docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.json",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-171/docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.json",
+        "bytes": 5059,
+        "sha256": "828fe645ed4b9f685f4fa39701d12de8a7253d890ce54b56f3ebb7280228b19e"
+      },
+      "patch_path": "pr-171/historical-source.patch",
+      "at_ids": [
+        "AT-327"
+      ]
+    },
+    {
+      "original_path": "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md",
+      "change_status": "A",
+      "origin_head_sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d",
+      "origin_git_blob_sha1": "c2039961fd232f0fb7b29e307239f357f1c15f29",
+      "origin_bytes": 2024,
+      "origin_sha256": "fb61422564004c08b2defd88be04fb434a97d9237067c46bed8500aec8aff6aa",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d/docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-171/docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md",
+        "bytes": 2024,
+        "sha256": "fb61422564004c08b2defd88be04fb434a97d9237067c46bed8500aec8aff6aa"
+      },
+      "patch_path": "pr-171/historical-source.patch",
+      "at_ids": [
+        "AT-327"
+      ]
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-171/historical-source.patch",
+    "bytes": 9090,
+    "sha256": "537980635d3f9869e7da55bcd99d4e86cd167a296e853258028a6ee878daaeff"
+  },
+  "at_ids": [
+    "AT-325",
+    "AT-326",
+    "AT-327"
+  ],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "Research-only follow-up to #169. Checked the original basemap, Vert 6 crop and two Wild Zone 11 images against their recorded hashes. Affine fit on eight architecture controls (no border/gates in fit); six withheld points, including two separate structures, 1.96 px RMS and 3.09 px worst. Daylight image distinguishes visible green West/bridge/East spans from the red session line in the other frames; upper gate and remaining perimeter are not verified. Research coordinates only; zero production geometry, route, live Site or Supabase changes."
+}

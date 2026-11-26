@@ -1,0 +1,1098 @@
+{
+  "schema_version": 1,
+  "scope": "Current requirements recovered from accessible Pokémon Atlas chats, exact repository plans, all PR metadata, issues and separate source evidence",
+  "generated_on": "2026-11-26",
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "main_sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4",
+  "limitations": [
+    "All 176 repository PRs and all 13 non-PR issues with 74 comments were enumerated at the audit snapshot; new PRs after this checkpoint require reconciliation.",
+    "Chat evidence is selected Personal Context retrieval for 18–26 November 2026, plus visible user instructions; it is not a full export of every historical conversation.",
+    "Historical source inclusion preserves a requirement or finding; it does not prove implementation, game accuracy, deployment or two-site parity.",
+    "AT-325 G0–G5 and AT-297 A1–A7 remain binding. The full-scope approved GitHub SHA and executable final Workspace prompt remain null until their gates pass."
+  ],
+  "requirements": [
+    {
+      "id": "CHAT-SCOPE-CONSOLIDATION",
+      "date": "2026-11-26",
+      "requirement": "Consolidate all accessible Pokémon Atlas plans, master plan, manifests, ledgers, chat decisions and relevant PR work for the eventual single final Workspace handoff; preserve unresolved/superseded work and provenance.",
+      "status": "current_request",
+      "priority": "required",
+      "evidence": {
+        "kind": "visible_current_user_instruction",
+        "source": "Current conversation user request and AGENTS.md project instructions"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c5",
+        "author_role": "user",
+        "timestamp": "2026-11-26T01:13:04Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "CHAT-NO-VIDEO",
+      "date": "2026-11-26",
+      "requirement": "Pause and remove active player-facing videos, YouTube/channel promotions and related video UI for now; preserve historical research and source media; do not revive video-only PRs.",
+      "status": "current_request",
+      "priority": "required",
+      "evidence": {
+        "kind": "visible_current_user_instruction",
+        "source": "Current conversation user request and AGENTS.md project instructions"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c5",
+        "author_role": "user",
+        "timestamp": "2026-11-26T01:04:39Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "MAP-AUDIT-FIRST",
+      "date": "2026-11-26",
+      "requirement": "Audit existing implementation before changing code; use a GitHub branch, test mobile and desktop and deploy only after validation. Preserve maps, guide pages, markers, progress and Supabase.",
+      "status": "binding_current_instruction",
+      "priority": "required",
+      "evidence": {
+        "kind": "visible_current_user_instruction",
+        "source": "Current conversation user request and AGENTS.md project instructions"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "MAP-GESTURES",
+      "date": "2026-11-26",
+      "requirement": "Maintain mobile pinch/pan/two-finger rotation, desktop zoom/pan/rotation, compass north reset and independent layers/filters.",
+      "status": "binding_current_instruction",
+      "priority": "required",
+      "evidence": {
+        "kind": "visible_current_user_instruction",
+        "source": "Current conversation user request and AGENTS.md project instructions"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "HYPERSPACE-DYNAMIC",
+      "date": "2026-11-26",
+      "requirement": "Never permanently pin random or day-changing Hyperspace distortions.",
+      "status": "binding_current_instruction",
+      "priority": "required",
+      "evidence": {
+        "kind": "visible_current_user_instruction",
+        "source": "Current conversation user request and AGENTS.md project instructions"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-294",
+      "date": "2026-11-24",
+      "requirement": "Use useful written/photo directions for ladders, scaffolds, bridges and roof connections. Do not create new individual access-structure pins or require a complete physical-structure inventory; preserve legacy Hotel Z pilot.",
+      "status": "controlling_owner_scope",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "Binding owner scope clarification"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-297",
+      "date": "2026-11-24",
+      "requirement": "Original Workspace source must be independently audited and backed up; preserve original site URL, existing structure, images, progress/auth/Supabase and feedback; apply compatible bounded patches using separate A1–A7 verification.",
+      "status": "original_workspace_separate_gate",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-297"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c1",
+        "author_role": "user",
+        "timestamp": "2026-11-25T08:36:10Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "AT-299",
+      "date": "2026-11-24",
+      "requirement": "Add clear sector names to the existing map; focus/highlight only independently supported orientation and geometry, retaining existing IDs and selection.",
+      "status": "implementation_status_reconcile",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-299"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-300",
+      "date": "2026-11-24",
+      "requirement": "Improve original-map photographic clarity without inventing geography or replacing source evidence with generated imagery.",
+      "status": "implementation_status_reconcile",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-300"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-301",
+      "date": "2026-11-24",
+      "requirement": "Use original owner JPG/PNG map-only crops with provenance, byte hashes and approved paths; keep original source checksums immutable.",
+      "status": "binding_source_policy",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-301"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-302-307",
+      "date": "2026-11-24",
+      "requirement": "Preserve sector street-bearing references, selected-sector Explorer details and original source-photo gallery; reconcile exact release history rather than duplicate assets.",
+      "status": "github_release_evidence_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-302 through AT-307"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-309-310",
+      "date": "2026-11-25",
+      "requirement": "All 48 named sectors need usable original-photo references, using 42 source PNGs where shared images are honest; no false claim of 48 distinct original captures.",
+      "status": "github_pages_deployed_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-310"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-311-314",
+      "date": "2026-11-25",
+      "requirement": "Retain non-video shared local map and guide crosslinks; former channel library, clips and public-media requirements are historical and superseded by current no-video policy.",
+      "status": "partially_superseded_by_2026_11_26_pause",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-311 / AT-314"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-315",
+      "date": "2026-11-25",
+      "requirement": "Bleu3/5 written access routes with original IDs and source uncertainty preserved.",
+      "status": "github_pages_deployed_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-315 / AT-319 reconciliation"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-319",
+      "date": "2026-11-25",
+      "requirement": "Written/photo-first useful Bleu2/4/6 routes and existing 57 research leads. Earlier permission to retain deployed video links is superseded by full current pause; PR153/154 remain unpromoted.",
+      "status": "non_video_requirement_retained_video_clause_superseded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-319"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-320-328",
+      "date": "2026-11-25",
+      "requirement": "Reconcile separate route PR156 non-overlapping plan/ledger/data against newer main. AT328 was separately reserved for route reconciliation; do not confuse with overview intake renamed AT329.",
+      "status": "g1_dependency_pending",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-325 / AT-329 identifier reconciliation"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-321",
+      "date": "2026-11-25",
+      "requirement": "Every Wild Zone gets exactly two verified owner PNGs and readable catchable Pokémon roster across main guide, standalone map, directory and Explorer. Preserve unlocks/IDs/coordinates, all40 source images, fixed Alpha versus Zone20 rotating pools, mobile/full-size viewing.",
+      "status": "github_merge_and_pages_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-321 / AT-323 / AT-325"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c3",
+        "author_role": "user",
+        "timestamp": "2026-11-25T18:22:14Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "AT-322-INDEX",
+      "date": "2026-11-25",
+      "requirement": "Build original encounter index keyed by existing zone/sector IDs and species/form; separate ordinary, fixed Alpha, rotating Alpha, mission, gift, trade and scripted bosses. Species search may highlight every verified area with conditions.",
+      "status": "future_runtime_requirement",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-322"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-322-GEOMETRY",
+      "date": "2026-11-25",
+      "requirement": "Focus/highlight independently validated area geometry; approximate orientation clearly labelled. Calibrate source with distributed landmarks and independent checkpoints; no coordinate inference from external URL or perspective image.",
+      "status": "zero_production_polygons_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-322"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-322-ROUTES",
+      "date": "2026-11-25",
+      "requirement": "Keep habitat highlighting distinct from walkable routes; draw a path only with proven contiguous physical connections and prerequisites. Retain written directions where unverified.",
+      "status": "future_runtime_requirement",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-322"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-322-RIGHTS",
+      "date": "2026-11-25",
+      "requirement": "Use PokéMaps/other sites as factual research cross-checks. No bulk external database, proprietary code, map tiles or art import. Capture evidence only when rights permit and record metadata.",
+      "status": "binding_research_policy",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-322"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-323",
+      "date": "2026-11-25",
+      "requirement": "Keep all68 area research rows and source disagreements. WZ11 crosses Jaune/Vert and WZ5 has boundary overlaps; complete research without silently overwriting disputed encounter/unlock data.",
+      "status": "research_only",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-323"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-324",
+      "date": "2026-11-25",
+      "requirement": "Keep all68 game-location identity references and multilingual search aliases; aliases aid research and are not official localization proof or coordinates. Resolve sewer approach and WZ7/17/18/19 conflicts.",
+      "status": "research_only",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-324"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-325",
+      "date": "2026-11-25",
+      "requirement": "Complete G0 documentation/private queue, G1 protect/reconcile release, G2 recover/calibrate images, G3 validate all68 boundary/encounter records, G4 highlighting/filter/directions/route UX, G5 exact-head mobile/desktop/regression/screenshots/merge/Pages/direct live validation. Only then generate executable A0 Workspace prompt pinned to approved SHA; independent A1–A7 original-site gates.",
+      "status": "g1_partial_g2_pilot_g3_g4_g5_pending_a0_blocked",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-325"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-326",
+      "date": "2026-11-25",
+      "requirement": "Preserve fixes for standalone zone hash, asset-trigger coverage, and correct Zone20 deep-link disclosure; do not overwrite them when reconciling PR156 or other older branches.",
+      "status": "merged_and_pages_recorded",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-326 / AT-326/327"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-327",
+      "date": "2026-11-25",
+      "requirement": "Treat measured candidate image registrations as research; no production geometry or absolute survey accuracy claim without independent physical checkpoints.",
+      "status": "candidate_registration_only",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-326/327"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-329",
+      "date": "2026-11-25",
+      "requirement": "Preserve three new overlapping city overview originals and PNG crops. Canonical ID AT329; historical AT328 filenames remain for provenance. These are replacement references, not recovered historical W01–W03 originals. Keep rejection of failed north/south fit and all residuals.",
+      "status": "sources_merged_calibration_pending",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-329"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-330-CLOTHING",
+      "date": "2026-11-25",
+      "requirement": "Optional appearance guide:41 boutique identities,5 arcades,10 wardrobe categories,17 example prices; Couture/story/DLC unlocks. Complete item variants/prices/unlocks and storefront photos later; never call selected examples complete.",
+      "status": "merged_pages_deployed_live_verification_pending",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-330"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-330-BEAUTY",
+      "date": "2026-11-25",
+      "requirement": "Hair/beauty guide:5 salons,19 hairstyles,32 hair colours,Flabébé/Floette unlocks, contacts/makeup,10 Furfrou forms and side-mission links. Full face swatches still pending.",
+      "status": "merged_pages_deployed_live_verification_pending",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-330"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-330-ECONOMY",
+      "date": "2026-11-25",
+      "requirement": "Optional treasure-pocket sale examples, safe selling, base/Hyperspace farming, donut powers and optional spending budgets; no guaranteed profit. Preserve200-item shop catalogue and25-link menu.",
+      "status": "merged_pages_deployed_live_verification_pending",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-330"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-330-TYPES",
+      "date": "2026-11-25",
+      "requirement": "Preserve functioning type chart and dual-type calculator, phone usability/navigation; no redesign requested. Owner playtest feedback is qualitative, not a controlled improvement claim.",
+      "status": "existing_feature_protection",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-330"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-330-FUTURE",
+      "date": "2026-11-25",
+      "requirement": "Legends Arceus and Pokémon Wind/Waves are deferred separate project ideas; no implementation, new repository/purchase or release-date assertions authorized.",
+      "status": "deferred_outside_current_scope",
+      "priority": "deferred",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-330"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-331",
+      "date": "2026-11-25",
+      "requirement": "Worldwide multilingual research across68 stable areas with English paraphrases and attribution; current25/48 sectors and1/20 zones have partial access research,70 total leads. Continue Rouge/Jaune/remaining zones then recheck Vert/Bleu. No need to replay every pickup or upload duplicate photos.",
+      "status": "partial_research_42_areas_not_started",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-331"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-332",
+      "date": "2026-11-25",
+      "requirement": "Continue lawful exact-item source research and coordinate/height/route registration. Source-space Screw coordinates and original game XYZ candidates do not become native map points automatically.",
+      "status": "zero_new_exact_native_pins",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-332"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-333-SYMBOLS",
+      "date": "2026-11-25",
+      "requirement": "Very small fixed Item and Screw circular dots; proposed6–8px visible diameter and10–12px selection outline, inverse zoom; no permanent text labels; colour plus textual legend; preserve major markers.",
+      "status": "implementation_pending_coordinate_gates",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-333"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-25T23:31:52Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "AT-333-FILTERS",
+      "date": "2026-11-25",
+      "requirement": "Independent Items/Colorful Screws toggles, all4 combinations; both-off proposed default, preserve other layers/view/search. Empty verified layer says no verified points yet, not no items in city.",
+      "status": "implementation_pending_coordinate_gates",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-333"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-25T23:31:52Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "AT-333-ACCESSIBILITY",
+      "date": "2026-11-25",
+      "requirement": "Small visual dots must have usable touch/keyboard/directory selection; coincident points use chooser with each identity/floor, no displaced true coordinates. Detail shows stable ID, scene/floor, evidence, unlocks, routes/photos.",
+      "status": "implementation_pending_coordinate_gates",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-333"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion.",
+      "chat_provenance": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-25T23:31:52Z",
+        "verbatim": false
+      }
+    },
+    {
+      "id": "AT-333-PROGRESS",
+      "date": "2026-11-25",
+      "requirement": "Keep original collection keys, no second checklist; filters never mark collected. Hide-collected optional only through existing progress owner. No pins for gifts/rewards/random drops/unregistered XY/transient content.",
+      "status": "binding_progress_and_eligibility",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-333"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-333-QA",
+      "date": "2026-11-25",
+      "requirement": "Validate at least364 synthetic eligible points only in tests,4toggle combinations, mixed layers, search/touch/keyboard/overlap, gestures/compass/deep links/keys, no production synthetic data, phone/desktop overview+zoom screenshots and performance.",
+      "status": "not_run",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-333"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-334",
+      "date": "2026-11-25",
+      "requirement": "Preserve recovered146 legacy marker tuples from byte-identical v35/v37 map-items JSON;144 ordinary/TM plus2 Screw candidates;111 reciprocal matches,35 unresolved. Raw heights/units/floors not established; no duplicate progress keys.",
+      "status": "source_recovery_merged_no_verified_physical_pins",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-334"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "AT-335",
+      "date": "2026-11-25",
+      "requirement": "Coordinate pilot has6fit/5holdout/2diagnostic pairs;2.765px fitRMS/5.308px holdoutRMS but leave-zone-out up to48.16px. Preserve13 source Screw references; no production transform, canonical assignments or floor claims.",
+      "status": "research_candidate_only_zero_new_pins",
+      "priority": "required",
+      "evidence": {
+        "kind": "repository_record_of_owner_decision",
+        "path": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/1ed0ea4c1e0951000ab3cc732724e77fbbc055f4/MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+        "section": "AT-335"
+      },
+      "caveat": "Status recorded in source at this exact main SHA; independently recheck PR, CI, deployment and Workspace evidence before claiming current completion."
+    },
+    {
+      "id": "CHAT-FULL-GUIDE",
+      "date": "2026-11-18",
+      "requirement": "Create complete polished Pokémon Z-A base+Mega Dimension strategy guide with existing Atlas style, local pages, maps, item/Pokémon images and secrets/no cheats; player navigation should remain internal. Research citations may remain in documentation.",
+      "status": "ongoing_full_guide_audit_not_certified_complete",
+      "priority": "required",
+      "AT_ids": [
+        "AT-007",
+        "AT-013",
+        "AT-019",
+        "AT-020",
+        "AT-224"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c3",
+        "author_role": "user",
+        "timestamp": "2026-11-18T13:57:50Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-WALKTHROUGH-DEPTH",
+      "date": "2026-11-20",
+      "requirement": "Consolidate and fact-check story/side missions with Canari/Ivor-level useful directions, NPCs/opponents, rewards, stage unlocks and obedience; preserve good existing guidance.",
+      "status": "numerous_historical_audit_findings_must_be_reconciled",
+      "priority": "required",
+      "AT_ids": [
+        "AT-007",
+        "AT-020",
+        "AT-021",
+        "AT-031",
+        "AT-041",
+        "AT-270",
+        "AT-271"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-20T20:17:25Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-CITY-ALPHAS",
+      "date": "2026-11-20",
+      "requirement": "Audit city/rooftop Alpha encounters, especially Alpha Dratini, and associated route/unlock conditions; unverified precise coordinates remain unknown.",
+      "status": "requested_completion_not_established_by_source_recovery",
+      "priority": "required",
+      "AT_ids": [
+        "AT-006",
+        "AT-020",
+        "AT-247"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-20T20:17:25Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-NUMBERING",
+      "date": "2026-11-21",
+      "requirement": "Map items and tick-chart/list entries must share matching identifiers so players can identify pickups; preserve all original collection keys and distinguish146 approximate leads from264 item entries and100 Screws.",
+      "status": "111_candidate_matches_35_ambiguous_not_exact_location_verification",
+      "priority": "required",
+      "AT_ids": [
+        "AT-004",
+        "AT-005",
+        "AT-235",
+        "AT-333",
+        "AT-334",
+        "AT-335"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c8",
+        "author_role": "user",
+        "timestamp": "2026-11-21T10:12:45Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-NAVIGATION",
+      "date": "2026-11-21",
+      "requirement": "Keep current Chatterfriends/Stream Bandit/Lumiose Atlas route structure; elaborate factual guidance in original words and connect guide sections with local links. No change to unrelated host projects.",
+      "status": "preserve_and_reconcile_local_crosslinks",
+      "priority": "required",
+      "AT_ids": [
+        "AT-012",
+        "AT-017",
+        "AT-224",
+        "AT-278",
+        "AT-311"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c8",
+        "author_role": "user",
+        "timestamp": "2026-11-21T10:00:19Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-HOSTING",
+      "date": "2026-11-21",
+      "requirement": "Use GitHub and Supabase for Atlas; leave Chatternet and unrelated projects alone. Do not switch to Render, create replacement site or spend extra credits for this consolidation.",
+      "status": "binding_preservation_constraint",
+      "priority": "required",
+      "AT_ids": [
+        "AT-001",
+        "AT-017",
+        "AT-018",
+        "AT-297"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c0",
+        "author_role": "user",
+        "timestamp": "2026-11-21T19:18:56Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-READABILITY",
+      "date": "2026-11-20",
+      "requirement": "Preserve the readability repair for all faint buttons and phone navigation; historical no-large-upgrade restriction was superseded by later explicit map authorization.",
+      "status": "prior_fix_to_preserve_actual_live_status_separate",
+      "priority": "required",
+      "AT_ids": [
+        "AT-012",
+        "AT-019"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c2",
+        "author_role": "user",
+        "timestamp": "2026-11-20T10:21:28Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-LEGENDARY",
+      "date": "2026-11-21",
+      "requirement": "Preserve accepted Legendary Fieldbook with shared collection progress; retain per-encounter requirements, reward caveats and routes during source reconciliation.",
+      "status": "historical_github_PR33_merge_and_deployment_report_not_new_workspace_parity",
+      "priority": "required",
+      "AT_ids": [
+        "AT-013",
+        "AT-020"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c0",
+        "author_role": "user",
+        "timestamp": "2026-11-21T20:19:40Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-HOME",
+      "date": "2026-11-21",
+      "requirement": "Retain full14-page Pokémon HOME source recovery and364-species roster/transfer rewards/restrictions; source recovery completed later in PR35 but runtime accuracy and Workspace parity remain separate checks.",
+      "status": "historical_queued_chat_superseded_by_main_recovery_evidence",
+      "priority": "required",
+      "AT_ids": [
+        "AT-013",
+        "AT-014",
+        "AT-020"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c0",
+        "author_role": "assistant",
+        "timestamp": "2026-11-21T19:34:23Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-FEEDBACK",
+      "date": "2026-11-19",
+      "requirement": "Feedback form is now complete per current user instruction; preserve stored reports, Supabase service, confirmation and private owner access. Do not reopen feedback development without a newly reported defect.",
+      "status": "preserve_existing_work_no_new_feedback_scope",
+      "priority": "required",
+      "AT_ids": [
+        "AT-016",
+        "AT-225",
+        "AT-226",
+        "AT-227",
+        "AT-228",
+        "AT-259",
+        "AT-260",
+        "AT-261"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_earlier_chats.txt",
+        "reference": "c6",
+        "author_role": "user",
+        "timestamp": "2026-11-19T17:03:02Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-ORIGINAL-RECOVERY",
+      "date": "2026-11-25",
+      "requirement": "Recover actual original Workspace source/export and compare both editions; keep unique and better content from either rather than wholesale replacement. v37 source/export is a historical release baseline, not proof of current live parity.",
+      "status": "recovered_archives_and_historical_release_present_current_workspace_gate_required",
+      "priority": "required",
+      "AT_ids": [
+        "AT-001",
+        "AT-013",
+        "AT-015",
+        "AT-297",
+        "AT-325"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c1",
+        "author_role": "user",
+        "timestamp": "2026-11-25T08:36:10Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-ALL-WILD-ZONE-IMAGES",
+      "date": "2026-11-25",
+      "requirement": "Use all supplied Wild Zone image batches in guide; preserve original dimensions/checksums and both wide/detail views. Later main confirms40 images, superseding earlier partially-uploaded chat status.",
+      "status": "main_sources_present_do_not_repeat_old_upload_hold",
+      "priority": "required",
+      "AT_ids": [
+        "AT-321",
+        "AT-325"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c6/c7",
+        "author_role": "user",
+        "timestamp": "2026-11-25T18:04:59Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-NO-REPLAY",
+      "date": "2026-11-25",
+      "requirement": "Assistant should verify collectible placements from existing archives/source evidence rather than requiring the owner to replay and manually mark every pickup or resend already-supplied photographs.",
+      "status": "continue_evidence_recovery_without_inventing_coordinates",
+      "priority": "required",
+      "AT_ids": [
+        "AT-332",
+        "AT-334",
+        "AT-335"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c4",
+        "author_role": "user",
+        "timestamp": "2026-11-25T23:31:52Z",
+        "verbatim": false
+      },
+      "caveat": "Recovered conversation summary; task/intent evidence only. Verify fresh repository and independent site evidence before claiming completion."
+    },
+    {
+      "id": "CHAT-TM-DIRECTIONS",
+      "date": "2026-11-26",
+      "requirement": "Retain written ordinary TM access directions for all20 Wild Zones, preserve source IDs and exclude three quest reward TMs from fixed ordinary pickup routes; removal of active media should not remove routes.",
+      "status": "github_merged_pages_deployed_workspace_pending",
+      "priority": "required",
+      "AT_ids": [
+        "AT-319",
+        "AT-331",
+        "AT-333"
+      ],
+      "evidence": {
+        "kind": "recovered_personal_context_summary",
+        "file": "recovered_late_chats.txt",
+        "reference": "c5",
+        "author_role": "assistant",
+        "timestamp": "2026-11-26T01:08:06Z",
+        "verbatim": false
+      },
+      "caveat": "PR188 exact reviewed head merged as cf01561d55bbccae5712b18606c6be4e42a0e9ef; exact Pages deployment succeeded. Written-source route notes retain uncertainty; no new exact pins or physical playthrough certification. Workspace not republished.",
+      "source_status": "PR188_candidate_exact_head_validation_required",
+      "current_evidence": "media-release-evidence.json"
+    },
+    {
+      "id": "PR-002-BRANDING",
+      "date": "2026-11-26",
+      "requirement": "Retain the existing LA compass logo and social-sharing metadata objective. The proposed IONOS guide subdomain is deferred; no DNS, origin, hosting or replacement-Site change is part of this consolidation.",
+      "status": "deferred_optional",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-005-PROGRESS-BACKUP",
+      "date": "2026-11-26",
+      "requirement": "Retain the merge-only JSON backup/import candidate, preview and recovery copy, original-host exporter and multi-tab retention checks; keep the 634-key reconstruction contract distinct from actual Workspace storage. Do not force a migration or overwrite saved progress.",
+      "status": "unmerged_candidate",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-166-HISTORICAL-OVERVIEWS",
+      "date": "2026-11-26",
+      "requirement": "Preserve recovered W01–W03 original JPEG evidence and registration sensitivity separately from the later AT-329 three-image set. Recovering images does not prove their boundaries or the identity of a different three-piece upload.",
+      "status": "unmerged_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/166"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-171-WZ11-SOUTH-EDGE",
+      "date": "2026-11-26",
+      "requirement": "Retain the Vert6/WZ11 southern-edge image registration and withheld-check evidence; visible southern spans do not establish the complete zone perimeter or production geometry.",
+      "status": "unmerged_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/171"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-172-WZ18-ROSTER",
+      "date": "2026-11-26",
+      "requirement": "Preserve the exact owner WZ18 survey screenshot corroborating six ordinary species; do not infer absence of all special encounters or remove Zone7 Gastly.",
+      "status": "unmerged_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/172"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-177-MISSION109",
+      "date": "2026-11-26",
+      "requirement": "Retain the Side Mission109 proposed complete reward/team correction for compatibility review and source/browser validation; do not transplant the old generated homepage wholesale.",
+      "status": "unmerged_editorial_candidate",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/177"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-184-ARCHIVE-VARIANTS",
+      "date": "2026-11-26",
+      "requirement": "Preserve both named v35 archive wrappers, the shared underlying item-data hashes, canonical tuple checksum and two provisional external TM coordinate pairs; keep main AT-334 register and original source inventory.",
+      "status": "overlapping_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/184"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-186-WZ2-GREAT-BALLS",
+      "date": "2026-11-26",
+      "requirement": "Preserve written/image diagnostics separating the eastern and southwestern Wild Zone2 Great Ball candidates; neither becomes a new verified pin or progress identity. The optional video proof lead is paused.",
+      "status": "unmerged_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/186"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-187-FURFROU087",
+      "date": "2026-11-26",
+      "requirement": "Retain the proposed conservative Mission087 revisit note after Side Mission062 at Main Mission30, including disagreement about earliest unlock; independently validate before runtime integration.",
+      "status": "unmerged_editorial_candidate",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/187"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "PR-189-TM-SOURCE-CAVEATS",
+      "date": "2026-11-26",
+      "requirement": "Preserve the seven supplementary TM source records and Night Slash obstacle-move discrepancy alongside PR188 all20 written notes; no duplicate pickup records or coordinate certification.",
+      "status": "overlapping_research_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "exact_pull_request_source",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/189"
+      },
+      "caveat": "Source evidence is retained; any unmerged runtime change still requires a current-base review and its own validation."
+    },
+    {
+      "id": "ISSUE-007-TRADING",
+      "date": "2026-11-26",
+      "requirement": "Retain the fair-trading and trade-evolution companion-guide backlog, with verified game/DLC methods, safe tradebacks, menus and local links; no trading service, account action or new transaction is authorized.",
+      "status": "future_backlog_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "repository_issue",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/7"
+      },
+      "caveat": "Issue state alone is not evidence of current implementation or Workspace parity."
+    },
+    {
+      "id": "ISSUE-008-CONTEXTUAL-LINKS",
+      "date": "2026-11-26",
+      "requirement": "Retain contextual completion-walkthrough links and return-to-context navigation between quests, item/encounter pages and the relevant story stage. Preserve all existing routes and collection IDs.",
+      "status": "future_backlog_preserved",
+      "priority": "preserve_requirement",
+      "evidence": {
+        "kind": "repository_issue",
+        "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/8"
+      },
+      "caveat": "Issue state alone is not evidence of current implementation or Workspace parity."
+    }
+  ],
+  "recovered_chat_sources": [
+    "recovered_late_chats.txt",
+    "recovered_earlier_chats.txt"
+  ],
+  "current_documentation_baseline": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+  "requirement_count": 67,
+  "chat_source_availability": "recovered_earlier_chats.txt and recovered_late_chats.txt are private audit-source labels for selected retrieval summaries, not repository-relative paths or attachments in this packet. Paraphrases, dates, roles and source types are preserved here; raw summaries remain private."
+}

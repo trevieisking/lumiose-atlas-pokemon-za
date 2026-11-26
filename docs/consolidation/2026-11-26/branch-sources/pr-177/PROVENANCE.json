@@ -1,0 +1,25 @@
+{
+  "number": 177,
+  "title": "Complete Side Mission 109’s medicine and cash rewards",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/177",
+  "origin_head_ref": "atlas/side-mission-109-restock",
+  "origin_head_sha": "e9cdcb5230bbe61c55a18eb8e7d30e7137c9e212",
+  "observed_base_ref": "main",
+  "observed_base_sha": "c72281063e258b19b0378cf886757e9a4548f6d1",
+  "git_diff_merge_base_sha": "c72281063e258b19b0378cf886757e9a4548f6d1",
+  "disposition": "retain_editorial_candidate",
+  "consolidation_note": "Side Mission109 proposed complete payout in source+two views and regression; exact-head runtime/visual gate required. Keep separate from map geometry.",
+  "all_changed_paths": [
+    "index.html",
+    "side-missions.html",
+    "src/sections/sidequests.html",
+    "tests/side_missions_index.test.mjs"
+  ],
+  "source_files": [],
+  "historical_patch": null,
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "Wondrous Self-Healing Pokémon now lists its complete mission payout in both guide views: ₽4,500, Lucky Egg ×1, Full Restore ×5 and Max Revive ×2. Names Bien and confirms team levels. No change to unlocks, progress keys, feedback, maps, Workspace or Supabase. The ₽4,500 is the mission reward, not a claim about separate battle prize money.\n\nSources: [Serebii quest and item reward table](https://www.serebii.net/legendsz-a/sidemissions/wondrousself-healingpokemon.shtml), [Thonky full mission payout](https://www.thonky.com/pokemon-legends-z-a/side-mission-109-wondrous-self-healing-pokemon), [GameTrek walkthrough](https://gmtreks.com/pokemon-z-a/side-missions/109).\n\nRebuilt static homepage from pinned source (baseline rebuilt to the exact tracked blob) and passed `node tests/side_missions_index.test.mjs` in a locally materialized fixture, with linked paths checked against the exact Git tree. CI and preview checks still pending."
+}

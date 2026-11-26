@@ -1,0 +1,645 @@
+[
+  {
+    "number": 1,
+    "title": "Audit: benchmark all 42 main missions and rebuild Mable's Research",
+    "body": "## Purpose\nResume the Pokémon Legends: Z-A guide fact-check, using the detailed Canari and Ivor walkthroughs as the editorial benchmark.\n\n## This bounded patch\n- Replaces the Mable's Research placeholder with an independently researched and usable level 2–50 rewards page, keeping the guide's shared navigation and Back to Walkthrough links.\n- Records an **all-42-mission content-depth inventory** and source-checked discrepancy register in `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md`.\n- Records the **17-section whole-site inventory** and cross-source verification plan in `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`.\n- Notes the editorial checkpoint in README and recovery status.\n\n## Sources checked\nOfficial Pokémon Mable/gameplay pages; Serebii main missions, Mable rewards, Canari, Ivor, mission 25, side request 2; Bulbapedia quest classification and research; Thonky detailed walkthroughs; PowerPyx reward inventory.\n\n## Review evidence\n- 49 consecutive Mable rewards verified in source; 3 Gold Bottle Caps at Lv48, Master Ball at 49, Shiny Charm at 50.\n- Shared navigation retained; all requisite direct links and 49 reward-row IDs checked; no duplicate IDs.\n- 42-row audit and 17-section inventory validated.\n- Existing `src/sections`, generated `index.html`, map, asset manifest and Supabase were **not changed**.\n\n## Boundaries / NOT DONE\nThis is a **first-pass audit**, not a claim that every quest, pickup, game mechanic or DLC page has been fact-checked. The next task is to correct main story missions 1–42 and regenerate the homepage with tests. Do not conflate original ChatGPT Site with this reconstruction. No database, DNS, original site, live URL, or backend write. Preview branch should remain separate pending page verification.\n",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T09:40:42Z",
+    "updated_at": "2026-11-21T09:41:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "audit/2026-11-21-main-story-research",
+      "sha": "b3d868db17afc87c5c94830f257ac2988be262e2"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1",
+    "disposition": "retain_unique_audit_requirements",
+    "consolidation_note": "Mable recovery superseded in main by #16; preserve all-42-mission depth and 17-section audit discrepancy requirements. Reconcile unique audit notes, never replace current mable-research.html with old branch.",
+    "changed_filenames": [
+      "README.md",
+      "RECOVERY_STATUS.md",
+      "docs/qa/MAIN_STORY_AUDIT_2026-11-21.md",
+      "docs/qa/SITEWIDE_AUDIT_2026-11-21.md",
+      "mable-research.html",
+      "tests/validate_static.py"
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Prepare Lumiose Atlas logo sharing card and safe IONOS subdomain",
+    "body": "## Goal\nMake the reconstructed Pokémon guide share with its **existing Lumiose Atlas LA compass logo** and an accurate descriptive write-up, while preparing a low-risk home under Stream Bandit's IONOS domain.\n\n## Changes\n- Update the shared source template **and** generated homepage with Open Graph / Twitter social metadata.\n- Keep the recovered `atlas-logo.png` (512 × 512), referenced by an absolute HTTPS URL currently pointing at the GitHub Pages preview. The image and source logo itself are unchanged.\n- Set meaningful preview title, site name, description and accessible image alt text. Preserve the `noindex,nofollow` staging directive and all page content.\n- Add a staged IONOS setup guide in `docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md`.\n\n## Confirmed domain evidence\nThe separate `trevieisking/stream-bandit` repository has a `CNAME` declaring `chatterfriendsstreambandit.co.uk`. We propose **`guide.chatterfriendsstreambandit.co.uk`** using an IONOS DNS `CNAME` to `trevieisking.github.io`, configured in the Pokémon repo's GitHub Pages settings **when released**. We have not confirmed whether the hostname is unused or that IONOS is the authoritative DNS host.\n\n## Safe scope\n- Draft PR only: **no merge, deployment, DNS changes, redirect, old ChatGPT Site change, Supabase connection/write or Stream Bandit repo change**.\n- The exact legacy `chatgpt.site` link cannot be reassigned using IONOS DNS; keep original published until an optional editor-controlled redirect becomes possible.\n- After the proper custom address is live, update the Open Graph image and canonical URL to that address and check with Meta Sharing Debugger. Sharing appearance is not guaranteed before a crawler test.\n",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T09:52:37Z",
+    "updated_at": "2026-11-21T10:08:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "d5d491588a679b42e8e4f31c9bdfec481b55625e",
+    "head": {
+      "ref": "feat/social-share-and-ionos-plan-2026-11-21",
+      "sha": "d4e1ae32613cf4b49347f1412634bfdd22741163"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2",
+    "disposition": "defer_hosting_preserve_brand_plan",
+    "consolidation_note": "Preserve existing LA compass social-sharing metadata objective and optional IONOS subdomain plan as future/deferred; current direction keeps original Workspace origin. Do not change DNS, hosting, canonical origin or Stream Bandit.",
+    "changed_filenames": [
+      "docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md",
+      "docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md",
+      "index.html",
+      "src/template.html"
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Expand early story missions 01–10 and connect guide sections",
+    "body": "## Goal\nMake Lumiose Atlas practical for a real Pokémon Legends: Z-A playthrough, using the detailed Canari/Ivor guides as the standard and **adding depth without deleting recovered content**.\n\n## Implemented\n- Expanded Mission **01–10** into more complete, originally phrased playthroughs, covering starters, barriers, Hotel Z, Mable TM004, Battle Zone matches, mandatory Emma requests, promotion teams, the Zygarde chase, Absol and the Mega Evolution cases.\n- Connected all **42** mission cards with previous/next navigation and relevant map, item, battle, Pokédex, sidequest and DLC links.\n- Connected **8 additional game sections** to related content and story unlocks: side quests, maps, items, Rogue Mega bosses, Pokédex, Mega Dimension, legendary Pokémon and berries.\n- Fixed a deep-link bug where an earlier mission filter could hide the requested mission.\n- Added style isolated in `reconstruction.css`; kept original images, saved map geometry and page structure unchanged.\n- Added documented gameplay source comparison and conflicting claims in `docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md`.\n- Extended static test checks for the 42 mission crosslinks and eight contextual section panels.\n\n## Source cross-check\nOfficial/recorded mission objective lists (Bulbapedia), Serebii main missions, Thonky detailed walkthroughs and relevant sidequest sources were reviewed for 01–10. No external guide passages copied. Zach's Pidgey level and some sidequest reward quantities conflict in sources; the page flags uncertainty rather than inventing it.\n\n## Non-loss / safety evidence\n- **42 / 42** mission cards and progress markers retained.\n- **203 / 203** side+EX entries retained.\n- **232 / 232** recovered Pokédex cards retained.\n- No Pokémon art, map pin, original website, Stream Bandit main/TCG, Supabase or domain changes.\n- New homepage and editable section sources changed together.\n- Source-derived app.js patch passed local Node syntax check; core site static validator passed on unchanged reconstruction baseline.\n- **Branch-specific browser/device smoke test and runtime static validator remain required before merge or release.**\n- Draft PR: **do not merge or publish until verification**. PR #1 (Mable research) and PR #2 (social sharing/hosting brand) are separate staged work and should be reconciled before any final release.\n\n## Next audit\nMissions 11–20, then 21–30, 31–42, plus 200 side/3 EX tasks, accurate rooftop/ladder/Holovator maps, live reward validity, and DLC/Hyperspace Pokédex.\n",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T10:10:43Z",
+    "updated_at": "2026-11-21T10:10:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "content/early-story-linked-playthrough-2026-11-21",
+      "sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/3",
+    "disposition": "retain_runtime_candidate",
+    "consolidation_note": "Preserve expanded missions 01–10 and all-42 related links as candidate; current main includes later link fixes and M24/25/37 changes. Port only unique prose/link improvements with non-loss diff, regenerate index, validate. No whole stale branch merge.",
+    "changed_filenames": [
+      "README.md",
+      "app.js",
+      "docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md",
+      "index.html",
+      "reconstruction.css",
+      "src/sections/berries.html",
+      "src/sections/bosses.html",
+      "src/sections/dimension.html",
+      "src/sections/items.html",
+      "src/sections/legends.html",
+      "src/sections/maps.html",
+      "src/sections/pokedex.html",
+      "src/sections/sidequests.html",
+      "src/sections/walkthrough.html",
+      "tests/validate_static.py"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Number Wild Zone map items and link them with tick lists",
+    "body": "## Goal\nA player should see item **#07** on a Wild Zone map, identify **#07** in the nearby mapped-pickup tick list, tap **Find #07** to focus the location, and tick that item without confusing it with another pickup.\n\n## Implementation\n- Index **146 unique recorded map pins across all 20 Wild Zones** with stable per-zone #01, #02 etc. labels, preserving the original approximate coordinates and item names.\n- Selected-zone city overlay + **enlarged numbered close-up** cloned from the recovered mission map, to distinguish overlapping pins without fabricating positions. Find #NN expands the close-up and focuses the matching pin.\n- Display a **matching numbered mapped-item tick list** for each selected zone, with accessible pin buttons and checkboxes.\n- Show **Item 01** etc. on every original item checklist row (264 original entries untouched). Display **Map #NN** only when name/zone match is uniquely attributable to an original entry.\n- Sync the **111 uniquely matched** map/checklist pairs through existing progress state. The **35 ambiguous** pins retain distinct device-local tracking and display *Map match unverified* instead of guessing.\n- Keep vendor rewards, random drops, and other unmapped entries in the original checklist without inventing map markers.\n- Improve map panel's item location preview, mobile labels, legend/explanation and CSS.\n- Add an index manifest, controller, audit document and regression checks; update `src/template.html`, editable section files and generated `index.html` together.\n\n## Evidence\n- Code-level audit: **20/20** zones, **146/146** IDs unique, **111** unambiguous matches, **35** flagged, **264** source checklist IDs preserved, all map coordinates within valid recorded ranges.\n- Preserved **42** missions, **203** side/EX tasks and **232** recovered Pokédex cards.\n- Local Chromium interaction tests: Zone 1 displays 8 numbered pins/rows; Zone 2 displays 4; map checkbox synchronises with original checklist where uniquely matched; Find #NN expands and focuses the original numbered close-up. Desktop and phone static renders created without JS errors.\n- **Still required before merge:** integrated branch CI/static test, manual phone/browser QA, and in-game verification of the 35 ambiguous matches and approximate roof/ground locations.\n\n## Dependence / no-loss rule\nThis branch is built **on top of draft PR #3**, so base this PR on `content/early-story-linked-playthrough-2026-11-21`. Merge in dependency order only after verification, or rebase carefully with exact changes and preserving all current source.\nNo writes to Supabase, no DNS/Render changes, no changes to Stream Bandit/TCG, and no change to the existing live ChatGPT Site or current `main` preview.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T10:29:16Z",
+    "updated_at": "2026-11-21T11:33:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "fbf6d5b4f99018c0f6772b60c2f70b9e645b5beb",
+    "head": {
+      "ref": "feat/numbered-map-pins-ticklists-2026-11-21",
+      "sha": "263f7faa3ddf8588cc73dae97577087d7a92df93"
+    },
+    "base": {
+      "ref": "content/early-story-linked-playthrough-2026-11-21",
+      "sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/4",
+    "disposition": "retain_runtime_candidate_dependency",
+    "consolidation_note": "PR base is #3's branch, not main. 146 numbered approximate points;111 candidate links/35 ambiguous; preserve264 IDs. Candidate numbering/controller not verified deployed. Reconcile with AT333 compact dots and AT334 source crosswalk; do not certify positions from name/zone match.",
+    "changed_filenames": [
+      "app.js",
+      "docs/qa/MAP_PIN_NUMBERING_2026-11-21.md",
+      "index.html",
+      "map-numbering.js",
+      "map-pin-index.js",
+      "reconstruction.css",
+      "src/sections/items.html",
+      "src/sections/maps.html",
+      "src/template.html",
+      "tests/validate_static.py"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Protect player progress: JSON backup, old-site exporter and safe import",
+    "body": "## Goal\nPreserve players' real progress when they eventually leave the existing ChatGPT Site for the independently reconstructed Lumiose Atlas guide. **Never erase or reset a player's checkmarks during migration.**\n\n## Verified source basis\nSaved original-site MHTML contains the five checkbox attributes and **634 unique IDs** (42 story, 203 side/EX, 25 legendary, 264 unique item pickups, 100 screws). Its 976 DOM checkboxes include duplicate item controls. The original executable JS/localStorage format is **unavailable**. No automatic cross-origin transfer is possible.\n\n## Implementation\n- Visible **Backup & Restore** link in the guide's shared sidebar, homepage and footer; matching standalone page with original menu and Back to Walkthrough.\n- Versioned JSON export of the reconstructed guide's completed checklists, including unmapped-numbered-pin progress and safely held future IDs. Files stay on the user's device (no network uploads).\n- **Voluntary old-site exporter bookmarklet** downloadable/copyable from the page. It runs only on the original hostname and reads the five known *currently checked checkbox* families rather than guessing storage keys or querying Supabase. It produces the same JSON format.\n- Import file validation, strict known-key manifest, preview of existing/new checked items, explicit confirmation, **merge-only completed status**, recovery snapshot stored before any mutation, and a downloadable recovery copy.\n- Preserve other guide tabs' progress when imports occur by syncing on localStorage events. No destructive replace action.\n- Add source-integrity checker `tests/validate_backup.py` and `docs/qa/PROGRESS_MIGRATION_2026-11-21.md`.\n\n## Source verification performed\n- Generated `index.html` matches the 17 editable section files + `src/template.html` exactly.\n- All **634 exact source checklist IDs** match the new manifest.\n- Preserved **42** story missions, **203** side/EX records, **232** Pokédex cards, original images and item-map geometry.\n- All required backup controls and script resources present. Source check confirms **no fetch/XHR/beacon calls or credentials**, and pre-import recovery write precedes progress modification.\n\n## Release gates: NOT DONE\n- **Browser/phone acceptance still required** for JSON export and re-import, duplicate import, malformed JSON rejection, multi-tab sync, and rollback after blocked storage.\n- **Original ChatGPT Site bookmarklet compatibility not yet tested** against its currently published runtime or Android browser security restrictions. Do not promise users a guaranteed old-site export before testing.\n- Do not merge this dependent PR until PR #3 and PR #4 have been reviewed/merged in order and the actual data-migration tests pass.\n\n## Strict non-impact\nNo original ChatGPT Site editor, original URL, original progress storage, Stream Bandit main/TCG, GitHub Pages `main`, IONOS DNS, Supabase records/policies, Render or user credentials were touched.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T10:42:21Z",
+    "updated_at": "2026-11-21T11:33:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "00dbb20b9383f96fb992dadb0de2bd90799102b7",
+    "head": {
+      "ref": "feat/safe-progress-backup-transfer-2026-11-21",
+      "sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a"
+    },
+    "base": {
+      "ref": "feat/numbered-map-pins-ticklists-2026-11-21",
+      "sha": "263f7faa3ddf8588cc73dae97577087d7a92df93"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5",
+    "disposition": "retain_optional_migration_candidate",
+    "consolidation_note": "PR base is #4's branch. Preserve merge-only JSON backup, preview/recovery copy,634-key manifest and multi-tab retention requirements. Original-host exporter/runtime compatibility untested; current no-replacement strategy means not a forced cross-site migration.",
+    "changed_filenames": [
+      "README.md",
+      "RECOVERY_STATUS.md",
+      "app.js",
+      "docs/qa/PROGRESS_MIGRATION_2026-11-21.md",
+      "index.html",
+      "map-numbering.js",
+      "progress-backup.css",
+      "progress-backup.html",
+      "progress-backup.js",
+      "progress-keys.js",
+      "src/sections/home.html",
+      "src/template.html",
+      "tests/validate_backup.py"
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Fix 8 broken Rogue Mega Boss portraits using Pokémon HOME catalogue",
+    "body": "## Scope\n- Fix only eight missing `dex-art/` portrait references in `boss-guide.html` by reusing the exact working images from `home-connection.html` (six existing `art/*.webp` files and PokeAPI HOME sprites for Staraptor and Tatsugiri).\n- Add regression coverage that checks all 28 boss-page `<img>` sources and verifies those eight portraits stay in sync with the HOME catalogue.\n- No gameplay content, navigation, CSS, database, ratings, reports, map data, or saved progress changes.\n\n## Evidence\n- Pre-patch: 8 of 28 `<img>` references pointed at absent repository files (`dex-art/{398,978,485,491,383,382,384,807}.webp`).\n- Post-patch: 0 missing local files, all 8 sources exactly match HOME catalogue, other images unchanged.\n- The two PokeAPI sprite blob paths exist in the upstream public GitHub repository. These are species portraits, not Mega/Primal form-specific artwork.\n- CI validation pending; draft PR intentionally not merged.\n\n## Important boundary\nThis repository is an **independent reconstructed GitHub Pages edition**. It is **not the original ChatGPT Workspace Site** at `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/`. Opening this PR does not edit, deploy, replace or affect that original Site or its Supabase connection. Port the same mapping to the original only after its authoritative Workspace source is accessible and verified.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-21T20:30:53Z",
+    "updated_at": "2026-11-21T20:30:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "bf9b22fd6c33a4a9f068f95ac6290adfd84d18bf",
+    "head": {
+      "ref": "fix/rogue-boss-portraits-home-20261121",
+      "sha": "97131c29969a80ed03a6e6684b05a8b914e137b7"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "fb3f57b797fd897371020f802fc7eecc8bdf1b07"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/37",
+    "disposition": "superseded_by_merged_100",
+    "consolidation_note": "Same eight boss portrait repairs are implemented by merged #100. Keep provenance; no second runtime merge.",
+    "changed_filenames": [
+      "boss-guide.html",
+      "tests/boss_recovered.test.mjs"
+    ]
+  },
+  {
+    "number": 59,
+    "title": "Draft: isolated visual research map for Holovator photo leads",
+    "body": "## Isolated Holovator visual prototype — NOT a production map release\n\nThe owner asked for the lift locations to become **visual**, not remain only in JSON. This draft PR adds **one unlinked, independent, read-only HTML research preview**, `holovator-research-preview.html`, to the existing independent Edition B repository. It reuses **the existing unchanged** `maps/lumiose-game-map.jpg`, does not modify `maps.html`/`maps.js`/`maps.css` or `sector-maps.html` and does not alter the original ChatGPT Site.\n\n### What is visual\n- Thirteen **approximate yellow double-chevron** markers, with tap/click to show source context and unverified entrance/roof details.\n- Filtering for mission-linked vs other photo leads, text search, accessible list and map buttons, 720px-minimum scrollable map for mobile.\n- Two independent newly calibrated Estival Avenue symbol centres: Café Gallant ≈**(578,1025)** and Espace Vide/Bleu Sector 4 ≈**(477,1130)** in existing 1920px source image, from two separate four-Wild-Zone-control photo alignments. Original private gameplay photos are **not** included.\n- The other 11 photo-derived, provisional area markers are sourced from unmerged research PR #58. Added research-only Mission #4 Rouge Plaza candidate (W06/W07 repeat symbol), Jaune Sector 4 (W06/W07 repeat but manual Atlas projection inconsistent by ~50px), and Mission #92 Bleu Sector 8/Café Soleil (W10 single view). **Mission #56 and #61 remain unpinned; none of the 13 is a confirmed physical entrance.**\n\n### Critical release hold\nThis is an **unlinked preview page on an unmerged draft PR**, not a replacement of production maps or one of the 23 individually confirmed Holovators. All thirteen displayed positions are **approximate owner-photo map symbols, not certified physical street entrances**. **0/23 unique device-category IDs** have been extracted from the public interactive sources; floors, rooftop destinations and exact entrance points remain unproven. Continue research, independently match 23/23 first, then approve a *separate* tested Holovator-only production layer; scaffolds and ladders afterwards.\n\nNo HTML/JS/CSS of existing routes, Wild Zone pins, source map binary, original Site A, `main`, Supabase, user saves, ratings, feedback or checklist records touched. No publication, deployment or merge has been authorized by creating this draft.\n\nRelated: [research PR #58](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/58) and [tracker #28](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28).\n\n**Remaining QA:** render and test this specific GitHub draft page against the unchanged original 1920px city JPG on desktop and phone; independently match all 23 external Holovator-category devices and ground/roof pairs; complete release checks. Do not promote until the 23/23 device gate holds.\n\n### New owner screenshot evidence and visual QA — batch 11\n\n- **W06/W07** photographs contain the same distinct yellow symbols at WZ3/Rouge Plaza (mission #004 vicinity), Hibernal Avenue (mission #080 vicinity), and Jaune Sector 4 east of Académie Étoile. Three icon pairs plus WZ3 badge centre agree on camera pan (+615.75,+104.75) at **2.09px RMS**; this is photo-icon identity, not source-map georeferencing accuracy.\n- **W10** shows a one-photo yellow symbol at (63,453), approx source-JPG (352,1496) near Café Soleil/Bleu Sector 8 and mission #092. No independent proof it is Aimant's actual lift.\n- A [full evidence JSON](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_W06_W07_HOLOVATOR_MATCHES_2026-11-22.json) and plan batch 11 reside in docs-only PR #58, not copied into the runtime preview branch.\n- **Actual desktop/mobile Chromium interaction QA** completed on a **separate private offline five-photo HTML** built from the owner's W06/W07/W08/W09/W10 uploaded photos: full images loaded, five tabs and on-map buttons worked, selected detail worked, repeated/single-photo filter worked, zero JS errors at **1365×905** and **390×844**. The **GitHub single-file preview itself** passed V8 inline JS syntax and static 13-location in-bounds/no-network/no-storage checks; this is **not a claim of browser-rendered QA against the original city JPG**. Private owner images are NOT committed to this repository.\n- Independent [player-made all-Holovator/ladders field map](https://forum.gamer.com.tw/C.php?bsn=1647&snA=127600) identifies **nine initially broken units** that are repaired through side missions and notes that discovered/inspected Holovators appear on the player's in-game map, broken units gray. Its authored map image is **not copied** into this PR.\n\n**Do not merge or deploy** this research-only draft before the 23 physical device matching and full production map QA/owner-imposed completion gates; no scaffolds or item pins.\n\n### Owner photo comparison V3 (private, ten images) — independent of this draft\n\nResearch PR #58 now includes [batch 12 all-ten original owner photo audit](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_ALL_TEN_OWNER_HOLOVATOR_VISUAL_AUDIT_2026-11-22.json) with **16 photographed candidate groups (12 repeated) and 28 photo observations**. A **new private conversation-only HTML comparison viewer** shows all ten original user images, with mobile/desktop Chromium Playwright interaction QA (10 tabs, images loaded, tap-to-inspect and repeat/single filters, 0 JS errors). **No original user image binary appears in this GitHub draft or public repository**.\n\nThis **PR #59 remains an unmerged, unlinked single-file prototype** with **15 provisional yellow *map-symbol* positions** on the unchanged city JPG. It is **not a completed 23-Holovator release**. The northern W06/W07 arrow east of Sushi High Roller has a *potential, unproven* connection to #080 near Café Kizuna; two separate icons in that road corridor must not be merged without actual entrance/roof evidence. Source reported category 23 still needs individual IDs and exact physical device verification. Scaffolds/ladders are a later phase.\n\n## Vert Plaza corrected from owner north-up closeups — latest 15 research markers\n\nThree additional, original owner north-locked game-map photographs (private `1000027221.heic`, `1000027222.heic`, `1000027220.heic`) demonstrate **FOUR distinct yellow double-up-chevron Holovator *map symbols*** around green **Vert Plaza/Wild Zone 2**, **not inside it**: (i) east edge of Vert Sector 4, (ii) middle/lower Vert Sector 4 beside Café Classe, (iii) farther south by Vert Pokémon Center, (iv) east of Vert Plaza by Café Cyclone/Coulant Waterway. **Black round yellow-diamond and magenta-triangle icons around the green plaza are not Holovators.**\n\nOn the unchanged original 1920px city JPG, screenshot-to-map geometric fitting gives **approximate research symbol positions**: `r-vert4-east=(1055,1383)`, `r-classe=(1010,1420)`, `r-vert4-south=(943,1466)`, `r-cyclone=(1299,1337)`. **Do not call these verified physical ground door coordinates or roof exits**. The southern marker is the previously documented W04 yellow icon `WIDE-C13`; old `r-classe` ≈(948,1470) was that *third southern icon*, not a mislocated instance of the middle Café Classe symbol. We preserved its research identity separately while correcting the original wrong grouping.\n\nNew photographic evidence [research PR #58, batch 13](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/58): [direct source coordinate record](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_VERT_PLAZA_CLOSEUP_LIFT_CORRECTION_2026-11-22.json), manifest rev 15, ledger AT-252. VP-C→VP-A matched 137 features with 1.34px photo reprojection RMS; VP-C→VP-B 187 features with 1.18px; original W04 six-landmark city registration RMS 5.8px. **These measure photographed map symbol agreement, not real-game roof/entrance precision.**\n\nSeparate private **13-photo, 18 candidate-group** offline HTML comparison V4 was tested with Chromium/Playwright at desktop (1365×905) and mobile-sized (390×844), VP-A 3 / VP-B 1 / VP-C 4 visible chevrons, tap-to-inspect and repeat filter working, zero JS errors. **That QA is not direct CI or preview-web-hosted pixel QA of this GitHub draft**. No owner screenshot binary published to GitHub. This PR changes only the already isolated single HTML preview; **still DRAFT / unmerged / unlinked / no live map update**. 23 unique physical category device IDs and entry/roof pairs remain unverified; scaffold phase deferred.\n\n\n## L001 Hotel Z — separate first ladder research visual\n\n**User-sourced field photography:** a real metal wall ladder in a narrow enclosed courtyard immediately to the **RIGHT when standing outside and facing the Hotel Z entrance**, Vert Sector 8. Red map ring is the player's standing position, blue arrow is facing direction. We have two red-ring map frames and a physical ladder photo. A SIFT/RANSAC image alignment against the unchanged original 1920px map projects the standing point at **approx (1202,1556)**, not a one-pixel-certified door. Exact roof arrival and any second ladder remain unknown. See [source-backed L001 survey](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_LADDER_FIELD_SURVEY_2026-11-22.json).\n\nThe **new separate, unlinked, read-only `ladder-research-preview.html`** visual layer uses existing `maps/lumiose-game-map.jpg` with exactly **one** colored ladder research symbol (different from 15 amber Holovators). `holovator-research-preview.html` now links to L001 and corrects owner-provided icon meanings: yellow double-up chevrons Holovators, red Poké Ball circles Pokémon Centers, red ring player current location, blue arrow facing direction, gold/pink dark round markers Hyperspace DLC. **No original user photo bytes, Supabase, persistence, progress writes, existing production map file edits, or third-party artwork** in PR. Separate private local three-photo tab viewer was tested desktop/mobile sized with zero JS errors; hosted preview and Android actual-device QA not yet claimed.\n\n**Remain DRAFT and unmerged**: owner still wants completion of all Holovators before safe production lift map release, with ladder entries now separately gathered one at a time and scaffolds deferred.\n\n\n## New r-061: owner-photographed physical ground lift at approximate (765,1396)\n\nThe owner provided direct photo evidence of the **golden physical Holovator** and their red-ring north-up map position in two zoom settings, in **Bleu Sector 3 just southeast of Bleu Plaza / northwest of Aymlis Park (WZ12), beside the short southwest corner of the Sector 3 building**. Original 1536×865 screenshots `1000027232.heic`, `1000027233.heic`, `1000027234.heic`, `1000027235.heic` were aligned privately and never committed to GitHub. Approx original `maps/lumiose-game-map.jpg` source image point **(765,1396)**, from two independently registered older owner photo controls giving (762.29,1395.74) and (769.07,1396.90). This is a photo-supported street entry **area**, not subpixel door-base or verified roof exit. See [full research source record](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json).\n\n**This unmerged draft preview now has 16 research markers**, including `r-061` (mission 61), with a **solid amber/teal ring** for an owner-photographed ground device vs **15 dashed approximate photo-symbol leads**. Same original unchanged guide 1920px city map JPEG. New card contains directions, mission context, source-image controls and roof uncertainty. Existing 15 markers, Hotel Z Ladder L001 page, production `maps.html`, live site code, GitHub main, player saves, feedback, ratings and Supabase **not touched**. Static V8 compile, all 16 coordinates bounded, unique IDs/no network calls checked. Private owner-only four-photo HTML viewer passed real desktop/mobile-sized Chromium tests; the hosted GitHub draft with original city image still needs its own browser QA before any eventual live release.\n\n**External physical 23-category marker ID match and rooftop landing still unknown.** Keep draft/unmerged pending complete 23-device + ground/roof release gate, scaffolds separately later.\n\n## Mission #061 fifth owner photo adds rooftop scene, not a new map pin — AT-256\n\nThe owner added original **fifth photo `1000027236.heic`** showing their character on a luminous rooftop arrival pad immediately after reporting the #061 Holovator journey. **Prism Tower** is visible to the right and a park/fountain below left; a separate **Investigate** prompt is present near a nearby object. This **visually documents the upper rooftop arrival scene** but does not contain a large north-up city map with a roof-position red ring. It cannot justify an exact native-city-JPG roof X/Y or height. User reports route continuity from the previously photographed **ground lift in Bleu Sector 3**.\n\nThe existing `r-061` marker remains **one owner-ground-physical-photo-supported research pin at approx (765,1396)**. Its evidence/details now mention **five** owner photos and the upper scene; its missing-evidence field states roof full-map coordinate and external Holovator category device ID **unverified**. **16** research markers retained, **0 new roof pins**, unchanged original city JPEG and live guide. See [five-photo survey](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/holovator-source-markers-sector-audit-20261121/MAPS_HOLOVATOR_061_OWNER_ENTRY_SURVEY_2026-11-22.json), master plan batch17, manifest rev19, AT-256.\n\nPrivate five-photo viewer remains **conversation-only** and was Chromium tested at desktop and phone-size viewports, five tabs, decoded fifth image and zero JS page errors. Neither public source repo nor this PR includes the original user photo bytes. **Draft/unmerged; not released**.\n",
+    "state": "open",
+    "draft": false,
+    "created_at": "2026-11-22T00:36:54Z",
+    "updated_at": "2026-11-22T11:55:31Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "66c9170052ba6bb2cdbffaf9c4d8289009b4d44a",
+    "head": {
+      "ref": "preview/holovator-research-visual-20261122",
+      "sha": "a15077d9513de2655b8c8485d37678723d60c77e"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "fa4247a51d6c0d23f19da18fd977eb582de7b4bc"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+    "disposition": "superseded_prototype_preserve_evidence",
+    "consolidation_note": "Historical unlinked 16-marker Holovator/one-ladder research previews superseded by #77 onward. Keep approximate registration/provenance; do not resurrect obsolete13/15/16-marker display or strict23-device gate as current all-project blocker.",
+    "changed_filenames": [
+      "holovator-research-preview.html",
+      "ladder-research-preview.html"
+    ]
+  },
+  {
+    "number": 76,
+    "title": "Atlas: owner-surveyed Holovator photo map (21 approximate research entries)",
+    "body": "## Goal\nPreserve the owner's 22 November firsthand Pokémon Legends: Z-A Holovator survey and make a usable, zoomable read-only map on the **independent GitHub edition**, without modifying the original ChatGPT-hosted Site.\n\n## Already merged / evidence\n- PR #75 merged 85 verified genuine binary JPG photo assets to main, in addition to five Jaune 11 JPGs already present: 90 hosted original photographs, not 90 devices.\n- The same 85-file import was verified by SHA1/size before merge.\n- Owner survey photos distinguish **permanent gold triple-chevron Holovators** from day-changing DLC Hyperspace portals.\n\n## Changes in this draft PR\n- Structured 21-entry owner-survey catalog: `MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json`, with location clues, approach directions, research-only 1920px city image points and exact GitHub JPG asset paths.\n- Add `holovator-map.html` / `.js` / `.css`: original 1920x1920 Lumiose City map, photo-backed lift pins, district/landmark search, zoom/pan, original photographs where **actually hosted**, and prominent inexact-position warnings.\n- Add a single link to this dedicated page from `maps.html` and `sector-maps.html`, without changing their 20 Wild Zone positions, 48 sectors or numbered item/screw data.\n- Add a regression test and checkpoint the mapping master plan + `MAPS_UPGRADE_MANIFEST.json` revision 22.\n\n## Evidence limits / blockers\n- All 21 map dots are **approximate**; none is an authoritative exact pixel or roof X/Y. The external list of 23 Holovators has **not** been fully identity-matched.\n- 11 recent original photos (WZ6: 5; Café Cyclone courtyard: 6) are only in the locally verified binary-transfer ZIP, **not yet in GitHub**. The viewer does not use broken image paths for these.\n- Ten older photos for #61 Bleu3 and Vert4 south are documented in survey JSON but are also not yet GitHub-hosted.\n- The Rouge5 return visit is a repeat of the same physical lift and is not counted as a second location.\n- This draft awaits tests and visual QA before being considered for merge; additional source-to-map registration required for precise permanent pins.\n\n## Safeguards\n**No** changes to the original ChatGPT Site, Supabase, player ratings/feedback/saved progress, original city JPG, core walkthrough/game logic, or DLC dynamic icons. No use of Repo Desk, CG Repair Lab, Code God, or Writer. This PR is not a deployment or authorization to overwrite the live guide.\n\n## Next chunk\nCheck the new fieldbook test plus existing static/map regression suite; reconcile any geometry ambiguities; attach 11+10 photo binaries using a verified binary route; only then consider ready-for-review/merge with green checks.\n\n## Final owner-survey archive and climbing-policy update (22 Nov 2026)\n- **Owner field survey closed for lifts found and unlocked**; this is not the same as independently verifying all reported 23 device IDs. No duplicate for the Rouge 5 return visit.\n- **Ladders/scaffolding:** the owner's game map does not show every climb as a map marker. A dedicated visible fieldbook section and `docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md` explain walking/roof routes, but do **not** invent exact ladder/scaffold pins.\n- **Two integrity-checked local handoff archives:** `lumiose-atlas-holovator-github-ready-complete-2026-11-22.zip` (96 JPGs; SHA256 `83a4731f32f9b7e04c5a42a2e5ee56bbdecee6b127a554a46dde253ebc040c85`), and `lumiose-atlas-holovator-github-import-missing-11-2026-11-22.zip` (11 JPGs; SHA256 `48431ce208a6b6f5a955e1dfb5c52dc114ee09d4464da4746aba3799f91b827b`). The older combined provenance archive has 218 entries. **These archives are ChatGPT handoff attachments, not committed GitHub binaries.**\n- The previously imported 90 photo JPGs remain unchanged. The last 11 photo binaries are still **pending direct GitHub upload**, as are 10 earlier owner-source photos. Missing photos must not be linked as if hosted.\n- Updated `MAPS_SECTOR_UPGRADE_MASTER_PLAN.md` and `MAPS_UPGRADE_MANIFEST.json` (revision 23), plus a regression assertion for the visible no-invented-pins policy.\n- **Do not merge/publish** until these checks are green, real image assets are present, fieldbook counts reflect the actual host state and manual mobile/desktop map QA is done. Original ChatGPT Site, Supabase, feedback, ratings and player progress remain untouched.\n",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-22T15:05:18Z",
+    "updated_at": "2026-11-22T15:57:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "feat/owner-holovator-photo-fieldbook-20261122",
+      "sha": "268b72125e644d68eb03c4c53a1f8d98b7372808"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "b59cba56834c44fad8bb6fa0e16fb336dbbdddb8"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/76",
+    "disposition": "superseded_prototype_preserve_evidence",
+    "consolidation_note": "21-entry90-photo standalone Holovator fieldbook superseded by #77 and later111-photo releases. Keep catalogue policy/source provenance; do not overwrite current Explorer, plan or photo counts.",
+    "changed_filenames": [
+      ".github/workflows/validate-recovered-articles.yml",
+      "MAPS_OWNER_HOLOVATOR_21_SURVEY_CATALOG_2026-11-22.json",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "docs/HOLOVATOR_SURVEY_AND_CLIMB_NAVIGATION_POLICY_2026-11-22.md",
+      "holovator-map.css",
+      "holovator-map.html",
+      "holovator-map.js",
+      "maps.html",
+      "sector-maps.html",
+      "tests/owner_holovator_fieldbook.test.mjs"
+    ]
+  },
+  {
+    "number": 97,
+    "title": "AT-266 — plan source-first recovery of original Workspace map close-ups",
+    "body": "## AT-266 — original Workspace map close-up recovery (documentation only)\n\n### Why\nThe owner can see additional map views in the protected original ChatGPT Workspace guide (Edition A), but they are not directly accessible here. The GitHub reconstruction's 48 sector entries and 20 Wild Zone previews currently use the same 1920 × 1920 city image; enlargement alone cannot substantiate a precise street/roof/pickup coordinate.\n\n### Exact scope\n- Append evidence-led AT-266 next steps to existing `MAPS_SECTOR_UPGRADE_MASTER_PLAN.md`.\n- Add `docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md` with owner-assisted original-asset export or screenshot, image-vs-CSS crop identification, ≥3 landmark registration, uncertainty labelling, single-region pilot and guarded release checklist.\n- First owner capture: Bleu Sector 3 / My Favorite Holovator #61 (already has five owner-verified gallery photos). No new photo or coordinate claimed captured.\n\n### Protection / gates\n- **Zero runtime code, image assets, coordinates, sectors, marker, backend, Supabase, feedback, player-progress or original Workspace modifications.** Existing independent GitHub Pages unchanged.\n- **Do not promote as a mapping feature or claim close-up recovery** until the owner supplies real image material and its registration can be validated on a distinct implementation PR with regression, mobile and desktop tests.\n- Keep 48 sectors, 20 Wild Zones, 21 researched approximate Holovator records and 111 original gallery photos; no permanent moving DLC Hyperspace pins.\n- Parent evidence and acceptance issue: #28.\n\nThis PR is intentionally **DRAFT** and documentation-only.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-22T21:22:46Z",
+    "updated_at": "2026-11-22T21:22:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "docs/atlas-at266-original-site-closeup-source-recovery-20261122",
+      "sha": "be9d047c8de15a8f52946b129e4040c06f14c8a1"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "c0b9015fc9527794d46f8bbc1e56d51f0c7752fb"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/97",
+    "disposition": "superseded_recovery_plan_preserve_gates",
+    "consolidation_note": "Original close-up recovery broadly delivered by #144/#146/#148; retain image-vs-CSS distinction, distributed-landmark registration and uncertainty/test requirements. Source recovery does not certify exact boundaries.",
+    "changed_filenames": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "docs/qa/ATLAS_AT266_ORIGINAL_WORKSPACE_MAP_CLOSEUP_RECOVERY_PLAN_2026-11-22.md"
+    ]
+  },
+  {
+    "number": 149,
+    "title": "AT-297 — Record the original Workspace v37 release",
+    "body": "Records gates A1–A7 for original Workspace v37, including the same-origin rollback rehearsal, retained progress, independently verified live links and the canonical-route correction. Updates the master plan, manifest, handoff and dual-site ledger with links to the release evidence.\n\nWorkspace source `1ac2c20002451d295dc4f8e80068297682fcdc4b`. GitHub Pages comparator `ca62d68f2e052bb5b7d584957be114cd6318d8d7`. Documentation changes only.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T09:13:04Z",
+    "updated_at": "2026-11-25T09:13:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "docs/at-297-workspace-v37-release",
+      "sha": "e826d100f0eb540f73e58274273a0d1c3c5cecb7"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "ca62d68f2e052bb5b7d584957be114cd6318d8d7"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/149",
+    "disposition": "retain_workspace_release_receipt",
+    "consolidation_note": "Unique v37 A1–A7 receipt, source1ac2c20002451d295dc4f8e80068297682fcdc4b and treec680b737a8e8fc4f2c866892444ab84ae2b58069. Reconcile documentation into current revision; this is historical evidence, not fresh current-deployment proof. Video mentions are historical only.",
+    "changed_filenames": [
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "WORKSPACE_ACCESS_HANDOFF.md",
+      "docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md"
+    ]
+  },
+  {
+    "number": 156,
+    "title": "AT-320 — Bleu 7–10 written routes and photographic references",
+    "body": "Four district-start routes (23 written steps), eight researched leads and preserved existing Bleu 7 Holovator and Café Soleil photos. Reconciles exact AT-319 release. No new videos, pins, collection IDs, map geometry, player progress, Supabase, feedback or Workspace edits. Source-level caveats remain. Exact-head automated checks and mobile/desktop screenshot review before any promotion.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T16:29:16Z",
+    "updated_at": "2026-11-25T21:02:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "feat/atlas-at320-bleu7-10-written-routes",
+      "sha": "a9e906cdce710a67ca960e363a087160cd08dc5d"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "91e80f4bc1765981436e5c861540b422dd3487ad"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/156",
+    "disposition": "retain_route_candidate_hold_visual_gate",
+    "consolidation_note": "AT320/AT328 four Bleu7–10 written routes,23steps,8leads,26total routes candidate. Last documented visual hold: blank desktop source images for Bleu7/9/10; latest head adds decode/paint test fix. Need fresh exact-head CI+artifact visual assessment and reconcile70 current leads without loss before runtime merge.",
+    "changed_filenames": [
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "MAPS_ACCESS_ROUTE_SURVEY.json",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "atlas-explorer-data.json",
+      "docs/qa/ATLAS_AT320_BLEU_7_10_WRITTEN_ROUTES.md",
+      "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ]
+  },
+  {
+    "number": 166,
+    "title": "AT-325 G2 — Verify the three historical owner overview photographs",
+    "body": "Documentation-only source checkpoint. Recovered and decoded all three original 1536×865 JPEG photos and confirmed the archived SHA-256 values; found clear south–center–north overlap. The later owner message did not explicitly identify filenames. Recorded leave-one-out sensitivity of prior approximate controls; no geometry or calibration claimed. Updated plan, manifest revision 69, ledger revision 77 and AT-325 release-gate evidence while preserving all 68 area rows and blocking the final Workspace prompt. Private images, Library identifiers, source maps, frontend, Supabase, and original Workspace are untouched. Prior G1 runtime fixes remain out of scope.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T19:55:04Z",
+    "updated_at": "2026-11-25T19:55:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "docs/at325-private-overview-evidence",
+      "sha": "a9a78e46e86ce56b4e08257ed017ef5d2d05fb04"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "8b15a8b7afd8370291f90c846217d0aff2eef601"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/166",
+    "disposition": "retain_unique_source_evidence",
+    "consolidation_note": "Preserve W01–W03 old JPEG recovery and alignment sensitivity; distinct from later newly uploaded city overview sources #173/#175. Avoid replacing current G-gate,manifest or ledger with stale69/77.",
+    "changed_filenames": [
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
+      "docs/qa/ATLAS_AT325_OVERVIEW_RECOVERY.md",
+      "docs/qa/ATLAS_AT325_RELEASE_GATE.json"
+    ]
+  },
+  {
+    "number": 171,
+    "title": "AT-327 research — Cross-check Wild Zone 11’s southern edge with Vert 6",
+    "body": "Research-only follow-up to #169. Checked the original basemap, Vert 6 crop and two Wild Zone 11 images against their recorded hashes. Affine fit on eight architecture controls (no border/gates in fit); six withheld points, including two separate structures, 1.96 px RMS and 3.09 px worst. Daylight image distinguishes visible green West/bridge/East spans from the red session line in the other frames; upper gate and remaining perimeter are not verified. Research coordinates only; zero production geometry, route, live Site or Supabase changes.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T20:52:40Z",
+    "updated_at": "2026-11-25T20:52:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "9cfd95bac6c109b6a312369185069ff4d3bc589c",
+    "head": {
+      "ref": "docs/at327-vert6-zone11-south-evidence",
+      "sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "91e80f4bc1765981436e5c861540b422dd3487ad"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/171",
+    "disposition": "retain_research_candidate",
+    "consolidation_note": "WZ11 south edge/Vert6 eight-control affine and six withheld checks; no complete perimeter or approved production geometry. Append evidence to current register, not infer68-area completion.",
+    "changed_filenames": [
+      "docs/qa/ATLAS_AT327_REGISTRATION_PILOT_REPORT.md",
+      "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.json",
+      "docs/qa/ATLAS_AT327_WZ11_SOUTH_EDGE_CHECK.md"
+    ]
+  },
+  {
+    "number": 172,
+    "title": "AT-322 — Corroborate Wild Zone 18’s ordinary roster with the original screenshot",
+    "body": "Documentation only. An exact owner screenshot shows a 100% in-game survey card, six pictured species and two empty slots. This corroborates the existing ordinary roster, not the absence of any special encounter. Keep the published fieldbook and Zone 7 Gastly listing unchanged. The audit and structured register now cite the same asset and Git blob. No player-facing files, pins, photos, hooks, Workspace deployment, or Supabase changes.\n\nValidation: visually read the exact checked Git blob; matched the six species against the fieldbook and fixed Alpha metadata; parsed the amended JSON and verified only the Gastly discrepancy changed semantically.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T21:45:28Z",
+    "updated_at": "2026-11-25T21:45:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "e63ccc0d6d9bfbdc5edb8200881761ee48e23f90",
+    "head": {
+      "ref": "atlas/at322-wz18-owner-survey",
+      "sha": "c2d739942eef7c34b08a67475df2252b4d3ededb"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "91e80f4bc1765981436e5c861540b422dd3487ad"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/172",
+    "disposition": "retain_research_candidate",
+    "consolidation_note": "Owner WZ18 100% survey image supports six ordinary species; does not prove all special encounters absent. Preserve Zone7 Gastly and existing roster; only resolve bounded discrepancy.",
+    "changed_filenames": [
+      "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+      "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json"
+    ]
+  },
+  {
+    "number": 177,
+    "title": "Complete Side Mission 109’s medicine and cash rewards",
+    "body": "Wondrous Self-Healing Pokémon now lists its complete mission payout in both guide views: ₽4,500, Lucky Egg ×1, Full Restore ×5 and Max Revive ×2. Names Bien and confirms team levels. No change to unlocks, progress keys, feedback, maps, Workspace or Supabase. The ₽4,500 is the mission reward, not a claim about separate battle prize money.\n\nSources: [Serebii quest and item reward table](https://www.serebii.net/legendsz-a/sidemissions/wondrousself-healingpokemon.shtml), [Thonky full mission payout](https://www.thonky.com/pokemon-legends-z-a/side-mission-109-wondrous-self-healing-pokemon), [GameTrek walkthrough](https://gmtreks.com/pokemon-z-a/side-missions/109).\n\nRebuilt static homepage from pinned source (baseline rebuilt to the exact tracked blob) and passed `node tests/side_missions_index.test.mjs` in a locally materialized fixture, with linked paths checked against the exact Git tree. CI and preview checks still pending.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-25T22:48:11Z",
+    "updated_at": "2026-11-25T22:48:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "6f768aabd6b2a3350ad0ddbebc1c38b5a19eddf1",
+    "head": {
+      "ref": "atlas/side-mission-109-restock",
+      "sha": "e9cdcb5230bbe61c55a18eb8e7d30e7137c9e212"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "c72281063e258b19b0378cf886757e9a4548f6d1"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/177",
+    "disposition": "retain_editorial_candidate",
+    "consolidation_note": "Side Mission109 proposed complete payout in source+two views and regression; exact-head runtime/visual gate required. Keep separate from map geometry.",
+    "changed_filenames": [
+      "index.html",
+      "side-missions.html",
+      "src/sections/sidequests.html",
+      "tests/side_missions_index.test.mjs"
+    ]
+  },
+  {
+    "number": 184,
+    "title": "AT-334 — Recover original Workspace item coordinates and crosswalk",
+    "body": "Original v35/v37 source archives read-only; all 146 original marker identity/zone/XY/height tuples match checksum against existing saved GitHub data. Preserves original 264 item and 100 Screw records, flags candidate collisions and unsafe height heuristic, includes 18 TM destination checks and two provisional external coordinate pairs. Documentation only. No original archive, secrets, runtime, progress or map changes. Manifest 79 and ledger 87.",
+    "state": "open",
+    "draft": false,
+    "created_at": "2026-11-25T23:43:38Z",
+    "updated_at": "2026-11-25T23:47:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "head": {
+      "ref": "atlas/at334-workspace-item-source-recovery",
+      "sha": "cbda3bc87ae54ac420f6b4dbd2e43d1cbc04cee1"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "7d9bafb8e4eb893e7fab48e40df10c8ef80832d1"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/184",
+    "disposition": "overlapping_archive_recovery_preserve_unique",
+    "consolidation_note": "Overlaps merged183 semantically using alternate filenames and old79/87 revisions. Preserve canonical tuple checksum,2external TM pairs and separately named v35archive provenance; same v37/map-items/map hashes. Do not replace main144KB recovery register or claim byte duplicate.",
+    "changed_filenames": [
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_AUDIT.md",
+      "docs/qa/ATLAS_AT334_WORKSPACE_ITEM_PIN_RECOVERY.json"
+    ]
+  },
+  {
+    "number": 186,
+    "title": "AT-335 research — Distinguish Wild Zone 2’s two Great Balls",
+    "body": "Documentation only. Reproduces the original affine comparison and four omitted-zone refits. The eastern pickup is the preferred match to archive 8258; the southwest pickup is a distinct unresolved research record. Exact owner close-up checked. Swift footage still not visually confirmed. No verified XY, geometry, progress-key or production changes.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-26T00:46:23Z",
+    "updated_at": "2026-11-26T00:46:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "3bbc62aac7b1932f135c09c38f7b13d2e88bfd8f",
+    "head": {
+      "ref": "atlas/at335-wz2-great-ball-disambiguation",
+      "sha": "8831be90c915efc237894fdc8a2423d8f5056bb9"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/186",
+    "disposition": "retain_nonvideo_research_candidate",
+    "consolidation_note": "WZ2 Great Ball east preferred for archived8258, west distinct/unresolved; no exact pin/collection change. Preserve written/image diagnostics; video proof lead remains historical paused under current owner direction.",
+    "changed_filenames": [
+      "docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.json",
+      "docs/qa/ATLAS_AT335_PICKUP_COORDINATE_PILOT.md"
+    ]
+  },
+  {
+    "number": 187,
+    "title": "Clarify when to revisit Mirte for Furfrou Mission 087",
+    "body": "Use the same conservative revisit checkpoint as the Atlas quest card: after Side Mission 062, check when Main Mission 30 begins. Record that the sources disagree on earliest availability, without ruling out an earlier trigger. No trim, battle, navigation or progress change. Seven local fashion tests passed, including a new regression assertion; exact-head CI and visual gates pending.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-26T00:46:26Z",
+    "updated_at": "2026-11-26T00:46:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "8610a9afbb3f31bccdf2e6487e20bff77904aab9",
+    "head": {
+      "ref": "atlas/furfrou-087-conservative-timing",
+      "sha": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/187",
+    "disposition": "retain_editorial_candidate",
+    "consolidation_note": "Furfrou087 conservative Mirte revisit afterSM062 atMM30; disagreement on earliest unlock remains. Exact-head CI+visual gate required before runtime change.",
+    "changed_filenames": [
+      "docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+      "hair-beauty-guide.html",
+      "tests/fashion_guides.test.mjs"
+    ]
+  },
+  {
+    "number": 188,
+    "title": "Atlas — All 20 Wild Zone TM routes and media-free guide",
+    "body": "Owner requests a photograph-first, written guide, with videos and YouTube channels paused. This draft retains all 20 ordinary TM access notes on Item Atlas and sector maps, excluding three quest rewards. Removes the shared channel and external watch-link injection, Journey channel banner, 11 route media records and legacy bookmark UI/module. Retains all local guide links, map geometry, written route steps, original source hints, progress IDs and photos; historical media research retained. No new exact pickup coordinates, database changes, Stream Bandit changes or Workspace changes. See docs/qa/ATLAS_MEDIA_PAUSE_AUDIT_2026-11-26.md. Exact-head automated validation and visual review required before deployment. Earlier green checks do not authorize this changed head.",
+    "state": "closed",
+    "draft": false,
+    "created_at": "2026-11-26T00:53:36Z",
+    "updated_at": "2026-11-26T01:17:51Z",
+    "closed_at": "2026-11-26T01:17:43Z",
+    "merged_at": "2026-11-26T01:17:43Z",
+    "merge_commit_sha": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+    "head": {
+      "ref": "atlas/tm-access-written-routes-20261126",
+      "sha": "37b20c38ee14459ffc73b1b6b93840abba3c3c1c"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/188",
+    "disposition": "merged_validated_media_pause",
+    "consolidation_note": "Exact reviewed head37b20c38ee14459ffc73b1b6b93840abba3c3c1c merged as cf01561d55bbccae5712b18606c6be4e42a0e9ef; all3 workflows/5jobs passed,4 phone/desktop excerpts reviewed; exact Pages run45734779457 succeeded. This does not update Workspace.",
+    "changed_filenames": [
+      "app.js",
+      "atlas-explorer-data.json",
+      "atlas-explorer-geometry.mjs",
+      "atlas-explorer.css",
+      "atlas-explorer.html",
+      "atlas-explorer.js",
+      "atlas-guide-links.mjs",
+      "atlas-video-bookmark.mjs",
+      "docs/qa/ATLAS_MEDIA_PAUSE_AUDIT_2026-11-26.md",
+      "docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json",
+      "docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.md",
+      "items.html",
+      "journey.html",
+      "reconstruction.css",
+      "recovered-articles.css",
+      "sector-maps.html",
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      "tests/atlas_guide_links.test.mjs",
+      "tests/sector_map_directory.test.mjs"
+    ],
+    "historical_premerge_observation": {
+      "state": "open",
+      "draft": true,
+      "created_at": "2026-11-26T00:53:36Z",
+      "updated_at": "2026-11-26T01:08:31Z",
+      "closed_at": null,
+      "merged_at": null,
+      "merge_commit_sha": "10941bae2946fba673e577dd4e16cfba49970259",
+      "head": {
+        "ref": "atlas/tm-access-written-routes-20261126",
+        "sha": "37b20c38ee14459ffc73b1b6b93840abba3c3c1c"
+      },
+      "base": {
+        "ref": "main",
+        "sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4"
+      }
+    },
+    "merged": true
+  },
+  {
+    "number": 189,
+    "title": "Atlas — Research seven more Wild Zone TM routes",
+    "body": "Research only, separate from PR #188. Seven original TM IDs and archive candidates checked against the saved ledger; English/Japanese written descriptions cross-checked. Explicitly retain the Night Slash obstacle-move discrepancy, no guessed route geometry or exact pins. Structured record is ready for later player-facing integration. No existing files or live systems changed.",
+    "state": "open",
+    "draft": true,
+    "created_at": "2026-11-26T00:58:51Z",
+    "updated_at": "2026-11-26T00:58:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "58f7ed2c1e50c9c9b733049ed2fa269e960d13c0",
+    "head": {
+      "ref": "research/atlas-tm-access-batch2-20261126",
+      "sha": "11c6e2f5877d1880237dfa2471d5d053f5533ca0"
+    },
+    "base": {
+      "ref": "main",
+      "sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4"
+    },
+    "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/189",
+    "disposition": "retain_overlapping_research_candidate",
+    "consolidation_note": "Seven TM research records overlap all20 player-facing notes in188; preserve source provenance/caveats, especially Night Slash move discrepancy. No exact pins or physically verified routes; avoid duplicate collection records.",
+    "changed_filenames": [
+      "docs/qa/ATLAS_TM_ACCESS_RESEARCH_BATCH2_2026-11-26.json"
+    ]
+  }
+]

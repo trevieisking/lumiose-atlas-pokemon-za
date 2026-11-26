@@ -1,0 +1,53 @@
+{
+  "number": 187,
+  "title": "Clarify when to revisit Mirte for Furfrou Mission 087",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/187",
+  "origin_head_ref": "atlas/furfrou-087-conservative-timing",
+  "origin_head_sha": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c",
+  "observed_base_ref": "main",
+  "observed_base_sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4",
+  "git_diff_merge_base_sha": "1ed0ea4c1e0951000ab3cc732724e77fbbc055f4",
+  "disposition": "retain_editorial_candidate",
+  "consolidation_note": "Furfrou087 conservative Mirte revisit afterSM062 atMM30; disagreement on earliest unlock remains. Exact-head CI+visual gate required before runtime change.",
+  "all_changed_paths": [
+    "docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+    "hair-beauty-guide.html",
+    "tests/fashion_guides.test.mjs"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+      "change_status": "M",
+      "origin_head_sha": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c",
+      "origin_git_blob_sha1": "c522eb2b6071bec35d4c050288463e845a609058",
+      "origin_bytes": 7976,
+      "origin_sha256": "38912a604eb3e29274dee5ece1b2c7b8da0b70d4048a6aed2eca9eb9f29f24d4",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/4686bfddf5ec9a0fe44148f1344a78556af4ca2c/docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "ebd4a87e583bc0477530fa86d1654c54ecb0ca48",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-187/docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+        "bytes": 7976,
+        "sha256": "38912a604eb3e29274dee5ece1b2c7b8da0b70d4048a6aed2eca9eb9f29f24d4"
+      },
+      "patch_path": "pr-187/historical-source.patch",
+      "at_ids": [
+        "AT-325"
+      ]
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-187/historical-source.patch",
+    "bytes": 2704,
+    "sha256": "f463d21a5c875d8020c1c4d46c825f7c753ee5cd24db5c06f3ce50ab601f5799"
+  },
+  "at_ids": [
+    "AT-325"
+  ],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "Use the same conservative revisit checkpoint as the Atlas quest card: after Side Mission 062, check when Main Mission 30 begins. Record that the sources disagree on earliest availability, without ruling out an earlier trigger. No trim, battle, navigation or progress change. Seven local fashion tests passed, including a new regression assertion; exact-head CI and visual gates pending."
+}

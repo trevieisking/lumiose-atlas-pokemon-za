@@ -1,0 +1,238 @@
+diff --git a/README.md b/README.md
+index 326f72f..2c5294e 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,7 @@
+ # Lumiose Atlas — The Free Online Player’s Guide for Pokémon Legends: Z-A
+ 
++> **Editorial audit checkpoint (21 Nov 2026):** A documented 42-mission and 17-section quality inventory is in `docs/qa/`. The Mable's Research placeholder has been replaced by a sourced levels 2–50 reward page on the audit branch. This is *not* certification of all gameplay facts. See `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md` and `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`. Original live ChatGPT Site and Supabase remain untouched.
++
+ **Description:** A free, illustrated guide to Pokémon Legends: Z-A, including story walkthroughs, side missions, Wild Zone maps, Pokédex entries, items, Alpha Pokémon, rewards, shiny-hunting guidance and Mega Dimension DLC. This independently reconstructed edition is being completed and verified section by section.
+ 
+ **Status:** Stage 1 recovery checkpoint. This is a **reconstructed, editable static site**, **not** an export of the original ChatGPT Site's source project. The original project was inaccessible; this copy was assembled from the user's own saved MHTML webpage capture from 20 November 2026. **No original live-site files were accessed for writing, and no deployment has occurred.**
+diff --git a/RECOVERY_STATUS.md b/RECOVERY_STATUS.md
+index 00196bd..edc73bc 100644
+--- a/RECOVERY_STATUS.md
++++ b/RECOVERY_STATUS.md
+@@ -1,5 +1,7 @@
+ # Recovery status — 21 November 2026
+ 
++> **Editorial audit checkpoint (21 Nov 2026):** A documented 42-mission and 17-section quality inventory is in `docs/qa/`. The Mable's Research placeholder has been replaced by a sourced levels 2–50 reward page on the audit branch. This is *not* certification of all gameplay facts. See `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md` and `docs/qa/SITEWIDE_AUDIT_2026-11-21.md`. Original live ChatGPT Site and Supabase remain untouched.
++
+ ## This is a reconstruction, not the original source
+ 
+ The original ChatGPT Site project could not be opened through the connected tools. A saved browser MHTML capture dated 20 November 2026 contained the rendered main page, four stylesheet resources (including a Google Fonts resource), and hundreds of images. Browser MHTML **does not contain the original development source or executable JS modules** and should not be misrepresented as a full source export.
+diff --git a/docs/qa/MAIN_STORY_AUDIT_2026-11-21.md b/docs/qa/MAIN_STORY_AUDIT_2026-11-21.md
+new file mode 100644
+index 0000000..98fc085
+--- /dev/null
++++ b/docs/qa/MAIN_STORY_AUDIT_2026-11-21.md
+@@ -0,0 +1,129 @@
++# Lumiose Atlas — Walkthrough accuracy audit (initial baseline)
++
++**Date:** 21 November 2026  
++**Repository:** `trevieisking/lumiose-atlas-pokemon-za`  
++**Source examined:** `src/sections/walkthrough.html` at Git blob `0957cd51cbb7a859495dab8674c136919e4c08bb` on `audit/2026-11-21-main-story-research`.  
++**Status:** **AUDIT IN PROGRESS; NOT A FULL FACT-CHECK CERTIFICATE.** The 42 mission records below have been inventoried; only selected claims for Missions 3, 14, 19 and 25, and the Mable reward page, have been compared to independent sources in this pass.
++
++## Scope and evidence standard
++
++**User's requested benchmark:** Mission 14 (Canari) and Mission 19 (Ivor). Every mission should ultimately explain *when it unlocks; who to speak with; the exact street, gate, ladder, roof or sewer access; puzzle/interrogation answers; opponents and Pokémon levels; rewards and next unlock*. A mission is not complete merely because an item list, map widget or an in-game-marker fallback makes its page long.
++
++**Source precedence:** recorded game text / unedited gameplay > official Pokémon information for mechanics and story > multiple independent specialist guides (Serebii, Bulbapedia, Thonky, PowerPyx) for specific walkthrough routes > unverified website text. The official site does **not** publish every mission's objective list, so a game-accurate walkthrough still needs corroboration and, where sources disagree, manual in-game evidence.
++
++**Statuses:** `Verified` (multiple agreeing sources or game footage), `Spot-checked` (a few high-value milestones checked only), `Conflict` (sources disagree), `Needs detail` (no reliable steps or missing fields), `Not checked`. Never equate content presence with factual accuracy.
++
++## Measured baseline (source, not gameplay truth)
++
++- **42/42** numbered story mission cards are present in the recovered editable HTML.
++- **35/42** core route summaries have fewer than 800 plain-text characters; **5/42** have fewer than 500. The Canari and Ivor core-route narratives have **1,751** and **3,221** characters respectively.
++- **39/42** core route summaries are under 1,000 characters. This is a *detail proxy*, **not** an error count.
++- Snapshot coverage: **203** side/EX quest cards (the game distinguishes 200 numbered side missions and three EX missions); **20** Wild Zone cards; **232** rendered Lumiose Pokédex entries; approximately **19** linked standalone routes were only placeholders at recovery.
++- Source recovery identified **154 generic item-location descriptions out of 264** item-list entries; these must not be treated as verified pickup directions.
++- The separately loaded Hyperspace Pokédex and original Supabase ratings/reports were not in the saved source; these require separate work.
++
++## Findings grounded against outside sources
++
++| ID | Area | Evidence and comparison | Next action | Confidence |
++|---|---|---|---|---|
++| G-01 | Mable's Research | Rebuilt `mable-research.html` was a placeholder, despite official recognition of Mable's task system. Serebii and Bulbapedia agree on the level 2–50 ladder, including **three** Gold Bottle Caps at level 48, one Master Ball at 49 and Shiny Charm at 50. | Replace placeholder with the verified reward table and instructions (included in this branch); independently expand the full individual task tiers later. | High for level rewards |
++| G-02 | Mission 03 | Existing card says catch five species and claim Mable's reward but lacks explicit **return to Research Lab / report to Mable / claim first TM through the X menu**. Bulbapedia's objective list and a gameplay walkthrough include these steps. | Expand Mission 03 with complete in-game interface steps and verify map directions. | High |
++| G-03 | Mission 14 — Canari | Recorded quiz password, True/False sequence, Eelektross dessert, Mani, Tarragon and Canari battles agree with Serebii/Thonky. **TM066 Volt Switch and an Autographed Plush** are reported rewards but absent from the core card. | Preserve the working detailed path, add rewards after verifying presentation, then compare all location details. | High for sequence and rewards; full page not certified |
++| G-04 | Mission 19 — Ivor | Hidden-wall investigation identifies four objects and is corroborated by detailed walkthroughs. **TM011 Bulk Up** is awarded after Ivor; the card omits it. One external guide lists Heracross Lv. 44 while Serebii and another walkthrough report Lv. 45. | Keep the 4 clues and sewer passage, add reward when editing; reconcile Heracross level with game footage before marking complete. | High for route/bonus TM; conflict on one level |
++| G-05 | Mission 25 | Core card covers the Lida→Naveen sequence but gives no roster/levels. Serebii and Thonky describe Lida's four Pokémon (Lv. 46–48) and Naveen's four (Lv. 48–50, ending Mega Scrafty). | Expand into distinct match preparations, route to battle court, partner battle lists, outcomes. | High |
++| G-06 | Side request 002 | Site lists reward names without quantities. Serebii's specific mission page, PowerPyx and the Bulbapedia walkthrough give **5 Poké Balls and 3 Potions**; a Bulbapedia summary table says one Potion. | Record conflict; prefer direct game verification before a sitewide quantity import. | Majority agreement, one conflicting table |
++| G-07 | Roto-Glide | Guides disagree about whether the rooftop tutorial is designated Mission 15 or Mission 16; Mission 16 opens within Mission 15's case chain. | Describe trigger by exact **rooftop tutorial during the Beedrill case** rather than a categorical quest-number claim until footage is checked. | Provisional |
++| G-08 | DLC numbering | Bulbapedia distinguishes numbered side missions 1–119 (base), 120–200 (DLC), plus EX1–EX3; 203 total entries is therefore not 203 numbered missions. | Label UI as **200 numbered + 3 EX** and separately verify DLC content. | High |
++| G-09 | City items/maps | Many items are generic area hints or random drop possibilities. The recovered map explicitly warns of approximate pins. | Require evidence for entrances/altitude/roof access and separate fixed, vendor, NPC, random-drop and repeatable loot. | Confirmed source limitation |
++| G-10 | Empty article pages | Mable, shiny hunting, shops, detailed missions and other linked standalones did not have content in the MHTML source. | Rebuild and cite one at a time; Mable is first in this branch. | Confirmed source limitation |
++
++## All 42 mission cards — depth inventory, not certification
++
++Core summary counts below exclude most appended map/item/sidequest panels. **All missions still require a full end-to-end check.**
++
++| No. | Mission | Core chars | Detail assessment | Priority | External fact-check |
++|---:|---|---:|---|---|---|
++| 01 | Get Your Travel Bag Back | 481 | Short — needs expansion | P1 | Not independently checked |
++| 02 | Escape from the Battle Zone | 445 | Short — needs expansion | P1 | Not independently checked |
++| 03 | A New Life in Lumiose City | 644 | Short — needs expansion | P1 | Not independently checked |
++| 04 | Battling in the Z-A Royale | 562 | Short — needs expansion | P1 | Not independently checked |
++| 05 | The City in the Shadow of Prism Tower | 834 | Medium — needs expansion | P2 | Not independently checked |
++| 06 | Reaching Rank X | 675 | Short — needs expansion | P1 | Not independently checked |
++| 07 | Reaching Rank W | 586 | Short — needs expansion | P1 | Not independently checked |
++| 08 | Reaching Rank V | 570 | Short — needs expansion | P1 | Not independently checked |
++| 09 | Chase That Mysterious Pokémon | 836 | Medium — needs expansion | P2 | Not independently checked |
++| 10 | The Secrets of Mega Evolution | 1125 | Medium — needs expansion | P2 | Not independently checked |
++| 11 | A Rogue Mega Slowbro | 649 | Short — needs expansion | P1 | Not independently checked |
++| 12 | A Rogue Mega Camerupt | 655 | Short — needs expansion | P1 | Not independently checked |
++| 13 | A Rogue Mega Victreebel | 619 | Short — needs expansion | P1 | Not independently checked |
++| 14 | Reaching Rank E | 1751 | Reference depth | P1 | Spot-checked; not fully certified |
++| 15 | A Job for Team MZ | 697 | Short — needs expansion | P1 | Not independently checked |
++| 16 | A Rogue Mega Beedrill | 559 | Short — needs expansion | P1 | Not independently checked |
++| 17 | A Rogue Mega Hawlucha | 626 | Short — needs expansion | P1 | Not independently checked |
++| 18 | A Rogue Mega Banette | 600 | Short — needs expansion | P1 | Not independently checked |
++| 19 | Reaching Rank D | 3221 | Reference depth | P1 | Spot-checked; not fully certified |
++| 20 | A Request from the Rust Syndicate | 944 | Medium — needs expansion | P1 | Not independently checked |
++| 21 | A Rogue Mega Mawile | 560 | Short — needs expansion | P1 | Not independently checked |
++| 22 | A Rogue Mega Barbaracle | 514 | Short — needs expansion | P1 | Not independently checked |
++| 23 | A Rogue Mega Ampharos | 587 | Short — needs expansion | P1 | Not independently checked |
++| 24 | Reaching Rank C | 625 | Short — needs expansion | P1 | Not independently checked |
++| 25 | A Showdown on the Battle Court | 407 | Short — needs expansion | P1 | Not independently checked |
++| 26 | An Invitation from the SBC | 743 | Short — needs expansion | P1 | Not independently checked |
++| 27 | A Rogue Mega Froslass | 553 | Short — needs expansion | P1 | Not independently checked |
++| 28 | A Rogue Mega Altaria | 595 | Short — needs expansion | P1 | Not independently checked |
++| 29 | A Rogue Mega Venusaur | 551 | Short — needs expansion | P1 | Not independently checked |
++| 30 | Reaching Rank B | 673 | Short — needs expansion | P1 | Not independently checked |
++| 31 | A Summons from Vinnie | 544 | Short — needs expansion | P1 | Not independently checked |
++| 32 | A Rogue Mega Dragonite | 587 | Short — needs expansion | P1 | Not independently checked |
++| 33 | A Rogue Mega Tyranitar | 532 | Short — needs expansion | P1 | Not independently checked |
++| 34 | A Rogue Mega Starmie | 578 | Short — needs expansion | P1 | Not independently checked |
++| 35 | Reaching Rank A | 953 | Medium — needs expansion | P2 | Not independently checked |
++| 36 | Prism Tower’s Dark Turn | 516 | Short — needs expansion | P1 | Not independently checked |
++| 37 | Operation Protect Lumiose | 714 | Short — needs expansion | P1 | Not independently checked |
++| 38 | The Future of Lumiose City | 631 | Short — needs expansion | P1 | Not independently checked |
++| 39 | The Infinite Z-A Royale | 656 | Short — needs expansion | P1 | Not independently checked |
++| 40 | The One That Gives | 454 | Short — needs expansion | P1 | Not independently checked |
++| 41 | The One That Takes | 442 | Short — needs expansion | P1 | Not independently checked |
++| 42 | To Keep the World in Balance | 605 | Short — needs expansion | P1 | Not independently checked |
++
++## Release-quality checklist for **every** mission
++
++- [ ] Correct number, official in-game title and prerequisite.
++- [ ] Correct starting character, exact location and entrance/height level.
++- [ ] Complete ordered objective chain without skipped cutscenes, hidden walls or mandatory side quests.
++- [ ] Accurate puzzle answers, investigation targets and navigation instructions.
++- [ ] Every required opposing Pokémon, level, Mega Evolution and useful counters checked.
++- [ ] Item/XP/TM/currency/reward values and exact quantities checked against game or reliable independent evidence.
++- [ ] Unlocks, next quest and permanently repeatable versus one-time actions identified.
++- [ ] Images and map markers match an actually reachable place, not just a guessed marker.
++- [ ] Mobile page, buttons, deep links and consistent navigation tested.
++- [ ] Two source references recorded, or in-game capture where sources disagree. An editor/date and evidence status recorded.
++- [ ] Live GitHub Pages render checked **after** changes merge; any public preview remains separate from original ChatGPT Site.
++
++## Suggested sequencing
++
++**Pass A:** Missions 1–10 and Mable, then 11–20, then 21–30, then 31–42. Correct the recovered source section and regenerate `index.html` in the same commit; do not edit the generated page alone.  
++**Pass B:** All 200 numbered side missions + EX1–EX3; verify unlock, objectives, rewards and requirements for DLC.  
++**Pass C:** DLC hyperspace missions and Pokédex, Pokémon forms/locations/evolutions, boss rosters, research, shops, Mega Shards, shiny hunting.  
++**Pass D:** Pickup coordinates, entrance paths, rooftop/scaffold/Holovator maps, mobile/desktop acceptance and progress widgets.
++
++**Safety:** This branch does not alter the original ChatGPT Site, its live URL, Supabase or the database. Do not merge any gameplay claim merely because it looks plausible.
++
++## Evidence register — checked 21 November 2026
++
++1. Official Pokémon, Mable: https://legends.pokemon.com/en-us/story-world/characters/mable
++2. Official Pokémon, game mechanics/real-time combat: https://legends.pokemon.com/en-us/gameplay
++3. Serebii, missions index: https://www.serebii.net/legendsz-a/mainmissions.shtml
++4. Serebii, Mable rewards: https://www.serebii.net/legendsz-a/mablesresearch.shtml
++5. Serebii, Canari: https://www.serebii.net/legendsz-a/mainmissions/reachingranke.shtml
++6. Serebii, Ivor: https://www.serebii.net/legendsz-a/mainmissions/reachingrankd.shtml
++7. Serebii, mission 25: https://www.serebii.net/legendsz-a/mainmissions/ashowdownonthebattlecourt.shtml
++8. Serebii, side request 002: https://www.serebii.net/legendsz-a/sidemissions/auseforanevolutionstone.shtml
++9. Bulbapedia, mission/side-mission objectives: https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)
++10. Bulbapedia, Mable's research: https://bulbapedia.bulbagarden.net/wiki/Mable%27s_research
++11. Thonky, Mission 03: https://www.thonky.com/pokemon-legends-z-a/main-mission-03-a-new-life-in-lumiose-city
++12. Thonky, Mission 14: https://www.thonky.com/pokemon-legends-z-a/main-mission-14-reaching-rank-e
++13. Thonky, Mission 19: https://www.thonky.com/pokemon-legends-z-a/main-mission-19-reaching-rank-d
++14. Thonky, Mission 25: https://www.thonky.com/pokemon-legends-z-a/main-mission-25-a-showdown-on-the-battle-court
++15. PowerPyx, side mission inventory: https://www.powerpyx.com/pokemon-legends-z-a-all-side-mission-locations-main-missions/
++16. Pokémon Legends: Z-A Mega Dimension mission classification: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Legends%3A_Z-A_%E2%80%93_Mega_Dimension
+diff --git a/docs/qa/SITEWIDE_AUDIT_2026-11-21.md b/docs/qa/SITEWIDE_AUDIT_2026-11-21.md
+new file mode 100644
+index 0000000..bd96d1a
+--- /dev/null
++++ b/docs/qa/SITEWIDE_AUDIT_2026-11-21.md
+@@ -0,0 +1,73 @@
++# Lumiose Atlas — whole-guide inventory and fact-check queue
++**Opened:** 21 November 2026  
++**Repository:** `trevieisking/lumiose-atlas-pokemon-za` — independent recovered guide, **not** the original ChatGPT Site source  
++**Audit state:** Source inventory completed; independent factual verification has **not** been completed for every card or map.
++
++## Recovery-wide inventory
++
++| Section/source file | Found content | Limitation | Required fact checks | Status |
++|---|---|---|---|---|
++| home | Overview | Main navigation and feature entrypoints | UI parity, internal links and returning to walkthrough | Not functionally retested |
++| walkthrough | 42 main missions | 39/42 core route summaries under 1,000 characters | Full route, battles, puzzles, exact rewards and correct chronology | Inventory complete; targeted spot-check |
++| sidequests | 203 side/EX cards | 200 numbered side missions + EX1–EX3 | Each unlock, requester, item quantity, battle, location and reward | Index counted; entries not fact-certified |
++| dimension | 14 DLC mission cards | Original snapshot content only | 12 hyperspace missions, portal/donut and special-scan mechanics; story prerequisites | Not individually verified |
++| bosses | 16 Rogue Mega cards | Captured early boss notes | Opponent level, attacks, weakness, phase/arena and reward | Not individually verified |
++| alphas | 20 zone cards | City and zone Alpha overview | Time/weather/fixed versus random appearance, catching strategy | Not individually verified |
++| maps | 20 Wild Zone markers; one city-map image | Approximate area pins | Exact entrances, layers, roof paths, elevators and marker identity | Geometry unverified |
++| items | 20 zone groups / 264 listed pickups | 154 generic location placeholders | Precise fixed pickup route; distinguish NPC/vendor/random drops | High-risk source limitation |
++| legends | 25 legendary/mythical cards | Captured summaries, not complete routes | Prerequisites, postgame events, combat, DLC, availability | Not individually verified |
++| berries | 37 recipe cards; 66 berry entries | Saved recipes and item art | Ingredient quantities, effect levels and donut hyperspace mechanics | Not individually verified |
++| starters | 3 starter cards | Initial choices | Levels, evolution, HOME unlock separation | Not individually verified |
++| pokedex | 232 rendered Lumiose cards | Separate Hyperspace Pokédex unavailable | Species/form/dex numbers, exact locations, evolutions, DLC distinctions | Not individually verified |
++| essentials | 6 advice cards | Short general advice | Mechanics, obedience, controls, battle timing, saving | Not individually verified |
++| secrets | 13 tips | Includes HOME/gift and traversal claims | Preconditions, availability dates, tricks and rewards | Not individually verified |
++| rewards | 6 reward entries | Potentially date-sensitive giveaway entries | Official event dates, codes, expiration, eligibility | Not current-verified |
++| battles | 13 ranked/season entries | Ranked season data can expire | Official live rules and changes, dates and reward eligibility | Not current-verified |
++| sources | 7 links | Source and attribution page | Links, licence/source dates, rightsholder attributions | Not exhaustively verified |
++
++The user-facing site additionally links to **19 separate article routes** that were placeholders after MHTML recovery. This branch replaces **Mable's Research** with an independently sourced reward guide; other route pages must be rebuilt individually. **No Supabase form, ratings or submission table** has been reconnected, so no data changes or ratings resets should be undertaken.
++
++## Playthrough-quality acceptance standard
++
++Use the **Canari / Ivor mission depth** as a benchmark, not just visual styling. For each mission: start trigger; where to go with street/sector, entrance and floor/roof access; whom to talk to and exact answer choices; ordered mandatory objectives; enemy teams and levels; useful counters without inventing moves; exact reward quantities; and what happens next. A player should be able to follow the page from start to finish without consulting another guide.
++
++For maps: show *confirmed* ladders, scaffolding, Holovators, roof connections and floor changes. Label any approximate pin **unverified search area**. A location row must say whether it represents a one-off floor item, fixed spawn, trainer gift, vendor inventory, random drop or repeatable source. Do not convert a possible hidden drop into a guaranteed pickup.
++
++For DLC: separately track **Hyperspace Missions**, 81 DLC side missions (numbered 120–200), EX3 and any dex/form additions. A count of 203 side/EX cards is not 203 numbered quests. Verify donut power, time limits, portals, reward unlocks, and postgame prerequisites.
++
++For all screens: preserve identical navigation; add a back-to-walkthrough action; test mobile scroll and tap accessibility; never link to another guide from the body to replace original guidance (bibliography/credits may list evidence); keep live status, dates and online-only rewards accurate.
++
++## Research procedure for each card
++
++1. Read the exact current GitHub source and identify the start, objective flow, traps, rewards and map assumptions.
++2. Check official Pokémon gameplay/mechanics where applicable.
++3. Compare **two independent walkthrough sources**, preferably Serebii, Bulbapedia, Thonky or gameplay video, writing new original explanations rather than copying their prose.
++4. For disagreement (e.g., exact item quantity or NPC level), mark **source conflict**; resolve with recorded in-game evidence before asserting a corrected value.
++5. Make the smallest isolated revision on a branch. Rebuild generated homepage from `src/sections` and verify `index.html` matches, plus run existing static tests. Verify real mobile interaction separately.
++6. Mark only the *specific* card/fact as verified, with direct source URLs and date. Do not advance a whole category to verified because the counts agree.
++7. Keep the original ChatGPT Site URL/database untouched; GitHub Pages is a **separate preview** and must not be mistaken for original hosting.
++
++## Immediate work queue
++
++**P1 — navigation and correctness:** Complete main-mission narrative pass for 1–42; replace placeholder article pages for Mable, Shiny Hunting, Shops, Journey, Sector Maps and Hyperspace Maps; resolve side request #002 quantity discrepancy; verify mission 3 first lab reward, mission 14 TM066/Autographed Plush, mission 19 TM011 and mission 25 rosters.
++
++**P2 — completeness:** Numbered side missions 1–200 and EX1–EX3, base/postgame legends, HyperSpace mission details and all Pokémon locations/evolutions, Mega Stones, item vendors and categories.
++
++**P3 — visual accuracy and runtime:** Ground/roof map screenshots, mobile menu and zoom parity, readable number ratings, independent feedback adapter and Supabase integration only after schema/permissions review.
++
++## Evidence sources for this phase
++
++- Official Pokémon gameplay: https://legends.pokemon.com/en-us/gameplay
++- Official Mable research description: https://legends.pokemon.com/en-us/story-world/characters/mable
++- Official Canari profile: https://legends.pokemon.com/en-gb/news/canari
++- Serebii main missions: https://www.serebii.net/legendsz-a/mainmissions.shtml
++- Serebii side missions: https://www.serebii.net/legendsz-a/sidemissions.shtml
++- Serebii Mable's Research: https://www.serebii.net/legendsz-a/mablesresearch.shtml
++- Bulbapedia mission classification: https://bulbapedia.bulbagarden.net/wiki/Mission_(Legends:_Z-A)
++- Bulbapedia Mega Dimension: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Legends%3A_Z-A_%E2%80%93_Mega_Dimension
++- Independent comparison: https://www.thonky.com/pokemon-legends-z-a/main-mission-14-reaching-rank-e
++- Recorded full playthrough index (not frame-by-frame checked): https://www.youtube.com/watch?v=7u2fcY-m1vA
++
++## Current completion truth
++
++This is **Phase 1 inventory + selected source spot-checks**, *not* a claim that all facts in 42 missions, 203 side/EX entries or thousands of item/species fields are correct. See `docs/qa/MAIN_STORY_AUDIT_2026-11-21.md` for 42-row mission detail matrix and confirmed discrepancies.

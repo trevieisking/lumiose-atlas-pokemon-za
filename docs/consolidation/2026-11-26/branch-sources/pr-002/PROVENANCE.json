@@ -1,0 +1,70 @@
+{
+  "number": 2,
+  "title": "Prepare Lumiose Atlas logo sharing card and safe IONOS subdomain",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2",
+  "origin_head_ref": "feat/social-share-and-ionos-plan-2026-11-21",
+  "origin_head_sha": "d4e1ae32613cf4b49347f1412634bfdd22741163",
+  "observed_base_ref": "main",
+  "observed_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "git_diff_merge_base_sha": "c94659cdfde1f1753e2d623a594a11e3bdf74bf2",
+  "disposition": "defer_hosting_preserve_brand_plan",
+  "consolidation_note": "Preserve existing LA compass social-sharing metadata objective and optional IONOS subdomain plan as future/deferred; current direction keeps original Workspace origin. Do not change DNS, hosting, canonical origin or Stream Bandit.",
+  "all_changed_paths": [
+    "docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md",
+    "docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md",
+    "index.html",
+    "src/template.html"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md",
+      "change_status": "A",
+      "origin_head_sha": "d4e1ae32613cf4b49347f1412634bfdd22741163",
+      "origin_git_blob_sha1": "4a0f6553174998e0bf09c950b1ff02334f08bc87",
+      "origin_bytes": 5329,
+      "origin_sha256": "372a22c42bfea9797c613fedf4c73c7c51b2c64a492e0884e5d3c0b030cce945",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d4e1ae32613cf4b49347f1412634bfdd22741163/docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-002/docs/architecture/CHATTERFRIENDS_STREAM_BANDIT_ATLAS.md",
+        "bytes": 5329,
+        "sha256": "372a22c42bfea9797c613fedf4c73c7c51b2c64a492e0884e5d3c0b030cce945"
+      },
+      "patch_path": "pr-002/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md",
+      "change_status": "A",
+      "origin_head_sha": "d4e1ae32613cf4b49347f1412634bfdd22741163",
+      "origin_git_blob_sha1": "a76fca3635d05f8ae0628a7991e681a2b516f9f0",
+      "origin_bytes": 4243,
+      "origin_sha256": "8465cb8859ad65d11d6df3c478c45964ce42617aa324b84eb4157e719797eede",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d4e1ae32613cf4b49347f1412634bfdd22741163/docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md",
+      "main_path_exists_at_comparison": false,
+      "main_blob_sha1": null,
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-002/docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md",
+        "bytes": 4243,
+        "sha256": "8465cb8859ad65d11d6df3c478c45964ce42617aa324b84eb4157e719797eede"
+      },
+      "patch_path": "pr-002/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-002/historical-source.patch",
+    "bytes": 10151,
+    "sha256": "8ab168c57c909b75983909e9e262865dad5cdb3bbfe68600afaa4a0b7be21ece"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Goal\nMake the reconstructed Pokémon guide share with its **existing Lumiose Atlas LA compass logo** and an accurate descriptive write-up, while preparing a low-risk home under Stream Bandit's IONOS domain.\n\n## Changes\n- Update the shared source template **and** generated homepage with Open Graph / Twitter social metadata.\n- Keep the recovered `atlas-logo.png` (512 × 512), referenced by an absolute HTTPS URL currently pointing at the GitHub Pages preview. The image and source logo itself are unchanged.\n- Set meaningful preview title, site name, description and accessible image alt text. Preserve the `noindex,nofollow` staging directive and all page content.\n- Add a staged IONOS setup guide in `docs/hosting/IONOS_GUIDE_SUBDOMAIN_PLAN.md`.\n\n## Confirmed domain evidence\nThe separate `trevieisking/stream-bandit` repository has a `CNAME` declaring `chatterfriendsstreambandit.co.uk`. We propose **`guide.chatterfriendsstreambandit.co.uk`** using an IONOS DNS `CNAME` to `trevieisking.github.io`, configured in the Pokémon repo's GitHub Pages settings **when released**. We have not confirmed whether the hostname is unused or that IONOS is the authoritative DNS host.\n\n## Safe scope\n- Draft PR only: **no merge, deployment, DNS changes, redirect, old ChatGPT Site change, Supabase connection/write or Stream Bandit repo change**.\n- The exact legacy `chatgpt.site` link cannot be reassigned using IONOS DNS; keep original published until an optional editor-controlled redirect becomes possible.\n- After the proper custom address is live, update the Open Graph image and canonical URL to that address and check with Meta Sharing Debugger. Sharing appearance is not guaranteed before a crawler test.\n"
+}

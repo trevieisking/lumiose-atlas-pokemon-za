@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-26",
+  "baseline_sha": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+  "validation": [
+    {
+      "check": "JSON parse",
+      "pass": true,
+      "files": 43
+    },
+    {
+      "check": "revisions,media pause,full-release gate",
+      "pass": true
+    },
+    {
+      "check": "all55 recovered requirement texts retained,67unique combined",
+      "pass": true
+    },
+    {
+      "check": "documentation-only allowlist",
+      "pass": true,
+      "changed_files_before_validation_receipt": 110
+    },
+    {
+      "check": "private player name not introduced in new packet or changed lines",
+      "pass": true
+    }
+  ],
+  "existing_static_validator": "PASS:17sections,645links,1431references,578capturedresources",
+  "independent_reviews": "Three read-only reviews; recorded corrections resolved.108 main-source hashes/82 archive hashes independently checked.",
+  "full_scope_release_approved": false,
+  "workspace_published": false
+}

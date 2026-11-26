@@ -1,0 +1,31 @@
+{
+  "origin": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/",
+  "exact_merge": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+  "method": "read-only HTTP byte comparison; no browser interactions",
+  "checks": [
+    {
+      "path": "atlas-guide-links.mjs",
+      "status": 200,
+      "sha256": "e5a0246f442bdc776d86f6e2f792a39a38cdc0362602e6587bb8a51ef23134e4",
+      "equals_reviewed_local_bytes": true
+    },
+    {
+      "path": "atlas-explorer-data.json",
+      "status": 200,
+      "sha256": "4b319e9a05fc0a7db6292589a82d97be83cd37ead6ce75e5b1e195862a2bae1c",
+      "equals_reviewed_local_bytes": true
+    },
+    {
+      "path": "items.html",
+      "status": 200,
+      "sha256": "e925d2906524b971e90c1cbd22d50eeebafa548d6fb2e7b86d94cdf7abc7dfae",
+      "equals_reviewed_local_bytes": true
+    },
+    {
+      "path": "journey.html",
+      "status": 200,
+      "sha256": "acad78c02e132b7b7a83adbd3a990ad2993f19072fcde19ad7bc72c8d76dd82e",
+      "equals_reviewed_local_bytes": true
+    }
+  ]
+}

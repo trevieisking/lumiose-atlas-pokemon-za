@@ -1,0 +1,60 @@
+{
+  "number": 37,
+  "title": "Fix 8 broken Rogue Mega Boss portraits using Pokémon HOME catalogue",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/37",
+  "origin_head_ref": "fix/rogue-boss-portraits-home-20261121",
+  "origin_head_sha": "97131c29969a80ed03a6e6684b05a8b914e137b7",
+  "observed_base_ref": "main",
+  "observed_base_sha": "fb3f57b797fd897371020f802fc7eecc8bdf1b07",
+  "git_diff_merge_base_sha": "fb3f57b797fd897371020f802fc7eecc8bdf1b07",
+  "disposition": "superseded_by_merged_100",
+  "consolidation_note": "Same eight boss portrait repairs are implemented by merged #100. Keep provenance; no second runtime merge.",
+  "all_changed_paths": [
+    "boss-guide.html",
+    "tests/boss_recovered.test.mjs"
+  ],
+  "source_files": [
+    {
+      "original_path": "boss-guide.html",
+      "change_status": "M",
+      "origin_head_sha": "97131c29969a80ed03a6e6684b05a8b914e137b7",
+      "origin_git_blob_sha1": "d58905143590fe0811ebcc82224987521001c854",
+      "origin_bytes": 39399,
+      "origin_sha256": "016351d99729d27782a0e148600bddb64e4072e6e5fa6f0a636d3dcc29340e80",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/97131c29969a80ed03a6e6684b05a8b914e137b7/boss-guide.html",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "d58905143590fe0811ebcc82224987521001c854",
+      "byte_identical_to_comparison_main": true,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-037/historical-source.patch",
+      "at_ids": []
+    },
+    {
+      "original_path": "tests/boss_recovered.test.mjs",
+      "change_status": "M",
+      "origin_head_sha": "97131c29969a80ed03a6e6684b05a8b914e137b7",
+      "origin_git_blob_sha1": "f2afa7f2e3e7dd165ba52c8e0568ca23d44b2a12",
+      "origin_bytes": 4739,
+      "origin_sha256": "b370dc0167ed13ab00c85ca20cff80920e25a7d34f6a4bc49a45a268ec316a8d",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/97131c29969a80ed03a6e6684b05a8b914e137b7/tests/boss_recovered.test.mjs",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "62c868016f2ed3502ceb73ba41b4027c4a65a164",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "exact_historical_patch_and_origin_reference",
+      "snapshot": null,
+      "patch_path": "pr-037/historical-source.patch",
+      "at_ids": []
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-037/historical-source.patch",
+    "bytes": 12878,
+    "sha256": "bfa89651743efc24c8cac342ba25182d1a677c136052d38c79dbd3d98f65828d"
+  },
+  "at_ids": [],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "## Scope\n- Fix only eight missing `dex-art/` portrait references in `boss-guide.html` by reusing the exact working images from `home-connection.html` (six existing `art/*.webp` files and PokeAPI HOME sprites for Staraptor and Tatsugiri).\n- Add regression coverage that checks all 28 boss-page `<img>` sources and verifies those eight portraits stay in sync with the HOME catalogue.\n- No gameplay content, navigation, CSS, database, ratings, reports, map data, or saved progress changes.\n\n## Evidence\n- Pre-patch: 8 of 28 `<img>` references pointed at absent repository files (`dex-art/{398,978,485,491,383,382,384,807}.webp`).\n- Post-patch: 0 missing local files, all 8 sources exactly match HOME catalogue, other images unchanged.\n- The two PokeAPI sprite blob paths exist in the upstream public GitHub repository. These are species portraits, not Mega/Primal form-specific artwork.\n- CI validation pending; draft PR intentionally not merged.\n\n## Important boundary\nThis repository is an **independent reconstructed GitHub Pages edition**. It is **not the original ChatGPT Workspace Site** at `https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/`. Opening this PR does not edit, deploy, replace or affect that original Site or its Supabase connection. Port the same mapping to the original only after its authoritative Workspace source is accessible and verified."
+}

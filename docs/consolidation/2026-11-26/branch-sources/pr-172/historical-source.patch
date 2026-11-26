@@ -1,0 +1,41 @@
+diff --git a/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md b/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md
+index 353079b..e1ce639 100644
+--- a/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md
++++ b/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md
+@@ -34,6 +34,7 @@ The absence of a source result is **not** evidence that a Pokémon is absent fro
+ - **Eevee:** seven named city sectors and Wild Zone 19 agree with [RotomLabs](https://rotomlabs.net/dex/legends-z-a/eevee). [Gamer Guides](https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/pokemon-locations/where-to-find-eevee-in-legends-z-a) explains the Bleu 7 rooftop approach. Area membership alone does not describe climb access.
+ - **Riolu:** four sectors agree with [RotomLabs](https://rotomlabs.net/dex/legends-z-a/riolu); [Gamer Guides](https://www.gamerguides.com/pokemon-legends-z-a/database/pokedex/pokemon/riolu/) provides separate rooftop/day/sunny leads. A trade is not a wild spawn.
+ - **Gastly:** the [PokéMaps species page](https://pokemaps.net/maps/lza/lumiose/gastly) names Zone 18 but does not list Zone 7. [Bulbapedia Zone 18](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18), [RotomLabs](https://rotomlabs.net/locations/legends-z-a/wild-zone-18) and [Serebii's Wild Zones](https://www.serebii.net/legendsz-a/wildzones.shtml) omit Gastly from the ordinary/fixed Zone 18 roster; Serebii and [Bulbapedia Zone 7](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_7) include Gastly there. TrainerLab also reports Zone 18, so do not dismiss or add the disputed record blindly. Investigate source classification and in-game conditions.
++  - **Original game evidence:** The [owner’s overview screenshot](../../assets/atlas/wild-zones/wild-zone-18-overview.png) (Git blob `b520201cb772c4d716036fb8066f35fd3d82cf5b`) shows the in-game Wild Zone 18 card at **100%** with Noibat, Fennekin, Bagon, Altaria, Noivern and Swablu, plus two empty slots. This directly corroborates the six survey-card species already in the Atlas. The fieldbook records fixed Alphas Salamence and Lopunny separately. Keep the published roster and the existing Zone 7 Gastly entry unchanged. The survey card does not rule out a scripted or otherwise special encounter; keep that lead open until gameplay shows the encounter and its location inside Zone 18.
+ - **Hotel Z Lucario:** PokéMaps uses a broad static label; [Serebii](https://www.serebii.net/legendsz-a/giftpokemon.shtml) and [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Hotel_Z) establish a post-story level-50 gift, not a catch.
+ - **Magenta 6 Mawile:** PokéMaps reports a scripted encounter; [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Magenta_Sector_6) documents the Rogue Mega Mawile fight. Do not mark it a repeatable catch based on a table row.
+ - **Zone 20:** [Simisear](https://pokemaps.net/maps/lza/lumiose/simisear) and Absol exemplify a generic Walk label that does not convey rotating Alpha availability. Preserve the ordinary/rotating distinction from [Serebii Pokéarth](https://www.serebii.net/pokearth/lumiosecity/wildzone20.shtml).
+diff --git a/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json b/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json
+index 96e5481..f9cd9dd 100644
+--- a/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json
++++ b/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json
+@@ -257,7 +257,23 @@
+         "https://rotomlabs.net/locations/legends-z-a/wild-zone-18",
+         "https://trainerlab.top/lza/pokemon/gastly/"
+       ],
+-      "note": "Zone 18 is listed by PokéMaps and TrainerLab, but absent from standard zone tables; no roster change or location pin until source/game condition resolved. PokéMaps species listing also omits ordinary Zone 7 Gastly listed by Serebii and Bulbapedia."
++      "note": "Zone 18 remains a disputed Gastly lead from PokéMaps and TrainerLab. The owner’s completed survey card substantiates the ordinary Zone 18 roster without Gastly. The card cannot decide special encounters. PokéMaps also omits ordinary Zone 7 Gastly listed by Serebii and Bulbapedia.",
++      "owner_survey_evidence": {
++        "asset": "assets/atlas/wild-zones/wild-zone-18-overview.png",
++        "git_blob": "b520201cb772c4d716036fb8066f35fd3d82cf5b",
++        "completion_percent": 100,
++        "survey_species": [
++          "Noibat",
++          "Fennekin",
++          "Bagon",
++          "Altaria",
++          "Noivern",
++          "Swablu"
++        ],
++        "empty_slots": 2,
++        "ordinary_roster": "Keep published Zone 18 survey species and existing Zone 7 Gastly entry unchanged.",
++        "special_encounter": "Unresolved; requires direct gameplay evidence of the encounter inside Zone 18. No new pin."
++      }
+     },
+     {
+       "species": "Bellsprout",

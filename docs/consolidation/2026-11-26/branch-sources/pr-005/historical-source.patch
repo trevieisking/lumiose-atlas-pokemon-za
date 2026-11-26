@@ -1,0 +1,72 @@
+diff --git a/README.md b/README.md
+index 091fc30..234f48f 100644
+--- a/README.md
++++ b/README.md
+@@ -4,6 +4,8 @@
+ 
+ **Editorial batch (21 Nov 2026, draft):** Expanded story Missions **01–10** in our own words; added previous/next links across all 42 mission cards and contextual links in eight topic sections. Kept the recovered Pokémon data and zone maps intact. Gameplay source comparisons, contested details and QA are recorded in [docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md](docs/qa/PLAYTHROUGH_001_010_AND_GUIDE_LINKS_2026-11-21.md). **This is a draft review, not a statement that every game mechanic has been checked or that the original Site has been updated.**
+ 
++**Player progress protection (draft):** The guide now has a **Backup & Restore** page. Players can export their completed mission, side mission, item, legendary and screw checklists as a local JSON file, preview an import and **merge only completed entries**. A user-run, no-network browser bookmarklet is supplied for exporting checked boxes from the old ChatGPT Site, because that site's original JavaScript is unavailable. This old-site transfer remains to be tested on the live original page and is not an automatic background migration. See [progress migration documentation](docs/qa/PROGRESS_MIGRATION_2026-11-21.md).
++
+ **Status:** Stage 1 recovery checkpoint. This is a **reconstructed, editable static site**, **not** an export of the original ChatGPT Site's source project. The original project was inaccessible; this copy was assembled from the user's own saved MHTML webpage capture from 20 November 2026. **No original live-site files were accessed for writing, and no deployment has occurred.**
+ 
+ Live original (not controlled by this repository):
+diff --git a/RECOVERY_STATUS.md b/RECOVERY_STATUS.md
+index 00196bd..8cc3a72 100644
+--- a/RECOVERY_STATUS.md
++++ b/RECOVERY_STATUS.md
+@@ -55,3 +55,7 @@ The original ChatGPT Site project could not be opened through the connected tool
+ - Verified JS syntax via `node --check`.
+ - Browser DOM smoke-checked navigation, mission expansion, local progress update, text search, Wild Zone selection, Pokédex filtering, Hyperspace missing-content notice, and phone/desktop layouts without JavaScript exceptions.
+ - A direct localhost browser smoke run was blocked by the tool environment's administrative navigation rules; the equivalent document was loaded in Chromium with inline styles/scripts to test interactions and layout. **No hosted deployment has been smoke-tested.**
++
++## Player progress backup and migration (draft)
++
++The independent guide now provides a `progress-backup.html` page with local JSON export/import and a non-destructive merge workflow. The old Site's executable scripts were not in the recovered MHTML, so the legacy export mechanism is a voluntary on-page bookmarklet that reads checked boxes rather than guessing localStorage keys. It is **not yet tested on the live original**. No user data, original Site, Supabase table, domain or deployed guide was modified by drafting this feature. See `docs/qa/PROGRESS_MIGRATION_2026-11-21.md`.
+diff --git a/docs/qa/PROGRESS_MIGRATION_2026-11-21.md b/docs/qa/PROGRESS_MIGRATION_2026-11-21.md
+new file mode 100644
+index 0000000..b9be334
+--- /dev/null
++++ b/docs/qa/PROGRESS_MIGRATION_2026-11-21.md
+@@ -0,0 +1,41 @@
++# Lumiose Atlas player progress migration and backups
++**Opened:** 21 November 2026  
++**Status:** Implementation staged in draft PR, NOT merged or deployed. Original Site export workaround still requires real-world compatibility test.
++
++## Why this matters
++The existing original ChatGPT Site has real users, including mobile players, with progress that should not be reset when the independently reconstructed guide is eventually published. Progress may be browser-local and is not automatically shared between two domains, devices or browsers.
++
++## Source evidence from the recovered original site
++The owner's saved 20 November MHTML page contains **976** checkbox elements representing **634 unique progress IDs**:
++- 42 main mission checkboxes (`data-check`).
++- 203 side/EX mission checkboxes (`data-side-check`).
++- 25 legendary checkboxes (`data-legend-check`).
++- 606 rendered item checkbox elements, for **264 unique** item IDs (`data-pickup`) because some are repeated in mission and item panels.
++- 100 Colorful Screw checkboxes (`data-screw`).
++
++The MHTML did **not** include the original executable JavaScript or localStorage schema. Therefore **do not assume the original stored key is the same as the new site's**, and do not claim the new origin can access old-origin browser data.
++
++## What was implemented on the rebuilt guide
++- `progress-backup.html` with a visible **Backup & Restore** link in sidebar, homepage and footer.
++- Export of local completion progress as versioned `.json`, with five original progress categories plus separate, unambiguously identified numbered map-pin data.
++- Strict JSON input size/type/schema checks and exact ID whitelist (`progress-keys.js` is generated from the recovered guide section IDs).
++- **Import preview** showing how many completed checkboxes are recognised and how many will be added; no write until an explicit Merge button.
++- **Non-destructive merge**: only imported `true` completions are added; existing `true` states are never cleared. An on-device pre-import recovery copy is stored before writes.
++- Unknown valid IDs from future versions are retained under a separate local-only namespace, surfaced in the preview, and included in subsequent backups rather than silently discarded.
++- Mapped pin tracking is included; 111 uniquely matched pins map into existing item IDs, while other pins have separate progress storage.
++- No login, HTTP request, API key, database write, Supabase migration, changed domain or modification to the old ChatGPT Site.
++
++## Migrating an individual user's original-site progress
++1. **On the device and browser that actually holds the original checkmarks**, open the original `lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/#home` URL.
++2. The new backup page supplies a copyable **old-page bookmarklet**: it runs only while viewing the original hostname, reads checked inputs from the five known `data-*` categories and downloads a versioned JSON file. It never reads other localStorage keys, cookies or credentials and makes no network calls.
++3. Confirm a file was downloaded. **Do not delete or reset the old site/browser data.** Some browsers may restrict bookmarklets, and the locked original site's compatibility cannot yet be guaranteed.
++4. On the new guide, select that file, inspect the import preview and confirm Merge. Every previously completed new-site item remains ticked.
++5. Export a new guide backup periodically, particularly before moving to another device.
++
++## Critical limitations and release conditions
++- The original Site editor is inaccessible; no native one-click Export button has been installed there. The bookmarklet is a **user-run migration workaround** and must be tested on the actual original website/browser, including Android.
++- The browser may store progress in IndexedDB or remote services not reflected in rendered checkbox state; the workaround can only capture currently checked inputs from a fully hydrated old guide page.
++- Old-site feedback, ratings, accounts, event history and submissions are **not** in a progress backup and remain separate in Stream Bandit's Supabase project.
++- Any user who cannot run the exporter must keep using the old site until a supported solution is available; never reset their storage or claim the transfer completed.
++- Run `python3 tests/validate_backup.py`, existing static validation and mobile browser acceptance before merging. Test synthetic fixture import, double import (idempotence), conflict merge, malformed JSON rejection, cross-device recovery, map-pin progress and storage rollback.
++- PR dependency order: walkthrough #3 → maps #4 → this backup PR. The original ChatGPT Site, GitHub Pages `main`, Stream Bandit and Supabase are unchanged by these drafts.

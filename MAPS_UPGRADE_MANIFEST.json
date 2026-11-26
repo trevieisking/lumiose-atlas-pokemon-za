@@ -2,6 +2,7 @@
   "read_first": {
     "binding": true,
     "read_order": [
+      "ATLAS_RELEASE_HANDOFF.md",
       "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
       "MAPS_UPGRADE_MANIFEST.json",
       "ATLAS_DUAL_SITE_FIX_LEDGER.md",
@@ -9,18 +10,18 @@
       "atlas_internal.feature_checklist",
       "atlas_internal.report_resolution_queue"
     ],
-    "rule": "Before any development loop, reopen current main and active PR plan/manifest, read ledger and relevant evidence/checklist; follow linked plans rather than stale summaries. Compare independent site states, select bounded next task, sync plan/manifest/ledger/private checklist with actual evidence. Never mark verified without separate deployment and manual checks. Follow AT-297 before any Edition A source access or changes. No automatic connection between the two sites.",
+    "rule": "Read the consolidated handoff and current main/active exact PR heads before development. Historical append-only checkpoints do not override current policy or independently verified evidence. Preserve both editions; no active videos/YouTube. Synchronize relevant planning records without rewriting player data or historical source proofs. AT-325 G0–G5 precede the final Workspace prompt; AT-297 governs original-Site adaptation and publication.",
     "owner_only_query": "select item_id, purpose, video_url, manifest_revision, github_status, github_stage, github_revision, workspace_status, workspace_stage from atlas_internal.feature_checklist order by item_id;",
     "feedback_protocol": "docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md",
     "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified",
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 80,
+  "revision": 81,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-329 city overview source images merged; preserve AT-328/AT-320 route reconciliation separately; G1-G5 pending.",
+  "current_phase": "AT-336 reconciled all accessible plans, PRs, chats and ledgers; PR188 media removal merged. AT-320/328 reconciliation and AT-325 G2–G5 remain open; final executable Workspace prompt blocked.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -150,7 +151,8 @@
     "feedback_changed": false,
     "original_workspace_site_changed": false,
     "protected_code_labs_writer_used": false,
-    "supabase_private_feature_metadata_update_planned": true
+    "supabase_private_feature_metadata_update_planned": true,
+    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188."
   },
   "phases": [
     {
@@ -159,34 +161,46 @@
       "status": "in_progress",
       "dependencies": [],
       "acceptance": "48 labelled sectors and 20 Wild Zones traced to source/captures; boundary confidence assigned; no fabricated polygons",
-      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment. Batch 03: all ten original private photographs recovered and re-inspected; 12 provisional photo marker groups / 15 approximate photo-pixel occurrences, with 6 possible mission-area links, but zero confirmed device or source-to-Atlas point alignment. Batch 04: 1920x1920 original city image recovered, six owner photos manually affine-registered with 4-5 landmarks, 11 provisional native map pixel coordinates documented, no confirmed device markers or roof entrances. P01/P08 and P03/P04 provide plausible icon-pair consistency; P08/P09 H-01 alternatives remain distinct."
+      "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment. Batch 03: all ten original private photographs recovered and re-inspected; 12 provisional photo marker groups / 15 approximate photo-pixel occurrences, with 6 possible mission-area links, but zero confirmed device or source-to-Atlas point alignment. Batch 04: 1920x1920 original city image recovered, six owner photos manually affine-registered with 4-5 landmarks, 11 provisional native map pixel coordinates documented, no confirmed device markers or roof entrances. P01/P08 and P03/P04 provide plausible icon-pair consistency; P08/P09 H-01 alternatives remain distinct.",
+      "historical_status_before_AT336": "in_progress",
+      "current_checkpoint_note": "48/20 identities and108-source register retained; full independently verified geometry remains open.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-02",
       "name": "Zoom/pan city map and 48 sector-specific views",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-01"
       ],
-      "acceptance": "Readable desktop and Android zoom; all sector selectors and all 20 Wild Zones work"
+      "acceptance": "Readable desktop and Android zoom; all sector selectors and all 20 Wild Zones work",
+      "historical_status_before_AT336": "planned",
+      "current_checkpoint_note": "Existing zoom/pan/rotation/compass and48-sector photo navigation deployed; full68-area geometry/linked highlight scope still open. Not merely unimplemented planned work.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-03",
       "name": "Buildings, street/alleys, plazas and landmark reference layers",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-02"
       ],
-      "acceptance": "Architecture/reference layer and written orientation, no unsupported traversable-path claim"
+      "acceptance": "Architecture/reference layer and written orientation, no unsupported traversable-path claim",
+      "historical_status_before_AT336": "planned",
+      "current_checkpoint_note": "Street-bearing and photo-reference implementations exist; independently verified boundary/architecture/traversable path completion remains open.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-04",
       "name": "Individually evidenced Holovator layer",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-03"
       ],
-      "acceptance": "Confirmed pins only with observation, access point, level and nearby landmark"
+      "acceptance": "Confirmed pins only with observation, access point, level and nearby landmark",
+      "historical_status_before_AT336": "planned",
+      "current_checkpoint_note": "21 approximate owner Holovator entries and111 photos preserved. Exact doors/roofs or complete citywide device inventory not certified.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-05",
@@ -196,25 +210,34 @@
         "SM-04"
       ],
       "acceptance": "Actionable evidence-backed directions from stable landmarks to relevant destinations, including unlocks, moves, obstacles and ascent order; no new individual ascent-structure pins, exact ascent XY or exhaustive count required",
-      "progress_note": "42 existing research leads retained. All nine Vert sectors initially researched; reconcile and publish useful routes rather than survey every ladder or scaffold. Written directions need no coordinate calibration. Continue independent Holovator and fixed item coordinate research when useful."
+      "progress_note": "42 existing research leads retained. All nine Vert sectors initially researched; reconcile and publish useful routes rather than survey every ladder or scaffold. Written directions need no coordinate calibration. Continue independent Holovator and fixed item coordinate research when useful.",
+      "historical_status_before_AT336": "in_progress",
+      "current_checkpoint_note": "22 deployed routes and70 research leads preserved. AT-320/328 PR156 proposes4 routes/23steps; latest head still requires current-base integration and independent visual gate.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-06",
       "name": "Exact-numbered item and Colorful Screw locations",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-05"
       ],
-      "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs; compact independent item/Screw layers, accessible overlap handling and dense-marker QA per AT-333."
+      "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs; compact independent item/Screw layers, accessible overlap handling and dense-marker QA per AT-333.",
+      "historical_status_before_AT336": "planned",
+      "current_checkpoint_note": "AT-333 design plus AT-334/335 recovered-coordinate research; confirmed new item/Screw pins remain0. Compact layers and eligibility implementation pending.",
+      "current_checkpoint": "AT-336"
     },
     {
       "id": "SM-07",
       "name": "Per-sector completeness audit, regressions and mobile QA",
-      "status": "planned",
+      "status": "in_progress",
       "dependencies": [
         "SM-06"
       ],
-      "acceptance": "48 sector views, 20 Wild Zones, working menus/zoom/progress, evidence-labelled data, green CI and Android QA"
+      "acceptance": "48 sector views, 20 Wild Zones, working menus/zoom/progress, evidence-labelled data, green CI and Android QA",
+      "historical_status_before_AT336": "planned",
+      "current_checkpoint_note": "Existing bounded releases have tests; complete68-area full-scope G5 signoff has not occurred.",
+      "current_checkpoint": "AT-336"
     }
   ],
   "sector_targets": [
@@ -2720,7 +2743,10 @@
         "workspace_status": "open",
         "limitation": "Exact deployed tree matches tested/visually reviewed preview. Public live URL direct HTTP inspection unavailable in session; no physical device claim. Workspace original source not accessed."
       }
-    }
+    },
+    "current_policy": "Historical media research only; active video requirements superseded by active_video_policy. Written/local-link portions remain valid.",
+    "historical_status_before_AT336": "github_deployed_verified_workspace_open",
+    "status": "media_paused_historical_evidence_retained"
   },
   "at_294_vert_reconciliation": {
     "status": "reviewed_existing_evidence_not_complete",
@@ -2952,8 +2978,8 @@
     "id": "AT-297",
     "date": "2026-11-24",
     "owner_approved": true,
-    "status": "documented_pending_authorized_workspace_access",
-    "review_date": "2026-11-25",
+    "status": "original_v37_source_and_deployment_observed_next_release_independent_gates_open",
+    "review_date": "2026-11-26",
     "handoff": "WORKSPACE_ACCESS_HANDOFF.md#at-297--workspace-source-access-export-and-safe-upgrade-policy",
     "checklist_id": "AT-297-HANDOFF-PROTOCOL",
     "edition_a": "Original live ChatGPT Site; preserve its source, URL, existing progress and Supabase integration.",
@@ -2965,35 +2991,45 @@
     "gates": [
       {
         "requirement": "A1 authorized original source access",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A2 verified source export and rollback",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A3 progress and integration audit",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A4 compare actual A source with verified B and prepare bounded patch",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A5 isolated preview and regression tests",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A6 independent safe publication through original editor",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       },
       {
         "requirement": "A7 live verification and checklist evidence",
-        "status": "open"
+        "status": "recheck_for_next_full_scope_release_historical_v37_evidence_preserved"
       }
     ],
     "owner_testing": "Live guide only; assistant handles development review.",
-    "no_changes_to_a_now": true
+    "no_changes_to_a_now": true,
+    "historical_status_before_AT336": "documented_pending_authorized_workspace_access",
+    "current_observation": "docs/consolidation/2026-11-26/workspace-observation.json",
+    "historical_v37_release": {
+      "pr": 149,
+      "source_sha": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
+      "tree": "c680b737a8e8fc4f2c866892444ab84ae2b58069",
+      "version": 37,
+      "gates": "A1–A7 passed for the scoped25Nov release, not the future full upgrade",
+      "source_snapshot": "docs/consolidation/2026-11-26/branch-sources/pr-149/docs/qa/ATLAS_AT297_WORKSPACE_V37_RELEASE_2026-11-25.md"
+    }
   },
   "at_298_vert3": {
     "id": "AT-298",
@@ -4412,7 +4448,7 @@
     "source_visual_recrops": 3
   },
   "at_311_cross_page_map_video_references": {
-    "status": "github_deployed_verified",
+    "status": "media_paused_historical_evidence_retained",
     "baseline_main_sha": "59c400dc3f7ecbdb9e0322cba21174ae917481ec",
     "owner_priority": "Use all existing guide maps and relevant attributed video walkthroughs across pages",
     "module": "atlas-guide-links.mjs",
@@ -4450,7 +4486,9 @@
       "pages_run": 45556857970,
       "conclusions": "success",
       "workspace": "v37 scoped release reported; documentation PR #149 pending reconciliation"
-    }
+    },
+    "current_policy": "Historical media research only; active video requirements superseded by active_video_policy. Written/local-link portions remain valid.",
+    "historical_status_before_AT336": "github_deployed_verified"
   },
   "at_313_vert8_bleu1_release": {
     "pr": 150,
@@ -4468,7 +4506,7 @@
     "workspace": "v37 unchanged"
   },
   "at_314_buddyvidz_video_library": {
-    "status": "github_deployed_verified",
+    "status": "media_paused_historical_evidence_retained",
     "channel": "https://www.youtube.com/@BuddyVidz-z8g",
     "channel_source": "authorized_vidiq_owner_channel_verified",
     "recording_focus": [
@@ -4512,7 +4550,9 @@
       "pages_conclusion": "success",
       "workspace": "v37 unchanged",
       "content_reviewed_owner_clips": 0
-    }
+    },
+    "current_policy": "Historical media research only; active video requirements superseded by active_video_policy. Written/local-link portions remain valid.",
+    "historical_status_before_AT336": "github_deployed_verified"
   },
   "at_315_bleu3_5_access_routes": {
     "status": "github_deployed_ci_verified",
@@ -4564,19 +4604,32 @@
     }
   },
   "at_319_written_first_policy": {
-    "status": "owner_approved_active",
-    "primary": "complete written instructions and existing map photographs; no video required to complete the guide",
-    "videos": "Only when a difficult location or action cannot be sufficiently explained with text and images; verify clip content and timestamp before adding",
-    "buddyvidz": "Owner continues independent YouTube playthrough; no requirement to upload large original files or review all recordings",
-    "held_prs": [
+    "status": "superseded_by_full_media_pause_2026_11_26",
+    "primary": "Written directions, existing maps and photographs; guide stands alone.",
+    "videos": "All active video and YouTube work paused; no exception inferred from the earlier optional-video policy.",
+    "existing_links": "Keep useful local guide and map links; active external watch links and channel promotions removed in PR188.",
+    "historical_policy_before_2026_11_26": {
+      "status": "owner_approved_active",
+      "primary": "complete written instructions and existing map photographs; no video required to complete the guide",
+      "videos": "Only when a difficult location or action cannot be sufficiently explained with text and images; verify clip content and timestamp before adding",
+      "buddyvidz": "Owner continues independent YouTube playthrough; no requirement to upload large original files or review all recordings",
+      "held_prs": [
+        153,
+        154
+      ],
+      "frame_reader_commit": "cc9a98cdfaf6c4ecd9bad797e7e75946a8acec4d",
+      "frame_reader_status": "unattached_commit; not promoted; future optional tool",
+      "existing_links": "Preserve previously deployed links, references and credit; no new video library rollout",
+      "vidiq_credits": 0,
+      "workspace_credits": 0,
+      "code_labs_changes": false
+    },
+    "closed_unmerged_video_prs": [
       153,
       154
     ],
-    "frame_reader_commit": "cc9a98cdfaf6c4ecd9bad797e7e75946a8acec4d",
-    "frame_reader_status": "unattached_commit; not promoted; future optional tool",
-    "existing_links": "Preserve previously deployed links, references and credit; no new video library rollout",
+    "workspace": "original v37 not republished; reconcile under final gated handoff",
     "vidiq_credits": 0,
-    "workspace_credits": 0,
     "code_labs_changes": false
   },
   "at_319_bleu2_4_6_written_routes": {
@@ -4765,7 +4818,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "g1_partial_merged_g2_pilot_research",
+    "status": "AT336_consolidated_G1_G2_partial_G3_G5_open",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4825,32 +4878,33 @@
       "historical_candidate_manifest": "MAPS_OWNER_WIDE_PHOTO_ALIGNMENT_2026-11-21.json",
       "inventory_check_method": "Exact recursive Git tree SHA and bytes matched 42 library rows and 40 batch manifest rows; all area image paths present. Not fresh pixel-level decode or registration.",
       "new_city_overview_frames": 3,
-      "new_city_overview_manifest": "assets/atlas/city-overview/manifest.json"
+      "new_city_overview_manifest": "assets/atlas/city-overview/manifest.json",
+      "historical_overviews_current_status": "Original W01–W03 recovery evidence preserved from PR166 separately; later AT-329 images are a different named source set. Neither establishes production polygons."
     },
     "phase_states": [
       {
         "id": "G0",
-        "state": "documentation_and_private_queue_recorded"
+        "state": "consolidated_documentation_private_metadata_sync_pending"
       },
       {
         "id": "G1",
-        "state": "three_regressions_deployed_at320_reconciliation_pending"
+        "state": "partial"
       },
       {
         "id": "G2",
-        "state": "four_zone_and_three_city_overview_candidate_registrations_no_production_geometry"
+        "state": "research_partial"
       },
       {
         "id": "G3",
-        "state": "pending"
+        "state": "open"
       },
       {
         "id": "G4",
-        "state": "pending"
+        "state": "open"
       },
       {
         "id": "G5",
-        "state": "pending"
+        "state": "blocked_by_G1_G4"
       },
       {
         "id": "A0",
@@ -4858,7 +4912,7 @@
       },
       {
         "id": "A1-A7",
-        "state": "blocked_until_A0"
+        "state": "new_release_pending_A0"
       }
     ],
     "remaining_review_findings": [
@@ -4882,10 +4936,12 @@
       "required_full_scope_signoff": null,
       "final_prompt_path": null,
       "allowed_to_send_or_execute": false,
-      "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site."
+      "release_policy": "No final prompt until G5 passes; no partial research transfer or replacement of original site.",
+      "readiness_contract": "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md"
     },
     "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
-    "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes."
+    "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes.",
+    "current_consolidation": "docs/consolidation/2026-11-26/manifest.json"
   },
   "at_326_map_review_regressions": {
     "status": "github_pages_deployed_exact_sha_verified",
@@ -5327,5 +5383,53 @@
     },
     "production_transform": null,
     "workspace": "open_pending_AT325_G5_and_AT297"
+  },
+  "at_336_consolidated_handoff": {
+    "id": "AT-336",
+    "date": "2026-11-26",
+    "status": "documentation_consolidated_full_upgrade_open",
+    "handoff": "ATLAS_RELEASE_HANDOFF.md",
+    "snapshot_manifest": "docs/consolidation/2026-11-26/manifest.json",
+    "requirements": 67,
+    "all_prs": "docs/consolidation/2026-11-26/pull-requests.json",
+    "branch_sources": "docs/consolidation/2026-11-26/branch-sources/SOURCE_MANIFEST.json",
+    "historical_at_index": "docs/consolidation/2026-11-26/historical-at-index.json",
+    "repository_prs_enumerated": 176,
+    "issues_enumerated": 13,
+    "issue_comments": 74,
+    "historical_at_ids": 326,
+    "main_sources_indexed": 108,
+    "open_branch_sources_preserved": 19,
+    "chat_coverage": "accessible18–26Nov search results plus visible instructions; not a full conversation export",
+    "application_baseline": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+    "manifest_revision": 81,
+    "ledger_revision": 89,
+    "workspace_changed": false,
+    "runtime_changed_by_consolidation": false,
+    "private_feature_metadata_reconciliation": "bounded owner-only feature metadata; final merge receipt is recorded in the private checklist and consolidation PR",
+    "final_workspace_prompt": "blocked_until_AT325_G5_verified"
+  },
+  "active_video_policy": {
+    "effective_date": "2026-11-26",
+    "binding": true,
+    "state": "paused",
+    "active_video_ui_allowed": false,
+    "youtube_channels_or_watch_links_allowed": false,
+    "new_video_research_or_uploads_required": false,
+    "resume_requires_new_owner_direction": true,
+    "historical_sources_retained": true,
+    "runtime_removal_pr": 188,
+    "reviewed_head": "37b20c38ee14459ffc73b1b6b93840abba3c3c1c",
+    "merge_sha": "cf01561d55bbccae5712b18606c6be4e42a0e9ef",
+    "pages_run": 45734779457,
+    "pages_conclusion": "success",
+    "workspace_removal_deployed_this_checkpoint": false,
+    "supersedes": [
+      "AT-295 active video/bookmark functionality",
+      "AT-311 video links, retaining non-video local links",
+      "AT-314 channel library",
+      "AT-316/317 video work",
+      "AT-319 permission to retain active previously deployed video links"
+    ]
   }
 }

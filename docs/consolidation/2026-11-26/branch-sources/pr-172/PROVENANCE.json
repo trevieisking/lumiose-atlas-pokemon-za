@@ -1,0 +1,79 @@
+{
+  "number": 172,
+  "title": "AT-322 — Corroborate Wild Zone 18’s ordinary roster with the original screenshot",
+  "state_at_snapshot": "open",
+  "draft_at_snapshot": true,
+  "origin_pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/172",
+  "origin_head_ref": "atlas/at322-wz18-owner-survey",
+  "origin_head_sha": "c2d739942eef7c34b08a67475df2252b4d3ededb",
+  "observed_base_ref": "main",
+  "observed_base_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
+  "git_diff_merge_base_sha": "91e80f4bc1765981436e5c861540b422dd3487ad",
+  "disposition": "retain_research_candidate",
+  "consolidation_note": "Owner WZ18 100% survey image supports six ordinary species; does not prove all special encounters absent. Preserve Zone7 Gastly and existing roster; only resolve bounded discrepancy.",
+  "all_changed_paths": [
+    "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+    "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json"
+  ],
+  "source_files": [
+    {
+      "original_path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+      "change_status": "M",
+      "origin_head_sha": "c2d739942eef7c34b08a67475df2252b4d3ededb",
+      "origin_git_blob_sha1": "e1ce639cdea7f9a9e9de4f9e39e56053ea3874b1",
+      "origin_bytes": 10234,
+      "origin_sha256": "a928cb86c3b536528fb4329aa14cf34247a26551dfee584ce8c850e06f411632",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c2d739942eef7c34b08a67475df2252b4d3ededb/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "353079b21ad5c2197f108696dde3ea5df7329c8c",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-172/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+        "bytes": 10234,
+        "sha256": "a928cb86c3b536528fb4329aa14cf34247a26551dfee584ce8c850e06f411632"
+      },
+      "patch_path": "pr-172/historical-source.patch",
+      "at_ids": [
+        "AT-320",
+        "AT-321",
+        "AT-322"
+      ]
+    },
+    {
+      "original_path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+      "change_status": "M",
+      "origin_head_sha": "c2d739942eef7c34b08a67475df2252b4d3ededb",
+      "origin_git_blob_sha1": "f9cd9dde6d0c39f9853ee4dcd2e2ce78787e3581",
+      "origin_bytes": 57063,
+      "origin_sha256": "1d32cc64edd1f31bb5c878bed9dabd713dfb11e8a33b030cc74602a783f25346",
+      "origin_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c2d739942eef7c34b08a67475df2252b4d3ededb/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+      "main_path_exists_at_comparison": true,
+      "main_blob_sha1": "96e5481c8a255d9de34f22f1194dfd5c0b7b4312",
+      "byte_identical_to_comparison_main": false,
+      "preservation": "full_source_snapshot",
+      "snapshot": {
+        "path": "pr-172/docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+        "bytes": 57063,
+        "sha256": "1d32cc64edd1f31bb5c878bed9dabd713dfb11e8a33b030cc74602a783f25346"
+      },
+      "patch_path": "pr-172/historical-source.patch",
+      "at_ids": [
+        "AT-321",
+        "AT-322"
+      ]
+    }
+  ],
+  "historical_patch": {
+    "path": "pr-172/historical-source.patch",
+    "bytes": 4779,
+    "sha256": "a5addd207864be542d80c54e8e697ba90f6842e2dab4bac1efbea915f3dfb1f3"
+  },
+  "at_ids": [
+    "AT-320",
+    "AT-321",
+    "AT-322"
+  ],
+  "at_ids_absent_from_main_canonical_documents": [],
+  "original_pr_description": "Documentation only. An exact owner screenshot shows a 100% in-game survey card, six pictured species and two empty slots. This corroborates the existing ordinary roster, not the absence of any special encounter. Keep the published fieldbook and Zone 7 Gastly listing unchanged. The audit and structured register now cite the same asset and Git blob. No player-facing files, pins, photos, hooks, Workspace deployment, or Supabase changes.\n\nValidation: visually read the exact checked Git blob; matched the six species against the fieldbook and fixed Alpha metadata; parsed the amended JSON and verified only the Gastly discrepancy changed semantically."
+}
