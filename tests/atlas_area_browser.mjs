@@ -145,7 +145,7 @@ try{
       await page.reload({waitUntil:"load"});await panel();
       assert.match(await page.locator("[data-area-detail]").textContent(),/Wild Zone 20/);
       if(surface!=="explorer"){
-        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap [data-map-zone="2"]';
+        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap [data-select-zone="2"]';
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
@@ -298,7 +298,7 @@ try{
           history.pushState(history.state,"",initial);
         },{empty,initial});
         await page.locator('#mapZones [data-select-zone="3"]').click();
-        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail h3")?.textContent==="Wild Zone 03");
+        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail > .rebuild-zone-detail > h3")?.textContent==="Wild Zone 03");
         assert.equal(new URL(page.url()).searchParams.get("area"),"wz-03","Original main-map choice updates its shared URL before evidence arrives");
         assert.equal(new URL(page.url()).hash,"#maps");
         assert.equal(await page.locator('[data-area-panel]').count(),0);
@@ -308,11 +308,11 @@ try{
         release();const host=await panel();
         if(action==="back"){
           assert.equal(page.url(),empty,"Late initialization must not replay a choice superseded by Back");
-          assert.equal(await page.locator("#mapZoneDetail h3").count(),0);
+          assert.equal(await page.locator("#mapZoneDetail > .rebuild-zone-detail > h3").count(),0);
           assert.equal(await host.locator('[data-area-results] [aria-pressed="true"]').count(),0);
           await page.goForward();await page.waitForURL(url=>url.searchParams.get("area")==="wz-03");
         }
-        assert.equal(await page.locator("#mapZoneDetail h3").textContent(),"Wild Zone 03");
+        assert.equal(await page.locator("#mapZoneDetail > .rebuild-zone-detail > h3").textContent(),"Wild Zone 03");
         assert.equal(await host.locator('[data-area-results] [data-area-id="wz-03"]').getAttribute("aria-pressed"),"true");
         assert.deepEqual(await areaIds(),["wz-03"]);
         const final=new URL(page.url());
