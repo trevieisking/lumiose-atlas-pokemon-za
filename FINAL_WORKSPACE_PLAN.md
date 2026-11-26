@@ -17,6 +17,8 @@ The [guarded private tracker update and fresh readback](docs/qa/ATLAS_AT342_RELE
 
 **Rollback:** Revert PR204 merge 223762bd1a21c2e72c592e975499d13c4195ae07 through a reviewed branch/PR, rerun affected checks and verify Pages. Preserve pre-release main 7616af2a204e0a09328a5ec9f2b6a0415bf67309. No storage migration, database schema or original Workspace change is part of this GitHub release.
 
+The [walkthrough obedience pass](docs/qa/ATLAS_STORY_OBEDIENCE.json) is staged for the next content review. All 42 Main Missions get after-stage rank and capture-level guidance; rewards and unlocks remain separate. This does not change the pinned Map 2.0 handoff.
+
 <!-- END_AT342_CURRENT_91_99 -->
 
 <!-- AT342_HISTORICAL_90_98 -->
