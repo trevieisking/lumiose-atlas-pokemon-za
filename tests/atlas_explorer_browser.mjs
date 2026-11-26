@@ -54,7 +54,11 @@ try{
   assert.match(await at302Phone.textContent(),/South of Saison Canal/);
   await at302Phone.scrollIntoViewIfNeeded();
   await sectorProbe.screenshot({path:output+"/phone-at302-sector-street-bearings.png"});
-  const at304PhoneCrop=sectorProbe.locator("#sector-vert-sector-1 .sector-source-map img");
+  const at304Closeup=sectorProbe.locator("#sector-vert-sector-1 details.sector-context-detail");
+  assert.equal(await at304Closeup.count(),1,"Legacy crop stays inside the new contextual-map disclosure");
+  await at304Closeup.locator("summary").click();
+  assert.equal(await at304Closeup.evaluate(el=>el.open),true);
+  const at304PhoneCrop=at304Closeup.locator('.sector-source-map img[src="assets/atlas/sector-streets/vert/vert-1-saison-canal.png"]');
   assert.equal(await at304PhoneCrop.count(),1);
   await at304PhoneCrop.scrollIntoViewIfNeeded();
   await sectorProbe.waitForFunction(()=>document.querySelector("#sector-vert-sector-1 .sector-source-map img")?.naturalWidth===358);
