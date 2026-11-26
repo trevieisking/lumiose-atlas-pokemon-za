@@ -1,0 +1,133 @@
+{
+  "id": "AT339_WORKSPACE_FILTER_HOTFIX",
+  "date": "2026-11-26",
+  "status": "bounded_existing_site_hotfix_published_and_live_browser_verified",
+  "scope": "Repair the user's original interactive-map layer/category conflict, place search and direct access to selected photographs; not the full Workspace map upgrade.",
+  "site_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+  "live_browser_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/atlas-explorer?place=bleu3-fav",
+  "project_id": "appgprj_6afda588d5948191b4143e40a1f9c291",
+  "previous_version_number": 37,
+  "version_number": 38,
+  "version_id": "appgprj_6afda588d5948191b4143e40a1f9c291~appgver_4744d0cc4c0c81918df8cb8d822931e1",
+  "baseline_source_commit": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
+  "published_source_commit": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+  "deployment": {
+    "id": "appgdep_6b0824836dcc8191a3679431ea5bfbd8",
+    "status": "succeeded",
+    "updated_at": "2026-11-26T12:22:41.628621+00:00",
+    "provider_deployment_id": "release---6afda9f0956c8191abfcd04270a22cb6",
+    "audience": "public_preserved",
+    "environment_revision": 0
+  },
+  "source_changes": [
+    "dist/atlas-explorer.js",
+    "dist/atlas-explorer.html",
+    "dist/atlas-explorer.css"
+  ],
+  "archive": {
+    "local_tar_gz_sha256": "a6d795d067787ce0105e10e1e707862eeb0691e7df5646b968fbea653c2039b4",
+    "saved_archive_format": "tar",
+    "saved_archive_content_hash": "sha256:7b9c480bff5bbe2ef29d6250dcc2db640e796a091f995840bba3529b3480cd16",
+    "saved_archive_bytes": 51066880,
+    "saved_archive_file_count": 1114
+  },
+  "rollback": {
+    "previous_version": 37,
+    "baseline_source_commit": "1ac2c20002451d295dc4f8e80068297682fcdc4b",
+    "retained_original_source_zip_sha256": "1a35949ff538dc42287a0ba9a32037023fa0362ff849857c16ed0c66b7aa64f7",
+    "method": "Redeploy saved version 37 or revert only this three-file source commit; do not clear player storage."
+  },
+  "validation": {
+    "syntax": "passed",
+    "diff_whitespace": "passed",
+    "independent_code_review": "no concrete blocker; actual production functions exercised against original v37 data",
+    "preview_browser": {
+      "each_isolated_layer": {
+        "zone": 20,
+        "holovator": 21,
+        "ladder": 1,
+        "landmark": 5
+      },
+      "route_cursor_preserved": "cafe-cyclone, Step 2 of 5",
+      "loaded_photos": 5
+    },
+    "live_browser": {
+      "observed": true,
+      "repeated_original_failure_sequence": "48 sectors category -> Holovators off -> on",
+      "recovered_holovator_markers": 21,
+      "place_status": "47 of 47 documented place markers visible. Category: All places. No place search.",
+      "wild_zone_2_results": [
+        "wz-02"
+      ],
+      "cafe_cyclone_results": [
+        "vert-cyclone",
+        "cafe-cyclone"
+      ],
+      "selected_place": "My Favorite Holovator \u2014 Bleu Sector 3",
+      "loaded_selected_photos": 5,
+      "photo_natural_width": 1536,
+      "photo_action_focused_existing_heading": true,
+      "route_options_including_prompt": 16
+    },
+    "live_http": {
+      "verified": false,
+      "reason": "Direct executor HTTP requests returned 403. No byte-matching claim; deployment verified by native Sites success and live browser interaction."
+    }
+  },
+  "preservation": {
+    "original_records": 96,
+    "original_eligible_place_markers": 47,
+    "original_routes": 15,
+    "original_route_steps": 82,
+    "source_data_byte_unchanged": true,
+    "all_other_source_files_unchanged": true,
+    "imports_load_details_renderer_and_bookmark_functions_unchanged": true,
+    "no_new_pin_or_geometry": true,
+    "no_progress_or_backend_write": true,
+    "full_upgrade_not_imported": true
+  },
+  "full_scope_G5_signed_off": false,
+  "approved_full_scope_sha": null,
+  "final_executable_workspace_prompt": null,
+  "live_http_attempt": {
+    "observed_at": "2026-11-26T12:23:30.977044+00:00",
+    "all_matched": false,
+    "files": [
+      {
+        "path": "atlas-explorer.js",
+        "expected_sha256": "d1802faaa2a2ee4c4df05d66ac77780e24b69d39edcb8fb53dc25248f47a99c0",
+        "error": "HTTP Error 403: Forbidden",
+        "matched": false
+      },
+      {
+        "path": "atlas-explorer.css",
+        "expected_sha256": "4516c77e0e1f8bbc03135a957e1f29a1c7ac3f990bfb665c2e516fc450abe81b",
+        "error": "HTTP Error 403: Forbidden",
+        "matched": false
+      },
+      {
+        "path": "atlas-explorer.html",
+        "expected_sha256": "95833c3be95f197857d44d5498ec678a71339800a1ff0eca9729f4a8d5eec62b",
+        "error": "HTTP Error 403: Forbidden",
+        "matched": false
+      }
+    ]
+  },
+  "published_file_hashes": [
+    {
+      "path": "dist/atlas-explorer.js",
+      "bytes": 41383,
+      "sha256": "d1802faaa2a2ee4c4df05d66ac77780e24b69d39edcb8fb53dc25248f47a99c0"
+    },
+    {
+      "path": "dist/atlas-explorer.html",
+      "bytes": 16842,
+      "sha256": "95833c3be95f197857d44d5498ec678a71339800a1ff0eca9729f4a8d5eec62b"
+    },
+    {
+      "path": "dist/atlas-explorer.css",
+      "bytes": 19469,
+      "sha256": "4516c77e0e1f8bbc03135a957e1f29a1c7ac3f990bfb665c2e516fc450abe81b"
+    }
+  ]
+}

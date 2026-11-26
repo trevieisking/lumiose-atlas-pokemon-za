@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-26",
+  "scope": "AT339 bounded shared areas/habitats and filter/photo usability review",
+  "reviewed_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+  "reviewed_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+  "ci_run": 45819110334,
+  "ci_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45819110334",
+  "artifact": {
+    "id": 15117007793,
+    "archive_bytes": 65430584,
+    "archive_sha256": "590dbc50a8460a340028710f9742c57a4496e8eebad35ccfb66eb337c8b819b6",
+    "archive_digest_recomputed": true,
+    "all_30_reviewed_PNGs_and_proof_match_archive": true
+  },
+  "proof": {
+    "source_artifact_path": "atlas-areas/at339-browser-proof.json",
+    "retained_path": "at339-browser-proof.json",
+    "bytes": 1915,
+    "sha256": "9854cbbee008ff37450191cec466468a7bd4b8767b468fef46df92ed935dc44f",
+    "copied_byte_identically": true
+  },
+  "independent_reviews": [
+    {
+      "scope": "Runtime and release evidence",
+      "decision": "PROMOTE bounded PR202 runtime",
+      "concrete_blockers": [],
+      "basis": "Exact commit/tree, successful unit and four browser suites, artifact digest, source/fixture isolation, state preservation and fallback checks."
+    },
+    {
+      "scope": "Visual review of all 30 listed PNGs",
+      "decision": "Approve bounded shared navigation and filter/photo corrections",
+      "concrete_blockers": [],
+      "basis": "Readable phone controls, inline original photos, single-line main-map digits, marker/filter feedback, retained evidence limits and reviewed WZ11 outline."
+    }
+  ],
+  "approval_limits": {
+    "production_boundary_ids": [
+      "wz-02",
+      "wz-03",
+      "wz-16",
+      "wz-05",
+      "wz-11"
+    ],
+    "remaining_boundaries": 63,
+    "comprehensive_roster_reviews_complete": 0,
+    "production_collectible_placements": 0,
+    "WZ01_synthetic_example_is_production_approval": false,
+    "WZ04_production_status": "HOLD unchanged",
+    "full_scope_G5_signed_off": false,
+    "complete_Workspace_upgrade_approved": false,
+    "separate_original_Site_v38_hotfix_receipt_required": true,
+    "this_packet_is_merge_or_deployment_receipt": false,
+    "physical_device_or_in_game_verification_claimed": false
+  },
+  "recorded_automated_proof": {
+    "phone_viewport": [
+      393,
+      852
+    ],
+    "desktop_viewport": [
+      1440,
+      900
+    ],
+    "surfaces_per_device": 4,
+    "history_and_reload": true,
+    "legacy_intent_and_history_reconciliation": true,
+    "source_photo_DOM_preserved": true,
+    "route_and_collectible_state_preserved": true,
+    "seeded_progress_bytes_preserved": true,
+    "storage_writes_per_device": 0,
+    "page_errors": [],
+    "source_failure_fallback": true,
+    "touch_pinch_and_rotation": "phone only; desktop touch field is false/not applicable",
+    "synthetic_fixtures_confined_to_intercepted_test_responses": true
+  },
+  "nonblocking_caveats": [
+    {
+      "id": "smooth_scroll_capture",
+      "artifact_paths": [
+        "atlas-explorer/place-photo-details-phone.png",
+        "atlas-explorer/place-photo-details-desktop.png"
+      ],
+      "finding": "Both captures occur before the actual photo enters the viewport during smooth scroll. Do not use them as visual proof of final photo visibility. Separate assertions wait for naturalWidth > 0 and preserve the loaded image node; retained shared-panel captures visibly show inline photos.",
+      "blocking": false
+    },
+    {
+      "id": "standalone_scroller_crop",
+      "artifact_paths": [
+        "atlas-areas/at339-measured-standalone-phone.png"
+      ],
+      "finding": "The phone standalone map capture reflects its horizontal scroller rather than a complete fit-to-width viewport.",
+      "blocking": false
+    },
+    {
+      "id": "fixed_chrome_in_long_element_capture",
+      "artifact_paths": [
+        "atlas-areas/at339-main-habitats-phone.png",
+        "atlas-areas/at339-main-habitats-desktop.png"
+      ],
+      "finding": "Existing fixed main-page chrome overlaps portions of long main-panel element captures. Separate control captures establish appearance; this does not establish an unscrollable blocked control.",
+      "blocking": false
+    },
+    {
+      "id": "scaffolding_label_wrap",
+      "artifact_paths": [
+        "atlas-explorer/place-layer-recovery-phone.png"
+      ],
+      "finding": "The disabled Scaffolding label wraps mid-word on phone; cosmetic. The layer remains disabled because verified standalone scaffold pins are unavailable.",
+      "blocking": false
+    }
+  ],
+  "reviewed_png_count": 30,
+  "retained_png_count": 7,
+  "retained_png_bytes": 1448172,
+  "reviewed_files": [
+    {
+      "artifact_path": "atlas-areas/at339-boundary-item-priority-desktop.png",
+      "bytes": 35244,
+      "sha256": "09386a04d4f847ed9369dfdffa73c60fc0aa05100e1939a8dda96394f7fa68a9",
+      "width": 452,
+      "height": 454,
+      "independently_visually_reviewed": true,
+      "classification": "synthetic_boundary_and_item_placement_fixture",
+      "synthetic_geometry_or_placement_fixture": true,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-boundary-item-priority-phone.png",
+      "bytes": 30750,
+      "sha256": "63b84b2f2f1f3ed6a7b13c9826820a16c2ae44f594522e9ab71a2b88c09663f0",
+      "width": 315,
+      "height": 472,
+      "independently_visually_reviewed": true,
+      "classification": "synthetic_boundary_and_item_placement_fixture",
+      "synthetic_geometry_or_placement_fixture": true,
+      "retained_path": "screenshots/at339-boundary-item-priority-phone.png",
+      "purpose": "Item click priority against a synthetic boundary",
+      "limitation": "The item placement and verified-location wording shown in this intercepted test scenario are synthetic; production collectible placements remain empty."
+    },
+    {
+      "artifact_path": "atlas-areas/at339-explorer-controls-phone.png",
+      "bytes": 11827,
+      "sha256": "c59038d2d708acbcbb17f8a49c00a67f67cf4bd9c42f99aece77c4e080677932",
+      "width": 285,
+      "height": 226,
+      "independently_visually_reviewed": true,
+      "classification": "production_shared_controls",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": "screenshots/at339-explorer-controls-phone.png",
+      "purpose": "Phone shared area/species, district and encounter controls",
+      "limitation": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-explorer-habitats-desktop.png",
+      "bytes": 107418,
+      "sha256": "17438050836856598ff81a461c27ca6adc55e8c1c587aa79383dd8a5405246fb",
+      "width": 452,
+      "height": 1265,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-explorer-habitats-phone.png",
+      "bytes": 98223,
+      "sha256": "7964efad5e10e6c1ea8bbfda7564b3154f5529f441af8cb77b621c7fe884d7e9",
+      "width": 315,
+      "height": 1416,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-main-controls-phone.png",
+      "bytes": 12253,
+      "sha256": "bf912b2b3cbbf57f936fcfaf4b1e2504f2cafc6ce4cee100ec85ef282449e965",
+      "width": 335,
+      "height": 226,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-main-habitats-desktop.png",
+      "bytes": 99659,
+      "sha256": "f5edd904bb8d062612db35d1f7636e1bd311b8eadb4463f40ceb340a338203f2",
+      "width": 1112,
+      "height": 914,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-main-habitats-phone.png",
+      "bytes": 111421,
+      "sha256": "7ecf567a60028dd59b1a5f1933126781bd3799247a0c6c6cae9e0156f127b65e",
+      "width": 365,
+      "height": 1316,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-explorer-desktop.png",
+      "bytes": 400305,
+      "sha256": "80bf387af7efad975d42c2fda83549300f393bb84f273356987d8fda670f9bd1",
+      "width": 837,
+      "height": 568,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-explorer-phone.png",
+      "bytes": 156643,
+      "sha256": "fc32960e840c9f01126970903120186fb867f0889599f067c8e7e9d846d1be18",
+      "width": 343,
+      "height": 478,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-main-desktop.png",
+      "bytes": 458018,
+      "sha256": "d28f73a1e8bc46d53f2d9a3ede3e9c045108527a42b8b2aadf5c3b29e6b19fc4",
+      "width": 555,
+      "height": 555,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-main-phone.png",
+      "bytes": 198540,
+      "sha256": "fe729532e18665b9ef483eaad0533692823a873878ee9caac79007a5868a35b6",
+      "width": 353,
+      "height": 354,
+      "independently_visually_reviewed": true,
+      "classification": "production_map_UI",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": "screenshots/at339-measured-main-phone.png",
+      "purpose": "Phone main map with preserved one-line numbered pins",
+      "limitation": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-sectors-desktop.png",
+      "bytes": 622038,
+      "sha256": "bb4ab5212921d8b1dde1f8781d1e9019001ad89309c68cb2c31e5c9bfbee02c8",
+      "width": 670,
+      "height": 671,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-sectors-phone.png",
+      "bytes": 166731,
+      "sha256": "ad3ce2fbe8bdfff190855cdb201fb20d3b0139acfec9443246086478afd11b8e",
+      "width": 323,
+      "height": 324,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-selected-wz11-desktop.png",
+      "bytes": 651752,
+      "sha256": "127dc7c4c8b5f90f63d3fbbe63d900d96dfc77eaf37cdaed73c08a5af55301b0",
+      "width": 837,
+      "height": 568,
+      "independently_visually_reviewed": true,
+      "classification": "production_reviewed_map_outline",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": "screenshots/at339-measured-selected-wz11-desktop.png",
+      "purpose": "Selected reviewed WZ11 rendered-map outline",
+      "limitation": "Rendered map-selection geometry only; no walking route, spawn extent, floor or pickup position is established."
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-selected-wz11-phone.png",
+      "bytes": 207507,
+      "sha256": "8d8b26b833e09ce7cc9ff853f3cc91d9fe64b272396f2c7a7cab626a5f1ed758",
+      "width": 343,
+      "height": 478,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-standalone-desktop.png",
+      "bytes": 552172,
+      "sha256": "256fdaa1a0f639f87c30298fd02946e70aa6cc751f9520a47da4ad3db6dd4ad6",
+      "width": 627,
+      "height": 627,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-measured-standalone-phone.png",
+      "bytes": 316112,
+      "sha256": "359210b671d6a2c959c244dd970d27a2c6d1031825091157ada2f054dff786a3",
+      "width": 575,
+      "height": 576,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-sectors-controls-phone.png",
+      "bytes": 11950,
+      "sha256": "cec6c711b74d08bf772c67ecb3d3a5c5b97440e3daaf7de951cdba2a22c2d15d",
+      "width": 293,
+      "height": 226,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-sectors-habitats-desktop.png",
+      "bytes": 104725,
+      "sha256": "bccc9f31fe444228f16791e20ec59df1293deeac53f20bd9ca73630c4dbe2a0a",
+      "width": 1000,
+      "height": 901,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-sectors-habitats-phone.png",
+      "bytes": 98213,
+      "sha256": "0821fc9ddd1347ed461409d4d6d3628233194bcc199c342a221d5d5fceda1a60",
+      "width": 323,
+      "height": 1394,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-standalone-controls-phone.png",
+      "bytes": 11988,
+      "sha256": "74e641115f6d35db258308b1ec2ef23fab1c160a9b6137f7d030d35869f59b91",
+      "width": 331,
+      "height": 226,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-standalone-habitats-desktop.png",
+      "bytes": 104892,
+      "sha256": "97ff13f45e35e95a7283311c885b71395378601ff787ce2c2fec2a30db1e937d",
+      "width": 1052,
+      "height": 901,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-standalone-habitats-phone.png",
+      "bytes": 95863,
+      "sha256": "141cfc3ad93210c74b1598090e9efc0d93bb677f446e2d276ba117f0124e5f78",
+      "width": 361,
+      "height": 1303,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-areas/at339-synthetic-boundary-desktop.png",
+      "bytes": 236087,
+      "sha256": "9ccf62a209a6e023641982c8ca31ad7d1e36af65abc6861c24888fe9a16261e7",
+      "width": 452,
+      "height": 1904,
+      "independently_visually_reviewed": true,
+      "classification": "synthetic_WZ01_boundary_fixture",
+      "synthetic_geometry_or_placement_fixture": true,
+      "retained_path": "screenshots/at339-synthetic-boundary-desktop.png",
+      "purpose": "Desktop inline original WZ01 photographs in a synthetic interaction scenario",
+      "limitation": "The WZ01 outline and one-outline count come from an intercepted test fixture; they do not approve production WZ01 geometry."
+    },
+    {
+      "artifact_path": "atlas-areas/at339-synthetic-boundary-phone.png",
+      "bytes": 267446,
+      "sha256": "17e5f77d2c8ee0dd69d65c89ae85f17cdd31870df7882c89b1e89dc6dc4b2c13",
+      "width": 315,
+      "height": 2327,
+      "independently_visually_reviewed": true,
+      "classification": "synthetic_WZ01_boundary_fixture",
+      "synthetic_geometry_or_placement_fixture": true,
+      "retained_path": "screenshots/at339-synthetic-boundary-phone.png",
+      "purpose": "Phone inline original WZ01 photographs in a synthetic interaction scenario",
+      "limitation": "The WZ01 outline and one-outline count come from an intercepted test fixture; they do not approve production WZ01 geometry."
+    },
+    {
+      "artifact_path": "atlas-explorer/place-layer-recovery-desktop.png",
+      "bytes": 53067,
+      "sha256": "b69f9fa7346c42fedb883ff6a391f78e43626de4b38711a5d3704f6042dfa063",
+      "width": 837,
+      "height": 338,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null
+    },
+    {
+      "artifact_path": "atlas-explorer/place-layer-recovery-phone.png",
+      "bytes": 51770,
+      "sha256": "f94e242c03dcecec255b9cdfe8ba9c9dcb56a44a3ae94aed56acd35649983eae",
+      "width": 340,
+      "height": 661,
+      "independently_visually_reviewed": true,
+      "classification": "production_place_UI",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": "screenshots/place-layer-recovery-phone.png",
+      "purpose": "Phone layer recovery, visible marker count and clear/photo actions",
+      "limitation": "The disabled Scaffolding label wraps mid-word; cosmetic only."
+    },
+    {
+      "artifact_path": "atlas-explorer/place-photo-details-desktop.png",
+      "bytes": 483066,
+      "sha256": "34575a1014776a5a531b0c53c2283880ca0349920cba0331988dd94df2d6252c",
+      "width": 1440,
+      "height": 900,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null,
+      "limitation": "Captured during smooth scroll before the actual photo entered the viewport; not standalone proof of final photo visibility."
+    },
+    {
+      "artifact_path": "atlas-explorer/place-photo-details-phone.png",
+      "bytes": 62293,
+      "sha256": "41fe8c9cbe5e098c7d7e4d5f28241690c71a360643825fe3c8ec439fbebf16d7",
+      "width": 390,
+      "height": 844,
+      "independently_visually_reviewed": true,
+      "classification": "production_data_UI_capture",
+      "synthetic_geometry_or_placement_fixture": false,
+      "retained_path": null,
+      "limitation": "Captured during smooth scroll before the actual photo entered the viewport; not standalone proof of final photo visibility."
+    }
+  ],
+  "preservation": {
+    "PNG_bytes_unchanged": true,
+    "proof_bytes_unchanged": true,
+    "screenshots_recaptured_or_edited": false,
+    "private_local_paths_included": false,
+    "real_player_state_included": false,
+    "raw_third_party_datasets_included": false,
+    "canonical_checkpoint_documents_changed": false,
+    "tracker_SQL_changed": false
+  }
+}

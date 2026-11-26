@@ -2,6 +2,34 @@
 
 ## AT-339 — shared areas and Pokémon habitats
 
+<!-- AT339_RELEASE_88_96 -->
+
+**26 November 2026 · Manifest 88 / Ledger 96 · Bounded GitHub release merged, deployed and live-verified.** The runtime candidate remains recorded at **Manifest 85 / Ledger 93**.
+
+[PR202](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/202) reviewed head `42409561393a9fbaa2caa58ba781268af4cb8a6e` and tree `731042231a91996f83d4fa08bf4d9953b9987c78` merged as `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f`. [Exact-head CI](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45819110334), [exact-merge Pages](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45820881956), live HTTP byte comparisons and an independent live browser observation are recorded in the [release receipt](docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json). The [immutable release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/74975108bca6bb488ebcb9e86e908d7b90efe8ed/docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json) retains that exact proof. Validation includes **89 Node checks, 4 browser suites, 30 reviewed screenshots and 24/24 live-file HTTP matches**. These checks do not constitute physical-device or in-game verification.
+
+Explorer's layer switches now recover Holovator markers from an incompatible sector-only filter, and the visible marker status explains the active category, search and layers. **Wild Zone 2** finds the preserved **Wild Zone 02** record and excludes **Wild Zone 20**; **cafe cyclone** finds the accented Café Cyclone records. **Clear place filters** resets the directory filters while retaining layer choices; **View photos and details** focuses the existing selected gallery. Shared area details show original-photo thumbnails, phone controls follow normal page scrolling, and the main map keeps its numbered pins on one line. Existing photos, routes, camera state and saved progress remain preserved.
+
+Shared area/species selection, habitat links and history now work across Explorer, standalone Maps, the sector directory and the main guide map. The release preserves all 68 area IDs and 272 prior encounter rows, adds **283 attributed claims**, and keeps uncertain and non-wild records separate from supported habitats. It includes **five reviewed rendered map outlines** for Wild Zones **2, 3, 5, 11 and 16**. They are not walking routes, exact spawn extents, interior floors or pickup positions.
+
+**63 boundaries and all 68 comprehensive roster reviews remain open.** G0/G1 retain their verified planning/reconciliation receipts; G2/G3 remain partial, G4 is verified for this bounded behavior, and full-scope G5/A0 remain open. Zero new production pickup positions are claimed. This GitHub documentation checkpoint performs no original Workspace publication. The separately authorized existing-site filter/photo repair is limited to three Explorer files and has its own source-preservation and verification evidence; it cannot satisfy complete-upgrade G5/A0. Original Workspace **v38** was independently published from `6f7808db2d3cfaa2bb660f381b13dbab452332ce` and live-browser verified, with its original 15 routes and 82 steps preserved. The [original-site hotfix receipt](docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json) records the three-file change. Executor HTTP requests returned 403, so no live-file byte-comparison claim is made for that Site. No full-upgrade SHA or executable Workspace prompt is approved. Videos and YouTube remain paused.
+
+The bounded private feature-metadata update is **verified by guarded execution and fresh readback**. The transaction at **12:47:29.421594 UTC**, checked again at **12:47:34 UTC on 26 November 2026**, reconciled **five existing rows** to Manifest88, including `AT-339-SHARED-AREAS`, with **no insert or deletion**. All five broader feature statuses remain **in progress**; their concurrent continuations are still unfinished. The **46-row** table has unchanged immediate-before/after totals of **16 open, 19 in progress and 11 verified**; all **41 unrelated full rows**, all GitHub statuses and verification timestamps, and all Workspace fields were preserved. The earlier planned 16/20/10 snapshot remains historical: an unrelated AT328 update had already occurred before this transaction and was preserved. The [tracker execution and readback receipt](docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json) records the bounded result. Public feedback, schema, runtime Supabase connections, media pause state and player progress remain unchanged. [Implementation, source evidence and rollback](docs/qa/ATLAS_AT339_SHARED_AREAS.md).
+
+**Concurrent [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204) source records remain unmerged at this checkpoint.** Manifest88/Ledger96 avoids reusing the 86/94 and 87/95 revision pairs recorded by that independent candidate. These references preserve its work; they are not part of PR202's runtime approval, and no PR204 runtime or manifest is imported. The latest referenced source tree is `9508c7cdda23eed0942464f2210859ee3ee7e1e6`.
+
+| Unmerged source revision | Immutable source head | Source records |
+|---|---|---|
+| Manifest86 / Ledger94 | [e003f5ffa8629c7a9c52da1bbd7bd78b9103354d](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+| Manifest87 / Ledger95 | [d1d7322e6341cd91016f576161c55da682e06834](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/d1d7322e6341cd91016f576161c55da682e06834) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+| Manifest87 / Ledger95 | [3e17c260fc749e3ee5bad877470ee6035601064c](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/3e17c260fc749e3ee5bad877470ee6035601064c) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+
+The latest unmerged PR204 source reconciles the actual PR202 main merge and includes newer WZ04 evidence. This checkpoint neither imports nor approves that candidate geometry. PR202 production remains at five outlines. The retained WZ04 HOLD packet describes the earlier candidate; it is not a blanket rejection of the newer PR204 evidence, which requires its own exact-candidate review.
+
+### Historical candidate checkpoint — Manifest 85 / Ledger 93
+
+The following text records the pre-promotion candidate and is retained as historical evidence.
+
 **26 November 2026 · Manifest 85 / Ledger 93 · Candidate awaiting exact-commit browser validation and release.** Recovered the interrupted area/habitat implementation and reconciled it with PR200's newly merged owner-crop evidence. One read-only model covers **48 sectors and 20 Wild Zones**, with **272 preserved encounter rows plus 283 attributed additional claims**. All rosters remain incomplete; ordinary, fixed Alpha, rotating Alpha, gift, mission, boss, disputed and research records retain their different meanings.
 
 The candidate connects Explorer, standalone Maps, the sector directory and the main guide map, plus species links from the fieldbook and Pokédex. Selection, filters, deep links and browser history share the same area IDs. Review fixed hidden selections under old filters and stale Explorer detail/pin selection; routes, collection selections and saved progress remain separate. PR196's exact collectible-search correction is selectively included.
@@ -37,6 +65,8 @@ This is the detailed source-consolidation entry point. The existing [master plan
 
 ## Current release facts
 
+**Historical AT336 snapshot:** the text below retains that consolidation's facts and work programme. The current AT339 receipt above and the final completion plan govern completed work and remaining scope.
+
 | Surface | Verified state | What this does not establish |
 | --- | --- | --- |
 | GitHub source | PR #188 reviewed head `37b20c38ee14459ffc73b1b6b93840abba3c3c1c` merged as **`cf01561d55bbccae5712b18606c6be4e42a0e9ef`**. Three workflows/five jobs passed; four phone/desktop screenshot excerpts reviewed. | Full Map 2.0 completion or physical verification of every written route. |
@@ -57,6 +87,8 @@ Documentation consolidation can be merged independently of unfinished runtime wo
 7. **Use bounded branches and evidence.** The assistant makes technical promotion decisions, audits before coding and validates the affected behavior. Repo Desk, CG Repair Lab, Code God and the protected Writer route remain excluded. Feedback development remains complete unless a new defect warrants work.
 
 ## One consolidated work programme
+
+**Historical AT336 snapshot:** the text below retains that consolidation's facts and work programme. The current AT339 receipt above and the final completion plan govern completed work and remaining scope.
 
 ### 1. Preserve what already works and reconcile branch differences
 
@@ -106,18 +138,18 @@ Exact heads, diffs, source paths and individual decisions are in the [complete P
 
 ## Route to the final Workspace prompt
 
-| Gate | Current state | Exit needed |
-| --- | --- | --- |
-|G0|Consolidated source/requirement records; private metadata reconciliation tracked|Reviewed documentation and synchronized feature metadata with honest remaining gaps.|
-|G1|Partial|Current-base branch reconciliation; protect deployed fixes; exact route/screenshot checks.|
-|G2|Partial research|Source recovery/registration and independent checks across required map coverage.|
-|G3|Open|Approved68-area boundary/encounter evidence; mandatory uncertainties resolved.|
-|G4|Open|Shared highlight/habitat/route interactions and AT-333 collectible layers with preserved controls/progress.|
-|G5|Blocked by unfinished work|Complete-scope tests, visual review, reviewed merge, exact deploy, live checks, rollback and signoff.|
-|A0|Blocked until G5|One final prompt with the actual approved full-scope SHA/tree and reviewed Workspace change inventory.|
-|A1–A7|Next release pending|Fresh original-source/backup/compatibility checks, bounded adaptation, preview, publish and independent live verification.|
+| Gate | Current bounded release status | Remaining scope |
+|---|---|---|
+| G0 | Prior consolidation, plan and private metadata sync verified | Five existing rows reconciled to revision88; fresh readback at 12:47:34 UTC confirms all five broader features remain in progress. |
+| G1 | Required route and current-base reconciliation verified | Preserve unrelated branches and their recorded scope. |
+| G2 | Partial: five reviewed zone outlines | 63 remaining boundaries; retain source hashes and independent calibration. |
+| G3 | Partial: 283 attributed encounter claims added | All 68 comprehensive roster and condition reviews remain incomplete. |
+| G4 | Bounded shared behavior verified | Remaining full-scope coverage and written/photo approaches retain their acceptance criteria. |
+| G5 | Full-scope signoff open | Complete mandatory coverage and full-upgrade validation before approval. |
+| A0 | Blocked until full-scope G5 | Approved full-upgrade SHA and executable Workspace prompt remain unset. |
+| A1–A7 | Complete Workspace upgrade pending | Independent source, backup, compatibility, preview, publication and live verification; a separate existing-site filter/photo hotfix does not advance this full-upgrade gate. |
 
-The [Workspace prompt readiness contract](docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md) contains the complete required content and evidence fields. Its approved full-scope SHA and final executable prompt path remain **null**. This avoids treating a completed documentation merge as a completed game/map release.
+The prior gate table is retained in the structured release checkpoint history. No bounded runtime receipt substitutes for full-scope G5 approval.
 
 ## Maintenance and safe continuation
 

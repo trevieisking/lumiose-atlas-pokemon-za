@@ -1,0 +1,1659 @@
+{
+  "id": "WZ04-MANUAL-CANDIDATE-2026-11-26",
+  "status": "candidate_pending_independent_review_with_three_unresolved_gate_connectors",
+  "baseline_commit": "ace2f504619b7a271e3ecb5d75d3ba565fe6052d",
+  "area_id": "wz-04",
+  "approved": false,
+  "production_geometry": null,
+  "scope": "Only a rendered map-selection outline candidate. No spawn, walkability, floor, route, entrance-accessibility, encounter or physical-geography claim.",
+  "registration": {
+    "method": "Six manually identified architecture correspondences fitted by unrobust projective least squares; no boundary vertices, cursor, gate symbols, zone badges, text or icons used for fitting. Three architecture and five border checks are withheld from the fit. An additional attempted architecture check H4 was visually rejected because it lies on a plain pavement edge rather than an identifiable corner; it remains in the receipt and review panel but is excluded from accuracy summaries. Initial point roles were fixed before fitting; neither the fitted controls nor transform changed after review. All observations and first-pass picks are retained.",
+    "source_to_native_matrix": [
+      [
+        0.2743846827376428,
+        -0.03588969231041278,
+        914.0695539230477
+      ],
+      [
+        0.008291198230332945,
+        0.2120663639153156,
+        199.1779003944205
+      ],
+      [
+        4.748831494523409e-05,
+        -3.7356196451293315e-05,
+        1.0
+      ]
+    ],
+    "metrics": {
+      "fit": {
+        "count": 6,
+        "rms_px": 1.0261018477352801,
+        "max_px": 1.7105684269212482
+      },
+      "architecture_holdout": {
+        "count": 3,
+        "rms_px": 1.5879670355794824,
+        "max_px": 1.81262105353095
+      },
+      "border_holdout": {
+        "count": 5,
+        "rms_px": 0.8563820079038018,
+        "max_px": 1.1735796449544758
+      }
+    },
+    "points": [
+      {
+        "id": "F1",
+        "label": "west upper roof northeast corner",
+        "source_xy": [
+          73,
+          291
+        ],
+        "native_xy": [
+          930.5,
+          264
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          930.5454999293936,
+          263.4450183072605
+        ],
+        "residual_px": 0.5568437149244039
+      },
+      {
+        "id": "F2",
+        "label": "west upper roof southeast corner",
+        "source_xy": [
+          73,
+          390
+        ],
+        "native_xy": [
+          930.5,
+          285
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          930.4325690108769,
+          285.66051990541615
+        ],
+        "residual_px": 0.6639529228379654
+      },
+      {
+        "id": "F3",
+        "label": "zone outer pavement northwest corner",
+        "source_xy": [
+          249.5,
+          85.5
+        ],
+        "native_xy": [
+          971,
+          217.5
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          971.0560755062567,
+          217.49593603609569
+        ],
+        "residual_px": 0.05622257735604481
+      },
+      {
+        "id": "F4",
+        "label": "zone outer pavement northeast corner",
+        "source_xy": [
+          1330.5,
+          95.5
+        ],
+        "native_xy": [
+          1204,
+          217.5
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          1203.9373569263275,
+          217.4955319926232
+        ],
+        "residual_px": 0.06280221149810394
+      },
+      {
+        "id": "F5",
+        "label": "east roof southwest corner",
+        "source_xy": [
+          1387,
+          740
+        ],
+        "native_xy": [
+          1221,
+          352.5
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          1221.3976129252737,
+          354.07326289203695
+        ],
+        "residual_px": 1.6227298499150147
+      },
+      {
+        "id": "F6",
+        "label": "zone outer pavement southeast corner",
+        "source_xy": [
+          1301.5,
+          754
+        ],
+        "native_xy": [
+          1204,
+          359.5
+        ],
+        "role": "fit",
+        "projected_native_xy": [
+          1203.6308857018705,
+          357.82973086656784
+        ],
+        "residual_px": 1.7105684269212482
+      },
+      {
+        "id": "H1",
+        "label": "north roof southwest corner",
+        "source_xy": [
+          281,
+          20
+        ],
+        "native_xy": [
+          979.5,
+          202
+        ],
+        "role": "architecture_holdout",
+        "projected_native_xy": [
+          978.132233632772,
+          203.18945796410952
+        ],
+        "residual_px": 1.81262105353095
+      },
+      {
+        "id": "H2",
+        "label": "east roof northwest corner",
+        "source_xy": [
+          1410.5,
+          126
+        ],
+        "native_xy": [
+          1221.5,
+          224
+        ],
+        "role": "architecture_holdout",
+        "projected_native_xy": [
+          1220.5564234829624,
+          223.66422130503517
+        ],
+        "residual_px": 1.00154080071515
+      },
+      {
+        "id": "H3",
+        "label": "east courtyard southwest corner",
+        "source_xy": [
+          1517,
+          606
+        ],
+        "native_xy": [
+          1246.5,
+          326
+        ],
+        "role": "architecture_holdout",
+        "projected_native_xy": [
+          1246.9597594113532,
+          324.24932580337384
+        ],
+        "residual_px": 1.810038358450028
+      },
+      {
+        "id": "H4",
+        "label": "REJECTED plain west pavement edge",
+        "source_xy": [
+          98,
+          269
+        ],
+        "native_xy": [
+          936.5,
+          259.5
+        ],
+        "role": "rejected_nonlandmark",
+        "first_pass_role": "architecture_holdout",
+        "rejection": "The labelled crop showed a straight pavement edge, not an independently identifiable corner. Retained transparently; excluded from holdout statistics despite its low residual.",
+        "projected_native_xy": [
+          936.3565334985009,
+          258.4305125038408
+        ],
+        "residual_px": 1.0790672553150877
+      },
+      {
+        "id": "B1",
+        "label": "green perimeter northwest corner",
+        "source_xy": [
+          282,
+          119
+        ],
+        "native_xy": [
+          979,
+          225
+        ],
+        "role": "border_holdout",
+        "projected_native_xy": [
+          978.4218882704919,
+          224.74130851415583
+        ],
+        "residual_px": 0.6333517637483426
+      },
+      {
+        "id": "B2",
+        "label": "green perimeter northeast corner",
+        "source_xy": [
+          1298,
+          129
+        ],
+        "native_xy": [
+          1197,
+          225
+        ],
+        "role": "border_holdout",
+        "projected_native_xy": [
+          1197.5455080608483,
+          224.53798969822455
+        ],
+        "residual_px": 0.7148654162827585
+      },
+      {
+        "id": "B3",
+        "label": "green perimeter southeast corner",
+        "source_xy": [
+          1276,
+          727
+        ],
+        "native_xy": [
+          1197,
+          352
+        ],
+        "role": "border_holdout",
+        "projected_native_xy": [
+          1198.0337853126152,
+          352.15467255794135
+        ],
+        "residual_px": 1.0452921470857341
+      },
+      {
+        "id": "B4",
+        "label": "south gate west outer shoulder",
+        "source_xy": [
+          983,
+          714
+        ],
+        "native_xy": [
+          1135,
+          352
+        ],
+        "role": "border_holdout",
+        "first_pass_native_xy": [
+          1138.5,
+          352
+        ],
+        "correction": "The first pick was inside the symbol apron. A 12x nearest-neighbour native crop showed the external green-line shoulder at x1135. No fit point, role or transform was changed; both residuals are retained.",
+        "projected_native_xy": [
+          1135.4456769490935,
+          351.70634901923773
+        ],
+        "residual_px": 0.5337216891376082,
+        "first_pass_residual_px": 3.0684067849295387
+      },
+      {
+        "id": "B5",
+        "label": "south gate east outer shoulder",
+        "source_xy": [
+          1080,
+          718
+        ],
+        "native_xy": [
+          1157.5,
+          352
+        ],
+        "role": "border_holdout",
+        "first_pass_native_xy": [
+          1158.5,
+          352
+        ],
+        "correction": "The 12x native inspection locates the external green-line shoulder one pixel west of the first pick. No fit point, role or transform was changed; both residuals are retained.",
+        "projected_native_xy": [
+          1156.3454900305135,
+          351.7892966222205
+        ],
+        "residual_px": 1.1735796449544758,
+        "first_pass_residual_px": 2.1647884705034173
+      }
+    ]
+  },
+  "candidate": {
+    "native_vertices": [
+      [
+        978.4218882704919,
+        224.74130851415583
+      ],
+      [
+        1086.8562651994364,
+        224.67643715470913
+      ],
+      [
+        1105.779525777668,
+        224.68721518625472
+      ],
+      [
+        1197.5455080608483,
+        224.53798969822455
+      ],
+      [
+        1198.0337853126152,
+        352.15467255794135
+      ],
+      [
+        1156.5597106000353,
+        351.7810832743163
+      ],
+      [
+        1155.4032159113276,
+        349.18485300455137
+      ],
+      [
+        1136.6777370305565,
+        349.45045967732193
+      ],
+      [
+        1135.4456769490932,
+        351.70634901923773
+      ],
+      [
+        978.1119963876648,
+        352.4572367807419
+      ],
+      [
+        977.9563549855919,
+        298.4301619123055
+      ],
+      [
+        981.1540095844458,
+        297.4522138514037
+      ],
+      [
+        981.0915005445154,
+        279.1560363162281
+      ],
+      [
+        978.125164302517,
+        277.8854272558743
+      ]
+    ],
+    "source_vertices": [
+      {
+        "xy": [
+          282,
+          119
+        ],
+        "label": "northwest visible corner"
+      },
+      {
+        "xy": [
+          773,
+          124
+        ],
+        "label": "north line before gate symbol"
+      },
+      {
+        "xy": [
+          861,
+          125
+        ],
+        "label": "north line after gate symbol"
+      },
+      {
+        "xy": [
+          1298,
+          129
+        ],
+        "label": "northeast visible corner"
+      },
+      {
+        "xy": [
+          1276,
+          727
+        ],
+        "label": "southeast visible corner"
+      },
+      {
+        "xy": [
+          1081,
+          718
+        ],
+        "label": "south gate east outer shoulder"
+      },
+      {
+        "xy": [
+          1076,
+          706
+        ],
+        "label": "south gate east inner shoulder"
+      },
+      {
+        "xy": [
+          989,
+          704
+        ],
+        "label": "south gate west inner shoulder"
+      },
+      {
+        "xy": [
+          983,
+          714
+        ],
+        "label": "south gate west outer shoulder"
+      },
+      {
+        "xy": [
+          279,
+          691
+        ],
+        "label": "southwest visible source corner; native cursor occludes it"
+      },
+      {
+        "xy": [
+          279,
+          452
+        ],
+        "label": "west gate south outer shoulder"
+      },
+      {
+        "xy": [
+          293,
+          448
+        ],
+        "label": "west gate south inner shoulder"
+      },
+      {
+        "xy": [
+          293,
+          366
+        ],
+        "label": "west gate north inner shoulder"
+      },
+      {
+        "xy": [
+          280,
+          360
+        ],
+        "label": "west gate north outer shoulder"
+      }
+    ],
+    "unresolved_segments": [
+      {
+        "from_vertex": 1,
+        "to_vertex": 2,
+        "reason": "North gate symbol covers a short perimeter span. Straight connection of the two visible green-line approaches is a selection-outline interpretation, not an observed continuous line."
+      },
+      {
+        "from_vertex": 6,
+        "to_vertex": 7,
+        "reason": "South gate symbol covers the connection between visible inner shoulders. Its arrow tips and filled squares are excluded from the outline; the crossing is unreviewed."
+      },
+      {
+        "from_vertex": 11,
+        "to_vertex": 12,
+        "reason": "West gate symbol covers the inner crossing. The source exposes both shoulders; their connection is unreviewed. This is not a traversable entrance claim."
+      }
+    ],
+    "closed_for_review_only": true,
+    "uncertainty": "Manual/raster picks are not subpixel physical truth. Residuals measure these image correspondences only, not a geographic accuracy bound. Review the 1.6\u20131.7 px southeast fit disagreement, native cursor-occluded west edge, and all three gate connectors. No uniform uncertainty radius is certified."
+  },
+  "topology": {
+    "vertex_count": 14,
+    "finite": true,
+    "in_native_bounds": true,
+    "self_intersections": [],
+    "area_native_px2": 27867.38029458627
+  },
+  "owner_corroboration": [
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+      "source_sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+      "matrix": [
+        [
+          1.0380447295713415,
+          0.003924658076965043,
+          29.33582976135691
+        ],
+        [
+          0.005105739663868397,
+          1.046120549169962,
+          -60.75378621948448
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "fit_count": 19,
+      "held_out": {
+        "count": 26,
+        "rms_px": 3.523442194181586,
+        "max_px": 7.489817383789794
+      },
+      "method": "Unchanged PR200 screening procedure: least-squares affine, target crop plus 48-native-pixel margin excluded from fit and holdout. Alternate-grid patch correspondences are contextual corroboration; they are not new named manual controls and do not determine this outline.",
+      "fit_points": [
+        {
+          "source_xy": [
+            882,
+            145
+          ],
+          "base_xy": [
+            946,
+            93
+          ],
+          "patch_score": 0.8969,
+          "residual_px": 2.2662
+        },
+        {
+          "source_xy": [
+            1146,
+            145
+          ],
+          "base_xy": [
+            1225,
+            95
+          ],
+          "patch_score": 0.6911,
+          "residual_px": 4.9229
+        },
+        {
+          "source_xy": [
+            750,
+            257
+          ],
+          "base_xy": [
+            807,
+            211
+          ],
+          "patch_score": 0.7877,
+          "residual_px": 2.5845
+        },
+        {
+          "source_xy": [
+            222,
+            481
+          ],
+          "base_xy": [
+            261,
+            446
+          ],
+          "patch_score": 0.7897,
+          "residual_px": 2.6166
+        },
+        {
+          "source_xy": [
+            750,
+            481
+          ],
+          "base_xy": [
+            806,
+            447
+          ],
+          "patch_score": 0.761,
+          "residual_px": 4.1895
+        },
+        {
+          "source_xy": [
+            354,
+            593
+          ],
+          "base_xy": [
+            397,
+            563
+          ],
+          "patch_score": 0.8314,
+          "residual_px": 2.7573
+        },
+        {
+          "source_xy": [
+            882,
+            593
+          ],
+          "base_xy": [
+            944,
+            567
+          ],
+          "patch_score": 0.7639,
+          "residual_px": 4.5869
+        },
+        {
+          "source_xy": [
+            1146,
+            593
+          ],
+          "base_xy": [
+            1223,
+            568
+          ],
+          "patch_score": 0.85,
+          "residual_px": 2.976
+        },
+        {
+          "source_xy": [
+            486,
+            705
+          ],
+          "base_xy": [
+            534,
+            680
+          ],
+          "patch_score": 0.9055,
+          "residual_px": 2.7292
+        },
+        {
+          "source_xy": [
+            750,
+            705
+          ],
+          "base_xy": [
+            807,
+            682
+          ],
+          "patch_score": 0.8629,
+          "residual_px": 4.0192
+        },
+        {
+          "source_xy": [
+            1278,
+            705
+          ],
+          "base_xy": [
+            1361,
+            684
+          ],
+          "patch_score": 0.8715,
+          "residual_px": 2.1302
+        },
+        {
+          "source_xy": [
+            90,
+            817
+          ],
+          "base_xy": [
+            131,
+            791
+          ],
+          "patch_score": 0.7862,
+          "residual_px": 6.2825
+        },
+        {
+          "source_xy": [
+            354,
+            817
+          ],
+          "base_xy": [
+            400,
+            795
+          ],
+          "patch_score": 0.8573,
+          "residual_px": 0.7764
+        },
+        {
+          "source_xy": [
+            1146,
+            817
+          ],
+          "base_xy": [
+            1222,
+            801
+          ],
+          "patch_score": 0.8675,
+          "residual_px": 1.2846
+        },
+        {
+          "source_xy": [
+            1410,
+            817
+          ],
+          "base_xy": [
+            1497,
+            801
+          ],
+          "patch_score": 0.8166,
+          "residual_px": 0.5951
+        },
+        {
+          "source_xy": [
+            1674,
+            817
+          ],
+          "base_xy": [
+            1770,
+            801
+          ],
+          "patch_score": 0.8662,
+          "residual_px": 1.4995
+        },
+        {
+          "source_xy": [
+            222,
+            929
+          ],
+          "base_xy": [
+            267,
+            910
+          ],
+          "patch_score": 0.822,
+          "residual_px": 4.4981
+        },
+        {
+          "source_xy": [
+            1014,
+            929
+          ],
+          "base_xy": [
+            1085,
+            917
+          ],
+          "patch_score": 0.8,
+          "residual_px": 0.8987
+        },
+        {
+          "source_xy": [
+            1542,
+            929
+          ],
+          "base_xy": [
+            1633,
+            917
+          ],
+          "patch_score": 0.893,
+          "residual_px": 2.0874
+        }
+      ],
+      "held_out_points": [
+        {
+          "source_xy": [
+            1014,
+            145
+          ],
+          "base_xy": [
+            1082,
+            93
+          ],
+          "patch_score": 0.8611,
+          "residual_px": 3.1851
+        },
+        {
+          "source_xy": [
+            750,
+            369
+          ],
+          "base_xy": [
+            806,
+            329
+          ],
+          "patch_score": 0.7456,
+          "residual_px": 3.7846
+        },
+        {
+          "source_xy": [
+            1278,
+            369
+          ],
+          "base_xy": [
+            1364,
+            331
+          ],
+          "patch_score": 0.8787,
+          "residual_px": 5.9826
+        },
+        {
+          "source_xy": [
+            354,
+            481
+          ],
+          "base_xy": [
+            396,
+            446
+          ],
+          "patch_score": 0.8559,
+          "residual_px": 3.4274
+        },
+        {
+          "source_xy": [
+            882,
+            481
+          ],
+          "base_xy": [
+            945,
+            447
+          ],
+          "patch_score": 0.819,
+          "residual_px": 2.1801
+        },
+        {
+          "source_xy": [
+            1146,
+            481
+          ],
+          "base_xy": [
+            1224,
+            448
+          ],
+          "patch_score": 0.8986,
+          "residual_px": 2.6977
+        },
+        {
+          "source_xy": [
+            1410,
+            481
+          ],
+          "base_xy": [
+            1500,
+            450
+          ],
+          "patch_score": 0.7777,
+          "residual_px": 4.5878
+        },
+        {
+          "source_xy": [
+            222,
+            593
+          ],
+          "base_xy": [
+            262,
+            562
+          ],
+          "patch_score": 0.8255,
+          "residual_px": 1.2945
+        },
+        {
+          "source_xy": [
+            486,
+            593
+          ],
+          "base_xy": [
+            533,
+            564
+          ],
+          "patch_score": 0.8492,
+          "residual_px": 3.8346
+        },
+        {
+          "source_xy": [
+            750,
+            593
+          ],
+          "base_xy": [
+            806,
+            566
+          ],
+          "patch_score": 0.8744,
+          "residual_px": 5.1529
+        },
+        {
+          "source_xy": [
+            1014,
+            593
+          ],
+          "base_xy": [
+            1084,
+            567
+          ],
+          "patch_score": 0.8174,
+          "residual_px": 2.3731
+        },
+        {
+          "source_xy": [
+            1542,
+            593
+          ],
+          "base_xy": [
+            1637,
+            568
+          ],
+          "patch_score": 0.8787,
+          "residual_px": 4.2207
+        },
+        {
+          "source_xy": [
+            90,
+            705
+          ],
+          "base_xy": [
+            129,
+            677
+          ],
+          "patch_score": 0.8596,
+          "residual_px": 3.5883
+        },
+        {
+          "source_xy": [
+            354,
+            705
+          ],
+          "base_xy": [
+            399,
+            679
+          ],
+          "patch_score": 0.8061,
+          "residual_px": 0.6991
+        },
+        {
+          "source_xy": [
+            618,
+            705
+          ],
+          "base_xy": [
+            670,
+            681
+          ],
+          "patch_score": 0.8837,
+          "residual_px": 3.8475
+        },
+        {
+          "source_xy": [
+            882,
+            705
+          ],
+          "base_xy": [
+            944,
+            683
+          ],
+          "patch_score": 0.8618,
+          "residual_px": 4.212
+        },
+        {
+          "source_xy": [
+            1146,
+            705
+          ],
+          "base_xy": [
+            1223,
+            684
+          ],
+          "patch_score": 0.875,
+          "residual_px": 1.7871
+        },
+        {
+          "source_xy": [
+            1410,
+            705
+          ],
+          "base_xy": [
+            1498,
+            684
+          ],
+          "patch_score": 0.8673,
+          "residual_px": 1.9175
+        },
+        {
+          "source_xy": [
+            222,
+            817
+          ],
+          "base_xy": [
+            264,
+            794
+          ],
+          "patch_score": 0.7014,
+          "residual_px": 1.623
+        },
+        {
+          "source_xy": [
+            750,
+            817
+          ],
+          "base_xy": [
+            807,
+            798
+          ],
+          "patch_score": 0.8667,
+          "residual_px": 4.0835
+        },
+        {
+          "source_xy": [
+            1014,
+            817
+          ],
+          "base_xy": [
+            1084,
+            801
+          ],
+          "patch_score": 0.8004,
+          "residual_px": 2.2673
+        },
+        {
+          "source_xy": [
+            1542,
+            817
+          ],
+          "base_xy": [
+            1634,
+            801
+          ],
+          "patch_score": 0.8769,
+          "residual_px": 0.9026
+        },
+        {
+          "source_xy": [
+            90,
+            929
+          ],
+          "base_xy": [
+            133,
+            908
+          ],
+          "patch_score": 0.8396,
+          "residual_px": 7.8285
+        },
+        {
+          "source_xy": [
+            354,
+            929
+          ],
+          "base_xy": [
+            402,
+            911
+          ],
+          "patch_score": 0.8402,
+          "residual_px": 2.6618
+        },
+        {
+          "source_xy": [
+            1146,
+            929
+          ],
+          "base_xy": [
+            1222,
+            918
+          ],
+          "patch_score": 0.8821,
+          "residual_px": 1.2183
+        },
+        {
+          "source_xy": [
+            1410,
+            929
+          ],
+          "base_xy": [
+            1496,
+            918
+          ],
+          "patch_score": 0.8989,
+          "residual_px": 0.7788
+        }
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+      "source_sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+      "matrix": [
+        [
+          1.0347919818887892,
+          0.005552004934034405,
+          466.662229281482
+        ],
+        [
+          0.012959655369879974,
+          1.0387791175786893,
+          82.28186407354401
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "fit_count": 13,
+      "held_out": {
+        "count": 22,
+        "rms_px": 4.369945605859274,
+        "max_px": 8.32803558449544
+      },
+      "method": "Unchanged PR200 screening procedure: least-squares affine, target crop plus 48-native-pixel margin excluded from fit and holdout. Alternate-grid patch correspondences are contextual corroboration; they are not new named manual controls and do not determine this outline.",
+      "fit_points": [
+        {
+          "source_xy": [
+            354,
+            369
+          ],
+          "base_xy": [
+            835,
+            471
+          ],
+          "patch_score": 0.8022,
+          "residual_px": 2.0765
+        },
+        {
+          "source_xy": [
+            618,
+            369
+          ],
+          "base_xy": [
+            1107,
+            472
+          ],
+          "patch_score": 0.8812,
+          "residual_px": 1.4214
+        },
+        {
+          "source_xy": [
+            222,
+            481
+          ],
+          "base_xy": [
+            700,
+            586
+          ],
+          "patch_score": 0.8151,
+          "residual_px": 1.9773
+        },
+        {
+          "source_xy": [
+            750,
+            481
+          ],
+          "base_xy": [
+            1243,
+            590
+          ],
+          "patch_score": 0.8881,
+          "residual_px": 2.6361
+        },
+        {
+          "source_xy": [
+            90,
+            593
+          ],
+          "base_xy": [
+            567,
+            701
+          ],
+          "patch_score": 0.8228,
+          "residual_px": 4.1969
+        },
+        {
+          "source_xy": [
+            882,
+            593
+          ],
+          "base_xy": [
+            1381,
+            709
+          ],
+          "patch_score": 0.8536,
+          "residual_px": 1.7373
+        },
+        {
+          "source_xy": [
+            222,
+            705
+          ],
+          "base_xy": [
+            701,
+            817
+          ],
+          "patch_score": 0.7799,
+          "residual_px": 1.2282
+        },
+        {
+          "source_xy": [
+            750,
+            705
+          ],
+          "base_xy": [
+            1243,
+            824
+          ],
+          "patch_score": 0.7942,
+          "residual_px": 3.6886
+        },
+        {
+          "source_xy": [
+            1014,
+            705
+          ],
+          "base_xy": [
+            1521,
+            829
+          ],
+          "patch_score": 0.8166,
+          "residual_px": 1.8948
+        },
+        {
+          "source_xy": [
+            1278,
+            705
+          ],
+          "base_xy": [
+            1798,
+            831
+          ],
+          "patch_score": 0.8898,
+          "residual_px": 4.8974
+        },
+        {
+          "source_xy": [
+            882,
+            817
+          ],
+          "base_xy": [
+            1382,
+            944
+          ],
+          "patch_score": 0.7218,
+          "residual_px": 2.2231
+        },
+        {
+          "source_xy": [
+            1146,
+            817
+          ],
+          "base_xy": [
+            1658,
+            947
+          ],
+          "patch_score": 0.8419,
+          "residual_px": 1.4393
+        },
+        {
+          "source_xy": [
+            486,
+            929
+          ],
+          "base_xy": [
+            973,
+            1051
+          ],
+          "patch_score": 0.8715,
+          "residual_px": 4.1705
+        }
+      ],
+      "held_out_points": [
+        {
+          "source_xy": [
+            882,
+            257
+          ],
+          "base_xy": [
+            1384,
+            353
+          ],
+          "patch_score": 0.8603,
+          "residual_px": 6.1294
+        },
+        {
+          "source_xy": [
+            222,
+            369
+          ],
+          "base_xy": [
+            699,
+            469
+          ],
+          "patch_score": 0.8403,
+          "residual_px": 1.7006
+        },
+        {
+          "source_xy": [
+            750,
+            369
+          ],
+          "base_xy": [
+            1244,
+            472
+          ],
+          "patch_score": 0.836,
+          "residual_px": 1.9709
+        },
+        {
+          "source_xy": [
+            1014,
+            369
+          ],
+          "base_xy": [
+            1523,
+            473
+          ],
+          "patch_score": 0.8722,
+          "residual_px": 6.1141
+        },
+        {
+          "source_xy": [
+            90,
+            481
+          ],
+          "base_xy": [
+            566,
+            584
+          ],
+          "patch_score": 0.7224,
+          "residual_px": 3.7302
+        },
+        {
+          "source_xy": [
+            354,
+            481
+          ],
+          "base_xy": [
+            835,
+            587
+          ],
+          "patch_score": 0.8741,
+          "residual_px": 1.4107
+        },
+        {
+          "source_xy": [
+            618,
+            481
+          ],
+          "base_xy": [
+            1107,
+            588
+          ],
+          "patch_score": 0.7864,
+          "residual_px": 2.1934
+        },
+        {
+          "source_xy": [
+            882,
+            481
+          ],
+          "base_xy": [
+            1382,
+            590
+          ],
+          "patch_score": 0.8263,
+          "residual_px": 2.1434
+        },
+        {
+          "source_xy": [
+            1146,
+            481
+          ],
+          "base_xy": [
+            1662,
+            592
+          ],
+          "patch_score": 0.7852,
+          "residual_px": 7.3725
+        },
+        {
+          "source_xy": [
+            486,
+            593
+          ],
+          "base_xy": [
+            970,
+            705
+          ],
+          "patch_score": 0.8839,
+          "residual_px": 3.0005
+        },
+        {
+          "source_xy": [
+            750,
+            593
+          ],
+          "base_xy": [
+            1243,
+            707
+          ],
+          "patch_score": 0.7999,
+          "residual_px": 3.1557
+        },
+        {
+          "source_xy": [
+            1014,
+            593
+          ],
+          "base_xy": [
+            1521,
+            710
+          ],
+          "patch_score": 0.8494,
+          "residual_px": 1.7544
+        },
+        {
+          "source_xy": [
+            1278,
+            593
+          ],
+          "base_xy": [
+            1799,
+            713
+          ],
+          "patch_score": 0.8187,
+          "residual_px": 6.4767
+        },
+        {
+          "source_xy": [
+            354,
+            705
+          ],
+          "base_xy": [
+            836,
+            818
+          ],
+          "patch_score": 0.8259,
+          "residual_px": 1.7619
+        },
+        {
+          "source_xy": [
+            618,
+            705
+          ],
+          "base_xy": [
+            1107,
+            822
+          ],
+          "patch_score": 0.7673,
+          "residual_px": 3.1481
+        },
+        {
+          "source_xy": [
+            1146,
+            705
+          ],
+          "base_xy": [
+            1660,
+            830
+          ],
+          "patch_score": 0.8521,
+          "residual_px": 3.622
+        },
+        {
+          "source_xy": [
+            1014,
+            817
+          ],
+          "base_xy": [
+            1521,
+            946
+          ],
+          "patch_score": 0.7766,
+          "residual_px": 1.7592
+        },
+        {
+          "source_xy": [
+            90,
+            929
+          ],
+          "base_xy": [
+            571,
+            1046
+          ],
+          "patch_score": 0.8683,
+          "residual_px": 7.5063
+        },
+        {
+          "source_xy": [
+            354,
+            929
+          ],
+          "base_xy": [
+            838,
+            1048
+          ],
+          "patch_score": 0.7137,
+          "residual_px": 5.2868
+        },
+        {
+          "source_xy": [
+            618,
+            929
+          ],
+          "base_xy": [
+            1109,
+            1054
+          ],
+          "patch_score": 0.799,
+          "residual_px": 3.2719
+        },
+        {
+          "source_xy": [
+            882,
+            929
+          ],
+          "base_xy": [
+            1381,
+            1058
+          ],
+          "patch_score": 0.8752,
+          "residual_px": 3.7528
+        },
+        {
+          "source_xy": [
+            1146,
+            929
+          ],
+          "base_xy": [
+            1657,
+            1061
+          ],
+          "patch_score": 0.8406,
+          "residual_px": 1.8839
+        }
+      ]
+    }
+  ],
+  "occlusions": [
+    "The native red cursor overlaps the west perimeter and southwest corner; use the original closeup and two retained PR200 images for those spans.",
+    "The native crown and zone badge obscure the north gate region/interior; original photo identity and surrounding architecture are used, never the crown/badge geometry.",
+    "The closeup's cursor, place name and badge lie inside the zone and are not used as landmarks or polygon edges.",
+    "Gate symbols cover short crossing spans in every supplied view. These three connectors remain explicit candidate interpretations, not newly observed geography."
+  ],
+  "sources": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "bytes": 411683,
+      "dimensions": [
+        1920,
+        1920
+      ]
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+      "sha256": "d46ebad35a9e2e17a84bb70b990a1b37f3e33200736342e7393871a6228faa36",
+      "bytes": 532567,
+      "dimensions": [
+        1536,
+        865
+      ]
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+      "sha256": "1539b255f8a617b5eec88b47bd068694283de101b88a2d24a36785d49b036c0e",
+      "bytes": 938497,
+      "dimensions": [
+        1536,
+        865
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/manifest.json",
+      "sha256": "b12291163a0c886e62b937cbe854f4b942b40d4cd74368cc44596a1cb4796e01",
+      "bytes": 101562
+    },
+    {
+      "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+      "sha256": "f319bcc58327d868389624a537bbe32818ec0f86108907380c87f386e4c20369",
+      "bytes": 7001
+    },
+    {
+      "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md",
+      "sha256": "0e484bdeac2994f3fcd94822d30087ce59c30fd92f55c215d22851b8bd946b48",
+      "bytes": 2608
+    },
+    {
+      "path": "docs/qa/atlas-early-zone-outline-screening.jpg",
+      "sha256": "86cc05d3b221738264032cb5257a5eb970fa131e6616361fab687e2644029a9c",
+      "bytes": 385363,
+      "dimensions": [
+        1250,
+        1200
+      ]
+    },
+    {
+      "path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "sha256": "741c4f88f15cf867d698b4b278449da181b575c3fa7608cb7f6aa9bab10a9d64",
+      "bytes": 621124
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+      "sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+      "bytes": 503015,
+      "dimensions": [
+        2048,
+        1049
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+      "sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+      "bytes": 480007,
+      "dimensions": [
+        2048,
+        1046
+      ]
+    }
+  ],
+  "preserved_rejections": [
+    "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+    "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md",
+    "docs/qa/atlas-early-zone-outline-screening.jpg",
+    "docs/qa/at339-geometry/wild_zone_registration_candidates.json"
+  ],
+  "review_artifacts": [
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/landmark-review.png",
+      "sha256": "5b2e76ad76f8a585403e6b54a48f71cba4df47929c2cbe6e7252feda1523195d"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/registered-source-review.png",
+      "sha256": "42808cf221f9702334afcbb3cc91a58fecfc98ebf69168cf48d522f15b9a34a0"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/original-closeup-review.png",
+      "sha256": "ff07258eba4387b330892542ce2629b2894166835997b3217abff4ebf9ea09b1"
+    }
+  ],
+  "reproducibility": {
+    "script_sha256": "e6cdbdb0df961cd319354cc684db718eca4bbcc3ada5c4528ae07e85bec45a54",
+    "observations_sha256": "91f38e7eacb91d5f8541bb52884c7ce8d5994a14458d5970837ca1d9a60b186a",
+    "python_dependencies": {
+      "opencv": "4.13.0",
+      "numpy": "2.3.5"
+    }
+  },
+  "independent_review": {
+    "decision": null,
+    "reviewer": null,
+    "required": "Review original point pairs, source agreement and three gate connectors before considering any runtime geometry. The gate connectors must not be silently described as directly observed."
+  }
+}
