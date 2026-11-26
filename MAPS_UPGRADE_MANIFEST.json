@@ -145,16 +145,19 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": false,
-    "site_code_changed": true,
+    "documentation_only_this_revision": true,
+    "site_code_changed": false,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
     "original_workspace_site_changed": false,
     "protected_code_labs_writer_used": false,
-    "supabase_private_feature_metadata_update_planned": true,
-    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
-    "checkpoint_scope": "AT-341: preserve all original behavior, repair the demonstrated test setup failure, retain source evidence and synchronize private planning metadata. No public database or Workspace changes."
+    "supabase_private_feature_metadata_update_planned": false,
+    "supabase_scope": "No runtime integration, schema, player or public feedback changes. A separate guarded owner-only feature metadata transaction updated five existing rows to revision88 and was verified by fresh readback; all GitHub statuses, Workspace fields and 41 unrelated rows remained unchanged. Media runtime removal was separate PR188.",
+    "checkpoint_scope": "Manifest89/Ledger97 continuation preserves verified PR202/PR205 release records, reviews source amendments and synchronizes private planning metadata. No public database, player, schema or Workspace change.",
+    "supabase_private_feature_metadata_update_verified": true,
+    "supabase_private_feature_metadata_receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+    "supabase_private_feature_metadata_verified_at": "2026-11-26T12:47:34Z"
   },
   "phases": [
     {
@@ -4820,7 +4823,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "AT338_G0_G1_reconciled_AT333_framework_verified_G2_G3_shared_G4_G5_open",
+    "status": "AT339_G0_G1_verified_G2_G3_partial_G4_bounded_verified_G5_A0_open",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4886,31 +4889,31 @@
     "phase_states": [
       {
         "id": "G0",
-        "state": "prior_consolidation_merged_private_metadata_reconciled"
+        "state": "verified_prior_consolidation_plan_and_AT339_private_metadata_sync"
       },
       {
         "id": "G1",
-        "state": "required_route_reconciliation_verified_PR191"
+        "state": "verified_required_PR191_routes_and_AT339_current_base_reconciliation"
       },
       {
         "id": "G2",
-        "state": "research_partial"
+        "state": "partial_five_reviewed_zone_outlines_63_boundaries_open"
       },
       {
         "id": "G3",
-        "state": "open"
+        "state": "partial_283_additive_claims_68_comprehensive_rosters_open"
       },
       {
         "id": "G4",
-        "state": "partial_AT333_framework_verified_shared_habitat_interactions_open"
+        "state": "bounded_shared_area_habitat_behavior_verified_full_scope_acceptance_open"
       },
       {
         "id": "G5",
-        "state": "blocked_by_G2_G4"
+        "state": "open_full_scope_coverage_validation_and_signoff_required"
       },
       {
         "id": "A0",
-        "state": "blocked_until_G5_verified"
+        "state": "blocked_until_full_scope_G5_verified"
       },
       {
         "id": "A1-A7",
@@ -4942,9 +4945,10 @@
       "readiness_contract": "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md"
     },
     "private_checklist_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
-    "private_checklist_intent": "Update only owner-only feature metadata after reviewed documentation merge. Workspace open/blocked until exact G5 full-scope verified release. No public data/schema changes.",
+    "private_checklist_intent": "Completed by a separately executed guarded transaction and fresh readback at 2026-11-26T12:47:34Z: five existing rows, including AT-339-SHARED-AREAS, updated to manifest88 with no insert or deletion. All five broader GitHub features remain in_progress, all GitHub statuses and verified timestamps are unchanged, and all 41 unrelated full rows were preserved. Immediate-before and after totals are 46 rows: 16 open, 19 in_progress and 11 verified. The older planned 16/20/10 snapshot is preserved as history; an unrelated AT328 update preceded this transaction. All Workspace fields remain unchanged and all 46 Workspace statuses remain open. The separate v38 filter/photo repair does not advance complete-upgrade G5/A0. Evidence: docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json. No public data, media pause state or schema changes.",
     "current_consolidation": "docs/consolidation/2026-11-26/manifest.json",
-    "current_completion_plan": "FINAL_WORKSPACE_PLAN.md"
+    "current_completion_plan": "FINAL_WORKSPACE_PLAN.md",
+    "owner_photo_inventory_scope": "Historical baseline inventory preserved verbatim; current bounded outline coverage is in at_339_shared_areas and the release receipt."
   },
   "at_326_map_review_regressions": {
     "status": "github_pages_deployed_exact_sha_verified",
@@ -5507,7 +5511,7 @@
   },
   "owner_overview_crops_2026_11_26": {
     "date": "2026-11-26",
-    "status": "candidate_source_evidence_only",
+    "status": "merged_source_evidence_candidate_registration_only",
     "report": "docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md",
     "source_manifest": "assets/atlas/city-overview/owner-crops-2026-11-26/manifest.json",
     "source_images": 8,
@@ -5517,7 +5521,15 @@
     ],
     "new_verified_boundaries": 0,
     "new_verified_placements": 0,
-    "site_runtime_changed": false
+    "site_runtime_changed": false,
+    "release_evidence": {
+      "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/200",
+      "merge_sha": "1f5ec84c240d7b5f256034316afb2759b6b6e9f3",
+      "reviewed_head": "bf6f8501c0c40d1fb26463f659e202dbab70ff1b",
+      "ci_run": 45808261327,
+      "pages_run": 45809211387,
+      "production_geometry_approved_by_this_intake": false
+    }
   },
   "at_339_shared_areas": {
     "id": "AT-339",
@@ -5526,7 +5538,7 @@
     "ledger_revision": 93,
     "baseline_main_sha": "1f5ec84c240d7b5f256034316afb2759b6b6e9f3",
     "recovered_source_baseline": "ee87bd2234d394e2dbc4197eb26610e6367e352b",
-    "status": "candidate_pending_exact_head_browser_and_release",
+    "status": "github_merged_deployed_live_verified",
     "evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
     "geometry_evidence": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
     "encounter_evidence": "docs/qa/at339-encounters/ENCOUNTER_AUDIT.md",
@@ -5560,7 +5572,122 @@
     "approved_full_scope_sha": null,
     "final_workspace_prompt": null,
     "integration_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
-    "archive_exclusion_pr_201": "merged_source_history_and_Pages_exclusions_preserved"
+    "archive_exclusion_pr_201": "merged_source_history_and_Pages_exclusions_preserved",
+    "candidate_status_before_release": "candidate_pending_exact_head_browser_and_release",
+    "revision_scope": "manifest_revision85/ledger_revision93 identify the runtime candidate; release_checkpoint identifies the subsequent88/96 documentation receipt.",
+    "release_checkpoint": {
+      "checkpoint_id": "AT339_RELEASE_88_96",
+      "date": "2026-11-26",
+      "display_date": "26 November 2026",
+      "manifest_revision": 88,
+      "ledger_revision": 96,
+      "candidate_manifest_revision": 85,
+      "candidate_ledger_revision": 93,
+      "status": "github_merged_deployed_live_verified",
+      "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/202",
+      "reviewed_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+      "reviewed_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+      "merge_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+      "ci_run": 45819110334,
+      "ci_node_checks": 89,
+      "ci_browser_suites": 4,
+      "reviewed_screenshots": 30,
+      "pages_run": 45820881956,
+      "release_receipt": "docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+      "immutable_release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/74975108bca6bb488ebcb9e86e908d7b90efe8ed/docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+      "release_receipt_sha256": "0b0c0df69b3bd6e0f785f30a98ce6c159f855138d3d893bfd1be511ee9a827e5",
+      "live_http_all_matched": true,
+      "live_http_matched_files": 24,
+      "live_browser_observed": true,
+      "full_scope_G5_signed_off": false,
+      "approved_full_scope_sha": null,
+      "final_workspace_prompt": null,
+      "workspace_changed": false,
+      "workspace_changed_scope": "This documentation checkpoint performs no Workspace action; a separate existing-site filter/photo hotfix is tracked by its own optional receipt.",
+      "original_workspace_hotfix_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+      "original_workspace_hotfix_receipt_sha256": "a80d7578ccae7ae7ddc6294f51a546829f7cb3045bf5ea747771dd212b598535",
+      "original_workspace_hotfix_scope": "existing_site_three_Explorer_files_filter_photo_repair_only_not_complete_Map_2_upgrade",
+      "private_feature_metadata_sync": "verified_by_guarded_execution_and_readback",
+      "private_feature_metadata_plan": {
+        "status": "verified_by_guarded_execution_and_readback",
+        "operation": "guarded_update_five_existing_rows_no_insert",
+        "existing_item_ids": [
+          "AT-322-POKEMAPS-REFERENCE-HIGHLIGHTING",
+          "AT-323-MULTISOURCE-BOUNDARY-RESEARCH",
+          "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+          "AT-329-CITY-OVERVIEW-INTAKE",
+          "AT-339-SHARED-AREAS"
+        ],
+        "inserts": 0,
+        "deletes": 0,
+        "github_status_policy": "All five existing rows remain in_progress; their broader concurrent continuations remain unfinished.",
+        "observed_table_counts_unchanged": {
+          "total": 46,
+          "github_open": 16,
+          "github_in_progress": 19,
+          "github_verified": 11
+        },
+        "all_five_manifest_revisions": 88,
+        "unrelated_full_rows_unchanged": 41,
+        "all_github_statuses_unchanged": true,
+        "all_github_verified_at_unchanged": true,
+        "Workspace_fields_changed": false,
+        "schema_player_public_feedback_or_media_state_changed": false,
+        "receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+        "executed_at": "2026-11-26 12:47:29.421594+00",
+        "readback_at": "2026-11-26T12:47:34Z",
+        "sql_sha256": "5cd15f0d296e95385978eab017ec759a1e0a2481c29521a2f1cde254f41e5b0d",
+        "prior_snapshot_scope": "The earlier planned 16/20/10 totals are retained in private_feature_metadata_pre_execution_snapshot. An unrelated concurrent AT328 update preceded this transaction; the immediate-before and after totals were both 16/19/11."
+      },
+      "concurrent_unmerged_sources": [
+        {
+          "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+          "source_head": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+          "manifest_revision": 86,
+          "ledger_revision": 94,
+          "status_at_checkpoint": "unmerged_source_record_not_runtime_release",
+          "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/MAPS_UPGRADE_MANIFEST.json",
+          "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+          "runtime_or_manifest_imported": false
+        },
+        {
+          "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+          "source_head": "d1d7322e6341cd91016f576161c55da682e06834",
+          "source_tree": "cc84b9219df34e6506af51f22df0d5fd0dd49a0b",
+          "manifest_revision": 87,
+          "ledger_revision": 95,
+          "status_at_checkpoint": "unmerged_source_record_not_runtime_release",
+          "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/MAPS_UPGRADE_MANIFEST.json",
+          "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+          "runtime_or_manifest_imported": false
+        },
+        {
+          "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+          "source_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+          "source_tree": "9508c7cdda23eed0942464f2210859ee3ee7e1e6",
+          "source_parents": [
+            "d1d7322e6341cd91016f576161c55da682e06834",
+            "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f"
+          ],
+          "manifest_revision": 87,
+          "ledger_revision": 95,
+          "status_at_checkpoint": "latest_unmerged_source_record_not_runtime_release",
+          "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/MAPS_UPGRADE_MANIFEST.json",
+          "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+          "source_scope": "Reconciles current main and records a separate newer WZ04 outline proposal; outside this PR202 approval.",
+          "runtime_or_manifest_imported": false,
+          "WZ04_geometry_approved_by_this_checkpoint": false
+        }
+      ],
+      "revision_reason": "Manifest88/Ledger96 is the active documentation checkpoint; PR204's unmerged 86/94 and 87/95 source records are preserved by immutable reference without importing that PR's runtime or manifest.",
+      "original_workspace_hotfix_version": 38,
+      "original_workspace_hotfix_source_commit": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+      "original_workspace_hotfix_live_browser_observed": true,
+      "original_workspace_hotfix_live_http_verified": false,
+      "private_feature_metadata_receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+      "private_feature_metadata_verified_at": "2026-11-26T12:47:34Z"
+    },
+    "workspace_changed_scope": "This GitHub runtime candidate and documentation checkpoint do not perform the separate original-Site v38 three-file hotfix; its own receipt is linked in release_checkpoint."
   },
   "at_340_verified_consolidation": {
     "id": "AT-340",
@@ -5676,5 +5803,227 @@
     "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
     "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
     "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
+  },
+  "at_339_release_checkpoint": {
+    "checkpoint_id": "AT339_RELEASE_88_96",
+    "date": "2026-11-26",
+    "display_date": "26 November 2026",
+    "manifest_revision": 88,
+    "ledger_revision": 96,
+    "candidate_manifest_revision": 85,
+    "candidate_ledger_revision": 93,
+    "status": "github_merged_deployed_live_verified",
+    "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/202",
+    "reviewed_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+    "reviewed_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+    "merge_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "ci_run": 45819110334,
+    "ci_node_checks": 89,
+    "ci_browser_suites": 4,
+    "reviewed_screenshots": 30,
+    "pages_run": 45820881956,
+    "release_receipt": "docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+    "immutable_release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/74975108bca6bb488ebcb9e86e908d7b90efe8ed/docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+    "release_receipt_sha256": "0b0c0df69b3bd6e0f785f30a98ce6c159f855138d3d893bfd1be511ee9a827e5",
+    "live_http_all_matched": true,
+    "live_http_matched_files": 24,
+    "live_browser_observed": true,
+    "full_scope_G5_signed_off": false,
+    "approved_full_scope_sha": null,
+    "final_workspace_prompt": null,
+    "workspace_changed": false,
+    "workspace_changed_scope": "This documentation checkpoint performs no Workspace action; a separate existing-site filter/photo hotfix is tracked by its own optional receipt.",
+    "original_workspace_hotfix_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "original_workspace_hotfix_receipt_sha256": "a80d7578ccae7ae7ddc6294f51a546829f7cb3045bf5ea747771dd212b598535",
+    "original_workspace_hotfix_scope": "existing_site_three_Explorer_files_filter_photo_repair_only_not_complete_Map_2_upgrade",
+    "private_feature_metadata_sync": "verified_by_guarded_execution_and_readback",
+    "private_feature_metadata_plan": {
+      "status": "verified_by_guarded_execution_and_readback",
+      "operation": "guarded_update_five_existing_rows_no_insert",
+      "existing_item_ids": [
+        "AT-322-POKEMAPS-REFERENCE-HIGHLIGHTING",
+        "AT-323-MULTISOURCE-BOUNDARY-RESEARCH",
+        "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+        "AT-329-CITY-OVERVIEW-INTAKE",
+        "AT-339-SHARED-AREAS"
+      ],
+      "inserts": 0,
+      "deletes": 0,
+      "github_status_policy": "All five existing rows remain in_progress; their broader concurrent continuations remain unfinished.",
+      "observed_table_counts_unchanged": {
+        "total": 46,
+        "github_open": 16,
+        "github_in_progress": 19,
+        "github_verified": 11
+      },
+      "all_five_manifest_revisions": 88,
+      "unrelated_full_rows_unchanged": 41,
+      "all_github_statuses_unchanged": true,
+      "all_github_verified_at_unchanged": true,
+      "Workspace_fields_changed": false,
+      "schema_player_public_feedback_or_media_state_changed": false,
+      "receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+      "executed_at": "2026-11-26 12:47:29.421594+00",
+      "readback_at": "2026-11-26T12:47:34Z",
+      "sql_sha256": "5cd15f0d296e95385978eab017ec759a1e0a2481c29521a2f1cde254f41e5b0d",
+      "prior_snapshot_scope": "The earlier planned 16/20/10 totals are retained in private_feature_metadata_pre_execution_snapshot. An unrelated concurrent AT328 update preceded this transaction; the immediate-before and after totals were both 16/19/11."
+    },
+    "concurrent_unmerged_sources": [
+      {
+        "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+        "source_head": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+        "manifest_revision": 86,
+        "ledger_revision": 94,
+        "status_at_checkpoint": "unmerged_source_record_not_runtime_release",
+        "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/MAPS_UPGRADE_MANIFEST.json",
+        "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+        "runtime_or_manifest_imported": false
+      },
+      {
+        "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+        "source_head": "d1d7322e6341cd91016f576161c55da682e06834",
+        "source_tree": "cc84b9219df34e6506af51f22df0d5fd0dd49a0b",
+        "manifest_revision": 87,
+        "ledger_revision": 95,
+        "status_at_checkpoint": "unmerged_source_record_not_runtime_release",
+        "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/MAPS_UPGRADE_MANIFEST.json",
+        "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+        "runtime_or_manifest_imported": false
+      },
+      {
+        "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+        "source_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+        "source_tree": "9508c7cdda23eed0942464f2210859ee3ee7e1e6",
+        "source_parents": [
+          "d1d7322e6341cd91016f576161c55da682e06834",
+          "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f"
+        ],
+        "manifest_revision": 87,
+        "ledger_revision": 95,
+        "status_at_checkpoint": "latest_unmerged_source_record_not_runtime_release",
+        "manifest_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/MAPS_UPGRADE_MANIFEST.json",
+        "ledger_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/ATLAS_DUAL_SITE_FIX_LEDGER.md",
+        "source_scope": "Reconciles current main and records a separate newer WZ04 outline proposal; outside this PR202 approval.",
+        "runtime_or_manifest_imported": false,
+        "WZ04_geometry_approved_by_this_checkpoint": false
+      }
+    ],
+    "revision_reason": "Manifest88/Ledger96 is the active documentation checkpoint; PR204's unmerged 86/94 and 87/95 source records are preserved by immutable reference without importing that PR's runtime or manifest.",
+    "original_workspace_hotfix_version": 38,
+    "original_workspace_hotfix_source_commit": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+    "original_workspace_hotfix_live_browser_observed": true,
+    "original_workspace_hotfix_live_http_verified": false,
+    "historical_candidate_state": {
+      "manifest_revision": 85,
+      "ledger_revision": 93,
+      "current_phase": "AT-339 recovered shared area/habitat implementation staged against PR200 main; five independently reviewed rendered-map outlines and 283 attributed encounter claims added. Exact-head browser/release checks pending. G2/G3 remain partial and full-scope G5/A0 remain open.",
+      "at325_status": "AT338_G0_G1_reconciled_AT333_framework_verified_G2_G3_shared_G4_G5_open",
+      "phase_states": [
+        {
+          "id": "G0",
+          "state": "prior_consolidation_merged_private_metadata_reconciled"
+        },
+        {
+          "id": "G1",
+          "state": "required_route_reconciliation_verified_PR191"
+        },
+        {
+          "id": "G2",
+          "state": "research_partial"
+        },
+        {
+          "id": "G3",
+          "state": "open"
+        },
+        {
+          "id": "G4",
+          "state": "partial_AT333_framework_verified_shared_habitat_interactions_open"
+        },
+        {
+          "id": "G5",
+          "state": "blocked_by_G2_G4"
+        },
+        {
+          "id": "A0",
+          "state": "blocked_until_G5_verified"
+        },
+        {
+          "id": "A1-A7",
+          "state": "new_release_pending_A0"
+        }
+      ],
+      "non_destructive_release_policy": {
+        "documentation_only_this_revision": false,
+        "site_code_changed": true,
+        "player_storage_changed": false,
+        "supabase_changed": false,
+        "feedback_changed": false,
+        "original_workspace_site_changed": false,
+        "protected_code_labs_writer_used": false,
+        "supabase_private_feature_metadata_update_planned": true,
+        "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
+        "checkpoint_scope": "Manifest85/Ledger93 bounded AT339 runtime candidate; source records, original progress, Workspace and public database contracts remain preserved."
+      },
+      "at339_status": "candidate_pending_exact_head_browser_and_release"
+    },
+    "historical_current_text": {
+      "final_plan_current_implementation": "[AT-339](docs/qa/ATLAS_AT339_SHARED_AREAS.md) recovers shared area/species search, linked habitats and selection across the four map views. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with 63 boundaries and all comprehensive encounter-roster reviews still open. Phone/desktop validation and GitHub release are pending; the original Workspace remains unchanged.",
+      "final_plan_readiness": "**Readiness: not ready to apply in Workspace.** The directory and switches are already live on GitHub Pages. The new photos improve calibration but do not approve any area boundaries or pickup coordinates. The shared interactions are now implemented in the AT-339 candidate; phone/desktop release checks and the remaining map evidence are still open. Do not copy an unmerged branch or historical PR into Workspace.",
+      "master_plan_status": "**Status:** Owner-approved plan; current revision82 completes the five-action plan and carries the bounded Bleu route reconciliation. Full Map 2.0 implementation remains open; runtime promotion requires its own reviewed release evidence.",
+      "handoff_gate_table_and_explanation": "| Gate | Current state | Exit needed |\n| --- | --- | --- |\n|G0|Consolidated source/requirement records; private metadata reconciliation tracked|Reviewed documentation and synchronized feature metadata with honest remaining gaps.|\n|G1|Partial|Current-base branch reconciliation; protect deployed fixes; exact route/screenshot checks.|\n|G2|Partial research|Source recovery/registration and independent checks across required map coverage.|\n|G3|Open|Approved68-area boundary/encounter evidence; mandatory uncertainties resolved.|\n|G4|Open|Shared highlight/habitat/route interactions and AT-333 collectible layers with preserved controls/progress.|\n|G5|Blocked by unfinished work|Complete-scope tests, visual review, reviewed merge, exact deploy, live checks, rollback and signoff.|\n|A0|Blocked until G5|One final prompt with the actual approved full-scope SHA/tree and reviewed Workspace change inventory.|\n|A1–A7|Next release pending|Fresh original-source/backup/compatibility checks, bounded adaptation, preview, publish and independent live verification.|\n\nThe [Workspace prompt readiness contract](docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md) contains the complete required content and evidence fields. Its approved full-scope SHA and final executable prompt path remain **null**. This avoids treating a completed documentation merge as a completed game/map release."
+    },
+    "private_feature_metadata_pre_execution_snapshot": {
+      "scope": "Earlier documentation plan, preserved as history; these counts are not the immediate-before database snapshot.",
+      "superseded_by_receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+      "superseded_at": "2026-11-26T12:47:34Z",
+      "private_feature_metadata_sync": "planned_not_executed_by_documentation_checkpoint",
+      "private_feature_metadata_plan": {
+        "status": "planned_not_executed_by_documentation_checkpoint",
+        "operation": "guarded_update_five_existing_rows_no_insert",
+        "existing_item_ids": [
+          "AT-322-POKEMAPS-REFERENCE-HIGHLIGHTING",
+          "AT-323-MULTISOURCE-BOUNDARY-RESEARCH",
+          "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+          "AT-329-CITY-OVERVIEW-INTAKE",
+          "AT-339-SHARED-AREAS"
+        ],
+        "inserts": 0,
+        "github_status_policy": "Preserve in_progress for all five existing rows; their broader concurrent continuations remain unfinished.",
+        "expected_table_counts_unchanged": {
+          "total": 46,
+          "github_open": 16,
+          "github_in_progress": 20,
+          "github_verified": 10
+        },
+        "Workspace_fields_changed": false,
+        "schema_player_public_feedback_or_media_state_changed": false
+      },
+      "G0_state": "verified_prior_consolidation_and_plan_AT339_private_update_planned",
+      "current_phase": "AT339 bounded place-layer/search/photo repairs and shared areas/habitats are merged, deployed and live-verified; five reviewed map-selection outlines and 283 attributed claims. Current documentation checkpoint88/96 preserves runtime candidate85/93 and PR204's unmerged 86/94 and 87/95 source records by immutable reference. G2/G3 remain partial; 63 boundaries and all comprehensive rosters, full-scope G5/A0 and the complete Workspace upgrade remain open. Original-Site v38 has its separate three-file filter/photo receipt and cannot advance those full-upgrade gates. Guarded synchronization of five existing private metadata rows remains planned; all five broader features remain in progress.",
+      "private_checklist_intent": "A new guarded transaction updating five existing rows, including AT-339-SHARED-AREAS, remains planned until separately executed and verified; no row insert. All five broader GitHub features remain in_progress because concurrent continuation work is unfinished. The 46-row table retains 16 open, 20 in_progress and 10 verified records. Existing G0 metadata evidence is historical; complete-upgrade Workspace tracker fields remain open/blocked. The separate v38 filter/photo repair receipt does not change those fields. No public data, media pause state or schema changes.",
+      "non_destructive_release_policy": {
+        "documentation_only_this_revision": true,
+        "site_code_changed": false,
+        "player_storage_changed": false,
+        "supabase_changed": false,
+        "feedback_changed": false,
+        "original_workspace_site_changed": false,
+        "protected_code_labs_writer_used": false,
+        "supabase_private_feature_metadata_update_planned": true,
+        "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
+        "checkpoint_scope": "Manifest88/Ledger96 release-receipt documentation only; AT339 runtime changed in the separately verified Manifest85/Ledger93 candidate. No SQL or original Workspace action is performed by this checkpoint."
+      }
+    },
+    "private_feature_metadata_receipt": "docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json",
+    "private_feature_metadata_verified_at": "2026-11-26T12:47:34Z"
+  },
+  "latest_main_reconciliation": {
+    "main": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+    "main_pr": 205,
+    "prior_candidate": "a0b12854b2478ec400fb11eb53db2b8b21b91555",
+    "scope": "Documentation/release receipt reconciliation only; all runtime bytes remain identical to a0b12854.",
+    "reason": "GitHub correctly blocked PR CI while the new main documentation conflicted with the candidate plans.",
+    "preserved": "All PR205 release/tracker/Workspace receipts, prior statuses and full historical source records.",
+    "validation": "Fresh exact-head CI and review still required."
   }
 }

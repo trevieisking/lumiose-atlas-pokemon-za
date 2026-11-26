@@ -786,5 +786,14 @@
     "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
     "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
     "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
+  },
+  "latest_main_reconciliation": {
+    "main": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+    "main_pr": 205,
+    "prior_candidate": "a0b12854b2478ec400fb11eb53db2b8b21b91555",
+    "scope": "Documentation/release receipt reconciliation only; all runtime bytes remain identical to a0b12854.",
+    "reason": "GitHub correctly blocked PR CI while the new main documentation conflicted with the candidate plans.",
+    "preserved": "All PR205 release/tracker/Workspace receipts, prior statuses and full historical source records.",
+    "validation": "Fresh exact-head CI and review still required."
   }
 }

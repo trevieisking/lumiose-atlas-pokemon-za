@@ -1,5 +1,7 @@
 # Final Workspace prompt — preparation and release conditions
 
+**Current continuation: AT341 · Manifest89 / Ledger97.** Latest main `7616af2a204e0a09328a5ec9f2b6a0415bf67309` (PR205) and its verified release/tracker receipts are retained. PR204 carries seven reviewed selection outlines,284 additive encounter claims and the Mission008 correction;61 boundaries and full-scope G5/A0 remain open. All48 private planning rows are synchronized. Final combined-head browser validation and bounded deployment remain pending. The earlier release checkpoints below retain their original dates, scope and counts.
+
 **Concurrent work preserved:** current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` and PR204 head `3e17c260fc749e3ee5bad877470ee6035601064c` include separately completed map-filter/search/photo fixes and a WZ04 review. This continuation retains them and the PR202 release receipts, then adds the independently reviewed WZ20/encounter/guide amendments. The original Workspace is recorded at **version38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after a separate three-file hotfix; this continuation makes no Workspace change. Manifest89/Ledger97 follow the separate Manifest88/Ledger96 release reconciliation.
 
 ## Current source checkpoint — AT-341 / Manifest89 / Ledger97

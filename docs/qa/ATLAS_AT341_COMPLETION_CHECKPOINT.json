@@ -5,8 +5,8 @@
   "manifest_revision": 89,
   "ledger_revision": 97,
   "scope": "Continuous completion, evidence review and durable GitHub/Supabase synchronization",
-  "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
-  "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+  "observed_main_sha": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+  "observed_pr_head": "a0b12854b2478ec400fb11eb53db2b8b21b91555",
   "pr": 204,
   "stage": "final_source_amendments_integrated_pending_exact_head_CI",
   "failed_run": 45818952302,
@@ -183,5 +183,14 @@
     "recorded_at": "2026-11-26",
     "source": "private planning metadata read-back",
     "report_player_schema_changes": false
+  },
+  "latest_main_reconciliation": {
+    "main": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+    "main_pr": 205,
+    "prior_candidate": "a0b12854b2478ec400fb11eb53db2b8b21b91555",
+    "scope": "Documentation/release receipt reconciliation only; all runtime bytes remain identical to a0b12854.",
+    "reason": "GitHub correctly blocked PR CI while the new main documentation conflicted with the candidate plans.",
+    "preserved": "All PR205 release/tracker/Workspace receipts, prior statuses and full historical source records.",
+    "validation": "Fresh exact-head CI and review still required."
   }
 }
