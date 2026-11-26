@@ -84,12 +84,23 @@ try{
     async function unobstructedFixturePoint(){
       return page.locator("[data-area-overlay]").evaluate(svg=>{
         const viewport=document.getElementById("aeViewport"),rect=viewport.getBoundingClientRect();
+        const matrix=svg.getScreenCTM();if(!matrix)throw Error("Synthetic boundary has no screen transform");
+        const inverse=matrix.inverse(),margin=12;
+        const controls=[...viewport.querySelectorAll("button,a,input,select,textarea")].map(node=>({node,box:node.getBoundingClientRect()}))
+          .filter(({node,box})=>box.width&&box.height&&getComputedStyle(node).visibility!=="hidden"&&box.right>Math.max(rect.left,0)&&box.left<Math.min(rect.right,innerWidth)&&box.bottom>Math.max(rect.top,0)&&box.top<Math.min(rect.bottom,innerHeight));
+        let best=null;
+        // A point just outside a round pin can be rounded/adjusted onto that pin
+        // by real touch input. Keep a CSS-pixel gap from every visible control.
         for(let x=750;x<=1150;x+=50)for(let y=750;y<=1150;y+=50){
-          const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(svg.getScreenCTM());
+          const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(matrix);
+          q.x=Math.round(q.x);q.y=Math.round(q.y);const native=q.matrixTransform(inverse);
           const target=document.elementFromPoint(q.x,q.y);
-          if(q.x>rect.left+15&&q.x<rect.right-70&&q.y>rect.top+15&&q.y<rect.bottom-45&&target&&viewport.contains(target)&&!target.closest("button,a,input,select,textarea"))return{x:q.x,y:q.y};
+          if(q.x<=Math.max(rect.left+15,margin)||q.x>=Math.min(rect.right-70,innerWidth-margin)||q.y<=Math.max(rect.top+15,margin)||q.y>=Math.min(rect.bottom-45,innerHeight-margin)||native.x<=700||native.x>=1220||native.y<=700||native.y>=1220||!target||!viewport.contains(target)||target.closest("button,a,input,select,textarea"))continue;
+          const clearance=Math.min(...controls.map(({box})=>Math.hypot(Math.max(box.left-q.x,0,q.x-box.right),Math.max(box.top-q.y,0,q.y-box.bottom))));
+          if(clearance>=margin&&(!best||clearance>best.clearance))best={x:q.x,y:q.y,native:[native.x,native.y],clearance};
         }
-        throw Error("No visible unobstructed point inside the synthetic boundary");
+        if(best)return best;
+        throw Error("No visible point inside the synthetic boundary has 12px clearance from map controls");
       });
     }
     async function tap(point){
@@ -483,8 +494,34 @@ try{
     await page.locator('[data-area-boundary="wz-01"]').waitFor({state:"attached"});
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();
     const point=await unobstructedFixturePoint();
-    await tap(point);
-    await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-01");
+    const tapDiagnostic=phase=>page.evaluate(({point,phase})=>{
+      const describe=node=>node?{tag:node.tagName,id:node.id||null,label:node.closest?.("button,a,input,select,textarea")?.getAttribute("aria-label")||null}:null;
+      const types=["pointerdown","pointerup","pointercancel","click"];
+      if(phase==="before"){
+        const audit={events:[]};
+        audit.record=event=>audit.events.push({type:event.type,x:event.clientX,y:event.clientY,pointerType:event.pointerType||null,target:describe(event.target)});
+        window.__atlasAreaTapAudit=audit;for(const type of types)document.addEventListener(type,audit.record,true);
+      }
+      const viewport=document.getElementById("aeViewport"),svg=document.querySelector("[data-area-overlay]"),box=viewport.getBoundingClientRect();
+      const p=svg.createSVGPoint();p.x=point.x;p.y=point.y;const native=p.matrixTransform(svg.getScreenCTM().inverse());
+      const result={phase,point,url:location.href,target:describe(document.elementFromPoint(point.x,point.y)),native:[native.x,native.y],viewport:{x:box.x,y:box.y,width:box.width,height:box.height},window:{width:innerWidth,height:innerHeight},selectedTitle:document.querySelector("#aeSelected > h3")?.textContent,events:window.__atlasAreaTapAudit?.events||[]};
+      if(phase==="after"){
+        for(const type of types)document.removeEventListener(type,window.__atlasAreaTapAudit.record,true);
+        delete window.__atlasAreaTapAudit;
+      }
+      return result;
+    },{point,phase});
+    console.log("AT339 synthetic tap",device,JSON.stringify(await tapDiagnostic("before")));
+    try{
+      await tap(point);
+      await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-01");
+    }catch(error){
+      await page.screenshot({path:output+"/at339-synthetic-boundary-tap-failure-"+device+".png"}).catch(screenshotError=>console.error("Synthetic tap failure screenshot:",String(screenshotError)));
+      throw error;
+    }finally{
+      const diagnostic=await tapDiagnostic("after").catch(error=>({phase:"after",url:page.url(),diagnosticError:String(error)}));
+      console.log("AT339 synthetic tap",device,JSON.stringify(diagnostic));
+    }
     const syntheticPanel=await panel();
     const sourceFixture=syntheticPanel.locator('[data-area-encounter-id="fixture-source-navigation"]');
     assert.equal(await sourceFixture.count(),1,"Synthetic citation record is actually displayed");
