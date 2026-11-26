@@ -1,40 +1,31 @@
-# Pokémon Atlas — simple completion plan
+# Pokémon Atlas final completion plan
 
-26 November 2026 · AT-338 · Manifest 83 · Ledger 91
+26 November 2026 · Manifest 83 · Ledger 91
 
-**The plan is complete.** All **67 recovered requirements** are assigned to the five actions below, with their detailed sources preserved in the [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json) and [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md). The map upgrade itself still has work remaining before the final Workspace prompt can be issued.
+**Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
-**Videos and YouTube remain paused.** Keep photographs, written directions and local guide links. Protect the existing site, design, pages, maps, markers, player progress, accounts, Supabase connections and completed feedback work.
+**Videos and YouTube remain paused.** Keep photographs, written directions and local guide links.
 
-## What is finished
+## Already complete
 
-- The accessible chats, PR plans, manifests and ledgers are consolidated. Missing chat history remains an explicit coverage limit.
-- Working map gestures, desktop controls, compass, existing layers and photographs are preserved.
-- Four Bleu 7–10 routes are now reconciled and live on GitHub: **26 routes, 151 written steps and 78 research leads** in total. All earlier routes and leads are retained.
-- The route update passed automated checks, independent review of **32 phone/desktop screenshots**, exact deployment checks and a live browser spot check. [Release evidence](docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json).
+The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json) and [364-record Item/Screw directory and layer framework](docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json) are live on GitHub Pages. The framework is tested; **zero new production pickup positions are claimed**.
 
-## Latest completed feature
+## Three remaining work packages
 
-The Item and Colorful Screw layers and searchable **364-record directory are live on GitHub Pages**. Separate switches, compact dots, overlap selection and read-only original progress passed phone/desktop checks and review of all **12 new screenshots**. Production has **zero newly verified pickup dots**; unverified records remain useful directory entries. [Open the directory](https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?collectible=screw%3A1) · [Release proof](docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json).
+1. **Verify the map and encounter data.** Complete source registration, boundaries and encounter records for **48 sectors and 20 Wild Zones**, using existing images and research. Record conditions, unlocks, Alpha distinctions and uncertainty. **Done when:** all 68 required records meet the existing G2/G3 criteria, with calibration and source evidence; no mandatory boundary or encounter requirement remains unresolved.
 
-## Five actions to the final Workspace prompt
+2. **Finish shared map interactions.** Complete area/species highlights, habitat links, filters, selection, deep links and phone/desktop panels across the existing map views. Retain written/photo approaches and the completed Item/Screw framework. **Done when:** all remaining G4 interactions work with existing IDs, links and progress intact. Unverified pickups stay in the directory; empty verified layers explain their status. A complete pickup survey is not a release requirement.
 
-1. **Reconcile useful older work — route integration complete.** Preserve every remaining proposal with its status and source. Carry forward verified improvements selectively; never replace current files with an old branch wholesale.
+3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
 
-2. **Finish map and encounter verification.** Complete the required records for **48 sectors and 20 Wild Zones** using existing supplied images and research. Resolve boundaries, encounter conditions, unlocks and Alpha distinctions. Keep image registration and coordinate uncertainty explicit. Provide useful written/photo access directions; no exhaustive ladder/scaffold pin survey or duplicate-photo request is required.
+## Final Workspace prompt
 
-3. **Finish the remaining map features.** Complete shared area/species highlights, habitat links, filters, selection and deep links. The Item and Colorful Screw layer/directory implementation is complete; retain its separate switches, accessible selection and overlap chooser. Preserve the distinct **264 item records, 100 Screw clues and 146 approximate leads**, original collection IDs and progress. Only evidenced fixed locations receive verified pins.
+After Package 3 passes, issue **one prompt pinned to the exact approved GitHub release**. Target the existing original Workspace project and URL. Reconfirm its actual source, take a backup, adapt compatible changes, independently preview/test, publish and verify. Keep evidence for the two sites separate under [AT-297](WORKSPACE_ACCESS_HANDOFF.md). Workspace was last observed at **version 37**; the approved full-upgrade commit and executable prompt remain unset until the [release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) passes.
 
-4. **Test and release the complete GitHub upgrade.** Validate affected guides, links, photographs, map controls and saved progress on phone and desktop. Include at least **364 synthetic collectible records in tests only**. Resolve review findings, merge the reviewed commit, verify its actual deployment and live behavior, and record the approved version, changed files and rollback. The assistant makes the technical promotion decision.
+## Preserve throughout
 
-5. **Issue one final Workspace prompt.** Only after Action 4 passes, pin the prompt to that exact approved GitHub release. Use the existing original Workspace project and URL. Back up its actual source, adapt compatible changes, independently preview/test, publish and verify it. Record proof separately for each site.
+Keep the design, pages, maps, images, gestures, compass, markers, player progress, accounts, Supabase and completed feedback. Preserve **264 item records, 100 Screw clues and 146 approximate leads** as distinct records. Filters must not change progress. Never invent geometry, floors or connections, or permanently pin random Hyperspace distortions or nightly Battle Zones. No exhaustive ladder/scaffold survey or duplicate-photo request is required.
 
-## Rules that remain in force
+All other guide improvements, historical PR candidates and deferred ideas retain their recorded scope and status; optional work adds no new release gates. Repo Desk, CG Repair Lab, Code God and Writer remain excluded.
 
-Never invent boundaries, pickup positions, floors or rooftop connections. Never permanently pin random Hyperspace distortions or nightly Battle Zones. Filters must not change collection progress. Empty verified layers should explain that no verified points are available yet.
-
-The whole-guide accuracy/depth work, early-mission prose, Mission 109/Furfrou 087 candidates, city Alphas, HOME/Legendary guidance, cosmetic/economy coverage, contextual links and optional backup work remain recorded. Optional expansion is not automatically another map-release gate. Trading pages, fuller catalogues, new hosting/DNS and future games remain separate or deferred. Repo Desk, CG Repair Lab, Code God and Writer remain excluded.
-
-The original Workspace is still the separately observed **version 37**; this GitHub release has not changed it. Existing **AT-325 G0–G5** and **AT-297 A1–A7** requirements remain binding. The final executable Workspace prompt and approved full-upgrade SHA are still **unset** until the remaining implementation and verification pass.
-
-Detailed records: [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [manifest](MAPS_UPGRADE_MANIFEST.json) · [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [source handoff](ATLAS_RELEASE_HANDOFF.md).
+**Authoritative detail:** [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [manifest](MAPS_UPGRADE_MANIFEST.json) · [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [source handoff](ATLAS_RELEASE_HANDOFF.md).
