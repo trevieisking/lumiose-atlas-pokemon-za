@@ -1,5 +1,9 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## Owner-cropped city overviews — G2 evidence intake
+
+**26 November 2026 · Manifest 84 / Ledger 92.** Eight new owner-cropped JPEGs preserved as exact bytes with [source inventory and registration review](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). All eight have candidate fits to the existing city basemap (2.4–4.5 px held-out RMS by frame). This does not verify map boundaries or collectible positions. No current map, visible guide page, progress, feedback, Supabase or original Workspace change. A [Wild Zone 05 outline comparison](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) cross-checks the visible contour against four of the new views with zone-exterior registration controls. Gate-corner review and GitHub release remain open.
+
 ## AT-338 — Item and Colorful Screw layers
 
 **26 November 2026 · Manifest 83 / Ledger 91.** This bounded implementation fulfils the AT-333 layer and directory design. It reuses all **264 item records and 100 Screw clues**, their original IDs and the existing progress store. Separate switches start off; the directory remains searchable. Eligible dots use a 7px visual with a 44px keyboard target and screen-space selection, retain native coordinates, and offer a complete overlap chooser. Written directions and still photographs remain supported.
