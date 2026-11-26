@@ -1,5 +1,12 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT346_DOSSIER_RECEIVED_100_108 -->
+## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
+
+Owner supplied the full research dossier on 26 November 2026. [Dossier intake, independently checked corrections and canonical encounter contract](docs/qa/at346-dex-audit/DOSSIER_INTAKE_2026-11-26.md). The earlier report-unavailable blocker is superseded; complete encounter verification remains open. The dossier is a specification and sourced research leads, not a complete per-species encounter table. In particular, Side Mission 180 Rosebud is an Alpha Annihilape battle that cannot be caught; MM40's three Lv70 Alphas are one-time capture opportunities. Preserve 232/132 species, 25 Alpha exclusions and 339 candidates; build three collection views using one source-qualified species/form/encounter model. Existing Hyperspace selector has missing-data fallback despite existing 132 HOME roster records; restore without fabricated capture locations or stats. Maintain all existing assets, IDs, coordinates, progress and both site connections. Random Hyperspace portals remain unpinned. No runtime release or completed encounter audit claimed by this documentation revision.
+<!-- END_AT346_DOSSIER_RECEIVED_100_108 -->
+
+
 <!-- AT346_DEX_AND_HABITAT_PLANNING_99_107 -->
 ## AT-346 planning addendum — complete three Pokédexes and verified habitat synchronization (Manifest 99 / Ledger 107)
 
