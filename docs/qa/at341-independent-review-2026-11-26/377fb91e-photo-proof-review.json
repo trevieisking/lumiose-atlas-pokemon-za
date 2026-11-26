@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-26T14:49:06.770824+00:00",
+  "reviewer": "independent encounter_content_completion agent",
+  "head_sha": "377fb91e03f2fea64237f0de031995b26090f468",
+  "tree_sha": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+  "artifact_id": "15128421851",
+  "artifact_zip_sha256": "711a69d616e867b321702096cee3d834f4f80e7828121986626872ee2d6cacf6",
+  "artifact_identity_basis": "Parent supplied and verified the exact-head artifact and ZIP SHA. This reviewer independently read the extracted proof, compared exact committed test/register source, counted the files, and directly viewed and hashed the 14 assigned PNGs.",
+  "source": {
+    "path": "tests/atlas_area_browser.mjs",
+    "git_blob_sha": "317376c380f5c8d5e8c6f3734648a6b256b7e50b",
+    "sha256": "671df411fe80b5f2468fbbc6a350c86beb218f815211fe1ab313f2d9db348c3e",
+    "read_from_exact_commit_object": true,
+    "equivalent_owner_commit": "06d2044988f08544452246cf497886a01ba11d4e",
+    "equivalent_owner_tree": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+    "owner_test_source_byte_identical": true,
+    "area_register_sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92"
+  },
+  "proof": {
+    "path": "areas/at339-browser-proof.json",
+    "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+    "production_boundary_ids_match_exact_source_register": true,
+    "production_boundary_count": 68,
+    "sector_count": 48,
+    "zone_count": 20,
+    "devices": [
+      {
+        "device": "phone",
+        "viewport_px": [
+          393,
+          852
+        ],
+        "initial_map_surfaces": 4,
+        "real_zone_records": 20,
+        "original_photo_references": 40,
+        "unique_original_photo_paths": 40,
+        "referenced_zone_screenshots_present": 40,
+        "all_zone_rows_selected_active_original_not_synthetic": true,
+        "storage_writes_reported": 0,
+        "page_errors_reported": [],
+        "touch_pinch_rotation_reported": true
+      },
+      {
+        "device": "desktop",
+        "viewport_px": [
+          1440,
+          900
+        ],
+        "initial_map_surfaces": 4,
+        "real_zone_records": 20,
+        "original_photo_references": 40,
+        "unique_original_photo_paths": 40,
+        "referenced_zone_screenshots_present": 40,
+        "all_zone_rows_selected_active_original_not_synthetic": true,
+        "storage_writes_reported": 0,
+        "page_errors_reported": [],
+        "touch_pinch_rotation_reported": false
+      }
+    ],
+    "synthetic_fixture_only_flag": true
+  },
+  "coverage_reconciliation": {
+    "artifact_files": 133,
+    "png_files": 132,
+    "proof_json_files": 1,
+    "png_categories": {
+      "phone_controls": 4,
+      "surface_habitats": 8,
+      "surface_maps": 8,
+      "zone_maps": 40,
+      "zone_photo_panels": 40,
+      "sector_maps": 10,
+      "sector_details": 10,
+      "related_cards": 6,
+      "real_sector_overlap": 2,
+      "synthetic_boundary": 2,
+      "collectible_priority": 2
+    },
+    "initial_surface_matrix": {
+      "surfaces": [
+        "atlas-explorer.html",
+        "maps.html",
+        "sector-maps.html",
+        "index.html#maps"
+      ],
+      "devices": [
+        "phone",
+        "desktop"
+      ],
+      "combinations": 8,
+      "assertion": "Each combination asserts exactly one shared overlay, the full approved 68-area ID set, search/class filtering and preservation of original area/photo access."
+    },
+    "zone_matrix": {
+      "zones_per_device": 20,
+      "device_count": 2,
+      "real_zone_selected_records": 40,
+      "zone_photo_panels": 40,
+      "photos_per_panel": 2,
+      "photo_display_instances": 80,
+      "unique_original_photo_paths": 40,
+      "source_assertions": [
+        "Current approved production zone exists and is the sole active selected area.",
+        "Native SVG getBBox equals the approved native geometry bounds within 0.01.",
+        "Original map src and seven visible enabled map controls remain.",
+        "Each photo src and full-size link href match the preserved fieldbook path.",
+        "Each photo decodes at its recorded natural width."
+      ]
+    },
+    "sector_selection_sample": {
+      "areas": [
+        "vert-sector-1",
+        "bleu-sector-2",
+        "magenta-sector-5",
+        "rouge-sector-4",
+        "jaune-sector-6"
+      ],
+      "device_count": 2,
+      "selected_combinations": 10,
+      "scope": "Five representative sector selections per device, not independent selected-state screenshots for every one of the 48 sectors."
+    },
+    "related_navigation_matrix": {
+      "per_device": [
+        [
+          "explorer",
+          "bleu-sector-2",
+          "wz-05"
+        ],
+        [
+          "explorer",
+          "bleu-sector-10",
+          "wz-10"
+        ],
+        [
+          "explorer",
+          "magenta-sector-5",
+          "wz-09"
+        ],
+        [
+          "standalone",
+          "bleu-sector-10",
+          "wz-10"
+        ],
+        [
+          "sectors",
+          "magenta-sector-5",
+          "wz-09"
+        ],
+        [
+          "main",
+          "bleu-sector-2",
+          "wz-05"
+        ]
+      ],
+      "combinations_per_device": 6,
+      "device_count": 2,
+      "total_navigation_combinations": 12,
+      "related_card_screenshots": 6,
+      "destination_photos_asserted_per_visit": 2,
+      "destination_photo_decode_checks": 24,
+      "source_assertions": [
+        "Original area-guide link remains.",
+        "Direct sector encounter count remains one for Bleu Sector 2 and zero for the other two; zone encounters are not copied into the sector.",
+        "Visible related control navigates to the expected zone and preserves the source query.",
+        "Destination has encounter content and exactly two decoded aa-photo images.",
+        "Back navigation and reload retain the related link; progress preservation is rechecked."
+      ]
+    }
+  },
+  "visual_review": {
+    "desktop_zone_panels_reviewed": 11,
+    "visible_zone_photographs_reviewed": 22,
+    "desktop_related_cards_reviewed": 3,
+    "total_pngs_directly_viewed": 14,
+    "zone_panels": [
+      {
+        "file": "areas/at339-approved-wz01-photos-desktop.png",
+        "sha256": "9f935c235e996c2d966d13676587510d780fba1ed2c42e39f2778e700c83cd23",
+        "bytes": 263217,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-01",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 1",
+        "visible_closeup_zone_marker": "1",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz06-photos-desktop.png",
+        "sha256": "47917e23f2b4b5e5e38d1f2afce3d70894252799cf9a7e54a5980129234e7a1b",
+        "bytes": 238500,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-06",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 6",
+        "visible_closeup_zone_marker": "6",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz07-photos-desktop.png",
+        "sha256": "28f5c9d6ef76957bc5b41942989b0ee6b90ad0d7f48595c61fac72ca49910483",
+        "bytes": 287958,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-07",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 7",
+        "visible_closeup_zone_marker": "7",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz08-photos-desktop.png",
+        "sha256": "29e42f089fb863cec66063bba8b62dc6332cd1aa5c5354c5ecc62e86d32cd374",
+        "bytes": 285002,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-08",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 8",
+        "visible_closeup_zone_marker": "8",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz09-photos-desktop.png",
+        "sha256": "0f40cc450bb6cceb59056fc738dc3a0d8370550d8a37d915a06adb62ccec474b",
+        "bytes": 292606,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-09",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 9",
+        "visible_closeup_zone_marker": "9",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz10-photos-desktop.png",
+        "sha256": "7e39191e9428364a30fa9a7795408302492b3b50df4aaa3a484be3a1a932a57a",
+        "bytes": 297752,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-10",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 10",
+        "visible_closeup_zone_marker": "10",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz12-photos-desktop.png",
+        "sha256": "274f8cce36d267e81724819f3c8fd5629f3faad8b0c0dd37583e61242787c08e",
+        "bytes": 278618,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-12",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 12",
+        "visible_closeup_zone_marker": "12",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz15-photos-desktop.png",
+        "sha256": "45422690e62c529e67a22597031cc9f22a65b2e27324b778707ccdba08127cf1",
+        "bytes": 253653,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-15",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 15",
+        "visible_closeup_zone_marker": "15",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz17-photos-desktop.png",
+        "sha256": "39ccb5452691a1427565abd388704ed919c3c47813bb869015f2c8e9b9e24f67",
+        "bytes": 299093,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-17",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 17",
+        "visible_closeup_zone_marker": "17",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz18-photos-desktop.png",
+        "sha256": "b6815bd3f1c34c14a7706c0c391085390643b8b762598d7d018ae8a4315cebf0",
+        "bytes": 260429,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-18",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 18",
+        "visible_closeup_zone_marker": "18",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      },
+      {
+        "file": "areas/at339-approved-wz19-photos-desktop.png",
+        "sha256": "a92915a44ffb64f0225abcde730deaf4c844fc5b8937ddb7bec600775f761eb3",
+        "bytes": 280776,
+        "dimensions_px": [
+          420,
+          595
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "area_id": "wz-19",
+        "visible_photos": 2,
+        "visible_overview_zone_label": "WILD ZONE 19",
+        "visible_closeup_zone_marker": "19",
+        "overview_and_closeup_labels_match": true,
+        "ui_captions_readable": true,
+        "full_size_link_affordances_visible": 2,
+        "missing_image_or_card_overlap_observed": false,
+        "assessment": "Both overview/encounter-card image and detailed close-up render. The zone number agrees across the two photographs; both captions and full-size link labels fit the panel."
+      }
+    ],
+    "related_cards": [
+      {
+        "file": "areas/at341-related-bleu-sector-2-desktop.png",
+        "sha256": "edbae5562ef27bc4e62e5e6af1f7b86665f726b5b10e49bb68ed1552e1703bbb",
+        "bytes": 22438,
+        "dimensions_px": [
+          422,
+          182
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "sector": "bleu-sector-2",
+        "target_area_id": "wz-05",
+        "visible_photos": 0,
+        "capture_scope": "Related-area text and navigation control only; destination photographs are not in this capture.",
+        "visible_link_label": "Open Wild Zone 05 encounters and photographs",
+        "labels_match_target": true,
+        "text_and_control_readable": true,
+        "clipping_or_overlap_observed": false,
+        "qualification_observed": "The card identifies Wild Zone 5 covering most of Bleu Sector 2 and extending into Bleu Sector 1 and Bleu Street."
+      },
+      {
+        "file": "areas/at341-related-bleu-sector-10-desktop.png",
+        "sha256": "19732b758007fb8fb69d239a9f7f7e4f0a8fbfaa7d62f8514bde3fe16c35ab11",
+        "bytes": 24024,
+        "dimensions_px": [
+          422,
+          183
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "sector": "bleu-sector-10",
+        "target_area_id": "wz-10",
+        "visible_photos": 0,
+        "capture_scope": "Related-area text and navigation control only; destination photographs are not in this capture.",
+        "visible_link_label": "Open Wild Zone 10 encounters and photographs",
+        "labels_match_target": true,
+        "text_and_control_readable": true,
+        "clipping_or_overlap_observed": false,
+        "qualification_observed": "The card identifies Wild Zone 10 occupying much of Bleu Sector 10 once open and retains separate qualification for encounters outside the zone."
+      },
+      {
+        "file": "areas/at341-related-magenta-sector-5-desktop.png",
+        "sha256": "16d14902571960c1e15a714d40e952efc2e1a5484ad17f6f48fba9b450b75ef6",
+        "bytes": 23025,
+        "dimensions_px": [
+          422,
+          182
+        ],
+        "viewed": true,
+        "view_method": "tools.view_image; original PNG displayed directly",
+        "sector": "magenta-sector-5",
+        "target_area_id": "wz-09",
+        "visible_photos": 0,
+        "capture_scope": "Related-area text and navigation control only; destination photographs are not in this capture.",
+        "visible_link_label": "Open Wild Zone 09 encounters and photographs",
+        "labels_match_target": true,
+        "text_and_control_readable": true,
+        "clipping_or_overlap_observed": false,
+        "qualification_observed": "The card identifies Wild Zone 9 occupying most of Magenta Sector 5 once open and scopes the encounter guide to that part of the sector."
+      }
+    ],
+    "result": "No mismatched zone labels, missing photos, unreadable UI captions, card overlap or clipped related-card text observed in the assigned captures.",
+    "actionable_findings": []
+  },
+  "evidence_limits": [
+    "renderedBounds in the proof comes from SVG getBBox in native coordinates, not screen-space getBoundingClientRect; coordinates beyond a device viewport dimension do not by themselves mean screen clipping. This receipt makes no map camera/framing approval.",
+    "The three related-card images contain text and a button, with zero photographs in those captures. Their two destination photographs are asserted and decoded by the exact test source; they are not visually present in these three images.",
+    "This reviewer directly viewed only the 11 specified new-zone desktop photo pairs and three desktop related cards. No phone captures, remaining nine zone pairs, sector maps or geometry screenshots were visually reviewed here.",
+    "Small in-game HUD text is inherent to the scaled source photographs; this review verifies visible zone identities and UI captions rather than transcribing every in-image label or certifying encounter rosters.",
+    "The artifact records an existing CI run. This review performs no browser interaction or new tests and does not independently re-query CI status.",
+    "The separate 15-file copy/framing/current-plan proposal is not incorporated in this exact head and is outside this receipt. No release, whole-master-plan or Workspace approval is inferred."
+  ],
+  "mutations": "Only this review JSON outside all checkouts; no repository, image, API, SQL, CI or browser changes."
+}

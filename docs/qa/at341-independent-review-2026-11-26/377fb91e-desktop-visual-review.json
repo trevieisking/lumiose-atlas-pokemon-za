@@ -1,0 +1,384 @@
+{
+  "id": "AT341-377FB91E-INDEPENDENT-DESKTOP-AND-OVERLAP-VISUAL-REVIEW",
+  "reviewed_at_utc": "2026-11-26T14:48:35.573939+00:00",
+  "reviewer": "Independent geometry review agent /root/geometry_completion",
+  "decision": "VISUAL_REVIEW_WITH_TWO_DESKTOP_SECTOR_CONTEXT_OCCLUSIONS",
+  "artifact": {
+    "head": "377fb91e03f2fea64237f0de031995b26090f468",
+    "artifact_id": 15128421851,
+    "zip_file": "atlas-areas-377fb91e.zip",
+    "zip_sha256": "711a69d616e867b321702096cee3d834f4f80e7828121986626872ee2d6cacf6",
+    "zip_bytes": 31621544,
+    "zip_sha256_independently_recomputed": true,
+    "extracted_directory": "areas",
+    "extracted_file_count": 133,
+    "head_and_artifact_id_source": "Root-provided workflow artifact attribution; this review made no network calls."
+  },
+  "ci_and_proof_context": {
+    "map_suites_result_reported_by_root": "PASS at 377fb91e; this visual review does not infer visual correctness from that result.",
+    "browser_proof_file": "areas/at339-browser-proof.json",
+    "browser_proof_sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+    "production_boundary_id_count": 68,
+    "device_records": [
+      {
+        "device": "phone",
+        "viewport": [
+          393,
+          852
+        ],
+        "approved_zone_render_records": 20,
+        "all_zone_render_records_marked_nonsynthetic": true,
+        "page_errors": [],
+        "storage_writes": 0
+      },
+      {
+        "device": "desktop",
+        "viewport": [
+          1440,
+          900
+        ],
+        "approved_zone_render_records": 20,
+        "all_zone_render_records_marked_nonsynthetic": true,
+        "page_errors": [],
+        "storage_writes": 0
+      }
+    ],
+    "proof_scope": "The retained JSON was read for attribution and coverage. This review independently inspects only the image files listed below, not every recorded browser assertion.",
+    "framing_fix_context": "Root states this head includes the 12px scroll-margin change but has not integrated the separately reviewed camera-inset/copy changes. The saved desktop images independently show the remaining occlusions."
+  },
+  "review_scope": {
+    "new_zone_ids": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      15,
+      17,
+      18,
+      19
+    ],
+    "desktop_zone_map_images": 11,
+    "desktop_sector_map_images": 5,
+    "phone_overlap_chooser_images": 1,
+    "desktop_overlap_chooser_images": 1,
+    "total_images_directly_viewed": 18,
+    "new_completed_desktop_evidence": true,
+    "phone_zone_or_sector_maps_reaudited": false,
+    "photo_galleries_reviewed_in_this_receipt": 0,
+    "existing_images_only": true,
+    "no_images_created_or_modified": true
+  },
+  "summary": {
+    "new_zone_desktop_selected_outline_clipping_found": 0,
+    "new_zone_desktop_gross_placement_mismatch_found": 0,
+    "desktop_sector_views_clear_of_context_card": 3,
+    "desktop_sector_views_with_context_card_occlusion": 2,
+    "affected_desktop_sectors": [
+      "magenta-sector-5",
+      "rouge-sector-4"
+    ],
+    "rouge_sector_4_desktop_card_also_occludes": true,
+    "overlap_chooser_views_with_text_or_button_clipping": 0,
+    "interpretation": "The completed desktop evidence supports the eleven displayed zone selections and both chooser layouts, while showing that two sector framing issues remain at this exact head despite passing CI."
+  },
+  "findings": [
+    {
+      "id": "DESKTOP-MAGENTA5-CONTEXT-OCCLUSION",
+      "file": "at341-sector-magenta-sector-5-desktop.png",
+      "area_id": "magenta-sector-5",
+      "category": "selected_footprint_information_card_occlusion",
+      "observed": "The northwest/northern vertex and adjacent upper purple edge sit behind the fixed selected-sector card.",
+      "scope": "Desktop presentation defect; the screenshot does not establish incorrect source coordinates or a changed polygon.",
+      "follow_up": "Integrate and validate the reviewed inset-framing fix on a later exact committed artifact; inspect this desktop view again."
+    },
+    {
+      "id": "DESKTOP-ROUGE4-CONTEXT-OCCLUSION",
+      "file": "at341-sector-rouge-sector-4-desktop.png",
+      "area_id": "rouge-sector-4",
+      "category": "selected_footprint_information_card_occlusion",
+      "observed": "The northern tip of the long purple footprint is covered by the selected-sector card. This confirms that the earlier phone issue also appears on desktop at this head.",
+      "scope": "Desktop presentation defect; the selected polygon remains inside the map viewport. No coordinate/source-data defect is inferred.",
+      "follow_up": "Integrate and validate the reviewed inset-framing fix on a later exact committed artifact; retain the existing source polygon."
+    }
+  ],
+  "limits": [
+    "No final release, live-site, merge or later-head approval is granted. These findings are tied to the exact supplied artifact hash.",
+    "Passing CI is recorded separately and does not clear the two visible sector-card overlaps.",
+    "No source/perimeter audit, geometry refit, numerical registration measurement or browser test was rerun.",
+    "A screenshot can show visible layout and gross alignment; it does not prove per-pixel accuracy, gesture behavior, successful chooser selection, persistence or navigation.",
+    "Purple sector source footprints are not required to coincide with green Wild Zone outlines and do not establish physical walls, exclusive partitions or encounter extents.",
+    "WZ17's visible connecting selection region does not prove a traversable route or connection.",
+    "The two overlap chooser screenshots show visible Bleu Sector 6 / Bleu Sector 8 choices; no click action was performed by this reviewer.",
+    "Only the eighteen listed images were directly inspected. The previous failed-run phone review remains a separate historical receipt."
+  ],
+  "files": [
+    {
+      "file": "at339-measured-selected-wz01-desktop.png",
+      "sha256": "4bd50c965f52d7a1cdc1573ea98264bd3f1d95d8dc79a99933d3e92a81943119",
+      "bytes": 392961,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-01",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete long waterfront outline and both sets of insets are visible; selected 01 control lies within the footprint. No viewport or map-control occlusion.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz06-desktop.png",
+      "sha256": "9e4cc2b7b1ae2085b111af251098b5d5250cf2b2775a68c90754a1d5300ea951",
+      "bytes": 400416,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-06",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete tall eastern outline, western steps and lower notch are visible. Bottom edge clears the map guidance; 06 remains inside the selection.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz07-desktop.png",
+      "sha256": "4b1610ae54613f6790bc8844a01051bb8f9eb2cede00580370a7a3222000ff6f",
+      "bytes": 508057,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-07",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete circular selection surrounds the matching native zone badge. Compass and bottom guidance remain clear.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz08-desktop.png",
+      "sha256": "6577bcba5be8a183f3311de406dfdc304ab8cdbba5303eb590a5fcd08c28d160",
+      "bytes": 497154,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-08",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete circular selection is visible, and the preserved 08 control lies within it. No gross displacement or viewport clipping is apparent.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz09-desktop.png",
+      "sha256": "ef263b01ed14bc1eb85d7b6259ce9401ea3f7f342961e4627223c5668ef32ad6",
+      "bytes": 415730,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-09",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Northern V-shaped notch and complete sloping lower edge are visible. No selected-outline clipping or gross placement mismatch.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz10-desktop.png",
+      "sha256": "26a8424a27f8e1c0b7062755f43a984115c901c3d1668dd705c09e22eb65b9a3",
+      "bytes": 477047,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-10",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete angled rectangular outline, west inset and east gate-step closure are visible. Selected 10 control remains contained.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz12-desktop.png",
+      "sha256": "79ac76757a97f4ee06bd291f282f9a872a96f825dd424f7b7f51eb0e9f0ad6bd",
+      "bytes": 497948,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-12",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Complete park outline, upper-west steps and eastern/southern insets are visible; no overlap with compass or map guidance.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz15-desktop.png",
+      "sha256": "07b2df8145cd9f6efddb9dcc9111b3a2807f5931dcfda229a30cef32b88e0ae9",
+      "bytes": 393603,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-15",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The complete narrow waterfront footprint and its inward notches are visible. Its shape remains recognizable despite the original map icons beneath it.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz17-desktop.png",
+      "sha256": "8c19cd7cb6825b855f7b41ded6460ccc89f8a30f68d310b2561dfd4b640336da",
+      "bytes": 540292,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-17",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "Both selection lobes and the narrow connecting portion are visible around the matching native badge. This rendered connection does not establish physical traversability.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz18-desktop.png",
+      "sha256": "3e6766412371815c16ff82ba3e65a8a7d7a32764b9acfe9870d3105be1c048c6",
+      "bytes": 406254,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-18",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The complete angled branched footprint is visible with its lower stepped edge. Selected 18 marker remains inside the selection.",
+      "issues": []
+    },
+    {
+      "file": "at339-measured-selected-wz19-desktop.png",
+      "sha256": "3a39367be8b3c857c685c7a494321d646c5709cf14d7328b6e72056d7e4a4c1c",
+      "bytes": 516772,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_zone_map",
+      "area_id": "wz-19",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The full footprint including its western inward corner is visible. Selected 19 marker, compass and bottom guidance are unobstructed.",
+      "issues": []
+    },
+    {
+      "file": "at341-sector-vert-sector-1-desktop.png",
+      "sha256": "022c466899ff99887a78f69297159d40b7e16c5b784ed1920c188a3c2a1803ea",
+      "bytes": 497876,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_sector_source_footprint",
+      "area_id": "vert-sector-1",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The complete purple footprint is visible below the selected-sector card and above the map guidance. No selected-edge clipping observed.",
+      "issues": []
+    },
+    {
+      "file": "at341-sector-bleu-sector-2-desktop.png",
+      "sha256": "8dc5479b527adf83f9e813b03c89d492312b7338d621032189d54dfd3d014dad",
+      "bytes": 488513,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_sector_source_footprint",
+      "area_id": "bleu-sector-2",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The complete purple footprint is visible. Its high northern vertex lies to the right of the information card and is not covered; the footprint is a source-area representation distinct from the green zone.",
+      "issues": []
+    },
+    {
+      "file": "at341-sector-magenta-sector-5-desktop.png",
+      "sha256": "3ccb69a5610bf799ed30e2d75cfe298c14c28c56b6aa9354912c39baa24c8060",
+      "bytes": 427760,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_sector_source_footprint",
+      "area_id": "magenta-sector-5",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The purple footprint's northwest/northern vertex and adjoining upper edge are covered by the selected-sector information card. The remaining footprint is visible and contained in the viewport.",
+      "issues": [
+        "DESKTOP-MAGENTA5-CONTEXT-OCCLUSION"
+      ]
+    },
+    {
+      "file": "at341-sector-rouge-sector-4-desktop.png",
+      "sha256": "1b65c2044488d5448113049534b9e4eafdab4f17b9b8103058500a14b0a343da",
+      "bytes": 511378,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_sector_source_footprint",
+      "area_id": "rouge-sector-4",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The northern end of the long purple footprint is covered by the selected-sector information card. The rest is visible within the viewport, including the lower end and both long edges.",
+      "issues": [
+        "DESKTOP-ROUGE4-CONTEXT-OCCLUSION"
+      ]
+    },
+    {
+      "file": "at341-sector-jaune-sector-6-desktop.png",
+      "sha256": "2883c17cac438eb45d5cfec558e569cf4c51c8b42199514c3620ec8ad9c71966",
+      "bytes": 494608,
+      "dimensions": [
+        837,
+        568
+      ],
+      "kind": "desktop_sector_source_footprint",
+      "area_id": "jaune-sector-6",
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The full purple source footprint and lower stepped edge are visible, below the card and above the guidance. No viewport clipping observed.",
+      "issues": []
+    },
+    {
+      "file": "at341-real-sector-overlap-phone.png",
+      "sha256": "e30c4c3e13adcd47fa46d3d2bb1d06121a5bc086c9ca59a58181513d2da8f0b1",
+      "bytes": 14929,
+      "dimensions": [
+        285,
+        179
+      ],
+      "kind": "phone_overlap_chooser",
+      "area_id": null,
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The heading and explanation are fully readable, including that sector heights and Wild Zone layers can overlap. Both Bleu Sector 6 and Bleu Sector 8 buttons are visible with complete labels, distinct borders and no text clipping.",
+      "issues": []
+    },
+    {
+      "file": "at341-real-sector-overlap-desktop.png",
+      "sha256": "b5484d64120e2f3e9c6a034f326520c2a1715db9b7b7433fea9b085da36c9adf",
+      "bytes": 16740,
+      "dimensions": [
+        422,
+        154
+      ],
+      "kind": "desktop_overlap_chooser",
+      "area_id": null,
+      "directly_viewed_with_view_image": true,
+      "visible_finding": "The heading and explanation are fully readable, including that sector heights and Wild Zone layers can overlap. Both Bleu Sector 6 and Bleu Sector 8 buttons are visible with complete labels, distinct borders and no text clipping.",
+      "issues": []
+    }
+  ],
+  "execution": {
+    "view_image_used": true,
+    "browser_calls": false,
+    "network_calls": false,
+    "code_changes": false,
+    "repository_mutations": false,
+    "supabase_writes": false,
+    "artifact_written": "This new review JSON only, outside checkouts."
+  }
+}

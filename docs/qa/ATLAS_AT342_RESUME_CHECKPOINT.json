@@ -61,7 +61,31 @@
     "final_screenshot_review": "pending",
     "expected_head_merge": "pending",
     "pages_deployment": "pending",
-    "deployed_live_checks": "pending"
+    "deployed_live_checks": "pending",
+    "runtime_file_hash_count": 24,
+    "overlap_scroll_correction": "docs/qa/ATLAS_AT342_OVERLAP_SCROLL_CORRECTION.json",
+    "scroll_correction_local_node": {
+      "passed": 154,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs",
+      "log": "docs/qa/at342-resume/scroll-correction-unit-tests.txt"
+    },
+    "latest_visible_framing": {
+      "tested_head": "c6b5b23dcc60c707aae4865372c9871fc99d5ded",
+      "tested_tree": "2477041a1a343c6c10bc354ad3604a7111bf7165",
+      "base_commit": "377fb91e03f2fea64237f0de031995b26090f468",
+      "passed": 155,
+      "failed": 0,
+      "skipped": 0,
+      "command": "node --test tests/*.test.mjs",
+      "log": "docs/qa/at342-resume/visible-frame-unit-tests.txt",
+      "log_sha256": "2dfb0acee558145deeda4af04bb7d556305af1630cea9f31aa2051e0752e97c9",
+      "review_receipts": [
+        "docs/qa/ATLAS_AT342_VISIBLE_FRAME_REVIEW.json",
+        "docs/qa/ATLAS_AT342_OVERLAP_VISIBILITY_REVIEW.json"
+      ],
+      "scope": "Local validation of the integrated visible-sector framing, preserved overlap diagnostics and owner 12px scroll clearance. Exact integrated-head browser CI and screenshot review remain pending."
+    }
   },
   "geometry_approval": "docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json",
   "private_tracker_receipt": "docs/qa/ATLAS_AT342_TRACKER_RECEIPT.json",
