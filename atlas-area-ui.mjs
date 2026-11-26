@@ -1,6 +1,7 @@
 /* Shared area controls. This module reads local evidence and never reads or
  * writes player storage. Optional failures leave each original map operational. */
 import {buildAreaModel,selectAreaResults,normaliseAreaSelection,readAreaSelection,areaSelectionUrl,areaLink,speciesKey,safeAreaSourceHref,ENCOUNTER_CLASSES} from './atlas-area-model.mjs';
+import {sectorContextFor,sectorContextImageStyle} from './atlas-sector-context.mjs';
 
 let loading;
 export function loadAreaModel(){
@@ -115,6 +116,24 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
         detail.append(related);
       }
       const original=safeAreaSourceHref(area.link);if(original)detail.append(link(original,'Open original area guide and photographs'));
+      // AT-345: wider context from a byte-identical archived owner map image.
+      // This is presentation-only; the small reviewed source crop stays as a fallback.
+      const context=area.kind==='sector'?sectorContextFor(area.id):null;
+      if(context&&localPhoto(context.path)){
+        const source=link(context.path);source.className='aa-context-link';
+        source.target='_blank';source.rel='noopener noreferrer';
+        source.setAttribute('aria-label','Open full original game-map photograph for '+area.name);
+        const window=make('span','aa-context-window');
+        const image=make('img','aa-context-image');
+        image.src=context.path;image.alt=area.name+' and nearby original game-map streets and landmarks';
+        image.loading='lazy';image.decoding='async';
+        image.width=context.width;image.height=context.height;
+        image.style.cssText=sectorContextImageStyle(context);
+        image.addEventListener('error',()=>source.remove(),{once:true});
+        window.append(image);
+        source.append(window,make('span','aa-context-caption','Wider original map view · Nearby streets and landmarks · Open complete photograph'));
+        detail.append(source,make('p','aa-context-note','Original north-up game-map photograph for orientation. This framing does not mark exact pickups, roof access or game coordinates.'));
+      }
       if(area.photos.length){
         const photos=make('div','aa-photo-links');
         for(const [i,p] of area.photos.entries())if(localPhoto(p.path)){
@@ -126,7 +145,11 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
           photoLink.append(photo,make('span','aa-photo-caption',title+' · Open full size'));
           photos.append(photoLink);
         }
-        detail.append(photos);
+        if(context){
+          const secondary=make('details','aa-secondary-photos');
+          secondary.append(make('summary','','Show preserved close-up photograph'),photos);
+          detail.append(secondary);
+        }else detail.append(photos);
       }
       if(onAreaFocus){const focus=make('button','',typeof areaFocusLabel==='string'?areaFocusLabel:area.kind==='sector'&&!area.geometry.eligible?'Show district starting view':area.geometry.eligible?'Show this area on the map':'Show saved zone centre');focus.type='button';focus.dataset.areaFocus=area.id;focus.addEventListener('click',()=>onAreaFocus(area));detail.append(focus);}
     }else{detail.append(make('h4','','Choose an area or Pokémon'),make('p','','Area records retain original photographs and written approaches. Choose a Pokémon to find its recorded wild habitats across all areas.'));return;}
