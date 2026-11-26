@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "tracking": "AT-342",
+  "reviewer": "runtime_review",
+  "created_at_utc": "2026-11-26T14:53:23.970872+00:00",
+  "status": "PASS_CODE_AND_PRESERVATION_REVIEW_BROWSER_VISUAL_GATE_PENDING",
+  "candidate": {
+    "remote_head": "f030c4ae3e33259105bf351885c386f6b53900d9",
+    "tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "materialized_local_head": "0bb2882c32b9f99e029d185f15ef6ddebde4d7c1",
+    "worktree_clean_at_identity_check": true
+  },
+  "reviewed_proposal": {
+    "local_head": "bff6499cfb396f651ad51315d096304b0a426bae",
+    "tree": "56831209699fb291dba7a4f9e85de77b206c0bf5",
+    "working_directory": "/workspace/scratch/eb5fa20055a2/atlas-visible-frame"
+  },
+  "compared_files": [
+    {
+      "path": "atlas-explorer-geometry.mjs",
+      "sha256": "d58b011de55bd253214ddfa094ddb506cec096e47f7afaad1d28fa1ac1820864",
+      "proposal_sha256": "d58b011de55bd253214ddfa094ddb506cec096e47f7afaad1d28fa1ac1820864",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-explorer.js",
+      "sha256": "5e6634d9bb45e192219df28e3904381e6ba31614d30db94468b854e8e060a241",
+      "proposal_sha256": "5e6634d9bb45e192219df28e3904381e6ba31614d30db94468b854e8e060a241",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-guide-links.mjs",
+      "sha256": "2cbcf5ddb2d213b43c5f4b704f798e2f3d0f471b9b31f7e6dc9100fe7560eb28",
+      "proposal_sha256": "2cbcf5ddb2d213b43c5f4b704f798e2f3d0f471b9b31f7e6dc9100fe7560eb28",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "items.html",
+      "sha256": "a8890aa6fc57ea6fb4aa34a4cbeb9c277f50589ebb4dcb2b9373753dc81c5d1d",
+      "proposal_sha256": "a8890aa6fc57ea6fb4aa34a4cbeb9c277f50589ebb4dcb2b9373753dc81c5d1d",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "sector-maps.html",
+      "sha256": "5a5658b2c44218a7fdd25c977a6103170f0f49f3916a215fd8809f672a6d60b3",
+      "proposal_sha256": "5a5658b2c44218a7fdd25c977a6103170f0f49f3916a215fd8809f672a6d60b3",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-area.css",
+      "sha256": "0dc5a22c1c2dff4b8a4b2ea29b6d50345d0339d99b4037eabd37ae52f6c77f3a",
+      "proposal_sha256": "0dc5a22c1c2dff4b8a4b2ea29b6d50345d0339d99b4037eabd37ae52f6c77f3a",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "tests/atlas_area_browser.mjs",
+      "sha256": "84124cb44eeb184ae55030b54a53c411dfc96eea4db2447808c37d3ac1ce3f69",
+      "proposal_sha256": "84124cb44eeb184ae55030b54a53c411dfc96eea4db2447808c37d3ac1ce3f69",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "tests/atlas_explorer.test.mjs",
+      "sha256": "3eaf742eb17a987963f8aba8344d0243f4bd1c14eeee9639f0bb4f1436a7f648",
+      "proposal_sha256": "3eaf742eb17a987963f8aba8344d0243f4bd1c14eeee9639f0bb4f1436a7f648",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "tests/atlas_sector_wild_zone_links.test.mjs",
+      "sha256": "d0df010eba76d3ce7a1743b215a2dec2a15167fedb8e510b5cfbf11d8b08b0ec",
+      "proposal_sha256": "d0df010eba76d3ce7a1743b215a2dec2a15167fedb8e510b5cfbf11d8b08b0ec",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "tests/atlas_guide_links.test.mjs",
+      "sha256": "7335df4263bd58fc5838570191fdb98dc41539c6311f6a3d4cd1d631d8203b2b",
+      "proposal_sha256": "7335df4263bd58fc5838570191fdb98dc41539c6311f6a3d4cd1d631d8203b2b",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": ".github/workflows/atlas-explorer.yml",
+      "sha256": "a7740880934718b8a5a006e6f1e7c78305ba0d3905bd4ac252cb3f3cb8056b1d",
+      "proposal_sha256": "a7740880934718b8a5a006e6f1e7c78305ba0d3905bd4ac252cb3f3cb8056b1d",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py",
+      "sha256": "fb032acb4e89d9fe0a4f0de2e8f44a554e341b8bd9dc7413a5f067eb3100819f",
+      "proposal_sha256": "fb032acb4e89d9fe0a4f0de2e8f44a554e341b8bd9dc7413a5f067eb3100819f",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-area-evidence.json",
+      "sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92",
+      "proposal_sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-explorer-data.json",
+      "sha256": "21b1b37838890442855be2337acfeeca4a8225e139f4e7d92cfe5f9cc2d8869f",
+      "proposal_sha256": "21b1b37838890442855be2337acfeeca4a8225e139f4e7d92cfe5f9cc2d8869f",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "atlas-collectibles-data.json",
+      "sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+      "proposal_sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "items-data.js",
+      "sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+      "proposal_sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "proposal_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/consolidation/2026-11-26/requirements.json",
+      "sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+      "proposal_sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "ATLAS_RELEASE_HANDOFF.md",
+      "sha256": "fa84ba2d86a23006a95b036ae56170965003f068c5483a91d834a32cb04c76aa",
+      "proposal_sha256": "fa84ba2d86a23006a95b036ae56170965003f068c5483a91d834a32cb04c76aa",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "FINAL_WORKSPACE_PLAN.md",
+      "sha256": "cd22136a0ca918e644583979567d8285370f22dff54164fed542b179ed6f3d51",
+      "proposal_sha256": "cd22136a0ca918e644583979567d8285370f22dff54164fed542b179ed6f3d51",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json",
+      "sha256": "137f7650bc140878d2538b0a0041157f527c92d10d2744ec39cf9965a2d16d43",
+      "proposal_sha256": "137f7650bc140878d2538b0a0041157f527c92d10d2744ec39cf9965a2d16d43",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "sha256": "5624b24bfa9b71b8fe0fa371eae7cb9d86f72fafab6363d2649bbde51706bad3",
+      "proposal_sha256": "5624b24bfa9b71b8fe0fa371eae7cb9d86f72fafab6363d2649bbde51706bad3",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
+      "sha256": "66193865d03ca48ddf3b8b3b311e1e3fad737a15a6c3d0195e0489dca9c8ba6d",
+      "proposal_sha256": "66193865d03ca48ddf3b8b3b311e1e3fad737a15a6c3d0195e0489dca9c8ba6d",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_RESUME_CHECKPOINT.json",
+      "sha256": "2d1d3f5fae2c809b9f100afaeaa3690f23a176ba8a260a4eb28acf28b9bbcc69",
+      "proposal_sha256": "aabbf3eaea581fe4768a2ea7e4391c9d42766e757c191930aade787fee798d58",
+      "identical_to_reviewed_proposal": false
+    },
+    {
+      "path": "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json",
+      "sha256": "2e40bfa1e18d5d21df0435d9fd1336f8ee3b5f8b347b97d862963350e2efef0f",
+      "proposal_sha256": "2e40bfa1e18d5d21df0435d9fd1336f8ee3b5f8b347b97d862963350e2efef0f",
+      "identical_to_reviewed_proposal": true
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_VISIBLE_FRAME_REVIEW.json",
+      "sha256": "7684250165dd499f543feb705aeb8b63b4bc3fa309f1e9f36bfbec6804c54a2c",
+      "proposal_sha256": "2454733e3d3b8c9d4d4d7f2a5b5a4ec064d09d3ab0e86639f4aafe08f3760376",
+      "identical_to_reviewed_proposal": false
+    },
+    {
+      "path": "docs/qa/ATLAS_AT342_OVERLAP_VISIBILITY_REVIEW.json",
+      "sha256": "cb4a6405455130833068a49751379a5b92467f843baa6eca639593c912cd3e5d",
+      "proposal_sha256": "cb4a6405455130833068a49751379a5b92467f843baa6eca639593c912cd3e5d",
+      "identical_to_reviewed_proposal": true
+    }
+  ],
+  "receipt_reconciliation": "The two nonidentical files are documentation receipts. The exact tree retains the historical proposal review and points the resume checkpoint to ATLAS_AT342_FINAL_INTEGRATION.json and combined-final-unit-tests.txt, rather than the alternate checkout's later local integrated-validation append. Both differences were read and do not change code, tests, source records or release-gate status.",
+  "runtime_findings": [
+    "frameBoundary accepts optional top/bottom screen-space insets and targets the available vertical rectangle before the existing single constrain call. Zero-inset zoom/pan formulas retain prior behavior.",
+    "Explorer measures the existing context/guidance rectangles only for a sector with a visible selected-sector context. Explicit focus reserves those rectangles plus12px clearance; zone focus retains zero insets.",
+    "The change preserves input geometry, camera rotation, zoom limits and the existing pointer/gesture, route, selection, layer and progress controllers.",
+    "The existing12px overlap scroll clearance and strict chooser viewport assertion are preserved. Browser checks additionally require the full selected-sector outline/stroke to clear context, guidance and horizontal map edges.",
+    "The two amended frozen sector-card hashes are checked exactly, then their specifically allowed summary text is restored in memory to recheck both original frozen hashes. Existing link and content-preservation assertions remain.",
+    "The added CI outline replay uses its default read-only byte-comparison path; the workflow supplies no --write flag."
+  ],
+  "focused_validation": {
+    "command": "node --test tests/atlas_explorer.test.mjs tests/atlas_sector_wild_zone_links.test.mjs tests/atlas_guide_links.test.mjs",
+    "executed_in": "/workspace/scratch/eb5fa20055a2/atlas-visible-frame",
+    "passed": 48,
+    "failed": 0,
+    "skipped": 0,
+    "exact_tree_binding": "Reviewed runtime, relevant source data and all three executed test files are byte-identical in the exact candidate tree. No browser was run locally.",
+    "inset_cases": 960,
+    "sectors": 48,
+    "inset_configurations": 4,
+    "rotations": [
+      0,
+      45,
+      120,
+      225,
+      315
+    ],
+    "covered_properties": [
+      "zero-inset equivalence",
+      "reserved-rectangle containment",
+      "rotation preservation",
+      "zoom limits",
+      "view-input immutability",
+      "source-geometry immutability"
+    ]
+  },
+  "root_local_checkpoint": {
+    "passed": 155,
+    "failed": 0,
+    "source": "Release coordinator and committed integration receipt; not a repeated full-suite run by this reviewer.",
+    "receipt": "docs/qa/ATLAS_AT342_FINAL_INTEGRATION.json",
+    "receipt_sha256": "383804029d1ed6960a69bd2a1ba7dde4574bad09bb529eef731c6f5e285fe159",
+    "log": "docs/qa/at342-resume/combined-final-unit-tests.txt",
+    "log_sha256": "d2f9b67aaa71651a17e5c5c47aec6b3ff294f1fab2eb9f3ce4bb1b295b9bf4f2",
+    "summary_lines": [
+      "\u2139 tests 155",
+      "\u2139 pass 155",
+      "\u2139 fail 0",
+      "\u2139 skipped 0"
+    ]
+  },
+  "html_preservation": [
+    {
+      "path": "items.html",
+      "tag_and_attribute_sequence_identical": true,
+      "text_node_count": 4871,
+      "text_changes": [
+        {
+          "occurrences": 1,
+          "before": "WHOLE CITY / VERIFIED NAMES, NOT YET VERIFIED MAPS",
+          "after": "WHOLE CITY / SECTOR PHOTOS AND REVIEWED AREA OUTLINES"
+        },
+        {
+          "occurrences": 1,
+          "before": "Full sector maps are still outstanding.",
+          "after": "Original sector photographs and reviewed area outlines are available."
+        },
+        {
+          "occurrences": 1,
+          "before": " We don't have verified sector boundary images or exact item XY coordinates for all 48 sectors. This is a complete sector ",
+          "after": " The 42 unique original game-map crops are reused across the 48 sector references; reviewed named-sector footprints identify areas on the city map. Exact item XY coordinates, roof and floor positions, and traversable routes still require separate evidence. This is a complete sector "
+        },
+        {
+          "occurrences": 1,
+          "before": " for orientation while sector-specific images are researched and verified.",
+          "after": " alongside the sector photographs and reviewed area outlines."
+        },
+        {
+          "occurrences": 48,
+          "before": "Full sector image and exact item pin placements: ",
+          "after": "Original sector photo and reviewed area outline available; exact item pin placements: "
+        }
+      ]
+    },
+    {
+      "path": "sector-maps.html",
+      "tag_and_attribute_sequence_identical": true,
+      "text_node_count": 5090,
+      "text_changes": [
+        {
+          "occurrences": 1,
+          "before": " Exact item / sector boundaries not yet recorded",
+          "after": " Exact pickup and roof positions still need individual evidence"
+        },
+        {
+          "occurrences": 18,
+          "before": "Sector map and item pins awaiting evidence",
+          "after": "Sector map available; item pins awaiting evidence"
+        }
+      ]
+    }
+  ],
+  "byte_identical_to_previous_377fb91_candidate": [
+    "atlas-area.css",
+    "atlas-area-evidence.json",
+    "atlas-explorer-data.json",
+    "atlas-collectibles-data.json",
+    "items-data.js",
+    "maps/lumiose-game-map.jpg",
+    "docs/consolidation/2026-11-26/requirements.json"
+  ],
+  "release_gate_states": {
+    "G4": "candidate_pending_exact_current_head_browser_validation",
+    "G5": "pending",
+    "A0": "blocked",
+    "A1-A7": "unchanged_original_site_full_upgrade_not_published"
+  },
+  "workspace_executable_prompt_allowed": false,
+  "limits": [
+    "No blocking regression was found in this code/preservation review. Exact f030c4ae browser CI and actual phone/desktop sector captures remain required before merge.",
+    "The377fb91 CI/artifact reviews are historical. They do not establish that the new inset framing clears the visible context/guidance in the current runtime.",
+    "Pure geometry coverage is48 sectors across four representative inset configurations and five rotations; actual browser clearance assertions exercise five representative sectors on both device sizes.",
+    "The two gallery snapshots still do not prove all five Hibernal Avenue photographs visibly load; retain the independent deployed-browser check.",
+    "No Pages deployment, original Workspace publication, Supabase mutation, or completion of all67 historical requirements is claimed."
+  ],
+  "mutations": {
+    "repository_edits": false,
+    "remote_actions": false,
+    "only_created_file": "/workspace/scratch/e3816c743f42/release-review-f030c4a/final-code-review.json"
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "tested_head": "377fb91e03f2fea64237f0de031995b26090f468",
+  "tested_tree": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+  "base_sha": "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+  "workflows": [
+    {
+      "id": 45841333148,
+      "name": "Validate rotatable Lumiose Atlas Explorer",
+      "event": "pull_request",
+      "head_sha": "377fb91e03f2fea64237f0de031995b26090f468",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-26T14:40:11Z",
+      "updated_at": "2026-11-26T14:45:11Z",
+      "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45841333148",
+      "check_suite_id": 124025323917
+    },
+    {
+      "id": 45841333154,
+      "name": "Validate recovered Atlas article pages",
+      "event": "pull_request",
+      "head_sha": "377fb91e03f2fea64237f0de031995b26090f468",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-26T14:40:11Z",
+      "updated_at": "2026-11-26T14:41:09Z",
+      "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45841333154",
+      "check_suite_id": 124025323924
+    },
+    {
+      "id": 45841333257,
+      "name": "Validate Atlas header feedback button",
+      "event": "pull_request",
+      "head_sha": "377fb91e03f2fea64237f0de031995b26090f468",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-26T14:40:11Z",
+      "updated_at": "2026-11-26T14:40:25Z",
+      "html_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45841333257",
+      "check_suite_id": 124025324152
+    }
+  ],
+  "map_jobs": [
+    {
+      "id": 139983479578,
+      "name": "atlas-unit",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45841333148,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Syntax-check isolated map modules",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Check source counts, actual photos and rotation/floor-route evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Gate collectible coordinates, original identities and read-only progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify owner overview source bytes and keep research out of live geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify original Wild Zone photo pairs and roster parity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Validate shared areas, habitat classes and boundary evidence gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Verify attributed sector reconciliation and preservation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Keep all 20 DLC deep links valid and all 14 original mission steps unchanged",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Reject broken local guide anchors and raw Markdown destinations across every page",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Validate native coverage destination and original 25-link menu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Protect existing guide, checkmarks and map references",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29
+        }
+      ]
+    },
+    {
+      "id": 139983479922,
+      "name": "atlas-areas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45841333148,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency, without changing package files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Confirm system Chrome is available for offline-style browser smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify shared habitats, all map views and original progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Attach shared-area screenshot and failure diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "id": 139983480301,
+      "name": "atlas-browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 45841333148,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install isolated Chromium smoke dependency, without changing package files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Confirm system Chrome is available for offline-style browser smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify real map and stepwise routes on desktop and phone",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify compact layers with isolated dense fixtures and unchanged player progress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Verify all 20 Wild Zone photo panels and four map surfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Attach screenshot QA evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 15128421851,
+      "name": "atlas-areas-mobile-desktop-preview",
+      "size_in_bytes": 31621544,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128421851",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128421851/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:44:29Z",
+      "expires_at": "2026-12-06T14:44:27Z",
+      "updated_at": "2026-11-26T14:44:29Z",
+      "digest": "sha256:711a69d616e867b321702096cee3d834f4f80e7828121986626872ee2d6cacf6",
+      "workflow_run": {
+        "id": 45841333148,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "377fb91e03f2fea64237f0de031995b26090f468"
+      }
+    },
+    {
+      "id": 15127877926,
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "size_in_bytes": 62760407,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15127877926",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15127877926/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:45:07Z",
+      "expires_at": "2026-12-06T14:45:05Z",
+      "updated_at": "2026-11-26T14:45:07Z",
+      "digest": "sha256:b958bf7408de0b99bdf93b38c4e0d97650332d11e3bb5d66b7d29a2df4ea6fd2",
+      "workflow_run": {
+        "id": 45841333148,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "377fb91e03f2fea64237f0de031995b26090f468"
+      }
+    },
+    {
+      "id": 15128635956,
+      "name": "fashion-phone-desktop-preview",
+      "size_in_bytes": 659981,
+      "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128635956",
+      "archive_download_url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/actions/artifacts/15128635956/zip",
+      "expired": false,
+      "created_at": "2026-11-26T14:41:04Z",
+      "expires_at": "2026-12-06T14:41:02Z",
+      "updated_at": "2026-11-26T14:41:04Z",
+      "digest": "sha256:7f199ce071bcf020067bb7a05070b25eda8f25dfe225e761416c091ad63a65bf",
+      "workflow_run": {
+        "id": 45841333154,
+        "repository_id": 1466374556,
+        "head_repository_id": 1466374556,
+        "head_branch": "release/atlas-verified-consolidation-20261126",
+        "head_sha": "377fb91e03f2fea64237f0de031995b26090f468"
+      }
+    }
+  ]
+}

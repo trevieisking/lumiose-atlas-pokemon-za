@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "tracking": "AT-342",
+  "reviewer": "runtime_review",
+  "created_at_utc": "2026-11-26T14:57:29.985781+00:00",
+  "status": "PASS_BOUNDED_PREMERGE_RUNTIME_ARTIFACT_REVIEW",
+  "candidate": {
+    "remote_head": "f030c4ae3e33259105bf351885c386f6b53900d9",
+    "tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "materialized_local_head": "0bb2882c32b9f99e029d185f15ef6ddebde4d7c1",
+    "worktree_clean_at_identity_check": true
+  },
+  "conclusion": "No material runtime or layout blocker was found in this bounded proof and screenshot scope. Both complete browser proof records and 16 previously inspected runtime captures match their approved prior bytes. The five changed captures assigned to this reviewer have been inspected. Both Jaune7 gallery snapshots remain incomplete loading evidence; the release coordinator retains the independent deployed-browser all-five photograph check. Merge, deployment and other reviewers' changed-sector/guide inspections are outside this receipt.",
+  "ci_checkpoint": {
+    "run_id": 45842781652,
+    "all_jobs_pass_reported_by_release_coordinator": true,
+    "ci_was_not_rerun_locally": true
+  },
+  "artifact_provenance": [
+    {
+      "name": "atlas-areas-mobile-desktop-preview",
+      "artifact_id": 15130116199,
+      "archive_sha256_verified_by_release_coordinator": "ddcf1c5954bc8dbcf879af3f693834fcc038f0f9cc4f0cd3fd97dfacb111215d",
+      "extracted_root": "/workspace/scratch/e3816c743f42/release-review-f030c4a/areas"
+    },
+    {
+      "name": "atlas-explorer-mobile-desktop-preview",
+      "artifact_id": 15128353733,
+      "archive_sha256_verified_by_release_coordinator": "36e68c683a5f326c23e8584c470d99e9b89394c26e57a189490e66e5531faaeb",
+      "extracted_root": "/workspace/scratch/e3816c743f42/release-review-f030c4a/map"
+    }
+  ],
+  "artifact_integrity": [
+    {
+      "section": "areas",
+      "files": 133,
+      "pngs": 132,
+      "all_pngs_verified": true,
+      "same_paths_as_previous": true,
+      "byte_identical_files": 122,
+      "changed_files": 11,
+      "added_files": 0,
+      "removed_files": 0,
+      "failure_diagnostics_present": false
+    },
+    {
+      "section": "map",
+      "files": 214,
+      "pngs": 213,
+      "all_pngs_verified": true,
+      "same_paths_as_previous": true,
+      "byte_identical_files": 193,
+      "changed_files": 21,
+      "added_files": 0,
+      "removed_files": 0,
+      "failure_diagnostics_present": false
+    }
+  ],
+  "previous_review": {
+    "path": "/workspace/scratch/e3816c743f42/release-review-377fb91/final-runtime-visual-review.json",
+    "sha256": "bc5cf7f6e2ba648dd655f49ba0de12635955c17ad86b1f6115351d542771f472",
+    "candidate": {
+      "head": "377fb91e03f2fea64237f0de031995b26090f468",
+      "tree": "bbe5fd1bb5ef2e865806bb30d8d760be97743942"
+    }
+  },
+  "code_and_preservation_review": {
+    "path": "/workspace/scratch/e3816c743f42/release-review-f030c4a/final-code-review.json",
+    "sha256": "671964a70e28e90c348cd50df35afde7fbaa28da92fc2d9795585e01d4bec168",
+    "scope": "Exact-tree code review, 48 focused test result binding, strict HTML tag/attribute preservation and coordinator 155-test checkpoint; this artifact review supplies subsequent CI proof/visual evidence."
+  },
+  "proof_reviews": {
+    "shared_areas": {
+      "path": "areas/at339-browser-proof.json",
+      "sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+      "unique_production_boundaries": 68,
+      "production_id_parity": true,
+      "devices": [
+        {
+          "device": "phone",
+          "viewport": [
+            393,
+            852
+          ],
+          "surfaces": 4,
+          "approved_zone_renders": 20,
+          "native_bounds_within_0_01_px": true,
+          "original_photo_pairs": 20,
+          "all_named_screenshots_present": true,
+          "storage_writes": 0,
+          "page_errors": [],
+          "preservation_flags_verified": [
+            "historyAndReload",
+            "legacyMarkerReload",
+            "legacyFilterReveal",
+            "explorerSelectionHistoryParity",
+            "pendingLegacyIntentPreserved",
+            "pendingHistorySupersedesIntent",
+            "pendingExplorerRecordPreserved",
+            "pendingMainChoiceAndFiltersPreserved",
+            "pendingSectorAnchorsPreserved",
+            "routeAndCollectibleStatePreserved",
+            "sourcePhotoDomPreserved",
+            "originalProgressBytesPreserved",
+            "sourceFailureFallback",
+            "syntheticTapAndDrag",
+            "boundaryLayerAndFilterHitGate",
+            "collectibleClickPriority"
+          ],
+          "touch_pinch_and_rotation": true
+        },
+        {
+          "device": "desktop",
+          "viewport": [
+            1440,
+            900
+          ],
+          "surfaces": 4,
+          "approved_zone_renders": 20,
+          "native_bounds_within_0_01_px": true,
+          "original_photo_pairs": 20,
+          "all_named_screenshots_present": true,
+          "storage_writes": 0,
+          "page_errors": [],
+          "preservation_flags_verified": [
+            "historyAndReload",
+            "legacyMarkerReload",
+            "legacyFilterReveal",
+            "explorerSelectionHistoryParity",
+            "pendingLegacyIntentPreserved",
+            "pendingHistorySupersedesIntent",
+            "pendingExplorerRecordPreserved",
+            "pendingMainChoiceAndFiltersPreserved",
+            "pendingSectorAnchorsPreserved",
+            "routeAndCollectibleStatePreserved",
+            "sourcePhotoDomPreserved",
+            "originalProgressBytesPreserved",
+            "sourceFailureFallback",
+            "syntheticTapAndDrag",
+            "boundaryLayerAndFilterHitGate",
+            "collectibleClickPriority"
+          ],
+          "touch_pinch_and_rotation": false
+        }
+      ],
+      "byte_identical_to_previous_complete_proof": true,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-browser-proof.json"
+    },
+    "collectibles": {
+      "path": "map/atlas-collectibles/at338-browser-proof.json",
+      "sha256": "99d38ccc67f62c94c36bc2d6a5f1379290fd940b2efe0ac7045e484d92f22129",
+      "production_pins": 0,
+      "fixture_records": 364,
+      "fixtures_test_only": true,
+      "devices": [
+        "desktop",
+        "phone"
+      ],
+      "layer_combination_counts": [
+        0,
+        264,
+        100,
+        364
+      ],
+      "original_major_markers_preserved": 47,
+      "repeated_full_pin_count": 364,
+      "original_pin_nodes_retained": true,
+      "no_horizontal_overflow": true,
+      "target_size_css_px": 44,
+      "dot_size_css_px": 7,
+      "overview_choice_count": 4,
+      "zoomed_choice_count": 3,
+      "storage_cases": [
+        {
+          "case": "corrupt-json",
+          "unavailableLabel": true,
+          "writes": 0,
+          "bytesPreserved": true
+        },
+        {
+          "case": "invalid-progress-shape",
+          "unavailableLabel": true,
+          "writes": 0,
+          "bytesPreserved": true
+        },
+        {
+          "case": "storage-unavailable",
+          "unavailableLabel": true,
+          "writes": 0,
+          "bytesPreserved": true
+        }
+      ],
+      "invalid_coordinate_rejected": true,
+      "register_failure_preserves_original_map": true,
+      "byte_identical_to_previous_complete_proof": true,
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-collectibles/at338-browser-proof.json"
+    }
+  },
+  "fresh_visual_inspections": [
+    {
+      "path": "map/atlas-explorer/at341-access-original-photo-phone.png",
+      "sha256": "f6a23dc81b496f108d4e0ff7d00996e64b3dca91c9ee95e076676bdb1e148b10",
+      "previous_sha256": "7ce0f7e405c955f233a06ae8dc7006295f0164d83d27f55fd0957189eea606df",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "fresh_visual_inspection_of_actual_candidate_png",
+      "finding": "Only the ground-entrance photograph has painted. Four labelled photo cards are blank in this capture. The five-card layout and source qualification text fit horizontally. This screenshot does not prove all five photographs loaded."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-original-photo-desktop.png",
+      "sha256": "586a78d1f2b253ee1a8c320da7ccf6785940f668788a16dd02cb21b7915f2add",
+      "previous_sha256": "95452dfce3a9f896bc5c5b3366a89d3679011bd90435dbfc2526ac6bd02fbd6a",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "fresh_visual_inspection_of_actual_candidate_png",
+      "finding": "Only the ground-entrance photograph has painted. The wide-map, neighbourhood-map, close-map and rooftop-arrival cards are blank at capture. Map, approximate-pin qualification and gallery layout remain readable. This screenshot does not prove all five photographs loaded."
+    },
+    {
+      "path": "map/atlas-explorer/place-photo-details-desktop.png",
+      "sha256": "65200d21263e1d4c2888351c786024bd8edbd2bb7425aacd341b5fc5f3cfbdab",
+      "previous_sha256": "11a48aafe14b9fa065178db3586d5559cbcb74cd39edf38a7a2656afd34b0784",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "fresh_visual_inspection_of_actual_candidate_png",
+      "finding": "Controls, search/filter panel and selected-sector context fit the desktop width. The selected detail badge appears at the bottom edge, while its photograph is below the captured viewport. This capture establishes layout and selected context; source-image preservation rests on executed DOM/source assertions."
+    },
+    {
+      "path": "areas/at339-standalone-habitats-desktop.png",
+      "sha256": "cb20d83a03289420a963221f7c224cd4577b05fffd32c9bb490c7fffd5f10882",
+      "previous_sha256": "b460f33f5940f0ef6fb290de939b3341ade97d9e4ed07c03acb27ab475aacce5",
+      "dimensions_px": [
+        1052,
+        901
+      ],
+      "method": "fresh_visual_inspection_of_actual_candidate_png",
+      "finding": "The area-search panel, district and Fixed Alpha selectors, one matching Wild Zone 01 result and Pidgey habitat card are fully readable without overlapping or clipped controls. The preserved uncertainty text distinguishes a recorded habitat from a permanent spawn or measured boundary."
+    },
+    {
+      "path": "map/atlas-explorer/atlas-owner-photos.png",
+      "sha256": "e026164822b6ecc58dfa82015648524e00a584ed553c5d2fbcaab2f5c34e2525",
+      "previous_sha256": "accefaa1c3ef46951cb1a05618e3623814e89a97b2a1982cd21912d526c0785b",
+      "dimensions_px": [
+        1440,
+        4187
+      ],
+      "method": "fresh_visual_inspection_of_actual_candidate_png",
+      "finding": "All five Sommi owner photographs visibly painted: ground facade, wide city map, Rouge Plaza neighbourhood map, close map and rooftop arrival. Captions, original map and owner survey links, selected route and progress-independent controls fit the full-page layout. This full-page capture is 4187px tall and does not by itself establish simultaneous visibility inside a 900px browser viewport; it is a different gallery from the pending Jaune7 check."
+    }
+  ],
+  "prior_visual_findings_carried_by_byte_identity": [
+    {
+      "path": "areas/at341-real-sector-overlap-phone.png",
+      "sha256": "e30c4c3e13adcd47fa46d3d2bb1d06121a5bc086c9ca59a58181513d2da8f0b1",
+      "dimensions_px": [
+        285,
+        179
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-real-sector-overlap-phone.png",
+      "previous_sha256": "e30c4c3e13adcd47fa46d3d2bb1d06121a5bc086c9ca59a58181513d2da8f0b1",
+      "finding": "Both Bleu Sector 6 and Bleu Sector 8 buttons are complete, readable and unclipped in the detail crop; overlap explanation is visible. The unchanged strict viewport check completed before capture."
+    },
+    {
+      "path": "areas/at341-real-sector-overlap-desktop.png",
+      "sha256": "b5484d64120e2f3e9c6a034f326520c2a1715db9b7b7433fea9b085da36c9adf",
+      "dimensions_px": [
+        422,
+        154
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at341-real-sector-overlap-desktop.png",
+      "previous_sha256": "b5484d64120e2f3e9c6a034f326520c2a1715db9b7b7433fea9b085da36c9adf",
+      "finding": "Both complete chooser buttons and overlap explanation render cleanly; no horizontal clipping. The unchanged strict viewport check completed before capture."
+    },
+    {
+      "path": "map/atlas-explorer/place-layer-recovery-phone.png",
+      "sha256": "2190769ed6fe0db67d9fa5e0c710c279b125a972dbce90d43e7c9c1a49fc23b0",
+      "dimensions_px": [
+        340,
+        656
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/place-layer-recovery-phone.png",
+      "previous_sha256": "2190769ed6fe0db67d9fa5e0c710c279b125a972dbce90d43e7c9c1a49fc23b0",
+      "finding": "Layer controls wrap inside the phone width, with separate Item/Screw choices, 47-of-47 place-marker status, and a clearly disabled unverified scaffolding layer."
+    },
+    {
+      "path": "map/atlas-explorer/place-layer-recovery-desktop.png",
+      "sha256": "b69f9fa7346c42fedb883ff6a391f78e43626de4b38711a5d3704f6042dfa063",
+      "dimensions_px": [
+        837,
+        338
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/place-layer-recovery-desktop.png",
+      "previous_sha256": "b69f9fa7346c42fedb883ff6a391f78e43626de4b38711a5d3704f6042dfa063",
+      "finding": "Layer controls, marker count, recovery actions and source-only collectible message are readable without overlap or clipping."
+    },
+    {
+      "path": "map/atlas-explorer/place-photo-details-phone.png",
+      "sha256": "142be961c57acab695cb8ba000d5bec87e7436705691fd464bb4f2f7c5b8b813",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/place-photo-details-phone.png",
+      "previous_sha256": "142be961c57acab695cb8ba000d5bec87e7436705691fd464bb4f2f7c5b8b813",
+      "finding": "Selected Bleu Sector 3 heading is visible at the bottom of the captured viewport and controls fit horizontally. The source image is below the captured frame; preservation is established by the executed DOM/source assertions rather than this image alone."
+    },
+    {
+      "path": "map/atlas-collectibles/at338-production-empty-map-phone.png",
+      "sha256": "fd229a7faae020cf327bccfe6c45a2e41f959cd7f4790e6aa1077805a6f1cb86",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-collectibles/at338-production-empty-map-phone.png",
+      "previous_sha256": "fd229a7faae020cf327bccfe6c45a2e41f959cd7f4790e6aa1077805a6f1cb86",
+      "finding": "Both collectible layers are enabled while the production status explicitly states no verified map points; 47 original place markers remain reported. Controls fit the phone width."
+    },
+    {
+      "path": "map/atlas-collectibles/at338-overlap-chooser-phone.png",
+      "sha256": "0d48a7482b3b30269053081e25b5fad60768b022323ce17410aadae403311be0",
+      "dimensions_px": [
+        340,
+        380
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-collectibles/at338-overlap-chooser-phone.png",
+      "previous_sha256": "0d48a7482b3b30269053081e25b5fad60768b022323ce17410aadae403311be0",
+      "finding": "Isolated synthetic fixture only: four distinct choices retain their ground/roof labels, with readable controls and no clipping."
+    },
+    {
+      "path": "areas/at339-approved-wz05-photos-phone.png",
+      "sha256": "d4a6ecf279ce15a0d6341849a09a0ed539504c171c0b50e2bb65d26201e65f9e",
+      "dimensions_px": [
+        283,
+        460
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/areas/at339-approved-wz05-photos-phone.png",
+      "previous_sha256": "d4a6ecf279ce15a0d6341849a09a0ed539504c171c0b50e2bb65d26201e65f9e",
+      "finding": "Both original Wild Zone 5 images have painted with separate overview/close-up captions and full-size link labels; no clipping or overlap."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-1-desktop.png",
+      "sha256": "b89d7a82b8027700d38f22728b703ec24d52b77f1e62bf1b5741405a7a37f761",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-1-desktop.png",
+      "previous_sha256": "b89d7a82b8027700d38f22728b703ec24d52b77f1e62bf1b5741405a7a37f761",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-1-phone.png",
+      "sha256": "f261427ea5f2cda63f58e58145289ab1176d7f66a8de05499702bcc0d1700c18",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-1-phone.png",
+      "previous_sha256": "f261427ea5f2cda63f58e58145289ab1176d7f66a8de05499702bcc0d1700c18",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-7-desktop.png",
+      "sha256": "7696ff87e2778a481d5104e628a651306c6dbd442637a6908241f4fca1772578",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-7-desktop.png",
+      "previous_sha256": "7696ff87e2778a481d5104e628a651306c6dbd442637a6908241f4fca1772578",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-7-phone.png",
+      "sha256": "bdd8aabe5c4ae502a174bf1579d3822c2d4293179cb149dd56ce5d029e21fb6f",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-7-phone.png",
+      "previous_sha256": "bdd8aabe5c4ae502a174bf1579d3822c2d4293179cb149dd56ce5d029e21fb6f",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-8-desktop.png",
+      "sha256": "e4158a55edfd3cab599557b5e980191de3599542d34cd59d84e6f9fcfd04062d",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-8-desktop.png",
+      "previous_sha256": "e4158a55edfd3cab599557b5e980191de3599542d34cd59d84e6f9fcfd04062d",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-jaune-sector-8-phone.png",
+      "sha256": "7ea257d2cbb5eb7c801d26737ac6b4074140ec09a828dd20f2a2c80cedf300be",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-jaune-sector-8-phone.png",
+      "previous_sha256": "7ea257d2cbb5eb7c801d26737ac6b4074140ec09a828dd20f2a2c80cedf300be",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-rouge-sector-4-desktop.png",
+      "sha256": "85b0b6fd1fbe8607e10c9f5985a534085de616f0c7fa9be413586b4977a7c4e3",
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-rouge-sector-4-desktop.png",
+      "previous_sha256": "85b0b6fd1fbe8607e10c9f5985a534085de616f0c7fa9be413586b4977a7c4e3",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-rouge-sector-4-phone.png",
+      "sha256": "eb912bb9271509a66c7a898655c01d14fadd1176f752ed9f7f9e7dae1fc4727e",
+      "dimensions_px": [
+        390,
+        844
+      ],
+      "method": "prior_visual_findings_carried_by_exact_byte_identity",
+      "previous_path": "/workspace/scratch/e3816c743f42/release-review-377fb91/map/atlas-explorer/at341-access-rouge-sector-4-phone.png",
+      "previous_sha256": "eb912bb9271509a66c7a898655c01d14fadd1176f752ed9f7f9e7dae1fc4727e",
+      "finding": "Access-route layout, readable evidence qualifications and controls; gallery completeness remains separately limited."
+    }
+  ],
+  "all_changed_artifact_files_against_previous": [
+    {
+      "path": "areas/at339-standalone-habitats-desktop.png",
+      "sha256": "cb20d83a03289420a963221f7c224cd4577b05fffd32c9bb490c7fffd5f10882",
+      "previous_sha256": "b460f33f5940f0ef6fb290de939b3341ade97d9e4ed07c03acb27ab475aacce5",
+      "review_assignment": "runtime_review_fresh_visual"
+    },
+    {
+      "path": "areas/at341-sector-bleu-sector-2-desktop.png",
+      "sha256": "028d85f9ab8eaeeaf959f926fa1af88b9b502d01ce892b78669290f9db590e04",
+      "previous_sha256": "8dc5479b527adf83f9e813b03c89d492312b7338d621032189d54dfd3d014dad",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-bleu-sector-2-phone.png",
+      "sha256": "45050da9e6e8940554dbaf24eb76161255d29fe406335e86adb7bec9333db424",
+      "previous_sha256": "5c93de41b242f91643e55e8fd0c114da746e66be2c5f22afb5231dbb0c6c6c5e",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-jaune-sector-6-desktop.png",
+      "sha256": "b93b277a10c803d2de329226b8d539893481dbfeb54ed08ffcf5c27d79d751a3",
+      "previous_sha256": "2883c17cac438eb45d5cfec558e569cf4c51c8b42199514c3620ec8ad9c71966",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-jaune-sector-6-phone.png",
+      "sha256": "7ca842b6d732e9760ba39316fd360a089e5613d31d70f11d3bcbeb1e9366728e",
+      "previous_sha256": "5aa47b7d836a6f14d152294c853b78b9955db5ca09f3b91a39f182cc302ddd23",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-magenta-sector-5-desktop.png",
+      "sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db",
+      "previous_sha256": "3ccb69a5610bf799ed30e2d75cfe298c14c28c56b6aa9354912c39baa24c8060",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-magenta-sector-5-phone.png",
+      "sha256": "903efeeeec0d9196cb8a4dc4090f9bba3ae4ca276c3eee2d4919ca8f59a191d7",
+      "previous_sha256": "1e41ee8d09fb07796fdd420a842b08d9b61e29c186c3edf22f3d7124a330574a",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-rouge-sector-4-desktop.png",
+      "sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e",
+      "previous_sha256": "1b65c2044488d5448113049534b9e4eafdab4f17b9b8103058500a14b0a343da",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-rouge-sector-4-phone.png",
+      "sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd",
+      "previous_sha256": "280c4f4238a20bf4f0bf512116fce0c39c2d50e3c1369dacf5e669eb4eff260c",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-vert-sector-1-desktop.png",
+      "sha256": "7afc4a536d895ef6b2d7c7fe31e96b5629aac124f4f4bf776b2167c1dba54079",
+      "previous_sha256": "022c466899ff99887a78f69297159d40b7e16c5b784ed1920c188a3c2a1803ea",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "areas/at341-sector-vert-sector-1-phone.png",
+      "sha256": "a8d907e6a4cb8e16efbc4574ee05800e2f619efeecd429c40923305d0bb98659",
+      "previous_sha256": "9eecf83827b50ec2174c9539852f5484adea5cff4e3255c4780b3e8f163cfeb4",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at270-mission37-main-guide-phone.png",
+      "sha256": "68befc3f94168cbebfb99059b8bbaa493375c0bfe887c76f0b39c7acbaa45fcb",
+      "previous_sha256": "426663e8d4c993eb3a7b1a795f6f320ff42eb732f5cd7aea8076a0bba1e11c68",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at277-filtered-mission3-phone.png",
+      "sha256": "a815f4477f9c3eb97f6b8bbd8355505e37a782bbdfb370d300ba21c4b6864697",
+      "previous_sha256": "88b1efe4cfa882404d59939b70bed8a68f9f6876f9f4df40842d7d43b962acbe",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at277-filtered-quest22-desktop.png",
+      "sha256": "88e721d6cbf14c33b401d131bb394e3c3f2fe6d28db5db0ae3101f86bcc86486",
+      "previous_sha256": "cb0f0d8601e6c745ce65267b29e4b7e0558bee6e5dfc6db67ba187f80e2a0f7f",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at311-jaune-5-directory-links-phone.png",
+      "sha256": "8d968cefae4ffe94b05386489c1f327376eff544a5317150cb6534ca3e89997a",
+      "previous_sha256": "ecedb22b62dd23667e6e3ed3d46b231db60cd1a174e56ac49edcdfee111b9be0",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at321-sector-wz12-desktop-photos.png",
+      "sha256": "69a07959cd827116a942ae259b2081fd65252b3bd8ace2b39f5e2e946c21065a",
+      "previous_sha256": "92d2c4ac76bf6acae923d4b704b690a07c42970133d1896f083d82b36d29f5f7",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at321-sector-wz12-desktop-roster.png",
+      "sha256": "18666e3b8f0d6d63c3e3c17ac4d37ad79ccbeb28a9655016d12fef10eb297fe1",
+      "previous_sha256": "f0d848732c0133ba92612fe328d85fd8490719fa8198b16f8486f7ee73a1362e",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at321-sector-wz12-phone-photos.png",
+      "sha256": "4c2ad8c63b12b2dbb4fe42125816ef0306d2ab9e356614f5fed6c173e6001bda",
+      "previous_sha256": "a8b24af5384fb8607cdc28e85539047ffd57308c25cf99a628f20bed294f4624",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at321-sector-wz12-phone-roster.png",
+      "sha256": "7876a895c2145d6647fd9cfe1834a6fc3ec728e8e32eb5eaf370e7969161e56e",
+      "previous_sha256": "9392c6bd4999846b1ea63dd3f778b6e6ce97f1d4b8b2cc0e76e0915cafbd4d17",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at326-zone20-records-phone.png",
+      "sha256": "097195eed13bc91fe6e291913ae0b6c97a4280ee26930b0a727550ef027e9c9a",
+      "previous_sha256": "39e53dfa2eb3da3025dad492511a3f5945245f3738257baa0c5afe200d35d8cd",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-original-photo-desktop.png",
+      "sha256": "586a78d1f2b253ee1a8c320da7ccf6785940f668788a16dd02cb21b7915f2add",
+      "previous_sha256": "95452dfce3a9f896bc5c5b3366a89d3679011bd90435dbfc2526ac6bd02fbd6a",
+      "review_assignment": "runtime_review_fresh_visual"
+    },
+    {
+      "path": "map/atlas-explorer/at341-access-original-photo-phone.png",
+      "sha256": "f6a23dc81b496f108d4e0ff7d00996e64b3dca91c9ee95e076676bdb1e148b10",
+      "previous_sha256": "7ce0f7e405c955f233a06ae8dc7006295f0164d83d27f55fd0957189eea606df",
+      "review_assignment": "runtime_review_fresh_visual"
+    },
+    {
+      "path": "map/atlas-explorer/atlas-owner-photos.png",
+      "sha256": "e026164822b6ecc58dfa82015648524e00a584ed553c5d2fbcaab2f5c34e2525",
+      "previous_sha256": "accefaa1c3ef46951cb1a05618e3623814e89a97b2a1982cd21912d526c0785b",
+      "review_assignment": "runtime_review_fresh_visual"
+    },
+    {
+      "path": "map/atlas-explorer/desktop-at302-sector-street-bearings.png",
+      "sha256": "f121f3d4527fed7ed9c219e066c449971ad366a542a250f6c535925c6b2cb15a",
+      "previous_sha256": "bcd3b4974f1c7a298d7d7a5f418a9d66f04756338c100d006ff526fb39d68e42",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/desktop-at304-source-image-bleu7.png",
+      "sha256": "1a92a61288dd1fe282c187a00cdabe7bd54182a2d57fe769f05ae5e84790d663",
+      "previous_sha256": "4c357b81c9a56f210b4217b9d3c343e6db149b2587d6cb3b3474955a5aa9352c",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/desktop-tm-access-sector-maps.png",
+      "sha256": "7ac55367ffe7469f3cbff6f8cefc0642513484761f4394013dd0d731cd3336a9",
+      "previous_sha256": "3e4117b273c8858d3159be0544c7827c284279750f74e5de0aed43086d0911b3",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/phone-at302-sector-street-bearings.png",
+      "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae",
+      "previous_sha256": "5208260b468aaa7aa6bf3d1dbbaa149ff7a043e1b4e385700fa97fe79c430f18",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/phone-at304-source-image-vert1.png",
+      "sha256": "704eb2c0166052bbe14d2882b2b4fbc3d6f80a1e49957dd76b6fb80abc3a3fae",
+      "previous_sha256": "5208260b468aaa7aa6bf3d1dbbaa149ff7a043e1b4e385700fa97fe79c430f18",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/phone-dlc-contained.png",
+      "sha256": "caf28d19c009877e1b3761516c52bc0707e578c18131f9c2910ec9a238ead7e2",
+      "previous_sha256": "3d0db912d662343efa213ecd5c1978471c11c958d34d8f5688d853ccb7879061",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/phone-ranked-battles-contained.png",
+      "sha256": "40685d7b51c1bfbba58f73213fcd4de135026826e22da518196cb903d8dd4c00",
+      "previous_sha256": "43b634a2e1107645830c3dc476366c9df0b853ab672530ca007944345302d900",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/phone-tm-access-sector-maps.png",
+      "sha256": "ac54480a982d0a25c9f9ef9598f39797c951c18589096d692de3807153558d2b",
+      "previous_sha256": "a55a2bae0585e1fd6e97b661d9c97ade212c0fbfe80dc2d19f0a286cec383523",
+      "review_assignment": "release_coordinator_geometry_or_guide_review"
+    },
+    {
+      "path": "map/atlas-explorer/place-photo-details-desktop.png",
+      "sha256": "65200d21263e1d4c2888351c786024bd8edbd2bb7425aacd341b5fc5f3cfbdab",
+      "previous_sha256": "11a48aafe14b9fa065178db3586d5559cbcb74cd39edf38a7a2656afd34b0784",
+      "review_assignment": "runtime_review_fresh_visual"
+    }
+  ],
+  "review_partition": {
+    "fresh_images_this_reviewer": 5,
+    "prior_images_carried_by_hash_this_reviewer": 16,
+    "remaining_changed_images_assigned_by_release_coordinator_to_geometry_and_guide_reviewers": 27,
+    "all_six_guide_workflow_images_identical_reported_by_release_coordinator": true
+  },
+  "gallery_followup": {
+    "status": "PENDING_INDEPENDENT_DEPLOYED_BROWSER_CHECK",
+    "place_id": "jaune7-hibernal",
+    "route_id": "jaune7-kizuna-hyper-beam-approach",
+    "route_url_path": "atlas-explorer.html?sector=jaune-sector-7",
+    "route_selector": "#aeRouteSelect",
+    "route_photo_link_selector": "#aeRouteDetail a[href=\"atlas-explorer.html?place=jaune7-hibernal\"]",
+    "url_path": "atlas-explorer.html?place=jaune7-hibernal",
+    "selector": "#aeSelected .ae-photo-grid img",
+    "original_image_link_selector": "#aeSelected .ae-photo-grid figure a",
+    "expected_images": 5,
+    "phone_images_painted_in_capture": 1,
+    "desktop_images_painted_in_capture": 1,
+    "source_images": [
+      {
+        "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-ground-entrance.jpg",
+        "sha256": "5d7cb15e493b71d67a4dbb326b2604c5b9e53e31a111b5e3a5d8638430fee949",
+        "dimensions_px": [
+          1536,
+          865
+        ]
+      },
+      {
+        "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-wide-map.jpg",
+        "sha256": "c7fac6904c0f9fd9f39c724b515fb5955e38773eaa5ecff02a4e01a267974fd4",
+        "dimensions_px": [
+          1536,
+          865
+        ]
+      },
+      {
+        "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-neighbourhood-map.jpg",
+        "sha256": "903033af7f7f889f44b57f4b3a91856385ad7fcc75117ecf390d3cc8243c002c",
+        "dimensions_px": [
+          1536,
+          865
+        ]
+      },
+      {
+        "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-close-map.jpg",
+        "sha256": "c6d1853fb76cf0db60e280433726fee77c501d9f69725d21c996f1bcddd7bc7c",
+        "dimensions_px": [
+          1536,
+          865
+        ]
+      },
+      {
+        "path": "assets/atlas/holovators/jaune7-hibernal-avenue/holovator-jaune7-hibernal-avenue-rooftop-arrival.jpg",
+        "sha256": "c6b47540ccdd798e8f56e5f461f91eeb708c4910064642b7dd0d53a1b9151810",
+        "dimensions_px": [
+          1536,
+          865
+        ]
+      }
+    ],
+    "test_capture_scope": "tests/atlas_explorer_browser.mjs scrolls and decodes only the first related-place photograph before these two access-gallery screenshots; atlas-explorer.js uses lazy loading and async decoding. Other blank cards in these captures are an evidence limitation, not a confirmed runtime image failure.",
+    "remaining_required_evidence": "Release coordinator to scroll/view all five original Jaune7 photographs in deployed browser on the reviewed release and retain evidence."
+  },
+  "limitations": [
+    "This is a bounded premerge artifact review, not GitHub Pages live verification or original Workspace release approval.",
+    "Archive identity and successful CI run status were supplied by the release coordinator. This reviewer independently rechecked extracted file counts, path sets, PNG integrity, proof JSON completeness, source ID/bounds/photo parity and named byte identities.",
+    "The real-overlap images are detail-element crops; full viewport containment is established by the unchanged strict executed browser assertion, not by these crops alone.",
+    "Motion, compass/north reset, URL/history and exact progress preservation are supported by executed CI assertions and proof records; static images alone do not prove these behaviors.",
+    "Both Jaune7 access gallery captures show only one painted photograph. Five-of-five live gallery proof remains assigned to the release coordinator.",
+    "The changed desktop photo-details and identical phone photo-details captures do not show their below-frame source photograph; source preservation is supported by DOM/source assertions.",
+    "The Sommi owner-photo image is a full-page screenshot of a separate gallery and cannot substitute for the Jaune7 live check.",
+    "Ten changed sector frame screenshots and other changed guide/directory captures were delegated by the coordinator to separate reviewers; this receipt does not claim to visually inspect them.",
+    "Collectible density/overlap demonstrations use isolated synthetic fixtures; production has zero registered collectible map positions.",
+    "This review does not claim exhaustive visual inspection of all 68 area panels, comprehensive encounter rosters, or completion of broader guide/Alpha obligations.",
+    "Local-storage probes do not alone validate live Supabase account/data workflows."
+  ],
+  "local_actions": {
+    "browser_execution": false,
+    "runtime_edits": false,
+    "test_edits": false,
+    "remote_mutations": false,
+    "only_new_file": "/workspace/scratch/e3816c743f42/release-review-f030c4a/final-runtime-visual-review.json"
+  }
+}

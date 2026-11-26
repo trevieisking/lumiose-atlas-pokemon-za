@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "AT342-RELEASE-LIVE-BROWSER-OBSERVATIONS",
+  "recorded_at_utc": "2026-11-26T15:05:56.508583+00:00",
+  "release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "release_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+  "site_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/",
+  "observer": "/root release coordinator",
+  "recorded_by": "/root/runtime_review",
+  "evidence_method": "The release coordinator directly interacted with the deployed site through CUA, read live image metadata and visually reviewed three CUA screenshots. This JSON records the reported observations; the recorder did not repeat the browser session.",
+  "observation_timestamp_limit": "Observed in this release session after deployment; individual CUA screenshot timestamps are not stored in this receipt.",
+  "screenshots": {
+    "visually_reviewed_count": 3,
+    "screenshot_files_saved": false,
+    "screenshot_file_paths": [],
+    "screenshot_file_hashes": [],
+    "limitation": "No saved live screenshot file is available for independent pixel reinspection from this package."
+  },
+  "gallery": {
+    "result": "PASS_RECORDED_LIVE_CHECK",
+    "place_id": "jaune7-hibernal",
+    "url_path": "atlas-explorer.html?place=jaune7-hibernal",
+    "selector": "#aeSelected .ae-photo-grid img",
+    "action": "View photos and details",
+    "expected_images": 5,
+    "observed_images": 5,
+    "all_complete": true,
+    "each_natural_dimensions_px": [
+      1536,
+      865
+    ],
+    "all_five_directly_visible_in_same_viewport_after_action": true,
+    "interpretation": "This later live observation resolves the earlier access-gallery screenshot completeness gap for the reviewed release. The unchanged earlier screenshots remain correctly documented as showing one painted image each.",
+    "source_byte_proof": {
+      "path": "candidate/live-http.json",
+      "sha256": "a5916ed332b02c65ff09e75c9161dfa11ce794341d4326121f355d04cd624422",
+      "bytes": 18084
+    }
+  },
+  "map_actions": [
+    {
+      "action": "Select Rouge Sector 4 and Show this area on the map",
+      "observation": "The complete selected outline was visible and clear of the selected-sector information card and gesture hint."
+    },
+    {
+      "action": "Zoom in",
+      "before_zoom": 4.06,
+      "after_zoom": 5.28
+    },
+    {
+      "action": "Rotate clockwise",
+      "before_degrees": 0,
+      "after_degrees": 45
+    },
+    {
+      "action": "Reset north with compass",
+      "after_degrees": 0
+    },
+    {
+      "action": "Toggle reviewed outlines off and restore",
+      "observed_states": [
+        "unchecked",
+        "checked"
+      ]
+    },
+    {
+      "action": "Restore final view",
+      "final_zoom": 4.06,
+      "final_degrees": 0
+    }
+  ],
+  "console_observation": {
+    "sample_size": 10,
+    "sample_description": "The last ten development-log entries inspected by the coordinator contained only browser-extension metadata errors.",
+    "overall_console_error_count": null,
+    "zero_overall_console_errors_claimed": false,
+    "limitation": "This bounded sampled log observation is not exhaustive console or network-error clearance."
+  },
+  "data_actions": {
+    "account_actions_performed": false,
+    "supabase_mutations_performed": false,
+    "public_data_mutations_performed": false,
+    "live_account_or_database_workflow_validated": false
+  },
+  "device_limits": {
+    "live_session_physical_device_test": false,
+    "ci_phone_coverage": "Browser phone viewport/touch emulation; no physical phone or tablet proof.",
+    "live_environment": "CUA browser session; no physical-device or native iOS/Safari claim."
+  },
+  "scope_limits": [
+    "No original Workspace site/source/version was published or independently verified by this live check.",
+    "No exhaustive review of every area, encounter roster, guide page, route or device is claimed.",
+    "The five reported natural-image dimensions are live DOM observations, not viewport dimensions."
+  ]
+}

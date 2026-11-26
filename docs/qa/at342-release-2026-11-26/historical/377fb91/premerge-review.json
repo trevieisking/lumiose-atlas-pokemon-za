@@ -1,0 +1,55 @@
+{
+  "tested_head": "377fb91e03f2fea64237f0de031995b26090f468",
+  "tested_tree": "bbe5fd1bb5ef2e865806bb30d8d760be97743942",
+  "reviewed_at": "2026-11-26T14:49:19.115592+00:00",
+  "decision": "PROMOTE reviewed finite Interactive Map 2.0 candidate to main; deployment and independent live verification follow.",
+  "required_workflows": "All three successful for this exact remote head; run metadata and artifact head/digests independently checked.",
+  "artifact_ids": [
+    15128421851,
+    15127877926,
+    15128635956
+  ],
+  "mobile_reviewed": true,
+  "desktop_reviewed": true,
+  "blocking_findings": [],
+  "nonblocking_observations": [
+    "Fixed selected-sector information card covers a short upper outline segment in the desktop Magenta5 and Rouge4 captures. Geometry remains framed, readable and manipulable."
+  ],
+  "root_direct_visuals": [
+    "at341-real-sector-overlap-phone.png",
+    "at341-real-sector-overlap-desktop.png",
+    "at341-sector-magenta-sector-5-desktop.png",
+    "at341-sector-rouge-sector-4-desktop.png"
+  ],
+  "independent_reviews": {
+    "final-geometry-visual-review.json": {
+      "sha256": "f33c4e11fe06e779da67dc408b95f714606792b0786e0480126f6db4b70e434d",
+      "bytes": 66036
+    },
+    "final-runtime-visual-review.json": {
+      "sha256": "bc5cf7f6e2ba648dd655f49ba0de12635955c17ad86b1f6115351d542771f472",
+      "bytes": 17445
+    },
+    "fashion-image-comparison.json": {
+      "sha256": "7802d465788682d0f10622985324189d5d4b9bf6cbaa469f5fc5c32a635b3ca4",
+      "bytes": 1346
+    },
+    "ci-run-summary.json": {
+      "sha256": "cb7beee14fc38064ece85861d706116298d3017d9fb4413e4ed9a84089f99d34",
+      "bytes": 11914
+    },
+    "tested-change-inventory.json": {
+      "sha256": "bdb759001600d75ea3e93c96946a06f309dcfc4e0bb56fd21cf8c03d047cb8d0",
+      "bytes": 104154
+    }
+  },
+  "limits": [
+    "Chrome desktop and phone viewport/touch emulation; no claim of physical-device or all-browser testing.",
+    "68 overlay identities across four surfaces; detailed visual checks cover all20 zones and five representative sectors.",
+    "Geometry is source-qualified area selection, not spawn extent, floor or walkability certification.",
+    "Static gallery captures show partial lazy loading; previous direct preview loaded allfive unchanged original photos and independent deployed allfive check remains required.",
+    "Local storage fixtures establish exact progress-byte preservation; no live player records or Supabase account data are modified/tested.",
+    "Original Workspace publication remains independent and pending.",
+    "Broader full-guide/mission-depth/city-Alpha obligations remain open."
+  ]
+}

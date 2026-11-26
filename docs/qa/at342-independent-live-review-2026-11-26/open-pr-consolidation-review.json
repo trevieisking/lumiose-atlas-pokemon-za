@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-26T15:22:32.295088+00:00",
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "read_only": true,
+  "main": {
+    "sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "parents": [
+      "7616af2a204e0a09328a5ec9f2b6a0415bf67309",
+      "f030c4ae3e33259105bf351885c386f6b53900d9"
+    ],
+    "message": "Merge PR204: release verified Atlas Map 2.0 consolidation\n\nPublish the reviewed 48-sector / 20-Wild-Zone map-selection release, preserved source-qualified encounters and 42 written routes. Exact-head map, article and feedback CI passed; final phone/desktop screenshots and preservation review passed. Original Workspace publication remains a separate validated step."
+  },
+  "listing": {
+    "url": "https://api.github.com/repos/trevieisking/lumiose-atlas-pokemon-za/pulls?state=open&per_page=100&page=1",
+    "open_count": 24,
+    "per_page": 100,
+    "pagination_exhausted": true,
+    "new_or_changed_heads_outside_inventory": [],
+    "merged_pr204_source": "f030c4ae3e33259105bf351885c386f6b53900d9"
+  },
+  "evidence_method": "Fresh complete open-PR listing and exact-main Git commit/tree from GitHub, then read-only historical Git objects and blob comparisons. No tests, branch switches, writes to checkouts or remote mutations. Ancestry checks were restricted to main first parent7616af2; selective integration findings rely on exact-main file and content evidence rather than claiming these open heads were merged.",
+  "preservation": {
+    "archived_files_exact_on_main": 82,
+    "source_records": 53,
+    "source_objects_hash_verified": 53,
+    "snapshots_verified": 26,
+    "historical_patches_verified": 18,
+    "all24_exact_heads_in_existing_inventory": true,
+    "requirement_count": 67,
+    "broader_master_plan_complete_claimed": false,
+    "original_workspace_upgrade_complete_claimed": false
+  },
+  "summary": {
+    "included_or_included_in_substance": [
+      203,
+      198,
+      197,
+      196,
+      195,
+      189,
+      187,
+      177,
+      172,
+      156,
+      3
+    ],
+    "superseded_runtime_or_recovery": [
+      97,
+      76,
+      59,
+      37
+    ],
+    "remaining_preserved_or_deferred_scope": [
+      186,
+      184,
+      171,
+      166,
+      149,
+      5,
+      4,
+      2,
+      1
+    ],
+    "genuine_unmerged_candidate_implementations": [
+      4,
+      5
+    ],
+    "no_unaccounted_new_open_pr_work_found": true
+  },
+  "pull_requests": [
+    {
+      "pr": 203,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/203",
+      "title": "Cross-check Wild Zone 14 against the original map photos",
+      "head_sha": "6a203e143dba392fa137db31bfcfd5264d6c7ff0",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "The WZ14 source note is an exact blob on main. Its original corroboration scope did not itself approve geometry; later approved selection outlines use separate evidence.",
+      "exact_main_file_matches": [
+        "docs/qa/ATLAS_WZ14_OWNER_SURVEY_CROSSCHECK.md"
+      ],
+      "archived_files_on_exact_main": 0,
+      "archive_prefix": null
+    },
+    {
+      "pr": 198,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/198",
+      "title": "Complete Vivace\u2019s two salon side missions",
+      "head_sha": "98a0a5f3e9c2b960769265bc2db015c2dbd2dc02",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "Mission51 source card is exact. Mission12 retains the reviewed rewards and individual-colour presentation correction; source cards are present in generated and standalone views.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 0,
+      "archive_prefix": null
+    },
+    {
+      "pr": 197,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/197",
+      "title": "Link the HOME forms guide to the current Vivillon gift",
+      "head_sha": "68c01ebac29730351dc1375126dfae4674fdacc0",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "home-connection.html is byte-identical to this PR head. This audit does not newly reverify the external gift distribution date.",
+      "exact_main_file_matches": [
+        "home-connection.html"
+      ],
+      "archived_files_on_exact_main": 0,
+      "archive_prefix": null
+    },
+    {
+      "pr": 196,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/196",
+      "title": "Fix collectible search by displayed label and exact Wild Zone",
+      "head_sha": "bc5b10fcf8a69ff8ec45d5ac5d6ff5dd0276838e",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "atlas-collectibles.mjs and its unit-test file are byte-identical; later UI/browser changes are preserved.",
+      "exact_main_file_matches": [
+        "atlas-collectibles.mjs",
+        "tests/atlas_collectibles.test.mjs"
+      ],
+      "archived_files_on_exact_main": 0,
+      "archive_prefix": null
+    },
+    {
+      "pr": 195,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/195",
+      "title": "Clarify two sludge routes and the Mission 19 Ice Beam shortcut",
+      "head_sha": "bbdc011ba425519821ad5fde8cd92a19e42265ce",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "The research JSON and Markdown are exact; both sludge notes and Mission19 Vanillite Lv.35/Change Moves guidance are on main.",
+      "exact_main_file_matches": [
+        "docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json",
+        "docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.md"
+      ],
+      "archived_files_on_exact_main": 0,
+      "archive_prefix": null
+    },
+    {
+      "pr": 189,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/189",
+      "title": "Atlas \u2014 Research seven more Wild Zone TM routes",
+      "head_sha": "11c6e2f5877d1880237dfa2471d5d053f5533ca0",
+      "same_head_as_inventory": true,
+      "classification": "included_in_substance_research_preserved",
+      "finding": "All seven proposed item IDs are in the current20-record written TM register; unique caveats remain archived. Exact pickup coordinates remain unapproved.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-189/"
+    },
+    {
+      "pr": 187,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/187",
+      "title": "Clarify when to revisit Mirte for Furfrou Mission 087",
+      "head_sha": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "The complete hair/beauty guide and source research note are exact; conservative Mission087 revisit guidance is included.",
+      "exact_main_file_matches": [
+        "docs/qa/ATLAS_FASHION_BEAUTY_RESEARCH_2026-11-25.md",
+        "hair-beauty-guide.html"
+      ],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-187/"
+    },
+    {
+      "pr": 186,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/186",
+      "title": "AT-335 research \u2014 Distinguish Wild Zone 2\u2019s two Great Balls",
+      "head_sha": "8831be90c915efc237894fdc8a2423d8f5056bb9",
+      "same_head_as_inventory": true,
+      "classification": "research_preserved_not_runtime_approval",
+      "finding": "Great Ball east/west disambiguation evidence is archived. It does not approve an exact pickup pin or a new collection identity.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 5,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-186/"
+    },
+    {
+      "pr": 184,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/184",
+      "title": "AT-334 \u2014 Recover original Workspace item coordinates and crosswalk",
+      "head_sha": "cbda3bc87ae54ac420f6b4dbd2e43d1cbc04cee1",
+      "same_head_as_inventory": true,
+      "classification": "research_preserved_not_runtime_approval",
+      "finding": "Alternate source-recovery documents and provenance are archived; do not overwrite the newer canonical recovery register or claim byte-identical duplicate source records.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 5,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-184/"
+    },
+    {
+      "pr": 177,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/177",
+      "title": "Complete Side Mission 109\u2019s medicine and cash rewards",
+      "head_sha": "e9cdcb5230bbe61c55a18eb8e7d30e7137c9e212",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "The complete Mission109 source card is byte-identical to the PR head and retained in generated and standalone views.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 2,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-177/"
+    },
+    {
+      "pr": 172,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/172",
+      "title": "AT-322 \u2014 Corroborate Wild Zone 18\u2019s ordinary roster with the original screenshot",
+      "head_sha": "c2d739942eef7c34b08a67475df2252b4d3ededb",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "Both Zone18 source-review documents are exact blobs on main. Six displayed survey species do not certify an exhaustive roster or absence of disputed encounters.",
+      "exact_main_file_matches": [
+        "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_AUDIT.md",
+        "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json"
+      ],
+      "archived_files_on_exact_main": 5,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-172/"
+    },
+    {
+      "pr": 171,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/171",
+      "title": "AT-327 research \u2014 Cross-check Wild Zone 11\u2019s southern edge with Vert 6",
+      "head_sha": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d",
+      "same_head_as_inventory": true,
+      "classification": "research_preserved_not_runtime_approval",
+      "finding": "The original southern-edge registration research is archived. Later selection-outline approval does not turn it into floor or spawn geometry.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 6,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-171/"
+    },
+    {
+      "pr": 166,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/166",
+      "title": "AT-325 G2 \u2014 Verify the three historical owner overview photographs",
+      "head_sha": "a9a78e46e86ce56b4e08257ed017ef5d2d05fb04",
+      "same_head_as_inventory": true,
+      "classification": "historical_evidence_preserved",
+      "finding": "The three historical overview-photo records are archived with their limits; they remain distinct from later owner overview sources.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 6,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-166/"
+    },
+    {
+      "pr": 156,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/156",
+      "title": "AT-320 \u2014 Bleu 7\u201310 written routes and photographic references",
+      "head_sha": "a9e906cdce710a67ca960e363a087160cd08dc5d",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "All four Bleu7\u201310 added route objects, including their steps, are exactly retained among the current42 routes.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 6,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-156/"
+    },
+    {
+      "pr": 149,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/149",
+      "title": "AT-297 \u2014 Record the original Workspace v37 release",
+      "head_sha": "e826d100f0eb540f73e58274273a0d1c3c5cecb7",
+      "same_head_as_inventory": true,
+      "classification": "historical_evidence_preserved",
+      "finding": "The original Workspace v37 release receipt is preserved. It is historical evidence, not proof of the newly released GitHub version being published to the original Workspace.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-149/"
+    },
+    {
+      "pr": 97,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/97",
+      "title": "AT-266 \u2014 plan source-first recovery of original Workspace map close-ups",
+      "head_sha": "be9d047c8de15a8f52946b129e4040c06f14c8a1",
+      "same_head_as_inventory": true,
+      "classification": "superseded_with_preserved_evidence",
+      "finding": "Source recovery was superseded by later original-image recoveries; registration and uncertainty requirements remain preserved.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-097/"
+    },
+    {
+      "pr": 76,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/76",
+      "title": "Atlas: owner-surveyed Holovator photo map (21 approximate research entries)",
+      "head_sha": "268b72125e644d68eb03c4c53a1f8d98b7372808",
+      "same_head_as_inventory": true,
+      "classification": "superseded_with_preserved_evidence",
+      "finding": "The21-entry/90-photo prototype is superseded by the current Explorer21 Holovators and111 photo references; source policy and historical patch remain archived.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 3,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-076/"
+    },
+    {
+      "pr": 59,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/59",
+      "title": "Draft: isolated visual research map for Holovator photo leads",
+      "head_sha": "a15077d9513de2655b8c8485d37678723d60c77e",
+      "same_head_as_inventory": true,
+      "classification": "superseded_with_preserved_evidence",
+      "finding": "The older isolated research preview was superseded by the later owner fieldbook and Explorer. Its approximate-source evidence remains archived.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 3,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-059/"
+    },
+    {
+      "pr": 37,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/37",
+      "title": "Fix 8 broken Rogue Mega Boss portraits using Pok\u00e9mon HOME catalogue",
+      "head_sha": "97131c29969a80ed03a6e6684b05a8b914e137b7",
+      "same_head_as_inventory": true,
+      "classification": "superseded_with_exact_runtime_evidence",
+      "finding": "boss-guide.html is byte-identical to this PR head; the eight portrait repairs already reached main through later merged work.",
+      "exact_main_file_matches": [
+        "boss-guide.html"
+      ],
+      "archived_files_on_exact_main": 3,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-037/"
+    },
+    {
+      "pr": 5,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/5",
+      "title": "Protect player progress: JSON backup, old-site exporter and safe import",
+      "head_sha": "c7db966c6a8955801f4ca6beb2c4fc15c837880a",
+      "same_head_as_inventory": true,
+      "classification": "unmerged_optional_candidate_preserved",
+      "finding": "The backup/export/import runtime files are absent from exact main. This is the recorded optional migration backlog; original-host compatibility remains unverified.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-005/"
+    },
+    {
+      "pr": 4,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/4",
+      "title": "Number Wild Zone map items and link them with tick lists",
+      "head_sha": "263f7faa3ddf8588cc73dae97577087d7a92df93",
+      "same_head_as_inventory": true,
+      "classification": "unmerged_unverified_candidate_preserved",
+      "finding": "map-numbering.js and map-pin-index.js are absent from exact main. The146 approximate numbering positions and111 candidate/35 ambiguous links remain archived/deferred, with existing collection identities preserved.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-004/"
+    },
+    {
+      "pr": 3,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/3",
+      "title": "Expand early story missions 01\u201310 and connect guide sections",
+      "head_sha": "4d65520593a438b03b96c5e3621989f76c4d8d4f",
+      "same_head_as_inventory": true,
+      "classification": "included_selectively",
+      "finding": "Verified early-story route detail is incorporated:73 steps across Missions01\u201310, with matching lists in source, generated main guide and standalone walkthrough. Historical duplicate UI and unsupported claims were deliberately omitted.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 4,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-003/"
+    },
+    {
+      "pr": 2,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/2",
+      "title": "Prepare Lumiose Atlas logo sharing card and safe IONOS subdomain",
+      "head_sha": "d4e1ae32613cf4b49347f1412634bfdd22741163",
+      "same_head_as_inventory": true,
+      "classification": "deferred_candidate_preserved",
+      "finding": "Branding/social-card and optional IONOS hosting plans remain preserved future scope. No DNS, origin or Stream Bandit change is implied.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 5,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-002/"
+    },
+    {
+      "pr": 1,
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/1",
+      "title": "Audit: benchmark all 42 main missions and rebuild Mable's Research",
+      "head_sha": "b3d868db17afc87c5c94830f257ac2988be262e2",
+      "same_head_as_inventory": true,
+      "classification": "partial_supersession_broader_duty_preserved",
+      "finding": "Mable recovery was superseded; the all42-mission depth and17-section audit obligations remain preserved and are not certified complete by Map2.0.",
+      "exact_main_file_matches": [],
+      "archived_files_on_exact_main": 5,
+      "archive_prefix": "docs/consolidation/2026-11-26/branch-sources/pr-001/"
+    }
+  ],
+  "cleanup_boundaries": [
+    "Do not merge stale branches wholesale or replace current canonical plans with older revisions.",
+    "Do not equate archived evidence with completed runtime delivery: PR4 numbering and PR5 backup/export remain separate unverified or optional candidates.",
+    "PR1 broader guide-depth audit, PR2 optional branding/hosting and original Workspace duties remain distinct from the finite Map2.0 release.",
+    "Archival source and current requirement dispositions must remain discoverable if an owner later closes superseded PRs. This review closes nothing."
+  ],
+  "evidence_files": [
+    "open-prs.json",
+    "main-commit.json",
+    "main-tree.json",
+    "local-object-and-file-evidence.json",
+    "semantic-and-preservation-evidence.json"
+  ]
+}
