@@ -1,0 +1,66 @@
+{
+  "source": "1000028756.mp4",
+  "sha256": "9d95aac4c6f865a9fe63767e45091b6b98462d7b7c6b8728f435e426342ffda3",
+  "duration_seconds": 56.262733,
+  "width": 1280,
+  "height": 720,
+  "nominal_fps": 120,
+  "size_bytes": 107198387,
+  "original_preserved": true,
+  "original_video_in_public_repository": false,
+  "video_usage": "Owner-requested private measurement evidence; no public video feature or YouTube integration.",
+  "frames": [
+    {
+      "file": "frame-014.0.png",
+      "time_seconds": 14,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "bcfcbe70602937905819066debb4584c1f4565b492dbf490ae4fdd3f192f34ac",
+      "derivation": "FFmpeg seek at indicated seconds; one decoded PNG frame; no crop or resize."
+    },
+    {
+      "file": "frame-021.0.png",
+      "time_seconds": 21,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "55aa468aaac69031d5f19461a7bfbf6e7416f5c7048f3aae1440490661484524",
+      "derivation": "FFmpeg seek at indicated seconds; one decoded PNG frame; no crop or resize."
+    }
+  ],
+  "waypoint_observations": [
+    {
+      "time_seconds": 20.9,
+      "displayed_value": 60
+    },
+    {
+      "time_seconds": 21,
+      "displayed_value": 60
+    },
+    {
+      "time_seconds": 21.5,
+      "displayed_value": 59
+    },
+    {
+      "time_seconds": 24,
+      "displayed_value": 55
+    },
+    {
+      "time_seconds": 28,
+      "displayed_value": 48
+    },
+    {
+      "time_seconds": 50,
+      "displayed_value": 10
+    }
+  ],
+  "waypoint_limitations": [
+    "Number before20.9s is clipped; highest original starting value cannot be read.",
+    "No explicit zero or final reopened map is shown.",
+    "Player arrow and pin obscure exact endpoints; the NE cross is offset from the cursor centre.",
+    "A decreasing waypoint number is observed; footsteps/metres and distance convention are not established."
+  ]
+}

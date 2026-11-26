@@ -1,5 +1,11 @@
 # AT-343 — map-cross correction and local alignment pilot
 
+## Later measurement-video follow-up — 26 November 2026
+
+The subsequent owner-supplied `1000028756.mp4` is recorded in the [AT-343 video/grid follow-up](ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md) and [structured evidence](ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json), at planning Manifest 95 / Ledger 103. It adds local Wild Zone 20 grid observations and a waypoint reading of 60 around 20.9–21.0 seconds; it does not establish counted steps, confirmed metres per cell, exact unobscured interval endpoints, citywide calibration or the developer's purpose. That separate report is the authority for the new measurements and limits. The new tracker receipt verifies a guarded 94-to-95 metadata update at 17:02:31.10883 UTC and independent readback at 17:02:56.25398 UTC on 26 November 2026: all 48 existing rows remain, with unchanged 17 verified / 15 in progress / 16 open status totals and all earlier notes, GitHub proofs, Workspace and business fields preserved. The separate inherited AT344 private checkpoint94/102 and its existing source-collection note/work are preserved; this follow-up does not certify that archive or claim it is in main. The original92/100 receipt remains a historical record.
+
+The findings and capture-status fields below preserve the earlier Vert/photo intake. Its experiment, original source inventory and tracker receipt remain unchanged; the new clip is map-measurement evidence, not a verified individual pickup capture. The current follow-up supersedes any earlier statement that no further map-measurement video had been supplied.
+
 ## Current finding
 
 **A faint cross does not reliably identify a currently present item ball.** After reporting repeated matches, Trev reported many crosses without balls and withdrew the general rule. This correction controls the earlier hypothesis. No item pins or native pickup coordinates were created from it.

@@ -1,0 +1,234 @@
+{
+  "id": "AT343-VIDEO-GRID-FOLLOWUP-2026-11-26",
+  "date": "2026-11-26",
+  "manifest_revision": 95,
+  "ledger_revision": 103,
+  "status": "verified_local_reference_geometry_and_observed_waypoint_reading_only",
+  "summary": "Wild Zone 20 crosses locally measure approximately 240 pixels on the identified 4096-pixel reference. Waypoint 60 is observed at 20.9-21.0 seconds. No exact footsteps, metres, global coordinates or developer construction purpose established.",
+  "source_video": {
+    "source": "1000028756.mp4",
+    "sha256": "9d95aac4c6f865a9fe63767e45091b6b98462d7b7c6b8728f435e426342ffda3",
+    "duration_seconds": 56.262733,
+    "width": 1280,
+    "height": 720,
+    "nominal_fps": 120,
+    "size_bytes": 107198387,
+    "original_preserved": true,
+    "original_video_in_public_repository": false,
+    "video_usage": "Owner-requested private measurement evidence; no public video feature or YouTube integration.",
+    "frames": [
+      {
+        "file": "frame-014.0.png",
+        "time_seconds": 14,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "sha256": "bcfcbe70602937905819066debb4584c1f4565b492dbf490ae4fdd3f192f34ac",
+        "derivation": "FFmpeg seek at indicated seconds; one decoded PNG frame; no crop or resize."
+      },
+      {
+        "file": "frame-021.0.png",
+        "time_seconds": 21,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "sha256": "55aa468aaac69031d5f19461a7bfbf6e7416f5c7048f3aae1440490661484524",
+        "derivation": "FFmpeg seek at indicated seconds; one decoded PNG frame; no crop or resize."
+      }
+    ],
+    "waypoint_observations": [
+      {
+        "time_seconds": 20.9,
+        "displayed_value": 60
+      },
+      {
+        "time_seconds": 21,
+        "displayed_value": 60
+      },
+      {
+        "time_seconds": 21.5,
+        "displayed_value": 59
+      },
+      {
+        "time_seconds": 24,
+        "displayed_value": 55
+      },
+      {
+        "time_seconds": 28,
+        "displayed_value": 48
+      },
+      {
+        "time_seconds": 50,
+        "displayed_value": 10
+      }
+    ],
+    "waypoint_limitations": [
+      "Number before20.9s is clipped; highest original starting value cannot be read.",
+      "No explicit zero or final reopened map is shown.",
+      "Player arrow and pin obscure exact endpoints; the NE cross is offset from the cursor centre.",
+      "A decreasing waypoint number is observed; footsteps/metres and distance convention are not established."
+    ]
+  },
+  "local_geometric_verification": {
+    "source_frame_seconds": 14,
+    "reference_dimensions": [
+      4096,
+      4096
+    ],
+    "reference_sha256": "69e7c03b58ad8e3dbdccda36075e64151973d6634c39feccb9f31c9b96f3bc89",
+    "fit_control_count": 15,
+    "held_out_outline_vertex_count": 7,
+    "fit_rms_reference_px": 1.3177109867324466,
+    "holdout_rms_reference_px": 0.8138911831947765,
+    "holdout_max_reference_px": 1.2518374965678545,
+    "within_hull_intervals_reference_px": [
+      239.95929333565917,
+      240.14028600091603
+    ],
+    "descriptive_grid_spacing_reference_px": 240,
+    "descriptive_grid_phase_reference_px": [
+      0,
+      0
+    ],
+    "phase_selected_after_observing_projected_crosses": true,
+    "independent_math_replay_pass": true,
+    "crosses": [
+      {
+        "id": "NW",
+        "video_xy": [
+          354,
+          214
+        ],
+        "estimated_reference_xy": [
+          1920.5574072209179,
+          1920.597245780972
+        ],
+        "use": "withheld_from_architecture_fit",
+        "outside_architecture_control_hull": false
+      },
+      {
+        "id": "NE",
+        "video_xy": [
+          748,
+          213
+        ],
+        "estimated_reference_xy": [
+          2160.51470541447,
+          1921.5757659900812
+        ],
+        "use": "withheld_from_architecture_fit",
+        "outside_architecture_control_hull": false
+      },
+      {
+        "id": "E_top",
+        "video_xy": [
+          1102,
+          207
+        ],
+        "estimated_reference_xy": [
+          2401.2376730974192,
+          1919.3085312265491
+        ],
+        "use": "withheld_from_architecture_fit",
+        "outside_architecture_control_hull": true
+      },
+      {
+        "id": "SW",
+        "video_xy": [
+          361,
+          628
+        ],
+        "estimated_reference_xy": [
+          1921.3526137268586,
+          2160.736215144994
+        ],
+        "use": "withheld_from_architecture_fit",
+        "outside_architecture_control_hull": false
+      },
+      {
+        "id": "E_bottom",
+        "video_xy": [
+          1095,
+          578
+        ],
+        "estimated_reference_xy": [
+          2400.494086323371,
+          2159.013511994529
+        ],
+        "use": "withheld_from_architecture_fit",
+        "outside_architecture_control_hull": true
+      }
+    ],
+    "packet": "docs/qa/at343-video-grid-2026-11-26/registration.json",
+    "independent_review": "docs/qa/at343-video-grid-2026-11-26/independent-review.json"
+  },
+  "waypoint_verification": {
+    "observed_value": 60,
+    "times_seconds": [
+      20.9,
+      21.0
+    ],
+    "interpretation": "Decreasing waypoint distance number near the start of the walk.",
+    "counted_footsteps": false,
+    "metres_confirmed": false,
+    "exact_cross_to_cross_endpoints_confirmed": false,
+    "endpoint_caveat": "North cross visible inside cursor, but cursor centre is offset; south cross covered by player arrow; no final map reopening."
+  },
+  "decisions": {
+    "local_secondary_alignment_reference_supported": true,
+    "use_for_research_search_cell_indexing": true,
+    "originals_must_be_duplicated_before_any_processing": true,
+    "citywide_grid_verified": false,
+    "all_zooms_verified": false,
+    "official_grid_origin_or_purpose_verified": false,
+    "exact_sixty_step_rule_verified": false,
+    "new_native_atlas_transform_verified": false,
+    "new_item_or_structure_pin_authorized_from_cross_alone": false,
+    "new_runtime_coordinate_promotion": false
+  },
+  "planned_reconstruction": {
+    "origin": "Research-local northwest park cross A1=(0,0); east neighbour B1=(1,0); south neighbour A2=(0,1).",
+    "subdivision": "A validated cell may be indexed into10x10 fractions; this does not improve the underlying measurement accuracy.",
+    "requirements": [
+      "Unique architecture establishes location before repeated crosses.",
+      "North-up game source; camera-perspective correction recorded per derivative.",
+      "Validate overlaps and zooms independently before extension.",
+      "Preserve original names, bytes, dimensions and metadata.",
+      "Floor, access and object identity require separate evidence."
+    ]
+  },
+  "inherited_planning": {
+    "inspected_main_sha": "c491cd7c7edcbc9a59914e798706d6e92f7ae7e9",
+    "inspected_main_manifest_revision": 92,
+    "inspected_main_ledger_revision": 100,
+    "private_tracker_manifest_revision_before_update": 94,
+    "private_tracker_ledger_revision_as_recorded_in_note": 102,
+    "prior_source_collection_note_preserved": true,
+    "at344_full_26_source_archive_verified_in_main_by_this_task": false,
+    "unrelated_intake_branch_changed": false
+  },
+  "tracker": {
+    "receipt": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json",
+    "status": "verified_guarded_update_and_fresh_readback",
+    "readback_at": "2026-11-26T17:02:56.25398+00:00",
+    "row_count": 48,
+    "status_counts_unchanged": true,
+    "all_previous_notes_and_AT344_preserved": true,
+    "all_release_proofs_and_workspace_fields_preserved": true
+  },
+  "preservation": {
+    "original_video_unchanged": true,
+    "original_atlas_image_unchanged": true,
+    "previous_vert_pilot_unchanged": true,
+    "runtime_code_changed": false,
+    "new_item_pins": 0,
+    "player_progress_changed": false,
+    "original_workspace_changed": false,
+    "approved_runtime_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "approved_release_manifest_revision": 91,
+    "approved_release_ledger_revision": 99
+  },
+  "evidence_note": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md"
+}
