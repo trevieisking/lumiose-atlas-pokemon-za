@@ -280,8 +280,9 @@ function selectRecord(item,focus=true){
     switchFor.checked=true;
     drawList();
   }
-  selectedId=item.id;
-  detailsFor(item);
+  // Shared initialization and layer changes may reconcile the same selection.
+  // Preserve its loaded photographs, open disclosures and focused links.
+  if(selectedId!==item.id){selectedId=item.id;detailsFor(item);}
   for(const [id,pin] of pinMap)pin.setAttribute("aria-pressed",String(id===selectedId));
   for(const button of resultList.querySelectorAll("[data-record-id]")){
     button.setAttribute("aria-pressed",String(button.dataset.recordId===selectedId));
@@ -574,9 +575,10 @@ async function load(){
       if(!areaUI)return;
       const record=recordMap.get(selection.areaId);
       if(record&&(record.kind==="zone"||record.kind==="sector")){
-        if(activeKind!=="all"&&activeKind!==record.kind)activeKind=record.kind;
-        if(!match(record))search.value="";
-        drawList();
+        let filtersChanged=false;
+        if(activeKind!=="all"&&activeKind!==record.kind){activeKind=record.kind;filtersChanged=true;}
+        if(!match(record)){search.value="";filtersChanged=true;}
+        if(filtersChanged)drawList();
         coverageSector.value=record.kind==="sector"?record.id:"";
         syncingArea=true;
         try{selectRecord(record,false);}finally{syncingArea=false;}

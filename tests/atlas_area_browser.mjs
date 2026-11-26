@@ -205,6 +205,43 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("source"),"selection-sync");
     await unchanged();
 
+    // Hold the optional evidence fetch until the original deep-linked photo is
+    // loaded. Shared initialization must retain that exact DOM node, rather
+    // than replace it while a reader is viewing or opening the source image.
+    let releaseEvidence;
+    const evidenceReady=new Promise(resolve=>{releaseEvidence=resolve;});
+    const delayedEvidence=async route=>{await evidenceReady;await route.continue();};
+    await page.route("**/atlas-area-evidence.json",delayedEvidence);
+    await page.goto(base+"/atlas-explorer.html?sector=jaune-sector-5&source=photo-stability",{waitUntil:"load"});
+    const originalPhoto=page.locator("#aeSelected .ae-source-map-reference img");
+    await originalPhoto.waitFor({state:"attached"});
+    const originalPhotoNode=await originalPhoto.elementHandle();
+    assert.ok(originalPhotoNode,"The original sector photo renders before the optional shared evidence finishes");
+    await originalPhoto.scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
+    releaseEvidence();
+    const stablePhotoPanel=await panel();
+    await stablePhotoPanel.locator('[data-area-results] [data-area-id="jaune-sector-5"][aria-pressed="true"]').waitFor({state:"attached"});
+    const unchangedPhoto=async()=>{
+      assert.equal(await originalPhotoNode.evaluate(node=>node.isConnected&&node===document.querySelector("#aeSelected .ae-source-map-reference img")),true,
+        "An unchanged area must preserve the original loaded source-image DOM node");
+      assert.equal(await page.locator('#aeResults [data-record-id="jaune-sector-5"]').getAttribute("aria-pressed"),"true");
+      assert.equal(await page.locator('#aeResults [data-record-id="jaune-sector-5"]').isVisible(),true);
+    };
+    await unchangedPhoto();
+    // Compatible text stays intact, while a deliberately incompatible legacy
+    // category is revealed again without replacing the selected photograph.
+    await page.locator("#aeSearch").fill("Jaune");
+    await page.locator('#aeFilters [data-kind="holovator"]').click();
+    await stablePhotoPanel.locator('[data-area-boundaries]').uncheck();
+    await unchangedPhoto();
+    assert.equal(await page.locator("#aeSearch").inputValue(),"Jaune");
+    await stablePhotoPanel.locator('[data-area-boundaries]').check();
+    await unchangedPhoto();
+    await page.unroute("**/atlas-area-evidence.json",delayedEvidence);
+    await originalPhotoNode.dispose();
+    await unchanged();
+
     await page.goto(base+"/atlas-explorer.html?area=wz-11",{waitUntil:"load"});
     const measuredPanel=await panel();
     await measuredPanel.locator('[data-area-focus="wz-11"]').click();
@@ -292,7 +329,7 @@ try{
     await page.unroute("**/items-data.js");await page.unroute("**/atlas-collectibles-data.json");
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
     assert.deepEqual(errors,[],"No uncaught runtime errors on "+device);
-    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,routeAndCollectibleStatePreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
+    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
     await context.close();
   }
   fs.writeFileSync(output+"/at339-browser-proof.json",JSON.stringify(proof,null,2)+"\n");
