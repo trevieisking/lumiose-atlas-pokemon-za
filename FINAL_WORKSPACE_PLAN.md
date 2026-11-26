@@ -174,3 +174,7 @@ Keep the design, pages, maps, images, gestures, compass, markers, player progres
 All other guide improvements, historical PR candidates and deferred ideas retain their recorded scope and status; optional work adds no new release gates. Repo Desk, CG Repair Lab, Code God and Writer remain excluded.
 
 **Authoritative detail:** [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [manifest](MAPS_UPGRADE_MANIFEST.json) · [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [source handoff](ATLAS_RELEASE_HANDOFF.md).
+
+### Item-coordinate follow-up: Wild Zone 2 data projection (research only)
+
+[Source counts, reproducible coordinates and local visual comparison](docs/qa/wz02-pickup-projection-2026-11-26/README.md) recover 1,153 exterior spawner records and 99 exterior plus one interior Screw source rows. The former Great Ball ambiguity is narrowed to the eastern candidate for existing key 2-5; Swift has separate map-neighborhood corroboration. No exact item placement, numbering crosswalk, runtime, saved-progress or Workspace change.
