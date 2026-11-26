@@ -1,0 +1,330 @@
+{
+  "id": "AT-338",
+  "date": "2026-11-26",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "manifest_revision": 83,
+  "ledger_revision": 91,
+  "scope": "AT-333 Item/Screw layer and original collection directory only; zero approved new production placements",
+  "status": "github_merged_deployed_live_verified",
+  "decision": "PROMOTE_bounded_feature_after_exact_CI_and_independent_visual_review",
+  "baseline_main_sha": "71cde4ff5990e6ad05299bee7494963364e70354",
+  "reviewed_head": "54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe",
+  "reviewed_tree": "df7249564e6625d6c7c1dc0fd913377a80ae092b",
+  "pr": 193,
+  "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/193",
+  "merge_sha": "c7f9861c70c8eb2101348da579d9720875ebc1e9",
+  "merge_tree_matches_reviewed": true,
+  "changed_paths": [
+    ".github/workflows/atlas-explorer.yml",
+    "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+    "ATLAS_RELEASE_HANDOFF.md",
+    "FINAL_WORKSPACE_PLAN.md",
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "MAPS_UPGRADE_MANIFEST.json",
+    "atlas-collectibles-data.json",
+    "atlas-collectibles-ui.mjs",
+    "atlas-collectibles.mjs",
+    "atlas-explorer.css",
+    "atlas-explorer.html",
+    "atlas-explorer.js",
+    "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+    "docs/qa/ATLAS_AT338_COLLECTIBLE_LAYERS.md",
+    "tests/atlas_collectibles.test.mjs",
+    "tests/atlas_collectibles_browser.mjs"
+  ],
+  "validation": {
+    "local_tests_passed": 67,
+    "static_validation": "passed;17sections645links1431image_script_refs578captured_resources",
+    "ci_run": 45740068408,
+    "ci_head": "54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe",
+    "ci_conclusion": "success",
+    "unit_job": 139642592234,
+    "unit_conclusion": "success",
+    "browser_job": 139642591890,
+    "browser_conclusion": "success",
+    "browser_suites": [
+      "existing_Explorer_routes_images_controls_guides",
+      "AT338_dense_layers_read_only_progress",
+      "20_Wild_Zone_fieldbooks_on_phone_and_desktop"
+    ],
+    "browser_proof": "docs/qa/ATLAS_AT338_BROWSER_PROOF.json",
+    "browser_proof_sha256": "215252894ae73a2adca0cb86a2f28b3805360a54c2cb37f345c19eb073bb8a15",
+    "failed_prior_runs": [
+      {
+        "id": 45739384546,
+        "head": "e2395c1a4ec97bab26d3eb1b6468ff21562c1955",
+        "reason": "phone test fixed gesture coordinates all intersected existing major markers"
+      },
+      {
+        "id": 45739671711,
+        "head": "6b01ea72a77b06a73a6ca897fde481239fd55b8e",
+        "reason": "same test-coordinate failure after filter regression passed"
+      }
+    ],
+    "correction": "Test now hit-tests visible map gaps with movement margins; real input and all gesture assertions retained. No runtime change for this test issue."
+  },
+  "artifact": {
+    "id": 15081345644,
+    "run_id": 45740068408,
+    "bytes": 58894510,
+    "sha256": "cfde0c29339d49a6912b7dd26aa2ed253a74a1b9109e809ed88893717bb27c3d",
+    "downloaded_hash_verified": true,
+    "expires_at": "2026-12-06T02:09:21Z"
+  },
+  "visual_review": {
+    "exact_head": "54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe",
+    "new_screenshots_reviewed": 12,
+    "existing_map_photo_samples_reviewed": 4,
+    "independent_code_review": "no remaining material findings",
+    "independent_all12_visual_review": "approved",
+    "root_representative_visual_review": "approved",
+    "blockers": [],
+    "files": [
+      {
+        "name": "atlas-desktop.png",
+        "bytes": 2174620,
+        "sha256": "f80df64f76f39db458a9ea0b9096b4fffd37e105d1c71e6ea9f087c6059b3a7b"
+      },
+      {
+        "name": "atlas-mobile.png",
+        "bytes": 974329,
+        "sha256": "31a5cd719805e622d8a76f151373fd8190849d01f7cdbac856cf19b43a8b366b"
+      },
+      {
+        "name": "atlas-owner-photos.png",
+        "bytes": 1877497,
+        "sha256": "455df6316673bf900a9c65f3dfb9a5756458c41a8e01b310ff6e1c77cbcab6e6"
+      },
+      {
+        "name": "atlas-wildzone6-original-photos-mobile.png",
+        "bytes": 1158175,
+        "sha256": "b25eccc21309108c4c0627ce45f7dded7bf4f3b6f6dfd345ca482f520926ca2e"
+      },
+      {
+        "name": "at338-browser-proof.json",
+        "bytes": 5408,
+        "sha256": "215252894ae73a2adca0cb86a2f28b3805360a54c2cb37f345c19eb073bb8a15"
+      },
+      {
+        "name": "at338-dense-overview-desktop.png",
+        "bytes": 543077,
+        "sha256": "dc6c3c482dfb7767cc506e79a403e439c25f3540c7b51c5ddfa71c5f6b0ae0b8"
+      },
+      {
+        "name": "at338-dense-overview-phone.png",
+        "bytes": 190962,
+        "sha256": "fb3402abc59acbf721e3a0d61bce14c14f89d65dd006b0cd45cef1dd2da3d698"
+      },
+      {
+        "name": "at338-dense-zoom-desktop.png",
+        "bytes": 561773,
+        "sha256": "0f72798c3d4abc8edb7805d87f59be1caca36b6dc58dd87322e2dd124580094d"
+      },
+      {
+        "name": "at338-dense-zoom-phone.png",
+        "bytes": 171947,
+        "sha256": "39904e41739e533b917f642b8f3961ce3b9b139feeb52b2a533b65bcff992ebc"
+      },
+      {
+        "name": "at338-overlap-chooser-desktop.png",
+        "bytes": 29415,
+        "sha256": "b98c04489770c99cc615786ad156603be5ea766c1cf5dccd39ac8ef688a3947b"
+      },
+      {
+        "name": "at338-overlap-chooser-phone.png",
+        "bytes": 26415,
+        "sha256": "e0955fe324ee861a3320988543deb6ff41de06ce6541dcd747b9b1f95beaf24a"
+      },
+      {
+        "name": "at338-production-empty-desktop.png",
+        "bytes": 536637,
+        "sha256": "17cc2c3b9369d69433fa9a0c59ecf9fd74df25a709ac15ce9314c1b3084a204f"
+      },
+      {
+        "name": "at338-production-empty-map-desktop.png",
+        "bytes": 526493,
+        "sha256": "be82846ca2ecd8618b1b320a3f712c54b94ed904b113ac1e1907a002f3887377"
+      },
+      {
+        "name": "at338-production-empty-map-phone.png",
+        "bytes": 181824,
+        "sha256": "49f6724d872584714a4904aa4c17202c9b6c5ed59700e1de945b8c8614d311e3"
+      },
+      {
+        "name": "at338-production-empty-phone.png",
+        "bytes": 60368,
+        "sha256": "3f0ca4818340a916093a1b4340f0f116e82be1e17eaa434a19b157c91f7a947a"
+      },
+      {
+        "name": "at338-selected-detail-desktop.png",
+        "bytes": 431872,
+        "sha256": "5fac2f3b93fa3066eba6c469ecf843812a042806a0998378272aebfab4ecd658"
+      },
+      {
+        "name": "at338-selected-detail-phone.png",
+        "bytes": 60104,
+        "sha256": "33389d0e9b1e2d6b3e25c3d3ad480b1bfaa3c8206b686fd189cc6092287523f3"
+      }
+    ],
+    "device_scope": "Chrome desktop and phone viewport/touch emulation; no claim of physical-device coverage for every browser"
+  },
+  "preservation": {
+    "original_tracked_paths": 1152,
+    "original_paths_removed": 0,
+    "original_paths_changed": 10,
+    "all_other_original_git_blobs_unchanged": true,
+    "item_records": 264,
+    "screw_clues": 100,
+    "approximate_leads": 146,
+    "routes": 26,
+    "route_steps": 151,
+    "access_leads": 78,
+    "sectors": 48,
+    "wild_zones": 20,
+    "production_verified_collectible_placements": 0,
+    "storage_writes": 0,
+    "original_progress_owner": "lumiose-atlas-reconstruction-v1",
+    "video_policy": "paused; active runtime remains removed",
+    "database_schema_changed": false,
+    "original_workspace_changed": false
+  },
+  "deployment": {
+    "run_id": 45740697392,
+    "head_sha": "c7f9861c70c8eb2101348da579d9720875ebc1e9",
+    "conclusion": "success"
+  },
+  "live_http": {
+    "release_sha": "c7f9861c70c8eb2101348da579d9720875ebc1e9",
+    "normal_public_urls": true,
+    "checks": [
+      {
+        "path": "atlas-explorer.html",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html",
+        "http_status": 200,
+        "bytes": 18578,
+        "sha256": "567eaf49c15d9cc7b6230d49fcf7ca9aa4fffd29f0f5abb3048ec7889cf15007",
+        "expected_sha256": "567eaf49c15d9cc7b6230d49fcf7ca9aa4fffd29f0f5abb3048ec7889cf15007",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-explorer.css",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.css",
+        "http_status": 200,
+        "bytes": 21265,
+        "sha256": "cd80530011d603b98bfe2031657aa12721b579bece5508d02f848974ccf7701f",
+        "expected_sha256": "cd80530011d603b98bfe2031657aa12721b579bece5508d02f848974ccf7701f",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-explorer.js",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.js",
+        "http_status": 200,
+        "bytes": 34874,
+        "sha256": "b21f07906975e180f3ea597b53edea23738bad07ced49c5437d54ca195ef4886",
+        "expected_sha256": "b21f07906975e180f3ea597b53edea23738bad07ced49c5437d54ca195ef4886",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-collectibles-ui.mjs",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles-ui.mjs",
+        "http_status": 200,
+        "bytes": 12585,
+        "sha256": "b5ff9602b4708026248bf31a9a38b7dd7c172225e35cef6130baedd1149b7103",
+        "expected_sha256": "b5ff9602b4708026248bf31a9a38b7dd7c172225e35cef6130baedd1149b7103",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-collectibles.mjs",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles.mjs",
+        "http_status": 200,
+        "bytes": 15954,
+        "sha256": "5f5b16deaa09685baf5b0395ec63a1452d837574428e9b0e993dd7b05275c030",
+        "expected_sha256": "5f5b16deaa09685baf5b0395ec63a1452d837574428e9b0e993dd7b05275c030",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-collectibles-data.json",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles-data.json",
+        "http_status": 200,
+        "bytes": 612,
+        "sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+        "expected_sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+        "exact_match": true
+      },
+      {
+        "path": "items-data.js",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/items-data.js",
+        "http_status": 200,
+        "bytes": 103398,
+        "sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "expected_sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "exact_match": true
+      },
+      {
+        "path": "items.js",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/items.js",
+        "http_status": 200,
+        "bytes": 7556,
+        "sha256": "d670c5c51dcd21fd7938fbf0e5acaf3bf1d2d7c92ed9a5441e2bd89e32f6d1e6",
+        "expected_sha256": "d670c5c51dcd21fd7938fbf0e5acaf3bf1d2d7c92ed9a5441e2bd89e32f6d1e6",
+        "exact_match": true
+      },
+      {
+        "path": "atlas-explorer-data.json",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer-data.json",
+        "http_status": 200,
+        "bytes": 171593,
+        "sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "expected_sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "exact_match": true
+      },
+      {
+        "path": "maps/lumiose-game-map.jpg",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/maps/lumiose-game-map.jpg",
+        "http_status": 200,
+        "bytes": 411683,
+        "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "expected_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "exact_match": true
+      }
+    ],
+    "all_matched": true
+  },
+  "live_browser": {
+    "date": "2026-11-26",
+    "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?collectible=screw%3A1",
+    "observed": true,
+    "checks": [
+      "original Screw1 deep link opens the selected directory record",
+      "364 original records shown with useful no-verified-points message",
+      "Items and Screws switches both enabled without inventing a pin",
+      "Screw filter plus Hotel Z search returns original records1,3,4",
+      "original checklist link retains items.html#item-screw-1",
+      "original rotation renders45degrees then compass returns0degrees",
+      "search and switches restored; selected progress display remains present"
+    ],
+    "live_collectible_pins": 0,
+    "applicable_browser_origin": "public GitHub Pages",
+    "log_note": "The sampled console errors came from browser-extension metadata messaging; this was not used as an application-error-free assertion."
+  },
+  "rollback": {
+    "baseline": "71cde4ff5990e6ad05299bee7494963364e70354",
+    "feature_merge": "c7f9861c70c8eb2101348da579d9720875ebc1e9",
+    "scope": "Reverse only PR193 runtime/test/workflow hunks on a branch, preserve later valid changes and all historical planning/evidence, test and deploy the reviewed rollback. No database or progress rollback is needed.",
+    "paths": [
+      ".github/workflows/atlas-explorer.yml",
+      "atlas-explorer.html",
+      "atlas-explorer.css",
+      "atlas-explorer.js",
+      "atlas-collectibles.mjs",
+      "atlas-collectibles-ui.mjs",
+      "atlas-collectibles-data.json",
+      "tests/atlas_collectibles.test.mjs",
+      "tests/atlas_collectibles_browser.mjs"
+    ]
+  },
+  "full_scope_G5_signed_off": false,
+  "approved_full_scope_sha": null,
+  "final_executable_workspace_prompt": null,
+  "original_workspace_version_last_observed": 37
+}

@@ -22,7 +22,7 @@
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-338 compact Item/Screw layers and364-record directory implemented; exact browser/release validation pending. G0/G1 reconciled; G2/G3 evidence, shared G4 interactions and G5 full release remain open. Final executable Workspace prompt blocked.",
+  "current_phase": "AT-338 compact Item/Screw layers and 364-record directory merged, deployed and checked live; zero new production placements. G0/G1 reconciled; G2/G3 evidence, shared G4 interactions and G5 full release remain open. Final executable Workspace prompt blocked.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -4819,7 +4819,7 @@
     "next": "Independently calibrate existing owner map images, starting WZ5/11 and Vert1; reconcile gate and rooftop access with in-game location header."
   },
   "at_325_github_first_workspace_gate": {
-    "status": "AT337_G0_G1_reconciled_G2_G5_open",
+    "status": "AT338_G0_G1_reconciled_AT333_framework_verified_G2_G3_shared_G4_G5_open",
     "evidence": "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
     "register": "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
     "baseline_main_sha": "069611db5a9e02788ce812b5e49f8c0522ae2360",
@@ -4901,7 +4901,7 @@
       },
       {
         "id": "G4",
-        "state": "open"
+        "state": "partial_AT333_framework_verified_shared_habitat_interactions_open"
       },
       {
         "id": "G5",
@@ -5243,7 +5243,7 @@
   },
   "at_333_compact_collectible_layers": {
     "id": "AT-333",
-    "status": "implemented_candidate_validation_pending_AT338",
+    "status": "github_framework_verified_coordinates_pending_AT338",
     "baseline_main_sha": "c1c7b13b7cc4a137df0dd2d4fb554f2736c46fed",
     "phase": "SM-06",
     "release_gates": [
@@ -5320,7 +5320,10 @@
         "no synthetic data in production",
         "performance and layout"
       ],
-      "status": "local_and_exact_head_browser_validation_pending"
+      "status": "exact_head_unit_browser_visual_deployment_live_checks_passed",
+      "reviewed_head": "54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe",
+      "ci_run": 45740068408,
+      "reviewed_screenshots": 12
     },
     "baseline": {
       "major_marker_css_px": 40,
@@ -5336,7 +5339,8 @@
     "workspace": "open_pending_AT325_G5_and_AT297",
     "implementation": "AT-338",
     "evidence": "docs/qa/ATLAS_AT338_COLLECTIBLE_LAYERS.md",
-    "production_verified_placements": 0
+    "production_verified_placements": 0,
+    "release_receipt": "docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json"
   },
   "at_334_workspace_pickup_recovery": {
     "id": "AT-334",
@@ -5472,7 +5476,7 @@
     "baseline_main_sha": "71cde4ff5990e6ad05299bee7494963364e70354",
     "baseline_tree": "b1ec2dfb7166d4b607c60cdc51e1855f14f7ae72",
     "scope": "AT-333 compact Item/Screw layers and read-only original collection directory",
-    "status": "implemented_candidate_validation_pending",
+    "status": "github_merged_deployed_live_verified",
     "evidence": "docs/qa/ATLAS_AT338_COLLECTIBLE_LAYERS.md",
     "original_item_records": 264,
     "original_screw_clues": 100,
@@ -5490,9 +5494,14 @@
     "existing_route_steps": 151,
     "existing_access_leads": 78,
     "existing_geometry_and_assets_changed": false,
-    "github_release_sha": null,
-    "github_pages_run": null,
+    "github_release_sha": "c7f9861c70c8eb2101348da579d9720875ebc1e9",
+    "github_pages_run": 45740697392,
     "workspace_changed": false,
-    "full_scope_signoff": false
+    "full_scope_signoff": false,
+    "reviewed_head": "54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe",
+    "reviewed_tree": "df7249564e6625d6c7c1dc0fd913377a80ae092b",
+    "ci_run": 45740068408,
+    "release_receipt": "docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json",
+    "browser_proof": "docs/qa/ATLAS_AT338_BROWSER_PROOF.json"
   }
 }
