@@ -1,7 +1,26 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
-<!-- AT342_CURRENT_90_98 -->
-## Current checkpoint — AT-342 / Manifest 90 / Ledger 98
+<!-- AT342_CURRENT_91_99 -->
+## Current release — AT-342 / Manifest 91 / Ledger 99
+
+**26 November 2026: the finite Interactive Map 2.0 GitHub release is merged, deployed and live-verified.** [PR #204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204) reviewed head `f030c4ae3e33259105bf351885c386f6b53900d9` and tree `0288e63d1d52fe5f95dc76e0c01631715310e54a` merged as **`223762bd1a21c2e72c592e975499d13c4195ae07`**, with the same runtime tree. [The release receipt](docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json) records the exact proof and rollback; earlier checkpoints below remain historical.
+
+The release includes **48 sector footprints, 20 Wild Zone selection outlines, 68 finite encounter-source dispositions, 42 written routes and 217 steps**. The **748 attributed encounter claims plus 272 original records** retain source conditions, encounter classes, eight disputes and `not_comprehensive` roster status. The 97 written access leads retain their limits. Sector projections can overlap; zone outlines describe map selection rather than exact spawn areas, floor plans or traversable paths. No new exact pickup positions or exhaustive ladder/scaffold inventory is claimed.
+
+**G0–G5 are verified for that finite scope.** All three exact-head workflows completed successfully: [Validate Atlas header feedback button](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45842781570) · [Validate recovered Atlas article pages](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45842781725) · [Validate rotatable Lumiose Atlas Explorer](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45842781652). [Actual phone/desktop screenshot review](docs/qa/ATLAS_AT342_SCREENSHOT_REVIEW.json), [exact-merge Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45844017622), **35/35** [live-file byte matches](docs/qa/ATLAS_AT342_LIVE_FILE_PROOF.json), and [independent live-browser checks](docs/qa/ATLAS_AT342_LIVE_BROWSER_PROOF.json) are recorded. Browser emulation and documented live observations do not imply a physical-device or in-game survey.
+
+The [guarded private tracker update and fresh readback](docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json) retains all **48 rows** at Manifest **91**. All 48 receive only the shared `manifest_revision` and `updated_at` metadata changes; the six documented release rows additionally receive GitHub release fields and appended notes. Unrelated feature data and proof, previous notes and every original-Workspace field are preserved. The actual readback counts are **17 verified, 15 in progress and 16 open**. No player, public feedback or schema data is changed.
+
+**A0 is ready:** use the [single release-pinned Workspace prompt](WORKSPACE_MAP2_RELEASE_PROMPT.md). **A1–A7 remain pending for the complete original-Site upgrade.** Target existing project `appgprj_6afda588d5948191b4143e40a1f9c291` and [its original URL](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site); last recorded source is **version 38**, `6f7808db2d3cfaa2bb660f381b13dbab452332ce`. Reconfirm actual source/access, backup/rollback and same-origin progress/Supabase compatibility; adapt only supported changes, preview/test, publish and verify independently. This GitHub release does not publish or establish parity with the original Site. The 24-file runtime inventory for this PR is release evidence, not a substitute for comparing all earlier GitHub improvements with the original source.
+
+**Broader required work remains open:** the base-game/Mega Dimension guide audit, all-mission depth audit and comprehensive city/rooftop Alpha inventory. The [targeted Dratini disposition](docs/qa/ATLAS_AT342_CITY_ALPHA_DRATINI_REVIEW.md) is complete with its recorded limits; it does not certify the wider Alpha inventory. All **67 historical requirements** remain in [the requirement dispositions](docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json). Videos and YouTube remain paused, and random Hyperspace distortions are never permanently marked.
+
+**Rollback:** Revert PR204 merge 223762bd1a21c2e72c592e975499d13c4195ae07 through a reviewed branch/PR, rerun affected checks and verify Pages. Preserve pre-release main 7616af2a204e0a09328a5ec9f2b6a0415bf67309. No storage migration, database schema or original Workspace change is part of this GitHub release.
+
+<!-- END_AT342_CURRENT_91_99 -->
+
+<!-- AT342_HISTORICAL_90_98 -->
+## Historical pre-release checkpoint — AT-342 / Manifest 90 / Ledger 98
 
 **26 November 2026: the combined source review is recovered; release validation is pending.** Continue in the existing [PR #204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Preserve main `7616af2a204e0a09328a5ec9f2b6a0415bf67309`, the earlier PR head `b788abb87ef32cb210747da420d95780c4a22583`, and the recovered combined work. Earlier green workflows prove their own heads; the new candidate still requires its own checks.
 
@@ -19,7 +38,7 @@ The later prompt must target the existing project `appgprj_6afda588d5948191b4143
 
 **Completion boundary:** the wider base-game/Mega Dimension guide audit (`CHAT-FULL-GUIDE`), mission-depth audit (`CHAT-WALKTHROUGH-DEPTH`) and targeted city/roof Alpha review (`CHAT-CITY-ALPHAS`, including the unresolved Alpha Dratini disposition) are **not certified complete**. They remain required broader obligations, separate from the finite map-release assessment; a later map release must not be described as completion of all 67 historical requirements. See the [current requirement dispositions](docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json).
 
-<!-- END_AT342_CURRENT_90_98 -->
+<!-- END_AT342_HISTORICAL_90_98 -->
 
 ## Historical progress snapshots and retained requirements
 
