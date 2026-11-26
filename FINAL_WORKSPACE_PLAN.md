@@ -146,3 +146,7 @@ Keep the design, pages, maps, images, gestures, compass, markers, player progres
 All other guide improvements, historical PR candidates and deferred ideas retain their recorded scope and status; optional work adds no new release gates. Repo Desk, CG Repair Lab, Code God and Writer remain excluded.
 
 **Authoritative detail:** [master plan](MAPS_SECTOR_UPGRADE_MASTER_PLAN.md) · [manifest](MAPS_UPGRADE_MANIFEST.json) · [two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) · [source handoff](ATLAS_RELEASE_HANDOFF.md).
+
+### AT-343 full-frame Bleu and centre references (source intake)
+
+[Four new full-frame source copies and visual catalogue](docs/qa/at343-owner-item-crosses/full-frame-2026-11-26/README.md) add Bleu Plaza overlaps and north/south Prism Tower views. The untouched originals stay in project sources; crop or transform only copies. The source is fixed north-up, and faint crosses may only serve as secondary local alignment checks, never as item pins. The existing map, published crop files and Workspace handoff are unchanged.
