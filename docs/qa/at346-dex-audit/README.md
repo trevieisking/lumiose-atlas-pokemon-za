@@ -1,5 +1,7 @@
 # AT-346 — Comprehensive Pokédex and habitat upgrade
 
+**Later intake:** The owner supplied the complete Deep Research dossier on 26 November 2026; see [dossier intake](DOSSIER_INTAKE_2026-11-26.md). The earlier report-unavailable sentence below is preserved as historical context, not current status.
+
 **Owner-approved 26 November 2026.** [Issue #220](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/220). Status: implementation and complete source verification open, documentation and research inventory only. Preserve the existing original Workspace Site, GitHub Pages, Map 2.0 assets and functionality. No new services or replacement Site.
 
 ## Initial independently checked evidence
