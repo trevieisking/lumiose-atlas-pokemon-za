@@ -1,0 +1,12 @@
+# Alpha Fieldbook: Restaurant Le Nah Dragonair
+
+**Scope:** a single already-documented rooftop route. The Vert 6 Alpha Dragonair is a chance encounter, not fixed or a new map pin. Ordinary Dragonair at this location is Lv. 30–32; the Alpha row is Lv. 40–42. Check the existing ladder and roof crossing on the Dratini card. At Rank V, a newly caught Pokémon over Lv. 40 may not obey until the cap rises.
+
+## Evidence and limits
+
+- The [pinned Xzonn slot export](https://github.com/Xzonn/PokemonLZA-pkNX/blob/eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f/spawner/t1_slot_sets.json), Git blob `d03f6ded0a7c3958d94b028750c85651944c9034`, identifies Dragonair, species 148 form 0, in Vert Sector 6 key 24 with both level bands.
+- [Game8's Japanese Dragonair field guide](https://game8.jp/pokemon-legends-z-a/731553) identifies the chance Alpha on the roof of Restaurant Le Nah in Vert 6 (Japanese name Restaurant de Futsū). [GameWith's Japanese guide](https://gamewith.jp/pokemon-za/530944) shows a Vert-district Alpha Dragonair and describes it appearing in place of Dratini. [Altema’s Dratini hunt](https://altema.jp/legendsza/oyabunminiryu) identifies the same roof and notes occasional Dragonair; [an English firsthand player report](https://www.reddit.com/r/PokemonZA/comments/1o9bkge) corroborates the roof and the two Alpha variants. The source accounts do not establish exclusive weather, day/night rules or a respawn count.
+- Other named-table leads, **not verified roof directions**: Bleu 9 (ordinary 31–33, Alpha 41–43), Jaune 3 (32–33, 42–43), Magenta 8 (32–33, 42–43), Rouge 8 (31–32, 41–42). The exact Jaune 5 export key includes Dratini, but no Dragonair row; this does not prove absence in every encounter class.
+- Audit queue: excluding all keys starting 'Wild Zone', the extract has 114 Alpha-positive rows across 43 of 76 included location keys, or 103 distinct species/form/location pairs and 25 species/form combinations. Prioritize Goomy and Sliggoo (17 keys each), Dedenne (12), then Hawlucha (11). These counts are leads, not odds, habitat certification, or proof of visible exact floors. Do not replace fixed, scripted, mission or rotating Alpha data.
+
+No new pins, assets, maps, services, progress keys, roster rows or catch-odds claims. Run the existing Alpha Fieldbook and static tests, then inspect phone and desktop before releasing. Original Workspace publication remains a separate step.

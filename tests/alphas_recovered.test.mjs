@@ -120,3 +120,10 @@ assert.equal(speciesRows.length,6);
 for(const row of speciesRows)assert.equal(row.encounter_class,'ordinary');
 assert.equal(cityRecord.limits.new_pins,0);
 assert.equal(cityRecord.limits.complete_city_alpha_audit,false);
+
+/* Restaurant Le Nah: same route, distinct species and qualified chance. */
+const dragonair=dratiniCard.match(/<p id="alpha-dragonair-rooftop">([\s\S]*?)<\/p>/)?.[1];
+assert.ok(dragonair);
+for (const clause of ["Restaurant Le Nah","instead of Dratini","Lv. 30–32","Lv. 40–42","Neither Alpha is guaranteed","walkthrough.html#rank-obedience"])
+  assert.ok(dragonair.includes(clause),"Dragonair route lost qualification: "+clause);
+assert.equal((html.match(/id="alpha-dragonair-rooftop"/g)||[]).length,1);
