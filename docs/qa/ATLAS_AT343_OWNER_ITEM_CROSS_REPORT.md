@@ -6,6 +6,8 @@
 
 Trev then suggested using the regular marks to align the photographed maps or measure relative spacing. **A strict, independently replayed comparison of the two Vert photographs supports using the pattern as a secondary local alignment reference.** Shared architecture established correspondence before the crosses were checked. The marks align with the mapped features in this overlap; a separate HUD comparison also supports map-relative anchoring locally. No physical or in-game distance unit, unique grid origin, citywide calibration or transform into the native Atlas map has been established.
 
+**Source orientation clarified by Trev:** the in-game map stays fixed north-up and has no rotation control. This owner-reported constraint gives the source views a common north-up orientation. Any correction for camera tilt or perspective concerns the photographed image, not a turn of the in-game map. The earlier wording about “rotation” referred to photograph alignment and should have stated that distinction explicitly. This clarification concerns the source game; the separate Atlas Explorer controls are unchanged.
+
 ## Observation history
 
 1. Trev initially reported five positive item/cross matches.
@@ -13,6 +15,7 @@ Trev then suggested using the regular marks to align the photographed maps or me
 3. Two further matches were reported in Trev's message. The phrase “kay just varified 2 more” does not unambiguously identify a second person; separate reporter identity and overlap with the earlier locations are unknown. This totals ten reported positive observations, without establishing ten uniquely identified or independently documented pickup coordinates. Earlier tracker wording attributing the two to a named second person is explicitly clarified in the append-only record.
 4. Trev then reported many crosses with no ball present. The negative count and individual locations were not specified; a success rate cannot be calculated.
 5. Trev accepted that crosses occur with and without items and proposed using their regular spacing as an alignment reference.
+6. Trev clarified that the source game's map remains north-up and cannot rotate. Retain that common orientation when comparing map content; distinguish it from the camera angle of a screen photograph.
 
 The grid interpretation is supported locally by the replay below, while the symbol's official purpose remains unknown. The earlier item finds remain reported observations. The later counterexamples rule out using a cross alone as automatic evidence of a present pickup.
 
@@ -59,7 +62,7 @@ python3 docs/qa/at343-owner-item-crosses/grid-registration-pilot.py \
 
 The script reads the archived originals and writes only the requested analysis result. No production code imports it. The recorded software versions are OpenCV 5.1.0 and NumPy 2.3.5.
 
-**Practical use:** establish the correct buildings and roads first, then use nearby cross rows and spacing to check relative alignment, rotation and scale. An unnumbered repeating pattern can be shifted by a whole cell and still appear to match, so it cannot identify the correct location on its own. Grid steps can describe relative spacing; metres, game distance, elevations and item locations remain unknown. Other regions and zoom levels were not tested.
+**Practical use:** establish the correct buildings and roads first, retain their common north-up direction, then use nearby cross rows and spacing to check position, relative image scale and spacing. A tilted or angled screen photograph may need correction for camera tilt or perspective; the in-game map itself does not rotate, as Trev clarified. An unnumbered repeating pattern can be shifted by a whole cell and still appear to match, so it cannot identify the correct location on its own. Grid steps can describe relative spacing; metres, game distance, elevations and item locations remain unknown. Other regions and zoom levels were not tested.
 
 ## Preservation
 
