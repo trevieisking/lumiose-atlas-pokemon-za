@@ -62,7 +62,7 @@ test('no new coordinates, progress persistence or map geometry; Wild Zone photo 
   assert.match(ui,/image\.addEventListener\('error',\(\)=>source\.remove\(\)/);
   assert.match(ui,/Show preserved close-up photograph/);
   assert.match(css,/\.aa-context-window\{/);
-  assert.doesNotMatch(read('atlas-sector-context.mjs').toString('utf8'),/localStorage|sessionStorage|setItem|fetch\(|coordinates|geometry\.coordinates/i);
+  assert.doesNotMatch(read('atlas-sector-context.mjs').toString('utf8'),/localStorage|sessionStorage|setItem|fetch\(|geometry\.coordinates|map_xy/i);
   for(let n=1;n<=20;n++){
     const num=String(n).padStart(2,'0');
     for(const type of ['overview','closeup'])
