@@ -34,6 +34,10 @@ on:
       - atlas-explorer-data.json
       - atlas-area-model.mjs
       - atlas-area-ui.mjs
+      - atlas-sector-context.mjs
+      - 'assets/atlas/sector-context/**'
+      - tests/atlas_sector_context.test.mjs
+      - tests/atlas_sector_context_browser.mjs
       - atlas-area-surfaces.mjs
       - atlas-area-evidence.json
       - atlas-area.css
@@ -110,7 +114,7 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-sector-context.mjs && node --check tests/atlas_sector_context_browser.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/atlas_access_continuation.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Verify native cross-grid calibration contract and bounded references
@@ -123,7 +127,7 @@ jobs:
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Validate shared areas, habitat classes and boundary evidence gates
         run: |
-          node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
+          node --test tests/atlas_sector_context.test.mjs tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs tests/atlas_sector_reconciliation.test.mjs tests/atlas_sector_continuation.test.mjs tests/atlas_sector_wild_zone_links.test.mjs
           python3 docs/qa/candidates/original-ui-zone-outlines-2026-11-26/replay_native_ui_candidates.py
       - name: Verify attributed sector reconciliation and preservation
         run: python3 scripts/reconcile_sector_encounters.py && python3 scripts/reconcile_remaining_sector_encounters.py
@@ -152,13 +156,17 @@ jobs:
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify shared habitats, all map views and original progress
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
-        run: node tests/atlas_area_browser.mjs
+        run: |
+          node tests/atlas_area_browser.mjs
+          node tests/atlas_sector_context_browser.mjs
       - name: Attach shared-area screenshot and failure diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: atlas-areas-mobile-desktop-preview
-          path: test-artifacts/atlas-areas/
+          path: |
+            test-artifacts/atlas-areas/
+            test-artifacts/atlas-sector-context/
           if-no-files-found: ignore
           retention-days: 10
   atlas-browser:
