@@ -10,11 +10,13 @@ The private Supabase planning preflight preserved all 43 previous rows and added
 
 Earlier sections below are dated history. This checkpoint and its actual PR/deployment evidence control current status; no historical approval is silently rewritten.
 
+The candidate now includes current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` after the separate PR202 merge, preserving its map-filter, exact-search and original-photo fixes. Wild Zone 04 adds a sixth reviewed selection outline; 62 boundaries and all 68 comprehensive roster reviews remain open. Fresh Sites metadata shows the separate original-site hotfix at **version 38**. This consolidation does not publish to that Site; the final full-upgrade prompt remains gated. All 128 local Node tests pass; final combined-head browser and visual checks are pending.
+
 ## AT-340 — one verified consolidation candidate
 
 **26 November 2026 · Manifest 86 / Ledger 94.** The combined candidate includes shared area/habitat navigation, the exact collectible-search correction, verified salon/quest/gift/written-route additions and restored Main Mission 01–10 detail. Independent review repaired disputed habitat leakage, stale Holovator selection, outbound evidence links and misleading pickup wording. [Scope, sources, validation and rollback](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md); [all 25 open PR dispositions](docs/qa/ATLAS_AT340_PR_DISPOSITIONS.json).
 
-**Bounded release status and exact validation/deployment evidence are recorded in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Full master-plan completion remains HOLD:** five reviewed selection outlines, 63 boundaries and all 68 comprehensive encounter reviews still open. No new pickup coordinates are approved. Original photos, IDs, routes, progress, Supabase and feedback are preserved. Original Workspace is still version37; its full-release SHA and executable publication prompt remain unset. Videos and YouTube remain paused.
+**Bounded release status and exact validation/deployment evidence are recorded in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Full master-plan completion remains HOLD:** six reviewed selection outlines, 62 boundaries and all 68 comprehensive encounter reviews still open. No new pickup coordinates are approved. Original photos, IDs, routes, progress, Supabase and feedback are preserved. Original Workspace is still version37; its full-release SHA and executable publication prompt remain unset. Videos and YouTube remain paused.
 
 The entries below preserve the earlier checkpoints; use AT-340 and its eventual exact PR/deployment receipt for the current consolidation status.
 

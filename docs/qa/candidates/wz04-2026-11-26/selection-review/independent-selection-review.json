@@ -1,0 +1,345 @@
+{
+  "id": "WZ04-INDEPENDENT-SELECTION-REVIEW-2026-11-26",
+  "date": "2026-11-26",
+  "reviewer": "geometry_evidence_independent_original_image_review",
+  "decision": "approved_for_rendered_map_selection_only",
+  "scope": "Only a rendered map-selection outline. No spawn, walkability, floor, route, entrance-accessibility, encounter or physical-geography claim.",
+  "candidate_evidence_sha256": "6581ec9e50c05d39fc73bd4509c3c4f6142f8b5457857fbb39f44066ceeb71ad",
+  "manual_observations_sha256": "91f38e7eacb91d5f8541bb52884c7ce8d5994a14458d5970837ca1d9a60b186a",
+  "historical_hold_sha256": "0bb921ca78f4e600073661efbec213a7784a27b96d33d7ff3e9097f7917ed151",
+  "historical_hold_preserved": true,
+  "change_from_hold": "The same limited entry-opening convention already approved for WZ02/03/05/11/16 is applied explicitly to the existing WZ04 connector segments; a new independent southwest roof-corner check addresses the prior absence of southwest architectural checking. Original candidate, original hold, controls, transform, source bytes and fourteen vertices are unchanged.",
+  "review": {
+    "boundary": true,
+    "registration": true,
+    "independent": true,
+    "occlusion": true
+  },
+  "observations": [
+    "The original closeup shows all four green perimeter corners. Its interior cursor does not cover the west or southwest perimeter hidden by the cursor on the native map.",
+    "The original overview independently shows the same rectangle and southwest corner; its Travel Here control covers only part of the southern span, which the closeup supplies.",
+    "The two retained PR200 owner views corroborate footprint and gate positions. Their higher-error affine registrations are contextual only and do not determine or refine the approved geometry.",
+    "All six fitted architectural correspondences are identifiable. Original H4 remains rejected as a plain edge, and all first-pass B4/B5 picks and corrections remain recorded.",
+    "The new southwest check is outside the native cursor. An initial source point above the actual corner was rejected despite a low residual. Independent original-pixel stroke intersections identify the replacement without fitting or modifying the transform.",
+    "North connector 1-2 joins the visible line approaches; south connector 6-7 and west connector 11-12 join visible inner shoulders. These are explicitly accepted display-footprint closures, not newly observed continuous physical boundary lines. Gate square/arrow decorations are excluded.",
+    "Three native pixels is the same declared raster/manual digitization tolerance used by current approvals. It is not a confidence interval, geographic error bound, or proof of walkability/spawn extent."
+  ],
+  "registration": {
+    "source_to_native_matrix": [
+      [
+        0.2743846827376428,
+        -0.03588969231041278,
+        914.0695539230477
+      ],
+      [
+        0.008291198230332945,
+        0.2120663639153156,
+        199.1779003944205
+      ],
+      [
+        4.748831494523409e-05,
+        -3.7356196451293315e-05,
+        1.0
+      ]
+    ],
+    "original_metrics_preserved": {
+      "fit": {
+        "count": 6,
+        "rms_px": 1.0261018477352801,
+        "max_px": 1.7105684269212482
+      },
+      "architecture_holdout": {
+        "count": 3,
+        "rms_px": 1.5879670355794824,
+        "max_px": 1.81262105353095
+      },
+      "border_holdout": {
+        "count": 5,
+        "rms_px": 0.8563820079038018,
+        "max_px": 1.1735796449544758
+      }
+    },
+    "metrics_including_new_southwest_check": {
+      "fit": {
+        "count": 6,
+        "rms_px": 1.0261018477352801,
+        "max_px": 1.7105684269212482
+      },
+      "architecture_holdout": {
+        "count": 4,
+        "rms_px": 1.7448104929513015,
+        "max_px": 2.147681705232549
+      },
+      "border_holdout": {
+        "count": 5,
+        "rms_px": 0.8563820079038018,
+        "max_px": 1.1735796449544758
+      }
+    },
+    "new_southwest_check": {
+      "id": "WZ04-INDEPENDENT-SW-CORNER-2026-11-26",
+      "status": "fixed_image_feature_before_projection_check",
+      "source_path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+      "native_path": "maps/lumiose-game-map.jpg",
+      "landmark": "Lower southeast roof corner of the stepped building west of Rouge Street, southwest of Wild Zone 04; independent intersection of its vertical and horizontal roof-outline strokes.",
+      "source_xy": [
+        56,
+        672
+      ],
+      "native_xy": [
+        928,
+        349
+      ],
+      "role": "new_independent_architecture_holdout",
+      "method": "The initial manual source [60,666] was rejected after viewing its enlarged panel because it fell on the vertical edge above the corner, despite a low residual. The replacement uses original-image stroke minima independently in each image, with no homography input: source median luminance across y658:667,x50:70 gives vertical x56; source y665:679,x40:55 gives horizontal y672. Native median luminance across y341:347,x918:936 gives vertical x928; native y345:356,x918:926 gives horizontal y349. Half-open pixel windows; source and target choices fixed before projecting this replacement. No fitted control, transform, or candidate vertex changed.",
+      "first_attempt": {
+        "source_xy": [
+          60,
+          666
+        ],
+        "native_xy": [
+          927,
+          350
+        ],
+        "residual_px": 1.4099914800184337,
+        "decision": "reject_as_corner_observation",
+        "reason": "The source crosshair is visibly above the horizontal stroke; low residual cannot validate the wrong landmark."
+      },
+      "limitations": "Stroke centres differ with raster rendering, blur and perspective. This is an independent image correspondence, not a physical-geography measurement or uniform confidence interval.",
+      "candidate_projection_native_xy": [
+        926.1026886889188,
+        350.00635306718556
+      ],
+      "residual_px": 2.147681705232549,
+      "fit_changed": false,
+      "candidate_vertices_changed": false
+    },
+    "threshold_px": 3,
+    "declared_raster_digitization_tolerance_px": 3,
+    "candidate_projection_difference_max_px": 2.2737367544323206e-13
+  },
+  "accepted_display_connector_segments": [
+    {
+      "from_vertex": 1,
+      "to_vertex": 2,
+      "historical_candidate_reason": "North gate symbol covers a short perimeter span. Straight connection of the two visible green-line approaches is a selection-outline interpretation, not an observed continuous line.",
+      "selection_review_decision": "accepted_for_rendered_map_selection_only",
+      "selection_review_reason": "The unchanged straight connector joins the two visible north green-line approaches across the gate symbol. Accept it as bounded display-footprint closure under the existing entry-opening convention; no continuous hidden line, traversable entrance or physical boundary is claimed."
+    },
+    {
+      "from_vertex": 6,
+      "to_vertex": 7,
+      "historical_candidate_reason": "South gate symbol covers the connection between visible inner shoulders. Its arrow tips and filled squares are excluded from the outline; the crossing is unreviewed.",
+      "selection_review_decision": "accepted_for_rendered_map_selection_only",
+      "selection_review_reason": "The unchanged connector joins the visible south inner shoulders and excludes the gate arrow and filled-square decorations. Accept it as bounded display-footprint closure under the existing entry-opening convention; no route or observed hidden physical edge is claimed."
+    },
+    {
+      "from_vertex": 11,
+      "to_vertex": 12,
+      "historical_candidate_reason": "West gate symbol covers the inner crossing. The source exposes both shoulders; their connection is unreviewed. This is not a traversable entrance claim.",
+      "selection_review_decision": "accepted_for_rendered_map_selection_only",
+      "selection_review_reason": "The unchanged connector joins the visible west inner shoulders exposed by the original closeup and excludes the gate decorations. Accept it as bounded display-footprint closure under the existing entry-opening convention; no entrance-accessibility or observed hidden physical edge is claimed."
+    }
+  ],
+  "geometry_unchanged": {
+    "native_vertices": [
+      [
+        978.4218882704919,
+        224.74130851415583
+      ],
+      [
+        1086.8562651994364,
+        224.67643715470913
+      ],
+      [
+        1105.779525777668,
+        224.68721518625472
+      ],
+      [
+        1197.5455080608483,
+        224.53798969822455
+      ],
+      [
+        1198.0337853126152,
+        352.15467255794135
+      ],
+      [
+        1156.5597106000353,
+        351.7810832743163
+      ],
+      [
+        1155.4032159113276,
+        349.18485300455137
+      ],
+      [
+        1136.6777370305565,
+        349.45045967732193
+      ],
+      [
+        1135.4456769490932,
+        351.70634901923773
+      ],
+      [
+        978.1119963876648,
+        352.4572367807419
+      ],
+      [
+        977.9563549855919,
+        298.4301619123055
+      ],
+      [
+        981.1540095844458,
+        297.4522138514037
+      ],
+      [
+        981.0915005445154,
+        279.1560363162281
+      ],
+      [
+        978.125164302517,
+        277.8854272558743
+      ]
+    ],
+    "topology": {
+      "vertex_count": 14,
+      "finite": true,
+      "in_native_bounds": true,
+      "self_intersections": [],
+      "area_native_px2": 27867.38029458627
+    }
+  },
+  "source_and_original_panel_hashes_verified": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+      "sha256": "d46ebad35a9e2e17a84bb70b990a1b37f3e33200736342e7393871a6228faa36",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+      "sha256": "1539b255f8a617b5eec88b47bd068694283de101b88a2d24a36785d49b036c0e",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/manifest.json",
+      "sha256": "b12291163a0c886e62b937cbe854f4b942b40d4cd74368cc44596a1cb4796e01",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+      "sha256": "f319bcc58327d868389624a537bbe32818ec0f86108907380c87f386e4c20369",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md",
+      "sha256": "0e484bdeac2994f3fcd94822d30087ce59c30fd92f55c215d22851b8bd946b48",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/atlas-early-zone-outline-screening.jpg",
+      "sha256": "86cc05d3b221738264032cb5257a5eb970fa131e6616361fab687e2644029a9c",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "sha256": "741c4f88f15cf867d698b4b278449da181b575c3fa7608cb7f6aa9bab10a9d64",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+      "sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+      "matches": true
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+      "sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/landmark-review.png",
+      "sha256": "5b2e76ad76f8a585403e6b54a48f71cba4df47929c2cbe6e7252feda1523195d",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/registered-source-review.png",
+      "sha256": "42808cf221f9702334afcbb3cc91a58fecfc98ebf69168cf48d522f15b9a34a0",
+      "matches": true
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/original-closeup-review.png",
+      "sha256": "ff07258eba4387b330892542ce2629b2894166835997b3217abff4ebf9ea09b1",
+      "matches": true
+    }
+  ],
+  "supplementary_artifacts": [
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/selection-review/southwest-refined-observation.json",
+      "sha256": "e365e1fefe1b4f481bd62983f795679ca3c65bfcc35106cd2db70aa46404bae2"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/selection-review/southwest-refined-check-result.json",
+      "sha256": "2d15dc376996a52f6ddbdeab4c20fc0ec0d55f5fa9fc1cbc951017bc4ade9d34"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/selection-review/southwest-refined-check-review.png",
+      "sha256": "a7ece50bd8898daf516ec02007955c621e5d44ab4f6241a7c774c83d20bdb7bf"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/selection-review/build_independent_review.py",
+      "sha256": "01da52d95145a890595ce5adf5663e035e09bdcad473faddca5dd0e2c178e856"
+    }
+  ],
+  "sensitivity_analysis": {
+    "scope": "Diagnostic alternative fits only; no alternative adopted and no uniform error bound inferred.",
+    "results": [
+      {
+        "omitted_control": "F1",
+        "success": true,
+        "max_vertex_shift_px": 0.4277270371396174,
+        "southwest_shift_px": 0.4277270371396174,
+        "independent_check_max_px": 2.0631535118567936
+      },
+      {
+        "omitted_control": "F2",
+        "success": true,
+        "max_vertex_shift_px": 2.431664232764754,
+        "southwest_shift_px": 2.431664232764754,
+        "independent_check_max_px": 3.6255828566272137
+      },
+      {
+        "omitted_control": "F3",
+        "success": true,
+        "max_vertex_shift_px": 0.742933918241167,
+        "southwest_shift_px": 0.7172473766567384,
+        "independent_check_max_px": 3.230919153391672
+      },
+      {
+        "omitted_control": "F4",
+        "success": true,
+        "max_vertex_shift_px": 19.125517474233803,
+        "southwest_shift_px": 6.056209929256923,
+        "independent_check_max_px": 22.357627236214526
+      },
+      {
+        "omitted_control": "F5",
+        "success": true,
+        "max_vertex_shift_px": 1.5377165471862089,
+        "southwest_shift_px": 0.9401729097418824,
+        "independent_check_max_px": 2.3973745256134396
+      },
+      {
+        "omitted_control": "F6",
+        "success": true,
+        "max_vertex_shift_px": 1.5333557212696929,
+        "southwest_shift_px": 1.1070751354985306,
+        "independent_check_max_px": 2.957516420006592
+      }
+    ],
+    "interpretation": "Omitting F4 creates a weak alternative with large errors; the independent northeast checks reject it. F4 itself is an identifiable corner and remains in the unchanged full fit. Other omissions and all residuals are retained rather than selectively hidden."
+  },
+  "release_effect": "One additional reviewed selection outline, WZ04. No roster completion, route, floor, spawn extent, precise pickup, other boundary, live publication or final CI approval."
+}

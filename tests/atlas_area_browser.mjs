@@ -127,12 +127,20 @@ try{
       assert.deepEqual((await page.locator("[data-area-boundary]").evaluateAll(nodes=>nodes.map(n=>n.dataset.areaBoundary))).sort(),[...productionIds].sort());
       if(surface==="standalone")assert.equal(await page.locator("#mapZoomImage").getAttribute("data-selected-zone"),"2","Legacy zone fragment preserved");
       await host.locator("[data-area-search]").fill("Pidgey");
+      if(device==="phone"){
+        // Capture the actual mobile controls before a result selection scrolls
+        // into its detail, independently of the habitat/result evidence below.
+        const controls=host.locator(".aa-controls");
+        await controls.scrollIntoViewIfNeeded();
+        await controls.screenshot({path:output+"/at339-"+surface+"-controls-phone.png"});
+      }
       await host.locator('[data-species-results] button[data-species-id="pidgey"]').click();
       const pidgey=await areaIds();assert.ok(pidgey.includes("wz-01")&&pidgey.includes("wz-05"),"All preserved Pidgey habitats are reachable");
       await host.locator("[data-area-class]").selectOption("fixed_alpha");
       assert.deepEqual(await areaIds(),["wz-01"],"Fixed Alpha Pidgey must not borrow another zone's ordinary roster");
       const locations=await host.locator('[data-area-detail] [data-encounter-area]').evaluateAll(nodes=>nodes.map(node=>({id:node.dataset.encounterArea,text:node.textContent})));
-      assert.ok(locations.length>0&&locations.every(row=>row.id==="wz-01"&&row.text==="Area: Wild Zone 01"),"Every displayed condition identifies its own canonical encounter area");
+      assert.ok(locations.length>0,"Fixed Alpha Pidgey exposes its encounter-area attribution");
+      for(const row of locations)assert.deepEqual(row,{id:"wz-01",text:"Area: Wild Zone 01"},"Every displayed condition identifies its own encounter area by its preserved source name");
       assert.equal(new URL(page.url()).searchParams.get("source"),"at339","Unrelated query preserved");
       await host.screenshot({path:output+"/at339-"+surface+"-habitats-"+device+".png"});
       await host.locator("[data-area-clear]").click();
@@ -156,7 +164,7 @@ try{
       await page.reload({waitUntil:"load"});await panel();
       assert.match(await page.locator("[data-area-detail]").textContent(),/Wild Zone 20/);
       if(surface!=="explorer"){
-        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap [data-select-zone="2"]';
+        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap button[data-select-zone="2"]';
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
@@ -462,13 +470,15 @@ try{
     await originalPhotoNode.dispose();
     await unchanged();
 
-    await page.goto(base+"/atlas-explorer.html?area=wz-11",{waitUntil:"load"});
-    const measuredPanel=await panel();
-    await measuredPanel.locator('[data-area-focus="wz-11"]').click();
-    await page.locator("#aeViewport").scrollIntoViewIfNeeded();
-    assert.equal(await page.locator('[data-area-boundary="wz-11"].is-active').count(),1);
-    await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-wz11-"+device+".png"});
-    await unchanged();
+    for(const areaId of ["wz-11","wz-04"]){
+      await page.goto(base+"/atlas-explorer.html?area="+areaId,{waitUntil:"load"});
+      const measuredPanel=await panel();
+      await measuredPanel.locator('[data-area-focus="'+areaId+'"]').click();
+      await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+      assert.equal(await page.locator('[data-area-boundary="'+areaId+'"].is-active').count(),1);
+      await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png"});
+      await unchanged();
+    }
 
     await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});await panel();
     const habitatLink=page.locator('[data-wz-fieldbook="1"] [data-atlas-species="pidgey"]').first();
@@ -535,41 +545,46 @@ try{
     await drag(dragStart);
     assert.equal(new URL(page.url()).searchParams.get("area"),null,"Dragging an overlay must not select a boundary");
     if(device==="phone"){
+      await page.locator("#aeViewport").scrollIntoViewIfNeeded();
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
       const touch=await page.locator("#aeViewport").evaluate(node=>{
-        const r=node.getBoundingClientRect(),margin=12,travel=20;
-        const left=Math.ceil(Math.max(r.left,0)+margin+travel),right=Math.floor(Math.min(r.right,innerWidth)-margin-travel);
-        const top=Math.ceil(Math.max(r.top,0)+margin+travel),bottom=Math.floor(Math.min(r.bottom,innerHeight)-margin-travel);
-        const controls=[...node.querySelectorAll("button,a,input,select,textarea")].map(control=>({control,box:control.getBoundingClientRect()}))
-          .filter(({control,box})=>box.width&&box.height&&getComputedStyle(control).visibility!=="hidden")
-          .map(({box})=>box);
-        const clearance=(x,y)=>{
-          const target=document.elementFromPoint(x,y);
-          if(!target||!node.contains(target)||target.closest("button,a,input,select,textarea"))return -1;
-          return Math.min(...controls.map(box=>Math.hypot(Math.max(box.left-x,0,x-box.right),Math.max(box.top-y,0,y-box.bottom))));
-        };
-        let best=null;
-        // The preceding real drag moves the original pins. Search the visible
-        // map for two integer touch points instead of assuming four fixed rows
-        // still offer an unobstructed pair. Keep every original control active.
-        for(let y=top;y<=bottom;y+=8){
-          const points=[];
-          for(let x=left;x<=right;x+=8){const gap=clearance(x,y);if(gap>=margin)points.push({x,gap});}
-          for(const a of points)for(const b of points){
-            if(b.x-a.x<100)continue;
-            const gap=Math.min(a.gap,b.gap);
-            if(!best||gap>best.clearance)best={x1:a.x,x2:b.x,y,clearance:gap};
+        const r=node.getBoundingClientRect();
+        const visible={left:Math.max(0,r.left),right:Math.min(innerWidth,r.right),top:Math.max(0,r.top),bottom:Math.min(innerHeight,r.bottom)};
+        // Reuse the collectible suite's adaptive visible-window scan. Reserve
+        // room for both real diagonal moves and preserve major-pin priority.
+        const bounds={left:Math.ceil(visible.left+30),right:Math.floor(visible.right-34),top:Math.ceil(visible.top+44),bottom:Math.floor(visible.bottom-46)};
+        const separation=Math.min(180,(visible.right-visible.left)*.45),margin=12;
+        const controls=[...node.querySelectorAll("button,a,input,select,textarea,[role='button']")].map(control=>({control,box:control.getBoundingClientRect()}))
+          .filter(({control,box})=>box.width&&box.height&&getComputedStyle(control).visibility!=="hidden"&&box.right>visible.left&&box.left<visible.right&&box.bottom>visible.top&&box.top<visible.bottom);
+        const blocked=new Map();let tested=0,free=0;
+        const diagnostics=()=>({viewport:{x:r.x,y:r.y,width:r.width,height:r.height},window:{width:innerWidth,height:innerHeight},visible,bounds,minimumSeparation:separation,minimumControlClearance:margin,testedPoints:tested,unobstructedPoints:free,obstructingHits:[...blocked].sort((a,b)=>b[1]-a[1]).slice(0,6)});
+        for(let y=bounds.top;y<=bounds.bottom;y+=12){
+          const row=[];
+          for(let x=bounds.left;x<=bounds.right;x+=12){
+            tested++;const hit=document.elementFromPoint(x,y),control=hit?.closest("button,a,input,select,textarea,[role='button']");
+            const clearance=Math.min(...controls.map(({box})=>Math.hypot(Math.max(box.left-x,0,x-box.right),Math.max(box.top-y,0,y-box.bottom))));
+            if(hit&&node.contains(hit)&&!control&&clearance>=margin){row.push({x,clearance,target:hit.id||hit.tagName});free++;}
+            else{
+              const target=control||hit;
+              const reason=!target?"outside document":!node.contains(hit)?"outside map: "+target.tagName:control?(control.id||control.getAttribute("aria-label")||control.tagName):"within 12px of map control";
+              blocked.set(reason,(blocked.get(reason)||0)+1);
+            }
           }
+          if(row.length>1&&row.at(-1).x-row[0].x>=separation)return{x1:row[0].x,x2:row.at(-1).x,y,starts:[row[0],row.at(-1)],diagnostics:diagnostics()};
         }
-        if(best)return best;
-        throw Error("No visible two-finger start has 100px separation and 12px control clearance");
+        return{diagnostics:diagnostics()};
       });
-      console.log("AT339 synthetic two-finger start",device,JSON.stringify(touch));
+      console.log("AT339 touch pair",device,JSON.stringify(touch));
+      if(!Number.isFinite(touch.x1)||!Number.isFinite(touch.x2)){
+        await page.screenshot({path:output+"/at339-touch-pair-failure-"+device+".png"}).catch(error=>console.error("Touch pair failure screenshot:",String(error)));
+        assert.fail("No separated unobstructed real touch gesture starts: "+JSON.stringify(touch.diagnostics));
+      }
       const beforeZoom=await page.locator("#aeZoomLabel").textContent();
       const beforeRotation=await page.locator("#aePositionReadout").textContent();
       const session=await context.newCDPSession(page),p=(x,y,id)=>({x:Math.round(x),y:Math.round(y),id});
       try{
         await session.send("Input.dispatchTouchEvent",{type:"touchStart",touchPoints:[p(touch.x1,touch.y,1),p(touch.x2,touch.y,2)]});
-        await session.send("Input.dispatchTouchEvent",{type:"touchMove",touchPoints:[p(touch.x1-20,touch.y-20,1),p(touch.x2+20,touch.y+20,2)]});
+        await session.send("Input.dispatchTouchEvent",{type:"touchMove",touchPoints:[p(touch.x1-22,touch.y-30,1),p(touch.x2+28,touch.y+40,2)]});
         await session.send("Input.dispatchTouchEvent",{type:"touchEnd",touchPoints:[]});
       }finally{await session.detach();}
       await page.waitForFunction(before=>document.getElementById("aeZoomLabel").textContent!==before,beforeZoom);

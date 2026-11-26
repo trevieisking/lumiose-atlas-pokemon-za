@@ -2382,6 +2382,149 @@
         "review_panel_sha256": "47062070f475b0fe986e1fbff18973cec3c68f7e7b1b8f05d295246cfe2709d5",
         "decision": "approved_for_rendered_map_selection_only"
       }
+    },
+    {
+      "area_id": "wz-04",
+      "status": "approved",
+      "kind": "zone",
+      "coordinateSpace": "atlas-native-pixels",
+      "mapSha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              978.4218882704919,
+              224.74130851415583
+            ],
+            [
+              1086.8562651994364,
+              224.67643715470913
+            ],
+            [
+              1105.779525777668,
+              224.68721518625472
+            ],
+            [
+              1197.5455080608483,
+              224.53798969822455
+            ],
+            [
+              1198.0337853126152,
+              352.15467255794135
+            ],
+            [
+              1156.5597106000353,
+              351.7810832743163
+            ],
+            [
+              1155.4032159113276,
+              349.18485300455137
+            ],
+            [
+              1136.6777370305565,
+              349.45045967732193
+            ],
+            [
+              1135.4456769490932,
+              351.70634901923773
+            ],
+            [
+              978.1119963876648,
+              352.4572367807419
+            ],
+            [
+              977.9563549855919,
+              298.4301619123055
+            ],
+            [
+              981.1540095844458,
+              297.4522138514037
+            ],
+            [
+              981.0915005445154,
+              279.1560363162281
+            ],
+            [
+              978.125164302517,
+              277.8854272558743
+            ],
+            [
+              978.4218882704919,
+              224.74130851415583
+            ]
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "path": "maps/lumiose-game-map.jpg",
+          "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+          "claim": "Original native map identity and visible green perimeter; native cursor-occluded west/southwest spans are supplied by the owner closeup."
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+          "sha256": "d46ebad35a9e2e17a84bb70b990a1b37f3e33200736342e7393871a6228faa36",
+          "claim": "Owner closeup supplies all four corners and visible gate shoulders; six architectural fit controls and nine independent checks support registration."
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+          "sha256": "1539b255f8a617b5eec88b47bd068694283de101b88a2d24a36785d49b036c0e",
+          "claim": "Owner overview independently corroborates identity, footprint and southwest corner; its Travel Here overlay is excluded."
+        },
+        {
+          "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+          "sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+          "claim": "Independent owner context corroborates rectangle and gate positions; its higher-error affine registration does not determine the polygon."
+        },
+        {
+          "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+          "sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+          "claim": "Independent owner context corroborates rectangle and gate positions; its higher-error affine registration does not determine the polygon."
+        }
+      ],
+      "registration": {
+        "method": "Unchanged six-control architecture homography; five border and four independent architecture checks, including a new southwest roof corner. Visible source perimeter and bounded gate-shoulder closures reviewed separately.",
+        "control_count": 6,
+        "holdout_count": 9,
+        "max_error_px": 2.147681705232549,
+        "uncertainty_px": 3,
+        "threshold_px": 3,
+        "fit_rms_px": 1.0261018477352801,
+        "holdout_rms_px": 1.3268343839780874,
+        "holdout_max_px": 2.147681705232549,
+        "border_holdout_count": 5,
+        "independent_architecture_holdout_count": 4,
+        "independent_architecture_rms_px": 1.7448104929513015,
+        "independent_architecture_max_px": 2.147681705232549,
+        "evidence_id": "WZ04-INDEPENDENT-SELECTION-REVIEW-2026-11-26",
+        "evidence_path": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json"
+      },
+      "review": {
+        "boundary": true,
+        "registration": true,
+        "independent": true,
+        "occlusion": true
+      },
+      "notes": [
+        "Rendered map-selection footprint only; not a traversal boundary, floor, route, entrance-accessibility, physical-geography or species encounter extent. Full area scope remains incomplete.",
+        "Three native pixels is stated raster/manual digitization tolerance for finite green line width, antialiasing and entry-opening treatment, not a statistical bound on world position.",
+        "Existing approximate marker centre, original source bytes, six-control transform and fourteen candidate vertices are unchanged.",
+        "Three short gate-symbol spans are accepted display-footprint closures between observed line approaches or shoulders. Their hidden continuous line is not claimed as directly observed, and they create no walking route.",
+        "The native cursor obscures the west/southwest perimeter. Original owner closeup supplies those edges; a separate southwest roof-corner check supports the registration in that region.",
+        "The prior HOLD and rejected automatic contours remain as historical evidence; the later independent selection review records the narrowed decision and additional southwest check."
+      ],
+      "independent_review": {
+        "date": "2026-11-26",
+        "reviewer": "geometry_evidence_independent_original_image_review",
+        "review_panel_path": "docs/qa/candidates/wz04-2026-11-26/registered-source-review.png",
+        "review_panel_sha256": "42808cf221f9702334afcbb3cc91a58fecfc98ebf69168cf48d522f15b9a34a0",
+        "supplementary_review_panel_path": "docs/qa/candidates/wz04-2026-11-26/selection-review/southwest-refined-check-review.png",
+        "supplementary_review_panel_sha256": "a7ece50bd8898daf516ec02007955c621e5d44ab4f6241a7c774c83d20bdb7bf",
+        "decision": "approved_for_rendered_map_selection_only",
+        "review_receipt_path": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+        "review_receipt_sha256": "a79fcba36a9cdc49ebbd830105a7b2490756d0816178a84a05d30e7cbfe4e42e"
+      }
     }
   ],
   "areas": [
@@ -9090,11 +9233,13 @@
           "encounter_class": "ordinary",
           "form": null,
           "condition": {
-            "time": null,
-            "weather": null,
+            "time": "daytime (source-corroborated)",
+            "weather": "clear skies (source-corroborated)",
             "floor": null,
             "unlock": null,
-            "notes": []
+            "notes": [
+              "Check around the Electrical Substation equipment in daytime under clear skies. Published ordinary levels are 37–38. An exact spawn point and the full weather-icon rules are not verified."
+            ]
           },
           "evidence_status": "owner_survey_correlated",
           "sources": [
@@ -9105,10 +9250,23 @@
             {
               "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14",
               "claim": "Ordinary roster entry; reviewed 26 November 2026."
+            },
+            {
+              "url": "https://gamewith.jp/pokemon-za/524504",
+              "claim": "Lists ordinary levels 37–38 and distinguishes clear skies from less-clear weather in daytime."
+            },
+            {
+              "url": "https://www.powerpyx.com/pokemon-legends-z-a-helioptile-location/",
+              "claim": "Independent first-hand catch guide reports sunny daytime and an approach by a small building."
+            },
+            {
+              "url": "https://pente.koro-pokemon.com/legendsz-a/map-wild-zone-14.shtml",
+              "claim": "Independent ordinary encounter table lists daytime and sunny weather."
             }
           ],
           "notes": [
-            "The image corroborates the species; the written table supplies the ordinary encounter class. Conditions not established here remain unknown."
+            "The image corroborates the species; the written table supplies the ordinary encounter class. Conditions not established here remain unknown.",
+            "The survey icon shows membership; the written references support the daytime clear-sky guidance, not a fixed point."
           ]
         },
         {

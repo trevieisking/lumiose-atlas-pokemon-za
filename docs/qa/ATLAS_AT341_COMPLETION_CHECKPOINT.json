@@ -8,10 +8,10 @@
   "observed_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
   "observed_pr_head": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
   "pr": 204,
-  "stage": "bounded_touch_test_fix_pending_exact_head_CI",
+  "stage": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI",
   "failed_run": 45818952302,
   "failure": "Four fixed test coordinate pairs were all obstructed after the preceding drag; no two-finger event dispatched",
-  "correction": "Find a visible real touch pair with 12px control clearance and 100px separation; retain all original controls and assertions and require rotation-readout change",
+  "correction": "Adaptively find visible separated touch starts with 12px clearance from original controls; scroll the viewport into view and settle the existing pan paint. Preserve all controls and real tap, pinch, rotation and no-selection assertions.",
   "runtime_change_for_failure": false,
   "full_upgrade_complete": false,
   "full_release_sha": null,
@@ -33,7 +33,7 @@
   },
   "required_remaining": {
     "sector_boundaries": 48,
-    "wild_zone_boundaries": 15,
+    "wild_zone_boundaries": 14,
     "comprehensive_roster_signoffs": 68,
     "exact_new_pickup_points": 0,
     "scope_note": "Current existing release criteria retained; no completion inferred from passing code tests"
@@ -47,7 +47,8 @@
   "limitations": {
     "local_browser": "Chromium binary unavailable; standard download denied by network policy",
     "cloud_preview": "Automatic approval review rejected private project rendering to cloud browser; no bypass",
-    "verification_route": "Existing exact-head GitHub Actions with actual screenshot artifact review"
+    "verification_route": "Existing exact-head GitHub Actions with actual screenshot artifact review",
+    "scope": "Earlier continuation observations are historical; this review also has a managed local preview. No rejected action is retried or bypassed."
   },
   "preservation": {
     "original_assets": true,
@@ -59,5 +60,25 @@
     "workspace": true,
     "no_videos": true
   },
-  "release_policy": "Promote only the fully tested reviewed bounded change. Full master-plan G5/A0 remain open until mandatory data evidence is actually satisfied."
+  "release_policy": "Promote only the fully tested reviewed bounded change. Full master-plan G5/A0 remain open until mandatory data evidence is actually satisfied.",
+  "reconciliation": {
+    "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_pr_head": "d1d7322e6341cd91016f576161c55da682e06834",
+    "main_change": "PR202 separately merged the current map filters, exact place search, inline original photographs and Helioptile source guidance; preserved in PR204.",
+    "workspace_observed_version": 38,
+    "workspace_observed_updated_at": "2026-11-26T12:23:22.620078+00:00",
+    "workspace_change": "Separate filter/photo hotfix already published; not the complete master-plan upgrade and not a write by PR204.",
+    "reviewed_zone_selection_outlines": 6,
+    "remaining_sector_boundaries": 48,
+    "remaining_zone_boundaries": 14,
+    "wz04_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+    "root_visual_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/ROOT_VISUAL_REVIEW.md",
+    "local_node_tests": {
+      "passed": 128,
+      "failed": 0
+    },
+    "current_validation": "reconciled_candidate_pending_exact_head_browser_CI",
+    "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+  },
+  "initial_checkpoint_preserved": true
 }

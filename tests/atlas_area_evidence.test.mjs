@@ -24,7 +24,7 @@ const expectedIds=[
 
 test('the integrated register retains every reviewed area and additive claim without claiming completion',()=>{
   assert.equal(hash('sha256',Buffer.from(read('docs/qa/at339-encounters/atlas-area-evidence.json'))),
-    '39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f',
+    'aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed',
     'The independently reviewed source packet must not silently change with runtime data');
   assert.deepEqual(evidence.areas,reviewed.areas);
   assert.deepEqual(sorted(evidence.areas.map(row=>row.area_id)),sorted(expectedIds));
@@ -75,6 +75,26 @@ test('all twenty owner-photo receipts match original bytes and only their 140 ob
   assert.ok(observations.find(row=>row.area_id==='wz-11').visible_species_icons.includes('Clauncher'));
   assert.ok(!observations.find(row=>row.area_id==='wz-11').visible_species_icons.includes('Carvanha'));
   assert.equal(observations.find(row=>row.area_id==='wz-18').git_blob_sha1,'b520201cb772c4d716036fb8066f35fd3d82cf5b');
+});
+
+test('Wild Zone 14 separates Helioptile source guidance from photo membership and fixed Alpha',()=>{
+  const result=selectAreaResults(model,readAreaSelection('atlas-explorer.html?area=wz-14&species=helioptile&encounter=ordinary'));
+  const row=result.encounters.find(row=>row.id==='g3-evidence-wz-14-helioptile-ordinary');
+  assert.ok(row);
+  assert.equal(row.evidenceStatus,'owner_survey_correlated');
+  assert.equal(row.condition.time,'daytime (source-corroborated)');
+  assert.equal(row.condition.weather,'clear skies (source-corroborated)');
+  assert.equal(row.condition.floor,null);
+  assert.equal(row.condition.unlock,null);
+  assert.match(row.condition.notes.join(' '),/37–38.*not verified/);
+  assert.ok(row.sources.some(source=>source.href==='assets/atlas/wild-zones/wild-zone-14-overview.png'));
+  assert.ok(row.sources.some(source=>source.href.startsWith('https://gamewith.jp/')));
+  assert.ok(row.sources.some(source=>source.href.startsWith('https://www.powerpyx.com/')));
+  for(const other of area('wz-14').encounters.filter(row=>['Emolga','Onix'].includes(row.species))){
+    assert.equal(other.condition.time,null);
+    assert.equal(other.condition.weather,null);
+  }
+  assert.ok(area('wz-14').encounters.some(row=>row.species==='Excadrill'&&row.encounterClass==='fixed_alpha'&&preserved(row)));
 });
 
 test('the seven actual disputes cannot become supported encounters through a legacy union',()=>{

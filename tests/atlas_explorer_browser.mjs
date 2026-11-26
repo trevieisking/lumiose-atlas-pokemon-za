@@ -1301,6 +1301,112 @@ try{
     }
     await page.close();
   }
+  // Place filters and layer switches must recover the reported sector ->
+  // Holovator view without replacing a selected photo or changing saved progress.
+  for(const [context,kind] of [[desktopContext,"desktop"],[phoneContext,"phone"]]){
+    const page=await context.newPage(),pageErrors=[];
+    const key="lumiose-atlas-reconstruction-v1";
+    const saved=JSON.stringify({check:{"1":true},sideCheck:{"61":true},pickup:{"2-5":true},screw:{"29":true},preservedFutureField:{untouched:"place-filter-regression"}});
+    page.on("pageerror",error=>pageErrors.push(String(error)));
+    await page.addInitScript(({key,saved})=>{
+      localStorage.setItem(key,saved);
+      window.__placeStorageWrites=[];
+      for(const method of ["setItem","removeItem","clear"]){
+        const original=Storage.prototype[method];
+        Storage.prototype[method]=function(...args){window.__placeStorageWrites.push([method,...args]);return original.apply(this,args);};
+      }
+    },{key,saved});
+    try{
+      await page.goto(base+"/atlas-explorer.html?sector=bleu-sector-3&source=place-filter-regression&collectible=screw%3A29",{waitUntil:"networkidle"});
+      await page.locator("[data-area-panel]").waitFor({state:"attached"});
+      const photo=page.locator("#aeSelected .ae-source-map-reference img");
+      await photo.scrollIntoViewIfNeeded();
+      await page.waitForFunction(()=>document.querySelector("#aeSelected .ae-source-map-reference img")?.naturalWidth>0);
+      const photoNode=await photo.elementHandle();
+      const photoSource=await photo.getAttribute("src");
+      await page.locator("#aeNextStep").click();
+      await page.locator("#aeTurnRight").click();
+      await page.waitForFunction(()=>document.getElementById("aePositionReadout")?.textContent.includes("45°"));
+      const preserved=await page.evaluate(()=>({
+        href:location.href,transform:document.getElementById("aeStage").style.transform,
+        route:document.getElementById("aeRouteSelect").value,step:document.getElementById("aeRouteProgress").textContent,
+        title:document.querySelector("#aeSelected > h3").textContent
+      }));
+      const category=()=>page.locator('#aeFilters [aria-pressed="true"]').getAttribute("data-kind");
+      const resultIds=()=>page.locator("#aeResults [data-record-id]").evaluateAll(nodes=>nodes.map(node=>node.dataset.recordId).sort());
+      const lifts=page.locator('#aeLayers [data-layer="holovator"]');
+      const zones=page.locator('#aeLayers [data-layer="zone"]');
+      assert.equal(await category(),"sector");
+      assert.equal(await lifts.isChecked(),true);
+      assert.equal(await page.locator("#aeMapPins .ae-pin:not([hidden])").count(),0);
+      assert.match(await page.locator("#aePlaceLayerStatus").textContent(),/0 of 47.*Named sector.*no mapped position/);
+      await lifts.uncheck();
+      assert.equal(await category(),"sector","Disabling a layer preserves the current place filter");
+      await lifts.check();
+      assert.equal(await category(),"all","Enabling Holovators reveals their markers from the sector-only view");
+      assert.equal(await page.locator('#aeMapPins [data-kind="holovator"]:not([hidden])').count(),21);
+      assert.match(await page.locator("#aePlaceLayerStatus").textContent(),/47 of 47.*All places/);
+      await page.locator("#aeLayers").screenshot({path:output+"/place-layer-recovery-"+kind+".png"});
+
+      await page.locator("#aeSearch").fill("Wild Zone 2");
+      assert.ok((await resultIds()).includes("wz-02"),"Unpadded zone search finds the saved Zone 02 identity");
+      assert.ok(!(await resultIds()).includes("wz-20"),"Zone 2 search must not borrow Zone 20");
+      await page.locator("#aeSearch").fill("Wild Zone 6");
+      assert.ok((await resultIds()).includes("wz-06"));
+      assert.ok((await resultIds()).includes("jaune12-wz6"),"A documented nearby Holovator remains searchable by its zone");
+      await page.locator("#aeSearch").fill("cafe cyclone");
+      assert.deepEqual(await resultIds(),["cafe-cyclone","vert-cyclone"],"Plain accents find both original Café Cyclone records");
+      await page.locator('#aeFilters [data-kind="holovator"]').click();
+      await lifts.uncheck();await lifts.check();
+      assert.equal(await category(),"holovator","A compatible category survives layer re-enabling");
+      assert.equal(await page.locator("#aeSearch").inputValue(),"cafe cyclone","A compatible search survives layer re-enabling");
+      assert.deepEqual(await resultIds(),["vert-cyclone"]);
+      assert.equal(await page.locator('#aeMapPins [data-kind="holovator"]:not([hidden])').count(),1);
+
+      await page.locator("#aeSearch").fill("Wild Zone 02");
+      await page.locator('#aeFilters [data-kind="sector"]').click();
+      await lifts.uncheck();await lifts.check();
+      assert.equal(await category(),"all");
+      assert.equal(await page.locator("#aeSearch").inputValue(),"","An incompatible search clears when a mapped place layer is enabled");
+      assert.equal(await page.locator('#aeMapPins [data-kind="holovator"]:not([hidden])').count(),21);
+
+      await page.locator('#aeFilters [data-kind="holovator"]').click();
+      await page.locator("#aeSearch").fill("cafe cyclone");
+      await zones.uncheck();
+      const sectorLabels=page.locator('#aeLayers [data-layer="sector-label"]');
+      await sectorLabels.uncheck();await sectorLabels.check();
+      assert.equal(await category(),"holovator","Sector-name controls do not reset place filters");
+      assert.equal(await page.locator("#aeSearch").inputValue(),"cafe cyclone");
+      await page.locator("#aeClearPlaceFilters").click();
+      assert.equal(await category(),"all");
+      assert.equal(await page.locator("#aeSearch").inputValue(),"");
+      assert.equal(await zones.isChecked(),false,"Clearing place filters preserves the chosen layers");
+      assert.equal(await page.locator('#aeMapPins [data-kind="zone"]:not([hidden])').count(),0);
+      assert.equal(await page.locator('#aeMapPins [data-kind="holovator"]:not([hidden])').count(),21);
+      assert.match(await page.locator("#aePlaceLayerStatus").textContent(),/27 of 47.*All places/);
+      assert.ok(await photoNode.evaluate(node=>node.isConnected&&node===document.querySelector("#aeSelected .ae-source-map-reference img")),"Filters retain the exact loaded source-image node");
+      assert.equal(await photo.getAttribute("src"),photoSource);
+      assert.deepEqual(await page.evaluate(()=>({
+        href:location.href,transform:document.getElementById("aeStage").style.transform,
+        route:document.getElementById("aeRouteSelect").value,step:document.getElementById("aeRouteProgress").textContent,
+        title:document.querySelector("#aeSelected > h3").textContent
+      })),preserved,"Layer and filter changes preserve URL, camera, route cursor and selected place");
+      const details=page.locator("#aeShowPlaceDetails");
+      assert.equal(await details.isDisabled(),false);
+      await details.click();
+      await page.waitForFunction(()=>{
+        const heading=document.querySelector("#aeSelected > h3"),box=heading?.getBoundingClientRect();
+        return document.activeElement===heading&&box.top>=-1&&box.top<innerHeight;
+      });
+      assert.ok(await photoNode.evaluate(node=>node.isConnected&&node===document.querySelector("#aeSelected .ae-source-map-reference img")),"Opening photos focuses the existing detail without replacing its image");
+      await page.screenshot({path:output+"/place-photo-details-"+kind+".png"});
+      assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),saved,"Original progress bytes remain intact");
+      assert.deepEqual(await page.evaluate(()=>window.__placeStorageWrites),[],"Place controls never write player progress");
+      assert.deepEqual(pageErrors,[]);
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)<=1,"Place controls fit both widths");
+      await photoNode.dispose();
+    }finally{await page.close();}
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

@@ -5578,23 +5578,46 @@
     "open_prs_reviewed": 25,
     "requirements_preserved": 67,
     "early_story_steps": 73,
-    "reviewed_zone_selection_outlines": 5,
-    "remaining_area_boundaries": 63,
+    "reviewed_zone_selection_outlines": 6,
+    "remaining_area_boundaries": 62,
     "comprehensive_rosters": 0,
     "production_new_pickup_positions": 0,
-    "workspace_observed_version": 37,
+    "workspace_observed_version": 38,
     "workspace_changed": false,
     "full_scope_signoff": false,
     "approved_full_scope_sha": null,
     "final_workspace_prompt": null,
-    "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+    "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+    "wz04_geometry_supplement": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+    "wz04_root_visual_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/ROOT_VISUAL_REVIEW.md",
+    "reconciled_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "workspace_write_scope": "No Workspace write by PR204; separate v38 hotfix observed."
   },
   "at_341_completion_checkpoint": {
     "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
-    "status": "bounded_touch_test_fix_pending_exact_head_CI",
+    "status": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI",
     "manifest_revision": 87,
     "ledger_revision": 95,
     "full_implementation_complete": false,
-    "supabase_private_planning_sync": "45 rows verified at Manifest86; Manifest87 checkpoint synchronization follows"
+    "supabase_private_planning_sync": "45 rows verified at Manifest86; Manifest87 checkpoint synchronization follows",
+    "reconciliation": {
+      "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+      "observed_pr_head": "d1d7322e6341cd91016f576161c55da682e06834",
+      "main_change": "PR202 separately merged the current map filters, exact place search, inline original photographs and Helioptile source guidance; preserved in PR204.",
+      "workspace_observed_version": 38,
+      "workspace_observed_updated_at": "2026-11-26T12:23:22.620078+00:00",
+      "workspace_change": "Separate filter/photo hotfix already published; not the complete master-plan upgrade and not a write by PR204.",
+      "reviewed_zone_selection_outlines": 6,
+      "remaining_sector_boundaries": 48,
+      "remaining_zone_boundaries": 14,
+      "wz04_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+      "root_visual_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/ROOT_VISUAL_REVIEW.md",
+      "local_node_tests": {
+        "passed": 128,
+        "failed": 0
+      },
+      "current_validation": "reconciled_candidate_pending_exact_head_browser_CI",
+      "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+    }
   }
 }

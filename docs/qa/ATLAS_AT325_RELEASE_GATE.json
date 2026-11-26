@@ -8,7 +8,7 @@
   "baseline_tree": "512fe997ea19f15703503f37c0b10850b976671a",
   "owner_direction": "Complete master plan and private Workspace tracking first, finish/test/deploy all approved GitHub map upgrades, then prepare a single final Workspace prompt. Reuse previously supplied whole-map pieces, all sector and all Wild Zone photographs.",
   "scope": "Interactive Map 2.0 and its researched maps, encounters and routes; prior guide research remains in existing audit/ledger. No unrelated feedback redevelopment.",
-  "current_state": "AT341_completion_in_progress_PR204_test_fix_pending_G2_G3_full_G5_A0_open",
+  "current_state": "AT341_current_main_reconciled_six_outlines_PR204_CI_pending_G2_G3_full_G5_A0_open",
   "source_inventory": {
     "base_map": {
       "path": "maps/lumiose-game-map.jpg",
@@ -1772,7 +1772,7 @@
     "full_implementation_complete": false,
     "G0_prior_receipt": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/190",
     "G1_route_packet": "docs/qa/ATLAS_AT337_BLEU_ROUTE_RECONCILIATION.md",
-    "G2_G3": "partial_five_reviewed_zone_map_outlines_63_boundaries_and_all_comprehensive_rosters_open",
+    "G2_G3": "partial_six_reviewed_zone_map_outlines_62_boundaries_and_all_comprehensive_rosters_open",
     "G4": "shared_interactions_and_review_fixes_implemented_release_validation_tracked_by_PR204",
     "G5": "full_scope_validation_merge_deployment_live_checks_open",
     "A0": "blocked_until_G5_verified",
@@ -1789,7 +1789,7 @@
     "manifest_revision": 87,
     "ledger_revision": 95,
     "shared_area_evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
-    "reviewed_zone_map_outlines": 5,
+    "reviewed_zone_map_outlines": 6,
     "approved_sector_boundaries": 0,
     "comprehensive_rosters": 0,
     "current_consolidation_evidence": "docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md",
@@ -1830,26 +1830,49 @@
     "open_prs_reviewed": 25,
     "requirements_preserved": 67,
     "early_story_steps": 73,
-    "reviewed_zone_selection_outlines": 5,
-    "remaining_area_boundaries": 63,
+    "reviewed_zone_selection_outlines": 6,
+    "remaining_area_boundaries": 62,
     "comprehensive_rosters": 0,
     "production_new_pickup_positions": 0,
-    "workspace_observed_version": 37,
+    "workspace_observed_version": 38,
     "workspace_changed": false,
     "full_scope_signoff": false,
     "approved_full_scope_sha": null,
     "final_workspace_prompt": null,
-    "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
+    "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+    "wz04_geometry_supplement": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+    "wz04_root_visual_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/ROOT_VISUAL_REVIEW.md",
+    "reconciled_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "workspace_write_scope": "No Workspace write by PR204; separate v38 hotfix observed."
   },
   "at341": {
     "checkpoint": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
-    "stage": "bounded_touch_test_fix_pending_exact_head_CI",
+    "stage": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI",
     "required_remaining": {
       "sector_boundaries": 48,
-      "wild_zone_boundaries": 15,
+      "wild_zone_boundaries": 14,
       "comprehensive_roster_signoffs": 68,
       "exact_new_pickup_points": 0,
       "scope_note": "Current existing release criteria retained; no completion inferred from passing code tests"
+    },
+    "reconciliation": {
+      "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+      "observed_pr_head": "d1d7322e6341cd91016f576161c55da682e06834",
+      "main_change": "PR202 separately merged the current map filters, exact place search, inline original photographs and Helioptile source guidance; preserved in PR204.",
+      "workspace_observed_version": 38,
+      "workspace_observed_updated_at": "2026-11-26T12:23:22.620078+00:00",
+      "workspace_change": "Separate filter/photo hotfix already published; not the complete master-plan upgrade and not a write by PR204.",
+      "reviewed_zone_selection_outlines": 6,
+      "remaining_sector_boundaries": 48,
+      "remaining_zone_boundaries": 14,
+      "wz04_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/independent-selection-review.json",
+      "root_visual_review": "docs/qa/candidates/wz04-2026-11-26/selection-review/ROOT_VISUAL_REVIEW.md",
+      "local_node_tests": {
+        "passed": 128,
+        "failed": 0
+      },
+      "current_validation": "reconciled_candidate_pending_exact_head_browser_CI",
+      "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
     }
   }
 }

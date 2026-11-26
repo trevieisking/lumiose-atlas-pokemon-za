@@ -44,7 +44,7 @@ test('shared model preserves 68 original areas, every original centre and all di
 });
 
 test('production renders only the independently reviewed boundary subset on the unchanged native map',()=>{
-  const expected=['wz-02','wz-03','wz-05','wz-11','wz-16'];
+  const expected=['wz-02','wz-03','wz-04','wz-05','wz-11','wz-16'];
   assert.deepEqual(production.geometries.map(row=>row.area_id).sort(),expected);assert.deepEqual(production.map,AREA_MAP);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+AREA_MAP.path,import.meta.url))).digest('hex'),AREA_MAP.sha256);
   const current=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production});
@@ -56,6 +56,9 @@ test('production renders only the independently reviewed boundary subset on the 
     const review=receipt.approved.find(row=>row.area_id===geometry.area_id);
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(geometry.geometry)).digest('hex'),review.production_geometry_sha256);
     assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+review.review.review_panel_path,import.meta.url))).digest('hex'),review.review.review_panel_sha256);
+    for(const [pathKey,hashKey] of [['supplementary_review_panel_path','supplementary_review_panel_sha256'],['review_receipt_path','review_receipt_sha256']]){
+      if(review.review[pathKey])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+review.review[pathKey],import.meta.url))).digest('hex'),review.review[hashKey]);
+    }
     for(const source of geometry.sources)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+source.path,import.meta.url))).digest('hex'),source.sha256);
   }
 });

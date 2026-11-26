@@ -2,7 +2,7 @@
 
 ## Current continuation — AT-341
 
-26 November 2026 · Manifest87 / Ledger95. [Completion checkpoint](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) records PR204 browser-test correction, private planning synchronization and remaining evidence. Full G5/A0 are still open; no new original-Workspace publication or final executable prompt is issued. Earlier dated checkpoints remain historical.
+26 November 2026 · Manifest87 / Ledger95. [Completion checkpoint](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) records PR204 browser-test correction, private planning synchronization and remaining evidence. Full G5/A0 are still open; no new original-Workspace publication or final executable prompt is issued. Earlier dated checkpoints remain historical. Fresh metadata now confirms original version38 after its separate filter/photo hotfix. PR204 must preserve that newer baseline; it does not represent the full Workspace upgrade.
 
 ## AT-336 — current consolidated checkpoint
 

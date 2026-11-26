@@ -4,9 +4,11 @@
 
 26 November 2026 · Manifest87 / Ledger95. [Completion checkpoint](../../qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) records PR204 browser-test correction, private planning synchronization and remaining evidence. Full G5/A0 are still open; no new original-Workspace publication or final executable prompt is issued. Earlier dated checkpoints remain historical.
 
+The candidate now includes current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` after the separate PR202 merge, preserving its map-filter, exact-search and original-photo fixes. Wild Zone 04 adds a sixth reviewed selection outline; 62 boundaries and all 68 comprehensive roster reviews remain open. Fresh Sites metadata shows the separate original-site hotfix at **version 38**. This consolidation does not publish to that Site; the final full-upgrade prompt remains gated. All 128 local Node tests pass; final combined-head browser and visual checks are pending.
+
 ## Current AT-340 checkpoint
 
-Manifest86 / Ledger94 consolidates all 25 open PR dispositions and the verified shared-interaction/content improvements in one candidate. See [the current consolidation](../../qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md). Final combined-head tests, visual review, merge and live verification are tracked in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). The original Site was freshly observed at version37 and remains unchanged. There are still 63 unresolved boundaries and no comprehensive area-roster signoff, so the full-scope approved SHA and final executable publication prompt remain null. The historical contract below remains applicable; bounded promotion must not be reported as full master-plan completion.
+Manifest86 / Ledger94 consolidates all 25 open PR dispositions and the verified shared-interaction/content improvements in one candidate. See [the current consolidation](../../qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md). Final combined-head tests, visual review, merge and live verification are tracked in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). The original Site was freshly observed at version37 and remains unchanged. There are still 62 unresolved boundaries and no comprehensive area-roster signoff, so the full-scope approved SHA and final executable publication prompt remain null. The historical contract below remains applicable; bounded promotion must not be reported as full master-plan completion.
 
 26 November 2026 · AT-336 · Plan ATLAS-MAPS-2026-11-21-V1
 
