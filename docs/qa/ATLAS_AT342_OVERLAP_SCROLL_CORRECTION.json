@@ -1,0 +1,48 @@
+{
+  "tracking": "AT-342",
+  "date": "2026-11-26",
+  "run_id": 45840376832,
+  "job_id": 139980139385,
+  "artifact": {
+    "id": 15127601909,
+    "name": "atlas-areas-mobile-desktop-preview",
+    "sha256": "aa5883aab340783774d1b4643717cff2c0230a603cafe93dce675633debb5bf3"
+  },
+  "diagnostic_json": {
+    "path": "docs/qa/at342-resume/overlap-scroll-before-phone.json",
+    "sha256": "612bee09fdb8cedb1c0becc411129bc09042d5ee496839528c9526121458ee4e"
+  },
+  "diagnostic_screenshot": {
+    "path": "docs/qa/at342-resume/overlap-scroll-before-phone.png",
+    "sha256": "622fa4ddb32613c333e2c822fabd907aed53e9171ee4b77e58c2af86be82b1f7"
+  },
+  "observed": {
+    "device": "phone",
+    "viewport_width_css_px": 393,
+    "viewport_height_css_px": 852,
+    "visual_viewport_scale": 1,
+    "scroll_y_css_px": 4882,
+    "chooser_detail_bottom_css_px": 852.453125,
+    "bleu_sector_6_button_bottom_css_px": 852.453125,
+    "bleu_sector_8_button_bottom_css_px": 852.453125,
+    "button_height_css_px": 44,
+    "overflow_below_viewport_css_px": 0.453125,
+    "detail_scroll_margin_bottom": "0px",
+    "area_selection_remains_unset": true
+  },
+  "diagnosis": "The real Bleu 6/Bleu 8 overlap tap successfully created and focused the chooser. The nearest-edge smooth scroll settled with both buttons and the detail bottom 0.453125 CSS pixels below the 852-pixel viewport. The actual screenshot shows their lower edge cut off. This is fractional edge alignment, not a missing chooser or insufficient animation wait.",
+  "correction": {
+    "runtime_file": "atlas-area.css",
+    "selector": ".atlas-area-ui .aa-detail",
+    "declaration": "scroll-margin-block-end:12px",
+    "purpose": "Reserve 12 CSS pixels after the shared detail panel when it is scrolled into view, keeping the final chooser controls clear of the viewport edge without changing layout geometry or the selection event flow."
+  },
+  "preserved_browser_assertion": "r && r.top >= 0 && r.bottom <= innerHeight",
+  "tests_weakened": false,
+  "application_javascript_changed": false,
+  "map_geometry_or_source_data_changed": false,
+  "validation_status": "Replacement-head browser CI and screenshot review pending; the failing artifact is diagnostic evidence, not release approval.",
+  "release_decision": "HOLD pending replacement-head validation.",
+  "failed_candidate_head": "994d436dd0e3e1d979b8277c9ea3722d3f3d545b",
+  "failed_candidate_tree": "f1cbe38f92f46e797bde35c30ae02365dea89abb"
+}

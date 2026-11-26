@@ -61,7 +61,15 @@
     "final_screenshot_review": "pending",
     "expected_head_merge": "pending",
     "pages_deployment": "pending",
-    "deployed_live_checks": "pending"
+    "deployed_live_checks": "pending",
+    "runtime_file_hash_count": 23,
+    "overlap_scroll_correction": "docs/qa/ATLAS_AT342_OVERLAP_SCROLL_CORRECTION.json",
+    "scroll_correction_local_node": {
+      "passed": 154,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs",
+      "log": "docs/qa/at342-resume/scroll-correction-unit-tests.txt"
+    }
   },
   "geometry_approval": "docs/qa/ATLAS_AT341_UI_OUTLINE_APPROVAL.json",
   "private_tracker_receipt": "docs/qa/ATLAS_AT342_TRACKER_RECEIPT.json",
