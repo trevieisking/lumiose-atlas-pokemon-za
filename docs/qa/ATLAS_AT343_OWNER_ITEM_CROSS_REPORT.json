@@ -46,6 +46,13 @@
       "report": "Crosses occur with and without items; their regular distribution may help align the maps or act as measurements.",
       "purpose": "relative image alignment/reference-grid investigation",
       "confirmed_measurement_units": null
+    },
+    {
+      "sequence": 6,
+      "reporter": "Trev",
+      "report": "The in-game map stays fixed north-up and cannot rotate.",
+      "purpose": "Clarify source-map orientation and distinguish screen-photo camera tilt from in-game map rotation.",
+      "evidence_kind": "owner_report"
     }
   ],
   "positive_report_summary": {
@@ -130,7 +137,18 @@
       1920,
       1920
     ],
-    "exploratory_fit_status": "Superseded by the strict replay; the earlier fit retained some street-label features and must not be used as final evidence."
+    "exploratory_fit_status": "Superseded by the strict replay; the earlier fit retained some street-label features and must not be used as final evidence.",
+    "source_map_orientation": {
+      "orientation": "fixed_north_up",
+      "in_game_rotation_available": false,
+      "evidence_kind": "owner_report",
+      "reported_by": "Trev",
+      "reported_date": "2026-11-26",
+      "source_statement": "Map stays fixed north there is no way to rotate it buddy!",
+      "alignment_consequence": "Retain the common north-up direction when matching source-map content; use landmarks and nearby crosses to check position, relative image scale and spacing.",
+      "photograph_geometry": "Camera tilt and perspective can affect a screen photograph even though the in-game map itself does not rotate. The recorded photo-to-photo transform does not imply an in-game rotation feature.",
+      "scope": "Source-game observation only; the separately authorised Atlas Explorer controls and the frozen pilot measurements are unchanged."
+    }
   },
   "planned_future_capture": {
     "reported_before_correction": "Trev intended photographs/video of exact positions before collecting items.",
@@ -170,5 +188,5 @@
     "original_workspace_changed": false
   },
   "follow_up": "Use the crosses as secondary local alignment checks only after unique architecture establishes correspondence. Any future transform to the native Atlas map requires separate validation. Retain the item-rule correction; accept specific future item evidence if offered without requiring a repeat survey or circled example.",
-  "updated_at": "2026-11-26T15:42:45.037671+00:00"
+  "updated_at": "2026-11-26T16:01:47.549627+00:00"
 }
