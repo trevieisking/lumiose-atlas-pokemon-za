@@ -1,5 +1,43 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT344_CURRENT_PLANNING_94_102 -->
+## Completed source collection — AT-344 / Manifest 94 / Ledger 102
+
+**Trev confirms that the sector screenshot collection is complete.** The final two views are **20261126_161334.jpg (centre/north)** and **20261126_161350.jpg (centre/south)**. They overlap around Prism Tower, its ring road, Saison Canal, Jaune Sector 2 and Café Gallant, connecting northern and southern district views. Trev reports that these captures, together with the preserved Wild Zone photographs, cover the whole map. Capture completion is recorded separately from the remaining alignment, seam/occlusion review and best-view selection.
+
+**Binding original-image rule: keep every supplied original unchanged and always duplicate it before editing.** Never crop, overwrite, rotate, resize, recompress, annotate or strip metadata from an original. All processing uses a separate derivative path. Keep the full source available after every crop, and record the original hash plus any crop/transform and derivative hash so the work can be traced and repeated.
+
+All **26 original JPEGs (43,603,649 bytes)** are visually indexed and preserved byte-for-byte: **18 archival copies** are added relative to GitHub main `c491cd7` (including the prior 16-file intake and the final central pair), and **8 existing AT343 originals** are reused. Existing full maps, detail crops and all 20 Wild Zone photo pairs are retained. [Source inventory](docs/qa/at344-sector-source-survey/source-inventory.json) · [48-sector register](docs/qa/at344-sector-source-survey/sector-coverage.json) · [Original checksums](docs/qa/at344-sector-source-survey/SOURCE_INTEGRITY.sha256).
+
+**North-up alignment:** use Trev’s direct observation that the source game map is fixed north-up. Match distinctive buildings, roads and canals across working copies, using the two central views as the bridge. Camera perspective, zoom and crop offsets still need correction on those copies. The faint X/plus-like marks are candidate secondary grid references; their official coordinate meaning, origin, units and citywide calibration remain unverified. AT343’s bounded local evidence and withdrawn item-marker theory remain preserved.
+
+**Next:** register the copies, verify overlaps and covered/obscured areas, then choose the strongest views for the existing 48 sector identities. [Alignment plan](docs/qa/at344-sector-source-survey/alignment-plan.json) · [Derivative policy and register](docs/qa/at344-sector-source-survey/derivatives.json) · [Readable source packet](docs/qa/at344-sector-source-survey/README.md). No derivative, new map coordinate or pin is produced by this intake. Any later gallery/map change requires its own mobile/desktop validation.
+
+The approved runtime remains `223762bd1a21c2e72c592e975499d13c4195ae07` at **Manifest 91 / Ledger 99**. Existing maps, guide pages, markers, player progress, Supabase connections, all 67 original requirements and the release-pinned Workspace prompt are preserved. Random Hyperspace distortions remain excluded from permanent markers. [Tracker execution receipt](docs/qa/ATLAS_AT344_COMPLETION_TRACKER_RECEIPT.json) records the actual bounded private checklist synchronization; earlier records remain below as history.
+
+<!-- END_AT344_CURRENT_PLANNING_94_102 -->
+
+### Historical source-intake checkpoint — Manifest 93 / Ledger 101
+
+The following 24-image, collection-in-progress checkpoint predates Trev’s final central pair and completion instruction above. It remains as historical evidence.
+
+<!-- AT344_CURRENT_PLANNING_93_101 -->
+## Current source survey — AT-344 / Manifest 93 / Ledger 101
+
+**The clearer/full-sector photograph survey is in progress.** Trev is progressively unlocking sectors and supplying converted JPEG originals with clearer or more complete views. Preserve each supplied original and continue the survey toward **48 sectors** as future captures arrive. The earlier48-sector source/outline milestone remains valid for its own release scope; it does **not** certify that this new best/full-view survey is complete. No newly preferred full-sector view is certified merely by that older milestone.
+
+The current intake audits **all24 JPEG originals, totaling40,475,086 bytes**: files15–22 are **eight byte-identical originals already retained in the AT343 archive**; files01–14 and23–24 are **16 further originals for the AT344 archive, totaling28,653,979 bytes**. Preserve their exact supplied bytes and retain the older archive references. No GPS EXIF was found in these24 audited files. The two newest views expand Bleu context and together have readable **Bleu1–10 labels**, with interface obstruction and clipping still recorded; this does not establish ten complete, unobscured sector photographs. [Source inventory](docs/qa/at344-sector-source-survey/source-inventory.json) · [Per-sector candidate coverage](docs/qa/at344-sector-source-survey/sector-coverage.json) · [Survey policy and packet](docs/qa/at344-sector-source-survey/README.md).
+
+**Candidate best-view policy:** use fixed north-up source orientation for comparison; retain original image bytes and record perspective or orientation deviations. Prefer a reviewed view with a readable sector label, the whole visible block/edges and useful surrounding context. Record clipping, icons, labels and other interface obstruction. Keep earlier originals and select the strongest reviewed candidate per sector, with uncertainty visible. Intake continues when Trev supplies captures; no automation or background monitoring is implied.
+
+**This is source intake and planning, with no current runtime, gallery or coordinate change.** No new map pin, native1920 transform, global calibration or permanent random-Hyperspace marker is approved. AT343’s item-rule correction and bounded one-pair alignment feasibility remain preserved below. The approved AT342 runtime remains merge `223762bd1a21c2e72c592e975499d13c4195ae07`, tree `0288e63d1d52fe5f95dc76e0c01631715310e54a`, at **Manifest91/Ledger99**; its release receipt, six hashed evidence/prompt files, G0–G5/A0 decisions and all67 original requirements remain unchanged.
+
+[AT344 private tracker execution/readback evidence](docs/qa/ATLAS_AT344_TRACKER_RECEIPT.json) controls the actual database status. The intended bounded update advances common `manifest_revision`/`updated_at` metadata on the existing48 rows to93 and appends a survey note to **AT-300-MAP-DETAIL-CLARITY**, preserving all statuses, GitHub proof, previous notes and Workspace fields. This addendum supplies no execution or verification timestamp and does not itself claim that the database update has completed.
+
+<!-- END_AT344_CURRENT_PLANNING_93_101 -->
+
+The following AT343 checkpoint is retained as prior planning evidence; the approved AT342 runtime-release record follows it.
+
 <!-- AT343_CURRENT_PLANNING_92_100 -->
 ## Latest planning evidence — AT-343 / Manifest 92 / Ledger 100
 
