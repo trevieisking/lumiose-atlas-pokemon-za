@@ -122,7 +122,7 @@ jobs:
         run: node --test tests/coverage_navigation.test.mjs
       - name: Protect existing guide, checkmarks and map references
         run: python3 tests/validate_static.py
-  atlas-browser:
+  atlas-areas-browser:
     runs-on: ubuntu-latest
     timeout-minutes: 18
     steps:
@@ -138,6 +138,27 @@ jobs:
       - name: Verify shared habitats, all map views and original progress
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/atlas_area_browser.mjs
+      - name: Attach shared-area screenshot and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-areas-mobile-desktop-preview
+          path: test-artifacts/atlas-areas/
+          if-no-files-found: ignore
+          retention-days: 10
+  atlas-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium smoke dependency, without changing package files
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Confirm system Chrome is available for offline-style browser smoke
+        id: chrome
+        run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/atlas_explorer_browser.mjs
@@ -155,6 +176,5 @@ jobs:
           path: |
             test-artifacts/atlas-explorer/
             test-artifacts/atlas-collectibles/
-            test-artifacts/atlas-areas/
           if-no-files-found: ignore
           retention-days: 10
