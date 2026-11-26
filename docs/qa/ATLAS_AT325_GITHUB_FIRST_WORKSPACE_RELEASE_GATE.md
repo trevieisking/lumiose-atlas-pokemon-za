@@ -2,7 +2,7 @@
 
 ## AT-337 — completion plan
 
-[The simple final Workspace plan](../../FINAL_WORKSPACE_PLAN.md) now assigns all67 recovered requirements to five actions. This packet also carries the current-base Bleu7–10 route reconciliation. See its separate exact-head release evidence; it does not certify G2–G5 or authorize A0. Prior G0 consolidation and private metadata reconciliation completed in PR190. The dated historical evidence and all68 area rows below remain intact.
+[The simple final Workspace plan](../../FINAL_WORKSPACE_PLAN.md) now assigns all67 recovered requirements to five actions. The current-base Bleu7–10 route reconciliation is now merged, deployed and live-checked in PR191. [Exact release receipt](ATLAS_AT337_RELEASE_RECEIPT.json). This completes the required G1 route reconciliation; it does not certify G2–G5 or authorize A0. Prior G0 consolidation and private metadata reconciliation completed in PR190. The dated historical evidence and all68 area rows below remain intact.
 
 ## AT-336 — current consolidated checkpoint
 

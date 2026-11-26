@@ -2,7 +2,7 @@
 
 26 November 2026. Current application/documentation base: `2a3e03942d102ad283be6c749241ac0d7ba36fc6`. Source candidate: PR #156 at `a9e906cdce710a67ca960e363a087160cd08dc5d`, compared with its merge base `91e80f4bc1765981436e5c861540b422dd3487ad`.
 
-**Candidate implementation; not yet merged or deployed.** This ports only the four written routes and eight research leads preserved in the [archived PR provenance](../consolidation/2026-11-26/branch-sources/pr-156/PROVENANCE.json). It does not apply the old branch wholesale. Current no-video behavior, the original 70 leads, later research and current canonical planning records remain intact. The full AT-325 release and original Workspace publication are separate gates.
+**Released in PR191.** Exact head `553c42ff863f306fff986d5f8c957af87d21c9c9` merged as `dba74e27af1d7bdfed0795d5209b8cf38f4daf25`. CI run45737026829, all32 screenshot reviews, Pages run45737663295, eight live HTTP/hash checks and an interactive live browser spot check passed. [Complete release receipt](ATLAS_AT337_RELEASE_RECEIPT.json). The candidate-stage notes below are retained as historical evidence. This ports only the four written routes and eight research leads preserved in the [archived PR provenance](../consolidation/2026-11-26/branch-sources/pr-156/PROVENANCE.json). It does not apply the old branch wholesale. Current no-video behavior, the original 70 leads, later research and current canonical planning records remain intact. The full AT-325 release and original Workspace publication are separate gates.
 
 ## Bounded changes
 
@@ -28,7 +28,7 @@ The [original route research](../consolidation/2026-11-26/branch-sources/pr-156/
 - Roto-Glide guidance uses the Hotel Z rooftop tutorial/unlock state; sources attach adjacent Main Mission 15/16 numbering. No new exact mission-completion gate is invented.
 - The first 22 current routes remain exactly as recorded on the current base, including removal of all 11 former video references. No channel, player, watch-link, bookmark control, map geometry, photo asset, item/Screw record, player-progress code or Supabase setting is changed.
 
-## Validation and remaining release gates
+## Candidate-stage validation and release requirements
 
 Existing unit and browser tests are extended for the four routes, all 23 steps, 26 route choices plus the empty select option, eight unique added leads, current 78-lead/29-sector/one-zone totals, source/photo references and absence of video UI. Existing media-pause checks remain in place.
 

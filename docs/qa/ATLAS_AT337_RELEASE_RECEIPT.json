@@ -1,0 +1,149 @@
+{
+  "id": "AT-337",
+  "date": "2026-11-26",
+  "scope": "Simple completion plan and four Bleu7–10 written routes only",
+  "manifest_revision": 82,
+  "ledger_revision": 90,
+  "pr": 191,
+  "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/191",
+  "reviewed_head": "553c42ff863f306fff986d5f8c957af87d21c9c9",
+  "base": "2a3e03942d102ad283be6c749241ac0d7ba36fc6",
+  "tree": "452fbf2550e5015d136996624e3933a92556fe62",
+  "merge": "dba74e27af1d7bdfed0795d5209b8cf38f4daf25",
+  "ci": {
+    "run": 45737026829,
+    "conclusion": "success",
+    "jobs": {
+      "atlas-unit": 139632624588,
+      "atlas-browser": 139632624995
+    },
+    "separate_combined_statuses": "none_found",
+    "formal_reviews_threads_comments": "none_found",
+    "independent_source_plan_visual_reviews": "pass"
+  },
+  "screenshots": {
+    "artifact": 15079931171,
+    "sha256": "0c1781bd42c5d6128334550bfad2b475ab4e4edd66bfe6845d504bc5e76752b5",
+    "archive_hash_verified": true,
+    "new_screenshots_reviewed": 32,
+    "decoded_crops": 8,
+    "source_viewports": 8,
+    "route_step_viewports": 16,
+    "prior_blank_photo_hold": "resolved_in_all_eight_phone_desktop_source_views",
+    "scope": "Chrome phone/desktop viewports; not physical-device gameplay"
+  },
+  "pages": {
+    "run": 45737663295,
+    "head_sha": "dba74e27af1d7bdfed0795d5209b8cf38f4daf25",
+    "conclusion": "success"
+  },
+  "live_http": {
+    "scope": "AT337 bounded route release only; not full Map2.0 or original Workspace",
+    "checked_at": "2026-11-26T01:44:39.229596+00:00",
+    "merge_sha": "dba74e27af1d7bdfed0795d5209b8cf38f4daf25",
+    "pages_run": 45737663295,
+    "checks": [
+      {
+        "path": "atlas-explorer-data.json",
+        "status": 200,
+        "bytes": 171593,
+        "sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "expected_sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "MAPS_ACCESS_ROUTE_SURVEY.json",
+        "status": 200,
+        "bytes": 231138,
+        "sha256": "e879d8484d24b6140181016998da137f2ab64a4fb28a29801c17fe2c5d7e5bc0",
+        "expected_sha256": "e879d8484d24b6140181016998da137f2ab64a4fb28a29801c17fe2c5d7e5bc0",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "FINAL_WORKSPACE_PLAN.md",
+        "status": 200,
+        "bytes": 8324,
+        "sha256": "34f07c776d51bf7d292ddc149f2846c8e70740d7066a8b82b812897ad876ed53",
+        "expected_sha256": "34f07c776d51bf7d292ddc149f2846c8e70740d7066a8b82b812897ad876ed53",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "atlas-explorer.html",
+        "status": 200,
+        "bytes": 16093,
+        "sha256": "72c6544e7d8242fe930f6165fe65cdb8f680aec069f796a558935ceb80a8a5d3",
+        "expected_sha256": "72c6544e7d8242fe930f6165fe65cdb8f680aec069f796a558935ceb80a8a5d3",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+        "status": 200,
+        "bytes": 397818,
+        "sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+        "expected_sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+        "status": 200,
+        "bytes": 57357,
+        "sha256": "68a049bcdffd53d875c4e707ce7ec0fb0a700bedaaeb69b46c98c4bb8d0b5afd",
+        "expected_sha256": "68a049bcdffd53d875c4e707ce7ec0fb0a700bedaaeb69b46c98c4bb8d0b5afd",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+        "status": 200,
+        "bytes": 657589,
+        "sha256": "fc76701b527f5199d7cba6832909a5c447498644f87e88d80a229e165855039f",
+        "expected_sha256": "fc76701b527f5199d7cba6832909a5c447498644f87e88d80a229e165855039f",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+        "status": 200,
+        "bytes": 748941,
+        "sha256": "4c176e73c9c985fc3bdf483d11e48e607289ccac728764a2612592ed52afd13f",
+        "expected_sha256": "4c176e73c9c985fc3bdf483d11e48e607289ccac728764a2612592ed52afd13f",
+        "matches_reviewed_source": true
+      }
+    ],
+    "all_passed": true
+  },
+  "live_browser": {
+    "date": "2026-11-26",
+    "result": "pass",
+    "actions": [
+      "Opened deployed Bleu7 deep link and observed26documented routes",
+      "Advanced Bleu7 to step2of7",
+      "Selected Bleu10 route and showed matching district map/sector reference",
+      "Opened the rendered direct place link and confirmed Bleu10 step1of5"
+    ],
+    "verified_final_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?place=bleu-sector-10",
+    "scope": "Live desktop browser spot check; full phone/desktop interaction checks belong to the exact-head CI evidence"
+  },
+  "preservation": {
+    "original_routes": 22,
+    "original_leads": 70,
+    "current_routes": 26,
+    "current_leads": 78,
+    "added_steps": 23,
+    "all_non_route_explorer_values_unchanged": true,
+    "new_exact_pins": 0,
+    "new_collection_ids": 0,
+    "active_video_refs": 0,
+    "original_workspace_changed": false
+  },
+  "full_upgrade": {
+    "planning_complete": true,
+    "G0_prior_consolidation": "completed_PR190",
+    "G1_required_route_reconciliation": "verified_PR191",
+    "G2_G3_evidence": "open",
+    "G4_interactions_collectibles": "open",
+    "G5_full_scope_release": "open",
+    "approved_full_scope_sha": null,
+    "final_executable_workspace_prompt": null,
+    "original_workspace_release": "pending_independent_A1_A7_after_G5"
+  },
+  "rollback": "Use pre-route application baseline2a3e03942d102ad283be6c749241ac0d7ba36fc6 through a bounded reviewed revert PR if a regression is demonstrated. Retain the consolidated plan and archival research; do not reset saved progress, force main, or change original Workspace."
+}
