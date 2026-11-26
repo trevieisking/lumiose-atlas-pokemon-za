@@ -31,7 +31,7 @@ def wrapper(text):
 table = ['<details class="journey-callout" id="rank-obedience" open><summary><strong>What level will obey?</strong></summary>',
          '<p>For wild Pokémon you catch, check their <strong>level when caught</strong>, not their current level. A Pokémon caught within the limit still obeys if you train it above the limit later. Check your current limit in the in-game Save screen.</p>',
          '<p>The limit rises after you win the promotion match. Mission 09 leaves you at Rank V; defeating Vinnie during Mission 10 takes you straight to Rank F.</p>',
-         '<table><caption>Z-A Royale obedience milestones</caption><thead><tr><th scope="col">When</th><th scope="col">Rank</th><th scope="col">Caught Pokémon obey</th></tr></thead><tbody>']
+         '<table><caption>Z-A Royale obedience milestones</caption><thead><tr><th scope="col">When</th><th scope="col" style="white-space:nowrap;overflow-wrap:normal">Rank</th><th scope="col">Caught Pokémon obey</th></tr></thead><tbody>']
 for m in milestones:
     when = f'Mission {m["mission"]:02d}: beat {m["battle"]}' if m['mission'] else 'Start of the game'
     table.append(f'<tr><th scope="row">{when}</th><td>{m["rank"]}</td><td>{cap(m)}</td></tr>')
