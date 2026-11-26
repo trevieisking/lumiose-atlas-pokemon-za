@@ -1,0 +1,2258 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-26",
+  "source_snapshot_policy": "Only URLs, SHA256 receipts and concise factual comparisons are committed; external HTML and images are not republished.",
+  "table_method": "Decode labelled image headers and table cell spans; preserve ordinary, fixed Alpha, rotating Alpha and mission headings separately.",
+  "zone_count": 20,
+  "records": [
+    {
+      "area_id": "wz-01",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_1",
+          "retrieved_on": "2026-11-26",
+          "sha256": "36dd1887fb5e1c8cb658399ed5f699a8b33e59e886db8c3145229786f213ca3d",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone1.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "c91bd70cfd262b11b60e5e37c72e7494d5eddefa6b591344c177ef820b6287db",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-01-overview.png",
+      "owner_photo_sha256": "5f8fa6a5333c0d2e2e442325c762c831ba9d39b416a7cf4b0534b7a7dc9dc67e",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Bunnelby",
+          "Fletchling",
+          "Mareep",
+          "Pichu",
+          "Pidgey",
+          "Scatterbug",
+          "Weedle"
+        ],
+        "serebii": [
+          "Bunnelby",
+          "Fletchling",
+          "Mareep",
+          "Pichu",
+          "Pidgey",
+          "Scatterbug",
+          "Weedle"
+        ],
+        "owner_survey": [
+          "Bunnelby",
+          "Fletchling",
+          "Mareep",
+          "Pichu",
+          "Pidgey",
+          "Scatterbug",
+          "Weedle"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Pidgey"
+        ],
+        "serebii": [
+          "Pidgey"
+        ],
+        "preserved": [
+          "Pidgey"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-02",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_2",
+          "retrieved_on": "2026-11-26",
+          "sha256": "41b0b720639f3b6e7621c89cdc68248949a1bce7593d998580ef1270611efd57",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone2.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "aa6bd66aa883bb3ea65cb70ae4741a7f2d71766cfb47530e7abd4315c7865d4e",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-02-overview.png",
+      "owner_photo_sha256": "d0e27a90128eec6321eab091fd098bdba6d12cc869b716b55730406f4b23487f",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Binacle",
+          "Budew",
+          "Kakuna",
+          "Magikarp",
+          "Patrat",
+          "Staryu"
+        ],
+        "serebii": [
+          "Binacle",
+          "Budew",
+          "Kakuna",
+          "Magikarp",
+          "Patrat",
+          "Staryu"
+        ],
+        "owner_survey": [
+          "Binacle",
+          "Budew",
+          "Kakuna",
+          "Magikarp",
+          "Patrat",
+          "Staryu"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Magikarp",
+          "Staryu"
+        ],
+        "serebii": [
+          "Magikarp",
+          "Staryu"
+        ],
+        "preserved": [
+          "Magikarp",
+          "Staryu"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Staryu",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-03",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_3",
+          "retrieved_on": "2026-11-26",
+          "sha256": "99a2c1a5e3b5536b0da5a603dfd844e98381babb96b018662e54754316b4ede2",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone3.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "c15608a90bea9895ba14c17b7af67a7592800a7ea567cb5f864685ce33cd0811",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-03-overview.png",
+      "owner_photo_sha256": "63946ab0aa155a1852cbde4943904eed932067e9ddfffad52be287d22492e5c7",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Espurr",
+          "Flabébé",
+          "Litleo",
+          "Pancham",
+          "Pikachu",
+          "Skiddo"
+        ],
+        "serebii": [
+          "Espurr",
+          "Flabébé",
+          "Litleo",
+          "Pancham",
+          "Pikachu",
+          "Skiddo"
+        ],
+        "owner_survey": [
+          "Espurr",
+          "Flabébé",
+          "Litleo",
+          "Pancham",
+          "Pikachu",
+          "Skiddo"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Fletchling",
+          "Litleo"
+        ],
+        "serebii": [
+          "Fletchling",
+          "Litleo"
+        ],
+        "preserved": [
+          "Fletchling",
+          "Litleo"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-04",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_4",
+          "retrieved_on": "2026-11-26",
+          "sha256": "ed7bdda3aa76098069e50d0700c761cd23db5a434b96ac83548149761738f335",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone4.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "465d4cbe5fb6827d8fbf52b1c7971c034000f63b8eb8752930530d06443dfe51",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+      "owner_photo_sha256": "1539b255f8a617b5eec88b47bd068694283de101b88a2d24a36785d49b036c0e",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Ekans",
+          "Gastly",
+          "Honedge",
+          "Patrat",
+          "Spewpa",
+          "Spinarak"
+        ],
+        "serebii": [
+          "Ekans",
+          "Gastly",
+          "Honedge",
+          "Patrat",
+          "Spewpa",
+          "Spinarak"
+        ],
+        "owner_survey": [
+          "Ekans",
+          "Gastly",
+          "Honedge",
+          "Patrat",
+          "Spewpa",
+          "Spinarak"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Spinarak"
+        ],
+        "serebii": [
+          "Spinarak"
+        ],
+        "preserved": [
+          "Spinarak"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Ekans",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Patrat",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Spewpa",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Honedge",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-05",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_5",
+          "retrieved_on": "2026-11-26",
+          "sha256": "fbcc9e933a18c86f6a8605c1f3ab421ae868c5b44b44a352324a22cde49eee9a",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone5.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "2725cda217d9c2b8b8067a8d2133e06a53672fcf45251e2212136ea8e3c8f1e8",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-05-overview.png",
+      "owner_photo_sha256": "041d7774dafb2a2b8636c20fcc71268b2460399d20bbe7eb643d41bf05aba843",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Abra",
+          "Bellsprout",
+          "Binacle",
+          "Bunnelby",
+          "Electrike",
+          "Fletchinder",
+          "Fletchling",
+          "Patrat",
+          "Pidgeotto",
+          "Pidgey",
+          "Venipede"
+        ],
+        "serebii": [
+          "Abra",
+          "Bellsprout",
+          "Binacle",
+          "Bunnelby",
+          "Electrike",
+          "Fletchinder",
+          "Fletchling",
+          "Patrat",
+          "Pidgeotto",
+          "Pidgey",
+          "Venipede"
+        ],
+        "owner_survey": [
+          "Abra",
+          "Bellsprout",
+          "Bunnelby",
+          "Electrike",
+          "Pidgeotto",
+          "Pidgey",
+          "Venipede"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": [
+          "Binacle",
+          "Fletchinder",
+          "Fletchling",
+          "Patrat"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Bellsprout",
+          "Whirlipede"
+        ],
+        "serebii": [
+          "Bellsprout",
+          "Whirlipede"
+        ],
+        "preserved": [
+          "Bellsprout",
+          "Whirlipede"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-06",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_6",
+          "retrieved_on": "2026-11-26",
+          "sha256": "20644a7636812212af7f7986c0731cb0b9c82994c787d4f3c7561f7d5d328e14",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone6.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "b811cc6a1cc4096f52899e7d0f110f2bbb5d33e04a52d17673f01409ac41e10b",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-06-overview.png",
+      "owner_photo_sha256": "24618de5ceab0b75a14a8ae4aded19bdc726d145587115a1efc62c4c6f3a669b",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Binacle",
+          "Buneary",
+          "Flaaffy",
+          "Houndour",
+          "Magikarp",
+          "Meditite",
+          "Swablu"
+        ],
+        "serebii": [
+          "Binacle",
+          "Buneary",
+          "Flaaffy",
+          "Houndour",
+          "Magikarp",
+          "Meditite",
+          "Swablu"
+        ],
+        "owner_survey": [
+          "Binacle",
+          "Buneary",
+          "Flaaffy",
+          "Houndour",
+          "Magikarp",
+          "Meditite",
+          "Swablu"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Binacle",
+          "Houndoom",
+          "Pikachu"
+        ],
+        "serebii": [
+          "Binacle",
+          "Houndoom",
+          "Pikachu"
+        ],
+        "preserved": [
+          "Binacle",
+          "Houndoom",
+          "Pikachu"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Meditite",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-07",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_7",
+          "retrieved_on": "2026-11-26",
+          "sha256": "a0b32b6ce3a8185894a3488e82467f5e636ca99ce21dc0395b3d6efd61b9ab75",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone7.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "9b5ccfa6702d576f438f04524ae16e10d0831c3ad3b7bd21f7b627f47566144b",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-07-overview.png",
+      "owner_photo_sha256": "266d54c15a96ed8374998ff2b64ac69abb8812bbc246ab21688a1b8fa58a3ff4",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Audino",
+          "Floette",
+          "Gastly",
+          "Hippopotas",
+          "Kakuna",
+          "Roselia",
+          "Shuppet",
+          "Vanillite"
+        ],
+        "serebii": [
+          "Audino",
+          "Floette",
+          "Gastly",
+          "Hippopotas",
+          "Kakuna",
+          "Roselia",
+          "Shuppet",
+          "Vanillite"
+        ],
+        "owner_survey": [
+          "Audino",
+          "Floette",
+          "Hippopotas",
+          "Kakuna",
+          "Roselia",
+          "Shuppet",
+          "Vanillite"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": [
+          "Gastly"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Fletchinder"
+        ],
+        "serebii": [
+          "Fletchinder"
+        ],
+        "preserved": [
+          "Fletchinder"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Gastly",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Shuppet",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Hippopotas",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-08",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_8",
+          "retrieved_on": "2026-11-26",
+          "sha256": "c6e2675dec3af379e856aeb77b1229eac66aa6f35a997fe9a854d37f269aa7ad",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone8.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "e1b7b5f14c4a99676a8185338f75c457970225ca105dcf30456bb41377fa68e5",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-08-overview.png",
+      "owner_photo_sha256": "ff0730f525b047710cb4178360232ab22a5f653577f39db678c7d37b2b7ab53e",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Drilbur",
+          "Gible",
+          "Krokorok",
+          "Machop",
+          "Numel",
+          "Sandile"
+        ],
+        "serebii": [
+          "Drilbur",
+          "Gible",
+          "Krokorok",
+          "Machop",
+          "Numel",
+          "Sandile"
+        ],
+        "owner_survey": [
+          "Drilbur",
+          "Gible",
+          "Krokorok",
+          "Machop",
+          "Numel",
+          "Sandile"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Camerupt",
+          "Krokorok"
+        ],
+        "serebii": [
+          "Camerupt",
+          "Krokorok"
+        ],
+        "preserved": [
+          "Camerupt",
+          "Krokorok"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-09",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9",
+          "retrieved_on": "2026-11-26",
+          "sha256": "f038f6704f014254e3e99c94940614744c3b219c6fa4839267b1ad1521544164",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone9.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "52e2a6ab89b071a704a99260fbeae2a170dde176c9fe7a2033ccf4e933751462",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-09-overview.png",
+      "owner_photo_sha256": "683e52935c81531e3e0d686b669eef21d7f27f5ecaf9c24af8b826818f3aaf35",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Carbink",
+          "Espurr",
+          "Fletchinder",
+          "Kadabra",
+          "Mawile",
+          "Sableye"
+        ],
+        "serebii": [
+          "Carbink",
+          "Espurr",
+          "Fletchinder",
+          "Kadabra",
+          "Mawile",
+          "Sableye"
+        ],
+        "owner_survey": [
+          "Carbink",
+          "Espurr",
+          "Fletchinder",
+          "Kadabra",
+          "Mawile",
+          "Sableye"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Manectric",
+          "Meowstic"
+        ],
+        "serebii": [
+          "Manectric",
+          "Meowstic"
+        ],
+        "preserved": [
+          "Manectric",
+          "Meowstic"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-10",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_10",
+          "retrieved_on": "2026-11-26",
+          "sha256": "8bb68cb23fddcfdbb64b992ea2fa2b628dc0c011621be858de2fef2879bb0311",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone10.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "9b7d401f513fe06bdd36c89b400f5f5571a08a8303b435df28160c48ebf3f427",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-10-overview.png",
+      "owner_photo_sha256": "db229a670bce22aa5c3b933d616823c25ad18a5a77e5359a7231371e6a076982",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Arbok",
+          "Bellsprout",
+          "Carvanha",
+          "Sharpedo",
+          "Slowpoke",
+          "Staryu",
+          "Tynamo",
+          "Watchog"
+        ],
+        "serebii": [
+          "Arbok",
+          "Bellsprout",
+          "Carvanha",
+          "Sharpedo",
+          "Slowpoke",
+          "Staryu",
+          "Tynamo",
+          "Watchog"
+        ],
+        "owner_survey": [
+          "Arbok",
+          "Bellsprout",
+          "Carvanha",
+          "Slowpoke",
+          "Staryu",
+          "Tynamo",
+          "Watchog"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": [
+          "Sharpedo"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Arbok",
+          "Sharpedo",
+          "Watchog"
+        ],
+        "serebii": [
+          "Arbok",
+          "Sharpedo",
+          "Watchog"
+        ],
+        "preserved": [
+          "Arbok",
+          "Sharpedo",
+          "Watchog"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-11",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11",
+          "retrieved_on": "2026-11-26",
+          "sha256": "3a0b2aa457a6d0d3f535ca3ab9f8a267bac4ad81ee74d6ff5fc0740cf43b18e8",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone11.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "b56be06d18dca1e902955ab17f89b70a2cfaeacd08469a2826bfed3747f93099",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+      "owner_photo_sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Clauncher",
+          "Furfrou",
+          "Gyarados",
+          "Inkay",
+          "Slowpoke",
+          "Stunfisk"
+        ],
+        "serebii": [
+          "Clauncher",
+          "Furfrou",
+          "Gyarados",
+          "Inkay",
+          "Slowpoke",
+          "Stunfisk"
+        ],
+        "owner_survey": [
+          "Clauncher",
+          "Furfrou",
+          "Gyarados",
+          "Inkay",
+          "Slowpoke",
+          "Stunfisk"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Clawitzer",
+          "Slowbro"
+        ],
+        "serebii": [
+          "Clawitzer",
+          "Slowbro"
+        ],
+        "preserved": [
+          "Clawitzer",
+          "Slowbro"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-12",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_12",
+          "retrieved_on": "2026-11-26",
+          "sha256": "03ce06a12ff878f933b0c8e8e8df43da83922c609f033c3c81a9793e7068a6b6",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone12.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "742a0734a31a5ed3b25495428da4175ed33952ca16ec341825cdb50cb4e0e99e",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-12-overview.png",
+      "owner_photo_sha256": "e817df8164d3edd0a5070c0fbe8b46da46f8b80d7d91ae93f626aa5484f7ee7a",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Avalugg",
+          "Bergmite",
+          "Delibird",
+          "Gogoat",
+          "Machoke",
+          "Machop",
+          "Snorunt",
+          "Snover",
+          "Vanillite"
+        ],
+        "serebii": [
+          "Avalugg",
+          "Bergmite",
+          "Delibird",
+          "Gogoat",
+          "Machoke",
+          "Machop",
+          "Snorunt",
+          "Snover",
+          "Vanillite"
+        ],
+        "owner_survey": [
+          "Bergmite",
+          "Delibird",
+          "Gogoat",
+          "Machoke",
+          "Machop",
+          "Snorunt",
+          "Snover",
+          "Vanillite"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": [
+          "Avalugg"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Abomasnow",
+          "Avalugg"
+        ],
+        "serebii": [
+          "Abomasnow",
+          "Avalugg"
+        ],
+        "preserved": [
+          "Abomasnow",
+          "Avalugg"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-13",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_13",
+          "retrieved_on": "2026-11-26",
+          "sha256": "79132865a9625e9b5ea17a00368535a2b468c422202c0902d5441c9fe972d3bc",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone13.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "1ffd9c532ecf6303385bf3f3996a2bcf3ca4e90149cf32659cc2394b94691a93",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+      "owner_photo_sha256": "24e0b104100e13da41aac51e0d62c665b48347267379fe4a69c257455d60d7bf",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Heracross",
+          "Phantump",
+          "Pinsir",
+          "Scyther",
+          "Vivillon",
+          "Weepinbell"
+        ],
+        "serebii": [
+          "Heracross",
+          "Phantump",
+          "Pinsir",
+          "Scyther",
+          "Vivillon",
+          "Weepinbell"
+        ],
+        "owner_survey": [
+          "Heracross",
+          "Phantump",
+          "Pinsir",
+          "Scyther",
+          "Vivillon",
+          "Weepinbell"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Trevenant",
+          "Weepinbell"
+        ],
+        "serebii": [
+          "Trevenant",
+          "Weepinbell"
+        ],
+        "preserved": [
+          "Trevenant",
+          "Weepinbell"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Phantump",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "VivillonMeadow Pattern",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Weepinbell",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Scyther",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-14",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_14",
+          "retrieved_on": "2026-11-26",
+          "sha256": "c861b0d5fbc6c830bba3d5a60c6bb19089fb1018cc5cf6367c410f46a0ac83a1",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone14.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "9ed1cccbd625f967205ca0ef2eb7303613359e35219ea93e00bb365c2fee63ac",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+      "owner_photo_sha256": "771712e2edcf21f53115d6e280c09b894a358911cf6e49ac69896935075ba854",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Aron",
+          "Drilbur",
+          "Emolga",
+          "Excadrill",
+          "Helioptile",
+          "Lairon",
+          "Onix"
+        ],
+        "serebii": [
+          "Aron",
+          "Drilbur",
+          "Emolga",
+          "Excadrill",
+          "Helioptile",
+          "Lairon",
+          "Onix"
+        ],
+        "owner_survey": [
+          "Aron",
+          "Drilbur",
+          "Emolga",
+          "Excadrill",
+          "Helioptile",
+          "Lairon",
+          "Onix"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Excadrill"
+        ],
+        "serebii": [
+          "Excadrill"
+        ],
+        "preserved": [
+          "Excadrill"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Helioptile",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-15",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_15",
+          "retrieved_on": "2026-11-26",
+          "sha256": "f6e9b05d6fbbc1bfe7f809ab099e21bffb8bebd0ed513d60767fd09dd54ab48f",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone15.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "a06ad50dc1147125ac55d9440f080e4858b900de5e922a57bdf4dedce6e779ed",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+      "owner_photo_sha256": "aeaecfdbc88bcc581a9deb2443410073a12c14f1ea97130c52a6969aa2865e9b",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Beedrill",
+          "Haunter",
+          "Larvitar",
+          "Pumpkaboo",
+          "Scolipede",
+          "Shuppet",
+          "Whirlipede"
+        ],
+        "serebii": [
+          "Banette",
+          "Beedrill",
+          "Haunter",
+          "Larvitar",
+          "Noibat",
+          "Pumpkaboo",
+          "Scolipede",
+          "Shuppet",
+          "Trevenant",
+          "Whirlipede"
+        ],
+        "owner_survey": [
+          "Beedrill",
+          "Haunter",
+          "Larvitar",
+          "Pumpkaboo",
+          "Scolipede",
+          "Shuppet",
+          "Whirlipede"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [
+          "Banette",
+          "Noibat",
+          "Trevenant"
+        ],
+        "published_not_owner_icon": [
+          "Banette",
+          "Noibat",
+          "Trevenant"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Banette",
+          "Beedrill",
+          "Gourgeist"
+        ],
+        "serebii": [
+          "Banette",
+          "Beedrill",
+          "Gourgeist"
+        ],
+        "preserved": [
+          "Banette",
+          "Beedrill",
+          "Gourgeist"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Beedrill",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Haunter",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Shuppet",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Whirlipede",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Scolipede",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-16",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_16",
+          "retrieved_on": "2026-11-26",
+          "sha256": "1e28616f1bc0f8a19549eab5dc0fd0160a2a0c0e78a94424ce734d5982271905",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone16.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "846a683b66b9bea7756b5c94e09e1e7c12b33a0dbd40eb7a3b64bf1d3c2609b6",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-16-overview.png",
+      "owner_photo_sha256": "a9bca31d1da537b790ef88fcd0f79a3b9bdf20ad59b8c7437290c3b49f7af415",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Barbaracle",
+          "Falinks",
+          "Flaaffy",
+          "Florges",
+          "Froakie",
+          "Medicham",
+          "Starmie"
+        ],
+        "serebii": [
+          "Ampharos",
+          "Barbaracle",
+          "Falinks",
+          "Flaaffy",
+          "Florges",
+          "Froakie",
+          "Medicham",
+          "Starmie"
+        ],
+        "owner_survey": [
+          "Barbaracle",
+          "Falinks",
+          "Flaaffy",
+          "Florges",
+          "Froakie",
+          "Medicham",
+          "Starmie"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [
+          "Ampharos"
+        ],
+        "published_not_owner_icon": [
+          "Ampharos"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Ampharos"
+        ],
+        "serebii": [
+          "Ampharos"
+        ],
+        "preserved": [
+          "Ampharos"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Starmie",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Barbaracle",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Medicham",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "FlorgesBlue Flower",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "FlorgesWhite Flower",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-17",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17",
+          "retrieved_on": "2026-11-26",
+          "sha256": "616b6eff9302e5c45886b2abb0ec5d3aa9c10d84d637e0e088f21e0f3ce64a72",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone17.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "2e2b966c23d739f5c202b54e8c8a89b119075bf47c7b08b38348df058fd065ae",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+      "owner_photo_sha256": "753a63229cd7954cee58f4ad2d0f9d1a79da0f2a249758f46231fa542d58ee3a",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Chespin",
+          "Diggersby",
+          "Klefki",
+          "Lampent",
+          "Pyroar",
+          "Skarmory",
+          "Talonflame"
+        ],
+        "serebii": [
+          "Chespin",
+          "Diggersby",
+          "Klefki",
+          "Lampent",
+          "Mawile",
+          "Pyroar",
+          "Skarmory"
+        ],
+        "owner_survey": [
+          "Chespin",
+          "Diggersby",
+          "Klefki",
+          "Lampent",
+          "Pyroar",
+          "Skarmory"
+        ],
+        "only_bulbapedia": [
+          "Talonflame"
+        ],
+        "only_serebii": [
+          "Mawile"
+        ],
+        "published_not_owner_icon": [
+          "Mawile",
+          "Talonflame"
+        ]
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Mawile",
+          "Pyroar"
+        ],
+        "serebii": [
+          "Mawile",
+          "Pyroar"
+        ],
+        "preserved": [
+          "Mawile",
+          "Pyroar"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Klefki",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Lampent",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Skarmory",
+          "time": [
+            "Day",
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-18",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_18",
+          "retrieved_on": "2026-11-26",
+          "sha256": "0d5cb329e5f4662daa8cdbdb1b66e1c6f7e289654d05f1534250304f72967469",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone18.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "86dbec1731c11fce7106da022c45488809f0c2eb2f7b14b66289cafce128ed9d",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-18-overview.png",
+      "owner_photo_sha256": "13d40a6eb36402e8b88ddfe4482dab16ef1065e9d32b97b498873c25248f5aac",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Altaria",
+          "Bagon",
+          "Fennekin",
+          "Noibat",
+          "Noivern",
+          "Swablu"
+        ],
+        "serebii": [
+          "Altaria",
+          "Bagon",
+          "Fennekin",
+          "Noibat",
+          "Noivern",
+          "Swablu"
+        ],
+        "owner_survey": [
+          "Altaria",
+          "Bagon",
+          "Fennekin",
+          "Noibat",
+          "Noivern",
+          "Swablu"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Lopunny",
+          "Salamence"
+        ],
+        "serebii": [
+          "Lopunny",
+          "Salamence"
+        ],
+        "preserved": [
+          "Lopunny",
+          "Salamence"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Noibat",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Altaria",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Noivern",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Swablu",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-19",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_19",
+          "retrieved_on": "2026-11-26",
+          "sha256": "750a445df0ca4b2638f274a246c98736941ecff0d2999878dd1c4512eba0097b",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone19.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "ab967b233c24641343dd777a508729fbfc90d9b66c25125d6620882bd79601bb",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-19-overview.png",
+      "owner_photo_sha256": "ccfa050f033ed1fd6c41520a2198e7d75d87150348bc978c9e57607485737f96",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Audino",
+          "Clefairy",
+          "Cleffa",
+          "Drampa",
+          "Eevee",
+          "Furfrou",
+          "Kangaskhan"
+        ],
+        "serebii": [
+          "Audino",
+          "Clefairy",
+          "Cleffa",
+          "Drampa",
+          "Eevee",
+          "Furfrou",
+          "Kangaskhan"
+        ],
+        "owner_survey": [
+          "Audino",
+          "Clefairy",
+          "Cleffa",
+          "Drampa",
+          "Eevee",
+          "Furfrou",
+          "Kangaskhan"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Ordinary chance rows remain separate from fixed Alpha rows.",
+        "bulbapedia": [
+          "Clefairy",
+          "Furfrou"
+        ],
+        "serebii": [
+          "Clefairy",
+          "Furfrou"
+        ],
+        "preserved": [
+          "Clefairy",
+          "Furfrou"
+        ]
+      },
+      "restrictive_ordinary_rows": [
+        {
+          "species": "Drampa",
+          "time": [
+            "Day"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Clefairy",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "species": "Cleffa",
+          "time": [
+            "Night"
+          ],
+          "weather": [
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        }
+      ],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    },
+    {
+      "area_id": "wz-20",
+      "review_kind": "fresh_standard_table_comparison",
+      "sources": [
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_20",
+          "retrieved_on": "2026-11-26",
+          "sha256": "f694921f2c40de349fc2a1dd86120c1b4aab1d4254a2c43dd64897498df4295e",
+          "parsed_headers": [
+            "Day",
+            "Night",
+            "Clear",
+            "Harsh sunlight",
+            "Cloudy",
+            "Rain",
+            "Fog"
+          ]
+        },
+        {
+          "url": "https://www.serebii.net/pokearth/lumiosecity/wildzone20.shtml",
+          "retrieved_on": "2026-11-26",
+          "sha256": "975d5e0a30118a8e458636fcb10a9e3818dad4d1c731cb44470cabd997dbe276",
+          "method": "Species-name cell, Alpha icon and separately labelled level/Alpha-chance rows inspected."
+        }
+      ],
+      "owner_observation_path": "docs/qa/at339-encounters/owner-survey-observations.json",
+      "owner_photo_path": "assets/atlas/wild-zones/wild-zone-20-overview.png",
+      "owner_photo_sha256": "2aa00d0864249d212439283857ee065022bef51b25e4a3ec5d4c66fac930a3a6",
+      "ordinary_species": {
+        "bulbapedia": [
+          "Aggron",
+          "Bulbasaur",
+          "Charmander",
+          "Chikorita",
+          "Dragalge",
+          "Garbodor",
+          "Gardevoir",
+          "Hippowdon",
+          "Lucario",
+          "Malamar",
+          "Roserade",
+          "Scrafty",
+          "Squirtle",
+          "Tepig",
+          "Totodile"
+        ],
+        "serebii": [
+          "Aggron",
+          "Bulbasaur",
+          "Charmander",
+          "Chikorita",
+          "Dragalge",
+          "Garbodor",
+          "Gardevoir",
+          "Hippowdon",
+          "Lucario",
+          "Malamar",
+          "Roserade",
+          "Scrafty",
+          "Squirtle",
+          "Tepig",
+          "Totodile"
+        ],
+        "owner_survey": [
+          "Aggron",
+          "Bulbasaur",
+          "Charmander",
+          "Chikorita",
+          "Dragalge",
+          "Garbodor",
+          "Gardevoir",
+          "Hippowdon",
+          "Lucario",
+          "Malamar",
+          "Roserade",
+          "Scrafty",
+          "Squirtle",
+          "Tepig",
+          "Totodile"
+        ],
+        "only_bulbapedia": [],
+        "only_serebii": [],
+        "published_not_owner_icon": []
+      },
+      "alpha_species": {
+        "published_heading_treatment": "Wild Zone 20 provider Alpha headings compared only to preserved rotating membership; no fixed classification inferred.",
+        "bulbapedia": [
+          "Absol",
+          "Aegislash",
+          "Aggron",
+          "Alakazam",
+          "Altaria",
+          "Ariados",
+          "Barbaracle",
+          "Carbink",
+          "Chandelure",
+          "Clefable",
+          "Dedenne",
+          "Delibird",
+          "Diggersby",
+          "Dragalge",
+          "Dragonite",
+          "Drampa",
+          "Eelektross",
+          "Falinks",
+          "Flareon",
+          "Florges",
+          "Froslass",
+          "Furfrou",
+          "Gallade",
+          "Garbodor",
+          "Garchomp",
+          "Gardevoir",
+          "Gengar",
+          "Glaceon",
+          "Gogoat",
+          "Goodra",
+          "Gourgeist",
+          "Gyarados",
+          "Hawlucha",
+          "Heliolisk",
+          "Heracross",
+          "Hippowdon",
+          "Jolteon",
+          "Kangaskhan",
+          "Klefki",
+          "Krookodile",
+          "Leafeon",
+          "Lucario",
+          "Machamp",
+          "Malamar",
+          "Medicham",
+          "Metagross",
+          "Noivern",
+          "Pangoro",
+          "Pinsir",
+          "Raichu",
+          "Roserade",
+          "Sableye",
+          "Scolipede",
+          "Scrafty",
+          "Simipour",
+          "Simisage",
+          "Simisear",
+          "Skarmory",
+          "Starmie",
+          "Stunfisk",
+          "Sylveon",
+          "Talonflame",
+          "Tyranitar",
+          "Vanilluxe",
+          "Vaporeon",
+          "Victreebel",
+          "Vivillon"
+        ],
+        "serebii": [
+          "Absol",
+          "Aegislash",
+          "Aggron",
+          "Alakazam",
+          "Altaria",
+          "Ariados",
+          "Barbaracle",
+          "Carbink",
+          "Chandelure",
+          "Clefable",
+          "Dedenne",
+          "Delibird",
+          "Diggersby",
+          "Dragalge",
+          "Dragonite",
+          "Drampa",
+          "Eelektross",
+          "Falinks",
+          "Flareon",
+          "Florges",
+          "Froslass",
+          "Furfrou",
+          "Gallade",
+          "Garbodor",
+          "Garchomp",
+          "Gardevoir",
+          "Gengar",
+          "Glaceon",
+          "Gogoat",
+          "Goodra",
+          "Gourgeist",
+          "Gyarados",
+          "Hawlucha",
+          "Heliolisk",
+          "Heracross",
+          "Hippowdon",
+          "Jolteon",
+          "Kangaskhan",
+          "Klefki",
+          "Krookodile",
+          "Leafeon",
+          "Lucario",
+          "Machamp",
+          "Malamar",
+          "Medicham",
+          "Metagross",
+          "Noivern",
+          "Pangoro",
+          "Pinsir",
+          "Raichu",
+          "Roserade",
+          "Sableye",
+          "Scolipede",
+          "Scrafty",
+          "Simipour",
+          "Simisage",
+          "Simisear",
+          "Skarmory",
+          "Starmie",
+          "Stunfisk",
+          "Sylveon",
+          "Talonflame",
+          "Tyranitar",
+          "Vanilluxe",
+          "Vaporeon",
+          "Victreebel",
+          "Vivillon"
+        ],
+        "preserved": [
+          "Absol",
+          "Aegislash",
+          "Aggron",
+          "Alakazam",
+          "Altaria",
+          "Ariados",
+          "Barbaracle",
+          "Carbink",
+          "Chandelure",
+          "Clefable",
+          "Dedenne",
+          "Delibird",
+          "Diggersby",
+          "Dragalge",
+          "Dragonite",
+          "Drampa",
+          "Eelektross",
+          "Falinks",
+          "Flareon",
+          "Florges",
+          "Froslass",
+          "Furfrou",
+          "Gallade",
+          "Garbodor",
+          "Garchomp",
+          "Gardevoir",
+          "Gengar",
+          "Glaceon",
+          "Gogoat",
+          "Goodra",
+          "Gourgeist",
+          "Gyarados",
+          "Hawlucha",
+          "Heliolisk",
+          "Heracross",
+          "Hippowdon",
+          "Jolteon",
+          "Kangaskhan",
+          "Klefki",
+          "Krookodile",
+          "Leafeon",
+          "Lucario",
+          "Machamp",
+          "Malamar",
+          "Medicham",
+          "Metagross",
+          "Noivern",
+          "Pangoro",
+          "Pinsir",
+          "Raichu",
+          "Roserade",
+          "Sableye",
+          "Scolipede",
+          "Scrafty",
+          "Simipour",
+          "Simisage",
+          "Simisear",
+          "Skarmory",
+          "Starmie",
+          "Stunfisk",
+          "Sylveon",
+          "Talonflame",
+          "Tyranitar",
+          "Vanilluxe",
+          "Vaporeon",
+          "Victreebel",
+          "Vivillon"
+        ]
+      },
+      "restrictive_ordinary_rows": [],
+      "scope_limit": "This compares the published standard tables and existing owner survey evidence; it does not assert that omitted or special encounters cannot occur."
+    }
+  ]
+}

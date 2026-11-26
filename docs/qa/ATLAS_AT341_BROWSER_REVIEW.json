@@ -1,0 +1,113 @@
+{
+  "reviewedAt": "2026-11-26T12:43:04.383352+00:00",
+  "scope": "Independent bounded browser artifact review for existing map controls, shared area integration, photo preservation and collectible priority",
+  "repository": "trevieisking/lumiose-atlas-pokemon-za",
+  "pr": 204,
+  "head": "d1d7322e6341cd91016f576161c55da682e06834",
+  "workflowRun": 45820839148,
+  "browserJob": 139912362526,
+  "workflowConclusion": "success",
+  "unitJobConclusion": "success",
+  "browserJobConclusion": "success",
+  "artifact": {
+    "id": 15116764303,
+    "name": "atlas-explorer-mobile-desktop-preview",
+    "sha256": "1bae49a22be26fa37280d3e9049ec44bb1d375a294dd1f512982f8a4a9e38601",
+    "downloadHashVerified": true,
+    "extractedFiles": 223
+  },
+  "reviewedScreenshots": [
+    {
+      "path": "atlas-areas/at339-explorer-habitats-phone.png",
+      "sha256": "8aa96e0b2a2a21fcf6381ddc109fdeb9ab60aca437a181846fd57b98272cdf4f",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-explorer-habitats-desktop.png",
+      "sha256": "068f478a31f3ad463a7a3a21c99b77a83746cc13e4814252c8b15889d45810c8",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-measured-selected-wz11-phone.png",
+      "sha256": "b91944631b5d7822a139454d797a70f35d4592f76694b930ba9712bfae0d26ce",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-measured-selected-wz11-desktop.png",
+      "sha256": "3a85aa2eeef5fcfa63ce4087143c32a4e0974d9eb9f067cd7aa58387400bc9b0",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-main-habitats-phone.png",
+      "sha256": "ac0ec4642c8beba5e66c7f2d0815c6e839c6875242237eadd7056b5bcc3e5821",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-sectors-habitats-phone.png",
+      "sha256": "f299cf1442079f936bfd027619737a517db08dc368622d8db93c91ffbc6c9db2",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-standalone-habitats-phone.png",
+      "sha256": "0979f555c8435980d37193167ec7922cedfc4511fc95a33a1462823c780d97a9",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-explorer/at311-jaune-5-explorer-photo-and-links-phone.png",
+      "sha256": "7dfb312b85546fe7606a3911ac3a570e95d86eeece4d01ec6de3c87dad25c2e2",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-explorer/at321-explorer-wz1-phone-photos.png",
+      "sha256": "3dd74b3b338c9c0830efa6b56b5c4e1e755638f16ec4622a6e10681689768e5e",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-explorer/at321-explorer-wz1-desktop-photos.png",
+      "sha256": "9f935c235e996c2d966d13676587510d780fba1ed2c42e39f2778e700c83cd23",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-areas/at339-boundary-item-priority-phone.png",
+      "sha256": "d2dc0ce8213da3baf0224fb425469133136e16271d107377954cda9b63d1bc54",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-collectibles/at338-overlap-chooser-phone.png",
+      "sha256": "e0955fe324ee861a3320988543deb6ff41de06ce6541dcd747b9b1f95beaf24a",
+      "view": "full screenshot"
+    },
+    {
+      "path": "atlas-explorer/atlas-mobile.png",
+      "sha256": "12b0f2e5791e6d47fb7dfa8982b543c1c2412a4c51efe3b8a8b5c4b6aa108ab1",
+      "view": "top crop only"
+    },
+    {
+      "path": "atlas-explorer/atlas-desktop.png",
+      "sha256": "e6ae6256afd540629bd577cd9fcbe332efed2367453012f4a811099a6799bc18",
+      "view": "top crop only"
+    }
+  ],
+  "machineReceipts": [
+    "atlas-areas/at339-browser-proof.json",
+    "atlas-collectibles/at338-browser-proof.json"
+  ],
+  "findings": [
+    "No blocking visual regression found in the 14 inspected screenshots or top crops.",
+    "Phone and desktop original Explorer controls remain legible: zoom, rotation, north, reset, original/Atlas map mode, and original layer choices. Compass remains visible over the source map.",
+    "Shared habitats are readable on all four phone surfaces and desktop Explorer; the phone drawer is vertically scrollable, and result cards and Close area panel remain accessible in the captured scrolled state.",
+    "Selected measured WZ11 area is drawn with the original map and numbered markers preserved on phone and desktop.",
+    "Original WZ1 overview and detail photographs render on phone and desktop; Jaune5 source image, source links, written bearings and original-clue links remain visible.",
+    "Test-only overlapping item fixtures select a collectible detail and offer a readable chooser; production receipt explicitly reports zero unverified production collectible pins.",
+    "Exact-head receipt confirms four surfaces on both device sizes, no page errors, route/history/filter preservation, original photo DOM preservation, source-failure fallback, zero original-progress storage writes, and native phone pinch and rotation.",
+    "The previously failing phone two-finger setup now selected unobstructed native touch start points (57,220) and (161,220) with reported clearance 88.5343 CSS px. Existing zoom checks and new independent rotation-change assertion passed."
+  ],
+  "limitations": [
+    "This is a finite visual sample plus exact-head automated evidence, not a manual review of all 223 artifact files.",
+    "The only full-page screenshot views were top crops: phone y0-1780, desktop y0-1090.",
+    "Synthetic boundary and collectible fixtures are browser-test-only; their screenshots do not certify production geography or item coordinates.",
+    "This review does not certify factual guide completeness, geography/evidence beyond visually checking the supplied measured WZ11 overlay, real-device hardware behavior, or final promotion readiness after later commits.",
+    "No local real-browser execution was possible because the installed Chromium target is missing. GitHub Actions supplied the actual Chromium executions. Previously rejected cloud preview was not retried."
+  ],
+  "newCodeChangesRequired": false
+}

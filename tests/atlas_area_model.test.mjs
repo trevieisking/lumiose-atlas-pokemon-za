@@ -44,11 +44,14 @@ test('shared model preserves 68 original areas, every original centre and all di
 });
 
 test('production renders only the independently reviewed boundary subset on the unchanged native map',()=>{
-  const expected=['wz-02','wz-03','wz-04','wz-05','wz-11','wz-16'];
+  const expected=['wz-02','wz-03','wz-04','wz-05','wz-11','wz-16','wz-20'];
   assert.deepEqual(production.geometries.map(row=>row.area_id).sort(),expected);assert.deepEqual(production.map,AREA_MAP);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+AREA_MAP.path,import.meta.url))).digest('hex'),AREA_MAP.sha256);
   const current=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production});
-  const receipt=JSON.parse(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json'));
+  const previousReceipt=JSON.parse(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json'));
+  const amendmentReceipt=JSON.parse(read('docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json'));
+  assert.equal(crypto.createHash('sha256').update(read('docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json')).digest('hex'),amendmentReceipt.previous_packet_sha256);
+  const receipt={approved:[...previousReceipt.approved,...amendmentReceipt.approved]};
   assert.equal(current.areas.length,68);assert.deepEqual(current.areas.filter(a=>a.geometry.eligible).map(a=>a.id).sort(),expected);
   assert.deepEqual(receipt.approved.map(row=>row.area_id).sort(),expected);
   assert.ok(current.areas.filter(a=>!expected.includes(a.id)).every(a=>!a.geometry.eligible&&a.geometry.geometry===null));
@@ -60,6 +63,7 @@ test('production renders only the independently reviewed boundary subset on the 
       if(review.review[pathKey])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+review.review[pathKey],import.meta.url))).digest('hex'),review.review[hashKey]);
     }
     for(const source of geometry.sources)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+source.path,import.meta.url))).digest('hex'),source.sha256);
+    for(const artifact of review.artifacts||[])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+artifact.path,import.meta.url))).digest('hex'),artifact.sha256);
   }
 });
 

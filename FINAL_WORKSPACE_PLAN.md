@@ -1,6 +1,8 @@
 # Pokémon Atlas final completion plan
 
-26 November 2026 · Manifest 87 · Ledger 95
+**Concurrent work preserved:** current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` and PR204 head `3e17c260fc749e3ee5bad877470ee6035601064c` include separately completed map-filter/search/photo fixes and a WZ04 review. This continuation retains them and the PR202 release receipts, then adds the independently reviewed WZ20/encounter/guide amendments. The original Workspace is recorded at **version38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after a separate three-file hotfix; this continuation makes no Workspace change. Manifest89/Ledger97 follow the separate Manifest88/Ledger96 release reconciliation.
+
+26 November 2026 · Manifest 89 · Ledger 97
 
 **Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
@@ -12,9 +14,11 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 ## Current implementation
 
-[AT-341](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) records the latest reconciliation. The candidate now includes current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` after the separate PR202 merge, preserving its map-filter, exact-search and original-photo fixes. Wild Zone 04 adds a sixth reviewed selection outline; 62 boundaries and all 68 comprehensive roster reviews remain open. Fresh Sites metadata shows the separate original-site hotfix at **version 38**. This consolidation does not publish to that Site; the final full-upgrade prompt remains gated. All 128 local Node tests pass; final combined-head browser and visual checks are pending.
+[AT-341](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) integrates the final reviewed amendments into [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). The preceding exact head passed all browser suites and actual screenshot review. The combined candidate adds independently reviewed WZ04/WZ20 selection outlines, attributed encounter conditions and a corrected Mission008 guide; its own final CI, screenshots, merge and live verification are still pending.
 
-[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) combines the shared area/species search and habitat work with the verified content from the outstanding PRs, including 73 written steps for Main Missions 01–10. Independent review fixes preserve disputed-habitat labels, explicitly chosen Holovator photos, local evidence navigation and honest approximate-map wording. Its candidate includes six reviewed map outlines (Wild Zones 2, 3, 4, 5, 11 and 16), with **62 boundaries and all 68 comprehensive encounter-roster reviews still open**. Final combined-head phone/desktop validation, merge and live verification are tracked in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204); the original Workspace remains unchanged.
+There are now **seven reviewed selection outlines and61 unresolved boundaries (48 sectors /13 Wild Zones)**. All20 Wild Zone standard tables have been compared, with source disagreements and unknown conditions recorded; full comprehensive roster signoff is still open. The immutable encounter baseline,140 photo receipts and272 original rows remain intact. Current totals are284 additive claims /556 rows. [Geometry decisions](docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json) and [encounter/guide review](docs/qa/encounter-review-2026-11-26/REVIEW.md) preserve exact evidence and limits.
+
+[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) retains the25 PR dispositions, shared area/species navigation and verified content including73 steps for Main Missions01–10. Private planning records are synchronized at each durable checkpoint without resetting prior deployment proof. The original Workspace remains unchanged.
 
 ## Three remaining work packages
 
@@ -24,7 +28,7 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
 
-Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. That source-intake packet did not approve production boundaries or pickup positions. The historical AT-339 review supports five map-selection outlines; the AT-340 supplemental review approves Wild Zone 04 as a sixth outline using the same limited selection-footprint standard.
+Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. That source-intake packet did not approve production boundaries or pickup positions. AT-339 approved five map-selection outlines; the concurrent WZ04 supplemental review adds the sixth and AT-341 adds WZ20 as the seventh. Both WZ04 reviews remain preserved. Historical candidate snapshots remain preserved.
 
 ## Workspace handoff record
 
@@ -35,7 +39,7 @@ Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](
 | GitHub versus original Workspace status | [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) and [original source handoff](WORKSPACE_ACCESS_HANDOFF.md) |
 | Release decision, exact commit and rollback | [Release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) and [release handoff](ATLAS_RELEASE_HANDOFF.md) |
 
-**Readiness: not ready to apply in Workspace.** The directory and switches are already live on GitHub Pages. Six individually reviewed map-selection outlines now have source and registration evidence; pickup coordinates are unchanged. Shared interactions are implemented in the consolidated candidate; final phone/desktop release checks and the remaining map evidence are still open. Do not copy an unmerged branch or historical PR into Workspace.
+**Readiness: the full Workspace prompt remains gated.** The directory/layer framework is already live on GitHub Pages. The reviewed shared-interaction and content candidate has seven supported outlines, with61 boundary gaps and the remaining comprehensive content obligations recorded. Complete the existing full-scope gates before issuing the final executable Workspace prompt. The pending bounded PR is not a claim that the whole master plan is complete.
 
 ## Final Workspace prompt
 

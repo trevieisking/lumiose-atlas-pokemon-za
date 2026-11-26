@@ -1,0 +1,75 @@
+{
+  "id": "AT341-CONCURRENT-WORK-RECONCILIATION",
+  "date": "2026-11-26",
+  "source_evidence": {
+    "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "retained_release_receipt_commit": "74975108bca6bb488ebcb9e86e908d7b90efe8ed",
+    "main_release": "PR202 separately merged map-filter recovery, exact place/accent/number search, original inline photographs and WZ14 source guidance. These changes are retained.",
+    "source_packet_policy": "Retain the concurrent current AT339 source packet and explicitly archive the earlier amendment baseline; do not overwrite either review history.",
+    "wz04_policy": "Preserve the concurrent six-outline production record and its separate review; the additional root WZ04 supplement remains corroborating evidence. WZ20 is the seventh outline.",
+    "workspace_observed_version": 38,
+    "workspace_source": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+    "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
+    "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
+  },
+  "resolved_plan_fields": [
+    {
+      "path": "MAPS_UPGRADE_MANIFEST.json/at_341_completion_checkpoint/status",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_state",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "AT341_final_candidate_seven_selection_outlines_61_boundaries_remaining_full_G5_A0_open",
+      "concurrent": "AT341_current_main_reconciled_six_outlines_PR204_CI_pending_G2_G3_full_G5_A0_open"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/G2_G3",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "partial_seven_reviewed_zone_selection_outlines_61_boundaries_and_comprehensive_roster_signoffs_open",
+      "concurrent": "partial_six_reviewed_zone_map_outlines_62_boundaries_and_all_comprehensive_rosters_open"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/current_completion_plan/reviewed_zone_map_outlines",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 7,
+      "concurrent": 6
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/at341/stage",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT325_RELEASE_GATE.json/at341/required_remaining/wild_zone_boundaries",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 13,
+      "concurrent": 14
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json/stage",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": "final_source_amendments_integrated_pending_exact_head_CI",
+      "concurrent": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI"
+    },
+    {
+      "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json/required_remaining/wild_zone_boundaries",
+      "choice": "later_seven_outline_candidate_value",
+      "ours": 13,
+      "concurrent": 14
+    }
+  ],
+  "original_main_and_pr_history_preserved": true,
+  "final_checks": {
+    "local_node_tests": 131,
+    "failed": 0,
+    "static": "passed",
+    "source_hashes": "passed",
+    "remote_exact_head_CI": "pending"
+  }
+}

@@ -1,5 +1,11 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+**Concurrent work preserved:** current main `4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f` and PR204 head `3e17c260fc749e3ee5bad877470ee6035601064c` include separately completed map-filter/search/photo fixes and a WZ04 review. This continuation retains them and the PR202 release receipts, then adds the independently reviewed WZ20/encounter/guide amendments. The original Workspace is recorded at **version38**, source `6f7808db2d3cfaa2bb660f381b13dbab452332ce`, after a separate three-file hotfix; this continuation makes no Workspace change. Manifest89/Ledger97 follow the separate Manifest88/Ledger96 release reconciliation.
+
+## Current source checkpoint — AT-341 / Manifest89 / Ledger97
+
+PR204's final candidate contains seven reviewed selection outlines,284 additive encounter claims and the sourced Mission008 correction. The previous exact-head browser artifact passed; final combined-head CI/screenshots and bounded deployment are pending. See [docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) and the current canonical plans. All61 remaining boundaries and comprehensive roster/guide obligations stay recorded; full G5/A0, the full-release SHA and final executable Workspace prompt remain unset. This continuation changes no Workspace source/publication, and infers no new Workspace proof from GitHub work. Older sections retain their original dates and counts.
+
 ## Current continuation — AT-341
 
 26 November 2026 · Manifest87 / Ledger95. [Completion checkpoint](docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json) records PR204 browser-test correction, private planning synchronization and remaining evidence. Full G5/A0 are still open; no new original-Workspace publication or final executable prompt is issued. Earlier dated checkpoints remain historical. Fresh metadata now confirms original version38 after its separate filter/photo hotfix. PR204 must preserve that newer baseline; it does not represent the full Workspace upgrade.

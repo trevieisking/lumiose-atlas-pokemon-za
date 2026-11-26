@@ -1,0 +1,194 @@
+{
+  "id": "AT341-WZ04-APPEND-ONLY-REVIEW-SUPPLEMENT",
+  "date": "2026-11-26",
+  "baseline_commit": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "area_id": "wz-04",
+  "status": "new_evidence_pending_independent_review_historical_hold_preserved",
+  "approved": false,
+  "production_geometry": null,
+  "scope": "Rendered map-selection outline only. No physical barrier, doorway, spawn extent, route, floor or traversal claim.",
+  "historical_candidate": {
+    "path": "docs/qa/candidates/wz04-2026-11-26/candidate-evidence.json",
+    "sha256": "6581ec9e50c05d39fc73bd4509c3c4f6142f8b5457857fbb39f44066ceeb71ad"
+  },
+  "historical_hold": {
+    "path": "docs/qa/candidates/wz04-2026-11-26/independent-review.json",
+    "sha256": "0bb921ca78f4e600073661efbec213a7784a27b96d33d7ff3e9097f7917ed151",
+    "unchanged": true
+  },
+  "source_records": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "bytes": 411683,
+      "dimensions": [
+        1920,
+        1920
+      ]
+    },
+    {
+      "path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+      "sha256": "d46ebad35a9e2e17a84bb70b990a1b37f3e33200736342e7393871a6228faa36",
+      "bytes": 532567,
+      "dimensions": [
+        1536,
+        865
+      ]
+    }
+  ],
+  "new_architecture_holdout": {
+    "id": "AT341-SW1",
+    "label": "Lower-west stepped roof southeast corner",
+    "role": "architecture_holdout",
+    "source_xy": [
+      58.5,
+      669.5
+    ],
+    "native_xy": [
+      928.5,
+      349.5
+    ],
+    "projected_native_xy": [
+      926.69510842169,
+      349.4094035313192
+    ],
+    "residual_px": 1.8071638911819734,
+    "fit_changed": false,
+    "observation": "The corner is visible left of the native red-cursor ring and below the existing west-side controls. It is a roof corner, unlike the earlier rejected H4 pavement-edge attempt. This newly checked point is not used for fitting or point selection."
+  },
+  "combined_architecture_holdouts": {
+    "count": 4,
+    "rms_px": 1.6455059440680577,
+    "max_px": 1.81262105353095
+  },
+  "unchanged_registration": {
+    "matrix": [
+      [
+        0.2743846827376428,
+        -0.03588969231041278,
+        914.0695539230477
+      ],
+      [
+        0.008291198230332945,
+        0.2120663639153156,
+        199.1779003944205
+      ],
+      [
+        4.748831494523409e-05,
+        -3.7356196451293315e-05,
+        1.0
+      ]
+    ],
+    "fit": {
+      "count": 6,
+      "rms_px": 1.0261018477352801,
+      "max_px": 1.7105684269212482
+    },
+    "border_holdout": {
+      "count": 5,
+      "rms_px": 0.8563820079038018,
+      "max_px": 1.1735796449544758
+    }
+  },
+  "gate_connector_review": [
+    {
+      "id": "north",
+      "from_vertex": 1,
+      "to_vertex": 2,
+      "native_endpoints": [
+        [
+          1086.8562651994364,
+          224.67643715470913
+        ],
+        [
+          1105.779525777668,
+          224.68721518625472
+        ]
+      ],
+      "modeled_connector_length_native_px": 18.923263647627362,
+      "offset_from_outer_approach_chord_native_px": [
+        0.03574191890780135,
+        0.06407831438110796
+      ],
+      "interpretation": "Straight selection-outline connection between the source-observed approach/inner-shoulder endpoints, excluding arrows and decorative square extents. Not a route or an assertion of hidden physical boundary pixels.",
+      "status": "pending_new_independent_review_of_explicit_rendered_selection_interpretation"
+    },
+    {
+      "id": "south",
+      "from_vertex": 6,
+      "to_vertex": 7,
+      "native_endpoints": [
+        [
+          1155.4032159113276,
+          349.18485300455137
+        ],
+        [
+          1136.6777370305565,
+          349.45045967732193
+        ]
+      ],
+      "modeled_connector_length_native_px": 18.727362500331566,
+      "offset_from_outer_approach_chord_native_px": [
+        2.592120557194461,
+        2.2602361261138975
+      ],
+      "interpretation": "Straight selection-outline connection between the source-observed approach/inner-shoulder endpoints, excluding arrows and decorative square extents. Not a route or an assertion of hidden physical boundary pixels.",
+      "status": "pending_new_independent_review_of_explicit_rendered_selection_interpretation"
+    },
+    {
+      "id": "west",
+      "from_vertex": 11,
+      "to_vertex": 12,
+      "native_endpoints": [
+        [
+          981.1540095844458,
+          297.4522138514037
+        ],
+        [
+          981.0915005445154,
+          279.1560363162281
+        ]
+      ],
+      "modeled_connector_length_native_px": 18.29628431618666,
+      "offset_from_outer_approach_chord_native_px": [
+        3.1895114557848516,
+        2.976675936618785
+      ],
+      "interpretation": "Straight selection-outline connection between the source-observed approach/inner-shoulder endpoints, excluding arrows and decorative square extents. Not a route or an assertion of hidden physical boundary pixels.",
+      "status": "pending_new_independent_review_of_explicit_rendered_selection_interpretation"
+    }
+  ],
+  "tolerance": {
+    "raster_native_px": 3,
+    "meaning": "Existing rendered-raster digitization tolerance, not physical-world uncertainty.",
+    "west_choice_note": "The western inner-shoulder connector lies up to 3.190 native px inward from the alternative outer-approach chord. That difference is explicitly reported, not rounded down to pass a three-pixel limit; the reviewer must assess the observed notch interpretation, not treat two different candidate closure choices as identical."
+  },
+  "recommendation": "Reconsider WZ04 for rendered-selection-only approval using the new southwest architectural holdout and explicit per-gate closure interpretations under the same contract used for WZ11. Do not overwrite or relabel the earlier HOLD as an approval. No independent decision is claimed here.",
+  "candidate_geometry_path": "docs/qa/candidates/wz04-2026-11-26/AT341-candidate-geometry.json",
+  "candidate_geometry_sha256": "82ef3e4c1d408c6442e05b709202278dc33ebcfb8eeb07fd60ccca7be1c160cd",
+  "geometry_changes_from_prior": "None; copied prior projected vertices and appended the first vertex solely to express an explicitly closed GeoJSON polygon.",
+  "review_artifacts": [
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/AT341-southwest-holdout-review.png",
+      "sha256": "0431ece67bbd078acef48cd7de73ee4d89ceecb88b3607720ed9f229205bbce0"
+    },
+    {
+      "path": "docs/qa/candidates/wz04-2026-11-26/AT341-gate-interpretation-review.png",
+      "sha256": "96e415481f7fee7012bf6cdc5eb6193ada5b1598ec170b6f053ca9a765731003"
+    }
+  ],
+  "reproducibility": {
+    "script_sha256": "a9472d5bbf872d49590a19fef20ffcf88399815f848032ff58082d0e475077ff"
+  },
+  "independent_review": {
+    "decision": null,
+    "approved": false,
+    "required": "Fresh inspection of SW1 originals, unchanged transform/holdouts, and the three modeled connectors with explicit selection-only interpretation. Preserve the historical decision."
+  },
+  "preservation": {
+    "prior_packet_edited": false,
+    "source_images_edited": false,
+    "runtime_edited": false,
+    "plans_edited": false
+  }
+}

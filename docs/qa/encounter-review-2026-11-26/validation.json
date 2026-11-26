@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-26",
+  "baseline_commit": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "checks": [
+    {
+      "command": "python3 scripts/build.py",
+      "result": "pass; index generated from 17 sections; pre-edit generation produced no diff"
+    },
+    {
+      "command": "node --test tests/atlas_area_evidence.test.mjs tests/side_missions_index.test.mjs",
+      "result": "pass; 14 tests, zero failures; both packet reconstructions, current Helioptile citations, all 68 review receipts and original preservation pass"
+    },
+    {
+      "command": "python3 tests/validate_static.py",
+      "result": "pass; 17 sections, 647 page links, 1431 image/script references, 578 resources"
+    },
+    {
+      "check": "Byte comparison against baseline outside the quest-8 article",
+      "result": "pass for src/sections/sidequests.html, side-missions.html and index.html; all other bytes identical"
+    },
+    {
+      "check": "Existing geometry array, 272 original model rows, 38 fixed Alpha rows, WZ20 15 ordinary/67 rotating and 20 owner photo SHA256/Git blobs",
+      "result": "pass; preserved by the targeted tests and baseline comparison"
+    },
+    {
+      "command": "node --check tests/fashion_guides_browser.mjs",
+      "result": "pass"
+    },
+    {
+      "check": "Current entire docs/qa/at339-encounters directory versus exact remote 3e17c260fc749e3ee5bad877470ee6035601064c",
+      "result": "pass; every file byte-identical, including the source packet, builder, audit and artifact hashes"
+    },
+    {
+      "check": "All runtime area data except the single Helioptile row versus our reviewed commit 628b1231089c47b5f4c3c45974503f6dd4a74ec6",
+      "result": "pass; the other 48 amended rows, Ampharos addition, all identities and review statuses are unchanged"
+    },
+    {
+      "check": "All runtime top-level fields other than areas versus remote 3e17c260fc749e3ee5bad877470ee6035601064c",
+      "result": "pass; exact remote geometries retained for separate root reconciliation"
+    },
+    {
+      "check": "Three Mission 008 guide surfaces and their dedicated tests versus our reviewed commit, then generated homepage rebuilt",
+      "result": "pass; files byte-identical to our reviewed commit and regeneration produced identical homepage bytes"
+    },
+    {
+      "check": "Deep equality of current wildZoneRecords against preserved AT339 baseline-wild-zone-records.json",
+      "result": "pass; all fields and array order remain identical, including original photos, 38 fixed Alpha rows and 67 rotating candidates"
+    }
+  ],
+  "original_packet_sha256": "39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f",
+  "amendment_sha256": "d353470f891507099acd84f9fcf78d57aafacfcc1b84d536186902f2f5263f49",
+  "browser_status": "Committed phone/desktop checks and screenshot capture are ready; exact-head CI execution and visual review remain required.",
+  "full_scope_release_signoff": false,
+  "comprehensive_roster_signoffs": 0,
+  "local_browser_execution": {
+    "status": "blocked_by_environment_before_any_page_test",
+    "attempt": "Existing browser suite launched through a local compatibility copy using the preinstalled Playwright package and /usr/bin/chromium.",
+    "reason": "The Chromium launcher exists but its target /usr/lib/chromium/chromium binary is missing; standard Chrome is also absent. No browser or screenshot success is claimed.",
+    "next_evidence": "Run the committed existing fashion-browser CI job with installed Chrome; inspect test-artifacts/fashion/mission-008-phone.png and mission-008-desktop.png."
+  },
+  "reconciled_remote_commit": "3e17c260fc749e3ee5bad877470ee6035601064c",
+  "original_packet_archive": "docs/qa/encounter-review-2026-11-26/atlas-area-evidence.e003f5f.original.json",
+  "current_reviewed_packet_sha256": "aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed"
+}

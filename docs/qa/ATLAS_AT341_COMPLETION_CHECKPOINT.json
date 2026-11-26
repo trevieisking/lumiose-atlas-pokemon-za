@@ -2,13 +2,13 @@
   "id": "AT-341",
   "date": "2026-11-26",
   "plan_id": "ATLAS-MAPS-2026-11-21-V1",
-  "manifest_revision": 87,
-  "ledger_revision": 95,
+  "manifest_revision": 89,
+  "ledger_revision": 97,
   "scope": "Continuous completion, evidence review and durable GitHub/Supabase synchronization",
-  "observed_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
-  "observed_pr_head": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+  "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
   "pr": 204,
-  "stage": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI",
+  "stage": "final_source_amendments_integrated_pending_exact_head_CI",
   "failed_run": 45818952302,
   "failure": "Four fixed test coordinate pairs were all obstructed after the preceding drag; no two-finger event dispatched",
   "correction": "Adaptively find visible separated touch starts with 12px clearance from original controls; scroll the viewport into view and settle the existing pan paint. Preserve all controls and real tap, pinch, rotation and no-selection assertions.",
@@ -33,10 +33,10 @@
   },
   "required_remaining": {
     "sector_boundaries": 48,
-    "wild_zone_boundaries": 14,
+    "wild_zone_boundaries": 13,
     "comprehensive_roster_signoffs": 68,
     "exact_new_pickup_points": 0,
-    "scope_note": "Current existing release criteria retained; no completion inferred from passing code tests"
+    "scope_note": "The 20 published standard-roster comparisons are performed and recorded; no full all-class roster certification is inferred. Existing full-scope criteria are retained."
   },
   "workstreams": [
     "Correct and re-run actual touch/browser validation",
@@ -61,6 +61,81 @@
     "no_videos": true
   },
   "release_policy": "Promote only the fully tested reviewed bounded change. Full master-plan G5/A0 remain open until mandatory data evidence is actually satisfied.",
+  "supabase_manifest_87_sync": {
+    "row_count": 46,
+    "all_revision": 87,
+    "result": "read_back_verified",
+    "previous_deployment_proofs_preserved": true,
+    "original_workspace_status_preserved": true,
+    "at328_reconciled_against_existing_at337_receipt": {
+      "pr": 191,
+      "merge": "dba74e27af1d7bdfed0795d5209b8cf38f4daf25",
+      "pages_run": 45737663295,
+      "conclusion": "success",
+      "verification_time_preserved": "2026-11-26T01:48:18.871993Z",
+      "scope": "Metadata reconciliation of previously completed route work"
+    }
+  },
+  "first_followup_ci": {
+    "head": "d1d7322e6341cd91016f576161c55da682e06834",
+    "tree": "cc84b9219df34e6506af51f22df0d5fd0dd49a0b",
+    "run": 45820839148,
+    "shared_area_suite": "passed",
+    "original_explorer_suite": "passed",
+    "remaining_browser_suites": "passed",
+    "promotion": "not_yet_final_source_amendments_under_review",
+    "overall_conclusion": "success",
+    "artifact_id": 15116764303,
+    "artifact_sha256": "1bae49a22be26fa37280d3e9049ec44bb1d375a294dd1f512982f8a4a9e38601",
+    "independent_visual_review": "docs/qa/ATLAS_AT341_BROWSER_REVIEW.json"
+  },
+  "independent_interaction_review": "docs/qa/ATLAS_AT341_INTERACTION_REVIEW.json",
+  "final_candidate": {
+    "stage": "final_source_amendments_integrated_pending_exact_head_CI",
+    "pr": 204,
+    "last_reviewed_remote_head": "d1d7322e6341cd91016f576161c55da682e06834",
+    "previous_exact_head_browser_result": "passed_and_artifact_visually_reviewed",
+    "geometry_review": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+    "boundary_source_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+    "approved_selection_outlines": [
+      "wz-02",
+      "wz-03",
+      "wz-04",
+      "wz-05",
+      "wz-11",
+      "wz-16",
+      "wz-20"
+    ],
+    "remaining_boundaries": 61,
+    "comprehensive_roster_signoffs": 0,
+    "encounter_review": "docs/qa/encounter-review-2026-11-26/area-review.json",
+    "encounter_amendments": "docs/qa/encounter-review-2026-11-26/amendments.json",
+    "preserved_original_encounter_rows": 272,
+    "additive_encounter_claims": 284,
+    "total_encounter_rows": 556,
+    "additive_status_counts": {
+      "owner_survey_correlated": 140,
+      "source_corroborated": 24,
+      "source_lead": 112,
+      "disputed": 8
+    },
+    "published_standard_roster_review": {
+      "areas_compared": 20,
+      "ordinary_source_agreement": 17,
+      "owner_ordinary_core_reconciled": 13,
+      "preserved_alpha_sets_reconciled": 20,
+      "full_comprehensive_signoff": false
+    },
+    "guide_correction": "Mission008: Branche, water-cleared approach, north ladder/twig distinction, exact rewards and level14 gift; original quest/progress identity retained",
+    "preservation": "Original images, native map, original geometry records/markers, collection records, player progress, accounts, Supabase runtime and feedback unchanged; no new exact pickup pins",
+    "workspace_changed": false,
+    "full_implementation_complete": false,
+    "full_workspace_prompt_ready": false,
+    "supabase_sync": "48 private planning rows confirmed at Manifest89; all46 previous statuses and proof fields, all Workspace fields and notes preserved, including concurrent PR202 release receipts.",
+    "next": "Final combined-head CI and actual phone/desktop screenshots; then reviewed bounded merge, exact Pages deployment and live checks.",
+    "local_validation": "docs/qa/ATLAS_AT341_FINAL_CANDIDATE_VALIDATION.json",
+    "current_remote_parent": "3e17c260fc749e3ee5bad877470ee6035601064c"
+  },
   "reconciliation": {
     "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
     "observed_pr_head": "d1d7322e6341cd91016f576161c55da682e06834",
@@ -80,5 +155,33 @@
     "current_validation": "reconciled_candidate_pending_exact_head_browser_CI",
     "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
   },
-  "initial_checkpoint_preserved": true
+  "initial_checkpoint_preserved": true,
+  "at341_concurrent_work_preservation": {
+    "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "retained_release_receipt_commit": "74975108bca6bb488ebcb9e86e908d7b90efe8ed",
+    "main_release": "PR202 separately merged map-filter recovery, exact place/accent/number search, original inline photographs and WZ14 source guidance. These changes are retained.",
+    "source_packet_policy": "Retain the concurrent current AT339 source packet and explicitly archive the earlier amendment baseline; do not overwrite either review history.",
+    "wz04_policy": "Preserve the concurrent six-outline production record and its separate review; the additional root WZ04 supplement remains corroborating evidence. WZ20 is the seventh outline.",
+    "workspace_observed_version": 38,
+    "workspace_source": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+    "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
+    "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
+  },
+  "supabase_manifest_89_sync": {
+    "row_count": 48,
+    "manifest_revision": 89,
+    "previous_rows": 46,
+    "previous_status_and_proof_fields_preserved": true,
+    "workspace_fields_preserved": true,
+    "notes_preserved": true,
+    "new_rows": [
+      "AT-341-ZONE-OUTLINES",
+      "AT-341-ENCOUNTER-REVIEW"
+    ],
+    "recorded_at": "2026-11-26",
+    "source": "private planning metadata read-back",
+    "report_player_schema_changes": false
+  }
 }

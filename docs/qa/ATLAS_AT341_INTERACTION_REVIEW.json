@@ -1,0 +1,47 @@
+{
+  "scope": "Independent static review of shared-map integration preservation; excludes map/encounter factual certification and complete master-plan signoff",
+  "head_sha": "d1d7322e6341cd91016f576161c55da682e06834",
+  "files": {
+    "atlas-area-ui.mjs": "23e42b546fd3d15361f20e6ce5699b71a76966d059b8906b2f7304a53442c212",
+    "atlas-area-surfaces.mjs": "80f22dc1ac0b3171a36e26976ea9e2a06ef5277cf97bd0a227f5c14f7e241810",
+    "atlas-explorer.js": "571c4b401860e7deb37c6c2efa005b0235fc0420c1442ed7c43b77e1536a519f",
+    "atlas-collectibles-ui.mjs": "4be768a17169d5aadd92ead78a4b3786c703c6e3a77f327ed5e698ff5a9360d6",
+    "maps.js": "3e3544e9698427198ca13308a03eae772bc44264c53d4f3012ffcacae0fdfbab",
+    "sector-maps.js": "8117e865a894ae808607058c9f1026d7be18325fb1636e3136fce2014f77e05c",
+    "app.js": "207447633d504074d193bbbe92e74cd35f2a338567fd4c104babeec36315d7e1",
+    "tests/atlas_area_browser.mjs": "ad0ed402d926d11c3913d910fa236c95162e6f476672e5200ef33ad6ff40a8c4"
+  },
+  "findings": [
+    {
+      "area": "player progress",
+      "result": "No must-fix finding",
+      "evidence": "atlas-area-ui/model/surfaces use no storage API. atlas-collectibles-ui reads the original progress key and has no setItem/removeItem/clear calls. Existing app checklist write path remains distinct."
+    },
+    {
+      "area": "camera gestures",
+      "result": "No must-fix finding",
+      "evidence": "Shared overlay pointer-events:none and capture-phase tap tracker do not replace the existing pan/pinch/rotate handler. Click selection is blocked after >6px movement or multitouch."
+    },
+    {
+      "area": "collectible priority",
+      "result": "No must-fix finding",
+      "evidence": "Area canSelectBoundary calls collectibleUI.hasSelectablePointAt using the same visible record matcher, projection and 24px radius used by actual collection selection."
+    },
+    {
+      "area": "photo and route preservation",
+      "result": "No must-fix finding",
+      "evidence": "selectRecord rebuilds details only when selectedId changes. syncingArea prevents route re-selection/reset. Explicit Holovator choice clears prior shared area without clearing selected access record."
+    },
+    {
+      "area": "history and startup races",
+      "result": "No must-fix finding",
+      "evidence": "Legacy original-control intent is queued or reflected in URL before optional model completion, superseded by newer history, and restored only when still current. New area URL generation preserves unrelated query parameters and non-area place links."
+    },
+    {
+      "area": "evidence fallback",
+      "result": "No must-fix finding",
+      "evidence": "Optional area-register failure falls back to original area/roster model with no approved geometry. Separate map/collection failures show independent status without replacing original controls."
+    }
+  ],
+  "validation_limit": "Actual real-touch exact-head browser suite remains required. No cloud preview was performed after automatic approval rejected localhost access."
+}

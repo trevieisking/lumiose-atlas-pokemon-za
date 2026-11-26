@@ -1,0 +1,416 @@
+{
+  "id": "AT341-WZ20-MANUAL-OBSERVATIONS",
+  "date": "2026-11-26",
+  "baseline_commit": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "area_id": "wz-20",
+  "native_map": "maps/lumiose-game-map.jpg",
+  "overview": "assets/atlas/wild-zones/wild-zone-20-overview.png",
+  "closeup": "assets/atlas/wild-zones/wild-zone-20-closeup.png",
+  "primary_registration": {
+    "source": "overview",
+    "target": "native",
+    "points": [
+      {
+        "id": "F1",
+        "role": "fit",
+        "label": "NW courtyard upper-left",
+        "source_xy": [
+          311.5,
+          66.5
+        ],
+        "target_xy": [
+          869.75,
+          760.25
+        ]
+      },
+      {
+        "id": "F2",
+        "role": "fit",
+        "label": "NW courtyard upper-right",
+        "source_xy": [
+          394,
+          38
+        ],
+        "target_xy": [
+          910.75,
+          747.5
+        ]
+      },
+      {
+        "id": "F3",
+        "role": "fit",
+        "label": "West roof upper-left",
+        "source_xy": [
+          56,
+          430
+        ],
+        "target_xy": [
+          738,
+          947
+        ]
+      },
+      {
+        "id": "F4",
+        "role": "fit",
+        "label": "East canal northwest",
+        "source_xy": [
+          831.5,
+          492
+        ],
+        "target_xy": [
+          1129.75,
+          983.75
+        ]
+      },
+      {
+        "id": "F5",
+        "role": "fit",
+        "label": "Tower southwest lower chamfer",
+        "source_xy": [
+          361.5,
+          597
+        ],
+        "target_xy": [
+          887.75,
+          1034.5
+        ]
+      },
+      {
+        "id": "F6",
+        "role": "fit",
+        "label": "Tower southeast lower chamfer",
+        "source_xy": [
+          626.5,
+          593
+        ],
+        "target_xy": [
+          1022.75,
+          1034.5
+        ]
+      },
+      {
+        "id": "H1",
+        "role": "holdout",
+        "label": "NW courtyard lower-right",
+        "source_xy": [
+          424.5,
+          122.5
+        ],
+        "target_xy": [
+          923.5,
+          791
+        ]
+      },
+      {
+        "id": "H2",
+        "role": "holdout",
+        "label": "NW courtyard lower-left",
+        "source_xy": [
+          340.5,
+          150
+        ],
+        "target_xy": [
+          881,
+          803.25
+        ]
+      },
+      {
+        "id": "H3",
+        "role": "holdout",
+        "label": "West roof lower-right",
+        "source_xy": [
+          151.5,
+          511.5
+        ],
+        "target_xy": [
+          783.75,
+          987
+        ]
+      },
+      {
+        "id": "H4",
+        "role": "holdout",
+        "label": "West roof upper-right",
+        "source_xy": [
+          138.5,
+          429.5
+        ],
+        "target_xy": [
+          778.5,
+          947
+        ]
+      },
+      {
+        "id": "H5",
+        "role": "holdout",
+        "label": "East canal southwest",
+        "source_xy": [
+          806,
+          567
+        ],
+        "target_xy": [
+          1117.5,
+          1022.5
+        ]
+      }
+    ],
+    "method": "Six manually identified architectural controls, projective least squares without RANSAC; five independent withheld architectural points. No perimeter or UI point fitted. Manual raster intersections are approximate."
+  },
+  "closeup_registration": {
+    "source": "closeup",
+    "target": "overview",
+    "points": [
+      {
+        "id": "C1",
+        "role": "fit",
+        "label": "West roof upper-left",
+        "source_xy": [
+          253.5,
+          369
+        ],
+        "target_xy": [
+          56,
+          430
+        ]
+      },
+      {
+        "id": "C2",
+        "role": "fit",
+        "label": "East canal northwest",
+        "source_xy": [
+          1467.5,
+          465.5
+        ],
+        "target_xy": [
+          831.5,
+          492
+        ]
+      },
+      {
+        "id": "C3",
+        "role": "fit",
+        "label": "Tower southwest lower chamfer",
+        "source_xy": [
+          721,
+          634
+        ],
+        "target_xy": [
+          361.5,
+          597
+        ]
+      },
+      {
+        "id": "C4",
+        "role": "fit",
+        "label": "Tower southeast lower chamfer",
+        "source_xy": [
+          1138,
+          627
+        ],
+        "target_xy": [
+          626.5,
+          593
+        ]
+      },
+      {
+        "id": "C5",
+        "role": "fit",
+        "label": "Tower northwest upper ledge",
+        "source_xy": [
+          711,
+          171
+        ],
+        "target_xy": [
+          352.5,
+          308.5
+        ]
+      },
+      {
+        "id": "C6",
+        "role": "fit",
+        "label": "Tower northeast upper ledge",
+        "source_xy": [
+          1136,
+          166
+        ],
+        "target_xy": [
+          620,
+          306
+        ]
+      },
+      {
+        "id": "CH1",
+        "role": "holdout",
+        "label": "West roof lower-right corner feature",
+        "source_xy": [
+          397.1175842285156,
+          494.5386962890625
+        ],
+        "target_xy": [
+          152.22421264648438,
+          511.3980407714844
+        ]
+      },
+      {
+        "id": "CH2",
+        "role": "holdout",
+        "label": "East canal southwest corner feature",
+        "source_xy": [
+          1427.3734130859375,
+          584.934326171875
+        ],
+        "target_xy": [
+          805.561279296875,
+          567.5118408203125
+        ]
+      },
+      {
+        "id": "CH3",
+        "role": "holdout",
+        "label": "Tower northwest upper-right ledge",
+        "source_xy": [
+          772,
+          170
+        ],
+        "target_xy": [
+          393,
+          308.5
+        ]
+      },
+      {
+        "id": "CH4",
+        "role": "holdout",
+        "label": "Tower northeast upper-left ledge",
+        "source_xy": [
+          1075,
+          166
+        ],
+        "target_xy": [
+          581,
+          306.5
+        ]
+      }
+    ],
+    "method": "Six manually identified architectural controls, projective least squares without RANSAC; four withheld architectural points. CH1/CH2 are distinct corner descriptors proposed by SIFT and visually checked; no UI or perimeter point fitted. Composed through the independently calibrated overview."
+  },
+  "trace": {
+    "native": {
+      "seed": [
+        955,
+        958
+      ],
+      "radial_range": [
+        120,
+        131,
+        0.125
+      ],
+      "angle_step_degrees": 0.5,
+      "exclude_angle_spans_center_halfwidth": [
+        [
+          -88,
+          12
+        ],
+        [
+          178,
+          12
+        ],
+        [
+          19,
+          13
+        ],
+        [
+          89,
+          20
+        ]
+      ],
+      "method": "Darkest green line in manually inspected narrow perimeter search window; all eligible rays retained. Even half-degree rays fit the ellipse; alternate half-degree rays held out. Window separates neighboring WZ05 perimeter and interior tower/cafe details seen in earlier failures."
+    },
+    "overview": {
+      "seed": [
+        490,
+        454
+      ],
+      "radial_range": [
+        230,
+        270,
+        0.125
+      ],
+      "angle_step_degrees": 1,
+      "exclude_angle_spans_center_halfwidth": [
+        [
+          -87,
+          13
+        ],
+        [
+          178,
+          12
+        ],
+        [
+          18,
+          13
+        ],
+        [
+          86,
+          26
+        ]
+      ],
+      "method": "Maximum green excess over red/blue along source perimeter search window. Used solely as independent checks after architecture calibration; never fits native ellipse."
+    },
+    "closeup": {
+      "seed": [
+        927,
+        397
+      ],
+      "radial_range": [
+        375,
+        410,
+        0.125
+      ],
+      "angle_step_degrees": 1,
+      "exclude_angle_spans_center_halfwidth": [
+        [
+          -87,
+          10
+        ],
+        [
+          178,
+          10
+        ],
+        [
+          19,
+          10
+        ],
+        [
+          94,
+          14
+        ],
+        [
+          64,
+          5
+        ]
+      ],
+      "method": "Maximum green excess over red/blue along source perimeter search window. Excluded north/west/east gate symbols, south Centrico Plaza icon and southwest gate, and southeast place-name lettering. Used solely for corroboration after composition, never fits native ellipse."
+    }
+  },
+  "raster_tolerance_native_px": 3,
+  "uncertainty_scope": "Tolerance for finite-width rendered green stroke and manual image-coordinate picks; not physical/geographic/spawn/route precision. Occluded gate/icon spans are modeled continuations of the measured rendered circular selection footprint and require independent reviewer acceptance. No doorway, floor, walkability or inaccessible-area claim.",
+  "mask_interpretation": "Angle origin points right; positive angles turn down in image coordinates. Spans are visual masks selected from original icons/gates/text, not held-out residual filtering.",
+  "manual_pick_correction": {
+    "changed": [
+      "F5",
+      "F6"
+    ],
+    "reason": "First source picks were on inner tower fill above the bottom chamfer stroke; original enlarged image identified stroke-center joints. Corrected F5/F6 source pixels only, all five withheld target observations retained unchanged. Initial points and output preserved."
+  },
+  "review_crop_native": [
+    800,
+    810,
+    1110,
+    1110
+  ],
+  "source_sha256": {
+    "native_map": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "overview": "2aa00d0864249d212439283857ee065022bef51b25e4a3ec5d4c66fac930a3a6",
+    "closeup": "4bdfaf330e505cbf3d3a73d843039450866a3045a860af35edc006697b4d1a4a"
+  }
+}

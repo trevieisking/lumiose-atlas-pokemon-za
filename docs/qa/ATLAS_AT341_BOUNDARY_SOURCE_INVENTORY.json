@@ -1,0 +1,3112 @@
+{
+  "id": "AT341-BOUNDARY-SOURCE-INVENTORY",
+  "date": "2026-11-26",
+  "status": "immutable_evidence_snapshot_not_the_canonical_release_gate",
+  "baseline_commit": "e003f5ffa8629c7a9c52da1bbd7bd78b9103354d",
+  "purpose": "Resume all 68 areas from exact retained sources and missing steps. Parent release records any subsequent independent WZ04/WZ20 decisions separately. Do not relax G2/G3 or conflate label vicinity with enclosing boundaries.",
+  "scope": "Original map images and rendered-selection geometry only; no runtime, encounter, route, pin, progress or Supabase changes.",
+  "counts_at_baseline": {
+    "sector_records": 48,
+    "unique_sector_images": 42,
+    "zone_records": 20,
+    "zone_images": 40,
+    "approved_selection_outlines": 5,
+    "unresolved_sector_boundaries": 48,
+    "unresolved_zone_boundaries": 15,
+    "unresolved_total": 63,
+    "new_review_packets": [
+      "wz-04",
+      "wz-20"
+    ],
+    "sectors_with_written_bearings": 31
+  },
+  "conditional_counts_not_approvals": {
+    "if_one_pending_packet_approved": {
+      "approved_zone_outlines": 6,
+      "unresolved_boundaries": 62
+    },
+    "if_both_pending_packets_approved": {
+      "approved_zone_outlines": 7,
+      "unresolved_boundaries": 61
+    }
+  },
+  "source_integrity": {
+    "sector_references_verified": 48,
+    "sector_unique_files_verified": 42,
+    "wild_zone_files_verified_against_preserved_trial_hashes": 40,
+    "owner_crops_verified_against_manifest": 8,
+    "mismatches": 0,
+    "native_map": {
+      "path": "maps/lumiose-game-map.jpg",
+      "bytes": 411683,
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "dimensions": [
+        1920,
+        1920
+      ]
+    },
+    "input_data": {
+      "path": "atlas-explorer-data.json",
+      "bytes": 171593,
+      "sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa"
+    },
+    "baseline_approved_evidence": {
+      "path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "bytes": 224394,
+      "sha256": "233c271528c7d0523fb17ae9255c2c97b1c59b484cf9ebc8945d12e62ceff5e1"
+    }
+  },
+  "sector_perimeter_evidence_limit": "Supplied crop records identify names and street context but do not record complete numbered-sector perimeter lines or reviewed polygons. Native map lacks a complete numbered-sector boundary layer. An independently calibrated label barycenter can only support orientation framing, never an enclosing polygon.",
+  "zones": [
+    {
+      "area_id": "wz-01",
+      "name": "Wild Zone 01",
+      "district": "Vert",
+      "existing_orientation_centre": [
+        1140,
+        1761
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-01-overview.png",
+          "bytes": 869924,
+          "sha256": "5f8fa6a5333c0d2e2e442325c762c831ba9d39b416a7cf4b0534b7a7dc9dc67e",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-01-closeup.png",
+          "bytes": 792456,
+          "sha256": "5ddb4844dfcd0911ed95494822856b5d521487de49f266696ce39e90a7112249",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 21,
+          "fit_rms_px": 0.6527401063847853,
+          "holdout_all_median_px": 388.78864247315886,
+          "holdout_all_max_px": 1457.097956631073,
+          "holdout_within_3px": 4,
+          "source_path": "assets/atlas/wild-zones/wild-zone-01-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.31943574108101014,
+          "holdout_all_median_px": 299.16429324799105,
+          "holdout_all_max_px": 2383.693164502558,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-01-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation.",
+      "prior_owner_crop_screening": {
+        "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+        "visual_decision": "The central label and its wing cover different parts of the narrow edge across frames. No whole perimeter accepted.",
+        "source_names": [
+          "1000028697.jpg",
+          "1000028701.jpg",
+          "1000028702.jpg"
+        ],
+        "screening_only": true
+      }
+    },
+    {
+      "area_id": "wz-02",
+      "name": "Wild Zone 02",
+      "district": "Vert",
+      "existing_orientation_centre": [
+        1175,
+        1269
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-02-overview.png",
+          "bytes": 1102975,
+          "sha256": "d0e27a90128eec6321eab091fd098bdba6d12cc869b716b55730406f4b23487f",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-02-closeup.png",
+          "bytes": 791357,
+          "sha256": "22cb8f4cf662e1504adaf7ba2706cf8a3e96e7728074f2b3c9f66bbafc79b48b",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 29,
+          "fit_rms_px": 0.7607810069891615,
+          "holdout_all_median_px": 515.9403627994261,
+          "holdout_all_max_px": 1288.288365692789,
+          "holdout_within_3px": 3,
+          "source_path": "assets/atlas/wild-zones/wild-zone-02-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 7,
+          "fit_rms_px": 0.3167833269421961,
+          "holdout_all_median_px": 499.84892034684265,
+          "holdout_all_max_px": 1022.4360793378889,
+          "holdout_within_3px": 2,
+          "source_path": "assets/atlas/wild-zones/wild-zone-02-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "approved_rendered_selection_outline",
+      "approval_evidence_id": "AT339-WZ02-NATIVE-PERIMETER",
+      "approval_evidence_path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "remaining_gap_for_selection_outline": null,
+      "next_action": "Preserve the existing reviewed outline and original source hashes. Do not reinterpret it as physical walkability or comprehensive encounters.",
+      "prior_owner_crop_screening": {
+        "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+        "visual_decision": "Three views corroborate the circular footprint. 1000028701 is rejected for the complete-outline check: the red cursor removes part of the southeast border.",
+        "source_names": [
+          "1000028697.jpg",
+          "1000028698.jpg",
+          "1000028701.jpg",
+          "1000028702.jpg"
+        ],
+        "screening_only": true
+      }
+    },
+    {
+      "area_id": "wz-03",
+      "name": "Wild Zone 03",
+      "district": "Rouge",
+      "existing_orientation_centre": [
+        954,
+        536
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-03-overview.png",
+          "bytes": 1078309,
+          "sha256": "63946ab0aa155a1852cbde4943904eed932067e9ddfffad52be287d22492e5c7",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-03-closeup.png",
+          "bytes": 684223,
+          "sha256": "b0b60db9bcb7599d2c4ef90fdb96552383018a55133321f5767e0d95d11ccc60",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 20,
+          "fit_rms_px": 1.3246024079515824,
+          "holdout_all_median_px": 273.725185858564,
+          "holdout_all_max_px": 1226.5679115086878,
+          "holdout_within_3px": 7,
+          "source_path": "assets/atlas/wild-zones/wild-zone-03-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.816278207243523,
+          "holdout_all_median_px": 226.64368653566135,
+          "holdout_all_max_px": 419.80506871311053,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-03-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "approved_rendered_selection_outline",
+      "approval_evidence_id": "AT339-WZ03-NATIVE-PERIMETER",
+      "approval_evidence_path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "remaining_gap_for_selection_outline": null,
+      "next_action": "Preserve the existing reviewed outline and original source hashes. Do not reinterpret it as physical walkability or comprehensive encounters.",
+      "prior_owner_crop_screening": {
+        "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+        "visual_decision": "All four images corroborate the oval outline. The two gate approaches still need landmark checks before approval.",
+        "source_names": [
+          "1000028696.jpg",
+          "1000028699.jpg",
+          "1000028700.jpg",
+          "1000028703.jpg"
+        ],
+        "screening_only": true
+      }
+    },
+    {
+      "area_id": "wz-04",
+      "name": "Wild Zone 04",
+      "district": "Rouge",
+      "existing_orientation_centre": [
+        1081,
+        284
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+          "bytes": 938497,
+          "sha256": "1539b255f8a617b5eec88b47bd068694283de101b88a2d24a36785d49b036c0e",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+          "bytes": 532567,
+          "sha256": "d46ebad35a9e2e17a84bb70b990a1b37f3e33200736342e7393871a6228faa36",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 12,
+          "fit_rms_px": 0.9307862342331266,
+          "holdout_all_median_px": 714.0943508501811,
+          "holdout_all_max_px": 1332.053867012615,
+          "holdout_within_3px": 2,
+          "source_path": "assets/atlas/wild-zones/wild-zone-04-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.7091328182211092,
+          "holdout_all_median_px": 846.3735041594466,
+          "holdout_all_max_px": 1439.595506326373,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "historical_hold_new_supplement_pending_independent_review",
+      "candidate_path": "docs/qa/candidates/wz04-2026-11-26/candidate-evidence.json",
+      "historical_decision_path": "docs/qa/candidates/wz04-2026-11-26/independent-review.json",
+      "supplement_path": "docs/qa/candidates/wz04-2026-11-26/AT341-supplement.json",
+      "remaining_gap_for_selection_outline": "Fresh independent decision on the three explicit modeled gate connectors, informed by the new southwest architectural holdout. Historical HOLD remains unchanged.",
+      "next_action": "Review AT341-southwest-holdout-review.png and AT341-gate-interpretation-review.png; independently reproject SW1 with unchanged transform and decide rendered-selection-only closure. Preserve prior HOLD as history.",
+      "prior_owner_crop_screening": {
+        "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+        "visual_decision": "The red cursor and zone badge defeat the thresholded basemap comparison. The two owner views show the rectangle; use them for manual edge picks rather than publishing the automated contour.",
+        "source_names": [
+          "1000028696.jpg",
+          "1000028700.jpg"
+        ],
+        "screening_only": true
+      }
+    },
+    {
+      "area_id": "wz-05",
+      "name": "Wild Zone 05",
+      "district": "Bleu",
+      "existing_orientation_centre": [
+        795,
+        1119
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-05-overview.png",
+          "bytes": 1191635,
+          "sha256": "041d7774dafb2a2b8636c20fcc71268b2460399d20bbe7eb643d41bf05aba843",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-05-closeup.png",
+          "bytes": 1008801,
+          "sha256": "c970f04cc400ce8bfca46676b32a92bdc8ac433b364e51273dedd2e6293816a7",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 8,
+          "fit_rms_px": 1.135907899893642,
+          "holdout_all_median_px": 746.9308844214526,
+          "holdout_all_max_px": 2260.7157994068925,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-05-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 7,
+          "fit_rms_px": 0.6060354755358065,
+          "holdout_all_median_px": 1332.0053344441003,
+          "holdout_all_max_px": 2214.5174510124034,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-05-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "approved_rendered_selection_outline",
+      "approval_evidence_id": "AT339-WZ05-NATIVE-PERIMETER",
+      "approval_evidence_path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "remaining_gap_for_selection_outline": null,
+      "next_action": "Preserve the existing reviewed outline and original source hashes. Do not reinterpret it as physical walkability or comprehensive encounters."
+    },
+    {
+      "area_id": "wz-06",
+      "name": "Wild Zone 06",
+      "district": "Jaune",
+      "existing_orientation_centre": [
+        1745,
+        995
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-06-overview.png",
+          "bytes": 814177,
+          "sha256": "24618de5ceab0b75a14a8ae4aded19bdc726d145587115a1efc62c4c6f3a669b",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-06-closeup.png",
+          "bytes": 705629,
+          "sha256": "a2ebfa92cc561c7c059b876933f9164d9922565dae55be113643b873f2055d9d",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.9383268328046152,
+          "holdout_all_median_px": 613.7922760113692,
+          "holdout_all_max_px": 1314.7930867402938,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-06-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.6691668799751481,
+          "holdout_all_median_px": 921.7280260109776,
+          "holdout_all_max_px": 1468.3517130711996,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-06-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation.",
+      "prior_owner_crop_screening": {
+        "path": "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+        "visual_decision": "Both independent photos show the northeast and south edges. The comparison is confounded by the basemap caf\u00e9 and zone badge; trace those segments manually.",
+        "source_names": [
+          "1000028698.jpg",
+          "1000028700.jpg"
+        ],
+        "screening_only": true
+      }
+    },
+    {
+      "area_id": "wz-07",
+      "name": "Wild Zone 07",
+      "district": "Magenta",
+      "existing_orientation_centre": [
+        561,
+        835
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-07-overview.png",
+          "bytes": 1071443,
+          "sha256": "266d54c15a96ed8374998ff2b64ac69abb8812bbc246ab21688a1b8fa58a3ff4",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-07-closeup.png",
+          "bytes": 773128,
+          "sha256": "381cd6f08cbc943ad861cabdd0303a7c888907c31aa88982f949c08cf8c6d017",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.8599947723519293,
+          "holdout_all_median_px": 1084.3838948812022,
+          "holdout_all_max_px": 1863.9314093151718,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-07-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 4,
+          "fit_rms_px": 1.461788177996424e-10,
+          "holdout_all_median_px": 2023.0567597635313,
+          "holdout_all_max_px": 2023.0567597635313,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-07-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "Overview inspected: round green selection lead with original UI and nearby red nightly Battle Zone. Red nightly shading is excluded from permanent geometry; no named calibration or polygon completed."
+    },
+    {
+      "area_id": "wz-08",
+      "name": "Wild Zone 08",
+      "district": "Jaune",
+      "existing_orientation_centre": [
+        1380,
+        820
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-08-overview.png",
+          "bytes": 1011579,
+          "sha256": "ff0730f525b047710cb4178360232ab22a5f653577f39db678c7d37b2b7ab53e",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-08-closeup.png",
+          "bytes": 766315,
+          "sha256": "0b7cc023a82f1678c67f384d629b76c87e8ec7d55cbb1daccbbf01ba96bbf5be",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.7324719363504025,
+          "holdout_all_median_px": 691.9739959432557,
+          "holdout_all_max_px": 824.4692274576855,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-08-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 1.0359037857368205,
+          "holdout_all_median_px": 718.1710249649657,
+          "holdout_all_max_px": 896.6000164773457,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-08-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "Overview inspected: round green selection lead with original UI and nearby red nightly Battle Zone. Red nightly shading is excluded from permanent geometry; no named calibration or polygon completed."
+    },
+    {
+      "area_id": "wz-09",
+      "name": "Wild Zone 09",
+      "district": "Magenta",
+      "existing_orientation_centre": [
+        250,
+        1069
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-09-overview.png",
+          "bytes": 1010622,
+          "sha256": "683e52935c81531e3e0d686b669eef21d7f27f5ecaf9c24af8b826818f3aaf35",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-09-closeup.png",
+          "bytes": 920472,
+          "sha256": "a5d02623fb78d0eef79d34798c18126423bf5e3e3242c7a16f06d318681a6e83",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 7,
+          "fit_rms_px": 1.280367099542392,
+          "holdout_all_median_px": 933.7138755741819,
+          "holdout_all_max_px": 3465.950559251821,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-09-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.21087211823088509,
+          "holdout_all_median_px": 1036.0229401605302,
+          "holdout_all_max_px": 1261.4018483749924,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-09-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-10",
+      "name": "Wild Zone 10",
+      "district": "Bleu",
+      "existing_orientation_centre": [
+        309,
+        1281
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-10-overview.png",
+          "bytes": 1105477,
+          "sha256": "db229a670bce22aa5c3b933d616823c25ad18a5a77e5359a7231371e6a076982",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-10-closeup.png",
+          "bytes": 882663,
+          "sha256": "9db4ead9db81632128bded4e2b1c39a363c843c024a794a739af8086f785f21d",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 6,
+          "fit_rms_px": 1.0261757231204607,
+          "holdout_all_median_px": 826.0955277275752,
+          "holdout_all_max_px": 3092.9662200764465,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-10-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.922494812461105,
+          "holdout_all_median_px": 755.4207833303396,
+          "holdout_all_max_px": 868.9659768705181,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-10-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-11",
+      "name": "Wild Zone 11",
+      "district": "Jaune",
+      "existing_orientation_centre": [
+        1580,
+        1135
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+          "bytes": 977008,
+          "sha256": "5cbb911948d31ffbe796ac9aeb8c26d8a95cd8494a7db58d2f162c8af74c3e9c",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-11-closeup.png",
+          "bytes": 809481,
+          "sha256": "580caa7e3b217969bd3bf2e044466434a304d2af633a3261a807db3711278e0a",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 10,
+          "fit_rms_px": 0.6773972797440547,
+          "holdout_all_median_px": 841.7238217895592,
+          "holdout_all_max_px": 1413.3386699259534,
+          "holdout_within_3px": 1,
+          "source_path": "assets/atlas/wild-zones/wild-zone-11-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.7887576243840775,
+          "holdout_all_median_px": 468.21158251587514,
+          "holdout_all_max_px": 1483.2509170367034,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-11-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "approved_rendered_selection_outline",
+      "approval_evidence_id": "AT339-WZ11-NATIVE-PERIMETER",
+      "approval_evidence_path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "remaining_gap_for_selection_outline": null,
+      "next_action": "Preserve the existing reviewed outline and original source hashes. Do not reinterpret it as physical walkability or comprehensive encounters."
+    },
+    {
+      "area_id": "wz-12",
+      "name": "Wild Zone 12",
+      "district": "Bleu",
+      "existing_orientation_centre": [
+        801,
+        1571
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-12-overview.png",
+          "bytes": 1024678,
+          "sha256": "e817df8164d3edd0a5070c0fbe8b46da46f8b80d7d91ae93f626aa5484f7ee7a",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-12-closeup.png",
+          "bytes": 683457,
+          "sha256": "cf95b951cd0d7986d08961b12112b5c0e13917113461ff41c2e6b339c733b253",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 8,
+          "fit_rms_px": 0.36874985024574425,
+          "holdout_all_median_px": 756.3459047451263,
+          "holdout_all_max_px": 1496.8564427348692,
+          "holdout_within_3px": 3,
+          "source_path": "assets/atlas/wild-zones/wild-zone-12-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 12,
+          "fit_rms_px": 0.8320576518488547,
+          "holdout_all_median_px": 1012.7751727146962,
+          "holdout_all_max_px": 1741.5259902007501,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-12-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "Overview inspected as a perimeter lead; original gate/UI masking and calibration still need full review. No geometry created."
+    },
+    {
+      "area_id": "wz-13",
+      "name": "Wild Zone 13",
+      "district": "Rouge",
+      "existing_orientation_centre": [
+        776,
+        144
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+          "bytes": 806946,
+          "sha256": "24e0b104100e13da41aac51e0d62c665b48347267379fe4a69c257455d60d7bf",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+          "bytes": 488157,
+          "sha256": "e71f8608394c45f61891b55a5c844335c5a90159f306019ec26700bcd006f7f1",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 11,
+          "fit_rms_px": 0.5475643898245444,
+          "holdout_all_median_px": 783.827844743023,
+          "holdout_all_max_px": 1498.726021415464,
+          "holdout_within_3px": 4,
+          "source_path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.9921539434500207,
+          "holdout_all_median_px": 888.5055733607915,
+          "holdout_all_max_px": 1620.8152205439337,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "Overview inspected as a perimeter lead; original gate/UI masking and calibration still need full review. No geometry created."
+    },
+    {
+      "area_id": "wz-14",
+      "name": "Wild Zone 14",
+      "district": "Magenta",
+      "existing_orientation_centre": [
+        209,
+        801
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+          "bytes": 1080011,
+          "sha256": "771712e2edcf21f53115d6e280c09b894a358911cf6e49ac69896935075ba854",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-closeup.png",
+          "bytes": 677026,
+          "sha256": "325b67133a926c57c0ff7416002a51444c468d752222da06232accda84ecf579",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 6,
+          "fit_rms_px": 0.9272358418638881,
+          "holdout_all_median_px": 607.054230184522,
+          "holdout_all_max_px": 14619.317143177954,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.23624635079308506,
+          "holdout_all_median_px": 708.3696927288577,
+          "holdout_all_max_px": 1349.7975958087852,
+          "holdout_within_3px": 1,
+          "source_path": "assets/atlas/wild-zones/wild-zone-14-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-15",
+      "name": "Wild Zone 15",
+      "district": "Jaune",
+      "existing_orientation_centre": [
+        1546,
+        346
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+          "bytes": 813927,
+          "sha256": "aeaecfdbc88bcc581a9deb2443410073a12c14f1ea97130c52a6969aa2865e9b",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-15-closeup.png",
+          "bytes": 641604,
+          "sha256": "33bb21de0a197e8247b0a932868520ce221366b24e5782186953e1ff69724e7e",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.8852872808081048,
+          "holdout_all_median_px": 599.9832420125163,
+          "holdout_all_max_px": 1490.6621297386926,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.587297800614188,
+          "holdout_all_median_px": 1672.055775122525,
+          "holdout_all_max_px": 4273.178551675821,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-15-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-16",
+      "name": "Wild Zone 16",
+      "district": "Bleu",
+      "existing_orientation_centre": [
+        710,
+        1294
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-16-overview.png",
+          "bytes": 1258908,
+          "sha256": "a9bca31d1da537b790ef88fcd0f79a3b9bdf20ad59b8c7437290c3b49f7af415",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-16-closeup.png",
+          "bytes": 578990,
+          "sha256": "3e65045e59631a6172063f55a52a2104eabdbdb8ef913cca155faddbe284e63e",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 31,
+          "fit_rms_px": 1.182724745010898,
+          "holdout_all_median_px": 605.7444841363282,
+          "holdout_all_max_px": 1286.7843777936969,
+          "holdout_within_3px": 10,
+          "source_path": "assets/atlas/wild-zones/wild-zone-16-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 9,
+          "fit_rms_px": 1.0971674864579222,
+          "holdout_all_median_px": 562.4356682926709,
+          "holdout_all_max_px": 1295.7760765209466,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-16-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "approved_rendered_selection_outline",
+      "approval_evidence_id": "AT339-WZ16-NATIVE-PERIMETER",
+      "approval_evidence_path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+      "remaining_gap_for_selection_outline": null,
+      "next_action": "Preserve the existing reviewed outline and original source hashes. Do not reinterpret it as physical walkability or comprehensive encounters."
+    },
+    {
+      "area_id": "wz-17",
+      "name": "Wild Zone 17",
+      "district": "Vert",
+      "existing_orientation_centre": [
+        1471,
+        1480
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+          "bytes": 979856,
+          "sha256": "753a63229cd7954cee58f4ad2d0f9d1a79da0f2a249758f46231fa542d58ee3a",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+          "bytes": 1101630,
+          "sha256": "1464786f74c62136d80b6738966c0eac3684bbc4f85be47e7a4976be2974c34b",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.7390215577928049,
+          "holdout_all_median_px": 1485.8742453307523,
+          "holdout_all_max_px": 32790.471945090685,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.7687500173176977,
+          "holdout_all_median_px": 769.2752687081556,
+          "holdout_all_max_px": 2277.0296725861735,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-18",
+      "name": "Wild Zone 18",
+      "district": "Magenta",
+      "existing_orientation_centre": [
+        390,
+        361
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-18-overview.png",
+          "bytes": 935814,
+          "sha256": "13d40a6eb36402e8b88ddfe4482dab16ef1065e9d32b97b498873c25248f5aac",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-18-closeup.png",
+          "bytes": 712859,
+          "sha256": "a2b3dc0c2c42f19e0d5aa261bb7abf2d4c40a6b6de893bf4d41890946ee6a97a",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.9596884164087973,
+          "holdout_all_median_px": 1187.8758912040125,
+          "holdout_all_max_px": 1525.1138053914412,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-18-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 6,
+          "fit_rms_px": 1.2221325568454626,
+          "holdout_all_median_px": 627.5838194318154,
+          "holdout_all_max_px": 1282.7897053410247,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-18-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-19",
+      "name": "Wild Zone 19",
+      "district": "Jaune",
+      "existing_orientation_centre": [
+        1549,
+        601
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-19-overview.png",
+          "bytes": 956500,
+          "sha256": "ccfa050f033ed1fd6c41520a2198e7d75d87150348bc978c9e57607485737f96",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-19-closeup.png",
+          "bytes": 823180,
+          "sha256": "33c672dafc018d5a923928994608b5b347d61c9c13c267572ad6b98b3d341f0b",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 1.1242099336232,
+          "holdout_all_median_px": 1531.4640742033007,
+          "holdout_all_max_px": 1752.700196124864,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-19-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 5,
+          "fit_rms_px": 0.5451977760944879,
+          "holdout_all_median_px": 1009.2817351231768,
+          "holdout_all_max_px": 1516.3406144112303,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-19-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "unresolved_sources_available_no_reviewed_closed_outline",
+      "remaining_gap_for_selection_outline": "Reviewed architectural calibration, complete visible-perimeter/occlusion trace and independent decision remain missing. Two source photographs alone are not a reviewed outline.",
+      "next_action": "Start from these exact source pairs; identify four or more distributed noncollinear architecture controls plus independent holdouts, mask original UI, trace observed native selection stroke and preserve failures before independent review.",
+      "bounded_visual_screen": "No fresh complete visual boundary review was claimed in this continuation."
+    },
+    {
+      "area_id": "wz-20",
+      "name": "Wild Zone 20",
+      "district": "Centrico",
+      "existing_orientation_centre": [
+        950,
+        960
+      ],
+      "centre_precision": "approx_saved_zone_centre",
+      "sources": [
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-20-overview.png",
+          "bytes": 1127667,
+          "sha256": "2aa00d0864249d212439283857ee065022bef51b25e4a3ec5d4c66fac930a3a6",
+          "dimensions": [
+            1536,
+            865
+          ]
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-20-closeup.png",
+          "bytes": 899102,
+          "sha256": "4bdfaf330e505cbf3d3a73d843039450866a3045a860af35edc006697b4d1a4a",
+          "dimensions": [
+            1536,
+            865
+          ]
+        }
+      ],
+      "raw_automatic_screening": [
+        {
+          "view": "overview",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 6,
+          "fit_rms_px": 0.6638070706094096,
+          "holdout_all_median_px": 834.3451595784845,
+          "holdout_all_max_px": 82400.57677270149,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-20-overview.png",
+          "not_an_approval": true
+        },
+        {
+          "view": "closeup",
+          "status": "candidate_registration_only_not_approved_geometry",
+          "fit_inliers": 8,
+          "fit_rms_px": 0.5115845646444357,
+          "holdout_all_median_px": 1224.560970313798,
+          "holdout_all_max_px": 9469.989293907936,
+          "holdout_within_3px": 0,
+          "source_path": "assets/atlas/wild-zones/wild-zone-20-closeup.png",
+          "not_an_approval": true
+        }
+      ],
+      "raw_screening_path": "docs/qa/at339-geometry/wild_zone_registration_candidates.json",
+      "screening_caution": "Preserved unreviewed automatic trials contain descriptor outliers. Low selected fit RMS cannot substitute for named architectural controls, independent checks or perimeter review.",
+      "baseline_boundary_status": "at341_candidate_pending_independent_review",
+      "candidate_path": "docs/qa/candidates/wz20-2026-11-26/candidate-evidence.json",
+      "remaining_gap_for_selection_outline": "Independent boundary/occlusion decision on measured circular footprint and modeled gate/icon spans.",
+      "next_action": "Review both originals, six named primary controls/five architecture holds, native held-out rays and two independent owner perimeter traces; rerun reproduce.py before a production approval."
+    }
+  ],
+  "sectors": [
+    {
+      "area_id": "vert-sector-1",
+      "name": "Vert Sector 1",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-1-saison-canal.png",
+        "bytes": 137103,
+        "sha256": "e293faa9b42375862a0aa1ab07a76c50b80d77cced96c25168738d4f8f19e3c4",
+        "dimensions": [
+          358,
+          267
+        ]
+      },
+      "crop_id": "vert-1-saison-canal",
+      "visible_labels": [
+        "Vert Sector 1",
+        "Saison Canal",
+        "Saison-Canalside"
+      ],
+      "bearing": "South of Saison Canal; Saison-Canalside is on the opposite side of the canal.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-2",
+      "name": "Vert Sector 2",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-2-vernal-avenue.png",
+        "bytes": 126795,
+        "sha256": "a98b2ec3fba25b5d91621dda0b5cf9d03a903fe91c188305697067f04b3e41df",
+        "dimensions": [
+          330,
+          351
+        ]
+      },
+      "crop_id": "vert-2-vernal-avenue",
+      "visible_labels": [
+        "Vert Sector 2",
+        "Vernal Avenue"
+      ],
+      "bearing": "Immediately beside Vernal Avenue, between the avenue and Vert Plaza.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-3",
+      "name": "Vert Sector 3",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-sector-3.png",
+        "bytes": 69130,
+        "sha256": "630170cb7f689db311c8aac41d314b334f5f6e1ae6331c63ec65d59e9c9f062e",
+        "dimensions": [
+          309,
+          201
+        ]
+      },
+      "crop_id": "vert-sector-3",
+      "visible_labels": [
+        "Vert Sector 3"
+      ],
+      "bearing": "Owner map places Vert Sector 3 immediately west of the green Wild Zone edge; a long narrow canal runs south of its western block.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-4",
+      "name": "Vert Sector 4",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-4-5.png",
+        "bytes": 307492,
+        "sha256": "4138f192169c7bf56e9440368635fc95d98da31649fb9e25b627de0d2de5460e",
+        "dimensions": [
+          797,
+          294
+        ]
+      },
+      "crop_id": "vert-4-5",
+      "visible_labels": [
+        "Vert Sector 4",
+        "Vert Sector 5",
+        "Vert Street"
+      ],
+      "bearing": "Between the Vernal Avenue corridor and the buildings of Vert Sector 5; south of Vert Plaza.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-5",
+      "name": "Vert Sector 5",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-4-5.png",
+        "bytes": 307492,
+        "sha256": "4138f192169c7bf56e9440368635fc95d98da31649fb9e25b627de0d2de5460e",
+        "dimensions": [
+          797,
+          294
+        ]
+      },
+      "crop_id": "vert-4-5",
+      "visible_labels": [
+        "Vert Sector 4",
+        "Vert Sector 5",
+        "Vert Street"
+      ],
+      "bearing": "Beside the waterway and Vert Street, next to Vert Sector 4.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-6",
+      "name": "Vert Sector 6",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-sector-6.png",
+        "bytes": 662433,
+        "sha256": "f4dd643b2b10ace15657d9aee0d754ba2591d051aad19ab6f5a5b750e52cf5cb",
+        "dimensions": [
+          1150,
+          670
+        ]
+      },
+      "crop_id": "vert-sector-6",
+      "visible_labels": [
+        "Vert Sector 6",
+        "Coulant Waterway",
+        "South Boulevard",
+        "Restaurant Le Nah"
+      ],
+      "bearing": "Vert Sector 6 sits west of Restaurant Le Nah, beside South Boulevard; Coulant Waterway is southwest.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-7",
+      "name": "Vert Sector 7",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-sector-7.png",
+        "bytes": 39799,
+        "sha256": "ca3728dc59b2752ae057c32d416470a9ba354f2446451888829e26a3f4f36a96",
+        "dimensions": [
+          250,
+          92
+        ]
+      },
+      "crop_id": "vert-sector-7",
+      "visible_labels": [
+        "Vert Sector 7"
+      ],
+      "bearing": "Near Vert Street and Station Front, above South Boulevard.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-8",
+      "name": "Vert Sector 8",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-sector-8.png",
+        "bytes": 48526,
+        "sha256": "023903eb59ca9f7188309b00254b2b5f464d66d4aab1c72139754bd680f1cb10",
+        "dimensions": [
+          222,
+          134
+        ]
+      },
+      "crop_id": "vert-sector-8",
+      "visible_labels": [
+        "Vert Sector 8"
+      ],
+      "bearing": "Between Vert Street and Station Front, north of South Boulevard.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "vert-sector-9",
+      "name": "Vert Sector 9",
+      "district": "Vert",
+      "source": {
+        "path": "assets/atlas/sector-streets/vert/vert-sector-9.png",
+        "bytes": 62726,
+        "sha256": "2e2f79c5e87ca7e348268ce82fa0e1e0969bbadbcf9c3d88ce430efa012b7b1e",
+        "dimensions": [
+          240,
+          166
+        ]
+      },
+      "crop_id": "vert-sector-9",
+      "visible_labels": [
+        "Vert Sector 9"
+      ],
+      "bearing": "Between Vernal Avenue and Vert Sector 8, north of South Boulevard.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-1",
+      "name": "Bleu Sector 1",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-1-vernal-avenue.png",
+        "bytes": 41516,
+        "sha256": "98d3723db3c23a50405b456a08fb7405e41e1db13ab50ced48d6c8f34c784923",
+        "dimensions": [
+          290,
+          103
+        ]
+      },
+      "crop_id": "bleu-sector-1-vernal-avenue",
+      "visible_labels": [
+        "Bleu Sector 1",
+        "Vernal Avenue"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-2",
+      "name": "Bleu Sector 2",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-2-estival.png",
+        "bytes": 138812,
+        "sha256": "1f5ea3072b9fc98b8fba43096d4bc05e18077bf90dc4af3779bc93f27f792df9",
+        "dimensions": [
+          415,
+          230
+        ]
+      },
+      "crop_id": "bleu-sector-2-estival",
+      "visible_labels": [
+        "Bleu Sector 2",
+        "Bleu Street"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-3",
+      "name": "Bleu Sector 3",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-3.png",
+        "bytes": 18510,
+        "sha256": "14ac67d6a493f96ea6206bda0d1a8f132bc9039dae751e3c9ba43a1984d1b2ca",
+        "dimensions": [
+          182,
+          83
+        ]
+      },
+      "crop_id": "bleu-sector-3",
+      "visible_labels": [
+        "Bleu Sector 3"
+      ],
+      "bearing": "East of Bleu Plaza and west of Vernal Avenue, north of Aymlis Park.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-4",
+      "name": "Bleu Sector 4",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-4-estival.png",
+        "bytes": 77051,
+        "sha256": "517e57caf03eb2835cc266f8d13c4c93ab7d61e1bd835fcf9e4cfe92c66bc2cb",
+        "dimensions": [
+          325,
+          157
+        ]
+      },
+      "crop_id": "bleu-sector-4-estival",
+      "visible_labels": [
+        "Bleu Sector 4"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-5",
+      "name": "Bleu Sector 5",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+        "bytes": 397818,
+        "sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+        "dimensions": [
+          638,
+          509
+        ]
+      },
+      "crop_id": "bleu-5-7-aymlis-park",
+      "visible_labels": [
+        "Bleu Sector 5",
+        "Bleu Sector 7",
+        "Aymlis Park",
+        "South Boulevard"
+      ],
+      "bearing": "West of Aymlis Park, near Bleu Street.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-6",
+      "name": "Bleu Sector 6",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-6-bleu-plaza.png",
+        "bytes": 190584,
+        "sha256": "7c6b975ffb52320efbd98229bd0741bffc96af914ea6ef8943379c5339cf719c",
+        "dimensions": [
+          520,
+          275
+        ]
+      },
+      "crop_id": "bleu-sector-6-bleu-plaza",
+      "visible_labels": [
+        "Bleu Sector 6",
+        "Bleu Plaza"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-7",
+      "name": "Bleu Sector 7",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png",
+        "bytes": 397818,
+        "sha256": "b3d990e48b79fadd403f811f34558e53566a9152c3e89b5a88446224c69dea91",
+        "dimensions": [
+          638,
+          509
+        ]
+      },
+      "crop_id": "bleu-5-7-aymlis-park",
+      "visible_labels": [
+        "Bleu Sector 5",
+        "Bleu Sector 7",
+        "Aymlis Park",
+        "South Boulevard"
+      ],
+      "bearing": "Along South Boulevard below Aymlis Park.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-8",
+      "name": "Bleu Sector 8",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-8.png",
+        "bytes": 57357,
+        "sha256": "68a049bcdffd53d875c4e707ce7ec0fb0a700bedaaeb69b46c98c4bb8d0b5afd",
+        "dimensions": [
+          220,
+          175
+        ]
+      },
+      "crop_id": "bleu-sector-8",
+      "visible_labels": [
+        "Bleu Sector 8"
+      ],
+      "bearing": "Southwest of Bleu Plaza, beside Bleu Street.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-9",
+      "name": "Bleu Sector 9",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-9.png",
+        "bytes": 657589,
+        "sha256": "fc76701b527f5199d7cba6832909a5c447498644f87e88d80a229e165855039f",
+        "dimensions": [
+          1130,
+          715
+        ]
+      },
+      "crop_id": "bleu-sector-9",
+      "visible_labels": [
+        "Bleu Sector 9",
+        "Caf\u00e9 Soleil",
+        "South Boulevard"
+      ],
+      "bearing": "Bleu Sector 9 is east of South Boulevard, just north of Caf\u00e9 Soleil; Bleu Sector 6 is northeast and Bleu Sector 8 is southeast.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "bleu-sector-10",
+      "name": "Bleu Sector 10",
+      "district": "Bleu",
+      "source": {
+        "path": "assets/atlas/sector-streets/bleu/bleu-sector-10.png",
+        "bytes": 748941,
+        "sha256": "4c176e73c9c985fc3bdf483d11e48e607289ccac728764a2612592ed52afd13f",
+        "dimensions": [
+          1290,
+          805
+        ]
+      },
+      "crop_id": "bleu-sector-10",
+      "visible_labels": [
+        "Bleu Sector 10",
+        "Estival Avenue",
+        "Espace Vide"
+      ],
+      "bearing": "Bleu Sector 10 is south of Estival Avenue, east of South Boulevard and west of Espace Vide.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-1",
+      "name": "Magenta Sector 1",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+        "bytes": 198890,
+        "sha256": "d6665319cd497583dcf9d2475e8a9b34425286ab0ba807b8915fb574f8ed2cc6",
+        "dimensions": [
+          623,
+          246
+        ]
+      },
+      "crop_id": "magenta-1-3-estival",
+      "visible_labels": [
+        "Magenta Sector 1",
+        "Magenta Sector 3",
+        "Estival Avenue"
+      ],
+      "bearing": "Above Estival Avenue and east of Magenta Sector 3.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-2",
+      "name": "Magenta Sector 2",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-2.png",
+        "bytes": 280502,
+        "sha256": "e84bad9f1aa3214a057a087481c98919b69069f4213221c7682ef7c8004eaec7",
+        "dimensions": [
+          792,
+          377
+        ]
+      },
+      "crop_id": "magenta-sector-2",
+      "visible_labels": [
+        "Magenta Sector 2",
+        "Lysandre Caf\u00e9"
+      ],
+      "bearing": "Magenta Sector 2 lies west of Autumnal Avenue, near Lysandre Caf\u00e9; Magenta Street and Saison Canal are immediately south.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-3",
+      "name": "Magenta Sector 3",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-1-3-estival.png",
+        "bytes": 198890,
+        "sha256": "d6665319cd497583dcf9d2475e8a9b34425286ab0ba807b8915fb574f8ed2cc6",
+        "dimensions": [
+          623,
+          246
+        ]
+      },
+      "crop_id": "magenta-1-3-estival",
+      "visible_labels": [
+        "Magenta Sector 1",
+        "Magenta Sector 3",
+        "Estival Avenue"
+      ],
+      "bearing": "Above Estival Avenue, around the long landscaped courtyard.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-4",
+      "name": "Magenta Sector 4",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-4.png",
+        "bytes": 57327,
+        "sha256": "7aa9f26f13392be3ab1a4f6f14da4f8a9e1e66ff6086aa3b8748c4e38db24ce5",
+        "dimensions": [
+          280,
+          160
+        ]
+      },
+      "crop_id": "magenta-sector-4",
+      "visible_labels": [
+        "Magenta Sector 4"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-5",
+      "name": "Magenta Sector 5",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-5.png",
+        "bytes": 104071,
+        "sha256": "a2eb1a1c79c7b9ed61bffa6603f15fca56331afd2261f744e82448176ed6f5df",
+        "dimensions": [
+          430,
+          180
+        ]
+      },
+      "crop_id": "magenta-sector-5",
+      "visible_labels": [
+        "Magenta Sector 5"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-6",
+      "name": "Magenta Sector 6",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-6-south-boulevard.png",
+        "bytes": 264513,
+        "sha256": "12b9f3778d221f0db400a59ab40b1a40e77394b6b2d02af1349889dc0670d740",
+        "dimensions": [
+          645,
+          320
+        ]
+      },
+      "crop_id": "magenta-sector-6-south-boulevard",
+      "visible_labels": [
+        "Magenta Sector 6",
+        "South Boulevard"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-7",
+      "name": "Magenta Sector 7",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-7.png",
+        "bytes": 295450,
+        "sha256": "b12627e68cee77c0f5fbabff116b0f5e34a237e7b1eaa383d4edef46a8801c24",
+        "dimensions": [
+          800,
+          505
+        ]
+      },
+      "crop_id": "magenta-sector-7",
+      "visible_labels": [
+        "Magenta Sector 7",
+        "Lumiose Sewers",
+        "Magenta Street"
+      ],
+      "bearing": "Magenta Sector 7 is at the Lumiose Sewers entrance, immediately north of Magenta Street and Saison Canal; Magenta Sector 8 is west.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-8",
+      "name": "Magenta Sector 8",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-8.png",
+        "bytes": 391491,
+        "sha256": "96c1f53a3fad3846a8eb22864bba34e79d9e24197f048b99b018c644938e1d8d",
+        "dimensions": [
+          865,
+          555
+        ]
+      },
+      "crop_id": "magenta-sector-8",
+      "visible_labels": [
+        "Magenta Sector 8",
+        "Pok\u00e9mon Center",
+        "Magenta Street"
+      ],
+      "bearing": "Magenta Sector 8 is beside the Pok\u00e9mon Center, west of the Lumiose Sewers entrance and north of Magenta Street/Saison Canal.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "magenta-sector-9",
+      "name": "Magenta Sector 9",
+      "district": "Magenta",
+      "source": {
+        "path": "assets/atlas/sector-streets/magenta/magenta-sector-9.png",
+        "bytes": 82296,
+        "sha256": "7fae594c39eb6465426c9b8f60413a98075d953f4ff8cdcd51e3fe2bd72a06fd",
+        "dimensions": [
+          303,
+          184
+        ]
+      },
+      "crop_id": "magenta-sector-9",
+      "visible_labels": [
+        "Magenta Sector 9"
+      ],
+      "bearing": "Between the North Boulevard side of Magenta and the Autumnal Avenue corridor.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-1",
+      "name": "Rouge Sector 1",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-1.png",
+        "bytes": 70800,
+        "sha256": "013f7ac7fb9b4105841c34ca430f187b2626334321065a82e3b73f7661808c8b",
+        "dimensions": [
+          252,
+          190
+        ]
+      },
+      "crop_id": "rouge-sector-1",
+      "visible_labels": [
+        "Rouge Sector 1"
+      ],
+      "bearing": "Between Autumnal Avenue and Rouge Street, beside the central city square.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-2",
+      "name": "Rouge Sector 2",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-2.png",
+        "bytes": 49325,
+        "sha256": "b535c70c9378f159ab74ced60f7202fb11ee4d2e46b7aaa0b75a63c339e01c6d",
+        "dimensions": [
+          220,
+          159
+        ]
+      },
+      "crop_id": "rouge-sector-2",
+      "visible_labels": [
+        "Rouge Sector 2"
+      ],
+      "bearing": "East of Rouge Street, near Vernal Avenue and north of the central city square.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-3",
+      "name": "Rouge Sector 3",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-3.png",
+        "bytes": 99680,
+        "sha256": "69130576a4d84fe5f76d10a25c82a053f429a3fc77882ac73c37b4987fd844d8",
+        "dimensions": [
+          265,
+          235
+        ]
+      },
+      "crop_id": "rouge-sector-3",
+      "visible_labels": [
+        "Rouge Sector 3"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-4",
+      "name": "Rouge Sector 4",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-4.png",
+        "bytes": 94858,
+        "sha256": "fa0f1576425c8d33b5270f71d38ad5636aa53fc3bac5b465747cf8a8f99ffed8",
+        "dimensions": [
+          250,
+          245
+        ]
+      },
+      "crop_id": "rouge-sector-4",
+      "visible_labels": [
+        "Rouge Sector 4"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-5",
+      "name": "Rouge Sector 5",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-5.png",
+        "bytes": 62098,
+        "sha256": "7dad792eca8b791558c34b5a29e2fe9c8efae601b72011414b45cf4bab90feff",
+        "dimensions": [
+          250,
+          210
+        ]
+      },
+      "crop_id": "rouge-sector-5",
+      "visible_labels": [
+        "Rouge Sector 5"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-6",
+      "name": "Rouge Sector 6",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-6.png",
+        "bytes": 55091,
+        "sha256": "127aecbe019c9c908acea5292cbe887446be69c912291890652de4d6821ec764",
+        "dimensions": [
+          362,
+          136
+        ]
+      },
+      "crop_id": "rouge-sector-6",
+      "visible_labels": [
+        "Rouge Sector 6"
+      ],
+      "bearing": "South of Dormez Bien Cemetery, near Rouge Plaza.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-7",
+      "name": "Rouge Sector 7",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-7-north-boulevard.png",
+        "bytes": 182470,
+        "sha256": "fafef8190975b4ae65bc7396946377233c473d8bb59356c6ef9ce2416f3e51a2",
+        "dimensions": [
+          710,
+          210
+        ]
+      },
+      "crop_id": "rouge-sector-7-north-boulevard",
+      "visible_labels": [
+        "Rouge Sector 7",
+        "North Boulevard"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "rouge-sector-8",
+      "name": "Rouge Sector 8",
+      "district": "Rouge",
+      "source": {
+        "path": "assets/atlas/sector-streets/rouge/rouge-sector-8-hibernal.png",
+        "bytes": 215897,
+        "sha256": "d860612a6d23607c09e98ba199fb3ecd7ad9f4c0feade140421fc0b1dd9b9ffb",
+        "dimensions": [
+          472,
+          395
+        ]
+      },
+      "crop_id": "rouge-sector-8-hibernal",
+      "visible_labels": [
+        "Rouge Sector 8",
+        "Hibernal Avenue"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-1",
+      "name": "Jaune Sector 1",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-1-jaune-street.png",
+        "bytes": 71483,
+        "sha256": "bdf45031e93f4301ea7272f782d677b27ca954596c8973ec13bce6879fbe1f8a",
+        "dimensions": [
+          265,
+          195
+        ]
+      },
+      "crop_id": "jaune-sector-1-jaune-street",
+      "visible_labels": [
+        "Jaune Sector 1",
+        "Jaune Street"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-2",
+      "name": "Jaune Sector 2",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-2.png",
+        "bytes": 84590,
+        "sha256": "8b86f78e130d6cab7417a08668acff2009b82fc84d7127e1506772c39c8f0c1c",
+        "dimensions": [
+          310,
+          175
+        ]
+      },
+      "crop_id": "jaune-sector-2",
+      "visible_labels": [
+        "Jaune Sector 2"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-3",
+      "name": "Jaune Sector 3",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-3-plaza.png",
+        "bytes": 120719,
+        "sha256": "6a3537bab46b2e093dee5c8c75a00308cbb0c10f5ee4bcdd2e0537fb58c2cd0e",
+        "dimensions": [
+          495,
+          195
+        ]
+      },
+      "crop_id": "jaune-sector-3-plaza",
+      "visible_labels": [
+        "Jaune Sector 3",
+        "Jaune Plaza"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-4",
+      "name": "Jaune Sector 4",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-4.png",
+        "bytes": 63401,
+        "sha256": "e2e6dd4f5af527d440dc28dfcd1b8e809fc501478011bf25408237a0281caabd",
+        "dimensions": [
+          234,
+          191
+        ]
+      },
+      "crop_id": "jaune-sector-4",
+      "visible_labels": [
+        "Jaune Sector 4"
+      ],
+      "bearing": "North of Jaune Sector 3 at the upper edge of the observed Jaune district view.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-5",
+      "name": "Jaune Sector 5",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-5.png",
+        "bytes": 597428,
+        "sha256": "02a1d70040d7f0b2a6fedd38ace58c611bb5b2910cd3de0987f0e8ff5e42be57",
+        "dimensions": [
+          1151,
+          754
+        ]
+      },
+      "crop_id": "jaune-sector-5",
+      "visible_labels": [
+        "Jaune Sector 5",
+        "Jaune Plaza"
+      ],
+      "bearing": "Jaune Sector 5 lies between Jaune Sector 4 and Wild Zone 19 (Jaune Sector 8), north of Jaune Street and Jaune Plaza.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-6",
+      "name": "Jaune Sector 6",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-6.png",
+        "bytes": 71294,
+        "sha256": "09e4232a8fb8c45f520bb257f90b4f57f5c4df231ca2741ae60eaa336c80943d",
+        "dimensions": [
+          220,
+          205
+        ]
+      },
+      "crop_id": "jaune-sector-6",
+      "visible_labels": [
+        "Jaune Sector 6"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-7",
+      "name": "Jaune Sector 7",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-7-hibernal.png",
+        "bytes": 193910,
+        "sha256": "45bb22c18c7fe7ba27681909813d3890d9cc7b4d55be688bdf7ff20134000c3b",
+        "dimensions": [
+          465,
+          300
+        ]
+      },
+      "crop_id": "jaune-sector-7-hibernal",
+      "visible_labels": [
+        "Jaune Sector 7",
+        "Hibernal Avenue"
+      ],
+      "bearing": null,
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-8",
+      "name": "Jaune Sector 8",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-sector-8.png",
+        "bytes": 74638,
+        "sha256": "2a5e3ba639a4313a502409b63db46561051567766d1514050b7512d9bc28a545",
+        "dimensions": [
+          337,
+          165
+        ]
+      },
+      "crop_id": "jaune-sector-8",
+      "visible_labels": [
+        "Jaune Sector 8"
+      ],
+      "bearing": "Below Jaune Sector 7, toward the southeastern edge of the observed map.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-9",
+      "name": "Jaune Sector 9",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "bytes": 647663,
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "dimensions": [
+          619,
+          833
+        ]
+      },
+      "crop_id": "jaune-9-10-11-12",
+      "visible_labels": [
+        "Jaune Sector 9",
+        "Jaune Sector 10",
+        "Jaune Sector 11",
+        "Jaune Sector 12",
+        "Jaune Street",
+        "North Boulevard"
+      ],
+      "bearing": "Below Jaune Street and southwest of the Jaune Sector 11 label.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-10",
+      "name": "Jaune Sector 10",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "bytes": 647663,
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "dimensions": [
+          619,
+          833
+        ]
+      },
+      "crop_id": "jaune-9-10-11-12",
+      "visible_labels": [
+        "Jaune Sector 9",
+        "Jaune Sector 10",
+        "Jaune Sector 11",
+        "Jaune Sector 12",
+        "Jaune Street",
+        "North Boulevard"
+      ],
+      "bearing": "North side of Saison Canal, to the west of Jaune Sector 12.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-11",
+      "name": "Jaune Sector 11",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "bytes": 647663,
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "dimensions": [
+          619,
+          833
+        ]
+      },
+      "crop_id": "jaune-9-10-11-12",
+      "visible_labels": [
+        "Jaune Sector 9",
+        "Jaune Sector 10",
+        "Jaune Sector 11",
+        "Jaune Sector 12",
+        "Jaune Street",
+        "North Boulevard"
+      ],
+      "bearing": "South of Jaune Street and west of North Boulevard.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    },
+    {
+      "area_id": "jaune-sector-12",
+      "name": "Jaune Sector 12",
+      "district": "Jaune",
+      "source": {
+        "path": "assets/atlas/sector-streets/jaune/jaune-9-10-11-12.png",
+        "bytes": 647663,
+        "sha256": "dec83ba260eb52c5517fd3ca6c221c2f0a40da4fd4f643272e5580b9d539bcd8",
+        "dimensions": [
+          619,
+          833
+        ]
+      },
+      "crop_id": "jaune-9-10-11-12",
+      "visible_labels": [
+        "Jaune Sector 9",
+        "Jaune Sector 10",
+        "Jaune Sector 11",
+        "Jaune Sector 12",
+        "Jaune Street",
+        "North Boulevard"
+      ],
+      "bearing": "Near North Boulevard and the eastern end of Saison Canal.",
+      "baseline_native_xy": null,
+      "baseline_native_label_xy": null,
+      "geographically_registered": false,
+      "boundary_status": "unresolved_no_reviewed_complete_sector_perimeter",
+      "orientation_status": "original_source_image_orientation_only",
+      "gaps": [
+        "No complete source-backed sector perimeter is recorded. Named-sector label/street vicinity does not establish its enclosing boundary.",
+        "No reviewed source-to-native calibration with independently withheld architecture points is attached to this sector crop.",
+        "No populated native label position is present; no orientation-only coordinate is supplied by this inventory."
+      ],
+      "next_action": "Inspect this exact crop and overlapping owner overview. If shared architecture suffices, calibrate with distributed controls/holdouts, then separately measure a label position for orientation-only framing. Obtain actual enclosing sector-perimeter evidence before any polygon.",
+      "source_target_label_recorded": true
+    }
+  ],
+  "owner_context_sources": [
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028696.jpg",
+      "bytes": 503015,
+      "sha256": "0929fa9177733cd8816f10552e6b2ec4f5c33ee3bdf2e4c163fadd7b27dee12c",
+      "dimensions": [
+        2048,
+        1049
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028697.jpg",
+      "bytes": 536604,
+      "sha256": "306e66975b45768e67735bc7b1510628301c2a6b71cb4f97fe5115e966ef2d8d",
+      "dimensions": [
+        2048,
+        1034
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028698.jpg",
+      "bytes": 593840,
+      "sha256": "df34942c5d740adfb64b0e1c242e646e59d1cf3c0934cf392220513f9f761054",
+      "dimensions": [
+        2048,
+        1029
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028699.jpg",
+      "bytes": 408681,
+      "sha256": "d3a61b00b8e04c902649989e337e2e7bff060962f478ce8bf9e333d845d17480",
+      "dimensions": [
+        2048,
+        1021
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028700.jpg",
+      "bytes": 480007,
+      "sha256": "a52dacf73f3d73e146b5a1740c015ea1ada5e806a832bb551fea9f335806dd47",
+      "dimensions": [
+        2048,
+        1046
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028701.jpg",
+      "bytes": 484442,
+      "sha256": "3268f3853dbdc552d45c54a41ac11a805c9b4c1bcb2b99e7fc86392fd74076ca",
+      "dimensions": [
+        2048,
+        1026
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028702.jpg",
+      "bytes": 541674,
+      "sha256": "551db92213d2122df7f6f97f00cdbf7bbe58b0c41f62e0fe1caeb30ebc1257d2",
+      "dimensions": [
+        2048,
+        1056
+      ]
+    },
+    {
+      "path": "assets/atlas/city-overview/owner-crops-2026-11-26/1000028703.jpg",
+      "bytes": 511794,
+      "sha256": "b3176b2c2b9d8ee739903c4265073bf94041fd2a03734ff72335f7ca05963a82",
+      "dimensions": [
+        2048,
+        1032
+      ]
+    }
+  ],
+  "incoming_original_attachment_inventory": [
+    {
+      "filename": "01-20261125_170238.jpg",
+      "bytes": 1564974,
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "02-20261125_170158.jpg",
+      "bytes": 1420507,
+      "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "03-20261125_165929.jpg",
+      "bytes": 1647674,
+      "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "04-20261126_104048.jpg",
+      "bytes": 1854391,
+      "sha256": "47bd5952180f9ec407a3c35921dec8f6cb360a1e66ed2bdb12c1ede271845cc8",
+      "dimensions": [
+        3951,
+        2038
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "05-20261125_213809.jpg",
+      "bytes": 1924588,
+      "sha256": "d78e3643af7fb447cbff6ec4096f797fc0c9692e17b5c405c0e952220767fa55",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "06-20261126_104041.jpg",
+      "bytes": 1711073,
+      "sha256": "a4f196979545f8a82d188b3912a0b2dd5fed6339970a2aebacea0a48b44bf71f",
+      "dimensions": [
+        3987,
+        1998
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "07-20261125_213830.jpg",
+      "bytes": 2230899,
+      "sha256": "50879abc45b6ce969efba79009546cfa99344057eb2cfb0fee8b02bb2a2a5e3e",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "08-20261125_213707.jpg",
+      "bytes": 2102179,
+      "sha256": "60ce7cb5ed4cac9e38ee5cb92cc2a346ab3ec4bef25c3cf8c0b11a6678e6a7b6",
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "09-20261126_103710.jpg",
+      "bytes": 1821787,
+      "sha256": "0b64c204e866ed12b654188398aa6b52542b53accb2fd6ffd0f06df76cd0dc28",
+      "dimensions": [
+        4000,
+        2020
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "10-20261126_103927.jpg",
+      "bytes": 1515464,
+      "sha256": "f2fd5f1cc44772f0c9345e106406bb9f433876a2b87565e92ff138c7be6eba3e",
+      "dimensions": [
+        4000,
+        1995
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "11-20261126_103721.jpg",
+      "bytes": 2035698,
+      "sha256": "672dbcc954a5a217b50c6346295aa4cfe972b28498de214d405e1e7cb7324873",
+      "dimensions": [
+        4000,
+        2009
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "12-20261126_104020.jpg",
+      "bytes": 1770810,
+      "sha256": "aa32faf7415d5e7c2669b32fd3125f8d48e49d57cd1279928635427fedcc1f65",
+      "dimensions": [
+        4000,
+        2042
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "13-20261126_104059.jpg",
+      "bytes": 1854048,
+      "sha256": "548c28b9e9dc840a48bef3badfe496e6cbfd8e298c6def677aa19d8d86602993",
+      "dimensions": [
+        3988,
+        2009
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    },
+    {
+      "filename": "14-20261126_103629.jpg",
+      "bytes": 1797907,
+      "sha256": "b4599b94aff04791a53e591054b5ca9ebcd73be0a3e9d9be2d08a325f5e5f76c",
+      "dimensions": [
+        4000,
+        2049
+      ],
+      "byte_identical_owner_crop_path": null,
+      "scope": "Incoming owner-original availability only; no resampling or source substitution performed."
+    }
+  ],
+  "incoming_original_caution": "Incoming JPEGs are generally higher-resolution than retained owner-map variants. Different SHA-256 values are not corruption or byte-identical substitution. This pass replaces or relabels no source.",
+  "gate_recommendation": {
+    "G2": "partial",
+    "G3": "partial",
+    "G5": "blocked",
+    "A0": "blocked",
+    "basis": "Bounded additional selection approvals do not supply remaining complete boundary reviews or comprehensive encounters. Canonical parent release decision remains authoritative."
+  },
+  "preservation": {
+    "source_images_modified": false,
+    "runtime_data_modified": false,
+    "canonical_plans_modified": false,
+    "geometry_approval_inferred_from_image_availability": false
+  }
+}

@@ -18,11 +18,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 87,
+  "revision": 89,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-341 continues PR204: real-touch test correction and exact-head validation pending; private planning records synchronized. Geometry/encounter evidence review continues; full G2/G3/G5/A0 remain open.",
+  "current_phase": "AT-341 final candidate: seven independently reviewed rendered zone outlines and bounded encounter/Mission008 corrections; final combined-head CI pending. Full G2/G3/G5/A0 remain open.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -166,7 +166,7 @@
       "progress_note": "9 externally published side-mission map XY references reviewed sequentially for Holovator unlock approaches and cross-checked against a second specialist source; mission-marker coordinates are not the exact Holovator positions and are not yet Atlas-image aligned. Original 48-sector geometry review remains open. Batch 02: followed all nine source Side Mission marker deep links, recorded nine source-grounded approach instructions and two newly reported QUEST sector labels (Vert-07 and Magenta-02), still no device category marker/Atlas-coordinate or exact roof alignment. Batch 03: all ten original private photographs recovered and re-inspected; 12 provisional photo marker groups / 15 approximate photo-pixel occurrences, with 6 possible mission-area links, but zero confirmed device or source-to-Atlas point alignment. Batch 04: 1920x1920 original city image recovered, six owner photos manually affine-registered with 4-5 landmarks, 11 provisional native map pixel coordinates documented, no confirmed device markers or roof entrances. P01/P08 and P03/P04 provide plausible icon-pair consistency; P08/P09 H-01 alternatives remain distinct.",
       "historical_status_before_AT336": "in_progress",
       "current_checkpoint_note": "48/20 identities and108-source register retained; full independently verified geometry remains open.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-02",
@@ -178,7 +178,7 @@
       "acceptance": "Readable desktop and Android zoom; all sector selectors and all 20 Wild Zones work",
       "historical_status_before_AT336": "planned",
       "current_checkpoint_note": "Existing zoom/pan/rotation/compass and48-sector photo navigation deployed; full68-area geometry/linked highlight scope still open. Not merely unimplemented planned work.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-03",
@@ -190,7 +190,7 @@
       "acceptance": "Architecture/reference layer and written orientation, no unsupported traversable-path claim",
       "historical_status_before_AT336": "planned",
       "current_checkpoint_note": "Street-bearing and photo-reference implementations exist; independently verified boundary/architecture/traversable path completion remains open.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-04",
@@ -202,7 +202,7 @@
       "acceptance": "Confirmed pins only with observation, access point, level and nearby landmark",
       "historical_status_before_AT336": "planned",
       "current_checkpoint_note": "21 approximate owner Holovator entries and111 photos preserved. Exact doors/roofs or complete citywide device inventory not certified.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-05",
@@ -214,8 +214,8 @@
       "acceptance": "Actionable evidence-backed directions from stable landmarks to relevant destinations, including unlocks, moves, obstacles and ascent order; no new individual ascent-structure pins, exact ascent XY or exhaustive count required",
       "progress_note": "42 existing research leads retained. All nine Vert sectors initially researched; reconcile and publish useful routes rather than survey every ladder or scaffold. Written directions need no coordinate calibration. Continue independent Holovator and fixed item coordinate research when useful.",
       "historical_status_before_AT336": "in_progress",
-      "current_checkpoint_note": "22 deployed routes and70 research leads preserved. AT-320/328 PR156 proposes4 routes/23steps; latest head still requires current-base integration and independent visual gate.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint_note": "26 released routes /151 written steps and78 retained research leads. PR191 current-base Bleu7–10 integration, exact Pages deployment and earlier independent live verification freshly reconciled. All-area route/source completeness remains open; no exhaustive structure survey or new route geometry implied.",
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-06",
@@ -226,8 +226,8 @@
       ],
       "acceptance": "Exact pin only with identity, XY, floor, route and source; preserve old 264/100/146 IDs; compact independent item/Screw layers, accessible overlap handling and dense-marker QA per AT-333.",
       "historical_status_before_AT336": "planned",
-      "current_checkpoint_note": "AT-333 design plus AT-334/335 recovered-coordinate research; confirmed new item/Screw pins remain0. Compact layers and eligibility implementation pending.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint_note": "AT338 compact independent layers, searchable364-record directory and original progress adapter are merged/deployed/live verified in PR193. Physical eligibility remains strict with0 new production placements; approximate146 leads are not exact positions.",
+      "current_checkpoint": "AT-341"
     },
     {
       "id": "SM-07",
@@ -239,7 +239,7 @@
       "acceptance": "48 sector views, 20 Wild Zones, working menus/zoom/progress, evidence-labelled data, green CI and Android QA",
       "historical_status_before_AT336": "planned",
       "current_checkpoint_note": "Existing bounded releases have tests; complete68-area full-scope G5 signoff has not occurred.",
-      "current_checkpoint": "AT-336"
+      "current_checkpoint": "AT-341"
     }
   ],
   "sector_targets": [
@@ -5595,11 +5595,55 @@
   },
   "at_341_completion_checkpoint": {
     "path": "docs/qa/ATLAS_AT341_COMPLETION_CHECKPOINT.json",
-    "status": "reconciled_current_main_and_WZ04_pending_exact_head_browser_CI",
-    "manifest_revision": 87,
-    "ledger_revision": 95,
+    "status": "final_source_amendments_integrated_pending_exact_head_CI",
+    "manifest_revision": 89,
+    "ledger_revision": 97,
     "full_implementation_complete": false,
-    "supabase_private_planning_sync": "45 rows verified at Manifest86; Manifest87 checkpoint synchronization follows",
+    "supabase_private_planning_sync": "48 rows confirmed at Manifest89; earlier statuses/notes/proofs and separate Workspacev38 receipt preserved.",
+    "final_candidate": {
+      "stage": "final_source_amendments_integrated_pending_exact_head_CI",
+      "pr": 204,
+      "last_reviewed_remote_head": "d1d7322e6341cd91016f576161c55da682e06834",
+      "previous_exact_head_browser_result": "passed_and_artifact_visually_reviewed",
+      "geometry_review": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+      "boundary_source_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "approved_selection_outlines": [
+        "wz-02",
+        "wz-03",
+        "wz-04",
+        "wz-05",
+        "wz-11",
+        "wz-16",
+        "wz-20"
+      ],
+      "remaining_boundaries": 61,
+      "comprehensive_roster_signoffs": 0,
+      "encounter_review": "docs/qa/encounter-review-2026-11-26/area-review.json",
+      "encounter_amendments": "docs/qa/encounter-review-2026-11-26/amendments.json",
+      "preserved_original_encounter_rows": 272,
+      "additive_encounter_claims": 284,
+      "total_encounter_rows": 556,
+      "additive_status_counts": {
+        "owner_survey_correlated": 140,
+        "source_corroborated": 24,
+        "source_lead": 112,
+        "disputed": 8
+      },
+      "published_standard_roster_review": {
+        "areas_compared": 20,
+        "ordinary_source_agreement": 17,
+        "owner_ordinary_core_reconciled": 13,
+        "preserved_alpha_sets_reconciled": 20,
+        "full_comprehensive_signoff": false
+      },
+      "guide_correction": "Mission008: Branche, water-cleared approach, north ladder/twig distinction, exact rewards and level14 gift; original quest/progress identity retained",
+      "preservation": "Original images, native map, original geometry records/markers, collection records, player progress, accounts, Supabase runtime and feedback unchanged; no new exact pickup pins",
+      "workspace_changed": false,
+      "full_implementation_complete": false,
+      "full_workspace_prompt_ready": false,
+      "supabase_sync": "48 private planning rows confirmed at Manifest89; all46 previous statuses and proof fields, all Workspace fields and notes preserved, including concurrent PR202 release receipts.",
+      "next": "Final combined-head CI and actual phone/desktop screenshots; then reviewed bounded merge, exact Pages deployment and live checks."
+    },
     "reconciliation": {
       "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
       "observed_pr_head": "d1d7322e6341cd91016f576161c55da682e06834",
@@ -5619,5 +5663,18 @@
       "current_validation": "reconciled_candidate_pending_exact_head_browser_CI",
       "release_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204"
     }
+  },
+  "at341_concurrent_work_preservation": {
+    "observed_main_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_pr_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "retained_release_receipt_commit": "74975108bca6bb488ebcb9e86e908d7b90efe8ed",
+    "main_release": "PR202 separately merged map-filter recovery, exact place/accent/number search, original inline photographs and WZ14 source guidance. These changes are retained.",
+    "source_packet_policy": "Retain the concurrent current AT339 source packet and explicitly archive the earlier amendment baseline; do not overwrite either review history.",
+    "wz04_policy": "Preserve the concurrent six-outline production record and its separate review; the additional root WZ04 supplement remains corroborating evidence. WZ20 is the seventh outline.",
+    "workspace_observed_version": 38,
+    "workspace_source": "6f7808db2d3cfaa2bb660f381b13dbab452332ce",
+    "workspace_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "workspace_scope": "Separate previously completed three-file hotfix; this continuation does not modify or republish Workspace and is not full G5/A0 completion.",
+    "validation": "Combined reconciliation requires a fresh exact-head test and screenshot pass."
   }
 }

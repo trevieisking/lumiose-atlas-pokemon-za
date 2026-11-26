@@ -1,0 +1,400 @@
+{
+  "id": "AT339_GITHUB_RELEASE",
+  "date": "2026-11-26",
+  "status": "github_merged_deployed_live_verified",
+  "scope": "Bounded repair of place layers/search/photo access and shared area/habitat navigation across the existing four map views. Full geometry/roster coverage remains incomplete.",
+  "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/202",
+  "reviewed_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+  "reviewed_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+  "merge_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+  "merge_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+  "merge_tree_matches_reviewed": true,
+  "merge_parents": [
+    "d7021a7af3973f18d54d07634e29c23cc78b0560",
+    "42409561393a9fbaa2caa58ba781268af4cb8a6e"
+  ],
+  "merged_at": "2026-11-26T12:34:14Z",
+  "validation": {
+    "ci_run": 45819110334,
+    "ci_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+    "ci_conclusion": "success",
+    "ci_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45819110334",
+    "node_checks": 89,
+    "browser_suites": 4,
+    "jobs": [
+      {
+        "id": 139906426963,
+        "name": "unit",
+        "conclusion": "success"
+      },
+      {
+        "id": 139906426649,
+        "name": "browser",
+        "conclusion": "success"
+      }
+    ],
+    "other_successful_exact_head_runs": [
+      45819109735,
+      45819109667
+    ],
+    "combined_commit_statuses_count": 0,
+    "combined_commit_statuses_result": "none found; not counted as PASS",
+    "review_comments_threads_count": 0,
+    "screenshot_review_count": 30,
+    "independent_code_review": "PROMOTE for this exact bounded candidate",
+    "independent_visual_review": "PROMOTE; nonblocking capture limitations retained in browser review",
+    "browser_evidence": "docs/qa/at339-browser-final/README.md",
+    "browser_proof": "docs/qa/at339-browser-final/at339-browser-proof.json",
+    "artifact": {
+      "id": 15117007793,
+      "bytes": 65430584,
+      "sha256": "590dbc50a8460a340028710f9742c57a4496e8eebad35ccfb66eb337c8b819b6",
+      "github_digest_matched": true,
+      "extracted_proof_bytes_matched": true,
+      "source_expires_at": "2026-12-06T12:29:30Z"
+    },
+    "prior_static_failure": "Run45818510255 at1c04958dba55b93e154367299cab078f13f1afc0 passed all four browser suites but rejected an edit to captured styles.css. Final4240956 restored those bytes and moved the scoped pin typography into reconstruction.css; final CI passed without weakening the validator."
+  },
+  "deployment": {
+    "run_id": 45820881956,
+    "head_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "name": "pages build and deployment",
+    "conclusion": "success",
+    "run_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45820881956",
+    "completed_observed_at": "2026-11-26T12:35:50Z",
+    "last_updated_at": "2026-11-26T12:35:24Z"
+  },
+  "live_http": {
+    "base_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/",
+    "merge_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "observed_at": "2026-11-26T12:35:59.668999+00:00",
+    "all_matched": true,
+    "matched_count": 24,
+    "files": [
+      {
+        "path": "atlas-explorer.html",
+        "bytes": 19197,
+        "sha256": "81faa0c143a7ce3160187024c3157579109a9c072b4e32075c078d785d4760c7",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 19197,
+        "actual_sha256": "81faa0c143a7ce3160187024c3157579109a9c072b4e32075c078d785d4760c7",
+        "matched": true
+      },
+      {
+        "path": "atlas-explorer.js",
+        "bytes": 41043,
+        "sha256": "a0f5d75dc1dffc08173667485f265f28dcec3829d7f7411f4ce6cd9102ffe159",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 41043,
+        "actual_sha256": "a0f5d75dc1dffc08173667485f265f28dcec3829d7f7411f4ce6cd9102ffe159",
+        "matched": true
+      },
+      {
+        "path": "atlas-explorer.css",
+        "bytes": 22019,
+        "sha256": "69d5bf5192b1a33e54ef81fffd393cc9910e4d754394f493a0d4690a852d6af3",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.css?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 22019,
+        "actual_sha256": "69d5bf5192b1a33e54ef81fffd393cc9910e4d754394f493a0d4690a852d6af3",
+        "matched": true
+      },
+      {
+        "path": "atlas-area-model.mjs",
+        "bytes": 19437,
+        "sha256": "6406797058e59f7121d126529f21005bb90282c4377e7c7a0162fc5c951a5fbd",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-area-model.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 19437,
+        "actual_sha256": "6406797058e59f7121d126529f21005bb90282c4377e7c7a0162fc5c951a5fbd",
+        "matched": true
+      },
+      {
+        "path": "atlas-area-ui.mjs",
+        "bytes": 20009,
+        "sha256": "a21a2d237595508e0752c82fd560741bb8290b9bc2ce0cff67eb6727543bed4a",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-area-ui.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 20009,
+        "actual_sha256": "a21a2d237595508e0752c82fd560741bb8290b9bc2ce0cff67eb6727543bed4a",
+        "matched": true
+      },
+      {
+        "path": "atlas-area-surfaces.mjs",
+        "bytes": 2475,
+        "sha256": "80f22dc1ac0b3171a36e26976ea9e2a06ef5277cf97bd0a227f5c14f7e241810",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-area-surfaces.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 2475,
+        "actual_sha256": "80f22dc1ac0b3171a36e26976ea9e2a06ef5277cf97bd0a227f5c14f7e241810",
+        "matched": true
+      },
+      {
+        "path": "atlas-area-evidence.json",
+        "bytes": 381545,
+        "sha256": "762a00bf28f551bbecfefa0a4fdd92f599db57b099c4ab79790508233e4ba3dc",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-area-evidence.json?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 381545,
+        "actual_sha256": "762a00bf28f551bbecfefa0a4fdd92f599db57b099c4ab79790508233e4ba3dc",
+        "matched": true
+      },
+      {
+        "path": "atlas-area.css",
+        "bytes": 5314,
+        "sha256": "23ce75b136475384f610138180970f82775249516fd85aad60515487bc5641e8",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-area.css?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 5314,
+        "actual_sha256": "23ce75b136475384f610138180970f82775249516fd85aad60515487bc5641e8",
+        "matched": true
+      },
+      {
+        "path": "atlas-collectibles.mjs",
+        "bytes": 17714,
+        "sha256": "3024f2cd0cad861d054f27d998064e6e1fc54bcfd427ebe3530291892227d9b1",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 17714,
+        "actual_sha256": "3024f2cd0cad861d054f27d998064e6e1fc54bcfd427ebe3530291892227d9b1",
+        "matched": true
+      },
+      {
+        "path": "atlas-collectibles-ui.mjs",
+        "bytes": 12429,
+        "sha256": "4be768a17169d5aadd92ead78a4b3786c703c6e3a77f327ed5e698ff5a9360d6",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles-ui.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 12429,
+        "actual_sha256": "4be768a17169d5aadd92ead78a4b3786c703c6e3a77f327ed5e698ff5a9360d6",
+        "matched": true
+      },
+      {
+        "path": "atlas-collectibles-data.json",
+        "bytes": 612,
+        "sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-collectibles-data.json?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 612,
+        "actual_sha256": "029dfa3f75450f9bb55991812ae8903262f788f79b7b8c8090908cabe33c5bcc",
+        "matched": true
+      },
+      {
+        "path": "maps.html",
+        "bytes": 196064,
+        "sha256": "38362cfd573d7cbedbfa1a995e5945cafcd0dbbd520577b6430b12e61f0d0293",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/maps.html?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 196064,
+        "actual_sha256": "38362cfd573d7cbedbfa1a995e5945cafcd0dbbd520577b6430b12e61f0d0293",
+        "matched": true
+      },
+      {
+        "path": "maps.js",
+        "bytes": 8768,
+        "sha256": "3e3544e9698427198ca13308a03eae772bc44264c53d4f3012ffcacae0fdfbab",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/maps.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 8768,
+        "actual_sha256": "3e3544e9698427198ca13308a03eae772bc44264c53d4f3012ffcacae0fdfbab",
+        "matched": true
+      },
+      {
+        "path": "sector-maps.html",
+        "bytes": 563433,
+        "sha256": "0f3dde078d806abb3a51f6aee58a251377b2da2cbe7d04dbe40214fcde0535cd",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/sector-maps.html?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 563433,
+        "actual_sha256": "0f3dde078d806abb3a51f6aee58a251377b2da2cbe7d04dbe40214fcde0535cd",
+        "matched": true
+      },
+      {
+        "path": "sector-maps.js",
+        "bytes": 9398,
+        "sha256": "8117e865a894ae808607058c9f1026d7be18325fb1636e3136fce2014f77e05c",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/sector-maps.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 9398,
+        "actual_sha256": "8117e865a894ae808607058c9f1026d7be18325fb1636e3136fce2014f77e05c",
+        "matched": true
+      },
+      {
+        "path": "app.js",
+        "bytes": 27145,
+        "sha256": "c076afd5871e2fcf9f7a988b4e027ecf23f22992734d066d6a47d13c9ed7589d",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/app.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 27145,
+        "actual_sha256": "c076afd5871e2fcf9f7a988b4e027ecf23f22992734d066d6a47d13c9ed7589d",
+        "matched": true
+      },
+      {
+        "path": "styles.css",
+        "bytes": 89584,
+        "sha256": "ab9798734f52177cea048aca82f5ce640bfbffc6b947236abaabbb009e66c4d3",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/styles.css?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 89584,
+        "actual_sha256": "ab9798734f52177cea048aca82f5ce640bfbffc6b947236abaabbb009e66c4d3",
+        "matched": true
+      },
+      {
+        "path": "reconstruction.css",
+        "bytes": 3555,
+        "sha256": "13efc19275bec03bac45acaeb30718a5091a4bd06b29c07042de7d0b528035e5",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/reconstruction.css?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 3555,
+        "actual_sha256": "13efc19275bec03bac45acaeb30718a5091a4bd06b29c07042de7d0b528035e5",
+        "matched": true
+      },
+      {
+        "path": "wild-zone-fieldbook.mjs",
+        "bytes": 20920,
+        "sha256": "3dab36608fdd156d69edec7049b677d3c81f19346c9091d6b1f0bce1dbeab1b0",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/wild-zone-fieldbook.mjs?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 20920,
+        "actual_sha256": "3dab36608fdd156d69edec7049b677d3c81f19346c9091d6b1f0bce1dbeab1b0",
+        "matched": true
+      },
+      {
+        "path": "wild-zone-fieldbook.css",
+        "bytes": 2126,
+        "sha256": "919616e2cfa1249068de30005500162818c6e3d3dae37d6ae7c273ff5ce84638",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/wild-zone-fieldbook.css?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 2126,
+        "actual_sha256": "919616e2cfa1249068de30005500162818c6e3d3dae37d6ae7c273ff5ce84638",
+        "matched": true
+      },
+      {
+        "path": "items-data.js",
+        "bytes": 103398,
+        "sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/items-data.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 103398,
+        "actual_sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "matched": true
+      },
+      {
+        "path": "items.js",
+        "bytes": 7556,
+        "sha256": "d670c5c51dcd21fd7938fbf0e5acaf3bf1d2d7c92ed9a5441e2bd89e32f6d1e6",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/items.js?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 7556,
+        "actual_sha256": "d670c5c51dcd21fd7938fbf0e5acaf3bf1d2d7c92ed9a5441e2bd89e32f6d1e6",
+        "matched": true
+      },
+      {
+        "path": "atlas-explorer-data.json",
+        "bytes": 171593,
+        "sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer-data.json?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 171593,
+        "actual_sha256": "5185c5f511ff69dc044faa1027b305a22847c2b595d9585cdcdc1c798cde8cfa",
+        "matched": true
+      },
+      {
+        "path": "maps/lumiose-game-map.jpg",
+        "bytes": 411683,
+        "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/maps/lumiose-game-map.jpg?at339=4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+        "http_status": 200,
+        "actual_bytes": 411683,
+        "actual_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "matched": true
+      }
+    ]
+  },
+  "live_browser": {
+    "observed": true,
+    "completed_at_utc": "2026-11-26T12:37:08Z",
+    "method": "Direct CUA interaction with the deployed public GitHub Pages site; no browser state injection or synthetic fixtures in this live check.",
+    "verified_url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?area=wz-02",
+    "layer_recovery": {
+      "sequence": "Select 48 sectors; switch Holovators off then on",
+      "before_visible_marker_status": 0,
+      "after_visible_marker_status": 47,
+      "holovator_pin_count": 21,
+      "result_category": "All"
+    },
+    "wild_zone_2_search": {
+      "result_labels": [
+        "Wild Zone 02"
+      ],
+      "visible_place_marker_status": 1,
+      "wild_zone_20_present": false
+    },
+    "accent_fold_search": {
+      "query": "cafe cyclone",
+      "results": [
+        "Café Cyclone — concealed courtyard",
+        "Café Cyclone"
+      ]
+    },
+    "photos": {
+      "selected_record": "bleu3-fav",
+      "selected_heading": "My Favorite Holovator — Bleu Sector 3",
+      "loaded_count": 5,
+      "each_natural_width": 1536,
+      "details_action_focused_existing_h3": true
+    },
+    "shared_habitat_filters": {
+      "query": "Eevee",
+      "encounter_class": "ordinary",
+      "matching_areas": 8,
+      "matching_encounter_records": 20,
+      "reviewed_outline_count": 5,
+      "selected_original_photo_count_retained": 5
+    },
+    "area_deep_link": {
+      "area": "wz-02",
+      "selected_original_heading": "Wild Zone 02",
+      "original_zone_layer_visible_count": 20
+    },
+    "scope_limit": "Cloud desktop live observation complements exact-head phone/desktop CI. It is not physical-device or in-game verification."
+  },
+  "preservation_receipt": "docs/qa/ATLAS_AT339_PRESERVATION_RECEIPT.json",
+  "research_recovery": "docs/qa/at339-source-recovery/README.md",
+  "wz04_candidate": "docs/qa/candidates/wz04-2026-11-26/README.md",
+  "wz04_decision": "HOLD; no production polygon approved",
+  "production_scope": {
+    "reviewed_outline_ids": [
+      "wz-02",
+      "wz-03",
+      "wz-05",
+      "wz-11",
+      "wz-16"
+    ],
+    "remaining_boundaries": 63,
+    "comprehensive_rosters_completed": 0,
+    "comprehensive_rosters_remaining": 68,
+    "preserved_encounter_rows": 272,
+    "additive_attributed_claims": 283,
+    "total_encounter_rows": 555,
+    "supported_additional_ordinary_habitat_rows": 155,
+    "new_production_pickup_placements": 0,
+    "synthetic_fixtures_in_production": false,
+    "github_videos_and_youtube": "paused"
+  },
+  "separate_original_site_hotfix": {
+    "receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+    "version": 38,
+    "scope": "Three original Explorer files only; independently published and live-browser verified, not the complete GitHub-to-Workspace upgrade."
+  },
+  "full_scope_G5_signed_off": false,
+  "approved_full_scope_sha": null,
+  "final_executable_workspace_prompt": null,
+  "rollback": {
+    "method": "Revert the PR202 merge after checking later changes; do not clear player storage or revert unrelated source evidence.",
+    "prior_main": "d7021a7af3973f18d54d07634e29c23cc78b0560"
+  },
+  "concurrency_note": "A separate PR204 candidate and Manifest87/Ledger95 metadata were observed during release recording. They are not covered by this PR202 runtime approval; later checkpoint reconciliation must retain their evidence and avoid duplicate AT339 tracking rows."
+}

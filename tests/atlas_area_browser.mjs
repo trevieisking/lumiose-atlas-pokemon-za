@@ -7,6 +7,7 @@ import {spawn} from "node:child_process";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 import {AREA_MAP} from "../atlas-area-model.mjs";
+import {wildZoneRecord} from "../wild-zone-fieldbook.mjs";
 
 const base="http://127.0.0.1:18769",output="test-artifacts/atlas-areas";
 const key="lumiose-atlas-reconstruction-v1";
@@ -54,7 +55,7 @@ try{
       window.__areaStorageWrites=[];
       for(const method of ["setItem","removeItem","clear"]){const original=Storage.prototype[method];Storage.prototype[method]=function(...args){window.__areaStorageWrites.push([method,...args]);return original.apply(this,args);};}
     },{key,saved});
-    const page=await context.newPage(),errors=[];
+    const page=await context.newPage(),errors=[],approvedZoneRenders=[];
     page.on("pageerror",error=>errors.push(String(error)));
     async function panel(){
       const host=page.locator("[data-area-panel]");await host.waitFor({state:"attached"});
@@ -470,7 +471,9 @@ try{
     await originalPhotoNode.dispose();
     await unchanged();
 
-    for(const areaId of ["wz-11","wz-04"]){
+    // Retain the current WZ11/WZ04 checks and add WZ20 only when production
+    // approves it. This runs before synthetic evidence interception.
+    for(const areaId of ["wz-11","wz-04",...productionIds.filter(id=>id==="wz-20")]){
       await page.goto(base+"/atlas-explorer.html?area="+areaId,{waitUntil:"load"});
       const measuredPanel=await panel();
       await measuredPanel.locator('[data-area-focus="'+areaId+'"]').click();
@@ -478,6 +481,40 @@ try{
       assert.equal(await page.locator('[data-area-boundary="'+areaId+'"].is-active').count(),1);
       await page.locator("#aeViewport").screenshot({path:output+"/at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png"});
       await unchanged();
+      if(!["wz-04","wz-20"].includes(areaId))continue;
+      const row=register.geometries.find(row=>row.area_id===areaId&&row.status==="approved");
+      assert.ok(row,"Rendered new outline must have approved production evidence");
+      const points=row.geometry.coordinates.flat(row.geometry.type==="Polygon"?1:2);
+      const xs=points.map(point=>point[0]),ys=points.map(point=>point[1]);
+      const expectedBounds={x:Math.min(...xs),y:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};
+      await explorerSelection(areaId);
+      const boundary=page.locator('[data-area-boundary="'+areaId+'"].is-active');
+      assert.equal(await page.locator('[data-area-boundary].is-active').count(),1,"Only the selected production area is active");
+      assert.ok(await boundary.isVisible(),"Selected production outline is visible");
+      const renderedBounds=await boundary.evaluate(node=>{const b=node.getBBox();return{x:b.x,y:b.y,width:b.width,height:b.height};});
+      for(const key of Object.keys(expectedBounds))assert.ok(Math.abs(renderedBounds[key]-expectedBounds[key])<0.01,"Rendered "+areaId+" "+key+" matches the approved native geometry");
+      assert.equal(await measuredPanel.locator('[data-area-results] [data-area-id="'+areaId+'"]').getAttribute("aria-pressed"),"true");
+      assert.equal(new URL(page.url()).searchParams.get("area"),areaId);
+      for(const control of ["aeZoomIn","aeZoomOut","aeTurnLeft","aeTurnRight","aeNorth","aeReset","aeRose"]){
+        assert.ok(await page.locator("#"+control).isVisible(),control+" remains visible with "+areaId);
+        assert.ok(await page.locator("#"+control).isEnabled(),control+" remains enabled with "+areaId);
+      }
+      assert.equal(await page.locator("#aeMapImage").getAttribute("src"),AREA_MAP.path,"The original map stays behind the approved outline");
+      const zone=wildZoneRecord(Number(areaId.slice(3)));
+      const photos=page.locator('#aeSelected [data-wz-fieldbook="'+zone.number+'"] .wz-photo-pair');
+      assert.equal(await photos.locator("img").count(),zone.photos.length,"Original photograph pair is retained");
+      for(const [index,photo] of zone.photos.entries()){
+        const img=photos.locator("img").nth(index);
+        assert.equal(await img.getAttribute("src"),photo.path);
+        assert.equal(await img.locator("..").getAttribute("href"),photo.path,"Full-size original photograph remains accessible");
+        await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());
+        assert.equal(await img.evaluate(node=>node.naturalWidth),photo.width,"Original photograph decodes at its recorded width");
+      }
+      const mapScreenshot="at339-measured-selected-"+areaId.replace("-","")+"-"+device+".png";
+      const photoScreenshot="at339-approved-"+areaId.replace("-","")+"-photos-"+device+".png";
+      await photos.screenshot({path:output+"/"+photoScreenshot});
+      await unchanged();
+      approvedZoneRenders.push({areaId,synthetic:false,selectedOriginalRecord:true,activeBoundary:true,renderedBounds,originalControls:true,originalPhotos:zone.photos.map(photo=>photo.path),mapScreenshot,photoScreenshot});
     }
 
     await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});await panel();
@@ -618,7 +655,7 @@ try{
     await page.unroute("**/items-data.js");await page.unroute("**/atlas-collectibles-data.json");
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
     assert.deepEqual(errors,[],"No uncaught runtime errors on "+device);
-    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,pendingLegacyIntentPreserved:true,pendingHistorySupersedesIntent:true,pendingExplorerRecordPreserved:true,pendingMainChoiceAndFiltersPreserved:true,pendingSectorAnchorsPreserved:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
+    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,pendingLegacyIntentPreserved:true,pendingHistorySupersedesIntent:true,pendingExplorerRecordPreserved:true,pendingMainChoiceAndFiltersPreserved:true,pendingSectorAnchorsPreserved:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,approvedZoneRenders,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
     await context.close();
   }
   fs.writeFileSync(output+"/at339-browser-proof.json",JSON.stringify(proof,null,2)+"\n");
