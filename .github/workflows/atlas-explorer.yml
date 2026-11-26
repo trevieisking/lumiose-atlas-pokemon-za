@@ -24,6 +24,12 @@ on:
       - atlas-guide-links.mjs
       - tests/atlas_guide_links.test.mjs
       - atlas-explorer-data.json
+      - atlas-collectibles.mjs
+      - atlas-collectibles-ui.mjs
+      - atlas-collectibles-data.json
+      - items-data.js
+      - tests/atlas_collectibles.test.mjs
+      - tests/atlas_collectibles_browser.mjs
       - sector-maps.js
       - sector-maps.css
       - tests/sector_map_directory.test.mjs
@@ -56,9 +62,11 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check sector-maps.js && node --check maps.js && node --check app.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
+      - name: Gate collectible coordinates, original identities and read-only progress
+        run: node --test tests/atlas_collectibles.test.mjs tests/items_checkoff.test.mjs
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
@@ -83,6 +91,8 @@ jobs:
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify real map and stepwise routes on desktop and phone
         run: node tests/atlas_explorer_browser.mjs
+      - name: Verify compact layers with isolated dense fixtures and unchanged player progress
+        run: node tests/atlas_collectibles_browser.mjs
       - name: Verify all 20 Wild Zone photo panels and four map surfaces
         run: node tests/wild_zone_fieldbook_browser.mjs
       - name: Attach screenshot QA evidence
@@ -90,6 +100,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: atlas-explorer-mobile-desktop-preview
-          path: test-artifacts/atlas-explorer/
+          path: |
+            test-artifacts/atlas-explorer/
+            test-artifacts/atlas-collectibles/
           if-no-files-found: ignore
           retention-days: 10

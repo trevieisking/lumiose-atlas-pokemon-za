@@ -38,6 +38,7 @@ let records=[],routes=[],recordMap=new Map(),pinMap=new Map(),zoneRows=[];
 let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
+let collectibleUI=null;
 const dimensions=()=>{
   const rect=viewport.getBoundingClientRect();
   return {width:Math.max(1,rect.width),height:Math.max(1,rect.height)};
@@ -55,6 +56,7 @@ function draw(){
   needle.style.transform="rotate("+(-view.rotation)+"deg)";
   zoomLabel.textContent=view.zoom.toFixed(2)+"×";
   readout.textContent="Original 2D city geometry · "+Math.round(view.rotation)+"° clockwise";
+  collectibleUI?.draw();
 }
 function scheduleDraw(){
   if(paintScheduled)return;
@@ -549,6 +551,17 @@ async function load(){
   }
   stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · "+routes.length+" documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
+  // Collection evidence is isolated: a failure must not disable the existing map.
+  import("./atlas-collectibles-ui.mjs").then(async ({installCollectibles})=>{
+    collectibleUI=await installCollectibles({
+      projectPoint:xy=>project(xy,view,dimensions()),
+      currentView:()=>({...view}),
+      focusPoint:xy=>applyView(centreOn(xy,{...view,zoom:Math.max(2,view.zoom)},dimensions()))
+    });
+    collectibleUI.draw();
+  }).catch(()=>{
+    by("aeCollectibleStatus").textContent="The collection directory could not load. The original item and Screw checklists are still available.";
+  });
 }
 setupNavigation();
 filters.forEach(b=>b.addEventListener("click",()=>{activeKind=b.dataset.kind||"all";drawList();}));
