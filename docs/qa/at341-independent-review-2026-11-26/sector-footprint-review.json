@@ -1,0 +1,134 @@
+{
+  "id": "AT341-SECTOR-FOOTPRINTS-INDEPENDENT-REVIEW-2026-11-26",
+  "date": "2026-11-26",
+  "reviewer": "delegated_independent_geometry_agent_geometry_completion",
+  "decision": "NO_GEOMETRY_BLOCKER_TO_SCOPED_SOURCE_AREA_FOOTPRINT_INTEGRATION",
+  "scope": "Bounded read-only review of the 48 named-sector source-area footprint candidates. Approval is limited to optional selectable 2-D source-area projections, with source identity, height, overlap and uncertainty qualifications retained. This is separate from the completed nine photo-derived Wild Zone outline review and is not a full release approval.",
+  "observed_checkout": "/workspace/scratch/dd7dfe1436cb/atlas-release",
+  "observed_commit": "cffbf6077682e2c1cfacad2603e7d9c6a94147ef",
+  "observed_tree": "914cdadba71490220c5a5f789c6ce5e02e0073ba",
+  "working_state_qualification": "The owner was modifying runtime integration files during the review. The committed candidate packet and the observations recorded here are the review scope; uncommitted integration changes and later exact-head CI are not approved by this receipt.",
+  "packet_root": "docs/qa/candidates/source-area-footprints-2026-11-26",
+  "frozen_reviewed_files": [
+    {
+      "path": "native-sector-footprint-candidates.json",
+      "sha256": "a2e1c6d6e15f68770ed52ea1d45f93ae7777ef35c94ef0aeed2bbd65219e3e00"
+    },
+    {
+      "path": "derived-sector-footprints.json",
+      "sha256": "a5bf06a7d2be48a36f5a0022b9ef2214af09e2c7795545a7831f3910bafaecf2"
+    },
+    {
+      "path": "calibration/independent-sector-footprint-review.json",
+      "sha256": "17924a0d33f7a1a5ed145a98b93d087dade14d5f4730b393d249ffab369e11d0"
+    },
+    {
+      "path": "calibration/independent-sector-source-replay.json",
+      "sha256": "e19d753078ac6a473234d9014f19d0f2ef21570c15918ce2729d577f53d2bc31"
+    },
+    {
+      "path": "calibration/independent-texture-native-review.json",
+      "sha256": "ba602cea3e653145aec895c5048bbb7aa2a7ed30d5a72ad27d48fc89773e6140"
+    },
+    {
+      "path": "all48-registered-texture-native-candidate.png",
+      "sha256": "ce1cd46f226ea401f73a8dd7ed8974b9fdcc609fff4967ac46cced2880885a9d"
+    },
+    {
+      "path": "owner-native-world-crosschecks.png",
+      "sha256": "5225fcdcc274a338f25805bb32b8b78b0c93e2374563cfb78a7337dcb3ea4399"
+    }
+  ],
+  "identity_and_projection_checks": {
+    "candidate_count": 48,
+    "unique_candidate_ids": 48,
+    "derived_source_record_count": 48,
+    "retained_raw_replay_record_count": 48,
+    "asset_receipt_count": 48,
+    "name_crosswalk_count": 48,
+    "district_counts": {"vert": 9, "bleu": 10, "magenta": 9, "rouge": 8, "jaune": 12},
+    "exact_match_to_existing_runtime_sector_id_set": true,
+    "all_candidate_statuses": "candidate_pending_root_review",
+    "all_representations": "source_area_footprint",
+    "all_coordinate_spaces": "atlas-native-pixels",
+    "all_native_map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+    "all_source_layers": 2,
+    "joins_checked": ["area ID", "visible English label", "source area name", "message name key", "source layer", "source SHA-256", "Git blob hash", "source path", "source height range"],
+    "join_errors": [],
+    "closed_ring_vertex_count": 784,
+    "independently_recomputed_native_projection_max_difference_px": 3.2155493553843715e-13,
+    "projection_method": "Evaluated the retained composed world-to-native matrix on every retained derived source XZ ring vertex; no fitting or modification.",
+    "all_vertices_finite_and_inside_1920_native_bounds": true,
+    "all_rings_closed": true,
+    "valid_single_polygons_without_holes": 48,
+    "topology_library": "Shapely 2.2.0 from existing research dependencies; no installation or raw-source decoding",
+    "read_only_model_check": {
+      "all_48_pending_records_rejected": true,
+      "all_48_pass_with_status_approved_supplied_only_in_memory": true,
+      "source_area_footprint_representation_preserved": true,
+      "issues": [],
+      "runtime_approval_or_files_modified": false
+    }
+  },
+  "overlap_and_height_checks": {
+    "independently_recomputed_overlap_pairs_above_world_area_0_0001": 47,
+    "overlap_pairs_with_different_recorded_source_y_ranges": 46,
+    "height_ranges_retained_for_every_record": true,
+    "nonconstant_height_ranges": [
+      {"label": "Bleu Sector 8", "world_y_range": [-15.759765625, -15.7109375]},
+      {"label": "Bleu Sector 9", "world_y_range": [-18.392578125, -18.390625]},
+      {"label": "Magenta Sector 2", "world_y_range": [-25.51953125, -25.494140625]},
+      {"label": "Jaune Sector 6", "world_y_range": [-10.0, 5.119140625]}
+    ],
+    "interpretation": "Preserve overlapping 2-D source-area projections. They are not an exclusive city partition, single-floor representation or exact game place-name classifier without layer/type/height resolution."
+  },
+  "registration_and_world_diagnostic_limits": {
+    "fixed_world_to_texture_formula": ["u = 78 - 3.94*x", "v = 78 - 3.94*z"],
+    "retained_raster_fit_control_count": 31,
+    "retained_reserved_architecture_holdout_count": 4,
+    "raster_fit_max_px": 2.0523614418784817,
+    "raster_holdout_max_px": 2.0008624115912745,
+    "observed_raster_pick_threshold_px": 3,
+    "world_to_green_diagnostic_count_retained": 13,
+    "world_to_green_diagnostics_exceeding_3px": [
+      {"id": "W13-NE", "difference_px": 7.070527550121739},
+      {"id": "W13-SW", "difference_px": 7.364567976841499},
+      {"id": "W14-NE", "difference_px": 3.0322100580554023}
+    ],
+    "interpretation": "The 3 px metric applies to original-texture-to-native architectural registration. It is not a universal bound on source-mesh versus green-display edges, physical boundaries or hidden edges. All 13 world-frame diagnostics remain disclosed, and they were not used to refit the transform. Source-area footprints must not be silently presented as green Wild Zone outlines."
+  },
+  "visual_review": {
+    "panels_viewed": ["all48-registered-texture-native-candidate.png", "owner-native-calibration.png", "owner-native-world-crosschecks.png"],
+    "finding": "All 48 projected footprints occupy plausible named-sector regions. The overview visibly preserves overlaps and coverage beneath some Wild Zones. The architecture controls and reserved holdouts cover the city. The world-versus-green panel explicitly shows the finite source/display discrepancies. Plausibility is corroboration; retained source identity joins and fixed transformations remain the authority.",
+    "historical_status_note": "The all-48 panel and intermediate composition candidate retain earlier HOLD captions. The separate independent projection receipt approves the scoped method; the native candidates still require explicit runtime integration approval."
+  },
+  "decoder_packaging_hash_reconciliation": {
+    "historical_frozen_original_sha256": "f59fa490617069c507864d5e9678259a71e47394ee961a8221c31428b80fc071",
+    "packaged_decoder_sha256": "3b7b7efc8ba0869eda0affe7dd65ea626395b572154dd2c46fed6e760b8355a8",
+    "retained_original_observed_at": "/workspace/scratch/dd7dfe1436cb/plan-audit/geometry-sources/sector-pilot/decode_sector_meshes.py",
+    "packaged_path": "docs/qa/candidates/source-area-footprints-2026-11-26/decode_sector_meshes.py",
+    "exact_removed_line": "sys.path.insert(0, str(Path(__file__).resolve().parent.parent/'python-deps'))",
+    "verification": "Direct comparison established that removing this one scratch-specific dependency-path line from the exact historical-hash original produces the packaged file byte-for-byte. All other bytes, including all decoding logic, are identical.",
+    "historical_receipt_should_remain_unchanged": true,
+    "geometry_blocker": false
+  },
+  "source_verification_scope": {
+    "publisher": "969981/ZA_Resources",
+    "public_source_commit": "e44a63db22a9f295d43c34db3f67695d31ae8e7a",
+    "publisher_declared_version": "2.0.2",
+    "provenance_qualification": "Third-party publication of original game-resource assets; no official-publisher endorsement or authenticity claim beyond retained content identities and spatial checks.",
+    "this_review_performed": "Checked supplied source-replay receipt coverage and all 48 per-record identity/hash/layer/height joins; checked present frozen packet hashes; independently recomputed native projections and projected topology/overlaps; directly inspected owner-native panels and reconciled the exact decoder packaging difference.",
+    "existing_raw_replay_receipt_scope": "Independent execution of the retained decoder and original text joins against raw pinned asset hashes. The receipt records 48 equal geometries/full-face hashes and zero mesh-versus-tree bounds discrepancy. It does not claim a second independently implemented binary decoder.",
+    "expensive_full_raw_source_replay_performed_in_this_review": false,
+    "new_external_fetches_or_research": false,
+    "checkout_or_remote_mutations": false
+  },
+  "integration_limits": [
+    "Retain representation source_area_footprint and describe overlapping 2-D named-area projections with height limitations.",
+    "Retain original source identities, immutable public commit, content hashes, source height ranges and overlap evidence.",
+    "Preserve all nine photo-derived Wild Zone outlines and original photos. Do not replace them with source colliders under this review.",
+    "Do not flatten overlaps, snap to streets, subtract higher layers, or infer physical barriers, walkability, entrances, encounter membership or spawn locations.",
+    "This geometry result closes no comprehensive encounter or whole-plan signoff. Integrated exact-head runtime/model/browser/visual/CI review remains separate."
+  ],
+  "material_geometry_or_representation_blocker_found": false
+}

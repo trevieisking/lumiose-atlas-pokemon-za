@@ -1,0 +1,278 @@
+{
+  "id": "AT341-COMBINED-GEOMETRY-INDEPENDENT-REVIEW-2026-11-26",
+  "reviewed_at_utc": "2026-11-26T13:20:09.918388+00:00",
+  "reviewer": "delegated_independent_geometry_agent_geometry_completion",
+  "scope": "Read-only independent review of WZ13 and WZ14 selection geometry evidence, with preservation comparison against exact combined parent b788. No general release approval.",
+  "decision": "approve_two_additional_rendered_selection_footprints_with_explicit_occlusion_limits",
+  "observed_checkout": "/workspace/scratch/dd7dfe1436cb/atlas-release",
+  "comparison_base_commit": "b788abb87ef32cb210747da420d95780c4a22583",
+  "observed_start_commit": "e576dee3efa5f7fa30a1c471d986e9c6fb53a320",
+  "observed_start_tree": "c95939974b2f982849e645fd2215a2ec5ae29f09",
+  "observed_end_commit": "cffbf6077682e2c1cfacad2603e7d9c6a94147ef",
+  "observed_end_tree": "914cdadba71490220c5a5f789c6ce5e02e0073ba",
+  "observed_end_git_status_short": "",
+  "concurrency_note": "The owner was actively committing unrelated guide/workflow work during review. Geometry dataset and continuation JSON hashes below stayed unchanged from start through final read. Only this temporary review file is written by the reviewer, outside both checkouts.",
+  "reviewed_runtime_evidence_dataset": {
+    "path": "atlas-area-evidence.json",
+    "sha256": "392492a5337ffd90f8fc554a7b6913a8d8a51f65ed3bdc27806eb02f2272f840"
+  },
+  "reviewed_continuation": {
+    "path": "docs/qa/ATLAS_AT341_GEOMETRY_CONTINUATION.json",
+    "sha256": "8933384dc5e3b280763fd3bbf005df4e17e4edd2326bdfcf90eac0150691a6e3"
+  },
+  "preservation": {
+    "prior_seven_entire_geometry_records_deep_equal": true,
+    "prior_area_ids": [
+      "wz-02",
+      "wz-03",
+      "wz-16",
+      "wz-05",
+      "wz-11",
+      "wz-04",
+      "wz-20"
+    ],
+    "only_added_geometry_area_ids": [
+      "wz-13",
+      "wz-14"
+    ],
+    "original_assets_maps_fieldbook_and_prior_geometry_receipts_git_diff_vs_base_empty": true,
+    "previous_receipts": [
+      {
+        "path": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+        "sha256": "e1af71628fe84b53d14ccb424ebcf8f5b194f34895ebab1a52d3b807f89e434b"
+      },
+      {
+        "path": "docs/qa/ATLAS_AT341_GEOMETRY_REVIEW.json",
+        "sha256": "68a9819c650b94be51e439b33d9bec931a4b71d01b442cc05d856e0caf9d84ad"
+      }
+    ],
+    "atlas_explorer_data_preservation": "All original zones, sectors, holovators, ladder, landmarks, map identity, counts and not_mapped records are deeply unchanged; all 26 previous route records are present unchanged. Sixteen new written routes are outside this geometry review.",
+    "encounter_evidence_scope": "The broader continuation adds 464 encounter rows and modifies condition/evidence/source/notes fields on 38 existing rows. No previous encounter row ID was removed. Those claims are outside this geometry approval and need their separate review."
+  },
+  "reproduction_method": {
+    "operation": "Loaded each reviewed reproduce_review.py using runpy.run_path with a non-main name; replaced only its in-memory write function with comparison of generated serialized bytes against existing files; invoked main with --repo. No output file, checkout, original, remote, or source packet was modified.",
+    "runtime": "python -B; NumPy 2.3.5; SciPy 1.17.0; Pillow 13.0.0",
+    "verified": "All 48 WZ13 and 57 WZ14 frozen input hashes, controls-only original fit replay, observed holdout metrics, deterministic original-image curve samples, candidate projections, topology, and both receipt/approved-record bytes."
+  },
+  "zones": [
+    {
+      "area_id": "wz-13",
+      "decision": "acceptable_for_rendered_map_selection_only",
+      "review_receipt": {
+        "path": "docs/qa/candidates/wz13-2026-11-26/selection-review-receipt.json",
+        "sha256": "41a061b6b19042a23476e63bca41cb15e3e2af683919266be6be1bd988ddb269"
+      },
+      "approved_record": {
+        "path": "docs/qa/candidates/wz13-2026-11-26/wz13-approved-record.json",
+        "sha256": "ddf53bf6b70c2d32fbf7575aaf0df11aa733cd02a93111cc83bd78ab0b1cf74f"
+      },
+      "candidate": {
+        "path": "docs/qa/candidates/wz13-2026-11-26/perimeter-candidate.json",
+        "sha256": "d93b9d5c23245528381829e6960aa0398d6eb57ad5a2ffa4f74fb83550a6e1da"
+      },
+      "reproduction_script": {
+        "path": "docs/qa/candidates/wz13-2026-11-26/reproduce_review.py",
+        "sha256": "6069127b9211f4e45232180fbf219c88cceb600db8b9786ebf93e0af3046dfff"
+      },
+      "runtime_entire_record_equals_approved_record": true,
+      "runtime_geometry_sha256_json_stringify_order": "24e5fd7afc1d2d9fd4fdeacb40192ff89885b9312b766e7aa6f0c37132fd4a2a",
+      "source_hashes_verified": [
+        {
+          "path": "maps/lumiose-game-map.jpg",
+          "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+          "matches_record": true
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-overview.png",
+          "sha256": "24e0b104100e13da41aac51e0d62c665b48347267379fe4a69c257455d60d7bf",
+          "matches_record": true
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-13-closeup.png",
+          "sha256": "e71f8608394c45f61891b55a5c844335c5a90159f306019ec26700bcd006f7f1",
+          "matches_record": true
+        }
+      ],
+      "frozen_input_count_verified": 48,
+      "no_write_replay_outputs_byte_identical": true,
+      "original_controls_only_fit_replay_max_vertex_difference_px": 7.75991130207635e-07,
+      "candidate_projection_difference_max_px": 1.1368683772161603e-13,
+      "observed_landmark_tolerance_px": 3,
+      "max_observed_error_px": 2.5977502904996608,
+      "holdout_count": 7,
+      "holdout_rms_px": 1.6539152818663307,
+      "holdout_max_px": 2.5260707519584686,
+      "topology": {
+        "unique_vertex_count": 29,
+        "finite": true,
+        "in_native_bounds": true,
+        "self_intersections": [],
+        "area_native_px2": 10316.31662407214
+      },
+      "original_images_visually_reviewed": [
+        "assets/atlas/wild-zones/wild-zone-13-overview.png",
+        "assets/atlas/wild-zones/wild-zone-13-closeup.png"
+      ],
+      "panels_visually_reviewed": [
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/source-perimeter-review.png",
+          "sha256": "56aa2bdec4530bcf17551d137bc5464c0c076b7c67ba8e42ace7f9a867320b10"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/registered-source-review.png",
+          "sha256": "0e7955f67f239db9621e8b2cfb0be222a48c85c0b8a11dca43c167fe915708bf"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/overview-landmarks-1.png",
+          "sha256": "9906ac2f99fd6ac479b0faea01e9c5d7f3f89ae4b6225dcb857fbdaade5aec78"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/overview-landmarks-2.png",
+          "sha256": "3772b5df5b70b581c9e414ca3141f5911e889054816fbdb18acf9b04d6aa50ab"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/overview-landmarks-3.png",
+          "sha256": "c331f1ebbb88b5ced0bf98ac2aff4600111a3e2b167d48ed05e96b2e20850ebd"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup_native-landmarks-1.png",
+          "sha256": "f190934db4a81fe59f041660b54482b083bf6e257f0c57a222b37e8189f84b7a"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup_native-landmarks-2.png",
+          "sha256": "bc4bb0b18cae011bcbd54c9a6f501dcffcb3f250788df81d1f11b1932125557a"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup-overview-landmarks-1.png",
+          "sha256": "613188f95663a76471f4696f6acdfa78188c94aba0488912d8648fd8d134d8a3"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup-overview-landmarks-2.png",
+          "sha256": "1955060c80bb49664d47e23ea91e082a9f8e8a19e7020cced74e41f985399d25"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup-overview-landmarks-3.png",
+          "sha256": "2af61fda8644c7947920f2f8fc3408f7887a103359843a72abf449af8c31c288"
+        },
+        {
+          "path": "docs/qa/candidates/wz13-2026-11-26/closeup-overview-landmarks-4.png",
+          "sha256": "790dbd0f712de3c6f025f0e17b6652561fb19a14539184c47f65bfb506e33e00"
+        }
+      ],
+      "visual_finding": "Visible green source perimeter, architectural correspondences and mapped approaches agree. Original H3 and northwest corrections are visibly feature-identity corrections, with failures retained and no fitted matrix/control changed. Three entrance-symbol spans remain display closures; the southeast hidden corner is not observed."
+    },
+    {
+      "area_id": "wz-14",
+      "decision": "acceptable_for_rendered_map_selection_only",
+      "review_receipt": {
+        "path": "docs/qa/candidates/wz14-2026-11-26/selection-review-receipt.json",
+        "sha256": "dbf58896362f821cc79c1396c06aacfe82c0377a1782f4a6233a86ce25ec1d3f"
+      },
+      "approved_record": {
+        "path": "docs/qa/candidates/wz14-2026-11-26/wz14-approved-record.json",
+        "sha256": "a933bf454b9e38a51168b5b59a078a6b36653a4949fd9b49665e15a0a50ff93f"
+      },
+      "candidate": {
+        "path": "docs/qa/candidates/wz14-2026-11-26/perimeter-candidate.json",
+        "sha256": "0ad8376cb383c707eb18b42707e13709aa1ce6352df491749e1e42095741e24e"
+      },
+      "reproduction_script": {
+        "path": "docs/qa/candidates/wz14-2026-11-26/reproduce_review.py",
+        "sha256": "f57756687cc7b36ab93e63a6ff5f6f682e3f2b87b46faf56184463bcaf40c706"
+      },
+      "runtime_entire_record_equals_approved_record": true,
+      "runtime_geometry_sha256_json_stringify_order": "d91c373d747fdfc16bca8100348b7cd5dc6c9e262ef03dd4bff2c7f8de81ca1a",
+      "source_hashes_verified": [
+        {
+          "path": "maps/lumiose-game-map.jpg",
+          "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+          "matches_record": true
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-closeup.png",
+          "sha256": "325b67133a926c57c0ff7416002a51444c468d752222da06232accda84ecf579",
+          "matches_record": true
+        },
+        {
+          "path": "assets/atlas/wild-zones/wild-zone-14-overview.png",
+          "sha256": "771712e2edcf21f53115d6e280c09b894a358911cf6e49ac69896935075ba854",
+          "matches_record": true
+        }
+      ],
+      "frozen_input_count_verified": 57,
+      "no_write_replay_outputs_byte_identical": true,
+      "original_controls_only_fit_replay_max_vertex_difference_px": 0.0,
+      "candidate_projection_difference_max_px": 0.0,
+      "observed_landmark_tolerance_px": 3,
+      "max_observed_error_px": 2.4581163528237666,
+      "holdout_count": 9,
+      "holdout_rms_px": 1.526767587017184,
+      "holdout_max_px": 2.4581163528237666,
+      "topology": {
+        "unique_vertex_count": 20,
+        "finite": true,
+        "in_native_bounds": true,
+        "self_intersections": [],
+        "area_native_px2": 16343.15443263646
+      },
+      "original_images_visually_reviewed": [
+        "assets/atlas/wild-zones/wild-zone-14-overview.png",
+        "assets/atlas/wild-zones/wild-zone-14-closeup.png"
+      ],
+      "panels_visually_reviewed": [
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/source-perimeter-review.png",
+          "sha256": "2d59343353b1e8b3ebd64b758836c9f333c403f5e36cb52e1a27ba315d78c80d"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/registered-native-panel.png",
+          "sha256": "0aa4ff290e0793d49f221255f2b8e990a18647e82a0e533700979964515618ac"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/registered-closeup-panel.png",
+          "sha256": "8755943dcdb91d5c63dfc71e2420bfec671bc7120029627e082abdfdc2e74d0b"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/landmark-review-1.png",
+          "sha256": "049c8437adf9ca68254f50aa7bdf8227ff53189d83f3165d53d1990e620869a2"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/landmark-review-2.png",
+          "sha256": "ebd772f20ef61459a9457bcaed468b29e6723fce73ad83af0c8820d4b056f933"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/landmark-review-3.png",
+          "sha256": "c3e3cfcad9f58992c3dcc6ad02035fd3dafd37a57a4cfac5be6f42c6def6c153"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/landmark-review-4.png",
+          "sha256": "89e32cc378d81cd9f9858e21ba7051adfac642000fdc81862e5595989bbaf03b"
+        },
+        {
+          "path": "docs/qa/candidates/wz14-2026-11-26/h2-matching-source-pair.png",
+          "sha256": "404e45bb6e6e38f9cbf787142c58b8d4a8829b420717ed39a4ac6f41c245102a"
+        }
+      ],
+      "visual_finding": "Visible source perimeter and architectural correspondences agree. The H2 corrected target is the same northwest roof junction as its source point; the first target was west of that roof in the pale green gap. No fit/control/matrix changed. The overview corroborates the eastern green line interrupted by the closeup cursor. Northern gate closure remains a display convention."
+    }
+  ],
+  "wz13_southeast_sensitivity_qualification": {
+    "distance_px": 3.580706815411129,
+    "meaning": "Distance from the adopted short diagonal display connector to an unadopted intersection obtained by extrapolating two visible approach strokes. The corner itself is obscured by entrance symbols.",
+    "not_an_observed_registration_error": true,
+    "not_a_changed_fit_threshold": true,
+    "not_an_observed_hidden_boundary_point": true,
+    "three_pixel_tolerance_scope": "Observed landmarks and raster/manual digitization only. It is not a uniform bound on every hidden perimeter pixel. The production record notes, review receipt and continuation explicitly preserve this limitation.",
+    "decision_basis": "Consistent with the existing WZ04/WZ11 rendered-selection closure convention: acceptable for display selection with explicit uncertainty, but not evidence of a physical boundary, traversable entrance, route, or universal 3 px enclosure."
+  },
+  "bounded_release_effect": {
+    "approved_selection_outlines_if_integrated": 9,
+    "remaining_unapproved_area_outlines": 59,
+    "remaining_unapproved_sector_outlines": 48,
+    "remaining_unapproved_wild_zone_outlines": 11,
+    "no_comprehensive_area_signoff_added": true,
+    "full_g2_g3_g5_a0_release_completion_not_claimed": true,
+    "exact_combined_final_head_ci_and_broader_runtime_changes_not_approved_by_this_review": true
+  },
+  "material_geometry_or_original_source_preservation_blocker_found": false
+}

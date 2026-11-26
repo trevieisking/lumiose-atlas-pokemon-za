@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "review_id": "AT341-COMBINED-CONTENT-INDEPENDENT-2026-11-26",
+  "recorded_at_utc": "2026-11-26T13:24:15.867039+00:00",
+  "review_date": "2026-11-26",
+  "review_scope": "Independent read-only comparison of combined encounter/source packets, written access and Quest 11 against the earlier b788 content checkpoint.",
+  "baseline": {
+    "commit": "b788abb87ef32cb210747da420d95780c4a22583",
+    "tree": "5fb953d1b54bd66ab81f19334ed7b4d14d910e61"
+  },
+  "checkout_observations": [
+    {
+      "observed_at_utc": "2026-11-26T13:15:07Z",
+      "commit": "e576dee3efa5f7fa30a1c471d986e9c6fb53a320",
+      "working_changes": [
+        ".github/workflows/atlas-explorer.yml",
+        "index.html",
+        "side-missions.html",
+        "src/sections/sidequests.html",
+        "tests/atlas_explorer_browser.mjs"
+      ]
+    },
+    {
+      "observed_at_utc": null,
+      "commit": "871a66839513d652715a070199ba5db79521c49d",
+      "working_changes": [],
+      "note": "Intermediate clean checkpoint observed during this review; exact observation time was not recorded."
+    },
+    {
+      "observed_at_utc": "2026-11-26T13:22:08.406503Z",
+      "commit": "cffbf6077682e2c1cfacad2603e7d9c6a94147ef",
+      "working_changes": [
+        "atlas-area-model.mjs",
+        "atlas-area-ui.mjs",
+        "atlas-explorer-geometry.mjs",
+        "atlas-explorer.js",
+        "sector-maps.js"
+      ],
+      "note": "Active concurrent runtime edits are excluded from content approval."
+    }
+  ],
+  "stable_content_sha256": {
+    "atlas-area-evidence.json": "392492a5337ffd90f8fc554a7b6913a8d8a51f65ed3bdc27806eb02f2272f840",
+    "atlas-explorer-data.json": "21b1b37838890442855be2337acfeeca4a8225e139f4e7d92cfe5f9cc2d8869f",
+    "MAPS_ACCESS_ROUTE_SURVEY.json": "6473b270d8e9e59184cb86d4d23e47608b408fb7ba0dab019a7e48bbb7873624",
+    "docs/qa/access-continuation-2026-11-26/observations.json": "1b44a40d2918895184d9b09e1a5870dfb1f546512ce4429564895d16fbe76e16"
+  },
+  "decision": {
+    "bounded_content_review": "pass_no_blocking_defect_found",
+    "comprehensive_roster_approval": false,
+    "runtime_approval": false,
+    "release_approval": false,
+    "full_masterplan_completion_certified": false,
+    "recommendation": "Preserve the combined content at the recorded hashes. Commit and independently validate the final runtime candidate before release; keep comprehensive roster gates open."
+  },
+  "preservation": {
+    "earlier_amendments_exact": 50,
+    "earlier_amendments_total": 50,
+    "fields_compared": "Entire area ID and encounter row objects, including IDs, species, class, form, conditions, statuses, notes and sources.",
+    "missing_prior_claim_ids": [],
+    "owner_photo_encounter_rows_exact": 140,
+    "baseline_model_encounters_exact": 272,
+    "baseline_model_value_changes": [],
+    "at339_packet_files_byte_identical_to_baseline": 11,
+    "earlier_amendment_packet_files_byte_identical_to_baseline": 7,
+    "current_at339_packet_sha256": "aa80ebb05cdee248f58086245c45c58b77b5f9ad54e1b40665798ebfd655a8ed",
+    "original_e003_archive_sha256": "39524a69d40a15d503d816927155dc147c69b8baf60d71a99413eb69f77fd60f",
+    "earlier_amendment_receipt_sha256": "d353470f891507099acd84f9fcf78d57aafacfcc1b84d536186902f2f5263f49",
+    "specific_preserved_corrections": [
+      "Thirty reviewed condition timings and earlier condition/form qualifications",
+      "Five flower-form corroborations and Fennekin gift corroboration",
+      "Concurrent WZ14 Helioptile guidance",
+      "Separate disputed ordinary Ampharos in WZ16",
+      "Mission 008 authored, generated and standalone correction"
+    ],
+    "new_packet_artifact_hash_failures": []
+  },
+  "encounter_source_review": {
+    "live_pages_retrieved": 39,
+    "rotomlabs_pages": 5,
+    "bisafans_pages": 34,
+    "retrieval_method": "Read-only HTTP retrieval and HTML inspection during the audit; original page bytes were not archived by this reviewer.",
+    "numbered_walking_sections": 45,
+    "walking_species_level_form_rows_compared": 484,
+    "exact_order_and_value_matches": 484,
+    "walking_mismatches": [],
+    "bisafans_ordinary_crosschecks_in_local_tables": 52,
+    "retained_pokemaps_crosschecks_not_refetched": 3,
+    "corroborated_alpha_reports_kept_unclassified_in_sector_packets": 16,
+    "source_handling": [
+      "Generic district or city-wide lists were excluded from numbered-area corroboration.",
+      "Walking, Alpha and static headings were kept separate.",
+      "RotomLabs form labels embedded in species display text were normalized only for comparison.",
+      "Jaune 3, 4 and 5 local tables were inspected directly because they omit the Durch Gebiet subheading.",
+      "Bleu 8 and Rouge 3 Scraggy night icons and Jaune 5 Dratini sunny-weather text were directly inspected.",
+      "Differing level ranges and unresolved memberships remain qualified; an absent row is not proof of absence."
+    ],
+    "urls": [
+      "https://rotomlabs.net/locations/legends-z-a/bleu-district",
+      "https://rotomlabs.net/locations/legends-z-a/jaune-district",
+      "https://rotomlabs.net/locations/legends-z-a/magenta-district",
+      "https://rotomlabs.net/locations/legends-z-a/rouge-district",
+      "https://rotomlabs.net/locations/legends-z-a/vert-district",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-4.php",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-5.php",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-6.php",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-7.php",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-8.php",
+      "https://www.bisafans.de/routendex/illumina-city/cyan-bezirk-9.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-11.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-2.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-3.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-4.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-5.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-6.php",
+      "https://www.bisafans.de/routendex/illumina-city/jaune-bezirk-7.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-1.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-2.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-4.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-7.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-8.php",
+      "https://www.bisafans.de/routendex/illumina-city/rose-bezirk-9.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-1.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-2.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-3.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-4.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-5.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-7.php",
+      "https://www.bisafans.de/routendex/illumina-city/rouge-bezirk-8.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-1.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-2.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-3.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-4.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-5.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-6.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-8.php",
+      "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-9.php"
+    ]
+  },
+  "combined_inventory": {
+    "existing_sector_rows_changed": 38,
+    "new_rows": 464,
+    "total_sector_delta": 502,
+    "additional_evidence_claims": 748,
+    "preserved_baseline_model_rows": 272,
+    "combined_model_rows": 1020,
+    "additional_evidence_status_counts": {
+      "source_lead": 518,
+      "source_corroborated": 82,
+      "owner_survey_correlated": 140,
+      "disputed": 8
+    },
+    "additional_encounter_class_counts": {
+      "unclassified_lead": 83,
+      "ordinary": 643,
+      "scripted_boss": 6,
+      "mission": 12,
+      "gift": 1,
+      "fixed_alpha": 3
+    },
+    "model_issues_observed": [],
+    "lead_or_disputed_rows_admitted_as_wild_habitat": 0,
+    "gift_mission_boss_or_unclassified_rows_admitted_as_wild_habitat": 0,
+    "corroborated_unclassified_rows_remaining_outside_wild_habitat": 17,
+    "eligible_sector_geometry_records": 0,
+    "model_inspection_limit": "Lightweight read-only model inspection during review, not fresh CI or approval of later uncommitted runtime changes."
+  },
+  "written_access_review": {
+    "routes_before": 26,
+    "routes_after": 42,
+    "new_routes": 16,
+    "prior_routes_changed": [],
+    "prior_routes_removed": [],
+    "other_explorer_data_top_level_fields_changed": [],
+    "referenced_owner_photo_hashes_checked": 14,
+    "photo_hash_failures": [],
+    "local_register_hash_failures": [],
+    "referenced_area_map_hash_failures": [],
+    "source_review": "Checked cited approach and item prose, including relevant Thonky missions, Altissimo area/item tables, PokeJungle Toxic access, Raider King routes, Gamer Guides Hyper Beam and DualShockers Justice Dojo ladder.",
+    "new_route_ids": [
+      "rouge2-galerie-roof-access",
+      "rouge3-north-boulevard-roof-approach",
+      "rouge4-passage-ombrage-roof",
+      "rouge5-looker-roof-approach",
+      "rouge6-ampharos-toxic-spikes-approach",
+      "rouge7-apartment-ladder-approach",
+      "rouge8-courtyard-scaffold-approach",
+      "jaune1-park-kakuna-approach",
+      "jaune2-dojo-courtyard-approach",
+      "jaune3-camerupt-scaffold-approach",
+      "jaune4-hibernal-roof-scaffold-approach",
+      "jaune5-western-courtyard-approach",
+      "jaune7-kizuna-hyper-beam-approach",
+      "jaune8-froakie-scaffold-approach",
+      "jaune9-banette-courtyard-approach",
+      "jaune11-jaune-street-roof-approach"
+    ],
+    "limits": [
+      "District-level written guidance only; no measured entrance/roof-exit coordinates or verified floor plan.",
+      "Rouge 4 differing ladder approaches remain explicit; no entrance coordinate is selected.",
+      "Mission 080 is one documented Jaune 7 approach, not the only possible approach and not asserted to be the retained owner-gallery device.",
+      "The final Froakie course is outside Jaune 8 and requires Roto-Glide.",
+      "Mission-only uncapturable encounters remain separate from ordinary habitat.",
+      "Owner arrival photographs do not prove unphotographed roof connections.",
+      "External Colorful Screw numbers are not mapped to original Atlas progress IDs.",
+      "This audit did not repeat physical traversal or visually inspect every photograph."
+    ]
+  },
+  "quest_11_review": {
+    "total_side_quest_cards": 203,
+    "changed_relative_to_baseline": [
+      11
+    ],
+    "other_cards_unchanged": 202,
+    "representations": [
+      "src/sections/sidequests.html",
+      "index.html",
+      "side-missions.html"
+    ],
+    "mission_008_unchanged_in_all_representations": true,
+    "correction": "Jaune Sector 1; opponents described as two level 8 Kakuna, a level 9 Kakuna and a level 11 Beedrill, removing an unsupported in-battle evolution assertion.",
+    "identity_progress_reward_and_unlock_fields_unchanged": true,
+    "authored_generated_standalone_new_sentence_and_start_agree": true,
+    "primary_independent_checks": [
+      "https://altissimo1.github.io/Supplementary-Series/Legends/Lumiose-Locations/jaune-sector-1.html",
+      "https://www.thonky.com/pokemon-legends-z-a/side-mission-011-the-kakuna-master"
+    ],
+    "electroweb_note": "Existing warning is retained; this audit independently checked the changed location and opponent wording, not every unchanged move field."
+  },
+  "retained_web_source_refs": [
+    {
+      "ref": "turn196310303view0",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-011-the-kakuna-master"
+    },
+    {
+      "ref": "turn196310303view1",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-009-a-challenge-from-froakie"
+    },
+    {
+      "ref": "turn196310303view2",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-23-a-rogue-mega-ampharos"
+    },
+    {
+      "ref": "turn196310303view3",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/main-mission-12-a-rogue-mega-camerupt"
+    },
+    {
+      "ref": "turn948717431view0",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-080-a-shocking-territorial-dispute"
+    },
+    {
+      "ref": "turn948717431view1",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/side-mission-065-apartment-block-eeriness"
+    }
+  ],
+  "open_requirements": {
+    "areas_not_comprehensive": 68,
+    "source_leads_unresolved": 518,
+    "disputed_claims_unresolved": 8,
+    "complete_rosters_certified": 0,
+    "conditions_or_alpha_behaviour_completeness_certified": false,
+    "complete_physical_access_certified": false
+  },
+  "execution_limits": {
+    "checkout_edits": false,
+    "commits": false,
+    "remote_mutations": false,
+    "supabase_calls": false,
+    "workspace_calls": false,
+    "builds": false,
+    "browser_test_runs": false,
+    "new_external_calls_to_write_this_receipt": false,
+    "receipt_written_outside_checkouts": true
+  },
+  "findings": []
+}
