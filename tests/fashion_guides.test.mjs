@@ -81,3 +81,25 @@ test("Mission 087 gives the conservative salon revisit checkpoint and keeps the 
  assert.doesNotMatch(mission,/Main Mission 26/);
  assert.match(mission,/Psycho Cut to unlock La Reine, Kabuki and Pharaoh/);
 });
+
+test("Shops style hub includes every existing boutique and salon without changing item sellers",()=>{
+ const originalBoutiques=[...clothes.matchAll(/data-fashion-boutique><dt>([^<]+)<\/dt>/g)].map(x=>x[1]);
+ const hubBoutiques=[...shops.matchAll(/<li data-style-boutique><strong>([^<]+)<\/strong>/g)].map(x=>x[1]);
+ assert.deepEqual(hubBoutiques,originalBoutiques,"Shops directory and clothing fieldbook must have identical 41 store names in arcade order");
+ assert.equal(hubBoutiques.length,41);
+ const originalSalons=[...hair.matchAll(/<article class="fashion-card" data-fashion-salon>[\s\S]*?<h3>([^<]+)<\/h3>/g)].map(x=>x[1]);
+ const hubSalons=[...shops.matchAll(/<article class="shop-style-card" data-style-card data-style-kind="salon" data-style-salon>[\s\S]*?<h3>([^<]+)<\/h3>/g)].map(x=>x[1]);
+ assert.deepEqual(hubSalons,originalSalons,"Shops directory must reproduce the five existing salon names");
+ assert.equal(hubSalons.length,5);
+ assert.equal((shops.match(/data-style-kind="arcade"/g)||[]).length,5);
+ for(const name of ["Galerie de la Lune","Passage du Palais","Passage Ombragé","Passage de la Félicité","Promenade du Vent"])assert.ok(shops.includes(name),name);
+ for(const anchor of ["fashion-subguides","fashion-arcades","fashion-salons"])assert.ok(shops.includes('id="'+anchor+'"'));
+ for(const href of ["clothing-guide.html","hair-beauty-guide.html","hair-beauty-guide.html#furfrou"])assert.ok(shops.includes('href="'+href+'"'));
+ assert.match(shops,/<script src="shops-style\.js" defer><\/script>/);
+ const styleJs=read("shops-style.js"),styleCss=read("shops.css");
+ assert.doesNotThrow(()=>new Function(styleJs));
+ assert.doesNotMatch(styleJs,/localStorage|sessionStorage|fetch\s*\(|XMLHttpRequest/);
+ assert.match(styleCss,/shop-style-grid/);
+ assert.equal((shops.match(/data-shop-card(?:\s|>)/g)||[]).length,18);
+ assert.equal((shops.match(/data-shop-item(?:\s|>)/g)||[]).length,200);
+});
