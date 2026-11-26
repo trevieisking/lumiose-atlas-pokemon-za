@@ -18,7 +18,7 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
 
-Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. No production boundaries or pickup positions were approved.
+Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](docs/qa/ATLAS_OWNER_OVERVIEW_CROPS_2026-11-26.md). [Wild Zone 05](docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.md) is the first cross-check using the new crops: four overlapping photos independently support the overall visible zone outline; gate corners still need manual review. [Screening of five more early zones](docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md) records strong outline support for Zones 2 and 3 and specific obstructions in Zones 1, 4 and 6. No production boundaries or pickup positions were approved.
 
 ## Workspace handoff record
 
