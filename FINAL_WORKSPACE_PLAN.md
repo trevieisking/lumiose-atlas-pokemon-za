@@ -1,6 +1,6 @@
 # Pokémon Atlas final completion plan
 
-26 November 2026 · Manifest 85 · Ledger 93
+26 November 2026 · Manifest 88 · Ledger 96
 
 **Planning is complete.** All **67 recovered requirements** from the accessible chats, PRs and planning records are preserved in the [requirement register](docs/consolidation/2026-11-26/REQUIREMENTS.md) and [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json), including source limitations. This page groups the remaining work into three packages; the detailed coverage remains unchanged.
 
@@ -12,13 +12,33 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 ## Current implementation
 
-[AT-339](docs/qa/ATLAS_AT339_SHARED_AREAS.md) recovers shared area/species search, linked habitats and selection across the four map views. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with 63 boundaries and all comprehensive encounter-roster reviews still open. Phone/desktop validation and GitHub release are pending; the original Workspace remains unchanged.
+<!-- AT339_RELEASE_88_96 -->
+
+[AT-339](docs/qa/ATLAS_AT339_SHARED_AREAS.md) is **merged, deployed and live-verified on GitHub Pages**; [exact release proof](docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json) records PR202, its reviewed head/tree, merge, CI, deployment and live checks.
+
+Place-layer switching now recovers hidden Holovator markers; exact Wild Zone-number and accent-insensitive search, visible marker status, clear-filter and photo/detail actions repair the reported map problems. Original-photo thumbnails, phone drawer scrolling and main-map pin digits are corrected. Shared area/species search, habitat links and selection work across the four map views.
+
+Five reviewed map-selection outlines cover Wild Zones 2, 3, 5, 11 and 16. **63 boundaries and all 68 comprehensive encounter-roster reviews remain open.** G2/G3 are partial; G4 is verified only for this bounded behavior. Full-scope G5/A0 and the complete Workspace upgrade remain open.
+
+This GitHub documentation checkpoint performs no original Workspace publication. The separately authorized existing-site filter/photo repair is limited to three Explorer files and has its own source-preservation and verification evidence; it cannot satisfy complete-upgrade G5/A0. Original Workspace **v38** was independently published from `6f7808db2d3cfaa2bb660f381b13dbab452332ce` and live-browser verified, with its original 15 routes and 82 steps preserved. The [original-site hotfix receipt](docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json) records the three-file change. Executor HTTP requests returned 403, so no live-file byte-comparison claim is made for that Site.
+
+The runtime candidate remains historical Manifest85/Ledger93; this release receipt is Manifest88/Ledger96. The AT339 private feature-metadata update is **verified by guarded execution at 12:47:29.421594 UTC and fresh readback at 12:47:34 UTC on 26 November 2026**. [Exact tracker receipt](docs/qa/ATLAS_AT339_TRACKER_RECEIPT.json). Five existing rows, including `AT-339-SHARED-AREAS`, were reconciled to revision88 with no insert or deletion; all five broader feature statuses remain in progress. All 41 unrelated full rows, all GitHub statuses and verification timestamps, and all Workspace fields were preserved. The 46-row table has unchanged immediate-before/after totals of **16 open, 19 in progress and 11 verified**. The earlier planned 16/20/10 snapshot remains historical; an unrelated AT328 update preceded this transaction and was preserved. Full-scope G5/A0 remain open.
+
+**Concurrent [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204) source records remain unmerged at this checkpoint.** Manifest88/Ledger96 avoids reusing the 86/94 and 87/95 revision pairs recorded by that independent candidate. These references preserve its work; they are not part of PR202's runtime approval, and no PR204 runtime or manifest is imported. The latest referenced source tree is `9508c7cdda23eed0942464f2210859ee3ee7e1e6`.
+
+| Unmerged source revision | Immutable source head | Source records |
+|---|---|---|
+| Manifest86 / Ledger94 | [e003f5ffa8629c7a9c52da1bbd7bd78b9103354d](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/e003f5ffa8629c7a9c52da1bbd7bd78b9103354d/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+| Manifest87 / Ledger95 | [d1d7322e6341cd91016f576161c55da682e06834](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/d1d7322e6341cd91016f576161c55da682e06834) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d1d7322e6341cd91016f576161c55da682e06834/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+| Manifest87 / Ledger95 | [3e17c260fc749e3ee5bad877470ee6035601064c](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/3e17c260fc749e3ee5bad877470ee6035601064c) | [Manifest](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/MAPS_UPGRADE_MANIFEST.json) · [Ledger](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/3e17c260fc749e3ee5bad877470ee6035601064c/ATLAS_DUAL_SITE_FIX_LEDGER.md) |
+
+The latest unmerged PR204 source reconciles the actual PR202 main merge and includes newer WZ04 evidence. This checkpoint neither imports nor approves that candidate geometry. PR202 production remains at five outlines. The retained WZ04 HOLD packet describes the earlier candidate; it is not a blanket rejection of the newer PR204 evidence, which requires its own exact-candidate review.
 
 ## Three remaining work packages
 
 1. **Verify the map and encounter data.** Complete source registration, boundaries and encounter records for **48 sectors and 20 Wild Zones**, using existing images and research. Record conditions, unlocks, Alpha distinctions and uncertainty. **Done when:** all 68 required records meet the existing G2/G3 criteria, with calibration and source evidence; no mandatory boundary or encounter requirement remains unresolved.
 
-2. **Finish shared map interactions.** Complete area/species highlights, habitat links, filters, selection, deep links and phone/desktop panels across the existing map views. Retain written/photo approaches and the completed Item/Screw framework. **Done when:** all remaining G4 interactions work with existing IDs, links and progress intact. Unverified pickups stay in the directory; empty verified layers explain their status. A complete pickup survey is not a release requirement.
+2. **Finish shared map coverage and remaining interactions.** Build on AT339's verified shared area/species highlights, habitat links, filters, selection, deep links and phone/desktop panels; complete the remaining full-scope G4 acceptance. Retain written/photo approaches and the completed Item/Screw framework. **Done when:** all remaining G4 interactions work with existing IDs, links and progress intact. Unverified pickups stay in the directory; empty verified layers explain their status. A complete pickup survey is not a release requirement.
 
 3. **Validate and release the complete GitHub upgrade.** Review the full change, test affected features and progress on phone and desktop, inspect screenshots, fix findings, merge the reviewed version and verify its deployment and live behavior. **Done when:** G0–G5 are signed off with the exact approved commit and tree, changed files, test evidence, live checks and rollback. The assistant makes the technical promotion decision.
 
@@ -33,11 +53,11 @@ Package 1 evidence: [eight owner-cropped overview maps and candidate alignment](
 | GitHub versus original Workspace status | [Two-site ledger](ATLAS_DUAL_SITE_FIX_LEDGER.md) and [original source handoff](WORKSPACE_ACCESS_HANDOFF.md) |
 | Release decision, exact commit and rollback | [Release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) and [release handoff](ATLAS_RELEASE_HANDOFF.md) |
 
-**Readiness: not ready to apply in Workspace.** The directory and switches are already live on GitHub Pages. The new photos improve calibration but do not approve any area boundaries or pickup coordinates. The shared interactions are now implemented in the AT-339 candidate; phone/desktop release checks and the remaining map evidence are still open. Do not copy an unmerged branch or historical PR into Workspace.
+**Readiness: not ready to apply in Workspace.** The directory/layer framework and bounded AT339 shared interactions are live on GitHub Pages. Five rendered map outlines are reviewed; 63 boundaries, all comprehensive encounter rosters and full-upgrade G5 remain open. This complete-upgrade gate does not prevent the separately authorized existing-site filter/photo repair with its own bounded evidence. Do not copy an unmerged branch or historical PR into Workspace.
 
 ## Final Workspace prompt
 
-After Package 3 passes, issue **one prompt pinned to the exact approved GitHub release**. Target the existing original Workspace project and URL. Reconfirm its actual source, take a backup, adapt compatible changes, independently preview/test, publish and verify. Keep evidence for the two sites separate under [AT-297](WORKSPACE_ACCESS_HANDOFF.md). Workspace was last observed at **version 37**; the approved full-upgrade commit and executable prompt remain unset until the [release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) passes.
+After Package 3 passes, issue **one prompt pinned to the exact approved GitHub release**. Target the existing original Workspace project and URL. Reconfirm its actual source, take a backup, adapt compatible changes, independently preview/test, publish and verify. Keep evidence for the two sites separate under [AT-297](WORKSPACE_ACCESS_HANDOFF.md). **Version 37** remains the retained source baseline; **version 38** is the latest published and live-browser-verified bounded filter/photo repair, recorded in its [separate hotfix receipt](docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json). The approved full-upgrade commit and executable prompt remain unset until the [release gate](docs/qa/ATLAS_AT325_RELEASE_GATE.json) passes.
 
 ## Preserve throughout
 

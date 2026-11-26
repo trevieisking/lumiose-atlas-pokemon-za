@@ -1,0 +1,127 @@
+{
+  "id": "AT339_PRIVATE_TRACKER_RECONCILIATION_88",
+  "date": "2026-11-26",
+  "status": "verified_by_guarded_execution_and_readback",
+  "scope": "Five existing owner-only feature metadata rows; no insert and no runtime, schema, public feedback, player data or Workspace-field changes.",
+  "manifest_revision": 88,
+  "ledger_revision": 96,
+  "runtime_candidate_manifest_revision": 85,
+  "runtime_candidate_ledger_revision": 93,
+  "project_id": "xzxqfrvqdgkzwujbkdbk",
+  "relation": "atlas_internal.feature_checklist",
+  "release": {
+    "pr": 202,
+    "reviewed_head": "42409561393a9fbaa2caa58ba781268af4cb8a6e",
+    "reviewed_tree": "731042231a91996f83d4fa08bf4d9953b9987c78",
+    "merge_sha": "4c1e7870cda363d62de3f65fe6fe2f7d3f9d7b7f",
+    "immutable_receipt_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/74975108bca6bb488ebcb9e86e908d7b90efe8ed/docs/qa/ATLAS_AT339_RELEASE_RECEIPT.json",
+    "live_verified_at": "2026-11-26T12:37:08Z"
+  },
+  "execution": {
+    "executed_at": "2026-11-26 12:47:29.421594+00",
+    "readback_at": "2026-11-26T12:47:34Z",
+    "sql_sha256": "5cd15f0d296e95385978eab017ec759a1e0a2481c29521a2f1cde254f41e5b0d",
+    "statement_scope": "Four progress-pointer/note updates plus one intake-note update, guarded by revision87/full-row fingerprints and append-only/preserved-field postconditions.",
+    "initial_rejected_attempt": {
+      "sql_sha256": "845a3bdaa3d6791182c1ff379a32893d69d2ce8e29672b15bd1bfa2472a22f8d",
+      "database_error": "42601: final escaped note string lacked explicit concatenation",
+      "mutations_observed": 0,
+      "all_46_row_fingerprints_unchanged_on_fresh_read": true,
+      "correction": "Only explicit || concatenation added; independently reviewed before successful retry."
+    }
+  },
+  "changed_existing_item_ids": [
+    "AT-322-POKEMAPS-REFERENCE-HIGHLIGHTING",
+    "AT-323-MULTISOURCE-BOUNDARY-RESEARCH",
+    "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+    "AT-329-CITY-OVERVIEW-INTAKE",
+    "AT-339-SHARED-AREAS"
+  ],
+  "inserted_rows": 0,
+  "deleted_rows": 0,
+  "before_row_count": 46,
+  "after_row_count": 46,
+  "before_github_status_counts": {
+    "open": 16,
+    "verified": 11,
+    "in_progress": 19
+  },
+  "after_github_status_counts": {
+    "open": 16,
+    "verified": 11,
+    "in_progress": 19
+  },
+  "before_workspace_status_counts": {
+    "open": 46
+  },
+  "after_workspace_status_counts": {
+    "open": 46
+  },
+  "touched_row_outcomes": [
+    {
+      "item_id": "AT-322-POKEMAPS-REFERENCE-HIGHLIGHTING",
+      "manifest_revision": 88,
+      "github_status": "in_progress",
+      "github_verified_at": null,
+      "updated_at": "2026-11-26 12:47:29.421594+00",
+      "release_pointer_updated": true
+    },
+    {
+      "item_id": "AT-323-MULTISOURCE-BOUNDARY-RESEARCH",
+      "manifest_revision": 88,
+      "github_status": "in_progress",
+      "github_verified_at": null,
+      "updated_at": "2026-11-26 12:47:29.421594+00",
+      "release_pointer_updated": true
+    },
+    {
+      "item_id": "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+      "manifest_revision": 88,
+      "github_status": "in_progress",
+      "github_verified_at": null,
+      "updated_at": "2026-11-26 12:47:29.421594+00",
+      "release_pointer_updated": true
+    },
+    {
+      "item_id": "AT-329-CITY-OVERVIEW-INTAKE",
+      "manifest_revision": 88,
+      "github_status": "in_progress",
+      "github_verified_at": null,
+      "updated_at": "2026-11-26 12:47:29.421594+00",
+      "release_pointer_updated": false
+    },
+    {
+      "item_id": "AT-339-SHARED-AREAS",
+      "manifest_revision": 88,
+      "github_status": "in_progress",
+      "github_verified_at": null,
+      "updated_at": "2026-11-26 12:47:29.421594+00",
+      "release_pointer_updated": true
+    }
+  ],
+  "preservation": {
+    "unrelated_full_rows_byte_fingerprint_unchanged": 41,
+    "all_target_fields_outside_explicit_allowlist_unchanged": true,
+    "all_46_github_statuses_unchanged": true,
+    "all_46_workspace_fields_unchanged": true,
+    "all_github_verified_at_unchanged": true,
+    "AT329_stage_and_prior_release_evidence_unchanged": true,
+    "AT339_PR204_tracking_url_and_purpose_unchanged": true,
+    "existing_notes_retained_with_exact_appended_suffixes": true,
+    "AT340_and_AT341_unchanged": true,
+    "media_pause_and_prior_AT333_AT338_evidence_unchanged": true,
+    "schema_public_feedback_runtime_integrations_player_data_unchanged_by_scope": true
+  },
+  "concurrent_work": {
+    "PR204_observed_head": "3e17c260fc749e3ee5bad877470ee6035601064c",
+    "PR204_status_at_execution": "open_unmerged_separate_candidate",
+    "all_five_touched_rows_remain_in_progress_for_broader_continuation": true,
+    "unrelated_AT328_change_precedes_execution": "A concurrent update had already changed the earlier snapshot's 16/20/10 GitHub totals to16open/19in_progress/11verified. The immediate-before snapshot, not the older planned totals, was used; that unrelated row remained unchanged by this transaction.",
+    "earlier_43_row_insert_plan": "Not executed; replaced by this reconciliation of five existing rows after concurrent work created AT-339-SHARED-AREAS."
+  },
+  "original_site_hotfix_receipt": "docs/qa/ATLAS_AT339_WORKSPACE_FILTER_HOTFIX.json",
+  "full_scope_G5_signed_off": false,
+  "approved_full_scope_sha": null,
+  "final_executable_workspace_prompt": null,
+  "proof_scope": "Fresh metadata snapshots are retained privately for the preservation comparison; this public receipt publishes only the bounded result and exact release identifiers."
+}
