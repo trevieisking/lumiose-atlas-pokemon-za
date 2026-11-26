@@ -1,0 +1,63 @@
+{
+  "id": "AT342-RELEASE-TRACKER-READBACK",
+  "status": "verified_guarded_release_update_and_fresh_readback",
+  "manifest_revision": 91,
+  "ledger_revision": 99,
+  "row_count": 48,
+  "github_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "executed_at": "2026-11-26T15:18:11.378739+00:00",
+  "readback_at": "2026-11-26T15:18:33.672551+00:00",
+  "preflight_at": "2026-11-26T15:17:31.741327+00:00",
+  "preflight_snapshot_md5": "51c7c9cfb7f47c7a2d9e45032e02c139",
+  "readback_snapshot_md5": "210498207abeea98dba306784fbf8e20",
+  "atomic_guard": "Materialized row locks plus exact full48-row snapshot fingerprint and revision90 guards; one bounded UPDATE; independent fresh readback.",
+  "all_previous_notes_preserved": true,
+  "all_workspace_fields_unchanged": true,
+  "unrelated_business_fields_preserved": true,
+  "all_row_metadata_fields_updated": [
+    "manifest_revision",
+    "updated_at"
+  ],
+  "release_rows_updated": [
+    "AT-325-GITHUB-FIRST-WORKSPACE-GATE",
+    "AT-339-SHARED-AREAS",
+    "AT-340-VERIFIED-CONSOLIDATION",
+    "AT-341-COMPLETION-CHECKPOINT",
+    "AT-341-ENCOUNTER-REVIEW",
+    "AT-341-ZONE-OUTLINES"
+  ],
+  "release_row_additional_fields_updated": [
+    "github_status",
+    "github_stage",
+    "github_revision",
+    "github_evidence_url",
+    "github_verified_at",
+    "verification_note"
+  ],
+  "schema_or_public_player_feedback_data_changed": false,
+  "status_counts": {
+    "open": 16,
+    "verified": 17,
+    "in_progress": 15
+  },
+  "workspace_status_counts": {
+    "open": 48
+  },
+  "changed_field_counts": {
+    "updated_at": 48,
+    "manifest_revision": 48,
+    "github_stage": 6,
+    "github_status": 6,
+    "github_revision": 6,
+    "verification_note": 6,
+    "github_verified_at": 6,
+    "github_evidence_url": 2
+  },
+  "evidence_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204",
+  "scope": "GitHub proof for finite68-area/42-route Map2.0 release only. Broad full-guide, mission-depth and comprehensive city/roof Alpha duties and original Workspace A1–A7 remain open.",
+  "prior_confirmation_expiry": {
+    "attempt_executed": false,
+    "fresh_read_confirmed_no_change": true
+  },
+  "private_row_contents_omitted": true
+}

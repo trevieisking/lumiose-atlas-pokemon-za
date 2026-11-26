@@ -1,0 +1,69 @@
+{
+  "id": "AT342-LIVE-BROWSER-REVIEW",
+  "release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "reviewed_runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+  "recorded_at": "2026-11-26T15:17:53Z",
+  "url": "https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html",
+  "passed": true,
+  "surface": "Live GitHub Pages Explorer in cloud Chrome desktop browser",
+  "observed_window": "2026-11-26T14:59:00Z/2026-11-26T15:02:00Z",
+  "checks": [
+    {
+      "id": "place-search",
+      "passed": true,
+      "observation": "Wild Zone 20 search produced one of47 place markers and one of96 directory entries."
+    },
+    {
+      "id": "original-zone-photos",
+      "passed": true,
+      "observation": "Wild Zone20 overview.png and closeup.png both loaded with natural dimensions1536x865."
+    },
+    {
+      "id": "rotation-and-compass",
+      "passed": true,
+      "observation": "Clockwise control changed footer to45 degrees; north reset returned0 degrees."
+    },
+    {
+      "id": "holovator-filter",
+      "passed": true,
+      "observation": "Holovators filter produced21 visible markers and21 directory entries."
+    },
+    {
+      "id": "accent-normalized-search",
+      "passed": true,
+      "observation": "Cafe Cyclone matched Café Cyclone — concealed courtyard."
+    },
+    {
+      "id": "access-photos",
+      "passed": true,
+      "observation": "All6 original Café Cyclone photographs completed loading with nonzero natural width."
+    },
+    {
+      "id": "written-route",
+      "passed": true,
+      "observation": "Follow documented approach opened Step1of5; next advanced to Step2of5, Enter the covered arch."
+    },
+    {
+      "id": "area-search-and-source-limits",
+      "passed": true,
+      "observation": "Rouge Sector4 query returned1of68areas and6encounter records. The selected area retained incomplete-roster, source-condition and discrepancy labels."
+    },
+    {
+      "id": "selected-sector-frame",
+      "passed": true,
+      "observation": "Show this area on the map displayed Rouge Sector4 purple outline wholly below the top context card and above bottom hint, with the original sector photograph visible alongside it; north-up footer remained0 degrees."
+    }
+  ],
+  "console_observation": {
+    "sample_limit": 10,
+    "returned_errors": 10,
+    "all_sampled_error_urls": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js",
+    "sampled_message": "Error sending browser metadata to extension: Object",
+    "qualification": "These sampled extension errors are not attributed to Atlas. This finite log sample does not establish a complete absence of site errors."
+  },
+  "limits": [
+    "This live browser session was desktop cloud Chrome, not a physical phone or in-game survey.",
+    "Exact reviewed-head CI supplies separate mobile and desktop emulation, native touch gesture checks and screenshot proof.",
+    "No player progress was reset and no live feedback reports were created."
+  ]
+}
