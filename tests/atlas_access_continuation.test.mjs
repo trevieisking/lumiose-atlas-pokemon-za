@@ -23,12 +23,23 @@ test('access continuation preserves every original route, lead and unaffected so
  const originalRoutes=data.routes.slice(0,26);
  assert.deepEqual(originalRoutes.map(r=>r.id),evidence.baseline.route_ids);
  assert.equal(digest(originalRoutes),evidence.baseline.routes_canonical_sha256);
- assert.equal(digest(Object.fromEntries(Object.entries(data).filter(([k])=>k!=='routes'))),evidence.baseline.non_route_explorer_canonical_sha256);
+ const originalExtras=structuredClone(Object.fromEntries(Object.entries(data).filter(([k])=>k!=='routes')));
+ const hotel=originalExtras.ladders.find(row=>row.id==='hotel-z-ladder');
+ assert.equal(hotel.photos.length,3);
+ assert.equal(hotel.photo_status,'hosted_owner_derivatives');
+ // Only the Hotel Z gallery is additive; preserve the original coordinate and every other field.
+ Object.assign(hotel,{photos:[],photo_status:'not_hosted'});
+ assert.equal(digest(originalExtras),evidence.baseline.non_route_explorer_canonical_sha256);
  const originalLeads=survey.leads.slice(0,78);
  assert.deepEqual(originalLeads.map(r=>r.id),evidence.baseline.lead_ids);
  assert.equal(digest(originalLeads),evidence.baseline.leads_canonical_sha256);
  assert.equal(digest(survey.coverage.filter(r=>!targetIds.includes(r.id))),evidence.baseline.untouched_coverage_canonical_sha256);
- const historical=Object.fromEntries(evidence.baseline.historical_survey_keys.map(k=>[k,survey[k]]));
+ const retainedMetadata=survey.historical_current_completion_checkpoint_89_97;
+ assert.equal(retainedMetadata.captured_from_release_sha,'223762bd1a21c2e72c592e975499d13c4195ae07');
+ assert.deepEqual(Object.keys(retainedMetadata.fields).sort(),['current_completion_checkpoint','next']);
+ const historical=Object.fromEntries(evidence.baseline.historical_survey_keys.map(k=>[
+  k,Object.hasOwn(retainedMetadata.fields,k)?retainedMetadata.fields[k]:survey[k]
+ ]));
  assert.equal(digest(historical),evidence.baseline.historical_survey_sections_canonical_sha256);
 });
 

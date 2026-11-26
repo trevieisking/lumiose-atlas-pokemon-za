@@ -46,7 +46,13 @@ test("AT-321 all 40 original PNGs, complete records and exact two photo panels",
 
 test('disputed sightings stay preserved without being presented as confirmed catches',()=>{
  const saved=JSON.parse(read('docs/qa/at339-encounters/baseline-wild-zone-records.json'));
- assert.deepEqual(wildZoneRecords,saved,'All original species, Alpha conditions and photo records remain unchanged');
+ const expected=structuredClone(saved);
+ const wz09=expected.find(row=>row.number===9);
+ for(const [time,form] of [['Night','Male'],['Day','Female']]){
+   const alpha=wz09.fixedAlphas.find(row=>row.name==='Meowstic'&&row.condition.endsWith(time));
+   alpha.condition+=' · '+form+' · Central rooftop';
+ }
+ assert.deepEqual(wildZoneRecords,expected,'Only the two sourced Meowstic conditions extend the original records');
  for(const [number,names] of [[7,['Gastly']],[15,['Noibat','Trevenant']]]){
    const markup=wildZoneFieldbookMarkup(number);
    for(const name of names)assert.ok(markup.includes('>'+name+'</a>'),'Preserve '+name+' as a recorded sighting');

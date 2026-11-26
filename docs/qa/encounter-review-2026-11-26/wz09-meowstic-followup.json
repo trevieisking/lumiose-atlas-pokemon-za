@@ -1,0 +1,80 @@
+{
+  "reviewed_on": "2026-11-26",
+  "scope": "Fixed Alpha Meowstic on the central Wild Zone 9 rooftop only. No exact pin, weather exclusivity, comprehensive roster or boundary signoff. The original Alpha rows and progress keys are retained.",
+  "previous_head": "b788abb87ef32cb210747da420d95780c4a22583",
+  "area_id": "wz-09",
+  "patches": [
+    {
+      "id": "g3-evidence-wz-09-meowstic-form-female",
+      "set": {
+        "condition": {
+          "time": "day (source-corroborated)",
+          "weather": null,
+          "floor": "central rooftop (source-corroborated)",
+          "unlock": null,
+          "notes": [
+            "Lv. 41–42. From the Wild Zone 9 fast-travel arrival, go straight to the ladder at the end and climb to the central rooftop."
+          ]
+        },
+        "evidence_status": "source_corroborated",
+        "sources": [
+          {
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9",
+            "claim": "Two separate fixed Alpha form rows."
+          },
+          {
+            "path": "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+            "claim": "Reports male at night and female by day."
+          },
+          {
+            "url": "https://gamewith.jp/pokemon-za/524512",
+            "claim": "Field-observed level and day/night split, with separate in-game stills for the male and female fixed Alphas."
+          },
+          {
+            "url": "https://game8.jp/pokemon-legends-z-a/731391",
+            "claim": "Confirms both forms share the central rooftop, female by day and male at night, and describes the approach from the fast-travel arrival."
+          }
+        ],
+        "notes": [
+          "Both forms use the same fixed encounter location in different time windows. Exact Atlas placement and weather exclusivity are not established."
+        ]
+      }
+    },
+    {
+      "id": "g3-evidence-wz-09-meowstic-form-male",
+      "set": {
+        "condition": {
+          "time": "night (source-corroborated)",
+          "weather": null,
+          "floor": "central rooftop (source-corroborated)",
+          "unlock": null,
+          "notes": [
+            "Lv. 41–42. From the Wild Zone 9 fast-travel arrival, go straight to the ladder at the end and climb to the central rooftop."
+          ]
+        },
+        "evidence_status": "source_corroborated",
+        "sources": [
+          {
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_9",
+            "claim": "Two separate fixed Alpha form rows."
+          },
+          {
+            "path": "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+            "claim": "Reports male at night and female by day."
+          },
+          {
+            "url": "https://gamewith.jp/pokemon-za/524512",
+            "claim": "Field-observed level and day/night split, with separate in-game stills for the male and female fixed Alphas."
+          },
+          {
+            "url": "https://game8.jp/pokemon-legends-z-a/731391",
+            "claim": "Confirms both forms share the central rooftop, female by day and male at night, and describes the approach from the fast-travel arrival."
+          }
+        ],
+        "notes": [
+          "Both forms use the same fixed encounter location in different time windows. Exact Atlas placement and weather exclusivity are not established."
+        ]
+      }
+    }
+  ]
+}

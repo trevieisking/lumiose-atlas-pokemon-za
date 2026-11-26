@@ -1,0 +1,11 @@
+# Colorful Screw crosswalk: seven bounded identity checks
+
+This is a research register, not a live placement list. Keep all 100 Atlas Screw numbers and their progress keys unchanged. The outdoor numbers below are independent candidate associations, not a sequential join to the 99 outdoor export rows. The 100th game-data Screw is in a separate indoor scene.
+
+- **#19 — Racine Construction:** Check behind Tarragon’s lobby desk. The numbered guide, Serebii’s venue inventory and the English game script agree on the venue. The game-data row `itb_t1_i011_01` is scene-local, not a city point. The spawn condition is unverified.
+- **#88 and #89 — northern Magenta Sector 6 scaffold:** Two floors, two pickups. Climb the course to the stairs above the lower pickup, drop onto the small landing beside the stairs and roll across to its platform. For the upper Screw, stay on the course up to the roof. The author’s gameplay still shows the drawn approach and lower purple pickup glow partly occluded by the minimap. It does not show the upper pickup. The full-size map still shows the player ring, not a labelled Screw. The two 1024px addresses return the same gameplay image; the full-size Map URL in the receipt is the actual map.
+- **#29, #40, #91 and #95:** Distinct provisional matches. The gap to each runner-up makes them useful verification targets, not exact pins. #91 is the **scaffold** in Wild Zone 9, not the Wild Zone badge, area outline or rooftop Pokémon encounter.
+
+The north-scaffold candidates are approximately **5.22 native map pixels apart** but **11.70 world height units apart**. Both guide points would pick the same lower row if distance alone were used. Keep separate floor directions and use a one-to-one association. The exterior geometry fit uses architecture, not the player ring or pickups. Its held-out residual is about 0.80 native px for this image; it does not measure pickup accuracy.
+
+The next verification pass should use a separately identified view of the upper pickup/floor and confirm source/version lineage. Treat exact exterior pickup pins and interior map geometry as open. Do not re-add videos, duplicate third-party screenshots into site assets, or bulk-import the export.

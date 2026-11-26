@@ -243,6 +243,19 @@ function detailsFor(item){
     if(item.id==="bleu3-fav")appendGuidePanel(selectedPanel,"My Favorite Holovator · Side Mission 61",[{href:"side-missions.html#quest-61",label:"Written mission solution"}],"The original owner photographs and approximate approach map remain the location evidence.");
   }else if(item.kind==="ladder"){
     selectedPanel.append(paragraph("The real ladder was photographed at ground level; its exact rooftop landing and onward path remain unverified."));
+    const photos=(item.photos||[]).filter(photo=>typeof photo.path==="string"&&/^assets\/atlas\/ladders\/hotel-z\/[a-z-]+\.jpg$/.test(photo.path));
+    if(photos.length){
+      selectedPanel.append(element("h4","","Original Hotel Z ladder photographs"));
+      const gallery=element("div","ae-photo-grid");gallery.dataset.ladderGallery=item.id;
+      for(const photo of photos){
+        const fig=element("figure"),label=plain(photo.caption),asset=link(photo.path,"",true),img=element("img");
+        asset.setAttribute("aria-label","Open full-size photograph: "+label);
+        img.src=photo.path;img.alt=label;img.width=photo.width;img.height=photo.height;
+        img.loading="lazy";img.decoding="async";asset.append(img);
+        fig.append(asset,element("figcaption","",label));gallery.append(fig);
+      }
+      selectedPanel.append(gallery);
+    }
     if(item.source_record)selectedPanel.append(link(item.source_record,"Read original Hotel Z ladder survey evidence"));
   }else if(item.kind==="scaffold"){
     selectedPanel.append(paragraph(eligibleMapPin(item)
