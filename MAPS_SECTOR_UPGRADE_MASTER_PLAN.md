@@ -1,5 +1,23 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+<!-- AT346_DOSSIER_RECEIVED_100_108 -->
+## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
+
+Owner supplied the full research dossier on 26 November 2026. [Dossier intake, independently checked corrections and canonical encounter contract](docs/qa/at346-dex-audit/DOSSIER_INTAKE_2026-11-26.md). The earlier report-unavailable blocker is superseded; complete encounter verification remains open. The dossier is a specification and sourced research leads, not a complete per-species encounter table. In particular, Side Mission 180 Rosebud is an Alpha Annihilape battle that cannot be caught; MM40's three Lv70 Alphas are one-time capture opportunities. Preserve 232/132 species, 25 Alpha exclusions and 339 candidates; build three collection views using one source-qualified species/form/encounter model. Existing Hyperspace selector has missing-data fallback despite existing 132 HOME roster records; restore without fabricated capture locations or stats. Maintain all existing assets, IDs, coordinates, progress and both site connections. Random Hyperspace portals remain unpinned. No runtime release or completed encounter audit claimed by this documentation revision.
+<!-- END_AT346_DOSSIER_RECEIVED_100_108 -->
+
+
+<!-- AT346_DEX_AND_HABITAT_PLANNING_99_107 -->
+## AT-346 planning addendum — complete three Pokédexes and verified habitat synchronization (Manifest 99 / Ledger 107)
+
+**26 November 2026 — owner-authorized new scope, not a runtime release.** [Issue #220](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/220) · [Implementation and evidence specification](docs/qa/at346-dex-audit/README.md) · [364-species coverage inventory](docs/qa/at346-dex-audit/species-coverage.json).
+
+Complete every numbered species, relevant form, capture/acquisition location and prerequisite in the existing 232-entry Lumiose and 132-entry Hyperspace Pokédexes, then expand the Alpha Fieldbook into a searchable Atlas Alpha catalogue. All 364 National IDs are present in the existing owner-derived roster; 25 are listed by Serebii as unable to be Alpha, leaving 339 **candidates**, not guaranteed direct catches. Distinguish fixed, random city/roof/interior, Wild Zone survey, rotating, mission, DLC, gift/fossil/evolution/transfer routes; preserve existing 38 fixed rows, 67 rotating candidates, city research and uncertainty. Verify each encounter with attributable multilingual evidence and translated official English names; full Deep Research report not yet retrieved, and individual inventories remain open.
+
+Extend the current shared area/species model (including a separately tested random_alpha class) and reflect only reviewed habitat claims on existing maps. No guessed coordinates, fabricated access paths, permanent random Hyperspace pins, replacement Site, public/player data changes or lost progress. Preserve all existing map sources, previous AT-345 and AT-330 obligations and historical release receipts. Five private checklist rows AT-346-LUMIOSE-DEX, AT-346-HYPERSPACE-DEX, AT-346-ALPHA-DEX, AT-346-DEX-MAP-SYNC and AT-346-DEX-RESEARCH-RELEASE remain OPEN until exact evidence, implementation, tests and separate site verification. Require exact-head CI, phone/desktop QA, matching GitHub deployment and independently validated same-Site Workspace import with rollback. Planning revision is not a new approved runtime.
+<!-- END_AT346_DEX_AND_HABITAT_PLANNING_99_107 -->
+
+
 <!-- AT345_CONTEXTUAL_MAP_AND_AT330_SHOPS_PLANNING_98_106 -->
 ## AT-345 planning addendum — wider sector photographs + fashion Shops (Manifest 98 / Ledger 106)
 
