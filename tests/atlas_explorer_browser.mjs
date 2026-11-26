@@ -23,16 +23,24 @@ try{
     try{
       for(const route of ["items.html","sector-maps.html"]){
         await probe.goto(base+"/"+route,{waitUntil:"load"});
-        for(const id of ["4-2","11-9","17-6","18-7"]){
-          const note=probe.locator('[data-tm-access="'+id+'"]');
-          assert.equal(await note.count(),1);
-          await note.evaluate(el=>{for(let p=el.parentElement;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;}});
-          await note.scrollIntoViewIfNeeded();
-          assert.ok(await note.isVisible(),route+" "+id);
-          assert.match(await note.textContent(),/exact pin unverified/);
-          const bounds=await note.evaluate(el=>({right:el.getBoundingClientRect().right,left:el.getBoundingClientRect().left,width:document.documentElement.clientWidth}));
-          assert.ok(bounds.left>=-1&&bounds.right<=bounds.width+1,route+" "+id+" "+JSON.stringify(bounds));
-          if(id==="18-7")await probe.screenshot({path:output+"/"+spec.name+"-tm-access-"+route.replace(".html","")+".png"});
+        const tmRows=JSON.parse(fs.readFileSync("docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json","utf8")).records;
+        for(const {id} of tmRows){
+          const notes=probe.locator('[data-tm-access="'+id+'"]');
+          assert.equal(await notes.count(),route==="sector-maps.html"&&id==="5-7"?2:1);
+          for(const note of await notes.all()){
+            await note.evaluate(el=>{for(let p=el.parentElement;p;p=p.parentElement){if(p.tagName==="DETAILS")p.open=true;}});
+            await note.scrollIntoViewIfNeeded();
+            assert.ok(await note.isVisible(),route+" "+id);
+            assert.match(await note.textContent(),/exact pin unverified/);
+            const bounds=await note.evaluate(el=>({right:el.getBoundingClientRect().right,left:el.getBoundingClientRect().left,width:document.documentElement.clientWidth}));
+            assert.ok(bounds.left>=-1&&bounds.right<=bounds.width+1,route+" "+id+" "+JSON.stringify(bounds));
+            if(id==="18-7"){
+              await probe.screenshot({path:output+"/"+spec.name+"-tm-access-"+route.replace(".html","")+".png"});
+              // Only a small, public static-guide excerpt, no user data or full browser capture.
+              const excerpt=await note.locator("xpath=ancestor::li[1]").screenshot({type:"jpeg",quality:55});
+              console.log("ATLAS_TM_VISUAL_"+spec.name+"_"+route.replace(".html","")+"="+excerpt.toString("base64"));
+            }
+          }
         }
       }
     }finally{await probe.close();}

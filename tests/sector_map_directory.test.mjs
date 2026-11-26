@@ -266,7 +266,9 @@ for(const row of at309.accepted){
 // Supplemental source-cross-checked TM directions: preserve the original row and progress key.
 const tmAccess=JSON.parse(read("docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json"));
 assert.equal(tmAccess.verified_new_native_pins,0);
-assert.equal(tmAccess.records.length,4);
+assert.equal(tmAccess.records.length,20);
+assert.deepEqual(tmAccess.records.map(r=>r.zone),Array.from({length:20},(_,i)=>i+1));
+assert.deepEqual(new Set(tmAccess.records.map(r=>r.id)),new Set(evidence.zones.flatMap(z=>z.items.filter(r=>/^TM\d{3}$/.test(r.name)&&r.kind!=="reward").map(r=>r.id))));
 const itemPage=read("items.html");
 for(const entry of tmAccess.records){
   const item=evidence.zones[entry.zone-1].items.find(r=>r.id===entry.id);
@@ -275,11 +277,15 @@ for(const entry of tmAccess.records){
   assert.equal(entry.verified_access_geometry,false);assert.ok(entry.sources.length>=2);
   const expected='data-tm-access="'+entry.id+'">Access guide (written-source cross-check; exact pin unverified): '+entry.note+'</span>';
   for(const [html,marker,progress] of [[page,'data-record-ref="'+entry.id+'"','data-progress-item="'+entry.id+'"'],[itemPage,'id="item-'+entry.id+'"','data-atlas-pickup="'+entry.id+'"']]){
-    const at=html.indexOf(marker),end=html.indexOf("</li>",at);
-    assert.ok(at>=0&&end>at);const row=html.slice(at,end);
-    assert.ok(row.includes(progress));assert.ok(row.includes(expected));
-    assert.ok(row.includes('<span>'+clean(item.hint)+'</span>'));
+    let at=-1,found=0;
+    while((at=html.indexOf(marker,at+1))!==-1){
+      const end=html.indexOf("</li>",at);assert.ok(end>at);const row=html.slice(at,end);
+      assert.ok(row.includes(progress));assert.ok(row.includes(expected));
+      assert.ok(row.includes('<span>'+clean(item.hint)+'</span>'));
+      found++;
+    }
+    assert.equal(found,html===page&&entry.id==="5-7"?2:1);
   }
 }
-assert.equal((page.match(/data-tm-access="/g)||[]).length,4);
-assert.equal((itemPage.match(/data-tm-access="/g)||[]).length,4);
+assert.equal((page.match(/data-tm-access="/g)||[]).length,21);
+assert.equal((itemPage.match(/data-tm-access="/g)||[]).length,20);
