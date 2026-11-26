@@ -1,0 +1,42 @@
+{
+  "purpose": "Preserve the five-file copy/test amendment for the active integration owner without moving PR204, main or private tracker. It does not include or approve the full runtime release.",
+  "base_commit": "f9cc461e16fb043676991534cbd0feb105cb8ef3",
+  "reviewed_commit": "8c1dff2ff2a769c5129bfb603cbb22a132f6ac3c",
+  "source_commits": [
+    "e501525a24ea1d957fa400bb225c394208323e50",
+    "8c1dff2ff2a769c5129bfb603cbb22a132f6ac3c"
+  ],
+  "file": "reviewed-sector-copy-amendment.patch.gz",
+  "gzip_sha256": "06861bf0e8168781b3ebe6ad21b8ce743cc70a7c3e56919b8be6e9d8ba051535",
+  "uncompressed_patch_sha256": "93141f33964927df2ba0346a20bb187a2d606b19284a55facd874684c37acf9f",
+  "files": [
+    {
+      "path": "atlas-explorer.html",
+      "before_sha256": "81faa0c143a7ce3160187024c3157579109a9c072b4e32075c078d785d4760c7",
+      "after_sha256": "85a2a106ec3c91ac66a68a63ad6bbd61a959402024324ff87ad83c2bfc23985d"
+    },
+    {
+      "path": "items.html",
+      "before_sha256": "3ce90f8d67b91d044102ff60b65f2fceaa2c9d388878ebb54685056a2f19905a",
+      "after_sha256": "a8890aa6fc57ea6fb4aa34a4cbeb9c277f50589ebb4dcb2b9373753dc81c5d1d"
+    },
+    {
+      "path": "sector-maps.html",
+      "before_sha256": "3efd2e59f6528aa7e27f77d777a366069c37c5dfbdda9e4d58bd74556d619696",
+      "after_sha256": "5a5658b2c44218a7fdd25c977a6103170f0f49f3916a215fd8809f672a6d60b3"
+    },
+    {
+      "path": "atlas-guide-links.mjs",
+      "before_sha256": "e5a0246f442bdc776d86f6e2f792a39a38cdc0362602e6587bb8a51ef23134e4",
+      "after_sha256": "2cbcf5ddb2d213b43c5f4b704f798e2f3d0f471b9b31f7e6dc9100fe7560eb28"
+    },
+    {
+      "path": "tests/atlas_sector_wild_zone_links.test.mjs",
+      "before_sha256": "80408ee3e4165a6f7908f13c314ff3c36ae28201388a20dc92efd6fa61c2c32d",
+      "after_sha256": "d0df010eba76d3ce7a1743b215a2dec2a15167fedb8e510b5cfbf11d8b08b0ec"
+    }
+  ],
+  "scope": "71 exact wording replacements across four runtime files plus the narrow two-card test amendment. No IDs, markup attributes, links, original guide cards, source receipts or runtime state change.",
+  "validation_receipt": "isolated-final-package-validation.json",
+  "integration_instruction": "Inspect/apply against a matching base or reconcile concurrent edits. Do not force-apply over other owner changes. Re-run the affected existing checks on the final combined candidate. The Explorer coverage paragraph may overlap the resumed owner wording update."
+}

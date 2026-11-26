@@ -17,3 +17,5 @@ This evidence-only checkpoint preserves completed reviews while PR204's active c
 PR204's final combined commit still requires its own tests, affected visual review, expected-head merge and deployment/live verification. None of these historical reviews alone establishes full master-plan completion. All67 recovered requirements and the original Workspace release remain outside this evidence-only mutation.
 
 - `isolated-final-package-validation.json`: exact isolated8c1dff2 local154-test/static/source/preservation checkpoint; final owner CI, deployment, live proof and current planning synchronization remain separate.
+
+- `reviewed-sector-copy-amendment.json` and its gzip patch preserve the five-file wording/preservation-test amendment for careful integration with concurrent edits; they do not alter this evidence branch runtime.
