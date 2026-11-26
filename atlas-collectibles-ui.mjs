@@ -88,7 +88,10 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
       }
       const show=make("button","","Show on map");show.id="aeCollectibleShowMap";show.type="button";
       show.addEventListener("click",()=>{
-        toggles.get(r.kind).checked=true;updateVisibility();focusPoint(r.xy);
+        // An explicit map action must not centre a point hidden by older filters.
+        if(kind.value!=="all"&&kind.value!==r.kind)kind.value="all";
+        if(!matchRecord(r))search.value="";
+        toggles.get(r.kind).checked=true;filterDirectory();focusPoint(r.xy);
         viewport.scrollIntoView({behavior:"smooth",block:"center"});
       });detail.append(show);
     }else{

@@ -283,6 +283,11 @@ try {
         assert.equal(await productionPage.locator("#aeStage").getAttribute("style"), originalView,
           "Empty layer toggles must preserve the original view");
       }
+      await productionPage.locator("#aeLayers").evaluate(element => {
+        window.scrollBy({ top: element.getBoundingClientRect().top - 80, behavior: "instant" });
+      });
+      await settle(productionPage);
+      await productionPage.screenshot({ path: output + "/at338-production-empty-map-" + name + ".png" });
       await directory(productionPage);
       await productionPage.locator('#aeCollectibleResults button[data-collectible-id="' + records[0].id + '"]').click();
       assert.match(await productionPage.locator("#aeCollectibleDetail [data-collectible-progress]").textContent(), /^\s*collected\b/i);
@@ -407,6 +412,60 @@ try {
       assert.equal(await page.locator('[data-layer="item"]').isChecked(), true);
       assert.equal(await page.locator('[data-layer="screw"]').isChecked(), false,
         "Show on map must enable only the selected record's layer");
+      const compatibleQuery = "Synthetic item " + records[0].originalId + " ×";
+      assert.equal(await page.locator("#aeCollectibleSearch").inputValue(), compatibleQuery,
+        "Show on map must preserve a search that already includes the selected record");
+      assert.equal(await page.locator("#aeCollectibleKind").inputValue(), "all");
+      assert.deepEqual(await visibleIds(page), [records[0].id]);
+
+      // A selected detail can outlive the current directory filter. The explicit
+      // map action must reveal that record by clearing only conflicting filters;
+      // changing filters alone must neither move the view nor change any layers.
+      const otherLayers = () => page.locator('#aeLayers input:not([data-layer="item"])')
+        .evaluateAll(nodes => nodes.map(node => [node.dataset.layer, node.checked]));
+      for (const scenario of [
+        { kind: "screw", query: compatibleQuery, expectedKind: "all", expectedQuery: compatibleQuery, expectedPins: 1 },
+        { kind: "item", query: "no-such-synthetic-record", expectedKind: "item", expectedQuery: "", expectedPins: 264 },
+        { kind: "screw", query: "Colorful Screw", expectedKind: "all", expectedQuery: "", expectedPins: 264 }
+      ]) {
+        const viewBeforeFilter = await page.locator("#aeStage").getAttribute("style");
+        const preservedLayers = await otherLayers();
+        await page.locator("#aeCollectibleKind").selectOption(scenario.kind);
+        await page.locator("#aeCollectibleSearch").fill(scenario.query);
+        assert.equal(await page.locator("#aeStage").getAttribute("style"), viewBeforeFilter);
+        assert.deepEqual(await otherLayers(), preservedLayers);
+        assert.equal(await page.locator('.ae-collectible-pin[data-collectible-id="' + records[0].id + '"]').isVisible(), false,
+          "The regression must start with the selected point excluded by the active directory filter");
+        assert.match(await page.locator("#aeCollectibleDetail").textContent(), /Synthetic item 1-0/,
+          "Filtering must retain the selected original record");
+        await page.locator("#aeCollectibleShowMap").click();
+        await settle(page);
+        assert.equal(await page.locator("#aeCollectibleKind").inputValue(), scenario.expectedKind);
+        assert.equal(await page.locator("#aeCollectibleSearch").inputValue(), scenario.expectedQuery);
+        const shownIds = await visibleIds(page);
+        assert.equal(shownIds.length, scenario.expectedPins);
+        assert.ok(shownIds.includes(records[0].id), "Show on map must expose the selected point, not only its coordinates");
+        assert.deepEqual(await otherLayers(), preservedLayers, "Showing an item must preserve every unrelated layer switch");
+        assert.equal(await page.locator('[data-layer="item"]').isChecked(), true);
+        const centreOffset = await page.locator('.ae-collectible-pin[data-collectible-id="' + records[0].id + '"]').evaluate(pin => {
+          const point = pin.getBoundingClientRect();
+          const viewport = document.querySelector("#aeViewport").getBoundingClientRect();
+          return Math.hypot(point.x + point.width / 2 - viewport.x - viewport.width / 2,
+            point.y + point.height / 2 - viewport.y - viewport.height / 2);
+        });
+        assert.ok(centreOffset <= 2,
+          "The visible selected point must be centred in the map");
+        assert.deepEqual(await nativePositions(page), positions);
+      }
+      // An already enabled other collectible layer is also preserved.
+      await layers(page, false, true);
+      const screwOnLayers = await otherLayers();
+      await page.locator("#aeCollectibleShowMap").click();
+      await settle(page);
+      assert.deepEqual(await otherLayers(), screwOnLayers);
+      assert.equal((await visibleIds(page)).length, 364);
+      await assertProgressUntouched(page, initialRaw, name + " filtered Show on map");
+      await layers(page, true, false);
       await page.locator("#aeCollectibleSearch").fill("no-such-synthetic-record");
       assert.equal(await page.locator("#aeCollectibleResults button[data-collectible-id]:not([hidden])").count(), 0);
       await page.locator("#aeCollectibleSearch").fill("");
