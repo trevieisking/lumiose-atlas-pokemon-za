@@ -431,9 +431,3 @@
   window.addEventListener('hashchange',renderRoute);
   renderRoute();
 })();
-
-/* AT-314: optional owner-video channel links, independent of all progress state. */
-(() => {
-  if(typeof document==="undefined"||typeof window==="undefined"||!document.documentElement||typeof document.createElement!=="function")return;
-  import("./atlas-guide-links.mjs").then(({installMainGuideBuddyVidz})=>installMainGuideBuddyVidz(document)).catch(error=>console.warn("Optional BuddyVidz references unavailable",error));
-})();
