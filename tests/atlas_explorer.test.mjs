@@ -829,3 +829,23 @@ test("AT-320: Bleu 7–10 photo-first written approaches preserve routes and all
  assert.equal(s.summary.sector_text_research_started,29);assert.equal(s.summary.wild_zone_text_research_started,1);
  assert.equal(s.coverage.length,68);assert.equal(data.routes.length,26);
 });
+
+test("Hotel Z ladder restores three checked photographs without changing the pin or route",()=>{
+  const ladder=data.ladders.find(row=>row.id==="hotel-z-ladder");
+  const receipt=JSON.parse(read("docs/qa/ATLAS_HOTEL_Z_LADDER_PHOTO_RECOVERY.json"));
+  assert.equal(ladder.photo_status,"hosted_owner_derivatives");
+  assert.deepEqual(ladder.xy,[1203,1556]);
+  assert.equal(ladder.precision,"approx_owner_player_standing_ring");
+  assert.equal(ladder.roof_exact,false);
+  assert.equal(data.routes.find(row=>row.id===ladder.id).steps.length,5);
+  assert.deepEqual(ladder.photos.map(x=>x.role),["physical-ladder","map-wide","map-close"]);
+  for(const [index,photo] of ladder.photos.entries()){
+    const file=receipt.photos[index];
+    assert.equal(photo.path,file.jpeg_path);
+    const bytes=fs.readFileSync(path.join(root,photo.path));
+    assert.equal(bytes.length,file.jpeg_bytes);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"),file.jpeg_sha256);
+    assert.deepEqual([photo.width,photo.height],[1536,865]);
+  }
+  assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
+});

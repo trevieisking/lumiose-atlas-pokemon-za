@@ -1407,6 +1407,21 @@ try{
       await photoNode.dispose();
     }finally{await page.close();}
   }
+  for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
+    await page.goto(base+"/atlas-explorer.html?place=hotel-z-ladder",{waitUntil:"load"});
+    const gallery=page.locator('#aeSelected [data-ladder-gallery="hotel-z-ladder"]');
+    await gallery.waitFor({state:"visible"});
+    for(const [i,role] of ["physical-ladder","map-wide","map-close"].entries()){
+      const tile=gallery.locator("figure").nth(i),img=tile.locator("img");
+      await img.scrollIntoViewIfNeeded();
+      await page.waitForFunction(role=>Array.from(document.querySelectorAll("#aeSelected [data-ladder-gallery] img")).some(img=>img.getAttribute("src")==="assets/atlas/ladders/hotel-z/"+role+".jpg"&&img.naturalWidth===1536&&img.naturalHeight===865),role);
+      assert.equal(await tile.locator("a").getAttribute("href"),"assets/atlas/ladders/hotel-z/"+role+".jpg");
+    }
+    assert.equal(await gallery.locator("figure").count(),3);
+    assert.equal(await page.locator("#aeRouteSelect").inputValue(),"hotel-z-ladder");
+    assert.match(await page.locator("#aeSelected").textContent(),/exact rooftop landing.*unverified/);
+    await gallery.screenshot({path:output+"/hotel-z-ladder-gallery-"+kind+".png"});
+  }
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

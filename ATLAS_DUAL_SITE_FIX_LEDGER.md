@@ -1,5 +1,9 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## Hotel Z courtyard ladder photo recovery
+
+**Candidate, not deployed.** Three original owner-file hashes match the ladder survey. [Recovery receipt](docs/qa/ATLAS_HOTEL_Z_LADDER_PHOTO_RECOVERY.json) records the physical ladder, wide map and close map derivatives. The approximate pin, five-step approach and unverified rooftop landing are unchanged. No Workspace, Supabase, player-data or video change.
+
 ## AT-341 — completion and preservation checkpoint
 
 **26 November 2026 · Manifest 87 / Ledger 95.** Continuation of [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204). Exact head `e003f5ffa8629c7a9c52da1bbd7bd78b9103354d` passed the existing Explorer, collectible and 20-zone photo suites, but its new two-finger test could not find clear starting points after a drag. A bounded test correction retains real touch input, every existing control/assertion, and adds an explicit rotation check. New exact-head browser validation, screenshot review, merge and live verification are pending.
