@@ -1,0 +1,27 @@
+{
+  "id": "AT344-DERIVATIVE-REGISTER",
+  "schema_version": 1,
+  "manifest_revision": 94,
+  "ledger_revision": 102,
+  "policy": {
+    "binding_owner_instruction": true,
+    "originals_are_immutable": true,
+    "preserve_exact_supplied_bytes_filenames_dimensions_and_metadata": true,
+    "do_not_overwrite_crop_rotate_resize_recompress_annotate_or_strip_originals": true,
+    "first_copy_then_edit_only_the_copy": true,
+    "keep_full_originals_available_after_derivative_selection": true,
+    "derivative_directory": "docs/qa/at344-sector-source-survey/derivatives/",
+    "derivative_register": "docs/qa/at344-sector-source-survey/derivatives.json",
+    "integrity_file": "docs/qa/at344-sector-source-survey/SOURCE_INTEGRITY.sha256",
+    "each_derivative_requires": [
+      "distinct output path",
+      "source original path and SHA-256",
+      "operation and crop rectangle in original-photo pixels when applicable",
+      "output dimensions and SHA-256",
+      "transform parameters and review evidence when used for alignment"
+    ],
+    "existing_basemap_and_all_earlier_photographs_preserved": true
+  },
+  "status": "no_derived_images_created_in_this_source_intake",
+  "derivatives": []
+}

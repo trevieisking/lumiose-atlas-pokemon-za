@@ -1,0 +1,55 @@
+{
+  "id": "AT344-COMPLETED-SOURCE-COLLECTION-TRACKER-READBACK",
+  "status": "verified_guarded_metadata_update_and_fresh_readback",
+  "manifest_revision": 94,
+  "ledger_revision": 102,
+  "row_count": 48,
+  "preflight_at": "2026-11-26 16:25:36.643156+00",
+  "executed_at": "2026-11-26T16:28:57.797365+00:00",
+  "readback_at": "2026-11-26 16:29:11.387707+00",
+  "preflight_snapshot_md5": "9ad2a40bf13c8c001493713dbefceb12",
+  "final_snapshot_md5": "7c656e069585fe6caa2b9c5347be56fc",
+  "snapshot_hash_expression": "md5(jsonb_agg(to_jsonb(t) order by t.item_id)::text)",
+  "all_row_metadata_fields_updated": [
+    "manifest_revision",
+    "updated_at"
+  ],
+  "observation_note_row": "AT-300-MAP-DETAIL-CLARITY",
+  "appended_note": "[AT344 completed source collection — 2026-11-26; Manifest94/Ledger102] Trev confirms the sector screenshot collection is complete, with two final central views (20261126_161334.jpg centre/north; 20261126_161350.jpg centre/south) to connect the city around Prism Tower. He reports that these sector/central captures together with the existing Wild Zone images cover the whole map. All 26 supplied JPEG originals are visually indexed and preserved byte-for-byte (43,603,649 bytes); 18 originals are added relative to GitHub c491cd7, including the prior 16-file intake and the final pair, while 8 AT343 originals are reused. Binding rule: preserve exact original bytes, filenames, dimensions and metadata; never crop, overwrite, rotate, resize, recompress or annotate originals. Duplicate first and process only separate derivatives, recording source hashes, crop/transform provenance and output hashes. Use Trev's fixed north-up source orientation, shared buildings/roads/canals and the two central overlaps for alignment. Faint X/cross marks remain candidate secondary alignment references; official coordinates, origin, units and citywide calibration are unverified and crosses do not prove item locations. Capture collection is owner-confirmed complete; independent assembled coverage, registration and best-view selection remain pending. All 48 sector identities, existing 20 Wild Zones, prior sources, runtime/markers/progress, all 67 original requirements and the approved 223762bd release at91/99 remain preserved. Packet: docs/qa/at344-sector-source-survey/README.md, source-inventory.json, sector-coverage.json, alignment-plan.json, derivatives.json and SOURCE_INTEGRITY.sha256. Private tracker synchronization changes only common revision/update metadata and this appended source-clarity note; statuses, prior notes, GitHub release proof and all Workspace fields stay unchanged.",
+  "previous_notes_preserved": true,
+  "status_counts": {
+    "open": 16,
+    "verified": 17,
+    "in_progress": 15
+  },
+  "status_counts_unchanged": true,
+  "all_github_status_stage_revision_and_release_proof_fields_unchanged": true,
+  "all_workspace_fields_unchanged": true,
+  "unrelated_business_fields_unchanged": true,
+  "changed_field_counts": {
+    "updated_at": 48,
+    "manifest_revision": 48,
+    "verification_note": 1
+  },
+  "new_rows": 0,
+  "deleted_rows": 0,
+  "preserved_existing_row_identities": 48,
+  "unexpected_field_changes": 0,
+  "schema_public_player_feedback_or_runtime_integration_changed": false,
+  "source_collection_status": "owner_confirmed_complete",
+  "current_original_jpeg_count": 26,
+  "total_original_bytes": 43603649,
+  "assembled_coverage_registration_and_best_view_selection_status": "pending_independent_review",
+  "new_full_sector_quality_approvals": 0,
+  "approved_runtime_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "approved_release_manifest_revision": 91,
+  "approved_release_ledger_revision": 99,
+  "private_row_contents_omitted": true,
+  "guard_conditions": [
+    "exact complete-table preflight snapshot hash",
+    "exact 48 row identities",
+    "existing plan ID and revision 93",
+    "completion note absent before append",
+    "same-transaction row and field preservation assertions"
+  ]
+}

@@ -1,0 +1,1472 @@
+{
+  "id": "AT344-COMPLETE-OWNER-SOURCE-COLLECTION",
+  "schema_version": 2,
+  "recorded_at": "2026-11-26T16:27:50.460162+00:00",
+  "manifest_revision": 94,
+  "ledger_revision": 102,
+  "status": "owner_collection_complete_originals_preserved_alignment_pending",
+  "owner_intent": "This completes the sector screenshots, including two central views north and south of the centre; together with the existing Wild Zone images, Trev reports whole-map image coverage. Preserve every original unchanged and process only duplicates.",
+  "current_source_count": 26,
+  "total_original_bytes": 43603649,
+  "newly_archived_originals": 18,
+  "newly_archived_bytes": 31782542,
+  "already_archived_originals_reused": 8,
+  "newly_received_photos_this_step": 2,
+  "all_original_bytes_preserved": true,
+  "source_game_orientation": {
+    "north_up_fixed": true,
+    "in_game_rotation_available": false,
+    "evidence": "Owner clarification retained in AT343 report; camera perspective is separate."
+  },
+  "survey_target_sector_count": 48,
+  "survey_completion_claimed": true,
+  "sector_register": "docs/qa/at344-sector-source-survey/sector-coverage.json",
+  "selection_policy": [
+    "Retain each original unchanged and reference its exact hash.",
+    "Prefer a clearly readable sector label with the whole intended block/view in frame and surrounding road/building context.",
+    "Record clipping, UI/cursor/icon occlusion and unlock state where evidenced.",
+    "Compare new candidates with existing sector photographs before selecting a replacement; retain both originals and useful detail views.",
+    "Use shared landmarks and fixed north-up direction; crosses supply only the previously bounded relative alignment aid.",
+    "Review native coordinates, boundaries, pickups and routes separately; source image receipt does not approve them.",
+    "Intake further supplied photos when available; no background monitoring or automatic replacement is claimed."
+  ],
+  "entries": [
+    {
+      "original_filename": "20261125_170238.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_170238.jpg",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "bytes": 1564974,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "vert-sector-7"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Wild Zone 17 close-up with two connected green lobes. Vert Street and Café Cyclone are readable; Racine Co… is cut off at the right edge. Regular faint crosses are visible.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Not a whole-city capture; edges clip surrounding map."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "wild_zone_detail",
+        "coverage": "Wild Zone 17 close-up with two connected green lobes. Vert Street and Café Cyclone are readable; Racine Co… is cut off at the right edge. Regular faint crosses are visible.",
+        "readable_sector_ids": [
+          "vert-sector-7"
+        ],
+        "limitations": [
+          "Not a whole-city capture; edges clip surrounding map."
+        ],
+        "visible_wild_zones": [
+          17
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261125_170158.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_170158.jpg",
+      "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+      "bytes": 1420507,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "vert-sector-6"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Wild Zone 17 selected with 100% WILD ZONE 17 Pokémon panel. Vert Street, a Pokémon Center, part of Vert Sector 7, and partial Café Cyclone/waterway labels appear. Overlaps image 01.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Large panel obscures the right half of the map.",
+        "Vert Sector 7 is only partly visible, so not included as a fully readable sector label."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "wild_zone_detail",
+        "coverage": "Wild Zone 17 selected with 100% WILD ZONE 17 Pokémon panel. Vert Street, a Pokémon Center, part of Vert Sector 7, and partial Café Cyclone/waterway labels appear. Overlaps image 01.",
+        "readable_sector_ids": [
+          "vert-sector-6"
+        ],
+        "limitations": [
+          "Large panel obscures the right half of the map.",
+          "Vert Sector 7 is only partly visible, so not included as a fully readable sector label."
+        ],
+        "visible_wild_zones": [
+          17
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261125_165929.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_165929.jpg",
+      "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+      "bytes": 1647674,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "jaune-sector-7"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Wild Zone 15 selected with 100% WILD ZONE 15 panel. Café Ultimo is readable and the long green zone boundary is visible. Avenue label at the left edge is clipped to …nal Avenue.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Large zone panel obscures part of the map.",
+        "Do not infer a full avenue name from the clipped label alone."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "wild_zone_detail",
+        "coverage": "Wild Zone 15 selected with 100% WILD ZONE 15 panel. Café Ultimo is readable and the long green zone boundary is visible. Avenue label at the left edge is clipped to …nal Avenue.",
+        "readable_sector_ids": [
+          "jaune-sector-7"
+        ],
+        "limitations": [
+          "Large zone panel obscures part of the map.",
+          "Do not infer a full avenue name from the clipped label alone."
+        ],
+        "visible_wild_zones": [
+          15
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_104048.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104048.jpg",
+      "sha256": "47bd5952180f9ec407a3c35921dec8f6cb360a1e66ed2bdb12c1ede271845cc8",
+      "bytes": 1854391,
+      "width": 3951,
+      "height": 2038,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad southern city view under Trev’s reported north-up orientation. Central tower-shaped footprint near the top; Wild Zone 6 is partly clipped at upper right. Southern circular city boundary shown. Strong overlap with 06, 08 and 09.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu obscures upper-left detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad southern city view under Trev’s reported north-up orientation. Central tower-shaped footprint near the top; Wild Zone 6 is partly clipped at upper right. Southern circular city boundary shown. Strong overlap with 06, 08 and 09.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu obscures upper-left detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          5,
+          2,
+          1,
+          6
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261125_213809.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213809.jpg",
+      "sha256": "d78e3643af7fb447cbff6ec4096f797fc0c9692e17b5c405c0e952220767fa55",
+      "bytes": 1924588,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad northern city view under Trev’s reported north-up orientation. Wild Zone 4 above Wild Zone 3; northern city rim visible. Central tower footprint partly at bottom.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu at upper left.",
+        "No district or sector text labels visible.",
+        "Central footprint is partially clipped."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad northern city view under Trev’s reported north-up orientation. Wild Zone 4 above Wild Zone 3; northern city rim visible. Central tower footprint partly at bottom.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu at upper left.",
+          "No district or sector text labels visible.",
+          "Central footprint is partially clipped."
+        ],
+        "visible_wild_zones": [
+          4,
+          3
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_104041.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104041.jpg",
+      "sha256": "a4f196979545f8a82d188b3912a0b2dd5fed6339970a2aebacea0a48b44bf71f",
+      "bytes": 1711073,
+      "width": 3987,
+      "height": 1998,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad southern/southeastern city view under Trev’s reported north-up orientation. Tower footprint at top and southern city rim visible. Similar coverage to 04, 08 and 09 with different pan position.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu obscures upper-left detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad southern/southeastern city view under Trev’s reported north-up orientation. Tower footprint at top and southern city rim visible. Similar coverage to 04, 08 and 09 with different pan position.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu obscures upper-left detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          5,
+          2,
+          1,
+          6
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261125_213830.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213830.jpg",
+      "sha256": "50879abc45b6ce969efba79009546cfa99344057eb2cfb0fee8b02bb2a2a5e3e",
+      "bytes": 2230899,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad central city view with tower footprint centred beneath red cursor. Wild Zone 3 at top, 5 lower-left, 6 right and 2 lower-right. Canal segments and circular plazas provide centre overlap references.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Northern and southern city extremities are outside the frame.",
+        "Mission menu and red cursor obscure some detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad central city view with tower footprint centred beneath red cursor. Wild Zone 3 at top, 5 lower-left, 6 right and 2 lower-right. Canal segments and circular plazas provide centre overlap references.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Northern and southern city extremities are outside the frame.",
+          "Mission menu and red cursor obscure some detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          3,
+          5,
+          6,
+          2
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261125_213707.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213707.jpg",
+      "sha256": "60ce7cb5ed4cac9e38ee5cb92cc2a346ab3ec4bef25c3cf8c0b11a6678e6a7b6",
+      "bytes": 2102179,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad southern city view under Trev’s reported north-up orientation. Tower footprint near top, southern rim and player marker at bottom. Overlaps 04, 06, 09 and central view 07.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu obscures upper-left detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad southern city view under Trev’s reported north-up orientation. Tower footprint near top, southern rim and player marker at bottom. Overlaps 04, 06, 09 and central view 07.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu obscures upper-left detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          5,
+          2,
+          6,
+          1
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_103710.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103710.jpg",
+      "sha256": "0b64c204e866ed12b654188398aa6b52542b53accb2fd6ffd0f06df76cd0dc28",
+      "bytes": 1821787,
+      "width": 4000,
+      "height": 2020,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad southern city view under Trev’s reported north-up orientation. Tower footprint near top and southern rim below. Cursor over building complex below Wild Zone 5.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu obscures upper-left detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad southern city view under Trev’s reported north-up orientation. Tower footprint near top and southern rim below. Cursor over building complex below Wild Zone 5.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu obscures upper-left detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          5,
+          2,
+          6,
+          1
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_103927.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103927.jpg",
+      "sha256": "f2fd5f1cc44772f0c9345e106406bb9f433876a2b87565e92ff138c7be6eba3e",
+      "bytes": 1515464,
+      "width": 4000,
+      "height": 1995,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad western/northwestern city edge under Trev’s reported north-up orientation. Large blue area left; city on right. Wild Zone 4 is partly clipped. Tower footprint, west canal and circular plaza geometry visible. Repeated faint crosses are clear over outside-city blue background.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Much of frame is outside-city background.",
+        "Some map features and zone boundaries are clipped.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad western/northwestern city edge under Trev’s reported north-up orientation. Large blue area left; city on right. Wild Zone 4 is partly clipped. Tower footprint, west canal and circular plaza geometry visible. Repeated faint crosses are clear over outside-city blue background.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Much of frame is outside-city background.",
+          "Some map features and zone boundaries are clipped.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          3,
+          4,
+          5
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_103721.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103721.jpg",
+      "sha256": "672dbcc954a5a217b50c6346295aa4cfe972b28498de214d405e1e7cb7324873",
+      "bytes": 2035698,
+      "width": 4000,
+      "height": 2009,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad central city view with tower footprint centred. Wild Zone 3 at top, 5 lower-left, 6 right and 2 lower-right. Player marker above tower; similar central coverage to 07.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu, cursor and player marker obscure some detail.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad central city view with tower footprint centred. Wild Zone 3 at top, 5 lower-left, 6 right and 2 lower-right. Player marker above tower; similar central coverage to 07.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu, cursor and player marker obscure some detail.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          3,
+          5,
+          6,
+          2
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_104020.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104020.jpg",
+      "sha256": "aa32faf7415d5e7c2669b32fd3125f8d48e49d57cd1279928635427fedcc1f65",
+      "bytes": 1770810,
+      "width": 4000,
+      "height": 2042,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad northeastern/eastern city view under Trev’s reported north-up orientation. Wild Zone 4 upper-left, 3 left, 6 lower-right and partial 5 at bottom-left. Tower footprint lower-left, eastern city boundary and blue background right. Repeated faint crosses are clear over outside-city blue background.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Mission menu obscures upper-left detail.",
+        "Wild Zone 5 is partially clipped.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad northeastern/eastern city view under Trev’s reported north-up orientation. Wild Zone 4 upper-left, 3 left, 6 lower-right and partial 5 at bottom-left. Tower footprint lower-left, eastern city boundary and blue background right. Repeated faint crosses are clear over outside-city blue background.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Mission menu obscures upper-left detail.",
+          "Wild Zone 5 is partially clipped.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          4,
+          3,
+          6,
+          5
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_104059.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104059.jpg",
+      "sha256": "548c28b9e9dc840a48bef3badfe496e6cbfd8e298c6def677aa19d8d86602993",
+      "bytes": 1854048,
+      "width": 3988,
+      "height": 2009,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad western/northwestern city view under Trev’s reported north-up orientation. Wild Zones 4 and 3 upper right, 5 lower-right and partial 2 at bottom. Tower footprint lower-right; western canal/plaza geometry mid-frame. Repeated faint crosses are clear over outside-city blue background.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Some features and Wild Zone 2 are clipped.",
+        "No district or sector text labels visible."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad western/northwestern city view under Trev’s reported north-up orientation. Wild Zones 4 and 3 upper right, 5 lower-right and partial 2 at bottom. Tower footprint lower-right; western canal/plaza geometry mid-frame. Repeated faint crosses are clear over outside-city blue background.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Some features and Wild Zone 2 are clipped.",
+          "No district or sector text labels visible."
+        ],
+        "visible_wild_zones": [
+          4,
+          3,
+          5,
+          2
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_103629.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103629.jpg",
+      "sha256": "b4599b94aff04791a53e591054b5ca9ebcd73be0a3e9d9be2d08a325f5e5f76c",
+      "bytes": 1797907,
+      "width": 4000,
+      "height": 2049,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad north-city overview. Visible context: Wild Zone 4, Wild Zone 3, part of Wild Zone 6, central tower footprint.",
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "prior_inventory": "docs/qa/ATLAS_AT341_BOUNDARY_SOURCE_INVENTORY.json",
+      "limits": [
+        "Zoomed-out unlabeled street layout; northern circular city edge, cemetery-shaped WZ4 above circular WZ3, several Pokemon Center symbols. Older mission state than the later sector photos. Not one of the latest two central reference photos."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "city_overview",
+        "coverage": "Broad north-city overview. Visible context: Wild Zone 4, Wild Zone 3, part of Wild Zone 6, central tower footprint.",
+        "readable_sector_ids": [],
+        "limitations": [
+          "Zoomed-out unlabeled street layout; northern circular city edge, cemetery-shaped WZ4 above circular WZ3, several Pokemon Center symbols. Older mission state than the later sector photos. Not one of the latest two central reference photos."
+        ],
+        "visible_landmarks": [
+          "Wild Zone 4",
+          "Wild Zone 3",
+          "part of Wild Zone 6",
+          "central tower footprint"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_141757.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_141757.jpg",
+      "sha256": "ecf1963705c8efbb90e24a683eb0c686bd2390155a3a56e6a22ba6ba29171c42",
+      "bytes": 1526830,
+      "width": 4000,
+      "height": 2218,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "vert-sector-4",
+        "vert-sector-5",
+        "vert-sector-7",
+        "vert-sector-8",
+        "vert-sector-9"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Southern Vert: sectors 4, 5, 7, 8 and 9; Hotel Z, Cafe Introversion, station front and Wild Zone 1. Pokemon Research Lab is partly visible at the lower edge.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Vert district south. Visible context: Hotel Z, Gare de Lumiose, Cafe Introversion, Cafe Cyclone, Pokemon Research Lab, Wild Zone 1, South Boulevard, Station Front, Vert Street.",
+        "readable_sector_ids": [
+          "vert-sector-4",
+          "vert-sector-5",
+          "vert-sector-7",
+          "vert-sector-8",
+          "vert-sector-9"
+        ],
+        "limitations": [
+          "Overlap with photo 16 through Vert sectors 4/5, Cafe Cyclone and Vert Street; portions of WZ1 and Vert Plaza at frame edges."
+        ],
+        "visible_landmarks": [
+          "Hotel Z",
+          "Gare de Lumiose",
+          "Cafe Introversion",
+          "Cafe Cyclone",
+          "Pokemon Research Lab",
+          "Wild Zone 1",
+          "South Boulevard",
+          "Station Front",
+          "Vert Street"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_141528.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_141528.jpg",
+      "sha256": "58c8dacaa2b5915908fb1852ce995836a2ba5df9bb5fff70303d27b585f367e0",
+      "bytes": 1664241,
+      "width": 4000,
+      "height": 2148,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "vert-sector-1",
+        "vert-sector-2",
+        "vert-sector-3",
+        "vert-sector-4",
+        "vert-sector-5",
+        "vert-sector-6"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Vert sectors 1-6; Vert Plaza / Wild Zone 2; Nouveau Cafe, Cafe Cyclone, Coulant Waterway and South Boulevard. Some peripheral labels and blocks are cropped.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Vert district north. Visible context: Vert Plaza / Wild Zone 2, Prism Tower, Nouveau Cafe, Cafe Cyclone, Coulant Waterway, Vert Street.",
+        "readable_sector_ids": [
+          "vert-sector-1",
+          "vert-sector-2",
+          "vert-sector-3",
+          "vert-sector-4",
+          "vert-sector-5",
+          "vert-sector-6"
+        ],
+        "limitations": [
+          "Strong canal, plaza and road anchors; connects to central-south photo 25 via Prism Tower, Nouveau Cafe and Vert Sector 1."
+        ],
+        "visible_landmarks": [
+          "Vert Plaza / Wild Zone 2",
+          "Prism Tower",
+          "Nouveau Cafe",
+          "Cafe Cyclone",
+          "Coulant Waterway",
+          "Vert Street"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_142840.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_142840.jpg",
+      "sha256": "76a9f382d2914b51dc261546fb1d24c93c7aa9e245916bf73ad61560afd3e25d",
+      "bytes": 1370073,
+      "width": 3642,
+      "height": 1988,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "rouge-sector-3",
+        "rouge-sector-4",
+        "rouge-sector-5",
+        "rouge-sector-6",
+        "rouge-sector-7",
+        "rouge-sector-8"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Northern Rouge: sectors 3-8; Dormez Bien Cemetery / Wild Zone 4, Looker Bureau, Sushi High Roller and North Boulevard. Rouge Plaza / Wild Zone 3 and Academie Etoile are partly visible below.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Rouge district north. Visible context: Dormez Bien Cemetery / Wild Zone 4, Rouge Plaza / Wild Zone 3, Looker Bureau, Sushi High Roller, Academie Etoile, North Boulevard, Rouge Street, Hibernal Avenue.",
+        "readable_sector_ids": [
+          "rouge-sector-3",
+          "rouge-sector-4",
+          "rouge-sector-5",
+          "rouge-sector-6",
+          "rouge-sector-7",
+          "rouge-sector-8"
+        ],
+        "limitations": [
+          "Rouge Plaza is partially cut off at the bottom but overlaps photo 18; left mission UI obscures some outer-edge map."
+        ],
+        "visible_landmarks": [
+          "Dormez Bien Cemetery / Wild Zone 4",
+          "Rouge Plaza / Wild Zone 3",
+          "Looker Bureau",
+          "Sushi High Roller",
+          "Academie Etoile",
+          "North Boulevard",
+          "Rouge Street",
+          "Hibernal Avenue"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_143129.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_143129.jpg",
+      "sha256": "34e51b4271ef0199ceca0d58bca193502cfb39004d8c4ca1fa65cf99b9ea91b8",
+      "bytes": 1635785,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "rouge-sector-1",
+        "rouge-sector-2"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Southern Rouge: sectors 1 and 2; Rouge Plaza / Wild Zone 3, Academie Etoile, Restaurant Le Wow and Hibernal Avenue. Peripheral buildings are cropped.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Rouge district south. Visible context: Rouge Plaza / Wild Zone 3, Academie Etoile, Restaurant Le Wow, Pokemon Center, Rouge Street, Hibernal Avenue.",
+        "readable_sector_ids": [
+          "rouge-sector-1",
+          "rouge-sector-2"
+        ],
+        "limitations": [
+          "Overlaps photo 17 via Rouge Plaza and Academie Etoile and central-north photo 26 via Rouge Street, Rouge sectors 1/2 and Restaurant Le Wow."
+        ],
+        "visible_landmarks": [
+          "Rouge Plaza / Wild Zone 3",
+          "Academie Etoile",
+          "Restaurant Le Wow",
+          "Pokemon Center",
+          "Rouge Street",
+          "Hibernal Avenue"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_144931.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_144931.jpg",
+      "sha256": "2300a8085329e70d2bb570f41fce39d8bba5814f11566c132726fba7cfd1addc",
+      "bytes": 1296968,
+      "width": 3494,
+      "height": 2192,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "jaune-sector-1",
+        "jaune-sector-2",
+        "jaune-sector-3",
+        "jaune-sector-6",
+        "jaune-sector-9",
+        "jaune-sector-10",
+        "jaune-sector-11",
+        "jaune-sector-12",
+        "vert-sector-1",
+        "vert-sector-3"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Southern Jaune: sectors 1, 2, 3, 6 and 9-12; Jaune Plaza, Jaune Street, Saison Canal and Wild Zone 6. Vert sectors 1 and 3 are partly visible below.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Jaune district south. Visible context: Jaune Plaza, Jaune Street, Saison Canal, Saison Canalside, Wild Zone 6, North Boulevard, Restaurant Le Wow, Nouveau Cafe.",
+        "readable_sector_ids": [
+          "jaune-sector-1",
+          "jaune-sector-2",
+          "jaune-sector-3",
+          "jaune-sector-6",
+          "jaune-sector-9",
+          "jaune-sector-10",
+          "jaune-sector-11",
+          "jaune-sector-12",
+          "vert-sector-1",
+          "vert-sector-3"
+        ],
+        "limitations": [
+          "Strong overlap with photo 20 at Jaune Plaza, Jaune Street and Jaune Sector 3; canal connects to central references."
+        ],
+        "visible_landmarks": [
+          "Jaune Plaza",
+          "Jaune Street",
+          "Saison Canal",
+          "Saison Canalside",
+          "Wild Zone 6",
+          "North Boulevard",
+          "Restaurant Le Wow",
+          "Nouveau Cafe"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_145412.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_145412.jpg",
+      "sha256": "94ffa02175f1973da4f9f239b5d6369dc4367d7ca181ec8696bcb75efdbb56ed",
+      "bytes": 1234593,
+      "width": 3346,
+      "height": 2252,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "jaune-sector-3",
+        "jaune-sector-4",
+        "jaune-sector-5",
+        "jaune-sector-7",
+        "jaune-sector-8"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Northern Jaune: sectors 3, 4, 5, 7 and 8; Cafe Kizuna, Cafe Ultimo and North Boulevard. Jaune Plaza is partly visible below; in-game zone unlock state is not a geographic absence.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Jaune district north. Visible context: Cafe Ultimo, Cafe Kizuna, Pokemon Centers, Academie Etoile, Restaurant Le Wow, Jaune Plaza, Hibernal Avenue, North Boulevard, Jaune Street.",
+        "readable_sector_ids": [
+          "jaune-sector-3",
+          "jaune-sector-4",
+          "jaune-sector-5",
+          "jaune-sector-7",
+          "jaune-sector-8"
+        ],
+        "limitations": [
+          "Jaune Plaza partly at bottom edge; cemetery/WZ4 corner at top left. Adjacent building blocks connect north and south images."
+        ],
+        "visible_landmarks": [
+          "Cafe Ultimo",
+          "Cafe Kizuna",
+          "Pokemon Centers",
+          "Academie Etoile",
+          "Restaurant Le Wow",
+          "Jaune Plaza",
+          "Hibernal Avenue",
+          "North Boulevard",
+          "Jaune Street"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_151150.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_151150.jpg",
+      "sha256": "ce7498bd27e67321c5871399fa9edc3e9deb95f52d44f1afe4af4daa48d82bbb",
+      "bytes": 1394383,
+      "width": 2966,
+      "height": 2252,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "magenta-sector-4",
+        "magenta-sector-7",
+        "magenta-sector-8",
+        "magenta-sector-9",
+        "rouge-sector-3",
+        "rouge-sector-4"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Northern Magenta: sectors 4, 7, 8 and 9; Cafe Triste, Magenta Street, Saison Canal, Electrical Substation and Magenta Plaza. Rouge sectors 3 and 4 appear at the upper/right edge; some peripheral labels are cropped.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Magenta district north. Visible context: Cafe Triste, Poke Ball Boutique, Restaurant Le Yeah, Pokemon Center, Electrical Substation, Magenta Plaza, Saison Canal, Magenta Street, Autumnal Avenue, North Boulevard.",
+        "readable_sector_ids": [
+          "magenta-sector-4",
+          "magenta-sector-7",
+          "magenta-sector-8",
+          "magenta-sector-9",
+          "rouge-sector-3",
+          "rouge-sector-4"
+        ],
+        "limitations": [
+          "Some right-edge labels clipped, including cafe name. Clear repeated crosses in off-map blue background. Overlaps photo 22 at Saison Canal, Electrical Substation and Magenta Plaza."
+        ],
+        "visible_landmarks": [
+          "Cafe Triste",
+          "Poke Ball Boutique",
+          "Restaurant Le Yeah",
+          "Pokemon Center",
+          "Electrical Substation",
+          "Magenta Plaza",
+          "Saison Canal",
+          "Magenta Street",
+          "Autumnal Avenue",
+          "North Boulevard"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_151459.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_151459.jpg",
+      "sha256": "7b26a71b87c54585d02d012b79fa284a006d4a1118e06546fa5aa750c47fce21",
+      "bytes": 1698234,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "reuse_existing_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "magenta-sector-1",
+        "magenta-sector-2",
+        "magenta-sector-3",
+        "magenta-sector-5",
+        "magenta-sector-6"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Southern Magenta: sectors 2, 3, 5 and 6; the sector 1 label is partly obscured by a mission icon. Electrical Substation, Magenta Plaza, Cafe Gallant and Estival Avenue are visible; a partial Wild Zone 5 / Bleu district edge appears at lower right, without complete Bleu coverage.",
+      "coverage_review": "Reused the prior AT343 visual description; no new geometry review.",
+      "limits": [
+        "Peripheral cropping and icons remain; use the prior coverage description."
+      ],
+      "partial_label_qualification": "Magenta Sector1 label is partly obscured by a mission icon; its candidate association is contextual, not a fully readable label.",
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Magenta district south. Visible context: Magenta Plaza, Electrical Substation, Pokemon Center, Cafe Gallant, Saison Canal, Magenta Street, Estival Avenue, part of Wild Zone 5.",
+        "readable_sector_ids": [
+          "magenta-sector-2",
+          "magenta-sector-3",
+          "magenta-sector-5",
+          "magenta-sector-6"
+        ],
+        "limitations": [
+          "A Magenta sector label below/right of the Pokemon Center is obscured by a blue mission icon; do not infer its numeral from this image alone. Area is clearly present. Yellow double-chevron marker near Estival Avenue, plus gray one near top edge, visible but their semantics are not established by this audit."
+        ],
+        "visible_landmarks": [
+          "Magenta Plaza",
+          "Electrical Substation",
+          "Pokemon Center",
+          "Cafe Gallant",
+          "Saison Canal",
+          "Magenta Street",
+          "Estival Avenue",
+          "part of Wild Zone 5"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 92
+    },
+    {
+      "original_filename": "20261126_160550.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_160550.jpg",
+      "sha256": "763d98f78662c42882d0dcddf529d990e845912d41e6d23569e461f23efa8a04",
+      "bytes": 2006176,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "bleu-sector-1",
+        "bleu-sector-2",
+        "bleu-sector-3",
+        "bleu-sector-4",
+        "bleu-sector-6",
+        "bleu-sector-8",
+        "bleu-sector-9",
+        "bleu-sector-10"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Broad Bleu Plaza / Wild Zone5 view with readable Bleu1,2,3,4,6,8,9,10 labels; Estival Avenue, Vernal Avenue, South Boulevard, part of Bleu Street; Cafe Gallant, Cafe Rouleau, Shutterbug Cafe, Cafe Soleil and Cafe Woof.",
+      "limits": [
+        "Mission/travel menu obscures upper-left map.",
+        "Cursor overlaps northwest Bleu Plaza; badges/icons hide local details.",
+        "Sector8 surroundings continue below the frame; right/bottom labels and buildings are clipped.",
+        "Readable labels and an extensive green Wild Zone5 outline do not certify complete numbered-sector perimeters."
+      ],
+      "coverage_review": "Original directly viewed independently by root and image-review agent on2026-11-26; no calibration performed.",
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Bleu district north. Visible context: Wild Zone 5, Bleu Plaza, Cafe Rouleau, Cafe Gallant, Shutterbug Cafe, Cafe Soleil, Cafe Woof, Estival Avenue, Vernal Avenue, South Boulevard, Prism Tower label partially at right edge.",
+        "readable_sector_ids": [
+          "bleu-sector-1",
+          "bleu-sector-2",
+          "bleu-sector-3",
+          "bleu-sector-4",
+          "bleu-sector-6",
+          "bleu-sector-8",
+          "bleu-sector-9",
+          "bleu-sector-10"
+        ],
+        "limitations": [
+          "Mission UI obscures some upper-left map. Overlaps photo 24 at Bleu Plaza and sectors 3/6/8/9; central-south photo 25 ties through WZ5 and Prism Tower."
+        ],
+        "visible_landmarks": [
+          "Wild Zone 5",
+          "Bleu Plaza",
+          "Cafe Rouleau",
+          "Cafe Gallant",
+          "Shutterbug Cafe",
+          "Cafe Soleil",
+          "Cafe Woof",
+          "Estival Avenue",
+          "Vernal Avenue",
+          "South Boulevard",
+          "Prism Tower label partially at right edge"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_160741.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_160741.jpg",
+      "sha256": "ebc757ea71d423d2ac87e4d894dd33b06130b3f05f3a000acd547ab6e4644aba",
+      "bytes": 1395804,
+      "width": 3500,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": false,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "bleu-sector-3",
+        "bleu-sector-5",
+        "bleu-sector-6",
+        "bleu-sector-7",
+        "bleu-sector-8",
+        "bleu-sector-9"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "coverage": "Southern Bleu with readable Bleu3,5,6,7,8,9 labels; Bleu Plaza, South Boulevard, Bleu Street, Vernal Avenue, Aymlis Park, Cafe Soleil and the southern Pokemon Center. Overlaps the first frame around3,6,8,9 and adds readable5/7 labels.",
+      "limits": [
+        "Top of Bleu Plaza is cut off.",
+        "Menu remnants cover the left edge; the cursor covers part of Bleu Street.",
+        "Right-edge cafe, Pokemon Center and Stone labels are truncated.",
+        "Sector7 is near the bottom edge; map continues outside the frame and bottom controls obscure a strip.",
+        "Unidentified green zone fragments are visible at the top/lower-right; no complete numbered zone badge is readable."
+      ],
+      "coverage_review": "Original directly viewed independently by root and image-review agent on2026-11-26; no calibration performed.",
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "district_overview",
+        "coverage": "Bleu district south. Visible context: Bleu Plaza, Cafe Soleil, Pokemon Centers, South Boulevard, Vernal Avenue, Bleu Street, Aymlis Park.",
+        "readable_sector_ids": [
+          "bleu-sector-3",
+          "bleu-sector-5",
+          "bleu-sector-6",
+          "bleu-sector-7",
+          "bleu-sector-8",
+          "bleu-sector-9"
+        ],
+        "limitations": [
+          "Some right-edge labels clipped; WZ5 edge only at top. Clear outer-city southern edge and street/park anchors. Inspect exact park spelling against source before publishing it as content."
+        ],
+        "visible_landmarks": [
+          "Bleu Plaza",
+          "Cafe Soleil",
+          "Pokemon Centers",
+          "South Boulevard",
+          "Vernal Avenue",
+          "Bleu Street",
+          "Aymlis Park"
+        ]
+      },
+      "central_alignment_role": null,
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": false,
+      "first_archive_intake_manifest_revision": 93
+    },
+    {
+      "original_filename": "20261126_161350.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76",
+      "bytes": 1635403,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": true,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "bleu-sector-1",
+        "bleu-sector-2",
+        "vert-sector-1",
+        "vert-sector-2",
+        "jaune-sector-2"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "central_alignment",
+        "coverage": "Central reference - centre/south. Visible context: Prism Tower, Saison Canal, Saison Canalside, Cafe Gallant, Nouveau Cafe, Wild Zone 5, Vert Plaza / part of Wild Zone 2, Bleu Plaza, Vernal Avenue, Vert Street, Jaune Street.",
+        "readable_sector_ids": [
+          "bleu-sector-1",
+          "bleu-sector-2",
+          "vert-sector-1",
+          "vert-sector-2",
+          "jaune-sector-2"
+        ],
+        "limitations": [
+          "One of the two central alignment references. Prism Tower is above frame centre, with southern Bleu/Vert context below. Overlaps central-north photo 26 substantially across tower footprint, ring road, Saison Canal, Jaune Sector 2 and Cafe Gallant. Magenta sector numeral at left obscured."
+        ],
+        "visible_landmarks": [
+          "Prism Tower",
+          "Saison Canal",
+          "Saison Canalside",
+          "Cafe Gallant",
+          "Nouveau Cafe",
+          "Wild Zone 5",
+          "Vert Plaza / part of Wild Zone 2",
+          "Bleu Plaza",
+          "Vernal Avenue",
+          "Vert Street",
+          "Jaune Street"
+        ]
+      },
+      "coverage": "Central reference - centre/south. Visible context: Prism Tower, Saison Canal, Saison Canalside, Cafe Gallant, Nouveau Cafe, Wild Zone 5, Vert Plaza / part of Wild Zone 2, Bleu Plaza, Vernal Avenue, Vert Street, Jaune Street.",
+      "limits": [
+        "One of the two central alignment references. Prism Tower is above frame centre, with southern Bleu/Vert context below. Overlaps central-north photo 26 substantially across tower footprint, ring road, Saison Canal, Jaune Sector 2 and Cafe Gallant. Magenta sector numeral at left obscured."
+      ],
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "central_alignment_role": "centre_south",
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": true,
+      "first_archive_intake_manifest_revision": 94
+    },
+    {
+      "original_filename": "20261126_161334.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a",
+      "bytes": 1493160,
+      "width": 4000,
+      "height": 2252,
+      "archive_action": "add_byte_identical_original",
+      "newly_received_in_this_step": true,
+      "original_bytes_preserved": true,
+      "source_orientation": "fixed_north_up_as_reported_by_Trev",
+      "published_as_runtime_asset": false,
+      "full_sector_best_view_selected": false,
+      "candidate_sector_ids": [
+        "rouge-sector-1",
+        "rouge-sector-2",
+        "magenta-sector-2",
+        "jaune-sector-1",
+        "jaune-sector-2",
+        "jaune-sector-3",
+        "vert-sector-1"
+      ],
+      "candidate_mapping_scope": "Visible-label/context index only; it does not certify complete sector coverage.",
+      "fresh_visual_review": {
+        "date": "2026-11-26",
+        "method": "Direct inspection of the supplied original; metadata read without image transformation.",
+        "source_class": "central_alignment",
+        "coverage": "Central reference - centre/north. Visible context: Prism Tower, Rouge Street, Restaurant Le Wow, Pokemon Centers, Saison Canal, Saison Canalside, Cafe Gallant, Autumnal Avenue, Hibernal Avenue, Jaune Street, part of Jaune Plaza.",
+        "readable_sector_ids": [
+          "rouge-sector-1",
+          "rouge-sector-2",
+          "magenta-sector-2",
+          "jaune-sector-1",
+          "jaune-sector-2",
+          "jaune-sector-3",
+          "vert-sector-1"
+        ],
+        "limitations": [
+          "One of the two central alignment references. Prism Tower is below frame centre, with northern Rouge/Jaune/Magenta context above. Tower footprint and surrounding roads/canals overlap photo 25. Jaune Sector 1 is partly covered but readable; lower-left Magenta sector numeral is obscured."
+        ],
+        "visible_landmarks": [
+          "Prism Tower",
+          "Rouge Street",
+          "Restaurant Le Wow",
+          "Pokemon Centers",
+          "Saison Canal",
+          "Saison Canalside",
+          "Cafe Gallant",
+          "Autumnal Avenue",
+          "Hibernal Avenue",
+          "Jaune Street",
+          "part of Jaune Plaza"
+        ]
+      },
+      "coverage": "Central reference - centre/north. Visible context: Prism Tower, Rouge Street, Restaurant Le Wow, Pokemon Centers, Saison Canal, Saison Canalside, Cafe Gallant, Autumnal Avenue, Hibernal Avenue, Jaune Street, part of Jaune Plaza.",
+      "limits": [
+        "One of the two central alignment references. Prism Tower is below frame centre, with northern Rouge/Jaune/Magenta context above. Tower footprint and surrounding roads/canals overlap photo 25. Jaune Sector 1 is partly covered but readable; lower-left Magenta sector numeral is obscured."
+      ],
+      "coverage_review": "Per-frame visual indexing completed on 2026-11-26; no geographic registration or complete-sector approval.",
+      "central_alignment_role": "centre_north",
+      "immutable_original": true,
+      "all_edits_require_separate_derivative": true,
+      "current_delivery_newly_received": true,
+      "first_archive_intake_manifest_revision": 94
+    }
+  ],
+  "approved_runtime_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "runtime_or_player_progress_changed": false,
+  "original_workspace_changed": false,
+  "archive_count_scope": "Compared with GitHub main c491cd7c7edcbc9a59914e798706d6e92f7ae7e9: 16 previously prepared originals plus 2 final central originals are added; 8 AT343 originals are reused.",
+  "collection_completion": {
+    "status": "complete_as_reported_by_owner",
+    "reported_by": "Trev",
+    "date": "2026-11-26",
+    "statement": "This completes the sector screenshots, including two central views north and south of the centre; together with the existing Wild Zone images, Trev reports whole-map image coverage.",
+    "source_intake_complete": true,
+    "all_26_frames_visually_indexed": true,
+    "whole_city_geometric_coverage_independently_verified": false,
+    "best_view_selection_status": "pending_comparison_and_alignment",
+    "meaning": "Capture collection is complete. Source registration, seam/occlusion review and selection of working derivatives are separate remaining tasks."
+  },
+  "central_alignment_pair": {
+    "centre_north": {
+      "original_filename": "20261126_161334.jpg",
+      "source_path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a",
+      "role": "Bridge Prism Tower to the northern Rouge, Jaune and Magenta context."
+    },
+    "centre_south": {
+      "original_filename": "20261126_161350.jpg",
+      "source_path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76",
+      "role": "Bridge Prism Tower to southern Bleu and Vert context, including Wild Zone 5 and Vert Plaza."
+    },
+    "shared_visible_landmarks": [
+      "Prism Tower footprint",
+      "surrounding ring road",
+      "Saison Canal",
+      "Jaune Sector 2",
+      "Café Gallant"
+    ],
+    "role_confirmed_by_visual_inspection": true,
+    "geometric_transform_fitted": false
+  },
+  "original_handling_policy": {
+    "binding_owner_instruction": true,
+    "originals_are_immutable": true,
+    "preserve_exact_supplied_bytes_filenames_dimensions_and_metadata": true,
+    "do_not_overwrite_crop_rotate_resize_recompress_annotate_or_strip_originals": true,
+    "first_copy_then_edit_only_the_copy": true,
+    "keep_full_originals_available_after_derivative_selection": true,
+    "derivative_directory": "docs/qa/at344-sector-source-survey/derivatives/",
+    "derivative_register": "docs/qa/at344-sector-source-survey/derivatives.json",
+    "integrity_file": "docs/qa/at344-sector-source-survey/SOURCE_INTEGRITY.sha256",
+    "each_derivative_requires": [
+      "distinct output path",
+      "source original path and SHA-256",
+      "operation and crop rectangle in original-photo pixels when applicable",
+      "output dimensions and SHA-256",
+      "transform parameters and review evidence when used for alignment"
+    ],
+    "existing_basemap_and_all_earlier_photographs_preserved": true
+  },
+  "cross_alignment_policy": {
+    "owner_hypothesis": "The faint X/cross marks may provide map coordinates or an alignment grid because the source game map remains fixed north-up.",
+    "observed": "Regular faint plus/cross marks repeat over the map and outside-city background.",
+    "use": "Candidate secondary relative-alignment references after matching unique buildings, roads and canal features.",
+    "prior_bounded_evidence": "AT343 supports one local photograph overlap only; its holdout limits remain binding.",
+    "official_coordinate_meaning_origin_units_and_citywide_calibration": "unverified",
+    "cross_alone_proves_item_location": false,
+    "cross_alone_authorizes_pin_or_coordinate": false,
+    "repeat_pattern_can_alias_positions": true
+  },
+  "survey_completion_scope": "Owner-reported capture collection only; independent complete-map alignment and best-view approval remain pending.",
+  "GPS_EXIF_found_in_current_26_files": false,
+  "history": "docs/qa/at344-sector-source-survey/history/manifest-93/source-inventory.json"
+}

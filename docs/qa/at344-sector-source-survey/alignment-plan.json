@@ -1,0 +1,61 @@
+{
+  "id": "AT344-NORTH-UP-ALIGNMENT-PLAN",
+  "manifest_revision": 94,
+  "ledger_revision": 102,
+  "status": "source_collection_ready_registration_pending",
+  "source_orientation": {
+    "north_up_fixed": true,
+    "in_game_rotation_available": false,
+    "evidence": "Trev direct gameplay observation"
+  },
+  "central_pair": {
+    "centre_north": {
+      "original_filename": "20261126_161334.jpg",
+      "source_path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a",
+      "role": "Bridge Prism Tower to the northern Rouge, Jaune and Magenta context."
+    },
+    "centre_south": {
+      "original_filename": "20261126_161350.jpg",
+      "source_path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76",
+      "role": "Bridge Prism Tower to southern Bleu and Vert context, including Wild Zone 5 and Vert Plaza."
+    },
+    "shared_visible_landmarks": [
+      "Prism Tower footprint",
+      "surrounding ring road",
+      "Saison Canal",
+      "Jaune Sector 2",
+      "Café Gallant"
+    ],
+    "role_confirmed_by_visual_inspection": true,
+    "geometric_transform_fitted": false
+  },
+  "cross_policy": {
+    "owner_hypothesis": "The faint X/cross marks may provide map coordinates or an alignment grid because the source game map remains fixed north-up.",
+    "observed": "Regular faint plus/cross marks repeat over the map and outside-city background.",
+    "use": "Candidate secondary relative-alignment references after matching unique buildings, roads and canal features.",
+    "prior_bounded_evidence": "AT343 supports one local photograph overlap only; its holdout limits remain binding.",
+    "official_coordinate_meaning_origin_units_and_citywide_calibration": "unverified",
+    "cross_alone_proves_item_location": false,
+    "cross_alone_authorizes_pin_or_coordinate": false,
+    "repeat_pattern_can_alias_positions": true
+  },
+  "workflow": [
+    "Verify SOURCE_INTEGRITY.sha256 and create separate working copies; never process an original in place.",
+    "Use the centre/north and centre/south images as an overlap bridge, matching distinctive Prism Tower corners, road junctions and canal corners before any repeating cross pattern.",
+    "Connect the five district photograph pairs to this centre and the preserved broad overviews and Wild Zone images.",
+    "Correct camera perspective or photographed-screen tilt only on copies. Account for zoom, scale and crop differences; fixed north-up does not imply identical pixel coordinates.",
+    "Record source/crop/transform provenance and validate independent landmark holdouts inside the intended fitted region. Do not extrapolate the prior AT343 local fit across the city.",
+    "Review seams, UI masks, frame edges and sector coverage for all 48 stable sector IDs plus the existing 20 Wild Zones. Prefer another original for obscured details; never invent unseen map content.",
+    "Retain full originals and alternative detail views when selecting website derivatives. Validate any eventual map/gallery replacement on mobile and desktop before release."
+  ],
+  "acceptance": {
+    "original_hashes_unchanged": true,
+    "all_derivatives_trace_to_originals": true,
+    "whole_city_coverage_and_registration_proof_required_before_complete_map_claim": true,
+    "pin_coordinates_require_separate_verified_evidence": true,
+    "random_hyperspace_permanent_markers_allowed": false
+  },
+  "production_coordinates_or_transforms_added": 0
+}

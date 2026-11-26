@@ -1,5 +1,21 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+<!-- ATLAS_CROSS_GRID_CURRENT_97_105 -->
+## Current work: calibrated cross grid and source recovery (Manifest 97 / Ledger 105)
+
+[Combined request and Workspace import brief](docs/qa/atlas-cross-grid-2026-11-26/REQUEST_AND_HANDOFF.md) · [Current checkpoint and pending gates](docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json) · [Native calibration and independent review](docs/qa/atlas-cross-grid-2026-11-26/NATIVE_GRID_EVIDENCE.md)
+
+**The existing release is merged PR #211**, commit `3259de9a8d70d5851ae208fb812c4774cc59c2ec`, tree `9d0375cc18618e00a46f9192d8e70a484ee330a7`; [its matching Pages deployment](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45880427799) succeeded. It remains the rollback/released baseline while this candidate completes its own release checks.
+
+**Implemented and checked locally:** the optional **A1–R18** native-image reference grid, fractional cell readout and copied links, plus the high-zoom diagonal-camera repair. Independent calibration reproduces 19 fit crossings and 20 reserved native checks; maximum reserved-node errors are 1.49 px outside the city and 1.82 px at the selected interior checks. These are sampled-image alignment results, not universal accuracy or new item-placement proof. The grid extends beyond the last measured row as an explicit Atlas convention. The integrated local checkpoint is **134 passing tests**; Desktop managed-preview observations also pass for sharp cell labels, rotation, clipped edge cells, dashed extensions, north reset and cleared selection text. Exact-head CI and phone validation remain separate.
+
+**Sources preserved:** all **26 supplied JPEG originals** match the earlier source branch byte for byte; eight are reused, eighteen restored, and four separate existing full-frame versions remain intact. All **60 archive preservation checks** and **26 original checksums** pass. No existing map, original photograph, marker/progress ID or player storage key is replaced. The game map remains north-up, while Atlas keeps viewer rotation/north reset. Roughly 60 remains Trev's walking-scale report and an observed waypoint number, not verified feet, metres or exact counted steps. No cross implies an item or permanent random Hyperspace pin.
+
+**Private planning synchronized:** [the actual guarded receipt](docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json) verifies **95 → 97** across all 48 existing rows at 19:53:03 UTC, with a matching fresh readback at 19:55:16 UTC on 26 November 2026. Two notes were appended; status totals remain 17 verified / 15 in progress / 16 open. Prior notes, GitHub proof, business data and all Workspace fields are preserved. This metadata update does not publish the candidate.
+
+**Release remains pending:** exact-head CI and its phone/desktop suites, phone interaction review, reviewed merge, matching Pages deployment and live verification. The original Workspace Site is unchanged. Its later import must use the released exact commit/tree, preserve newer existing-Site changes, retain backup/rollback and pass a scoped preview before publication. All 67 historical requirements, older sealed prompts and broader unfinished master-plan obligations remain intact. Earlier blocks below are dated historical checkpoints; their use of “current” or “candidate” applies to their recorded stage.
+<!-- END_ATLAS_CROSS_GRID_CURRENT_97_105 -->
+
 <!-- AT343_VIDEO_CURRENT_PLANNING_95_103 -->
 ## Latest planning evidence — AT-343 video follow-up / Manifest 95 / Ledger 103
 

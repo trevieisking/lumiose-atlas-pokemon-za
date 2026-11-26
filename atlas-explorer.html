@@ -80,6 +80,7 @@
     <label><input type="checkbox" data-layer="ladder" checked> Ladders</label>
     <label><input type="checkbox" data-layer="landmark" checked> Landmarks</label>
     <label><input type="checkbox" data-layer="sector-label" checked> Sector names</label>
+    <label><input type="checkbox" id="aeGridToggle" disabled> Cross grid <small id="aeGridAvailability">(loading…)</small></label>
     <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
     <label><input type="checkbox" data-layer="item"> Items</label>
     <label><input type="checkbox" data-layer="screw"> Colorful Screws</label>
@@ -106,6 +107,7 @@
         <span id="aeSectorContextBearing">Street reference pending source verification</span>
       </div>
       <button type="button" class="ae-rose" id="aeRose" aria-label="Reset map to north-up" title="Reset north-up"><span id="aeNeedle" aria-hidden="true">▲</span><strong aria-hidden="true">N</strong></button>
+      <div id="aeGridCentre" class="ae-grid-centre" aria-hidden="true" hidden></div>
       <div class="ae-map-guidance" aria-hidden="true">Drag to explore · pinch to zoom and rotate</div>
     </div>
   </div>
@@ -113,6 +115,18 @@
     <span id="aePositionReadout">Original map · north up</span>
     <span>Not live Switch tracking · all city pixels are from the existing 1920 × 1920 map</span>
   </div>
+  <section id="aeGridPanel" class="ae-grid-panel" aria-labelledby="aeGridTitle" hidden>
+    <div class="ae-grid-reading"><h3 id="aeGridTitle">Cross-to-cross reference</h3><output id="aeGridReference" aria-live="off">Move the map beneath the centre cross.</output></div>
+    <p>Each square runs from one faint map cross to the next. Columns run east from A; rows run south from 1. The percentages locate the reference cross within its square. Drag to read the map centre; zoom closer to see tenths of the selected square.</p>
+    <form id="aeGridForm" class="ae-grid-form">
+      <label for="aeGridCell">Go to grid square</label><input id="aeGridCell" type="text" value="I9" maxlength="5" placeholder="I9" autocapitalize="characters" autocomplete="off" spellcheck="false" aria-describedby="aeGridRange">
+      <button type="submit">Go to square</button><button type="button" id="aeGridCopy">Copy reference</button>
+      <span id="aeGridRange">A1–R18 · squares at the image edge are cropped</span>
+    </form>
+    <p class="ae-grid-note">Atlas reference names stay attached to the map as you zoom or rotate. The grid narrows a search area; photographs and directions establish an object’s location and floor.</p>
+    <p id="aeGridConfidence" class="ae-grid-note">Dashed lines continue the measured spacing at the image edges.</p>
+    <p id="aeGridStatus" role="status" aria-live="polite"></p>
+  </section>
   <section class="ae-collectible-chooser" id="aeCollectibleChooser" aria-label="Choose an overlapping collectible" hidden>
     <div class="ae-collectible-chooser-heading"><h3 id="aeCollectibleChooserTitle">Choose a nearby item or Screw</h3><button type="button" id="aeCollectibleClose">Close choices</button></div>
     <p>These locations share the same small area. Choose the matching record and floor.</p>

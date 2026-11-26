@@ -3,6 +3,9 @@ on:
   pull_request:
     paths:
       - atlas-explorer.html
+      - 'docs/qa/at344-sector-source-survey/**'
+      - 'docs/qa/at344-sector-source-recovery-2026-11-26/**'
+      - 'docs/qa/atlas-cross-grid-2026-11-26/**'
       - atlas-explorer.css
       - atlas-explorer.js
       - index.html
@@ -21,6 +24,11 @@ on:
       - tests/mission37_ally_wave.test.mjs
       - tests/mission24_25_source_parity.test.mjs
       - atlas-explorer-geometry.mjs
+      - atlas-cross-grid.mjs
+      - atlas-cross-grid-ui.mjs
+      - atlas-cross-grid.json
+      - tests/atlas_cross_grid.test.mjs
+      - tests/atlas_cross_grid_browser.mjs
       - atlas-guide-links.mjs
       - tests/atlas_guide_links.test.mjs
       - atlas-explorer-data.json
@@ -105,6 +113,8 @@ jobs:
         run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/atlas_access_continuation.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
+      - name: Verify native cross-grid calibration contract and bounded references
+        run: node --check atlas-cross-grid-ui.mjs && node --check tests/atlas_cross_grid_browser.mjs && node --test tests/atlas_cross_grid.test.mjs
       - name: Gate collectible coordinates, original identities and read-only progress
         run: node --test tests/atlas_collectibles.test.mjs tests/items_checkoff.test.mjs
       - name: Verify owner overview source bytes and keep research out of live geometry
@@ -125,6 +135,8 @@ jobs:
         run: node --test tests/coverage_navigation.test.mjs
       - name: Protect existing guide, checkmarks and map references
         run: python3 tests/validate_static.py
+      - name: Verify all recovered original sector photographs and historical source bytes
+        run: python3 docs/qa/at344-sector-source-recovery-2026-11-26/verify_sources.py
   atlas-areas-browser:
     runs-on: ubuntu-latest
     timeout-minutes: 18
@@ -168,6 +180,9 @@ jobs:
       - name: Verify compact layers with isolated dense fixtures and unchanged player progress
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/atlas_collectibles_browser.mjs
+      - name: Verify optional cross grid, rotated edge panning and preserved map controls
+        if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
+        run: node tests/atlas_cross_grid_browser.mjs
       - name: Verify all 20 Wild Zone photo panels and four map surfaces
         if: ${{ !cancelled() && steps.chrome.outcome == 'success' }}
         run: node tests/wild_zone_fieldbook_browser.mjs
@@ -179,5 +194,6 @@ jobs:
           path: |
             test-artifacts/atlas-explorer/
             test-artifacts/atlas-collectibles/
+            test-artifacts/atlas-cross-grid/
           if-no-files-found: ignore
           retention-days: 10

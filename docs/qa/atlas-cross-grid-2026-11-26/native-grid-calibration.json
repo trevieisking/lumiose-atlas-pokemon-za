@@ -1,0 +1,111 @@
+{
+  "id": "atlas-native-grid-v1",
+  "version": 1,
+  "label": "Atlas cross grid",
+  "coordinate_space": "native_image_pixels",
+  "native_image_path": "maps/lumiose-game-map.jpg",
+  "native_image_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "native_width": 1920,
+  "native_height": 1920,
+  "origin_native_xy": [
+    27.190436640992303,
+    31.181553067815514
+  ],
+  "column_vector_native_xy": [
+    108.66657856804908,
+    -0.01784961253751029
+  ],
+  "row_vector_native_xy": [
+    0.044411804896392404,
+    108.78386641874158
+  ],
+  "columns": 18,
+  "rows": 18,
+  "subdivisions_per_cell": 10,
+  "index_convention": {
+    "origin": "The model-defined northwest reference crossing is node A1=(0,0). Columns increase east A-R; rows increase south1-18.",
+    "cell_label": "The northwest crossing names its cell; A1 spans grid[0,1)\u00d7[0,1).",
+    "boundary_assignment": "Half-open cells: a point exactly on a grid line belongs to the cell east/south of that line.",
+    "distinct_from_prior_research_origin": "This global native-image A1 is not the Wild Zone20-local A1 used in the earlier research packet."
+  },
+  "domain": {
+    "image_bounds_xyxy": [
+      0,
+      0,
+      1920,
+      1920
+    ],
+    "grid_index_bounds_crcr": [
+      0,
+      0,
+      18,
+      18
+    ],
+    "measured_native_cross_index_bounds_inclusive": [
+      0,
+      0,
+      17,
+      15
+    ],
+    "measured_bounds_note": "Bounds enclose sampled nodes, not every node. A1 itself was too faint to measure. Native error statistics apply only to measured nodes; the conventional grid extends beyond the measured bottom row.",
+    "edge_policy": "Clip each cell polygon to native image bounds. Row18 and columnR are partial edge cells. The narrow top/left strips before A1 have no labelled cell. Do not assign points outside image bounds or negative grid indices."
+  },
+  "distance_scale": {
+    "unit": "cross_interval",
+    "physical_or_game_unit_conversion": null,
+    "sixty_observation": "Owner video displays waypoint60 at21s; exact endpoints, footsteps, metres, feet and universal60-per-interval conversion are not established."
+  },
+  "evidence": {
+    "status": "native_image_lattice_measured_and_cross_checked",
+    "native_outskirts_fit": {
+      "count": 19,
+      "rms": 1.0094852579418798,
+      "max": 2.425795170713951
+    },
+    "native_outskirts_holdout": {
+      "count": 10,
+      "rms": 0.9377123449223449,
+      "max": 1.487486863876046
+    },
+    "independent_interior_checks": {
+      "count": 10,
+      "rms_native_px": 1.3451413824509433,
+      "max_native_px": 1.8175349164016836
+    },
+    "photo26_architecture_to_native": {
+      "inlier_features": 12,
+      "unique_source_locations": 11,
+      "fit_rms_native_px": 0.7287344336509705,
+      "withheld_crosses_within_control_hull": {
+        "count": 9,
+        "rms": 1.0373043876665824,
+        "max": 1.604392780209172
+      }
+    },
+    "photo25_to_photo26": {
+      "inlier_features": 114,
+      "unique_source_locations": 102,
+      "fit_rms_photo26_px": 1.8774710400587808,
+      "withheld_crosses_within_control_hull": {
+        "count": 9,
+        "rms": 4.785453146464306,
+        "max": 8.242503214215919
+      }
+    },
+    "interpretation": "Pixel residuals measure alignment of observed crosses on these images. They are not certified item-location accuracy or ground-distance uncertainty."
+  },
+  "location_policy": {
+    "existing_coordinates_unchanged": true,
+    "cross_is_item_evidence": false,
+    "subdivision_improves_source_accuracy": false,
+    "floor_and_access_require_separate_evidence": true,
+    "random_hyperspace_distortions_have_no_permanent_pins": true
+  },
+  "limitations": [
+    "Atlas-created labels and origin; no official developer coordinate system or construction purpose claimed.",
+    "The native lattice is approximated by one affine model; direct held-out visible crossings support sub-two-pixel native alignment in measured areas.",
+    "Displayed fractional-cell precision is representational precision, not measured ground accuracy.",
+    "Photograph transforms are valid only in their measured control hulls; central-photo extrapolation reaches9native pixels and must not promote new exact pins.",
+    "The native lattice does not locate unverified items or structures; each marker retains its existing source/floor/confidence evidence."
+  ]
+}

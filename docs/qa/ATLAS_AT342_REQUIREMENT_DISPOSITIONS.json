@@ -102,8 +102,8 @@
   },
   "broader_master_plan_complete": false,
   "workspace_upgrade_complete": false,
-  "manifest_revision": 95,
-  "ledger_revision": 103,
+  "manifest_revision": 97,
+  "ledger_revision": 105,
   "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
   "historical_groups_before_release_90_98": {
     "current_checkpoint_sync_verified": [
@@ -208,6 +208,328 @@
   "finite_map_release_verified": true,
   "final_workspace_prompt_ready": true,
   "current_planning": {
+    "tracking": "AT-343/AT-344",
+    "follow_up_id": "ATLAS-CROSS-GRID-2026-11-26",
+    "date": "2026-11-26",
+    "manifest_revision": 97,
+    "ledger_revision": 105,
+    "status": "candidate_implemented_local_checks_passed_exact_head_browser_and_release_checks_pending",
+    "evidence_report": "docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json",
+    "evidence_note": "docs/qa/atlas-cross-grid-2026-11-26/REQUEST_AND_HANDOFF.md",
+    "latest_conclusion": "The 26-photo original archive is recovered and hash-verified. Native cross-grid calibration independently passes for an optional Atlas-owned reference layer with measured-region limits; the runtime grid and camera repair are implemented and 134 local tests pass. The guarded 48-row tracker sync to 97 succeeded with two appended notes and preserved business fields. Desktop managed-preview observations pass; exact-head CI, phone validation, merge and deployment remain pending. PR211 remains the released baseline.",
+    "source_archive": {
+      "status": "recovered_locally_verified_not_yet_merged_in_this_candidate",
+      "source_commit": "87ea05e97851a745c1a01ee5afb2b5da5c652887",
+      "recovery_record": "docs/qa/at344-sector-source-recovery-2026-11-26/source-recovery.json",
+      "recovery_review": "docs/qa/at344-sector-source-recovery-2026-11-26/README.md",
+      "original_jpegs": 26,
+      "reused_exact_originals": 8,
+      "restored_exact_originals": 18,
+      "total_original_bytes": 43603649,
+      "separate_full_frame_versions_preserved": 4,
+      "all_26_current_supplied_originals_match_archive_bytes": true,
+      "historical_packet_files_restored_exactly": 30,
+      "source_collection_complete_as_reported_by_owner": true,
+      "complete_city_geometric_coverage_verified": false,
+      "all_originals_immutable": true,
+      "only_derivative_copies_may_be_transformed": true,
+      "integrity_checks": {
+        "status": "pass",
+        "file_hash_checks": 60,
+        "original_checksum_checks": 26,
+        "validator": "docs/qa/at344-sector-source-recovery-2026-11-26/verify_sources.py"
+      }
+    },
+    "coordinate_policy": {
+      "optional_cross_reference_grid": true,
+      "source_map_orientation": "fixed_north_up",
+      "viewer_rotation_permitted": true,
+      "numbered_cross_to_cross_cells_and_fractional_positions": true,
+      "native_registration_status": "independently_reviewed_pass_for_optional_reference_grid",
+      "production_alignment_approved": true,
+      "sixty_scale": "Owner-reported approximate walking scale and observed waypoint60; exact feet, metres or counted steps per cell unverified.",
+      "require_independent_architectural_controls_holdouts_and_uncertainty": true,
+      "new_verified_item_or_structure_pins": 0,
+      "permanent_random_hyperspace_markers": 0,
+      "production_alignment_approval_scope": "Optional reference overlay on the unchanged native image only; existing markers and their accuracy claims are unchanged.",
+      "uniform_citywide_error_bound_verified": false,
+      "native_configuration": "atlas-cross-grid.json",
+      "native_calibration_report": "docs/qa/atlas-cross-grid-2026-11-26/native-grid-registration.json",
+      "independent_review": "docs/qa/atlas-cross-grid-2026-11-26/independent-calibration-review.json"
+    },
+    "latest_verified_github_release": {
+      "scope": "Previously released PR211 package; rollback baseline for the new grid candidate.",
+      "pr": 211,
+      "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/211",
+      "status": "merged_matching_Pages_deployment_succeeded",
+      "merge_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec",
+      "reviewed_head": "736510ee212c9df094c1c56414815a74abc3d3a9",
+      "tree": "9d0375cc18618e00a46f9192d8e70a484ee330a7",
+      "pages_run": 45880427799,
+      "pages_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45880427799",
+      "evidence_authority": "GitHub PR211 release receipt and matching deployment; this record does not claim a fresh live or original-Workspace verification.",
+      "source_handoff": "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md",
+      "original_workspace_publication_claimed": false
+    },
+    "camera_repair": {
+      "status": "implemented_local_unit_checks_passed_exact_head_browser_and_release_checks_pending",
+      "module": "atlas-explorer-geometry.mjs",
+      "function": "constrain",
+      "diagnosis": "The prior clamp used the rotated square bounding box only. At high zoom and diagonal rotation/pan it could allow the actual map polygon to leave the viewport.",
+      "repair": "Retain existing screen-axis clamps and also require positive overlap against both map-edge axes; reduce only violating extreme translations.",
+      "validation_scope": "The local workflow Node file list passes134tests with zero failures; desktop managed-preview observations pass. Exact-head GitHub CI and phone validation remain pending.",
+      "existing_navigation_and_framing_must_remain_preserved": true
+    },
+    "tracker": {
+      "status": "verified_guarded_update_and_fresh_readback",
+      "manifest_revision": 97,
+      "ledger_revision": 105,
+      "previous_manifest_revision": 95,
+      "last_verified_manifest_revision": 97,
+      "last_verified_ledger_revision": 105,
+      "prior_verified_receipt": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json",
+      "target_manifest_revision": 97,
+      "target_ledger_revision": 105,
+      "row_count": 48,
+      "appended_note_count": 2,
+      "executed_at": "2026-11-26T19:53:03.153578+00:00",
+      "preserved_business_fields_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+      "preserved_other_notes_md5": "eb372b95011af12c602e1d29ecccf96f",
+      "snapshot_after_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+      "new_sync_receipt": "docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json",
+      "new_write_claimed": true,
+      "all_48_existing_rows_and_business_fields_preserved": true,
+      "prior_notes_statuses_release_proofs_and_all_Workspace_fields_preserved": true,
+      "evidence_scope": "The saved authenticated receipt records guarded95to97execution and a fresh readback with identical complete-row snapshot hash. All48 existing rows, status/release/Workspace fields and prior notes are preserved; only planning metadata and two appended notes change.",
+      "last_verified_receipt": "docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json",
+      "readback_at": "2026-11-26 19:55:16.640355+00",
+      "status_counts": {
+        "open": 16,
+        "verified": 17,
+        "in_progress": 15
+      },
+      "guard_passed": true,
+      "readback_snapshot_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+      "changed_field_counts": {
+        "manifest_revision": 48,
+        "updated_at": 48,
+        "verification_note": 2
+      },
+      "all_prior_notes_preserved": true,
+      "new_rows": 0,
+      "deleted_rows": 0
+    },
+    "candidate_release": {
+      "decision": "HOLD_pending_exact_head_and_browser_validation",
+      "branch": "feat/atlas-cross-grid-recovery-20261126",
+      "pull_request": null,
+      "reviewed_head": null,
+      "reviewed_tree": null,
+      "native_calibration": "pass_for_optional_Atlas_reference_grid_with_recorded_limits",
+      "source_archive_integrity": "pass",
+      "integrated_unit_checks": "pass_134_local_tests",
+      "exact_head_ci": "pending",
+      "mobile_browser_qa": "pending",
+      "desktop_browser_qa": "managed_preview_observations_pass_exact_head_browser_suite_pending",
+      "merge": "not_performed",
+      "pages_deployment": "not_performed",
+      "live_verification": "not_performed",
+      "rollback_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec"
+    },
+    "original_workspace": {
+      "project_id": "appgprj_6afda588d5948191b4143e40a1f9c291",
+      "url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+      "status": "unchanged_this_candidate_separate_scoped_import_and_validation_required",
+      "new_site_or_rebuild_authorized": false,
+      "new_grid_prompt_executable": false,
+      "existing_Map2_prompt_preserved": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "existing_PR211_handoff_preserved": "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md",
+      "release_requirement": "Pin the tested merged commit/tree and successful matching deployment before adapting the original Site; compare existing source, preserve newer changes, back up, preview and validate before publication."
+    },
+    "original_67_requirement_ids_and_acceptance_unchanged": true,
+    "broader_master_plan_complete": false,
+    "prior_evidence": [
+      "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
+      "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
+      "docs/qa/at344-sector-source-survey/source-inventory.json"
+    ],
+    "video_policy_scope": "Owner-supplied recording remains measurement evidence. Public video and YouTube features remain paused.",
+    "local_validation": {
+      "status": "pass",
+      "tests": 134,
+      "test_failures": 0,
+      "tests_scope": "Exact Node test-file list used by the Atlas Explorer workflow; the ten-test grid suite is included in the total.",
+      "test_log": "docs/qa/atlas-cross-grid-2026-11-26/UNIT_TESTS.txt",
+      "test_log_sha256": "bd53bdaca6cf52ed7200f01b2448dd40f20db18b24dc565deeeccfe4795f978f",
+      "source_archive_file_hash_checks": 60,
+      "source_original_checksums": 26,
+      "historical_archive_files": 30,
+      "separate_full_frame_versions": 4,
+      "sector_ids": 48,
+      "native_calibration_replay": "pass",
+      "independent_calibration_review": "pass_with_recorded_limits",
+      "static_validation": {
+        "status": "pass",
+        "sections": 17,
+        "links": 691,
+        "references": 1431,
+        "resources": 578,
+        "source": "Root agent completed validator result."
+      },
+      "git_diff_whitespace_check": "pass",
+      "exact_head_ci_claimed": false,
+      "mobile_browser_proof_claimed": false,
+      "receipt": "docs/qa/atlas-cross-grid-2026-11-26/LOCAL_VALIDATION.json"
+    },
+    "desktop_preview_observations": {
+      "status": "pass_observed_in_managed_preview",
+      "scope": "Desktop managed preview; does not substitute for exact-head CI or phone touch validation.",
+      "observed": [
+        "Grid remains off by default.",
+        "Keyboard Go to square I9 resolves to50%east50%south at4.50x.",
+        "Screen-space labels remain sharp; selectedcell shows ten subdivisions.",
+        "45degree rotation preserves native alignment.",
+        "Clipped R18 displays21%east18%south and a visible explicit edge target.",
+        "Bottom/east extension is dashed and explained.",
+        "Compass resets north; edge-target status changes to Centre readout resumed.",
+        "I9 navigation remains functional after compass reset."
+      ],
+      "source": "docs/qa/atlas-cross-grid-2026-11-26/LOCAL_VALIDATION.json",
+      "physical_device_testing_claimed": false
+    }
+  },
+  "approved_release_baseline": {
+    "tracking": "AT-342",
+    "manifest_revision": 91,
+    "ledger_revision": 99,
+    "runtime_merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+    "workspace_prompt": {
+      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
+    },
+    "scope": "Approved finite Map2.0 runtime release; unchanged by the AT343 research addendum."
+  },
+  "latest_evidence_addendum": "docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json",
+  "latest_evidence_summary": "docs/qa/atlas-cross-grid-2026-11-26/REQUEST_AND_HANDOFF.md",
+  "historical_current_planning_92_100": {
+    "tracking": "AT-343",
+    "date": "2026-11-26",
+    "manifest_revision": 92,
+    "ledger_revision": 100,
+    "status": "owner_item_rule_retracted_bounded_relative_alignment_locally_supported_no_production_change",
+    "evidence_report": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
+    "evidence_note": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md",
+    "latest_conclusion": "Trev reports many crosses with no ball present and retracts the general cross-equals-item rule. The number of empty crosses is unspecified; no universal item relationship or precise grid semantics is established.",
+    "initial_report_history": {
+      "trev_cumulative_matches_reported": 8,
+      "trev_breakdown": [
+        5,
+        3
+      ],
+      "unique_combined_match_count": null,
+      "duplicate_or_overlap_status": "not_established",
+      "initial_no_failure_report": "Historical statement superseded by the later empty-cross report; not an accuracy estimate.",
+      "typical_reported_method": "Item often found first and then compared with its X; not a blind prospective test.",
+      "further_matches_reported": 2,
+      "further_reporter_identity": "Unconfirmed; the original wording does not establish a distinct reporter named Kay.",
+      "attribution_qualification": "Trev reported eight cumulative matches, then two further matches were reported. Separate reporter identity and unique-location overlap are unconfirmed."
+    },
+    "visual_grid_semantics": "Map-relative lattice locally supported for one Vert pair; item meaning, real/game units and global origin remain unconfirmed.",
+    "new_verified_pins": 0,
+    "new_native_coordinates": 0,
+    "runtime_changed": false,
+    "approved_release_unchanged": true,
+    "original_67_requirement_ids_and_acceptance_unchanged": true,
+    "tracker": {
+      "receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
+      "manifest_revision": 92,
+      "row_count": 48,
+      "github_status_counts_unchanged": {
+        "verified": 17,
+        "in_progress": 15,
+        "open": 16
+      },
+      "initial_AT332_note_executed_at": "2026-11-26T15:30:35.67812Z",
+      "counterreport_AT332_note_executed_at": "2026-11-26T15:31:43.772416Z",
+      "readback_authority": "The separate tracker receipt records the actual guarded readback; this planning addendum supplies no readback timestamp.",
+      "all_existing_github_proof_preserved": true,
+      "all_workspace_fields_preserved": true
+    },
+    "secondary_research_purpose": {
+      "purpose": "Use the regular marks as a secondary relative image-alignment check after unique architecture establishes correspondence.",
+      "status": "bounded_one_pair_feasibility_locally_supported_no_production_approval",
+      "bounded_alignment_feasibility_supported": true,
+      "anchoring": "The strict Vert overlap and separate local HUD comparison support a map-relative reference lattice rather than a fixed screen overlay, only within this tested pair.",
+      "measurement_units": "Unknown real/game units; no conversion to in-game distance or Atlas-native coordinates is approved.",
+      "original_base_map_pixels": [
+        1920,
+        1920
+      ],
+      "original_base_map_unchanged": true,
+      "alignment_approved": false,
+      "alignment_approval_scope": "This flag refers to production or Atlas-native alignment, not the separately supported bounded relative-photo feasibility result.",
+      "new_coordinate_promotion": false,
+      "pair_count": 1,
+      "pilot_evidence": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.json",
+      "replay_script": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.py",
+      "architecture_fit": {
+        "candidate_feature_correspondences": 197,
+        "inlier_feature_correspondences": 97,
+        "distinct_source_inlier_locations": 82,
+        "count_qualification": "Feature correspondences and rounded source locations, not unique named landmarks.",
+        "rms_original_photo_pixels": 1.7321170844490605
+      },
+      "inside_actual_inlier_hull_holdouts": [
+        {
+          "name": "Vert5 roof cross",
+          "residual_original_photo_pixels": 3.5652048170458097
+        },
+        {
+          "name": "east canal cross",
+          "residual_original_photo_pixels": 4.28400241003484
+        }
+      ],
+      "outside_hull_extrapolation_diagnostics": [
+        {
+          "name": "eastern street cross",
+          "residual_original_photo_pixels": 17.097543509312402
+        },
+        {
+          "name": "South Boulevard edge cross",
+          "residual_original_photo_pixels": 28.642145149265776
+        }
+      ],
+      "hud_comparison_scope": "Local fixed-HUD similarity model,not full-screen camera calibration;supporting check only.",
+      "limits": [
+        "Only one Vert photograph pair; no citywide or all-zoom calibration.",
+        "An unnumbered periodic lattice has whole-cell ambiguity and no unique global origin.",
+        "Residuals are original-photograph pixels, not certified native1920-map or ground accuracy.",
+        "The larger outside-hull errors prevent claiming uniform accuracy beyond the supported overlap.",
+        "No native1920 transform, global calibration, new item/structure coordinates, item pins or production promotion."
+      ]
+    }
+  },
+  "inherited_private_tracker_checkpoint_94_102": {
+    "tracking": "AT-344",
+    "manifest_revision": 94,
+    "ledger_revision": 102,
+    "status": "inherited_private_source_collection_checkpoint_preserved_without_archive_completion_certification",
+    "evidence_basis": "Authenticated private-tracker inspection during this follow-up found the earlier AT344 source-collection note and manifest94 metadata.",
+    "source_note_row": "AT-300-MAP-DETAIL-CLARITY",
+    "source_note_label": "AT344 completed source collection — 2026-11-26; Manifest94/Ledger102",
+    "private_note_and_work_preservation_required": true,
+    "inspected_github_main_sha": "c491cd7c7edcbc9a59914e798706d6e92f7ae7e9",
+    "inspected_github_main_manifest_revision": 92,
+    "inspected_github_main_ledger_revision": 100,
+    "complete_source_collection_archive_verified_in_main": false,
+    "source_collection_archive_incorporated_this_followup": false,
+    "separate_unmerged_branch_modified_this_followup": false,
+    "scope": "Preserve the inherited private checkpoint and its existing AT300 note. This video-evidence addendum does not certify, replace, reconstruct or claim publication of the separate AT344 source archive. No missing AT344 archive path is presented as an available file.",
+    "reconciliation_evidence_authority": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json"
+  },
+  "historical_current_planning_95_103": {
     "tracking": "AT-343",
     "follow_up_id": "AT343-VIDEO-GRID-FOLLOWUP-2026-11-26",
     "date": "2026-11-26",
@@ -335,135 +657,24 @@
       "scope": "Advance this additive video-evidence checkpoint after the private AT34494/102 record, preserving its existing note/work without claiming that its separate archive is merged into main. The original published92/100 pilot and receipt remain historical evidence."
     }
   },
-  "approved_release_baseline": {
-    "tracking": "AT-342",
-    "manifest_revision": 91,
-    "ledger_revision": 99,
-    "runtime_merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
-    "runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
-    "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
-    "workspace_prompt": {
-      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
-      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
-    },
-    "scope": "Approved finite Map2.0 runtime release; unchanged by the AT343 research addendum."
+  "historical_planning_pointers_before_97_105": {
+    "manifest_revision": 95,
+    "ledger_revision": 103,
+    "latest_evidence_addendum": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
+    "latest_evidence_summary": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md"
   },
-  "latest_evidence_addendum": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
-  "latest_evidence_summary": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md",
-  "historical_current_planning_92_100": {
-    "tracking": "AT-343",
-    "date": "2026-11-26",
-    "manifest_revision": 92,
-    "ledger_revision": 100,
-    "status": "owner_item_rule_retracted_bounded_relative_alignment_locally_supported_no_production_change",
-    "evidence_report": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
-    "evidence_note": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md",
-    "latest_conclusion": "Trev reports many crosses with no ball present and retracts the general cross-equals-item rule. The number of empty crosses is unspecified; no universal item relationship or precise grid semantics is established.",
-    "initial_report_history": {
-      "trev_cumulative_matches_reported": 8,
-      "trev_breakdown": [
-        5,
-        3
-      ],
-      "unique_combined_match_count": null,
-      "duplicate_or_overlap_status": "not_established",
-      "initial_no_failure_report": "Historical statement superseded by the later empty-cross report; not an accuracy estimate.",
-      "typical_reported_method": "Item often found first and then compared with its X; not a blind prospective test.",
-      "further_matches_reported": 2,
-      "further_reporter_identity": "Unconfirmed; the original wording does not establish a distinct reporter named Kay.",
-      "attribution_qualification": "Trev reported eight cumulative matches, then two further matches were reported. Separate reporter identity and unique-location overlap are unconfirmed."
-    },
-    "visual_grid_semantics": "Map-relative lattice locally supported for one Vert pair; item meaning, real/game units and global origin remain unconfirmed.",
-    "new_verified_pins": 0,
-    "new_native_coordinates": 0,
-    "runtime_changed": false,
-    "approved_release_unchanged": true,
-    "original_67_requirement_ids_and_acceptance_unchanged": true,
-    "tracker": {
-      "receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
-      "manifest_revision": 92,
-      "row_count": 48,
-      "github_status_counts_unchanged": {
-        "verified": 17,
-        "in_progress": 15,
-        "open": 16
-      },
-      "initial_AT332_note_executed_at": "2026-11-26T15:30:35.67812Z",
-      "counterreport_AT332_note_executed_at": "2026-11-26T15:31:43.772416Z",
-      "readback_authority": "The separate tracker receipt records the actual guarded readback; this planning addendum supplies no readback timestamp.",
-      "all_existing_github_proof_preserved": true,
-      "all_workspace_fields_preserved": true
-    },
-    "secondary_research_purpose": {
-      "purpose": "Use the regular marks as a secondary relative image-alignment check after unique architecture establishes correspondence.",
-      "status": "bounded_one_pair_feasibility_locally_supported_no_production_approval",
-      "bounded_alignment_feasibility_supported": true,
-      "anchoring": "The strict Vert overlap and separate local HUD comparison support a map-relative reference lattice rather than a fixed screen overlay, only within this tested pair.",
-      "measurement_units": "Unknown real/game units; no conversion to in-game distance or Atlas-native coordinates is approved.",
-      "original_base_map_pixels": [
-        1920,
-        1920
-      ],
-      "original_base_map_unchanged": true,
-      "alignment_approved": false,
-      "alignment_approval_scope": "This flag refers to production or Atlas-native alignment, not the separately supported bounded relative-photo feasibility result.",
-      "new_coordinate_promotion": false,
-      "pair_count": 1,
-      "pilot_evidence": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.json",
-      "replay_script": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.py",
-      "architecture_fit": {
-        "candidate_feature_correspondences": 197,
-        "inlier_feature_correspondences": 97,
-        "distinct_source_inlier_locations": 82,
-        "count_qualification": "Feature correspondences and rounded source locations, not unique named landmarks.",
-        "rms_original_photo_pixels": 1.7321170844490605
-      },
-      "inside_actual_inlier_hull_holdouts": [
-        {
-          "name": "Vert5 roof cross",
-          "residual_original_photo_pixels": 3.5652048170458097
-        },
-        {
-          "name": "east canal cross",
-          "residual_original_photo_pixels": 4.28400241003484
-        }
-      ],
-      "outside_hull_extrapolation_diagnostics": [
-        {
-          "name": "eastern street cross",
-          "residual_original_photo_pixels": 17.097543509312402
-        },
-        {
-          "name": "South Boulevard edge cross",
-          "residual_original_photo_pixels": 28.642145149265776
-        }
-      ],
-      "hud_comparison_scope": "Local fixed-HUD similarity model,not full-screen camera calibration;supporting check only.",
-      "limits": [
-        "Only one Vert photograph pair; no citywide or all-zoom calibration.",
-        "An unnumbered periodic lattice has whole-cell ambiguity and no unique global origin.",
-        "Residuals are original-photograph pixels, not certified native1920-map or ground accuracy.",
-        "The larger outside-hull errors prevent claiming uniform accuracy beyond the supported overlap.",
-        "No native1920 transform, global calibration, new item/structure coordinates, item pins or production promotion."
-      ]
-    }
-  },
-  "inherited_private_tracker_checkpoint_94_102": {
-    "tracking": "AT-344",
-    "manifest_revision": 94,
-    "ledger_revision": 102,
-    "status": "inherited_private_source_collection_checkpoint_preserved_without_archive_completion_certification",
-    "evidence_basis": "Authenticated private-tracker inspection during this follow-up found the earlier AT344 source-collection note and manifest94 metadata.",
-    "source_note_row": "AT-300-MAP-DETAIL-CLARITY",
-    "source_note_label": "AT344 completed source collection — 2026-11-26; Manifest94/Ledger102",
-    "private_note_and_work_preservation_required": true,
-    "inspected_github_main_sha": "c491cd7c7edcbc9a59914e798706d6e92f7ae7e9",
-    "inspected_github_main_manifest_revision": 92,
-    "inspected_github_main_ledger_revision": 100,
-    "complete_source_collection_archive_verified_in_main": false,
-    "source_collection_archive_incorporated_this_followup": false,
-    "separate_unmerged_branch_modified_this_followup": false,
-    "scope": "Preserve the inherited private checkpoint and its existing AT300 note. This video-evidence addendum does not certify, replace, reconstruct or claim publication of the separate AT344 source archive. No missing AT344 archive path is presented as an available file.",
-    "reconciliation_evidence_authority": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json"
+  "latest_verified_github_release": {
+    "scope": "Previously released PR211 package; rollback baseline for the new grid candidate.",
+    "pr": 211,
+    "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/211",
+    "status": "merged_matching_Pages_deployment_succeeded",
+    "merge_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec",
+    "reviewed_head": "736510ee212c9df094c1c56414815a74abc3d3a9",
+    "tree": "9d0375cc18618e00a46f9192d8e70a484ee330a7",
+    "pages_run": 45880427799,
+    "pages_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45880427799",
+    "evidence_authority": "GitHub PR211 release receipt and matching deployment; this record does not claim a fresh live or original-Workspace verification.",
+    "source_handoff": "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md",
+    "original_workspace_publication_claimed": false
   }
 }

@@ -1,0 +1,144 @@
+{
+  "reviewed_base_head": "c491cd7c7edcbc9a59914e798706d6e92f7ae7e9",
+  "candidate_scope": {
+    "modified_tracked_paths": [
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "ATLAS_RELEASE_HANDOFF.md",
+      "FINAL_WORKSPACE_PLAN.md",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "WORKSPACE_ACCESS_HANDOFF.md",
+      "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md",
+      "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md",
+      "docs/qa/ATLAS_AT325_RELEASE_GATE.json",
+      "docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json",
+      "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json"
+    ],
+    "new_file_count": 29
+  },
+  "originals": {
+    "source_count": 26,
+    "inventory_count": 26,
+    "total_bytes": 43603649,
+    "new_archive_count": 18,
+    "existing_archive_count": 8,
+    "all_26_byte_and_metadata_checks_pass": true,
+    "checksum_entry_count": 26,
+    "checksums_pass": true
+  },
+  "previous_images": {
+    "count": 922,
+    "all_git_blob_hashes_unchanged": true,
+    "failures": []
+  },
+  "runtime": {
+    "sealed_inventory_count": 24,
+    "all_sha256_unchanged": true,
+    "failures": []
+  },
+  "original_requirements": {
+    "count": 67,
+    "source_sha256_preserved": true
+  },
+  "sealed_release": {
+    "receipt_unchanged_vs_HEAD": true,
+    "sealed_file_checks": [
+      {
+        "path": "docs/qa/ATLAS_AT342_SCREENSHOT_REVIEW.json",
+        "matches": true
+      },
+      {
+        "path": "docs/qa/ATLAS_AT342_LIVE_FILE_PROOF.json",
+        "matches": true
+      },
+      {
+        "path": "docs/qa/ATLAS_AT342_LIVE_BROWSER_PROOF.json",
+        "matches": true
+      },
+      {
+        "path": "docs/qa/ATLAS_AT342_RELEASE_TRACKER_RECEIPT.json",
+        "matches": true
+      },
+      {
+        "path": "docs/qa/at342-resume/runtime-file-hashes.json",
+        "matches": true
+      },
+      {
+        "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+        "matches": true
+      }
+    ],
+    "protected_structures_unchanged": {
+      "MAPS_UPGRADE_MANIFEST.json": {
+        "approved_release_baseline": true,
+        "phases": true,
+        "sector_targets": true,
+        "completion_requirements": true
+      },
+      "docs/qa/ATLAS_AT325_RELEASE_GATE.json": {
+        "approved_release_baseline": true,
+        "phases": true,
+        "current_phase_assessment": true
+      },
+      "docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json": {
+        "approved_release_baseline": true,
+        "groups": true
+      },
+      "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json": {
+        "approved_release_baseline": true,
+        "mapping": true,
+        "current_phase_assessment": true
+      }
+    }
+  },
+  "source_sector_consistency": {
+    "48_ids_unchanged": true,
+    "candidate_errors": []
+  },
+  "new_markdown_missing_links": [],
+  "blocking_findings": [],
+  "final_semantic_checks": {
+    "current_planning_identical_across_four_canonical_JSONs": true,
+    "prior_92_100_planning_snapshot_preserved_exactly": true,
+    "tracker_status_and_revision_agree_with_receipt": true,
+    "tracker_execution_and_readback_agree_with_receipt": true,
+    "release_policy_tracker_verified_and_count_correct": true,
+    "owner_capture_completion_separate_from_alignment": true,
+    "central_north_and_south_correct": true,
+    "originals_immutable_and_copy_first": true,
+    "north_up_attributed_to_owner": true,
+    "cross_hypothesis_qualified": true,
+    "no_new_pins_coordinates_or_random_distortions": true,
+    "no_crops_created": true,
+    "packet_collection_and_central_pair_consistent": true,
+    "manifest_at_344_duplicate_matches_current_planning": true
+  },
+  "tracker_receipt_review": {
+    "scope": "Consistency review of actual saved execution/readback receipt; database calls performed by the separate tracker agent, not rerun in this review.",
+    "row_count": 48,
+    "changed_field_counts": {
+      "updated_at": 48,
+      "manifest_revision": 48,
+      "verification_note": 1
+    },
+    "unexpected_field_changes": 0,
+    "new_rows": 0,
+    "deleted_rows": 0,
+    "all_prior_notes_statuses_proofs_and_Workspace_fields_preserved_as_recorded": true
+  },
+  "status": "PASS",
+  "reviewed_at_utc": "2026-11-26T16:30:06.514885+00:00",
+  "reviewed_changed_file_sha256": {
+    "ATLAS_DUAL_SITE_FIX_LEDGER.md": "eef533d8d512b0eb55c9230273d4cc9ac4a271ed68d0f1c40394bcf20698a999",
+    "ATLAS_RELEASE_HANDOFF.md": "319d7139c1a36d949c2605f4c4b114a612f0d2cb7fdee07a2af9079911333d63",
+    "FINAL_WORKSPACE_PLAN.md": "3e00896062be5da5a1e02e73b0ef3b2bf4b7a8babbb1e8ea5be1f6e95b3b275e",
+    "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md": "fdeadfe22cfae0f9259da48c87f3dda87c2255f282026d041b871b5c828532cd",
+    "MAPS_UPGRADE_MANIFEST.json": "573cd9578978a4e5665738517d64db9110ba433b30b281ae3dadb1e2fa47292d",
+    "WORKSPACE_ACCESS_HANDOFF.md": "cc7424791ac901ec65389050c17b17a2e5ed596134d06cda435a12d5fa3e2a7d",
+    "docs/consolidation/2026-11-26/WORKSPACE_PROMPT_READINESS.md": "666e99da869a05f28f238186e12ba904534d2ca98d189360144b5c1edf3c3b77",
+    "docs/qa/ATLAS_AT325_GITHUB_FIRST_WORKSPACE_RELEASE_GATE.md": "0c823354c3a9328452f4cc4ce95c1dc4316381965d24d233b0765692ec885c52",
+    "docs/qa/ATLAS_AT325_RELEASE_GATE.json": "b3a862b8db833f6e3e4d07edf836da3f4b568ac752bde2bb638d8e86dbb93975",
+    "docs/qa/ATLAS_AT342_REQUIREMENT_DISPOSITIONS.json": "f4a0f4729cb30236372b05f01f5a120c8139d0213fb57417616b6a8fb423e3d8",
+    "docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json": "a5254ccf31fea000b2f3f7a18e1af90836921223899a5774872e58f4d52e188b"
+  }
+}

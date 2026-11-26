@@ -1,7 +1,7 @@
 /* Lumiose Atlas Explorer — one read-only, source-aligned 2D city-map viewport.
    No user tracking, database, external SDK, or game-state write. */
 import {
-  MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project,
+  MAP_SIZE, MIN_ZOOM, MAX_ZOOM, stageBase, startView, project, unproject,
   constrain, panBy, changeAround, centreOn, normaliseRoute, eligibleMapPin,
   coverageCellCentre, districtStart, frameBoundary
 } from "./atlas-explorer-geometry.mjs";
@@ -40,6 +40,7 @@ let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
 let collectibleUI=null;
+let crossGridUI=null;
 let areaUI=null,syncingArea=false,pendingAreaSelection=null;
 const dimensions=()=>{
   const rect=viewport.getBoundingClientRect();
@@ -59,6 +60,7 @@ function draw(){
   zoomLabel.textContent=view.zoom.toFixed(2)+"×";
   readout.textContent="Original 2D city geometry · "+Math.round(view.rotation)+"° clockwise";
   collectibleUI?.draw();
+  crossGridUI?.draw();
 }
 function scheduleDraw(){
   if(paintScheduled)return;
@@ -623,6 +625,20 @@ async function load(){
   }
   stats.textContent="20 Wild Zones · 48 named sectors · 21 owner-surveyed Holovator leads · "+data.ladders.length+" photographed ladder · "+scaffoldPins+" verified scaffold pins · "+routes.length+" documented approaches · "+data.counts.confirmed_exact_holovator_device_pins+" precise lift pins claimed";
   ready=true;draw();
+  // A reference grid is independent of place filters, saved pins and collection state.
+  import("./atlas-cross-grid-ui.mjs").then(async({installCrossGrid})=>{
+    crossGridUI=await installCrossGrid({
+      stage,viewport,currentView:()=>({...view}),
+      centrePoint:()=>unproject(mapCenter(),view,dimensions()),
+      projectPoint:xy=>project(xy,view,dimensions()),
+      onFocus:xy=>applyView(centreOn(xy,{...view,zoom:Math.max(4.5,view.zoom)},dimensions()))
+    });
+    by("aeGridAvailability").textContent="";
+    crossGridUI.draw();
+  }).catch(()=>{
+    by("aeGridToggle").disabled=true;
+    by("aeGridAvailability").textContent="(temporarily unavailable)";
+  });
   // Collection evidence is isolated: a failure must not disable the existing map.
   import("./atlas-collectibles-ui.mjs").then(async ({installCollectibles})=>{
     collectibleUI=await installCollectibles({

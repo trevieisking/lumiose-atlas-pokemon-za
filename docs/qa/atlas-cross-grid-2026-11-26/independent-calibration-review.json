@@ -1,0 +1,395 @@
+{
+  "id": "ATLAS-CROSS-GRID-INDEPENDENT-CALIBRATION-REVIEW-2026-11-26",
+  "reviewed_at_utc": "2026-11-26T19:49:50.309768+00:00",
+  "decision": "PASS_FOR_OPTIONAL_ATLAS_REFERENCE_GRID_WITH_RECORDED_LIMITS",
+  "scope": "Independent arithmetic and visual review of the native-image lattice and supporting local central-photo transforms. This does not approve exact collectible/structure coordinates, game units, official semantics, or a new live release.",
+  "reviewed_inputs": [
+    {
+      "filename": "native-grid-registration.json",
+      "sha256": "aa92337f37ec4fd039bbd40d64fe846da9946395ca6136d8795b21e78408a588"
+    },
+    {
+      "filename": "native-grid-calibration.json",
+      "sha256": "e43205f384439a0f2eddc9c3bae1e5e92a285e30ebd0156be76a1e6e13649231"
+    }
+  ],
+  "source_integrity": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+      "matches_recorded": true,
+      "dimensions": [
+        1920,
+        1920
+      ],
+      "dimensions_match": true
+    },
+    {
+      "path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a",
+      "matches_recorded": true,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "dimensions_match": true
+    },
+    {
+      "path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76",
+      "matches_recorded": true,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "dimensions_match": true
+    }
+  ],
+  "source_integrity_pass": true,
+  "native_affine": {
+    "method": "Solved (A^T A) B = A^T X from the 19 frozen fit observations, independently of the producing lstsq implementation; then projected the ten outer and ten interior reserved observations.",
+    "independently_computed_grid_to_native": [
+      [
+        108.66657856804915,
+        0.04441180489640361,
+        27.190436640992413
+      ],
+      [
+        -0.017849612537498033,
+        108.78386641874161,
+        31.181553067815344
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "maximum_coefficient_difference_from_frozen": 1.7053025658242404e-13,
+    "fit_holdout_sets_disjoint": true,
+    "reproduced_residuals_native_pixels": {
+      "fit": {
+        "count": 19,
+        "rms": 1.0094852579418798,
+        "maximum": 2.4257951707142222
+      },
+      "outer_holdout": {
+        "count": 10,
+        "rms": 0.9377123449220964,
+        "maximum": 1.487486863875147
+      },
+      "interior_holdout": {
+        "count": 10,
+        "rms": 1.345141382450742,
+        "maximum": 1.8175349164017145
+      }
+    },
+    "sensitivity_check": {
+      "model": "Separate horizontal and vertical scale/offset with zero shear, fitted to the same19 fit observations.",
+      "residuals_native_pixels": {
+        "fit": {
+          "count": 19,
+          "rms": 1.0468168580033057,
+          "maximum": 2.599549557201924
+        },
+        "outer_holdout": {
+          "count": 10,
+          "rms": 0.9222407923638811,
+          "maximum": 1.5436707033578814
+        },
+        "interior_holdout": {
+          "count": 10,
+          "rms": 1.374174354231494,
+          "maximum": 1.9189141233632006
+        }
+      },
+      "conclusion": "The small shear terms are not necessary to obtain similar observed residuals. This supports a stable lattice reference rather than proving the fine affine coefficients are physical constants."
+    }
+  },
+  "local_photo_registration": {
+    "independent_method": "Normalized direct linear transform from the frozen inlier correspondences, followed by SciPy nonlinear least-squares minimization of forward reprojection error. Recomputed reserved-cross projections and convex hull membership; also refitted after deduplicating source locations rounded to0.01px.",
+    "results": {
+      "source26_native_architecture_fit": {
+        "inlier_feature_count": 12,
+        "unique_source_count_at_0_01px": 11,
+        "independent_fit_matrix": [
+          [
+            0.19355121931286998,
+            -0.006447500879352337,
+            617.334627321676
+          ],
+          [
+            -0.0017632027721158432,
+            0.18568488371751435,
+            655.2291746877255
+          ],
+          [
+            2.736581138092677e-07,
+            -1.0618877362258058e-05,
+            1.0
+          ]
+        ],
+        "independent_fit_reprojection_px": {
+          "count": 12,
+          "rms": 0.728742435857558,
+          "maximum": 1.8045152054316957
+        },
+        "max_projected_difference_from_frozen_H_at_reserved_crosses_px": 0.005974654131212414,
+        "withheld_cross_residuals_all": {
+          "count": 19,
+          "rms": 3.275344401879247,
+          "maximum": 8.997354629706072
+        },
+        "withheld_cross_residuals_within_hull": {
+          "count": 9,
+          "rms": 1.0381648273587782,
+          "maximum": 1.6067114828700721
+        },
+        "frozen_H_residuals_within_hull": {
+          "count": 9,
+          "rms": 1.0373043876666037,
+          "maximum": 1.604392780209215
+        },
+        "reported_hull_flags_match_independent_convex_hull": true,
+        "deduplicated_fit_reprojection_px": {
+          "count": 11,
+          "rms": 0.7526000546281344,
+          "maximum": 1.769188784219441
+        },
+        "deduplicated_withheld_cross_residuals_within_hull": {
+          "count": 9,
+          "rms": 1.0226639572377454,
+          "maximum": 1.6125850171289369
+        }
+      },
+      "source25_to_source26_architecture_fit": {
+        "inlier_feature_count": 114,
+        "unique_source_count_at_0_01px": 102,
+        "independent_fit_matrix": [
+          [
+            0.9942229154981213,
+            -0.030082236369106487,
+            -136.18293600981573
+          ],
+          [
+            0.043072423008405906,
+            0.9580715731239703,
+            886.958645457952
+          ],
+          [
+            9.012742794954252e-06,
+            -6.997195424630574e-06,
+            1.0
+          ]
+        ],
+        "independent_fit_reprojection_px": {
+          "count": 114,
+          "rms": 1.871544324241572,
+          "maximum": 3.9325647903124605
+        },
+        "max_projected_difference_from_frozen_H_at_reserved_crosses_px": 0.41189338952630544,
+        "withheld_cross_residuals_all": {
+          "count": 10,
+          "rms": 4.865115505744883,
+          "maximum": 8.472727172274993
+        },
+        "withheld_cross_residuals_within_hull": {
+          "count": 9,
+          "rms": 4.845809548193386,
+          "maximum": 8.472727172274993
+        },
+        "frozen_H_residuals_within_hull": {
+          "count": 9,
+          "rms": 4.785453146464348,
+          "maximum": 8.24250321421602
+        },
+        "reported_hull_flags_match_independent_convex_hull": true,
+        "deduplicated_fit_reprojection_px": {
+          "count": 102,
+          "rms": 1.8229845802475404,
+          "maximum": 4.174820558666853
+        },
+        "deduplicated_withheld_cross_residuals_within_hull": {
+          "count": 9,
+          "rms": 4.7589318638021565,
+          "maximum": 8.196293895263233
+        }
+      }
+    },
+    "conclusion": "The independent refits corroborate the reported local transforms. Within-hull cross residuals stay near1native pixel for the centre/north photo and near5photo26 pixels for the photo-pair overlap. Extrapolated centre/north cross error reaches about9native pixels; the local transform must not be extended into an exact global marker-placement method."
+  },
+  "visual_review": {
+    "inspected": [
+      "native-grid-evidence-overlay.jpg",
+      "native-grid-cross-crops.jpg",
+      "native-interior-candidates.jpg",
+      "cross-crops-26.jpg",
+      "native-feature-matches.jpg",
+      "reviewer-created crop sheet of all10outer and10interior holdouts from the unchanged native image"
+    ],
+    "outer_crosses": "All29 selected outer panels show the repeating cross pattern. Several are faint/JPEG-soft; the observed integer-pixel centres do not imply subpixel certainty.",
+    "interior_crosses": "The10 accepted interior candidates show visible plus-shaped marks, distinct from surrounding road/building edges. Rejected diagnostic candidates include icons, corners or obscured markings and are not counted as check evidence.",
+    "reserved_nodes_directly_reviewed": {
+      "outer_grid_indices": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          17,
+          2
+        ],
+        [
+          17,
+          5
+        ]
+      ],
+      "interior_grid_indices": [
+        [
+          7,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ]
+    },
+    "central_photo": "The original-photo cross sheet and architectural feature montage support the central correspondence without an apparent whole-cell alias. Numeric checks, not the montage alone, control the residual claims.",
+    "matching_errors_found": []
+  },
+  "corrections_verified": [
+    {
+      "finding": "Two photo source paths initially named metadata-stripped AT343 files while listing exact-original hashes.",
+      "resolution": "Packet now names the exact AT344 original paths and lists the AT343 pixel-identical versions separately. All three source path/hash/dimension checks pass."
+    },
+    {
+      "finding": "A1 was initially described as an observed crossing although index[0,0] was not one of the29 measured samples.",
+      "resolution": "Final config describes A1 as the model-defined northwest reference crossing."
+    }
+  ],
+  "domain_review": {
+    "native_image_bounds": [
+      0,
+      0,
+      1920,
+      1920
+    ],
+    "measured_outer_cross_grid_index_extents": {
+      "minimum": [
+        0,
+        0
+      ],
+      "maximum": [
+        17,
+        15
+      ]
+    },
+    "fit_convex_hull_grid_vertices": [
+      [
+        16,
+        15
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        17,
+        0
+      ],
+      [
+        17,
+        12
+      ]
+    ],
+    "labelled_cell_domain": "18columns by18rows, clipped to image; bottom/right partial cells and unlabelled pre-origin top/left strips are intentional conventions.",
+    "unmeasured_edge_accuracy_guaranteed": false,
+    "limitation": "Measured native observations reach row15 (~1663px); the reference grid extends to lower rows. Bottom-edge attempts did not yield defensible additional observations. The whole-image overlay is an Atlas coordinate convention, with alignment residuals certified only for the recorded samples and no universal error bound.",
+    "fit_independence_limit": "The reserved nodes are absent from the fit, but the exploratory candidate search used approximate lattice positions. Interior acceptance followed visual inspection of34crops. These are observed alignment checks, not blind/preregistered citywide accuracy estimates."
+  },
+  "release_conditions": [
+    "Preserve the exact existing native map bytes/hash and expose the grid as an optional Atlas-owned reference layer.",
+    "Keep the model-defined origin/cell convention distinct from the earlier Wild Zone20 local A1 convention and official game coordinates.",
+    "Do not label sixty as verified feet/metres/counted steps per cell or infer an item/structure from a cross.",
+    "Retain original marker coordinates, source confidence, floor/access evidence and near-boundary ambiguity; fractional formatting does not improve location accuracy.",
+    "Keep the measured-region/error qualifications when presenting calibration results, including lower-edge extrapolation.",
+    "Complete independent runtime, exact-head CI, phone/desktop and release verification before promotion."
+  ],
+  "new_item_or_structure_coordinates_approved": false,
+  "official_game_coordinate_system_verified": false,
+  "original_files_modified_by_review": false,
+  "runtime_or_planning_files_modified_by_review": false
+}
