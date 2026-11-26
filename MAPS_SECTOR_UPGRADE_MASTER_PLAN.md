@@ -1,5 +1,15 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+## AT-339 — shared areas and Pokémon habitats
+
+**26 November 2026 · Manifest 85 / Ledger 93 · Candidate awaiting exact-commit browser validation and release.** Recovered the interrupted area/habitat implementation and reconciled it with PR200's newly merged owner-crop evidence. One read-only model covers **48 sectors and 20 Wild Zones**, with **272 preserved encounter rows plus 283 attributed additional claims**. All rosters remain incomplete; ordinary, fixed Alpha, rotating Alpha, gift, mission, boss, disputed and research records retain their different meanings.
+
+The candidate connects Explorer, standalone Maps, the sector directory and the main guide map, plus species links from the fieldbook and Pokédex. Selection, filters, deep links and browser history share the same area IDs. Review fixed hidden selections under old filters and stale Explorer detail/pin selection; routes, collection selections and saved progress remain separate. PR196's exact collectible-search correction is selectively included.
+
+**Five reviewed map outlines: Wild Zones 2, 3, 5, 11 and 16.** These follow the green areas shown on the original map; they do not establish walking routes, exact spawn extents or floors. The other **15 Wild Zone outlines and all 48 sector boundaries remain unresolved**. Original photo hashes, holdouts and manual review receipts are retained. No new pickup coordinates or production test fixtures are introduced. [Implementation, evidence and rollback](docs/qa/ATLAS_AT339_SHARED_AREAS.md).
+
+The recovered source passed 78 focused checks and static/link validation locally; the revised selection behavior still requires exact-head phone/desktop CI and screenshot review before release. Full AT-325 G2/G3/G5 completion and the executable Workspace prompt remain open. The original Workspace site, runtime Supabase integration, feedback and player data are unchanged. Videos and YouTube remain paused.
+
 ## AT-338 — Item and Colorful Screw layers
 
 **26 November 2026 · Manifest 83 / Ledger 91.** This bounded implementation fulfils the AT-333 layer and directory design. It reuses all **264 item records and 100 Screw clues**, their original IDs and the existing progress store. Separate switches start off; the directory remains searchable. Eligible dots use a 7px visual with a 44px keyboard target and screen-space selection, retain native coordinates, and offer a complete overlap chooser. Written directions and still photographs remain supported.

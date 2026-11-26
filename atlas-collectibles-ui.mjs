@@ -1,9 +1,8 @@
 /* Read-only collectible layers. Original checklists remain the sole write path. */
 import "./items-data.js";
-import {buildCollectibleCatalog,buildCollectibleIndex,overlappingPoints,readCollected} from "./atlas-collectibles.mjs";
+import {buildCollectibleCatalog,buildCollectibleIndex,overlappingPoints,readCollected,collectibleLabel,createCollectibleMatcher} from "./atlas-collectibles.mjs";
 
 const PROGRESS_KEY="lumiose-atlas-reconstruction-v1";
-const kindLabel=kind=>kind==="item"?"Item":"Colorful Screw";
 const make=(tag,cls,text)=>{
   const el=document.createElement(tag);
   if(cls)el.className=cls;
@@ -46,14 +45,6 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
     const value=readCollected(r,saved);
     return value===null?"Progress unavailable":value?"Collected":"Not collected";
   };
-  const recordLabel=r=>r.kind==="screw"?"Colorful Screw "+r.number:kindLabel(r.kind)+" "+r.number+" · "+r.name;
-  const matchRecord=r=>{
-    if(kind.value!=="all"&&kind.value!==r.kind)return false;
-    const q=search.value.trim().toLocaleLowerCase();
-    if(!q)return true;
-    return [r.name,r.number,r.originalId,r.hint,r.district,r.sector,r.zone?"Wild Zone "+r.zone:"",kindLabel(r.kind)]
-      .some(v=>typeof v==="string"&&v.toLocaleLowerCase().includes(q));
-  };
   const visibleRecords=()=>matches.filter(r=>r.eligible&&toggles.get(r.kind).checked);
   function closeChooser(returnFocus=false){
     chooser.hidden=true;choices.replaceChildren();
@@ -64,7 +55,7 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
     clear.hidden=selected===null;
     if(!selected){detail.append(make("h3","","Select an item or Screw"),make("p","","Open its original clue and checklist without changing saved progress."));return;}
     const r=selected;
-    detail.append(make("h3","",recordLabel(r)),make("p","ae-collectible-identity","Original checklist ID: "+r.originalId));
+    detail.append(make("h3","",collectibleLabel(r)),make("p","ae-collectible-identity","Original checklist ID: "+r.originalId));
     const collected=make("p","ae-collectible-progress",progressText(r));collected.dataset.collectibleProgress="";detail.append(collected);
     const area=[r.district,r.sector,r.zone?"Wild Zone "+r.zone:null].filter(Boolean).join(" · ");
     if(area)detail.append(make("p","",area));
@@ -90,7 +81,7 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
       show.addEventListener("click",()=>{
         // An explicit map action must not centre a point hidden by older filters.
         if(kind.value!=="all"&&kind.value!==r.kind)kind.value="all";
-        if(!matchRecord(r))search.value="";
+        if(!createCollectibleMatcher(search.value,kind.value)(r))search.value="";
         toggles.get(r.kind).checked=true;filterDirectory();focusPoint(r.xy);
         viewport.scrollIntoView({behavior:"smooth",block:"center"});
       });detail.append(show);
@@ -123,7 +114,7 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
     if(candidates.length===1){selectRecord(candidates[0],{focusDetail:true});return;}
     choices.replaceChildren();by("aeCollectibleChooserTitle").textContent=candidates.length+" nearby items and Screws";
     for(const r of candidates){
-      const button=make("button","",recordLabel(r)+" · "+r.scene+" · "+r.floor);button.type="button";button.dataset.collectibleId=r.id;
+      const button=make("button","",collectibleLabel(r)+" · "+r.scene+" · "+r.floor);button.type="button";button.dataset.collectibleId=r.id;
       button.addEventListener("click",()=>selectRecord(r,{focusDetail:true}));choices.append(button);
     }
     chooser.hidden=false;choices.querySelector("button")?.focus();
@@ -138,7 +129,7 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
     else status.textContent=visible.size+" of "+verified+" verified map points shown. The original item and Screw directory stays available.";
   }
   function filterDirectory(){
-    matches=records.filter(matchRecord);const ids=new Set(matches.map(r=>r.id));
+    matches=records.filter(createCollectibleMatcher(search.value,kind.value));const ids=new Set(matches.map(r=>r.id));
     for(const [id,button] of resultById)button.hidden=!ids.has(id);
     count.textContent=matches.length+" of "+records.length+" original item records and Screw clues";
     empty.hidden=matches.length!==0;updateVisibility();
@@ -146,13 +137,13 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
   saved=readProgress();
   for(const r of records){
     const button=make("button");button.type="button";button.dataset.collectibleId=r.id;button.setAttribute("aria-pressed","false");
-    button.append(make("strong","",recordLabel(r)),make("span","",[r.sector,r.zone?"Wild Zone "+r.zone:r.district].filter(Boolean).join(" · ")));
+    button.append(make("strong","",collectibleLabel(r)),make("span","",[r.sector,r.zone?"Wild Zone "+r.zone:r.district].filter(Boolean).join(" · ")));
     const progress=make("small","",progressText(r));progress.dataset.collectibleProgress="";button.append(progress);
     button.addEventListener("click",()=>selectRecord(r));results.append(button);resultById.set(r.id,button);
     if(!r.eligible)continue;
     const pin=make("button","ae-collectible-pin");pin.type="button";pin.dataset.collectibleId=r.id;pin.dataset.collectibleKind=r.kind;
     pin.style.left=(r.xy[0]/1920*100)+"%";pin.style.top=(r.xy[1]/1920*100)+"%";
-    pin.setAttribute("aria-label",recordLabel(r)+"; "+r.scene+"; "+r.floor);pin.setAttribute("aria-pressed","false");
+    pin.setAttribute("aria-label",collectibleLabel(r)+"; "+r.scene+"; "+r.floor);pin.setAttribute("aria-pressed","false");
     const dot=make("span","ae-collectible-dot");dot.dataset.collectibleKind=r.kind;dot.setAttribute("aria-hidden","true");pin.append(dot);
     // Pointer hit testing belongs to the viewport, so dense targets never block pan/pinch.
     // Keyboard activation still reaches this real button and the complete overlap chooser.
@@ -197,5 +188,9 @@ export async function installCollectibles({projectPoint,currentView,focusPoint})
   const draw=()=>{
     const v=currentView();pins.style.setProperty("--inverse-zoom",String(1/v.zoom));pins.style.setProperty("--counter-rotation",(-v.rotation)+"deg");
   };
-  draw();return {draw};
+  const hasSelectablePointAt=(clientX,clientY)=>{
+    const box=viewport.getBoundingClientRect();
+    return overlappingPoints(visibleRecords(),{x:clientX-box.left,y:clientY-box.top},projectPoint,24).length>0;
+  };
+  draw();return {draw,hasSelectablePointAt};
 }

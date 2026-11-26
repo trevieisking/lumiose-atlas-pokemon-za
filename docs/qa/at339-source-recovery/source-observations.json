@@ -1,0 +1,156 @@
+{
+  "status": "research_only_not_runtime_approved",
+  "observed_at_utc": "2026-11-26T09:37:10.416944+00:00",
+  "source_page": "https://pokemaps.net/maps/lza/lumiose",
+  "polygon_data": {
+    "url": "https://pokemaps.net/assets/gen9-lumiose.areas-DCM40BHQ.json",
+    "sha256": "05865a71e4cb9abb8c95babf2242d4e5b9f9077228839916caa0e59697a1e226",
+    "all_records": 107,
+    "sector_records": 48,
+    "zone_records": 20,
+    "all_target_records_have_polygons": true,
+    "schema_keys": [
+      "id",
+      "label",
+      "locationSlug",
+      "shape",
+      "slug",
+      "type",
+      "waterShape"
+    ],
+    "source_metadata_present": false,
+    "sector_rings_per_record": {
+      "1": 48
+    },
+    "sector_total_vertices": 23758,
+    "sector_closed_rings": 0,
+    "sector_ring_min_vertices": 258,
+    "sector_ring_max_vertices": 822
+  },
+  "coordinate_registration": {
+    "provider_logical_grid": [
+      8,
+      8
+    ],
+    "provider_padding": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "provider_preview_pixels": [
+      1024,
+      1024
+    ],
+    "verified_native_transform": null,
+    "warning": "No direct multiplication into Atlas native pixels approved. Independent architecture registration and semantic boundary proof are separate requirements."
+  },
+  "encounters": {
+    "area_keys_all": 89,
+    "rows_all": 829,
+    "target_area_keys": 65,
+    "target_rows": 726,
+    "missing_target_keys": [
+      "bleu-sector-10",
+      "bleu-sector-2",
+      "magenta-sector-5"
+    ],
+    "target_methods": {
+      "Walk": 705,
+      "Static Encounter": 18,
+      "Gift": 3
+    },
+    "schema_keys": [
+      "conditionsRaw",
+      "levelMax",
+      "levelMin",
+      "obtainMethod",
+      "pokemonId",
+      "pokemonName",
+      "pokemonSlug",
+      "questRef",
+      "regionalForm",
+      "terrain",
+      "versionLabels",
+      "versions"
+    ],
+    "conditionsRaw_rows_all": 2,
+    "conditionsRaw_unique": [
+      "[\"quest:side-mission-192\"]",
+      "[\"quest:side-mission-193\"]"
+    ],
+    "regional_form_rows_all": 1,
+    "fixed_rotating_alpha_separation": false,
+    "absence_claims_approved": false,
+    "wild_zone20_rows": 75,
+    "wild_zone20_methods": {
+      "Walk": 74,
+      "Static Encounter": 1
+    }
+  },
+  "spawns": {
+    "records": 70,
+    "record_classes": {
+      "scripted": 16,
+      "stationary": 54
+    },
+    "points": 78,
+    "point_classes": {
+      "scripted": 16,
+      "stationary": 62
+    },
+    "source_id_prefixes": {
+      "mg": 78
+    },
+    "source_prefix_meaning_verified": false,
+    "spawnAreas_are_not_region_boundaries": true
+  },
+  "unresolved": [
+    "No exact game build, extracted region-volume file, boundary algorithm, source receipts or author methodology accompanies provider polygons.",
+    "Public about/help/changelog do not establish sector boundaries as original game data.",
+    "No reuse licence for provider polygons established. Existing Atlas G3 requires references as evidence rather than bulk imports.",
+    "Image alignment alone cannot establish sector semantic correctness, traversal access or encounter extent.",
+    "Public area encounter data is not comprehensive class-aware coverage of all68 areas."
+  ],
+  "public_citations": [
+    {
+      "url": "https://pokemaps.net/help",
+      "web_ref": "turn996796849search2",
+      "finding": "Provider describes optional area outlines and species highlights."
+    },
+    {
+      "url": "https://pokemaps.net/about",
+      "web_ref": "turn363291702view0",
+      "finding": "Provider identifies itself as unofficial fan project."
+    },
+    {
+      "url": "https://pokemaps.net/changelog",
+      "web_ref": "turn372747890view2",
+      "finding": "2026-08-22 announcement says sector areas clickable; no boundary extraction methodology."
+    }
+  ],
+  "alternate_primary_repositories": [
+    {
+      "repository": "gskim071031/Pokemon-Legends-ZA",
+      "tree_sha": "b1765a4d579547c9e78f7093b45ffc2df3ad1152",
+      "finding": "Actual main JSON has two records: WZ1 polygon and WZ2 circle. No48sectordata. Submaps contain demonstrations."
+    },
+    {
+      "repository": "SakuraiTsubaki/PokemonLegends-Z-A-Decompilation",
+      "tree_sha": "384e8a6ff936f76145ec29bf86d5c6109d6c4975",
+      "finding": "Research scaffold only; exact build identity unselected; no extracted map geometry."
+    },
+    {
+      "repository": "nibinemui/Lumiose-Toolkit",
+      "tree_sha": "ab9604880df0011f76e89fcf54356b883fb0792b",
+      "path": "za_map.py",
+      "blob_sha": "4b940235aaa72fe31a670d0a2ce70562ede3ef3d",
+      "finding": "Spawner coordinate viewer. Fitted world-to-map transform disclosed, but no named sector boundary table in inspected module. Its approximate spawn-fit transform is not Atlas registration."
+    },
+    {
+      "repository": "Insektaure/Shiny-Stash-Live-Map",
+      "tree_sha": "548896d0cc3b5fd531bd970f0708ecda13338492",
+      "finding": "Point spawner tables and live memory viewer; no sector polygon data in inspected tree."
+    }
+  ]
+}

@@ -18,11 +18,11 @@
     "workspace_handoff": "WORKSPACE_ACCESS_HANDOFF.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 84,
+  "revision": 85,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "owner_approved_source_first_access_survey_in_progress",
-  "current_phase": "AT-338 compact Item/Screw layers and 364-record directory merged, deployed and checked live; zero new production placements. G0/G1 reconciled; G2/G3 evidence, shared G4 interactions and G5 full release remain open. Final executable Workspace prompt blocked.",
+  "current_phase": "AT-339 recovered shared area/habitat implementation staged against PR200 main; five independently reviewed rendered-map outlines and 283 attributed encounter claims added. Exact-head browser/release checks pending. G2/G3 remain partial and full-scope G5/A0 remain open.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",
@@ -145,15 +145,16 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
     "original_workspace_site_changed": false,
     "protected_code_labs_writer_used": false,
     "supabase_private_feature_metadata_update_planned": true,
-    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188."
+    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
+    "checkpoint_scope": "Manifest85/Ledger93 bounded AT339 runtime candidate; source records, original progress, Workspace and public database contracts remain preserved."
   },
   "phases": [
     {
@@ -5517,5 +5518,48 @@
     "new_verified_boundaries": 0,
     "new_verified_placements": 0,
     "site_runtime_changed": false
+  },
+  "at_339_shared_areas": {
+    "id": "AT-339",
+    "date": "2026-11-26",
+    "manifest_revision": 85,
+    "ledger_revision": 93,
+    "baseline_main_sha": "1f5ec84c240d7b5f256034316afb2759b6b6e9f3",
+    "recovered_source_baseline": "ee87bd2234d394e2dbc4197eb26610e6367e352b",
+    "status": "candidate_pending_exact_head_browser_and_release",
+    "evidence": "docs/qa/ATLAS_AT339_SHARED_AREAS.md",
+    "geometry_evidence": "docs/qa/ATLAS_AT339_GEOMETRY_EVIDENCE.json",
+    "encounter_evidence": "docs/qa/at339-encounters/ENCOUNTER_AUDIT.md",
+    "areas": 68,
+    "preserved_encounter_rows": 272,
+    "additional_encounter_claims": 283,
+    "comprehensive_rosters": 0,
+    "reviewed_zone_map_outlines": [
+      "wz-02",
+      "wz-03",
+      "wz-05",
+      "wz-11",
+      "wz-16"
+    ],
+    "approved_sector_boundaries": 0,
+    "remaining_area_boundaries": 63,
+    "geometry_scope": "rendered_green_zone_map_selection_only_not_walkable_routes_or_exact_spawn_extents",
+    "production_new_pickup_positions": 0,
+    "shared_surfaces": [
+      "atlas-explorer.html",
+      "maps.html",
+      "sector-maps.html",
+      "index.html#maps"
+    ],
+    "pokedex_habitat_links": true,
+    "player_progress_writes": false,
+    "source_pr_196": "selectively_integrated_exact_search_patch",
+    "owner_crop_pr_200": "merged_evidence_preserved",
+    "workspace_changed": false,
+    "full_scope_signoff": false,
+    "approved_full_scope_sha": null,
+    "final_workspace_prompt": null,
+    "integration_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
+    "archive_exclusion_pr_201": "merged_source_history_and_Pages_exclusions_preserved"
   }
 }

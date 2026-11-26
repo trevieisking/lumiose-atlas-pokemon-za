@@ -10,6 +10,37 @@ export const COLLECTIBLE_MAP = Object.freeze({
   coordinateSpace: "atlas-native-pixels"
 });
 
+
+export const collectibleLabel = record => record.kind === "screw" ? "Colorful Screw " + record.number : "Item " + record.number + " · " + record.name;
+
+const foldCollectibleSearch = value => typeof value === "string"
+  ? value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/g, " ").trim() : "";
+const wildZonePhrase = /\bwild zone\s+(\d+)\b/g;
+
+/** Compile the player's query once. Explicit Wild Zone numbers describe the
+ * owning zone of an item, or the wording in an unnumbered Screw clue. */
+export function createCollectibleMatcher(query, kind = "all") {
+  const folded = foldCollectibleSearch(query).replace(/#\s*(?=\d)/g, "");
+  const zones = [...folded.matchAll(wildZonePhrase)].map(match => Number(match[1]));
+  const term = folded.replace(wildZonePhrase, " ").replace(/\s+/g, " ").trim();
+  const exactScrew = /^(?:colorful )?screw (\d+)$/.exec(term);
+  return record => {
+    if (kind !== "all" && kind !== record.kind) return false;
+    if (zones.length) {
+      const recordZones = record.kind === "item" ? [record.zone]
+        : [record.hint, record.district, record.sector].flatMap(value =>
+            [...foldCollectibleSearch(value).matchAll(wildZonePhrase)].map(match => Number(match[1])));
+      if (!zones.every(zone => recordZones.includes(zone))) return false;
+    }
+    if (!term) return true;
+    if (exactScrew) return record.kind === "screw" && Number(record.number) === Number(exactScrew[1]);
+    return [collectibleLabel(record), record.name, record.number, record.originalId,
+      record.hint, record.district, record.sector, record.zone ? "Wild Zone " + record.zone : "",
+      record.kind === "item" ? "Item" : "Colorful Screw"]
+      .some(value => foldCollectibleSearch(value).includes(term));
+  };
+}
+
 const EMPTY = Object.freeze([]);
 const ITEM_KINDS = new Set(["zone_only", "hidden_outcome", "reward", "sector_area", "landmark"]);
 const FIXED_ITEM_KINDS = new Set(["zone_only", "sector_area", "landmark"]);

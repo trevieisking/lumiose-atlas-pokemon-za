@@ -7,7 +7,7 @@
 <meta name="description" content="Real-game Lumiose City map with rotation, pinch zoom, 48 sectors, 20 Wild Zones, owner Holovator photographs and careful building/roof directions.">
 <title>Interactive Rotating Lumiose City Atlas — Pokémon Legends: Z-A</title>
 <link rel="icon" href="favicon.png" type="image/png">
-<link rel="stylesheet" href="recovered-articles.css"><link rel="stylesheet" href="atlas-explorer.css"><link rel="stylesheet" href="wild-zone-fieldbook.css">
+<link rel="stylesheet" href="recovered-articles.css"><link rel="stylesheet" href="atlas-explorer.css"><link rel="stylesheet" href="wild-zone-fieldbook.css"><link rel="stylesheet" href="atlas-area.css">
 <script src="recovered-articles.js" defer></script><script type="module" src="atlas-explorer.js"></script>
 </head><body class="atlas-article"><a class="skip-link" href="#main">Skip to Holovator fieldbook</a>
 <header class="atlas-article-header">
@@ -83,7 +83,12 @@
     <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
     <label><input type="checkbox" data-layer="item"> Items</label>
     <label><input type="checkbox" data-layer="screw"> Colorful Screws</label>
-    <span class="ae-layer-hint">Show several layers together; search results stay available even when a pin layer is hidden.</span>
+    <span class="ae-layer-hint">Switches show Atlas markers. Symbols printed on the original game map stay visible. The Sector names switch shows the selected sector label.</span>
+    <span class="ae-layer-hint ae-place-layer-status" id="aePlaceLayerStatus" role="status" aria-live="polite">Loading place markers…</span>
+    <div class="ae-place-actions">
+      <button type="button" id="aeClearPlaceFilters">Clear place filters</button>
+      <button type="button" id="aeShowPlaceDetails" aria-controls="aeSelected" disabled>View photos and details</button>
+    </div>
     <span class="ae-layer-hint" id="aeCollectibleStatus" role="status" aria-live="polite">Loading item and Screw locations…</span>
     <a class="ae-collection-guide" href="items.html">Open the original item and Screw checklists</a>
   </fieldset>
@@ -165,6 +170,7 @@
   <section class="ae-selected" id="aeSelected" aria-label="Selected location and its evidence">
     <h3>Select a map pin or place</h3><p>Tap a marker to see original pictures, local directions and whether a route has actually been checked.</p>
   </section>
+  <section id="aeAreaPanel" aria-label="Shared area and Pokémon habitat search"><p>Loading area and habitat records…</p></section>
   <details class="ae-collectible-directory" id="aeCollectibleDirectory">
     <summary>Find items and Colorful Screws</summary>
     <p>Browse the original item records and Screw clues. Map switches only control verified dots; your checklists stay unchanged.</p>

@@ -44,3 +44,6 @@
 }
 
 /* AT-314: owner channel entry; no changes to navigation or map gestures. */
+
+/* AT-339: keep the original map-label text centred on its pin. */
+#atlasMap .atlas-pin { padding: 0; white-space: nowrap; line-height: 1; }

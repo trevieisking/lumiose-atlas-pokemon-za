@@ -259,7 +259,7 @@ try {
     await pause(150);
   }
   assert.ok(serving, "Local static test server must start");
-  browser = await chromium.launch({ channel: "chrome", headless: true, args: ["--no-sandbox"] });
+  browser = await chromium.launch({ ...(process.env.ATLAS_CHROME_EXECUTABLE ? { executablePath: process.env.ATLAS_CHROME_EXECUTABLE } : { channel: "chrome" }), headless: true, args: ["--no-sandbox"] });
 
   for (const device of [
     { name: "desktop", viewport: { width: 1440, height: 900 }, isMobile: false, hasTouch: false },
@@ -289,6 +289,22 @@ try {
       await settle(productionPage);
       await productionPage.screenshot({ path: output + "/at338-production-empty-map-" + name + ".png" });
       await directory(productionPage);
+      const matchingRows = async (query, filter = "all") => {
+        await productionPage.locator("#aeCollectibleKind").selectOption(filter);
+        await productionPage.locator("#aeCollectibleSearch").fill(query);
+        return productionPage.locator("#aeCollectibleResults button:not([hidden])")
+          .evaluateAll(nodes => nodes.map(node => node.dataset.collectibleId));
+      };
+      assert.deepEqual(await matchingRows("Colorful Screw 29", "screw"), ["screw:29"]);
+      assert.deepEqual(await matchingRows("Colorful Screw #29", "screw"), ["screw:29"]);
+      assert.deepEqual(await matchingRows("Wild Zone 2 Great Ball"), ["item:2-5"]);
+      assert.deepEqual(await matchingRows("Wild Zone 2"),
+        [...Array.from({length:6}, (_,i) => "item:2-" + i), "screw:15"]);
+      const accented = await matchingRows("Poké Ball");
+      assert.equal(accented.length, 5);
+      assert.deepEqual(accented, await matchingRows("Poke Ball"));
+      assert.equal((await matchingRows("")).length, 364);
+      assert.deepEqual(await visibleIds(productionPage), []);
       await productionPage.locator('#aeCollectibleResults button[data-collectible-id="' + records[0].id + '"]').click();
       assert.match(await productionPage.locator("#aeCollectibleDetail [data-collectible-progress]").textContent(), /^\s*collected\b/i);
       assert.equal(await productionPage.locator("#aeCollectibleShowMap:visible").count(), 0,

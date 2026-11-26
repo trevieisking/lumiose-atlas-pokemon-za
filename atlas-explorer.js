@@ -19,6 +19,7 @@ const layerToggleByKind=new Map(layerToggles.map(input=>[input.dataset.layer,inp
 const layerVisible=kind=>layerToggleByKind.get(kind)?.checked!==false;
 const needle=by("aeNeedle"),zoomLabel=by("aeZoomLabel"),readout=by("aePositionReadout");
 const count=by("aeCount"),stats=by("aeStats"),noResults=by("aeNoResults");
+const placeLayerStatus=by("aePlaceLayerStatus"),showPlaceDetails=by("aeShowPlaceDetails");
 if(!viewport||!stage||!layer||!resultList||!selectedPanel||!routePicker)throw Error("Atlas Explorer page markup missing");
 const element=(tag,cls,value)=>{
   const out=document.createElement(tag);
@@ -39,6 +40,7 @@ let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
 let collectibleUI=null;
+let areaUI=null,syncingArea=false,pendingAreaSelection=null;
 const dimensions=()=>{
   const rect=viewport.getBoundingClientRect();
   return {width:Math.max(1,rect.width),height:Math.max(1,rect.height)};
@@ -273,29 +275,70 @@ function detailsFor(item){
 }
 function selectRecord(item,focus=true){
   if(!item)return;
+  // The initial deep-link render runs before ready. Later original-control
+  // selections are explicit intent and must survive optional evidence loading.
+  if(ready&&!areaUI&&!syncingArea)pendingAreaSelection=item.id;
   // A directory selection should never focus on an invisible map pin.
   const switchFor=layerToggleByKind.get(item.kind);
   if(pinMap.has(item.id)&&switchFor&&!switchFor.checked){
     switchFor.checked=true;
     drawList();
   }
-  selectedId=item.id;
-  detailsFor(item);
+  // Shared initialization and layer changes may reconcile the same selection.
+  // Preserve its loaded photographs, open disclosures and focused links.
+  if(selectedId!==item.id){selectedId=item.id;detailsFor(item);}
+  if(showPlaceDetails)showPlaceDetails.disabled=false;
   for(const [id,pin] of pinMap)pin.setAttribute("aria-pressed",String(id===selectedId));
   for(const button of resultList.querySelectorAll("[data-record-id]")){
     button.setAttribute("aria-pressed",String(button.dataset.recordId===selectedId));
   }
   if(focus)focusRecord(item);
   syncSectorContext();
+  if(!syncingArea&&(item.kind==="zone"||item.kind==="sector"))areaUI?.selectArea(item.id,{history:true,focus:false});
   const route=routes.find(r=>r.point_id===item.id);
-  if(route)chooseRoute(route.id);
+  if(route&&!syncingArea)chooseRoute(route.id);
+}
+const foldPlaceText=value=>plain(value).normalize("NFD").replace(/\p{M}/gu,"").toLocaleLowerCase().replace(/\s+/g," ").trim();
+function matchesPlaceSearch(item){
+  const query=foldPlaceText(search.value);
+  if(!query)return true;
+  const fields=[item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),item.kind==="zone"?zoneSearchText(item.number):"",labels[item.kind]].map(foldPlaceText);
+  const zoneNumbers=[...query.matchAll(/\bwild zone 0*(\d+)\b/g)].map(match=>Number(match[1]));
+  if(zoneNumbers.length){
+    // Saved zone names are zero padded. Other places may legitimately mention
+    // a nearby zone, but Zone 2 must never match Zone 20 by substring alone.
+    const mentioned=new Set(item.kind==="zone"?[Number(item.number)]:fields.flatMap(value=>[...value.matchAll(/\bwild zone 0*(\d+)\b/g)].map(match=>Number(match[1]))));
+    if(!zoneNumbers.every(number=>mentioned.has(number)))return false;
+    const remaining=query.replace(/\bwild zone 0*\d+\b/g,"").replace(/\s+/g," ").trim();
+    return !remaining||fields.some(value=>value.includes(remaining));
+  }
+  return fields.some(value=>value.includes(query));
 }
 function match(item){
-  const query=search.value.trim().toLocaleLowerCase();
-  if(activeKind!=="all"&&item.kind!==activeKind)return false;
-  if(!query)return true;
-  return [item.name,item.area,item.district,item.description,item.directions,item.street_bearing?.text,...(item.source_map_reference?.visible_labels||[]),item.kind==="zone"?zoneSearchText(item.number):"",labels[item.kind]]
-    .some(value=>plain(value).toLocaleLowerCase().includes(query));
+  return (activeKind==="all"||item.kind===activeKind)&&matchesPlaceSearch(item);
+}
+function updatePlaceLayerStatus(matches){
+  if(!placeLayerStatus)return;
+  const visible=[...pinMap.values()].filter(pin=>!pin.hidden).length;
+  const matchingPins=matches.filter(item=>pinMap.has(item.id)).length;
+  const category=activeKind==="all"?"All places":labels[activeKind]||activeKind;
+  const query=search.value.trim();
+  let text=visible+" of "+pinMap.size+" documented place markers visible. Category: "+category+". "+(query?"Search: “"+query+"”.":"No place search.");
+  if(!visible){
+    if(matches.length&&!matchingPins)text+=" Matching entries have no mapped position; their photos and details remain available in the directory.";
+    else if(!matchingPins)text+=" No place markers match these filters. Clear place filters or enable a place layer to reveal its markers.";
+    else text+=" The matching place layers are switched off.";
+  }
+  placeLayerStatus.textContent=text;
+}
+function changePlaceLayer(input){
+  const kind=input.dataset.layer;
+  if(input.checked&&["zone","holovator","ladder","landmark","scaffold"].includes(kind)){
+    if(activeKind!=="all"&&activeKind!==kind)activeKind="all";
+    const candidates=records.filter(item=>item.kind===kind&&pinMap.has(item.id));
+    if(candidates.length&&!candidates.some(matchesPlaceSearch))search.value="";
+  }
+  drawList();
 }
 function drawList(){
   resultList.replaceChildren();
@@ -322,6 +365,7 @@ function drawList(){
   for(const b of filters)b.setAttribute("aria-pressed",String(b.dataset.kind===activeKind));
   count.textContent=matches.length+" of "+records.length+" documented city entries";
   noResults.hidden=matches.length!==0;
+  updatePlaceLayerStatus(matches);
   syncSectorContext();
 }
 function createPins(){
@@ -436,6 +480,15 @@ function setupNavigation(){
   });
   by("aeOriginal").addEventListener("click",()=>setStyle(false));
   by("aeTint").addEventListener("click",()=>setStyle(true));
+  by("aeClearPlaceFilters")?.addEventListener("click",()=>{
+    activeKind="all";search.value="";drawList();
+  });
+  showPlaceDetails?.addEventListener("click",()=>{
+    if(!selectedId)return;
+    const heading=selectedPanel.querySelector(":scope > h3");
+    if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+    selectedPanel.scrollIntoView({behavior:"smooth",block:"start"});
+  });
   viewport.addEventListener("pointerdown",event=>{
     if(event.target.closest("button, a, input, select")||(event.pointerType==="mouse"&&event.button!==0))return;
     pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
@@ -544,8 +597,9 @@ async function load(){
   const requested=new URLSearchParams(window.location.search);
   const requestedPlace=recordMap.get(requested.get("place"));
   const requestedSector=recordMap.get(requested.get("sector"));
+  const requestedArea=recordMap.get(requested.get("area"));
   // Existing ?sector= links keep working; only registered place IDs can select records.
-  const deepLinked=requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
+  const deepLinked=(requestedArea?.kind==="zone"||requestedArea?.kind==="sector"?requestedArea:null)||requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
   if(deepLinked){
     activeKind=deepLinked.kind;drawList();selectRecord(deepLinked,true);
   }
@@ -562,10 +616,54 @@ async function load(){
   }).catch(()=>{
     by("aeCollectibleStatus").textContent="The collection directory could not load. The original item and Screw checklists are still available.";
   });
+  // Area controls share original identities and reject unapproved boundaries.
+  // The existing route, camera and collection controllers retain their state.
+  import("./atlas-area-ui.mjs").then(async({installAreaInteractions})=>{
+    const syncSelection=({selection})=>{
+      // Installation renders before returning its controller. Reconcile that
+      // first render below, after any legacy selection made while loading.
+      if(!areaUI)return;
+      const record=recordMap.get(selection.areaId);
+      if(record&&(record.kind==="zone"||record.kind==="sector")){
+        let filtersChanged=false;
+        if(activeKind!=="all"&&activeKind!==record.kind){activeKind=record.kind;filtersChanged=true;}
+        if(!match(record)){search.value="";filtersChanged=true;}
+        if(filtersChanged)drawList();
+        coverageSector.value=record.kind==="sector"?record.id:"";
+        syncingArea=true;
+        try{selectRecord(record,false);}finally{syncingArea=false;}
+      }else{
+        const previous=recordMap.get(selectedId);
+        if(previous?.kind!=="zone"&&previous?.kind!=="sector")return;
+        selectedId=null;coverageSector.value="";
+        if(showPlaceDetails)showPlaceDetails.disabled=true;
+        selectedPanel.replaceChildren(element("h3","","Select a map pin or place"),paragraph("Tap a marker to see original pictures, local directions and whether a route has actually been checked."));
+        for(const pin of pinMap.values())pin.setAttribute("aria-pressed","false");
+        for(const button of resultList.querySelectorAll("[data-record-id]"))button.setAttribute("aria-pressed","false");
+        syncSectorContext();
+      }
+    };
+    areaUI=await installAreaInteractions({
+      host:by("aeAreaPanel"),overlayHost:stage,eventHost:viewport,
+      onSelection:syncSelection,
+      onAreaFocus:area=>{const record=recordMap.get(area.id);if(record)focusRecord(record);},
+      // Reuse the collection controller's exact screen-space hit test.
+      canSelectBoundary:event=>!collectibleUI?.hasSelectablePointAt?.(event.clientX,event.clientY)
+    });
+    const pending=recordMap.get(pendingAreaSelection);pendingAreaSelection=null;
+    const selection=areaUI.getSelection();
+    if(pending){
+      if(pending.kind==="zone"||pending.kind==="sector")areaUI.selectArea(pending.id,{history:"replace",focus:false});
+      else areaUI.clear({history:"replace"});
+    }else syncSelection({selection});
+  }).catch(()=>{
+    by("aeAreaPanel").textContent="Area and habitat search could not load. The original place directory, photographs and routes remain available.";
+  });
 }
 setupNavigation();
+window.addEventListener("popstate",()=>{if(!areaUI)pendingAreaSelection=null;});
 filters.forEach(b=>b.addEventListener("click",()=>{activeKind=b.dataset.kind||"all";drawList();}));
-layerToggles.forEach(input=>input.addEventListener("change",drawList));
+layerToggles.forEach(input=>input.addEventListener("change",()=>changePlaceLayer(input)));
 search.addEventListener("input",drawList);
 routePicker.addEventListener("change",()=>{
   if(routePicker.value)chooseRoute(routePicker.value);

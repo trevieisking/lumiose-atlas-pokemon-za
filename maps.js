@@ -1,5 +1,5 @@
 /* Interactive Lumiose City map. Source markers are the saved main-page map positions.
-   This page never fetches, writes game state, or alters the original Site or Supabase. */
+   The shared area module reads local evidence; original progress remains read-only. */
 (() => {
   "use strict";
   const pins=Array.from(document.querySelectorAll("[data-map-pin]"));
@@ -22,6 +22,7 @@
   const detailById=new Map(detail.map(d=>[d.dataset.mapZoneDetail,d]));
   let district="All";
   let selected=null;
+  let areaUI=null,syncingArea=false,pendingLegacySelection=null;
   const closeTo=number=>Math.max(0,Math.min(100,number));
   function zoomOnZone(){
     if(!selected)return;
@@ -45,11 +46,21 @@
   // and the existing scroll-to-detail behaviour. Share uses location.href.
   function syncZoneHash(id){
     if(typeof window==="undefined"||!window.location||!window.history)return;
+    if(!areaUI)pendingLegacySelection={zone:id};
     const {pathname,search,hash}=window.location;
-    if(id===null&&!zoneHash.test(hash))return;
-    const next=id===null?"":"#wild-zone-"+id;
-    if(next===hash)return;
-    window.history.pushState(window.history.state,"",pathname+search+next);
+    const query=new URLSearchParams(search);
+    // An existing shared selection must follow original controls immediately,
+    // even while its optional module is loading or unavailable. A legacy link
+    // without shared parameters keeps its original fragment-only form.
+    if(id===null){
+      for(const key of ["area","species","habitat_q","habitat_district","encounter"])query.delete(key);
+    }else if(query.has("area")||query.has("species")){
+      query.set("area","wz-"+String(id).padStart(2,"0"));query.delete("species");
+    }
+    const nextHash=id===null?(zoneHash.test(hash)?"":hash):"#wild-zone-"+id;
+    const nextSearch=query.size?"?"+query.toString():"";
+    if(nextHash===hash&&nextSearch===search)return;
+    window.history.pushState(window.history.state,"",pathname+nextSearch+nextHash);
   }
   function clearSelection(sync=true){
     selected=null;
@@ -62,6 +73,7 @@
     zoom.dataset.selectedZone="";
     zoom.style.backgroundPosition="center";
     if(sync)syncZoneHash(null);
+    if(areaUI&&!syncingArea)areaUI.clear({history:sync?'replace':false});
   }
   function selectZone(value,scroll=true,sync=true){
     const id=String(value);
@@ -75,6 +87,7 @@
     zoomSlider.disabled=false;
     zoomOnZone();
     if(sync)syncZoneHash(id);
+    if(areaUI&&!syncingArea)areaUI.selectArea("wz-"+id.padStart(2,"0"),{history:sync?'replace':false,focus:false});
     if(scroll&&typeof focus.scrollIntoView==="function")focus.scrollIntoView({behavior:"smooth",block:"start"});
   }
   function updateList(){
@@ -107,6 +120,8 @@
   // filters only when necessary; never rewrite unrelated page anchors.
   if(typeof window!=="undefined"){
     const openHash=()=>{
+      // Traversing history is newer than a click queued while loading.
+      if(!areaUI)pendingLegacySelection=null;
       const match=zoneHash.exec(window.location.hash);
       if(!match){if(selected!==null)clearSelection(false);return;}
       const id=match[1];
@@ -121,5 +136,31 @@
     window.addEventListener("popstate",openHash);
     window.addEventListener("hashchange",openHash);
     openHash();
+  }
+  if(typeof document.createElement==="function"){
+    import("./atlas-area-surfaces.mjs").then(async({installAreaSurface})=>{
+      areaUI=await installAreaSurface({surface:"standalone",onSelection:({selection})=>{
+        // A click or clear during loading is newer than the initial shared
+        // render. Replay that intent through the shared controller below.
+        if(!areaUI&&pendingLegacySelection)return;
+        syncingArea=true;
+        try{
+          const zone=/^wz-(\d{2})$/.exec(selection.areaId||"");
+          if(zone){
+            const id=String(Number(zone[1]));
+            // Shared search can select a zone hidden by the original directory.
+            // Reveal it as legacy deep links do; retain compatible filters.
+            if(pinById.get(id)?.hidden){district="All";search.value="";updateList();}
+            if(selected!==id)selectZone(id,false,false);
+          }
+          else if(selected!==null)clearSelection(false);
+        }finally{syncingArea=false;}
+      }});
+      if(areaUI&&pendingLegacySelection){
+        const {zone}=pendingLegacySelection;pendingLegacySelection=null;
+        if(zone===null)areaUI.clear({history:"replace"});
+        else areaUI.selectArea("wz-"+String(zone).padStart(2,"0"),{history:"replace",focus:false});
+      }
+    }).catch(()=>{/* Original map, photos and directory remain available. */});
   }
 })();

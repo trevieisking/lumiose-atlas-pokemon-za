@@ -13,7 +13,7 @@ const server=spawn("python3",["-m","http.server","18766","--bind","127.0.0.1"],{
 let browser;
 try{
  let available=false;for(let i=0;i<40;i++){try{if((await fetch(base+"/maps.html")).ok){available=true;break;}}catch{}await pause(150);}
- assert.ok(available);browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
+ assert.ok(available);browser=await chromium.launch({...(process.env.ATLAS_CHROME_EXECUTABLE?{executablePath:process.env.ATLAS_CHROME_EXECUTABLE}:{channel:"chrome"}),headless:true,args:["--no-sandbox"]});
  for(const [kind,width,height] of [["phone",393,852],["desktop",1440,900]]){
    const page=await browser.newPage({viewport:{width,height},isMobile:kind==="phone",hasTouch:kind==="phone",deviceScaleFactor:1});
    const errors=[];page.on("pageerror",err=>errors.push(String(err)));
@@ -38,13 +38,22 @@ try{
    for(const n of [1,6,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
    // AT-326: share links track the selection without resetting filters on a click.
    await page.goto(base+"/maps.html?source=atlas#wild-zone-1",{waitUntil:"load"});await check(1,"map",true);
+   await page.locator('[data-area-panel]').waitFor({state:"attached"});
+   assert.equal(new URL(page.url()).search,"?source=atlas","Opening the original fragment does not rewrite its query");
+   const historyBeforeZoneChange=await page.evaluate(()=>history.length);
    await page.locator('#zone-directory [data-map-zone-button="20"]').click();await check(20,"map",true);
-   assert.equal(new URL(page.url()).hash,"#wild-zone-20");assert.equal(new URL(page.url()).search,"?source=atlas");
+   // The legacy fragment and shared area identify the same selection. Shared
+   // synchronization replaces the fragment entry rather than pushing another.
+   assert.equal(new URL(page.url()).hash,"#wild-zone-20");assert.equal(new URL(page.url()).search,"?source=atlas&area=wz-20");
+   assert.equal(await page.evaluate(()=>history.length),historyBeforeZoneChange+1,"One zone change creates one history entry");
    await page.evaluate(()=>history.back());await page.waitForURL("**/maps.html?source=atlas#wild-zone-1");
    await page.locator('[data-wz-fieldbook="1"]:visible').waitFor();
-   await page.evaluate(()=>history.forward());await page.waitForURL("**/maps.html?source=atlas#wild-zone-20");
+   assert.equal(new URL(page.url()).searchParams.has("area"),false,"Back restores the original legacy URL in one step");
+   await page.evaluate(()=>history.forward());await page.waitForURL("**/maps.html?source=atlas&area=wz-20#wild-zone-20");
    await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
    await page.reload({waitUntil:"load"});await page.locator('[data-wz-fieldbook="20"]:visible').waitFor();
+   assert.equal(new URL(page.url()).search,"?source=atlas&area=wz-20");
+   assert.equal(new URL(page.url()).hash,"#wild-zone-20");
    await page.locator("#mapSearch").fill("not-a-real-at326-species");
    // Same-document navigation notifications can reach the Playwright client
    // after the input action completes. Verify the actual browser state and
@@ -53,18 +62,24 @@ try{
      document.getElementById("mapZoomImage").dataset.selectedZone===""&&
      [...document.querySelectorAll("[data-map-zone-detail]")].every(card=>card.hidden));
    await page.waitForURL(url=>url.hash===""&&url.search==="?source=atlas");
+   assert.equal(new URL(page.url()).searchParams.has("area"),false,"Clearing a filtered selection removes the shared area parameter");
    assert.equal(await page.locator("[data-wz-fieldbook]:visible").count(),0);
    await page.locator("#mapSearch").fill("Eevee");assert.equal(await page.locator('[data-map-zone-button="19"]').isVisible(),true);
    await page.locator('[data-map-zone-button="19"]').click();
    assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
-   await page.waitForURL(url=>url.hash==="#wild-zone-19"&&url.search==="?source=atlas");
+   await page.waitForURL(url=>url.hash==="#wild-zone-19"&&url.search==="?source=atlas&area=wz-19");
    await page.evaluate(()=>{Object.defineProperty(navigator,"share",{configurable:true,value:async data=>{window.__at326SharedUrl=data.url;}});document.getElementById("atlasArticleShare").click();});
    await page.waitForFunction(()=>window.__at326SharedUrl===location.href);
+   assert.equal(await page.evaluate(()=>window.__at326SharedUrl),base+"/maps.html?source=atlas&area=wz-19#wild-zone-19","Share keeps the unrelated query, shared area and original fragment together");
+   const historyAtZone19=await page.evaluate(()=>history.length);
    await page.locator('[data-map-pin="19"]').click();
    assert.equal(await page.locator("#mapSearch").inputValue(),"Eevee");
+   assert.equal(await page.evaluate(()=>history.length),historyAtZone19,"Reselecting the same zone does not add a duplicate history entry");
+   assert.equal(new URL(page.url()).search,"?source=atlas&area=wz-19");
    await page.goto(base+"/maps.html?source=atlas#map-key",{waitUntil:"load"});
    await page.locator("#mapSearch").fill("not-a-real-at326-species");
    assert.equal(await page.evaluate(()=>location.hash),"#map-key");
+   assert.equal(new URL(page.url()).search,"?source=atlas","Unrelated anchors do not create a shared area selection");
    // The new rotating-Alpha disclosure must not steal the old item-record anchor.
    await page.goto(base+"/sector-maps.html#wildzone-20",{waitUntil:"load"});
    await page.locator("#wildzone-20 details.zone-records[open]").waitFor();

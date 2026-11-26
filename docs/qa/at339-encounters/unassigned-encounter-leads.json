@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "retained_research_outside_the_68_area_register",
+  "reason": "These named places, gifts, trades, or route approaches must not be forced into a numbered sector without location evidence.",
+  "records": [
+    {
+      "species": "Lucario",
+      "place": "Hotel Z, Room 202",
+      "encounter_class": "gift",
+      "condition": "Level-50 post-story gift",
+      "sources": [
+        {
+          "url": "https://www.serebii.net/legendsz-a/giftpokemon.shtml",
+          "claim": "Post-story gift."
+        },
+        {
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Hotel_Z",
+          "claim": "Room 202 gift context."
+        },
+        {
+          "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+          "claim": "Gift classification corroborated in the original audit."
+        }
+      ]
+    },
+    {
+      "species": "Riolu",
+      "place": null,
+      "encounter_class": "trade",
+      "condition": "Side Mission 24; exact numbered-sector identity not assigned here",
+      "sources": [
+        {
+          "path": "docs/qa/ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json",
+          "claim": "AT324-E01 separates the trade from wild roof encounters."
+        }
+      ]
+    },
+    {
+      "species": "Gastly",
+      "place": "Espace Vide",
+      "encounter_class": "unclassified_lead",
+      "condition": "Provider reports levels 15–18; floor and exact area identity need verification",
+      "sources": [
+        {
+          "url": "https://pokemaps.net/maps/lza/lumiose/espace-vide",
+          "claim": "Area-page lead."
+        },
+        {
+          "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+          "claim": "No numbered sector assigned by this review."
+        }
+      ]
+    },
+    {
+      "species": "Gastly",
+      "place": "Lumiose Sewers",
+      "encounter_class": "unclassified_lead",
+      "condition": "Walking and static labels require separate classification",
+      "sources": [
+        {
+          "url": "https://pokemaps.net/maps/lza/lumiose/gastly",
+          "claim": "Sewer rows use walking and static labels."
+        }
+      ]
+    },
+    {
+      "species": "Litwick",
+      "place": "Lumiose Sewers",
+      "encounter_class": "unclassified_lead",
+      "condition": "Interior floor and access prerequisites unresolved",
+      "sources": [
+        {
+          "url": "https://pokemaps.net/locations/litwick",
+          "claim": "Named-location lead."
+        },
+        {
+          "path": "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+          "claim": "Interior access not established."
+        }
+      ]
+    }
+  ]
+}

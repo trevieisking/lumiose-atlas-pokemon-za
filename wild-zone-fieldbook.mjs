@@ -1,6 +1,7 @@
 /* AT-321: single source for all Wild Zone photo and encounter panels.
    Roster facts: Serebii Wild Zones; fixed Alpha times and Zone 20 pool: preserved Atlas Alpha source.
    Photo paths/areas: owner batch manifests 01–04. No user data or network API. */
+import {areaLink,speciesKey} from "./atlas-area-model.mjs";
 export const wildZoneRecords = [
   {
     "number": 1,
@@ -876,14 +877,15 @@ export function wildZoneFieldbookMarkup(n){
  const z=wildZoneRecord(n);if(!z)return "";
  const label="Wild Zone "+String(z.number).padStart(2,"0");
  const e=escapeHtml;
+ const habitat=name=>'<a href="'+e(areaLink({speciesId:speciesKey(name)}))+'" data-atlas-species="'+e(speciesKey(name))+'" aria-label="'+e('Explore recorded habitats for '+name)+'">'+e(name)+'</a>';
  const photos=z.photos.map(p=>{
    const heading=p.kind==="overview"?"Area overview & Pokémon encounter card":"Detailed area close-up";
    return '<figure><a href="'+e(p.path)+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+e(label+" — "+heading)+' at full resolution"><img src="'+e(p.path)+'" alt="'+e(label+" — "+heading+", "+z.area)+'" width="'+p.width+'" height="'+p.height+'" loading="lazy" decoding="async"></a><figcaption><strong>'+heading+'</strong><span>Tap or click to view full size ↗</span></figcaption></figure>';
  }).join("");
- const names=z.species.map(s=>'<li>'+e(s)+'</li>').join("");
- const fixed=z.fixedAlphas.map(a=>'<li><strong>'+e(a.name)+'</strong><span>'+e(a.condition)+'</span></li>').join("");
+ const names=z.species.map(s=>'<li>'+habitat(s)+'</li>').join("");
+ const fixed=z.fixedAlphas.map(a=>'<li><strong>'+habitat(a.name)+'</strong><span>'+e(a.condition)+'</span></li>').join("");
  const alphaPanel=z.number===20?
-  '<details class="wz-alpha-pool"><summary>67 possible rotating Alpha Pokémon</summary><p>Two rotating Alpha encounters from the saved pool; individual species are not guaranteed on each visit (Lv. 63–65).</p><ul class="wz-species">'+z.rotatingAlphas.map(s=>'<li>'+e(s)+'</li>').join("")+'</ul></details>':
+  '<details class="wz-alpha-pool"><summary>67 possible rotating Alpha Pokémon</summary><p>Two rotating Alpha encounters from the saved pool; individual species are not guaranteed on each visit (Lv. 63–65).</p><ul class="wz-species">'+z.rotatingAlphas.map(s=>'<li>'+habitat(s)+'</li>').join("")+'</ul></details>':
   '<h4>Fixed Alpha encounters</h4><ul class="wz-fixed-alphas">'+fixed+'</ul><p>Listed Alpha locations and times are preserved from the existing Alpha fieldbook; other eligible wild spawns may become Alpha after the zone survey.</p>';
  return '<section class="wz-fieldbook" data-wz-fieldbook="'+z.number+'" aria-label="'+e(label+" original maps and catchable Pokémon")+'"><div class="wz-fieldbook-title"><h3>'+e(label+" · "+z.area)+'</h3><p>'+e(z.district+" district · original owner map photographs")+'</p></div><div class="wz-photo-pair">'+photos+'</div><h4>'+ (z.number===20?"15 ordinary catchable Pokémon":"Catchable Pokémon · including Alpha encounters")+'</h4><ul class="wz-species" aria-label="Catchable Pokémon">'+names+'</ul><p>'+ (z.number===20?"Regular encounters are distinct from the randomized central Alpha pool.":"This location roster includes ordinary and fixed Alpha species; not all species appear simultaneously. Time of day, terrain, story access and spawn conditions can affect availability.")+'</p>'+alphaPanel+'<p class="wz-evidence">Original photos show the owner’s captured game session, not the reader’s saved progress or permanent distortion locations. They are orientation references, not exact pickup pins. <a href="alphas.html#zone-'+z.number+'">Full Alpha fieldbook ↗</a></p></section>';
 }
