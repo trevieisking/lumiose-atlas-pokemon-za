@@ -1,0 +1,33 @@
+{
+  "tracking": "AT-342",
+  "date": "2026-11-26",
+  "failed_candidate_head": "82f710dd6fc3a585a48e5daf3104fad28e6e765f",
+  "failed_candidate_tree": "b6890f161fd71e70615484b9d587e9a5f0c563fe",
+  "run_id": 45836666015,
+  "job_id": 139967230953,
+  "failed_step": "Verify shared habitats, all map views and original progress",
+  "failure_excerpt": "docs/qa/at342-resume/initial-browser-failure.txt",
+  "failed_test_location": "tests/atlas_area_browser.mjs:563",
+  "diagnosis": "The new related-area loop opened index.html with query parameters but omitted #maps. The main guide correctly displayed its home view; the map control existed in a hidden section and a normal click timed out.",
+  "evidence": [
+    "GitHub log reports related wz-05 button resolved but not visible for 30 seconds.",
+    "Source inspection confirms hash routing defaults to home.",
+    "Direct browser reproduction: unanchored main URL displays home and relatedButtonVisible=false.",
+    "Corrected #maps URL displays the map panel. A normal related-zone click preserves source query, selects wz-05 and renders both original photographs at1536x865."
+  ],
+  "correction": "Construct related-area URLs with URL/searchParams, add #maps for main surface and explicitly assert control visibility before the unchanged normal click.",
+  "changed_test": "tests/atlas_area_browser.mjs",
+  "runtime_files_changed": false,
+  "runtime_file_hash_count_verified_unchanged": 22,
+  "preserved_assertions": [
+    "query parameters",
+    "back/reload history",
+    "direct sector roster isolation",
+    "related encounters",
+    "both original photographs and decode",
+    "original progress bytes"
+  ],
+  "other_browser_steps_on_failed_candidate": "Explorer routes and gestures, collectibles and all20 Wild Zone photo-panel suites passed; these are supporting history, not approval of the replacement candidate.",
+  "release_decision": "HOLD pending complete replacement-head CI and actual screenshot review.",
+  "replacement_ci_state": "pending"
+}

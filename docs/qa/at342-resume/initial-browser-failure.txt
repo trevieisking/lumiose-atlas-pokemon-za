@@ -1,0 +1,23 @@
+2026-11-26T14:15:13.9923029Z locator.click: Timeout 30000ms exceeded.
+2026-11-26T14:15:13.9923603Z Call log:
+2026-11-26T14:15:13.9924534Z   - waiting for locator('[data-area-panel]').locator('[data-related-areas]').locator('[data-related-area="wz-05"]')
+2026-11-26T14:15:13.9926333Z     - locator resolved to <button type="button" data-related-area="wz-05">Open Wild Zone 05 encounters and photographs</button>
+2026-11-26T14:15:13.9927333Z   - attempting click action
+2026-11-26T14:15:13.9927959Z     2 × waiting for element to be visible, enabled and stable
+2026-11-26T14:15:13.9929238Z       - element is not visible
+2026-11-26T14:15:13.9931143Z     - retrying click action
+2026-11-26T14:15:13.9931606Z     - waiting 20ms
+2026-11-26T14:15:13.9932312Z     2 × waiting for element to be visible, enabled and stable
+2026-11-26T14:15:13.9932973Z       - element is not visible
+2026-11-26T14:15:13.9933427Z     - retrying click action
+2026-11-26T14:15:13.9934394Z       - waiting 100ms
+2026-11-26T14:15:13.9935249Z     58 × waiting for element to be visible, enabled and stable
+2026-11-26T14:15:13.9935881Z        - element is not visible
+2026-11-26T14:15:13.9936318Z      - retrying click action
+2026-11-26T14:15:13.9936780Z        - waiting 500ms
+2026-11-26T14:15:13.9937045Z 
+2026-11-26T14:15:13.9937519Z     at /home/runner/work/lumiose-atlas-pokemon-za/lumiose-atlas-pokemon-za/tests/atlas_area_browser.mjs:563:63 {
+2026-11-26T14:15:13.9938377Z   name: 'TimeoutError'
+2026-11-26T14:15:13.9938653Z }
+2026-11-26T14:15:13.9938769Z 
+2026-11-26T14:15:13.9938901Z Node.js v22.23.5

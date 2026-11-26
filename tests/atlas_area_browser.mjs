@@ -552,7 +552,11 @@ try{
       ['sectors','sector-maps.html','magenta-sector-5','wz-09'],
       ['main','index.html','bleu-sector-2','wz-05']
     ]){
-      await page.goto(base+'/'+url+'?source=at341-crossref&area='+sector,{waitUntil:'load'});
+      const relatedUrl=new URL(url,base+'/');
+      relatedUrl.searchParams.set('source','at341-crossref');
+      relatedUrl.searchParams.set('area',sector);
+      if(surface==='main')relatedUrl.hash='maps';
+      await page.goto(relatedUrl.href,{waitUntil:'load'});
       const host=await panel();
       const original=host.locator('[data-area-detail] > a').filter({hasText:'Open original area guide and photographs'});
       assert.equal(await original.count(),1);
@@ -560,7 +564,9 @@ try{
       const related=host.locator('[data-related-areas]');
       assert.match(await related.textContent(),/Wild Zone/);
       if(surface==='explorer')await related.screenshot({path:output+'/at341-related-'+sector+'-'+device+'.png'});
-      await related.locator('[data-related-area="'+zone+'"]').click();
+      const relatedControl=related.locator('[data-related-area="'+zone+'"]');
+      assert.ok(await relatedControl.isVisible(),surface+' related-area control is visible before navigation');
+      await relatedControl.click();
       assert.equal(new URL(page.url()).searchParams.get('area'),zone);
       assert.equal(new URL(page.url()).searchParams.get('source'),'at341-crossref');
       assert.ok(await host.locator('[data-area-detail] .aa-encounter').count()>0);
