@@ -10,6 +10,23 @@
       "unchanged": true
     },
     "status": "planning_only_original_source_quality_selection_and_workspace_import_pending",
+    "current_at345_runtime_candidate": {
+      "status": "code_complete_in_review_branch_exact_head_CI_and_phone_desktop_visual_gate_pending",
+      "branch": "feat/atlas-48-contextual-sector-views-20261126",
+      "baseline_main": "34746fe66956064500072a9ce5193808b49e52a2",
+      "scope": "48 wider contextual photo windows in the existing shared-area panel and 48-sector clue directory",
+      "exact_owner_original_blobs_reused": 10,
+      "sector_view_references": 48,
+      "published_replacements_approved": false,
+      "source_index": "atlas-sector-context.mjs",
+      "implementation_evidence": "docs/qa/ATLAS_AT345_CONTEXTUAL_SECTOR_IMPLEMENTATION_2026-11-26.md",
+      "tests": ["tests/atlas_sector_context.test.mjs", "tests/atlas_sector_context_browser.mjs", ".github/workflows/atlas-explorer.yml"],
+      "old_clips_preserved_as_secondary": true,
+      "wild_zone_pairs_preserved": 20,
+      "map_xy_changes": 0,
+      "original_workspace_updated": false,
+      "shops_PR216_already_merged": true
+    },
     "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/217",
     "specification": "docs/qa/ATLAS_AT345_SECTOR_CONTEXT_PHOTOS_AND_SHOPS_2026-11-26.md",
     "source_register": "docs/qa/at344-sector-source-survey/sector-coverage.json",
