@@ -30,7 +30,12 @@ try{
       const image=page.locator('.aa-context-image');
       await image.waitFor({state:'attached',timeout:15000});
       await image.scrollIntoViewIfNeeded();
-      await image.evaluate(async img=>{if(!img.complete)await new Promise((resolve,reject)=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',reject,{once:true});});});
+      await image.evaluate(async img=>{
+        await img.decode();
+        // A load event or natural size may precede painting an async JPEG.
+        // Wait a paint boundary before recording the visible evidence.
+        await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+      });
       const record=sectorContextFor(id);
       assert.equal(await image.getAttribute('src'),record.path,id+' must load selected owner original');
       const size=await image.evaluate(img=>({width:img.naturalWidth,height:img.naturalHeight}));
@@ -56,7 +61,12 @@ try{
     const directoryImage=card.locator('.sector-context-image');
     await directoryImage.waitFor({state:'attached',timeout:15000});
     await directoryImage.scrollIntoViewIfNeeded();
-    await directoryImage.evaluate(async img=>{if(!img.complete)await new Promise((resolve,reject)=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',reject,{once:true});});});
+    await directoryImage.evaluate(async img=>{
+        await img.decode();
+        // A load event or natural size may precede painting an async JPEG.
+        // Wait a paint boundary before recording the visible evidence.
+        await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+      });
     assert.equal(await directoryImage.getAttribute('src'),sectorContextFor('jaune-sector-2').path);
     assert.equal(await page.locator('[data-sector-card] .sector-context-photo').count(),48);
     assert.ok(await card.locator('.sector-context-detail .sector-source-map').count(),'The pre-existing 310px Jaune 2 crop is preserved');
