@@ -11,6 +11,16 @@ assert.equal(original.length,203,"The archived guide must retain 200 numbered an
 assert.equal(recovered.length,203,"Every original quest must be restored exactly once");
 // AT-281: verified side-mission route addenda supplement, never overwrite, archived 203 quest records.
 const forQuest=n=>recovered.find(m=>Number(m[1])===n)?.[4]||"";
+// The two salon missions keep matching reward, route and battle guidance.
+const flabebe=forQuest(12),floette=forQuest(51);
+assert.match(flabebe,/₽1,500, Rare Candy ×1 and eight hair colours/);
+assert.match(flabebe,/show them to her one at a time in the same visit/);
+assert.ok(flabebe.includes('href="hair-beauty-guide.html#flabebe-route"'));
+assert.ok(read("hair-beauty-guide.html").includes('id="flabebe-route"'));
+assert.match(floette,/₽2,500, Rare Candy ×2 and nine pastel hair colours/);
+assert.match(floette,/If the marker is missing,[^<]+a few in-game days/);
+assert.ok(floette.includes('href="type-chart.html#type-fairy"'));
+assert.ok(read("type-chart.html").includes('id="type-fairy"'));
 const h03=forQuest(40),h04=forQuest(45);
 assert.match(h03,/data-verified-holovator="H-03"/);
 assert.match(h03,/Vert Pokémon Center/);
