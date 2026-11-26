@@ -205,6 +205,183 @@ try{
     assert.equal(new URL(page.url()).searchParams.get("source"),"selection-sync");
     await unchanged();
 
+    // Original map controls remain authoritative while optional evidence is
+    // pending. The latest history entry must also supersede any queued click.
+    for(const action of ["clear","switch","clear-back"]){
+      let release;
+      const evidenceReady=new Promise(resolve=>{release=resolve;});
+      const holdEvidence=async route=>{await evidenceReady;await route.continue();};
+      await page.route("**/atlas-area-evidence.json",holdEvidence);
+      const source="at339-pending-"+action,initial=base+"/maps.html?source="+source+"&keep=original&area=wz-20#wild-zone-20";
+      const cleared=base+"/maps.html?source="+source+"&keep=original";
+      const switched=base+"/maps.html?source="+source+"&keep=original&area=wz-01#wild-zone-1";
+      const changed=action==="switch"?switched:cleared;
+      try{
+        await page.goto(initial,{waitUntil:"load"});
+        await page.waitForFunction(()=>document.getElementById("mapZoomImage")?.dataset.selectedZone==="20");
+        assert.equal(await page.locator('[data-area-panel]').count(),0,"The optional area module is still loading");
+        if(action==="switch")await page.locator('[data-map-zone-button="1"]').click();
+        else await page.locator("#mapSearch").fill("not-a-real-pending-species");
+        await page.waitForURL(changed);
+        if(action==="clear-back"){
+          await page.goBack();await page.waitForURL(initial);
+          await page.waitForFunction(()=>document.getElementById("mapZoomImage")?.dataset.selectedZone==="20");
+        }
+        release();const host=await panel();
+        const selected=action==="clear-back"?"20":action==="switch"?"1":"";
+        await page.waitForFunction(selected=>document.getElementById("mapZoomImage")?.dataset.selectedZone===selected,selected);
+        assert.equal(page.url(),action==="clear-back"?initial:changed,"Shared initialization must preserve the latest original-control or history intent");
+        assert.equal(await page.locator('[data-map-zone-detail]:visible').count(),selected?1:0);
+        if(selected)assert.equal(await host.locator('[data-area-id="wz-'+selected.padStart(2,"0")+'"]').getAttribute("aria-pressed"),"true");
+        else assert.equal(await host.locator('[data-area-results] [aria-pressed="true"]').count(),0);
+        // Exact one-step traversal catches duplicate entries without depending
+        // on the browser's finite retained-history length in this long suite.
+        if(action!=="clear-back"){
+          await page.goBack();await page.waitForURL(initial);
+          await page.waitForFunction(()=>document.getElementById("mapZoomImage")?.dataset.selectedZone==="20");
+        }
+        await page.goForward();await page.waitForURL(changed);
+        await page.waitForFunction(selected=>document.getElementById("mapZoomImage")?.dataset.selectedZone===selected,action==="switch"?"1":"");
+        assert.equal(new URL(page.url()).searchParams.get("keep"),"original");
+        await unchanged();
+      }finally{release();await page.unroute("**/atlas-area-evidence.json",holdEvidence);}
+    }
+
+    // Main-map choices replace the current URL immediately. On late startup,
+    // retain a newer original choice, reconcile only incompatible shared filters,
+    // and let a subsequent Back to an empty selection take precedence.
+    for(const action of ["empty","filtered","back"]){
+      let release;
+      const evidenceReady=new Promise(resolve=>{release=resolve;});
+      const holdEvidence=async route=>{await evidenceReady;await route.continue();};
+      await page.route("**/atlas-area-evidence.json",holdEvidence);
+      const source="pending-main-"+action;
+      const empty=base+"/index.html?source="+source+"&keep=1#maps";
+      const initial=action==="empty"?empty:base+"/index.html?source="+source+"&keep=1&area=wz-02"+(action==="filtered"?"&habitat_q=Wild%20Zone%202&habitat_district=Centrico&encounter=trade":"")+"#maps";
+      try{
+        await page.goto(initial,{waitUntil:"load"});
+        assert.equal(await page.locator('[data-area-panel]').count(),0);
+        if(action==="back")await page.evaluate(({empty,initial})=>{
+          history.replaceState(history.state,"",empty);
+          history.pushState(history.state,"",initial);
+        },{empty,initial});
+        await page.locator('#mapZones [data-select-zone="3"]').click();
+        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail h3")?.textContent==="Wild Zone 03");
+        assert.equal(new URL(page.url()).searchParams.get("area"),"wz-03","Original main-map choice updates its shared URL before evidence arrives");
+        assert.equal(new URL(page.url()).hash,"#maps");
+        assert.equal(await page.locator('[data-area-panel]').count(),0);
+        if(action==="back"){
+          await page.goBack();await page.waitForURL(empty);
+        }
+        release();const host=await panel();
+        if(action==="back"){
+          assert.equal(page.url(),empty,"Late initialization must not replay a choice superseded by Back");
+          assert.equal(await page.locator("#mapZoneDetail h3").count(),0);
+          assert.equal(await host.locator('[data-area-results] [aria-pressed="true"]').count(),0);
+          await page.goForward();await page.waitForURL(url=>url.searchParams.get("area")==="wz-03");
+        }
+        assert.equal(await page.locator("#mapZoneDetail h3").textContent(),"Wild Zone 03");
+        assert.equal(await host.locator('[data-area-results] [data-area-id="wz-03"]').getAttribute("aria-pressed"),"true");
+        assert.deepEqual(await areaIds(),["wz-03"]);
+        const final=new URL(page.url());
+        assert.equal(final.searchParams.get("area"),"wz-03");
+        assert.equal(final.searchParams.get("source"),source);assert.equal(final.searchParams.get("keep"),"1");
+        assert.equal(final.hash,"#maps");
+        for(const key of ["habitat_q","habitat_district","encounter"])assert.equal(final.searchParams.has(key),false,"Late reconciliation removes the incompatible "+key+" filter");
+        await unchanged();
+      }finally{release();await page.unroute("**/atlas-area-evidence.json",holdEvidence);}
+    }
+
+    // Genuine sector-directory anchors keep a matching shared query and their
+    // original fragment in one history entry, even before the optional model.
+    for(const action of ["zone","zone-back","sector"]){
+      let release;
+      const evidenceReady=new Promise(resolve=>{release=resolve;});
+      const holdEvidence=async route=>{await evidenceReady;await route.continue();};
+      await page.route("**/atlas-area-evidence.json",holdEvidence);
+      const source="pending-sectors-"+action,area=action==="sector"?"vert-sector-8":"wz-03";
+      const fragment=action==="sector"?"#sector-vert-sector-8":"#wildzone-3";
+      const initial=base+"/sector-maps.html?source="+source+"&keep=1&area=wz-02#wildzone-2";
+      const changed=base+"/sector-maps.html?source="+source+"&keep=1&area="+area+fragment;
+      try{
+        await page.goto(initial,{waitUntil:"load"});
+        assert.equal(await page.locator('[data-area-panel]').count(),0);
+        await page.locator('a[href="'+fragment+'"]').first().click();
+        await page.waitForURL(changed);
+        assert.equal(await page.locator(fragment+(action==="sector"?" details":" details.zone-records")).first().evaluate(node=>node.open),true,"The original target disclosure opens before evidence arrives");
+        if(action==="zone-back"){
+          await page.goBack();await page.waitForURL(initial);
+          await page.waitForFunction(()=>document.querySelector("#wildzone-2 details.zone-records")?.open);
+        }
+        release();const host=await panel();
+        const selected=action==="zone-back"?"wz-02":area;
+        assert.equal(page.url(),action==="zone-back"?initial:changed);
+        assert.equal(await host.locator('[data-area-results] [data-area-id="'+selected+'"]').getAttribute("aria-pressed"),"true");
+        assert.deepEqual(await areaIds(),[selected]);
+        if(action!=="zone-back"){
+          await page.goBack();await page.waitForURL(initial);
+          await page.waitForFunction(()=>document.querySelector("#wildzone-2 details.zone-records")?.open);
+          assert.equal(await host.locator('[data-area-results] [data-area-id="wz-02"]').getAttribute("aria-pressed"),"true");
+        }
+        await page.goForward();await page.waitForURL(changed);
+        assert.equal(await host.locator('[data-area-results] [data-area-id="'+area+'"]').getAttribute("aria-pressed"),"true");
+        assert.equal(await page.locator(fragment+(action==="sector"?" details":" details.zone-records")).first().evaluate(node=>node.open),true);
+        assert.equal(new URL(page.url()).searchParams.get("source"),source);assert.equal(new URL(page.url()).searchParams.get("keep"),"1");
+        await unchanged();
+      }finally{release();await page.unroute("**/atlas-area-evidence.json",holdEvidence);}
+    }
+
+    // A newer original Explorer selection must win over the initial URL when
+    // evidence arrives, including a non-area photo/route selection.
+    for(const target of ["wz-03","vert-cyclone","history-empty"]){
+      let release;
+      const evidenceReady=new Promise(resolve=>{release=resolve;});
+      const holdEvidence=async route=>{await evidenceReady;await route.continue();};
+      await page.route("**/atlas-area-evidence.json",holdEvidence);
+      try{
+        await page.goto(base+"/atlas-explorer.html?area=wz-02&source=pending-explorer&collectible=screw%3A29",{waitUntil:"load"});
+        await page.waitForFunction(()=>document.querySelector("#aeSelected > h3")?.textContent==="Wild Zone 02");
+        assert.equal(await page.locator('[data-area-panel]').count(),0);
+        if(target==="history-empty"){
+          // Establish empty and selected entries in the actual browser history
+          // while the optional module is held; no application state is mocked.
+          await page.evaluate(()=>{
+            const url=new URL(location.href);url.searchParams.delete("area");
+            history.replaceState(history.state,"",url.pathname+url.search+url.hash);
+            url.searchParams.set("area","wz-02");
+            history.pushState(history.state,"",url.pathname+url.search+url.hash);
+          });
+        }
+        if(target==="vert-cyclone")await page.locator('#aeFilters [data-kind="holovator"]').click();
+        await page.locator('#aeResults [data-record-id="'+(target==="history-empty"?"wz-03":target)+'"]').click();
+        const title=await page.locator("#aeSelected > h3").textContent();
+        const photo=await page.locator("#aeSelected img").first().elementHandle();
+        assert.ok(photo,"The explicit selection exposes its original photograph before evidence finishes");
+        if(target==="vert-cyclone")await page.locator("#aeNextStep").click();
+        const routeProgress=await page.locator("#aeRouteProgress").textContent();
+        if(target==="history-empty"){
+          await page.goBack();await page.waitForURL(url=>!url.searchParams.has("area"));
+          assert.equal(await page.locator('[data-area-panel]').count(),0);
+        }
+        release();await panel();
+        if(target==="history-empty")await explorerSelection(null);
+        else{
+          assert.equal(await page.locator("#aeSelected > h3").textContent(),title,"Late initialization must not restore the stale URL area");
+          assert.equal(await photo.evaluate(node=>node.isConnected&&node===document.querySelector("#aeSelected img")),true);
+          assert.equal(await page.locator('#aeResults [data-record-id="'+target+'"]').getAttribute("aria-pressed"),"true");
+        }
+        assert.equal(new URL(page.url()).searchParams.get("area"),target==="wz-03"?target:null);
+        assert.equal(new URL(page.url()).searchParams.get("source"),"pending-explorer");
+        assert.equal(new URL(page.url()).searchParams.get("collectible"),"screw:29");
+        assert.equal(await page.locator("#aeRouteProgress").textContent(),routeProgress,"Late initialization retains the independent route step");
+        if(target==="history-empty"){
+          await page.goForward();await page.waitForURL(url=>url.searchParams.get("area")==="wz-02");
+          await explorerSelection("wz-02");
+        }
+        await photo.dispose();await unchanged();
+      }finally{release();await page.unroute("**/atlas-area-evidence.json",holdEvidence);}
+    }
+
     // Hold the optional evidence fetch until the original deep-linked photo is
     // loaded. Shared initialization must retain that exact DOM node, rather
     // than replace it while a reader is viewing or opening the source image.
@@ -329,7 +506,7 @@ try{
     await page.unroute("**/items-data.js");await page.unroute("**/atlas-collectibles-data.json");
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
     assert.deepEqual(errors,[],"No uncaught runtime errors on "+device);
-    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
+    proof.devices.push({device,width,height,surfaces:4,historyAndReload:true,legacyMarkerReload:true,legacyFilterReveal:true,explorerSelectionHistoryParity:true,pendingLegacyIntentPreserved:true,pendingHistorySupersedesIntent:true,pendingExplorerRecordPreserved:true,pendingMainChoiceAndFiltersPreserved:true,pendingSectorAnchorsPreserved:true,routeAndCollectibleStatePreserved:true,sourcePhotoDomPreserved:true,originalProgressBytesPreserved:true,storageWrites:0,sourceFailureFallback:true,syntheticTapAndDrag:true,touchPinchAndRotation:device==="phone",boundaryLayerAndFilterHitGate:true,collectibleClickPriority:true,pageErrors:errors});
     await context.close();
   }
   fs.writeFileSync(output+"/at339-browser-proof.json",JSON.stringify(proof,null,2)+"\n");

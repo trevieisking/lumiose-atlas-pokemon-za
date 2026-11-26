@@ -1,0 +1,36 @@
+name: Validate photo-only GitHub Pages output
+on:
+  pull_request:
+    paths:
+      - _config.yml
+      - '.github/workflows/atlas-pages-archive.yml'
+      - 'tests/verify_pages_archive_exclusion.py'
+      - 'tests/pages_archive_smoke.mjs'
+permissions:
+  contents: read
+jobs:
+  pages-content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Confirm archival media links are not hosted in the Pages preview
+        run: python3 tests/verify_pages_archive_exclusion.py _site
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Chromium smoke dependency
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Check the Pages build on phone and desktop
+        run: node tests/pages_archive_smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atlas-pages-archive-phone-desktop
+          path: test-artifacts/pages-archive/
+          if-no-files-found: ignore
+          retention-days: 10

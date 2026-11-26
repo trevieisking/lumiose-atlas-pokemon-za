@@ -145,15 +145,16 @@
   "numbering_rule": "Guide per-sector IDs, e.g. V05-I01 or V05-S01, cross-reference but do not replace existing item, Screw, A-lead or checkmark IDs.",
   "data_rule": "264 source item records are not 264 fixed pickups. Conditional loot/NPC rewards/random outcomes remain text, never exact stationary map pins without evidence.",
   "non_destructive_release_policy": {
-    "documentation_only_this_revision": true,
-    "site_code_changed": false,
+    "documentation_only_this_revision": false,
+    "site_code_changed": true,
     "player_storage_changed": false,
     "supabase_changed": false,
     "feedback_changed": false,
     "original_workspace_site_changed": false,
     "protected_code_labs_writer_used": false,
     "supabase_private_feature_metadata_update_planned": true,
-    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188."
+    "supabase_scope": "Only owner-only feature planning metadata reconciliation; no schema/player/public feedback changes. Media runtime removal was separate PR188.",
+    "checkpoint_scope": "Manifest85/Ledger93 bounded AT339 runtime candidate; source records, original progress, Workspace and public database contracts remain preserved."
   },
   "phases": [
     {
@@ -5557,6 +5558,8 @@
     "workspace_changed": false,
     "full_scope_signoff": false,
     "approved_full_scope_sha": null,
-    "final_workspace_prompt": null
+    "final_workspace_prompt": null,
+    "integration_main_sha": "d7021a7af3973f18d54d07634e29c23cc78b0560",
+    "archive_exclusion_pr_201": "merged_source_history_and_Pages_exclusions_preserved"
   }
 }

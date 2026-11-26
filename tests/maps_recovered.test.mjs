@@ -113,7 +113,7 @@ const window={location,history:{state:{keep:true},pushState(state,_title,url){
  const u=new URL(url,"https://atlas.example");location.hash=u.hash;
  assert.equal(u.search,"?source=atlas");
 }},addEventListener(name,fn){historyEvents[name]=fn}};
-runInNewContext(script,{document:{querySelectorAll:s=>q[s]||[],getElementById:id=>ids[id]||null},window,Number,String,Math,Map});
+runInNewContext(script,{document:{querySelectorAll:s=>q[s]||[],getElementById:id=>ids[id]||null},window,Number,String,Math,Map,URLSearchParams});
 assert.equal(ids.mapCount.textContent,"20 of 20 Wild Zones listed");
 assert.ok(details.every(d=>d.hidden),"No initial accidental detail choice");
 pins[1].events.click();
@@ -154,4 +154,32 @@ assert.ok(details.every(d=>d.hidden));
 assert.equal(historyCalls.length,calls);
 location.hash="#wild-zone-21";historyEvents.hashchange();
 assert.ok(details.every(d=>d.hidden),"Invalid zone hash must not open a record");
+// Original controls must reconcile an existing shared query before the optional
+// module becomes available (the absent createElement also exercises fallback).
+for(const action of ["clear","switch"]){
+ const pendingPins=mapPins.map((p,i)=>makeNode({mapPin:String(i+1),pinX:p[3],pinY:p[4]}));
+ const pendingButtons=dirButtons.map(p=>makeNode({mapZoneButton:p[1],district:p[2],zoneSearch:p[3]}));
+ const pendingDetails=Array.from({length:20},(_,i)=>makeNode({mapZoneDetail:String(i+1)}));
+ const pendingIds=Object.fromEntries(Object.keys(ids).map(id=>[id,makeNode()]));pendingIds.mapZoomLevel.value="2.5";
+ const pendingQuery={"[data-map-pin]":pendingPins,"[data-map-zone-button]":pendingButtons,
+   "[data-map-zone-detail]":pendingDetails,"[data-district-filter]":names.map(d=>makeNode({districtFilter:d}))};
+ const pendingLocation={pathname:"/maps.html",search:"?source=atlas&keep=original&area=wz-20",hash:"#wild-zone-20"};
+ const pendingHistory=[];
+ const pendingWindow={location:pendingLocation,history:{state:{keep:true},pushState(state,_title,url){
+   assert.deepEqual(state,{keep:true});pendingHistory.push(url);const parsed=new URL(url,"https://atlas.example");
+   Object.assign(pendingLocation,{pathname:parsed.pathname,search:parsed.search,hash:parsed.hash});
+ }},addEventListener(){}};
+ runInNewContext(script,{document:{querySelectorAll:s=>pendingQuery[s]||[],getElementById:id=>pendingIds[id]||null},window:pendingWindow,Number,String,Math,Map,URLSearchParams});
+ assert.equal(pendingIds.mapZoomImage.dataset.selectedZone,"20");
+ if(action==="clear"){
+   pendingIds.mapSearch.value="not-a-real-item-1234";pendingIds.mapSearch.events.input();
+   assert.equal(pendingLocation.search,"?source=atlas&keep=original");assert.equal(pendingLocation.hash,"");
+   assert.equal(pendingIds.mapZoomImage.dataset.selectedZone,"");assert.ok(pendingDetails.every(d=>d.hidden));
+ }else{
+   pendingButtons[0].events.click();
+   assert.equal(pendingLocation.search,"?source=atlas&keep=original&area=wz-01");assert.equal(pendingLocation.hash,"#wild-zone-1");
+   assert.equal(pendingIds.mapZoomImage.dataset.selectedZone,"1");assert.equal(pendingDetails[0].hidden,false);
+ }
+ assert.equal(pendingHistory.length,1,"Legacy intent creates one history entry while the optional module is unavailable");
+}
 console.log("PASS: 20 saved map markers, full source zone details, 264 item entries, 38 Alphas, 25 Screw clues, 25-link menu, offline search and zoom.");

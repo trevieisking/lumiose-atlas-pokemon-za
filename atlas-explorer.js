@@ -39,7 +39,7 @@ let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
 let collectibleUI=null;
-let areaUI=null,syncingArea=false;
+let areaUI=null,syncingArea=false,pendingAreaSelection=null;
 const dimensions=()=>{
   const rect=viewport.getBoundingClientRect();
   return {width:Math.max(1,rect.width),height:Math.max(1,rect.height)};
@@ -274,6 +274,9 @@ function detailsFor(item){
 }
 function selectRecord(item,focus=true){
   if(!item)return;
+  // The initial deep-link render runs before ready. Later original-control
+  // selections are explicit intent and must survive optional evidence loading.
+  if(ready&&!areaUI&&!syncingArea)pendingAreaSelection=item.id;
   // A directory selection should never focus on an invisible map pin.
   const switchFor=layerToggleByKind.get(item.kind);
   if(pinMap.has(item.id)&&switchFor&&!switchFor.checked){
@@ -599,14 +602,18 @@ async function load(){
       // Reuse the collection controller's exact screen-space hit test.
       canSelectBoundary:event=>!collectibleUI?.hasSelectablePointAt?.(event.clientX,event.clientY)
     });
-    const active=recordMap.get(selectedId),selection=areaUI.getSelection();
-    if(!selection.areaId&&!selection.speciesId&&(active?.kind==="zone"||active?.kind==="sector"))areaUI.selectArea(active.id,{history:false,focus:false});
-    else syncSelection({selection});
+    const pending=recordMap.get(pendingAreaSelection);pendingAreaSelection=null;
+    const selection=areaUI.getSelection();
+    if(pending){
+      if(pending.kind==="zone"||pending.kind==="sector")areaUI.selectArea(pending.id,{history:"replace",focus:false});
+      else areaUI.clear({history:"replace"});
+    }else syncSelection({selection});
   }).catch(()=>{
     by("aeAreaPanel").textContent="Area and habitat search could not load. The original place directory, photographs and routes remain available.";
   });
 }
 setupNavigation();
+window.addEventListener("popstate",()=>{if(!areaUI)pendingAreaSelection=null;});
 filters.forEach(b=>b.addEventListener("click",()=>{activeKind=b.dataset.kind||"all";drawList();}));
 layerToggles.forEach(input=>input.addEventListener("change",drawList));
 search.addEventListener("input",drawList);
