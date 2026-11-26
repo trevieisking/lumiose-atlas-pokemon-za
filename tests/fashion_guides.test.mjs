@@ -73,3 +73,11 @@ test("Only fashion pages attach the in-page feedback context listener",()=>{
  assert.match(js,/url\.searchParams\.set\("page", location\.pathname \+ location\.hash\)/);
  assert.doesNotMatch(js,/fetch\s*\(|localStorage|sessionStorage/);
 });
+
+test("Mission 087 gives the conservative salon revisit checkpoint and keeps the quest link",()=>{
+ const mission=hair.match(/<dt><a href="side-missions\.html#quest-87">[\s\S]*?<\/dd>/)?.[0]??"";
+ assert.match(mission,/Side Mission 062/);
+ assert.match(mission,/once Main Mission 30 begins/);
+ assert.doesNotMatch(mission,/Main Mission 26/);
+ assert.match(mission,/Psycho Cut to unlock La Reine, Kabuki and Pharaoh/);
+});
