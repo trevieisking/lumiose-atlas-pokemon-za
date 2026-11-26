@@ -80,8 +80,13 @@ try{
         const viewport=document.getElementById("aeViewport"),rect=viewport.getBoundingClientRect();
         for(let x=750;x<=1150;x+=50)for(let y=750;y<=1150;y+=50){
           const p=svg.createSVGPoint();p.x=x;p.y=y;const q=p.matrixTransform(svg.getScreenCTM());
-          const target=document.elementFromPoint(q.x,q.y);
-          if(q.x>rect.left+15&&q.x<rect.right-70&&q.y>rect.top+15&&q.y<rect.bottom-45&&target&&viewport.contains(target)&&!target.closest("button,a,input,select,textarea"))return{x:q.x,y:q.y};
+          // Mobile Chromium may retarget a touch to a nearby button even when
+          // the exact centre hit is clear. Use a full touch-sized patch.
+          const clear=[-18,0,18].every(dx=>[-18,0,18].every(dy=>{
+            const target=document.elementFromPoint(q.x+dx,q.y+dy);
+            return target&&viewport.contains(target)&&!target.closest("button,a,input,select,textarea");
+          }));
+          if(q.x>rect.left+20&&q.x<rect.right-70&&q.y>rect.top+20&&q.y<rect.bottom-45&&clear)return{x:q.x,y:q.y};
         }
         throw Error("No visible unobstructed point inside the synthetic boundary");
       });
@@ -267,7 +272,7 @@ try{
           history.pushState(history.state,"",initial);
         },{empty,initial});
         await page.locator('#mapZones [data-select-zone="3"]').click();
-        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail h3")?.textContent==="Wild Zone 03");
+        await page.waitForFunction(()=>document.querySelector("#mapZoneDetail .rebuild-zone-detail > h3")?.textContent==="Wild Zone 03");
         assert.equal(new URL(page.url()).searchParams.get("area"),"wz-03","Original main-map choice updates its shared URL before evidence arrives");
         assert.equal(new URL(page.url()).hash,"#maps");
         assert.equal(await page.locator('[data-area-panel]').count(),0);
@@ -277,11 +282,11 @@ try{
         release();const host=await panel();
         if(action==="back"){
           assert.equal(page.url(),empty,"Late initialization must not replay a choice superseded by Back");
-          assert.equal(await page.locator("#mapZoneDetail h3").count(),0);
+          assert.equal(await page.locator("#mapZoneDetail .rebuild-zone-detail > h3").count(),0);
           assert.equal(await host.locator('[data-area-results] [aria-pressed="true"]').count(),0);
           await page.goForward();await page.waitForURL(url=>url.searchParams.get("area")==="wz-03");
         }
-        assert.equal(await page.locator("#mapZoneDetail h3").textContent(),"Wild Zone 03");
+        assert.equal(await page.locator("#mapZoneDetail .rebuild-zone-detail > h3").textContent(),"Wild Zone 03");
         assert.equal(await host.locator('[data-area-results] [data-area-id="wz-03"]').getAttribute("aria-pressed"),"true");
         assert.deepEqual(await areaIds(),["wz-03"]);
         const final=new URL(page.url());
@@ -446,9 +451,15 @@ try{
     assert.match(await page.locator("[data-area-status]").textContent(),/No verified boundary/i);
     await unchanged();await page.unroute("**/atlas-area-evidence.json");
 
+    async function hideUnrelatedFixturePins(){
+      for(const layer of ["zone","holovator","ladder","landmark","sector-label"]){
+        const toggle=page.locator('#aeLayers [data-layer="'+layer+'"]');
+        await toggle.uncheck();
+      }
+    }
     // Verify the actual overlay and tap/pan behaviour with an explicitly synthetic polygon.
     await page.route("**/atlas-area-evidence.json",route=>route.fulfill({status:200,contentType:"application/json",body:JSON.stringify(fixture)}));
-    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});await panel();
+    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});await panel();await hideUnrelatedFixturePins();
     await page.locator('[data-area-boundary="wz-01"]').waitFor({state:"attached"});
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();
     const point=await unobstructedFixturePoint();
@@ -462,26 +473,33 @@ try{
     await drag(dragStart);
     assert.equal(new URL(page.url()).searchParams.get("area"),null,"Dragging an overlay must not select a boundary");
     if(device==="phone"){
+      await page.locator("#aeViewport").scrollIntoViewIfNeeded();
       const touch=await page.locator("#aeViewport").evaluate(node=>{
         const r=node.getBoundingClientRect();
-        for(const fraction of [.6,.7,.45,.35]){
-          const y=r.top+r.height*fraction,x1=r.left+r.width*.3,x2=r.left+r.width*.7;
-          if([x1,x2].every(x=>{const target=document.elementFromPoint(x,y);return target&&node.contains(target)&&!target.closest("button,a,input,select");}))return{x1,x2,y};
+        const left=Math.max(0,r.left)+34,right=Math.min(innerWidth,r.right)-38;
+        const top=Math.max(0,r.top)+46,bottom=Math.min(innerHeight,r.bottom)-48;
+        for(let y=top;y<=bottom;y+=12){
+          const free=[];
+          for(let x=left;x<=right;x+=12){
+            const hit=document.elementFromPoint(x,y);
+            if(hit&&node.contains(hit)&&!hit.closest("button,a,input,select,textarea"))free.push(x);
+          }
+          if(free.length>1&&free.at(-1)-free[0]>=150)return{x1:free[0],x2:free.at(-1),y};
         }
-        throw Error("No unobstructed real touch gesture start");
+        throw Error("No separated unobstructed and visible touch gesture starts");
       });
       const beforeZoom=await page.locator("#aeZoomLabel").textContent();
       const session=await context.newCDPSession(page),p=(x,y,id)=>({x:Math.round(x),y:Math.round(y),id});
       try{
         await session.send("Input.dispatchTouchEvent",{type:"touchStart",touchPoints:[p(touch.x1,touch.y,1),p(touch.x2,touch.y,2)]});
-        await session.send("Input.dispatchTouchEvent",{type:"touchMove",touchPoints:[p(touch.x1-20,touch.y-20,1),p(touch.x2+20,touch.y+20,2)]});
+        await session.send("Input.dispatchTouchEvent",{type:"touchMove",touchPoints:[p(touch.x1-22,touch.y-30,1),p(touch.x2+28,touch.y+40,2)]});
         await session.send("Input.dispatchTouchEvent",{type:"touchEnd",touchPoints:[]});
       }finally{await session.detach();}
       await page.waitForFunction(before=>document.getElementById("aeZoomLabel").textContent!==before,beforeZoom);
       assert.equal(new URL(page.url()).searchParams.get("area"),null,"A two-finger pinch/rotation must not select a boundary");
     }
     // Both paint and hit testing must respect the visible layer and filters.
-    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});const fixturePanel=await panel();
+    await page.goto(base+"/atlas-explorer.html?source=fixture",{waitUntil:"load"});const fixturePanel=await panel();await hideUnrelatedFixturePins();
     await fixturePanel.locator("[data-area-boundaries]").uncheck();
     assert.equal(await page.locator('[data-area-boundary="wz-01"]').isVisible(),false);
     await page.locator("#aeViewport").scrollIntoViewIfNeeded();await tap(await unobstructedFixturePoint());
