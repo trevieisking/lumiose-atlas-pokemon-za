@@ -105,6 +105,15 @@ assert.equal((html.match(/class="alpha-zone-card"/g)||[]).length,20);
 assert.ok(html.includes('id="alpha-dratini-rooftops"'), "Existing Dratini retained");
 assert.ok(html.includes("No new Alpha pins, estimated coordinates or invented access points"));
 
+
+/* Follow-on international source review: one page, one new explanatory section. */
+const alphaBenefits=html.match(/<section class="panel" id="alpha-benefits">([\s\S]*?)<\/section>/)?.[1];
+assert.ok(alphaBenefits,"Verified Alpha trait guide must exist");
+for(const phrase of ["three perfect IVs","Individual Values (IVs) at 31","252 HP EVs","mastered as a Plus Move","Exp. Candy","Seeds of Mastery","not","random city Alpha"])
+  assert.ok(alphaBenefits.includes(phrase),"Alpha trait source qualification absent: "+phrase);
+assert.ok(html.includes('href="#alpha-benefits"'),"Alpha traits should be discoverable from hero");
+assert.equal((html.match(/id="alpha-benefits"/g)||[]).length,1);
+
 const cityData=JSON.parse(read('atlas-area-evidence.json'));
 const speciesRows=cityData.areas.flatMap(a=>a.encounters.filter(r=>r.species==='Dratini').map(r=>({...r,area:a.area_id})));
 assert.equal(speciesRows.length,6);
