@@ -1,5 +1,13 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+## AT-338 — Item and Colorful Screw layers
+
+**26 November 2026 · Manifest 83 / Ledger 91.** This bounded implementation fulfils the AT-333 layer and directory design. It reuses all **264 item records and 100 Screw clues**, their original IDs and the existing progress store. Separate switches start off; the directory remains searchable. Eligible dots use a 7px visual with a 44px keyboard target and screen-space selection, retain native coordinates, and offer a complete overlap chooser. Written directions and still photographs remain supported.
+
+**Candidate under validation; not yet a live-release claim.** Production contains **zero new verified collectible placements**. Missing or unverified identity, native XY, map scene, floor, route or provenance keeps a record in the directory only. Rewards and random outcomes never become fixed pickup pins. Test-only intercepted data exercises 364 eligible points without entering production. [Scope, validation and rollback](docs/qa/ATLAS_AT338_COLLECTIBLE_LAYERS.md).
+
+All existing map/route data, major markers, map photographs, guide pages and player progress are preserved. The layer adapter reads the original checklist values and makes no storage writes. Videos remain paused; original Workspace is unchanged. Required boundary/encounter evidence, shared habitat interactions and full AT-325 G5 release validation remain open. No approved full-upgrade SHA or executable Workspace prompt is created by this bounded release.
+
 ## AT-337 — simple completion plan and current route reconciliation
 
 **26 November 2026 · Manifest 82 / Ledger 90.** Read [FINAL_WORKSPACE_PLAN.md](FINAL_WORKSPACE_PLAN.md) for the five-action completion plan. Its [coverage map](docs/qa/ATLAS_FINAL_PLAN_COVERAGE.json) assigns all 67 recovered requirements without dropping sources or adding new release gates. The detailed AT-336 source archive remains intact.

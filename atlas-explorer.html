@@ -81,12 +81,17 @@
     <label><input type="checkbox" data-layer="landmark" checked> Landmarks</label>
     <label><input type="checkbox" data-layer="sector-label" checked> Sector names</label>
     <label><input type="checkbox" data-layer="scaffold" disabled> Scaffolding <small id="aeScaffoldNote">(no verified map pins yet)</small></label>
+    <label><input type="checkbox" data-layer="item"> Items</label>
+    <label><input type="checkbox" data-layer="screw"> Colorful Screws</label>
     <span class="ae-layer-hint">Show several layers together; search results stay available even when a pin layer is hidden.</span>
+    <span class="ae-layer-hint" id="aeCollectibleStatus" role="status" aria-live="polite">Loading item and Screw locations…</span>
+    <a class="ae-collection-guide" href="items.html">Open the original item and Screw checklists</a>
   </fieldset>
   <div class="ae-map-shell">
     <div class="ae-map-viewport" id="aeViewport" tabindex="0" role="region" aria-label="Interactive rotating Lumiose map: drag to pan, wheel or pinch to zoom, two fingers to rotate, arrow keys to pan, square brackets to rotate and Home to reset north">
       <div class="ae-stage" id="aeStage">
         <img id="aeMapImage" src="maps/lumiose-game-map.jpg" width="1920" height="1920" alt="Original overhead Lumiose City in-game overview, with original Wild Zones, roads, plazas and waterways" draggable="false">
+        <div class="ae-collectible-pins" id="aeCollectiblePins"></div>
         <div class="ae-map-pins" id="aeMapPins"></div>
       </div>
       <div class="ae-sector-context" id="aeSectorContext" role="status" aria-live="polite" aria-atomic="true" hidden>
@@ -103,6 +108,11 @@
     <span id="aePositionReadout">Original map · north up</span>
     <span>Not live Switch tracking · all city pixels are from the existing 1920 × 1920 map</span>
   </div>
+  <section class="ae-collectible-chooser" id="aeCollectibleChooser" aria-label="Choose an overlapping collectible" hidden>
+    <div class="ae-collectible-chooser-heading"><h3 id="aeCollectibleChooserTitle">Choose a nearby item or Screw</h3><button type="button" id="aeCollectibleClose">Close choices</button></div>
+    <p>These locations share the same small area. Choose the matching record and floor.</p>
+    <div id="aeCollectibleChooserOptions"></div>
+  </section>
   <section class="ae-coverage-panel" aria-labelledby="aeCoverageTitle">
   <h3 id="aeCoverageTitle">Open every part of Lumiose</h3>
   <p class="ae-coverage-intro">Choose any square on this <strong>complete original city map</strong> to enlarge that area above, or choose a district or one of all 48 named sectors. You can then drag, pinch, rotate and zoom around every street. The squares are navigation regions, <strong>not</strong> unverified sector borders or item locations.</p>
@@ -131,6 +141,8 @@
     <span><b class="ae-symbol ae-symbol-scaffold">▤</b> Scaffolding (awaiting evidence)</span>
     <span><b class="ae-symbol ae-symbol-landmark">◆</b> Landmark</span>
     <span><b class="ae-symbol ae-symbol-sector">48</b> Sector directory only</span>
+    <span><i class="ae-collectible-dot" data-collectible-kind="item" aria-hidden="true"></i> Item</span>
+    <span><i class="ae-collectible-dot" data-collectible-kind="screw" aria-hidden="true"></i> Colorful Screw</span>
   </div>
 </section>
 
@@ -153,6 +165,19 @@
   <section class="ae-selected" id="aeSelected" aria-label="Selected location and its evidence">
     <h3>Select a map pin or place</h3><p>Tap a marker to see original pictures, local directions and whether a route has actually been checked.</p>
   </section>
+  <details class="ae-collectible-directory" id="aeCollectibleDirectory">
+    <summary>Find items and Colorful Screws</summary>
+    <p>Browse the original item records and Screw clues. Map switches only control verified dots; your checklists stay unchanged.</p>
+    <label for="aeCollectibleSearch">Search items, numbers or location clues</label>
+    <input id="aeCollectibleSearch" type="search" placeholder="Try Leaf Stone, 01-04 or Café…" autocomplete="off">
+    <label for="aeCollectibleKind">Collection</label>
+    <select id="aeCollectibleKind"><option value="all">All collectibles</option><option value="item">Items</option><option value="screw">Colorful Screws</option></select>
+    <p id="aeCollectibleCount" role="status" aria-live="polite"></p>
+    <div id="aeCollectibleResults" class="ae-collectible-results" role="group" aria-label="Matching items and Screw clues"></div>
+    <p id="aeCollectibleEmpty" hidden>No matching records. Try another name, number or landmark.</p>
+    <section id="aeCollectibleDetail" class="ae-collectible-detail" tabindex="-1" aria-label="Selected item or Screw" aria-live="polite"><h3>Select an item or Screw</h3><p>Open its original clue and checklist without changing saved progress.</p></section>
+    <button type="button" id="aeCollectibleClear" hidden>Clear item selection</button>
+  </details>
 </aside>
 </div>
 

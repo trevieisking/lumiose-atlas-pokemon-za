@@ -51,6 +51,39 @@
 .ae-pin[data-kind="landmark"]{background:#6f478d;color:#fff}
 .ae-pin:hover,.ae-pin:focus-visible,.ae-pin[aria-pressed="true"]{z-index:4;outline:4px solid #fef2a8;border-color:#583f8d}
 .ae-pin[hidden]{display:none}
+.ae-collection-guide{font-size:12px;color:#543193;font-weight:750}
+.ae-collectible-pins{position:absolute;inset:0;pointer-events:none}
+.ae-collectible-pin{position:absolute;z-index:1;display:grid;place-items:center;width:44px;height:44px;margin:0;padding:0;border:0;background:transparent;pointer-events:none;transform:translate(-50%,-50%) scale(var(--inverse-zoom,1)) rotate(var(--counter-rotation,0deg));outline:0}
+.ae-collectible-pin[hidden]{display:none}
+.ae-collectible-dot{display:inline-block;width:7px;height:7px;flex:none;border:1px solid #fff;border-radius:50%;box-sizing:border-box;background:#145caa}
+.ae-collectible-dot[data-collectible-kind="screw"]{background:#a12789}
+.ae-collectible-pin:focus-visible .ae-collectible-dot,.ae-collectible-pin[aria-pressed="true"] .ae-collectible-dot{outline:2px solid #1d163b;outline-offset:0}
+.ae-collectible-chooser{padding:14px;background:#fff9e7;border-top:1px solid #d8bc76;border-bottom:1px solid #d8bc76}
+.ae-collectible-chooser[hidden]{display:none}
+.ae-collectible-chooser-heading{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.ae-collectible-chooser h3{font-size:16px;margin:0;color:#33233e}
+.ae-collectible-chooser p{font-size:12px;color:#51465e;line-height:1.5}
+#aeCollectibleChooserOptions{display:grid;gap:6px;max-height:260px;overflow:auto}
+.ae-collectible-chooser button,.ae-collectible-directory button{min-height:44px;border:1px solid #cfc2df;border-radius:9px;padding:9px 11px;background:#fff;color:#392751;font-size:12px;line-height:1.45;text-align:left;overflow-wrap:anywhere}
+.ae-collectible-chooser button:focus-visible,.ae-collectible-directory button:focus-visible,.ae-collectible-directory summary:focus-visible,.ae-collectible-directory select:focus-visible{outline:3px solid #a97917;outline-offset:2px}
+.ae-collectible-directory{border-top:1px solid #d9d0e5;padding:14px;background:#fff}
+.ae-collectible-directory summary{font-size:15px;line-height:1.5;font-weight:800;color:#493165;cursor:pointer;min-height:44px}
+.ae-collectible-directory p{font-size:12px;line-height:1.6;color:#514760}
+.ae-collectible-directory label{display:block;font-size:12px;font-weight:750;color:#41324e;margin:10px 0 5px}
+.ae-collectible-directory input,.ae-collectible-directory select{display:block;width:100%;margin:0;padding:11px;border:1px solid #bfb0ce;border-radius:8px;background:#fff;color:#30213f;font-size:14px;box-sizing:border-box}
+.ae-collectible-results{display:grid;gap:6px;max-height:260px;overflow:auto;scrollbar-color:#8b76a6 #f4f0f8}
+.ae-collectible-results button[hidden]{display:none}
+.ae-collectible-results button[aria-pressed="true"]{border-color:#6f4b96;background:#f5effb}
+.ae-collectible-results strong,.ae-collectible-results span,.ae-collectible-results small{display:block}
+.ae-collectible-results span,.ae-collectible-results small{font-size:11px;color:#5b4b69;margin-top:2px}
+.ae-collectible-detail{border-top:1px solid #e4dceb;margin-top:14px;padding-top:12px;overflow-wrap:anywhere}
+.ae-collectible-detail:focus-visible{outline:3px solid #a97917;outline-offset:3px}
+.ae-collectible-detail h3{font-size:16px;line-height:1.4;color:#392450}
+.ae-collectible-detail a{display:block;color:#543193;font-size:12px;font-weight:750;margin:10px 0;overflow-wrap:anywhere}
+.ae-collectible-detail li{font-size:12px;line-height:1.6;color:#514760;margin:6px 0}
+.ae-collectible-detail .ae-collectible-progress{font-weight:750;color:#443357}
+.ae-collectible-detail .ae-collectible-evidence{background:#f6f1fb;border-radius:8px;padding:8px}
+#aeCollectibleClear{margin-top:10px}
 .ae-rose{position:absolute;top:12px;right:12px;display:grid;place-items:center;background:#ffffffed;color:#34294a;border:2px solid #cdb16d;box-shadow:0 3px 14px #17294650;border-radius:50%;width:64px;height:64px;padding:0;cursor:pointer}
 .ae-rose:hover{background:#fff3d8;border-color:#8b643d}
 .ae-rose:focus-visible{outline:3px solid #e5a83e;outline-offset:3px}
