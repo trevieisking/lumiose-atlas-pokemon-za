@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "checkpoint": "AT-342 visible sector framing and current-plan reconciliation",
+  "created_at_utc": "2026-11-26T14:36:01.160859+00:00",
+  "reviewed_local_head": "cf2c7735a48e9e9edba585da59190507931f7081",
+  "reviewed_tree": "b25761ed8552159dc294142c738166bd2650da93",
+  "published_equivalent_code_commit": "432e8aa5fafa8fdb4aa3a91284f4cad101ad11ee",
+  "base_commit": "7132bcf0f1d0e96c013ff79f79a6c00b5c0b3d6b",
+  "branch": "review/atlas-visible-area-frame-20261126",
+  "scope": [
+    "Clear the selected-sector card and bottom guidance while framing reviewed outlines",
+    "Retain zero-inset zone framing, camera limits, rotation and source coordinates",
+    "Correct three remaining source-map descriptions with strict two-card hash amendments",
+    "Run the frozen eleven-outline replay without writing candidate data",
+    "Correct active inventory pointer and targeted Dratini status while retaining broader city Alpha obligation"
+  ],
+  "validation": {
+    "node_tests": {
+      "passed": 155,
+      "failed": 0,
+      "skipped": 0,
+      "test_files": 42
+    },
+    "default_framing_cases": 288,
+    "sector_inset_cases": 960,
+    "sector_count": 48,
+    "inset_configurations": 4,
+    "rotation_values": 5,
+    "static": {
+      "sections": 17,
+      "page_links": 647,
+      "image_script_references": 1431,
+      "captured_resources": 578,
+      "result": "PASS"
+    },
+    "owner_crop_hash_checks": 8,
+    "sector_tables": 45,
+    "source_walking_rows": 484,
+    "ui_candidate_replay": {
+      "result": "PASS",
+      "count": 11,
+      "vertices": 832,
+      "frozen_native_checks": 43,
+      "max_error_px": 2.0984617749247665
+    }
+  },
+  "preservation": {
+    "protected_files": {
+      "maps/lumiose-game-map.jpg": {
+        "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+        "bytes": 411683,
+        "byte_identical_to_base": true
+      },
+      "atlas-explorer-data.json": {
+        "sha256": "21b1b37838890442855be2337acfeeca4a8225e139f4e7d92cfe5f9cc2d8869f",
+        "bytes": 201031,
+        "byte_identical_to_base": true
+      },
+      "atlas-area-evidence.json": {
+        "sha256": "e05924dd40df6f3cfb334ee91187547f5430c55d204c7bf0e417f279094ece92",
+        "bytes": 1429344,
+        "byte_identical_to_base": true
+      },
+      "items-data.js": {
+        "sha256": "9ea02b50d6a26a95ebdd221b6e45802bf9591ad84d8284c99e99add05d7bbddf",
+        "bytes": 103398,
+        "byte_identical_to_base": true
+      },
+      "docs/consolidation/2026-11-26/requirements.json": {
+        "sha256": "329d12c1f525bd949e7200af1455763efb1a3c2dc6d7ed5fd1b24436eb9d1a3a",
+        "bytes": 59243,
+        "byte_identical_to_base": true
+      }
+    },
+    "original_requirement_count": 67,
+    "tracked_image_blobs_unchanged": 899,
+    "historical_and_acceptance_subtrees_checked": 40,
+    "plan_validation_receipt_sha256": "5f63eb869814bf576da98e120cbd83eaaebc2be5de588ba90ad28a7ff630a5f4",
+    "release_gate_and_workspace_statuses_unchanged": true
+  },
+  "independent_review": {
+    "result": "No concrete regression found",
+    "zero_insets": "Same previous zoom and pan expressions",
+    "camera": "Targets available rectangle before one existing constraint call",
+    "timing": "Selection populates visible card synchronously before measuring",
+    "browser_assertion": "Actual projected outline plus stroke must clear card, guidance and horizontal edges"
+  },
+  "limits": [
+    "Local tests and code review do not replace exact combined-head browser CI and screenshots",
+    "Existing7132 overlap-chooser wait failure still requires evidence-based diagnosis",
+    "No PR204/main merge, Supabase write or original Workspace publication by this proposal",
+    "All67 historical requirements retain their own dispositions; broader required guide and city Alpha work is not certified complete"
+  ]
+}
