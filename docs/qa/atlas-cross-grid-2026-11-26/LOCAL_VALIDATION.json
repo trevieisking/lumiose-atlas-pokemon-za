@@ -1,0 +1,43 @@
+{
+  "id": "ATLAS-CROSS-GRID-LOCAL-VALIDATION",
+  "checked_at": "2026-11-26T19:57:03Z",
+  "status": "PASS",
+  "runtime_changes_uncommitted_at_check": true,
+  "unit": {
+    "tests": 134,
+    "pass": 134,
+    "fail": 0,
+    "scope": "All Node test files named in the atlas-unit workflow job, including10native-grid and44Explorer tests."
+  },
+  "static": {
+    "sections": 17,
+    "page_links": 691,
+    "image_script_references": 1431,
+    "captured_resources": 578,
+    "status": "PASS"
+  },
+  "archive": {
+    "file_hash_checks": 60,
+    "original_sources": 26,
+    "historical_packet_files": 30,
+    "preserved_full_frame_versions": 4,
+    "sector_ids": 48,
+    "status": "PASS"
+  },
+  "managed_preview": {
+    "method": "Sites managed static preview with CUA; no separate local browser automation server.",
+    "browser": "Chrome desktop",
+    "observations": [
+      "Grid remains off by default.",
+      "Keyboard Go to square I9 resolves to50%east50%south at4.50x.",
+      "Screen-space labels remain sharp; selectedcell shows ten subdivisions.",
+      "45degree rotation preserves native alignment.",
+      "Clipped R18 displays21%east18%south and a visible explicit edge target.",
+      "Bottom/east extension is dashed and explained.",
+      "Compass resets north; edge-target status changes to Centre readout resumed.",
+      "I9 navigation remains functional after compass reset."
+    ],
+    "automated_mobile_evidence": "pending exact-head GitHub CI"
+  },
+  "whitespace": "PASS"
+}

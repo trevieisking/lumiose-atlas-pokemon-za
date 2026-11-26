@@ -12,6 +12,81 @@ const root=path.resolve(import.meta.dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=JSON.parse(read("atlas-explorer-data.json"));
 const near=(a,b,tolerance=1e-5)=>assert.ok(Math.abs(a-b)<tolerance,String(a)+" != "+String(b));
+// Independently clip the four rendered map corners to the viewport. A rotated
+// bounding-box intersection is insufficient: its empty corners caused the bug.
+function visibleMapArea(view,viewport){
+  let polygon=[[0,0],[MAP_SIZE,0],[MAP_SIZE,MAP_SIZE],[0,MAP_SIZE]]
+    .map(xy=>project(xy,view,viewport));
+  for(const [axis,boundary,minimum] of [['x',0,true],['x',viewport.width,false],['y',0,true],['y',viewport.height,false]]){
+    const clipped=[];
+    for(let i=0;i<polygon.length;i++){
+      const a=polygon[i],b=polygon[(i+1)%polygon.length];
+      const insideA=minimum?a[axis]>=boundary:a[axis]<=boundary;
+      const insideB=minimum?b[axis]>=boundary:b[axis]<=boundary;
+      if(insideA)clipped.push(a);
+      if(insideA!==insideB){
+        const t=(boundary-a[axis])/(b[axis]-a[axis]);
+        clipped.push({x:a.x+t*(b.x-a.x),y:a.y+t*(b.y-a.y)});
+      }
+    }
+    polygon=clipped;
+  }
+  return Math.abs(polygon.reduce((sum,p,i)=>{
+    const q=polygon[(i+1)%polygon.length];return sum+p.x*q.y-q.x*p.y;
+  },0))/2;
+}
+test('rotated extreme pans retain actual map pixels instead of an empty bounding-box corner',()=>{
+  for(const viewport of [{width:343,height:360},{width:393,height:478},{width:1100,height:650}])
+  for(const rotation of [0,15,30,45,60,89,90,120,135,180,225,270,315,359])
+  for(const zoom of [.75,1,3,6])
+  for(const [panX,panY] of [[1e6,1e6],[1e6,-1e6],[-1e6,1e6],[-1e6,-1e6],[1e6,0],[-1e6,0],[0,1e6],[0,-1e6]]){
+    const view=constrain({zoom,rotation,panX,panY},viewport);
+    assert.ok(visibleMapArea(view,viewport)>1,
+      'The real map must remain visible: '+JSON.stringify({viewport,view}));
+    const repeated=constrain(view,viewport);
+    near(repeated.panX,view.panX);near(repeated.panY,view.panY);
+    assert.ok(Object.values(view).every(Number.isFinite));
+  }
+});
+test('cardinal-angle pan limits preserve the existing phone and desktop behavior',()=>{
+  const cases=[
+    {viewport:{width:343,height:360},zoom:.75,maxX:79.4075,maxY:70.9075},
+    {viewport:{width:343,height:360},zoom:6,maxX:925.76,maxY:917.26},
+    {viewport:{width:1100,height:650},zoom:.75,maxX:0,maxY:34.125},
+    {viewport:{width:1100,height:650},zoom:6,maxX:1413,maxY:1638}
+  ];
+  for(const {viewport,zoom,maxX,maxY} of cases)for(const rotation of [0,90,180,270])
+  for(const signX of [-1,1])for(const signY of [-1,1]){
+    const view=constrain({zoom,rotation,panX:signX*1e6,panY:signY*1e6},viewport);
+    near(view.panX,signX*maxX);near(view.panY,signY*maxY);
+    assert.equal(view.zoom,zoom);assert.equal(view.rotation,rotation);
+  }
+});
+test('camera bounds retain overlap for small finite viewports and clamped zooms',()=>{
+  for(const viewport of [{width:1,height:1},{width:120,height:100},{width:1024,height:120},{width:120,height:1024}])
+  for(const rotation of [-405,0,45,90,135,225,315,765])for(const zoom of [-50,.75,6,999]){
+    const view=constrain({zoom,rotation,panX:1e9,panY:-1e9},viewport);
+    assert.ok(Object.values(view).every(Number.isFinite));
+    assert.ok(view.zoom>=.75&&view.zoom<=6);
+    assert.ok(visibleMapArea(view,viewport)>1e-8,JSON.stringify({viewport,view}));
+  }
+});
+test('high-zoom focus and interior gesture anchors retain their native coordinates after rotation',()=>{
+  for(const viewport of [{width:343,height:360},{width:1100,height:650}])for(const rotation of [0,45,90,135,225,315]){
+    for(const point of [[480,480],[1440,480],[480,1440],[1440,1440],[960,960]]){
+      const view=centreOn(point,{zoom:6,rotation,panX:0,panY:0},viewport);
+      const rendered=project(point,view,viewport);
+      near(rendered.x,viewport.width/2);near(rendered.y,viewport.height/2);
+      assert.ok(visibleMapArea(view,viewport)>1);
+    }
+    const view={zoom:4,rotation,panX:0,panY:0};
+    const anchor={x:viewport.width/2+30,y:viewport.height/2-20};
+    const point=unproject(anchor,view,viewport);
+    const changed=changeAround(view,anchor,viewport,1.4,37);
+    const rendered=project(point,changed,viewport);
+    near(rendered.x,anchor.x);near(rendered.y,anchor.y);
+  }
+});
 test('reviewed area focus frames every actual sector outline without changing geometry or rotation',()=>{
   const rows=JSON.parse(read('atlas-area-evidence.json')).geometries.filter(row=>row.kind==='sector');
   assert.equal(rows.length,48);

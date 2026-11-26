@@ -1,0 +1,57 @@
+{
+  "id": "ATLAS-CROSS-GRID-TRACKER-RECEIPT",
+  "status": "verified_guarded_update_and_fresh_readback",
+  "manifest_revision": 97,
+  "ledger_revision": 105,
+  "preflight": {
+    "read_at": "2026-11-26T19:52:35.027379+00:00",
+    "row_count": 48,
+    "min_revision": 95,
+    "max_revision": 95,
+    "snapshot_md5": "2dd9fee30a824566928090033dc19b12",
+    "immutable_business_md5": "894e7bc409d8df4527fd9fab54caa1b2"
+  },
+  "execution": {
+    "executed_at": "2026-11-26T19:53:03.153578+00:00",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "guard_passed": true,
+    "rows_updated": 48,
+    "snapshot_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+    "other_notes_md5": "eb372b95011af12c602e1d29ecccf96f",
+    "note_rows_changed": 2,
+    "all_business_fields_preserved": true,
+    "all_prior_note_prefixes_preserved": true
+  },
+  "readback": {
+    "readback_at": "2026-11-26 19:55:16.640355+00",
+    "row_count": 48,
+    "min_revision": 97,
+    "max_revision": 97,
+    "snapshot_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+    "business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "target_notes_present": true
+  },
+  "hash_method": "md5(string_agg(jsonb-row-text, newline ORDER BY item_id)); business rows exclude manifest_revision, updated_at and verification_note",
+  "scope": "Existing private Atlas planning metadata only. Append evidence to AT300 and AT332; preserve status, release, Workspace and player data.",
+  "changed_field_counts": {
+    "manifest_revision": 48,
+    "updated_at": 48,
+    "verification_note": 2
+  },
+  "all_prior_notes_preserved": true,
+  "all_status_and_release_fields_preserved": true,
+  "all_workspace_fields_preserved": true,
+  "new_rows": 0,
+  "deleted_rows": 0,
+  "schema_or_public_player_feedback_changed": false,
+  "new_notes": {
+    "note300": "[AT344 recovery and grid candidate — 2026-11-26; Manifest97/Ledger105] Recovered the complete source archive from existing branch commit87ea05e97851a745c1a01ee5afb2b5da5c652887 without replacing newer PR211 work. All26 current supplied JPEG originals match the archive byte-for-byte (43,603,649bytes);8 originals are reused and18 are restored locally at historical paths. Four distinct metadata-stripped full-frame copies remain unchanged, with identical decoded pixels. All60 preservation-file checks pass. Archive/checkpoint integration is on feat/atlas-cross-grid-recovery-20261126 and awaits its own exact-head CI, merge and matching Pages deployment. Current released baseline3259de9a8d70d5851ae208fb812c4774cc59c2ec (PR211) is preserved. Evidence: docs/qa/at344-sector-source-recovery-2026-11-26/source-recovery.json and docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json. Only derivative copies may be cropped or transformed. Complete capture collection is owner-reported; all-city seam/obstruction verification remains separate. Original Workspace, existing maps, guide content, stable IDs and player data unchanged.",
+    "note332": "[Native cross-grid candidate — 2026-11-26; Manifest97/Ledger105] Direct native1920 image measurement supports an Atlas-owned versioned reference grid. Origin(27.190436640992303,31.181553067815514), east vector(108.66657856804908,-0.01784961253751029), south vector(0.044411804896392404,108.78386641874158).19 fitted native crossings;10 withheld exterior checks RMS0.938/max1.487px and10 additional interior checks RMS1.345/max1.818px. Independent arithmetic, native/source hash and visual review passed. Central-photo architecture fits corroborate local alignment; extrapolation beyond their control hulls is not exact. Samples reach grid row15; lower/eastern extension cells are explicitly qualified. A1–R18 are our map-image reference labels, distinct from earlier local A1, not official game coordinates. Optional overlay, within-cell fractions, copied links and diagonal high-zoom camera fix are implemented locally;134 integrated unit checks pass, exact-head CI/mobile/desktop/merge/live gates still pending. The observed waypoint60 is not a counted-footstep, metre or foot conversion. No new item, ladder, lift, scaffold or random-Hyperspace pins; no progress or schema changes. Evidence: docs/qa/atlas-cross-grid-2026-11-26/CHECKPOINT.json, native-grid-registration.json and independent-calibration-review.json. Preserve all earlier research, notes, release proofs and Workspace fields."
+  },
+  "private_prior_row_contents_omitted": true
+}

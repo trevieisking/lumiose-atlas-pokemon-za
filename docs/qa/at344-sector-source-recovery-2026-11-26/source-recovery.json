@@ -1,0 +1,768 @@
+{
+  "id": "AT344-ARCHIVE-RECOVERY-2026-11-26",
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-26T19:43:39.116561+00:00",
+  "scope": "Selective recovery of historical source archive; no master-plan rollback or runtime image replacement.",
+  "base_main_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec",
+  "recovered_source_branch": "docs/atlas-complete-sector-sources-20261126",
+  "recovered_source_commit": "87ea05e97851a745c1a01ee5afb2b5da5c652887",
+  "source_collection": {
+    "jpeg_count": 26,
+    "total_original_bytes": 43603649,
+    "reused_exact_original_count": 8,
+    "restored_exact_original_count": 18,
+    "restored_exact_original_bytes": 31782542,
+    "existing_full_frame_versions_preserved": 4,
+    "all_current_originals_match_supplied_and_prior_branch": true,
+    "all_originals_decode": true,
+    "GPS_EXIF_found": false
+  },
+  "historical_packet": {
+    "files_restored": 30,
+    "all_bytes_match_original_branch": true,
+    "manifest_revision": 94,
+    "ledger_revision": 102,
+    "current_planning_authority": false,
+    "note": "These historical records and tracker receipts are preserved unchanged. Their revision/current-runtime references describe that earlier checkpoint, not the present release or a new Supabase write."
+  },
+  "coverage": {
+    "owner_report": "Completed sector photograph collection plus existing Wild Zone images covers the city.",
+    "independent_complete_city_geometric_coverage_verified": false,
+    "previous_sector_register_entries": 48,
+    "sectors_with_prior_candidate_context": 48,
+    "sectors_without_prior_readable_label_candidate": [],
+    "meaning": "Context indexing does not certify whole-sector coverage, native coordinate registration, seams, occlusions, chosen best view, or exact item/structure positions.",
+    "all_48_original_sector_ids_preserved": true,
+    "existing_wild_zone_and_sector_images_replaced": 0
+  },
+  "video_provenance": {
+    "sha256": "9d95aac4c6f865a9fe63767e45091b6b98462d7b7c6b8728f435e426342ffda3",
+    "bytes": 107198387,
+    "matches_prior_AT343_video_source": true,
+    "prior_recorded_filename": "1000028756.mp4",
+    "prior_provenance": "docs/qa/at343-video-grid-2026-11-26/source-provenance.json",
+    "archived_original_video_in_this_recovery": false,
+    "purpose": "Private measurement evidence; no public video feature.",
+    "supplied_filename": "20261126_164711(1).mp4",
+    "workspace_basename": "20261126_164711-1-.mp4"
+  },
+  "entries": [
+    {
+      "original_filename": "20261125_170238.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_170238.jpg",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "bytes": 1564974,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "8a42af23d20199b03cd7f9e4f9b505adf723bac83bfbe2c5390ef48a1fb4deb5",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "vert-sector-7"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261125_170158.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_170158.jpg",
+      "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+      "bytes": 1420507,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "dd5a53fd6f29283a67f04c181b09da87a029ccc997c9f762cb392f455ebe3505",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "vert-sector-6"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261125_165929.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_165929.jpg",
+      "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+      "bytes": 1647674,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "8d26349c77a62f567661d6194782d9b32ccee55a29f16b061bada62aff0e880a",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "jaune-sector-7"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_104048.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104048.jpg",
+      "sha256": "47bd5952180f9ec407a3c35921dec8f6cb360a1e66ed2bdb12c1ede271845cc8",
+      "bytes": 1854391,
+      "dimensions": [
+        3951,
+        2038
+      ],
+      "decoded_rgb_sha256": "1b5a019464e53dd1d4620f9060615200d15081595fa959bb545a74b8b9b5c4a5",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261125_213809.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213809.jpg",
+      "sha256": "d78e3643af7fb447cbff6ec4096f797fc0c9692e17b5c405c0e952220767fa55",
+      "bytes": 1924588,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "b4e5c1cdcfa2ef5beeca4c6f5ec1490885deb43db1b5a22c34072aca581eb6e7",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_104041.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104041.jpg",
+      "sha256": "a4f196979545f8a82d188b3912a0b2dd5fed6339970a2aebacea0a48b44bf71f",
+      "bytes": 1711073,
+      "dimensions": [
+        3987,
+        1998
+      ],
+      "decoded_rgb_sha256": "074c844103fe0bf77257d926cdb69dc488151eeaea64108f946a73d2489f4204",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261125_213830.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213830.jpg",
+      "sha256": "50879abc45b6ce969efba79009546cfa99344057eb2cfb0fee8b02bb2a2a5e3e",
+      "bytes": 2230899,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "77a4402f42e774625a8081596e0a4f1726c6cb15abd8e7c92de3c1d4deadac33",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261125_213707.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261125_213707.jpg",
+      "sha256": "60ce7cb5ed4cac9e38ee5cb92cc2a346ab3ec4bef25c3cf8c0b11a6678e6a7b6",
+      "bytes": 2102179,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "66695be94b1d826d69d1dc9c141d66afa99c9a9cfaa0b06405135509e6f94d65",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_103710.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103710.jpg",
+      "sha256": "0b64c204e866ed12b654188398aa6b52542b53accb2fd6ffd0f06df76cd0dc28",
+      "bytes": 1821787,
+      "dimensions": [
+        4000,
+        2020
+      ],
+      "decoded_rgb_sha256": "47d2d973a256d97e3c00498f296094ce46a24a87e3d6cc0f4217195399bb569d",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_103927.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103927.jpg",
+      "sha256": "f2fd5f1cc44772f0c9345e106406bb9f433876a2b87565e92ff138c7be6eba3e",
+      "bytes": 1515464,
+      "dimensions": [
+        4000,
+        1995
+      ],
+      "decoded_rgb_sha256": "1fef235e33b00ca233be3ba564ea94438db635ab2586f403686afeeb4e839100",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_103721.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103721.jpg",
+      "sha256": "672dbcc954a5a217b50c6346295aa4cfe972b28498de214d405e1e7cb7324873",
+      "bytes": 2035698,
+      "dimensions": [
+        4000,
+        2009
+      ],
+      "decoded_rgb_sha256": "cf901fcd8dfa5373d99e34b6f9ce797b2cd68ceb687b51a6d1c75ba704ad71fb",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_104020.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104020.jpg",
+      "sha256": "aa32faf7415d5e7c2669b32fd3125f8d48e49d57cd1279928635427fedcc1f65",
+      "bytes": 1770810,
+      "dimensions": [
+        4000,
+        2042
+      ],
+      "decoded_rgb_sha256": "c46576cfa3addf6805a02042d48af5e5c233f24ec212d859bffc6cf9c90c3958",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_104059.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_104059.jpg",
+      "sha256": "548c28b9e9dc840a48bef3badfe496e6cbfd8e298c6def677aa19d8d86602993",
+      "bytes": 1854048,
+      "dimensions": [
+        3988,
+        2009
+      ],
+      "decoded_rgb_sha256": "e2a6fa4bc3f5e406ceed018197bb0eaf7550b29c2427e30783c68e217c20f2dd",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_103629.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_103629.jpg",
+      "sha256": "b4599b94aff04791a53e591054b5ca9ebcd73be0a3e9d9be2d08a325f5e5f76c",
+      "bytes": 1797907,
+      "dimensions": [
+        4000,
+        2049
+      ],
+      "decoded_rgb_sha256": "7c52b25371b5efbadc37c4bdf43903bd4c6813c8f71598f047d2a18fc9efdeb8",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_141757.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_141757.jpg",
+      "sha256": "ecf1963705c8efbb90e24a683eb0c686bd2390155a3a56e6a22ba6ba29171c42",
+      "bytes": 1526830,
+      "dimensions": [
+        4000,
+        2218
+      ],
+      "decoded_rgb_sha256": "eff650f4734c949d1a039406b3219646c7854d57a9ade973a15ccfa5a1be0d17",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_141757.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "vert-sector-4",
+          "vert-sector-5",
+          "vert-sector-7",
+          "vert-sector-8",
+          "vert-sector-9"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_141528.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_141528.jpg",
+      "sha256": "58c8dacaa2b5915908fb1852ce995836a2ba5df9bb5fff70303d27b585f367e0",
+      "bytes": 1664241,
+      "dimensions": [
+        4000,
+        2148
+      ],
+      "decoded_rgb_sha256": "2a1cbd68c4356e1748488036a9eb17d3cc84f9d517893458306a9aefedbf240c",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_141528.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "vert-sector-1",
+          "vert-sector-2",
+          "vert-sector-3",
+          "vert-sector-4",
+          "vert-sector-5",
+          "vert-sector-6"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_142840.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_142840.jpg",
+      "sha256": "76a9f382d2914b51dc261546fb1d24c93c7aa9e245916bf73ad61560afd3e25d",
+      "bytes": 1370073,
+      "dimensions": [
+        3642,
+        1988
+      ],
+      "decoded_rgb_sha256": "2d7f02d82bd531dce517a4b818b4ea05158a15076bcc3b62605448793de079b6",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_142840.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "rouge-sector-3",
+          "rouge-sector-4",
+          "rouge-sector-5",
+          "rouge-sector-6",
+          "rouge-sector-7",
+          "rouge-sector-8"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_143129.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_143129.jpg",
+      "sha256": "34e51b4271ef0199ceca0d58bca193502cfb39004d8c4ca1fa65cf99b9ea91b8",
+      "bytes": 1635785,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "3ee3eb30d2faf898d44deac13a529316c685c551caf850b68a37c9004e1d9ea4",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_143129.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "rouge-sector-1",
+          "rouge-sector-2"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_144931.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_144931.jpg",
+      "sha256": "2300a8085329e70d2bb570f41fce39d8bba5814f11566c132726fba7cfd1addc",
+      "bytes": 1296968,
+      "dimensions": [
+        3494,
+        2192
+      ],
+      "decoded_rgb_sha256": "5b4268ec11fd6ad052c415b1a028794bf1adcbd3242bfb29ea84de2779b23754",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_144931.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "jaune-sector-1",
+          "jaune-sector-2",
+          "jaune-sector-3",
+          "jaune-sector-6",
+          "jaune-sector-9",
+          "jaune-sector-10",
+          "jaune-sector-11",
+          "jaune-sector-12",
+          "vert-sector-1",
+          "vert-sector-3"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_145412.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_145412.jpg",
+      "sha256": "94ffa02175f1973da4f9f239b5d6369dc4367d7ca181ec8696bcb75efdbb56ed",
+      "bytes": 1234593,
+      "dimensions": [
+        3346,
+        2252
+      ],
+      "decoded_rgb_sha256": "caffb8137a71d0ee036cf7bfd4719bb392db9f2a51f32e8a9f0b34cb5c9b7136",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_145412.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "jaune-sector-3",
+          "jaune-sector-4",
+          "jaune-sector-5",
+          "jaune-sector-7",
+          "jaune-sector-8"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_151150.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_151150.jpg",
+      "sha256": "ce7498bd27e67321c5871399fa9edc3e9deb95f52d44f1afe4af4daa48d82bbb",
+      "bytes": 1394383,
+      "dimensions": [
+        2966,
+        2252
+      ],
+      "decoded_rgb_sha256": "f25f8144cec7d01b814c2c2a72edc6559ce3172b5195990b75b03f3372aa7858",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_151150.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "magenta-sector-4",
+          "magenta-sector-7",
+          "magenta-sector-8",
+          "magenta-sector-9",
+          "rouge-sector-3",
+          "rouge-sector-4"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_151459.jpg",
+      "repository_path": "docs/qa/at343-owner-item-crosses/sources/20261126_151459.jpg",
+      "sha256": "7b26a71b87c54585d02d012b79fa284a006d4a1118e06546fa5aa750c47fce21",
+      "bytes": 1698234,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "b5df32deb34cf7e2ce0df6a1c0666c23adff193bf0cc0adfc0e8e1031c573544",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [
+        "docs/qa/at343-owner-item-crosses/sources/20261126_151459.jpg"
+      ],
+      "recovery_action": "reuse_existing_exact_original",
+      "other_preserved_versions": [],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "magenta-sector-1",
+          "magenta-sector-2",
+          "magenta-sector-3",
+          "magenta-sector-5",
+          "magenta-sector-6"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_160550.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_160550.jpg",
+      "sha256": "763d98f78662c42882d0dcddf529d990e845912d41e6d23569e461f23efa8a04",
+      "bytes": 2006176,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "aea05ae0c3bbaa6cc721d5c7ddcaff1be5c693631776b3ef7f38d6dffd855696",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [
+        {
+          "repository_path": "docs/qa/at343-owner-item-crosses/full-frame-2026-11-26/20261126_160550.jpg",
+          "sha256": "897c534dbe38bff6abf57925a6bea132ea0f4a5fdad63ae832e5d802e7b8aaea",
+          "bytes": 1922446,
+          "classification": "full_frame_copy_with_camera_metadata_and_non_frame_payloads_omitted",
+          "same_decoded_RGB_pixels_as_original": true,
+          "original_bytes_identical": false,
+          "existing_copy_unchanged": true
+        }
+      ],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "bleu-sector-1",
+          "bleu-sector-2",
+          "bleu-sector-3",
+          "bleu-sector-4",
+          "bleu-sector-6",
+          "bleu-sector-8",
+          "bleu-sector-9",
+          "bleu-sector-10"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_160741.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_160741.jpg",
+      "sha256": "ebc757ea71d423d2ac87e4d894dd33b06130b3f05f3a000acd547ab6e4644aba",
+      "bytes": 1395804,
+      "dimensions": [
+        3500,
+        2252
+      ],
+      "decoded_rgb_sha256": "eb7782875655fd7beaf135ac8802c00bbf465ad9be3e702f28b696be0edf631f",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [
+        {
+          "repository_path": "docs/qa/at343-owner-item-crosses/full-frame-2026-11-26/20261126_160741.jpg",
+          "sha256": "fd23a8fca4e45619303805dce0d76090f1eb41fe0f48a14d9cb4d66b4a6b26e1",
+          "bytes": 1288590,
+          "classification": "full_frame_copy_with_camera_metadata_and_non_frame_payloads_omitted",
+          "same_decoded_RGB_pixels_as_original": true,
+          "original_bytes_identical": false,
+          "existing_copy_unchanged": true
+        }
+      ],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "bleu-sector-3",
+          "bleu-sector-5",
+          "bleu-sector-6",
+          "bleu-sector-7",
+          "bleu-sector-8",
+          "bleu-sector-9"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_161350.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76",
+      "bytes": 1635403,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "c11eda77b3b017bc005ac0c24d92eda09b9ed36f0bd0eb19188e3a297612eb73",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [
+        {
+          "repository_path": "docs/qa/at343-owner-item-crosses/full-frame-2026-11-26/20261126_161350.jpg",
+          "sha256": "d29182b0f0946fcaba74c0c957a1db612c6735f3c948d4b4e3f6e12f5dcb1210",
+          "bytes": 1526863,
+          "classification": "full_frame_copy_with_camera_metadata_and_non_frame_payloads_omitted",
+          "same_decoded_RGB_pixels_as_original": true,
+          "original_bytes_identical": false,
+          "existing_copy_unchanged": true
+        }
+      ],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "bleu-sector-1",
+          "bleu-sector-2",
+          "vert-sector-1",
+          "vert-sector-2",
+          "jaune-sector-2"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    },
+    {
+      "original_filename": "20261126_161334.jpg",
+      "repository_path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a",
+      "bytes": 1493160,
+      "dimensions": [
+        4000,
+        2252
+      ],
+      "decoded_rgb_sha256": "7585b1e9d86937f52852ed13643f1c9179547bfc032fba93546931158fbe110f",
+      "GPS_EXIF_present": false,
+      "matches_current_supplied_source": true,
+      "matches_original_source_branch_blob": true,
+      "main_before_recovery_exact_original_paths": [],
+      "recovery_action": "restore_prior_archive_path_and_bytes",
+      "other_preserved_versions": [
+        {
+          "repository_path": "docs/qa/at343-owner-item-crosses/full-frame-2026-11-26/20261126_161334.jpg",
+          "sha256": "400d3de995caa3a94bcafeb3168d8c04b0df6364ed2b4fda3bf0f50a7b2128b4",
+          "bytes": 1381196,
+          "classification": "full_frame_copy_with_camera_metadata_and_non_frame_payloads_omitted",
+          "same_decoded_RGB_pixels_as_original": true,
+          "original_bytes_identical": false,
+          "existing_copy_unchanged": true
+        }
+      ],
+      "prior_visual_index": {
+        "source": "docs/qa/at344-sector-source-survey/source-inventory.json",
+        "candidate_sector_ids": [
+          "rouge-sector-1",
+          "rouge-sector-2",
+          "magenta-sector-2",
+          "jaune-sector-1",
+          "jaune-sector-2",
+          "jaune-sector-3",
+          "vert-sector-1"
+        ],
+        "scope": "Carried-forward visible-label/context index; not freshly certified geographic coverage."
+      }
+    }
+  ]
+}

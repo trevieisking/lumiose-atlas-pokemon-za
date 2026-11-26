@@ -1,0 +1,282 @@
+{
+  "id": "ATLAS-CROSS-GRID-2026-11-26",
+  "date": "2026-11-26",
+  "manifest_revision": 97,
+  "ledger_revision": 105,
+  "status": "candidate_implemented_local_checks_passed_exact_head_browser_and_release_checks_pending",
+  "request_and_handoff": "docs/qa/atlas-cross-grid-2026-11-26/REQUEST_AND_HANDOFF.md",
+  "latest_verified_github_release": {
+    "scope": "Previously released PR211 package; rollback baseline for the new grid candidate.",
+    "pr": 211,
+    "pr_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/211",
+    "status": "merged_matching_Pages_deployment_succeeded",
+    "merge_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec",
+    "reviewed_head": "736510ee212c9df094c1c56414815a74abc3d3a9",
+    "tree": "9d0375cc18618e00a46f9192d8e70a484ee330a7",
+    "pages_run": 45880427799,
+    "pages_url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/45880427799",
+    "evidence_authority": "GitHub PR211 release receipt and matching deployment; this record does not claim a fresh live or original-Workspace verification.",
+    "source_handoff": "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md",
+    "original_workspace_publication_claimed": false
+  },
+  "source_archive": {
+    "status": "recovered_locally_verified_not_yet_merged_in_this_candidate",
+    "source_commit": "87ea05e97851a745c1a01ee5afb2b5da5c652887",
+    "recovery_record": "docs/qa/at344-sector-source-recovery-2026-11-26/source-recovery.json",
+    "recovery_review": "docs/qa/at344-sector-source-recovery-2026-11-26/README.md",
+    "original_jpegs": 26,
+    "reused_exact_originals": 8,
+    "restored_exact_originals": 18,
+    "total_original_bytes": 43603649,
+    "separate_full_frame_versions_preserved": 4,
+    "all_26_current_supplied_originals_match_archive_bytes": true,
+    "historical_packet_files_restored_exactly": 30,
+    "source_collection_complete_as_reported_by_owner": true,
+    "complete_city_geometric_coverage_verified": false,
+    "all_originals_immutable": true,
+    "only_derivative_copies_may_be_transformed": true,
+    "integrity_checks": {
+      "status": "pass",
+      "file_hash_checks": 60,
+      "original_checksum_checks": 26,
+      "validator": "docs/qa/at344-sector-source-recovery-2026-11-26/verify_sources.py"
+    }
+  },
+  "cross_grid": {
+    "status": "native_lattice_independently_reviewed_optional_runtime_grid_implemented",
+    "intended_feature": "Optional map reference overlay with numbered cross-to-cross cells and fractional positions.",
+    "source_game_map_orientation": "fixed_north_up_as_reported_by_owner",
+    "interactive_viewer_rotation": "permitted_preserve_controls_and_north_reset",
+    "native_map_dimensions": [
+      1920,
+      1920
+    ],
+    "coordinate_spaces_distinct": [
+      "original_photo_pixels",
+      "registered_native_map_pixels",
+      "cross_grid_cell_and_fraction",
+      "displayed_game_distance"
+    ],
+    "native_transform": {
+      "origin_native_xy": [
+        27.190436640992303,
+        31.181553067815514
+      ],
+      "column_vector_native_xy": [
+        108.66657856804908,
+        -0.01784961253751029
+      ],
+      "row_vector_native_xy": [
+        0.044411804896392404,
+        108.78386641874158
+      ],
+      "native_map_path": "maps/lumiose-game-map.jpg",
+      "native_map_sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+    },
+    "approved_coverage": {
+      "scope": "Optional Atlas-owned native-image reference grid; alignment residuals apply to recorded measured samples only.",
+      "labelled_cell_columns": 18,
+      "labelled_cell_rows": 18,
+      "measured_native_cross_index_bounds_inclusive": [
+        0,
+        0,
+        17,
+        15
+      ],
+      "domain": {
+        "image_bounds_xyxy": [
+          0,
+          0,
+          1920,
+          1920
+        ],
+        "grid_index_bounds_crcr": [
+          0,
+          0,
+          18,
+          18
+        ],
+        "measured_native_cross_index_bounds_inclusive": [
+          0,
+          0,
+          17,
+          15
+        ],
+        "measured_bounds_note": "Bounds enclose sampled nodes, not every node. A1 itself was too faint to measure. Native error statistics apply only to measured nodes; the conventional grid extends beyond the measured bottom row.",
+        "edge_policy": "Clip each cell polygon to native image bounds. Row18 and columnR are partial edge cells. The narrow top/left strips before A1 have no labelled cell. Do not assign points outside image bounds or negative grid indices."
+      },
+      "official_game_coordinates": false,
+      "uniform_citywide_error_bound_verified": false,
+      "new_marker_placement_accuracy_approved": false
+    },
+    "residual_report": "docs/qa/atlas-cross-grid-2026-11-26/independent-calibration-review.json",
+    "origin_and_spacing_rule": "Directly fit19native crossings; ten outer and ten interior crosses withheld. Independent numerical review reproduced the affine and supporting local architecture fits. A1 is a model-defined reference origin, not an official game origin.",
+    "cell_convention": {
+      "column": "increases_east",
+      "row": "increases_south",
+      "fractions": "eastward_and_southward_fraction_within_measured_cell",
+      "numbering_origin": "Model-defined northwest reference crossing A1; columns A–R increase east, rows1–18 increase south.",
+      "uncertainty": "Keep error bounds and adjacent-cell ambiguity; coordinate decimals do not establish accuracy.",
+      "cell_labels": "The northwest crossing names its cell. Half-open boundary assignment uses the cell east/south of an exact line.",
+      "subdivisions_per_cell": 10,
+      "fractional_precision_scope": "Display precision does not improve measured source or marker accuracy."
+    },
+    "approximate_60_scale": {
+      "owner_observation": "Roughly 60 walking steps between adjacent crosses, repeatedly reported by Trev.",
+      "video_observation": "Waypoint display reads 60 around 20.9–21.0 seconds in the preserved recording.",
+      "verified_exact_feet_metres_or_counted_steps_per_cell": false,
+      "endpoint_limitation": "Partly obscured player/pin endpoints prevent an exact one-cell physical-distance conversion.",
+      "use": "The runtime uses ten visual subdivisions per cell. Sixty remains the owner report/waypoint observation and is not used as a feet/metres/step conversion."
+    },
+    "crosses_are_item_markers": false,
+    "new_verified_item_or_structure_pins": 0,
+    "permanent_random_hyperspace_markers": 0,
+    "native_calibration_evidence": "docs/qa/atlas-cross-grid-2026-11-26/native-grid-registration.json",
+    "runtime_configuration": "atlas-cross-grid.json",
+    "runtime_configuration_sha256": "f4e851f22e52ca9aec6889221bda0ea762fbd185404a00b1a62952bae7dcb2e5",
+    "independent_calibration_decision": "PASS_FOR_OPTIONAL_ATLAS_REFERENCE_GRID_WITH_RECORDED_LIMITS",
+    "native_fit": {
+      "count": 19,
+      "rms": 1.0094852579418798,
+      "max": 2.425795170713951
+    },
+    "native_outer_holdout": {
+      "count": 10,
+      "rms": 0.9377123449223449,
+      "max": 1.487486863876046
+    },
+    "native_interior_holdout": {
+      "count": 10,
+      "rms_native_px": 1.3451413824509433,
+      "max_native_px": 1.8175349164016836
+    }
+  },
+  "camera": {
+    "status": "implemented_local_unit_checks_passed_exact_head_browser_and_release_checks_pending",
+    "module": "atlas-explorer-geometry.mjs",
+    "function": "constrain",
+    "diagnosis": "The prior clamp used the rotated square bounding box only. At high zoom and diagonal rotation/pan it could allow the actual map polygon to leave the viewport.",
+    "repair": "Retain existing screen-axis clamps and also require positive overlap against both map-edge axes; reduce only violating extreme translations.",
+    "validation_scope": "The local workflow Node file list passes134tests with zero failures; desktop managed-preview observations pass. Exact-head GitHub CI and phone validation remain pending.",
+    "existing_navigation_and_framing_must_remain_preserved": true
+  },
+  "preservation": {
+    "existing_map_and_photo_bytes_unchanged": true,
+    "stable_marker_sector_zone_and_progress_ids_preserved": true,
+    "player_progress_storage_keys_unchanged": true,
+    "feedback_accounts_and_Supabase_connections_preserved": true,
+    "all_67_historical_requirements_and_acceptance_preserved": true,
+    "public_video_and_YouTube_features_remain_paused": true,
+    "previous_releases_evidence_and_prompts_preserved": true,
+    "whole_master_plan_complete": false
+  },
+  "tracker": {
+    "status": "verified_guarded_update_and_fresh_readback",
+    "manifest_revision": 97,
+    "ledger_revision": 105,
+    "previous_manifest_revision": 95,
+    "last_verified_manifest_revision": 97,
+    "last_verified_ledger_revision": 105,
+    "prior_verified_receipt": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json",
+    "target_manifest_revision": 97,
+    "target_ledger_revision": 105,
+    "row_count": 48,
+    "appended_note_count": 2,
+    "executed_at": "2026-11-26T19:53:03.153578+00:00",
+    "preserved_business_fields_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "preserved_other_notes_md5": "eb372b95011af12c602e1d29ecccf96f",
+    "snapshot_after_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+    "new_sync_receipt": "docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json",
+    "new_write_claimed": true,
+    "all_48_existing_rows_and_business_fields_preserved": true,
+    "prior_notes_statuses_release_proofs_and_all_Workspace_fields_preserved": true,
+    "evidence_scope": "The saved authenticated receipt records guarded95to97execution and a fresh readback with identical complete-row snapshot hash. All48 existing rows, status/release/Workspace fields and prior notes are preserved; only planning metadata and two appended notes change.",
+    "last_verified_receipt": "docs/qa/atlas-cross-grid-2026-11-26/TRACKER_RECEIPT.json",
+    "readback_at": "2026-11-26 19:55:16.640355+00",
+    "status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "guard_passed": true,
+    "readback_snapshot_md5": "5e9f07f16dc4c68af924eaa1314eb793",
+    "changed_field_counts": {
+      "manifest_revision": 48,
+      "updated_at": 48,
+      "verification_note": 2
+    },
+    "all_prior_notes_preserved": true,
+    "new_rows": 0,
+    "deleted_rows": 0
+  },
+  "candidate_release": {
+    "decision": "HOLD_pending_exact_head_and_browser_validation",
+    "branch": "feat/atlas-cross-grid-recovery-20261126",
+    "pull_request": null,
+    "reviewed_head": null,
+    "reviewed_tree": null,
+    "native_calibration": "pass_for_optional_Atlas_reference_grid_with_recorded_limits",
+    "source_archive_integrity": "pass",
+    "integrated_unit_checks": "pass_134_local_tests",
+    "exact_head_ci": "pending",
+    "mobile_browser_qa": "pending",
+    "desktop_browser_qa": "managed_preview_observations_pass_exact_head_browser_suite_pending",
+    "merge": "not_performed",
+    "pages_deployment": "not_performed",
+    "live_verification": "not_performed",
+    "rollback_commit": "3259de9a8d70d5851ae208fb812c4774cc59c2ec"
+  },
+  "original_workspace": {
+    "project_id": "appgprj_6afda588d5948191b4143e40a1f9c291",
+    "url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+    "status": "unchanged_this_candidate_separate_scoped_import_and_validation_required",
+    "new_site_or_rebuild_authorized": false,
+    "new_grid_prompt_executable": false,
+    "existing_Map2_prompt_preserved": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+    "existing_PR211_handoff_preserved": "docs/qa/atlas-workspace-consolidation-2026-11-26/WORKSPACE_NEXT_PACKAGE.md",
+    "release_requirement": "Pin the tested merged commit/tree and successful matching deployment before adapting the original Site; compare existing source, preserve newer changes, back up, preview and validate before publication."
+  },
+  "local_validation": {
+    "status": "pass",
+    "tests": 134,
+    "test_failures": 0,
+    "tests_scope": "Exact Node test-file list used by the Atlas Explorer workflow; the ten-test grid suite is included in the total.",
+    "test_log": "docs/qa/atlas-cross-grid-2026-11-26/UNIT_TESTS.txt",
+    "test_log_sha256": "bd53bdaca6cf52ed7200f01b2448dd40f20db18b24dc565deeeccfe4795f978f",
+    "source_archive_file_hash_checks": 60,
+    "source_original_checksums": 26,
+    "historical_archive_files": 30,
+    "separate_full_frame_versions": 4,
+    "sector_ids": 48,
+    "native_calibration_replay": "pass",
+    "independent_calibration_review": "pass_with_recorded_limits",
+    "static_validation": {
+      "status": "pass",
+      "sections": 17,
+      "links": 691,
+      "references": 1431,
+      "resources": 578,
+      "source": "Root agent completed validator result."
+    },
+    "git_diff_whitespace_check": "pass",
+    "exact_head_ci_claimed": false,
+    "mobile_browser_proof_claimed": false,
+    "receipt": "docs/qa/atlas-cross-grid-2026-11-26/LOCAL_VALIDATION.json"
+  },
+  "desktop_preview_observations": {
+    "status": "pass_observed_in_managed_preview",
+    "scope": "Desktop managed preview; does not substitute for exact-head CI or phone touch validation.",
+    "observed": [
+      "Grid remains off by default.",
+      "Keyboard Go to square I9 resolves to50%east50%south at4.50x.",
+      "Screen-space labels remain sharp; selectedcell shows ten subdivisions.",
+      "45degree rotation preserves native alignment.",
+      "Clipped R18 displays21%east18%south and a visible explicit edge target.",
+      "Bottom/east extension is dashed and explained.",
+      "Compass resets north; edge-target status changes to Centre readout resumed.",
+      "I9 navigation remains functional after compass reset."
+    ],
+    "source": "docs/qa/atlas-cross-grid-2026-11-26/LOCAL_VALIDATION.json",
+    "physical_device_testing_claimed": false
+  }
+}

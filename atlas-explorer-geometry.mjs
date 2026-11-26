@@ -38,19 +38,34 @@ export function unproject({ x, y }, view, viewport) {
     MAP_SIZE / 2 - dx * Math.sin(r) + dy * Math.cos(r)
   ];
 }
-/* Keep a minimum visible fraction on screen when dragging a scaled, rotated map.
-   The extent is conservative for the real square map, with no inferred geometry. */
+/* Preserve the familiar screen-axis limits, then keep the actual rotated square
+   in view. Its bounding box alone admits empty corners at high zoom. */
 export function constrain(view, viewport) {
   const zoom = clamp(Number(view.zoom), MIN_ZOOM, MAX_ZOOM);
   const rotation = wrapRotation(Number(view.rotation));
   const r = rotation * RADIANS;
-  const half = stageBase(viewport) * zoom / 2 * (Math.abs(Math.cos(r)) + Math.abs(Math.sin(r)));
-  const maxX = Math.max(0, half - viewport.width / 2 + 130);
-  const maxY = Math.max(0, half - viewport.height / 2 + 130);
+  const c = Math.cos(r), s = Math.sin(r), ac = Math.abs(c), as = Math.abs(s);
+  const sideHalf = stageBase(viewport) * zoom / 2;
+  const half = sideHalf * (ac + as);
+  const overlap = Math.min(130, viewport.width / 2, viewport.height / 2, sideHalf);
+  const maxX = Math.min(Math.max(0, half - viewport.width / 2 + 130), half + viewport.width / 2 - overlap);
+  const maxY = Math.min(Math.max(0, half - viewport.height / 2 + 130), half + viewport.height / 2 - overlap);
+  const panX = clamp(Number(view.panX), -maxX, maxX);
+  const panY = clamp(Number(view.panY), -maxY, maxY);
+  // The screen axes above and the two map-edge normals below are all four
+  // separating axes of the square and viewport. Positive overlap on each
+  // prevents a blank viewport, including rotated diagonal pan extremes.
+  const mapX = panX * c + panY * s, mapY = -panX * s + panY * c;
+  const limitX = sideHalf + (ac * viewport.width + as * viewport.height) / 2 - overlap;
+  const limitY = sideHalf + (as * viewport.width + ac * viewport.height) / 2 - overlap;
+  const factor = Math.min(1,
+    Math.abs(mapX) > 0 ? limitX / Math.abs(mapX) : 1,
+    Math.abs(mapY) > 0 ? limitY / Math.abs(mapY) : 1);
+  // Scaling toward the origin also preserves both earlier screen-axis bounds.
   return {
     zoom, rotation,
-    panX: clamp(Number(view.panX), -maxX, maxX),
-    panY: clamp(Number(view.panY), -maxY, maxY)
+    panX: panX * factor,
+    panY: panY * factor
   };
 }
 export function panBy(view, dx, dy, viewport) {

@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "source_hashes_verified": [
+    {
+      "path": "maps/lumiose-game-map.jpg",
+      "sha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade"
+    },
+    {
+      "path": "docs/qa/at344-sector-source-survey/sources/20261126_161334.jpg",
+      "sha256": "8f598bcbde0d8b7b8f556c347a7dc618e5bc599bd220944ce9cf8e3ebe4fc85a"
+    },
+    {
+      "path": "docs/qa/at344-sector-source-survey/sources/20261126_161350.jpg",
+      "sha256": "ad302f0ac72e0c2f19268a053a0dd5e2efe23a1d0a7212e9eb7ed97630cb0f76"
+    }
+  ],
+  "matrix_replayed": [
+    [
+      108.66657856804908,
+      0.044411804896392404,
+      27.190436640992303
+    ],
+    [
+      -0.01784961253751029,
+      108.78386641874158,
+      31.181553067815514
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "native_fit": {
+    "count": 19,
+    "rms": 1.0094852579418798,
+    "max": 2.425795170713951
+  },
+  "native_holdout": {
+    "count": 10,
+    "rms": 0.9377123449223449,
+    "max": 1.487486863876046
+  },
+  "interior_holdout": {
+    "count": 10,
+    "rms": 1.3451413824509513,
+    "max": 1.8175349164016836
+  },
+  "source26_cross_holdout_inside_hull": {
+    "count": 9,
+    "rms": 1.0373043876666015,
+    "max": 1.604392780209172
+  },
+  "source25_overlap_cross_holdout_inside_hull": {
+    "count": 9,
+    "rms": 4.785453146464306,
+    "max": 8.242503214215919
+  },
+  "native_image_redetection": {
+    "status": "pass",
+    "count": 29,
+    "opencv": "5.1.0"
+  }
+}
