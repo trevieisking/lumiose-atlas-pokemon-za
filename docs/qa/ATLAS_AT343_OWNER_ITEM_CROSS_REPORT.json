@@ -1,0 +1,174 @@
+{
+  "id": "AT343-OWNER-ITEM-CROSS-REPORT",
+  "recorded_at": "2026-11-26T15:35:13.073211+00:00",
+  "manifest_revision": 92,
+  "ledger_revision": 100,
+  "status": "item_marker_generalisation_withdrawn_local_relative_alignment_feasibility_supported",
+  "current_conclusion": "Do not use a faint map cross by itself to infer a currently present item ball or approve an item pin. Owner reported many crosses without balls after earlier positive matches.",
+  "reported_observation_history": [
+    {
+      "sequence": 1,
+      "reporter": "Trev",
+      "report": "Five item/cross matches were initially reported.",
+      "positive_count": 5,
+      "cumulative": true,
+      "independently_identified_locations": null
+    },
+    {
+      "sequence": 2,
+      "reporter": "Trev",
+      "report": "Eight cumulative successful matches, comprising the earlier five plus three. The latest described method was finding an item first, then checking the map for a cross.",
+      "positive_count": 8,
+      "cumulative": true,
+      "earlier_five_included": true,
+      "no_failures_reported_at_this_stage": true,
+      "current_failure_summary": false
+    },
+    {
+      "sequence": 3,
+      "reporter": "Not separately identified; reported in Trev’s message",
+      "report": "Two further item/cross matches reported. The wording does not unambiguously identify a second reporter.",
+      "positive_count": 2,
+      "independently_identified_locations": null,
+      "overlap_with_earlier_locations": null
+    },
+    {
+      "sequence": 4,
+      "reporter": "Trev",
+      "report": "The general rule was withdrawn after finding many crosses with no ball present.",
+      "negative_count": null,
+      "negative_quantity_as_reported": "lots",
+      "latest_item_marker_conclusion": true
+    },
+    {
+      "sequence": 5,
+      "reporter": "Trev",
+      "report": "Crosses occur with and without items; their regular distribution may help align the maps or act as measurements.",
+      "purpose": "relative image alignment/reference-grid investigation",
+      "confirmed_measurement_units": null
+    }
+  ],
+  "positive_report_summary": {
+    "trev_cumulative": 8,
+    "combined_reported_positive_observations": 10,
+    "unique_combined_locations": null,
+    "double_count_previous_five": false,
+    "formal_success_rate": null,
+    "individual_item_records": [],
+    "further_reported_matches": 2,
+    "separate_reporter_identity": null,
+    "attribution_note": "The phrase “kay just varified 2 more” is ambiguous; do not infer a person named Kay. Earlier tracker wording is explicitly clarified in the append-only receipt."
+  },
+  "evidence_limits": [
+    "Eight source photographs are map overviews; their count does not correspond to eight identified pickup records.",
+    "The owner-reported empty-cross counterexamples supersede the earlier no-failures-reported snapshot.",
+    "Item names, exact native Atlas coordinates, floor/height and routes were not supplied for these aggregate reports.",
+    "The bounded overlap supports map-relative anchoring locally. The official symbol purpose, global/all-zoom anchoring and any real-world/in-game length unit remain unestablished."
+  ],
+  "grid_alignment": {
+    "status": "bounded_overlap_replayed_local_relative_reference_supported",
+    "tested_source_pair": [
+      "20261126_141528.jpg",
+      "20261126_141757.jpg"
+    ],
+    "map_fixed_or_viewport_fixed": "map_relative_interpretation_supported_in_this_local_overlap_only",
+    "official_symbol_meaning": null,
+    "units": null,
+    "bounded_alignment_feasibility_supported": true,
+    "alignment_approved": false,
+    "alignment_approved_scope": "Production/global/native-map alignment remains unapproved; this intake establishes bounded local feasibility only.",
+    "native_coordinate_promotion": false,
+    "pilot_result": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.json",
+    "pilot_result_sha256": "56cc54f68ed9293cfa9d29a940f6895a51b65b0fc9566c2dc27b59c7824b6a11",
+    "pilot_replay_script": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.py",
+    "pilot_replay_script_sha256": "5fe34f95faa62f8e51addd9139178fc93265c16428726def5f152984f4e92d86",
+    "independent_replay_matches_reviewed_strict_result": true,
+    "architecture_fit": {
+      "strict_candidate_feature_matches": 197,
+      "inlier_feature_matches": 97,
+      "unique_source_inlier_locations_rounded_2dp": 82,
+      "count_qualification": "Feature correspondences,not unique named landmarks;multiple SIFT orientations can share a location.",
+      "inlier_error_photo_px": {
+        "rms": 1.7321170844490605,
+        "median": 1.3387319027848308,
+        "p95": 3.012972442797038,
+        "max": 3.880528755142625
+      }
+    },
+    "cross_holdouts": [
+      {
+        "name": "Vert5 roof cross",
+        "inside_architecture_inlier_convex_hull": true,
+        "residual_original_photo_px": 3.5652048170458097
+      },
+      {
+        "name": "east canal cross",
+        "inside_architecture_inlier_convex_hull": true,
+        "residual_original_photo_px": 4.28400241003484
+      },
+      {
+        "name": "eastern street cross",
+        "inside_architecture_inlier_convex_hull": false,
+        "residual_original_photo_px": 17.097543509312402
+      },
+      {
+        "name": "South Boulevard edge cross",
+        "inside_architecture_inlier_convex_hull": false,
+        "residual_original_photo_px": 28.642145149265776
+      }
+    ],
+    "viewport_check": "A separate local fixed-HUD fit predicts positions roughly74/77 original-photo pixels from observed crosses. This supports map-relative anchoring locally, not full-screen calibration.",
+    "limits": [
+      "Only this single Vert pair tested;no citywide/all-zoom certification.",
+      "Only crosses inside actual architecture-inlier convex hull are local holdout evidence;outside crosses are extrapolated diagnostics.",
+      "Photograph perspective/lens/display distortions can limit one homography,as distant residuals show.",
+      "An unnumbered repeating lattice has whole-cell ambiguity and supplies no physical/game unit or unique world origin.",
+      "Errors are photograph pixels,not certified Atlas or ground accuracy.",
+      "No Atlas-native transform,new item/structure coordinate,production change or promotion."
+    ],
+    "production_map_unchanged_pixels": [
+      1920,
+      1920
+    ],
+    "exploratory_fit_status": "Superseded by the strict replay; the earlier fit retained some street-label features and must not be used as final evidence."
+  },
+  "planned_future_capture": {
+    "reported_before_correction": "Trev intended photographs/video of exact positions before collecting items.",
+    "new_individual_pickup_capture_received": false,
+    "required_to_record_or_accept_correction": false,
+    "general_youtube_or_video_feature_work_resumed": false
+  },
+  "sources": {
+    "inventory": "docs/qa/at343-owner-item-crosses/source-inventory.json",
+    "inventory_sha256": "80b52f12014a3435cf82851e01edf622411b58087466a7bf19e9c5f4dd88fc2e",
+    "original_count": 8,
+    "original_bytes": 11821107,
+    "byte_identical_original_copies": true,
+    "source_photos_are_item_pickup_proof": false
+  },
+  "tracker": {
+    "receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
+    "status": "verified_guarded_research_update_correction_alignment_attribution_and_fresh_readback"
+  },
+  "approved_runtime_baseline": {
+    "merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "tree_sha": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "release_manifest_revision": 91,
+    "release_ledger_revision": 99,
+    "receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+    "workspace_prompt": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+    "release_and_prompt_amended": false
+  },
+  "changes": {
+    "new_item_pins": 0,
+    "native_pickup_coordinates_approved": 0,
+    "runtime_code_changed": false,
+    "existing_image_bytes_changed": false,
+    "new_research_source_images": 8,
+    "player_progress_changed": false,
+    "supabase_runtime_or_schema_changed": false,
+    "original_workspace_changed": false
+  },
+  "follow_up": "Use the crosses as secondary local alignment checks only after unique architecture establishes correspondence. Any future transform to the native Atlas map requires separate validation. Retain the item-rule correction; accept specific future item evidence if offered without requiring a repeat survey or circled example.",
+  "updated_at": "2026-11-26T15:42:45.037671+00:00"
+}

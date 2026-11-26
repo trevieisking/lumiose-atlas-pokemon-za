@@ -1,0 +1,76 @@
+{
+  "id": "AT343-ITEM-CROSS-CORRECTION-AND-GRID-TRACKER-READBACK",
+  "status": "verified_guarded_research_update_correction_alignment_attribution_and_fresh_readback",
+  "manifest_revision": 92,
+  "ledger_revision": 100,
+  "row_count": 48,
+  "preflight_at": "2026-11-26T15:29:33.322722+00:00",
+  "initial_report_executed_at": "2026-11-26T15:30:35.67812+00:00",
+  "initial_report_readback_at": "2026-11-26T15:31:29.043889+00:00",
+  "correction_executed_at": "2026-11-26T15:31:43.772416+00:00",
+  "readback_at": "2026-11-26T15:42:48.793514+00:00",
+  "preflight_snapshot_md5": "210498207abeea98dba306784fbf8e20",
+  "interim_snapshot_md5": "587358800e7704cace5542e3996d177e",
+  "final_snapshot_md5": "184b033fb220b393c0888950ff5e0e5a",
+  "all_row_metadata_fields_updated": [
+    "manifest_revision",
+    "updated_at"
+  ],
+  "observation_note_row": "AT-332-ITEM-COORDINATE-SOURCES",
+  "append_only_note_sequence": [
+    {
+      "sequence": 1,
+      "note": "[AT343 owner item/cross observations — 2026-11-26; Manifest92/Ledger100 research addendum] Trev reports8 cumulative successful item/cross matches (the earlier5 plus3); Kay reports2 further matches. Keep the two reporter counts separate: overlap and distinct location identities are unknown. No failures have been reported; no measured universal success rate is claimed. The latest method described is finding an item first, then checking its map position for an X. Trev cannot presently circle individual marks and plans exact photographs/video before collecting the observed items. Record these owner-reported findings now; do not require a circled example before accepting the report. Existing8map-view photographs establish source context, not individual pickup identities. Individual item names, exact native Atlas XY, height/floor and access evidence remain unset until received and reconciled. Repeated-grid appearance is an unconfirmed visual interpretation, not proof against the reported item associations. No inferred cross-to-item pins, production data, original Workspace, progress or feedback changes. Approved runtime223762bd1a21c2e72c592e975499d13c4195ae07 and its Manifest91/Ledger99 release/prompt remain valid and unchanged. Research packet:docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json. User-supplied location photos/video may document these observations when received; general YouTube/video features remain paused.",
+      "current": false,
+      "attribution_superseded_by_sequence": 4
+    },
+    {
+      "sequence": 2,
+      "note": "[AT343 correction — latest owner report, 2026-11-26] Trev subsequently reports: 'its not right just found lots of them without any balls there'. Treat this as explicit withdrawal of the general one-cross/one-present-item-ball rule. Multiple empty cross positions are now owner-reported; the count, individual locations and collection/floor conditions are unspecified. Earlier8Trev+2Kay positive reports remain historical observations and must not be labelled10unique verified locations or a perfect success rate. The crosses alone are not reliable evidence that a visible pickup is currently present. Grid/background semantics remain a visual interpretation, not a separately proven game rule. This correction controls the earlier no-failures-reported snapshot above. No item pins or exact native coordinates have been created from this theory; none is authorised by this report. Further individual item evidence may be recorded if supplied, but a new survey or video is not required to accept this correction. Keep the current tested runtime, source coordinates, original Workspace and existing progress unchanged.",
+      "current": true,
+      "attribution_superseded_by_sequence": 4
+    },
+    {
+      "sequence": 3,
+      "note": "[AT343 relative-grid alignment follow-up — 2026-11-26] Trev clarified that crosses occur with and without items and proposed them as map-alignment or measurement references. A bounded replay of the two original Vert photographs (20261126_141528.jpg and 20261126_141757.jpg) supports a map-relative repeating lattice as a secondary local alignment check after shared architecture establishes correspondence. Strict architecture fit excludes cross neighborhoods and cursor/HUD/map labels: 197 candidate feature matches, 97 inliers at 82 distinct source feature coordinates (not named landmarks), 1.732 original-photo-pixel RMS. Two held-out crosses inside the actual inlier hull have 3.565 and 4.284 photo-pixel error; two eastern diagnostics outside it have 17.098 and 28.642 pixel error, so the fit must not be extended across the whole photograph. A separate fixed-HUD comparison supports the map-relative interpretation locally. One pair does not certify other regions/zooms; a repeating unnumbered grid has whole-cell ambiguity, no unique origin and no established physical/game distance unit. This is bounded feasibility evidence only: no native1920x1920 Atlas transform, item/structure coordinate, runtime map change or production alignment approval. The item-rule withdrawal above remains controlling. Reproducible evidence: docs/qa/at343-owner-item-crosses/grid-registration-pilot.json and grid-registration-pilot.py. Eight original overview photos are archived unchanged. Approved runtime223762bd1a21c2e72c592e975499d13c4195ae07, release Manifest91/Ledger99, prior GitHub proofs/statuses, Workspace and player progress are preserved; current research planning stays Manifest92/Ledger100.",
+      "current": true,
+      "scope": "bounded_relative_grid_feasibility"
+    },
+    {
+      "sequence": 4,
+      "note": "[AT343 attribution clarification — 2026-11-26] The earlier assistant note interpreted the phrase 'kay just varified 2 more' as a named second reporter. The user message does not unambiguously identify a person named Kay; it could be conversational wording. Active evidence must therefore say: Trev reported eight cumulative matches, followed in his message by two further reported matches; separate reporter identity, exact locations and overlap are unconfirmed. Do not treat these as independent observations from a verified second person, ten unique locations or a measured success rate. Earlier notes are preserved as history with this attribution clarification controlling. This does not change the withdrawal of the item-marker rule or the separately replayed bounded grid-alignment result.",
+      "current": true,
+      "scope": "attribution_clarification"
+    }
+  ],
+  "current_conclusion": "Owner withdrew the cross-to-present-item-ball rule after reporting many empty crosses. The strict one-pair replay supports secondary local relative image alignment only, with unknown real/game units and no native-map or production coordinate approval. Separate reporter identity for the two further reported matches is unconfirmed.",
+  "status_counts": {
+    "open": 16,
+    "verified": 17,
+    "in_progress": 15
+  },
+  "status_counts_unchanged": true,
+  "all_github_status_and_release_proof_fields_unchanged": true,
+  "all_workspace_fields_unchanged": true,
+  "all_previous_notes_preserved": true,
+  "unrelated_business_fields_preserved": true,
+  "changed_field_counts": {
+    "updated_at": 48,
+    "manifest_revision": 48,
+    "verification_note": 1
+  },
+  "schema_or_public_player_feedback_data_changed": false,
+  "new_rows": 0,
+  "deleted_rows": 0,
+  "approved_runtime_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "approved_release_manifest_revision": 91,
+  "approved_release_ledger_revision": 99,
+  "private_row_contents_omitted": true,
+  "correction_readback_at": "2026-11-26T15:32:36.56938+00:00",
+  "correction_snapshot_md5": "b8290e08fd89052812de0a6735e0c977",
+  "alignment_preflight_at": "2026-11-26T15:41:11.542883+00:00",
+  "alignment_executed_at": "2026-11-26T15:41:29.42848+00:00",
+  "alignment_readback_at": "2026-11-26T15:41:58.141903+00:00",
+  "alignment_snapshot_md5": "e29960c2ca0032cfbca7aaa630f9e7fc",
+  "attribution_clarification_executed_at": "2026-11-26T15:42:14.984695+00:00"
+}

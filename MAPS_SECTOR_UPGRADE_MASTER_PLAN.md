@@ -1,5 +1,22 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+<!-- AT343_CURRENT_PLANNING_92_100 -->
+## Latest planning evidence — AT-343 / Manifest 92 / Ledger 100
+
+**Latest correction: the general cross-equals-item rule is unsupported and withdrawn.** Trev subsequently reported finding many crosses with no ball present; their number is unspecified. The marks’ game meaning, real/game units and global origin remain unconfirmed; the bounded relative-alignment result below does not restore an item-marker interpretation. No new pin, native coordinate, collectible identity or runtime behavior is approved by these observations.
+
+**Bounded alignment result:** the strict pilot supports the marks as a **secondary map-relative alignment reference for one Vert photograph pair**, after shared architecture establishes correspondence. It retained **197 candidate feature correspondences, 97 inliers at 82 distinct source locations**—not 82 named landmarks—with **1.732 original-photograph-pixel RMS**. The roof and canal cross holdouts lie **inside the actual architecture-inlier convex hull**, with residuals of **3.565 and 4.284 photograph pixels**. Eastern checks lie outside that hull and are extrapolation diagnostics, with larger residuals of **17.098 and 28.642 pixels**. A separate local HUD comparison supports map-relative rather than fixed-screen anchoring only for this pair. [Strict pilot data](docs/qa/at343-owner-item-crosses/grid-registration-pilot.json) · [Portable replay script](docs/qa/at343-owner-item-crosses/grid-registration-pilot.py).
+
+**Alignment limits:** this is bounded relative-photo feasibility, not production approval. Real/game units remain unknown, and the periodic lattice has whole-cell ambiguity. The original **1920×1920-pixel** map stays unchanged: there is no Atlas-native1920 transform, global/all-zoom calibration, item pin, or coordinate promotion. Production `alignment_approved` remains **false**; local feasibility is explicitly supported within the recorded bounds.
+
+The earlier observations remain reported history: **Trev reported eight cumulative matches (five plus three), then two further matches were reported; the separate reporter identity and overlap of locations are unconfirmed**. The wording does not establish a second person named Kay or ten distinct verified positions. Items were often found first and then compared with an X. The earlier absence of reported failures is superseded by the later empty-cross report and never established a perfect success rate. Trev cannot currently circle an individual example and intends to provide before-pickup photos or video; no such new capture or verification is claimed here.
+
+[Owner report and correction](docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json) · [Readable evidence note](docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md) · [Separate tracker execution/readback receipt](docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json). The existing 48 private planning rows carry Manifest92 with unchanged GitHub status totals of **17 verified, 15 in progress and 16 open**. Prior GitHub release proofs and all Workspace fields remain preserved. The AT332 observation note was appended at **15:30:35.67812 UTC** and its counterreport at **15:31:43.772416 UTC** on 26 November2026; actual guarded readback evidence belongs to the separate tracker receipt, with no readback time inferred here.
+
+**Planning revision92/Ledger100 is separate from the approved runtime release at Manifest91/Ledger99 below.** The approved merge remains `223762bd1a21c2e72c592e975499d13c4195ae07`, tree `0288e63d1d52fe5f95dc76e0c01631715310e54a`. Its release receipt, six hashed evidence/prompt files, G0–G5/A0 decisions and all67 original requirements remain unchanged. The existing release-pinned Workspace prompt is retained exactly; this research correction neither promotes new map placements nor alters its approved runtime. Original Workspace publication and broader guide/Alpha duties retain their existing status.
+
+<!-- END_AT343_CURRENT_PLANNING_92_100 -->
+
 <!-- AT342_CURRENT_91_99 -->
 ## Current release — AT-342 / Manifest 91 / Ledger 99
 
