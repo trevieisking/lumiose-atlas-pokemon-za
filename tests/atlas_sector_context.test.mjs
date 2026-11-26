@@ -35,7 +35,7 @@ test('every original named sector gets exactly one source-registered wider conte
   assert.equal(sectorContextFor('wz-01'),null);
   assert.equal(sectorContextFor('not-a-sector'),null);
   assert.equal(sectorContextImageStyle(null),'');
-  assert.equal(oldLibrary.counts.images_crops,42);
+  assert.equal(oldLibrary.counts.image_crops,42);
   assert.equal(oldLibrary.counts.sectors_with_photographic_references,48);
 });
 
