@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-26T14:16:25.621256+00:00",
+  "reviewer": "independent encounter_content_completion agent",
+  "head_sha": "82f710dd6fc3a585a48e5daf3104fad28e6e765f",
+  "tree_sha": "b6890f161fd71e70615484b9d587e9a5f0c563fe",
+  "workflow_run_id": "45836666038",
+  "artifact_id": "15127345477",
+  "artifact_zip_sha256": "ac44d3a39e5e9aabac3c04089fd847f0bde5330f6f9b7914bc8043c46fc6b224",
+  "artifact_identity_basis": "Full head, tree, workflow, artifact ID and verified ZIP SHA supplied by parent from its exact-head artifact verification; this reviewer independently read, hashed and viewed the six extracted PNGs.",
+  "scope": "Read-only visual review of six existing CI screenshots. No browser/private-preview calls, extra tests, screenshot generation, source edits, remote actions or SQL.",
+  "result": "No blocking layout defect observed in the captured content; screenshot coverage is limited as specified per image.",
+  "images": [
+    {
+      "file": "fashion/clothing-guide-desktop.png",
+      "sha256": "30a71ee583bac5085151e9ba23b152802422334e5e239e65fc7a2e4a54834ef9",
+      "bytes": 177816,
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Initial guide viewport; lower page not captured.",
+      "visible_assessment": [
+        "Heading, introductory copy, three category links, 41-boutique summary and outfit instructions are readable, with no body overlap or horizontal clipping.",
+        "Header controls fit. The navigation strip ends with a partially shown Type mat label at its right boundary; reachability of the remaining navigation is not demonstrated by this static capture.",
+        "The next section starts below the bottom viewport edge. No clothing photographs are visible."
+      ]
+    },
+    {
+      "file": "fashion/clothing-guide-phone.png",
+      "sha256": "d44e9f6cfbef401977ec0d636651425cbcc31ec1099d96a3d5742b6afd2df3af",
+      "bytes": 83468,
+      "dimensions_px": [
+        393,
+        852
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Initial phone guide viewport; lower page not captured.",
+      "visible_assessment": [
+        "Heading and paragraphs wrap within the screen; header controls and three category links fit without overlap. The 41-boutique summary card is visible and readable.",
+        "The main navigation shows Overview, Complete journey route and Walkthrough; further links are outside the capture. Static evidence cannot confirm horizontal navigation interaction.",
+        "No clothing photographs or lower boutique cards are visible."
+      ]
+    },
+    {
+      "file": "fashion/hair-beauty-guide-desktop.png",
+      "sha256": "d068791ad91a25bf9cc24d4056b9622972bd5d4714d37c68db00ca87b449a04e",
+      "bytes": 159385,
+      "dimensions_px": [
+        1440,
+        900
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Initial guide viewport including the top of the first salon-card row.",
+      "visible_assessment": [
+        "Heading, introduction, category links, 3,000-price summary, salon instructions and the visible portions of the first two salon cards are readable without overlap.",
+        "Header controls fit. The navigation strip ends with a partially shown Type mat label at its right boundary; reachability of the remaining navigation is not demonstrated by this static capture.",
+        "The two salon cards continue below the viewport edge. No hairstyle or location photographs are visible."
+      ]
+    },
+    {
+      "file": "fashion/hair-beauty-guide-phone.png",
+      "sha256": "61aee3a6fe4a2035c59b3b265a255e36c99e49296baf52d4a6ac4a59b9c013b8",
+      "bytes": 82416,
+      "dimensions_px": [
+        393,
+        852
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Initial phone guide viewport; salon cards and lower page not captured.",
+      "visible_assessment": [
+        "Heading, introduction, header controls and category links wrap and fit without overlap. The 3,000-price summary text is readable; the summary card continues to the bottom viewport edge.",
+        "The main navigation shows Overview, Complete journey route and Walkthrough; further links are outside the capture. Static evidence cannot confirm horizontal navigation interaction.",
+        "No hairstyle or location photographs are visible."
+      ]
+    },
+    {
+      "file": "fashion/mission-008-desktop.png",
+      "sha256": "9bf4b276a2afd6470751b6d2284f7475efb281f1cc92d5b2b26bd6126b5a19da",
+      "bytes": 99461,
+      "dimensions_px": [
+        520,
+        927
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Complete expanded mission card element; not a whole desktop viewport.",
+      "visible_assessment": [
+        "Mission title, completion control, expanded field notes, unlock, start, rewards, all four numbered steps and both link buttons are legible and fit the card without text overlap or horizontal clipping.",
+        "Visible corrected content includes Branche, Magenta Sector 2, the Water-type sludge-clearing approach, north ladder and intact Revitalizing Twig, and Fennekin as a mission reward rather than a repeatable wild spawn.",
+        "Visible rewards are 1,200, Exp. Candy XS x3, Exp. Candy S x1 and Fennekin Lv. 14. The map-reference disclaimer distinguishes an area reference from a precise quest marker.",
+        "No mission photograph is shown; no global menu is included in the element capture."
+      ]
+    },
+    {
+      "file": "fashion/mission-008-phone.png",
+      "sha256": "35b0010892382921d9ea5af875fa36101e7ae13a26b130161874c61c4e9634c4",
+      "bytes": 81209,
+      "dimensions_px": [
+        361,
+        1042
+      ],
+      "viewed": true,
+      "view_method": "tools.view_image; original PNG displayed directly; no image modification",
+      "visible_layout_result": "no_blocking_defect_observed_in_captured_content",
+      "capture_scope": "Complete expanded mission card element, taller than the 852-pixel phone guide viewport; not proof that the entire card fits on one phone screen.",
+      "visible_assessment": [
+        "Mission title, completion control, expanded field notes, unlock, start, rewards, all four numbered steps and both link buttons are legible and fit the card width without text overlap or horizontal clipping.",
+        "Visible corrected content includes Branche, Magenta Sector 2, the Water-type sludge-clearing approach, north ladder and intact Revitalizing Twig, and Fennekin as a mission reward rather than a repeatable wild spawn.",
+        "Visible rewards are 1,200, Exp. Candy XS x3, Exp. Candy S x1 and Fennekin Lv. 14. The map-reference disclaimer distinguishes an area reference from a precise quest marker.",
+        "No mission photograph is shown; no global menu is included in the element capture."
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "No photographs are visible in any of these six captures. Photo existence, rendering, full-page photo layout and image provenance are not visually verified by this artifact.",
+    "Fashion guide captures cover only the initial viewport. The complete shopping directory, lower cards and lower-page states are not reviewed here.",
+    "The navigation strips show only part of the link set; the desktop rightmost visible label is partially cut by the strip boundary. Static images do not establish scrollability or link reachability. This is recorded as an evidence limitation, not a demonstrated navigation defect.",
+    "Mission screenshots show complete card elements and establish readable width/wrapping, not whole-page layout or a one-screen phone fit.",
+    "No click, menu-opening, completion-state, keyboard, touch, zoom, map or persistence behavior was exercised by this review.",
+    "This review does not approve a runtime deployment, the whole master plan, Workspace parity or publication."
+  ],
+  "actionable_findings": [],
+  "follow_up_scope": "Use existing separate photo/navigation evidence for those requirements; this receipt alone does not close them."
+}

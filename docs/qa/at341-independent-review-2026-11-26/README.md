@@ -19,3 +19,6 @@ PR204's final combined commit still requires its own tests, affected visual revi
 - `isolated-final-package-validation.json`: exact isolated8c1dff2 local154-test/static/source/preservation checkpoint; final owner CI, deployment, live proof and current planning synchronization remain separate.
 
 - `reviewed-sector-copy-amendment.json` and its gzip patch preserve the five-file wording/preservation-test amendment for careful integration with concurrent edits; they do not alter this evidence branch runtime.
+
+- `at342-tracker-protection-review.json`: independent fresh readback verifies all48 original notes and protected status/proof/Workspace fields after Manifest90 synchronization; only6 documented stage labels changed.
+- `82f710dd-fashion-visual-review.json`: all6 actual exact-head guide/fashion screenshots inspected. This bounded visual pass is not whole-release approval; the map browser run has a failed shared-area step pending diagnosis.
