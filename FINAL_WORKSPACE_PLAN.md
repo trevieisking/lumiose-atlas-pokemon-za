@@ -1,5 +1,18 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT345_CONTEXTUAL_MAP_AND_AT330_SHOPS_PLANNING_98_106 -->
+## AT-345 planning addendum — wider sector photographs + fashion Shops (Manifest 98 / Ledger 106)
+
+**26 November 2026 — new owner request, not a released image replacement.** [AT-345 issue #217](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/217) · [Source and original-Workspace import specification](docs/qa/ATLAS_AT345_SECTOR_CONTEXT_PHOTOS_AND_SHOPS_2026-11-26.md).
+
+The Jaune Sector 2 card currently displays a **310×175 px** close crop. For **all 48 sectors**, review the **26 byte-preserved original source JPEG photographs** and choose wider, north-up, **sector-centred contextual views** that retain adjoining streets, buildings, waterways, plazas and labelled neighbouring sectors. Record source SHA, bounds, visual quality, chosen best view and fallback separately per sector. Existing **42 small source crops**, source archives, registered map geometry, original coordinates, 20 Wild Zones, filters, photograph galleries, player progress, feedback and Supabase stay untouched until verified replacements pass exact-head tests and phone/desktop visual QA. Context photographs remain orientation evidence; they do not authorize exact item, Holovator, ladder, scaffold or permanent random Hyperspace pins. The prior AT-344 coverage register still labels best originals unselected; **no 48-view swap or live Website change is claimed by this planning addendum**.
+
+**Already released on GitHub main, not yet verified on the original Workspace Site:** [AT-330 Shops PR #216](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/216), merged commit `0a460046187d029a08656f12168f87be4db20d15`, integrates the existing **41 boutiques/five arcades/five salons**, while retaining the original 18 shop groups/200 items, dedicated clothing/beauty pages and all calculators. The **next one-site Workspace package must include BOTH AT-345 wider photos (after visual verification) and the already-merged AT-330 Shops update**, with same-Site backup, comparison, test and rollback; no replacement Site or added paid services. Independently verify and update `atlas_internal.feature_checklist` rows `AT-345-SECTOR-CONTEXT-PHOTOS`, `AT-330-SHOPS-STYLE-HUB`, `AT-330-CLOTHING` and `AT-330-HAIR-BEAUTY` without changing historical release receipts or claiming original-Site publication before proof.
+
+**Release separation:** Existing Map 2.0 cross-grid release **Manifest 97 / Ledger 105** and its sealed evidence remain current *verified runtime history*. Manifest 98 / Ledger 106 is a new **unshipped planning checkpoint** only; it does not supersede the approved original-Site prompt, CI SHA or release snapshot below.
+<!-- END_AT345_CONTEXTUAL_MAP_AND_AT330_SHOPS_PLANNING_98_106 -->
+
+
 <!-- ATLAS_CROSS_GRID_CURRENT_97_105 -->
 ## Released cross grid and source archive (Manifest 97 / Ledger 105)
 
