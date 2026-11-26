@@ -4,6 +4,8 @@
 
 ## Decision and scope
 
+**Release receipt:** [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204) records the current candidate, exact CI, screenshot review, promotion decision, merge, deployment and live checks. This file records the preparation and safety contract; the PR receipt supplies the later observed outcomes without claiming them in advance.
+
 This is one consolidated candidate for the verified improvements accumulated across the open Atlas PRs. Its starting main is `d7021a7af3973f18d54d07634e29c23cc78b0560`; the recovered shared-area source is PR202 head `426aa3b71814b560a42939e9a7cc8304fb4a454d`. The assistant makes the bounded promotion decision after the final combined head passes the checks below. The PR's release receipt must record its actual reviewed head/tree, merge, deployment and live checks; this document does not pre-certify those future events.
 
 **Full master-plan completion remains HOLD.** Five reviewed Wild Zone map-selection outlines are available, while 63 required boundaries and all 68 comprehensive encounter reviews remain open. A working search interface and attributed encounter rows do not resolve those evidence gaps. The full-scope approved SHA and executable Workspace publication prompt remain null. These are existing requirements, not new approval steps for the owner.
@@ -26,7 +28,8 @@ The [25-PR disposition record](ATLAS_AT340_PR_DISPOSITIONS.json) preserves exact
 2. Selecting a Holovator after the shared model loaded left the older area selected. A boundary/filter rerender could replace the chosen photographs. Explicit access selection now clears that stale area context and preserves its route cursor and original photo nodes.
 3. Evidence controls created external or raw Markdown navigation. Attribution remains visible and full URLs remain in the evidence records; player links stay within published Atlas guides/photos.
 4. The main map copy overstated approximate markers and raw heights as exact pickup/floor information. It now describes zone orientation and item search clues. No coordinate or height data was changed.
-5. Two browser assertions expected unpadded zone names. They now assert the canonical `Wild Zone 01` / `Wild Zone 02` labels while retaining independent `wz-01` / `wz-02` checks.
+5. The original photo fieldbook still described preserved and disputed sightings as confirmed catchable species. All four map surfaces now describe these as incomplete preserved records and link each zone to its current encounter evidence. Every original roster value, Alpha condition and image remains intact.
+6. Two browser assertions expected unpadded zone names. They now assert the canonical `Wild Zone 01` / `Wild Zone 02` labels while retaining independent `wz-01` / `wz-02` checks.
 
 ## Preservation and validation contract
 
@@ -39,7 +42,7 @@ The combined candidate must pass:
 - Actual screenshot review for the affected maps and guide views; no material console, overflow, missing-image or progress regression.
 - A fresh main/head review immediately before an expected-head merge, then verification of the exact Pages deployment and live bytes/behavior. Keep the reviewed tree and deployed merge distinct in the receipt.
 
-Local combined-candidate checks completed before publication: **126 Node tests passed**, static validation passed for 17 sections / 647 page links / 1,431 image-script references / 578 captured resources, all eight original owner-crop byte and registration checks passed, generated `index.html` reproduced exactly, and `git diff --check` passed. Independent geometry/preservation review found no remaining must-fix issue in its bounded scope. Final GitHub browser CI, actual screenshots and deployment checks remain separate required release evidence.
+Local combined-candidate checks completed before publication: **127 Node tests passed**, static validation passed for 17 sections / 647 page links / 1,431 image-script references / 578 captured resources, all eight original owner-crop byte and registration checks passed, generated `index.html` reproduced exactly, and `git diff --check` passed. Independent geometry/preservation review found no remaining must-fix issue in its bounded scope. Final GitHub browser CI, actual screenshots and deployment checks remain separate required release evidence.
 
 Passing software tests verifies behavior and preservation. It does not establish unreviewed game geography or complete encounter rosters.
 

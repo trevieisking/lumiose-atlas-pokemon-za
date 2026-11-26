@@ -28,7 +28,9 @@ try{
        await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
        assert.equal(await img.evaluate(el=>el.naturalWidth),1536);
      }
-     assert.equal(await panel.locator('ul[aria-label="Catchable Pokémon"] li').count(),z.species.length);
+     assert.equal(await panel.locator('ul[aria-label="Preserved species records"] li').count(),z.species.length);
+     assert.equal(await panel.locator('[data-wz-current-evidence="'+n+'"]').getAttribute('href'),'atlas-explorer.html?area='+explorerZoneId(n));
+     assert.match(await panel.locator('.wz-roster-status').textContent(),n===20?/not comprehensive/:/incomplete, and some entries are disputed/);
      if(n===20){await panel.locator("summary").click();assert.equal(await panel.locator(".wz-alpha-pool li").count(),67);}
      const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
      assert.ok(overflow<=1,screen+" "+kind+" overflow "+overflow);

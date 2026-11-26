@@ -12,7 +12,7 @@ The plans, manifests and ledgers are consolidated. The [reconciled routes](docs/
 
 ## Current implementation
 
-[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) combines the shared area/species search and habitat work with the verified content from the outstanding PRs, including 73 written steps for Main Missions 01–10. Independent review fixes preserve disputed-habitat labels, explicitly chosen Holovator photos, local evidence navigation and honest approximate-map wording. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with **63 boundaries and all 68 comprehensive encounter-roster reviews still open**. Final combined-head phone/desktop validation and bounded GitHub release are pending; the original Workspace remains unchanged.
+[AT-340](docs/qa/ATLAS_AT340_VERIFIED_CONSOLIDATION.md) combines the shared area/species search and habitat work with the verified content from the outstanding PRs, including 73 written steps for Main Missions 01–10. Independent review fixes preserve disputed-habitat labels, explicitly chosen Holovator photos, local evidence navigation and honest approximate-map wording. Its candidate includes five reviewed map outlines (Wild Zones 2, 3, 5, 11 and 16), with **63 boundaries and all 68 comprehensive encounter-roster reviews still open**. Final combined-head phone/desktop validation, merge and live verification are tracked in [PR204](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/204); the original Workspace remains unchanged.
 
 ## Three remaining work packages
 
