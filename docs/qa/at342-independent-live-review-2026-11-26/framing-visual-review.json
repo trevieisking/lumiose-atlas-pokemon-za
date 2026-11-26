@@ -1,0 +1,406 @@
+{
+  "id": "AT341-F030C4AE-INDEPENDENT-FRAMING-VISUAL-REVIEW",
+  "reviewed_at_utc": "2026-11-26T14:56:46.425078+00:00",
+  "reviewer": "Independent geometry review agent /root/geometry_completion",
+  "decision": "PASS_SCOPED_SECTOR_FRAMING_AND_OVERLAP_CHOOSER_VISUAL_REVIEW",
+  "artifact": {
+    "head": "f030c4ae3e33259105bf351885c386f6b53900d9",
+    "workflow_run": 45842781652,
+    "artifact_id": 15130116199,
+    "artifact_name": "atlas-areas-mobile-desktop-preview",
+    "zip_file": "atlas-areas-f030c4ae.zip",
+    "zip_sha256": "ddcf1c5954bc8dbcf879af3f693834fcc038f0f9cc4f0cd3fd97dfacb111215d",
+    "zip_bytes": 31776963,
+    "zip_sha256_independently_recomputed": true,
+    "extracted_file_count": 133,
+    "downloaded_metadata_file": "ci-artifacts.json",
+    "downloaded_metadata_sha256": "869e66d411303fd6c2270bee3411b1f5bf31e3c3c1e8ccbc32dc00e56c9aed07",
+    "attribution_scope": "Exact head/run/artifact association read from the locally retained artifact metadata; no network lookup performed."
+  },
+  "ci_context": {
+    "jobs_file": "ci-jobs.json",
+    "jobs_file_sha256": "ad6f6689edec24507687118c919c35cc1c7c8684aeedce8866042b230f3caf23",
+    "jobs": [
+      {
+        "id": 139988537062,
+        "name": "atlas-browser",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 139988537702,
+        "name": "atlas-unit",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 139988537745,
+        "name": "atlas-areas-browser",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "browser_proof_file": "areas/at339-browser-proof.json",
+    "browser_proof_sha256": "e6f4d4471cfb113b50d55f6be4fa9c612286e45bc9d679d6176b5eae794b39a4",
+    "scope": "Successful CI is retained separately. The visual resolution decision below comes from direct inspection of the listed screenshots."
+  },
+  "review_scope": {
+    "sector_ids": [
+      "vert-sector-1",
+      "bleu-sector-2",
+      "magenta-sector-5",
+      "rouge-sector-4",
+      "jaune-sector-6"
+    ],
+    "phone_sector_map_captures": 5,
+    "desktop_sector_map_captures": 5,
+    "phone_overlap_chooser_captures": 1,
+    "desktop_overlap_chooser_captures": 1,
+    "total_existing_images_directly_viewed": 12,
+    "focus": "Entire selected outline and visible stroke clear of the context card, bottom guidance and map edges; readable and contained overlap choosers.",
+    "zone_maps_or_photos_repeated": false,
+    "new_screenshots_or_composites_created": false
+  },
+  "summary": {
+    "sector_map_views_clear": 10,
+    "sector_map_views_reviewed": 10,
+    "overlap_chooser_views_clear": 2,
+    "overlap_chooser_views_reviewed": 2,
+    "previous_occlusion_findings_resolved": 3,
+    "previous_occlusion_findings_remaining": 0,
+    "new_visible_issues_found": 0,
+    "resolution_statement": "Rouge Sector 4 phone and desktop, and Magenta Sector 5 desktop, now display the formerly hidden corner/end with full visible stroke below the card. All other reviewed sector views also clear the card, guidance and map edges."
+  },
+  "resolved_findings": [
+    {
+      "prior_finding_id": "PHONE-SECTOR-ROUGE4-CARD-OCCLUSION",
+      "prior_receipt": "/workspace/scratch/eb5fa20055a2/atlas-failure-review-82f710dd/independent-phone-visual-review.json",
+      "prior_receipt_sha256": "85a7a5748c61f3e7d841d04f8857d55c3b67dd538c7ecae80831069614abd3c8",
+      "area_id": "rouge-sector-4",
+      "device": "phone",
+      "current_file": "areas/at341-sector-rouge-sector-4-phone.png",
+      "current_sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd",
+      "verdict": "RESOLVED_IN_THIS_EXACT_HEAD_CAPTURE",
+      "evidence": "The formerly covered northern tip and its full stroke are now visible below the context card. The long footprint is contained, with its lower tip above the guidance."
+    },
+    {
+      "prior_finding_id": "DESKTOP-ROUGE4-CONTEXT-OCCLUSION",
+      "prior_receipt": "/workspace/scratch/eb5fa20055a2/atlas-release-review-377fb91e/independent-desktop-visual-review.json",
+      "prior_receipt_sha256": "affc3ef6782a5fad5d7d8bb1ec22a7288306d42568d0704833a2a17e6f02835c",
+      "area_id": "rouge-sector-4",
+      "device": "desktop",
+      "current_file": "areas/at341-sector-rouge-sector-4-desktop.png",
+      "current_sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e",
+      "verdict": "RESOLVED_IN_THIS_EXACT_HEAD_CAPTURE",
+      "evidence": "The formerly covered northern end is fully visible below the information card. Both long edges, the upper and lower end strokes, and all corners are contained and clear of the guidance."
+    },
+    {
+      "prior_finding_id": "DESKTOP-MAGENTA5-CONTEXT-OCCLUSION",
+      "prior_receipt": "/workspace/scratch/eb5fa20055a2/atlas-release-review-377fb91e/independent-desktop-visual-review.json",
+      "prior_receipt_sha256": "affc3ef6782a5fad5d7d8bb1ec22a7288306d42568d0704833a2a17e6f02835c",
+      "area_id": "magenta-sector-5",
+      "device": "desktop",
+      "current_file": "areas/at341-sector-magenta-sector-5-desktop.png",
+      "current_sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db",
+      "verdict": "RESOLVED_IN_THIS_EXACT_HEAD_CAPTURE",
+      "evidence": "The formerly obscured northwest/northern vertex and adjoining upper purple edge are now fully visible below the information card. The entire footprint and stroke also clear the guidance and map edges."
+    }
+  ],
+  "files": [
+    {
+      "file": "areas/at341-sector-vert-sector-1-phone.png",
+      "sha256": "a8d907e6a4cb8e16efbc4574ee05800e2f619efeecd429c40923305d0bb98659",
+      "bytes": 197993,
+      "dimensions": [
+        343,
+        478
+      ],
+      "device": "phone",
+      "area_id": "vert-sector-1",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The complete purple footprint and thick stroke sit below the taller, wrapped information card, with visible clearance above the guidance and at both map edges.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-vert-sector-1-desktop.png",
+      "sha256": "7afc4a536d895ef6b2d7c7fe31e96b5629aac124f4f4bf776b2167c1dba54079",
+      "bytes": 496481,
+      "dimensions": [
+        837,
+        568
+      ],
+      "device": "desktop",
+      "area_id": "vert-sector-1",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The complete purple footprint, including its upper-left vertex and lower edge, is visible below the context card and above the guidance. No stroke is hidden or clipped.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-bleu-sector-2-phone.png",
+      "sha256": "45050da9e6e8940554dbaf24eb76161255d29fe406335e86adb7bec9333db424",
+      "bytes": 210019,
+      "dimensions": [
+        343,
+        478
+      ],
+      "device": "phone",
+      "area_id": "bleu-sector-2",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "All purple edges and corner strokes are visible beneath the card. The lower tip clears the guidance and the left/right extents remain inside the map.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-bleu-sector-2-desktop.png",
+      "sha256": "028d85f9ab8eaeeaf959f926fa1af88b9b502d01ce892b78669290f9db590e04",
+      "bytes": 537722,
+      "dimensions": [
+        837,
+        568
+      ],
+      "device": "desktop",
+      "area_id": "bleu-sector-2",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The complete source footprint and stroke are visible with clear margins from the card, guidance and map boundaries.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-magenta-sector-5-phone.png",
+      "sha256": "903efeeeec0d9196cb8a4dc4090f9bba3ae4ca276c3eee2d4919ca8f59a191d7",
+      "bytes": 187540,
+      "dimensions": [
+        343,
+        478
+      ],
+      "device": "phone",
+      "area_id": "magenta-sector-5",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The northwest vertex, northern inward step and complete lower edge are visible. The stroke clears the card, guidance and both map edges.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-magenta-sector-5-desktop.png",
+      "sha256": "ba1f65d02e7f3bc7183fc0eb5d7ccbf0408c55a3fc61a85bf365c8bb5e0da9db",
+      "bytes": 450778,
+      "dimensions": [
+        837,
+        568
+      ],
+      "device": "desktop",
+      "area_id": "magenta-sector-5",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The formerly obscured northwest/northern vertex and adjoining upper purple edge are now fully visible below the information card. The entire footprint and stroke also clear the guidance and map edges.",
+      "resolved_prior_finding": "DESKTOP-MAGENTA5-CONTEXT-OCCLUSION",
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-rouge-sector-4-phone.png",
+      "sha256": "70dc67f291ae39284d35452163530281b73e2e3afe101deb724cd571686533dd",
+      "bytes": 209929,
+      "dimensions": [
+        343,
+        478
+      ],
+      "device": "phone",
+      "area_id": "rouge-sector-4",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The formerly covered northern tip and its full stroke are now visible below the context card. The long footprint is contained, with its lower tip above the guidance.",
+      "resolved_prior_finding": "PHONE-SECTOR-ROUGE4-CARD-OCCLUSION",
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-rouge-sector-4-desktop.png",
+      "sha256": "6241d8ed73d1267c28a4823cb740d485b4284e253bd0278fc9877ab1e1f4b24e",
+      "bytes": 604302,
+      "dimensions": [
+        837,
+        568
+      ],
+      "device": "desktop",
+      "area_id": "rouge-sector-4",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The formerly covered northern end is fully visible below the information card. Both long edges, the upper and lower end strokes, and all corners are contained and clear of the guidance.",
+      "resolved_prior_finding": "DESKTOP-ROUGE4-CONTEXT-OCCLUSION",
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-jaune-sector-6-phone.png",
+      "sha256": "7ca842b6d732e9760ba39316fd360a089e5613d31d70f11d3bcbeb1e9366728e",
+      "bytes": 208339,
+      "dimensions": [
+        343,
+        478
+      ],
+      "device": "phone",
+      "area_id": "jaune-sector-6",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "The upper corners and southern stepped edge are all visible with their full stroke. The footprint clears the context card, guidance and viewport boundaries.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-sector-jaune-sector-6-desktop.png",
+      "sha256": "b93b277a10c803d2de329226b8d539893481dbfeb54ed08ffcf5c27d79d751a3",
+      "bytes": 492475,
+      "dimensions": [
+        837,
+        568
+      ],
+      "device": "desktop",
+      "area_id": "jaune-sector-6",
+      "kind": "selected_sector_map",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "complete_selected_outline_visible": true,
+        "complete_visible_stroke_clear_of_context_card": true,
+        "complete_visible_stroke_clear_of_guidance": true,
+        "complete_visible_stroke_within_map_edges": true,
+        "selected_context_text_contained": true
+      },
+      "observation": "All edges of the irregular source footprint, including its southern steps, are visible. The complete stroke has clear space from the context card, guidance and map boundaries.",
+      "resolved_prior_finding": null,
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-real-sector-overlap-phone.png",
+      "sha256": "e30c4c3e13adcd47fa46d3d2bb1d06121a5bc086c9ca59a58181513d2da8f0b1",
+      "bytes": 14929,
+      "dimensions": [
+        285,
+        179
+      ],
+      "device": "phone",
+      "kind": "real_sector_overlap_chooser",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "heading_contained": true,
+        "explanatory_text_contained": true,
+        "both_choice_buttons_fully_visible": true,
+        "both_choice_labels_readable": true
+      },
+      "visible_choices": [
+        "Bleu Sector 6",
+        "Bleu Sector 8"
+      ],
+      "observation": "The heading, overlap/height explanation and both bordered sector choices fit the panel. No text or button is visibly clipped. This is a static visual check, not a new click test.",
+      "new_issue": null
+    },
+    {
+      "file": "areas/at341-real-sector-overlap-desktop.png",
+      "sha256": "b5484d64120e2f3e9c6a034f326520c2a1715db9b7b7433fea9b085da36c9adf",
+      "bytes": 16740,
+      "dimensions": [
+        422,
+        154
+      ],
+      "device": "desktop",
+      "kind": "real_sector_overlap_chooser",
+      "directly_viewed_with_view_image": true,
+      "checks": {
+        "heading_contained": true,
+        "explanatory_text_contained": true,
+        "both_choice_buttons_fully_visible": true,
+        "both_choice_labels_readable": true
+      },
+      "visible_choices": [
+        "Bleu Sector 6",
+        "Bleu Sector 8"
+      ],
+      "observation": "The heading, overlap/height explanation and both bordered sector choices fit the panel. No text or button is visibly clipped. This is a static visual check, not a new click test.",
+      "new_issue": null
+    }
+  ],
+  "limits": [
+    "This approval covers the twelve listed rendered views at the exact artifact/head hash. It is not a guarantee for every sector, every screen size, arbitrary user zoom/rotation, or future code.",
+    "Visual inspection confirms clear visible spacing; it is not a newly measured numerical registration, source-perimeter or geometry proof.",
+    "The purple shapes remain source-area selection footprints. No physical wall, traversable route, exclusive partition or encounter-boundary claim is added.",
+    "Both overlap chooser layouts are readable and contained; no chooser click or navigation was executed by this reviewer.",
+    "The eleven zone maps and original photographs were not repeated because this task targets the sector framing change; their prior evidence and zero-inset implementation review remain separate.",
+    "This is a bounded visual validation, not merge, deployment, Supabase or final full-master-plan authorization."
+  ],
+  "execution": {
+    "actual_view_image_used_for_all_twelve": true,
+    "browser_calls": false,
+    "network_calls": false,
+    "source_audit_or_pipeline": false,
+    "repository_or_pr_changes": false,
+    "sql_or_supabase_changes": false,
+    "artifact_written": "This new JSON review only, outside checkouts."
+  }
+}
