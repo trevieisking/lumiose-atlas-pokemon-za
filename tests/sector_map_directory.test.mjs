@@ -289,3 +289,12 @@ for(const entry of tmAccess.records){
 }
 assert.equal((page.match(/data-tm-access="/g)||[]).length,21);
 assert.equal((itemPage.match(/data-tm-access="/g)||[]).length,20);
+
+// Obstacle instructions agree across all three player-facing items views without adding pins.
+for(const id of ["5-7","10-7"]){
+ const rec=tmAccess.records.find(r=>r.id===id);
+ assert.match(rec.note,/Water Gun or Confusion/);
+ const row=city.split('data-map-pickup="'+id+'"')[1]?.split("</li>")[0]||"";
+ assert.ok(row.includes('data-tm-access="'+id+'"'));
+ assert.ok(row.includes(rec.note));
+}
