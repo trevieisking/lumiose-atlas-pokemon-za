@@ -13,9 +13,9 @@
 - Four Bleu 7–10 routes are now reconciled and live on GitHub: **26 routes, 151 written steps and 78 research leads** in total. All earlier routes and leads are retained.
 - The route update passed automated checks, independent review of **32 phone/desktop screenshots**, exact deployment checks and a live browser spot check. [Release evidence](docs/qa/ATLAS_AT337_RELEASE_RECEIPT.json).
 
-## Current implementation
+## Latest completed feature
 
-The Item and Colorful Screw layers and searchable **364-record directory** are implemented in the AT-338 candidate. Separate switches, compact dots, overlap selection and read-only original progress are awaiting phone/desktop release validation. Production has **zero newly verified pickup dots**; unverified records remain useful directory entries. [Validation scope](docs/qa/ATLAS_AT338_COLLECTIBLE_LAYERS.md).
+The Item and Colorful Screw layers and searchable **364-record directory are live on GitHub Pages**. Separate switches, compact dots, overlap selection and read-only original progress passed phone/desktop checks and review of all **12 new screenshots**. Production has **zero newly verified pickup dots**; unverified records remain useful directory entries. [Open the directory](https://trevieisking.github.io/lumiose-atlas-pokemon-za/atlas-explorer.html?collectible=screw%3A1) · [Release proof](docs/qa/ATLAS_AT338_RELEASE_RECEIPT.json).
 
 ## Five actions to the final Workspace prompt
 
@@ -23,7 +23,7 @@ The Item and Colorful Screw layers and searchable **364-record directory** are i
 
 2. **Finish map and encounter verification.** Complete the required records for **48 sectors and 20 Wild Zones** using existing supplied images and research. Resolve boundaries, encounter conditions, unlocks and Alpha distinctions. Keep image registration and coordinate uncertainty explicit. Provide useful written/photo access directions; no exhaustive ladder/scaffold pin survey or duplicate-photo request is required.
 
-3. **Finish the remaining map features.** Complete shared area/species highlights, habitat links, filters, selection and deep links. Validate and release the implemented Item and Colorful Screw layers, separate switches, accessible selection and overlap chooser. Preserve the distinct **264 item records, 100 Screw clues and 146 approximate leads**, original collection IDs and progress. Only evidenced fixed locations receive verified pins.
+3. **Finish the remaining map features.** Complete shared area/species highlights, habitat links, filters, selection and deep links. The Item and Colorful Screw layer/directory implementation is complete; retain its separate switches, accessible selection and overlap chooser. Preserve the distinct **264 item records, 100 Screw clues and 146 approximate leads**, original collection IDs and progress. Only evidenced fixed locations receive verified pins.
 
 4. **Test and release the complete GitHub upgrade.** Validate affected guides, links, photographs, map controls and saved progress on phone and desktop. Include at least **364 synthetic collectible records in tests only**. Resolve review findings, merge the reviewed commit, verify its actual deployment and live behavior, and record the approved version, changed files and rollback. The assistant makes the technical promotion decision.
 

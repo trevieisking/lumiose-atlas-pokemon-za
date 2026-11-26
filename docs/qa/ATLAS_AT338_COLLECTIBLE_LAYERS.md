@@ -4,7 +4,7 @@
 
 ## Scope and release state
 
-**Implemented candidate; exact browser, visual and deployment validation pending.** This is a bounded layer/directory release. It does not certify all Interactive Map 2.0 requirements or authorize the final Workspace prompt. Baseline main is `71cde4ff5990e6ad05299bee7494963364e70354`, tree `b1ec2dfb7166d4b607c60cdc51e1855f14f7ae72`.
+**Merged, deployed and live-verified on GitHub Pages.** PR193 reviewed head `54f9c2590a92bd5e6cd8fc5ceb37bf3d7420d3fe`, merge `c7f9861c70c8eb2101348da579d9720875ebc1e9`. [Exact release receipt](ATLAS_AT338_RELEASE_RECEIPT.json) and [original browser proof](ATLAS_AT338_BROWSER_PROOF.json). This is a bounded layer/directory release. It does not certify all Interactive Map 2.0 requirements or authorize the final Workspace prompt. Baseline main is `71cde4ff5990e6ad05299bee7494963364e70354`, tree `b1ec2dfb7166d4b607c60cdc51e1855f14f7ae72`.
 
 The audited `items-data.js` contains 264 original item records and 100 numbered Screw clues. Its pure global data assignment can be imported without loading the checklist controller. The original progress owner remains `lumiose-atlas-reconstruction-v1`: item values use `pickup[originalId]`, Screws use `screw[originalId]`. Original detail links are `items.html#item-ID` and `items.html#item-screw-ID`.
 
@@ -26,9 +26,9 @@ The pure eligibility engine requires the exact original record ID, unique physic
 
 Rewards, hidden/random outcomes, transient/temporary entries, duplicate record or physical IDs, unknown scene/floor/route evidence, unregistered source coordinates and malformed data cannot create pins. Supplied photographs must be existing local still-image paths; production additions still require manual evidence review. No media player or video integration is restored.
 
-## Validation required for promotion
+## Validation and release evidence
 
-Local validation has passed **67 relevant unit/integration checks** and the static check of 17 sections, 645 links, 1,431 image/script references and 578 captured resources. The original media-removal test is unchanged and passes. Independent UI review found and corrected keyboard focus after chooser selection and clearing, and centring a selected point excluded by older filters. Local Chrome is unavailable; actual browser and screenshot approval remain pending the exact CI head.
+Local validation has passed **67 relevant unit/integration checks** and the static check of 17 sections, 645 links, 1,431 image/script references and 578 captured resources. The original media-removal test is unchanged and passes. Independent UI review found and corrected keyboard focus after chooser selection and clearing, and centring a selected point excluded by older filters. Local Chrome was unavailable. Exact Chrome CI45740068408 passed both jobs, including all existing Explorer and 20 Wild Zone fieldbook checks. All 12 new screenshots and four existing map/photo samples passed visual review. Pages45740697392 deployed the exact merge; ten public resources matched its bytes and hashes, and the live directory/search/layers/rotation/compass spot check passed.
 
 1. Run existing geometry, routes, source/photo counts, guide links, item checks and static validation alongside the new engine tests. Confirm all existing source data, images, checklist code and other application pages are unchanged from baseline.
 2. On real Chrome CI, use desktop and phone viewports. Check production's 364 directory records and zero pins, all four layer combinations, read-only progress and useful empty state.
@@ -43,6 +43,6 @@ The browser fixtures are isolated inside `tests/atlas_collectibles_browser.mjs`;
 
 Unchanged: 48 sectors, 20 Wild Zones, 26 routes/151 steps, 78 access leads, 21 Holovator entries and original photographs, Hotel Z ladder, all existing map geometry/assets, original item/Screw IDs, 146 approximate leads, guide pages, account/Supabase integration and completed feedback. No original Workspace publication is included. Videos remain paused.
 
-Rollback is a normal revert of this bounded feature commit/merge, restoring the four edited Explorer/workflow files and removing only the new collectible modules/register/tests. There is no database migration, progress migration or media restoration. Preserve later independent changes and historical planning records when applying a revert.
+Rollback reverses only PR193 runtime/test/workflow hunks on a branch, restoring the four edited Explorer/workflow files and removing only the new collectible modules/register/tests. Preserve later valid changes and all historical planning/release records. Test and deploy the reviewed rollback normally. There is no database migration, progress migration or media restoration. The exact merge and path scope are recorded in the release receipt.
 
 The full AT-325 G2/G3 evidence, shared area/habitat interactions and G5 complete-release checks remain open. The approved full-upgrade SHA and final executable Workspace prompt remain unset.
