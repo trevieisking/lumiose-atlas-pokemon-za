@@ -1,0 +1,60 @@
+{
+  "status": "candidate_only_pending_independent_review",
+  "baseline_commit": "ace2f504619b7a271e3ecb5d75d3ba565fe6052d",
+  "area_id": "wz-04",
+  "native_map": "maps/lumiose-game-map.jpg",
+  "source": "assets/atlas/wild-zones/wild-zone-04-closeup.png",
+  "method": "Six manually identified architecture correspondences fitted by unrobust projective least squares; no boundary vertices, cursor, gate symbols, zone badges, text or icons used for fitting. Three architecture and five border checks are withheld from the fit. An additional attempted architecture check H4 was visually rejected because it lies on a plain pavement edge rather than an identifiable corner; it remains in the receipt and review panel but is excluded from accuracy summaries. Initial point roles were fixed before fitting; neither the fitted controls nor transform changed after review. All observations and first-pass picks are retained.",
+  "points": [
+    {"id":"F1","label":"west upper roof northeast corner","source_xy":[73,291],"native_xy":[930.5,264],"role":"fit"},
+    {"id":"F2","label":"west upper roof southeast corner","source_xy":[73,390],"native_xy":[930.5,285],"role":"fit"},
+    {"id":"F3","label":"zone outer pavement northwest corner","source_xy":[249.5,85.5],"native_xy":[971,217.5],"role":"fit"},
+    {"id":"F4","label":"zone outer pavement northeast corner","source_xy":[1330.5,95.5],"native_xy":[1204,217.5],"role":"fit"},
+    {"id":"F5","label":"east roof southwest corner","source_xy":[1387,740],"native_xy":[1221,352.5],"role":"fit"},
+    {"id":"F6","label":"zone outer pavement southeast corner","source_xy":[1301.5,754],"native_xy":[1204,359.5],"role":"fit"},
+    {"id":"H1","label":"north roof southwest corner","source_xy":[281,20],"native_xy":[979.5,202],"role":"architecture_holdout"},
+    {"id":"H2","label":"east roof northwest corner","source_xy":[1410.5,126],"native_xy":[1221.5,224],"role":"architecture_holdout"},
+    {"id":"H3","label":"east courtyard southwest corner","source_xy":[1517,606],"native_xy":[1246.5,326],"role":"architecture_holdout"},
+    {"id":"H4","label":"REJECTED plain west pavement edge","source_xy":[98,269],"native_xy":[936.5,259.5],"role":"rejected_nonlandmark","first_pass_role":"architecture_holdout","rejection":"The labelled crop showed a straight pavement edge, not an independently identifiable corner. Retained transparently; excluded from holdout statistics despite its low residual."},
+    {"id":"B1","label":"green perimeter northwest corner","source_xy":[282,119],"native_xy":[979,225],"role":"border_holdout"},
+    {"id":"B2","label":"green perimeter northeast corner","source_xy":[1298,129],"native_xy":[1197,225],"role":"border_holdout"},
+    {"id":"B3","label":"green perimeter southeast corner","source_xy":[1276,727],"native_xy":[1197,352],"role":"border_holdout"},
+    {"id":"B4","label":"south gate west outer shoulder","source_xy":[983,714],"native_xy":[1135,352],"role":"border_holdout","first_pass_native_xy":[1138.5,352],"correction":"The first pick was inside the symbol apron. A 12x nearest-neighbour native crop showed the external green-line shoulder at x1135. No fit point, role or transform was changed; both residuals are retained."},
+    {"id":"B5","label":"south gate east outer shoulder","source_xy":[1080,718],"native_xy":[1157.5,352],"role":"border_holdout","first_pass_native_xy":[1158.5,352],"correction":"The 12x native inspection locates the external green-line shoulder one pixel west of the first pick. No fit point, role or transform was changed; both residuals are retained."}
+  ],
+  "source_perimeter_vertices": [
+    {"xy":[282,119],"label":"northwest visible corner"},
+    {"xy":[773,124],"label":"north line before gate symbol"},
+    {"xy":[861,125],"label":"north line after gate symbol"},
+    {"xy":[1298,129],"label":"northeast visible corner"},
+    {"xy":[1276,727],"label":"southeast visible corner"},
+    {"xy":[1081,718],"label":"south gate east outer shoulder"},
+    {"xy":[1076,706],"label":"south gate east inner shoulder"},
+    {"xy":[989,704],"label":"south gate west inner shoulder"},
+    {"xy":[983,714],"label":"south gate west outer shoulder"},
+    {"xy":[279,691],"label":"southwest visible source corner; native cursor occludes it"},
+    {"xy":[279,452],"label":"west gate south outer shoulder"},
+    {"xy":[293,448],"label":"west gate south inner shoulder"},
+    {"xy":[293,366],"label":"west gate north inner shoulder"},
+    {"xy":[280,360],"label":"west gate north outer shoulder"}
+  ],
+  "unresolved_gate_connector_segments": [
+    {"from_vertex":1,"to_vertex":2,"reason":"North gate symbol covers a short perimeter span. Straight connection of the two visible green-line approaches is a selection-outline interpretation, not an observed continuous line."},
+    {"from_vertex":6,"to_vertex":7,"reason":"South gate symbol covers the connection between visible inner shoulders. Its arrow tips and filled squares are excluded from the outline; the crossing is unreviewed."},
+    {"from_vertex":11,"to_vertex":12,"reason":"West gate symbol covers the inner crossing. The source exposes both shoulders; their connection is unreviewed. This is not a traversable entrance claim."}
+  ],
+  "occlusions": [
+    "The native red cursor overlaps the west perimeter and southwest corner; use the original closeup and two retained PR200 images for those spans.",
+    "The native crown and zone badge obscure the north gate region/interior; original photo identity and surrounding architecture are used, never the crown/badge geometry.",
+    "The closeup's cursor, place name and badge lie inside the zone and are not used as landmarks or polygon edges.",
+    "Gate symbols cover short crossing spans in every supplied view. These three connectors remain explicit candidate interpretations, not newly observed geography."
+  ],
+  "corroborating_owner_files": ["1000028696.jpg", "1000028700.jpg"],
+  "review_crop_native": [905,190,1280,385],
+  "preserved_rejections": [
+    "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json",
+    "docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.md",
+    "docs/qa/atlas-early-zone-outline-screening.jpg",
+    "docs/qa/at339-geometry/wild_zone_registration_candidates.json"
+  ]
+}

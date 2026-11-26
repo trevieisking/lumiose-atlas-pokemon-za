@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-26",
+  "reviewer": "independent root review",
+  "decision": "HOLD_closed_production_polygon_retain_observed_segments_and_registration",
+  "candidate_evidence_sha256": "6581ec9e50c05d39fc73bd4509c3c4f6142f8b5457857fbb39f44066ceeb71ad",
+  "panels_reviewed": [
+    "landmark-review.png",
+    "registered-source-review.png",
+    "original-closeup-review.png"
+  ],
+  "checks": {
+    "fit": {
+      "count": 6,
+      "rms_px": 1.0261018477352803,
+      "max_px": 1.7105684269212484
+    },
+    "architecture_holdout": {
+      "count": 3,
+      "rms_px": 1.587967035579548,
+      "max_px": 1.8126210535309497
+    },
+    "border_holdout": {
+      "count": 5,
+      "rms_px": 0.8563820079037809,
+      "max_px": 1.173579644954486
+    }
+  },
+  "calculation_scope": "Independently reprojected all recorded fit/holdout observations with the stored transform; not a fresh landmark survey or a newly fitted transform.",
+  "source_and_panel_hashes_verified": 13,
+  "observations": [
+    "The six fitted architectural corners correspond to identifiable building/pavement features; H4 remains correctly rejected as a plain edge.",
+    "The original closeup reveals the west and southwest extent hidden by the native cursor; both registered owner views support the same broad footprint.",
+    "Green gate symbols still cover three short perimeter crossings. The dashed connectors are interpretations rather than observed continuous boundary lines.",
+    "Contextual owner views have larger retained residuals and do not independently resolve the gate-symbol spans."
+  ],
+  "release_effect": "No sixth approved outline. Keep PR202 scope at five; no runtime evidence edit.",
+  "next_step": "Use the retained source observations and existing image collection to resolve or explicitly validate the three map-selection connector interpretations before approving a closed polygon. Do not infer routes, spawn extents or pickup positions."
+}
