@@ -93,8 +93,9 @@ assert.deepEqual(Object.fromEntries(cityRecord.locations.map(row=>[row.area_id,r
 assert.ok(cityRecord.locations.every(row=>row.ordinary.join()=== "28,29" && row.alpha.join()==="38,39"));
 
 /* 2026-11-26: scoped Alpha fieldbook fact-check; no mutation of fixed zone or map data. */
-const riolu=html.match(/<article class="step-card" id="alpha-riolu-rooftops">([\\s\\S]*?)<\\/article>/)?.[1];
-const otherCity=html.match(/<article class="step-card" id="alpha-more-city-chances">([\\s\\S]*?)<\\/article>/)?.[1];
+const cityAlphaCard=id=>{const start=html.indexOf('<article class="step-card" id="'+id+'">');return start<0?null:html.slice(start,html.indexOf("</article>",start)+10)};
+const riolu=cityAlphaCard("alpha-riolu-rooftops");
+const otherCity=cityAlphaCard("alpha-more-city-chances");
 assert.ok(riolu && otherCity, "Chance Alpha guides must be present");
 for (const text of ["Rouge Sector 4","Bleu Sector 5","Vert Sector 8","Magenta Sector 9","not guaranteed","not exact verified map coordinates"])
   assert.ok(riolu.includes(text), "Missing qualified Riolu claim: " + text);
