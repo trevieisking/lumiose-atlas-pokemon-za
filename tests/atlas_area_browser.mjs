@@ -138,7 +138,7 @@ try{
       await page.reload({waitUntil:"load"});await panel();
       assert.match(await page.locator("[data-area-detail]").textContent(),/Wild Zone 20/);
       if(surface!=="explorer"){
-        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap [data-map-zone="2"]';
+        const selector=surface==="standalone"?'[data-map-pin="2"]':surface==="sectors"?'[data-zone-marker="2"]':'#atlasMap button[data-select-zone="2"]';
         await page.locator(selector).click();
         await page.waitForFunction(()=>new URL(location.href).searchParams.get("area")==="wz-02");
         await page.reload({waitUntil:"load"});await panel();
