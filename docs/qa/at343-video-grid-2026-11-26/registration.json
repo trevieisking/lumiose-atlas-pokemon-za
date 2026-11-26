@@ -1,0 +1,518 @@
+{
+  "status": "research_only_no_production_promotion",
+  "method": "Manual architecture-only homography, normalized DLT initialized then geometric least squares in reference pixels; crosses excluded; seven additional architecture vertices held out.",
+  "source_frame": {
+    "path": "frame-014.0.png",
+    "time_seconds": 14,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "bcfcbe70602937905819066debb4584c1f4565b492dbf490ae4fdd3f192f34ac"
+  },
+  "reference": {
+    "path": "external_research_input/lumiose-original.png",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "sha256": "69e7c03b58ad8e3dbdccda36075e64151973d6634c39feccb9f31c9b96f3bc89",
+    "coordinate_convention": "image pixels, origin top-left, x right, y down",
+    "source_url": "https://github.com/santacrab2/ShinyStashMap/blob/master/ShinyStashMap/Resources/lumiose.png",
+    "git_blob_sha": "c5d863319961690d02d4b7d78f87b4ab0ed8b74c",
+    "redistributed_in_atlas": false
+  },
+  "controls": [
+    {
+      "id": "nw_chamfer_top_left",
+      "video_xy": [
+        311,
+        147
+      ],
+      "reference_xy": [
+        1897.5,
+        1882.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.9575208716588508
+    },
+    {
+      "id": "nw_chamfer_top_right",
+      "video_xy": [
+        388,
+        147
+      ],
+      "reference_xy": [
+        1940.5,
+        1882.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.20522565001103504
+    },
+    {
+      "id": "top_inset_left",
+      "video_xy": [
+        415,
+        178
+      ],
+      "reference_xy": [
+        1955.5,
+        1900.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 0.7806202920440573
+    },
+    {
+      "id": "top_inset_right",
+      "video_xy": [
+        714,
+        177
+      ],
+      "reference_xy": [
+        2139.5,
+        1900.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.0385248163140754
+    },
+    {
+      "id": "ne_chamfer_top_left",
+      "video_xy": [
+        739,
+        147
+      ],
+      "reference_xy": [
+        2154.5,
+        1882.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 0.6596960549273047
+    },
+    {
+      "id": "ne_chamfer_top_right",
+      "video_xy": [
+        806,
+        147
+      ],
+      "reference_xy": [
+        2197.5,
+        1882.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.9277914472525866
+    },
+    {
+      "id": "ne_chamfer_outer_upper",
+      "video_xy": [
+        829,
+        173
+      ],
+      "reference_xy": [
+        2212.5,
+        1897.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 0.7180985675313706
+    },
+    {
+      "id": "ne_chamfer_outer_lower",
+      "video_xy": [
+        828,
+        244
+      ],
+      "reference_xy": [
+        2212.5,
+        1940.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.4811024413056345
+    },
+    {
+      "id": "east_upper_inset",
+      "video_xy": [
+        799,
+        271
+      ],
+      "reference_xy": [
+        2194.5,
+        1955.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.794792224493322
+    },
+    {
+      "id": "east_lower_inset",
+      "video_xy": [
+        799,
+        567
+      ],
+      "reference_xy": [
+        2194.5,
+        2139.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.7267340269534537
+    },
+    {
+      "id": "se_chamfer_outer_upper",
+      "video_xy": [
+        826,
+        589
+      ],
+      "reference_xy": [
+        2212.5,
+        2154.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 0.6002932685856042
+    },
+    {
+      "id": "se_chamfer_outer_lower",
+      "video_xy": [
+        826,
+        656
+      ],
+      "reference_xy": [
+        2212.5,
+        2197.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.4237790644678287
+    },
+    {
+      "id": "se_chamfer_bottom_right",
+      "video_xy": [
+        804,
+        680
+      ],
+      "reference_xy": [
+        2197.5,
+        2212.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.2236026109607503
+    },
+    {
+      "id": "se_chamfer_bottom_left",
+      "video_xy": [
+        738,
+        685
+      ],
+      "reference_xy": [
+        2154.5,
+        2212.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 1.0091752958944775
+    },
+    {
+      "id": "bottom_inset_right",
+      "video_xy": [
+        714,
+        658
+      ],
+      "reference_xy": [
+        2139.5,
+        2194.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.1414829381698792
+    },
+    {
+      "id": "bottom_inset_left",
+      "video_xy": [
+        416,
+        685
+      ],
+      "reference_xy": [
+        1955.5,
+        2194.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 3.087067910606087
+    },
+    {
+      "id": "sw_chamfer_bottom_right",
+      "video_xy": [
+        394,
+        711
+      ],
+      "reference_xy": [
+        1940.5,
+        2212.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 1.2518374965678545
+    },
+    {
+      "id": "sw_chamfer_outer_upper",
+      "video_xy": [
+        294,
+        621
+      ],
+      "reference_xy": [
+        1882.5,
+        2154.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.3787111556458379
+    },
+    {
+      "id": "west_lower_inset",
+      "video_xy": [
+        327,
+        592
+      ],
+      "reference_xy": [
+        1900.5,
+        2139.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.7675154728516198
+    },
+    {
+      "id": "west_upper_inset",
+      "video_xy": [
+        323,
+        276
+      ],
+      "reference_xy": [
+        1900.5,
+        1955.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 1.7890394779640044
+    },
+    {
+      "id": "nw_chamfer_outer_lower",
+      "video_xy": [
+        288,
+        249
+      ],
+      "reference_xy": [
+        1882.5,
+        1940.5
+      ],
+      "role": "check",
+      "residual_reference_pixels": 0.3616844269262642
+    },
+    {
+      "id": "nw_chamfer_outer_upper",
+      "video_xy": [
+        286,
+        173
+      ],
+      "reference_xy": [
+        1882.5,
+        1897.5
+      ],
+      "role": "fit",
+      "residual_reference_pixels": 0.43393446018365245
+    }
+  ],
+  "fit_count": 15,
+  "held_out_architecture_count": 7,
+  "fit_rms_reference_pixels": 1.3177109867324466,
+  "held_out_rms_reference_pixels": 0.8138911831947765,
+  "held_out_max_reference_pixels": 1.2518374965678545,
+  "video_to_reference_homography": [
+    [
+      0.28998381322648303,
+      -0.07616507031241926,
+      1729.5353867052127
+    ],
+    [
+      -0.25052599419075167,
+      0.4704873119388412,
+      1803.9299161561903
+    ],
+    [
+      -0.00013230959797641873,
+      -3.5797581758361926e-05,
+      1.0
+    ]
+  ],
+  "crosses": [
+    {
+      "id": "NW",
+      "video_xy": [
+        354,
+        214
+      ],
+      "estimated_reference_xy": [
+        1920.5574072209179,
+        1920.597245780972
+      ],
+      "use": "withheld_from_architecture_fit",
+      "outside_architecture_control_hull": false
+    },
+    {
+      "id": "NE",
+      "video_xy": [
+        748,
+        213
+      ],
+      "estimated_reference_xy": [
+        2160.51470541447,
+        1921.5757659900812
+      ],
+      "use": "withheld_from_architecture_fit",
+      "outside_architecture_control_hull": false
+    },
+    {
+      "id": "E_top",
+      "video_xy": [
+        1102,
+        207
+      ],
+      "estimated_reference_xy": [
+        2401.2376730974192,
+        1919.3085312265491
+      ],
+      "use": "withheld_from_architecture_fit",
+      "outside_architecture_control_hull": true
+    },
+    {
+      "id": "SW",
+      "video_xy": [
+        361,
+        628
+      ],
+      "estimated_reference_xy": [
+        1921.3526137268586,
+        2160.736215144994
+      ],
+      "use": "withheld_from_architecture_fit",
+      "outside_architecture_control_hull": false
+    },
+    {
+      "id": "E_bottom",
+      "video_xy": [
+        1095,
+        578
+      ],
+      "estimated_reference_xy": [
+        2400.494086323371,
+        2159.013511994529
+      ],
+      "use": "withheld_from_architecture_fit",
+      "outside_architecture_control_hull": true
+    }
+  ],
+  "intervals": {
+    "top_left_interval": {
+      "reference_vector": [
+        239.9572981935521,
+        0.9785202091093197
+      ],
+      "reference_distance": 239.95929333565917,
+      "start": "NW",
+      "end": "NE",
+      "picking_noise_only_95_percent_range": [
+        236.6001170532831,
+        243.637540938754
+      ],
+      "deviation_from_240": -0.04070666434083137
+    },
+    "top_right_interval": {
+      "reference_vector": [
+        240.72296768294927,
+        -2.2672347635320875
+      ],
+      "reference_distance": 240.7336443531714,
+      "start": "NE",
+      "end": "E_top",
+      "picking_noise_only_95_percent_range": [
+        234.1342249470294,
+        246.73173107937376
+      ],
+      "deviation_from_240": 0.7336443531713996
+    },
+    "left_vertical_interval": {
+      "reference_vector": [
+        0.7952065059407687,
+        240.13896936402193
+      ],
+      "reference_distance": 240.14028600091603,
+      "start": "NW",
+      "end": "SW",
+      "picking_noise_only_95_percent_range": [
+        236.31520203649237,
+        243.61951272364146
+      ],
+      "deviation_from_240": 0.14028600091603494
+    },
+    "right_vertical_interval": {
+      "reference_vector": [
+        -0.7435867740482536,
+        239.7049807679798
+      ],
+      "reference_distance": 239.7061341022964,
+      "start": "E_top",
+      "end": "E_bottom",
+      "picking_noise_only_95_percent_range": [
+        234.41751969701312,
+        244.24891514421378
+      ],
+      "deviation_from_240": -0.29386589770359706
+    }
+  },
+  "limitations": [
+    "Manual selections; reference outline colour differs from in-game overlay but shape matches.",
+    "Two eastern crosses are extrapolated outside the park control hull and have greater sensitivity.",
+    "Camera lens distortion and any source map version mismatch are not modelled.",
+    "Uncertainty experiment covers picking noise only and is not a total accuracy confidence interval.",
+    "No conversion to metres, footsteps, game engine units, or existing 1920 Atlas coordinates.",
+    "Pin cursor and player arrow occlude centres; their positions are not used to assert exact start/end grid coordinates.",
+    "The 240-pixel spacing and phase are a post-fit local descriptive model, not a withheld test of an official origin."
+  ],
+  "post_fit_lattice_comparison": {
+    "description": "A 240-pixel axis-aligned grid with local origin(1920,1920) is compared after fitting architecture; it is not used to fit H. These five points do not establish the origin across the whole city.",
+    "grid_indices": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "hypothesis_origin": [
+      1920,
+      1920
+    ],
+    "hypothesis_spacing": 240,
+    "point_residual_reference_pixels": [
+      0.8169487944908793,
+      1.6576972338703222,
+      1.4177319072141303,
+      1.5399924135542615,
+      1.1033040740795637
+    ],
+    "rms_reference_pixels": 1.3426977118040886,
+    "max_reference_pixels": 1.6576972338703222
+  },
+  "local_grid_model": {
+    "spacing_reference_pixels": 240,
+    "grid_phase_reference_pixels": [
+      0,
+      0
+    ],
+    "fitted_after_observing_transformed_crosses": true,
+    "official_grid_origin_verified": false,
+    "scope": "Descriptive local model for the observed Wild Zone 20 frame; not a citywide survey or native Atlas transform."
+  }
+}

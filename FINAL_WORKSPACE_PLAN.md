@@ -1,5 +1,30 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT343_VIDEO_CURRENT_PLANNING_95_103 -->
+## Latest planning evidence — AT-343 video follow-up / Manifest 95 / Ledger 103
+
+**26 November 2026: a new owner-supplied measurement video has been received.** Trev asks that the faint X marks be used to investigate a precise reference grid for rebuilding the maps. The original `1000028756.mp4`, original photographs and existing map assets are preserved; analysis uses separate frame extracts and derived evidence. [Current evidence report](docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md) · [Structured measurements and source identity](docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json).
+
+**Current finding:** the earlier bounded Vert comparison, observed Wild Zone 20 video rows and independently reviewed local image registration support using the crosses as local reference checks. A waypoint value of **60** is visible around **20.9–21.0 seconds**. This is not a count of footsteps or a confirmed metres-per-cell measurement. Partly obscured waypoint-measurement endpoints prevent treating that value as proof of one exact grid interval. The new report controls any numerical image-registration claims; no universal exact-60 spacing, citywide calibration or developer-purpose claim is established.
+
+**Reconstruction requirement:** preserve the common north-up source orientation, establish each location from its buildings and roads, then check nearby cross rows and spacing. Record original source dimensions, hashes, coordinate space, controls and independent checks for every measured transform. A numbered Atlas reference grid may be defined from validated image measurements, but that would be our coordinate convention. Source-image pixels, grid-relative references, native 1920×1920 Atlas pixels and in-game distance must remain distinct until their relationship is verified. The earlier cross-equals-present-item rule remains withdrawn; no item, structure or gameplay pin is approved by a cross alone.
+
+**Evidence preservation:** the [original AT-343 report](docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md) retains its dated Vert experiment. Its strict pilot, replay script, eight-photo source inventory and earlier tracker receipt remain unchanged. The 92/100 summary below is historical: its statement that no further video had been received describes that earlier intake, not this follow-up.
+
+**Planning reconciliation:** the inspected GitHub main baseline remains Manifest **92** / Ledger **100**, while the authenticated private tracker already records the separate **AT-344 source-collection checkpoint at 94/102**. This **95/103** follow-up preserves that existing note and work while adding the requested video evidence. It does not certify or replace the separate AT344 archive, claim that its complete source packet is merged into main, or modify the separate unmerged source-intake branch. The new tracker receipt verifies preservation of the earlier AT344 note and the existing business data.
+
+**Tracker synchronization verified.** The [new tracker receipt](docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json) records the guarded **94 → 95** update at **17:02:31.10883 UTC** and an independent fresh readback at **17:02:56.25398 UTC** on 26 November 2026. All **48 existing rows** are at Manifest **95**; status totals remain **17 verified, 15 in progress and 16 open**. Only shared `manifest_revision` / `updated_at` metadata and one appended AT332 note changed. The existing AT344 source-collection note, all earlier notes, GitHub status and release proofs, Workspace fields and unrelated business data are preserved. No rows were added or deleted.
+
+**Release scope:** planning 95/103 adds research evidence and no production coordinate promotion, runtime change or new pin. The approved runtime remains `223762bd1a21c2e72c592e975499d13c4195ae07`, tree `0288e63d1d52fe5f95dc76e0c01631715310e54a`, at release Manifest 91 / Ledger 99. Its sealed release evidence, original requirements, player progress, release-pinned Workspace prompt and independent original-Workspace status are preserved. The supplied video is mapping evidence; public video/YouTube features remain paused.
+
+<!-- END_AT343_VIDEO_CURRENT_PLANNING_95_103 -->
+
+<!-- AT343_VIDEO_PRIOR_92_100_HISTORY -->
+<details>
+<summary>Historical research checkpoint — AT-343 / Manifest 92 / Ledger 100</summary>
+
+The following is the preserved earlier intake, before the measurement video was supplied. The 95/103 follow-up above is the current research summary.
+
 <!-- AT343_CURRENT_PLANNING_92_100 -->
 ## Latest planning evidence — AT-343 / Manifest 92 / Ledger 100
 
@@ -16,6 +41,9 @@ The earlier observations remain reported history: **Trev reported eight cumulati
 **Planning revision92/Ledger100 is separate from the approved runtime release at Manifest91/Ledger99 below.** The approved merge remains `223762bd1a21c2e72c592e975499d13c4195ae07`, tree `0288e63d1d52fe5f95dc76e0c01631715310e54a`. Its release receipt, six hashed evidence/prompt files, G0–G5/A0 decisions and all67 original requirements remain unchanged. The existing release-pinned Workspace prompt is retained exactly; this research correction neither promotes new map placements nor alters its approved runtime. Original Workspace publication and broader guide/Alpha duties retain their existing status.
 
 <!-- END_AT343_CURRENT_PLANNING_92_100 -->
+
+</details>
+<!-- END_AT343_VIDEO_PRIOR_92_100_HISTORY -->
 
 <!-- AT342_CURRENT_91_99 -->
 ## Current release — AT-342 / Manifest 91 / Ledger 99

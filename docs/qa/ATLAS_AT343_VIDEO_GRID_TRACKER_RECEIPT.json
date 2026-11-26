@@ -1,0 +1,59 @@
+{
+  "id": "AT343-VIDEO-GRID-TRACKER-RECEIPT",
+  "status": "verified_guarded_update_and_fresh_readback",
+  "manifest_revision": 95,
+  "ledger_revision": 103,
+  "previous_tracker_manifest_revision": 94,
+  "previous_tracker_ledger_revision_as_recorded_in_note": 102,
+  "preflight": {
+    "read_at": "2026-11-26T17:02:02.018735+00:00",
+    "row_count": 48,
+    "max_revision": 94,
+    "min_revision": 94,
+    "snapshot_md5": "22b979182b5336510e1654628c4c2584",
+    "other_notes_md5": "a6c31c0e48b8b29ea00bc23dbc5431cc",
+    "immutable_business_md5": "894e7bc409d8df4527fd9fab54caa1b2"
+  },
+  "execution": {
+    "executed_at": "2026-11-26T17:02:31.10883+00:00",
+    "guard_passed": true,
+    "rows_updated": 48,
+    "new_snapshot_md5": "2dd9fee30a824566928090033dc19b12",
+    "note_rows_changed": 1,
+    "all_other_notes_preserved": true,
+    "target_note_prefix_preserved": true,
+    "all_business_fields_preserved": true
+  },
+  "readback": {
+    "row_count": 48,
+    "readback_at": "2026-11-26T17:02:56.25398+00:00",
+    "max_revision": 95,
+    "min_revision": 95,
+    "snapshot_md5": "2dd9fee30a824566928090033dc19b12",
+    "status_counts": {
+      "open": 16,
+      "verified": 17,
+      "in_progress": 15
+    },
+    "other_notes_md5": "a6c31c0e48b8b29ea00bc23dbc5431cc",
+    "target_note_present": true,
+    "immutable_business_md5": "894e7bc409d8df4527fd9fab54caa1b2",
+    "prior_AT344_note_preserved": true
+  },
+  "scope": "Existing private Atlas planning metadata only; append the video-grid evidence to the existing AT332 note. Preserve AT344 source intake, all earlier notes, status and release proofs, Workspace fields and unrelated business data.",
+  "all_previous_notes_preserved": true,
+  "all_status_and_release_proof_fields_preserved": true,
+  "all_workspace_fields_preserved": true,
+  "changed_field_counts": {
+    "manifest_revision": 48,
+    "updated_at": 48,
+    "verification_note": 1
+  },
+  "new_rows": 0,
+  "deleted_rows": 0,
+  "schema_or_public_player_feedback_changed": false,
+  "new_runtime_coordinate_promotions": 0,
+  "approved_runtime_release_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+  "new_note": "[AT343 video grid verification — 2026-11-26; Manifest95/Ledger103] Owner-supplied1000028756.mp4 (SHA2569d95aac4c6f865a9fe63767e45091b6b98462d7b7c6b8728f435e426342ffda3) is measurement evidence. At20.9–21.0s the waypoint visibly reads60; this is not a counted-footstep or confirmed-metre result, and the cursor/player obscure exact endpoints. An architecture-only fit of the Wild Zone20 park (15 controls,7 reserved outline vertices; crosses withheld) gives local adjacent cross intervals239.96/240.14 pixels on the identified4096 reference image. Independent replay and alternative fits support approximately240-pixel local spacing; eastern extrapolated diagnostics remain qualified. The phase/origin is a post-fit descriptive model, not official coordinates or developer-construction proof. Use unique architecture first, then crosses as secondary local references and optional subdivided search cells; validate each overlap/zoom and any native1920 transform separately. Preserve all original media and the earlier Vert experiment; process only derivative copies. The cross-to-present-item rule remains withdrawn. No new pins, native coordinate promotion, runtime/Workspace/player/schema changes. Evidence: docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json and .md. Preserve the separate AT344 source-collection note at prior94/102; this followup does not certify its full26-original archive is merged intoGitHub. Approved runtime223762bd1a21c2e72c592e975499d13c4195ae07 remains release91/99.",
+  "private_prior_row_contents_omitted": true
+}

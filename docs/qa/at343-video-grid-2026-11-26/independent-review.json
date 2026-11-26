@@ -1,0 +1,79 @@
+{
+  "status": "local_geometry_supported_with_limits_no_promotion",
+  "reviewed_packet": "analysis/x-grid-independent/park-cross-registration.json",
+  "reviewed_packet_sha256": "7b213691fbdd71a78026ea00a47b04f79ead488265103070202b4aebea8d8bd7",
+  "replayed_reference_frame_sha256": "bcfcbe70602937905819066debb4584c1f4565b492dbf490ae4fdd3f192f34ac",
+  "replayed_reference_image_sha256": "69e7c03b58ad8e3dbdccda36075e64151973d6634c39feccb9f31c9b96f3bc89",
+  "interval_order": [
+    "top_left_interval",
+    "top_right_interval",
+    "left_vertical_interval",
+    "right_vertical_interval"
+  ],
+  "numerical_replay": {
+    "stored_h_fit_rms": 1.3177109867324466,
+    "stored_h_holdout_rms": 0.8138911831947765,
+    "independent_fit_rms": 1.317710986647569,
+    "independent_holdout_rms": 0.8138965061363606,
+    "max_cross_projection_difference_pixels": 7.779403140836446e-05,
+    "model_variants_intervals": {
+      "independent_fit": [
+        239.95930910691555,
+        240.73371518463765,
+        240.14027075433623,
+        239.70617356742113
+      ],
+      "all_22_architecture_vertices": [
+        239.8283873836315,
+        240.1897256507514,
+        240.36349896202455,
+        239.51889009328596
+      ],
+      "excluding_highest_residual_fit_point": [
+        239.9008186716221,
+        239.5807892046232,
+        240.97536189718937,
+        239.43589680076946
+      ]
+    },
+    "leave_one_fit_point_out_interval_min": [
+      239.6402942146187,
+      239.5807892046232,
+      239.72921497840466,
+      239.10539971932516
+    ],
+    "leave_one_fit_point_out_interval_max": [
+      240.23871180345975,
+      241.75424663822272,
+      240.97536189718937,
+      240.44138543428605
+    ]
+  },
+  "visual_review": [
+    "Selected architecture vertices are recognizable and broadly correctly placed on the same chamfered central footprint; substantial colour/rendering differences remain between reference and game overlay.",
+    "NW and SW cross centers are visible. The NE cross center is visible inside the cursor ring; the ring center is offset, so using the cross itself is appropriate.",
+    "Eastern lower cross is faint and partly overlays a map boundary; selection appears reasonable but its contrast and outside-hull position make it weaker evidence.",
+    "The missing SE grid point is near/under the player arrow and was appropriately excluded; do not derive an exact start coordinate from that icon.",
+    "The contact sheet at 20.9 and 21.0 seconds visibly shows HUD number 60. This is a displayed distance indicator, not an observed step count."
+  ],
+  "interpretation": [
+    "Two in-hull horizontal/vertical intervals support approximately 240 reference-image pixels locally.",
+    "Two outside-hull intervals corroborate approximately 240 pixels but do not establish whole-city scale.",
+    "Withheld architecture vertices support local shape registration. They all belong to one footprint in one frame and are not independent geographic anchors or separate-camera validation.",
+    "Cross observations did not enter the architecture homography fit. Therefore the near-240 interval is not imposed by those cross observations in this fit.",
+    "The 240-pixel lattice origin was chosen after inspecting the transformed positions. Its residual is a descriptive local consistency metric, not independent validation of a citywide origin.",
+    "RMS subpixel held-out error is alignment residual on selected reference points, not total map/pin accuracy. It omits source map mismatch, lens distortion, manual-pick bias, image compression, and global registration uncertainty.",
+    "Picking perturbations use assumed noise levels. The reported 95-percent ranges are sensitivity percentiles, not empirical 95-percent confidence bounds on true world distance.",
+    "One 60 reading with endpoint occlusion is consistent with a roughly 60 displayed-unit interval in this demonstration. It does not establish every grid interval or distinguish rounding/slope/path/world-distance conventions.",
+    "No metres, footsteps, native engine units, 1920 Atlas coordinates, or exact item coordinates are certified."
+  ],
+  "recommended_user_wording": "The crosses in this central map view form a repeatable local grid, with roughly 240 pixels between neighbouring crosses on the 4096-pixel reference image. Your video also shows 60 on the in-game distance readout for the demonstrated target. That supports the scale you noticed, while footsteps, official units and citywide exact coordinates remain unverified.",
+  "repackaged_packet_review": {
+    "reviewed_path": "docs/qa/at343-video-grid-2026-11-26/registration.json",
+    "sha256": "ca026e7b1ead0844ec9af574592724b814bb5ad6d9ee2c451c01aa428714163d",
+    "status": "reviewed_independently_after_repackaging",
+    "changes": "Normalized workspace-specific paths, attached source URL/blob identity, replaced irrelevant256 comparison with240 deltas, and added explicit post-fit grid-model qualifications; controls, homography, projections and measured intervals unchanged.",
+    "reviewer_confirmation": "Independent reviewer inspected the shipped packet and repeated the portable numerical replay; no scientific error found.",
+    "historical_source_packet_hash_retained": true
+  }
+}

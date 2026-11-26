@@ -102,8 +102,8 @@
   },
   "broader_master_plan_complete": false,
   "workspace_upgrade_complete": false,
-  "manifest_revision": 92,
-  "ledger_revision": 100,
+  "manifest_revision": 95,
+  "ledger_revision": 103,
   "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
   "historical_groups_before_release_90_98": {
     "current_checkpoint_sync_verified": [
@@ -209,6 +209,149 @@
   "final_workspace_prompt_ready": true,
   "current_planning": {
     "tracking": "AT-343",
+    "follow_up_id": "AT343-VIDEO-GRID-FOLLOWUP-2026-11-26",
+    "date": "2026-11-26",
+    "manifest_revision": 95,
+    "ledger_revision": 103,
+    "status": "video_grid_measurement_evidence_recorded_units_and_global_calibration_unverified",
+    "evidence_report": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
+    "evidence_note": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md",
+    "latest_conclusion": "The supplied video adds local Wild Zone 20 grid observations and independently reviewed local image-registration evidence to the earlier bounded Vert experiment. A waypoint value of 60 is visible around 20.9–21.0 seconds; this is not a counted-footstep measurement or a confirmed metres-per-cell calibration. Partly obscured waypoint-measurement endpoints prevent equating that reading with one exact grid interval. Use the new report for measured image-registration results and their limits.",
+    "source_video": {
+      "filename": "1000028756.mp4",
+      "purpose": "Owner-requested map-grid measurement evidence",
+      "original_preserved": true,
+      "individual_pickup_identity_proof": false,
+      "source_identity_and_hash_authority": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json"
+    },
+    "observations": {
+      "prior_local_evidence": "Strict original Vert photograph-pair experiment, preserved without changes.",
+      "additional_local_evidence": "Observed cross rows in the supplied Wild Zone 20 video, with independently reviewed local image-registration support; numerical values and boundaries are in the follow-up report.",
+      "waypoint_value_observed": 60,
+      "waypoint_value_time_seconds": [
+        20.9,
+        21.0
+      ],
+      "footsteps_counted": false,
+      "metres_per_grid_interval_confirmed": false,
+      "endpoint_limitation": "The endpoints needed to calibrate the displayed waypoint60 reading against one exact grid interval are partly obscured; this does not negate the separately measured local image-grid reference.",
+      "numeric_registration_authority": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
+      "original_item_marker_rule_withdrawal_preserved": true,
+      "locally_measured_image_grid_spacing_supported": true,
+      "waypoint_60_adjacent_grid_endpoints_verified": false
+    },
+    "coordinate_policy": {
+      "purpose": "Use locally supported crosses as reference checks after buildings and roads establish the correct map correspondence.",
+      "source_map_orientation": "fixed_north_up",
+      "orientation_evidence": "Previously recorded owner report; screen-photograph camera tilt is separate from in-game map rotation.",
+      "coordinate_spaces": "Record every source image or video frame by dimensions and hash. Source pixels, the native 1920x1920 Atlas map, grid-relative positions and in-game distances are distinct spaces until their relationship is independently measured.",
+      "universal_exact_60_spacing_verified": false,
+      "citywide_or_all_zoom_calibration_verified": false,
+      "official_grid_purpose_verified": false,
+      "production_alignment_approved": false,
+      "new_coordinate_promotion": false
+    },
+    "new_verified_pins": 0,
+    "new_production_native_coordinates": 0,
+    "runtime_changed": false,
+    "approved_release_unchanged": true,
+    "original_67_requirement_ids_and_acceptance_unchanged": true,
+    "prior_evidence": {
+      "report": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
+      "note": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md",
+      "strict_pilot": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.json",
+      "strict_replay": "docs/qa/at343-owner-item-crosses/grid-registration-pilot.py",
+      "source_inventory": "docs/qa/at343-owner-item-crosses/source-inventory.json",
+      "tracker_receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
+      "frozen_pilot_inventory_and_receipt_unchanged": true
+    },
+    "tracker": {
+      "status": "verified_guarded_update_and_fresh_readback",
+      "receipt": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json",
+      "target_manifest_revision": 95,
+      "observation_note_row": "AT-332-ITEM-COORDINATE-SOURCES",
+      "preserve_previous_notes_and_all_github_proof_fields": true,
+      "preserve_all_workspace_fields_and_unrelated_data": true,
+      "readback_authority": "The separate receipt records the authenticated private94 preflight, guarded advancement of all48 existing rows to95, one appended AT332 note, preservation of the AT344/AT300 note and other existing notes/business fields, and the independent fresh readback. This is planning metadata evidence, not a runtime or original-Workspace publication.",
+      "prior_published_receipt_snapshot_92_100": {
+        "receipt": "docs/qa/ATLAS_AT343_TRACKER_RECEIPT.json",
+        "manifest_revision": 92,
+        "row_count": 48,
+        "github_status_counts": {
+          "verified": 17,
+          "in_progress": 15,
+          "open": 16
+        },
+        "is_fresh_readback_for_this_followup": false
+      },
+      "inherited_private_checkpoint": {
+        "manifest_revision": 94,
+        "ledger_revision": 102,
+        "source_note_row": "AT-300-MAP-DETAIL-CLARITY",
+        "proof_scope": "Pre-update private94/102 checkpoint. The new receipt verifies unchanged statuses and preservation of this source-collection note while advancing shared planning metadata to95; current95 readback fields are recorded separately above.",
+        "row_count": 48,
+        "github_status_counts": {
+          "open": 16,
+          "verified": 17,
+          "in_progress": 15
+        },
+        "is_completed_readback_for_this_followup": false
+      },
+      "manifest_revision": 95,
+      "ledger_revision": 103,
+      "previous_tracker_manifest_revision": 94,
+      "guard_passed": true,
+      "executed_at": "2026-11-26T17:02:31.10883+00:00",
+      "readback_at": "2026-11-26T17:02:56.25398+00:00",
+      "row_count": 48,
+      "github_status_counts": {
+        "open": 16,
+        "verified": 17,
+        "in_progress": 15
+      },
+      "status_counts_unchanged": true,
+      "changed_field_counts": {
+        "manifest_revision": 48,
+        "updated_at": 48,
+        "verification_note": 1
+      },
+      "all_previous_notes_preserved": true,
+      "all_github_status_and_release_proof_fields_preserved": true,
+      "all_workspace_fields_preserved": true,
+      "all_business_fields_preserved": true,
+      "prior_AT344_note_preserved": true,
+      "new_rows": 0,
+      "deleted_rows": 0
+    },
+    "video_policy_scope": "The supplied clip is mapping evidence requested by the owner. Public video/YouTube features remain paused.",
+    "planning_reconciliation": {
+      "inspected_github_main_manifest_revision": 92,
+      "inspected_github_main_ledger_revision": 100,
+      "inherited_private_tracker_manifest_revision": 94,
+      "inherited_private_tracker_ledger_revision": 102,
+      "new_followup_manifest_revision": 95,
+      "new_followup_ledger_revision": 103,
+      "preserved_checkpoint_key": "inherited_private_tracker_checkpoint_94_102",
+      "scope": "Advance this additive video-evidence checkpoint after the private AT34494/102 record, preserving its existing note/work without claiming that its separate archive is merged into main. The original published92/100 pilot and receipt remain historical evidence."
+    }
+  },
+  "approved_release_baseline": {
+    "tracking": "AT-342",
+    "manifest_revision": 91,
+    "ledger_revision": 99,
+    "runtime_merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
+    "runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
+    "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
+    "workspace_prompt": {
+      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
+      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
+    },
+    "scope": "Approved finite Map2.0 runtime release; unchanged by the AT343 research addendum."
+  },
+  "latest_evidence_addendum": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.json",
+  "latest_evidence_summary": "docs/qa/ATLAS_AT343_VIDEO_GRID_FOLLOWUP_2026-11-26.md",
+  "historical_current_planning_92_100": {
+    "tracking": "AT-343",
     "date": "2026-11-26",
     "manifest_revision": 92,
     "ledger_revision": 100,
@@ -305,19 +448,22 @@
       ]
     }
   },
-  "approved_release_baseline": {
-    "tracking": "AT-342",
-    "manifest_revision": 91,
-    "ledger_revision": 99,
-    "runtime_merge_sha": "223762bd1a21c2e72c592e975499d13c4195ae07",
-    "runtime_tree": "0288e63d1d52fe5f95dc76e0c01631715310e54a",
-    "release_receipt": "docs/qa/ATLAS_AT342_RELEASE_RECEIPT.json",
-    "workspace_prompt": {
-      "path": "WORKSPACE_MAP2_RELEASE_PROMPT.md",
-      "sha256": "3bb623432d2d51b30aab420cc03fa69e658874636ae3074d4693a68ae292d0ea"
-    },
-    "scope": "Approved finite Map2.0 runtime release; unchanged by the AT343 research addendum."
-  },
-  "latest_evidence_addendum": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.json",
-  "latest_evidence_summary": "docs/qa/ATLAS_AT343_OWNER_ITEM_CROSS_REPORT.md"
+  "inherited_private_tracker_checkpoint_94_102": {
+    "tracking": "AT-344",
+    "manifest_revision": 94,
+    "ledger_revision": 102,
+    "status": "inherited_private_source_collection_checkpoint_preserved_without_archive_completion_certification",
+    "evidence_basis": "Authenticated private-tracker inspection during this follow-up found the earlier AT344 source-collection note and manifest94 metadata.",
+    "source_note_row": "AT-300-MAP-DETAIL-CLARITY",
+    "source_note_label": "AT344 completed source collection — 2026-11-26; Manifest94/Ledger102",
+    "private_note_and_work_preservation_required": true,
+    "inspected_github_main_sha": "c491cd7c7edcbc9a59914e798706d6e92f7ae7e9",
+    "inspected_github_main_manifest_revision": 92,
+    "inspected_github_main_ledger_revision": 100,
+    "complete_source_collection_archive_verified_in_main": false,
+    "source_collection_archive_incorporated_this_followup": false,
+    "separate_unmerged_branch_modified_this_followup": false,
+    "scope": "Preserve the inherited private checkpoint and its existing AT300 note. This video-evidence addendum does not certify, replace, reconstruct or claim publication of the separate AT344 source archive. No missing AT344 archive path is presented as an available file.",
+    "reconciliation_evidence_authority": "docs/qa/ATLAS_AT343_VIDEO_GRID_TRACKER_RECEIPT.json"
+  }
 }
