@@ -51,7 +51,8 @@ try{
     // Original 48-sector clue directory: the owner's reported tiny-map location.
     await page.goto(base+'/sector-maps.html#sector-jaune-sector-2',{waitUntil:'domcontentloaded'});
     const card=page.locator('#sector-jaune-sector-2');
-    await card.locator('details.sector-clues > summary').click();
+    const cardDetails=card.locator('details.sector-clues');
+    if(!await cardDetails.evaluate(el=>el.open))await cardDetails.locator(':scope > summary').click();
     const directoryImage=card.locator('.sector-context-image');
     await directoryImage.waitFor({state:'attached',timeout:15000});
     await directoryImage.scrollIntoViewIfNeeded();
