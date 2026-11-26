@@ -28,7 +28,12 @@ test('access continuation preserves every original route, lead and unaffected so
  assert.deepEqual(originalLeads.map(r=>r.id),evidence.baseline.lead_ids);
  assert.equal(digest(originalLeads),evidence.baseline.leads_canonical_sha256);
  assert.equal(digest(survey.coverage.filter(r=>!targetIds.includes(r.id))),evidence.baseline.untouched_coverage_canonical_sha256);
- const historical=Object.fromEntries(evidence.baseline.historical_survey_keys.map(k=>[k,survey[k]]));
+ const retainedMetadata=survey.historical_current_completion_checkpoint_89_97;
+ assert.equal(retainedMetadata.captured_from_release_sha,'223762bd1a21c2e72c592e975499d13c4195ae07');
+ assert.deepEqual(Object.keys(retainedMetadata.fields).sort(),['current_completion_checkpoint','next']);
+ const historical=Object.fromEntries(evidence.baseline.historical_survey_keys.map(k=>[
+  k,Object.hasOwn(retainedMetadata.fields,k)?retainedMetadata.fields[k]:survey[k]
+ ]));
  assert.equal(digest(historical),evidence.baseline.historical_survey_sections_canonical_sha256);
 });
 
