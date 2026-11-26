@@ -13,7 +13,7 @@ const server=spawn("python3",["-m","http.server","18766","--bind","127.0.0.1"],{
 let browser;
 try{
  let available=false;for(let i=0;i<40;i++){try{if((await fetch(base+"/maps.html")).ok){available=true;break;}}catch{}await pause(150);}
- assert.ok(available);browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
+ assert.ok(available);browser=await chromium.launch({...(process.env.ATLAS_CHROME_EXECUTABLE?{executablePath:process.env.ATLAS_CHROME_EXECUTABLE}:{channel:"chrome"}),headless:true,args:["--no-sandbox"]});
  for(const [kind,width,height] of [["phone",393,852],["desktop",1440,900]]){
    const page=await browser.newPage({viewport:{width,height},isMobile:kind==="phone",hasTouch:kind==="phone",deviceScaleFactor:1});
    const errors=[];page.on("pageerror",err=>errors.push(String(err)));

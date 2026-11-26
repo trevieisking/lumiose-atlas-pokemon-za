@@ -1,5 +1,5 @@
 /* Interactive Lumiose City map. Source markers are the saved main-page map positions.
-   This page never fetches, writes game state, or alters the original Site or Supabase. */
+   The shared area module reads local evidence; original progress remains read-only. */
 (() => {
   "use strict";
   const pins=Array.from(document.querySelectorAll("[data-map-pin]"));
@@ -22,6 +22,7 @@
   const detailById=new Map(detail.map(d=>[d.dataset.mapZoneDetail,d]));
   let district="All";
   let selected=null;
+  let areaUI=null,syncingArea=false;
   const closeTo=number=>Math.max(0,Math.min(100,number));
   function zoomOnZone(){
     if(!selected)return;
@@ -62,6 +63,7 @@
     zoom.dataset.selectedZone="";
     zoom.style.backgroundPosition="center";
     if(sync)syncZoneHash(null);
+    if(areaUI&&!syncingArea)areaUI.clear({history:sync?'replace':false});
   }
   function selectZone(value,scroll=true,sync=true){
     const id=String(value);
@@ -75,6 +77,7 @@
     zoomSlider.disabled=false;
     zoomOnZone();
     if(sync)syncZoneHash(id);
+    if(areaUI&&!syncingArea)areaUI.selectArea("wz-"+id.padStart(2,"0"),{history:sync?'replace':false,focus:false});
     if(scroll&&typeof focus.scrollIntoView==="function")focus.scrollIntoView({behavior:"smooth",block:"start"});
   }
   function updateList(){
@@ -121,5 +124,23 @@
     window.addEventListener("popstate",openHash);
     window.addEventListener("hashchange",openHash);
     openHash();
+  }
+  if(typeof document.createElement==="function"){
+    import("./atlas-area-surfaces.mjs").then(async({installAreaSurface})=>{
+      areaUI=await installAreaSurface({surface:"standalone",onSelection:({selection})=>{
+        syncingArea=true;
+        try{
+          const zone=/^wz-(\d{2})$/.exec(selection.areaId||"");
+          if(zone){
+            const id=String(Number(zone[1]));
+            // Shared search can select a zone hidden by the original directory.
+            // Reveal it as legacy deep links do; retain compatible filters.
+            if(pinById.get(id)?.hidden){district="All";search.value="";updateList();}
+            if(selected!==id)selectZone(id,false,false);
+          }
+          else if(selected!==null)clearSelection(false);
+        }finally{syncingArea=false;}
+      }});
+    }).catch(()=>{/* Original map, photos and directory remain available. */});
   }
 })();

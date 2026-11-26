@@ -15,6 +15,7 @@
   const empty=document.getElementById("mapAtlasEmpty");
   const indexedRows=Array.from(document.querySelectorAll("[data-progress-item],[data-progress-screw]"));
   let district="All";
+  let areaUI=null;
 
   function repaint() {
     const q=(search?.value||"").trim().toLocaleLowerCase();
@@ -141,4 +142,29 @@
     if(typeof requestAnimationFrame==="function")requestAnimationFrame(openDirectHash);
     else openDirectHash();
   },{once:true});
+  if(typeof document.createElement==="function"){
+    import("./atlas-area-surfaces.mjs").then(async({installAreaSurface})=>{
+      areaUI=await installAreaSurface({surface:"sectors",areaFocusLabel:"Open this area's original record",onAreaFocus:area=>{
+        const id=area.kind==="zone"?"wildzone-"+area.number:"sector-"+area.id;
+        const card=document.getElementById(id);if(!card)return;
+        district="All";if(search)search.value="";repaint();
+        card.scrollIntoView({block:"start",behavior:"smooth"});
+      }});
+      // A genuine same-page area link keeps its original fragment/history and
+      // reconciles the shared query before restoration can read a stale area.
+      document.addEventListener("click",event=>{
+        if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+        const anchor=event.target.closest('a[href^="#"]');
+        if(!anchor||anchor.target&&anchor.target!=="_self")return;
+        const hash=anchor.getAttribute("href"),zone=/^#wildzone-([1-9]|1[0-9]|20)$/.exec(hash);
+        const sector=/^#sector-((?:vert|bleu|magenta|rouge|jaune)-sector-\d{1,2})$/.exec(hash);
+        const id=zone?"wz-"+zone[1].padStart(2,"0"):sector?.[1];
+        if(!id||!document.getElementById(hash.slice(1)))return;
+        event.preventDefault();
+        if(location.hash!==hash)history.pushState(history.state,"",location.pathname+location.search+hash);
+        areaUI?.selectArea(id,{history:"replace",focus:false});
+        openDirectHash();
+      });
+    }).catch(()=>{/* Original sector photos, clues and checklists remain available. */});
+  }
 })();

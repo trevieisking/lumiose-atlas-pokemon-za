@@ -7,6 +7,7 @@
   'use strict';
   const VIEWS = new Set(['home','walkthrough','sidequests','dimension','bosses','alphas','maps','items','legends','berries','starters','pokedex','essentials','secrets','rewards','battles','sources']);
   const KEY = 'lumiose-atlas-reconstruction-v1';
+  let areaUI=null,syncingArea=false;
   const checkedKinds = ['check','sideCheck','legendCheck','pickup','screw'];
   // Open the existing static feedback page; no direct HTML Edge Function link.
   // The page's own script uses the deployed JSON relay with no client secrets.
@@ -273,6 +274,7 @@
     const zone=Number(n);if(!Number.isInteger(zone)||zone<1||zone>20)return;
     currentZone=zone;
     if(navigate && currentView!=='maps')route('maps');
+    if(areaUI&&!syncingArea)areaUI.selectArea('wz-'+String(zone).padStart(2,'0'),{history:navigate?'replace':false,focus:false});
     $$('[data-select-zone]').forEach(button=>button.classList.toggle('active',Number(button.dataset.selectZone)===zone));
     const detail=$('#mapZoneDetail');
     if(!detail)return;
@@ -430,4 +432,22 @@
   updateMissionFilter();updateSideFilter();updateBossFilter();updateAlphaFilter();updateLegendFilter();updateItemFilter();updateBerryFilter();updateDexFilter();updateRecipes();updateScrewFilter();
   window.addEventListener('hashchange',renderRoute);
   renderRoute();
+  import('./atlas-area-surfaces.mjs').then(async({installAreaSurface,installDexHabitatLinks})=>{
+    areaUI=await installAreaSurface({surface:'main',onSelection:({selection})=>{
+      const zone=/^wz-(\d{2})$/.exec(selection.areaId||'');
+      if(!zone){
+        if(currentZone!==null){
+          currentZone=null;
+          $$('[data-select-zone]').forEach(button=>button.classList.remove('active'));
+          const detail=$('#mapZoneDetail');
+          if(detail){const message=document.createElement('p');message.textContent='Choose a Wild Zone on the original map or in the area directory to open its photographs and field notes.';detail.replaceChildren(message);}
+        }
+        return;
+      }
+      if(currentZone===Number(zone[1]))return;
+      syncingArea=true;
+      try{selectZone(Number(zone[1]),false);}finally{syncingArea=false;}
+    }});
+    await installDexHabitatLinks(document);
+  }).catch(()=>{/* The original map and Pokédex controls remain available. */});
 })();

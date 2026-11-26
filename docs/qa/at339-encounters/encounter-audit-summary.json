@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-11-26",
+  "baseline_main_sha": "ee87bd2234d394e2dbc4197eb26610e6367e352b",
+  "register_status": "additive_source_review_not_complete_release_evidence",
+  "g3_complete": false,
+  "area_count": 68,
+  "sector_count": 48,
+  "wild_zone_count": 20,
+  "complete_rosters": 0,
+  "sectors_with_additive_claims": 46,
+  "sectors_without_additive_claims": [
+    "bleu-sector-10",
+    "magenta-sector-5"
+  ],
+  "additive_claims": 283,
+  "by_encounter_class": {
+    "unclassified_lead": 66,
+    "ordinary": 195,
+    "scripted_boss": 6,
+    "mission": 12,
+    "gift": 1,
+    "fixed_alpha": 3
+  },
+  "by_evidence_status": {
+    "source_lead": 118,
+    "source_corroborated": 18,
+    "owner_survey_correlated": 140,
+    "disputed": 7
+  },
+  "owner_survey_images_reviewed": 20,
+  "owner_survey_species_area_icons": 140,
+  "preserved_baseline": {
+    "wild_zone_records": 20,
+    "species_area_memberships": 167,
+    "fixed_alpha_rows": 38,
+    "rotating_alpha_candidates": 67,
+    "wild_zone_20_ordinary_species": 15,
+    "wild_zone_20_ordinary_rotating_overlap": [
+      "Aggron",
+      "Dragalge",
+      "Garbodor",
+      "Gardevoir",
+      "Hippowdon",
+      "Lucario",
+      "Malamar",
+      "Roserade",
+      "Scrafty"
+    ],
+    "baseline_module_sha256": "f6a4b19cfa51d91694ea610eddef54d22303a64d9007509c3f07dfb552057907"
+  },
+  "status_meanings": {
+    "owner_survey_correlated": "Species is visibly on the owner survey card and a written zone table supplies the ordinary class; missing conditions remain unknown.",
+    "source_corroborated": "The stated bounded claim is supported by multiple written sources in the referenced audit; it is not in-game capture or geometry evidence.",
+    "source_lead": "A source reports this claim; required independent verification or classification is incomplete.",
+    "disputed": "Reviewed sources disagree or the species/area/class remains unresolved; do not treat as a verified catchable habitat."
+  },
+  "integration_invariants": [
+    "Never replace or sort/deduplicate the original wildZoneRecords arrays in place.",
+    "Preserve both same-name fixed Pyroar and Meowstic rows and their original conditions.",
+    "Do not classify ordinary membership by subtracting fixed Alpha names from the species union.",
+    "Do not authorize geometry from a source lead, disputed claim, gift, trade, mission, or scripted boss.",
+    "Unknown time, weather, floor, form, and unlock are null, not unrestricted availability.",
+    "A route approach label is not an encounter-area identity.",
+    "A survey card does not prove absence of species outside its icons.",
+    "No random session-dependent distortion becomes a permanent map point."
+  ],
+  "source_registers": [
+    "docs/qa/ATLAS_AT322_POKEMAPS_REFERENCE_REGISTER.json",
+    "docs/qa/ATLAS_AT323_BOUNDARY_AND_ENCOUNTER_REGISTER.json",
+    "docs/qa/ATLAS_AT324_LOCATION_IDENTITY_REGISTER.json"
+  ],
+  "current_source_notes": [
+    "Current PokéMaps Gastly page still lists WZ18 and omits WZ7.",
+    "Current Bulbapedia WZ14 infobox and prose now agree on Magenta District; original owner image agrees on Electrical Substation and adjacent Magenta Sector 6.",
+    "WZ18/19 unlock is source-corroborated as after reaching Rank B; legacy mission labels remain unchanged.",
+    "Serebii district pages expose district-wide spawn tables and sector-specific trainer/item sections. District-wide species must not be copied into every numbered sector."
+  ],
+  "unresolved_release_requirements": [
+    "Comprehensive class-aware encounter review for each of 48 sectors and 20 zones.",
+    "Explicit time/weather/floor/form and progression checks where sources are incomplete or conflicting.",
+    "WZ7 Gastly, WZ17 Talonflame and ordinary Mawile / fixed Pyroar forms, WZ18 Gastly.",
+    "WZ5, WZ10, WZ12 and WZ15 supplementary table entries and survey-card differences.",
+    "Independent geometry and exact spawn/route evidence; no new polygon or coordinate is supplied here."
+  ]
+}

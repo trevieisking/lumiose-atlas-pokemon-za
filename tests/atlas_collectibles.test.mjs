@@ -5,7 +5,7 @@ import vm from 'node:vm';
 import crypto from 'node:crypto';
 import {
   COLLECTIBLE_MAP, buildCollectibleCatalog, evaluateCollectiblePlacement,
-  buildCollectibleIndex, overlappingPoints, readCollected
+  buildCollectibleIndex, overlappingPoints, readCollected, collectibleLabel, createCollectibleMatcher
 } from '../atlas-collectibles.mjs';
 
 const read = path => fs.readFileSync(new URL('../' + path, import.meta.url), 'utf8');
@@ -268,4 +268,28 @@ test('progress uses original zero-based item and unpadded Screw keys with strict
   assert.equal(accessed, false);
   assert.equal(JSON.stringify(saved), before);
   assert.doesNotMatch(read('atlas-collectibles.mjs'), /\b(?:localStorage|sessionStorage|fetch|XMLHttpRequest)\s*[.(]/);
+});
+
+test('real collectibles match displayed labels, accents and a bounded Wild Zone on the same row', () => {
+  const ids = (query, kind) => catalog.filter(createCollectibleMatcher(query, kind)).map(({id})=>id);
+  const screw29 = catalog.find(r=>r.id==='screw:29');
+  const greatBall = catalog.find(r=>r.id==='item:2-5');
+  assert.deepEqual(ids(collectibleLabel(screw29), 'screw'), ['screw:29']);
+  assert.deepEqual(ids('Colorful Screw #29', 'screw'), ['screw:29']);
+  assert.deepEqual(ids('Colorful Screw 2', 'screw'), ['screw:2']);
+  assert.deepEqual(ids('Colorful Screw 29', 'item'), []);
+  assert.deepEqual(ids(collectibleLabel(greatBall)), ['item:2-5']);
+  assert.deepEqual(ids('item 02-06'), ['item:2-5']);
+  assert.deepEqual(ids('02-06'), ['item:2-5']);
+  assert.deepEqual(ids('Wild Zone 2 Great Ball'), ['item:2-5']);
+  assert.deepEqual(ids('Great Ball Wild Zone 02'), ['item:2-5']);
+  assert.deepEqual(ids('Wild Zone 2'), [...Array.from({length:6}, (_,i)=>'item:2-'+i), 'screw:15']);
+  assert.equal(ids('Wild Zone 20', 'item').length, 66);
+  assert.deepEqual(ids('Wild Zone 21'), []);
+  assert.equal(ids('Great Ball').length, 13);
+  assert.equal(ids('Great B').length, 13);
+  assert.equal(ids('Poké Ball').length, 5);
+  assert.deepEqual(ids('Poké Ball'), ids('Poke Ball'));
+  assert.equal(ids('', 'item').length, 264);
+  assert.equal(ids('', 'screw').length, 100);
 });

@@ -39,6 +39,7 @@ let activeKind="all",selectedId=null,routeId=null,stepIndex=0;
 let view=startView(),tint=false,ready=false;
 let pointers=new Map(),frame=null,paintScheduled=false;
 let collectibleUI=null;
+let areaUI=null,syncingArea=false;
 const dimensions=()=>{
   const rect=viewport.getBoundingClientRect();
   return {width:Math.max(1,rect.width),height:Math.max(1,rect.height)};
@@ -287,8 +288,9 @@ function selectRecord(item,focus=true){
   }
   if(focus)focusRecord(item);
   syncSectorContext();
+  if(!syncingArea&&(item.kind==="zone"||item.kind==="sector"))areaUI?.selectArea(item.id,{history:true,focus:false});
   const route=routes.find(r=>r.point_id===item.id);
-  if(route)chooseRoute(route.id);
+  if(route&&!syncingArea)chooseRoute(route.id);
 }
 function match(item){
   const query=search.value.trim().toLocaleLowerCase();
@@ -544,8 +546,9 @@ async function load(){
   const requested=new URLSearchParams(window.location.search);
   const requestedPlace=recordMap.get(requested.get("place"));
   const requestedSector=recordMap.get(requested.get("sector"));
+  const requestedArea=recordMap.get(requested.get("area"));
   // Existing ?sector= links keep working; only registered place IDs can select records.
-  const deepLinked=requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
+  const deepLinked=(requestedArea?.kind==="zone"||requestedArea?.kind==="sector"?requestedArea:null)||requestedPlace||(requestedSector?.kind==="sector"?requestedSector:null);
   if(deepLinked){
     activeKind=deepLinked.kind;drawList();selectRecord(deepLinked,true);
   }
@@ -561,6 +564,44 @@ async function load(){
     collectibleUI.draw();
   }).catch(()=>{
     by("aeCollectibleStatus").textContent="The collection directory could not load. The original item and Screw checklists are still available.";
+  });
+  // Area controls share original identities and reject unapproved boundaries.
+  // The existing route, camera and collection controllers retain their state.
+  import("./atlas-area-ui.mjs").then(async({installAreaInteractions})=>{
+    const syncSelection=({selection})=>{
+      // Installation renders before returning its controller. Reconcile that
+      // first render below, after any legacy selection made while loading.
+      if(!areaUI)return;
+      const record=recordMap.get(selection.areaId);
+      if(record&&(record.kind==="zone"||record.kind==="sector")){
+        if(activeKind!=="all"&&activeKind!==record.kind)activeKind=record.kind;
+        if(!match(record))search.value="";
+        drawList();
+        coverageSector.value=record.kind==="sector"?record.id:"";
+        syncingArea=true;
+        try{selectRecord(record,false);}finally{syncingArea=false;}
+      }else{
+        const previous=recordMap.get(selectedId);
+        if(previous?.kind!=="zone"&&previous?.kind!=="sector")return;
+        selectedId=null;coverageSector.value="";
+        selectedPanel.replaceChildren(element("h3","","Select a map pin or place"),paragraph("Tap a marker to see original pictures, local directions and whether a route has actually been checked."));
+        for(const pin of pinMap.values())pin.setAttribute("aria-pressed","false");
+        for(const button of resultList.querySelectorAll("[data-record-id]"))button.setAttribute("aria-pressed","false");
+        syncSectorContext();
+      }
+    };
+    areaUI=await installAreaInteractions({
+      host:by("aeAreaPanel"),overlayHost:stage,eventHost:viewport,
+      onSelection:syncSelection,
+      onAreaFocus:area=>{const record=recordMap.get(area.id);if(record)focusRecord(record);},
+      // Reuse the collection controller's exact screen-space hit test.
+      canSelectBoundary:event=>!collectibleUI?.hasSelectablePointAt?.(event.clientX,event.clientY)
+    });
+    const active=recordMap.get(selectedId),selection=areaUI.getSelection();
+    if(!selection.areaId&&!selection.speciesId&&(active?.kind==="zone"||active?.kind==="sector"))areaUI.selectArea(active.id,{history:false,focus:false});
+    else syncSelection({selection});
+  }).catch(()=>{
+    by("aeAreaPanel").textContent="Area and habitat search could not load. The original place directory, photographs and routes remain available.";
   });
 }
 setupNavigation();

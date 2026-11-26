@@ -16,7 +16,7 @@ try{
     await pause(150);
   }
   assert.ok(available,"Static page test server must be reachable");
-  browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
+  browser=await chromium.launch({...(process.env.ATLAS_CHROME_EXECUTABLE?{executablePath:process.env.ATLAS_CHROME_EXECUTABLE}:{channel:"chrome"}),headless:true,args:["--no-sandbox"]});
   // Written TM routes appear on both guide surfaces, on phone and desktop, without new pins.
   for(const spec of [{name:"phone",width:393,height:852,mobile:true},{name:"desktop",width:1280,height:900,mobile:false}]){
     const probe=await browser.newPage({viewport:{width:spec.width,height:spec.height},deviceScaleFactor:1,isMobile:spec.mobile,hasTouch:spec.mobile});

@@ -24,6 +24,17 @@ on:
       - atlas-guide-links.mjs
       - tests/atlas_guide_links.test.mjs
       - atlas-explorer-data.json
+      - atlas-area-model.mjs
+      - atlas-area-ui.mjs
+      - atlas-area-surfaces.mjs
+      - atlas-area-evidence.json
+      - atlas-area.css
+      - tests/atlas_area_model.test.mjs
+      - tests/atlas_area_evidence.test.mjs
+      - tests/atlas_area_browser.mjs
+      - 'docs/qa/ATLAS_AT339_*'
+      - 'docs/qa/at339-encounters/**'
+      - 'docs/qa/at339-geometry/**'
       - atlas-collectibles.mjs
       - atlas-collectibles-ui.mjs
       - atlas-collectibles-data.json
@@ -44,6 +55,8 @@ on:
       - docs/qa/ATLAS_WZ05_OWNER_OVERVIEW_OUTLINE.json
       - docs/qa/ATLAS_EARLY_ZONE_OUTLINE_SCREENING.json
       - tests/validate_owner_overview_evidence.py
+      - 'assets/atlas/sector-streets/**'
+      - maps/lumiose-game-map.jpg
       - wild-zone-fieldbook.mjs
       - wild-zone-fieldbook.css
       - tests/wild_zone_fieldbook.test.mjs
@@ -66,7 +79,7 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax-check isolated map modules
-        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
+        run: node --check atlas-explorer-geometry.mjs && node --check atlas-explorer.js && node --check atlas-collectibles.mjs && node --check atlas-collectibles-ui.mjs && node --check tests/atlas_collectibles_browser.mjs && node --check atlas-area-model.mjs && node --check atlas-area-ui.mjs && node --check atlas-area-surfaces.mjs && node --check tests/atlas_area_browser.mjs && node --check sector-maps.js && node --check maps.js && node --check app.js
       - name: Check source counts, actual photos and rotation/floor-route evidence
         run: node --test tests/atlas_explorer.test.mjs tests/sector_map_directory.test.mjs tests/maps_recovered.test.mjs tests/atlas_guide_links.test.mjs
       - name: Gate collectible coordinates, original identities and read-only progress
@@ -75,6 +88,8 @@ jobs:
         run: python3 tests/validate_owner_overview_evidence.py
       - name: Verify original Wild Zone photo pairs and roster parity
         run: node --test tests/wild_zone_fieldbook.test.mjs
+      - name: Validate shared areas, habitat classes and boundary evidence gates
+        run: node --test tests/atlas_area_model.test.mjs tests/atlas_area_evidence.test.mjs
       - name: Keep all 20 DLC deep links valid and all 14 original mission steps unchanged
         run: node --test tests/mega_dimension_index.test.mjs
       - name: Reject broken local guide anchors and raw Markdown destinations across every page
@@ -101,6 +116,8 @@ jobs:
         run: node tests/atlas_collectibles_browser.mjs
       - name: Verify all 20 Wild Zone photo panels and four map surfaces
         run: node tests/wild_zone_fieldbook_browser.mjs
+      - name: Verify shared habitats, all map views and original progress
+        run: node tests/atlas_area_browser.mjs
       - name: Attach screenshot QA evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -109,5 +126,6 @@ jobs:
           path: |
             test-artifacts/atlas-explorer/
             test-artifacts/atlas-collectibles/
+            test-artifacts/atlas-areas/
           if-no-files-found: ignore
           retention-days: 10
