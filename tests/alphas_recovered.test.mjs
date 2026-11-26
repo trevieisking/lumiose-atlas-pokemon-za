@@ -91,6 +91,19 @@ assert.deepEqual(Object.fromEntries(cityRecord.locations.map(row=>[row.area_id,r
   "bleu-sector-9":47,"jaune-sector-3":86,"jaune-sector-5":88,"magenta-sector-8":63,"rouge-sector-8":79,"vert-sector-6":24
 });
 assert.ok(cityRecord.locations.every(row=>row.ordinary.join()=== "28,29" && row.alpha.join()==="38,39"));
+
+/* 2026-11-26: scoped Alpha fieldbook fact-check; no mutation of fixed zone or map data. */
+const riolu=html.match(/<article class="step-card" id="alpha-riolu-rooftops">([\\s\\S]*?)<\\/article>/)?.[1];
+const otherCity=html.match(/<article class="step-card" id="alpha-more-city-chances">([\\s\\S]*?)<\\/article>/)?.[1];
+assert.ok(riolu && otherCity, "Chance Alpha guides must be present");
+for (const text of ["Rouge Sector 4","Bleu Sector 5","Vert Sector 8","Magenta Sector 9","not guaranteed","not exact verified map coordinates"])
+  assert.ok(riolu.includes(text), "Missing qualified Riolu claim: " + text);
+for (const text of ["Ralts","Larvitar","Dedenne","Vert Sector 4","Bleu Sector 7","Magenta Sector 7","Rouge Sector 7","Jaune Sector 6","Jaune Sector 11","after that zone’s Pokédex survey is complete"])
+  assert.ok(otherCity.includes(text), "Missing qualified city chance Alpha: " + text);
+assert.equal((html.match(/class="alpha-zone-card"/g)||[]).length,20);
+assert.ok(html.includes('id="alpha-dratini-rooftops"'), "Existing Dratini retained");
+assert.ok(html.includes("No new Alpha pins, estimated coordinates or invented access points"));
+
 const cityData=JSON.parse(read('atlas-area-evidence.json'));
 const speciesRows=cityData.areas.flatMap(a=>a.encounters.filter(r=>r.species==='Dratini').map(r=>({...r,area:a.area_id})));
 assert.equal(speciesRows.length,6);
