@@ -227,24 +227,83 @@
     });
   }
   const origDexOrder=new Map();
+  function installHyperspaceRoster() {
+    const grid=$('#dexGrid');
+    if(!grid||grid.querySelector('[data-dex-region="Hyperspace"]'))return false;
+    const roster=window.ATLAS_HOME_SOURCE?.records?.filter(r=>r.group==='Hyperspace');
+    if(roster?.length!==132)return false;
+    const verifiedRoutes={720:'hoopa',721:'volcanion',807:'zeraora'};
+    const fragment=document.createDocumentFragment();
+    for(const r of roster){
+      const card=document.createElement('article');
+      card.className='dex-card';
+      card.id='dex-hyperspace-'+r.dexIndex;
+      card.dataset.dexRegion='Hyperspace';
+      card.hidden=true;
+      const button=document.createElement('button');
+      button.type='button';button.className='dex-toggle';
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label',r.name+', show catalogue links');
+      const head=document.createElement('div');head.className='dex-head';
+      const image=document.createElement('img');image.alt='';image.loading='lazy';image.decoding='async';
+      // Reuse exactly the known artwork sources from the existing HOME roster.
+      const external='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/'+r.number+'.png';
+      if(r.image===external||r.image==='art/'+r.number+'.webp'||r.image==='dex-art/'+r.number+'.webp')image.src=r.image;
+      image.addEventListener('error',()=>{image.hidden=true;},{once:true});
+      const meta=document.createElement('div');
+      const number=document.createElement('span');number.className='dex-number';
+      number.textContent='#'+String(r.dexIndex).padStart(3,'0')+' · NATIONAL #'+r.number;
+      const name=document.createElement('strong');name.textContent=r.name;
+      const types=document.createElement('span');types.className='dex-types';types.textContent=r.types;
+      meta.append(number,name,types);head.append(image,meta);
+      const hint=document.createElement('span');hint.className='dex-hint';hint.textContent='Catalogue links ↓';
+      button.append(head,hint);
+      const details=document.createElement('div');details.className='dex-stats';
+      const links=document.createElement('div');links.className='dex-location';
+      const home=document.createElement('a');home.href='home-connection.html#home-species-'+r.number;
+      home.textContent='Open HOME checklist entry';
+      const route=verifiedRoutes[r.number];
+      if(route){
+        const a=document.createElement('a');a.href='legendaries.html#legend-'+route;a.textContent='Open verified catch guide';
+        links.append(a,document.createElement('br'));
+      }else{
+        const note=document.createElement('p');note.textContent='Capture routes and stats for this entry are still being checked.';
+        links.append(note);
+      }
+      links.append(home);details.append(links);card.append(button,details);
+      origDexOrder.set(card,r.dexIndex);
+      fragment.append(card);
+    }
+    grid.append(fragment);
+    return true;
+  }
   function updateDexFilter() {
     const source=$('[data-dex-source].active')?.dataset.dexSource || 'Lumiose';
     const filter=activeFilter('pokedex'),query=searchVal('dexSearch');
-    const cards=$$('#dexGrid > .dex-card');let visible=0;
-    const missing=source==='Hyperspace';
+    const hyperspace=source==='Hyperspace';
+    const installed=hyperspace&&installHyperspaceRoster();
+    const cards=$$('#dexGrid > .dex-card');let visible=0,total=0;
+    $$('[data-dex-source]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dexSource===source)));
+    for(const option of $$('#dexSort option'))option.disabled=hyperspace&&['total','speed'].includes(option.value);
+    const sort=$('#dexSort');const resetSort=sort?.selectedOptions[0]?.disabled;
+    if(resetSort)sort.value='number';
     cards.forEach(node=>{
       const type=$('.dex-types',node)?.textContent||'';
       const known=['Grass','Fire','Water','Electric','Psychic','Dragon','Fairy'];
       const typeMatch=filter==='All'||(filter==='Other'?!known.some(t=>type.includes(t)):type.includes(filter));
       const metadata=[ $('.dex-head strong',node)?.textContent||'', $('.dex-number',node)?.textContent||'', type ].join(' ').toLocaleLowerCase();
-      const yes=!missing && typeMatch && (!query || metadata.includes(query));
+      const sameRegion=(node.dataset.dexRegion||'Lumiose')===source;
+      if(sameRegion)total++;
+      const yes=sameRegion && typeMatch && (!query || metadata.includes(query));
       show(node,yes);if(yes)visible++;
     });
-    text('#dexCount',missing?'Hyperspace entries not included in saved snapshot':`${visible} of ${cards.length} Lumiose entries`);
-    let notice=$('#dexUnrecovered');
-    if(!notice){notice=document.createElement('p');notice.id='dexUnrecovered';notice.className='rebuild-inline-warning';$('#pokedex .dex-switch')?.insertAdjacentElement('afterend',notice);}
-    notice.hidden=!missing;
-    notice.textContent='The original guide advertised 132 Hyperspace entries, but their rendered data was not in the saved archive. We will reconstruct this section from verified sources; no invented entries are shown.';
+    text('#dexCount',`${visible} of ${total} ${source} entries`);
+    const notice=$('#dexUnrecovered');
+    if(notice){
+      notice.hidden=!hyperspace;
+      notice.textContent=total?'All 132 numbered entries are listed. The full stats and capture-route audit is still in progress.':'The Hyperspace roster could not load. Use the Pokémon HOME checklist link below.';
+    }
+    if(installed||resetSort)sortDex();
   }
   function sortDex() {
     const grid=$('#dexGrid');if(!grid)return;
@@ -349,7 +408,7 @@
     $('#dexSearch').value=name;
     $$('#dexTabs [data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter==='All'));
     updateDexFilter();
-    const found=$$('#dexGrid > .dex-card').find(node=>$('.dex-head strong',node)?.textContent.trim().toLowerCase()===name.toLowerCase());
+    const found=$$('#dexGrid > .dex-card').find(node=>!node.dataset.dexRegion&&$('.dex-head strong',node)?.textContent.trim().toLowerCase()===name.toLowerCase());
     if(found){found.classList.add('open');$('.dex-toggle',found)?.setAttribute('aria-expanded','true');requestAnimationFrame(()=>found.scrollIntoView({block:'center'}));}
     else announce(`No saved Lumiose Pokédex entry for ${name}.`);
   }
