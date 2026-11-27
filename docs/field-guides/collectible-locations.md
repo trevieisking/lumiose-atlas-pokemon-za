@@ -326,3 +326,25 @@ Destination: `assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/`
 | Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029300.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player on southern canal bank just west of Wild Zone 11 | `1000029301.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Dusk Ball beside the lamppost | `1000029302.jpg` | `pickup-confirmation.webp` |
+
+## Revive — Vert Sector 3 raised Saison Canal walkway
+
+Field catalogue find 017; the second distinct Revive in this photographic collection.
+
+Locate **Saison Canal** immediately north of **Vert Sector 3**, west of **Wild Zone 11 (Jaune Sector 10)**. The three in-game map photographs place the player on the southern canal bank close to the bridge and staircase, farther west than the earlier Dusk Ball location.
+
+Descend the broad stone staircase to the cobbled landing. Locate the slightly raised building-side walkway parallel to the lower waterfront promenade. Facing towards Wild Zone 11 with the canal on the left, look for the red pickup beam on the raised walkway in the corner between the building with blue windows and the projecting stone retaining wall. The final gameplay photograph confirms **Revive ×1** in that corner. This is distinct from the Revive beside the east-bank staircase planter on Coulant Waterway (find 011), and from the Dusk Ball on the lower Saison Canal promenade (find 016). Other visible pickup beams and pink crystals are not identified by this photo set.
+
+The photographs establish item identity and elevation. The map views show the player's approach position, not a calibrated collectible coordinate. The exact Atlas basemap point and any special access requirements remain unverified. No live marker added.
+
+**Evidence status:** All five original photographs decoded as genuine WebP (1536 pixels wide, heights 821–865 pixels). Original bytes verified against all five new files in the cumulative 60-photo upload archive, with all 55 earlier archived files confirmed unchanged. GitHub binary transfer remains pending; the following are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup in wall corner | Red beam on raised building-side walkway, beside projecting stone wall | `1000029308.jpg` | `pickup-in-wall-corner.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029309.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029310.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on southern bank near bridge and staircase | `1000029311.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Revive in the stone wall corner | `1000029312.jpg` | `pickup-confirmation.webp` |
