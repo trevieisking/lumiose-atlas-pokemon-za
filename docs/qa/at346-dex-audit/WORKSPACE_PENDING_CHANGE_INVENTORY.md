@@ -42,3 +42,7 @@ Independent research narrative received 27 November; downloadable ZIP/CSV/JSON s
 Concurrent Vivillon pattern correction at `80bd42b2d0be37b2061db8db7c93cec222cbac40` retained in this candidate: [source evidence](LUMIOSE_VIVILLON_ALPHA_PATTERNS_2026-11-27.md), separate Meadow/Garden capture routes, Marine/Poké Ball gift distinction and timed Rewards note. No restoration of stale Alpha/Pokédex/Rewards source.
 
 Full research narrative supplied by owner; no additional PDF/ZIP required to continue. Original raw research files remain uninspected, but a public Z-A-specific source was retrieved and a bounded 132-species stat projection added. 364 default species stat displays in draft; full form/learnset and encounter completeness remains outstanding.
+
+## AT-347 candidate content hub
+
+The bounded player-facing hub `game-content.html` and `game-content-data.json`, local CSS/JS and six article links have been prepared in this same draft. See [candidate scope and unresolved checks](../at347-content-coverage/CONTENT_CANDIDATE_2026-11-27.md). Do not replace the existing Site or import this unapproved draft; exact-head validation, independent visual review, completeness decisions, and GitHub live verification remain required. The original approved handoff is unchanged.

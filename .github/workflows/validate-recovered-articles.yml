@@ -30,6 +30,12 @@ on:
       - alpha-catalogue.css
       - tests/alpha_catalogue.test.mjs
       - tests/alpha_catalogue_browser.mjs
+      - game-content.html
+      - game-content-data.json
+      - game-content.css
+      - game-content.js
+      - tests/game_content.test.mjs
+      - tests/game_content_browser.mjs
       - shops.html
       - clothing-guide.html
       - hair-beauty-guide.html
@@ -121,6 +127,8 @@ jobs:
           node-version: '22'
       - name: Verify article JS syntax
         run: node --check recovered-articles.js && node --check app.js && node --check atlas-guide-links.mjs && node --test tests/atlas_guide_links.test.mjs
+      - name: Verify AT-347 content catalogue and safe offline search
+        run: node --check game-content.js && node --test tests/game_content.test.mjs
       - name: Verify original PDF reward order, menu, safe local state and navigation
         run: node --test tests/mable_recovered.test.mjs
       - name: Verify shiny calculator JavaScript syntax
@@ -222,6 +230,16 @@ jobs:
         run: node tests/fashion_guides_browser.mjs
       - name: Verify Alpha catalogue phone and desktop search, filters and no progress writes
         run: node tests/alpha_catalogue_browser.mjs
+      - name: Verify AT-347 phone and desktop catalogue, search and no state writes
+        run: node tests/game_content_browser.mjs
+      - name: Attach content catalogue screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-content-phone-desktop-preview
+          path: test-artifacts/game-content/
+          if-no-files-found: ignore
+          retention-days: 10
       - name: Attach Alpha catalogue screenshots
         if: always()
         uses: actions/upload-artifact@v4
