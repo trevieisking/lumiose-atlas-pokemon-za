@@ -370,3 +370,25 @@ Destination: `assets/atlas/collectibles/saison-canal-burn-heal-bridge/`.
 | Neighbourhood map view | Saison Canal and Vert Sectors 1 and 3 | `1000029320.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player near the southern end of the bridge | `1000029321.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Burn Heal at the stone balustrade | `1000029322.jpg` | `pickup-confirmation.webp` |
+
+## Poké Ball — Vert Plaza northeast landscaped strip beside scaffolding
+
+Field catalogue find 019.
+
+Locate **Vert Plaza (Wild Zone 2)** and the route running between **Vert Sectors 1 and 3** towards the bridge over **Saison Canal**. The three in-game map photographs place the player near the southern end of the elongated landscaped strip, immediately northeast of Vert Plaza and outside the wild-zone boundary.
+
+From Vert Plaza, head towards Saison Canal along this route. Look for the building covered in black construction scaffolding, with cyan-edged platforms and arrow-marked ramps. Beside the scaffolding is a grassy landscaped strip with trees, shrubs and flowers. The approach photograph shows a red pickup beam at the base of the nearer tree, beside flowering plants. The final gameplay photograph confirms **Poké Ball ×1** beside that tree. Nearby pink crystals and other visible sparkles are separate features, not this pickup.
+
+The item is at ground level; the photographs do not establish any need to climb the scaffolding. The map views record the player's nearby position, not a calibrated collectible coordinate. The exact Atlas basemap point and formal sector designation remain unverified. No live marker added.
+
+**Evidence status:** All five original photographs decoded as genuine WebP at 1536 × 865. Original bytes verified against all five new files in the cumulative 70-photo upload archive, with all 65 previous archived photographs confirmed unchanged. GitHub binary transfer remains pending; the following are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup by tree | Red beam at the tree base beside flowers and scaffolding | `1000029328.jpg` | `pickup-by-tree.webp` |
+| Wide map view | Location relative to Wild Zones 2 and 11 | `1000029329.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Vert Plaza, Vert Sectors 1 and 3 and Saison Canal | `1000029330.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player at the southern end of the landscaped strip northeast of Vert Plaza | `1000029331.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Poké Ball beside the tree | `1000029332.jpg` | `pickup-confirmation.webp` |
