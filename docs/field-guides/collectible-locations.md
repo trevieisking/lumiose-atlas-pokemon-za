@@ -282,3 +282,25 @@ Destination: `assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/`.
 | Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029278.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player near the western boundary of Wild Zone 11 | `1000029279.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Antidote beside the terrace planter | `1000029280.jpg` | `pickup-confirmation.webp` |
+
+## Super Potion — Vert Sector 3 Wild Zone 11 balustrade
+
+Field catalogue find 015; the second distinct Super Potion in this photographic collection.
+
+Locate **Vert Sector 3** immediately west of **Wild Zone 11 (Jaune Sector 10)**. The three in-game map photographs show the player along the western green boundary of the wild zone, slightly south of the earlier Antidote terrace location.
+
+Follow the paved promenade alongside the wild-zone boundary. Look for the stone balustrade between two square wooden planters containing small trees. The red pickup beam stands directly on the pavement beside the railing, opposite the lower grassy area near the green Wild Zone 11 entrance pillars. The final gameplay photograph confirms **Super Potion ×1** beside this balustrade. The red pickup beam visible below inside the wild zone is a different, unidentified item. This Super Potion is distinct from the west-bank tree-planter Super Potion in find 013 and from the Antidote in find 014.
+
+The photographs establish the item identity and pickup position relative to the railing. The precise Atlas basemap coordinate and any access prerequisites remain unverified. No live marker added.
+
+**Evidence status:** Five genuine WebP photographs decoded and visually reviewed (1536 pixels wide, heights 806–865 pixels). Original bytes verified against all five files in the cumulative local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup beside balustrade | Red beam on the pavement between two square planters, outside the railing | `1000029287.jpg` | `pickup-by-balustrade.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029288.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029289.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player beside the western Wild Zone 11 boundary | `1000029290.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Super Potion at the railing | `1000029291.jpg` | `pickup-confirmation.webp` |
