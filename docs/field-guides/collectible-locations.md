@@ -348,3 +348,25 @@ Destination: `assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkwa
 | Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029310.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player on southern bank near bridge and staircase | `1000029311.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Revive in the stone wall corner | `1000029312.jpg` | `pickup-confirmation.webp` |
+
+## Burn Heal — Saison Canal bridge between Vert Sectors 1 and 3
+
+Field catalogue find 018.
+
+Locate the bridge over **Saison Canal** between **Vert Sector 1** and **Vert Sector 3**, west of Wild Zone 11. The three map photographs place the player near the southern end of this crossing, above the lower canal-side paths.
+
+On the upper bridge, look for the red-brick paving, circular decorative pavement motifs and stone balustrades. The approach photograph shows a red pickup beam beside the balustrade towards the southern end of the crossing. The final gameplay photograph confirms **Burn Heal ×1** at that railing. The nearby pedestrians are incidental and not required for collection. This is a distinct upper-level pickup, not the Dusk Ball or Revive recorded on the lower and raised building-side promenades in finds 016 and 017.
+
+The photographs establish the item identity and bridge-level position. The map views show the player's nearby position rather than a calibrated collectible coordinate. The precise Atlas basemap point remains unverified. No live marker added.
+
+**Evidence status:** Five original photographs decoded as genuine WebP (1536 pixels wide, heights 826–865 pixels). All five files were verified byte-for-byte in the cumulative 65-photo archive, and all 60 previous archived files were verified unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/saison-canal-burn-heal-bridge/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup beside bridge balustrade | Red beam beside stone railing on brick-paved bridge | `1000029318.jpg` | `pickup-by-bridge-balustrade.webp` |
+| Wide map view | Bridge location relative to Vert Plaza and Wild Zone 11 | `1000029319.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Saison Canal and Vert Sectors 1 and 3 | `1000029320.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player near the southern end of the bridge | `1000029321.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Burn Heal at the stone balustrade | `1000029322.jpg` | `pickup-confirmation.webp` |
