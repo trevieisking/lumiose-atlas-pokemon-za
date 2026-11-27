@@ -2,6 +2,10 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
+**Photo archive:** 196 original photographs across 39 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. All 196 paths are checked against the PR file inventory. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+
+[Open the organised photograph fieldbook](../../collectible-fieldbook.html).
+
 ## Hyper Potion — Vert Sector 7 rooftop
 
 On the in-game map, find the building beside **Vert Street** marked by the player arrow and red circle in the [sector view](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/map-sector.webp). It is on the same side of Vert Street as the small garden with the looping path. Use the [close-up](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/map-close.webp) to match the exact building outline.
@@ -11,6 +15,8 @@ From the roof shown in the gameplay photo, look across to the short, raised sect
 ![Hyper Potion pickup on the short green roof beside the café terrace](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/pickup-rooftop.webp)
 
 Trev identified the pickup as a Hyper Potion and surveyed the spot after unlocking Hover Glide. The gameplay photo shows the ball before collection. The route from street level, whether Hover Glide is required, and the exact coordinates on the Atlas basemap still need verification.
+
+**Evidence status:** 4 original photographs are present on PR #226 and linked below. Item identity reported firsthand; no final collection screenshot. Exact Atlas coordinates and canonical checklist matching remain pending.
 
 | Photo | What to look for | Source filename |
 | --- | --- | --- |
@@ -28,6 +34,8 @@ On the flat, gray-tiled roof, look for the long chimney wall topped with two gro
 ![Dive Ball pickup at the base of a rooftop chimney wall on Vert Street](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-rooftop.webp)
 
 The route up from street level and the exact coordinates on the Atlas basemap still need verification.
+
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
 | Photo | What to look for | Source filename |
 | --- | --- | --- |
@@ -47,6 +55,8 @@ Face up the steps and stay on the cobbled landing to their left. Walk past the b
 
 The exact point on the Atlas basemap still needs verification for a live pin.
 
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
+
 | Photo | What to look for | Source filename |
 | --- | --- | --- |
 | [Pickup beside the stairs](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-at-stairs.webp) | The wide steps, black lamppost and pickup beam in the back corner | `1000029162.webp` |
@@ -64,6 +74,8 @@ From the paved walkway beside the pale shutters, step into the flower bed betwee
 ![Rare Candy pickup beam just beyond a tree in the flower bed beside Coulant Waterway](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-in-flower-bed.webp)
 
 The exact point on the Atlas basemap still needs verification for a live pin.
+
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
 | Photo | What to look for | Source filename |
 | --- | --- | --- |
@@ -83,6 +95,8 @@ Go to the lower cobbled plaza beneath the green steel bridge. Facing the wide st
 
 The exact point on the Atlas basemap still needs verification for a live pin.
 
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
+
 | Photo | What to look for | Source filename |
 | --- | --- | --- |
 | [Pickup beneath the bridge](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-under-bridge.webp) | Green steel beams, wide staircase and pickup beam in the stone corner | `1000029182.webp` |
@@ -99,17 +113,19 @@ On the raised cobbled walkway alongside the pale building, walk towards the end 
 
 The route onto the raised walkway, any movement prerequisites, and the exact point on the Atlas basemap still need verification. Do not publish a live pin from the player marker alone.
 
-**Evidence status:** All five supplied photographs were visually reviewed and decoded at 1536 × 865. Although the supplied filenames end in `.jpg`, the actual files are WebP. Their original bytes have been preserved for transfer. GitHub binary upload is pending; the following filenames identify the evidence and planned repository destination, not existing image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-7-potion-raised-walkway/`.
+Repository folder: `assets/atlas/collectibles/vert-7-potion-raised-walkway/`.
+
+![Pickup on raised walkway](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/pickup-on-walkway.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on raised walkway | Red pickup beam, low stone parapet, scaffolding and yellow ladders | `1000029192.jpg` | `pickup-on-walkway.webp` |
-| Wide map view | Position within the wider Vert district | `1000029193.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029194.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player marker beside the building at the crossing | `1000029195.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Potion beside the scaffolding | `1000029196.jpg` | `pickup-confirmation.webp` |
+| [Pickup on raised walkway](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/pickup-on-walkway.webp) | Red pickup beam, low stone parapet, scaffolding and yellow ladders | `1000029192.jpg` | `pickup-on-walkway.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/map-wide.webp) | Position within the wider Vert district | `1000029193.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029194.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/map-close.webp) | Player marker beside the building at the crossing | `1000029195.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-potion-raised-walkway/pickup-confirmation.webp) | On-screen award of one Potion beside the scaffolding | `1000029196.jpg` | `pickup-confirmation.webp` |
 
 ## Potion — Vert Sector 7 scaffold planter by Coulant Waterway
 
@@ -119,17 +135,19 @@ On the lower paved plaza beneath the green steel bridge, locate the tall black s
 
 This is a separate pickup from the staircase Potion and raised-walkway Potion above. Another visible pickup beam on the nearby scaffold platform is not identified by this evidence and must not be catalogued as this Potion. The photographs were taken at night; a nighttime-only requirement has not been established. The precise Atlas basemap coordinate and access route from street level remain to be verified before publishing a live marker.
 
-**Evidence status:** All five photographs were visually reviewed and decoded as genuine WebP images (1536 × 865, except the close map at 1536 × 831). Original bytes were preserved without re-encoding. GitHub binary upload is pending; the following are planned destinations, not existing image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-7-potion-scaffold-planter/`.
+Repository folder: `assets/atlas/collectibles/vert-7-potion-scaffold-planter/`.
+
+![Pickup in planted border](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/pickup-in-planted-border.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup in planted border | Red beam, round shrub, tall scaffolding tower and stone post | `1000029204.jpg` | `pickup-in-planted-border.webp` |
-| Wide map view | Position in the wider Vert district | `1000029205.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029206.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player marker beside the waterway crossing | `1000029207.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Potion beside the round shrub | `1000029208.jpg` | `pickup-confirmation.webp` |
+| [Pickup in planted border](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/pickup-in-planted-border.webp) | Red beam, round shrub, tall scaffolding tower and stone post | `1000029204.jpg` | `pickup-in-planted-border.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/map-wide.webp) | Position in the wider Vert district | `1000029205.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029206.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/map-close.webp) | Player marker beside the waterway crossing | `1000029207.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-potion-scaffold-planter/pickup-confirmation.webp) | On-screen award of one Potion beside the round shrub | `1000029208.jpg` | `pickup-confirmation.webp` |
 
 ## Carbos — Vert Sector 7 scaffold platform by Coulant Waterway
 
@@ -139,17 +157,19 @@ On the lower paved plaza, identify the black scaffolding assembly with yellow la
 
 The photographs establish the pickup position and item identity. The exact climb sequence, any movement prerequisites, and the precise Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established.
 
-**Evidence status:** Five genuine WebP photographs decoded and visually reviewed, with original bytes preserved (1536 × 865 except the wide map at 1536 × 842). Binary upload to GitHub is pending; the following are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-7-carbos-scaffold-platform/`.
+Repository folder: `assets/atlas/collectibles/vert-7-carbos-scaffold-platform/`.
+
+![Pickup on scaffold](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/pickup-on-scaffold.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on scaffold | Red beam, raised side platform, traffic cone and tall yellow ladder | `1000029216.jpg` | `pickup-on-scaffold.webp` |
-| Wide map view | Position in the wider Vert district | `1000029217.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sectors 6–7 | `1000029218.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player marker beside the waterway | `1000029219.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Carbos from the scaffold platform | `1000029220.jpg` | `pickup-confirmation.webp` |
+| [Pickup on scaffold](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/pickup-on-scaffold.webp) | Red beam, raised side platform, traffic cone and tall yellow ladder | `1000029216.jpg` | `pickup-on-scaffold.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/map-wide.webp) | Position in the wider Vert district | `1000029217.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway and Vert Sectors 6–7 | `1000029218.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/map-close.webp) | Player marker beside the waterway | `1000029219.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-carbos-scaffold-platform/pickup-confirmation.webp) | On-screen award of one Carbos from the scaffold platform | `1000029220.jpg` | `pickup-confirmation.webp` |
 
 ## Colorful Screw — Vert Sector 7 covered scaffold by Coulant Waterway
 
@@ -161,17 +181,19 @@ Climb to the upper scaffolding platform with a yellow ladder opening. Face the c
 
 The photographed beam crossing and pickup position are established; the full climb from ground level, any movement prerequisites, and the exact Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established. Do not publish a live marker until the basemap coordinate is checked.
 
-**Evidence status:** Five genuine WebP photographs visually reviewed and decoded at 1536 × 865. Original bytes preserved and checked byte-for-byte in the local upload archive. Binary upload to GitHub remains pending; the following are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/`.
+Repository folder: `assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/`.
+
+![Pickup on covered platform](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/pickup-on-covered-platform.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on covered platform | Purple beam, narrow metal crossing, scaffold canopy and bridge | `1000029226.jpg` | `pickup-on-covered-platform.webp` |
-| Wide map view | Position within the wider Vert district | `1000029227.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway and surrounding Vert sectors | `1000029228.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player marker near the crossing; distinguish player position from the pickup across the beam | `1000029229.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Colorful Screw beneath the canopy | `1000029230.jpg` | `pickup-confirmation.webp` |
+| [Pickup on covered platform](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/pickup-on-covered-platform.webp) | Purple beam, narrow metal crossing, scaffold canopy and bridge | `1000029226.jpg` | `pickup-on-covered-platform.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/map-wide.webp) | Position within the wider Vert district | `1000029227.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway and surrounding Vert sectors | `1000029228.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/map-close.webp) | Player marker near the crossing; distinguish player position from the pickup across the beam | `1000029229.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/pickup-confirmation.webp) | On-screen award of one Colorful Screw beneath the canopy | `1000029230.jpg` | `pickup-confirmation.webp` |
 
 ## Pearl — Coulant Waterway east-bank tree planter near Vert Sector 6
 
@@ -183,17 +205,19 @@ On the lower cobbled promenade, face the broad stairs leading towards the green-
 
 The location is on the canal-side boundary near Vert Sector 6, rather than the earlier scaffold cluster. The exact sector boundary designation and Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established.
 
-**Evidence status:** All five original WebP photographs decoded at 1536 × 865 and visually reviewed. Their exact bytes are preserved and verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/coulant-waterway-pearl-tree/`.
+Repository folder: `assets/atlas/collectibles/coulant-waterway-pearl-tree/`.
+
+![Pickup by tree](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/pickup-by-tree.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup by tree | Red beam at the foot of the nearer tree beside the canal balustrade | `1000029236.jpg` | `pickup-by-tree.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029237.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029238.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on the east bank just south of the bridge | `1000029239.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Pearl beside the tree and white flowers | `1000029240.jpg` | `pickup-confirmation.webp` |
+| [Pickup by tree](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/pickup-by-tree.webp) | Red beam at the foot of the nearer tree beside the canal balustrade | `1000029236.jpg` | `pickup-by-tree.webp` |
+| [Wide map view](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029237.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029238.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/map-close.webp) | Player on the east bank just south of the bridge | `1000029239.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/coulant-waterway-pearl-tree/pickup-confirmation.webp) | On-screen award of one Pearl beside the tree and white flowers | `1000029240.jpg` | `pickup-confirmation.webp` |
 
 ## Revive — Coulant Waterway east-bank staircase planter near Vert Sector 6
 
@@ -205,17 +229,19 @@ Facing the staircase, look in the planted strip on the left beside the canal bal
 
 The exact point on the Atlas basemap and sector boundary designation remain unverified. No live marker added.
 
-**Evidence status:** All five supplied photographs decoded as genuine WebP images and visually reviewed. Original bytes verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/`.
+Repository folder: `assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/`.
+
+![Staircase planter approach](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/pickup-by-stair-planter.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Staircase planter approach | Red pickup beam in the planted strip near the stairs, beyond the foreground crystals | `1000029246.jpg` | `pickup-by-stair-planter.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029247.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029248.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on the east side of the canal north of the bridge | `1000029249.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Revive beside the shrub and stepped planters | `1000029250.jpg` | `pickup-confirmation.webp` |
+| [Staircase planter approach](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/pickup-by-stair-planter.webp) | Red pickup beam in the planted strip near the stairs, beyond the foreground crystals | `1000029246.jpg` | `pickup-by-stair-planter.webp` |
+| [Wide map view](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029247.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029248.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/map-close.webp) | Player on the east side of the canal north of the bridge | `1000029249.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/pickup-confirmation.webp) | On-screen award of one Revive beside the shrub and stepped planters | `1000029250.jpg` | `pickup-confirmation.webp` |
 
 ## Potion — Coulant Waterway west-bank stone recess near Vert Sector 3
 
@@ -227,17 +253,19 @@ Look for the stone building wall with an arched window and a square planter, imm
 
 The map shows the player's nearby position, not a calibrated collectible coordinate. The exact Atlas basemap point and sector boundary designation remain unverified. No live marker added.
 
-**Evidence status:** Use only the five replacement photographs below, as requested by the contributor. The superseded HEIC batch is excluded. All five replacements decoded as genuine WebP images and their original bytes verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/`.
+Repository folder: `assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/`.
+
+![Wall recess approach](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/pickup-in-wall-recess.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Wall recess approach | Red pickup beam in the inside stone corner immediately left of the stairs | `1000029256.jpg` | `pickup-in-wall-recess.webp` |
-| Wide map view | Wider Vert district | `1000029257.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Vert Sectors 3 and 6, Café Cyclone and Coulant Waterway | `1000029258.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on the west side of the canal north of the crossing | `1000029259.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Potion in the stone recess | `1000029260.jpg` | `pickup-confirmation.webp` |
+| [Wall recess approach](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/pickup-in-wall-recess.webp) | Red pickup beam in the inside stone corner immediately left of the stairs | `1000029256.jpg` | `pickup-in-wall-recess.webp` |
+| [Wide map view](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/map-wide.webp) | Wider Vert district | `1000029257.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/map-neighbourhood.webp) | Vert Sectors 3 and 6, Café Cyclone and Coulant Waterway | `1000029258.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/map-close.webp) | Player on the west side of the canal north of the crossing | `1000029259.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/pickup-confirmation.webp) | On-screen award of one Potion in the stone recess | `1000029260.jpg` | `pickup-confirmation.webp` |
 
 ## Super Potion — Coulant Waterway west-bank tree planter near Vert Sector 3
 
@@ -249,17 +277,19 @@ On the canal-side staircase landing, face along the waterway towards Café Cyclo
 
 The map indicates the player's nearby position, not a calibrated collectible coordinate. The precise Atlas basemap point and sector boundary designation remain unverified. No live marker added.
 
-**Evidence status:** Five genuine WebP photographs visually reviewed and decoded, with dimensions ranging from 1536 × 776 to 1536 × 865. Their original bytes were verified in the local upload archive. Binary transfer to GitHub is pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/`.
+Repository folder: `assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/`.
+
+![Pickup by tree](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/pickup-by-tree.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup by tree | Red beam between the tree and rounded shrub on the canal-side landing | `1000029266.jpg` | `pickup-by-tree.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029267.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Café Cyclone, Vert Sectors 3 and 6, Coulant Waterway | `1000029268.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player near the northern end of the canal on its western edge | `1000029269.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Super Potion by the tree | `1000029270.jpg` | `pickup-confirmation.webp` |
+| [Pickup by tree](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/pickup-by-tree.webp) | Red beam between the tree and rounded shrub on the canal-side landing | `1000029266.jpg` | `pickup-by-tree.webp` |
+| [Wide map view](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029267.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/map-neighbourhood.webp) | Café Cyclone, Vert Sectors 3 and 6, Coulant Waterway | `1000029268.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/map-close.webp) | Player near the northern end of the canal on its western edge | `1000029269.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/pickup-confirmation.webp) | On-screen award of one Super Potion by the tree | `1000029270.jpg` | `pickup-confirmation.webp` |
 
 ## Antidote — Vert Sector 3 upper terrace overlooking Wild Zone 11
 
@@ -271,17 +301,19 @@ Follow the upper cobbled terrace beside the wild zone. Look for wooden benches, 
 
 The precise Atlas basemap coordinate and any access prerequisites remain unverified. No live marker added.
 
-**Evidence status:** Five genuine WebP photographs decoded and visually reviewed, with dimensions ranging from 1536 × 793 to 1536 × 865. Original bytes were verified against all five files in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/`.
+Repository folder: `assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/`.
+
+![Pickup by terrace planter](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/pickup-by-terrace-planter.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup by terrace planter | Red beam beside the benches, square planter and parapet | `1000029276.jpg` | `pickup-by-terrace-planter.webp` |
-| Wide map view | Vert district and Wild Zones 2 and 11 | `1000029277.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029278.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player near the western boundary of Wild Zone 11 | `1000029279.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Antidote beside the terrace planter | `1000029280.jpg` | `pickup-confirmation.webp` |
+| [Pickup by terrace planter](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/pickup-by-terrace-planter.webp) | Red beam beside the benches, square planter and parapet | `1000029276.jpg` | `pickup-by-terrace-planter.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/map-wide.webp) | Vert district and Wild Zones 2 and 11 | `1000029277.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/map-neighbourhood.webp) | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029278.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/map-close.webp) | Player near the western boundary of Wild Zone 11 | `1000029279.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/pickup-confirmation.webp) | On-screen award of one Antidote beside the terrace planter | `1000029280.jpg` | `pickup-confirmation.webp` |
 
 ## Super Potion — Vert Sector 3 Wild Zone 11 balustrade
 
@@ -293,17 +325,19 @@ Follow the paved promenade alongside the wild-zone boundary. Look for the stone 
 
 The photographs establish the item identity and pickup position relative to the railing. The precise Atlas basemap coordinate and any access prerequisites remain unverified. No live marker added.
 
-**Evidence status:** Five genuine WebP photographs decoded and visually reviewed (1536 pixels wide, heights 806–865 pixels). Original bytes verified against all five files in the cumulative local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/`.
+Repository folder: `assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/`.
+
+![Pickup beside balustrade](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/pickup-by-balustrade.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup beside balustrade | Red beam on the pavement between two square planters, outside the railing | `1000029287.jpg` | `pickup-by-balustrade.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029288.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029289.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player beside the western Wild Zone 11 boundary | `1000029290.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Super Potion at the railing | `1000029291.jpg` | `pickup-confirmation.webp` |
+| [Pickup beside balustrade](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/pickup-by-balustrade.webp) | Red beam on the pavement between two square planters, outside the railing | `1000029287.jpg` | `pickup-by-balustrade.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029288.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/map-neighbourhood.webp) | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029289.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/map-close.webp) | Player beside the western Wild Zone 11 boundary | `1000029290.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustrade/pickup-confirmation.webp) | On-screen award of one Super Potion at the railing | `1000029291.jpg` | `pickup-confirmation.webp` |
 
 ## Dusk Ball — Vert Sector 3 lower Saison Canal promenade by lamppost
 
@@ -315,17 +349,19 @@ Descend to the lower cobbled canal-side promenade near the western boundary of W
 
 The photographs establish item identity, level and pickup position relative to the lamppost. The map marker records the player's nearby position, not a calibrated collectible coordinate. The precise Atlas basemap point remains unverified. No live marker added.
 
-**Evidence status:** All five original photographs decoded as genuine WebP (1536 pixels wide, heights 834–865 pixels). Their bytes were compared against the new cumulative archive, and the existing 50 archived photographs were verified unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/`.
+Repository folder: `assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/`.
+
+![Pickup by lamppost](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/pickup-by-lamppost.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup by lamppost | Red beam at foot of black lamppost on lower canal promenade | `1000029298.jpg` | `pickup-by-lamppost.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029299.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029300.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on southern canal bank just west of Wild Zone 11 | `1000029301.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Dusk Ball beside the lamppost | `1000029302.jpg` | `pickup-confirmation.webp` |
+| [Pickup by lamppost](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/pickup-by-lamppost.webp) | Red beam at foot of black lamppost on lower canal promenade | `1000029298.jpg` | `pickup-by-lamppost.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029299.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/map-neighbourhood.webp) | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029300.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/map-close.webp) | Player on southern canal bank just west of Wild Zone 11 | `1000029301.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/pickup-confirmation.webp) | On-screen award of one Dusk Ball beside the lamppost | `1000029302.jpg` | `pickup-confirmation.webp` |
 
 ## Revive — Vert Sector 3 raised Saison Canal walkway
 
@@ -337,17 +373,19 @@ Descend the broad stone staircase to the cobbled landing. Locate the slightly ra
 
 The photographs establish item identity and elevation. The map views show the player's approach position, not a calibrated collectible coordinate. The exact Atlas basemap point and any special access requirements remain unverified. No live marker added.
 
-**Evidence status:** All five original photographs decoded as genuine WebP (1536 pixels wide, heights 821–865 pixels). Original bytes verified against all five new files in the cumulative 60-photo upload archive, with all 55 earlier archived files confirmed unchanged. GitHub binary transfer remains pending; the following are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/`.
+Repository folder: `assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/`.
+
+![Pickup in wall corner](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/pickup-in-wall-corner.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup in wall corner | Red beam on raised building-side walkway, beside projecting stone wall | `1000029308.jpg` | `pickup-in-wall-corner.webp` |
-| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029309.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029310.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on southern bank near bridge and staircase | `1000029311.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Revive in the stone wall corner | `1000029312.jpg` | `pickup-confirmation.webp` |
+| [Pickup in wall corner](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/pickup-in-wall-corner.webp) | Red beam on raised building-side walkway, beside projecting stone wall | `1000029308.jpg` | `pickup-in-wall-corner.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/map-wide.webp) | Wider Vert district and Wild Zones 2 and 11 | `1000029309.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/map-neighbourhood.webp) | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029310.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/map-close.webp) | Player on southern bank near bridge and staircase | `1000029311.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-3-revive-saison-canal-raised-walkway/pickup-confirmation.webp) | On-screen award of one Revive in the stone wall corner | `1000029312.jpg` | `pickup-confirmation.webp` |
 
 ## Burn Heal — Saison Canal bridge between Vert Sectors 1 and 3
 
@@ -359,17 +397,19 @@ On the upper bridge, look for the red-brick paving, circular decorative pavement
 
 The photographs establish the item identity and bridge-level position. The map views show the player's nearby position rather than a calibrated collectible coordinate. The precise Atlas basemap point remains unverified. No live marker added.
 
-**Evidence status:** Five original photographs decoded as genuine WebP (1536 pixels wide, heights 826–865 pixels). All five files were verified byte-for-byte in the cumulative 65-photo archive, and all 60 previous archived files were verified unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/saison-canal-burn-heal-bridge/`.
+Repository folder: `assets/atlas/collectibles/saison-canal-burn-heal-bridge/`.
+
+![Pickup beside bridge balustrade](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/pickup-by-bridge-balustrade.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup beside bridge balustrade | Red beam beside stone railing on brick-paved bridge | `1000029318.jpg` | `pickup-by-bridge-balustrade.webp` |
-| Wide map view | Bridge location relative to Vert Plaza and Wild Zone 11 | `1000029319.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Saison Canal and Vert Sectors 1 and 3 | `1000029320.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player near the southern end of the bridge | `1000029321.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Burn Heal at the stone balustrade | `1000029322.jpg` | `pickup-confirmation.webp` |
+| [Pickup beside bridge balustrade](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/pickup-by-bridge-balustrade.webp) | Red beam beside stone railing on brick-paved bridge | `1000029318.jpg` | `pickup-by-bridge-balustrade.webp` |
+| [Wide map view](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/map-wide.webp) | Bridge location relative to Vert Plaza and Wild Zone 11 | `1000029319.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/map-neighbourhood.webp) | Saison Canal and Vert Sectors 1 and 3 | `1000029320.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/map-close.webp) | Player near the southern end of the bridge | `1000029321.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/saison-canal-burn-heal-bridge/pickup-confirmation.webp) | On-screen award of one Burn Heal at the stone balustrade | `1000029322.jpg` | `pickup-confirmation.webp` |
 
 ## Poké Ball — Vert Plaza northeast landscaped strip beside scaffolding
 
@@ -381,17 +421,19 @@ From Vert Plaza, head towards Saison Canal along this route. Look for the buildi
 
 The item is at ground level; the photographs do not establish any need to climb the scaffolding. The map views record the player's nearby position, not a calibrated collectible coordinate. The exact Atlas basemap point and formal sector designation remain unverified. No live marker added.
 
-**Evidence status:** All five original photographs decoded as genuine WebP at 1536 × 865. Original bytes verified against all five new files in the cumulative 70-photo upload archive, with all 65 previous archived photographs confirmed unchanged. GitHub binary transfer remains pending; the following are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/`.
+Repository folder: `assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/`.
+
+![Pickup by tree](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/pickup-by-tree.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup by tree | Red beam at the tree base beside flowers and scaffolding | `1000029328.jpg` | `pickup-by-tree.webp` |
-| Wide map view | Location relative to Wild Zones 2 and 11 | `1000029329.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Vert Plaza, Vert Sectors 1 and 3 and Saison Canal | `1000029330.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player at the southern end of the landscaped strip northeast of Vert Plaza | `1000029331.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Poké Ball beside the tree | `1000029332.jpg` | `pickup-confirmation.webp` |
+| [Pickup by tree](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/pickup-by-tree.webp) | Red beam at the tree base beside flowers and scaffolding | `1000029328.jpg` | `pickup-by-tree.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/map-wide.webp) | Location relative to Wild Zones 2 and 11 | `1000029329.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/map-neighbourhood.webp) | Vert Plaza, Vert Sectors 1 and 3 and Saison Canal | `1000029330.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/map-close.webp) | Player at the southern end of the landscaped strip northeast of Vert Plaza | `1000029331.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/pickup-confirmation.webp) | On-screen award of one Poké Ball beside the tree | `1000029332.jpg` | `pickup-confirmation.webp` |
 
 ## Dazzling Gleam — Magenta Plaza central monument (Wild Zone 7)
 
@@ -403,17 +445,19 @@ Enter the wild zone and head towards the central stone monument with engraved ge
 
 The monument provides a strong in-world location reference, but the map cursor is snapped to the wild-zone travel marker and is not a calibrated item coordinate. Exact Atlas basemap placement and any access prerequisites beyond entering Wild Zone 7 remain to be verified. No live marker added. Reserve a distinct TM filter and checklist category for later integration; this entry does not implement or alter the live map or player progress.
 
-**Evidence status:** Five original photographs decoded as genuine WebP at 1536 × 865 pixels and visually reviewed. All five new files were verified byte-for-byte in the cumulative 75-photo archive, and all 70 earlier archived files were confirmed unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Contributor identification supported by partially visible pickup text. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/`.
+Repository folder: `assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/`.
+
+![Pickup at monument](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/pickup-at-monument.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup at monument | Golden beam in front of the engraved stone pedestal | `1000029350.jpg` | `pickup-at-monument.webp` |
-| Wide map view | Magenta Plaza relative to Wild Zones 5 and 9 and Prism Tower | `1000029351.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Magenta Plaza, Magenta Street and Saison Canal | `1000029352.jpg` | `map-neighbourhood.webp` |
-| Close map view | Selected Wild Zone 7 marker at center of Magenta Plaza | `1000029353.jpg` | `map-close.webp` |
-| Collection confirmation | New purple TM disc and partially visible Dazzling Gleam pickup text at monument | `1000029354.jpg` | `pickup-confirmation.webp` |
+| [Pickup at monument](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/pickup-at-monument.webp) | Golden beam in front of the engraved stone pedestal | `1000029350.jpg` | `pickup-at-monument.webp` |
+| [Wide map view](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/map-wide.webp) | Magenta Plaza relative to Wild Zones 5 and 9 and Prism Tower | `1000029351.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/map-neighbourhood.webp) | Magenta Plaza, Magenta Street and Saison Canal | `1000029352.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/map-close.webp) | Selected Wild Zone 7 marker at center of Magenta Plaza | `1000029353.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/pickup-confirmation.webp) | New purple TM disc and partially visible Dazzling Gleam pickup text at monument | `1000029354.jpg` | `pickup-confirmation.webp` |
 
 ## Bullet Seed — Bleu Sector 1 rooftop near Bleu Plaza (Wild Zone 5)
 
@@ -421,17 +465,19 @@ Field catalogue find 021; second Technical Machine (TM).
 
 Locate the southwestern edge of **Bleu Sector 1**, in **Wild Zone 5**, immediately northeast of Bleu Plaza. The three map photographs place the player near the southwest entrance to the wild zone, at the corner of the building. Reach the blue-grey metal rooftop overlooking the curved path beside the green boundary pillars. Look for a golden pickup beam along the outer roof edge, near a chimney and across from the central roof recess. The final photograph confirms **Bullet Seed ×1** on the roof above the entrance. Exact climb route and any Hover Glide prerequisite are not established by the photographs. The map views show a nearby player position, not a calibrated collectible coordinate. No live marker added.
 
-**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels; the original bytes were verified against the cumulative 85-photo archive, with all 75 previously archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/`.
+Repository folder: `assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/`.
+
+![Pickup](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/pickup-on-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup | Golden beam on the metal roof near a chimney | `1000029360.jpg` | `pickup-on-rooftop.webp` |
-| Wide map view | Wild Zone 5 southwest of Prism Tower | `1000029361.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Bleu Sector 1 and Bleu Plaza | `1000029362.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player near the southwestern entrance of Wild Zone 5 | `1000029363.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Bullet Seed at the rooftop edge | `1000029364.jpg` | `pickup-confirmation.webp` |
+| [Pickup](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/pickup-on-rooftop.webp) | Golden beam on the metal roof near a chimney | `1000029360.jpg` | `pickup-on-rooftop.webp` |
+| [Wide map view](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/map-wide.webp) | Wild Zone 5 southwest of Prism Tower | `1000029361.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/map-neighbourhood.webp) | Bleu Sector 1 and Bleu Plaza | `1000029362.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/map-close.webp) | Player near the southwestern entrance of Wild Zone 5 | `1000029363.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/pickup-confirmation.webp) | On-screen award of one Bullet Seed at the rooftop edge | `1000029364.jpg` | `pickup-confirmation.webp` |
 
 
 ## Night Slash — Bleu Sector 10 rooftop terrace (Wild Zone 10)
@@ -444,17 +490,19 @@ Locate **Bleu Sector 10 (Wild Zone 10)**, near Shutterbug Café, south of Estiva
 
 The rooftop access route, any Hover Glide prerequisite and exact Atlas basemap coordinate are still unverified. The map cursor is snapped to the wild-zone travel marker rather than a precise item point. No live marker added.
 
-**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels; the original bytes were verified against the cumulative 85-photo archive, with all 75 previously archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/`.
+Repository folder: `assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/`.
+
+![Pickup](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/pickup-by-hedge.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup | Golden beam on rooftop tiles beside rectangular hedge | `1000029370.jpg` | `pickup-by-hedge.webp` |
-| Wide map view | Wild Zone 10 south of Wild Zone 9 | `1000029371.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Bleu Sector 10 and Shutterbug Café | `1000029372.jpg` | `map-neighbourhood.webp` |
-| Close map view | Selected Wild Zone 10 travel marker | `1000029373.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Night Slash during an encounter | `1000029374.jpg` | `pickup-confirmation.webp` |
+| [Pickup](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/pickup-by-hedge.webp) | Golden beam on rooftop tiles beside rectangular hedge | `1000029370.jpg` | `pickup-by-hedge.webp` |
+| [Wide map view](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/map-wide.webp) | Wild Zone 10 south of Wild Zone 9 | `1000029371.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/map-neighbourhood.webp) | Bleu Sector 10 and Shutterbug Café | `1000029372.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/map-close.webp) | Selected Wild Zone 10 travel marker | `1000029373.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/pickup-confirmation.webp) | On-screen award of one Night Slash during an encounter | `1000029374.jpg` | `pickup-confirmation.webp` |
 
 
 ## Power-Up Punch — Magenta Sector 5 rooftop near Café Rouleau (Wild Zone 9)
@@ -465,17 +513,19 @@ Locate **Magenta Sector 5 (Wild Zone 9)**, north of Estival Avenue, opposite Ble
 
 Exact rooftop access route, any Hover Glide prerequisite, and Atlas basemap coordinates remain unverified. Map views show the nearby player position, not a calibrated item coordinate. No live marker added.
 
-**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels. The original bytes of all ten new images (finds 023 and 024) were verified against the cumulative 95-photo archive, with all 85 earlier archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/`.
+Repository folder: `assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/`.
+
+![Pickup on rooftop](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/pickup-on-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on rooftop | Golden beam beside the pale rooftop parapet | `1000029380.jpg` | `pickup-on-rooftop.webp` |
-| Wide map view | Wild Zone 9 north of Wild Zone 10 | `1000029381.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Magenta Sector 5, Café Rouleau and Estival Avenue | `1000029382.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player on the southeastern side of Wild Zone 9 | `1000029383.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Power-Up Punch at the parapet | `1000029385.jpg` | `pickup-confirmation.webp` |
+| [Pickup on rooftop](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/pickup-on-rooftop.webp) | Golden beam beside the pale rooftop parapet | `1000029380.jpg` | `pickup-on-rooftop.webp` |
+| [Wide map view](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/map-wide.webp) | Wild Zone 9 north of Wild Zone 10 | `1000029381.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/map-neighbourhood.webp) | Magenta Sector 5, Café Rouleau and Estival Avenue | `1000029382.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/map-close.webp) | Player on the southeastern side of Wild Zone 9 | `1000029383.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/pickup-confirmation.webp) | On-screen award of one Power-Up Punch at the parapet | `1000029385.jpg` | `pickup-confirmation.webp` |
 
 ## Ice Beam — Wild Zone 12 northern fenced sports court
 
@@ -485,17 +535,19 @@ Locate **Wild Zone 12** in the Bleu district, southeast of Bleu Plaza and betwee
 
 The photographed item is at court/ground level, not on a rooftop. The photos show an open gate and short stairs, but do not establish the game's unlock prerequisites or exact Atlas basemap coordinates. The player marker provides a strong in-game reference; do not treat its screen position as a calibrated Atlas coordinate. No live marker added.
 
-**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels. Their original bytes were verified in the cumulative 95-photo archive together with find 023, with all 85 earlier archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/`.
+
+![Pickup on court](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/pickup-on-court.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on court | Golden beam beyond the open chain-link gate, between dark rock piles | `1000029391.jpg` | `pickup-on-court.webp` |
-| Wide map view | Wild Zone 12 southeast of Bleu Plaza | `1000029392.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Northern park area, Bleu Sector 5 and Stone Emporium | `1000029393.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player inside the rectangular court north of the Wild Zone 12 travel marker | `1000029394.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Ice Beam on the painted court center | `1000029395.jpg` | `pickup-confirmation.webp` |
+| [Pickup on court](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/pickup-on-court.webp) | Golden beam beyond the open chain-link gate, between dark rock piles | `1000029391.jpg` | `pickup-on-court.webp` |
+| [Wide map view](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/map-wide.webp) | Wild Zone 12 southeast of Bleu Plaza | `1000029392.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/map-neighbourhood.webp) | Northern park area, Bleu Sector 5 and Stone Emporium | `1000029393.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/map-close.webp) | Player inside the rectangular court north of the Wild Zone 12 travel marker | `1000029394.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/pickup-confirmation.webp) | On-screen award of one Ice Beam on the painted court center | `1000029395.jpg` | `pickup-confirmation.webp` |
 
 
 ## Work Up — Wild Zone 1 rooftop garden terrace
@@ -506,17 +558,19 @@ Locate **Wild Zone 1**, on South Boulevard, southwest of Hotel Z in Vert Sector 
 
 The item is on the rooftop, not at street level. A ladder is visible on a neighbouring building in the confirmation photograph, but its connection to the pickup route is not established. Exact rooftop access route, any Hover Glide prerequisite and the calibrated Atlas basemap coordinate remain unverified. Map views show the nearby player position rather than an independently calibrated item coordinate. No live marker added. Preserve other collectibles and existing player progress.
 
-**Evidence status:** Five supplied files decoded as genuine WebP at 1536 × 865 pixels. The original bytes were verified in the cumulative 100-photo archive, with all 95 previously archived photographs unchanged; archive integrity passed. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/pickup-on-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam beside the café table and blue railing | `1000029401.jpg` | `pickup-on-rooftop.webp` |
-| Wide map view | Wild Zone 1 on the southern edge of the city | `1000029402.jpg` | `map-wide.webp` |
-| Neighbourhood map view | South Boulevard, Hotel Z, Pokémon Research Lab and northern zone boundary | `1000029403.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player near the northern boundary west of the northeast entrance | `1000029404.jpg` | `map-close.webp` |
-| Collection confirmation | On-screen award of one Work Up at the wooden terrace railing corner | `1000029405.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/pickup-on-rooftop.webp) | Golden beam beside the café table and blue railing | `1000029401.jpg` | `pickup-on-rooftop.webp` |
+| [Wide map view](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/map-wide.webp) | Wild Zone 1 on the southern edge of the city | `1000029402.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/map-neighbourhood.webp) | South Boulevard, Hotel Z, Pokémon Research Lab and northern zone boundary | `1000029403.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/map-close.webp) | Player near the northern boundary west of the northeast entrance | `1000029404.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/pickup-confirmation.webp) | On-screen award of one Work Up at the wooden terrace railing corner | `1000029405.jpg` | `pickup-confirmation.webp` |
 
 
 ## Swift — Wild Zone 2 central island, Vert Plaza
@@ -527,16 +581,18 @@ Locate **Wild Zone 2**, in Vert Plaza. The neighbourhood and close map photograp
 
 **Verification distinction:** The location and golden pickup are photographically documented; the identification as Swift is based on the contributor's firsthand report. No collection confirmation image was supplied. The map references show the nearby player position, not a calibrated exact item coordinate. The route from the zone entrance and any unlock prerequisites have not been independently tested. No live marker added.
 
-**Evidence status:** Four supplied files decoded as genuine WebP at 1536 × 865 pixels. Original bytes verified in the cumulative 104-photo archive; all 100 earlier archived photographs are unchanged and archive integrity passed. GitHub binary transfer remains pending; these are planned destinations, not live image links. Do not fabricate a fifth image or label this find as screenshot-confirmed.
+**Evidence status:** 4 original photographs are present on PR #226 and linked below. Item identity reported firsthand; no final collection screenshot. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/wild-zone-2-swift-central-island/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-2-swift-central-island/`.
+
+![Pickup on island](../../assets/atlas/collectibles/wild-zone-2-swift-central-island/pickup-on-island.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Pickup on island | Golden beam beside trees, tall grass and water | `1000029411.jpg` | `pickup-on-island.webp` |
-| Wide map view | Wild Zone 2 in Vert Plaza | `1000029412.jpg` | `map-wide.webp` |
-| Neighbourhood map view | Central island and surrounding Vert sectors | `1000029413.jpg` | `map-neighbourhood.webp` |
-| Close map view | Player southeast of the Wild Zone 2 travel marker | `1000029414.jpg` | `map-close.webp` |
+| [Pickup on island](../../assets/atlas/collectibles/wild-zone-2-swift-central-island/pickup-on-island.webp) | Golden beam beside trees, tall grass and water | `1000029411.jpg` | `pickup-on-island.webp` |
+| [Wide map view](../../assets/atlas/collectibles/wild-zone-2-swift-central-island/map-wide.webp) | Wild Zone 2 in Vert Plaza | `1000029412.jpg` | `map-wide.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/wild-zone-2-swift-central-island/map-neighbourhood.webp) | Central island and surrounding Vert sectors | `1000029413.jpg` | `map-neighbourhood.webp` |
+| [Close map view](../../assets/atlas/collectibles/wild-zone-2-swift-central-island/map-close.webp) | Player southeast of the Wild Zone 2 travel marker | `1000029414.jpg` | `map-close.webp` |
 
 
 ## Psychic — Wild Zone 11 northern rock wall, Jaune Sector 10
@@ -547,15 +603,19 @@ Locate **Wild Zone 11**, Jaune Sector 10. The three map photographs place the pl
 
 The precise route from the entrance and Atlas basemap coordinate remain unverified; map screenshots show nearby player position. No live marker added.
 
-Destination: `assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/`.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
+
+Repository folder: `assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/`.
+
+![Ground pickup](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/pickup-by-rock-wall.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Ground pickup | Golden beam between trees beside the rock wall | `1000029421.jpg` | `pickup-by-rock-wall.webp` |
-| Wide map | Wild Zone 11 in eastern Lumiose | `1000029422.jpg` | `map-wide.webp` |
-| Neighbourhood map | Northern Jaune Sector 10 near Jaune Sector 12 | `1000029423.jpg` | `map-neighbourhood.webp` |
-| Close map | Player near northern wild-zone boundary | `1000029424.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Psychic ×1 | `1000029425.jpg` | `pickup-confirmation.webp` |
+| [Ground pickup](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/pickup-by-rock-wall.webp) | Golden beam between trees beside the rock wall | `1000029421.jpg` | `pickup-by-rock-wall.webp` |
+| [Wide map](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/map-wide.webp) | Wild Zone 11 in eastern Lumiose | `1000029422.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/map-neighbourhood.webp) | Northern Jaune Sector 10 near Jaune Sector 12 | `1000029423.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/map-close.webp) | Player near northern wild-zone boundary | `1000029424.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/pickup-confirmation.webp) | NEW Psychic ×1 | `1000029425.jpg` | `pickup-confirmation.webp` |
 
 ## Water Pulse — Wild Zone 6 rooftop terrace, Jaune Sector 12
 
@@ -565,14 +625,18 @@ Locate the southwestern end of **Jaune Sector 12 (Wild Zone 6)**, immediately be
 
 Correction to the initial conversational label: Zone 11 is the neighbouring landmark; the map places the player on the Zone 6 side. Exact rooftop access route, any Hover Glide prerequisite, and calibrated Atlas coordinates remain unverified. No live marker added.
 
-Destination: `assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/`.
+**Evidence status:** 4 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
+
+Repository folder: `assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/pickup-on-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam at the planted patio corner | `1000029430.jpg` | `pickup-on-rooftop.webp` |
-| Neighbourhood map | Zone 6 beside Zone 11 and North Boulevard | `1000029431.jpg` | `map-neighbourhood.webp` |
-| Close map | Southwestern boundary of Jaune Sector 12 | `1000029432.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Water Pulse ×1 | `1000029433.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/pickup-on-rooftop.webp) | Golden beam at the planted patio corner | `1000029430.jpg` | `pickup-on-rooftop.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/map-neighbourhood.webp) | Zone 6 beside Zone 11 and North Boulevard | `1000029431.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/map-close.webp) | Southwestern boundary of Jaune Sector 12 | `1000029432.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/pickup-confirmation.webp) | NEW Water Pulse ×1 | `1000029433.jpg` | `pickup-confirmation.webp` |
 
 ## Rock Tomb — Wild Zone 8 market stalls, Jaune Plaza
 
@@ -582,17 +646,19 @@ Locate **Wild Zone 8**, Jaune Plaza, on Jaune Street northeast of Prism Tower. T
 
 The map marker represents the nearby player position; calibrated item coordinates and the route from the specific entrance are not independently verified. No live marker added.
 
-Destination: `assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/`.
+
+![Ground pickup](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/pickup-near-stalls.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Ground pickup | Golden beam near the market stalls | `1000029439.jpg` | `pickup-near-stalls.webp` |
-| Wide map | Wild Zone 8 northeast of Prism Tower | `1000029440.jpg` | `map-wide.webp` |
-| Neighbourhood map | Jaune Plaza and surrounding sectors | `1000029441.jpg` | `map-neighbourhood.webp` |
-| Close map | Player near plaza centre | `1000029442.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Rock Tomb ×1; nearby Camerupt | `1000029443.jpg` | `pickup-confirmation.webp` |
+| [Ground pickup](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/pickup-near-stalls.webp) | Golden beam near the market stalls | `1000029439.jpg` | `pickup-near-stalls.webp` |
+| [Wide map](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/map-wide.webp) | Wild Zone 8 northeast of Prism Tower | `1000029440.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/map-neighbourhood.webp) | Jaune Plaza and surrounding sectors | `1000029441.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/map-close.webp) | Player near plaza centre | `1000029442.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/pickup-confirmation.webp) | NEW Rock Tomb ×1; nearby Camerupt | `1000029443.jpg` | `pickup-confirmation.webp` |
 
-**Evidence status for finds 027–029:** All 14 supplied image files decoded as genuine WebP (despite their .jpg filenames). All original bytes were preserved and verified in the cumulative 118-photo pending archive; all 104 earlier archived files are unchanged. Archive integrity passed. The 24 previously committed photographs remain untouched. Binary transfer to GitHub is still pending, and the destination filenames above are not live links. No runtime, player progress, main, Workspace, or Supabase changes.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
 
 ## Fire Spin — Wild Zone 4 southern cemetery wall, Dormez Bien Cemetery
@@ -603,17 +669,19 @@ Locate **Dormez Bien Cemetery (Wild Zone 4)** in the Rouge district, north of Ro
 
 The pickup is at ground level. The photos show roots nearby, but do not establish that clearing them with a move is necessary. Map views identify the nearby player position rather than a calibrated item coordinate. The suggested approach is inferred from the photographs, not an independently tested route. No live marker added.
 
-**Evidence status:** Five supplied files decoded as genuine WebP at 1536 × 865 pixels despite their .jpg filenames. All original bytes verified in the cumulative 123-photo pending archive, with all 118 previous archived photographs unchanged and archive integrity passed. The 24 previously committed photographs remain untouched. Binary upload to GitHub remains pending; the destinations below are not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/`.
+
+![Ground pickup](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/pickup-by-cemetery-wall.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Ground pickup | Golden beam by the mausoleum, bushes and thorny roots | `1000029450.jpg` | `pickup-by-cemetery-wall.webp` |
-| Wide map | Wild Zone 4 north of Wild Zone 3 | `1000029451.jpg` | `map-wide.webp` |
-| Neighbourhood map | Dormez Bien Cemetery and Sushi High Roller | `1000029452.jpg` | `map-neighbourhood.webp` |
-| Close map | Player against southern boundary west of entrance | `1000029453.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Fire Spin ×1 beside stone wall | `1000029454.jpg` | `pickup-confirmation.webp` |
+| [Ground pickup](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/pickup-by-cemetery-wall.webp) | Golden beam by the mausoleum, bushes and thorny roots | `1000029450.jpg` | `pickup-by-cemetery-wall.webp` |
+| [Wide map](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/map-wide.webp) | Wild Zone 4 north of Wild Zone 3 | `1000029451.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/map-neighbourhood.webp) | Dormez Bien Cemetery and Sushi High Roller | `1000029452.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/map-close.webp) | Player against southern boundary west of entrance | `1000029453.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/pickup-confirmation.webp) | NEW Fire Spin ×1 beside stone wall | `1000029454.jpg` | `pickup-confirmation.webp` |
 
 
 ## Aerial Ace — Wild Zone 3 western rooftop, Rouge Plaza
@@ -624,17 +692,19 @@ Locate **Rouge Plaza (Wild Zone 3)** on Rouge Street, south of Dormez Bien Cemet
 
 Elevation: rooftop, not ground level. The map cursor is the nearby player position, not a calibrated item coordinate. The wide map has a selected travel marker; use the close map's separate player cursor for the location reference. No live marker added.
 
-**Evidence status:** All five original files decoded as genuine WebP despite their .jpg filenames; original dimensions vary. All five are preserved byte-for-byte in the cumulative 128-photo pending archive, with all 123 previous archived photographs unchanged. ZIP integrity passed. The 24 photographs previously committed to the PR remain untouched. Binary upload is pending; the destination filenames below are not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/`.
+Repository folder: `assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/pickup-on-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam beside stone balustrade | `1000029460.jpg` | `pickup-on-rooftop.webp` |
-| Wide map | Wild Zone 3 south of Zone 4 | `1000029461.jpg` | `map-wide.webp` |
-| Neighbourhood map | Rouge Plaza and surrounding sectors | `1000029462.jpg` | `map-neighbourhood.webp` |
-| Close map | Player on western outlined structure | `1000029463.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Aerial Ace ×1 on rooftop | `1000029464.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/pickup-on-rooftop.webp) | Golden beam beside stone balustrade | `1000029460.jpg` | `pickup-on-rooftop.webp` |
+| [Wide map](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/map-wide.webp) | Wild Zone 3 south of Zone 4 | `1000029461.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/map-neighbourhood.webp) | Rouge Plaza and surrounding sectors | `1000029462.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/map-close.webp) | Player on western outlined structure | `1000029463.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/pickup-confirmation.webp) | NEW Aerial Ace ×1 on rooftop | `1000029464.jpg` | `pickup-confirmation.webp` |
 
 
 ## X-Scissor — Wild Zone 13 stump garden, Rouge Sector 7
@@ -645,15 +715,19 @@ Locate **Wild Zone 13** along North Boulevard, north of Rouge Sector 7 and north
 
 The map views locate the nearby player position rather than the calibrated item coordinate. The exact entrance route and any obstacle-clearing requirement are unverified. No live marker added.
 
-Destination: `assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/`.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
+
+Repository folder: `assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/`.
+
+![Ground pickup](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/pickup-by-stumps.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Ground pickup | Golden beam beside stump and gravel path | `1000029470.jpg` | `pickup-by-stumps.webp` |
-| Wide map | Wild Zone 13 northwest of Zone 4 | `1000029471.jpg` | `map-wide.webp` |
-| Neighbourhood map | North Boulevard and Rouge Sector 7 | `1000029472.jpg` | `map-neighbourhood.webp` |
-| Close map | Player inside the zone just southwest of travel icon | `1000029473.jpg` | `map-close.webp` |
-| Collection confirmation | NEW X-Scissor ×1 | `1000029474.jpg` | `pickup-confirmation.webp` |
+| [Ground pickup](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/pickup-by-stumps.webp) | Golden beam beside stump and gravel path | `1000029470.jpg` | `pickup-by-stumps.webp` |
+| [Wide map](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/map-wide.webp) | Wild Zone 13 northwest of Zone 4 | `1000029471.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/map-neighbourhood.webp) | North Boulevard and Rouge Sector 7 | `1000029472.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/map-close.webp) | Player inside the zone just southwest of travel icon | `1000029473.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/pickup-confirmation.webp) | NEW X-Scissor ×1 | `1000029474.jpg` | `pickup-confirmation.webp` |
 
 ## Colorful Screw — Rouge Sector 3, Poké Ball Boutique rooftop
 
@@ -663,17 +737,19 @@ Locate **Rouge Sector 3**, beside the **Poké Ball Boutique** on Autumnal Avenue
 
 Elevation: rooftop structure. Keep this location separate from ordinary item and TM pickups in the Colorful Screw collection category. The map cursor marks the player's nearby position, not an independently calibrated item coordinate. No live marker added.
 
-Destination: `assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/`.
+Repository folder: `assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/pickup-by-rooftop-ladder.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Purple beam above gray rooftop structure and blue ladder | `1000029480.jpg` | `pickup-by-rooftop-ladder.webp` |
-| Wide map | Rouge district northwest of Rouge Plaza | `1000029481.jpg` | `map-wide.webp` |
-| Neighbourhood map | Rouge Sector 3 beside Poké Ball Boutique | `1000029482.jpg` | `map-neighbourhood.webp` |
-| Close map | Player on building footprint northeast of boutique icon | `1000029483.jpg` | `map-close.webp` |
-| Collection confirmation | Colorful Screw ×1 on rooftop | `1000029484.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/pickup-by-rooftop-ladder.webp) | Purple beam above gray rooftop structure and blue ladder | `1000029480.jpg` | `pickup-by-rooftop-ladder.webp` |
+| [Wide map](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/map-wide.webp) | Rouge district northwest of Rouge Plaza | `1000029481.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/map-neighbourhood.webp) | Rouge Sector 3 beside Poké Ball Boutique | `1000029482.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/map-close.webp) | Player on building footprint northeast of boutique icon | `1000029483.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/pickup-confirmation.webp) | Colorful Screw ×1 on rooftop | `1000029484.jpg` | `pickup-confirmation.webp` |
 
-**Evidence status for finds 032–033:** All ten supplied photographs decoded as genuine WebP despite the .jpg filenames. All ten original byte streams are preserved in the cumulative 138-photo pending archive, with every one of the previous 128 files unchanged and ZIP integrity passed. The first 24 photographs already committed to the PR remain untouched. Binary upload to GitHub remains pending; destination names above are not live links. No runtime, main, Workspace or Supabase changes.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
 
 ## Dragon Pulse — Rust Syndicate building rooftop, Bleu Sector 4
@@ -684,17 +760,19 @@ Locate the **Rust Syndicate building** (building identity confirmed by the playe
 
 Elevation: rooftop terrace; the initial street-to-roof access route and any unlock or Hover Glide requirement are not established. The nighttime photographs show the item at the time of collection, not a night-only requirement. Map views locate the nearby player position, not an independently calibrated Atlas coordinate. No live marker added.
 
-**Evidence status:** All five original files decoded as genuine WebP (1536 × 865) despite the .jpg filenames. All five are preserved byte-for-byte in the cumulative 143-photo pending archive, with all 138 previous archived photographs unchanged. ZIP integrity passed. The first 24 photographs committed to the PR remain untouched. Binary upload to GitHub is pending; destination filenames below are not live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/`.
+Repository folder: `assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/pickup-in-bamboo.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam in bamboo behind purple-and-blue banners | `1000029490.jpg` | `pickup-in-bamboo.webp` |
-| Wide map | Bleu Sector 4 between Wild Zones 5 and 10 | `1000029491.jpg` | `map-wide.webp` |
-| Neighbourhood map | Eastern building in Bleu Sector 4 northwest of Bleu Plaza | `1000029492.jpg` | `map-neighbourhood.webp` |
-| Close map | Player on square inset roof footprint north of courtyard | `1000029493.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Dragon Pulse ×1 among bamboo | `1000029494.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/pickup-in-bamboo.webp) | Golden beam in bamboo behind purple-and-blue banners | `1000029490.jpg` | `pickup-in-bamboo.webp` |
+| [Wide map](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/map-wide.webp) | Bleu Sector 4 between Wild Zones 5 and 10 | `1000029491.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/map-neighbourhood.webp) | Eastern building in Bleu Sector 4 northwest of Bleu Plaza | `1000029492.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/map-close.webp) | Player on square inset roof footprint north of courtyard | `1000029493.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/pickup-confirmation.webp) | NEW Dragon Pulse ×1 among bamboo | `1000029494.jpg` | `pickup-confirmation.webp` |
 
 
 ## Access survey — Bleu Sector 6 — western scaffold complex
@@ -707,16 +785,18 @@ Infrastructure observation, separate from the 34 numbered collectible finds. Can
 
 **Interactive Map 2.0 reconstruction requirement:** retain a separate scaffold-area feature with its building-face footprint, individual access points, ladder transitions, platform elevations, ramp connections and links to nearby collectibles. Reconcile the photograph against AR-B06-01 before assigning any permanent route ID. Register the close-map landmarks and faint crosses against the canonical map image; trace only confirmed scaffold extents and record entrance, exit and floor geometry as unknown until additional evidence proves them. Use the existing scaffold/ladder layer and filters, rather than treating the player's cursor as an item or precise access marker. Do not publish guessed geometry, change collection progress or assign canonical Screw numbers from this photograph.
 
-**Evidence status:** four original WebP files (1536 × 865), decoded and preserved byte-for-byte in the cumulative 147-photo pending archive. All 143 previous archived photographs remain unchanged. ZIP integrity passed. The first 24 photographs already committed to the PR are untouched. Binary upload remains pending; destination filenames below are not live links. No pickup-confirmation photograph supplied.
+**Evidence status:** 4 original photographs are present on PR #226 and linked below. Infrastructure survey only; no confirmed collectible identity or complete route. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/access/bleu-6-western-scaffold/`.
+Repository folder: `assets/atlas/access/bleu-6-western-scaffold/`.
+
+![Street view](../../assets/atlas/access/bleu-6-western-scaffold/scaffold-street-view.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Street view | Multilevel scaffold, ramps, upper ladder and visible pickup beams | `1000029499.jpg` | `scaffold-street-view.webp` |
-| Wide map | Position between Wild Zone 10 and Bleu Plaza | `1000029500.jpg` | `map-wide.webp` |
-| Neighbourhood map | Bleu Sector 6 courtyard, opposite Bleu Sector 9 | `1000029501.jpg` | `map-neighbourhood.webp` |
-| Close map | Western building corner, triangular green island and faint grid crosses | `1000029502.jpg` | `map-close.webp` |
+| [Street view](../../assets/atlas/access/bleu-6-western-scaffold/scaffold-street-view.webp) | Multilevel scaffold, ramps, upper ladder and visible pickup beams | `1000029499.jpg` | `scaffold-street-view.webp` |
+| [Wide map](../../assets/atlas/access/bleu-6-western-scaffold/map-wide.webp) | Position between Wild Zone 10 and Bleu Plaza | `1000029500.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/access/bleu-6-western-scaffold/map-neighbourhood.webp) | Bleu Sector 6 courtyard, opposite Bleu Sector 9 | `1000029501.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/access/bleu-6-western-scaffold/map-close.webp) | Western building corner, triangular green island and faint grid crosses | `1000029502.jpg` | `map-close.webp` |
 
 
 ## Flip Turn — Magenta Sector 3 vicinity, Estival Avenue rooftop
@@ -727,17 +807,19 @@ Destination: `assets/atlas/access/bleu-6-western-scaffold/`.
 
 **Written directions:** locate the modern white-clad building with blue window bands and a landscaped rooftop garden containing conical topiary, shrubs and paths. Player-confirmed access route: take the Holovator, climb the ladder, then cross the bridge to the rooftop garden. Do not use the staircase as the access route. At the garden roof, the golden pickup is on the pale roof edge beside the planting. The collection photograph shows the player on an elevated pale roof corner overlooking an adjacent blue-roofed building. The red-beam pickup on that neighbouring roof is separate and unidentified; do not register it as Flip Turn. The Holovator → ladder → bridge sequence is confirmed by the contributor. The exact Holovator and ladder coordinates, bridge geometry and any Hover Glide requirement remain unverified. No calibrated Atlas coordinate or live pin is claimed.
 
-**Evidence status:** all five original files decoded as WebP (1536 × 865) despite their .jpg names. All five are preserved byte-for-byte in the cumulative 152-photo pending archive, with all 147 previous archived photographs unchanged. ZIP integrity passed. The first 24 photographs committed to the PR remain untouched. Binary upload pending; destination filenames are not yet live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/magenta-3-flip-turn-rooftop/`.
+Repository folder: `assets/atlas/collectibles/magenta-3-flip-turn-rooftop/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/pickup-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam at the garden roof edge; foreground staircase is not the confirmed access route | `1000029508.jpg` | `pickup-rooftop.webp` |
-| Wide map | Location east of Wild Zone 9, north of Wild Zone 10 and Bleu Sector 4 | `1000029509.jpg` | `map-wide.webp` |
-| Neighbourhood map | Triangular block west of Magenta Sector 3 courtyard and north of Estival Avenue | `1000029510.jpg` | `map-neighbourhood.webp` |
-| Close map | Player at triangular block's southeast corner, nearby faint grid crosses | `1000029511.jpg` | `map-close.webp` |
-| Collection confirmation | NEW Flip Turn ×1 on rooftop | `1000029512.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/pickup-rooftop.webp) | Golden beam at the garden roof edge; foreground staircase is not the confirmed access route | `1000029508.jpg` | `pickup-rooftop.webp` |
+| [Wide map](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/map-wide.webp) | Location east of Wild Zone 9, north of Wild Zone 10 and Bleu Sector 4 | `1000029509.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/map-neighbourhood.webp) | Triangular block west of Magenta Sector 3 courtyard and north of Estival Avenue | `1000029510.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/map-close.webp) | Player at triangular block's southeast corner, nearby faint grid crosses | `1000029511.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/magenta-3-flip-turn-rooftop/pickup-confirmation.webp) | NEW Flip Turn ×1 on rooftop | `1000029512.jpg` | `pickup-confirmation.webp` |
 
 ## Colorful Screw — Vert Sector 1, Prism Tower-facing scaffold
 
@@ -749,17 +831,19 @@ Destination: `assets/atlas/collectibles/magenta-3-flip-turn-rooftop/`.
 
 **Access-layer evidence:** retain the scaffold, ramp and ladder as a candidate access-layer survey attached to this find. Match against the existing access and Screw registries before assigning an infrastructure ID or canonical Screw number. No live pin, calibrated coordinate, required Hover Glide status or complete route geometry is claimed.
 
-**Evidence status:** all five supplied .jpg files decoded as WebP (1536 × 865). Original bytes preserved in the cumulative 157-photo pending archive; all 152 previous archived files remain byte-identical, with unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-1-colorful-screw-scaffold/`.
+Repository folder: `assets/atlas/collectibles/vert-1-colorful-screw-scaffold/`.
+
+![Scaffold pickup](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/pickup-scaffold.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Scaffold pickup | Purple beam on raised scaffold; visible ramp and ladder | `1000029518.jpg` | `pickup-scaffold.webp` |
-| Wide map | Position southeast of Prism Tower, northwest of Vert Plaza | `1000029519.jpg` | `map-wide.webp` |
-| Neighbourhood map | Vert Sector 1, Nouveau Café and Saison Canal | `1000029520.jpg` | `map-neighbourhood.webp` |
-| Close map | Plaza-facing western building edge, courtyard and faint grid crosses | `1000029521.jpg` | `map-close.webp` |
-| Collection confirmation | Colorful Screw ×1 on raised scaffold platform | `1000029522.jpg` | `pickup-confirmation.webp` |
+| [Scaffold pickup](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/pickup-scaffold.webp) | Purple beam on raised scaffold; visible ramp and ladder | `1000029518.jpg` | `pickup-scaffold.webp` |
+| [Wide map](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/map-wide.webp) | Position southeast of Prism Tower, northwest of Vert Plaza | `1000029519.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/map-neighbourhood.webp) | Vert Sector 1, Nouveau Café and Saison Canal | `1000029520.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/map-close.webp) | Plaza-facing western building edge, courtyard and faint grid crosses | `1000029521.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-1-colorful-screw-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on raised scaffold platform | `1000029522.jpg` | `pickup-confirmation.webp` |
 
 ## Colorful Screw — Magenta, Café Gallant scaffold beside Prism Tower
 
@@ -771,17 +855,19 @@ Destination: `assets/atlas/collectibles/vert-1-colorful-screw-scaffold/`.
 
 **Access-layer evidence:** retain the scaffold, steps and ramp as a candidate infrastructure survey associated with this pickup. Match against existing access and Screw registries before assigning a permanent access ID or canonical Screw number. No calibrated Atlas coordinate or live marker is claimed.
 
-**Evidence status:** all five supplied .jpg files decoded as WebP (1536 × 865). Original bytes preserved in the cumulative 162-photo pending archive, with all 157 previous archived files unchanged; unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection notification partly obscured; see original photograph. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/`.
+Repository folder: `assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/`.
+
+![Scaffold pickup](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/pickup-scaffold.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Scaffold pickup | Purple beam on upper platform; cyan-edged steps and ramp | `1000029528.jpg` | `pickup-scaffold.webp` |
-| Wide map | Position west of Prism Tower and north of Wild Zone 5 | `1000029529.jpg` | `map-wide.webp` |
-| Neighbourhood map | Standalone building east of Café Gallant, beside Estival Avenue | `1000029530.jpg` | `map-neighbourhood.webp` |
-| Close map | Player at southern edge of standalone building; faint grid crosses | `1000029531.jpg` | `map-close.webp` |
-| Collection confirmation | Colorful Screw ×1 partly overlapped by NPC dialogue, player on raised scaffold | `1000029532.jpg` | `pickup-confirmation.webp` |
+| [Scaffold pickup](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/pickup-scaffold.webp) | Purple beam on upper platform; cyan-edged steps and ramp | `1000029528.jpg` | `pickup-scaffold.webp` |
+| [Wide map](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/map-wide.webp) | Position west of Prism Tower and north of Wild Zone 5 | `1000029529.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/map-neighbourhood.webp) | Standalone building east of Café Gallant, beside Estival Avenue | `1000029530.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/map-close.webp) | Player at southern edge of standalone building; faint grid crosses | `1000029531.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 partly overlapped by NPC dialogue, player on raised scaffold | `1000029532.jpg` | `pickup-confirmation.webp` |
 
 ## Colorful Screw — Vert Sector 7, Racine Construction scaffold
 
@@ -793,17 +879,19 @@ Destination: `assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaf
 
 **Access-layer evidence:** preserve the ramps, connecting span and tiered platforms as a candidate scaffold survey linked to this pickup. The visible NPC dialogue refers to exchanging Colorful Screws for a Canari plush; retain it as a nearby landmark, without inferring exchange rates or unlock requirements. Match against existing access and Screw registries before assigning permanent IDs. No calibrated coordinates or live markers are claimed.
 
-**Evidence status:** all five supplied .jpg files decoded as WebP; three map photographs are 1536 × 865, the approach photograph is 1536 × 842, and the collection photograph is 1536 × 843. Original bytes preserved in the cumulative 167-photo pending archive. All 162 prior archived files remain byte-identical, with unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/`.
+Repository folder: `assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/`.
+
+![Scaffold pickup](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/pickup-scaffold.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Scaffold pickup | Purple beam on highest right-hand platform, left and right ramps and connecting span | `1000029538.jpg` | `pickup-scaffold.webp` |
-| Wide map | Southeast city perimeter, southeast of Wild Zone 2 and northeast of Wild Zone 1 | `1000029539.jpg` | `map-wide.webp` |
-| Neighbourhood map | Vert Sector 7, Racine Construction, Pokémon Center and Gare de Lumiose | `1000029540.jpg` | `map-neighbourhood.webp` |
-| Close map | Boulevard-facing building edge southwest of Racine Construction; faint grid crosses | `1000029541.jpg` | `map-close.webp` |
-| Collection confirmation | Colorful Screw ×1 on elevated platform near Canari plush exchange | `1000029542.jpg` | `pickup-confirmation.webp` |
+| [Scaffold pickup](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/pickup-scaffold.webp) | Purple beam on highest right-hand platform, left and right ramps and connecting span | `1000029538.jpg` | `pickup-scaffold.webp` |
+| [Wide map](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/map-wide.webp) | Southeast city perimeter, southeast of Wild Zone 2 and northeast of Wild Zone 1 | `1000029539.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/map-neighbourhood.webp) | Vert Sector 7, Racine Construction, Pokémon Center and Gare de Lumiose | `1000029540.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/map-close.webp) | Boulevard-facing building edge southwest of Racine Construction; faint grid crosses | `1000029541.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on elevated platform near Canari plush exchange | `1000029542.jpg` | `pickup-confirmation.webp` |
 
 ## Roar — Rouge Plaza southwest rooftop near Café Pokémon-Amie
 
@@ -815,14 +903,16 @@ Destination: `assets/atlas/collectibles/vert-7-racine-construction-colorful-scre
 
 **Access-layer evidence:** record the NPC battle as a prerequisite for this Holovator, based on the contributor's firsthand route. The nearby yellow Holovator symbol on the plaza-facing side of the building is a candidate access anchor; match it to the existing Holovator registry before assigning an ID. NPC identity, battle details, precise entrance coordinates and calibrated pickup position remain unverified. Do not assume the prerequisite applies to other Holovators. No permanent live marker is claimed.
 
-**Evidence status:** all five supplied .jpg files decoded as WebP; four are 1536 × 865 and the neighbourhood map is 1536 × 823. Original bytes preserved in the cumulative 172-photo pending archive, with all 167 previous entries byte-identical, unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+**Evidence status:** 5 original photographs are present on PR #226 and linked below. Collection screenshot available. Exact Atlas coordinates and canonical checklist matching remain pending.
 
-Destination: `assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/`.
+Repository folder: `assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/`.
+
+![Rooftop pickup](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/pickup-rooftop.webp)
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam beside chimney; Prism Tower in background | `1000029549.jpg` | `pickup-rooftop.webp` |
-| Wide map | Southwest of Wild Zone 3 and northeast of Wild Zone 7 | `1000029550.jpg` | `map-wide.webp` |
-| Neighbourhood map | Building across Autumnal Avenue from Café Pokémon-Amie, northwest of Rouge Sector 1 | `1000029551.jpg` | `map-neighbourhood.webp` |
-| Close map | Avenue-facing roof footprint and nearby Holovator symbol | `1000029552.jpg` | `map-close.webp` |
-| Collection confirmation | Roar ×1 beside four-pot chimney overlooking avenue | `1000029553.jpg` | `pickup-confirmation.webp` |
+| [Rooftop pickup](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/pickup-rooftop.webp) | Golden beam beside chimney; Prism Tower in background | `1000029549.jpg` | `pickup-rooftop.webp` |
+| [Wide map](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/map-wide.webp) | Southwest of Wild Zone 3 and northeast of Wild Zone 7 | `1000029550.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/map-neighbourhood.webp) | Building across Autumnal Avenue from Café Pokémon-Amie, northwest of Rouge Sector 1 | `1000029551.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/map-close.webp) | Avenue-facing roof footprint and nearby Holovator symbol | `1000029552.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/pickup-confirmation.webp) | Roar ×1 beside four-pot chimney overlooking avenue | `1000029553.jpg` | `pickup-confirmation.webp` |
