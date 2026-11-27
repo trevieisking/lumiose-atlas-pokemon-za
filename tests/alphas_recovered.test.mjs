@@ -208,3 +208,11 @@ for(const cue of ["Red or white, Jaune Sector 2","alley behind Justice Dojo","cl
 const beautyFlowers = read("hair-beauty-guide.html").match(/<section id="flabebe-route">([\s\S]*?)<\/section>/)?.[1];
 assert.ok(beautyFlowers.includes('href="alphas.html#alpha-flabebe-colours"'));
 assert.ok(beautyFlowers.includes('href="side-missions.html#quest-12"'));
+
+const vivillon = cityAlphaCard("alpha-vivillon-patterns");
+assert.ok(vivillon);
+for (const cue of ["Lv. 46–47","by day in Wild Zone 13","1★ Flying","1★ Bug","Lv. 24–26","Lv. 22–24","quest-21","gift-poke-ball-vivillon","home-species-666","distribution has ended"]) {
+  assert.ok(vivillon.includes(cue) && source.includes(cue),cue);
+}
+assert.match(read("src/sections/pokedex.html"),/href="alphas\.html#alpha-vivillon-patterns"/);
+assert.match(read("rewards.html"),/id="gift-poke-ball-vivillon"/);

@@ -8,7 +8,7 @@ const expected=pdfMatchedSource.replace('class="view" id="rewards"','class="rewa
   .replace('<button class="button primary" data-go="items">Open the screw and item checklist</button>','<a class="button primary" href="items.html">Open the screw and item checklist</a>')
   .replace('<button class="button light" data-go="battles">See the ranks and rewards ↗</button>','<a class="button light" href="battles.html">See the ranks and rewards ↗</a>');
 assert.ok(html.includes(expected),"Recovered article must retain every text and card element from the owner's PDF-matched original guide section");
-assert.equal((html.match(/<article>/g)||[]).length,6,"All six original gift/event cards must survive");
+assert.equal((html.match(/<article\b[^>]*>/g)||[]).length,6,"All six original gift/event cards must survive");
 for(const [label,source] of [
   ["Shiny Xerneas","dex-art/716.webp"],
   ["Poké Ball Pattern Vivillon","dex-art/666.webp"],

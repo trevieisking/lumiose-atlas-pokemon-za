@@ -1,0 +1,7 @@
+# AT-346: Vivillon pattern acquisition
+
+The [pinned city/zone point export](LUMIOSE_CITY_ALPHA_POINTS_2026-11-27.md) supports Meadow form 6: WZ1 Alpha Scatterbug Lv. 15–16, daytime WZ4 Alpha Spewpa Lv. 22–24 across two adjacent bands, and daytime WZ13 Alpha Vivillon Lv. 46–47. Each row carries its own survey condition; raw phase is not translated into an unsupported exact mission. WZ20's central Meadow range remains Lv. 63–64.
+
+The [pinned generated join](HYPERSPACE_GENERATED_WILD_AUDIT.md) finds 24 Garden family rows in 1★ Flying/Bug, forming six bands and no other family form. Flying ordinary/Alpha: Scatterbug 10–12/19–21, Spewpa 15–17/24–26, Vivillon 15–17/24–26. Bug: Scatterbug 12–14/21–23, Spewpa 13–15/22–24, Vivillon 15–17/24–26. Both pattern keys retain their form across Lv. 9 and Lv. 12 evolution. Cross-checks: [Flying pools](https://www.serebii.net/legendsz-a/hyperspacewildzone/flying.shtml), [Bug pools](https://www.serebii.net/legendsz-a/hyperspacewildzone/bug.shtml), [pattern inheritance](https://bulbapedia.bulbagarden.net/wiki/Spewpa).
+
+The Marine Museum reward is a distinct one-off gift. The [official Spewpa distribution notice](https://legends.pokemon.com/en-us/news/vivillon-challenge) excludes Marine, Meadow, Garden and Poké Ball from its 16 timed patterns; that Spewpa distribution ended in November 2026. The separate Poké Ball Pattern reward links to the Atlas Rewards card, which already owns the deadline. Do not infer Alpha eligibility for gift patterns or add permanent map pins.
