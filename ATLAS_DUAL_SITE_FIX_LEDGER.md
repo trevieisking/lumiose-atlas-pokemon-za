@@ -1,5 +1,22 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT346_AT347_WORKSPACE_V40 -->
+## 27 November 2026 — AT-346 / AT-347 published on the original Workspace Site
+
+| Release evidence | Value |
+| --- | --- |
+| Site and public URL | `appgprj_6afda588d5948191b4143e40a1f9c291` · [Lumiose Atlas](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site) |
+| GitHub runtime | [Merged PR #224](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224) · `bdfce92bfa7324517d0a1e2f8db7eec84983eefb` · reviewed tree `b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1` · Manifest 102 / Ledger 110 |
+| Original Workspace release | v40 · `appgprj_6afda588d5948191b4143e40a1f9c291~appgver_1b17368d1b088191bb8f45e381a4b48e` · Site source `f0fd141bdb5a6a3a533ed03bfe5667ed166d0535` · deployment `appgdep_6b0998fa25008191bb950e0eff5a36b3` succeeded |
+| Previous version and rollback | Archived v39 · `appgprj_6afda588d5948191b4143e40a1f9c291~appgver_754ae0fa1a9481919a2d61966471db66` · source `da8cf425f680485bec476321e88bb1daf54b4cfb` · source backup SHA-256 `36eca33a439966d1a86d97a664fe00d36d7c8d7aa055fcaa61039786e8a31143` |
+
+- **GitHub evidence.** Six validation jobs passed on reviewed head `1d547314715b45bc1e83fd78840f0155b479a9d1`. Pages run 46013174330 succeeded on the merged SHA. Direct browser readback matched the approved café, title, music and restaurant counts and Le Wow repeat reward. [Release receipt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224#issuecomment-7220500171)
+- **Workspace preview.** A single Site build passed 393 px and 1440 px browser checks. The phone test used synthetic touch events. Verified map gestures and controls, grid and layers, all 48 sector views and the 20 Wild Zone photo pairs, Dex totals and speed sorting, 132 Hyperspace route entries and 202 capture bands across 105 species, 364-species Alpha search, 41 boutiques and five salons, inventory and both planners, Furfrou League, City Life search and menus, and reload of isolated HOME and walkthrough marks. Six Workspace preservation tests and 33 pinned source tests passed. The production feedback and rating controls were checked without submissions.
+- **Independent live readback.** The actual Workspace site displayed 17 cafés and 133 menu entries, four restaurants, 55 title groups, 34 music tracks and 27 Rush entries. Live checks also confirmed the 3,494 × 2,192 Jaune 2 source photo, I9 at 25% east and 75% south, Meowth's capture bands and sort controls, the Alpha index, 200 shop item rows, 364 HOME registration controls, and feedback with five rating controls. [City Life](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/game-content) · [Sector Maps](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/sector-maps#jaune-2) · [Alpha Pokédex](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/alphas#alpha-catalogue)
+- **Preservation and open research.** Existing Site ID, URL, public audience, original photos, map geometry and coordinates, marker IDs, progress keys, Supabase files and environment revision 0 were preserved. The manual HOME tracker uses the approved registration key and stays separate from existing progress. The field captures, full encounter/form/learnset and habitat audits, exact music unlocks, optional rewards, and persistent completion work remain open. Random Hyperspace locations remain unpinned.
+
+<!-- END_AT346_AT347_WORKSPACE_V40 -->
+
 <!-- AT347_BOUNDED_RELEASE_102_110 -->
 ## AT-346 / AT-347 — bounded consolidated release candidate (Manifest 102 / Ledger 110)
 
