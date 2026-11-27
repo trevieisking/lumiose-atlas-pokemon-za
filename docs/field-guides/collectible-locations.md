@@ -760,3 +760,25 @@ Destination: `assets/atlas/collectibles/vert-1-colorful-screw-scaffold/`.
 | Neighbourhood map | Vert Sector 1, Nouveau Café and Saison Canal | `1000029520.jpg` | `map-neighbourhood.webp` |
 | Close map | Plaza-facing western building edge, courtyard and faint grid crosses | `1000029521.jpg` | `map-close.webp` |
 | Collection confirmation | Colorful Screw ×1 on raised scaffold platform | `1000029522.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Magenta, Café Gallant scaffold beside Prism Tower
+
+**Collectible find 37.** Colorful Screw, purple pickup beam. The final photograph shows the Screw icon and **Colorful Screw ×1**, partly overlapped by an NPC dialogue bubble. This is a separate field find from the Vert Sector 1 scaffold, not an assigned canonical Screw number.
+
+**Map anchor:** small standalone quadrilateral building immediately east of the Café Gallant block, on the western side of Prism Tower plaza and directly north of the northern tip of Wild Zone 5 (Bleu Sector 2). The close map places the player on the Estival Avenue-facing side of this building, near its southwest corner. The neighbouring Magenta sector number is obscured in the submitted map, so retain the unambiguous Café Gallant landmark and separate building outline instead of guessing a numbered sector. Use the surrounding faint grid crosses for later registration; the player arrow is not a calibrated pickup coordinate.
+
+**Written directions:** from Café Gallant, walk east along Estival Avenue towards Prism Tower. Look for the scaffold with cyan-lit edges against the tall stone building with rows of blue windows and arched lower windows. The approach photograph shows scaffold steps, a sloping ramp and tiered platforms. The purple pickup beam rises from the higher patterned platform next to the facade. Ascend to that platform and collect the Screw. The final photograph shows the player standing on the raised metal platform above street level. The exact climbing sequence and any movement prerequisites are unverified.
+
+**Access-layer evidence:** retain the scaffold, steps and ramp as a candidate infrastructure survey associated with this pickup. Match against existing access and Screw registries before assigning a permanent access ID or canonical Screw number. No calibrated Atlas coordinate or live marker is claimed.
+
+**Evidence status:** all five supplied .jpg files decoded as WebP (1536 × 865). Original bytes preserved in the cumulative 162-photo pending archive, with all 157 previous archived files unchanged; unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+
+Destination: `assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaffold/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Scaffold pickup | Purple beam on upper platform; cyan-edged steps and ramp | `1000029528.jpg` | `pickup-scaffold.webp` |
+| Wide map | Position west of Prism Tower and north of Wild Zone 5 | `1000029529.jpg` | `map-wide.webp` |
+| Neighbourhood map | Standalone building east of Café Gallant, beside Estival Avenue | `1000029530.jpg` | `map-neighbourhood.webp` |
+| Close map | Player at southern edge of standalone building; faint grid crosses | `1000029531.jpg` | `map-close.webp` |
+| Collection confirmation | Colorful Screw ×1 partly overlapped by NPC dialogue, player on raised scaffold | `1000029532.jpg` | `pickup-confirmation.webp` |
