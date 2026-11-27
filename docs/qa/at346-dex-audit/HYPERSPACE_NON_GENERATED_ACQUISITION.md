@@ -33,4 +33,34 @@ The pinned personal export independently resolves each source form and target. K
 - **Armarouge and Ceruledge:** use Auspicious Armor or Malicious Armor, respectively, on Charcadet. [SM132](../../../side-missions.html#quest-132) offers one choice; both also occur in 5★ floating-item Special loot. [Loot table](https://www.serebii.net/legendsz-a/floatingpokeballs.shtml)
 - **Gholdengo:** evolve either form of Gimmighoul with 999 coins. Keep separate from the existing [SM122 route](../../../side-missions.html#quest-122) or generated Chest Form Gimmighoul.
 
-**13 pending species:** Heatran, Volcanion, Genesect, Hoopa, Marshadow, Meltan, Melmetal, Darkrai, Kyogre, Groudon, Rayquaza, Magearna and Zeraora. Some already have guide cards. Pending means the research coverage has not reconciled those cards to the source schema here, not that the guide lacks them or they cannot be obtained.
+
+## Remaining 13 Hyperspace acquisition classifications
+
+| Class | Species | Route evidence |
+| --- | --- | --- |
+| Story boss capture | Heatran | HM09, Infernal Arena; caught Lv. 80. |
+| Story boss capture | Darkrai | HM11, Bad Dreams Cruller, Newmoon Nightmare via Prism Tower; caught Lv. 85. |
+| Story boss capture | Kyogre | HM14, Alpha Donut, Wild Zone 5 portal to Primordial Sea; caught Lv. 80. |
+| Story boss capture | Groudon | HM13, Omega Donut, Jaune Sector 11 portal to Desolate Land; caught Lv. 80. |
+| Story boss capture | Rayquaza | HM12; complete both primal routes, use Delta Donut from Hotel Z into Sky Pillar; caught Lv. 85. |
+| Side mission catch | Genesect | SM191, Wild Zone 13 scripted 5★ portal; encounter Lv. 200, caught Lv. 60. |
+| Side mission catch | Marshadow | SM192, sunset interaction on the Rouge Sector 1 court; caught Lv. 80. |
+| Side mission catch | Meltan | SM193, near the Rouge Sector 1 bank; caught Lv. 70 and retained. |
+| Side mission catch | Volcanion | SM194, Pokémon Research Lab; caught Lv. 80. |
+| Side mission catch | Zeraora | EX3, scripted Gare de Lumiose portal with the Plasma-Glazed Donut; caught Lv. 85. |
+| Scripted reward | Melmetal | Separate Lv. 80 gift in SM193 after catching Meltan. |
+| Scripted reward | Magearna | Jett in SM195 at Quasartico, Lv. 80; HM12 and SM190 supported. Hold the disputed SM162 prerequisite. |
+| Scripted reward | Hoopa | SM196: defeat Unbound, then use the Prison Bottle; joins in Confined form Lv. 80. |
+
+[Story mission and venue cross-check](https://bulbapedia.bulbagarden.net/wiki/Hyperspace_Mission), [Serebii capture levels](https://www.serebii.net/legendsz-a/legendary.shtml), [Meltan and Melmetal](https://www.serebii.net/legendsz-a/sidemissions/dreamsofmeltan.shtml), [EX3](https://www.serebii.net/legendsz-a/sidemissions/raginglightning.shtml), [Magearna](https://gamewith.jp/pokemon-za/534440). Genesect: [Japanese SM191 walkthrough](https://gamewith.jp/pokemon-za/534350) and [portal preparation and encounter](https://www.gamerguides.com/pokemon-legends-z-a/guide/mega-dimensions-dlc/legendary-and-mythical-pokemon/how-to-catch-genesect/). Marshadow: [Japanese SM192 walkthrough](https://gamewith.jp/pokemon-za/534592) and [sunset trigger and capture](https://www.gamerguides.com/pokemon-legends-z-a/guide/mega-dimensions-dlc/legendary-and-mythical-pokemon/how-to-catch-marshadow). Use the existing mission marker for Genesect's wall rather than reconciling conflicting compass descriptions. The Marshadow directions use Café Bataille and Wild Zone 6 for the requester, and a separate court near Centrico Pokémon Center for the encounter. This pass updates just those two player cards.
+
+## Nine Lumiose acquisition classifications
+
+- **Fixed Alpha:** Salamence, Wild Zone 18, Lv. 61–62. This is a direct Alpha catch, not the only acquisition route.
+- **Rotating Alpha pool:** Dragonite and Garchomp (Lv. 64–65) and Metagross (Lv. 63–64) are possible picks from Wild Zone 20's two rotating Alpha slots. No particular species is guaranteed. Evolution is an alternate route for these and Salamence.
+- **Story catches:** Xerneas at Wild Zone 11 (MM40), Yveltal at Rouge Sector 2 (MM41), and Zygarde at Prism Tower (MM42).
+- **Gift-unlocked mission catches:** Diancite unlocks Diancie (EX1); the Mewtwonite X/Y gift unlocks Mewtwo (EX2). Timed distributions are separate records.
+
+[Fixed Alphas](https://www.serebii.net/legendsz-a/alphapokemon.shtml), [Wild Zone 20 pool and slot count](https://www.gamerguides.com/pokemon-legends-z-a/database/alpha-pokemon/groups/wild-zone-20), [level ranges](https://bulbapedia.bulbagarden.net/wiki/Walkthrough%3APok%C3%A9mon_Legends%3A_Z-A/Part_27), [story captures](https://www.serebii.net/legendsz-a/legendary.shtml), official [Diancie](https://legends.pokemon.com/en-au/news/get-diancie) and [Mewtwo](https://legends.pokemon.com/en-au/news/get-mewtwo-and-mewtonite-stones) announcements.
+
+**Coverage:** 27/27 Hyperspace and 9/9 Lumiose absences now have at least one acquisition class. This does not close the work for alternate routes, individual forms, Alpha eligibility, source disagreements, or all unlock gates. No new map pins or blanket render of the research data.

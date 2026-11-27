@@ -462,7 +462,31 @@ window.ATLAS_LEGENDARY_SOURCE = {
           "maps.html#wild-zone-13"
         ]
       ],
-      "verificationGap": "The original PDF stops at inspecting the wall. The precise steps after entering this route need an in-game verification pass."
+      "verifiedRoute": {
+        "place": "Wild Zone 13 → Hyperspace",
+        "description": "Buy all four Drives, then use a 5★ donut at the scripted Wild Zone 13 portal. Genesect is Lv. 200 in the encounter and Lv. 60 when caught.",
+        "note": "Budget 2,160 Mega Shards: 540 for each of the four Drives.",
+        "steps": [
+          "Finish the Rayquaza route in Hyperspace Mission 12.",
+          "At the Mega Shard Exchange in Vert Sector 7, west of Wild Zone 17, buy the Douse, Shock, Burn and Chill Drives. Show the trader all four.",
+          "Inspect the mission-marked wall inside Wild Zone 13. It opens the scripted 5★ portal. Bring a 5★ donut to enter.",
+          "Follow the path through the portal and catch Genesect. It is Lv. 200 in the encounter and Lv. 60 when caught."
+        ],
+        "links": [
+          [
+            "Collecting Four Drives · Side Mission 191",
+            "side-missions.html#quest-191"
+          ],
+          [
+            "Drive prices",
+            "shops.html#shop-dlc-shards"
+          ],
+          [
+            "Wild Zone 13",
+            "maps.html#wild-zone-13"
+          ]
+        ]
+      }
     },
     {
       "id": "marshadow",
@@ -491,7 +515,27 @@ window.ATLAS_LEGENDARY_SOURCE = {
           "maps.html"
         ]
       ],
-      "verificationGap": "The PDF documents the shadow puzzle, but not a detailed follow-on capture sequence."
+      "verifiedRoute": {
+        "place": "Café Bataille → Rouge Sector 1 training court",
+        "description": "Talk to Gardie near Café Bataille, north of Wild Zone 6. At sunset, use Investigate in the Rouge Sector 1 court, then catch Lv. 80 Marshadow.",
+        "note": "Wait for Prism Tower’s shadow to reach the court’s centre circle. No donut is needed.",
+        "steps": [
+          "Finish the Rayquaza route in Hyperspace Mission 12.",
+          "Talk to Gardie on South Boulevard, north of Wild Zone 6 by Café Bataille.",
+          "Go to the Rouge Sector 1 training court near Centrico Pokémon Center at sunset.",
+          "When Prism Tower’s shadow reaches the centre of the Poké Ball circle and Investigate appears, interact with the spot. Battle and catch Lv. 80 Marshadow."
+        ],
+        "links": [
+          [
+            "The Stealthy Shadow · Side Mission 192",
+            "side-missions.html#quest-192"
+          ],
+          [
+            "City overview",
+            "maps.html"
+          ]
+        ]
+      }
     },
     {
       "id": "zeraora",
