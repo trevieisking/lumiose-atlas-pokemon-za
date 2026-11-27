@@ -290,3 +290,9 @@ for (const card of [forQuest(144), original.find(m=>Number(m[1])===144)?.[2]]) {
  assert.match(card,/right-hand bench.*?higher balcony.*?Take Photo.*?other prompt spot/);
  assert.doesNotMatch(card,/adjust the photo angle/);
 }
+
+for (const card of [forQuest(25), original.find(m=>Number(m[1])===25)?.[2]]) {
+ assert.match(card,/data-side-check="25"/);
+ assert.match(card,/₽1,200, Rare Candy ×2 and Dusk Ball ×5/);
+ assert.match(card,/Walk slowly.*?marked bins.*?game-content\.html#service-friendship-checker/);
+}

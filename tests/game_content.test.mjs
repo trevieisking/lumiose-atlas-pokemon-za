@@ -5,7 +5,7 @@ test('AT-347: existing article routes discover the hub; no new state/network ope
 
 test('AT-347: verified gift, restaurant repeat and ranked season requirements stay synchronized',()=>{const coin=data.gifts.find(x=>x.id==='gift-coin-collection');assert.match(coin.requirement,/gives you Gimmighoul and 413 coins/);assert.match(html,/gives you Gimmighoul and 413 coins/);assert.doesNotMatch(html,/collect 413 Gimmighoul Coins for the associated gift/);for(const r of data.restaurants){assert.equal(r.unlock,'Complete Side Mission '+r.mission+' to unlock paid repeat visits.');assert.ok(html.includes('Repeat visits after Side Mission '+r.mission));}assert.match(html,/do not count toward Mable's Trainer-battle wins/);assert.ok(data.titles.filter(x=>x.id.startsWith('title-z-a-battle-club-')).every(x=>x.description.includes('during a Ranked Battles season')));});
 
-test('AT-347: restaurant rewards, training checkpoints and camera/friendship guidance',()=>{const s=Object.fromEntries(data.services.map(x=>[x.id,x]));assert.match(s['service-ev-removal'].description,/Main Mission 20/);assert.match(s['service-hyper-training'].description,/Main Mission 37/);assert.match(s['service-plus-move-mastery'].description,/Main Mission 19/);assert.match(s['service-special-scan'].description,/Philippe/);assert.equal(data.mechanics_review.friendship.cafe_active_gain,30);assert.equal(data.mechanics_review.friendship.bench_party_gain,10);assert.equal(data.mechanics_review.photo.perspective_toggle,'Y');assert.match(html,/Switch between first and third person/);assert.match(html,/adds 30 friendship to the active Pokémon/);assert.ok(data.restaurants.every(r=>r.repeat_reward&&r.coordinate===null));});
+test('AT-347: restaurant rewards, training checkpoints and camera/friendship guidance',()=>{const s=Object.fromEntries(data.services.map(x=>[x.id,x]));assert.match(s['service-ev-removal'].description,/Main Mission 20/);assert.match(s['service-hyper-training'].description,/Main Mission 19/);assert.match(s['service-plus-move-mastery'].description,/Main Mission 19/);assert.match(s['service-special-scan'].description,/Philippe/);assert.equal(data.mechanics_review.friendship.cafe_active_gain,30);assert.equal(data.mechanics_review.friendship.bench_party_gain,10);assert.equal(data.mechanics_review.photo.perspective_toggle,'Y');assert.match(html,/Switch between first and third person/);assert.match(html,/adds 30 friendship to the active Pokémon/);assert.ok(data.restaurants.every(r=>r.repeat_reward&&r.coordinate===null));});
 
 test('AT-347: field camera controls and scripted rooftop photo are distinct',()=>{
  const photo=html.match(/id="photo">([\s\S]*?)<\/section>/)[1];
@@ -13,4 +13,14 @@ test('AT-347: field camera controls and scripted rooftop photo are distinct',()=
  assert.equal((photo.match(/scope="row"/g)||[]).length,9);
  assert.match(photo,/<kbd>−<\/kbd>/); assert.match(photo,/console’s <strong>Album/);
  assert.match(photo,/side-missions\.html#quest-144/);
+});
+
+test('AT-347: training services give distinct unlocks and spending choices',()=>{
+ const row=id=>data.services.find(s=>s.id==='service-'+id).description;
+ assert.match(row('hyper-training'),/Main Mission 19.*?attendant on the right.*?Lv\. 50/);
+ assert.match(row('iv-judge'),/credits.*?open Boxes.*?press the right stick.*?still missing, visit a Pokémon Center/);
+ assert.match(row('ev-removal'),/five Mega Shards.*?Main Mission 20.*?Main Mission 25/);
+ assert.match(row('plus-move-mastery'),/master naturally.*?only by TM.*?While Mega Evolved/);
+ assert.match(html,/160 plus any species-specific condition.*?255.*?1\/24 to 1\/12/);
+ assert.match(html,/252 EVs in one stat and 510 overall/);
 });
