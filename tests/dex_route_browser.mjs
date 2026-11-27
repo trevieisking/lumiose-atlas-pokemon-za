@@ -30,7 +30,7 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   assert.ok((await card.innerText()).includes(method),method);
   await card.locator('button.dex-toggle').click();
  }
- assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),142);
+ assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),149);
  for(const [dexIndex,route] of [[1,"1★ Fighting — catch Lv. 16–18; Alpha Lv. 25–27"],[2,"3★ Fighting — catch Lv. 28–30; Alpha Lv. 37–39"],[16,"2★ Steel — catch Lv. 18–20; Alpha Lv. 27–29"],[18,"4★ Fairy — catch Lv. 41–43; Alpha Lv. 50–52"],[35,"5★ Ghost — catch Lv. 62–64; Alpha Lv. 71–73"],[57,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[58,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[88,"4★ Ice — catch Lv. 38–40; Alpha Lv. 47–49"]]){
   const card=page.locator('#dex-hyperspace-'+dexIndex);
   await card.locator('button.dex-toggle').click();
@@ -67,6 +67,16 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   await card.locator('button.dex-toggle').click();
  }
  for(const [dexIndex,expected,scan] of [[11,["3★ Normal — catch Lv. 21–23; Alpha Lv. 30–32","5★ Normal — catch Lv. 50–52; Alpha Lv. 59–61"],true],[12,["5★ Normal — catch Lv. 52–54; Alpha Lv. 61–63"],true],[13,["5★ Normal — catch Lv. 54–56; Alpha Lv. 63–65"],true],[19,["4★ Dragon — catch Lv. 38–40; Alpha Lv. 47–49","4★ Normal — catch Lv. 38–40; Alpha Lv. 47–49"],false],[20,["3★ Poison — catch Lv. 24–26; Alpha Lv. 33–35","3★ Rock — catch Lv. 24–26; Alpha Lv. 33–35","4★ Poison — catch Lv. 36–38; Alpha Lv. 45–47","4★ Rock — catch Lv. 36–38; Alpha Lv. 45–47"],false],[21,["4★ Poison — catch Lv. 41–43; Alpha Lv. 50–52","4★ Rock — catch Lv. 41–43; Alpha Lv. 50–52"],false],[23,["1★ Ghost — catch Lv. 17–19; Alpha Lv. 26–28","4★ Ghost — catch Lv. 36–38; Alpha Lv. 45–47"],false],[24,["4★ Ghost — catch Lv. 39–41; Alpha Lv. 48–50"],false],[27,["4★ Normal — catch Lv. 38–40; Alpha Lv. 47–49"],false],[29,["3★ Ice — catch Lv. 26–28; Alpha Lv. 35–37"],false],[32,["5★ Dragon — catch Lv. 52–54; Alpha Lv. 61–63","5★ Ice — catch Lv. 52–54; Alpha Lv. 61–63"],true],[33,["5★ Dragon — catch Lv. 54–56; Alpha Lv. 63–65","5★ Ice — catch Lv. 54–56; Alpha Lv. 63–65"],true],[34,["5★ Dragon — catch Lv. 57–59; Alpha Lv. 66–68","5★ Ice — catch Lv. 57–59; Alpha Lv. 66–68"],true],[60,["4★ Ghost — catch Lv. 40–42; Alpha Lv. 49–51"],false],[68,["3★ Ghost — catch Lv. 24–26; Alpha Lv. 33–35"],false]]){
+  const card=page.locator('#dex-hyperspace-'+dexIndex);
+  await card.locator('button.dex-toggle').click();
+  for(const route of expected)assert.ok((await card.innerText()).includes(route),route);
+  assert.match(await card.innerText(),/not guaranteed spawns/);
+  assert.equal(await card.getByRole("link",{name:"Unlock Special Scans"}).count(),scan?1:0);
+  if(scan)assert.match(await card.innerText(),/25,000 Hyperspace Survey Points/);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
+  await card.locator('button.dex-toggle').click();
+ }
+ for(const [dexIndex,expected,scan] of [[6,["4★ Steel — catch Lv. 39–41; Alpha Lv. 48–50"],false],[38,["5★ Poison — catch Lv. 53–55; Alpha Lv. 62–64"],true],[62,["1★ Bug — catch Lv. 17–19; Alpha Lv. 26–28","3★ Water — catch Lv. 23–25; Alpha Lv. 32–34"],false],[63,["3★ Water — catch Lv. 30–32; Alpha Lv. 39–41"],false],[69,["4★ Bug — catch Lv. 40–42; Alpha Lv. 49–51"],false],[70,["3★ Electric — catch Lv. 24–26; Alpha Lv. 33–35"],false]]){
   const card=page.locator('#dex-hyperspace-'+dexIndex);
   await card.locator('button.dex-toggle').click();
   for(const route of expected)assert.ok((await card.innerText()).includes(route),route);
