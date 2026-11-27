@@ -277,3 +277,16 @@ assert.match(beautyFurfrou,/Wild Zone 19/);
 assert.match(beautyFurfrou,/after the early-morning window/);
 assert.doesNotMatch(beautyFurfrou,/Wild Zone 17|completing Main Mission 15/);
 assert.match(read('alphas.html'),/id="alpha-furfrou-route"[^>]*>[\s\S]*?4★ Normal portals/);
+
+for (const card of [forQuest(173), original.find(m=>Number(m[1])===173)?.[2]]) {
+ assert.match(card,/data-side-check="173"/);
+ assert.match(card,/Defeat Canari and Ivor in Hyperspace Mission 9/);
+ assert.match(card,/First clear: ₽3,400, TM130 Charge Beam and the Defenseless Dodger title/);
+ assert.match(card,/first-clear payout is not a confirmed repeat reward/);
+}
+for (const card of [forQuest(144), original.find(m=>Number(m[1])===144)?.[2]]) {
+ assert.match(card,/data-side-check="144"/);
+ assert.match(card,/₽2,300 and Fast Ball ×5/);
+ assert.match(card,/right-hand bench.*?higher balcony.*?Take Photo.*?other prompt spot/);
+ assert.doesNotMatch(card,/adjust the photo angle/);
+}

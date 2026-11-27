@@ -1,5 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT348_CONSOLIDATED_COMPLETION_104_112 -->
+## AT-348 — Single remaining-guide integration candidate (Manifest 104 / Ledger 112)
+
+Owner requests one PR first, then individual safe fixes. [Consolidated completion plan](docs/qa/AT348_CONSOLIDATED_COMPLETION_PLAN.md) · [structured register](docs/qa/AT348_CONSOLIDATED_COMPLETION_REGISTER.json) · [active draft PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229). Preserve the interrupted Work [resume prompt](docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md) and current v40 baseline. The 24 prior reviewed historical heads are unchanged; no stale patch replay. PR227 exact source `4c68ff1bec5534190872b9227894bc6eed017170` passed two source-head workflows; its 11 non-overlapping files are incorporated into this candidate, with combined-head tests still pending. Preserve PR227 as source; this supersedes only its earlier separate-development treatment. PR226 remains the independent ongoing exact item/Screw field-photo intake. Ordered slices: photo restoration; three Pokédex/habitat completeness; access routes; fashion/beauty/economy; City Life/challenge details; unified progress and safe backup; full factual audit; final exact-head validation and one same-Site Workspace handoff. No new release or full-completion claim. Keep existing runtime baseline, all originals, validated markers, storage, Supabase/feedback, rollback and previous evidence; no public video or replacement Site. HOLD until all scoped critical gates pass.
+<!-- END_AT348_CONSOLIDATED_COMPLETION_104_112 -->
+
 <!-- AT348_WORKSPACE_RESUME_103_111 -->
 ## AT-348 — Interrupted Workspace photograph recovery (Manifest 103 / Ledger 111; planning only)
 

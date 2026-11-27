@@ -1,0 +1,249 @@
+{
+  "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
+  "schema_version": 1,
+  "manifest_revision": 104,
+  "ledger_revision": 112,
+  "scope": "one active non-item guide completion candidate; staged, not release approval",
+  "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+  "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
+  "active_pr": 229,
+  "previous_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
+  "resume_prompt": "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
+  "workspace_last_recorded_live": "v40",
+  "workspace_v41_verified": false,
+  "field_collection": {
+    "pr": 226,
+    "head": "79647ff8c5435049438e0f3f05910ea091cc0e30",
+    "policy": "ongoing exact item/Colorful Screw photo intake remains separate and untouched until independently verified and deliberately reconciled for a release"
+  },
+  "incoming": {
+    "pr": 227,
+    "head": "4c68ff1bec5534190872b9227894bc6eed017170",
+    "tree": "6d181a1a56d1c3bc7d2bf5a72f55e3ef90b08152",
+    "prior_workflows": [
+      46027544829,
+      46027544803
+    ],
+    "files": [
+      "boss-guide-data.js",
+      "boss-guide.html",
+      "game-content-data.json",
+      "game-content.css",
+      "game-content.html",
+      "index.html",
+      "side-missions.html",
+      "src/sections/sidequests.html",
+      "tests/game_content.test.mjs",
+      "tests/side_missions_index.test.mjs",
+      "docs/qa/at347-content-coverage/CHALLENGE_FOLLOW_UP_2026-11-27.md"
+    ],
+    "disposition": "exact non-overlapping file transfer into PR229; not promoted; PR227 preserved as source, no separate release",
+    "integrated_head_tests": "pending"
+  },
+  "historical_head_check": {
+    "count": 24,
+    "all_exact_heads_unchanged": true,
+    "prior_review": "docs/qa/at342-independent-live-review-2026-11-26/open-pr-consolidation-review.json",
+    "groups": {
+      "included_in_substance": [
+        203,
+        198,
+        197,
+        196,
+        195,
+        189,
+        187,
+        177,
+        172,
+        156,
+        3
+      ],
+      "superseded": [
+        97,
+        76,
+        59,
+        37
+      ],
+      "research_or_receipt": [
+        186,
+        184,
+        171,
+        166,
+        149,
+        2,
+        1
+      ],
+      "adaptation_pending": [
+        4,
+        5
+      ]
+    },
+    "heads": [
+      {
+        "pr": 203,
+        "head": "6a203e143dba392fa137db31bfcfd5264d6c7ff0"
+      },
+      {
+        "pr": 198,
+        "head": "98a0a5f3e9c2b960769265bc2db015c2dbd2dc02"
+      },
+      {
+        "pr": 197,
+        "head": "68c01ebac29730351dc1375126dfae4674fdacc0"
+      },
+      {
+        "pr": 196,
+        "head": "bc5b10fcf8a69ff8ec45d5ac5d6ff5dd0276838e"
+      },
+      {
+        "pr": 195,
+        "head": "bbdc011ba425519821ad5fde8cd92a19e42265ce"
+      },
+      {
+        "pr": 189,
+        "head": "11c6e2f5877d1880237dfa2471d5d053f5533ca0"
+      },
+      {
+        "pr": 187,
+        "head": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c"
+      },
+      {
+        "pr": 186,
+        "head": "8831be90c915efc237894fdc8a2423d8f5056bb9"
+      },
+      {
+        "pr": 184,
+        "head": "cbda3bc87ae54ac420f6b4dbd2e43d1cbc04cee1"
+      },
+      {
+        "pr": 177,
+        "head": "e9cdcb5230bbe61c55a18eb8e7d30e7137c9e212"
+      },
+      {
+        "pr": 172,
+        "head": "c2d739942eef7c34b08a67475df2252b4d3ededb"
+      },
+      {
+        "pr": 171,
+        "head": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d"
+      },
+      {
+        "pr": 166,
+        "head": "a9a78e46e86ce56b4e08257ed017ef5d2d05fb04"
+      },
+      {
+        "pr": 156,
+        "head": "a9e906cdce710a67ca960e363a087160cd08dc5d"
+      },
+      {
+        "pr": 149,
+        "head": "e826d100f0eb540f73e58274273a0d1c3c5cecb7"
+      },
+      {
+        "pr": 97,
+        "head": "be9d047c8de15a8f52946b129e4040c06f14c8a1"
+      },
+      {
+        "pr": 76,
+        "head": "268b72125e644d68eb03c4c53a1f8d98b7372808"
+      },
+      {
+        "pr": 59,
+        "head": "a15077d9513de2655b8c8485d37678723d60c77e"
+      },
+      {
+        "pr": 37,
+        "head": "97131c29969a80ed03a6e6684b05a8b914e137b7"
+      },
+      {
+        "pr": 5,
+        "head": "c7db966c6a8955801f4ca6beb2c4fc15c837880a"
+      },
+      {
+        "pr": 4,
+        "head": "263f7faa3ddf8588cc73dae97577087d7a92df93"
+      },
+      {
+        "pr": 3,
+        "head": "4d65520593a438b03b96c5e3621989f76c4d8d4f"
+      },
+      {
+        "pr": 2,
+        "head": "d4e1ae32613cf4b49347f1412634bfdd22741163"
+      },
+      {
+        "pr": 1,
+        "head": "b3d868db17afc87c5c94830f257ac2988be262e2"
+      }
+    ]
+  },
+  "slices": [
+    {
+      "id": "A0",
+      "title": "Single candidate and interrupted-session recovery",
+      "status": "in_progress",
+      "source": "PR229; #228; AT348_WORKSPACE_RESUME_PROMPT.md",
+      "acceptance": "Retain existing Work draft; record source/checkpoints; do not restart or claim publication."
+    },
+    {
+      "id": "A1",
+      "title": "Photo restoration",
+      "status": "open",
+      "source": "AT-348 / #228",
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping."
+    },
+    {
+      "id": "A2",
+      "title": "Pokédex encounter and form coverage",
+      "status": "open",
+      "source": "AT-346 / #220",
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins."
+    },
+    {
+      "id": "A3",
+      "title": "Maps and written access",
+      "status": "open",
+      "source": "AT-299/300/321/322/323/324/327/331",
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims."
+    },
+    {
+      "id": "A4",
+      "title": "Fashion, beauty, treasure",
+      "status": "open",
+      "source": "AT-330",
+      "acceptance": "Complete boutique inventories/prices/unlocks, available hairstyle/colour/contact swatches, treasure sale values and budgets. Preserve calculators and type chart."
+    },
+    {
+      "id": "A5",
+      "title": "City Life services and challenges",
+      "status": "candidate_partial",
+      "source": "AT-347 / #225; PR227",
+      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues."
+    },
+    {
+      "id": "A6",
+      "title": "Unified completion and progress safeguards",
+      "status": "open",
+      "source": "AT-347-COMPLETE-001; historical PR4/5",
+      "acceptance": "Build additive interactive completion view around stable existing IDs and progress keys. Review current same-origin storage and old #4 numbered verified pin/#5 backup candidates; adapt only applicable pieces, preview/merge imports, preserve unknown keys and rollback. No fabricated pins or destructive resets. Item-photo intake excluded from this implementation."
+    },
+    {
+      "id": "A7",
+      "title": "Full-guide factual and coverage QA",
+      "status": "open",
+      "source": "historical PR1; AT-346/347",
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded."
+    },
+    {
+      "id": "A8",
+      "title": "Exact final validation and single Workspace handoff",
+      "status": "open",
+      "source": "AT-325/297, #229",
+      "acceptance": "Run exact-head required workflows, local static/build and unit tests, real browser phone/desktop visual/touch checks, asset and storage preservation, release tree check and verified Pages. Reconfirm current Workspace draft and v40 baseline, use recovery prompt as resume pointer, one source-pinned compatible release only after GitHub gates; backup and independent same-Site validation/live readback. Keep rollback."
+    }
+  ],
+  "release_decision": "HOLD",
+  "preserve_all_originals_and_progress": true,
+  "no_workspace_credits": true,
+  "supabase_sync": "separately record new AT348 open/in-progress planning item after branch readback; preserve all existing rows"
+}
