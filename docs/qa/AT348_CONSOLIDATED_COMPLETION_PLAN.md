@@ -1,5 +1,13 @@
 # AT-348 — One remaining-guide completion pull request
 
+<!-- AT348_VERT4_SCREW_INTAKE_111_119 -->
+## AT-348 Vert Sector 4 field intake (Manifest 111 / Ledger 119)
+
+[PR #226](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226) adds [field find 42](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/collectible-fieldbook.html#vert-4-colorful-screw-courtyard-scaffold). The pickup photo confirms **Colorful Screw ×1** on a short scaffold platform inside Vert Sector 4's grassy courtyard northeast of Café Classe. The five new photos match the originals byte for byte, bringing the archive to 42 finds, including seven photographed Screws, one access survey and 211 photos. The static check and 14 focused collectible tests passed. The photos support the AR-V04-05 courtyard scaffold lead. The climbing route, canonical checklist match and calibrated Atlas coordinates remain pending.
+
+The [article](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46078879451) and [Explorer](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46078879457) workflows passed on the prior PR #229 head with the WZ15 test correction. The WZ17 close-up comparison, phone and desktop screenshot review, and A3 integration are still tracked in [PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229). Workspace v40 is the last recorded live release.
+<!-- END_AT348_VERT4_SCREW_INTAKE_111_119 -->
+
 ## AT-348 A1-02 browser assertion reconciliation — Manifest 110 / Ledger 118
 
 Reviewed parent `4e7c90049ecb5c9b81937ed82143399f3933257c`. Prior job 140751485123 failed at shared-area browser line 507: actual verified WZ15 original JPG versus obsolete expected preview PNG. The shared-area test now uses the existing wildZoneFullPhotoPath mapping, retains the independent preview src assertion and decodes restored originals at 4000×2252. Existing independent hash/mapping tests retained. No runtime or image changes. Exact new-head CI pending; WZ17 close-up exact-frame comparison and independent phone/desktop screenshot review remain open. Field intake 41 finds / 206 photos remains on PR226. Workspace v40 last recorded; HOLD, no publication. Private tracker sync pending separate readback. Next: review exact-head CI, verify WZ17 close-up, then A1-03 and A3.
