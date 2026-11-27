@@ -1,0 +1,11 @@
+# AT-346: Existing Wild Zone Alphas and survey gates
+
+The [point export](https://github.com/Xzonn/PokemonLZA-pkNX/blob/eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f/spawner/t1_point_spawners_a.json) and [encounter table](https://github.com/Xzonn/PokemonLZA-pkNX/blob/eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f/raw/world/ik_data/field/pokemon/encount_data/encount_data/encount_data_array.json) are pinned. With the source files downloaded locally, run `python3 scripts/audit_wild_zone_alpha_surveys.py POINT_JSON ENCOUNTER_JSON`. The script checks each exact blob, matches the guide roster by zone, National species name and calculated Alpha range, and preserves duplicate encounters as separate rows.
+
+- All 38 published pre–Wild Zone 20 fixed rows match by zone, species and levels. This cohort excludes the three one-time Mission 40 encounters and the two central Wild Zone 20 pools (134 rows).
+- All 439 conditional Alpha rows specify completion of their own Wild Zone survey. This verifies the condition for eligible encounters, not the odds per visit or every ordinary spawn. A survey gate can exist on a fixed Alpha as well.
+- **Wild Zone 15:** The fixed Lv. 52–53 Gourgeist in the central grass has the WZ15 survey gate in the encounter activation table. It has no day or weather restriction on the point; only the seven ordinary species are survey targets. The guide omits the form-size label because named sources disagree and does not assume a separate research reward-claim step. Cross-checks: [field screenshot](https://game8.jp/pokemon-legends-z-a/731207), [day and night](https://www.powerpyx.com/pokemon-legends-z-a-gourgeist-location/), [Mable’s research](https://www.serebii.net/legendsz-a/mablesresearch.shtml), [survey roster](https://www.videogameschronicle.com/guide/pokemon-legends-z-a-wild-zone-15/).
+- **Wild Zone 17:** Both Lv. 56–57 Alpha Pyroar slots are male. Their day and night points share one encounter ID, but are separate records. Neither is the ordinary female Pyroar. [Zone roster](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_17).
+- WZ11 Clawitzer and WZ3 Fletchling have other raw work conditions; their exact player-visible changes remain open. No new directions inferred from those flags.
+
+Guide-only corrections. No map coordinates, photo changes, or new encounter rows in player data.

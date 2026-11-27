@@ -49,7 +49,10 @@ for(let i=0;i<20;i++){
  const alphas=[...first.matchAll(/<li><button data-dex-name="([^"]+)"[^>]*>[^<]*<\/button><small>([^<]*)<\/small><\/li>/g)];
  alphaTotal+=alphas.length;
  for(const row of alphas){
-  assert.ok(html.includes('<strong>'+escape(decode(row[1]))+'</strong><span>'+escape(decode(row[2]))+'</span>'),"Original Alpha target missing "+row[1]);
+  // The linked Alpha guide has verified requirements; the archived map list retains the recorded range.
+  const level = zone===15 && row[1]==="Gourgeist" ? row[2].replace(/ · After survey$/, "") :
+    zone===17 && row[1]==="Pyroar" ? row[2].replace(/ · Male · (Day|Night)$/, "") : row[2];
+  assert.ok(html.includes('<strong>'+escape(decode(row[1]))+'</strong><span>'+escape(decode(level))+'</span>'),"Original Alpha target missing "+row[1]);
  }
  const image=sourceAlpha[i].match(/<img[^>]*src="(dex-art\/[^"]+)"/)?.[1];
  assert.ok(image&&existsSync(new URL("../"+image,import.meta.url)),"Saved Alpha portrait unavailable");

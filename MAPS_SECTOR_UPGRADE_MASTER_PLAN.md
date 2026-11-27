@@ -6,6 +6,10 @@
 - **Next verified scope:** [AT-346 roster and mission slice](docs/qa/at346-dex-audit/ROSTER_AND_MYTHICAL_ROUTES_2026-11-27.md): all 132 Hyperspace roster entries, three specific DLC catch guides and a HOME completion clarification. Capture-route completeness across all 364 species, full Alpha coverage and map synchronization remain open in [Issue #220](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/220).
 - **Original Site:** [one Workspace prompt](WORKSPACE_ATLAS_NEXT_RELEASE.md) with backup, exact-source, preview and live checks. This repository does not certify original-Site publication or an update to the private Supabase ledger. No videos in the release.
 
+## AT-346 follow-up guide batch
+
+The [follow-up pull request #224](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224) collects independently checked portal prep, legendary routes and Alpha Fieldbook corrections. Evidence: [Hyperspace encounter replay](docs/qa/at346-dex-audit/HYPERSPACE_GENERATED_WILD_AUDIT.md), [city Alpha points](docs/qa/at346-dex-audit/LUMIOSE_CITY_ALPHA_POINTS_2026-11-27.md), [Wild Zone 20 and Mission 40](docs/qa/at346-dex-audit/LUMIOSE_WZ20_AND_MM40_2026-11-27.md), and [Wild Zone survey replay](docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md). This checkpoint does not change the pinned Workspace handoff, certify any original-Site deployment, publish new map pins, or close the wider species/form audit.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

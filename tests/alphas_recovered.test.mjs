@@ -142,3 +142,11 @@ for (const text of ["While it’s raining","Saison Canal","seen here in rainy we
   assert.ok(canal.includes(text),text);
 }
 assert.doesNotMatch(canal,/only at night|must be night/i);
+
+const wz15 = restored[14];
+assert.match(wz15,/Gourgeist<\/span><span class="alpha-level">Lv\. 52–53 · After survey/);
+assert.match(wz15,/Register Beedrill, Haunter, Larvitar, Shuppet, Whirlipede, Scolipede and Pumpkaboo/);
+assert.match(wz15,/central grass by day or night/);
+assert.match(wz15,/Gourgeist itself is not a survey target/);
+const pyroar = revisedTargets(restored[16]).filter(x=>x.name==="Pyroar");
+assert.deepEqual(pyroar.map(x=>x.level),["Lv. 56–57 · Male · Day","Lv. 56–57 · Male · Night"]);
