@@ -676,11 +676,11 @@ Destination: `assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/
 **Evidence status for finds 032–033:** All ten supplied photographs decoded as genuine WebP despite the .jpg filenames. All ten original byte streams are preserved in the cumulative 138-photo pending archive, with every one of the previous 128 files unchanged and ZIP integrity passed. The first 24 photographs already committed to the PR remain untouched. Binary upload to GitHub remains pending; destination names above are not live links. No runtime, main, Workspace or Supabase changes.
 
 
-## Dragon Pulse — Bleu Sector 4 bamboo rooftop
+## Dragon Pulse — Rust Syndicate building rooftop, Bleu Sector 4
 
 Field catalogue find 034; fourteenth Technical Machine (TM).
 
-Locate the eastern building in **Bleu Sector 4**, south of Estival Avenue, immediately west of Wild Zone 5 (Bleu Sector 2) and northwest of Bleu Plaza. The three map views place the player on the square inset building footprint just north of the small landscaped courtyard. This is outside the green Wild Zone boundary. On the elevated terrace, look for dense bamboo growing over pale gravel, bordered by a dark stone parapet and tall purple-and-blue banners. Walk into the bamboo towards the golden pickup beam behind the banners. The final photograph clearly confirms **Dragon Pulse ×1** among the bamboo.
+Locate the **Rust Syndicate building** (building identity confirmed by the player), in eastern **Bleu Sector 4**, south of Estival Avenue, immediately west of Wild Zone 5 (Bleu Sector 2) and northwest of Bleu Plaza. The three map views place the player on the square inset building footprint just north of the small landscaped courtyard. This is outside the green Wild Zone boundary. On the elevated terrace, look for dense bamboo growing over pale gravel, bordered by a dark stone parapet and tall purple-and-blue banners. Walk into the bamboo towards the golden pickup beam behind the banners. The final photograph clearly confirms **Dragon Pulse ×1** among the bamboo.
 
 Elevation: rooftop terrace; the initial street-to-roof access route and any unlock or Hover Glide requirement are not established. The nighttime photographs show the item at the time of collection, not a night-only requirement. Map views locate the nearby player position, not an independently calibrated Atlas coordinate. No live marker added.
 
