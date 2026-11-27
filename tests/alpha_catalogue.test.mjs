@@ -1,0 +1,42 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import vm from "node:vm";
+import {buildAlphaCatalogue,filterAlphaCatalogue,unavailableAlphaIds,portalAlphaIds} from "../alpha-catalogue.mjs";
+const read=p=>fs.readFileSync(new URL("../"+p,import.meta.url),"utf8");
+const context={window:{}};vm.runInNewContext(read("home-dex-data.js"),context);
+const roster=JSON.parse(JSON.stringify(context.window.ATLAS_HOME_SOURCE.records));
+const rows=buildAlphaCatalogue(roster);
+test("all 364 species preserve National ID, regions and names; exact exclusion set and portal parity",()=>{
+ assert.equal(rows.length,364);assert.deepEqual(rows.map(({status,routes,...r})=>r),roster);
+ assert.deepEqual([...unavailableAlphaIds],[150,380,381,382,383,384,485,491,638,639,640,647,648,649,716,717,718,719,720,721,801,802,807,808,809]);
+ assert.equal(rows.filter(r=>r.status==="unavailable").length,25);
+ const p=JSON.parse(read("app.js").match(/const reviewedPortalRoutes=(\{[^\n]+\});/)[1]);
+ assert.deepEqual([...portalAlphaIds],Object.keys(p).map(Number));
+ assert.equal(Object.values(p).flat().length,202);
+ assert.equal(rows.filter(r=>r.status==="routes").length,224);
+ assert.equal(rows.filter(r=>r.status==="pending").length,115);
+ assert.ok(rows.every(r=>r.status==="routes"?r.routes.length>0:r.routes.length===0));
+ assert.equal(rows.flatMap(r=>r.routes).filter(r=>r.kind==="fixed").length,38);
+ assert.equal(rows.flatMap(r=>r.routes).filter(r=>r.kind==="rotating").length,67);
+ assert.throws(()=>buildAlphaCatalogue(roster.slice(1)));
+});
+test("filters and named routes do not confuse unavailable and pending",()=>{
+ assert.equal(filterAlphaCatalogue(rows,{status:"unavailable"}).length,25);
+ assert.equal(filterAlphaCatalogue(rows,{region:"Lumiose"}).length,232);
+ assert.equal(filterAlphaCatalogue(rows,{region:"Hyperspace"}).length,132);
+ assert.equal(filterAlphaCatalogue(rows,{query:"Dratini"})[0].number,147);
+ assert.match(rows.find(r=>r.number===147).routes.find(r=>r.kind==="chance").note,/38–39/);
+ assert.equal(rows.find(r=>r.number===150).status,"unavailable");
+ assert.equal(rows.find(r=>r.number===710).routes.some(r=>r.note.includes("52–53")),true);
+ assert.equal(rows.find(r=>r.number===56).routes.some(r=>r.kind==="hyperspace"),true);
+ assert.equal(rows.find(r=>r.number===152).routes.some(r=>r.kind==="gift"),true);
+ assert.ok(filterAlphaCatalogue(rows,{query:"flabebe"}).some(r=>r.number===669));
+ assert.ok(filterAlphaCatalogue(rows,{status:"pending"}).every(r=>!unavailableAlphaIds.includes(r.number)));
+});
+test("new index is linked from both source surfaces, and does not own player state",()=>{
+ assert.match(read("alphas.html"),/id="alpha-catalogue"/);
+ for(const p of ["index.html","src/sections/alphas.html","src/sections/pokedex.html"])assert.match(read(p),/href="alphas\.html#alpha-catalogue"/);
+ assert.doesNotMatch(read("alpha-catalogue.mjs"),/localStorage|sessionStorage|XMLHttpRequest|innerHTML|fetch\s*\(/);
+ assert.ok(rows.flatMap(r=>r.routes).every(r=>!/^https?:|^\/\//.test(r.href)));
+});

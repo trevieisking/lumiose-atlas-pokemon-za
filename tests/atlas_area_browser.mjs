@@ -661,6 +661,37 @@ try{
     assert.ok(await page.locator("#dexGrid .dex-card").count()>=232,"Existing Pokédex entries preserved");
     await unchanged();
 
+    // Reviewed chance Alpha rows are independent of the original fixed and
+    // rotating pools and must never add new geometry or write progress.
+    await page.goto(base+"/atlas-explorer.html?species=pumpkaboo&encounter=random_alpha",{waitUntil:"load"});
+    const chancePanel=await panel();
+    assert.equal(await chancePanel.locator("[data-area-class]").inputValue(),"random_alpha");
+    assert.deepEqual(await areaIds(),["wz-15"]);
+    const chanceRows=chancePanel.locator('[data-area-detail] [data-encounter-class="random_alpha"]');
+    assert.equal(await chanceRows.count(),4);
+    for(const variety of ["Medium Variety","Small Variety","Large Variety","Jumbo Variety"])assert.match((await chanceRows.allTextContents()).join(" "),new RegExp(variety));
+    assert.match((await chanceRows.allTextContents()).join(" "),/Chance Alpha \(not guaranteed\)/);
+    assert.match((await chanceRows.allTextContents()).join(" "),/52–53/);
+    assert.equal(await page.locator("[data-area-boundary]").count(),68);
+    await chancePanel.locator("[data-area-detail]").screenshot({path:output+"/at346-pumpkaboo-chance-"+device+".png"});
+    await unchanged();
+    await page.goto(base+"/atlas-explorer.html?species=dratini&encounter=random_alpha",{waitUntil:"load"});await panel();
+    assert.deepEqual(await areaIds(),["jaune-sector-5"]);
+    assert.match(await page.locator("[data-area-detail]").textContent(),/Café Kizuna roof/);
+    assert.match(await page.locator("[data-area-detail]").textContent(),/38–39/);
+    await unchanged();
+    await page.goto(base+"/atlas-explorer.html?species=dragonair&encounter=random_alpha",{waitUntil:"load"});await panel();
+    assert.deepEqual(await areaIds(),["vert-sector-6"]);
+    assert.match(await page.locator("[data-area-detail]").textContent(),/Restaurant Le Nah roof/);
+    assert.match(await page.locator("[data-area-detail]").textContent(),/40–42/);
+    await unchanged();
+    // The optional packet failing must not remove any original area or outline.
+    await page.route("**/atlas-area-alpha-evidence.json",route=>route.fulfill({status:503,contentType:"application/json",body:'{"error":"test-only unavailable chance Alpha packet"}'}));
+    await page.goto(base+"/atlas-explorer.html?species=pumpkaboo&encounter=random_alpha",{waitUntil:"load"});await panel();
+    assert.equal((await areaIds()).length,0);
+    assert.equal(await page.locator("[data-area-boundary]").count(),68);
+    await unchanged();await page.unroute("**/atlas-area-alpha-evidence.json");
+
     // An unavailable additive register must retain original areas and rosters.
     await page.route("**/atlas-area-evidence.json",route=>route.fulfill({status:503,contentType:"application/json",body:'{"error":"test-only unavailable register"}'}));
     await page.goto(base+"/atlas-explorer.html?species=pidgey",{waitUntil:"load"});await panel();

@@ -1,0 +1,15 @@
+/* Scoped to the Alpha index; existing guide layout is unchanged. */
+#alpha-catalogue{scroll-margin-top:1rem;min-width:0}
+#alpha-catalogue .ac-controls{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:.75rem}
+#alpha-catalogue .ac-controls label{display:flex;flex-direction:column;gap:.25rem;min-width:0;font-weight:600}
+#alpha-catalogue .ac-controls input,#alpha-catalogue .ac-controls select{font:inherit;width:100%;min-width:0;box-sizing:border-box;padding:.6rem;border:1px solid #9890a0;border-radius:.5rem;background:#fff;color:#302b37}
+#alpha-catalogue .ac-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;list-style:none;padding:0}
+#alpha-catalogue .ac-results li{min-width:0;border:1px solid #d9d3e1;border-radius:.65rem;padding:.8rem;overflow-wrap:anywhere}
+#alpha-catalogue .ac-results li>strong,#alpha-catalogue .ac-results li>span,#alpha-catalogue .ac-results li>b{display:block}
+#alpha-catalogue .ac-results li>span{font-size:.85rem;color:#62576c}
+#alpha-catalogue .ac-results li>b{font-size:.9rem;margin-top:.4rem}
+#alpha-catalogue .ac-results p{font-size:.9rem;margin:.4rem 0 0}
+#alpha-catalogue .ac-pages{display:flex;gap:.5rem;flex-wrap:wrap}
+#alpha-catalogue .ac-pages button{font:inherit;padding:.5rem .8rem;border:1px solid #9890a0;border-radius:.5rem;background:#fff;color:#302b37}
+#alpha-catalogue .ac-pages button:disabled{opacity:.45}
+@media(max-width:650px){#alpha-catalogue .ac-controls,#alpha-catalogue .ac-results{grid-template-columns:minmax(0,1fr)}}

@@ -58,3 +58,15 @@ for(const img of html.matchAll(/<img[^>]*src="([^"]+)"/g)){
  assert.ok(existsSync(new URL("../"+img[1],import.meta.url)),"Missing image "+img[1]);
 }
 console.log("PASS: 14 original DLC missions with source-exact steps and side request notes, 25-link menu, live local links, read-only page and responsive layout.");
+
+// AT-346: difficulty estimates, temporary wild levels, and drain are distinct.
+{
+ const rankBlock=read("mega-dimension.html").split('id="portal-prep"')[1].split("</section>")[0];
+ const actual=[...rankBlock.matchAll(/<tr><th scope="row">(\d)★<\/th><td>(\d+)<\/td><td>\+(\d+)<\/td><td>([\d.]+)<\/td><\/tr>/g)].map(m=>m.slice(1).map(Number));
+ assert.deepEqual(actual,[[1,105,85,1],[2,120,95,1.6],[3,140,110,3.5],[4,170,125,7.5],[5,200,140,10]]);
+ assert.match(rankBlock,/5 min 43 sec at 3★.*2 min 40 sec at 4★/);
+ assert.match(rankBlock,/caught wild Pokémon return to their normal levels/);
+ assert.match(read("hyperspace-maps.html"),/href="mega-dimension.html#portal-prep"/);
+ const substitution="4 Hyper Kasib, 2 Hyper Chilan, 1 Hyper Charti and 1 Hyper Babiri";
+ for(const file of ["legendaries.html","side-missions.html"])assert.ok(read(file).includes(substitution));
+}

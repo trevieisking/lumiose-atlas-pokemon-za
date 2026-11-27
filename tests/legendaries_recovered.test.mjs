@@ -195,3 +195,34 @@ assert.match(denied.ids.legendSaveStatus.textContent,/could not be read or saved
 denied.toggles[1].checked=true;denied.toggles[1].events.change();
 assert.equal(denied.writeCount(),0);
 console.log("PASS: 25 PDF-faithful illustrated routes, source levels/locations/notes, route links, shared progress, 4 search filters and storage recovery.");
+
+// AT-346: the Mega Stone battle unlocks both species but is not a catch.
+for(const name of ["Latias","Latios"]){
+ const start=html.indexOf('id="legend-'+name.toLowerCase()+'"');
+ assert.ok(start>0);
+ const card=html.slice(start,html.indexOf("</article>",start));
+ assert.match(card,/Side Mission 189, Siblings of the Sky, before spending points/);
+ assert.match(card,/cannot catch either Pokémon in that fight/);
+ assert.match(card,/Side Mission 188 unlocks Special Scanning/);
+ assert.match(card,/25,000 Hyperspace research points/);
+ assert.match(card,/href="side-missions.html#quest-189"/);
+ assert.match(card,/href="side-missions.html#quest-188"/);
+ assert.match(card,/not a guarantee for a particular species/);
+ assert.ok(card.includes('data-atlas-legend="'+name+'"'));
+}
+
+// AT-346: cross-check the verified additions without changing PDF-source fields.
+for(const [name,signals,quest] of [
+ ["genesect",["5★ donut","Lv. 200","Lv. 60","2,160 Mega Shards","mission-marked wall"],191],
+ ["marshadow",["Café Bataille","north of Wild Zone 6","at sunset","Investigate","Lv. 80"],192],
+]){
+ const start=html.indexOf('id="legend-'+name+'"');
+ const card=html.slice(start,html.indexOf("</article>",start));
+ const record=db.records.find(r=>r.id===name);
+ for(const value of [record.verifiedRoute.place,record.verifiedRoute.description,record.verifiedRoute.note,...record.verifiedRoute.steps,...signals]){
+  assert.ok(card.includes(value),name+" verified-route copy differs: "+value);
+ }
+ assert.ok(record.verifiedRoute.links.some(([,target])=>target==="side-missions.html#quest-"+quest));
+ assert.ok(card.includes('href="side-missions.html#quest-'+quest+'"'));
+ assert.equal(record.verificationGap,undefined);
+}

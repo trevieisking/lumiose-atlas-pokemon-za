@@ -3,8 +3,8 @@
  * Evidence flags describe a reviewed receipt; they do not independently verify it.
  */
 export const AREA_MAP = Object.freeze({path:"maps/lumiose-game-map.jpg",sha256:"4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",width:1920,height:1920,coordinateSpace:"atlas-native-pixels"});
-export const ENCOUNTER_CLASSES = Object.freeze(["recorded","ordinary","fixed_alpha","rotating_alpha","gift","trade","scripted_boss","mission","unclassified_lead"]);
-const WILD = new Set(["recorded","ordinary","fixed_alpha","rotating_alpha"]);
+export const ENCOUNTER_CLASSES = Object.freeze(["recorded","ordinary","fixed_alpha","random_alpha","rotating_alpha","gift","trade","scripted_boss","mission","unclassified_lead"]);
+const WILD = new Set(["recorded","ordinary","fixed_alpha","random_alpha","rotating_alpha"]);
 const STATUSES = new Set(["baseline_preserved","source_corroborated","owner_survey_correlated","verified","disputed","source_lead"]);
 const DISTRICTS = new Set(["All","Vert","Bleu","Magenta","Rouge","Jaune","Centrico"]);
 const object = x => x !== null && typeof x === "object" && !Array.isArray(x);
@@ -99,7 +99,7 @@ export function isRecordedHabitat(row){return WILD.has(row?.encounterClass)&&row
 
 /** Build a fresh immutable model. Baseline rosters and source objects are never
  * edited; additional claims retain their class and evidence status. */
-export function buildAreaModel({atlas,rosters,evidence}={}){
+export function buildAreaModel({atlas,rosters,evidence,alphaEvidence}={}){
   try{
     if(!Array.isArray(atlas?.sectors)||atlas.sectors.length!==48||!Array.isArray(atlas.zones)||atlas.zones.length!==20||!Array.isArray(rosters)||rosters.length!==20)throw Error("incomplete_area_catalog");
     const ids=new Set(),issues=[],areas=[];
@@ -107,6 +107,11 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
     const extraAreas=evidenceAvailable&&Array.isArray(evidence.areas)?evidence.areas:[];
     const geometryRows=evidenceAvailable&&Array.isArray(evidence.geometries)?evidence.geometries:[];
     const mapContext=evidence?.map;
+    // A separate encounter-only packet preserves the existing reviewed register
+    // and all approved geometry byte-for-byte. It cannot supply new outlines.
+    const alphaAvailable=evidenceAvailable&&object(mapContext)&&Object.keys(AREA_MAP).every(k=>mapContext[k]===AREA_MAP[k])&&
+      object(alphaEvidence)&&alphaEvidence.schemaVersion===1&&alphaEvidence.mapSha256===AREA_MAP.sha256&&Array.isArray(alphaEvidence.areas);
+    const alphaAreas=alphaAvailable?alphaEvidence.areas:[];
     const encounterIds=new Set();
     for(const [kind,rows] of [['sector',atlas.sectors],['zone',atlas.zones]])for(const source of rows){
       if(!areaIdValid(source?.id)||ids.has(source.id)||!string(source.name,120)||!DISTRICTS.has(source.district)||kind==='zone'&&source.id!=="wz-"+String(source.number).padStart(2,"0"))throw Error("invalid_area_identity");
@@ -145,6 +150,27 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
         // Separate fixed/rotating Alpha rows retain their own class evidence.
         for(const row of area.encounters)if(row.evidenceStatus==='baseline_preserved'&&disputes.some(d=>d.speciesId===row.speciesId&&(d.encounterClass===row.encounterClass||d.encounterClass==='unclassified_lead'||row.encounterClass==='recorded'&&d.encounterClass==='ordinary'))){row.originalEvidenceStatus=row.evidenceStatus;row.evidenceStatus='disputed';row.notes.push('A current source claim disputes this preserved fieldbook entry.');}
       }
+      // Only source-supported chance Alpha claims may enter this new packet.
+      // No coordinates, geometry or roster replacements are read from it.
+      const additions=alphaAreas.filter(row=>row?.area_id===area.id);
+      if(additions.length>1)issues.push("Duplicate chance Alpha evidence for "+area.id);
+      if(additions.length===1&&extras.length===1&&Array.isArray(additions[0].encounters)){
+        for(const sourceRow of additions[0].encounters){
+          const row=evidenceEncounter(sourceRow,area);
+          if(!row||row.encounterClass!=='random_alpha'||!['source_corroborated','verified'].includes(row.evidenceStatus)||
+            !row.id.startsWith('at346-random-alpha-')||encounterIds.has(row.id)||
+            !row.condition.notes.length||!row.sources.length||!row.sources.every(s=>s.href)){
+            issues.push("Rejected unsupported chance Alpha claim for "+area.id);continue;
+          }
+          // An explicit unresolved/disputed claim of the same chance class and
+          // form must not be promoted by a second packet.
+          if(area.encounters.some(e=>e.speciesId===row.speciesId&&e.encounterClass==='random_alpha'&&e.form===row.form&&
+            (e.evidenceStatus==='disputed'||e.evidenceStatus==='source_lead'))){
+            issues.push("Conflicting chance Alpha claim for "+area.id);continue;
+          }
+          encounterIds.add(row.id);area.encounters.push(row);
+        }
+      }
       const geometries=geometryRows.filter(row=>row?.area_id===area.id);
       area.geometry=geometries.length>1?fail("duplicate_boundary_evidence"):evaluateAreaGeometry(area,geometries[0],mapContext||null);
       areas.push(area);
@@ -153,6 +179,7 @@ export function buildAreaModel({atlas,rosters,evidence}={}){
     for(const row of encounters){if(!bySpecies.has(row.speciesId))bySpecies.set(row.speciesId,{id:row.speciesId,name:row.species,areaIds:[]});const species=bySpecies.get(row.speciesId);if(isRecordedHabitat(row)&&!species.areaIds.includes(row.areaId))species.areaIds.push(row.areaId);}
     for(const row of extraAreas)if(!ids.has(row?.area_id))issues.push("Unknown encounter area rejected");
     for(const row of geometryRows)if(!ids.has(row?.area_id))issues.push("Unknown boundary area rejected");
+    for(const row of alphaAreas)if(!ids.has(row?.area_id))issues.push("Unknown chance Alpha area rejected");
     return freeze({areas,encounters,species:[...bySpecies.values()].sort((a,b)=>a.name.localeCompare(b.name)),issues});
   }catch(error){return freeze({areas:[],encounters:[],species:[],issues:[String(error?.message||"Area records unavailable")]});}
 }

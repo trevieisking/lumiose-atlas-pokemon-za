@@ -220,3 +220,33 @@ test('source links use known written references and the model has no storage or 
   assert.doesNotMatch(read('atlas-area-model.mjs'),/\b(?:localStorage|sessionStorage|fetch|XMLHttpRequest)\s*[.(]/);
   assert.doesNotMatch(read('atlas-area-ui.mjs'),/\b(?:localStorage|sessionStorage)\s*[.(]/);
 });
+
+test('AT-346 chance Alpha packet adds six named-area rows without altering existing areas or outlines',()=>{
+  const alphaEvidence=JSON.parse(read('atlas-area-alpha-evidence.json'));
+  const before=build(production);
+  const input=freeze({atlas:clone(atlas),rosters:clone(wildZoneRecords),evidence:clone(production),alphaEvidence:clone(alphaEvidence)});
+  const snapshot=JSON.stringify(input),after=buildAreaModel(input);
+  assert.equal(JSON.stringify(input),snapshot);
+  assert.equal(after.areas.length,68);assert.deepEqual(after.issues,[]);
+  assert.equal(after.encounters.length,before.encounters.length+6);
+  assert.deepEqual(after.encounters.filter(row=>row.encounterClass!=='random_alpha'),before.encounters);
+  assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
+  const lookup=speciesId=>selectAreaResults(after,{speciesId,encounterClass:'random_alpha'});
+  assert.deepEqual(lookup('dratini').areas.map(a=>a.id),['jaune-sector-5']);
+  assert.deepEqual(lookup('dragonair').areas.map(a=>a.id),['vert-sector-6']);
+  const pumpkaboo=lookup('pumpkaboo');
+  assert.deepEqual(pumpkaboo.areas.map(a=>a.id),['wz-15']);
+  assert.deepEqual(pumpkaboo.encounters.map(r=>[r.form,r.condition.time]),[['Medium Variety','Day'],['Small Variety','Day'],['Large Variety','Night'],['Jumbo Variety','Night']]);
+  assert.ok(pumpkaboo.encounters.every(r=>r.condition.unlock.includes('Wild Zone 15 survey')&&r.condition.notes.some(n=>n.includes('52–53'))));
+  assert.deepEqual(pumpkaboo.geometries.map(g=>g.areaId),['wz-15']);
+  assert.deepEqual(selectAreaResults(after,{speciesId:'pumpkaboo',encounterClass:'fixed_alpha'}),selectAreaResults(before,{speciesId:'pumpkaboo',encounterClass:'fixed_alpha'}));
+  assert.equal(readAreaSelection(areaLink({speciesId:'pumpkaboo',encounterClass:'random_alpha'})).encounterClass,'random_alpha');
+  assert.equal(after.encounters.filter(r=>r.encounterClass==='rotating_alpha').length,67);
+  assert.equal(buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production,alphaEvidence:{...alphaEvidence,mapSha256:'wrong'}}).encounters.length,before.encounters.length);
+  assert.equal(buildAreaModel({atlas,rosters:wildZoneRecords,evidence:null,alphaEvidence}).encounters.length,272);
+  const broken=clone(alphaEvidence);broken.areas[0].encounters[0].sources=[];
+  const rejected=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production,alphaEvidence:broken});
+  assert.equal(rejected.encounters.length,before.encounters.length+5);
+  assert.equal(selectAreaResults(rejected,{speciesId:'dratini',encounterClass:'random_alpha'}).areas.length,0);
+  assert.ok(rejected.issues.some(x=>x.includes('Rejected unsupported chance Alpha')));
+});

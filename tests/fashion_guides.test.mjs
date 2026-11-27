@@ -33,7 +33,7 @@ test("Verified fashion follow-up: exact clothing examples, five flower locations
  const flower=hair.split('id="flabebe-route"')[1].split("</section>")[0];
  for(const colour of ["Red","Yellow","White","Orange","Blue"])assert.ok(flower.includes("<dt>"+colour+"</dt>"));
  const trim=hair.split('id="furfrou"')[1].split("</section>")[0];
- for(const name of ["Natural Form","Heart","Star","Diamond","Debutante","Matron","Dandy","La Reine","Kabuki","Pharaoh","Psycho Cut","Main Mission 15","Gold Bottle Cap"])assert.ok(trim.includes(name),name);
+ for(const name of ["Natural Form","Heart","Star","Diamond","Debutante","Matron","Dandy","La Reine","Kabuki","Pharaoh","Psycho Cut","Main Mission 19","Gold Bottle Cap"])assert.ok(trim.includes(name),name);
  for(const n of [12,30,31,32,47,51,62,87,103,181,182,183,184,185]){
   assert.ok((clothes+hair).includes('href="side-missions.html#quest-'+n+'"'));
   assert.ok(side.includes('id="quest-'+n+'"'));

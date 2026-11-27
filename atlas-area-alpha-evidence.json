@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "mapSha256": "4602cfa3746f1e3cb4954b80fa9e75ffd2fe0c7d51f445ca83b73a7d3bc4aade",
+  "scope": "Reviewed named-area chance Alpha claims only; no new coordinates, geometry, spawn probabilities, complete roster or guaranteed encounter.",
+  "areas": [
+    {
+      "area_id": "jaune-sector-5",
+      "encounters": [
+        {
+          "id": "at346-random-alpha-jaune-5-dratini",
+          "species": "Dratini",
+          "encounter_class": "random_alpha",
+          "form": null,
+          "condition": {
+            "time": "Daytime at this roof",
+            "weather": "Sunny, clear-sunny or rainbow (pinned point conditions)",
+            "floor": "Café Kizuna roof",
+            "unlock": null,
+            "notes": [
+              "Ordinary Lv. 28–29; Alpha Lv. 38–39 if selected.",
+              "Use the garden ladder to reach the roof."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_CITY_ALPHA_POINTS_2026-11-27.md",
+              "claim": "Pinned point and named-slot exports match; Café Kizuna point daytime/clear-weather conditions and capture levels."
+            },
+            {
+              "url": "https://www.gamerguides.com/pokemon-legends-z-a/guide/getting-started/pokemon-locations/where-to-find-scraggy-in-legends-z-a",
+              "claim": "Independent written ladder and roof approach."
+            }
+          ],
+          "notes": [
+            "This is a chance encounter, not a guaranteed Alpha; do not apply this weather or time gate to other Dratini roofs. The outline is a named area, not a spawn pin."
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "vert-sector-6",
+      "encounters": [
+        {
+          "id": "at346-random-alpha-vert-6-dragonair",
+          "species": "Dragonair",
+          "encounter_class": "random_alpha",
+          "form": null,
+          "condition": {
+            "time": null,
+            "weather": null,
+            "floor": "Restaurant Le Nah roof",
+            "unlock": null,
+            "notes": [
+              "Ordinary Lv. 30–32; Alpha Lv. 40–42 if selected.",
+              "Separate rooftop point from the Café Kizuna Dratini."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_CITY_ALPHA_POINTS_2026-11-27.md",
+              "claim": "Pinned city Alpha point/slot match for Dragonair and the previously reviewed rooftop route."
+            },
+            {
+              "url": "https://www.bisafans.de/routendex/illumina-city/verte-bezirk-6.php",
+              "claim": "Area-specific Dragonair roof location beside the restaurant; published ordinary levels differ from the pinned band."
+            }
+          ],
+          "notes": [
+            "No probability, all-day availability or exact spawn coordinate claimed. The displayed capture band is from the pinned point export; other published ordinary sightings have different levels."
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "wz-15",
+      "encounters": [
+        {
+          "id": "at346-random-alpha-wz15-pumpkaboo-medium",
+          "species": "Pumpkaboo",
+          "encounter_class": "random_alpha",
+          "form": "Medium Variety",
+          "condition": {
+            "time": "Day",
+            "weather": null,
+            "floor": null,
+            "unlock": "Complete the seven-species Wild Zone 15 survey",
+            "notes": [
+              "Ordinary Lv. 42–43; Alpha Lv. 52–53 if selected.",
+              "Trade to evolve into the same Gourgeist variety."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md",
+              "claim": "Pinned point and encounter replay: all seven Pumpkaboo point objects support this form and time window after the local survey."
+            }
+          ],
+          "notes": [
+            "Chance Alpha; not the fixed Medium Variety Gourgeist. Side Mission 98 needs a non-Alpha Jumbo Variety. No individual point, odds or permanent marker is inferred."
+          ]
+        },
+        {
+          "id": "at346-random-alpha-wz15-pumpkaboo-small",
+          "species": "Pumpkaboo",
+          "encounter_class": "random_alpha",
+          "form": "Small Variety",
+          "condition": {
+            "time": "Day",
+            "weather": null,
+            "floor": null,
+            "unlock": "Complete the seven-species Wild Zone 15 survey",
+            "notes": [
+              "Ordinary Lv. 42–43; Alpha Lv. 52–53 if selected.",
+              "Trade to evolve into the same Gourgeist variety."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md",
+              "claim": "Pinned point and encounter replay: all seven Pumpkaboo point objects support this form and time window after the local survey."
+            }
+          ],
+          "notes": [
+            "Chance Alpha; not the fixed Medium Variety Gourgeist. Side Mission 98 needs a non-Alpha Jumbo Variety. No individual point, odds or permanent marker is inferred."
+          ]
+        },
+        {
+          "id": "at346-random-alpha-wz15-pumpkaboo-large",
+          "species": "Pumpkaboo",
+          "encounter_class": "random_alpha",
+          "form": "Large Variety",
+          "condition": {
+            "time": "Night",
+            "weather": null,
+            "floor": null,
+            "unlock": "Complete the seven-species Wild Zone 15 survey",
+            "notes": [
+              "Ordinary Lv. 42–43; Alpha Lv. 52–53 if selected.",
+              "Trade to evolve into the same Gourgeist variety."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md",
+              "claim": "Pinned point and encounter replay: all seven Pumpkaboo point objects support this form and time window after the local survey."
+            }
+          ],
+          "notes": [
+            "Chance Alpha; not the fixed Medium Variety Gourgeist. Side Mission 98 needs a non-Alpha Jumbo Variety. No individual point, odds or permanent marker is inferred."
+          ]
+        },
+        {
+          "id": "at346-random-alpha-wz15-pumpkaboo-jumbo",
+          "species": "Pumpkaboo",
+          "encounter_class": "random_alpha",
+          "form": "Jumbo Variety",
+          "condition": {
+            "time": "Night",
+            "weather": null,
+            "floor": null,
+            "unlock": "Complete the seven-species Wild Zone 15 survey",
+            "notes": [
+              "Ordinary Lv. 42–43; Alpha Lv. 52–53 if selected.",
+              "Trade to evolve into the same Gourgeist variety."
+            ]
+          },
+          "evidence_status": "source_corroborated",
+          "sources": [
+            {
+              "path": "docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md",
+              "claim": "Pinned point and encounter replay: all seven Pumpkaboo point objects support this form and time window after the local survey."
+            }
+          ],
+          "notes": [
+            "Chance Alpha; not the fixed Medium Variety Gourgeist. Side Mission 98 needs a non-Alpha Jumbo Variety. No individual point, odds or permanent marker is inferred."
+          ]
+        }
+      ]
+    }
+  ]
+}

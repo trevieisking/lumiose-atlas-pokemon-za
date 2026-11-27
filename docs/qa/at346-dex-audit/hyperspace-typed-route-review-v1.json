@@ -1,0 +1,4284 @@
+{
+  "schema": "atlas-hyperspace-typed-route-review-v1",
+  "status": "research_only_individual_route_cross_checks_pending",
+  "sourceCommit": "eadfb4b3ee9b1e09bb217dda87f1acd796e1a31f",
+  "sourceGitBlobs": {
+    "wild": "bf63f7f4f687664fb9cfc3a78c04c79be9e2dfe6",
+    "spawner": "285b0cd4e7baf95ea8bab77a5c89700f4de7e5c0",
+    "encounter": "435502d116a7941096c7d589a92e65d0fcde0996",
+    "personal": "ddbe44da3d5ae479129a26953c6597b4a308e0b0"
+  },
+  "fullJoinCounts": {
+    "patterns": 500,
+    "spawnerIds": 476,
+    "encounterIds": 369,
+    "candidateRows": 2377,
+    "species": 328,
+    "speciesForms": 368
+  },
+  "hyperspaceSpecies": 105,
+  "uniqueRoutes": 202,
+  "limits": "Generated typed pools only. No portal guarantees, field odds, exact coordinates, time/weather interpretation or full acquisition claims. Form numbers are source IDs, not localized labels. Capture levels, not combat levels.",
+  "species": [
+    {
+      "national": 56,
+      "dexIndex": 1,
+      "name": "Mankey",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "national": 57,
+      "dexIndex": 2,
+      "name": "Primeape",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 3,
+          "catch": [
+            28,
+            30
+          ],
+          "alpha": [
+            37,
+            39
+          ],
+          "patterns": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "national": 52,
+      "dexIndex": 4,
+      "name": "Meowth",
+      "routes": [
+        {
+          "form": 1,
+          "type": "Dark",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            3,
+            4
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "form": 2,
+          "type": "Steel",
+          "rank": 2,
+          "catch": [
+            19,
+            21
+          ],
+          "alpha": [
+            28,
+            30
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            3,
+            4
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Dark",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 2,
+          "type": "Steel",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 53,
+      "dexIndex": 5,
+      "name": "Persian",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            28,
+            30
+          ],
+          "alpha": [
+            37,
+            39
+          ],
+          "patterns": [
+            3,
+            4
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Dark",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 863,
+      "dexIndex": 6,
+      "name": "Perrserker",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 83,
+      "dexIndex": 7,
+      "name": "Farfetch'd",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 2,
+          "catch": [
+            18,
+            20
+          ],
+          "alpha": [
+            27,
+            29
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Fighting",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 104,
+      "dexIndex": 9,
+      "name": "Cubone",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 105,
+      "dexIndex": 10,
+      "name": "Marowak",
+      "routes": [
+        {
+          "form": 1,
+          "type": "Fire",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 137,
+      "dexIndex": 11,
+      "name": "Porygon",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 5,
+          "catch": [
+            50,
+            52
+          ],
+          "alpha": [
+            59,
+            61
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 233,
+      "dexIndex": 12,
+      "name": "Porygon2",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 5,
+          "catch": [
+            52,
+            54
+          ],
+          "alpha": [
+            61,
+            63
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 474,
+      "dexIndex": 13,
+      "name": "Porygon-Z",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 951,
+      "dexIndex": 14,
+      "name": "Capsakid",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 2,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            5,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 952,
+      "dexIndex": 15,
+      "name": "Scovillain",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            5,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 957,
+      "dexIndex": 16,
+      "name": "Tinkatink",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 2,
+          "catch": [
+            18,
+            20
+          ],
+          "alpha": [
+            27,
+            29
+          ],
+          "patterns": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 958,
+      "dexIndex": 17,
+      "name": "Tinkatuff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 959,
+      "dexIndex": 18,
+      "name": "Tinkaton",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Steel",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 967,
+      "dexIndex": 19,
+      "name": "Cyclizar",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dragon",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 969,
+      "dexIndex": 20,
+      "name": "Glimmet",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 970,
+      "dexIndex": 21,
+      "name": "Glimmora",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 479,
+      "dexIndex": 22,
+      "name": "Rotom",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            52,
+            54
+          ],
+          "alpha": [
+            61,
+            63
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 2,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 3,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 4,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 5,
+          "type": "Electric",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 971,
+      "dexIndex": 23,
+      "name": "Greavard",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 972,
+      "dexIndex": 24,
+      "name": "Houndstone",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 769,
+      "dexIndex": 25,
+      "name": "Sandygast",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 1,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 770,
+      "dexIndex": 26,
+      "name": "Palossand",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            42,
+            44
+          ],
+          "alpha": [
+            51,
+            53
+          ],
+          "patterns": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 352,
+      "dexIndex": 27,
+      "name": "Kecleon",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "national": 973,
+      "dexIndex": 28,
+      "name": "Flamigo",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 615,
+      "dexIndex": 29,
+      "name": "Cryogonal",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 977,
+      "dexIndex": 30,
+      "name": "Dondozo",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 978,
+      "dexIndex": 31,
+      "name": "Tatsugiri",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 2,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 996,
+      "dexIndex": 32,
+      "name": "Frigibax",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dragon",
+          "rank": 5,
+          "catch": [
+            52,
+            54
+          ],
+          "alpha": [
+            61,
+            63
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 5,
+          "catch": [
+            52,
+            54
+          ],
+          "alpha": [
+            61,
+            63
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 997,
+      "dexIndex": 33,
+      "name": "Arctibax",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dragon",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 998,
+      "dexIndex": 34,
+      "name": "Baxcalibur",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dragon",
+          "rank": 5,
+          "catch": [
+            57,
+            59
+          ],
+          "alpha": [
+            66,
+            68
+          ],
+          "patterns": [
+            1
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 5,
+          "catch": [
+            57,
+            59
+          ],
+          "alpha": [
+            66,
+            68
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 999,
+      "dexIndex": 35,
+      "name": "Gimmighoul",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 5,
+          "catch": [
+            62,
+            64
+          ],
+          "alpha": [
+            71,
+            73
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 211,
+      "dexIndex": 37,
+      "name": "Qwilfish",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 2,
+          "catch": [
+            19,
+            21
+          ],
+          "alpha": [
+            28,
+            30
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Poison",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Poison",
+          "rank": 5,
+          "catch": [
+            51,
+            53
+          ],
+          "alpha": [
+            60,
+            62
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 904,
+      "dexIndex": 38,
+      "name": "Overqwil",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 5,
+          "catch": [
+            53,
+            55
+          ],
+          "alpha": [
+            62,
+            64
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 252,
+      "dexIndex": 39,
+      "name": "Treecko",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 2,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 5,
+          "catch": [
+            50,
+            52
+          ],
+          "alpha": [
+            59,
+            61
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 253,
+      "dexIndex": 40,
+      "name": "Grovyle",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 254,
+      "dexIndex": 41,
+      "name": "Sceptile",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 255,
+      "dexIndex": 42,
+      "name": "Torchic",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 2,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            4
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 5,
+          "catch": [
+            50,
+            52
+          ],
+          "alpha": [
+            59,
+            61
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 256,
+      "dexIndex": 43,
+      "name": "Combusken",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "national": 257,
+      "dexIndex": 44,
+      "name": "Blaziken",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 258,
+      "dexIndex": 45,
+      "name": "Mudkip",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 2,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            4
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 5,
+          "catch": [
+            50,
+            52
+          ],
+          "alpha": [
+            59,
+            61
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 259,
+      "dexIndex": 46,
+      "name": "Marshtomp",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "national": 260,
+      "dexIndex": 47,
+      "name": "Swampert",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 5,
+          "catch": [
+            54,
+            56
+          ],
+          "alpha": [
+            63,
+            65
+          ],
+          "patterns": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "national": 349,
+      "dexIndex": 48,
+      "name": "Feebas",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 2,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 433,
+      "dexIndex": 50,
+      "name": "Chingling",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 1,
+          "catch": [
+            14,
+            16
+          ],
+          "alpha": [
+            23,
+            25
+          ],
+          "patterns": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 358,
+      "dexIndex": 51,
+      "name": "Chimecho",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 876,
+      "dexIndex": 52,
+      "name": "Indeedee",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            7,
+            8
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 509,
+      "dexIndex": 53,
+      "name": "Purrloin",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 1,
+          "catch": [
+            14,
+            16
+          ],
+          "alpha": [
+            23,
+            25
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 510,
+      "dexIndex": 54,
+      "name": "Liepard",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 517,
+      "dexIndex": 55,
+      "name": "Munna",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 1,
+          "catch": [
+            15,
+            17
+          ],
+          "alpha": [
+            24,
+            26
+          ],
+          "patterns": [
+            1,
+            2
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 4,
+          "catch": [
+            35,
+            37
+          ],
+          "alpha": [
+            44,
+            46
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 518,
+      "dexIndex": 56,
+      "name": "Musharna",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 538,
+      "dexIndex": 57,
+      "name": "Throh",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 539,
+      "dexIndex": 58,
+      "name": "Sawk",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            5,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 562,
+      "dexIndex": 59,
+      "name": "Yamask",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 1,
+          "catch": [
+            18,
+            20
+          ],
+          "alpha": [
+            27,
+            29
+          ],
+          "patterns": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Ghost",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            8
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Ground",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 563,
+      "dexIndex": 60,
+      "name": "Cofagrigus",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 4,
+          "catch": [
+            40,
+            42
+          ],
+          "alpha": [
+            49,
+            51
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 767,
+      "dexIndex": 62,
+      "name": "Wimpod",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Bug",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            6,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 768,
+      "dexIndex": 63,
+      "name": "Golisopod",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Water",
+          "rank": 3,
+          "catch": [
+            30,
+            32
+          ],
+          "alpha": [
+            39,
+            41
+          ],
+          "patterns": [
+            6,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 827,
+      "dexIndex": 64,
+      "name": "Nickit",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 1,
+          "catch": [
+            14,
+            16
+          ],
+          "alpha": [
+            23,
+            25
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 828,
+      "dexIndex": 65,
+      "name": "Thievul",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 852,
+      "dexIndex": 66,
+      "name": "Clobbopus",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 1,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 853,
+      "dexIndex": 67,
+      "name": "Grapploct",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 778,
+      "dexIndex": 68,
+      "name": "Mimikyu",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ghost",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "national": 900,
+      "dexIndex": 69,
+      "name": "Kleavor",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Bug",
+          "rank": 4,
+          "catch": [
+            40,
+            42
+          ],
+          "alpha": [
+            49,
+            51
+          ],
+          "patterns": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 877,
+      "dexIndex": 70,
+      "name": "Morpeko",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Electric",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 622,
+      "dexIndex": 71,
+      "name": "Golett",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 3,
+          "catch": [
+            25,
+            27
+          ],
+          "alpha": [
+            34,
+            36
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 623,
+      "dexIndex": 72,
+      "name": "Golurk",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ground",
+          "rank": 4,
+          "catch": [
+            43,
+            45
+          ],
+          "alpha": [
+            52,
+            54
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 821,
+      "dexIndex": 73,
+      "name": "Rookidee",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 1,
+          "catch": [
+            14,
+            16
+          ],
+          "alpha": [
+            23,
+            25
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 822,
+      "dexIndex": 74,
+      "name": "Corvisquire",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 823,
+      "dexIndex": 75,
+      "name": "Corviknight",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 174,
+      "dexIndex": 76,
+      "name": "Igglybuff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 2,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 39,
+      "dexIndex": 77,
+      "name": "Jigglypuff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 3,
+          "catch": [
+            24,
+            26
+          ],
+          "alpha": [
+            33,
+            35
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 40,
+      "dexIndex": 78,
+      "name": "Wigglytuff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 926,
+      "dexIndex": 79,
+      "name": "Fidough",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 2,
+          "catch": [
+            18,
+            20
+          ],
+          "alpha": [
+            27,
+            29
+          ],
+          "patterns": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 927,
+      "dexIndex": 80,
+      "name": "Dachsbun",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 3,
+          "catch": [
+            27,
+            29
+          ],
+          "alpha": [
+            36,
+            38
+          ],
+          "patterns": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 396,
+      "dexIndex": 81,
+      "name": "Starly",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 1,
+          "catch": [
+            13,
+            15
+          ],
+          "alpha": [
+            22,
+            24
+          ],
+          "patterns": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            13,
+            15
+          ],
+          "alpha": [
+            22,
+            24
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 2,
+          "catch": [
+            15,
+            17
+          ],
+          "alpha": [
+            24,
+            26
+          ],
+          "patterns": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "national": 397,
+      "dexIndex": 82,
+      "name": "Staravia",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 2,
+          "catch": [
+            18,
+            20
+          ],
+          "alpha": [
+            27,
+            29
+          ],
+          "patterns": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            5
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 4,
+          "catch": [
+            35,
+            37
+          ],
+          "alpha": [
+            44,
+            46
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 398,
+      "dexIndex": 83,
+      "name": "Staraptor",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 4,
+          "catch": [
+            40,
+            42
+          ],
+          "alpha": [
+            49,
+            51
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 325,
+      "dexIndex": 84,
+      "name": "Spoink",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 326,
+      "dexIndex": 85,
+      "name": "Grumpig",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 4,
+          "catch": [
+            40,
+            42
+          ],
+          "alpha": [
+            49,
+            51
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 931,
+      "dexIndex": 86,
+      "name": "Squawkabilly",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 2,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            9
+          ]
+        },
+        {
+          "form": 3,
+          "type": "Normal",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 739,
+      "dexIndex": 87,
+      "name": "Crabrawler",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            35,
+            37
+          ],
+          "alpha": [
+            44,
+            46
+          ],
+          "patterns": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 4,
+          "catch": [
+            35,
+            37
+          ],
+          "alpha": [
+            44,
+            46
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 740,
+      "dexIndex": 88,
+      "name": "Crabominable",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fighting",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 932,
+      "dexIndex": 89,
+      "name": "Nacli",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 933,
+      "dexIndex": 90,
+      "name": "Naclstack",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 934,
+      "dexIndex": 91,
+      "name": "Garganacl",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Rock",
+          "rank": 4,
+          "catch": [
+            41,
+            43
+          ],
+          "alpha": [
+            50,
+            52
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 316,
+      "dexIndex": 92,
+      "name": "Gulpin",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            35,
+            37
+          ],
+          "alpha": [
+            44,
+            46
+          ],
+          "patterns": [
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 317,
+      "dexIndex": 93,
+      "name": "Swalot",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            38,
+            40
+          ],
+          "alpha": [
+            47,
+            49
+          ],
+          "patterns": [
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 41,
+      "dexIndex": 94,
+      "name": "Zubat",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 1,
+          "catch": [
+            15,
+            17
+          ],
+          "alpha": [
+            24,
+            26
+          ],
+          "patterns": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 42,
+      "dexIndex": 95,
+      "name": "Golbat",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Flying",
+          "rank": 3,
+          "catch": [
+            25,
+            27
+          ],
+          "alpha": [
+            34,
+            36
+          ],
+          "patterns": [
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "national": 169,
+      "dexIndex": 96,
+      "name": "Crobat",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "national": 935,
+      "dexIndex": 97,
+      "name": "Charcadet",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Fire",
+          "rank": 2,
+          "catch": [
+            19,
+            21
+          ],
+          "alpha": [
+            28,
+            30
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 942,
+      "dexIndex": 100,
+      "name": "Maschiff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            1,
+            2
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 943,
+      "dexIndex": 101,
+      "name": "Mabosstiff",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Dark",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "national": 848,
+      "dexIndex": 102,
+      "name": "Toxel",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Electric",
+          "rank": 2,
+          "catch": [
+            19,
+            21
+          ],
+          "alpha": [
+            28,
+            30
+          ],
+          "patterns": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Electric",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 849,
+      "dexIndex": 103,
+      "name": "Toxtricity",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Electric",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Electric",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            5,
+            6,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 944,
+      "dexIndex": 104,
+      "name": "Shroodle",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 1,
+          "catch": [
+            16,
+            18
+          ],
+          "alpha": [
+            25,
+            27
+          ],
+          "patterns": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            22,
+            24
+          ],
+          "alpha": [
+            31,
+            33
+          ],
+          "patterns": [
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            36,
+            38
+          ],
+          "alpha": [
+            45,
+            47
+          ],
+          "patterns": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "national": 945,
+      "dexIndex": 105,
+      "name": "Grafaiai",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 3,
+          "catch": [
+            28,
+            30
+          ],
+          "alpha": [
+            37,
+            39
+          ],
+          "patterns": [
+            5,
+            6
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 4,
+          "catch": [
+            39,
+            41
+          ],
+          "alpha": [
+            48,
+            50
+          ],
+          "patterns": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "national": 335,
+      "dexIndex": 106,
+      "name": "Zangoose",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Normal",
+          "rank": 2,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "national": 336,
+      "dexIndex": 107,
+      "name": "Seviper",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Poison",
+          "rank": 3,
+          "catch": [
+            26,
+            28
+          ],
+          "alpha": [
+            35,
+            37
+          ],
+          "patterns": [
+            4,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "national": 439,
+      "dexIndex": 108,
+      "name": "Mime Jr.",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 1,
+          "catch": [
+            17,
+            19
+          ],
+          "alpha": [
+            26,
+            28
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Fairy",
+          "rank": 2,
+          "catch": [
+            20,
+            22
+          ],
+          "alpha": [
+            29,
+            31
+          ],
+          "patterns": [
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 3,
+          "catch": [
+            23,
+            25
+          ],
+          "alpha": [
+            32,
+            34
+          ],
+          "patterns": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "national": 122,
+      "dexIndex": 109,
+      "name": "Mr. Mime",
+      "routes": [
+        {
+          "form": 1,
+          "type": "Ice",
+          "rank": 3,
+          "catch": [
+            33,
+            35
+          ],
+          "alpha": [
+            42,
+            44
+          ],
+          "patterns": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Psychic",
+          "rank": 3,
+          "catch": [
+            33,
+            35
+          ],
+          "alpha": [
+            42,
+            44
+          ],
+          "patterns": [
+            1,
+            4
+          ]
+        },
+        {
+          "form": 1,
+          "type": "Ice",
+          "rank": 4,
+          "catch": [
+            40,
+            42
+          ],
+          "alpha": [
+            49,
+            51
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 866,
+      "dexIndex": 110,
+      "name": "Mr. Rime",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Ice",
+          "rank": 4,
+          "catch": [
+            42,
+            44
+          ],
+          "alpha": [
+            51,
+            53
+          ],
+          "patterns": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "national": 590,
+      "dexIndex": 111,
+      "name": "Foongus",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 2,
+          "catch": [
+            21,
+            23
+          ],
+          "alpha": [
+            30,
+            32
+          ],
+          "patterns": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 4,
+          "catch": [
+            37,
+            39
+          ],
+          "alpha": [
+            46,
+            48
+          ],
+          "patterns": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "national": 591,
+      "dexIndex": 112,
+      "name": "Amoonguss",
+      "routes": [
+        {
+          "form": 0,
+          "type": "Grass",
+          "rank": 4,
+          "catch": [
+            42,
+            44
+          ],
+          "alpha": [
+            51,
+            53
+          ],
+          "patterns": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    }
+  ]
+}

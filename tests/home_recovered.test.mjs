@@ -191,3 +191,130 @@ restricted.ticks[1].checked=true;restricted.ticks[1].events.change();
 assert.equal(restricted.writes(),0);
 assert.equal(restricted.mainWrites(),0);
 console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 local/108 disclosed portraits, three safe filters, separate persistent HOME marks and no existing guide changes.");
+
+// AT-346: finite acquisition-route display, not a full encounter audit.
+{
+ const app=read("app.js");
+ const links=JSON.parse(app.match(/const fieldbookRoutes=(\{[^\n]+\});/)?.[1]);
+ const evolutions=JSON.parse(app.match(/const evolutionRoutes=(\{[^\n]+\});/)?.[1]);
+ const sandbox={window:{}};
+ runInNewContext(read("home-dex-data.js"),sandbox);
+ const roster=sandbox.window.ATLAS_HOME_SOURCE.records;
+ const ids=[...Object.keys(links),...Object.keys(evolutions)];
+ assert.equal(Object.keys(links).length,20);
+ assert.equal(Object.keys(evolutions).length,7);
+ assert.equal(new Set(ids).size,27);
+ assert.equal(roster.length,364);
+ const legends=read("legendaries.html"),missions=read("side-missions.html");
+ for(const n of ids)assert.ok(roster.some(r=>r.number===Number(n)&&r.group==="Hyperspace"),n);
+ for(const id of Object.values(links))assert.ok(legends.includes('id="legend-'+id+'"'),id);
+ for(const r of Object.values(evolutions)){
+  assert.ok(r.note.length>40);
+  if(r.quest)assert.ok(missions.includes('id="quest-'+r.quest+'"'),r.quest);
+ }
+ assert.match(evolutions[979].note,/Rage Fist at least 20 times/);
+ assert.match(evolutions[865].note,/three critical hits/);
+ assert.match(evolutions[867].note,/49 HP missing/);
+ assert.match(evolutions[350].note,/Prism Scale/);
+ assert.match(evolutions[936].note,/Auspicious Armor/);
+ assert.match(evolutions[937].note,/Malicious Armor/);
+ assert.match(evolutions[1000].note,/999 Gimmighoul Coins/);
+}
+
+// AT-346: generated-route review register and public pilot are distinct.
+{
+ const app=read("app.js");
+ const pilot=JSON.parse(app.match(/const reviewedPortalRoutes=(\{[^\n]+\});/)?.[1]);
+ const research=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-typed-route-review-v1.json"));
+ const original=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-generated-wild-summary-v1.json"));
+ assert.deepEqual(research.fullJoinCounts,original.summary);
+ assert.equal(research.hyperspaceSpecies,105);
+ assert.equal(research.species.length,105);
+ assert.equal(research.uniqueRoutes,202);
+ assert.equal(research.species.reduce((n,s)=>n+s.routes.length,0),202);
+ assert.equal(new Set(research.species.map(s=>s.national)).size,105);
+ const sandbox={window:{}};
+ runInNewContext(read("home-dex-data.js"),sandbox);
+ const roster=JSON.parse(JSON.stringify(sandbox.window.ATLAS_HOME_SOURCE.records)).filter(r=>r.group==="Hyperspace");
+ const missing=new Set(original.notInTypedGeneratedTable.filter(r=>r.group==="Hyperspace").map(r=>r.number));
+ assert.equal(missing.size,27);
+ assert.deepEqual(research.species.map(s=>s.national),roster.filter(r=>!missing.has(r.number)).map(r=>r.number));
+ for(const s of research.species){
+  assert.equal(roster.find(r=>r.number===s.national)?.dexIndex,s.dexIndex);
+  for(const r of s.routes){
+   assert.ok(r.rank>=1&&r.rank<=5&&r.patterns.length>0);
+   assert.deepEqual(r.alpha,r.catch.map(n=>n+9));
+  }
+ }
+ assert.equal(Object.keys(pilot).length,105);
+ assert.equal(Object.values(pilot).flat().length,202);
+ for(const [n,routes] of Object.entries(pilot)){
+  const s=research.species.find(s=>s.national===Number(n));
+  assert.ok(s);
+  assert.deepEqual(routes,s.routes.map(({patterns,...r})=>r));
+ }
+ assert.deepEqual(pilot[56].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[999],[{form:0,type:"Ghost",rank:5,catch:[62,64],alpha:[71,73]}]);
+ for(const n of [252,253,254,255,256,257,258,259,260,951,952,590,591,935,349,977,769,770,852,853])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[252].map(r=>r.rank),[2,3,5]);
+ assert.deepEqual(pilot[257].map(r=>[r.rank,r.type]),[[4,"Fighting"],[4,"Fire"],[5,"Fire"]]);
+ assert.deepEqual(pilot[260].map(r=>[r.rank,r.type]),[[4,"Ground"],[4,"Water"],[5,"Water"]]);
+ assert.deepEqual(pilot[935],[{form:0,type:"Fire",rank:2,catch:[19,21],alpha:[28,30]}]);
+ for(const n of [509,510,827,828,942,943,433,358,517,518,325,326,174,39,40,926,927,821,822,823,973])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[509].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[942].map(r=>r.rank),[1,4]);
+ assert.deepEqual(pilot[433].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[174].map(r=>r.rank),[2,3]);
+ assert.deepEqual(pilot[822].map(r=>r.rank),[3,4]);
+ for(const n of [396,397,398,335,316,317,41,42,169,336,932,933,934,622,623])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[396].map(r=>[r.rank,r.type]),[[1,"Flying"],[1,"Normal"],[2,"Normal"],[3,"Flying"]]);
+ assert.deepEqual(pilot[42].map(r=>[r.rank,r.type]),[[3,"Flying"],[4,"Poison"]]);
+ for(const n of [137,233,474,967,969,970,971,972,352,615,996,997,998,778,563])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[137].map(r=>r.rank),[3,5]);
+ for(const n of [996,997,998])assert.deepEqual(pilot[n].map(r=>[r.rank,r.type]),[[5,"Dragon"],[5,"Ice"]]);
+ assert.deepEqual(pilot[969].map(r=>[r.rank,r.type]),[[3,"Poison"],[3,"Rock"],[4,"Poison"],[4,"Rock"]]);
+ for(const n of [863,904,767,768,900,877])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[767].map(r=>[r.rank,r.type]),[[1,"Bug"],[3,"Water"]]);
+ assert.deepEqual(pilot[904],[{form:0,type:"Poison",rank:5,catch:[53,55],alpha:[62,64]}]);
+ const labels=JSON.parse(app.match(/const portalFormLabels=(\{[^\n]+\});/)?.[1]);
+ assert.deepEqual(Object.keys(pilot).map(Number).sort((a,b)=>a-b),research.species.map(s=>s.national).sort((a,b)=>a-b));
+ for(const [n,routes] of Object.entries(pilot))if(routes.some(r=>r.form>0)){
+  assert.equal(new Set(labels[n]).size,labels[n].length);
+  for(const route of routes)assert.ok(labels[n][route.form],`Missing form label ${n}/${route.form}`);
+ }
+ assert.deepEqual(labels[52],["Kantonian Meowth","Alolan Meowth","Galarian Meowth"]);
+ assert.deepEqual(labels[479],["Rotom (ordinary form)","Heat Rotom","Wash Rotom","Frost Rotom","Fan Rotom","Mow Rotom"]);
+ assert.deepEqual(labels[931],["Green Plumage","Blue Plumage","Yellow Plumage","White Plumage"]);
+ assert.deepEqual(labels[978],["Curly Form","Droopy Form","Stretchy Form"]);
+ assert.ok(app.includes("row.dataset.atlasPortalForm=String(encounter.form)"));
+ assert.ok(app.includes("reviewedPortalRoutes[r.number].some(encounter=>encounter.rank===5)"));
+ assert.ok(read("side-missions.html").includes('id="quest-188"'));
+ assert.ok(read("mega-dimension.html").includes('id="portal-prep"'));
+}
+
+// AT-346: exact source-derived default-form stats, preserving route arrays and original cards.
+{
+ const app=read("app.js");
+ const reg=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-base-stats-v1.json"));
+ const stats=JSON.parse(app.match(/const hyperspaceBaseStats=(\{[^\n]+\});/)[1]);
+ const labels=JSON.parse(app.match(/const hyperspaceStatForms=(\{[^\n]+\});/)[1]);
+ const box={window:{}};runInNewContext(read("home-dex-data.js"),box);
+ const roster=JSON.parse(JSON.stringify(box.window.ATLAS_HOME_SOURCE.records)).filter(r=>r.group==="Hyperspace");
+ assert.equal(reg.rows.length,132);assert.equal(Object.keys(stats).length,132);
+ assert.deepEqual(reg.statOrder,["hp","attack","defense","special_attack","special_defense","speed"]);
+ assert.deepEqual(reg.rows.map(r=>[r.national,r.dexIndex,r.name]),roster.map(r=>[r.number,r.dexIndex,r.name]));
+ for(const row of reg.rows){assert.deepEqual(stats[row.national],row.stats);assert.equal(row.stats.length,6);assert.ok(row.stats.every(n=>Number.isInteger(n)&&n>0&&n<=255));assert.equal(row.form,labels[row.national]||"Default form (non-Mega)");}
+ for(const [n,v] of Object.entries(reg.crossCheck.stats))assert.deepEqual(stats[n],v);
+ assert.equal(labels[999],"Chest Form");assert.equal(labels[876],"Male Indeedee");assert.equal(labels[720],"Confined");
+ assert.equal(reg.lumioseComparison.exactSourceMatches,231);
+ assert.equal(Object.values(JSON.parse(app.match(/const reviewedPortalRoutes=(\{[^\n]+\});/)[1])).flat().length,202);
+ assert.ok(app.includes("regionCards.length===132&&regionCards.every"));
+ assert.ok(app.includes("$$('.stat-row',node).at(-1)?.lastElementChild"));
+}
+
+// AT-346 startup regression: collection queries must use the collection selector.
+{
+ const app=read("app.js");
+ assert.ok(app.includes("$$('.stat-row',node).length===6"));
+ assert.ok(app.includes("for(const option of $$('#dexSort option'))"));
+}

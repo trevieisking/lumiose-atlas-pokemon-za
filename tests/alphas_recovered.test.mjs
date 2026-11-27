@@ -7,7 +7,7 @@ const legacy=[...source.matchAll(/<article class="alpha-card">([\s\S]*?)<\/artic
 const restored=[...html.matchAll(/<article class="alpha-zone-card"([\s\S]*?)<\/article>/g)].map(x=>x[0]);
 assert.equal(legacy.length,20,"Original source must contain all 20 zones");
 assert.equal(restored.length,20,"Standalone fieldbook must retain 20 zone cards");
-const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>[^<]+<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:y[1],level:y[2]}));
+const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>([^<]+)<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:["Vivillon (Meadow Pattern)","Florges (Red Flower)"].includes(y[2])?y[2]:y[1],level:y[3]}));
 const revisedTargets=x=>[...x.matchAll(/<span class="alpha-target-name">([^<]+)<\/span><span class="alpha-level">([^<]+)<\/span>/g)].map(y=>({name:y[1],level:y[2]}));
 let fixedCount=0;
 for(let i=0;i<20;i++){
@@ -19,7 +19,15 @@ for(let i=0;i<20;i++){
   if(n!==20)fixedCount+=captured.length;
 }
 assert.equal(fixedCount,38);
-assert.equal(revisedTargets(restored[19]).length,67);
+const centralPool = revisedTargets(restored[19]);
+assert.equal(centralPool.length,67);
+const higher = "Alakazam Machamp Kangaskhan Gyarados Dragonite Tyranitar Gardevoir Aggron Altaria Absol Garchomp Lucario Gallade Garbodor Eelektross Chandelure Florges Pangoro Aegislash Malamar Barbaracle Dragalge Heliolisk Goodra Drampa Falinks".split(" ");
+assert.deepEqual(centralPool.filter(r=>r.level==="Lv. 64–65").map(r=>r.name.replace(/ \(.*\)$/, "")).sort(), higher.sort());
+assert.equal(centralPool.filter(r=>r.level==="Lv. 63–64").length,41);
+assert.ok(centralPool.some(r=>r.name==="Vivillon (Meadow Pattern)" && r.level==="Lv. 63–64"));
+assert.ok(centralPool.some(r=>r.name==="Florges (Red Flower)" && r.level==="Lv. 64–65"));
+assert.match(legacy[19],/data-dex-name="Vivillon" type="button">Vivillon \(Meadow Pattern\)/);
+assert.match(legacy[19],/data-dex-name="Florges" type="button">Florges \(Red Flower\)/);
 assert.match(restored[19],/Show all 67 possible Zone 20 Alpha Pokémon/);
 assert.match(restored[19],/This complete list was present in the saved main guide, but was collapsed/);
 const pageMenu=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
@@ -120,3 +128,91 @@ assert.equal(speciesRows.length,6);
 for(const row of speciesRows)assert.equal(row.encounter_class,'ordinary');
 assert.equal(cityRecord.limits.new_pins,0);
 assert.equal(cityRecord.limits.complete_city_alpha_audit,false);
+
+const leNah = html.match(/<p id="alpha-dragonair-rooftop">([^\n]+)<\/p>/)?.[1];
+assert.ok(leNah);
+assert.match(leNah,/Restaurant Le Nah/);
+assert.match(leNah,/Lv\. 30–32 normally/);
+assert.match(leNah,/Lv\. 40–42 if Alpha/);
+assert.doesNotMatch(leNah,/clear daylight/);
+assert.match(dratiniCard,/Café Kizuna roof, Jaune Sector 5:[^\n]+Try this roof during clear daylight\./);
+const canal = cityAlphaCard("alpha-goomy-sliggoo-canal");
+assert.ok(canal);
+for (const text of ["While it’s raining","Saison Canal","seen here in rainy weather at night","Goomy at Lv. 49","Sliggoo at Lv. 53","fast-travel back to Justice Dojo","quest-4","#zone-20"]) {
+  assert.ok(canal.includes(text),text);
+}
+assert.doesNotMatch(canal,/only at night|must be night/i);
+
+const wz15 = restored[14];
+assert.match(wz15,/Gourgeist<\/span><span class="alpha-level">Lv\. 52–53 · After survey/);
+assert.match(wz15,/Register Beedrill, Haunter, Larvitar, Shuppet, Whirlipede, Scolipede and Pumpkaboo/);
+assert.match(wz15,/central grass by day or night/);
+assert.match(wz15,/Gourgeist itself is not a survey target/);
+const pyroar = revisedTargets(restored[16]).filter(x=>x.name==="Pyroar");
+assert.deepEqual(pyroar.map(x=>x.level),["Lv. 56–57 · Male · Day","Lv. 56–57 · Male · Night"]);
+assert.match(wz15,/fixed Medium Variety Alpha Gourgeist/);
+assert.match(wz15,/Lv\. 52–53 Alpha Pumpkaboo/);
+assert.match(wz15,/Medium or Small Variety by day/);
+assert.match(wz15,/Large or Jumbo Variety by night/);
+assert.match(wz15,/Alpha Gourgeist of the same variety/);
+assert.match(wz15,/separate non-Alpha Jumbo/);
+assert.match(wz15,/id="alpha-pumpkaboo-varieties"/);
+
+const regional = html.match(/<section id="alpha-regional-forms"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+assert.ok(regional);
+const direct = [...regional.matchAll(/<tr><th scope="row">([^<]+)<\/th><td>(\d)★ ([^<]+)<\/td><td>(\d+)–(\d+)<\/td><td>(\d+)–(\d+)<\/td><\/tr>/g)];
+assert.equal(direct.length,25);
+assert.equal(new Set(direct.map(r=>r[1])).size,19);
+assert.ok(direct.every(r=>+r[4]+9===+r[6] && +r[5]+9===+r[7]));
+assert.ok(direct.some(r=>r[1]==="Galarian Mr. Mime"&&r[2]==="3"&&r[3]==="Ice"&&r[6]==="42"&&r[7]==="44"));
+for(const name of ["Galarian Slowbro","Galarian Slowking"]) {
+  assert.ok(direct.some(r=>r[1]===name&&r[2]==="5"&&r[3]==="Poison"&&r[6]==="64"&&r[7]==="66"));
+}
+for(const quest of [39,72,75,108])assert.ok(regional.includes(`side-missions.html#quest-${quest}`));
+assert.match(regional,/No direct catch was found in these generated pools/);
+
+const fossil = cityAlphaCard("alpha-fossils");
+assert.ok(fossil);
+for (const text of ["₽20,000","₽30,000","second floor","1% Alpha chance","Lv. 20","Lv. 35","3★ Rock","Lv. 33–35 Alpha","4★ Ice","Lv. 46–48 Alpha","5★ Rock","Lv. 62–64 Alpha","Lv. 64–66 Alpha","25,000 Hyperspace Survey Points","quest-27","quest-188","shop-stones"]) {
+  assert.ok(fossil.includes(text) && source.includes(text),text);
+}
+for (const page of ["shops.html","side-missions.html"]) assert.ok(read(page).includes('href="alphas.html#alpha-fossils"'));
+
+const weedleMission = cityAlphaCard("alpha-weedle-mission-43");
+assert.ok(weedleMission);
+assert.match(weedleMission,/Decline Grandt’s handover request to keep it/);
+assert.match(weedleMission,/side-missions\.html#quest-43/);
+assert.match(weedleMission,/Wild Zone 1 after completing its survey/);
+assert.match(source,/Decline Grandt’s request if you want to keep it/);
+assert.match(source,/alphas\.html#alpha-weedle-mission-43/);
+
+// AT-346: mission catch and owned NPC Pokémon are not interchangeable.
+assert.equal((html.match(/id="alpha-bunnelby-mission-1"/g)||[]).length,1);
+const bunnelby=html.match(/<article class="step-card" id="alpha-bunnelby-mission-1">([\s\S]*?)<\/article>/)?.[1];
+assert.ok(bunnelby);
+assert.match(bunnelby,/alley east of Wild Zone 4 in Rouge Sector 8/);
+assert.match(bunnelby,/defeating it also completes the mission/);
+assert.match(bunnelby,/Lv\. 23–25 Alpha Bunnelby/);
+assert.match(source,/alphas\.html#alpha-bunnelby-mission-1/);
+const rosebud=cityAlphaCard("alpha-rosebud-mission-180");
+assert.ok(rosebud);
+for(const text of ["Rosebud cannot be caught","3★ Fighting portal","Lv. 37–39","Lv. 31–33","Rage Fist (learned at Lv. 35)","use it 20 times","keeps its Alpha status","side-missions.html#quest-180"])assert.ok(rosebud.includes(text),text);
+assert.match(source,/Rosebud is a Lv\. 99 Alpha Annihilape in Wild Zone 6, but cannot be caught/);
+assert.match(source,/alphas\.html#alpha-rosebud-mission-180/);
+
+const flower = cityAlphaCard("alpha-flabebe-colours");
+assert.ok(flower);
+for(const cue of ["Red or white, Jaune Sector 2","alley behind Justice Dojo","climb the ladder","Yellow, orange or blue, Jaune Sector 3","rooftop obstacle course","not a proven requirement","Lv. 20–23","Lv. 21–23","Shiny Stone","Lv. 25–27","Lv. 48–50","hair-beauty-guide.html#flabebe-route"]) {
+  assert.ok(flower.includes(cue) && source.includes(cue),cue);
+}
+const beautyFlowers = read("hair-beauty-guide.html").match(/<section id="flabebe-route">([\s\S]*?)<\/section>/)?.[1];
+assert.ok(beautyFlowers.includes('href="alphas.html#alpha-flabebe-colours"'));
+assert.ok(beautyFlowers.includes('href="side-missions.html#quest-12"'));
+
+const vivillon = cityAlphaCard("alpha-vivillon-patterns");
+assert.ok(vivillon);
+for (const cue of ["Lv. 46–47","by day in Wild Zone 13","1★ Flying","1★ Bug","Lv. 24–26","Lv. 22–24","quest-21","gift-poke-ball-vivillon","home-species-666","distribution has ended"]) {
+  assert.ok(vivillon.includes(cue) && source.includes(cue),cue);
+}
+assert.match(read("src/sections/pokedex.html"),/href="alphas\.html#alpha-vivillon-patterns"/);
+assert.match(read("rewards.html"),/id="gift-poke-ball-vivillon"/);

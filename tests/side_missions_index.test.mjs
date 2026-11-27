@@ -221,3 +221,59 @@ assert.match(progress.textContent,/Could not read/);
 assert.equal(writes,0,"No original quest progress or unrelated data may be modified");
 assert.equal(reads,2,"Only initial and focus read: filters and deep links must not access storage");
 console.log("PASS: 203 source-exact quest fields, 119/81/3 filters, EX aliases, 25-link menu, no writes, mobile and old feedback compatibility.");
+
+const jumboSource = original.find(x=>x[1]==="98")?.[2];
+const jumboHome = read("index.html").match(/<article class="side-quest" id="quest-98">([\s\S]*?)<\/article>/)?.[1];
+assert.equal(jumboSource,jumboHome);
+for (const body of [jumboSource,forQuest(98)]) {
+  assert.match(body,/Wild Zone 15 at night/);
+  assert.match(body,/non-Alpha/);
+  assert.match(body,/Summary says <strong>Jumbo Variety/);
+  assert.match(body,/XL is a separate size rating/);
+  assert.match(body,/She keeps it/);
+  assert.match(body,/₽6,000, 5 Seeds of Mastery and 2 Rare Candies/);
+  assert.match(body,/alphas\.html#alpha-pumpkaboo-varieties/);
+  assert.doesNotMatch(body,/An Alpha does not count as Jumbo/);
+}
+
+const weedleSource = original.find(x=>x[1]==="43")?.[2];
+const weedleHome = read("index.html").match(/<article class="side-quest" id="quest-43">([\s\S]*?)<\/article>/)?.[1];
+assert.equal(weedleSource,weedleHome);
+for (const body of [weedleSource,forQuest(43)]) {
+  assert.match(body,/Magenta Sector 3 during the day/);
+  assert.match(body,/you can keep the Alpha Weedle/);
+  assert.match(body,/Either choice completes the mission and gives the same rewards/);
+  assert.match(body,/₽1,500/);
+  assert.match(body,/alphas\.html#alpha-weedle-mission-43/);
+  assert.doesNotMatch(body,/give him the Weedle when he asks/);
+}
+
+// AT-346: encounter location and acquisition vs battle-only distinction.
+for(const n of [1,180]) {
+  const s=original.find(x=>Number(x[1])===n)?.[2];
+  const home=read("index.html").match(new RegExp('<article class="side-quest" id="quest-'+n+'">([\\s\\S]*?)<\\/article>'))?.[1];
+  assert.equal(s,home);
+  for(const body of [s,forQuest(n)]) {
+    if(n===1) {assert.match(body,/east of Wild Zone 4 in Rouge Sector 8/);assert.match(body,/Lv\. 10 Alpha Bunnelby/);assert.match(body,/or defeat it to complete the mission/);assert.match(body,/₽400, Fresh Water ×2/);assert.match(body,/alphas\.html#alpha-bunnelby-mission-1/);}
+    else {assert.match(body,/Southwest entrance of Wild Zone 6/);assert.match(body,/Lv\. 99 Alpha Annihilape/);assert.match(body,/Rosebud cannot be caught/);assert.match(body,/₽3,700, Love Ball ×10/);assert.match(body,/alphas\.html#alpha-rosebud-mission-180/);}
+  }
+}
+
+// AT-347: keep the two usable Furfrou League routes and their saved keys in sync.
+for (const [id, reward] of [[47,'₽800, Revive ×1, Exp. Candy S ×3'],[62,'₽1,600, Revive ×3, Exp. Candy M ×3'],[87,'₽2,400, Max Revive ×1, Exp. Candy L ×2'],[103,'₽30,000 and Gold Bottle Cap ×1']]) {
+ for (const card of [forQuest(id), original.find(m=>Number(m[1])===id)?.[2]]) {
+  assert.ok(card.includes(reward));
+  assert.ok(card.includes(`data-side-check="${id}"`));
+  if (id===103) {
+   assert.match(card,/Complete Side Mission 87 and return to Hotel Z after Lysandre Labs in Main Mission 35/);
+   assert.match(card,/five Lv\. 59 Furfrou and a shiny Lv\. 60 Furfrou/);
+   assert.match(card,/alphas\.html#alpha-furfrou-route/);
+   assert.doesNotMatch(card,/62After|After request 62/);
+  }
+ }
+}
+const beautyFurfrou = read('hair-beauty-guide.html').match(/<section id="furfrou">([\s\S]*?)<\/section>/)[1];
+assert.match(beautyFurfrou,/Wild Zone 19/);
+assert.match(beautyFurfrou,/after the early-morning window/);
+assert.doesNotMatch(beautyFurfrou,/Wild Zone 17|completing Main Mission 15/);
+assert.match(read('alphas.html'),/id="alpha-furfrou-route"[^>]*>[\s\S]*?4★ Normal portals/);
