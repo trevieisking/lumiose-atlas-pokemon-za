@@ -122,3 +122,17 @@ test('AT-347: first Scuffles unlock hair; Slugfests award alternate colours',()=
   }
  }
 });
+
+test('AT-346/347: Floette collection routes are separate from the pastel dye battle',()=>{
+ const routes=hair.split('id="floette-colours"')[1].split('</section>')[0];
+ assert.match(routes,/Blue Floette.*?#flabebe-route.*?south side.*?Lv\. 19/);
+ assert.match(routes,/Orange Floette.*?Main Mission 10.*?Lv\. 20–22.*?maps\.html#wild-zone-7/);
+ assert.match(routes,/Side Mission 012 asks to see Flabébé, not Floette/);
+ for(const path of ['side-missions.html','src/sections/sidequests.html','index.html']){
+  const card=read(path).split('id="quest-51"')[1].split('</article>')[0];
+  assert.match(card,/Vivace brings all five opposing Floette\. You do not need to catch or evolve your own/);
+  assert.match(card,/type-chart\.html#type-fairy/);
+  assert.match(card,/Alpha Houndoom.*?wild-zone-6.*?Sludge Bomb/);
+  assert.match(card,/hair-beauty-guide\.html#floette-colours/);
+ }
+});
