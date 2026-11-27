@@ -1,5 +1,13 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT348_DEVELOPMENT_CYCLE_105_113 -->
+## AT-348 — Whole-guide audit and mandatory start/end synchronization (Manifest 105 / Ledger 113)
+
+**Read first at every development prompt:** [two-site development cycle](docs/qa/AT348_DEVELOPMENT_CYCLE.md) · [whole-guide audit](docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md) · [active register](docs/qa/AT348_CONSOLIDATED_COMPLETION_REGISTER.json) · [Workspace resume prompt](docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md). Read both master plans, joint manifest and dual-site ledger at the active exact head before selecting a slice; update them together at each completed stage and end of prompt, recording evidence, tests, blockers and next step. Keep PR229 as the single integration candidate, PR226 as ongoing field intake and PR227 as source only. Reconcile reviewed field evidence into PR229 without duplicate PRs. No new PR opened.
+
+Reviewed PR229 parent `7df9ba0d86377153f0ef77c7882efd9dc32b9c7e` passed both workflows 46034741717/46034741732; PR226 `d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab` passed both 46064540604/46064540487 and contains all 196 organised photographs (39 finds: 16 TMs, 18 items, five Screws; one access survey). Photos no longer await upload, but canonical matching, precise coordinates, verified routes and integration remain pending. Source audit: all 26 standalone sources and 17 homepage source sections inspected, no missing static local file targets found; not exhaustive factual or visible browser proof. Confirmed gallery truncation: rouge5-looker has 10 photos but Explorer displays only eight. Next A1-01 fix and regression, A1-02 exact original mappings, then A3 field/access, A2 Dex, A7 factual synchronization, A4/A5, A6 and A8. Preserve existing 67 requirements and later research, originals, progress, feedback/Supabase and approved release receipts. Workspace continuation inventory updated, not production approval. Last recorded original Site v40 with v39 rollback; independent original-Site readback still required. HOLD. Private tracker synchronization separately pending.
+<!-- END_AT348_DEVELOPMENT_CYCLE_105_113 -->
+
 <!-- AT348_CONSOLIDATED_COMPLETION_104_112 -->
 ## AT-348 — Single remaining-guide integration candidate (Manifest 104 / Ledger 112)
 

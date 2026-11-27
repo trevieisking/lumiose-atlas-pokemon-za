@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 104,
-    "ledger_revision": 112,
-    "status": "single_draft_integration_candidate_partial_content_and_planned_slices",
+    "revision": 105,
+    "ledger_revision": 113,
+    "status": "single_draft_integration_candidate_audit_recorded_next_photo_repair",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -17,7 +17,12 @@
         46027544829,
         46027544803
       ],
-      "integrated_tests": "pending"
+      "integrated_tests": "success_on_reviewed_parent_only",
+      "reviewed_integrated_head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+      "integrated_workflows": [
+        46034741717,
+        46034741732
+      ]
     },
     "field_intake_pr": 226,
     "previous_historical_heads_preserved": 24,
@@ -25,7 +30,27 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "separate_readback_required"
+    "tracker_sync": "pending_separate_readback",
+    "field_intake_review": {
+      "pr": 226,
+      "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+      "counts": {
+        "tm": 16,
+        "item": 18,
+        "screw": 5,
+        "access": 1,
+        "collectibleFinds": 39,
+        "photos": 196
+      },
+      "workflow_runs": [
+        46064540604,
+        46064540487
+      ],
+      "status": "uploaded_and_organised_draft_not_integrated",
+      "calibrated_coordinates": false
+    },
+    "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
+    "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md"
   },
   "at_348_workspace_photo_recovery": {
     "id": "AT-348-PHOTO-AUDIT-RECOVERY",
@@ -288,20 +313,25 @@
   "read_first": {
     "binding": true,
     "read_order": [
+      "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "FINAL_WORKSPACE_PLAN.md",
+      "MAPS_UPGRADE_MANIFEST.json",
+      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+      "docs/qa/AT348_CONSOLIDATED_COMPLETION_REGISTER.json",
+      "docs/qa/AT348_CONSOLIDATED_COMPLETION_PLAN.md",
+      "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
+      "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
       "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json",
       "docs/qa/atlas-cross-grid-release-2026-11-26/CHECKPOINT.json",
       "docs/qa/atlas-cross-grid-release-2026-11-26/WORKSPACE_CROSS_GRID_RELEASE_PROMPT.md",
       "docs/qa/atlas-cross-grid-release-2026-11-26/REQUEST_AND_HANDOFF.md",
-      "FINAL_WORKSPACE_PLAN.md",
       "ATLAS_RELEASE_HANDOFF.md",
-      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
-      "MAPS_UPGRADE_MANIFEST.json",
-      "ATLAS_DUAL_SITE_FIX_LEDGER.md",
       "MAPS_ACCESS_ROUTE_SURVEY.json",
       "atlas_internal.feature_checklist",
       "atlas_internal.report_resolution_queue"
     ],
-    "rule": "Read the consolidated handoff and current main/active exact PR heads before development. Historical append-only checkpoints do not override current policy or independently verified evidence. Preserve both editions; no active videos/YouTube. Synchronize relevant planning records without rewriting player data or historical source proofs. AT-325 G0–G5 precede the final Workspace prompt; AT-297 governs original-Site adaptation and publication.",
+    "rule": "Read the consolidated handoff and current main/active exact PR heads before development. Historical append-only checkpoints do not override current policy or independently verified evidence. Preserve both editions; no active videos/YouTube. Synchronize relevant planning records without rewriting player data or historical source proofs. AT-325 G0–G5 precede the final Workspace prompt; AT-297 governs original-Site adaptation and publication. Current active AT348 checkpoint 105/113 governs prompt-start and stage-end synchronization; preserve historical release evidence. Read both plans and joint records at each start, update both at every stage end and read back. Reuse PR229 and separate field intake PR226. Workspace publishes only the final approved same-Site package.",
     "owner_only_query": "select item_id, purpose, video_url, manifest_revision, github_status, github_stage, github_revision, workspace_status, workspace_stage from atlas_internal.feature_checklist order by item_id;",
     "feedback_protocol": "docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md",
     "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified",
@@ -309,10 +339,11 @@
     "current_checkpoint": "docs/qa/atlas-cross-grid-release-2026-11-26/CHECKPOINT.json",
     "latest_evidence_addendum": "docs/qa/atlas-cross-grid-release-2026-11-26/CHECKPOINT.json",
     "latest_evidence_summary": "docs/qa/atlas-cross-grid-release-2026-11-26/REQUEST_AND_HANDOFF.md",
-    "approved_runtime_checkpoint": "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json"
+    "approved_runtime_checkpoint": "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json",
+    "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 104,
+  "revision": 105,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -8940,5 +8971,76 @@
     "complete_encounter_audit": false,
     "inventory": "docs/qa/at346-dex-audit/WORKSPACE_PENDING_CHANGE_INVENTORY.md",
     "original_workspace_changed": false
+  },
+  "at_348_development_cycle_105_113": {
+    "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
+    "date": "2026-11-27",
+    "revision": 105,
+    "ledger_revision": 113,
+    "status": "audit_recorded_development_cycle_bound_runtime_repairs_open",
+    "active_pr": 229,
+    "reviewed_parent": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "cycle": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
+    "audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
+    "master_plans": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "FINAL_WORKSPACE_PLAN.md"
+    ],
+    "joint_manifest": "MAPS_UPGRADE_MANIFEST.json",
+    "dual_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+    "field_intake": {
+      "pr": 226,
+      "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+      "counts": {
+        "tm": 16,
+        "item": 18,
+        "screw": 5,
+        "access": 1,
+        "collectibleFinds": 39,
+        "photos": 196
+      },
+      "workflow_runs": [
+        46064540604,
+        46064540487
+      ],
+      "status": "uploaded_and_organised_draft_not_integrated",
+      "calibrated_coordinates": false
+    },
+    "reviewed_integration": {
+      "head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+      "workflow_runs": [
+        46034741717,
+        46034741732
+      ],
+      "status": "both_success_on_reviewed_parent_only"
+    },
+    "audit_scope": {
+      "standalone_sources": 26,
+      "homepage_source_sections": 17,
+      "tree_paths": 1987,
+      "missing_static_local_file_targets": 0,
+      "generated_homepage_direct_read": false,
+      "exhaustive_factual_verification": false,
+      "new_browser_qa": false
+    },
+    "next_slice": "A1-01 confirmed rouge5-looker gallery cap; then A1-02 exact Wild Zone full-resolution mappings",
+    "ordered_slices": [
+      "A1",
+      "A3",
+      "A2",
+      "A7",
+      "A4",
+      "A5",
+      "A6",
+      "A8"
+    ],
+    "release_decision": "HOLD",
+    "workspace_last_recorded_live": "v40",
+    "workspace_live_verified_this_cycle": false,
+    "workspace_prompt_status": "continuation_inventory_only_no_new_release",
+    "private_tracker_sync": "pending_separate_readback",
+    "runtime_changed": false,
+    "new_prs": 0
   }
 }

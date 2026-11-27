@@ -1,5 +1,9 @@
 # AT-348 — Resume interrupted Workspace photograph repair (do not restart)
 
+## Current shared continuation inventory — Manifest 105 / Ledger 113
+
+Before every Workspace prompt read the latest [development cycle](AT348_DEVELOPMENT_CYCLE.md), [master plan](../../MAPS_SECTOR_UPGRADE_MASTER_PLAN.md), [Workspace plan](../../FINAL_WORKSPACE_PLAN.md), [joint manifest](../../MAPS_UPGRADE_MANIFEST.json), [ledger](../../ATLAS_DUAL_SITE_FIX_LEDGER.md), [register](AT348_CONSOLIDATED_COMPLETION_REGISTER.json) and [audit](AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md) from the active GitHub head. Reconcile persisted draft and approved source before changes. At each stage end record actual edits, evidence, failures, next safe step and update both plans/manifest/ledger/register; no duplicate PR or restart. The previous recovery record below is retained as historical evidence. PR226 now has 196 organised originals; do not re-upload or directly publish draft content. PR229 reviewed parent CI passed; new integrated release still HOLD. The actual gallery cap is confirmed (rouge5-looker 10 photos, only eight shown). Three Wild Zone full-size mappings still require verification. Continue with those scoped repairs, then reviewed field evidence and other ordered slices. Workspace handles original-Site publication from the final approved immutable GitHub release after backup, preview and independent checks. No new site, no claim of v41, no spending credits to repeat verified work.
+
 **Owner-authorized recovery checkpoint, 27 November 2026.** This prompt resumes an interrupted Work session; it is not a new full-site import or release approval.
 
 ## Copy into the existing Workspace conversation when Work usage is available

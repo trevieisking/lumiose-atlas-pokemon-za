@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 104,
-  "ledger_revision": 112,
+  "manifest_revision": 105,
+  "ledger_revision": 113,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -13,8 +13,20 @@
   "workspace_v41_verified": false,
   "field_collection": {
     "pr": 226,
-    "head": "79647ff8c5435049438e0f3f05910ea091cc0e30",
-    "policy": "ongoing exact item/Colorful Screw photo intake remains separate and untouched until independently verified and deliberately reconciled for a release"
+    "head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+    "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
+    "counts": {
+      "tm": 16,
+      "item": 18,
+      "screw": 5,
+      "access": 1,
+      "collectibleFinds": 39,
+      "photos": 196
+    },
+    "workflow_runs": [
+      46064540604,
+      46064540487
+    ]
   },
   "incoming": {
     "pr": 227,
@@ -38,7 +50,12 @@
       "docs/qa/at347-content-coverage/CHALLENGE_FOLLOW_UP_2026-11-27.md"
     ],
     "disposition": "exact non-overlapping file transfer into PR229; not promoted; PR227 preserved as source, no separate release",
-    "integrated_head_tests": "pending"
+    "integrated_head_tests": "success_on_reviewed_parent_only",
+    "reviewed_integrated_head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+    "integrated_workflows": [
+      46034741717,
+      46034741732
+    ]
   },
   "historical_head_check": {
     "count": 24,
@@ -183,14 +200,14 @@
       "title": "Single candidate and interrupted-session recovery",
       "status": "in_progress",
       "source": "PR229; #228; AT348_WORKSPACE_RESUME_PROMPT.md",
-      "acceptance": "Retain existing Work draft; record source/checkpoints; do not restart or claim publication."
+      "acceptance": "Retain existing Work draft; record source/checkpoints; do not restart or claim publication. Mandatory preflight and stage-end two-site synchronization recorded; persisted Workspace draft still requires readback."
     },
     {
       "id": "A1",
       "title": "Photo restoration",
-      "status": "open",
+      "status": "confirmed_defect_repair_open",
       "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping."
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals."
     },
     {
       "id": "A2",
@@ -204,7 +221,7 @@
       "title": "Maps and written access",
       "status": "open",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions."
     },
     {
       "id": "A4",
@@ -218,7 +235,7 @@
       "title": "City Life services and challenges",
       "status": "candidate_partial",
       "source": "AT-347 / #225; PR227",
-      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues."
+      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues. Both integrated workflows passed at reviewed parent 7df9ba0d86377153f0ef77c7882efd9dc32b9c7e only; new head requires validation."
     },
     {
       "id": "A6",
@@ -230,9 +247,9 @@
     {
       "id": "A7",
       "title": "Full-guide factual and coverage QA",
-      "status": "open",
+      "status": "source_audit_recorded_factual_review_open",
       "source": "historical PR1; AT-346/347",
-      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded."
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open."
     },
     {
       "id": "A8",
@@ -245,5 +262,88 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "separately record new AT348 open/in-progress planning item after branch readback; preserve all existing rows"
+  "supabase_sync": "pending separately authorized private planning tracker readback and scoped append; no database update claimed",
+  "previous_planning_checkpoint": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+  "development_cycle": {
+    "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
+    "date": "2026-11-27",
+    "revision": 105,
+    "ledger_revision": 113,
+    "status": "audit_recorded_development_cycle_bound_runtime_repairs_open",
+    "active_pr": 229,
+    "reviewed_parent": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "cycle": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
+    "audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
+    "master_plans": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "FINAL_WORKSPACE_PLAN.md"
+    ],
+    "joint_manifest": "MAPS_UPGRADE_MANIFEST.json",
+    "dual_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+    "field_intake": {
+      "pr": 226,
+      "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+      "counts": {
+        "tm": 16,
+        "item": 18,
+        "screw": 5,
+        "access": 1,
+        "collectibleFinds": 39,
+        "photos": 196
+      },
+      "workflow_runs": [
+        46064540604,
+        46064540487
+      ],
+      "status": "uploaded_and_organised_draft_not_integrated",
+      "calibrated_coordinates": false
+    },
+    "reviewed_integration": {
+      "head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+      "workflow_runs": [
+        46034741717,
+        46034741732
+      ],
+      "status": "both_success_on_reviewed_parent_only"
+    },
+    "audit_scope": {
+      "standalone_sources": 26,
+      "homepage_source_sections": 17,
+      "tree_paths": 1987,
+      "missing_static_local_file_targets": 0,
+      "generated_homepage_direct_read": false,
+      "exhaustive_factual_verification": false,
+      "new_browser_qa": false
+    },
+    "next_slice": "A1-01 confirmed rouge5-looker gallery cap; then A1-02 exact Wild Zone full-resolution mappings",
+    "ordered_slices": [
+      "A1",
+      "A3",
+      "A2",
+      "A7",
+      "A4",
+      "A5",
+      "A6",
+      "A8"
+    ],
+    "release_decision": "HOLD",
+    "workspace_last_recorded_live": "v40",
+    "workspace_live_verified_this_cycle": false,
+    "workspace_prompt_status": "continuation_inventory_only_no_new_release",
+    "private_tracker_sync": "pending_separate_readback",
+    "runtime_changed": false,
+    "new_prs": 0
+  },
+  "next_slice": "A1-01 confirmed rouge5-looker gallery cap; then A1-02 exact Wild Zone full-resolution mappings",
+  "ordered_slices": [
+    "A1",
+    "A3",
+    "A2",
+    "A7",
+    "A4",
+    "A5",
+    "A6",
+    "A8"
+  ]
 }
