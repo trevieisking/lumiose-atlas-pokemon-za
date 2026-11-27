@@ -130,3 +130,23 @@ Destination: `assets/atlas/collectibles/vert-7-potion-scaffold-planter/`.
 | Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029206.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player marker beside the waterway crossing | `1000029207.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Potion beside the round shrub | `1000029208.jpg` | `pickup-confirmation.webp` |
+
+## Carbos — Vert Sector 7 scaffold platform by Coulant Waterway
+
+Find **Café Cyclone** and **Coulant Waterway** on the in-game map. The three map views place the player just east of the café near the crossing and construction plaza.
+
+On the lower paved plaza, identify the black scaffolding assembly with yellow ladders and an arrow-marked ramp. The red pickup beam is on the raised side platform extending from the taller scaffold tower beside the tall yellow ladder and traffic cone, in front of the stone retaining wall. The final gameplay photograph shows the player standing on a platform and the award **Carbos ×1**. This is consistent with the previously unidentified elevated pickup beam visible in the scaffold-planter Potion evidence; it is a separate pickup from that Potion.
+
+The photographs establish the pickup position and item identity. The exact climb sequence, any movement prerequisites, and the precise Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established.
+
+**Evidence status:** Five genuine WebP photographs decoded and visually reviewed, with original bytes preserved (1536 × 865 except the wide map at 1536 × 842). Binary upload to GitHub is pending; the following are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-7-carbos-scaffold-platform/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on scaffold | Red beam, raised side platform, traffic cone and tall yellow ladder | `1000029216.jpg` | `pickup-on-scaffold.webp` |
+| Wide map view | Position in the wider Vert district | `1000029217.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sectors 6–7 | `1000029218.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player marker beside the waterway | `1000029219.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Carbos from the scaffold platform | `1000029220.jpg` | `pickup-confirmation.webp` |
