@@ -103,3 +103,22 @@ test("Shops style hub includes every existing boutique and salon without changin
  assert.equal((shops.match(/data-shop-card(?:\s|>)/g)||[]).length,18);
  assert.equal((shops.match(/data-shop-item(?:\s|>)/g)||[]).length,200);
 });
+
+test('AT-347: first Scuffles unlock hair; Slugfests award alternate colours',()=>{
+ const dlc=hair.match(/id="dlc-hair">([\s\S]*?)<\/section>/)[1];
+ const outfits=clothes.match(/id="character-outfits">([\s\S]*?)<\/section>/)[1];
+ const missions=[read('side-missions.html'),read('src/sections/sidequests.html')];
+ assert.match(dlc,/Hyperspace Mission 8/);
+ assert.match(outfits,/Canari look for ₽7,000/);
+ assert.match(outfits,/White alone costs ₽100,000/);
+ for(let n=151;n<=155;n++) {
+  assert.match(dlc,new RegExp('quest-'+n+'">Mission '+n+'</a> · '));
+  for(const doc of missions) {
+   const first=doc.split('id="quest-'+n+'"')[1].split('</article>')[0];
+   const rematch=doc.split('id="quest-'+(n+30)+'"')[1].split('</article>')[0];
+   assert.match(first,/₽10,000, Mega Shard ×100.*?hair-beauty-guide\.html#dlc-hair/);
+   assert.match(rematch,/₽20,000, Mega Shard ×200.*?alternate .*?outfit colours/);
+   assert.doesNotMatch(rematch,/hairstyle|at salons/);
+  }
+ }
+});
