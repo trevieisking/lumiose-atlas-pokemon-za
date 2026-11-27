@@ -36,3 +36,21 @@ The route up from street level and the exact coordinates on the Atlas basemap st
 | [Block map view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-block.webp) | The building beside Vert Street and the canal | `1000029154.webp` |
 | [Close map view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-close.webp) | The player marker at the canal-facing end of the building | `1000029155.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-confirmation.webp) | The on-screen award of one Dive Ball at the chimney | `1000029156.webp` |
+
+## Potion — Vert Sector 7 staircase
+
+Find the wide stone staircase beside the small garden with the looping path, between **Vert Street** and **Racine Construction**. The [neighbourhood map](../../assets/atlas/collectibles/vert-7-potion-staircase/map-neighbourhood.webp) shows the spot in relation to the Pokémon Center near Station Front. Use the [close map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-close.webp) to pick out the correct staircase.
+
+Face up the steps and stay on the cobbled landing to their left. Walk past the black lamppost to the back corner, where the side wall of the stairs meets the dark stone retaining wall. The pickup beam is at ground level in that corner. The [collection photo](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-confirmation.webp) confirms **Potion ×1**.
+
+![Potion pickup in the ground-level corner beside the wide stone stairs in Vert Sector 7](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-at-stairs.webp)
+
+The exact point on the Atlas basemap still needs verification for a live pin.
+
+| Photo | What to look for | Source filename |
+| --- | --- | --- |
+| [Pickup beside the stairs](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-at-stairs.webp) | The wide steps, black lamppost and pickup beam in the back corner | `1000029162.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-wide.webp) | The player's position in the wider Vert district | `1000029163.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-neighbourhood.webp) | Vert Street, Racine Construction and the nearby Pokémon Center | `1000029164.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-close.webp) | The steps beside the small garden in Vert Sector 7 | `1000029165.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-confirmation.webp) | The on-screen award of one Potion at the foot of the wall | `1000029166.webp` |
