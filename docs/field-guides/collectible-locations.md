@@ -593,3 +593,24 @@ Destination: `assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/`.
 | Collection confirmation | NEW Rock Tomb ×1; nearby Camerupt | `1000029443.jpg` | `pickup-confirmation.webp` |
 
 **Evidence status for finds 027–029:** All 14 supplied image files decoded as genuine WebP (despite their .jpg filenames). All original bytes were preserved and verified in the cumulative 118-photo pending archive; all 104 earlier archived files are unchanged. Archive integrity passed. The 24 previously committed photographs remain untouched. Binary transfer to GitHub is still pending, and the destination filenames above are not live links. No runtime, player progress, main, Workspace, or Supabase changes.
+
+
+## Fire Spin — Wild Zone 4 southern cemetery wall, Dormez Bien Cemetery
+
+Field catalogue find 030; eleventh Technical Machine (TM).
+
+Locate **Dormez Bien Cemetery (Wild Zone 4)** in the Rouge district, north of Rouge Sector 6 and Sushi High Roller. The three map views place the player along the southern cemetery boundary, west of the southern entrance. From that entrance, follow the inside of the stone perimeter wall west towards the mausoleum. Look for the golden pickup beam beside the tangled thorny roots and bushes. The approach photograph shows the beam near the wall; the final photograph clearly confirms **Fire Spin ×1** on the grassy strip beside the stone wall and roots.
+
+The pickup is at ground level. The photos show roots nearby, but do not establish that clearing them with a move is necessary. Map views identify the nearby player position rather than a calibrated item coordinate. The suggested approach is inferred from the photographs, not an independently tested route. No live marker added.
+
+**Evidence status:** Five supplied files decoded as genuine WebP at 1536 × 865 pixels despite their .jpg filenames. All original bytes verified in the cumulative 123-photo pending archive, with all 118 previous archived photographs unchanged and archive integrity passed. The 24 previously committed photographs remain untouched. Binary upload to GitHub remains pending; the destinations below are not live links.
+
+Destination: `assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Ground pickup | Golden beam by the mausoleum, bushes and thorny roots | `1000029450.jpg` | `pickup-by-cemetery-wall.webp` |
+| Wide map | Wild Zone 4 north of Wild Zone 3 | `1000029451.jpg` | `map-wide.webp` |
+| Neighbourhood map | Dormez Bien Cemetery and Sushi High Roller | `1000029452.jpg` | `map-neighbourhood.webp` |
+| Close map | Player against southern boundary west of entrance | `1000029453.jpg` | `map-close.webp` |
+| Collection confirmation | NEW Fire Spin ×1 beside stone wall | `1000029454.jpg` | `pickup-confirmation.webp` |
