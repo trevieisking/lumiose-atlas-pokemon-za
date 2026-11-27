@@ -195,3 +195,18 @@ assert.match(denied.ids.legendSaveStatus.textContent,/could not be read or saved
 denied.toggles[1].checked=true;denied.toggles[1].events.change();
 assert.equal(denied.writeCount(),0);
 console.log("PASS: 25 PDF-faithful illustrated routes, source levels/locations/notes, route links, shared progress, 4 search filters and storage recovery.");
+
+// AT-346: the Mega Stone battle unlocks both species but is not a catch.
+for(const name of ["Latias","Latios"]){
+ const start=html.indexOf('id="legend-'+name.toLowerCase()+'"');
+ assert.ok(start>0);
+ const card=html.slice(start,html.indexOf("</article>",start));
+ assert.match(card,/Side Mission 189, Siblings of the Sky, before spending points/);
+ assert.match(card,/cannot catch either Pokémon in that fight/);
+ assert.match(card,/Side Mission 188 unlocks Special Scanning/);
+ assert.match(card,/25,000 Hyperspace research points/);
+ assert.match(card,/href="side-missions.html#quest-189"/);
+ assert.match(card,/href="side-missions.html#quest-188"/);
+ assert.match(card,/not a guarantee for a particular species/);
+ assert.ok(card.includes('data-atlas-legend="'+name+'"'));
+}

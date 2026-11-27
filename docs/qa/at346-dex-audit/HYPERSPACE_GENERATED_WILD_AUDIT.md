@@ -31,3 +31,5 @@ The script preserves source weights at the pattern, cluster and child levels and
 - **Chest Form Gimmighoul:** 5★ Ghost Special Scan capture Lv. 62–64 / Alpha Lv. 71–73. It is an alternative to the quest's separate Gholdengo acquisition, not a replacement for it. [Ghost pool](https://www.serebii.net/legendsz-a/hyperspacewildzone/ghost.shtml)
 
 Use a small pilot before publishing generated candidates: keep city/setup routes and generated pools distinct, verify rank and availability independently, label captured versus battle levels, and keep exact IDs and all existing navigation.
+
+See also [the separate Special Scan and evolution checkpoint](HYPERSPACE_NON_GENERATED_ACQUISITION.md) for follow-up classification of 14 Hyperspace gaps.
