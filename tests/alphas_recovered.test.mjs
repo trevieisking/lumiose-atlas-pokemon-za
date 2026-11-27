@@ -199,3 +199,12 @@ assert.ok(rosebud);
 for(const text of ["Rosebud cannot be caught","3★ Fighting portal","Lv. 37–39","Lv. 31–33","Rage Fist (learned at Lv. 35)","use it 20 times","keeps its Alpha status","side-missions.html#quest-180"])assert.ok(rosebud.includes(text),text);
 assert.match(source,/Rosebud is a Lv\. 99 Alpha Annihilape in Wild Zone 6, but cannot be caught/);
 assert.match(source,/alphas\.html#alpha-rosebud-mission-180/);
+
+const flower = cityAlphaCard("alpha-flabebe-colours");
+assert.ok(flower);
+for(const cue of ["Red or white, Jaune Sector 2","alley behind Justice Dojo","climb the ladder","Yellow, orange or blue, Jaune Sector 3","rooftop obstacle course","not a proven requirement","Lv. 20–23","Lv. 21–23","Shiny Stone","Lv. 25–27","Lv. 48–50","hair-beauty-guide.html#flabebe-route"]) {
+  assert.ok(flower.includes(cue) && source.includes(cue),cue);
+}
+const beautyFlowers = read("hair-beauty-guide.html").match(/<section id="flabebe-route">([\s\S]*?)<\/section>/)?.[1];
+assert.ok(beautyFlowers.includes('href="alphas.html#alpha-flabebe-colours"'));
+assert.ok(beautyFlowers.includes('href="side-missions.html#quest-12"'));
