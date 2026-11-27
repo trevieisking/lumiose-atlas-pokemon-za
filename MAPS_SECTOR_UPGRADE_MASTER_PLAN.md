@@ -19,6 +19,9 @@ The [follow-up pull request #224](https://github.com/trevieisking/lumiose-atlas-
 
 **Hyperspace acquisition cards (27 November, draft):** [27-card integration evidence](docs/qa/at346-dex-audit/HYPERSPACE_ACQUISITION_CARD_LINKS_2026-11-27.md) connects 20 existing Legendary Fieldbook guides and seven evolution routes to the recovered Hyperspace Pokédex by National ID. The other 105 entries' encounter audit, stats and full Alpha/habitat gates remain open. Existing 364 IDs, maps, progress and pinned Workspace prompt are unchanged. Exact-head CI and browser/visual review remain pending.
 
+
+**Generated portal integration pilot (27 November, draft):** [202-route research register and ten-card review evidence](docs/qa/at346-dex-audit/HYPERSPACE_TYPED_ROUTE_PILOT_2026-11-27.md) reproduces the 2,377-row pinned join. The Pokédex gains 18 cross-checked ordinary/Alpha capture bands for ten species (37/132 entries with at least one route note or guide link). Remaining 95 generated-pool species stay research-only. No map or pinned Workspace change; exact-head CI and visual validation pending. Full form, acquisition and habitat gates remain open.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

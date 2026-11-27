@@ -237,6 +237,8 @@
     const fieldbookRoutes={"380":"latias","381":"latios","382":"kyogre","383":"groudon","384":"rayquaza","485":"heatran","491":"darkrai","638":"cobalion","639":"terrakion","640":"virizion","647":"keldeo","648":"meloetta","649":"genesect","720":"hoopa","721":"volcanion","801":"magearna","802":"marshadow","807":"zeraora","808":"meltan","809":"melmetal"};
     const verifiedCatchRoutes=new Set([720,721,807]);
     const evolutionRoutes={"350":{"note":"Trade evolution: Trade Feebas while it holds a Prism Scale. Side Mission 160 awards a scale for handing over a Feebas; keep a separate Feebas to evolve.","quest":160},"865":{"note":"Evolution: Land at least three critical hits with Galarian Farfetch’d in the same battle; evolve after the battle. The Leek from Side Mission 133 can help.","quest":133},"867":{"note":"Evolution: Keep Galarian Yamask conscious with at least 49 HP missing (aim for 50 or more), then go beneath the Coulant Waterway bridge between Wild Zones 11 and 17 and choose Evolve."},"936":{"note":"Item evolution: Use Auspicious Armor on Charcadet. Side Mission 132 gives you one choice of armor. Additional armor can appear in 5★ Hyperspace floating-item loot with Item Power: Special.","quest":132},"937":{"note":"Item evolution: Use Malicious Armor on Charcadet. Side Mission 132 gives you one choice of armor. Additional armor can appear in 5★ Hyperspace floating-item loot with Item Power: Special.","quest":132},"979":{"note":"Evolution: Have Primeape use Rage Fist at least 20 times, then choose Evolve. Rosebud in Side Mission 180 belongs to its trainer and cannot be caught.","quest":180},"1000":{"note":"Evolution: Collect 999 Gimmighoul Coins and use them to evolve Gimmighoul. Side Mission 122 provides a Gimmighoul and 413 starter coins; gather the rest in Hyperspace.","quest":122}};
+    // Reviewed typed portal routes only. The complete 105-species candidate register remains in QA.
+    const reviewedPortalRoutes={"56":[{"form":0,"type":"Fighting","rank":1,"catch":[16,18],"alpha":[25,27]},{"form":0,"type":"Fighting","rank":3,"catch":[22,24],"alpha":[31,33]}],"57":[{"form":0,"type":"Fighting","rank":3,"catch":[28,30],"alpha":[37,39]}],"538":[{"form":0,"type":"Fighting","rank":3,"catch":[26,28],"alpha":[35,37]}],"539":[{"form":0,"type":"Fighting","rank":3,"catch":[26,28],"alpha":[35,37]}],"739":[{"form":0,"type":"Fighting","rank":1,"catch":[16,18],"alpha":[25,27]},{"form":0,"type":"Fighting","rank":4,"catch":[35,37],"alpha":[44,46]},{"form":0,"type":"Ice","rank":4,"catch":[35,37],"alpha":[44,46]}],"740":[{"form":0,"type":"Fighting","rank":4,"catch":[38,40],"alpha":[47,49]},{"form":0,"type":"Ice","rank":4,"catch":[38,40],"alpha":[47,49]}],"957":[{"form":0,"type":"Steel","rank":2,"catch":[18,20],"alpha":[27,29]},{"form":0,"type":"Steel","rank":3,"catch":[22,24],"alpha":[31,33]}],"958":[{"form":0,"type":"Steel","rank":3,"catch":[26,28],"alpha":[35,37]},{"form":0,"type":"Fairy","rank":4,"catch":[38,40],"alpha":[47,49]},{"form":0,"type":"Steel","rank":4,"catch":[38,40],"alpha":[47,49]}],"959":[{"form":0,"type":"Fairy","rank":4,"catch":[41,43],"alpha":[50,52]},{"form":0,"type":"Steel","rank":4,"catch":[41,43],"alpha":[50,52]}],"999":[{"form":0,"type":"Ghost","rank":5,"catch":[62,64],"alpha":[71,73]}]};
     const fragment=document.createDocumentFragment();
     for(const r of roster){
       const card=document.createElement('article');
@@ -278,6 +280,29 @@
           const a=document.createElement('a');a.href='side-missions.html#quest-'+evolution.quest;
           a.textContent='Related Side Mission '+evolution.quest;links.append(a,document.createElement('br'));
         }
+      }else if(reviewedPortalRoutes[r.number]){
+        const portalNote=document.createElement('p');
+        portalNote.textContent=r.number===999?'Chest Form — 5★ Ghost Special Scan candidate.':'Reviewed Hyperspace Wild Zone routes:';
+        links.append(portalNote);
+        const list=document.createElement('ul');
+        for(const encounter of reviewedPortalRoutes[r.number]){
+          const row=document.createElement('li');
+          row.dataset.atlasPortalRoute=String(encounter.rank)+'-'+encounter.type;
+          row.textContent=encounter.rank+'★ '+encounter.type+' — catch Lv. '+encounter.catch.join('–')+'; Alpha Lv. '+encounter.alpha.join('–');
+          list.append(row);
+        }
+        links.append(list);
+        const limits=document.createElement('p');
+        limits.textContent='Look for the matching portal and preview Pokémon. These are possible generated encounters, not guaranteed spawns. Capture levels are shown, not boosted battle levels. Other routes and stats remain under review.';
+        links.append(limits);
+        if(r.number===999){
+          const scans=document.createElement('a');scans.href='side-missions.html#quest-188';scans.textContent='Unlock Special Scans';
+          links.append(scans,document.createElement('br'));
+          const mission=document.createElement('a');mission.href='side-missions.html#quest-122';mission.textContent='Separate Gimmighoul mission route';
+          links.append(mission,document.createElement('br'));
+        }
+        const prep=document.createElement('a');prep.href='mega-dimension.html#portal-prep';prep.textContent='Portal ranks and donut preparation';
+        links.append(prep,document.createElement('br'));
       }else{
         const note=document.createElement('p');note.textContent='Capture routes and stats for this entry are still being checked.';
         links.append(note);
@@ -313,7 +338,7 @@
     const notice=$('#dexUnrecovered');
     if(notice){
       notice.hidden=!hyperspace;
-      notice.textContent=total?'All 132 numbered entries are listed, including 20 Legendary Fieldbook links and seven evolution notes. The full stats and alternate capture-route audit is still in progress.':'The Hyperspace roster could not load. Use the Pokémon HOME checklist link below.';
+      notice.textContent=total?'All 132 numbered entries are listed, including 20 Legendary Fieldbook links, seven evolution notes and ten reviewed generated-portal cards. The full stats and alternate capture-route audit is still in progress.':'The Hyperspace roster could not load. Use the Pokémon HOME checklist link below.';
     }
     if(installed||resetSort)sortDex();
   }

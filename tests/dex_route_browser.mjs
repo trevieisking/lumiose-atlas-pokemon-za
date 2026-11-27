@@ -30,7 +30,18 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   assert.ok((await card.innerText()).includes(method),method);
   await card.locator('button.dex-toggle').click();
  }
- assert.match(await page.locator('#dex-hyperspace-1 .dex-location').textContent(),/still being checked/);
+ assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),18);
+ for(const [dexIndex,route] of [[1,"1★ Fighting — catch Lv. 16–18; Alpha Lv. 25–27"],[2,"3★ Fighting — catch Lv. 28–30; Alpha Lv. 37–39"],[16,"2★ Steel — catch Lv. 18–20; Alpha Lv. 27–29"],[18,"4★ Fairy — catch Lv. 41–43; Alpha Lv. 50–52"],[35,"5★ Ghost — catch Lv. 62–64; Alpha Lv. 71–73"],[57,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[58,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[88,"4★ Ice — catch Lv. 38–40; Alpha Lv. 47–49"]]){
+  const card=page.locator('#dex-hyperspace-'+dexIndex);
+  await card.locator('button.dex-toggle').click();
+  assert.ok((await card.innerText()).includes(route),route);
+  assert.match(await card.innerText(),/not guaranteed spawns/);
+  assert.ok(await card.getByRole("link",{name:"Portal ranks and donut preparation"}).isVisible());
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
+  await card.locator('button.dex-toggle').click();
+ }
+ assert.match(await page.locator('#dex-hyperspace-35 .dex-location').textContent(),/Chest Form/);
+ assert.match(await page.locator('#dex-hyperspace-4 .dex-location').textContent(),/still being checked/);
  assert.equal(await page.locator('#dexGrid [data-dex-region="Hyperspace"] a[href^="home-connection.html#home-species-"]').count(),132);
  await page.getByRole("button",{name:"Electric",exact:true}).click();
  assert.ok(await page.locator("#dexGrid .dex-card:visible").count()<132);

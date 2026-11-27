@@ -220,3 +220,40 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  assert.match(evolutions[937].note,/Malicious Armor/);
  assert.match(evolutions[1000].note,/999 Gimmighoul Coins/);
 }
+
+// AT-346: generated-route review register and public pilot are distinct.
+{
+ const app=read("app.js");
+ const pilot=JSON.parse(app.match(/const reviewedPortalRoutes=(\{[^\n]+\});/)?.[1]);
+ const research=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-typed-route-review-v1.json"));
+ const original=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-generated-wild-summary-v1.json"));
+ assert.deepEqual(research.fullJoinCounts,original.summary);
+ assert.equal(research.hyperspaceSpecies,105);
+ assert.equal(research.species.length,105);
+ assert.equal(research.uniqueRoutes,202);
+ assert.equal(research.species.reduce((n,s)=>n+s.routes.length,0),202);
+ assert.equal(new Set(research.species.map(s=>s.national)).size,105);
+ const sandbox={window:{}};
+ runInNewContext(read("home-dex-data.js"),sandbox);
+ const roster=sandbox.window.ATLAS_HOME_SOURCE.records.filter(r=>r.group==="Hyperspace");
+ const missing=new Set(original.notInTypedGeneratedTable.filter(r=>r.group==="Hyperspace").map(r=>r.number));
+ assert.equal(missing.size,27);
+ assert.deepEqual(research.species.map(s=>s.national),roster.filter(r=>!missing.has(r.number)).map(r=>r.number));
+ for(const s of research.species){
+  assert.equal(roster.find(r=>r.number===s.national)?.dexIndex,s.dexIndex);
+  for(const r of s.routes){
+   assert.ok(r.rank>=1&&r.rank<=5&&r.patterns.length>0);
+   assert.deepEqual(r.alpha,r.catch.map(n=>n+9));
+  }
+ }
+ assert.equal(Object.keys(pilot).length,10);
+ assert.equal(Object.values(pilot).flat().length,18);
+ for(const [n,routes] of Object.entries(pilot)){
+  const s=research.species.find(s=>s.national===Number(n));
+  assert.ok(s);
+  assert.deepEqual(routes,s.routes.map(({patterns,...r})=>r));
+ }
+ assert.deepEqual(pilot[56].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[999],[{form:0,type:"Ghost",rank:5,catch:[62,64],alpha:[71,73]}]);
+ assert.ok(read("mega-dimension.html").includes('id="portal-prep"'));
+}
