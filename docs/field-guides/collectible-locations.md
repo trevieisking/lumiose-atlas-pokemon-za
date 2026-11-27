@@ -635,3 +635,42 @@ Destination: `assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooft
 | Neighbourhood map | Rouge Plaza and surrounding sectors | `1000029462.jpg` | `map-neighbourhood.webp` |
 | Close map | Player on western outlined structure | `1000029463.jpg` | `map-close.webp` |
 | Collection confirmation | NEW Aerial Ace ×1 on rooftop | `1000029464.jpg` | `pickup-confirmation.webp` |
+
+
+## X-Scissor — Wild Zone 13 stump garden, Rouge Sector 7
+
+Field catalogue find 032; thirteenth Technical Machine (TM).
+
+Locate **Wild Zone 13** along North Boulevard, north of Rouge Sector 7 and northwest of Dormez Bien Cemetery. The three map views place the player inside the narrow green zone, just southwest of the travel icon. At ground level, look for the golden pickup beam beside a cut tree stump near the gravel path, bushes and tangled roots. Distinguish the golden TM beam from the other red item beams on nearby stumps. The final photograph clearly confirms **X-Scissor ×1** while a red-eyed wild Pokémon is nearby; this observed encounter is not a guaranteed spawn or prerequisite.
+
+The map views locate the nearby player position rather than the calibrated item coordinate. The exact entrance route and any obstacle-clearing requirement are unverified. No live marker added.
+
+Destination: `assets/atlas/collectibles/wild-zone-13-x-scissor-rouge-7/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Ground pickup | Golden beam beside stump and gravel path | `1000029470.jpg` | `pickup-by-stumps.webp` |
+| Wide map | Wild Zone 13 northwest of Zone 4 | `1000029471.jpg` | `map-wide.webp` |
+| Neighbourhood map | North Boulevard and Rouge Sector 7 | `1000029472.jpg` | `map-neighbourhood.webp` |
+| Close map | Player inside the zone just southwest of travel icon | `1000029473.jpg` | `map-close.webp` |
+| Collection confirmation | NEW X-Scissor ×1 | `1000029474.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Rouge Sector 3, Poké Ball Boutique rooftop
+
+Field catalogue find 033; second Colorful Screw in the photographic catalogue (not an official in-game numbering).
+
+Locate **Rouge Sector 3**, beside the **Poké Ball Boutique** on Autumnal Avenue, across from the clothing shops in Rouge Sector 4. The three map views place the player on the building footprint northeast of the boutique's map icon. On the rooftop, look for the small gray rooftop structure with a blue ladder, yellow ladder markings, a decorative doorway and two flowerpots. The purple collectible beam rises above the structure; climb the ladder to reach the raised roof. The final photograph clearly confirms **Colorful Screw ×1**. The photo of the ladder supports the local rooftop access instruction, but the initial street-to-roof route and any Hover Glide prerequisite remain unverified.
+
+Elevation: rooftop structure. Keep this location separate from ordinary item and TM pickups in the Colorful Screw collection category. The map cursor marks the player's nearby position, not an independently calibrated item coordinate. No live marker added.
+
+Destination: `assets/atlas/collectibles/rouge-3-colorful-screw-boutique-rooftop/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Rooftop pickup | Purple beam above gray rooftop structure and blue ladder | `1000029480.jpg` | `pickup-by-rooftop-ladder.webp` |
+| Wide map | Rouge district northwest of Rouge Plaza | `1000029481.jpg` | `map-wide.webp` |
+| Neighbourhood map | Rouge Sector 3 beside Poké Ball Boutique | `1000029482.jpg` | `map-neighbourhood.webp` |
+| Close map | Player on building footprint northeast of boutique icon | `1000029483.jpg` | `map-close.webp` |
+| Collection confirmation | Colorful Screw ×1 on rooftop | `1000029484.jpg` | `pickup-confirmation.webp` |
+
+**Evidence status for finds 032–033:** All ten supplied photographs decoded as genuine WebP despite the .jpg filenames. All ten original byte streams are preserved in the cumulative 138-photo pending archive, with every one of the previous 128 files unchanged and ZIP integrity passed. The first 24 photographs already committed to the PR remain untouched. Binary upload to GitHub remains pending; destination names above are not live links. No runtime, main, Workspace or Supabase changes.
