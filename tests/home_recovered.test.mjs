@@ -291,3 +291,23 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  assert.ok(read("side-missions.html").includes('id="quest-188"'));
  assert.ok(read("mega-dimension.html").includes('id="portal-prep"'));
 }
+
+// AT-346: exact source-derived default-form stats, preserving route arrays and original cards.
+{
+ const app=read("app.js");
+ const reg=JSON.parse(read("docs/qa/at346-dex-audit/hyperspace-base-stats-v1.json"));
+ const stats=JSON.parse(app.match(/const hyperspaceBaseStats=(\{[^\n]+\});/)[1]);
+ const labels=JSON.parse(app.match(/const hyperspaceStatForms=(\{[^\n]+\});/)[1]);
+ const box={window:{}};runInNewContext(read("home-dex-data.js"),box);
+ const roster=JSON.parse(JSON.stringify(box.window.ATLAS_HOME_SOURCE.records)).filter(r=>r.group==="Hyperspace");
+ assert.equal(reg.rows.length,132);assert.equal(Object.keys(stats).length,132);
+ assert.deepEqual(reg.statOrder,["hp","attack","defense","special_attack","special_defense","speed"]);
+ assert.deepEqual(reg.rows.map(r=>[r.national,r.dexIndex,r.name]),roster.map(r=>[r.number,r.dexIndex,r.name]));
+ for(const row of reg.rows){assert.deepEqual(stats[row.national],row.stats);assert.equal(row.stats.length,6);assert.ok(row.stats.every(n=>Number.isInteger(n)&&n>0&&n<=255));assert.equal(row.form,labels[row.national]||"Default form (non-Mega)");}
+ for(const [n,v] of Object.entries(reg.crossCheck.stats))assert.deepEqual(stats[n],v);
+ assert.equal(labels[999],"Chest Form");assert.equal(labels[876],"Male Indeedee");assert.equal(labels[720],"Confined");
+ assert.equal(reg.lumioseComparison.exactSourceMatches,231);
+ assert.equal(Object.values(JSON.parse(app.match(/const reviewedPortalRoutes=(\{[^\n]+\});/)[1])).flat().length,202);
+ assert.ok(app.includes("regionCards.length===132&&regionCards.every"));
+ assert.ok(app.includes("$$('.stat-row',node).at(-1)?.lastElementChild"));
+}

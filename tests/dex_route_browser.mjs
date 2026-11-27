@@ -16,9 +16,16 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
  await page.getByRole("button",{name:"Hyperspace · 132"}).click();
  assert.equal(await page.locator("#dexCount").innerText(),"132 of 132 Hyperspace entries");
  assert.equal(await page.locator("#dexGrid .dex-card:visible").count(),132);
+ assert.equal(await page.locator("#dexSort").inputValue(),"speed");
+ assert.equal(await page.locator('#dexSort option[value="speed"]').evaluate(el=>el.disabled),false);
+ const visibleSpeed=await page.locator('#dexGrid [data-dex-region="Hyperspace"]:visible').evaluateAll(cards=>cards.map(c=>Number(c.querySelector('[data-dex-stat="5"] span:last-child').textContent)));
+ assert.deepEqual(visibleSpeed,[...visibleSpeed].sort((a,b)=>b-a));
+ await page.locator("#dexSort").selectOption("total");
+ const visibleTotals=await page.locator('#dexGrid [data-dex-region="Hyperspace"]:visible .dex-total b').allTextContents();
+ assert.deepEqual(visibleTotals.map(Number),visibleTotals.map(Number).sort((a,b)=>b-a));
+ await page.locator("#dexSort").selectOption("number");
  assert.equal(await page.locator("#dexGrid .dex-card:visible").first().getAttribute("id"),"dex-hyperspace-1");
- assert.equal(await page.locator("#dexSort").inputValue(),"number");
- assert.equal(await page.locator('#dexSort option[value="speed"]').evaluate(el=>el.disabled),true);
+ assert.equal(await page.locator('#dexGrid [data-dex-region="Hyperspace"] .stat-row').count(),792);
  const fieldbookLinks=page.locator('#dexGrid [data-dex-region="Hyperspace"] a[href^="legendaries.html#legend-"]');
  assert.equal(await fieldbookLinks.count(),20);
  for(const [dexIndex,slug] of [[113,"heatran"],[115,"cobalion"],[120,"genesect"],[125,"darkrai"],[126,"latias"],[127,"latios"],[131,"magearna"]]){

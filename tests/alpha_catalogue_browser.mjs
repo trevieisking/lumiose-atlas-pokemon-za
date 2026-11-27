@@ -33,6 +33,28 @@ try{
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth<=1));
   assert.deepEqual(await page.evaluate(()=>window.__alphaWrites),[]);
   assert.deepEqual(errors,[]);
+  // The same isolated browser also exercises the regional stats in both layouts.
+  await page.goto(base+"index.html#pokedex",{waitUntil:"load"});
+  await page.locator("#dexCount").waitFor({state:"visible"});
+  assert.equal(await page.locator("#dexGrid .dex-card:visible").count(),232);
+  await page.getByRole("button",{name:"Hyperspace · 132",exact:true}).click();
+  assert.equal(await page.locator("#dexGrid .dex-card:visible").count(),132);
+  assert.equal(await page.locator('#dexGrid [data-dex-region="Hyperspace"] .stat-row').count(),792);
+  assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),202);
+  for(const mode of ["total","speed"]){
+    await page.locator("#dexSort").selectOption(mode);
+    const values=await page.locator('#dexGrid [data-dex-region="Hyperspace"]:visible').evaluateAll((cards,mode)=>cards.map(c=>Number(c.querySelector(mode==="total"?".dex-total b":'[data-dex-stat="5"] span:last-child').textContent)),mode);
+    assert.deepEqual(values,[...values].sort((a,b)=>b-a));
+  }
+  await page.locator("#dexSort").selectOption("number");
+  const mankey=page.locator("#dex-hyperspace-1");
+  await mankey.locator("button.dex-toggle").click();
+  assert.equal(await mankey.locator(".dex-total b").innerText(),"305");
+  assert.deepEqual((await mankey.locator(".stat-row span:last-child").allTextContents()).map(Number),[40,80,35,35,45,70]);
+  assert.match(await mankey.innerText(),/default non-Mega form/);
+  await mankey.screenshot({path:output+"/hyperspace-stats-"+device+".png"});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth<=1));
+  assert.deepEqual(errors,[]);
   await context.close();
  }
 }finally{await browser?.close();server.kill();}
