@@ -496,3 +496,24 @@ Destination: `assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/`.
 | Neighbourhood map view | Northern park area, Bleu Sector 5 and Stone Emporium | `1000029393.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player inside the rectangular court north of the Wild Zone 12 travel marker | `1000029394.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Ice Beam on the painted court center | `1000029395.jpg` | `pickup-confirmation.webp` |
+
+
+## Work Up — Wild Zone 1 rooftop garden terrace
+
+Field catalogue find 025; sixth Technical Machine (TM). Contributor is focusing on TMs for the current survey.
+
+Locate **Wild Zone 1**, on South Boulevard, southwest of Hotel Z in Vert Sector 8 and northeast of the Pokémon Research Lab. The three map photographs show the player near the northern boundary of the zone, immediately west of the northeast entrance and northwest of the Wild Zone 1 travel marker. On the elevated rooftop garden, look for a wooden terrace with round café tables, chairs, trimmed hedges and blue perimeter railings. The approach photograph shows a golden pickup beam between the chairs of the table nearest the railing corner. The final gameplay photograph clearly confirms **Work Up ×1** at that corner, overlooking the neighbouring green-roofed buildings and wild-zone boundary.
+
+The item is on the rooftop, not at street level. A ladder is visible on a neighbouring building in the confirmation photograph, but its connection to the pickup route is not established. Exact rooftop access route, any Hover Glide prerequisite and the calibrated Atlas basemap coordinate remain unverified. Map views show the nearby player position rather than an independently calibrated item coordinate. No live marker added. Preserve other collectibles and existing player progress.
+
+**Evidence status:** Five supplied files decoded as genuine WebP at 1536 × 865 pixels. The original bytes were verified in the cumulative 100-photo archive, with all 95 previously archived photographs unchanged; archive integrity passed. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Rooftop pickup | Golden beam beside the café table and blue railing | `1000029401.jpg` | `pickup-on-rooftop.webp` |
+| Wide map view | Wild Zone 1 on the southern edge of the city | `1000029402.jpg` | `map-wide.webp` |
+| Neighbourhood map view | South Boulevard, Hotel Z, Pokémon Research Lab and northern zone boundary | `1000029403.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player near the northern boundary west of the northeast entrance | `1000029404.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Work Up at the wooden terrace railing corner | `1000029405.jpg` | `pickup-confirmation.webp` |
