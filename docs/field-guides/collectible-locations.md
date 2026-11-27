@@ -2,7 +2,7 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
-**Photo archive:** 201 original photographs across 40 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 201 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+**Photo archive:** 206 original photographs across 41 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 206 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
 
 [Open the organised photograph fieldbook](../../collectible-fieldbook.html).
 
@@ -936,3 +936,21 @@ The ladder visible across the canal is a landmark. The exact Atlas map coordinat
 | [Neighbourhood map](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/map-neighbourhood.webp) | Vert Sector 5, Vert Street, Café Cyclone and the Coulant Waterway | `1000029987.jpg` | `map-neighbourhood.webp` |
 | [Close map](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/map-close.webp) | Player on the canal-side corner of the Vert Sector 5 building block | `1000029988.jpg` | `map-close.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/pickup-confirmation.webp) | Headbutt ×1 between the building and the canal railing | `1000029989.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Scaffold northwest of Hotel Z
+
+Collectible find 41. The final gameplay photograph confirms Colorful Screw ×1.
+
+From Hotel Z in Vert Sector 8, look northwest for the small grassy courtyard across the street, between the hotel and Vert Sector 9. Find the cyan-edged scaffold beside the three-lantern streetlamp. Look for the purple beam on the highest platform of the taller scaffold stack.
+
+The approach photo shows ramps and stepped platforms. The climbing sequence and any movement requirements are unverified. Atlas coordinate calibration and original checklist matching are pending.
+
+![Circled purple beam on the scaffold northwest of Hotel Z](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/pickup-scaffold.webp)
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| [Scaffold pickup](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/pickup-scaffold.webp) | Circled purple beam on the top platform of the cyan-edged scaffold | `1000029991.jpg` | `pickup-scaffold.webp` |
+| [Wide map](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/map-wide.webp) | Player north of Wild Zone 1, east of Wild Zone 12 and south of Wild Zone 2 | `1000029997.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/map-neighbourhood.webp) | Player northwest of Hotel Z and east of the Vert Sector 9 label | `1000029998.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/map-close.webp) | Player at the southwest edge of the small green courtyard northwest of Hotel Z | `1000029999.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on the top patterned metal platform beside the streetlamp | `1000030000.jpg` | `pickup-confirmation.webp` |
