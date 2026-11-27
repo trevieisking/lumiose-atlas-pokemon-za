@@ -28,6 +28,13 @@ window.ATLAS_LEGENDARY_SOURCE = {
       "place": "Wild Zone 11",
       "description": "After the credits, speak to Mable. Clear the anomalous Alphas in Wild Zones 3, 5 and 9, then enter Wild Zone 11 for the Xerneas encounter.",
       "tip": "Mission 40 · Level 75.",
+      "verifiedRoute": {
+        "prerequisite": "Catch or defeat the three Lv. 70 mission Alphas; defeated individuals do not respawn.",
+        "landmarks": [
+          "Find Steelix in the centre of Wild Zone 3, Gallade where Venipede normally gather in Wild Zone 5, and Pangoro on the high rooftop where Mawile normally appears in Wild Zone 9."
+        ],
+        "fallback": "Already defeated one? Gallade and Pangoro can reappear as rotating Alphas in Wild Zone 20. For Alpha Steelix, trade an Alpha Onix holding a Metal Coat or check 4★ Steel Hyperspace Wild Zones with Mega Dimension."
+      },
       "originalPdfPage": 1,
       "steps": [
         "Finish the main story and speak with Mable after the credits.",

@@ -7,7 +7,7 @@ const legacy=[...source.matchAll(/<article class="alpha-card">([\s\S]*?)<\/artic
 const restored=[...html.matchAll(/<article class="alpha-zone-card"([\s\S]*?)<\/article>/g)].map(x=>x[0]);
 assert.equal(legacy.length,20,"Original source must contain all 20 zones");
 assert.equal(restored.length,20,"Standalone fieldbook must retain 20 zone cards");
-const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>[^<]+<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:y[1],level:y[2]}));
+const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>([^<]+)<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:["Vivillon (Meadow Pattern)","Florges (Red Flower)"].includes(y[2])?y[2]:y[1],level:y[3]}));
 const revisedTargets=x=>[...x.matchAll(/<span class="alpha-target-name">([^<]+)<\/span><span class="alpha-level">([^<]+)<\/span>/g)].map(y=>({name:y[1],level:y[2]}));
 let fixedCount=0;
 for(let i=0;i<20;i++){
@@ -19,7 +19,15 @@ for(let i=0;i<20;i++){
   if(n!==20)fixedCount+=captured.length;
 }
 assert.equal(fixedCount,38);
-assert.equal(revisedTargets(restored[19]).length,67);
+const centralPool = revisedTargets(restored[19]);
+assert.equal(centralPool.length,67);
+const higher = "Alakazam Machamp Kangaskhan Gyarados Dragonite Tyranitar Gardevoir Aggron Altaria Absol Garchomp Lucario Gallade Garbodor Eelektross Chandelure Florges Pangoro Aegislash Malamar Barbaracle Dragalge Heliolisk Goodra Drampa Falinks".split(" ");
+assert.deepEqual(centralPool.filter(r=>r.level==="Lv. 64–65").map(r=>r.name.replace(/ \(.*\)$/, "")).sort(), higher.sort());
+assert.equal(centralPool.filter(r=>r.level==="Lv. 63–64").length,41);
+assert.ok(centralPool.some(r=>r.name==="Vivillon (Meadow Pattern)" && r.level==="Lv. 63–64"));
+assert.ok(centralPool.some(r=>r.name==="Florges (Red Flower)" && r.level==="Lv. 64–65"));
+assert.match(legacy[19],/data-dex-name="Vivillon" type="button">Vivillon \(Meadow Pattern\)/);
+assert.match(legacy[19],/data-dex-name="Florges" type="button">Florges \(Red Flower\)/);
 assert.match(restored[19],/Show all 67 possible Zone 20 Alpha Pokémon/);
 assert.match(restored[19],/This complete list was present in the saved main guide, but was collapsed/);
 const pageMenu=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
