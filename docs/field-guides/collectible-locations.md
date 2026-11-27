@@ -90,3 +90,23 @@ The exact point on the Atlas basemap still needs verification for a live pin.
 | [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Street and Racine Construction | `1000029184.webp` |
 | [Close map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-close.webp) | The player marker at the Vert Sector 7 end of the crossing | `1000029185.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-confirmation.webp) | The on-screen award of one Great Ball where the stone walls meet | `1000029186.webp` |
+
+## Potion — Vert Sector 7 raised walkway by Coulant Waterway
+
+Find **Café Cyclone** and the crossing over **Coulant Waterway**. At the Vert Sector 7 end of the crossing, locate the building overlooking the construction scaffolding. The close in-game map photograph places the player on the walkway beside the building, east of Café Cyclone.
+
+On the raised cobbled walkway alongside the pale building, walk towards the end of the stone railing overlooking the lower plaza. Look for the red pickup beam beside the low stone parapet, facing the black scaffolding towers with yellow ladders and an arrow-marked ramp. The final gameplay photograph confirms **Potion ×1** at this spot. This is a separate pickup from the ground-level staircase Potion above.
+
+The route onto the raised walkway, any movement prerequisites, and the exact point on the Atlas basemap still need verification. Do not publish a live pin from the player marker alone.
+
+**Evidence status:** All five supplied photographs were visually reviewed and decoded at 1536 × 865. Although the supplied filenames end in `.jpg`, the actual files are WebP. Their original bytes have been preserved for transfer. GitHub binary upload is pending; the following filenames identify the evidence and planned repository destination, not existing image links.
+
+Destination: `assets/atlas/collectibles/vert-7-potion-raised-walkway/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on raised walkway | Red pickup beam, low stone parapet, scaffolding and yellow ladders | `1000029192.jpg` | `pickup-on-walkway.webp` |
+| Wide map view | Position within the wider Vert district | `1000029193.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029194.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player marker beside the building at the crossing | `1000029195.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Potion beside the scaffolding | `1000029196.jpg` | `pickup-confirmation.webp` |
