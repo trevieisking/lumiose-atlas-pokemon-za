@@ -54,3 +54,21 @@ The exact point on the Atlas basemap still needs verification for a live pin.
 | [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-neighbourhood.webp) | Vert Street, Racine Construction and the nearby Pokémon Center | `1000029164.webp` |
 | [Close map view](../../assets/atlas/collectibles/vert-7-potion-staircase/map-close.webp) | The steps beside the small garden in Vert Sector 7 | `1000029165.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-7-potion-staircase/pickup-confirmation.webp) | The on-screen award of one Potion at the foot of the wall | `1000029166.webp` |
+
+## Rare Candy — Vert Sector 7 by Coulant Waterway
+
+On the in-game map, find **Café Cyclone** and the nearby crossing over **Coulant Waterway**. The [close map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-close.webp) shows the player beside the building at the Vert Sector 7 end of the crossing.
+
+From the paved walkway beside the pale shutters, step into the flower bed between the building and the stone railing. Look just past the tree, among the blue and white flowers toward the green steel bridge supports. The [collection photo](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-confirmation.webp) confirms **Rare Candy ×1** in that flower bed.
+
+![Rare Candy pickup beam just beyond a tree in the flower bed beside Coulant Waterway](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-in-flower-bed.webp)
+
+The exact point on the Atlas basemap still needs verification for a live pin.
+
+| Photo | What to look for | Source filename |
+| --- | --- | --- |
+| [Pickup in the flower bed](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-in-flower-bed.webp) | The tree, shuttered windows, stone railing and pink pickup beam | `1000029172.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-wide.webp) | The player's position in the wider Vert district | `1000029173.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Street and Racine Construction | `1000029174.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-close.webp) | The building and flower bed by the crossing | `1000029175.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-confirmation.webp) | The on-screen award of one Rare Candy beside the steel bridge supports | `1000029176.webp` |
