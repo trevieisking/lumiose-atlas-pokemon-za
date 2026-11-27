@@ -50,3 +50,14 @@ test('AT-347: all Nouveau Café trucks share one verified low-cost friendship me
  assert.match(html,/four orders reach 255 for ₽400/);
  assert.match(html,/regular ₽100,000|ordinary ₽100,000/);
 });
+
+test('AT-347: the collector recovers misses, not failed catches, before a paid restock',()=>{
+ const id='service-lost-poke-ball-collectors';
+ const card=html.split('id="'+id+'">')[1].split('</article>')[0];
+ for(const value of [card,data.services.find(s=>s.id===id).description]){
+  assert.match(value,/orange speech bubble.*?clean misses free.*?same ball type/);
+  assert.match(value,/failed to catch the Pokémon are not returned/);
+  assert.match(value,/10 standard Poké Balls together for ₽1,000/);
+ }
+ assert.match(card,/shops\.html#shop-centers/);
+});
