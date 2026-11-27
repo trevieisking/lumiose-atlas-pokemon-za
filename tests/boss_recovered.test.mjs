@@ -40,6 +40,41 @@ filters[1].events.click();assert.equal(nodes.bossStatus.textContent,"16 of 28 bo
 filters[2].events.click();assert.equal(nodes.bossStatus.textContent,"10 of 28 boss cards shown");
 nodes.bossSearch.value="darkrai";nodes.bossSearch.events.input();assert.equal(nodes.bossStatus.textContent,"1 of 28 boss cards shown");
 nodes.bossSearch.value="not-a-boss";nodes.bossSearch.events.input();assert.equal(nodes.bossNoResults.hidden,false);
+
+
+const homeHtml=read("home-connection.html");
+const homeBossPortraits=[
+  ["Mega Staraptor","Staraptor"],
+  ["Mega Tatsugiri","Tatsugiri"],
+  ["Mega Heatran","Heatran"],
+  ["Mega Darkrai","Darkrai"],
+  ["Primal Groudon","Groudon"],
+  ["Primal Kyogre","Kyogre"],
+  ["Mega Rayquaza","Rayquaza"],
+  ["Mega Zeraora","Zeraora"]
+];
+for(const [bossName,species] of homeBossPortraits){
+  const homeLine=homeHtml.split("\n").find(line=>line.includes('alt="'+species+' Pokémon portrait"'));
+  const bossLine=html.split("\n").find(line=>line.includes("<h3>"+bossName+"</h3>"));
+  const homeSrc=homeLine?.match(/src="([^"]+)"/)?.[1];
+  const bossSrc=bossLine?.match(/<img src="([^"]+)"/)?.[1];
+  assert.ok(homeSrc&&bossSrc,"Missing portrait reference for "+bossName);
+  assert.equal(bossSrc,homeSrc,"Boss portrait must match HOME catalogue: "+bossName);
+}
+const permittedExternalImages=new Set([
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/398.png",
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/978.png"
+]);
+const allBossImages=[...html.matchAll(/<img[^>]*src="([^"]+)"/g)].map(match=>match[1]);
+assert.equal(allBossImages.length,28,"All 28 boss-page images must be checked");
+for(const src of allBossImages){
+  if(src.startsWith("https://")){
+    assert.ok(permittedExternalImages.has(src),"Unexpected external boss image: "+src);
+  }else{
+    assert.ok(existsSync(new URL("../"+src,import.meta.url)),"Missing local boss image: "+src);
+  }
+}
+
 console.log("PASS: 28 PDF boss cards, 25-link menu, internal assets, responsive cards, offline filters and unchanged player state.");
 
 
