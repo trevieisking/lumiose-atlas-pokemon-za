@@ -194,3 +194,47 @@ Destination: `assets/atlas/collectibles/coulant-waterway-pearl-tree/`.
 | Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029238.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player on the east bank just south of the bridge | `1000029239.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Pearl beside the tree and white flowers | `1000029240.jpg` | `pickup-confirmation.webp` |
+
+## Revive — Coulant Waterway east-bank staircase planter near Vert Sector 6
+
+Field catalogue find 011.
+
+Follow the lower east-bank promenade of **Coulant Waterway** towards **Vert Sector 6** and the wide staircase. The close map shows the player on the east bank of the canal, north of the nearby bridge. This is a different location from the Pearl farther south.
+
+Facing the staircase, look in the planted strip on the left beside the canal balustrade. The approach photo shows a red pickup beam farther along the strip near the staircase, beyond the foreground pink crystals and shrubs. The final photo confirms **Revive ×1** beside the round shrub, flowers and stepped stone planters at the foot of the staircase. The pink crystals in the approach photograph are not the Revive.
+
+The exact point on the Atlas basemap and sector boundary designation remain unverified. No live marker added.
+
+**Evidence status:** All five supplied photographs decoded as genuine WebP images and visually reviewed. Original bytes verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/coulant-waterway-revive-east-bank-stairs/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Staircase planter approach | Red pickup beam in the planted strip near the stairs, beyond the foreground crystals | `1000029246.jpg` | `pickup-by-stair-planter.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029247.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029248.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on the east side of the canal north of the bridge | `1000029249.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Revive beside the shrub and stepped planters | `1000029250.jpg` | `pickup-confirmation.webp` |
+
+## Potion — Coulant Waterway west-bank stone recess near Vert Sector 3
+
+Field catalogue find 012; a fourth distinct Potion pickup in this photographic collection.
+
+From **Café Cyclone**, follow the lower western canal-side path towards **Vert Sector 3**, keeping the water to your right. The close map places the player west of the waterway and north of the crossing, opposite Vert Sector 6.
+
+Look for the stone building wall with an arched window and a square planter, immediately beside a staircase. The red pickup beam is at ground level in the recessed inside corner of the wall to the left of the staircase. The last gameplay photo confirms **Potion ×1** in that stone corner. This is distinct from the previously documented Vert Sector 7 staircase, raised walkway and scaffold planter Potions.
+
+The map shows the player's nearby position, not a calibrated collectible coordinate. The exact Atlas basemap point and sector boundary designation remain unverified. No live marker added.
+
+**Evidence status:** Use only the five replacement photographs below, as requested by the contributor. The superseded HEIC batch is excluded. All five replacements decoded as genuine WebP images and their original bytes verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Wall recess approach | Red pickup beam in the inside stone corner immediately left of the stairs | `1000029256.jpg` | `pickup-in-wall-recess.webp` |
+| Wide map view | Wider Vert district | `1000029257.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Vert Sectors 3 and 6, Café Cyclone and Coulant Waterway | `1000029258.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on the west side of the canal north of the crossing | `1000029259.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Potion in the stone recess | `1000029260.jpg` | `pickup-confirmation.webp` |
