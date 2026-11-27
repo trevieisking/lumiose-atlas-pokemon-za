@@ -10,6 +10,9 @@
 
 The [follow-up pull request #224](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224) collects independently checked portal prep, legendary routes and Alpha Fieldbook corrections. Evidence: [Hyperspace encounter replay](docs/qa/at346-dex-audit/HYPERSPACE_GENERATED_WILD_AUDIT.md), [city Alpha points](docs/qa/at346-dex-audit/LUMIOSE_CITY_ALPHA_POINTS_2026-11-27.md), [Wild Zone 20 and Mission 40](docs/qa/at346-dex-audit/LUMIOSE_WZ20_AND_MM40_2026-11-27.md), and [Wild Zone survey replay](docs/qa/at346-dex-audit/LUMIOSE_WILD_ZONE_ALPHA_SURVEYS_2026-11-27.md). This checkpoint does not change the pinned Workspace handoff, certify any original-Site deployment, publish new map pins, or close the wider species/form audit.
 
+
+**Side Mission 43 candidate (27 November):** [Alpha Weedle retention evidence](docs/qa/at346-dex-audit/LUMIOSE_ALPHA_WEEDLE_MISSION_2026-11-27.md) corrects the optional handover in both mission views and both Alpha guides. This is a draft guide correction; keep existing player IDs, maps, pinned Workspace release and all full-dex gates unchanged. Exact-head CI and visual review remain pending.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

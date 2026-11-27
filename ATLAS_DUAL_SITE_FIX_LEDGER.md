@@ -6,6 +6,9 @@
 - **Next verified scope:** [AT-346 roster and mission slice](docs/qa/at346-dex-audit/ROSTER_AND_MYTHICAL_ROUTES_2026-11-27.md): all 132 Hyperspace roster entries, three specific DLC catch guides and a HOME completion clarification. Capture-route completeness across all 364 species, full Alpha coverage and map synchronization remain open in [Issue #220](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/220).
 - **Original Site:** [one Workspace prompt](WORKSPACE_ATLAS_NEXT_RELEASE.md) with backup, exact-source, preview and live checks. This repository does not certify original-Site publication or an update to the private Supabase ledger. No videos in the release.
 
+
+**Side Mission 43 candidate (27 November):** [Alpha Weedle retention evidence](docs/qa/at346-dex-audit/LUMIOSE_ALPHA_WEEDLE_MISSION_2026-11-27.md) corrects the optional handover in both mission views and both Alpha guides. This is a draft guide correction; keep existing player IDs, maps, pinned Workspace release and all full-dex gates unchanged. Exact-head CI and visual review remain pending.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

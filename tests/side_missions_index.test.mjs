@@ -235,3 +235,15 @@ for (const body of [jumboSource,forQuest(98)]) {
   assert.match(body,/alphas\.html#alpha-pumpkaboo-varieties/);
   assert.doesNotMatch(body,/An Alpha does not count as Jumbo/);
 }
+
+const weedleSource = original.find(x=>x[1]==="43")?.[2];
+const weedleHome = read("index.html").match(/<article class="side-quest" id="quest-43">([\s\S]*?)<\/article>/)?.[1];
+assert.equal(weedleSource,weedleHome);
+for (const body of [weedleSource,forQuest(43)]) {
+  assert.match(body,/Magenta Sector 3 during the day/);
+  assert.match(body,/you can keep the Alpha Weedle/);
+  assert.match(body,/Either choice completes the mission and gives the same rewards/);
+  assert.match(body,/₽1,500/);
+  assert.match(body,/alphas\.html#alpha-weedle-mission-43/);
+  assert.doesNotMatch(body,/give him the Weedle when he asks/);
+}

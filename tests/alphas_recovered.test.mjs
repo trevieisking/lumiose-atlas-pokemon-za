@@ -177,3 +177,11 @@ for (const text of ["₽20,000","₽30,000","second floor","1% Alpha chance","Lv
   assert.ok(fossil.includes(text) && source.includes(text),text);
 }
 for (const page of ["shops.html","side-missions.html"]) assert.ok(read(page).includes('href="alphas.html#alpha-fossils"'));
+
+const weedleMission = cityAlphaCard("alpha-weedle-mission-43");
+assert.ok(weedleMission);
+assert.match(weedleMission,/Decline Grandt’s handover request to keep it/);
+assert.match(weedleMission,/side-missions\.html#quest-43/);
+assert.match(weedleMission,/Wild Zone 1 after completing its survey/);
+assert.match(source,/Decline Grandt’s request if you want to keep it/);
+assert.match(source,/alphas\.html#alpha-weedle-mission-43/);
