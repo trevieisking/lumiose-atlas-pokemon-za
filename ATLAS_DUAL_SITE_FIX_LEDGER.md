@@ -1,5 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT347_CONTENT_COVERAGE_101_109 -->
+## AT-347 — Complete Game Content Coverage Expansion (candidate Manifest 101 / Ledger 109)
+
+27 November 2026: owner supplied full content-discovery Deep Research report and requested shared planning intake. [Issue #225](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/225) · [Full structured implementation plan](docs/qa/at347-content-coverage/CONTENT_COVERAGE_PLAN.md) · [21-gap register + supplemental research/validation tasks](docs/qa/at347-content-coverage/GAP_REGISTER.json) · [Pending Workspace planning brief](docs/qa/at347-content-coverage/WORKSPACE_PLANNING_BRIEF.md). Phases A–K cover all 17 cafés, restaurant courses, permanent services, training and passive mechanics, titles, private multiplayer/trading/music, photography, repeatable challenges, world mechanics, gifts/acquisition and completion dashboard. Audit current pages first, reuse routes and the AT-346 dex/encounter model; retain unresolved leads separately (missing café entries, restaurant fees/repeat rewards, box expansion, ribbons/marks, birthday visuals, coordinates and DLC challenge rewards). This is documentation and planning only on consolidated draft PR224: no runtime implementation, no release claim, no change to previous approved Workspace prompt. Preserve all original photos, maps, coordinates, marker/progress IDs, player state, feedback and Supabase connections. Fixed validated locations only; dynamic Hyperspace remains unpinned. All new tasks open in both editions, separately gated. Shared tracker synchronization is separately verified; preserve previous 56 records and their release evidence. Existing AT-346 and prior release gates remain intact.
+<!-- END_AT347_CONTENT_COVERAGE_101_109 -->
+
 ## Start here: current GitHub baseline and Workspace handoff
 
 - **GitHub Pages verified:** [PR #219](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/219) ships wider original photo views for all 48 sectors, preserving the old crops and originals; [PR #216](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/216) ships 41 boutiques and five hair salons. Both are present at `a6df28bc6342f85b1b3d4a3030a5ce4837d4e0e3`. Older candidate labels below are dated history.

@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "id": "AT-347",
+  "title": "Complete Game Content Coverage Expansion",
+  "research_date": "2026-11-27",
+  "plan_id": "ATLAS-MAPS-2026-11-21-V1",
+  "planning_manifest_revision": 101,
+  "planning_dual_site_ledger_revision": 109,
+  "baseline_main": "24d5d16cc1d07118a3e4947dbb933b25cadc2cd7",
+  "draft_parent": "12e3560de6f0e3cf85fe55cfe4d049a61867a6f3",
+  "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/225",
+  "scope": "Owner-supplied Deep Research dossier intake; not independent claim-by-claim verification or runtime implementation.",
+  "gap_count": 21,
+  "gaps": [
+    {
+      "id": "CITY-CAFES-001",
+      "tracker_id": "AT-347-CITY-CAFES-001",
+      "phase": "A",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "missing_complete_system",
+      "destination": "Shops / City Life",
+      "baseline_evidence": "shops.html lacks Café Pokémon-Amie; earlier ten confirmed drinks do not constitute a citywide catalogue.",
+      "acceptance": "Complete all 17 cafés with per-venue menu and prices, unlocks, friendship/healing/photo behavior, routes and coordinate evidence.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/cafes.shtml",
+        "https://www.serebii.net/legendsz-a/friendship.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "CITY-RESTAURANTS-001",
+      "tracker_id": "AT-347-CITY-RESTAURANTS-001",
+      "phase": "B",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "Battles / City Life",
+      "baseline_evidence": "shops.html lacks Le Nah; individual missions documented.",
+      "acceptance": "Le Nah, Le Yeah, Le Wow, Sushi High Roller; course/Furfrou League rules, entry cost, unlocks, rewards and repeatability separately verified.",
+      "source_urls": [
+        "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Aonestar.shtml",
+        "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Atwostars.shtml",
+        "https://advent.serebii.net/legendsz-a/sidemissions/facingthefurfrouleague.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-BALLRECOVERY-001",
+      "tracker_id": "AT-347-SERVICE-BALLRECOVERY-001",
+      "phase": "C",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "missing",
+      "destination": "Useful People & Services",
+      "baseline_evidence": "No standalone service found.",
+      "acceptance": "Free lost-ball collection outside Pokémon Centers; verify fixed locations and eligible missed throws.",
+      "source_urls": [
+        "https://bulbapedia.bulbagarden.net/wiki/Lost_Pok%C3%A9_Ball_collector",
+        "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Centers"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-FRIENDSHIP-001",
+      "tracker_id": "AT-347-SERVICE-FRIENDSHIP-001",
+      "phase": "C/D",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "Training Academy",
+      "baseline_evidence": "Mission reference but no complete mechanics.",
+      "acceptance": "Café Pokémon-Amie checker after SM25; friendship bands, ordinary threshold 160 and café/bench increase to 255.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/friendship.shtml",
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-EVRESET-001",
+      "tracker_id": "AT-347-SERVICE-EVRESET-001",
+      "phase": "C/D",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "missing_or_partial",
+      "destination": "Training Academy",
+      "baseline_evidence": "No dedicated service found.",
+      "acceptance": "Rust Syndicate reception Bleu District; five Mega Shards per Pokémon; verify exact MM20 completion prerequisite.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml",
+        "https://www.psypokes.com/plza/servicenpcs.php"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-HYPERTRAIN-001",
+      "tracker_id": "AT-347-SERVICE-HYPERTRAIN-001",
+      "phase": "C/D",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "missing_or_partial",
+      "destination": "Training Academy",
+      "baseline_evidence": "No complete service found.",
+      "acceptance": "Justice Dojo, level 50+, Bottle Cap one stat, Gold Bottle Cap all stats; verify unlock.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml",
+        "https://www.psypokes.com/plza/servicenpcs.php"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-IVJUDGE-001",
+      "tracker_id": "AT-347-SERVICE-IVJUDGE-001",
+      "phase": "C/D",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "missing_or_partial",
+      "destination": "Training Academy",
+      "baseline_evidence": "No complete service found.",
+      "acceptance": "Postgame Pokémon Center unlock; Right Stick in Boxes; verify dialogue labels.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "SERVICE-PLUSMOVE-001",
+      "tracker_id": "AT-347-SERVICE-PLUSMOVE-001",
+      "phase": "C/D",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "Training Academy",
+      "baseline_evidence": "Battle references rather than service workflow.",
+      "acceptance": "Josée at Justice Dojo, Seed of Mastery, eligible Plus Moves; verify eligibility and unlock.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "ACH-TITLES-001",
+      "tracker_id": "AT-347-ACH-TITLES-001",
+      "phase": "E",
+      "priority": "P0",
+      "game_scope": "both",
+      "audit_status": "missing",
+      "destination": "Achievements & Titles",
+      "baseline_evidence": "coverage.html does not surface titles.",
+      "acceptance": "Complete searchable catalogue of all official title tiers, thresholds and profile selection; separate DLC/online/event status.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/titles.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Title_%28Legends%3A_Z-A%29"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "PHOTO-SYSTEM-001",
+      "tracker_id": "AT-347-PHOTO-SYSTEM-001",
+      "phase": "G",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "City Life / Fashion",
+      "baseline_evidence": "Brief fashion photography guidance.",
+      "acceptance": "Camera modes, bench/party photos, café, poses/filters, Royale profile; verify Switch and Switch 2 controls before diagrams.",
+      "source_urls": [
+        "https://bulbapedia.bulbagarden.net/wiki/Photo",
+        "https://www.serebii.net/legendsz-a/cafes.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "CHALLENGE-REMATCH-001",
+      "tracker_id": "AT-347-CHALLENGE-REMATCH-001",
+      "phase": "H",
+      "priority": "P0",
+      "game_scope": "both",
+      "audit_status": "partial",
+      "destination": "Minigames & Challenges / Boss guide",
+      "baseline_evidence": "Boss coverage lacks activity loop.",
+      "acceptance": "Rogue Mega Simulator: story + Yveltal, Vinnie, level 70, timer/record, three Exp. Candy M; verify extension and conditions.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/roguerematch.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "CHALLENGE-RUSH-001",
+      "tracker_id": "AT-347-CHALLENGE-RUSH-001",
+      "phase": "H",
+      "priority": "P0",
+      "game_scope": "dlc",
+      "audit_status": "partial",
+      "destination": "Minigames & Challenges / Boss guide",
+      "baseline_evidence": "No complete 27-opponent challenge.",
+      "acceptance": "After Rayquaza; level 100, no bag items during encounters, three full heals, no time limit, Mega Rush Master; full roster with boss links.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/roguemegarush.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "CHALLENGE-DODGER-001",
+      "tracker_id": "AT-347-CHALLENGE-DODGER-001",
+      "phase": "H",
+      "priority": "P1",
+      "game_scope": "dlc",
+      "audit_status": "partial",
+      "destination": "Minigames & Challenges / DLC",
+      "baseline_evidence": "SM173 linked but no standalone repeatable activity.",
+      "acceptance": "30 seconds, no fighting/Pokémon, TM130 and title as mission rewards, repeatable afterward; verify repeat rewards.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/sidemissions/beadefenselessdodger.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Title_%28Legends%3A_Z-A%29"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MULTI-PRIVATE-001",
+      "tracker_id": "AT-347-MULTI-PRIVATE-001",
+      "phase": "F",
+      "priority": "P0",
+      "game_scope": "base",
+      "audit_status": "missing",
+      "destination": "Battles / Multiplayer & Trading",
+      "baseline_evidence": "battles.html lacks private battle treatment.",
+      "acceptance": "Link Play after Mable Rewards, local/online private rooms/passcodes, ranked, link trade eight-digit codes, version and NSO requirements.",
+      "source_urls": [
+        "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68627/c/874",
+        "https://legends.pokemon.com/en-us/news/z-a-battle-club-ranked-battles"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MULTI-MUSIC-001",
+      "tracker_id": "AT-347-MULTI-MUSIC-001",
+      "phase": "F",
+      "priority": "P1",
+      "game_scope": "both",
+      "audit_status": "missing",
+      "destination": "Battles / Multiplayer & Trading",
+      "baseline_evidence": "battles.html lacks music.",
+      "acceptance": "Complete 34-track source catalogue with progression and base/DLC availability; verify track unlocks.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/musiccustomisation.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MECH-TIME-001",
+      "tracker_id": "AT-347-MECH-TIME-001",
+      "phase": "I",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "City Life / Training / Dex",
+      "baseline_evidence": "Encounter mentions but no complete system.",
+      "acceptance": "Day 04:00–20:00, night 20:00–04:00, about two real minutes per in-game hour, bench skip and spawn refresh, night Battle Zones.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/daynightcycle.shtml",
+        "https://serebii.net/legendsz-a/wildpokemon.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MECH-WEATHER-001",
+      "tracker_id": "AT-347-MECH-WEATHER-001",
+      "phase": "I",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "missing_or_partial",
+      "destination": "Training / Dex",
+      "baseline_evidence": "No complete system found.",
+      "acceptance": "Standard, overcast, sun, rain, fog, rainbow; combat modifiers and source-qualified spawn/evolution effects.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/weather.shtml",
+        "https://serebii.net/legendsz-a/wildpokemon.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MECH-HEALTH-001",
+      "tracker_id": "AT-347-MECH-HEALTH-001",
+      "phase": "I",
+      "priority": "P1",
+      "game_scope": "base",
+      "audit_status": "missing",
+      "destination": "Useful People & Services",
+      "baseline_evidence": "No complete player-health system found.",
+      "acceptance": "Trainer damage, recovery, blackout, Rogue restart, Green Canari Plush maxima 100/150/200/250.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/playerhealth.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MECH-SIZE-001",
+      "tracker_id": "AT-347-MECH-SIZE-001",
+      "phase": "D",
+      "priority": "P2",
+      "game_scope": "base",
+      "audit_status": "partial",
+      "destination": "Training Academy / Alpha Fieldbook",
+      "baseline_evidence": "Alpha guide only partly covers size.",
+      "acceptance": "XS–XL, Alpha larger than ordinary XL yet labeled XL; size-gated missions and donut effects where verified.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/pokemonsize.shtml",
+        "https://www.serebii.net/legendsz-a/flavorpowers.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "MECH-PASSIVE-001",
+      "tracker_id": "AT-347-MECH-PASSIVE-001",
+      "phase": "D",
+      "priority": "P1",
+      "game_scope": "both",
+      "audit_status": "missing",
+      "destination": "Training Academy / Dex",
+      "baseline_evidence": "No dedicated treatment found.",
+      "acceptance": "Species-specific passive mechanics; no normal Ability system. Distinguish rogue-only effects from usable species effects.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/passiveeffects.shtml"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    },
+    {
+      "id": "COMPLETE-001",
+      "tracker_id": "AT-347-COMPLETE-001",
+      "phase": "K",
+      "priority": "P0",
+      "game_scope": "both",
+      "audit_status": "missing",
+      "destination": "100% Completion Guide",
+      "baseline_evidence": "coverage.html tracks reconstruction rather than player completion.",
+      "acceptance": "Linked dashboard for story, missions, dexes, research, titles, city life, challenges, collections, fashion, online/event/DLC goals; additive progress only.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/titles.shtml",
+        "https://www.serebii.net/legendsz-a/cafes.shtml",
+        "https://www.serebii.net/legendsz-a/roguemegarush.shtml",
+        "https://legends.pokemon.com/en-us/news/pokemon-home-connectivity?pubDate=20260302"
+      ],
+      "research_date": "2026-11-27",
+      "verification_state": "owner_supplied_research_pending_implementation_recheck",
+      "github_status": "open",
+      "workspace_status": "open"
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SERVICE-SPECIALSCAN",
+      "tracker_id": "AT-347-SERVICE-SPECIALSCAN",
+      "phase": "C/J",
+      "acceptance": "Special Scan after SM188 and each 25,000 Hyperspace Survey Points; verify service and randomized five-star pool. Cross-link existing AT-346 coverage, no persistent portal pin.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "CITY-BIRTHDAY",
+      "tracker_id": "AT-347-CITY-BIRTHDAY",
+      "phase": "A/C",
+      "acceptance": "Birthday registration after first Looker Bureau visit; verify deferred registration and visual celebration; healing-only stand north of Rouge Plaza and nine centers to be checked against existing Atlas.",
+      "source_urls": [
+        "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Centers"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "GIFT-TRADE-ACQUISITION",
+      "tracker_id": "AT-347-GIFT-TRADE-ACQUISITION",
+      "phase": "F/J",
+      "acceptance": "Audit and cross-link gift/trade catalogue and repeatable fossil restoration; no duplicate routes; check current HOME status and promotions separately.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/giftpokemon.shtml",
+        "https://www.serebii.net/legendsz-a/ingametrades.shtml",
+        "https://legends.pokemon.com/en-us/news/pokemon-home-connectivity?pubDate=20260302"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "TRAINING-NATURES",
+      "tracker_id": "AT-347-TRAINING-NATURES",
+      "phase": "D",
+      "acceptance": "Verify natures, mints, move learning/relearning, training items and any other relevant mechanics before adding.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "FIELD-CAPTURES",
+      "tracker_id": "AT-347-FIELD-CAPTURES",
+      "phase": "A/B/C/G/H",
+      "acceptance": "Capture exact missing café entries, exterior/interior routes, service dialogs, birthday, title and music selectors, private rooms, Switch/Switch 2 camera controls, challenge start/results; reuse owner sources first.",
+      "source_urls": [
+        "https://www.serebii.net/legendsz-a/cafes.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Photo",
+        "https://www.serebii.net/legendsz-a/useful.shtml"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "RESEARCH-ONLY",
+      "tracker_id": "AT-347-RESEARCH-ONLY",
+      "phase": "all",
+      "acceptance": "Hold box expansion (Box Link exists but expansion unverified), ribbons/marks, restaurant prices/repeat rewards, coordinates, birthday visuals, Hyperspatial Scuffles/Slugfest rewards, older-game assumptions and any unverified features.",
+      "source_urls": [
+        "https://www.serebii.net/itemdex/pokemonboxlink.shtml",
+        "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Centers",
+        "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Aonestar.shtml",
+        "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Atwostars.shtml"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "RELEASE-VALIDATION",
+      "tracker_id": "AT-347-RELEASE-VALIDATION",
+      "phase": "all",
+      "acceptance": "Read-only preflight, source and storage compatibility, no regressions, exact-head CI and phone/desktop review, GitHub live proof, one separately approved Workspace adaptation and live proof.",
+      "source_urls": [],
+      "status": "open"
+    }
+  ],
+  "source_register": {
+    "cafe": "https://www.serebii.net/legendsz-a/cafes.shtml",
+    "friend": "https://www.serebii.net/legendsz-a/friendship.shtml",
+    "service": "https://www.serebii.net/legendsz-a/useful.shtml",
+    "service2": "https://www.psypokes.com/plza/servicenpcs.php",
+    "ball": "https://bulbapedia.bulbagarden.net/wiki/Lost_Pok%C3%A9_Ball_collector",
+    "center": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Centers",
+    "titles": "https://www.serebii.net/legendsz-a/titles.shtml",
+    "titles2": "https://bulbapedia.bulbagarden.net/wiki/Title_%28Legends%3A_Z-A%29",
+    "photo": "https://bulbapedia.bulbagarden.net/wiki/Photo",
+    "one": "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Aonestar.shtml",
+    "two": "https://serebii.net/legendsz-a/sidemissions/fullcourseofbattles%3Atwostars.shtml",
+    "furfrou": "https://advent.serebii.net/legendsz-a/sidemissions/facingthefurfrouleague.shtml",
+    "rematch": "https://www.serebii.net/legendsz-a/roguerematch.shtml",
+    "rush": "https://www.serebii.net/legendsz-a/roguemegarush.shtml",
+    "dodger": "https://www.serebii.net/legendsz-a/sidemissions/beadefenselessdodger.shtml",
+    "multi": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68627/c/874",
+    "club": "https://legends.pokemon.com/en-us/news/z-a-battle-club-ranked-battles",
+    "music": "https://www.serebii.net/legendsz-a/musiccustomisation.shtml",
+    "time": "https://www.serebii.net/legendsz-a/daynightcycle.shtml",
+    "weather": "https://www.serebii.net/legendsz-a/weather.shtml",
+    "health": "https://www.serebii.net/legendsz-a/playerhealth.shtml",
+    "size": "https://www.serebii.net/legendsz-a/pokemonsize.shtml",
+    "passive": "https://www.serebii.net/legendsz-a/passiveeffects.shtml",
+    "gift": "https://www.serebii.net/legendsz-a/giftpokemon.shtml",
+    "trade": "https://www.serebii.net/legendsz-a/ingametrades.shtml",
+    "home": "https://legends.pokemon.com/en-us/news/pokemon-home-connectivity?pubDate=20260302",
+    "box": "https://www.serebii.net/itemdex/pokemonboxlink.shtml",
+    "wild": "https://serebii.net/legendsz-a/wildpokemon.shtml",
+    "donut": "https://www.serebii.net/legendsz-a/flavorpowers.shtml",
+    "update": "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html"
+  },
+  "release_status": {
+    "github_runtime_implemented": false,
+    "workspace_published": false,
+    "approved_prompt_changed": false,
+    "random_hyperspace_pins_added": 0
+  },
+  "verification_states": [
+    "confirmed-primary",
+    "confirmed-multiple",
+    "confirmed-secondary",
+    "probable",
+    "disputed",
+    "pending-field-validation",
+    "research-only",
+    "not-applicable"
+  ],
+  "preservation": [
+    "all prior AT-346 draft commits and records",
+    "existing routes and content",
+    "original map/photo assets and validated coordinates",
+    "marker and mission IDs",
+    "player progress and storage compatibility",
+    "Supabase connections, feedback, ratings and schemas",
+    "same original Workspace Site and URL",
+    "no videos or new paid services"
+  ]
+}

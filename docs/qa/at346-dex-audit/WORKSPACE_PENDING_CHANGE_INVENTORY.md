@@ -1,5 +1,9 @@
 # AT-346 — Shared pending Workspace change inventory (NOT an executable prompt)
 
+## AT-347 — additional owner-authorized content coverage (planning only)
+
+[Issue #225](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/225) · [Full plan](../at347-content-coverage/CONTENT_COVERAGE_PLAN.md) · [Gap register](../at347-content-coverage/GAP_REGISTER.json) · [Workspace brief](../at347-content-coverage/WORKSPACE_PLANNING_BRIEF.md). 21 reported gaps plus seven supplementary tasks, phases A–K, not yet implemented or approved for import. Preserve existing AT-346 candidate scope and evidence. This inventory does not supersede the approved release-pinned prompt. Include only verified, subsequently merged and live-tested additions in one future final Workspace prompt. Do not mark original Workspace published or verified.
+
 Updated 27 November 2026. This file is a cumulative draft inventory for GitHub PR [#224](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224) and the existing private Supabase `atlas_internal.feature_checklist` rows. It is not permission to import a draft branch. The prior immutable Workspace prompt remains available at the already merged baseline; do not replace that approved handoff with this pending inventory.
 
 ## Existing Site and release gates
