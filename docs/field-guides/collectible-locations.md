@@ -614,3 +614,24 @@ Destination: `assets/atlas/collectibles/wild-zone-4-fire-spin-cemetery-wall/`.
 | Neighbourhood map | Dormez Bien Cemetery and Sushi High Roller | `1000029452.jpg` | `map-neighbourhood.webp` |
 | Close map | Player against southern boundary west of entrance | `1000029453.jpg` | `map-close.webp` |
 | Collection confirmation | NEW Fire Spin ×1 beside stone wall | `1000029454.jpg` | `pickup-confirmation.webp` |
+
+
+## Aerial Ace — Wild Zone 3 western rooftop, Rouge Plaza
+
+Field catalogue find 031; twelfth Technical Machine (TM).
+
+Locate **Rouge Plaza (Wild Zone 3)** on Rouge Street, south of Dormez Bien Cemetery and north of Rouge Sectors 1 and 2. The map views place the player on the western side of the circular Wild Zone, on the small outlined structure west of the travel marker. Reach the flat elevated rooftop enclosed by ornate stone balustrades. Look for the golden pickup beam on the bare rooftop floor immediately inside the railing. The approach photograph also shows a rectangular opening with an access icon; the full climbing route and any prerequisites are not established by the evidence. The final photograph clearly confirms **Aerial Ace ×1** beside the railing.
+
+Elevation: rooftop, not ground level. The map cursor is the nearby player position, not a calibrated item coordinate. The wide map has a selected travel marker; use the close map's separate player cursor for the location reference. No live marker added.
+
+**Evidence status:** All five original files decoded as genuine WebP despite their .jpg filenames; original dimensions vary. All five are preserved byte-for-byte in the cumulative 128-photo pending archive, with all 123 previous archived photographs unchanged. ZIP integrity passed. The 24 photographs previously committed to the PR remain untouched. Binary upload is pending; the destination filenames below are not live links.
+
+Destination: `assets/atlas/collectibles/wild-zone-3-aerial-ace-rouge-plaza-rooftop/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Rooftop pickup | Golden beam beside stone balustrade | `1000029460.jpg` | `pickup-on-rooftop.webp` |
+| Wide map | Wild Zone 3 south of Zone 4 | `1000029461.jpg` | `map-wide.webp` |
+| Neighbourhood map | Rouge Plaza and surrounding sectors | `1000029462.jpg` | `map-neighbourhood.webp` |
+| Close map | Player on western outlined structure | `1000029463.jpg` | `map-close.webp` |
+| Collection confirmation | NEW Aerial Ace ×1 on rooftop | `1000029464.jpg` | `pickup-confirmation.webp` |
