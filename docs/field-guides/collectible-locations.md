@@ -110,3 +110,23 @@ Destination: `assets/atlas/collectibles/vert-7-potion-raised-walkway/`.
 | Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029194.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player marker beside the building at the crossing | `1000029195.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Potion beside the scaffolding | `1000029196.jpg` | `pickup-confirmation.webp` |
+
+## Potion — Vert Sector 7 scaffold planter by Coulant Waterway
+
+Use the in-game map to locate **Café Cyclone** and the **Coulant Waterway** crossing. The three map photographs show the player close to the crossing, east of the café, near the lower construction plaza.
+
+On the lower paved plaza beneath the green steel bridge, locate the tall black scaffolding tower next to a stone balustrade. Beside the tower is a narrow planted border with grass and a large round shrub. The red pickup beam is at ground level in the planting, immediately beside the shrub and stone corner post. The wide staircase opposite and overhead bridge provide additional visual landmarks. The final gameplay photograph confirms **Potion ×1** beside that shrub.
+
+This is a separate pickup from the staircase Potion and raised-walkway Potion above. Another visible pickup beam on the nearby scaffold platform is not identified by this evidence and must not be catalogued as this Potion. The photographs were taken at night; a nighttime-only requirement has not been established. The precise Atlas basemap coordinate and access route from street level remain to be verified before publishing a live marker.
+
+**Evidence status:** All five photographs were visually reviewed and decoded as genuine WebP images (1536 × 865, except the close map at 1536 × 831). Original bytes were preserved without re-encoding. GitHub binary upload is pending; the following are planned destinations, not existing image links.
+
+Destination: `assets/atlas/collectibles/vert-7-potion-scaffold-planter/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup in planted border | Red beam, round shrub, tall scaffolding tower and stone post | `1000029204.jpg` | `pickup-in-planted-border.webp` |
+| Wide map view | Position in the wider Vert district | `1000029205.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway, Vert Sector 6 and Vert Sector 7 | `1000029206.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player marker beside the waterway crossing | `1000029207.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Potion beside the round shrub | `1000029208.jpg` | `pickup-confirmation.webp` |
