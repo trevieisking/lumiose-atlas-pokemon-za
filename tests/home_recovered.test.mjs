@@ -235,7 +235,7 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  assert.equal(new Set(research.species.map(s=>s.national)).size,105);
  const sandbox={window:{}};
  runInNewContext(read("home-dex-data.js"),sandbox);
- const roster=sandbox.window.ATLAS_HOME_SOURCE.records.filter(r=>r.group==="Hyperspace");
+ const roster=JSON.parse(JSON.stringify(sandbox.window.ATLAS_HOME_SOURCE.records)).filter(r=>r.group==="Hyperspace");
  const missing=new Set(original.notInTypedGeneratedTable.filter(r=>r.group==="Hyperspace").map(r=>r.number));
  assert.equal(missing.size,27);
  assert.deepEqual(research.species.map(s=>s.national),roster.filter(r=>!missing.has(r.number)).map(r=>r.number));
