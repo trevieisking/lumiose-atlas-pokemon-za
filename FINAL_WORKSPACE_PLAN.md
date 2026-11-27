@@ -1,5 +1,9 @@
 # Pokémon Atlas final completion plan
 
+## AT-348 A1-02 browser assertion reconciliation — Manifest 110 / Ledger 118
+
+Reviewed parent `4e7c90049ecb5c9b81937ed82143399f3933257c`. Prior job 140751485123 failed at shared-area browser line 507: actual verified WZ15 original JPG versus obsolete expected preview PNG. The shared-area test now uses the existing wildZoneFullPhotoPath mapping, retains the independent preview src assertion and decodes restored originals at 4000×2252. Existing independent hash/mapping tests retained. No runtime or image changes. Exact new-head CI pending; WZ17 close-up exact-frame comparison and independent phone/desktop screenshot review remain open. Field intake 41 finds / 206 photos remains on PR226. Workspace v40 last recorded; HOLD, no publication. Private tracker sync pending separate readback. Next: review exact-head CI, verify WZ17 close-up, then A1-03 and A3.
+
 <!-- AT348_HEADBUTT_INTAKE_108_116 -->
 ## AT-348 field intake checkpoint — Manifest 108 / Ledger 116
 

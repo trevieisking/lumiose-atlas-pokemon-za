@@ -7,7 +7,7 @@ import {spawn} from "node:child_process";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 import {AREA_MAP} from "../atlas-area-model.mjs";
-import {wildZoneRecord} from "../wild-zone-fieldbook.mjs";
+import {wildZoneRecord,wildZoneFullPhotoPath} from "../wild-zone-fieldbook.mjs";
 
 const base="http://127.0.0.1:18769",output="test-artifacts/atlas-areas";
 const key="lumiose-atlas-reconstruction-v1";
@@ -504,7 +504,9 @@ try{
       for(const [index,photo] of zone.photos.entries()){
         const img=photos.locator("img").nth(index);
         assert.equal(await img.getAttribute("src"),photo.path);
-        assert.equal(await img.locator("..").getAttribute("href"),photo.path,"Full-size original photograph remains accessible");
+        const full=wildZoneFullPhotoPath(photo.path);
+        assert.equal(await img.locator("..").getAttribute("href"),full,"Full-size original photograph remains accessible");
+        if(full!==photo.path){const dimensions=await page.evaluate(async url=>{const original=new Image();original.src=url;await original.decode();return [original.naturalWidth,original.naturalHeight];},full);assert.deepEqual(dimensions,[4000,2252],"Restored owner original decodes at full resolution");}
         await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());
         assert.equal(await img.evaluate(node=>node.naturalWidth),photo.width,"Original photograph decodes at its recorded width");
       }

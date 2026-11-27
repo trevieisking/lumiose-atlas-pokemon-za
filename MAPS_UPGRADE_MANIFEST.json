@@ -1,8 +1,8 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 109,
-    "ledger_revision": 117,
+    "revision": 110,
+    "ledger_revision": 118,
     "status": "single_draft_two_exact_original_links_candidate_validation_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "scoped_AT348_row_update_after_planning_commit_readback",
+    "tracker_sync": "pending_separate_readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -52,7 +52,7 @@
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
     "latest_slice": "docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md",
-    "next_slice": "Reconcile the A1-02 shared-area browser assertion for the WZ15 original JPG link and rerun exact-head validation. Verify the unresolved WZ17 close-up and review the saved mobile and desktop evidence before the remaining A1 and A3 slices.",
+    "next_slice": "Review exact-head CI; verify WZ17 close-up exact frame and phone/desktop screenshots; then A1-03 and A3",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
@@ -117,6 +117,17 @@
       "workflow_status_at_checkpoint": "started; exact-head results and visible review pending",
       "integration": "draft field intake; approved A3 integration pending",
       "calibrated_coordinates": false
+    },
+    "browser_assertion_checkpoint": {
+      "reviewed_parent": "4e7c90049ecb5c9b81937ed82143399f3933257c",
+      "manifest_revision": 110,
+      "ledger_revision": 118,
+      "prior_failed_job": 140751485123,
+      "changed_test": "tests/atlas_area_browser.mjs",
+      "status": "assertion_reconciled_exact_head_ci_pending",
+      "next": "Review exact-head CI; verify WZ17 close-up exact frame and phone/desktop screenshots; then A1-03 and A3",
+      "private_tracker_sync": "pending_separate_readback",
+      "release_decision": "HOLD"
     }
   },
   "at_348_workspace_photo_recovery": {
@@ -410,7 +421,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 109,
+  "revision": 110,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
