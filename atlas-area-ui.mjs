@@ -8,16 +8,17 @@ export function loadAreaModel(){
   if(!loading)loading=Promise.all([
     fetch('atlas-explorer-data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Area directory unavailable');return r.json();}),
     import('./wild-zone-fieldbook.mjs'),
-    fetch('atlas-area-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
-  ]).then(([atlas,{wildZoneRecords},evidence])=>{
-    const model=buildAreaModel({atlas,rosters:wildZoneRecords,evidence});
+    fetch('atlas-area-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
+    fetch('atlas-area-alpha-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
+  ]).then(([atlas,{wildZoneRecords},evidence,alphaEvidence])=>{
+    const model=buildAreaModel({atlas,rosters:wildZoneRecords,evidence,alphaEvidence});
     if(model.areas.length!==68)throw Error('Original area directory is incomplete');return model;
   }).catch(error=>{loading=null;throw error;});
   return loading;
 }
 
 const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;};
-const labels={recorded:'Fieldbook roster · class unresolved',ordinary:'Ordinary encounter',fixed_alpha:'Fixed Alpha',rotating_alpha:'Rotating Alpha candidate',gift:'Gift',trade:'Trade',scripted_boss:'Scripted boss',mission:'Mission encounter',unclassified_lead:'Unclassified research lead'};
+const labels={recorded:'Fieldbook roster · class unresolved',ordinary:'Ordinary encounter',fixed_alpha:'Fixed Alpha',random_alpha:'Chance Alpha (not guaranteed)',rotating_alpha:'Rotating Alpha candidate',gift:'Gift',trade:'Trade',scripted_boss:'Scripted boss',mission:'Mission encounter',unclassified_lead:'Unclassified research lead'};
 const evidenceLabels={baseline_preserved:'Original fieldbook',source_corroborated:'Written-source cross-check',owner_survey_correlated:'Owner survey matched',verified:'Verified encounter',disputed:'Disputed',source_lead:'Research lead'};
 const localPhoto=value=>typeof value==='string'&&/^assets\/atlas\/[A-Za-z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(value)&&!value.split('/').includes('..');
 function link(href,label){const a=make('a','',label);a.href=href;if(href.startsWith('https://')){a.target='_blank';a.rel='noopener noreferrer';}return a;}
@@ -96,7 +97,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
   function renderDetail(result){
     detail.replaceChildren();
     if(selection.speciesId){
-      const species=speciesById.get(selection.speciesId),sourceOnly=!['all','recorded','ordinary','fixed_alpha','rotating_alpha'].includes(selection.encounterClass);detail.append(make('h4','',species.name+(sourceOnly?' · source claims':' · recorded wild habitats')),make('p','',result.areas.length+' matching area records. '+(sourceOnly?'These source claims do not establish a repeatable wild habitat.':'A recorded habitat is not proof of a permanent spawn or of a measured boundary.')));
+      const species=speciesById.get(selection.speciesId),sourceOnly=!['all','recorded','ordinary','fixed_alpha','random_alpha','rotating_alpha'].includes(selection.encounterClass);detail.append(make('h4','',species.name+(sourceOnly?' · source claims':' · recorded wild habitats')),make('p','',result.areas.length+' matching area records. '+(sourceOnly?'These source claims do not establish a repeatable wild habitat.':'A recorded habitat is not proof of a permanent spawn or of a measured boundary.')));
       if(!result.areas.length)detail.append(make('p','','No supported wild habitat matches these filters. Disputed, gift, trade, mission and boss claims do not establish a repeatable wild habitat.'));
     }else if(selection.areaId){
       const area=byId.get(selection.areaId);
