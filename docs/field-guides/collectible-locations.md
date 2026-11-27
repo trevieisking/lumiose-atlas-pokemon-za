@@ -172,3 +172,25 @@ Destination: `assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/`
 | Neighbourhood map view | Café Cyclone, Coulant Waterway and surrounding Vert sectors | `1000029228.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player marker near the crossing; distinguish player position from the pickup across the beam | `1000029229.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Colorful Screw beneath the canopy | `1000029230.jpg` | `pickup-confirmation.webp` |
+
+## Pearl — Coulant Waterway east-bank tree planter near Vert Sector 6
+
+Field catalogue find 010.
+
+Locate **Café Cyclone**, then follow **Coulant Waterway** north-east towards the bridge beside **Vert Sector 6**. The close in-game map shows the player immediately east of the canal, south of that bridge; the wider map gives context relative to Vert Plaza and Wild Zone 11.
+
+On the lower cobbled promenade, face the broad stairs leading towards the green-lit area. The planted strip along the canal's stone balustrade contains round shrubs, flowers and trees. Look for the red pickup beam at the foot of the nearer tree, among the flowers. The final gameplay photograph confirms **Pearl ×1** beside that tree. The other red beams farther towards the steps and across the canal are distinct pickups whose identities are not established by this batch.
+
+The location is on the canal-side boundary near Vert Sector 6, rather than the earlier scaffold cluster. The exact sector boundary designation and Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established.
+
+**Evidence status:** All five original WebP photographs decoded at 1536 × 865 and visually reviewed. Their exact bytes are preserved and verified in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/coulant-waterway-pearl-tree/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup by tree | Red beam at the foot of the nearer tree beside the canal balustrade | `1000029236.jpg` | `pickup-by-tree.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029237.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sector 6 | `1000029238.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on the east bank just south of the bridge | `1000029239.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Pearl beside the tree and white flowers | `1000029240.jpg` | `pickup-confirmation.webp` |
