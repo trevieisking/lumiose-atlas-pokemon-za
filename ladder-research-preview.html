@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ladder 001 · Hotel Z — Lumiose Atlas research</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#edf3fd;background:#101827}
+*{box-sizing:border-box}
+body{margin:0;min-width:310px}
+header{padding:18px clamp(15px,3vw,36px);background:#18243a;border-bottom:1px solid #384b66}
+.header-inner{max-width:1310px;margin:auto;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+h1{margin:4px 0;font-size:clamp(24px,3vw,38px)}
+h2{font-size:20px;margin:0 0 10px}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:.11em;color:#f7d78e}
+.sub{font-size:13px;color:#bdc9dd;line-height:1.5}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav a{color:#e2ebff;font-size:13px;text-decoration:none;border:1px solid #63748f;padding:10px;border-radius:9px;font-weight:800}
+nav a:hover,nav a:focus-visible{text-decoration:underline;outline:2px solid #ffd78d}
+main{max-width:1310px;padding:16px;margin:auto}
+.warning{padding:13px 15px;background:#2b2e35;border:1px solid #9c8151;border-radius:12px;line-height:1.6;font-size:13px;color:#f0deb8;margin-bottom:14px}
+.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.65fr);gap:16px;align-items:start}
+.panel{background:#1b2a40;border:1px solid #3c5170;border-radius:15px;overflow:hidden;min-width:0}
+.panel-head{padding:14px 16px;border-bottom:1px solid #3c5170}
+.map-scroll{max-height:75vh;overflow:auto;background:#b9d1de;overscroll-behavior:contain}
+.map-scroll:focus-visible{outline:3px solid #f4cb7e;outline-offset:-3px}
+.map{width:100%;min-width:680px;aspect-ratio:1;position:relative}
+.map img{width:100%;height:100%;display:block}
+.ladder-pin{position:absolute;left:62.6042%;top:81.0417%;width:48px;height:48px;transform:translate(-50%,-50%);background:#14314c;color:#ffecb8;border:3px dashed #f0c66c;border-radius:50%;font-size:22px;cursor:pointer;box-shadow:0 0 0 3px #213b5c77;display:grid;place-items:center}
+.ladder-pin:hover,.ladder-pin:focus-visible,.ladder-pin[aria-pressed="true"]{outline:3px solid white;outline-offset:2px;background:#ffdf98;color:#132237;border-style:solid}
+.map-foot{padding:13px 16px;border-top:1px solid #3c5170;font-size:12px;line-height:1.6;color:#d1deee}
+.info{padding:17px}
+.kicker{font-weight:900;color:#f5cc7b;letter-spacing:.1em;font-size:11px}
+.detail{padding:14px;background:#233752;border-radius:12px;margin:14px 0}
+.detail p,.info p{font-size:13px;line-height:1.7;color:#d7e3f3}
+.detail strong{color:#ffe1a6}
+.step{display:flex;gap:12px;align-items:start;margin:11px 0;font-size:13px;line-height:1.6;color:#e0e9fa}
+.step-num{display:grid;place-items:center;background:#ffdb96;color:#132337;min-width:28px;height:28px;border-radius:50%;font-weight:900}
+.legend{border-top:1px solid #435772;margin-top:18px;padding-top:15px}
+.legend div{font-size:12px;color:#d1deee;line-height:1.75}
+.note{font-size:12px;line-height:1.6;color:#aabed7;margin:14px 0}
+@media(max-width:920px){.layout{grid-template-columns:1fr}.map-scroll{max-height:57vh}}
+</style>
+</head>
+<body>
+<header><div class="header-inner">
+<div><div class="eyebrow">LUMIOSE ATLAS · SEPARATE LADDER SURVEY</div><h1>🪜 Ladder 001 — Hotel Z</h1><div class="sub">Vert Sector 8 · First owner-positioned physical ladder · Research preview only</div></div>
+<nav><a href="holovator-research-preview.html">Holovator research</a><a href="maps.html">Existing guide map</a></nav>
+</div></header>
+<main>
+<div class="warning"><strong>Not a live map pin.</strong> The owner photographed a silver wall ladder and stood at its base for two north-up game-map images. This provisional marker follows the red player-position ring, not an official in-game ladder icon. Photo-to-map location is approximate; the rooftop landing has not yet been surveyed.</div>
+<div class="layout">
+<section class="panel" aria-labelledby="map-title"><div class="panel-head"><h2 id="map-title">Hotel Z on the original Lumiose City map</h2><div class="sub">Tap the amber/blue ladder symbol. On a phone, scroll the map to reach the lower-right Hotel Z area.</div></div>
+<div class="map-scroll" role="region" tabindex="0" aria-label="Scrollable original city map with first provisional ladder pin">
+<div class="map"><img src="maps/lumiose-game-map.jpg" alt="Original Lumiose City guide map with one provisional ladder marker near Hotel Z" width="1920" height="1920" draggable="false"><button id="ladder-l001" type="button" class="ladder-pin" aria-pressed="false" aria-label="Show Ladder 001 Hotel Z location details">🪜</button></div>
+</div><div class="map-foot">Blue/amber outlined ladder = our separately surveyed ladder. Yellow two-chevron icons = Holovators and are <strong>not</strong> represented by this ladder layer. Approx original image XY: <strong>(1202,1556)</strong> of 1920 × 1920.</div></section>
+<aside class="panel"><div class="info">
+<div class="kicker">OWNER-MARKED PHYSICAL LADDER</div><h2>Hotel Z · Right of the front doors</h2>
+<p>Stand outside Hotel Z and face its entrance. Go into the passage on your <strong>right</strong>, towards the narrow walled courtyard. The tall pale metal ladder stands vertically against an ivy-covered wall, with bushes at its base.</p>
+<div class="detail" id="details" aria-live="polite"><strong>Map position: approximately X 1202, Y 1556.</strong><p>The red ring in the owner's two uploaded map screenshots centres on this location, and the close-up image shows the same spot. The avatar was standing at the ladder; map-symbol centre may be slightly offset from the actual foot.</p></div>
+<h2>Directions from Hotel Z</h2>
+<div class="step"><span class="step-num">1</span><span>Face the hotel's front entrance doors.</span></div>
+<div class="step"><span class="step-num">2</span><span>Take the passage to the <strong>right</strong> of the hotel and enter the small courtyard.</span></div>
+<div class="step"><span class="step-num">3</span><span>Look for the <strong>silver ladder</strong> fixed to a tall wall with ivy and shrubs.</span></div>
+<div class="step"><span class="step-num">4</span><span>Climb to the upper rooftop approach; the exact landing and subsequent climbs are to be documented separately.</span></div>
+<div class="legend"><h2>Correct game-map legend</h2>
+<div>📍 Red outlined ring = your position. The blue arrow shows the way your character is facing.</div>
+<div>🟨 Yellow double chevrons = Holovators / lifts.</div>
+<div>🔴 Red Poké Ball circles = Pokémon Centers.</div>
+<div>🌀 Other dark black/pink round symbols = Hyperspace DLC locations, not Holovators (exact category varies).</div>
+<div>🪜 L001 amber/blue research symbol = our own first ladder location, not a native game-map icon.</div></div>
+<p class="note"><strong>Unverified:</strong> exact rooftop exit pixel, further ladders, full roof route, availability gates. Physical ladder photographed and player-positioned, but individual map pixels are approximate. No photos uploaded to the public repository, no database writes, no changes to existing map routes.</p>
+</div></aside>
+</div></main>
+<script>
+(()=>{"use strict";const b=document.getElementById("ladder-l001"),d=document.getElementById("details");b.addEventListener("click",()=>{const active=b.getAttribute("aria-pressed")==="true";b.setAttribute("aria-pressed",String(!active));d.style.outline=active?"none":"2px solid #ffd88b";d.scrollIntoView({block:"nearest",behavior:"smooth"});});})();
+</script></body></html>
