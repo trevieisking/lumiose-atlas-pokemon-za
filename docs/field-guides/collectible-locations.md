@@ -304,3 +304,25 @@ Destination: `assets/atlas/collectibles/vert-3-super-potion-wild-zone-11-balustr
 | Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029289.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player beside the western Wild Zone 11 boundary | `1000029290.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Super Potion at the railing | `1000029291.jpg` | `pickup-confirmation.webp` |
+
+## Dusk Ball — Vert Sector 3 lower Saison Canal promenade by lamppost
+
+Field catalogue find 016.
+
+Locate **Saison Canal** immediately north of **Vert Sector 3** and west of **Wild Zone 11 (Jaune Sector 10)**. The three map photographs place the player near the southeastern edge of Saison Canal, on the southern bank just west of the wild-zone boundary.
+
+Descend to the lower cobbled canal-side promenade near the western boundary of Wild Zone 11. Face along the canal towards the stone arched bridge and Prism Tower, keeping the water and black railing on the right and the stone retaining wall with ivy on the left. The approach photograph shows the red pickup beam at the foot of the first ornate black lamppost. The final gameplay photograph confirms **Dusk Ball ×1** beside that lamppost. The nearby pedestrian is an incidental visual reference, not a required encounter.
+
+The photographs establish item identity, level and pickup position relative to the lamppost. The map marker records the player's nearby position, not a calibrated collectible coordinate. The precise Atlas basemap point remains unverified. No live marker added.
+
+**Evidence status:** All five original photographs decoded as genuine WebP (1536 pixels wide, heights 834–865 pixels). Their bytes were compared against the new cumulative archive, and the existing 50 archived photographs were verified unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-3-dusk-ball-saison-canal-lamppost/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup by lamppost | Red beam at foot of black lamppost on lower canal promenade | `1000029298.jpg` | `pickup-by-lamppost.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029299.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Saison Canal, Vert Sector 3 and Jaune Sector 10 | `1000029300.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on southern canal bank just west of Wild Zone 11 | `1000029301.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Dusk Ball beside the lamppost | `1000029302.jpg` | `pickup-confirmation.webp` |
