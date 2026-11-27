@@ -695,3 +695,25 @@ Destination: `assets/atlas/collectibles/bleu-4-dragon-pulse-bamboo-rooftop/`.
 | Neighbourhood map | Eastern building in Bleu Sector 4 northwest of Bleu Plaza | `1000029492.jpg` | `map-neighbourhood.webp` |
 | Close map | Player on square inset roof footprint north of courtyard | `1000029493.jpg` | `map-close.webp` |
 | Collection confirmation | NEW Dragon Pulse ×1 among bamboo | `1000029494.jpg` | `pickup-confirmation.webp` |
+
+
+## Access survey — Bleu Sector 6 — western scaffold complex
+
+Infrastructure observation, separate from the 34 numbered collectible finds. Candidate photographic corroboration of existing access lead `AR-B06-01` in [MAPS_ACCESS_ROUTE_SURVEY.json](../../MAPS_ACCESS_ROUTE_SURVEY.json); do not create a duplicate route or assume the candidate Screw IDs 62–63 are confirmed.
+
+**Map anchor:** western corner of the courtyard building in Bleu Sector 6, immediately southeast of Wild Zone 10 (Shutterbug Café), northeast of Bleu Sector 9 and west of Bleu Plaza. The closest map view shows the player near the triangular green island beside the corner of the building, with the courtyard's circular feature farther east. This locates the observation, not the surveyed footprint of every scaffold. The visible faint map crosses provide reference points for later registration to the Atlas basemap.
+
+**Visible construction:** the street-facing building has a tall multilevel scaffold tower, stacked black scaffold modules edged in cyan, inclined ramps and a vertical ladder extending above the roofline. Lower scaffold structures continue to the right in the photograph, with two blue signs displaying yellow-and-blue symbols. A purple collectible beam is visible beside the upper ladder, and red pickup beams are visible on a lower platform and near the ground. The upper pickup is consistent with a Colorful Screw, but identity, count and number remain unconfirmed. The photograph does not establish whether all visible platforms connect, the exact route through them or the ladder exit on the roof.
+
+**Interactive Map 2.0 reconstruction requirement:** retain a separate scaffold-area feature with its building-face footprint, individual access points, ladder transitions, platform elevations, ramp connections and links to nearby collectibles. Reconcile the photograph against AR-B06-01 before assigning any permanent route ID. Register the close-map landmarks and faint crosses against the canonical map image; trace only confirmed scaffold extents and record entrance, exit and floor geometry as unknown until additional evidence proves them. Use the existing scaffold/ladder layer and filters, rather than treating the player's cursor as an item or precise access marker. Do not publish guessed geometry, change collection progress or assign canonical Screw numbers from this photograph.
+
+**Evidence status:** four original WebP files (1536 × 865), decoded and preserved byte-for-byte in the cumulative 147-photo pending archive. All 143 previous archived photographs remain unchanged. ZIP integrity passed. The first 24 photographs already committed to the PR are untouched. Binary upload remains pending; destination filenames below are not live links. No pickup-confirmation photograph supplied.
+
+Destination: `assets/atlas/access/bleu-6-western-scaffold/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Street view | Multilevel scaffold, ramps, upper ladder and visible pickup beams | `1000029499.jpg` | `scaffold-street-view.webp` |
+| Wide map | Position between Wild Zone 10 and Bleu Plaza | `1000029500.jpg` | `map-wide.webp` |
+| Neighbourhood map | Bleu Sector 6 courtyard, opposite Bleu Sector 9 | `1000029501.jpg` | `map-neighbourhood.webp` |
+| Close map | Western building corner, triangular green island and faint grid crosses | `1000029502.jpg` | `map-close.webp` |
