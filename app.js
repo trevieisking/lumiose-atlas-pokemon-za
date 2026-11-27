@@ -232,7 +232,11 @@
     if(!grid||grid.querySelector('[data-dex-region="Hyperspace"]'))return false;
     const roster=window.ATLAS_HOME_SOURCE?.records?.filter(r=>r.group==='Hyperspace');
     if(roster?.length!==132)return false;
-    const verifiedRoutes={720:'hoopa',721:'volcanion',807:'zeraora'};
+    // AT-346: link existing Fieldbook routes and authored evolution notes by stable National ID.
+    // A link is not an exhaustive capture audit or a location pin.
+    const fieldbookRoutes={"380":"latias","381":"latios","382":"kyogre","383":"groudon","384":"rayquaza","485":"heatran","491":"darkrai","638":"cobalion","639":"terrakion","640":"virizion","647":"keldeo","648":"meloetta","649":"genesect","720":"hoopa","721":"volcanion","801":"magearna","802":"marshadow","807":"zeraora","808":"meltan","809":"melmetal"};
+    const verifiedCatchRoutes=new Set([720,721,807]);
+    const evolutionRoutes={"350":{"note":"Trade evolution: Trade Feebas while it holds a Prism Scale. Side Mission 160 awards a scale for handing over a Feebas; keep a separate Feebas to evolve.","quest":160},"865":{"note":"Evolution: Land at least three critical hits with Galarian Farfetch’d in the same battle; evolve after the battle. The Leek from Side Mission 133 can help.","quest":133},"867":{"note":"Evolution: Keep Galarian Yamask conscious with at least 49 HP missing (aim for 50 or more), then go beneath the Coulant Waterway bridge between Wild Zones 11 and 17 and choose Evolve."},"936":{"note":"Item evolution: Use Auspicious Armor on Charcadet. Side Mission 132 gives you one choice of armor. Additional armor can appear in 5★ Hyperspace floating-item loot with Item Power: Special.","quest":132},"937":{"note":"Item evolution: Use Malicious Armor on Charcadet. Side Mission 132 gives you one choice of armor. Additional armor can appear in 5★ Hyperspace floating-item loot with Item Power: Special.","quest":132},"979":{"note":"Evolution: Have Primeape use Rage Fist at least 20 times, then choose Evolve. Rosebud in Side Mission 180 belongs to its trainer and cannot be caught.","quest":180},"1000":{"note":"Evolution: Collect 999 Gimmighoul Coins and use them to evolve Gimmighoul. Side Mission 122 provides a Gimmighoul and 413 starter coins; gather the rest in Hyperspace.","quest":122}};
     const fragment=document.createDocumentFragment();
     for(const r of roster){
       const card=document.createElement('article');
@@ -262,10 +266,18 @@
       const links=document.createElement('div');links.className='dex-location';
       const home=document.createElement('a');home.href='home-connection.html#home-species-'+r.number;
       home.textContent='Open HOME checklist entry';
-      const route=verifiedRoutes[r.number];
+      const route=fieldbookRoutes[r.number];
+      const evolution=evolutionRoutes[r.number];
       if(route){
-        const a=document.createElement('a');a.href='legendaries.html#legend-'+route;a.textContent='Open verified catch guide';
+        const a=document.createElement('a');a.href='legendaries.html#legend-'+route;
+        a.textContent=verifiedCatchRoutes.has(r.number)?'Open verified catch guide':'Open Legendary Fieldbook guide';
         links.append(a,document.createElement('br'));
+      }else if(evolution){
+        const note=document.createElement('p');note.textContent=evolution.note;links.append(note);
+        if(evolution.quest){
+          const a=document.createElement('a');a.href='side-missions.html#quest-'+evolution.quest;
+          a.textContent='Related Side Mission '+evolution.quest;links.append(a,document.createElement('br'));
+        }
       }else{
         const note=document.createElement('p');note.textContent='Capture routes and stats for this entry are still being checked.';
         links.append(note);
@@ -301,7 +313,7 @@
     const notice=$('#dexUnrecovered');
     if(notice){
       notice.hidden=!hyperspace;
-      notice.textContent=total?'All 132 numbered entries are listed. The full stats and capture-route audit is still in progress.':'The Hyperspace roster could not load. Use the Pokémon HOME checklist link below.';
+      notice.textContent=total?'All 132 numbered entries are listed, including 20 Legendary Fieldbook links and seven evolution notes. The full stats and alternate capture-route audit is still in progress.':'The Hyperspace roster could not load. Use the Pokémon HOME checklist link below.';
     }
     if(installed||resetSort)sortDex();
   }

@@ -191,3 +191,32 @@ restricted.ticks[1].checked=true;restricted.ticks[1].events.change();
 assert.equal(restricted.writes(),0);
 assert.equal(restricted.mainWrites(),0);
 console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 local/108 disclosed portraits, three safe filters, separate persistent HOME marks and no existing guide changes.");
+
+// AT-346: finite acquisition-route display, not a full encounter audit.
+{
+ const app=read("app.js");
+ const links=JSON.parse(app.match(/const fieldbookRoutes=(\{[^\n]+\});/)?.[1]);
+ const evolutions=JSON.parse(app.match(/const evolutionRoutes=(\{[^\n]+\});/)?.[1]);
+ const sandbox={window:{}};
+ runInNewContext(read("home-dex-data.js"),sandbox);
+ const roster=sandbox.window.ATLAS_HOME_SOURCE.records;
+ const ids=[...Object.keys(links),...Object.keys(evolutions)];
+ assert.equal(Object.keys(links).length,20);
+ assert.equal(Object.keys(evolutions).length,7);
+ assert.equal(new Set(ids).size,27);
+ assert.equal(roster.length,364);
+ const legends=read("legendaries.html"),missions=read("side-missions.html");
+ for(const n of ids)assert.ok(roster.some(r=>r.number===Number(n)&&r.group==="Hyperspace"),n);
+ for(const id of Object.values(links))assert.ok(legends.includes('id="legend-'+id+'"'),id);
+ for(const r of Object.values(evolutions)){
+  assert.ok(r.note.length>40);
+  if(r.quest)assert.ok(missions.includes('id="quest-'+r.quest+'"'),r.quest);
+ }
+ assert.match(evolutions[979].note,/Rage Fist at least 20 times/);
+ assert.match(evolutions[865].note,/three critical hits/);
+ assert.match(evolutions[867].note,/49 HP missing/);
+ assert.match(evolutions[350].note,/Prism Scale/);
+ assert.match(evolutions[936].note,/Auspicious Armor/);
+ assert.match(evolutions[937].note,/Malicious Armor/);
+ assert.match(evolutions[1000].note,/999 Gimmighoul Coins/);
+}

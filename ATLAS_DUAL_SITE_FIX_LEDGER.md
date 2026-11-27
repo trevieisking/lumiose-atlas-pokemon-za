@@ -12,6 +12,9 @@
 
 **Mission catch classification (27 November, draft):** [Bunnelby and Rosebud evidence](docs/qa/at346-dex-audit/LUMIOSE_ALPHA_MISSION_BUNNELBY_ROSEBUD_2026-11-27.md) distinguishes the Rouge Sector 8 first-Alpha encounter and full mission rewards from the non-catchable Lv. 99 Annihilape battle, with a separate verified DLC evolution route. Main and standalone mission/Alpha pages stay aligned. No map or pinned Workspace change; exact-head validation and broader AT-346 gates remain open.
 
+
+**Hyperspace acquisition cards (27 November, draft):** [27-card integration evidence](docs/qa/at346-dex-audit/HYPERSPACE_ACQUISITION_CARD_LINKS_2026-11-27.md) connects 20 existing Legendary Fieldbook guides and seven evolution routes to the recovered Hyperspace Pokédex by National ID. The other 105 entries' encounter audit, stats and full Alpha/habitat gates remain open. Existing 364 IDs, maps, progress and pinned Workspace prompt are unchanged. Exact-head CI and browser/visual review remain pending.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 
