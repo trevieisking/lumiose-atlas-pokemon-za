@@ -1,5 +1,13 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+<!-- AT348_COLORFUL_SCREW_INTAKE_109_117 -->
+## AT-348 field intake checkpoint (Manifest 109 / Ledger 117)
+
+[PR #226](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226) records [field find 41](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/collectible-fieldbook.html#hotel-z-colorful-screw-scaffold), a Colorful Screw on the upper scaffold in the grassy courtyard northwest of Hotel Z. The final photograph confirms **Colorful Screw ×1**. The archive now contains 41 collectible finds, including six photographed Screws, plus one access survey and 206 photographs. The five original images match byte for byte. The static check and 14 focused collectible tests passed. The [map and pickup evidence](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-locations.md#colorful-screw--scaffold-northwest-of-hotel-z) supports the existing AR-V05-01 scaffold lead. Atlas coordinates, the canonical checklist ID and the exact climbing sequence remain pending.
+
+PR #226 stays open for intake. The field evidence awaits A3 integration review in [PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229). Workspace v40 remains the last recorded live release. The earlier A1-02 Wild Zone 15 browser assertion and Wild Zone 17 close-up checks remain open. Carry these checks forward from the [prior planning checkpoint](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/4977ccefd2b53ef7f813c021d503a98a728444e2).
+<!-- END_AT348_COLORFUL_SCREW_INTAKE_109_117 -->
+
 <!-- AT348_HEADBUTT_INTAKE_108_116 -->
 ## AT-348 field intake checkpoint — Manifest 108 / Ledger 116
 

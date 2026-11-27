@@ -1,56 +1,84 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 108,
-  "ledger_revision": 116,
+  "manifest_revision": 109,
+  "ledger_revision": 117,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
   "active_pr": 229,
-  "previous_checkpoint": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
+  "previous_checkpoint": "4977ccefd2b53ef7f813c021d503a98a728444e2",
   "resume_prompt": "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
   "workspace_last_recorded_live": "v40",
   "workspace_v41_verified": false,
   "field_collection": {
     "pr": 226,
-    "head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
-    "previous_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+    "head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
+    "previous_head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
     "counts": {
       "tm": 17,
       "item": 18,
-      "screw": 5,
+      "screw": 6,
       "access": 1,
-      "collectibleFinds": 40,
-      "photos": 201
+      "collectibleFinds": 41,
+      "photos": 206
     },
-    "latest_find": "TM001 Headbutt, find 40, behind two boulders on the Vert Sector 5 canal-side walkway",
-    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-photo-register.json",
-    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-locations.md#headbutt--vert-sector-5-canal-side-walkway",
-    "local_validation": "Static validation and 16 focused tests passed; all 201 links reconciled and five new WebP originals matched byte for byte.",
+    "latest_find": "Colorful Screw, find 41, on the upper scaffold northwest of Hotel Z",
+    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-photo-register.json",
+    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-locations.md#colorful-screw--scaffold-northwest-of-hotel-z",
+    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/collectible-fieldbook.html#hotel-z-colorful-screw-scaffold",
+    "local_validation": "Static validation and 14 focused collectible tests passed. All 206 registered photograph paths exist, and the five new WebP originals match byte for byte and open from the fieldbook.",
     "workflow_runs": [
-      46077614149,
-      46077614239
+      46078482384,
+      46078482398
     ],
-    "workflow_status_at_checkpoint": "started; exact-head results and visible review pending",
-    "integration": "draft field intake; approved A3 integration pending",
+    "workflow_status_at_checkpoint": "CI started for the exact field-evidence head",
+    "integration": "draft field intake; A3 review and integration pending",
     "calibrated_coordinates": false,
+    "canonical_checklist_id": null,
+    "related_access_lead": "AR-V05-01",
     "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
     "prior_review": {
       "pr": 226,
-      "head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
-      "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
+      "head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
+      "previous_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
       "counts": {
-        "tm": 16,
+        "tm": 17,
         "item": 18,
         "screw": 5,
         "access": 1,
-        "collectibleFinds": 39,
-        "photos": 196
+        "collectibleFinds": 40,
+        "photos": 201
       },
+      "latest_find": "TM001 Headbutt, find 40, behind two boulders on the Vert Sector 5 canal-side walkway",
+      "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-photo-register.json",
+      "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-locations.md#headbutt--vert-sector-5-canal-side-walkway",
+      "local_validation": "Static validation and 16 focused tests passed; all 201 links reconciled and five new WebP originals matched byte for byte.",
       "workflow_runs": [
-        46064540604,
-        46064540487
-      ]
+        46077614149,
+        46077614239
+      ],
+      "workflow_status_at_checkpoint": "started; exact-head results and visible review pending",
+      "integration": "draft field intake; approved A3 integration pending",
+      "calibrated_coordinates": false,
+      "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
+      "prior_review": {
+        "pr": 226,
+        "head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+        "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
+        "counts": {
+          "tm": 16,
+          "item": 18,
+          "screw": 5,
+          "access": 1,
+          "collectibleFinds": 39,
+          "photos": 196
+        },
+        "workflow_runs": [
+          46064540604,
+          46064540487
+        ]
+      }
     }
   },
   "incoming": {
