@@ -2,7 +2,7 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
-**Photo archive:** 206 original photographs across 41 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 206 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+**Photo archive:** 211 original photographs across 42 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 211 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
 
 [Open the organised photograph fieldbook](../../collectible-fieldbook.html).
 
@@ -954,3 +954,21 @@ The approach photo shows ramps and stepped platforms. The climbing sequence and 
 | [Neighbourhood map](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/map-neighbourhood.webp) | Player northwest of Hotel Z and east of the Vert Sector 9 label | `1000029998.jpg` | `map-neighbourhood.webp` |
 | [Close map](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/map-close.webp) | Player at the southwest edge of the small green courtyard northwest of Hotel Z | `1000029999.jpg` | `map-close.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/hotel-z-colorful-screw-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on the top patterned metal platform beside the streetlamp | `1000030000.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Vert Sector 4 courtyard scaffold
+
+Collectible find 42. The final photo confirms Colorful Screw ×1.
+
+On the map, find the enclosed grassy courtyard northeast of Café Classe and southwest of Vert Plaza (Wild Zone 2) in Vert Sector 4. Inside the courtyard, look for the short cyan-edged scaffold platform beside pink crystal clusters. The approach photo shows the purple pickup beam on a platform just below the player’s viewpoint.
+
+The photos confirm the pickup platform. The route onto it, exact Atlas coordinates and the original checklist match remain under review.
+
+![Colorful Screw beam on a scaffold platform in the Vert Sector 4 courtyard](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/pickup-scaffold.webp)
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| [Scaffold pickup](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/pickup-scaffold.webp) | Purple pickup beam on the lower cyan-edged platform in the courtyard | `1000030006.jpg` | `pickup-scaffold.webp` |
+| [Wide map](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/map-wide.webp) | Player southwest of Wild Zone 2 and northeast of Wild Zone 12 | `1000030007.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/map-neighbourhood.webp) | Vert Sector 4 between Café Classe and Vert Plaza | `1000030008.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/map-close.webp) | Player inside the enclosed Vert Sector 4 courtyard northeast of Café Classe | `1000030009.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on the patterned scaffold platform beside two pink crystal clusters | `1000030010.jpg` | `pickup-confirmation.webp` |
