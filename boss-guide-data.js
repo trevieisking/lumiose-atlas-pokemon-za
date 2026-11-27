@@ -388,7 +388,7 @@ window.ATLAS_ROGUE_BOSSES = [
     "move": "Moonblast + Thunderbolt + Close Combat",
     "weak": "Team coverage",
     "watch": "The phase transition changes its attack pattern.",
-    "tactic": "After the DLC Rogue encounters, prepare a balanced six-Pokémon party. The Rush chains the bosses in order; conserve the limited full-team heals and use items deliberately.",
+    "tactic": "Bring one balanced party for the full run. Bag items are unavailable. Use moves that restore HP and save the three between-fight party heals for when several teammates need them.",
     "dex": null,
     "mission": ""
   }
