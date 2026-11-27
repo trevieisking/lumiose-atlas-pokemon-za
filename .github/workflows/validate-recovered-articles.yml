@@ -26,6 +26,10 @@ on:
       - alphas.css
       - alphas.js
       - tests/alphas_recovered.test.mjs
+      - alpha-catalogue.mjs
+      - alpha-catalogue.css
+      - tests/alpha_catalogue.test.mjs
+      - tests/alpha_catalogue_browser.mjs
       - shops.html
       - clothing-guide.html
       - hair-beauty-guide.html
@@ -142,7 +146,7 @@ jobs:
       - name: Check Alpha fieldbook JavaScript syntax
         run: node --check alphas.js
       - name: Compare 20 source zone cards, Zone 20 pool and search behaviour
-        run: node --test tests/alphas_recovered.test.mjs
+        run: node --test tests/alphas_recovered.test.mjs tests/alpha_catalogue.test.mjs
       - name: Validate shops catalog and planner JavaScript
         run: node --check shops.js && node --check shops-data.js
       - name: Verify 190 PDF shop entries, currencies and offline calculators
@@ -216,6 +220,16 @@ jobs:
         run: command -v google-chrome || command -v google-chrome-stable
       - name: Verify fashion guide phone and desktop layout and feedback navigation
         run: node tests/fashion_guides_browser.mjs
+      - name: Verify Alpha catalogue phone and desktop search, filters and no progress writes
+        run: node tests/alpha_catalogue_browser.mjs
+      - name: Attach Alpha catalogue screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpha-catalogue-phone-desktop-preview
+          path: test-artifacts/alpha-catalogue/
+          if-no-files-found: ignore
+          retention-days: 10
       - name: Attach fashion preview screenshots
         if: always()
         uses: actions/upload-artifact@v4
