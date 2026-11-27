@@ -238,3 +238,25 @@ Destination: `assets/atlas/collectibles/coulant-waterway-potion-west-bank-recess
 | Neighbourhood map view | Vert Sectors 3 and 6, Café Cyclone and Coulant Waterway | `1000029258.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player on the west side of the canal north of the crossing | `1000029259.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Potion in the stone recess | `1000029260.jpg` | `pickup-confirmation.webp` |
+
+## Super Potion — Coulant Waterway west-bank tree planter near Vert Sector 3
+
+Field catalogue find 013.
+
+Locate **Coulant Waterway** between **Vert Sector 3** and **Vert Sector 6**. The close map photograph places the player near the northern end of the canal section, on its western edge beside the stairs and south of Wild Zone 11.
+
+On the canal-side staircase landing, face along the waterway towards Café Cyclone. Look in the planted border beside the stone balustrade for the red pickup beam between the near tree and the round shrub, among the red flowers. The final gameplay photograph confirms **Super Potion ×1** beside the same tree. This is distinct from the Potion in the stone wall recess on the western bank and from the Pearl and Revive on the eastern bank.
+
+The map indicates the player's nearby position, not a calibrated collectible coordinate. The precise Atlas basemap point and sector boundary designation remain unverified. No live marker added.
+
+**Evidence status:** Five genuine WebP photographs visually reviewed and decoded, with dimensions ranging from 1536 × 776 to 1536 × 865. Their original bytes were verified in the local upload archive. Binary transfer to GitHub is pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-tree/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup by tree | Red beam between the tree and rounded shrub on the canal-side landing | `1000029266.jpg` | `pickup-by-tree.webp` |
+| Wide map view | Wider Vert district and Wild Zones 2 and 11 | `1000029267.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Vert Sectors 3 and 6, Coulant Waterway | `1000029268.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player near the northern end of the canal on its western edge | `1000029269.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Super Potion by the tree | `1000029270.jpg` | `pickup-confirmation.webp` |
