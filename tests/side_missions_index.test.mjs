@@ -258,3 +258,22 @@ for(const n of [1,180]) {
     else {assert.match(body,/Southwest entrance of Wild Zone 6/);assert.match(body,/Lv\. 99 Alpha Annihilape/);assert.match(body,/Rosebud cannot be caught/);assert.match(body,/₽3,700, Love Ball ×10/);assert.match(body,/alphas\.html#alpha-rosebud-mission-180/);}
   }
 }
+
+// AT-347: keep the two usable Furfrou League routes and their saved keys in sync.
+for (const [id, reward] of [[47,'₽800, Revive ×1, Exp. Candy S ×3'],[62,'₽1,600, Revive ×3, Exp. Candy M ×3'],[87,'₽2,400, Max Revive ×1, Exp. Candy L ×2'],[103,'₽30,000 and Gold Bottle Cap ×1']]) {
+ for (const card of [forQuest(id), original.find(m=>Number(m[1])===id)?.[2]]) {
+  assert.ok(card.includes(reward));
+  assert.ok(card.includes(`data-side-check="${id}"`));
+  if (id===103) {
+   assert.match(card,/Complete Side Mission 87 and return to Hotel Z after Lysandre Labs in Main Mission 35/);
+   assert.match(card,/five Lv\. 59 Furfrou and a shiny Lv\. 60 Furfrou/);
+   assert.match(card,/alphas\.html#alpha-furfrou-route/);
+   assert.doesNotMatch(card,/62After|After request 62/);
+  }
+ }
+}
+const beautyFurfrou = read('hair-beauty-guide.html').match(/<section id="furfrou">([\s\S]*?)<\/section>/)[1];
+assert.match(beautyFurfrou,/Wild Zone 19/);
+assert.match(beautyFurfrou,/after the early-morning window/);
+assert.doesNotMatch(beautyFurfrou,/Wild Zone 17|completing Main Mission 15/);
+assert.match(read('alphas.html'),/id="alpha-furfrou-route"[^>]*>[\s\S]*?4★ Normal portals/);
