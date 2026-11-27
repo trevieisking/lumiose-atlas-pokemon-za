@@ -414,3 +414,44 @@ Destination: `assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/`.
 | Neighbourhood map view | Magenta Plaza, Magenta Street and Saison Canal | `1000029352.jpg` | `map-neighbourhood.webp` |
 | Close map view | Selected Wild Zone 7 marker at center of Magenta Plaza | `1000029353.jpg` | `map-close.webp` |
 | Collection confirmation | New purple TM disc and partially visible Dazzling Gleam pickup text at monument | `1000029354.jpg` | `pickup-confirmation.webp` |
+
+## Bullet Seed — Bleu Sector 1 rooftop near Bleu Plaza (Wild Zone 5)
+
+Field catalogue find 021; second Technical Machine (TM).
+
+Locate the southwestern edge of **Bleu Sector 1**, in **Wild Zone 5**, immediately northeast of Bleu Plaza. The three map photographs place the player near the southwest entrance to the wild zone, at the corner of the building. Reach the blue-grey metal rooftop overlooking the curved path beside the green boundary pillars. Look for a golden pickup beam along the outer roof edge, near a chimney and across from the central roof recess. The final photograph confirms **Bullet Seed ×1** on the roof above the entrance. Exact climb route and any Hover Glide prerequisite are not established by the photographs. The map views show a nearby player position, not a calibrated collectible coordinate. No live marker added.
+
+**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels; the original bytes were verified against the cumulative 85-photo archive, with all 75 previously archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/bleu-1-bullet-seed-rooftop/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup | Golden beam on the metal roof near a chimney | `1000029360.jpg` | `pickup-on-rooftop.webp` |
+| Wide map view | Wild Zone 5 southwest of Prism Tower | `1000029361.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Bleu Sector 1 and Bleu Plaza | `1000029362.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player near the southwestern entrance of Wild Zone 5 | `1000029363.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Bullet Seed at the rooftop edge | `1000029364.jpg` | `pickup-confirmation.webp` |
+
+
+## Night Slash — Bleu Sector 10 rooftop terrace (Wild Zone 10)
+
+Field catalogue find 022; third Technical Machine (TM).
+
+Locate **Bleu Sector 10 (Wild Zone 10)**, near Shutterbug Café, south of Estival Avenue and north of Bleu Sector 9. The three map photographs show the selected Wild Zone 10 travel marker. Reach the rooftop terrace inside the zone and look for a broad area of square paving tiles, rectangular trimmed hedges, perimeter railings and purple debris piles. The approach photograph shows a golden pickup beam on the tiles beside a hedge. The final gameplay photograph clearly confirms **Night Slash ×1**, with an encounter alert visible and a large Pokémon partly obscuring the scene.
+
+**Encounter warning:** The contributor reports being attacked by a level 50 Arbok while collecting this TM. The screenshots confirm an active encounter but do not independently establish the species, level, Alpha status or a fixed spawn location. Do not treat this as a guaranteed Arbok spawn or create a permanent encounter marker from this report alone.
+
+The rooftop access route, any Hover Glide prerequisite and exact Atlas basemap coordinate are still unverified. The map cursor is snapped to the wild-zone travel marker rather than a precise item point. No live marker added.
+
+**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels; the original bytes were verified against the cumulative 85-photo archive, with all 75 previously archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup | Golden beam on rooftop tiles beside rectangular hedge | `1000029370.jpg` | `pickup-by-hedge.webp` |
+| Wide map view | Wild Zone 10 south of Wild Zone 9 | `1000029371.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Bleu Sector 10 and Shutterbug Café | `1000029372.jpg` | `map-neighbourhood.webp` |
+| Close map view | Selected Wild Zone 10 travel marker | `1000029373.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Night Slash during an encounter | `1000029374.jpg` | `pickup-confirmation.webp` |
