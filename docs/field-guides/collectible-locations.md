@@ -738,3 +738,25 @@ Destination: `assets/atlas/collectibles/magenta-3-flip-turn-rooftop/`.
 | Neighbourhood map | Triangular block west of Magenta Sector 3 courtyard and north of Estival Avenue | `1000029510.jpg` | `map-neighbourhood.webp` |
 | Close map | Player at triangular block's southeast corner, nearby faint grid crosses | `1000029511.jpg` | `map-close.webp` |
 | Collection confirmation | NEW Flip Turn ×1 on rooftop | `1000029512.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Vert Sector 1, Prism Tower-facing scaffold
+
+**Collectible find 36.** Colorful Screw, purple pickup beam. Final gameplay photograph explicitly confirms **Colorful Screw ×1**. This is a screw-category field find, not an assigned canonical Screw number.
+
+**Map anchor:** western corner/face of the small polygonal building with an enclosed courtyard at the western end of Vert Sector 1, immediately southeast of Prism Tower plaza, northeast of Nouveau Café and south of Saison Canal. The close map shows the blue player arrow at the building's plaza-facing western edge. Use that building outline and the nearby faint grid crosses for later basemap registration. The arrow marks the player position, not a calibrated item coordinate.
+
+**Written directions:** from Nouveau Café, follow the plaza edge towards the canal and look for the dark scaffold with cyan illuminated edges against the corner building. A sloping ramp and yellow-tipped ladder are visible on the scaffold. The purple beam is on an elevated platform beside the facade, below the roofline. Ascend the scaffold to the pickup platform; the final photograph shows the player standing on the patterned metal platform with the collection notification. The precise sequence of ramp and ladder use is not documented. The separate red beam across the street is unidentified.
+
+**Access-layer evidence:** retain the scaffold, ramp and ladder as a candidate access-layer survey attached to this find. Match against the existing access and Screw registries before assigning an infrastructure ID or canonical Screw number. No live pin, calibrated coordinate, required Hover Glide status or complete route geometry is claimed.
+
+**Evidence status:** all five supplied .jpg files decoded as WebP (1536 × 865). Original bytes preserved in the cumulative 157-photo pending archive; all 152 previous archived files remain byte-identical, with unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+
+Destination: `assets/atlas/collectibles/vert-1-colorful-screw-scaffold/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Scaffold pickup | Purple beam on raised scaffold; visible ramp and ladder | `1000029518.jpg` | `pickup-scaffold.webp` |
+| Wide map | Position southeast of Prism Tower, northwest of Vert Plaza | `1000029519.jpg` | `map-wide.webp` |
+| Neighbourhood map | Vert Sector 1, Nouveau Café and Saison Canal | `1000029520.jpg` | `map-neighbourhood.webp` |
+| Close map | Plaza-facing western building edge, courtyard and faint grid crosses | `1000029521.jpg` | `map-close.webp` |
+| Collection confirmation | Colorful Screw ×1 on raised scaffold platform | `1000029522.jpg` | `pickup-confirmation.webp` |
