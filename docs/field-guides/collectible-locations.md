@@ -150,3 +150,25 @@ Destination: `assets/atlas/collectibles/vert-7-carbos-scaffold-platform/`.
 | Neighbourhood map view | Café Cyclone, Coulant Waterway and Vert Sectors 6–7 | `1000029218.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player marker beside the waterway | `1000029219.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Carbos from the scaffold platform | `1000029220.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Vert Sector 7 covered scaffold by Coulant Waterway
+
+Field catalogue find 009; Colorful Screw 001 in this photographic collection (not an official in-game numbering scheme).
+
+Find **Café Cyclone** and the nearby **Coulant Waterway** bridge on the in-game map. The three map photographs place the player near the crossing east of the café.
+
+Climb to the upper scaffolding platform with a yellow ladder opening. Face the covered scaffold tower beside the green steel bridge, identifiable by its patterned canopy and the purple collectible beam. Cross the narrow metal beam connecting the platforms. The screw sits on the elevated platform underneath the canopy, overlooking the waterway. The final gameplay photograph confirms **Colorful Screw ×1** on that platform. It is a separate collectible from the Carbos on the lower scaffold platform and the Potion in the planted border.
+
+The photographed beam crossing and pickup position are established; the full climb from ground level, any movement prerequisites, and the exact Atlas basemap coordinate remain unverified. Photographed at night; no nighttime-only requirement is established. Do not publish a live marker until the basemap coordinate is checked.
+
+**Evidence status:** Five genuine WebP photographs visually reviewed and decoded at 1536 × 865. Original bytes preserved and checked byte-for-byte in the local upload archive. Binary upload to GitHub remains pending; the following are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/vert-7-colorful-screw-covered-scaffold/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on covered platform | Purple beam, narrow metal crossing, scaffold canopy and bridge | `1000029226.jpg` | `pickup-on-covered-platform.webp` |
+| Wide map view | Position within the wider Vert district | `1000029227.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Café Cyclone, Coulant Waterway and surrounding Vert sectors | `1000029228.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player marker near the crossing; distinguish player position from the pickup across the beam | `1000029229.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Colorful Screw beneath the canopy | `1000029230.jpg` | `pickup-confirmation.webp` |
