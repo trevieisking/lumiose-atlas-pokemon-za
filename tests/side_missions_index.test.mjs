@@ -247,3 +247,14 @@ for (const body of [weedleSource,forQuest(43)]) {
   assert.match(body,/alphas\.html#alpha-weedle-mission-43/);
   assert.doesNotMatch(body,/give him the Weedle when he asks/);
 }
+
+// AT-346: encounter location and acquisition vs battle-only distinction.
+for(const n of [1,180]) {
+  const s=original.find(x=>Number(x[1])===n)?.[2];
+  const home=read("index.html").match(new RegExp('<article class="side-quest" id="quest-'+n+'">([\\s\\S]*?)<\\/article>'))?.[1];
+  assert.equal(s,home);
+  for(const body of [s,forQuest(n)]) {
+    if(n===1) {assert.match(body,/east of Wild Zone 4 in Rouge Sector 8/);assert.match(body,/Lv\. 10 Alpha Bunnelby/);assert.match(body,/or defeat it to complete the mission/);assert.match(body,/₽400, Fresh Water ×2/);assert.match(body,/alphas\.html#alpha-bunnelby-mission-1/);}
+    else {assert.match(body,/Southwest entrance of Wild Zone 6/);assert.match(body,/Lv\. 99 Alpha Annihilape/);assert.match(body,/Rosebud cannot be caught/);assert.match(body,/₽3,700, Love Ball ×10/);assert.match(body,/alphas\.html#alpha-rosebud-mission-180/);}
+  }
+}

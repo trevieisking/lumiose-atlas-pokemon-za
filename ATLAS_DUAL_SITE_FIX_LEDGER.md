@@ -9,6 +9,9 @@
 
 **Side Mission 43 candidate (27 November):** [Alpha Weedle retention evidence](docs/qa/at346-dex-audit/LUMIOSE_ALPHA_WEEDLE_MISSION_2026-11-27.md) corrects the optional handover in both mission views and both Alpha guides. This is a draft guide correction; keep existing player IDs, maps, pinned Workspace release and all full-dex gates unchanged. Exact-head CI and visual review remain pending.
 
+
+**Mission catch classification (27 November, draft):** [Bunnelby and Rosebud evidence](docs/qa/at346-dex-audit/LUMIOSE_ALPHA_MISSION_BUNNELBY_ROSEBUD_2026-11-27.md) distinguishes the Rouge Sector 8 first-Alpha encounter and full mission rewards from the non-catchable Lv. 99 Annihilape battle, with a separate verified DLC evolution route. Main and standalone mission/Alpha pages stay aligned. No map or pinned Workspace change; exact-head validation and broader AT-346 gates remain open.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

@@ -185,3 +185,17 @@ assert.match(weedleMission,/side-missions\.html#quest-43/);
 assert.match(weedleMission,/Wild Zone 1 after completing its survey/);
 assert.match(source,/Decline Grandt’s request if you want to keep it/);
 assert.match(source,/alphas\.html#alpha-weedle-mission-43/);
+
+// AT-346: mission catch and owned NPC Pokémon are not interchangeable.
+assert.equal((html.match(/id="alpha-bunnelby-mission-1"/g)||[]).length,1);
+const bunnelby=html.match(/<article class="step-card" id="alpha-bunnelby-mission-1">([\s\S]*?)<\/article>/)?.[1];
+assert.ok(bunnelby);
+assert.match(bunnelby,/alley east of Wild Zone 4 in Rouge Sector 8/);
+assert.match(bunnelby,/defeating it also completes the mission/);
+assert.match(bunnelby,/Lv\. 23–25 Alpha Bunnelby/);
+assert.match(source,/alphas\.html#alpha-bunnelby-mission-1/);
+const rosebud=cityAlphaCard("alpha-rosebud-mission-180");
+assert.ok(rosebud);
+for(const text of ["Rosebud cannot be caught","3★ Fighting portal","Lv. 37–39","Lv. 31–33","Rage Fist (learned at Lv. 35)","use it 20 times","keeps its Alpha status","side-missions.html#quest-180"])assert.ok(rosebud.includes(text),text);
+assert.match(source,/Rosebud is a Lv\. 99 Alpha Annihilape in Wild Zone 6, but cannot be caught/);
+assert.match(source,/alphas\.html#alpha-rosebud-mission-180/);
