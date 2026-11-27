@@ -15,7 +15,7 @@ def pinned(path, expected):
     return json.loads(data)
 
 
-def main(point_file, encounter_file):
+def main(point_file, encounter_file, personal_file=None):
     points = pinned(point_file, '314258d07929b23026a73e435e0cc190d3d92c2b')
     encounter = pinned(encounter_file, '435502d116a7941096c7d589a92e65d0fcde0996')
     zone_points = [p for p in points if re.fullmatch(r'Wild Zone \d+', p['Location'])]
@@ -67,10 +67,30 @@ def main(point_file, encounter_file):
     pyroar = [(p['Name'], s['Gender'], s['ConditionTime']) for p, s in fixed
               if s['Id'] == 'ect_a0101_w01_v01_z668_m_Alpha']
     assert sorted(pyroar) == [('spn_a0101_w01_v01_041', 0, 1), ('spn_a0101_w01_v01_046', 0, 2)]
-    print('38 existing fixed rows match; 439 eligible chance rows have their own survey gate.')
+    pumpkaboo = [(p, s) for p, s in zone_rows
+                if p['Location'] == 'Wild Zone 15' and s['Species'] == 710]
+    assert Counter(p['Name'].rsplit('_', 1)[-1] for p, _ in pumpkaboo) == {
+        key: 4 for key in ('121', '122', '123', '124', '125', '127', '128')
+    }
+    assert Counter((s['Form'], s['ConditionTime']) for _, s in pumpkaboo) == {
+        (0, 1): 7, (1, 1): 7, (2, 2): 7, (3, 2): 7
+    }
+    assert all((s['LevelMin'], s['LevelMax'], s['LevelBoostFromArea'],
+                s['LevelBoostIfAlpha'], s['AlphaProbability']) == (42, 43, 0, 10, 5)
+               for _, s in pumpkaboo)
+    assert raw['FormNo'] == 0
+    if personal_file:
+        personal = pinned(personal_file, 'ddbe44da3d5ae479129a26953c6597b4a308e0b0')['Table']
+        sizes = {r['Info']['Form']: (r['Info']['Height'], r['Info']['Weight'])
+                 for r in personal if r['Info']['SpeciesNational'] == 711}
+        assert sizes == {0: (90, 125), 1: (70, 95), 2: (110, 140), 3: (170, 390)}
+        evo = [(r['Info']['Form'], e['Form'], e['Method'], e['SpeciesInternal'])
+               for r in personal if r['Info']['SpeciesNational'] == 710 for e in r['Evolutions']]
+        assert sorted(evo) == [(f, f, 5, 711) for f in range(4)]
+    print('38 fixed rows match; 439 eligible chance rows have survey gates; 28 Pumpkaboo rows match time and form.')
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
-        raise SystemExit('Usage: audit_wild_zone_alpha_surveys.py POINT_JSON ENCOUNTER_JSON')
+    if len(sys.argv) not in (3, 4):
+        raise SystemExit('Usage: audit_wild_zone_alpha_surveys.py POINT_JSON ENCOUNTER_JSON [PERSONAL_JSON]')
     main(*sys.argv[1:])
