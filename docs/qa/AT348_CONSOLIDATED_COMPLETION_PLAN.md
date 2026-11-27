@@ -1,5 +1,9 @@
 # AT-348 — One remaining-guide completion pull request
 
+## Current A1 checkpoint — 106 / 114
+
+[Gallery repair evidence](AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md): remove confirmed eight-photo cap, preserve all original gallery links and add exact ten-photo mobile/desktop regression. Parent tests passed; current candidate tests and visible QA pending. Continue A1-02 only after validation. No runtime change beyond the gallery loop/obsolete note. Preserve current published baseline and keep release HOLD.
+
 ## Current checkpoint — owner-directed development cycle (105 / 113)
 
 Read [mandatory development cycle](AT348_DEVELOPMENT_CYCLE.md) and [whole-guide audit](AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md) first. Both plans and the manifest/ledger/register must be read at prompt start and updated at stage end. The earlier plan below is retained as history where superseded: PR226 uploads are complete and its 196-photo draft is organised; integrate only the reviewed compatible package into PR229 after scoped validation (no separate release). PR229's reviewed parent passed both workflows; the next head requires new evidence. A1-01 gallery cap repair first, A1-02 full-resolution source matching next, then A3 (including field crosswalk), A2, A7, A4/A5, A6 and A8. No new PR; original Workspace publication only via one approved source-pinned cumulative prompt after GitHub gates. Keep current site and rollback protected.

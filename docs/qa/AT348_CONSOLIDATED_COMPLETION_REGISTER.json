@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 105,
-  "ledger_revision": 113,
+  "manifest_revision": 106,
+  "ledger_revision": 114,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -205,9 +205,9 @@
     {
       "id": "A1",
       "title": "Photo restoration",
-      "status": "confirmed_defect_repair_open",
+      "status": "gallery_cap_candidate_implemented_exact_head_validation_pending",
       "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals."
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open."
     },
     {
       "id": "A2",
@@ -263,7 +263,7 @@
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
   "supabase_sync": "pending separately authorized private planning tracker readback and scoped append; no database update claimed",
-  "previous_planning_checkpoint": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+  "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
     "date": "2026-11-27",
@@ -335,7 +335,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A1-01 confirmed rouge5-looker gallery cap; then A1-02 exact Wild Zone full-resolution mappings",
+  "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings",
   "ordered_slices": [
     "A1",
     "A3",
@@ -345,5 +345,44 @@
     "A5",
     "A6",
     "A8"
-  ]
+  ],
+  "a1_01_gallery_repair": {
+    "id": "AT-348-A1-01-HOLOVATOR-GALLERY",
+    "revision": 106,
+    "ledger_revision": 114,
+    "date": "2026-11-27",
+    "active_pr": 229,
+    "reviewed_parent": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "parent_workflows": [
+      46066107365,
+      46066107372
+    ],
+    "scope": "Remove arbitrary 8-photo rendering cap and obsolete overflow note; add existing test-suite regression for ten-photo owner gallery on desktop and phone",
+    "affected_runtime": [
+      "atlas-explorer.js"
+    ],
+    "test_paths": [
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "evidence": "docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md",
+    "registered_photos": 10,
+    "previously_rendered_max": 8,
+    "existing_owner_photo_inventory": 111,
+    "photo_data_or_binary_changed": false,
+    "coordinates_or_progress_changed": false,
+    "github_implementation": "candidate_written_exact_head_readback_and_ci_required",
+    "github_validation": "pending_exact_head",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_existing_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker_sync": "pending_separate_readback",
+    "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings",
+    "release_decision": "HOLD",
+    "new_prs": 0
+  }
 }

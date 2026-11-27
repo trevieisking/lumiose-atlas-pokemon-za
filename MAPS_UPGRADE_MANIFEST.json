@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 105,
-    "ledger_revision": 113,
-    "status": "single_draft_integration_candidate_audit_recorded_next_photo_repair",
+    "revision": 106,
+    "ledger_revision": 114,
+    "status": "single_draft_a1_01_gallery_repair_candidate_validation_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -50,7 +50,9 @@
       "calibrated_coordinates": false
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
-    "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md"
+    "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
+    "latest_slice": "docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md",
+    "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings"
   },
   "at_348_workspace_photo_recovery": {
     "id": "AT-348-PHOTO-AUDIT-RECOVERY",
@@ -343,7 +345,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 105,
+  "revision": 106,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9041,6 +9043,45 @@
     "workspace_prompt_status": "continuation_inventory_only_no_new_release",
     "private_tracker_sync": "pending_separate_readback",
     "runtime_changed": false,
+    "new_prs": 0
+  },
+  "at_348_a1_01_gallery_repair": {
+    "id": "AT-348-A1-01-HOLOVATOR-GALLERY",
+    "revision": 106,
+    "ledger_revision": 114,
+    "date": "2026-11-27",
+    "active_pr": 229,
+    "reviewed_parent": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "parent_workflows": [
+      46066107365,
+      46066107372
+    ],
+    "scope": "Remove arbitrary 8-photo rendering cap and obsolete overflow note; add existing test-suite regression for ten-photo owner gallery on desktop and phone",
+    "affected_runtime": [
+      "atlas-explorer.js"
+    ],
+    "test_paths": [
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "evidence": "docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md",
+    "registered_photos": 10,
+    "previously_rendered_max": 8,
+    "existing_owner_photo_inventory": 111,
+    "photo_data_or_binary_changed": false,
+    "coordinates_or_progress_changed": false,
+    "github_implementation": "candidate_written_exact_head_readback_and_ci_required",
+    "github_validation": "pending_exact_head",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_existing_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker_sync": "pending_separate_readback",
+    "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings",
+    "release_decision": "HOLD",
     "new_prs": 0
   }
 }

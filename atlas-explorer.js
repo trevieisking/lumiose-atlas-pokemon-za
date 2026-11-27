@@ -224,7 +224,7 @@ function detailsFor(item){
       if(item.photo_story)selectedPanel.append(paragraph(item.photo_story));
       selectedPanel.append(element("h4","",item.photos.length+" genuine owner photographs on GitHub"));
       const gallery=element("div","ae-photo-grid");
-      for(const photo of item.photos.slice(0,8)){
+      for(const photo of item.photos){
         if(typeof photo.path!=="string"||!photo.path.startsWith("assets/atlas/holovators/")||!photo.path.endsWith(".jpg"))continue;
         const fig=element("figure"),a=link(photo.path,"",true);
         const label=plain(photo.caption)||plain(photo.role).replace(/[-_]/g," ");
@@ -237,7 +237,6 @@ function detailsFor(item){
         gallery.append(fig);
       }
       selectedPanel.append(gallery);
-      if(item.photos.length>8)selectedPanel.append(paragraph("Additional original photographs are indexed in the Holovator fieldbook."));
     }else{
       selectedPanel.append(paragraph("Original survey images for this location are not yet hosted in GitHub. No broken or replacement artwork is shown."));
     }

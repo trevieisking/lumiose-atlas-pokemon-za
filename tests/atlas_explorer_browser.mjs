@@ -1484,6 +1484,36 @@ try{
     assert.match(await page.locator("#aeSelected").textContent(),/exact rooftop landing.*unverified/);
     await gallery.screenshot({path:output+"/hotel-z-ladder-gallery-"+kind+".png"});
   }
+
+  // AT-348 A1-01: do not silently truncate the ten-photo Looker Bureau survey.
+  const looker=JSON.parse(fs.readFileSync("atlas-explorer-data.json","utf8"))
+    .holovators.find(h=>h.id==="rouge5-looker");
+  assert.equal(looker.photos.length,10,"The original ten registered photographs must remain intact");
+  for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
+    await page.goto(base+"/atlas-explorer.html?place=rouge5-looker",{waitUntil:"load"});
+    const gallery=page.locator("#aeSelected .ae-photo-grid");
+    await gallery.waitFor({state:"visible"});
+    assert.equal(await gallery.locator("figure").count(),10,
+      "All ten owner photographs must be rendered, including the two previously hidden originals");
+    assert.match(await page.locator("#aeSelected").textContent(),/10 genuine owner photographs on GitHub/);
+    for(const [i,photo] of looker.photos.entries()){
+      const figure=gallery.locator("figure").nth(i);
+      const img=figure.locator("img");
+      await img.scrollIntoViewIfNeeded();
+      assert.equal(await img.getAttribute("src"),photo.path);
+      assert.equal(await figure.locator("a").getAttribute("href"),photo.path);
+      assert.equal(await figure.locator("a").getAttribute("target"),"_blank");
+      assert.equal(await img.getAttribute("loading"),"lazy");
+      assert.ok((await img.getAttribute("alt")).length>0);
+      await page.waitForFunction(expected=>Array.from(document.querySelectorAll("#aeSelected .ae-photo-grid img")).some(img=>img.getAttribute("src")===expected&&img.complete&&img.naturalWidth>0&&img.naturalHeight>0),photo.path,{timeout:20000});
+    }
+    assert.match(await gallery.locator("figure").nth(8).textContent(),/wide city map revisit/i);
+    assert.match(await gallery.locator("figure").nth(9).textContent(),/rooftop arrival revisit/i);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Complete gallery fits "+kind);
+    await gallery.screenshot({path:output+"/at348-looker-ten-photos-"+kind+".png"});
+  }
+  assert.equal(errors.length,0,"AT-348 gallery desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-348 gallery phone JS errors: "+mobileErrors.join(" | "));
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

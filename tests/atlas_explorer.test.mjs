@@ -994,3 +994,17 @@ test("Hotel Z ladder restores three checked photographs without changing the pin
   }
   assert.equal(data.holovators.reduce((n,h)=>n+h.photos.length,0),111);
 });
+
+test("AT-348 A1-01: owner gallery has no arbitrary photo cap and preserves all ten Looker sources",()=>{
+  const looker=data.holovators.find(h=>h.id==="rouge5-looker");
+  assert.equal(looker.photos.length,10);
+  assert.deepEqual(looker.photos.slice(8).map(p=>p.role),["wide-city-map-revisit","rooftop-arrival-revisit"]);
+  assert.equal(looker.photo_count_referenced,10);
+  const renderer=read("atlas-explorer.js");
+  const galleryBranch=renderer.split('}else if(item.kind==="holovator"){')[1].split('}else if(item.kind==="ladder"){')[0];
+  assert.ok(galleryBranch.includes("for(const photo of item.photos){"));
+  assert.ok(!galleryBranch.includes("item.photos.slice("));
+  assert.ok(!galleryBranch.includes("Additional original photographs are indexed"));
+  assert.ok(galleryBranch.includes('img.loading="lazy"'));
+  for(const photo of looker.photos)assert.ok(fs.existsSync(path.join(root,photo.path)),photo.path);
+});

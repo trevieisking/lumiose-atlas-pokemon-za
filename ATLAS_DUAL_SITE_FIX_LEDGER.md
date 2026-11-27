@@ -1,5 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT348_A1_01_GALLERY_106_114 -->
+## AT-348 A1-01 — Remove the Holovator gallery cap (Manifest 106 / Ledger 114)
+
+[Repair evidence and validation contract](docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md). Preflight: PR229 parent `ba4bb222b6c644ddf15a542c918942e5e5c1fe6c` and Manifest 105 / Ledger 113 read; both prior workflows 46066107365 and 46066107372 passed. Main remains `bdfce92bfa7324517d0a1e2f8db7eec84983eefb`; last recorded Workspace v40, rollback v39, no fresh original-Site readback. Cause: `atlas-explorer.js` capped the existing ten-photo rouge5-looker gallery at eight. Candidate removes only the cap and obsolete overflow message, retaining the existing path filter, captions, lazy loading and full-size links. Added source/unit regression and real Chromium desktop/phone gallery regression covering all ten paths, decoded images and layout. All data, original photo assets, coordinates, routes, progress and Supabase contracts unchanged. Exact new-head readback/CI and visual review are required; results must be tied to the exact head, not inferred from prior passes. No publication. Keep PR229 and PR226; no new PR. Next: verify A1-01, then identify the three full-resolution Wild Zone links using exact source provenance for A1-02. Private tracker sync remains separately pending. Update Workspace continuation inventory at this same revision. HOLD.
+<!-- END_AT348_A1_01_GALLERY_106_114 -->
+
 <!-- AT348_DEVELOPMENT_CYCLE_105_113 -->
 ## AT-348 — Whole-guide audit and mandatory start/end synchronization (Manifest 105 / Ledger 113)
 
