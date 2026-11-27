@@ -1,8 +1,8 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 107,
-    "ledger_revision": 115,
+    "revision": 108,
+    "ledger_revision": 116,
     "status": "single_draft_two_exact_original_links_candidate_validation_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "read_AT348_existing_row_revision104; scoped_update_after_readback",
+    "tracker_sync": "scoped_AT348_row_update_after_planning_commit_readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -52,7 +52,45 @@
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
     "latest_slice": "docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md",
-    "next_slice": "A1-02: verify the exact reduced WZ17 close-up against 20261125_170238.jpg; review A1-01 and A1-02 saved phone/desktop screenshots and exact new-head tests; then A1-03 whole-guide imagery and A3 access evidence."
+    "next_slice": "Reconcile the A1-02 shared-area browser assertion for the WZ15 original JPG link and rerun exact-head validation. Verify the unresolved WZ17 close-up and review the saved mobile and desktop evidence before the remaining A1 and A3 slices.",
+    "field_intake_checkpoint": {
+      "pr": 226,
+      "head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
+      "previous_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+      "counts": {
+        "tm": 17,
+        "item": 18,
+        "screw": 5,
+        "access": 1,
+        "collectibleFinds": 40,
+        "photos": 201
+      },
+      "latest_find": "TM001 Headbutt, find 40, behind two boulders on the Vert Sector 5 canal-side walkway",
+      "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-photo-register.json",
+      "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-locations.md#headbutt--vert-sector-5-canal-side-walkway",
+      "local_validation": "Static validation and 16 focused tests passed; all 201 links reconciled and five new WebP originals matched byte for byte.",
+      "workflow_runs": [
+        46077614149,
+        46077614239
+      ],
+      "workflow_status_at_checkpoint": "started; exact-head results and visible review pending",
+      "integration": "draft field intake; approved A3 integration pending",
+      "calibrated_coordinates": false
+    },
+    "workspace_site_readback": {
+      "version": 40,
+      "live_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+      "publication_of_this_checkpoint": false
+    },
+    "prior_candidate_validation": {
+      "head": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
+      "article_workflow": 46072181242,
+      "article_result": "success",
+      "explorer_workflow": 46072181253,
+      "explorer_result": "failure",
+      "failing_job": 140751485123,
+      "failure": "Shared-area browser test expected reduced WZ15 PNG; actual link is archived original JPG."
+    }
   },
   "at_348_workspace_photo_recovery": {
     "id": "AT-348-PHOTO-AUDIT-RECOVERY",
@@ -345,7 +383,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 107,
+  "revision": 108,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",

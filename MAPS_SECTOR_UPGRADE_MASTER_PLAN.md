@@ -1,5 +1,13 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+<!-- AT348_HEADBUTT_INTAKE_108_116 -->
+## AT-348 field intake checkpoint — Manifest 108 / Ledger 116
+
+**Field intake.** [PR #226](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226) now holds 40 collectible finds, one access survey and 201 original photographs. [TM001 Headbutt](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-locations.md#headbutt--vert-sector-5-canal-side-walkway) is find 40, behind two boulders on the Vert Sector 5 canal-side walkway. The final image confirms Headbutt ×1. All five new images match the originals byte for byte, all 201 image paths reconcile across the [register](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/c1ef6d1b6ad9b3c87198b15a137a766e6605628e/docs/field-guides/collectible-photo-register.json), guide and fieldbook, and the static check and 16 focused tests passed. [Explorer](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46077614149) and [article](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46077614239) runs started for the updated field head. A3 integration, visible review, exact map calibration and checklist matching remain open.
+
+**Release status.** The [original Workspace site](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site) reports v40. PR #229 remains draft. Its A1-02 source `f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e` passed the article workflow, but [Explorer shared-area browser validation](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46072181253/job/140751485123) failed because the test expected the reduced WZ15 PNG where the restored original JPG is now linked. Reconcile the A1-02 shared-area browser assertion for the WZ15 original JPG link and rerun exact-head validation. Verify the unresolved WZ17 close-up and review the saved mobile and desktop evidence before the remaining A1 and A3 slices. The Headbutt evidence remains on PR #226 until A3 review.
+<!-- END_AT348_HEADBUTT_INTAKE_108_116 -->
+
 <!-- AT348_A1_02_107_115 -->
 ## AT-348 A1-02 — Exact original Wild Zone links (Manifest 107 / Ledger 115)
 
