@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 106,
-    "ledger_revision": 114,
-    "status": "single_draft_a1_01_gallery_repair_candidate_validation_pending",
+    "revision": 107,
+    "ledger_revision": 115,
+    "status": "single_draft_two_exact_original_links_candidate_validation_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "pending_separate_readback",
+    "tracker_sync": "read_AT348_existing_row_revision104; scoped_update_after_readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md",
-    "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings"
+    "latest_slice": "docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md",
+    "next_slice": "A1-02: verify the exact reduced WZ17 close-up against 20261125_170238.jpg; review A1-01 and A1-02 saved phone/desktop screenshots and exact new-head tests; then A1-03 whole-guide imagery and A3 access evidence."
   },
   "at_348_workspace_photo_recovery": {
     "id": "AT-348-PHOTO-AUDIT-RECOVERY",
@@ -345,7 +345,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 106,
+  "revision": 107,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9082,6 +9082,124 @@
     "private_tracker_sync": "pending_separate_readback",
     "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings",
     "release_decision": "HOLD",
+    "new_prs": 0
+  },
+  "at_348_a1_02_original_links": {
+    "id": "AT-348-A1-02-WILD-ZONE-ORIGINAL-LINKS",
+    "revision": 107,
+    "ledger_revision": 115,
+    "date": "2026-11-27",
+    "active_pr": 229,
+    "reviewed_parent": "fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "prior_gallery_workflows": [
+      46066870386,
+      46066870511
+    ],
+    "prior_gallery_validation": "exact_head_unit_and_emulated_phone_desktop_browser_success; independent screenshot review outstanding",
+    "evidence": "docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md",
+    "archive_integrity": {
+      "all_eight_local_sha256_and_git_blob_sha_match": true,
+      "originals": [
+        {
+          "file": "20261125_165929.jpg",
+          "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+          "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+          "bytes": 1647674
+        },
+        {
+          "file": "20261125_170158.jpg",
+          "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+          "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+          "bytes": 1420507
+        },
+        {
+          "file": "20261125_170238.jpg",
+          "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+          "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+          "bytes": 1564974
+        },
+        {
+          "file": "20261125_213707.jpg",
+          "sha256": "60ce7cb5ed4cac9e38ee5cb92cc2a346ab3ec4bef25c3cf8c0b11a6678e6a7b6",
+          "blob": "e96685431560ef0dc4d0c0f596a0ba763a103518",
+          "bytes": 2102179
+        },
+        {
+          "file": "20261125_213809.jpg",
+          "sha256": "d78e3643af7fb447cbff6ec4096f797fc0c9692e17b5c405c0e952220767fa55",
+          "blob": "77c353f200250bc6314ec26e65e58c3f856548a7",
+          "bytes": 1924588
+        },
+        {
+          "file": "20261125_213830.jpg",
+          "sha256": "50879abc45b6ce969efba79009546cfa99344057eb2cfb0fee8b02bb2a2a5e3e",
+          "blob": "a5922c1ac0ec26095a603cbf0abbfffa60f11986",
+          "bytes": 2230899
+        },
+        {
+          "file": "20261126_104041.jpg",
+          "sha256": "a4f196979545f8a82d188b3912a0b2dd5fed6339970a2aebacea0a48b44bf71f",
+          "blob": "c086cf37fa1dcca5c3bb0cc0af30dd74c6864766",
+          "bytes": 1711073
+        },
+        {
+          "file": "20261126_104048.jpg",
+          "sha256": "47bd5952180f9ec407a3c35921dec8f6cb360a1e66ed2bdb12c1ede271845cc8",
+          "blob": "6475e2fc2850ba6edcadd5dc907b32714782e178",
+          "bytes": 1854391
+        }
+      ]
+    },
+    "verified_visual_matches": [
+      {
+        "zone": 15,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+        "preview_blob": "3803bcd51c15900e138d7263b82a48eff283ce99",
+        "filename": "20261125_165929.jpg",
+        "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+        "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+        "bytes": 1647674,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+        "preview_blob": "c4709da5da42a3fc195de49c59903e9fd1aec1f8",
+        "filename": "20261125_170158.jpg",
+        "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+        "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+        "bytes": 1420507,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+      }
+    ],
+    "unresolved_comparison": {
+      "zone": 17,
+      "kind": "closeup",
+      "filename": "20261125_170238.jpg",
+      "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+      "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+      "status": "original_zone_and_detail_confirmed_exact_preview_comparison_blocked"
+    },
+    "scope": "Change two full-size hrefs only across shared fieldbook and both static mirrors; keep all 40 PNG previews, all records and map/progress data; reuse exact original archive blobs under runtime asset paths; no new uploaded images",
+    "new_runtime_asset_paths": [
+      "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg",
+      "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+    ],
+    "github_validation": "pending_exact_new_head",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_existing_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker_sync": "read_existing_AT348_row_revision104; scoped update after GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "A1-02: verify the exact reduced WZ17 close-up against 20261125_170238.jpg; review A1-01 and A1-02 saved phone/desktop screenshots and exact new-head tests; then A1-03 whole-guide imagery and A3 access evidence.",
     "new_prs": 0
   }
 }

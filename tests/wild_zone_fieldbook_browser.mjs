@@ -4,7 +4,7 @@ import fs from "node:fs";
 import {spawn} from "node:child_process";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
-import {wildZoneRecords} from "../wild-zone-fieldbook.mjs";
+import {wildZoneRecords,wildZoneFullPhotoPath} from "../wild-zone-fieldbook.mjs";
 const base="http://127.0.0.1:18766",output="test-artifacts/atlas-explorer";
 // Explorer stores zero-padded IDs; the other map surfaces use numeric fragments.
 const explorerZoneId=n=>"wz-"+String(n).padStart(2,"0");
@@ -24,7 +24,9 @@ try{
      const imgs=panel.locator(".wz-photo-pair img");assert.equal(await imgs.count(),2);
      for(let i=0;i<2;i++){
        const img=imgs.nth(i);assert.equal(await img.getAttribute("src"),z.photos[i].path);
-       assert.equal(await img.locator("..").getAttribute("href"),z.photos[i].path);
+       const full=wildZoneFullPhotoPath(z.photos[i].path);
+       assert.equal(await img.locator("..").getAttribute("href"),full);
+       if(full!==z.photos[i].path){const dimensions=await page.evaluate(async url=>{const original=new Image();original.src=url;await original.decode();return [original.naturalWidth,original.naturalHeight];},full);assert.deepEqual(dimensions,[4000,2252],"Exact full-resolution owner original decodes "+full);}
        await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
        assert.equal(await img.evaluate(el=>el.naturalWidth),1536);
      }
@@ -37,7 +39,7 @@ try{
      if(shot){await panel.locator(".wz-photo-pair").screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-photos.png"});await panel.screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-roster.png"});}
    }
    await page.goto(base+"/index.html#maps",{waitUntil:"load"});
-   for(const n of [1,6,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
+   for(const n of [1,6,15,17,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
    // AT-326: share links track the selection without resetting filters on a click.
    await page.goto(base+"/maps.html?source=atlas#wild-zone-1",{waitUntil:"load"});await check(1,"map",true);
    await page.locator('[data-area-panel]').waitFor({state:"attached"});
@@ -95,7 +97,11 @@ try{
    await page.goto(base+"/sector-maps.html#wildzone-12",{waitUntil:"load"});await check(12,"sector",true);
    await page.goto(base+"/atlas-explorer.html?place="+explorerZoneId(1),{waitUntil:"networkidle"});await check(1,"explorer",true);
    await page.locator('#aeFilters button[data-kind="zone"]').click();
-   for(let n=2;n<=20;n++){await page.locator('#aeResults [data-record-id="'+explorerZoneId(n)+'"]').click();await check(n,"explorer",n===20);}
+   for(let n=2;n<=20;n++){await page.locator('#aeResults [data-record-id="'+explorerZoneId(n)+'"]').click();await check(n,"explorer",[15,17,20].includes(n));}
+   for(const n of [15,17]){
+     await page.goto(base+"/maps.html#wild-zone-"+n,{waitUntil:"load"});await check(n,"map",true);
+     await page.goto(base+"/sector-maps.html#wildzone-"+n,{waitUntil:"load"});await check(n,"sector",true);
+   }
    assert.deepEqual(errors,[]);await page.close();
  }
  console.log("PASS AT-321: 20 Explorer selections, original PNG pairs, full-size links, 15/67 Zone 20 lists, standalone/map directory/main views on desktop and phone.");

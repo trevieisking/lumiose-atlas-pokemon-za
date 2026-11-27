@@ -1,5 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT348_A1_02_107_115 -->
+## AT-348 A1-02 — Exact original Wild Zone links (Manifest 107 / Ledger 115)
+
+**27 November 2026 — Manifest 107 / Ledger 115.** [A1-02 exact source and link evidence](docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md). Main remains `bdfce92bfa7324517d0a1e2f8db7eec84983eefb`; PR229 reviewed parent `fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17` passed exact Explorer workflow [46066870386](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46066870386) (unit, real Chromium desktop/phone emulation and shared-area browser jobs) and article workflow [46066870511](https://github.com/trevieisking/lumiose-atlas-pokemon-za/actions/runs/46066870511). A1-01 ten-photo gallery automated assertions passed; independent review of saved gallery screenshots remains open. All eight supplied original JPEGs match archived SHA-256, size and Git blob SHA. Visually matched the exact reduced WZ15 and WZ17 overview PNGs against their 4000×2252 originals (165929 and 170158); candidate changes only the two full-size links and uses the same original blobs under runtime asset paths, preserving every existing preview and record. WZ17 close-up original 170238 is independently identified as the correct zone/detail, but exact reduced-blob visual retrieval failed; do not replace that link yet. New unit/browser checks cover unchanged thumbnails, exact original bytes, decoded dimensions and four surfaces. New-head checks and independent visual review pending. Preserve all photos, IDs, geometry, progress and feedback/Supabase contracts. Workspace v40 last recorded, v39 rollback; persisted draft and live v41 not verified. Private tracker row read at revision 104; scoped sync after GitHub readback. HOLD; no new PR or publication. Next: A1-02: verify the exact reduced WZ17 close-up against 20261125_170238.jpg; review A1-01 and A1-02 saved phone/desktop screenshots and exact new-head tests; then A1-03 whole-guide imagery and A3 access evidence.
+<!-- END_AT348_A1_02_107_115 -->
+
 <!-- AT348_A1_01_GALLERY_106_114 -->
 ## AT-348 A1-01 — Remove the Holovator gallery cap (Manifest 106 / Ledger 114)
 

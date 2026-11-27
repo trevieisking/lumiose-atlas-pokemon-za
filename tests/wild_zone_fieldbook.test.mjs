@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import {createHash} from "node:crypto";
-import {wildZoneRecords,wildZoneRecord,wildZoneFieldbookMarkup,zoneSearchText} from "../wild-zone-fieldbook.mjs";
+import {wildZoneRecords,wildZoneRecord,wildZoneFieldbookMarkup,zoneSearchText,wildZoneFullPhotoPath} from "../wild-zone-fieldbook.mjs";
 const read=p=>fs.readFileSync(new URL("../"+p,import.meta.url),"utf8");
 const bytes=p=>fs.readFileSync(new URL("../"+p,import.meta.url));
 test("AT-321 all 40 original PNGs, complete records and exact two photo panels",()=>{
@@ -60,4 +60,29 @@ test('disputed sightings stay preserved without being presented as confirmed cat
    assert.match(markup,/some entries are disputed/);
    assert.ok(markup.includes('data-wz-current-evidence="'+number+'"'));
  }
+});
+
+// The archived files are reused by blob identity; never change the 40 preview records.
+test("AT-348 verified full-size links preserve exact preview records and original JPEG bytes",()=>{
+ const matches=[
+  {
+    "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+    "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg",
+    "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+    "filename": "20261125_165929.jpg",
+    "bytes": 1647674
+  },
+  {
+    "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+    "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg",
+    "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+    "filename": "20261125_170158.jpg",
+    "bytes": 1420507
+  }
+];
+ const originals=JSON.parse(read("docs/qa/at344-sector-source-survey/source-inventory.json")).entries;
+ const expected=new Map(matches.map(m=>[m.preview,m.full]));
+ for(const z of wildZoneRecords){const markup=wildZoneFieldbookMarkup(z.number);for(const p of z.photos){const full=expected.get(p.path)||p.path;assert.equal(wildZoneFullPhotoPath(p.path),full);assert.ok(markup.includes('href="'+full+'"'));assert.ok(markup.includes('src="'+p.path+'"'));}}
+ for(const m of matches){const archived=originals.find(o=>o.original_filename===m.filename);assert.equal(archived.sha256,m.sha256);const b=bytes(m.full);assert.equal(b.length,m.bytes);assert.equal(b.subarray(0,3).toString("hex"),"ffd8ff");assert.equal(createHash("sha256").update(b).digest("hex"),m.sha256);assert.deepEqual(b,bytes(archived.repository_path));}
+ assert.equal(wildZoneFullPhotoPath("assets/atlas/wild-zones/wild-zone-17-closeup.png"),"assets/atlas/wild-zones/wild-zone-17-closeup.png");
 });
