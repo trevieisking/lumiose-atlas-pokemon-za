@@ -128,3 +128,17 @@ assert.equal(speciesRows.length,6);
 for(const row of speciesRows)assert.equal(row.encounter_class,'ordinary');
 assert.equal(cityRecord.limits.new_pins,0);
 assert.equal(cityRecord.limits.complete_city_alpha_audit,false);
+
+const leNah = html.match(/<p id="alpha-dragonair-rooftop">([^\n]+)<\/p>/)?.[1];
+assert.ok(leNah);
+assert.match(leNah,/Restaurant Le Nah/);
+assert.match(leNah,/Lv\. 30–32 normally/);
+assert.match(leNah,/Lv\. 40–42 if Alpha/);
+assert.doesNotMatch(leNah,/clear daylight/);
+assert.match(dratiniCard,/Café Kizuna roof, Jaune Sector 5:[^\n]+Try this roof during clear daylight\./);
+const canal = cityAlphaCard("alpha-goomy-sliggoo-canal");
+assert.ok(canal);
+for (const text of ["While it’s raining","Saison Canal","seen here in rainy weather at night","Goomy at Lv. 49","Sliggoo at Lv. 53","fast-travel back to Justice Dojo","quest-4","#zone-20"]) {
+  assert.ok(canal.includes(text),text);
+}
+assert.doesNotMatch(canal,/only at night|must be night/i);
