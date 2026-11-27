@@ -170,3 +170,10 @@ for(const name of ["Galarian Slowbro","Galarian Slowking"]) {
 }
 for(const quest of [39,72,75,108])assert.ok(regional.includes(`side-missions.html#quest-${quest}`));
 assert.match(regional,/No direct catch was found in these generated pools/);
+
+const fossil = cityAlphaCard("alpha-fossils");
+assert.ok(fossil);
+for (const text of ["₽20,000","₽30,000","second floor","1% Alpha chance","Lv. 20","Lv. 35","3★ Rock","Lv. 33–35 Alpha","4★ Ice","Lv. 46–48 Alpha","5★ Rock","Lv. 62–64 Alpha","Lv. 64–66 Alpha","25,000 Hyperspace Survey Points","quest-27","quest-188","shop-stones"]) {
+  assert.ok(fossil.includes(text) && source.includes(text),text);
+}
+for (const page of ["shops.html","side-missions.html"]) assert.ok(read(page).includes('href="alphas.html#alpha-fossils"'));
