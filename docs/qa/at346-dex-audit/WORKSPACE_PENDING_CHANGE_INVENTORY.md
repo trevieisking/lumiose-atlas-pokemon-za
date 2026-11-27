@@ -46,3 +46,5 @@ Full research narrative supplied by owner; no additional PDF/ZIP required to con
 ## AT-347 candidate content hub
 
 The bounded player-facing hub `game-content.html` and `game-content-data.json`, local CSS/JS and six article links have been prepared in this same draft. See [candidate scope and unresolved checks](../at347-content-coverage/CONTENT_CANDIDATE_2026-11-27.md). Do not replace the existing Site or import this unapproved draft; exact-head validation, independent visual review, completeness decisions, and GitHub live verification remain required. The original approved handoff is unchanged.
+
+AT-347 content verification follow-up: correct gift acquisition directions, restaurant repeat prerequisites, title season counts and Special Scan wording; see candidate scope. Still requires exact-head review and live release evidence.
