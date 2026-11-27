@@ -517,3 +517,23 @@ Destination: `assets/atlas/collectibles/wild-zone-1-work-up-rooftop-terrace/`.
 | Neighbourhood map view | South Boulevard, Hotel Z, Pokémon Research Lab and northern zone boundary | `1000029403.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player near the northern boundary west of the northeast entrance | `1000029404.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Work Up at the wooden terrace railing corner | `1000029405.jpg` | `pickup-confirmation.webp` |
+
+
+## Swift — Wild Zone 2 central island, Vert Plaza
+
+Field catalogue find 026; seventh Technical Machine (TM). Contributor reports collecting Swift but could not capture the final collection notification.
+
+Locate **Wild Zone 2**, in Vert Plaza. The neighbourhood and close map photographs show the player on the southeastern side of the central island, southeast of the Wild Zone 2 travel marker. Use the wooden crossings to reach the grassy central island. The approach photograph shows a golden pickup beam among tall grass beside trees and the water, with a rocky slope and wooden ramp nearby. Search this area at ground level.
+
+**Verification distinction:** The location and golden pickup are photographically documented; the identification as Swift is based on the contributor's firsthand report. No collection confirmation image was supplied. The map references show the nearby player position, not a calibrated exact item coordinate. The route from the zone entrance and any unlock prerequisites have not been independently tested. No live marker added.
+
+**Evidence status:** Four supplied files decoded as genuine WebP at 1536 × 865 pixels. Original bytes verified in the cumulative 104-photo archive; all 100 earlier archived photographs are unchanged and archive integrity passed. GitHub binary transfer remains pending; these are planned destinations, not live image links. Do not fabricate a fifth image or label this find as screenshot-confirmed.
+
+Destination: `assets/atlas/collectibles/wild-zone-2-swift-central-island/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on island | Golden beam beside trees, tall grass and water | `1000029411.jpg` | `pickup-on-island.webp` |
+| Wide map view | Wild Zone 2 in Vert Plaza | `1000029412.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Central island and surrounding Vert sectors | `1000029413.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player southeast of the Wild Zone 2 travel marker | `1000029414.jpg` | `map-close.webp` |
