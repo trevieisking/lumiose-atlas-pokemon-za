@@ -72,3 +72,21 @@ The exact point on the Atlas basemap still needs verification for a live pin.
 | [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Street and Racine Construction | `1000029174.webp` |
 | [Close map view](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/map-close.webp) | The building and flower bed by the crossing | `1000029175.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-7-rare-candy-waterway/pickup-confirmation.webp) | The on-screen award of one Rare Candy beside the steel bridge supports | `1000029176.webp` |
+
+## Great Ball — Vert Sector 7 under the Coulant Waterway bridge
+
+Find the **Coulant Waterway** crossing near **Café Cyclone**. The [close map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-close.webp) shows the player at the Vert Sector 7 end of the crossing, close to the Rare Candy flower bed above.
+
+Go to the lower cobbled plaza beneath the green steel bridge. Facing the wide stone staircase from the plaza, look to its right, under the bridge beams. The pickup is in the inside corner where the two dark stone walls meet. The [collection photo](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-confirmation.webp) confirms **Great Ball ×1** in that corner.
+
+![Great Ball pickup in the stone corner beneath the green bridge, to the right of the stairs](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-under-bridge.webp)
+
+The exact point on the Atlas basemap still needs verification for a live pin.
+
+| Photo | What to look for | Source filename |
+| --- | --- | --- |
+| [Pickup beneath the bridge](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-under-bridge.webp) | Green steel beams, wide staircase and pickup beam in the stone corner | `1000029182.webp` |
+| [Wide map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-wide.webp) | The crossing in the wider Vert district | `1000029183.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-neighbourhood.webp) | Café Cyclone, Coulant Waterway, Vert Street and Racine Construction | `1000029184.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/map-close.webp) | The player marker at the Vert Sector 7 end of the crossing | `1000029185.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-great-ball-under-bridge/pickup-confirmation.webp) | The on-screen award of one Great Ball where the stone walls meet | `1000029186.webp` |
