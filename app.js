@@ -356,8 +356,8 @@
     const cards=$$('#dexGrid > .dex-card');let visible=0,total=0;
     $$('[data-dex-source]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dexSource===source)));
     const regionCards=cards.filter(node=>(node.dataset.dexRegion||'Lumiose')===source);
-    const statsReady=!hyperspace||(regionCards.length===132&&regionCards.every(node=>$('.dex-total b',node)&&$('.stat-row',node).length===6));
-    for(const option of $('#dexSort option'))option.disabled=!statsReady&&['total','speed'].includes(option.value);
+    const statsReady=!hyperspace||(regionCards.length===132&&regionCards.every(node=>$('.dex-total b',node)&&$$('.stat-row',node).length===6));
+    for(const option of $$('#dexSort option'))option.disabled=!statsReady&&['total','speed'].includes(option.value);
     const sort=$('#dexSort');const resetSort=sort?.selectedOptions[0]?.disabled;
     if(resetSort)sort.value='number';
     cards.forEach(node=>{
@@ -384,7 +384,7 @@
     const val=(node)=>{
       if(mode==='name')return $('.dex-head strong',node)?.textContent||'';
       if(mode==='total')return Number($('.dex-total b',node)?.textContent)||0;
-      if(mode==='speed')return Number($('.stat-row',node).at(-1)?.lastElementChild?.textContent)||0;
+      if(mode==='speed')return Number($$('.stat-row',node).at(-1)?.lastElementChild?.textContent)||0;
       return origDexOrder.get(node)||0;
     };
     const cards=$$('#dexGrid > .dex-card');

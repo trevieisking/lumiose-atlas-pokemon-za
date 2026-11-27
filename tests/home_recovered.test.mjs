@@ -311,3 +311,10 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  assert.ok(app.includes("regionCards.length===132&&regionCards.every"));
  assert.ok(app.includes("$$('.stat-row',node).at(-1)?.lastElementChild"));
 }
+
+// AT-346 startup regression: collection queries must use the collection selector.
+{
+ const app=read("app.js");
+ assert.ok(app.includes("$$('.stat-row',node).length===6"));
+ assert.ok(app.includes("for(const option of $$('#dexSort option'))"));
+}
