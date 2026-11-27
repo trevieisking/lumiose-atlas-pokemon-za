@@ -303,3 +303,8 @@ for (const [id, cash, item] of [[29,'₽300','Iron ×2'],[60,'₽1,000','Zinc ×
   assert.match(card,/Compare the paid repeat course/);
  }
 }
+for (const card of [forQuest(176), original.find(m=>Number(m[1])===176)?.[2]]) {
+ assert.match(card,/data-side-check="176"/);
+ assert.match(card,/₽100, Lumiose Galette ×3, Moomoo Milk ×3 and the Discerning Trainer title/);
+ assert.match(card,/₽999,900.*?side-missions\.html#quest-200/);
+}

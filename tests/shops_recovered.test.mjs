@@ -12,7 +12,7 @@ assert.equal(shops.find(s=>s.id==="quasartico").items.length,40);
 const cafe=shops.find(s=>s.id==="cafe-drinks");
 assert.ok(cafe,"The player-confirmed café must be a distinct listing");
 assert.equal(cafe.currency,"money");
-assert.match(cafe.location,/unverified/i,"Do not infer a café location from screenshots");
+assert.match(cafe.location,/Vert Street, Bleu Sector 5 and Magenta Sector 3.*photographed branch unverified/i,"Keep the shared branches distinct from the unknown photographed location");
 assert.equal(cafe.items.length,10);
 const expectedDrinks=[
  ["Coffee","Ember Roast",250],["Coffee","Flamethrower Roast",250],
@@ -25,7 +25,8 @@ assert.deepEqual(cafe.items.map(item=>[item.menu,item.name,item.price]),expected
 const cafeHtml=html.match(/<article class="shop-card shop-card-player" id="shop-cafe-drinks"[\s\S]*?<\/article>/)?.[0];
 assert.ok(cafeHtml,"The player café must appear as a static, searchable shop card");
 assert.match(cafeHtml,/1\. Coffee menu[\s\S]*2\. Tea menu[\s\S]*3\. Something else/);
-assert.match(cafeHtml,/location and truck number not yet confirmed/i);
+assert.match(cafeHtml,/photographed truck number not yet confirmed/i);
+assert.match(cafeHtml,/Nouveau Café · shared drinks menu/);
 for(const [,name,price] of expectedDrinks){
  const exactMarkup='<span class="shop-item-name">'+name+'</span><strong class="shop-item-price">₽'+price+'</strong>';
  assert.ok(cafeHtml.includes(exactMarkup),"Static café price mismatch for "+name);

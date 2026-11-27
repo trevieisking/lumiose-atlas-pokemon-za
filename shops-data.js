@@ -521,11 +521,11 @@ window.ATLAS_SHOPS = [
   },
   {
     "id": "cafe-drinks",
-    "name": "Café truck · drinks menu (player verified)",
-    "location": "Lumiose City café truck · exact street and truck number unverified",
+    "name": "Nouveau Café · shared drinks menu",
+    "location": "Vert Street, Bleu Sector 5 and Magenta Sector 3 · photographed branch unverified",
     "currency": "money",
-    "unlock": "Seen in player's in-game screenshots; access requirements not established",
-    "detail": "Coffee, tea and other drinks in the exact three-menu order photographed by the player. Names and order come from screenshots; prices were confirmed directly by the player. This truck has not been verified as Nouveau Café Truck No. 3.",
+    "unlock": "Player-verified shared menu; individual access requirements not established",
+    "detail": "Coffee, tea and other drinks in the exact three-menu order photographed by the player. Names and order come from screenshots; prices were confirmed directly by the player. The menu matches all three Nouveau Café trucks; the photographed branch is unverified.",
     "source": "Owner-supplied in-game menu photographs and first-hand prices, 21 November 2026",
     "items": [
       {

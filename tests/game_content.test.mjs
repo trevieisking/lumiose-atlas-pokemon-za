@@ -37,3 +37,16 @@ test('AT-347: first-clear restaurant rewards are distinct from paid repeats',()=
   assert.ok(card.includes(row.repeat_tip));
  }
 });
+
+test('AT-347: all Nouveau Café trucks share one verified low-cost friendship menu',()=>{
+ const trucks=data.cafes.filter(c=>c.name.startsWith('Nouveau Café'));
+ assert.equal(trucks.length,3);
+ for(const truck of trucks){
+  assert.deepEqual(truck.menu,trucks[0].menu);
+  assert.equal(truck.menu.length,10);
+  assert.deepEqual(truck.menu.filter(x=>x.price===100).map(x=>x.name),['Fresh Water','Sparkling Water']);
+ }
+ assert.equal(Math.ceil((255-160)/30)*100,400);
+ assert.match(html,/four orders reach 255 for ₽400/);
+ assert.match(html,/regular ₽100,000|ordinary ₽100,000/);
+});
