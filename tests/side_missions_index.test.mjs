@@ -296,3 +296,10 @@ for (const card of [forQuest(25), original.find(m=>Number(m[1])===25)?.[2]]) {
  assert.match(card,/₽1,200, Rare Candy ×2 and Dusk Ball ×5/);
  assert.match(card,/Walk slowly.*?marked bins.*?game-content\.html#service-friendship-checker/);
 }
+
+for (const [id, cash, item] of [[29,'₽300','Iron ×2'],[60,'₽1,000','Zinc ×3'],[73,'₽1,500','10 each'],[94,'₽2,000','Carbos ×5']]) {
+ for (const card of [forQuest(id), original.find(m=>Number(m[1])===id)?.[2]]) {
+  assert.ok(card.includes(cash)&&card.includes(item),String(id));
+  assert.match(card,/Compare the paid repeat course/);
+ }
+}
