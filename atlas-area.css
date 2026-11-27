@@ -27,6 +27,14 @@
 .atlas-area-ui .aa-detail{border-top:1px solid #e1d9e9;margin-top:12px;padding-top:5px;overflow-wrap:anywhere;scroll-margin-block-end:12px}
 .atlas-area-ui .aa-detail>p,.atlas-area-ui .aa-detail>a{font-size:1rem;line-height:1.6}
 .atlas-area-ui .aa-detail>a{display:block;margin:8px 0}
+.atlas-area-ui .aa-context-link{display:block;border:1px solid #c8badb;border-radius:11px;overflow:hidden;background:#f8f5fc;color:#44285c;margin:14px 0 4px;text-decoration:none}
+.atlas-area-ui .aa-context-window{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;isolation:isolate;background:#e4e9ed}
+.atlas-area-ui .aa-context-image{display:block;position:absolute;max-width:none;height:auto;border:0}
+.atlas-area-ui .aa-context-caption{display:block;padding:12px 13px;font-weight:750;font-size:.9rem;line-height:1.5;text-decoration:underline}
+.atlas-area-ui .aa-context-note{font-size:.84rem;line-height:1.5;color:#685773;margin:6px 0 12px}
+.atlas-area-ui .aa-secondary-photos{margin:10px 0}
+.atlas-area-ui .aa-secondary-photos>summary{font-weight:650;cursor:pointer;padding:11px 4px;min-height:44px;color:#553479}
+.atlas-area-ui .aa-context-link:hover .aa-context-caption{text-decoration-thickness:2px}
 .atlas-area-ui .aa-photo-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0;font-size:.875rem}
 .atlas-area-ui .aa-photo-link{display:block;min-width:0;border:1px solid #d6cbe4;border-radius:8px;overflow:hidden;background:#faf8fd}
 .atlas-area-ui .aa-photo{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#e9eced}

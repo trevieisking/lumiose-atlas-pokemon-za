@@ -177,4 +177,6 @@
       if(early&&location.href===early.href)areaUI?.selectArea(early.areaId,{history:"replace",focus:false});
     }).catch(()=>{/* Original sector photos, clues and checklists remain available. */});
   }
+  // AT-345 optional original-image context; failure leaves all existing clues/photos intact.
+  import('./sector-context-directory.mjs').catch(()=>{});
 })();

@@ -54,7 +54,11 @@ try{
   assert.match(await at302Phone.textContent(),/South of Saison Canal/);
   await at302Phone.scrollIntoViewIfNeeded();
   await sectorProbe.screenshot({path:output+"/phone-at302-sector-street-bearings.png"});
-  const at304PhoneCrop=sectorProbe.locator("#sector-vert-sector-1 .sector-source-map img");
+  const at304Closeup=sectorProbe.locator("#sector-vert-sector-1 details.sector-context-detail");
+  assert.equal(await at304Closeup.count(),1,"Legacy crop stays inside the new contextual-map disclosure");
+  await at304Closeup.locator("summary").click();
+  assert.equal(await at304Closeup.evaluate(el=>el.open),true);
+  const at304PhoneCrop=at304Closeup.locator('.sector-source-map img[src="assets/atlas/sector-streets/vert/vert-1-saison-canal.png"]');
   assert.equal(await at304PhoneCrop.count(),1);
   await at304PhoneCrop.scrollIntoViewIfNeeded();
   await sectorProbe.waitForFunction(()=>document.querySelector("#sector-vert-sector-1 .sector-source-map img")?.naturalWidth===358);
@@ -94,7 +98,11 @@ try{
   assert.match(await at302DesktopNote.textContent(),/South Boulevard/);
   await at302DesktopNote.scrollIntoViewIfNeeded();
   await at302Desktop.screenshot({path:output+"/desktop-at302-sector-street-bearings.png"});
-  const at304DesktopCrop=at302Desktop.locator("#sector-bleu-sector-7 .sector-source-map img");
+  const at304DesktopDetail=at302Desktop.locator("#sector-bleu-sector-7 details.sector-context-detail");
+  assert.equal(await at304DesktopDetail.count(),1);
+  await at304DesktopDetail.locator("summary").click();
+  assert.equal(await at304DesktopDetail.evaluate(el=>el.open),true);
+  const at304DesktopCrop=at304DesktopDetail.locator('.sector-source-map img[src="assets/atlas/sector-streets/bleu/bleu-5-7-aymlis-park.png"]');
   assert.equal(await at304DesktopCrop.count(),1);
   await at304DesktopCrop.scrollIntoViewIfNeeded();
   await at302Desktop.waitForFunction(()=>document.querySelector("#sector-bleu-sector-7 .sector-source-map img")?.naturalWidth===638);
@@ -1090,7 +1098,11 @@ try{
   }
   const at310Directory=await phoneContext.newPage();
   await at310Directory.goto(base+"/sector-maps.html#sector-jaune-sector-5",{waitUntil:"load"});
-  const dirCrop=at310Directory.locator("#sector-jaune-sector-5 .sector-source-map img");
+  const at310Legacy=at310Directory.locator("#sector-jaune-sector-5 details.sector-context-detail");
+  assert.equal(await at310Legacy.count(),1);
+  await at310Legacy.locator("summary").click();
+  assert.equal(await at310Legacy.evaluate(el=>el.open),true);
+  const dirCrop=at310Legacy.locator('.sector-source-map img[src="assets/atlas/sector-streets/jaune/jaune-sector-5.png"]');
   await dirCrop.scrollIntoViewIfNeeded();
   await at310Directory.waitForFunction(()=>document.querySelector("#sector-jaune-sector-5 .sector-source-map img")?.naturalWidth>0);
   const dirSizes=await at310Directory.evaluate(()=>({view:document.documentElement.clientWidth,document:document.documentElement.scrollWidth,body:document.body.scrollWidth}));

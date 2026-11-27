@@ -30,6 +30,19 @@ The Jaune Sector 2 card currently displays a **310×175 px** close crop. For **a
 **Release separation:** Existing Map 2.0 cross-grid release **Manifest 97 / Ledger 105** and its sealed evidence remain current *verified runtime history*. Manifest 98 / Ledger 106 is a new **unshipped planning checkpoint** only; it does not supersede the approved original-Site prompt, CI SHA or release snapshot below.
 <!-- END_AT345_CONTEXTUAL_MAP_AND_AT330_SHOPS_PLANNING_98_106 -->
 
+<!-- AT345_WIDE_SOURCE_RUNTIME_CANDIDATE -->
+### AT-345 implementation candidate — reuse existing source maps; no new photographs required
+
+**Owner clarification confirmed in the AT-344 archive:** the 26 exact JPEG originals, 48 sector source associations, 40 original Wild Zone photographs, three city overviews, and existing smaller detail crops were already collected. The outstanding task is *presentation and verification*, not another capture campaign.
+
+**GitHub branch** `feat/atlas-48-contextual-sector-views-20261126` from planning release `34746fe66956064500072a9ce5193808b49e52a2` now proposes **48 wider, north-up source contexts** across all five districts, using **10 byte-identical archived original photographs** reused as public asset Git blobs (not cropped/recompressed archive files). `atlas-sector-context.mjs` contains the 48 display-only original-frame focal positions, provenance and existing-source fallback; `atlas-area-ui.mjs` and the original 48-sector clue directory render wider neighbouring streets and a link to the complete image, with original cropped detail photos preserved. Original static maps, source hashes, 20 Wild Zone pairs, exact geometry, item and Screw IDs, player progress, filters and Supabase remain protected. This is a **candidate pending exact-head CI and phone/desktop screenshot proof**, not an already published runtime or independently upgraded Workspace Site.
+
+[Implementation/provenance record](docs/qa/ATLAS_AT345_CONTEXTUAL_SECTOR_IMPLEMENTATION_2026-11-26.md) · [Original AT-344 survey](docs/qa/at344-sector-source-survey/sector-coverage.json) · [AT-345 requirement #217](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/217). Keep the GitHub source archive and all 42 older close-ups; the new context display is orientation-only, not exact pickup/roof/Holovator geometry. Any proof failure holds promotion.
+
+**Joint Workspace + Shops gate:** existing **merged [AT-330 Shops PR #216](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/216)** already adds **41 clothing boutiques, five arcades and five salons**, preserving 18 original shop groups and 200 items. Import both verified GitHub improvements in one **scoped adaptation** of existing original Site `appgprj_6afda588d5948191b4143e40a1f9c291` only after the GitHub runtime passes gates; compare Workspace current source and keep its URL, progress, ratings, feedback, maps, accounts and existing Supabase. Neither AT-345 images nor AT-330 Shops are certified to be on the original Workspace Site yet. **Planning Manifest 98 / Ledger 106 and prior verified Manifest 97 / Ledger 105 stay unchanged pending runtime release proof.**
+<!-- END_AT345_WIDE_SOURCE_RUNTIME_CANDIDATE -->
+
+
 
 <!-- ATLAS_CROSS_GRID_CURRENT_97_105 -->
 ## Released cross grid and source archive (Manifest 97 / Ledger 105)
