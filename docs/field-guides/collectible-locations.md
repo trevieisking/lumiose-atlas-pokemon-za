@@ -2,7 +2,7 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
-**Photo archive:** 196 original photographs across 39 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. All 196 paths are checked against the PR file inventory. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+**Photo archive:** 201 original photographs across 40 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 201 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
 
 [Open the organised photograph fieldbook](../../collectible-fieldbook.html).
 
@@ -916,3 +916,23 @@ Repository folder: `assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar
 | [Neighbourhood map](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/map-neighbourhood.webp) | Building across Autumnal Avenue from Café Pokémon-Amie, northwest of Rouge Sector 1 | `1000029551.jpg` | `map-neighbourhood.webp` |
 | [Close map](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/map-close.webp) | Avenue-facing roof footprint and nearby Holovator symbol | `1000029552.jpg` | `map-close.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/pickup-confirmation.webp) | Roar ×1 beside four-pot chimney overlooking avenue | `1000029553.jpg` | `pickup-confirmation.webp` |
+
+## Headbutt — Vert Sector 5 canal-side walkway
+
+**Collectible find 40.** **TM001 Headbutt.** The final photo confirms **Headbutt ×1**.
+
+From Vert Plaza, look south for the canal-side corner of the Vert Sector 5 building block, across the water from Vert Street and near Café Cyclone. The close map photo marks the player on the paved walkway beside the canal.
+
+Follow the canal railing to the building with blue storefront windows. Break the two boulders blocking the corner, then collect the golden pickup behind them in the narrow space between the wall and the stone railing.
+
+The ladder visible across the canal is a landmark. The exact Atlas map coordinate and original checklist matching are pending.
+
+![Golden Headbutt pickup beam behind the canal-side boulders](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/pickup-behind-boulders.webp)
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup behind the boulders](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/pickup-behind-boulders.webp) | Golden beam behind two boulders beside blue storefront windows and the canal railing | `1000029985.jpg` | `pickup-behind-boulders.webp` |
+| [Wide map](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/map-wide.webp) | Player south of Vert Plaza and north of Hotel Z | `1000029986.jpg` | `map-wide.webp` |
+| [Neighbourhood map](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/map-neighbourhood.webp) | Vert Sector 5, Vert Street, Café Cyclone and the Coulant Waterway | `1000029987.jpg` | `map-neighbourhood.webp` |
+| [Close map](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/map-close.webp) | Player on the canal-side corner of the Vert Sector 5 building block | `1000029988.jpg` | `map-close.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-5-headbutt-coulant-waterway/pickup-confirmation.webp) | Headbutt ×1 between the building and the canal railing | `1000029989.jpg` | `pickup-confirmation.webp` |
