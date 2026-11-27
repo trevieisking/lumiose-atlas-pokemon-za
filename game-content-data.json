@@ -2,7 +2,7 @@
   "schema_version": 1,
   "workstream": "AT-347",
   "research_date": "2026-11-27",
-  "status": "candidate_partial_field_verification_pending",
+  "status": "bounded_release_candidate_field_verification_open",
   "sources": {
     "cafes": [
       "https://www.serebii.net/legendsz-a/cafes.shtml",
@@ -21,7 +21,11 @@
       "https://www.serebii.net/legendsz-a/friendship.shtml",
       "https://www.psypokes.com/plza/servicenpcs.php",
       "https://bulbapedia.bulbagarden.net/wiki/Lost_Pok%C3%A9_Ball_collector",
-      "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Center"
+      "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Center",
+      "https://psypokes.com/plza/servicenpcs.php",
+      "https://pokemondatabase.com/help/q/where-to-buy-ev-reducing-berries-legends-z-a/",
+      "https://bulbapedia.bulbagarden.net/wiki/Mega_Dimension",
+      "https://bulbapedia.bulbagarden.net/wiki/Friendship"
     ],
     "restaurants": [
       "https://hyperts.net/plza/kinsaku/",
@@ -30,7 +34,9 @@
       "https://bulbapedia.bulbagarden.net/wiki/Restaurant_Le_Wow",
       "https://bulbapedia.bulbagarden.net/wiki/Sushi_High_Roller",
       "https://bulbapedia.bulbagarden.net/wiki/Sushi_High_Roller_%28Lumiose_City%29",
-      "https://bulbapedia.bulbagarden.net/wiki/Side_Mission"
+      "https://bulbapedia.bulbagarden.net/wiki/Side_Mission",
+      "https://game8.jp/pokemon-legends-z-a/732475",
+      "https://gamewith.jp/pokemon-za/518953"
     ],
     "world": [
       "https://www.serebii.net/legendsz-a/daynightcycle.shtml",
@@ -56,7 +62,8 @@
     ],
     "photo": [
       "https://www.serebii.net/legendsz-a/cafes.shtml",
-      "https://bulbapedia.bulbagarden.net/wiki/Photo"
+      "https://bulbapedia.bulbagarden.net/wiki/Photo",
+      "https://bulbapedia.bulbagarden.net/wiki/Photography"
     ]
   },
   "sections": [
@@ -890,12 +897,16 @@
       "mission": 94,
       "rounds": "10 courses",
       "fee": 100000,
-      "repeat_reward": null,
+      "repeat_reward": "10 Pearl Strings; 10 Exp. Candy L",
       "unlock": "Complete Side Mission 94 to unlock paid repeat visits.",
       "coordinate": null,
       "coordinate_status": "field_verification_pending",
       "source": "restaurants",
-      "verification": "published_reference"
+      "verification": "published_reference",
+      "reward_evidence": [
+        "https://game8.jp/pokemon-legends-z-a/732475",
+        "https://gamewith.jp/pokemon-za/518953"
+      ]
     }
   ],
   "services": [
@@ -921,7 +932,7 @@
       "id": "service-ev-removal",
       "name": "EV removal",
       "location": "Rust Syndicate reception, Bleu District",
-      "description": "Spend five Mega Shards to reset a Pokémon's effort values. The exact story unlock is still to be checked; if unavailable, continue the story.",
+      "description": "Spend five Mega Shards to reset one Pokémon's effort values at reception. Available after Main Mission 20, according to published service guides.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -930,7 +941,7 @@
       "id": "service-hyper-training",
       "name": "Hyper Training",
       "location": "Justice Dojo",
-      "description": "For level 50 or higher: Bottle Cap for one stat; Gold Bottle Cap for all stats. Hyper Training changes effective stats, not the original underlying IVs. Exact service unlock remains under review.",
+      "description": "At the Justice Dojo, use one Bottle Cap for a stat or a Gold Bottle Cap for all stats on a level-50-or-higher Pokémon. This changes effective stats, not original IVs. A published service guide places the unlock after Main Mission 37; check availability then.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -939,7 +950,7 @@
       "id": "service-iv-judge",
       "name": "IV Judge",
       "location": "Pokémon Center after the story; then Boxes",
-      "description": "Unlock the Judge at a Pokémon Center; press the right stick in Boxes. Individual IVs: 31 Best, 30 Fantastic, 26–29 Very Good, 16–25 Pretty Good, 1–15 Decent, 0 No Good.",
+      "description": "After the story, visit a Pokémon Center to unlock the Judge; press the right stick in Boxes. Individual IVs: 31 Best, 30 Fantastic, 26–29 Very Good, 16–25 Pretty Good, 1–15 Decent, 0 No Good. IV total 151–186: Amazing stats; 121–150: Great stats; 91–120: Good stats; 0–90: OK stats.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -948,7 +959,7 @@
       "id": "service-plus-move-mastery",
       "name": "Plus Move mastery",
       "location": "Josée, Justice Dojo",
-      "description": "Use a Seed of Mastery on an eligible move. Check the available choices in the service menu; not every move is eligible.",
+      "description": "After defeating Josée in Main Mission 19, visit her at Justice Dojo. Use a Seed of Mastery to master an eligible move, including eligible TM moves; the service menu shows which moves can be mastered.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -957,7 +968,7 @@
       "id": "service-special-scan",
       "name": "Special Scan",
       "location": "Rust Syndicate",
-      "description": "After Side Mission 188, each 25,000 Hyperspace Survey Points earned enables a special five-star portal scan. Results may include Legendary Pokémon, battle zones or rare species; no particular species or permanent map marker is guaranteed.",
+      "description": "After Side Mission 188, earn 25,000 Hyperspace Survey Points per special five-star portal scan. When Corbeau calls, return to his office and speak to Philippe. Results may include Legendary Pokémon, battle zones or rare species; no particular species or permanent map marker is guaranteed.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -2179,5 +2190,21 @@
       "#acquisition"
     ]
   ],
-  "review_note": "27 November 2026: full published café menu comparison, title group list and thresholds, music track list, Rogue Mega Rush roster, four restaurant fees, three repeat-reward sets, gift and trade route verification. Unknown map coordinates, per-track unlocks and remaining field checks stay unresolved."
+  "review_note": "27 November 2026: full published café menu comparison, title group list and thresholds, music track list, Rogue Mega Rush roster, four restaurant fees, three repeat-reward sets, gift and trade route verification. Unknown map coordinates, per-track unlocks and remaining field checks stay unresolved. Additional source review: all four restaurant repeat rewards, published training checkpoints, IV Judge totals, active café and full-party bench friendship gains, camera perspective toggle and Philippe's special-scan role. Exact coordinates and full capture diagrams remain open.",
+  "mechanics_review": {
+    "friendship": {
+      "cap": 255,
+      "evolution_threshold": 160,
+      "cafe_active_gain": 30,
+      "bench_party_gain": 10,
+      "bench_seconds": 10,
+      "ev_reducing_berry_gain_at_160": 1,
+      "source": "services"
+    },
+    "photo": {
+      "perspective_toggle": "Y",
+      "profile_perspective": "third person",
+      "source": "photo"
+    }
+  }
 }

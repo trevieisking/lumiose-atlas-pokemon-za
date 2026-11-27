@@ -1,5 +1,11 @@
 # Pokémon Atlas final completion plan
 
+<!-- AT347_BOUNDED_RELEASE_102_110 -->
+## AT-346 / AT-347 — bounded consolidated release candidate (Manifest 102 / Ledger 110)
+
+PR [#224](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/224) now implements source-qualified Pokédex/Alpha/guide upgrades and the AT-347 player-facing City Life hub across phases A–K; previous planning-only entries are historical. Source-reviewed checkpoint `8a6f5d5cb4cbbbf382ec07229b300a44bcc556e5` passed all three workflows. See [candidate scope, corrections and open checks](docs/qa/at347-content-coverage/CONTENT_CANDIDATE_2026-11-27.md), [Furfrou review](docs/qa/at347-content-coverage/FURFROU_ROUTE_REVIEW_2026-11-27.md), [AT-346 pending inventory](docs/qa/at346-dex-audit/WORKSPACE_PENDING_CHANGE_INVENTORY.md) and [gap register](docs/qa/at347-content-coverage/GAP_REGISTER.json). Source-qualified bounded release only: 17 cafes / 133 menu entries, four restaurant reward sets, 55 title groups, 34 music names, nine regular Centers, eight service entries, 27-opponent Rush roster, gifts/trades and read-only completion navigation; 132/132 Hyperspace acquisition notes/links, 132 default-form stat rows, 202 capture bands, 364-species custom Alpha index with pending routes explicitly labelled. Full encounter/form/learnset and field surveys, per-track unlocks, exact controller diagrams, unconfirmed rewards and persistent completion dashboard remain open. Keep the original Site, all map images, validated geometry, existing progress, feedback and Supabase runtime; no new permanent random portal markers. Exact-head validation and GitHub Pages verification required before the single original-Site import prompt. Prior approved handoff is unchanged until promotion receipt. Do not infer full research completion or Workspace publication.
+<!-- END_AT347_BOUNDED_RELEASE_102_110 -->
+
 <!-- AT347_CONTENT_COVERAGE_101_109 -->
 ## AT-347 — Complete Game Content Coverage Expansion (candidate Manifest 101 / Ledger 109)
 

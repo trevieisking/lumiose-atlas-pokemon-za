@@ -3,7 +3,7 @@
     "id": "AT-347-COMPLETE-GAME-CONTENT-COVERAGE",
     "planning_manifest_revision": 101,
     "planning_dual_site_ledger_revision": 109,
-    "status": "owner_report_received_planning_only_candidate_implementation_open",
+    "status": "bounded_runtime_candidate_exact_head_validation_pending",
     "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/225",
     "implementation_plan": "docs/qa/at347-content-coverage/CONTENT_COVERAGE_PLAN.md",
     "gap_register": "docs/qa/at347-content-coverage/GAP_REGISTER.json",
@@ -42,12 +42,29 @@
       "AT-347-RESEARCH-ONLY",
       "AT-347-RELEASE-VALIDATION"
     ],
-    "runtime_changed": false,
+    "runtime_changed": true,
     "original_workspace_changed": false,
     "approved_workspace_prompt_changed": false,
     "random_hyperspace_permanent_markers_added": 0,
     "prior_AT346_preserved": true,
-    "tracker_note": "Existing tracker rows and evidence must be preserved; new open rows recorded separately; revision synchronization of prior rows follows reviewed merge."
+    "tracker_note": "Existing tracker rows and evidence must be preserved; new open rows recorded separately; revision synchronization of prior rows follows reviewed merge.",
+    "candidate_manifest_revision": 102,
+    "candidate_dual_site_ledger_revision": 110,
+    "reviewed_prior_head": "8a6f5d5cb4cbbbf382ec07229b300a44bcc556e5",
+    "candidate_evidence": "docs/qa/at347-content-coverage/CONTENT_CANDIDATE_2026-11-27.md",
+    "candidate_counts": {
+      "cafes": 17,
+      "menu_rows": 133,
+      "restaurants": 4,
+      "restaurant_repeat_rewards": 4,
+      "centers": 9,
+      "services": 8,
+      "title_groups": 55,
+      "music_tracks": 34,
+      "rogue_rush_opponents": 27
+    },
+    "research_completion_certified": false,
+    "remaining": "Field coordinates and captures, exact per-track unlocks, comprehensive forms/encounters, repeat challenge edge cases, original Site parity and persistent completion checklist remain open."
   },
   "current_workspace_handoff": {
     "document": "WORKSPACE_ATLAS_NEXT_RELEASE.md",
@@ -136,7 +153,11 @@
       "published_replacements_approved": false,
       "source_index": "atlas-sector-context.mjs",
       "implementation_evidence": "docs/qa/ATLAS_AT345_CONTEXTUAL_SECTOR_IMPLEMENTATION_2026-11-26.md",
-      "tests": ["tests/atlas_sector_context.test.mjs", "tests/atlas_sector_context_browser.mjs", ".github/workflows/atlas-explorer.yml"],
+      "tests": [
+        "tests/atlas_sector_context.test.mjs",
+        "tests/atlas_sector_context_browser.mjs",
+        ".github/workflows/atlas-explorer.yml"
+      ],
       "old_clips_preserved_as_secondary": true,
       "wild_zone_pairs_preserved": 20,
       "map_xy_changes": 0,
@@ -234,7 +255,7 @@
     "approved_runtime_checkpoint": "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 101,
+  "revision": 102,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -8314,7 +8335,7 @@
       "waypoint_value_observed": 60,
       "waypoint_value_time_seconds": [
         20.9,
-        21.0
+        21
       ],
       "footsteps_counted": false,
       "metres_per_grid_interval_confirmed": false,
@@ -8482,7 +8503,7 @@
       "waypoint_value_observed": 60,
       "waypoint_value_time_seconds": [
         20.9,
-        21.0
+        21
       ],
       "footsteps_counted": false,
       "metres_per_grid_interval_confirmed": false,
@@ -8846,5 +8867,21 @@
     }
   },
   "cross_grid_release_receipt": "docs/qa/atlas-cross-grid-release-2026-11-26/RELEASE_RECEIPT.json",
-  "cross_grid_workspace_release_prompt": "docs/qa/atlas-cross-grid-release-2026-11-26/WORKSPACE_CROSS_GRID_RELEASE_PROMPT.md"
+  "cross_grid_workspace_release_prompt": "docs/qa/atlas-cross-grid-release-2026-11-26/WORKSPACE_CROSS_GRID_RELEASE_PROMPT.md",
+  "at_346_consolidated_candidate": {
+    "status": "bounded_runtime_candidate_exact_head_validation_pending",
+    "pr": 224,
+    "reviewed_prior_head": "8a6f5d5cb4cbbbf382ec07229b300a44bcc556e5",
+    "acquisition_notes_or_links": 132,
+    "generated_species": 105,
+    "portal_capture_bands": 202,
+    "hyperspace_default_stat_rows": 132,
+    "alpha_index_species": 364,
+    "alpha_index_routes": 224,
+    "alpha_source_unavailable": 25,
+    "alpha_index_pending": 115,
+    "complete_encounter_audit": false,
+    "inventory": "docs/qa/at346-dex-audit/WORKSPACE_PENDING_CHANGE_INVENTORY.md",
+    "original_workspace_changed": false
+  }
 }
