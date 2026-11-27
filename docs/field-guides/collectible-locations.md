@@ -537,3 +537,59 @@ Destination: `assets/atlas/collectibles/wild-zone-2-swift-central-island/`.
 | Wide map view | Wild Zone 2 in Vert Plaza | `1000029412.jpg` | `map-wide.webp` |
 | Neighbourhood map view | Central island and surrounding Vert sectors | `1000029413.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player southeast of the Wild Zone 2 travel marker | `1000029414.jpg` | `map-close.webp` |
+
+
+## Psychic — Wild Zone 11 northern rock wall, Jaune Sector 10
+
+Field catalogue find 027; eighth Technical Machine (TM).
+
+Locate **Wild Zone 11**, Jaune Sector 10. The three map photographs place the player near its northern boundary, on the grassy side above the canal, west of Jaune Sector 12. Look for a golden pickup beam on the ground between trees and bushes at the foot of the rocky embankment. The final photograph clearly confirms **Psychic ×1** beside the rock wall. A large Slowbro and other Pokémon are visible in the approach photograph; this is an observed encounter, not a guaranteed spawn or prerequisite.
+
+The precise route from the entrance and Atlas basemap coordinate remain unverified; map screenshots show nearby player position. No live marker added.
+
+Destination: `assets/atlas/collectibles/wild-zone-11-psychic-rock-wall/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Ground pickup | Golden beam between trees beside the rock wall | `1000029421.jpg` | `pickup-by-rock-wall.webp` |
+| Wide map | Wild Zone 11 in eastern Lumiose | `1000029422.jpg` | `map-wide.webp` |
+| Neighbourhood map | Northern Jaune Sector 10 near Jaune Sector 12 | `1000029423.jpg` | `map-neighbourhood.webp` |
+| Close map | Player near northern wild-zone boundary | `1000029424.jpg` | `map-close.webp` |
+| Collection confirmation | NEW Psychic ×1 | `1000029425.jpg` | `pickup-confirmation.webp` |
+
+## Water Pulse — Wild Zone 6 rooftop terrace, Jaune Sector 12
+
+Field catalogue find 028; ninth Technical Machine (TM).
+
+Locate the southwestern end of **Jaune Sector 12 (Wild Zone 6)**, immediately beside the boundary with Wild Zone 11 (Jaune Sector 10). The two map photographs distinguish the rooftop location on the Zone 6 side from the adjacent Zone 11 canal. On the raised wooden patio, look for round café tables, chairs, a rectangular flower planter and a black plant pot. The golden pickup is at the planted corner near the green wild-zone barrier. The final photograph confirms **Water Pulse ×1** at the rooftop edge.
+
+Correction to the initial conversational label: Zone 11 is the neighbouring landmark; the map places the player on the Zone 6 side. Exact rooftop access route, any Hover Glide prerequisite, and calibrated Atlas coordinates remain unverified. No live marker added.
+
+Destination: `assets/atlas/collectibles/wild-zone-6-water-pulse-rooftop-terrace/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Rooftop pickup | Golden beam at the planted patio corner | `1000029430.jpg` | `pickup-on-rooftop.webp` |
+| Neighbourhood map | Zone 6 beside Zone 11 and North Boulevard | `1000029431.jpg` | `map-neighbourhood.webp` |
+| Close map | Southwestern boundary of Jaune Sector 12 | `1000029432.jpg` | `map-close.webp` |
+| Collection confirmation | NEW Water Pulse ×1 | `1000029433.jpg` | `pickup-confirmation.webp` |
+
+## Rock Tomb — Wild Zone 8 market stalls, Jaune Plaza
+
+Field catalogue find 029; tenth Technical Machine (TM).
+
+Locate **Wild Zone 8**, Jaune Plaza, on Jaune Street northeast of Prism Tower. The wide, neighbourhood and close map views place the player near the centre of the circular plaza, just west of the travel marker. Walk towards the market stalls at ground level. Look for a golden pickup beam near the black-canopied stall beside the grassy border. The approach photograph shows the stalls and the golden beam; the final photograph clearly confirms **Rock Tomb ×1**. An aggressive red-eyed Camerupt is visible at collection, so watch for nearby wild Pokémon; its presence is not a guaranteed encounter or a collection prerequisite.
+
+The map marker represents the nearby player position; calibrated item coordinates and the route from the specific entrance are not independently verified. No live marker added.
+
+Destination: `assets/atlas/collectibles/wild-zone-8-rock-tomb-market-stalls/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Ground pickup | Golden beam near the market stalls | `1000029439.jpg` | `pickup-near-stalls.webp` |
+| Wide map | Wild Zone 8 northeast of Prism Tower | `1000029440.jpg` | `map-wide.webp` |
+| Neighbourhood map | Jaune Plaza and surrounding sectors | `1000029441.jpg` | `map-neighbourhood.webp` |
+| Close map | Player near plaza centre | `1000029442.jpg` | `map-close.webp` |
+| Collection confirmation | NEW Rock Tomb ×1; nearby Camerupt | `1000029443.jpg` | `pickup-confirmation.webp` |
+
+**Evidence status for finds 027–029:** All 14 supplied image files decoded as genuine WebP (despite their .jpg filenames). All original bytes were preserved and verified in the cumulative 118-photo pending archive; all 104 earlier archived files are unchanged. Archive integrity passed. The 24 previously committed photographs remain untouched. Binary transfer to GitHub is still pending, and the destination filenames above are not live links. No runtime, player progress, main, Workspace, or Supabase changes.
