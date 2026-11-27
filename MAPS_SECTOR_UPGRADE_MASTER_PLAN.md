@@ -22,6 +22,9 @@ The [follow-up pull request #224](https://github.com/trevieisking/lumiose-atlas-
 
 **Generated portal integration pilot (27 November, draft):** [202-route research register and ten-card review evidence](docs/qa/at346-dex-audit/HYPERSPACE_TYPED_ROUTE_PILOT_2026-11-27.md) reproduces the 2,377-row pinned join. The Pokédex gains 18 cross-checked ordinary/Alpha capture bands for ten species (37/132 entries with at least one route note or guide link). Remaining 95 generated-pool species stay research-only. No map or pinned Workspace change; exact-head CI and visual validation pending. Full form, acquisition and habitat gates remain open.
 
+
+**Generated portal integration, batch 2 (27 November, draft):** [20 additional species and 42 bands](docs/qa/at346-dex-audit/HYPERSPACE_TYPED_ROUTE_BATCH_2_2026-11-27.md) expand the reviewed portal cards to 30 species/60 bands, including all nine Hoenn starter-family entries. Every reviewed 5★ route links to Special Scan unlock, with random outcomes and cost disclosed. Finite route/link coverage is 57/132; 75 generated species remain under review. Preserve the 202-band register, all existing maps and player progress, and the pinned Workspace handoff. Exact-head validation and targeted browser review pending.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 

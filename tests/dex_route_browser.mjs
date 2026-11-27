@@ -30,13 +30,22 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   assert.ok((await card.innerText()).includes(method),method);
   await card.locator('button.dex-toggle').click();
  }
- assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),18);
+ assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),60);
  for(const [dexIndex,route] of [[1,"1★ Fighting — catch Lv. 16–18; Alpha Lv. 25–27"],[2,"3★ Fighting — catch Lv. 28–30; Alpha Lv. 37–39"],[16,"2★ Steel — catch Lv. 18–20; Alpha Lv. 27–29"],[18,"4★ Fairy — catch Lv. 41–43; Alpha Lv. 50–52"],[35,"5★ Ghost — catch Lv. 62–64; Alpha Lv. 71–73"],[57,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[58,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[88,"4★ Ice — catch Lv. 38–40; Alpha Lv. 47–49"]]){
   const card=page.locator('#dex-hyperspace-'+dexIndex);
   await card.locator('button.dex-toggle').click();
   assert.ok((await card.innerText()).includes(route),route);
   assert.match(await card.innerText(),/not guaranteed spawns/);
   assert.ok(await card.getByRole("link",{name:"Portal ranks and donut preparation"}).isVisible());
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
+  await card.locator('button.dex-toggle').click();
+ }
+ for(const [dexIndex,expected,scan] of [[14,"2★ Grass — catch Lv. 17–19; Alpha Lv. 26–28",false],[39,"5★ Grass — catch Lv. 50–52; Alpha Lv. 59–61",true],[41,"5★ Grass — catch Lv. 54–56; Alpha Lv. 63–65",true],[44,"4★ Fighting — catch Lv. 41–43; Alpha Lv. 50–52",true],[45,"2★ Water — catch Lv. 16–18; Alpha Lv. 25–27",true],[47,"4★ Ground — catch Lv. 41–43; Alpha Lv. 50–52",true],[48,"2★ Water — catch Lv. 20–22; Alpha Lv. 29–31",false],[97,"2★ Fire — catch Lv. 19–21; Alpha Lv. 28–30",false],[112,"4★ Grass — catch Lv. 42–44; Alpha Lv. 51–53",false]]){
+  const card=page.locator('#dex-hyperspace-'+dexIndex);
+  await card.locator('button.dex-toggle').click();
+  assert.ok((await card.innerText()).includes(expected),expected);
+  assert.equal(await card.getByRole("link",{name:"Unlock Special Scans"}).count(),scan?1:0);
+  if(scan)assert.match(await card.innerText(),/25,000 Hyperspace Survey Points/);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
   await card.locator('button.dex-toggle').click();
  }
