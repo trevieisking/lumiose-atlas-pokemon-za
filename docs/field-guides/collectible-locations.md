@@ -455,3 +455,44 @@ Destination: `assets/atlas/collectibles/bleu-10-night-slash-rooftop-terrace/`.
 | Neighbourhood map view | Bleu Sector 10 and Shutterbug Café | `1000029372.jpg` | `map-neighbourhood.webp` |
 | Close map view | Selected Wild Zone 10 travel marker | `1000029373.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Night Slash during an encounter | `1000029374.jpg` | `pickup-confirmation.webp` |
+
+
+## Power-Up Punch — Magenta Sector 5 rooftop near Café Rouleau (Wild Zone 9)
+
+Field catalogue find 023; fourth Technical Machine (TM).
+
+Locate **Magenta Sector 5 (Wild Zone 9)**, north of Estival Avenue, opposite Bleu Sector 10. The three map views place the player near the southeastern boundary of Wild Zone 9, immediately west of Café Rouleau. On the elevated rooftop terrace, look for the dark paved surface, black railing and pale horizontal parapet wall between small rooftop structures. The approach photo shows a golden pickup beam at the wall; the final photo confirms **Power-Up Punch ×1** at that wall. Rooftop Pokémon are visible in the approach photograph, but no fixed encounter or access requirement is established.
+
+Exact rooftop access route, any Hover Glide prerequisite, and Atlas basemap coordinates remain unverified. Map views show the nearby player position, not a calibrated item coordinate. No live marker added.
+
+**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels. The original bytes of all ten new images (finds 023 and 024) were verified against the cumulative 95-photo archive, with all 85 earlier archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/magenta-5-power-up-punch-rooftop/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on rooftop | Golden beam beside the pale rooftop parapet | `1000029380.jpg` | `pickup-on-rooftop.webp` |
+| Wide map view | Wild Zone 9 north of Wild Zone 10 | `1000029381.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Magenta Sector 5, Café Rouleau and Estival Avenue | `1000029382.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player on the southeastern side of Wild Zone 9 | `1000029383.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Power-Up Punch at the parapet | `1000029385.jpg` | `pickup-confirmation.webp` |
+
+## Ice Beam — Wild Zone 12 northern fenced sports court
+
+Field catalogue find 024; fifth Technical Machine (TM).
+
+Locate **Wild Zone 12** in the Bleu district, southeast of Bleu Plaza and between Bleu Sector 5 and the Stone Emporium. The neighbourhood and close map views locate the player inside the rectangular court in the northern section of the park, north of the Wild Zone 12 travel marker. The approach photo shows a golden pickup beam inside a chain-link fenced sports court, surrounded by large dark rock piles. Enter through the open fence gate and climb the short steps to the painted court. The TM is on the large Poké Ball design at the center. The final photograph clearly confirms **Ice Beam ×1** on that design.
+
+The photographed item is at court/ground level, not on a rooftop. The photos show an open gate and short stairs, but do not establish the game's unlock prerequisites or exact Atlas basemap coordinates. The player marker provides a strong in-game reference; do not treat its screen position as a calibrated Atlas coordinate. No live marker added.
+
+**Evidence status:** Five supplied images decoded as genuine WebP at 1536 × 865 pixels. Their original bytes were verified in the cumulative 95-photo archive together with find 023, with all 85 earlier archived files unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/wild-zone-12-ice-beam-sports-court/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup on court | Golden beam beyond the open chain-link gate, between dark rock piles | `1000029391.jpg` | `pickup-on-court.webp` |
+| Wide map view | Wild Zone 12 southeast of Bleu Plaza | `1000029392.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Northern park area, Bleu Sector 5 and Stone Emporium | `1000029393.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player inside the rectangular court north of the Wild Zone 12 travel marker | `1000029394.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Ice Beam on the painted court center | `1000029395.jpg` | `pickup-confirmation.webp` |
