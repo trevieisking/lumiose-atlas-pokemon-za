@@ -30,7 +30,7 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   assert.ok((await card.innerText()).includes(method),method);
   await card.locator('button.dex-toggle').click();
  }
- assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),60);
+ assert.equal(await page.locator('#dexGrid [data-atlas-portal-route]').count(),92);
  for(const [dexIndex,route] of [[1,"1★ Fighting — catch Lv. 16–18; Alpha Lv. 25–27"],[2,"3★ Fighting — catch Lv. 28–30; Alpha Lv. 37–39"],[16,"2★ Steel — catch Lv. 18–20; Alpha Lv. 27–29"],[18,"4★ Fairy — catch Lv. 41–43; Alpha Lv. 50–52"],[35,"5★ Ghost — catch Lv. 62–64; Alpha Lv. 71–73"],[57,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[58,"3★ Fighting — catch Lv. 26–28; Alpha Lv. 35–37"],[88,"4★ Ice — catch Lv. 38–40; Alpha Lv. 47–49"]]){
   const card=page.locator('#dex-hyperspace-'+dexIndex);
   await card.locator('button.dex-toggle').click();
@@ -46,6 +46,15 @@ for (const viewport of [{width:390,height:844},{width:1366,height:900}]) {
   assert.ok((await card.innerText()).includes(expected),expected);
   assert.equal(await card.getByRole("link",{name:"Unlock Special Scans"}).count(),scan?1:0);
   if(scan)assert.match(await card.innerText(),/25,000 Hyperspace Survey Points/);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
+  await card.locator('button.dex-toggle').click();
+ }
+ for(const [dexIndex,expected] of [[28,"4★ Flying — catch Lv. 37–39; Alpha Lv. 46–48"],[50,"1★ Psychic — catch Lv. 14–16; Alpha Lv. 23–25"],[51,"3★ Psychic — catch Lv. 24–26; Alpha Lv. 33–35"],[53,"1★ Dark — catch Lv. 14–16; Alpha Lv. 23–25"],[54,"3★ Dark — catch Lv. 24–26; Alpha Lv. 33–35"],[55,"1★ Psychic — catch Lv. 15–17; Alpha Lv. 24–26"],[56,"4★ Psychic — catch Lv. 38–40; Alpha Lv. 47–49"],[64,"1★ Dark — catch Lv. 14–16; Alpha Lv. 23–25"],[65,"3★ Dark — catch Lv. 24–26; Alpha Lv. 33–35"],[73,"1★ Flying — catch Lv. 14–16; Alpha Lv. 23–25"],[74,"3★ Flying — catch Lv. 24–26; Alpha Lv. 33–35"],[75,"4★ Flying — catch Lv. 41–43; Alpha Lv. 50–52"],[76,"2★ Fairy — catch Lv. 17–19; Alpha Lv. 26–28"],[77,"3★ Fairy — catch Lv. 24–26; Alpha Lv. 33–35"],[78,"4★ Fairy — catch Lv. 39–41; Alpha Lv. 48–50"],[79,"2★ Fairy — catch Lv. 18–20; Alpha Lv. 27–29"],[80,"3★ Fairy — catch Lv. 27–29; Alpha Lv. 36–38"],[84,"1★ Psychic — catch Lv. 17–19; Alpha Lv. 26–28"],[85,"4★ Psychic — catch Lv. 40–42; Alpha Lv. 49–51"],[100,"1★ Dark — catch Lv. 17–19; Alpha Lv. 26–28"],[101,"4★ Dark — catch Lv. 39–41; Alpha Lv. 48–50"]]){
+  const card=page.locator('#dex-hyperspace-'+dexIndex);
+  await card.locator('button.dex-toggle').click();
+  assert.ok((await card.innerText()).includes(expected),expected);
+  assert.match(await card.innerText(),/not guaranteed spawns/);
+  assert.equal(await card.getByRole("link",{name:"Unlock Special Scans"}).count(),0);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)<=1);
   await card.locator('button.dex-toggle').click();
  }

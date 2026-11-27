@@ -246,8 +246,8 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
    assert.deepEqual(r.alpha,r.catch.map(n=>n+9));
   }
  }
- assert.equal(Object.keys(pilot).length,30);
- assert.equal(Object.values(pilot).flat().length,60);
+ assert.equal(Object.keys(pilot).length,51);
+ assert.equal(Object.values(pilot).flat().length,92);
  for(const [n,routes] of Object.entries(pilot)){
   const s=research.species.find(s=>s.national===Number(n));
   assert.ok(s);
@@ -260,6 +260,12 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  assert.deepEqual(pilot[257].map(r=>[r.rank,r.type]),[[4,"Fighting"],[4,"Fire"],[5,"Fire"]]);
  assert.deepEqual(pilot[260].map(r=>[r.rank,r.type]),[[4,"Ground"],[4,"Water"],[5,"Water"]]);
  assert.deepEqual(pilot[935],[{form:0,type:"Fire",rank:2,catch:[19,21],alpha:[28,30]}]);
+ for(const n of [509,510,827,828,942,943,433,358,517,518,325,326,174,39,40,926,927,821,822,823,973])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
+ assert.deepEqual(pilot[509].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[942].map(r=>r.rank),[1,4]);
+ assert.deepEqual(pilot[433].map(r=>r.rank),[1,3]);
+ assert.deepEqual(pilot[174].map(r=>r.rank),[2,3]);
+ assert.deepEqual(pilot[822].map(r=>r.rank),[3,4]);
  assert.ok(app.includes("reviewedPortalRoutes[r.number].some(encounter=>encounter.rank===5)"));
  assert.ok(read("side-missions.html").includes('id="quest-188"'));
  assert.ok(read("mega-dimension.html").includes('id="portal-prep"'));

@@ -25,6 +25,9 @@ The [follow-up pull request #224](https://github.com/trevieisking/lumiose-atlas-
 
 **Generated portal integration, batch 2 (27 November, draft):** [20 additional species and 42 bands](docs/qa/at346-dex-audit/HYPERSPACE_TYPED_ROUTE_BATCH_2_2026-11-27.md) expand the reviewed portal cards to 30 species/60 bands, including all nine Hoenn starter-family entries. Every reviewed 5★ route links to Special Scan unlock, with random outcomes and cost disclosed. Finite route/link coverage is 57/132; 75 generated species remain under review. Preserve the 202-band register, all existing maps and player progress, and the pinned Workspace handoff. Exact-head validation and targeted browser review pending.
 
+
+**Generated portal integration, batch 3 (27 November, draft):** [21 species / 32 new capture bands](docs/qa/at346-dex-audit/HYPERSPACE_TYPED_ROUTE_BATCH_3_2026-11-27.md) bring reviewed generated cards to 51 species/92 bands and finite Hyperspace route/link coverage to 78/132. The [cumulative pending Workspace inventory](docs/qa/at346-dex-audit/WORKSPACE_PENDING_CHANGE_INVENTORY.md) records the candidate guide changes for later same-Site adaptation; this is not a release prompt. Preserve the original approved handoff. Exact-head CI and visual review pending; 54 generated species remain, and the broader Alpha/Lumiose/area audits are open.
+
 <!-- AT346_DOSSIER_RECEIVED_100_108 -->
 ## AT-346 Deep Research dossier received — Manifest 100 / Ledger 108
 
