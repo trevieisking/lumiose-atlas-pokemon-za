@@ -725,7 +725,7 @@ Destination: `assets/atlas/access/bleu-6-western-scaffold/`.
 
 **Map anchor:** southeast corner of the triangular building footprint immediately west of the labelled Magenta Sector 3 courtyard block, on the north side of Estival Avenue, east of Café Rouleau and Wild Zone 9. Bleu Sector 4 and Espace Vide are across Estival Avenue to the south. The red cursor and blue player arrow are reference positions; the golden pickup is visible at the roof edge in the approach photograph. Keep the adjacent-block distinction rather than assuming the pickup is on the centre of Magenta Sector 3. Use the visible building outlines and faint grid crosses for later Atlas basemap registration.
 
-**Written directions:** locate the modern white-clad building with blue window bands and a landscaped rooftop garden containing conical topiary, shrubs and paths. From the elevated landing near the exterior metal staircase, look towards the garden roof: the golden pickup is on the pale roof edge beside the planting. The collection photograph shows the player on an elevated pale roof corner overlooking an adjacent blue-roofed building. The red-beam pickup on that neighbouring roof is separate and unidentified; do not register it as Flip Turn. The exact street-to-rooftop access route, any requirement for Hover Glide and precise roof-to-landing connections remain unverified. No calibrated Atlas coordinate or live pin is claimed.
+**Written directions:** locate the modern white-clad building with blue window bands and a landscaped rooftop garden containing conical topiary, shrubs and paths. Player-confirmed access route: take the Holovator, climb the ladder, then cross the bridge to the rooftop garden. Do not use the staircase as the access route. At the garden roof, the golden pickup is on the pale roof edge beside the planting. The collection photograph shows the player on an elevated pale roof corner overlooking an adjacent blue-roofed building. The red-beam pickup on that neighbouring roof is separate and unidentified; do not register it as Flip Turn. The Holovator → ladder → bridge sequence is confirmed by the contributor. The exact Holovator and ladder coordinates, bridge geometry and any Hover Glide requirement remain unverified. No calibrated Atlas coordinate or live pin is claimed.
 
 **Evidence status:** all five original files decoded as WebP (1536 × 865) despite their .jpg names. All five are preserved byte-for-byte in the cumulative 152-photo pending archive, with all 147 previous archived photographs unchanged. ZIP integrity passed. The first 24 photographs committed to the PR remain untouched. Binary upload pending; destination filenames are not yet live links.
 
@@ -733,7 +733,7 @@ Destination: `assets/atlas/collectibles/magenta-3-flip-turn-rooftop/`.
 
 | Photo | What to look for | Source filename | Destination filename |
 | --- | --- | --- | --- |
-| Rooftop pickup | Golden beam at the garden roof edge, external staircase in foreground | `1000029508.jpg` | `pickup-rooftop.webp` |
+| Rooftop pickup | Golden beam at the garden roof edge; foreground staircase is not the confirmed access route | `1000029508.jpg` | `pickup-rooftop.webp` |
 | Wide map | Location east of Wild Zone 9, north of Wild Zone 10 and Bleu Sector 4 | `1000029509.jpg` | `map-wide.webp` |
 | Neighbourhood map | Triangular block west of Magenta Sector 3 courtyard and north of Estival Avenue | `1000029510.jpg` | `map-neighbourhood.webp` |
 | Close map | Player at triangular block's southeast corner, nearby faint grid crosses | `1000029511.jpg` | `map-close.webp` |
