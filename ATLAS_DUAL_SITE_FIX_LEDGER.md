@@ -1,5 +1,11 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+<!-- AT348_WORKSPACE_RESUME_103_111 -->
+## AT-348 — Interrupted Workspace photograph recovery (Manifest 103 / Ledger 111; planning only)
+
+**Read first for photograph recovery:** [Copy-ready Workspace continuation prompt](docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md) · [Issue #228](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/228). Owner supplied six screenshots showing that Work ran out of credits after source backup, image fingerprint/mapping inspection, archive-photo markup and gallery work. It explicitly reported eight originals matching the approved archive byte-for-byte, three smaller Wild Zone images needing full-resolution links and two Holovator photographs hidden by the eight-image gallery cutoff. Last visible activity: inspected Atlas assets and dual-site fix artifacts for photo-source recovery. Reported actions are not verified persisted edits. Reopen the existing Work run/draft and resume at the first incomplete checkpoint; do not restart the audit, overwrite newer changes or purchase credits. Compare the actual draft against approved PR224 merge `bdfce92bfa7324517d0a1e2f8db7eec84983eefb`, verify the backup and every repair, and reconcile later GitHub AT-348 work. Original Site last recorded v40 with v39 as its prior rollback; v41 not verified. All eight originals are already in the pinned AT344 source archive. Preserve PR226 and PR227 separately, existing maps/progress/feedback/Supabase, immutable originals, all prior release evidence and the existing approved handoffs. Do not treat archive-only paths as published assets. No runtime code, live deployment or original Workspace changes authorized by this planning record; independent GitHub and same-Site validation remain open. Existing older candidate/publication labels below are historical, not evidence of AT-348 completion. Private tracker planning sync must be separately evidenced.
+<!-- END_AT348_WORKSPACE_RESUME_103_111 -->
+
 <!-- AT347_BOUNDED_RELEASE_102_110 -->
 ## AT-346 / AT-347 — bounded consolidated release candidate (Manifest 102 / Ledger 110)
 
