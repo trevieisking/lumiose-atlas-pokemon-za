@@ -157,3 +157,16 @@ assert.match(wz15,/Large or Jumbo Variety by night/);
 assert.match(wz15,/Alpha Gourgeist of the same variety/);
 assert.match(wz15,/separate non-Alpha Jumbo/);
 assert.match(wz15,/id="alpha-pumpkaboo-varieties"/);
+
+const regional = html.match(/<section id="alpha-regional-forms"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+assert.ok(regional);
+const direct = [...regional.matchAll(/<tr><th scope="row">([^<]+)<\/th><td>(\d)★ ([^<]+)<\/td><td>(\d+)–(\d+)<\/td><td>(\d+)–(\d+)<\/td><\/tr>/g)];
+assert.equal(direct.length,25);
+assert.equal(new Set(direct.map(r=>r[1])).size,19);
+assert.ok(direct.every(r=>+r[4]+9===+r[6] && +r[5]+9===+r[7]));
+assert.ok(direct.some(r=>r[1]==="Galarian Mr. Mime"&&r[2]==="3"&&r[3]==="Ice"&&r[6]==="42"&&r[7]==="44"));
+for(const name of ["Galarian Slowbro","Galarian Slowking"]) {
+  assert.ok(direct.some(r=>r[1]===name&&r[2]==="5"&&r[3]==="Poison"&&r[6]==="64"&&r[7]==="66"));
+}
+for(const quest of [39,72,75,108])assert.ok(regional.includes(`side-missions.html#quest-${quest}`));
+assert.match(regional,/No direct catch was found in these generated pools/);
