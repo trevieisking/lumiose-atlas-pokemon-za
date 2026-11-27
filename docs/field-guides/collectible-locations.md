@@ -782,3 +782,25 @@ Destination: `assets/atlas/collectibles/magenta-cafe-gallant-colorful-screw-scaf
 | Neighbourhood map | Standalone building east of Café Gallant, beside Estival Avenue | `1000029530.jpg` | `map-neighbourhood.webp` |
 | Close map | Player at southern edge of standalone building; faint grid crosses | `1000029531.jpg` | `map-close.webp` |
 | Collection confirmation | Colorful Screw ×1 partly overlapped by NPC dialogue, player on raised scaffold | `1000029532.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Vert Sector 7, Racine Construction scaffold
+
+**Collectible find 38.** Colorful Screw, purple pickup beam. Final gameplay photograph explicitly confirms **Colorful Screw ×1**. Separate from the earlier Vert Sector 7 covered scaffold beside Coulant Waterway; canonical Screw number not yet assigned.
+
+**Map anchor:** boulevard-facing edge of the long building block immediately southwest of the Racine Construction travel marker in Vert Sector 7, northeast of the Pokémon Center near Gare de Lumiose. The close map places the player beside this building across from the small rectangular landscaped island on South Boulevard. Retain the building outline and nearby faint grid crosses for later basemap registration. The blue arrow records player position, not a calibrated pickup coordinate.
+
+**Written directions:** from Racine Construction, head southwest along South Boulevard towards the Pokémon Center by Gare de Lumiose. Look for the cyan-edged scaffolding in front of the stone building with red-framed ground-floor shop windows and blue upper windows. The approach photograph shows two groups of stepped platforms connected by a narrow elevated span, with sloping ramps at the left approach and the taller right-hand stack. Follow the scaffold towards the upper right-hand platform, where the purple beam is visible. The collection photograph shows the player standing on the raised patterned metal platform, close to the Canari plush exchange NPC and green sign. The exact traversal sequence and movement prerequisites have not been independently verified.
+
+**Access-layer evidence:** preserve the ramps, connecting span and tiered platforms as a candidate scaffold survey linked to this pickup. The visible NPC dialogue refers to exchanging Colorful Screws for a Canari plush; retain it as a nearby landmark, without inferring exchange rates or unlock requirements. Match against existing access and Screw registries before assigning permanent IDs. No calibrated coordinates or live markers are claimed.
+
+**Evidence status:** all five supplied .jpg files decoded as WebP; three map photographs are 1536 × 865, the approach photograph is 1536 × 842, and the collection photograph is 1536 × 843. Original bytes preserved in the cumulative 167-photo pending archive. All 162 prior archived files remain byte-identical, with unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+
+Destination: `assets/atlas/collectibles/vert-7-racine-construction-colorful-screw-scaffold/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Scaffold pickup | Purple beam on highest right-hand platform, left and right ramps and connecting span | `1000029538.jpg` | `pickup-scaffold.webp` |
+| Wide map | Southeast city perimeter, southeast of Wild Zone 2 and northeast of Wild Zone 1 | `1000029539.jpg` | `map-wide.webp` |
+| Neighbourhood map | Vert Sector 7, Racine Construction, Pokémon Center and Gare de Lumiose | `1000029540.jpg` | `map-neighbourhood.webp` |
+| Close map | Boulevard-facing building edge southwest of Racine Construction; faint grid crosses | `1000029541.jpg` | `map-close.webp` |
+| Collection confirmation | Colorful Screw ×1 on elevated platform near Canari plush exchange | `1000029542.jpg` | `pickup-confirmation.webp` |
