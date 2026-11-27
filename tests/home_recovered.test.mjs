@@ -246,8 +246,8 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
    assert.deepEqual(r.alpha,r.catch.map(n=>n+9));
   }
  }
- assert.equal(Object.keys(pilot).length,87);
- assert.equal(Object.values(pilot).flat().length,149);
+ assert.equal(Object.keys(pilot).length,105);
+ assert.equal(Object.values(pilot).flat().length,202);
  for(const [n,routes] of Object.entries(pilot)){
   const s=research.species.find(s=>s.national===Number(n));
   assert.ok(s);
@@ -276,6 +276,17 @@ console.log("PASS: full owner-PDF 364 digest, exact original 232 parity, 256 loc
  for(const n of [863,904,767,768,900,877])assert.ok(pilot[n].length>0&&pilot[n].every(r=>r.form===0),n);
  assert.deepEqual(pilot[767].map(r=>[r.rank,r.type]),[[1,"Bug"],[3,"Water"]]);
  assert.deepEqual(pilot[904],[{form:0,type:"Poison",rank:5,catch:[53,55],alpha:[62,64]}]);
+ const labels=JSON.parse(app.match(/const portalFormLabels=(\{[^\n]+\});/)?.[1]);
+ assert.deepEqual(Object.keys(pilot).map(Number).sort((a,b)=>a-b),research.species.map(s=>s.national).sort((a,b)=>a-b));
+ for(const [n,routes] of Object.entries(pilot))if(routes.some(r=>r.form>0)){
+  assert.equal(new Set(labels[n]).size,labels[n].length);
+  for(const route of routes)assert.ok(labels[n][route.form],`Missing form label ${n}/${route.form}`);
+ }
+ assert.deepEqual(labels[52],["Kantonian Meowth","Alolan Meowth","Galarian Meowth"]);
+ assert.deepEqual(labels[479],["Rotom (ordinary form)","Heat Rotom","Wash Rotom","Frost Rotom","Fan Rotom","Mow Rotom"]);
+ assert.deepEqual(labels[931],["Green Plumage","Blue Plumage","Yellow Plumage","White Plumage"]);
+ assert.deepEqual(labels[978],["Curly Form","Droopy Form","Stretchy Form"]);
+ assert.ok(app.includes("row.dataset.atlasPortalForm=String(encounter.form)"));
  assert.ok(app.includes("reviewedPortalRoutes[r.number].some(encounter=>encounter.rank===5)"));
  assert.ok(read("side-missions.html").includes('id="quest-188"'));
  assert.ok(read("mega-dimension.html").includes('id="portal-prep"'));
