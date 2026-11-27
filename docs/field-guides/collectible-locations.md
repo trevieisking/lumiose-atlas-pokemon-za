@@ -804,3 +804,25 @@ Destination: `assets/atlas/collectibles/vert-7-racine-construction-colorful-scre
 | Neighbourhood map | Vert Sector 7, Racine Construction, Pokémon Center and Gare de Lumiose | `1000029540.jpg` | `map-neighbourhood.webp` |
 | Close map | Boulevard-facing building edge southwest of Racine Construction; faint grid crosses | `1000029541.jpg` | `map-close.webp` |
 | Collection confirmation | Colorful Screw ×1 on elevated platform near Canari plush exchange | `1000029542.jpg` | `pickup-confirmation.webp` |
+
+## Roar — Rouge Plaza southwest rooftop near Café Pokémon-Amie
+
+**Collectible find 39.** TM Roar, golden pickup beam. Final gameplay photograph explicitly confirms **Roar ×1**. Normal-type TM.
+
+**Map anchor:** the southwestern arm of the irregular building block immediately west/southwest of Rouge Plaza (Wild Zone 3), across Autumnal Avenue from Café Pokémon-Amie and northwest of the labelled Rouge Sector 1 building. Close map shows the player at the avenue-facing western edge of the roof footprint. The precise numbered sector of the target building is not established by these photographs. Preserve the map's faint registration crosses for subsequent basemap calibration; the player position is not a calibrated pickup coordinate.
+
+**Written directions (player-confirmed):** battle the NPC to unlock the Holovator, take the Holovator to the rooftop, then turn left. Find the golden pickup beside the chimney stack on the tan metal roof. Prism Tower is visible in the background. The final photograph confirms collection beside a chimney with four pots, overlooking the tree-lined avenue.
+
+**Access-layer evidence:** record the NPC battle as a prerequisite for this Holovator, based on the contributor's firsthand route. The nearby yellow Holovator symbol on the plaza-facing side of the building is a candidate access anchor; match it to the existing Holovator registry before assigning an ID. NPC identity, battle details, precise entrance coordinates and calibrated pickup position remain unverified. Do not assume the prerequisite applies to other Holovators. No permanent live marker is claimed.
+
+**Evidence status:** all five supplied .jpg files decoded as WebP; four are 1536 × 865 and the neighbourhood map is 1536 × 823. Original bytes preserved in the cumulative 172-photo pending archive, with all 167 previous entries byte-identical, unique paths and ZIP integrity verified. First 24 committed photographs remain untouched. Binary upload pending; destination filenames are not yet live links.
+
+Destination: `assets/atlas/collectibles/rouge-plaza-cafe-pokemon-amie-roar-rooftop/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Rooftop pickup | Golden beam beside chimney; Prism Tower in background | `1000029549.jpg` | `pickup-rooftop.webp` |
+| Wide map | Southwest of Wild Zone 3 and northeast of Wild Zone 7 | `1000029550.jpg` | `map-wide.webp` |
+| Neighbourhood map | Building across Autumnal Avenue from Café Pokémon-Amie, northwest of Rouge Sector 1 | `1000029551.jpg` | `map-neighbourhood.webp` |
+| Close map | Avenue-facing roof footprint and nearby Holovator symbol | `1000029552.jpg` | `map-close.webp` |
+| Collection confirmation | Roar ×1 beside four-pot chimney overlooking avenue | `1000029553.jpg` | `pickup-confirmation.webp` |
