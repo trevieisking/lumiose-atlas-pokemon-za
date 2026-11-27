@@ -260,3 +260,25 @@ Destination: `assets/atlas/collectibles/coulant-waterway-super-potion-west-bank-
 | Neighbourhood map view | Café Cyclone, Vert Sectors 3 and 6, Coulant Waterway | `1000029268.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player near the northern end of the canal on its western edge | `1000029269.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Super Potion by the tree | `1000029270.jpg` | `pickup-confirmation.webp` |
+
+## Antidote — Vert Sector 3 upper terrace overlooking Wild Zone 11
+
+Field catalogue find 014.
+
+Locate **Vert Sector 3** on the map, immediately west of **Wild Zone 11 (Jaune Sector 10)** and south of **Saison Canal**. The close map places the player near the northeastern corner of Vert Sector 3, just outside the western green boundary of the wild zone.
+
+Follow the upper cobbled terrace beside the wild zone. Look for wooden benches, a black lamppost by the stair opening and a square planter containing a small tree. The red pickup beam is in the far corner beside the planter where the stone parapet turns, overlooking the water and grassy terraces of Wild Zone 11. The final gameplay photograph confirms **Antidote ×1** at this corner, outside the wild zone. Do not confuse it with the other pickup beam visible below in the wild zone.
+
+The precise Atlas basemap coordinate and any access prerequisites remain unverified. No live marker added.
+
+**Evidence status:** Five genuine WebP photographs decoded and visually reviewed, with dimensions ranging from 1536 × 793 to 1536 × 865. Original bytes were verified against all five files in the local upload archive. GitHub binary transfer remains pending; these are planned destinations, not live links.
+
+Destination: `assets/atlas/collectibles/vert-3-antidote-wild-zone-11-terrace/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup by terrace planter | Red beam beside the benches, square planter and parapet | `1000029276.jpg` | `pickup-by-terrace-planter.webp` |
+| Wide map view | Vert district and Wild Zones 2 and 11 | `1000029277.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Vert Sector 3, Saison Canal and Jaune Sector 10 | `1000029278.jpg` | `map-neighbourhood.webp` |
+| Close map view | Player near the western boundary of Wild Zone 11 | `1000029279.jpg` | `map-close.webp` |
+| Collection confirmation | On-screen award of one Antidote beside the terrace planter | `1000029280.jpg` | `pickup-confirmation.webp` |
