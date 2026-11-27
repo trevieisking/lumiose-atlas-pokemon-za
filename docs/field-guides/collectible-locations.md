@@ -392,3 +392,25 @@ Destination: `assets/atlas/collectibles/vert-plaza-poke-ball-scaffold-tree/`.
 | Neighbourhood map view | Vert Plaza, Vert Sectors 1 and 3 and Saison Canal | `1000029330.jpg` | `map-neighbourhood.webp` |
 | Close map view | Player at the southern end of the landscaped strip northeast of Vert Plaza | `1000029331.jpg` | `map-close.webp` |
 | Collection confirmation | On-screen award of one Poké Ball beside the tree | `1000029332.jpg` | `pickup-confirmation.webp` |
+
+## Dazzling Gleam — Magenta Plaza central monument (Wild Zone 7)
+
+Field catalogue find 020; first Technical Machine (TM) in this photographic collection. Keep the TM category separate from ordinary items and Colorful Screws; the catalogue numbering is not official game numbering.
+
+Locate **Magenta Plaza (Wild Zone 7)** on the in-game map. It is the circular wild zone west of Prism Tower, between the two sections of Saison Canal, with a Pokémon Center nearby to the southeast. The three map photographs show the selected Wild Zone 7 travel marker at the center of Magenta Plaza.
+
+Enter the wild zone and head towards the central stone monument with engraved geometric symbols on its pedestal. The approach photograph shows a golden pickup beam at ground level directly in front of the engraved panel, between two clusters of thorny roots. Collect the TM from the base of the monument. The final gameplay photograph shows a new purple TM disc and the visible beginning of the name “Dazzling Gl…”, consistent with the contributor's identification of **Dazzling Gleam**. The remainder of the pickup text is cropped at the right edge. The red beam among the roots is a distinct unidentified pickup and must not be assigned to this TM.
+
+The monument provides a strong in-world location reference, but the map cursor is snapped to the wild-zone travel marker and is not a calibrated item coordinate. Exact Atlas basemap placement and any access prerequisites beyond entering Wild Zone 7 remain to be verified. No live marker added. Reserve a distinct TM filter and checklist category for later integration; this entry does not implement or alter the live map or player progress.
+
+**Evidence status:** Five original photographs decoded as genuine WebP at 1536 × 865 pixels and visually reviewed. All five new files were verified byte-for-byte in the cumulative 75-photo archive, and all 70 earlier archived files were confirmed unchanged. GitHub binary transfer remains pending; these are planned destinations, not live image links.
+
+Destination: `assets/atlas/collectibles/magenta-plaza-dazzling-gleam-monument/`.
+
+| Photo | What to look for | Source filename | Destination filename |
+| --- | --- | --- | --- |
+| Pickup at monument | Golden beam in front of the engraved stone pedestal | `1000029350.jpg` | `pickup-at-monument.webp` |
+| Wide map view | Magenta Plaza relative to Wild Zones 5 and 9 and Prism Tower | `1000029351.jpg` | `map-wide.webp` |
+| Neighbourhood map view | Magenta Plaza, Magenta Street and Saison Canal | `1000029352.jpg` | `map-neighbourhood.webp` |
+| Close map view | Selected Wild Zone 7 marker at center of Magenta Plaza | `1000029353.jpg` | `map-close.webp` |
+| Collection confirmation | New purple TM disc and partially visible Dazzling Gleam pickup text at monument | `1000029354.jpg` | `pickup-confirmation.webp` |
