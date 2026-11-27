@@ -18,3 +18,21 @@ Trev identified the pickup as a Hyper Potion and surveyed the spot after unlocki
 | [Close map view](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/map-close.webp) | The marked building outline and Vert Street label | `1000029145.webp` |
 | [Sector map view](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/map-sector.webp) | The same roof beside the garden and the Vert Sector 7 label | `1000029146.webp` |
 | [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-hyper-potion-rooftop/map-neighbourhood.webp) | The building in relation to the nearby Pokémon Center and surrounding blocks | `1000029143.webp` |
+
+## Dive Ball — Vert Sector 7 rooftop
+
+On the in-game map, find the canal-facing end of the building beside **Vert Street** in the [block view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-block.webp). The [close-up](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-close.webp) shows where the player was standing. It is the same building outline as the Hyper Potion above, with the player marker closer to the canal.
+
+On the flat, gray-tiled roof, look for the long chimney wall topped with two groups of dark pipes. The pink pickup beam is at the base of that wall. The [collection photo](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-confirmation.webp) shows the game awarding **Dive Ball ×1** next to the same chimney.
+
+![Dive Ball pickup at the base of a rooftop chimney wall on Vert Street](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-rooftop.webp)
+
+The route up from street level and the exact coordinates on the Atlas basemap still need verification.
+
+| Photo | What to look for | Source filename |
+| --- | --- | --- |
+| [Rooftop pickup](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-rooftop.webp) | Pink beam at the base of the chimney wall | `1000029152.webp` |
+| [Neighbourhood map view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-neighbourhood.webp) | The surrounding canal, garden and street blocks | `1000029153.webp` |
+| [Block map view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-block.webp) | The building beside Vert Street and the canal | `1000029154.webp` |
+| [Close map view](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/map-close.webp) | The player marker at the canal-facing end of the building | `1000029155.webp` |
+| [Collection confirmation](../../assets/atlas/collectibles/vert-7-dive-ball-rooftop/pickup-confirmation.webp) | The on-screen award of one Dive Ball at the chimney | `1000029156.webp` |
