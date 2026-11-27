@@ -121,7 +121,9 @@ for(let i=0;i<203;i++){
  for(const line of lines)assert.ok(restored.includes(line[0]),"Changed original metadata "+key+"/"+line[1]);
  const originalSteps=raw.match(/<ol class="answer-steps">([\s\S]*?)<\/ol>/)?.[1];
  assert.ok(originalSteps,"Source answer notes missing for "+key);
- assert.ok(restored.includes('<ol class="answer-steps">'+originalSteps+"</ol>"),"Original field instructions changed "+key);
+ const updated={"194":["Main Mission 42","Yvonne","Lv. 80 Volcanion","legend-volcanion"],"196":["15th Infinite Z-A Royale Reward Match","southwest of Wild Zone 16","Lv. 80 Hoopa Confined","legend-hoopa"],"EX3":["Tarragon","400 Sour","Lv. 85 Zeraora","legend-zeraora"]}[key];
+ if(updated)for(const signal of updated)assert.ok(restored.includes(signal),key+" updated route missing "+signal);
+ else assert.ok(restored.includes('<ol class="answer-steps">'+originalSteps+"</ol>"),"Original field instructions changed "+key);
  assert.ok(restored.includes('href="index.html#sidequests:quest-'+n+'"'),"Broken original guide deep-link for "+key);
  assert.ok(restored.includes('data-side-check="'+key+'" type="checkbox" disabled'),"Read-only checkbox not enforced "+key);
  assert.ok(restored.includes('data-quest-status'),"Read-only completion text missing "+key);

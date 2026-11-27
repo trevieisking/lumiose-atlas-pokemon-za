@@ -1,5 +1,11 @@
 # Pokémon Atlas — consolidated release handoff
 
+## Start here: current GitHub baseline and Workspace handoff
+
+- **GitHub Pages verified:** [PR #219](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/219) ships wider original photo views for all 48 sectors, preserving the old crops and originals; [PR #216](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/216) ships 41 boutiques and five hair salons. Both are present at `a6df28bc6342f85b1b3d4a3030a5ce4837d4e0e3`. Older candidate labels below are dated history.
+- **Next verified scope:** [AT-346 roster and mission slice](docs/qa/at346-dex-audit/ROSTER_AND_MYTHICAL_ROUTES_2026-11-27.md): all 132 Hyperspace roster entries, three specific DLC catch guides and a HOME completion clarification. Capture-route completeness across all 364 species, full Alpha coverage and map synchronization remain open in [Issue #220](https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/220).
+- **Original Site:** [one Workspace prompt](WORKSPACE_ATLAS_NEXT_RELEASE.md) with backup, exact-source, preview and live checks. This repository does not certify original-Site publication or an update to the private Supabase ledger. No videos in the release.
+
 <!-- AT345_CONTEXTUAL_MAP_AND_AT330_SHOPS_PLANNING_98_106 -->
 ## AT-345 planning addendum — wider sector photographs + fashion Shops (Manifest 98 / Ledger 106)
 
