@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 147,
-  "ledger_revision": 155,
+  "manifest_revision": 148,
+  "ledger_revision": 156,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -13,22 +13,22 @@
   "workspace_v41_verified": false,
   "field_collection": {
     "pr": 226,
-    "head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
-    "previous_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "previous_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
     "counts": {
-      "tm": 21,
+      "tm": 22,
       "item": 20,
-      "screw": 9,
+      "screw": 22,
       "access": 1,
-      "collectibleFinds": 50,
-      "photos": 250
+      "collectibleFinds": 64,
+      "photos": 318
     },
-    "latest_find": "Endure, find 50, Jaune rooftop garden north of Wild Zone 8",
-    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-photo-register.json",
-    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-locations.md",
-    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/collectible-fieldbook.html",
-    "local_validation": "17 collectible tests passed; all 250 original hashes, 51 gallery groups and no pin/checklist assignment verified; sitewide link graph passed; generated homepage parity failed and corrected in next candidate",
-    "integration": "All 250 original Git blobs verified on exact 95949c12; 8 new fieldbook records and Mission 20 contextual links; homepage parity correction candidate pending CI",
+    "latest_find": "Colorful Screw #64, South Boulevard ladder scaffold between Racine Construction and Restaurant Le Nah",
+    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/docs/field-guides/collectible-photo-register.json",
+    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/docs/field-guides/collectible-locations.md",
+    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/collectible-fieldbook.html",
+    "local_validation": "68 new source blob identities verified in PR229; all 318 registered paths present; 250 earlier source and guide blobs retained; exact CI pending",
+    "integration": "Verified source-to-guide transfer 06d81703c2158d2ef14d73a88c5582f5f3705f35; exact CI and contextual review pending",
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
@@ -66,7 +66,7 @@
       "finds": 0,
       "photos": 0,
       "status": "imported_and_organised",
-      "next_find": 51
+      "next_find": 65
     },
     "mandatory_intake_cycle": {
       "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
@@ -2314,5 +2314,42 @@
     "paid_services": false,
     "release_decision": "HOLD",
     "next": "Continue remaining written city encounter routes and individual conditions; then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace, zero paid services."
+  },
+  "a1_field_batch_51_64": {
+    "id": "AT-348-A1-FIELD-BATCH-51-64",
+    "date": "2026-11-28",
+    "manifest_revision": 148,
+    "ledger_revision": 156,
+    "source_pr": 226,
+    "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "source_import_commit": "32e79392492b6d26cfce25ecc466fcd6d102377f",
+    "reviewed_guide_parent": "d17dae9df12bbbbf487878ddff11f5eaeb6c7eb8",
+    "guide_transfer_commit": "06d81703c2158d2ef14d73a88c5582f5f3705f35",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 68,
+    "retained_prior_blob_matches": 250,
+    "archive_sha256": "b15d262831751b8167e60ae139a1b43878d23fef83824896eddcc3b20fe29d86",
+    "counts": {
+      "tm": 22,
+      "item": 20,
+      "screw": 22,
+      "access": 1,
+      "collectibleFinds": 64,
+      "photos": 318
+    },
+    "added_finds": [
+      51,
+      64
+    ],
+    "added_photos": 68,
+    "fieldbook_groups": 65,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 65,
+    "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
   }
 }

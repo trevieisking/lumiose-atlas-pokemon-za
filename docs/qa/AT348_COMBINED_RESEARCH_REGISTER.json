@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 147,
-  "ledger_revision": 155,
+  "manifest_revision": 148,
+  "ledger_revision": 156,
   "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
   "pr": 229,
   "photo_pr": 226,
@@ -18,7 +18,7 @@
       "id": "owner",
       "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226",
       "role": "Primary location, pickup and access evidence",
-      "status": "50 finds, one survey and 250 integrated originals; ongoing intake"
+      "status": "64 finds, one survey and 318 candidate originals; ongoing intake"
     },
     {
       "id": "serebii",
@@ -121,7 +121,7 @@
         "nintendo-life",
         "pokemon-france"
       ],
-      "status": "250 photos integrated; stable ID/position matching still open"
+      "status": "318 original photos in candidate; stable ID/position matching and contextual reuse open"
     },
     {
       "slice": "A7",
@@ -381,5 +381,42 @@
     "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
     "no_paid_services": true,
     "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+  },
+  "a1_field_batch_51_64": {
+    "id": "AT-348-A1-FIELD-BATCH-51-64",
+    "date": "2026-11-28",
+    "manifest_revision": 148,
+    "ledger_revision": 156,
+    "source_pr": 226,
+    "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "source_import_commit": "32e79392492b6d26cfce25ecc466fcd6d102377f",
+    "reviewed_guide_parent": "d17dae9df12bbbbf487878ddff11f5eaeb6c7eb8",
+    "guide_transfer_commit": "06d81703c2158d2ef14d73a88c5582f5f3705f35",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 68,
+    "retained_prior_blob_matches": 250,
+    "archive_sha256": "b15d262831751b8167e60ae139a1b43878d23fef83824896eddcc3b20fe29d86",
+    "counts": {
+      "tm": 22,
+      "item": 20,
+      "screw": 22,
+      "access": 1,
+      "collectibleFinds": 64,
+      "photos": 318
+    },
+    "added_finds": [
+      51,
+      64
+    ],
+    "added_photos": 68,
+    "fieldbook_groups": 65,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 65,
+    "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
   }
 }
