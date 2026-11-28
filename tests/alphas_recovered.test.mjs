@@ -7,7 +7,7 @@ const legacy=[...source.matchAll(/<article class="alpha-card">([\s\S]*?)<\/artic
 const restored=[...html.matchAll(/<article class="alpha-zone-card"([\s\S]*?)<\/article>/g)].map(x=>x[0]);
 assert.equal(legacy.length,20,"Original source must contain all 20 zones");
 assert.equal(restored.length,20,"Standalone fieldbook must retain 20 zone cards");
-const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>([^<]+)<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:["Vivillon (Meadow Pattern)","Florges (Red Flower)"].includes(y[2])?y[2]:y[1],level:y[3]}));
+const originalTargets=x=>[...x.matchAll(/data-dex-name="([^"]+)"[^>]*>([^<]+)<\/button><small>([^<]+)<\/small>/g)].map(y=>({name:["Vivillon (Meadow Pattern)","Florges (Red Flower)","Gourgeist (Medium Variety)"].includes(y[2])?y[2]:y[1],level:y[3]}));
 const revisedTargets=x=>[...x.matchAll(/<span class="alpha-target-name">([^<]+)<\/span><span class="alpha-level">([^<]+)<\/span>/g)].map(y=>({name:y[1],level:y[2]}));
 let fixedCount=0;
 for(let i=0;i<20;i++){
@@ -26,6 +26,8 @@ assert.deepEqual(centralPool.filter(r=>r.level==="Lv. 64–65").map(r=>r.name.re
 assert.equal(centralPool.filter(r=>r.level==="Lv. 63–64").length,41);
 assert.ok(centralPool.some(r=>r.name==="Vivillon (Meadow Pattern)" && r.level==="Lv. 63–64"));
 assert.ok(centralPool.some(r=>r.name==="Florges (Red Flower)" && r.level==="Lv. 64–65"));
+assert.ok(centralPool.some(r=>r.name==="Gourgeist (Medium Variety)" && r.level==="Lv. 63–64"));
+assert.match(legacy[19],/data-dex-name="Gourgeist" type="button">Gourgeist \(Medium Variety\)/);
 assert.match(legacy[19],/data-dex-name="Vivillon" type="button">Vivillon \(Meadow Pattern\)/);
 assert.match(legacy[19],/data-dex-name="Florges" type="button">Florges \(Red Flower\)/);
 assert.match(restored[19],/Show all 67 possible Zone 20 Alpha Pokémon/);
@@ -216,3 +218,21 @@ for (const cue of ["Lv. 46–47","by day in Wild Zone 13","1★ Flying","1★ Bu
 }
 assert.match(read("src/sections/pokedex.html"),/href="alphas\.html#alpha-vivillon-patterns"/);
 assert.match(read("rewards.html"),/id="gift-poke-ball-vivillon"/);
+
+// AT-348 A2-15: source-backed interior route buttons on existing base-dex cards.
+const interiorDex=read("src/sections/pokedex.html");
+for(const [name,anchors] of Object.entries({"Scraggy":["alpha-interior-main-sewers"],"Litwick":["alpha-interior-main-sewers"],"Klefki":["alpha-interior-main-sewers","alpha-interior-canal"],"Noibat":["alpha-interior-main-sewers","alpha-interior-canal","alpha-lysandre-labs"],"Patrat":["alpha-interior-main-sewers"],"Inkay":["alpha-interior-main-sewers","alpha-interior-canal"],"Goomy":["alpha-interior-main-sewers"],"Gastly":["alpha-interior-main-sewers","alpha-interior-old-building"],"Haunter":["alpha-interior-main-sewers"],"Skrelp":["alpha-interior-main-sewers","alpha-interior-canal"],"Dragalge":["alpha-interior-main-sewers"],"Ariados":["alpha-interior-canal"],"Gengar":["alpha-interior-old-building"],"Ekans":["alpha-lysandre-labs"],"Houndour":["alpha-lysandre-labs"],"Electrike":["alpha-lysandre-labs"],"Honedge":["alpha-lysandre-labs"],"Arbok":["alpha-lysandre-labs"],"Houndoom":["alpha-lysandre-labs"],"Manectric":["alpha-lysandre-labs"],"Beldum":["alpha-lysandre-labs"],"Metang":["alpha-lysandre-labs"],"Doublade":["alpha-lysandre-labs"],"Noivern":["alpha-lysandre-labs"]})){
+  const marker='<b>Where to get '+name+'</b>',start=interiorDex.indexOf(marker);
+  assert.ok(start>=0,name);
+  const card=interiorDex.slice(start,interiorDex.indexOf('</article>',start));
+  for(const anchor of anchors){assert.ok(card.includes('href="alphas.html#'+anchor+'"'),name+' '+anchor);assert.equal((html.match(new RegExp('id="'+anchor+'"','g'))||[]).length,1);}
+}
+assert.equal((interiorDex.match(/class="dex-card"/g)||[]).length,232);
+assert.match(cityAlphaCard("alpha-interior-main-sewers"),/Bleu Sector 7.*Ice Beam.*Bleu Sector 1/);
+assert.match(cityAlphaCard("alpha-interior-canal"),/unresolved repeatable-spawn claim/);
+assert.match(cityAlphaCard("alpha-interior-old-building"),/one Lv\. 40 Gastly and two Lv\. 42 Gengar/);
+assert.match(cityAlphaCard("alpha-lysandre-labs"),/Mission 35.*Reaching Rank A/);
+const essentials=read("src/sections/essentials.html");assert.match(essentials,/2\.0\.2.*19 March 2026/);assert.match(essentials,/9,999/);
+for(const page of ["src/sections/sidequests.html","side-missions.html"])assert.match(read(page),/25,000 points each\.<\/li><li>If Special Scanning is stuck/);
+for(const page of ["src/sections/walkthrough.html","walkthrough.html","journey.html"])assert.match(read(page),/Lv\. 40 Gastly and two Lv\. 42 Gengar/);
+assert.match(read("home-connection.html"),/without purchasing Mega Dimension.*communication features/);

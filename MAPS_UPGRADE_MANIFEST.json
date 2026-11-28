@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 141,
-    "ledger_revision": 149,
-    "status": "a2_14_rotating_city_labs_donuts_candidate_full_scope_open",
+    "revision": 142,
+    "ledger_revision": 150,
+    "status": "a2_15_official_source_interior_guide_parity_repair_candidate_full_scope_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A2_14_ROTATING_CITY_LABS_DONUTS.md",
-    "next_slice": "Continue verified city ordinary/chance and fixed sector routes, Canal Access and Old Building interior encounters, all alternate acquisitions/forms and evolution methods, remaining Hyperspace-specific encounter rules and full page-by-page A3–A8 QA. No live release before exact validation.",
+    "latest_slice": "docs/qa/AT348_A2_15_OFFICIAL_SOURCE_INTERIOR_GUIDE.md",
+    "next_slice": "Check exact-head CI and independently review phone/desktop. Continue A2 capture-first verified city sector encounters, alternative evolution/gift/trade/form acquisition and remaining Hyperspace detail, then full A3–A8. Use official sources first, secondary guides for omitted game data and owner photos for verified positions. No release before full GitHub gate.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
       "date": "2026-11-28",
@@ -613,7 +613,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 141,
+  "revision": 142,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -10729,5 +10729,113 @@
     "full_source_audit_complete": false,
     "release_decision": "HOLD",
     "next": "Continue verified city ordinary/chance and fixed sector routes, Canal Access and Old Building interior encounters, all alternate acquisitions/forms and evolution methods, remaining Hyperspace-specific encounter rules and full page-by-page A3–A8 QA. No live release before exact validation."
+  },
+  "at_348_a2_15_official_source_interior_guide": {
+    "id": "AT-348-A2-15-OFFICIAL-SOURCE-INTERIOR-GUIDE",
+    "date": "2026-11-28",
+    "manifest_revision": 142,
+    "ledger_revision": 150,
+    "reviewed_parent": "9d9be9148fe4817ce17d14c3e75e832b44286225",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_15_OFFICIAL_SOURCE_INTERIOR_GUIDE.md",
+    "source_policy": {
+      "date": "2026-11-28",
+      "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
+      "primary": [
+        "https://legends.pokemon.com/en-gb/",
+        "https://www.pokemon.com/uk/",
+        "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html",
+        "https://home.pokemon.com/en-gb/move/"
+      ],
+      "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
+      "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
+    },
+    "software_baseline": "2.0.2, 19 March 2026 UK (Nintendo Support read 28 November 2026)",
+    "prior_ci": [
+      {
+        "id": 46176473894,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176473788,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 46176473792,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176473789,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "prior_failure": {
+      "run_id": 46176473788,
+      "job_id": 141076216056,
+      "path": "tests/alphas_recovered.test.mjs:18",
+      "cause": "Standalone Gourgeist (Medium Variety) label differed from unchanged homepage source/old comparator",
+      "resolution": "Correct exact source label and extend existing comparator to the source-supported form; all 20 lists, 38 fixed and 67 rotating rows compared locally"
+    },
+    "interior_pokedex_species": 24,
+    "interior_route_links": 30,
+    "interior_groups": [
+      "Main sewers",
+      "Canal Access",
+      "Old Building",
+      "Lysandre Labs B1F"
+    ],
+    "main_sewer_ordinary_species": 11,
+    "canal_repeatable_species": 4,
+    "canal_klefki": "disputed repeatability; retain source-reported level as qualified claim",
+    "old_building_mission_encounters": 3,
+    "lab_ordinary_species": 12,
+    "official_patch_surfaces": [
+      "src/sections/essentials.html",
+      "src/sections/sidequests.html",
+      "side-missions.html",
+      "shops.html",
+      "home-connection.html"
+    ],
+    "candidate_validation": {
+      "alpha_source_parity": 20,
+      "fixed_alpha_rows": 38,
+      "rotating_alpha_rows": 67,
+      "base_dex_cards": 232,
+      "home_cards": 364,
+      "mission_cards": 42,
+      "side_mission_controls": 203,
+      "homepage_source_sections": 5,
+      "homepage_roundtrip_exact": true,
+      "new_test_assertions": "Added to existing article test; full Node and browser CI pending"
+    },
+    "condition_supplements_retained": 249,
+    "chance_alpha_rows_retained": 146,
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_delta": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Check exact-head CI and independently review phone/desktop. Continue A2 capture-first verified city sector encounters, alternative evolution/gift/trade/form acquisition and remaining Hyperspace detail, then full A3–A8. Use official sources first, secondary guides for omitted game data and owner photos for verified positions. No release before full GitHub gate."
+  },
+  "at_348_official_source_policy": {
+    "date": "2026-11-28",
+    "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
+    "primary": [
+      "https://legends.pokemon.com/en-gb/",
+      "https://www.pokemon.com/uk/",
+      "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html",
+      "https://home.pokemon.com/en-gb/move/"
+    ],
+    "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
+    "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
   }
 }

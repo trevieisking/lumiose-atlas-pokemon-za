@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 141,
-  "ledger_revision": 149,
+  "manifest_revision": 142,
+  "ledger_revision": 150,
   "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
   "pr": 229,
   "photo_pr": 226,
@@ -36,26 +36,26 @@
       "id": "pokemon-france",
       "url": "https://www.pokemon-france.com/guides/legendes-pokemon-z-a/",
       "role": "Story, missions, bosses, DLC and items",
-      "status": "35 indexed; 25 substantive excerpts, 5 navigation-only, 5 body-pending"
+      "status": "35 indexed earlier; 25 substantive excerpts, five navigation-only, five body-pending; current hub cache miss."
     },
     {
       "id": "nintendo-life",
       "url": "https://www.nintendolife.com/guides/pokemon-legends-z-a-walkthrough-all-wild-zones-tips-and-tricks",
       "role": "Route and visual comparison, difficult catches",
-      "status": "Hub and targeted samples; no unauthorized image reuse"
+      "status": "Hub and targeted Beldum capture article directly reopened; secondary, no image reuse."
     },
     {
       "id": "game8",
       "url": "https://game8.co/games/Pokemon-Legends-Z-A",
       "role": "Access, collectibles, missions and customisation",
-      "status": "English HTTP 403; Japanese counterpart targeted review",
+      "status": "English HTTP403 on this turn; retain prior bounded Japanese counterpart research; no fresh full audit.",
       "alternate": "https://game8.jp/pokemon-legends-z-a"
     },
     {
       "id": "official",
       "url": "https://legends.pokemon.com/",
       "role": "Official terminology, features, version and distribution verification",
-      "status": "Recheck release-sensitive claims"
+      "status": "Official UK gameplay, DLC, update history and HOME/Champions connectivity directly reviewed 28 November 2026. Current offer pages individually recheck; specific capture tables secondary."
     },
     {
       "id": "other",
@@ -83,7 +83,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "All 20 targeted zone passes and 67 rotating candidate supplements staged; city fixed district/lab guide enriched. Detailed city/other interiors, alternate routes/forms, DLC and full QA remain open."
+      "status": "All 20 targeted zones and rotating candidate supplements; fixed district guide plus 24 linked base-dex interior species. City sector details, gifts/trades/evolution, forms, remaining DLC and independent QA open."
     },
     {
       "slice": "A3",
@@ -225,6 +225,31 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
+    "interior_species": 24,
+    "interior_route_links": 30,
+    "official_patch_baseline": "2.0.2",
+    "total_condition_supplements": 249,
+    "total_chance_alpha_rows": 146,
+    "alpha_source_parity": 20,
+    "full_ci": "pending",
+    "visual": "pending"
+  },
+  "open_disputes": [
+    "WZ18 fixed Alpha time/weather table vs narrative",
+    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
+    "Gastly lead remains unclassified",
+    "WZ18 exact earliest Rank B transition",
+    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
+    "English Game8 body inaccessible",
+    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
+    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
+    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
+    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open."
+  ],
+  "full_audit_complete": false,
+  "release_decision": "HOLD",
+  "next": "Check exact-head CI and independently review phone/desktop. Continue A2 capture-first verified city sector encounters, alternative evolution/gift/trade/form acquisition and remaining Hyperspace detail, then full A3–A8. Use official sources first, secondary guides for omitted game data and owner photos for verified positions. No release before full GitHub gate.",
+  "previous_slice": {
     "rotating_pool_supplements": 67,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
@@ -238,35 +263,16 @@
     "full_ci": "pending",
     "visual": "pending"
   },
-  "open_disputes": [
-    "WZ18 fixed Alpha time/weather table vs narrative",
-    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
-    "Gastly lead remains unclassified",
-    "WZ18 exact earliest Rank B transition",
-    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
-    "English Game8 body inaccessible",
-    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
-    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
-    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown."
-  ],
-  "full_audit_complete": false,
-  "release_decision": "HOLD",
-  "next": "Continue verified city ordinary/chance and fixed sector routes, Canal Access and Old Building interior encounters, all alternate acquisitions/forms and evolution methods, remaining Hyperspace-specific encounter rules and full page-by-page A3–A8 QA. No live release before exact validation.",
-  "previous_slice": {
-    "zones": [
-      19,
-      20
+  "official_source_policy": {
+    "date": "2026-11-28",
+    "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
+    "primary": [
+      "https://legends.pokemon.com/en-gb/",
+      "https://www.pokemon.com/uk/",
+      "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html",
+      "https://home.pokemon.com/en-gb/move/"
     ],
-    "supplements_added": 24,
-    "chance_alpha_added": 22,
-    "total_condition_supplements": 182,
-    "total_chance_alpha_rows": 146,
-    "rotating_alpha_pool_preserved": 67,
-    "geometry_unchanged": true,
-    "unrelated_encounters_unchanged": true,
-    "isolated_model_areas": 68,
-    "isolated_model_issues": 0,
-    "full_ci": "pending",
-    "visual": "pending"
+    "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
+    "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
   }
 }
