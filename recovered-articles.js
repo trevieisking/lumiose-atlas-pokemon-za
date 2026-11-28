@@ -103,3 +103,11 @@
   if(!["maps.html","sector-maps.html","alphas.html","items.html","walkthrough.html","side-missions.html","shiny-hunting.html","hyperspace-maps.html","mega-dimension.html","atlas-explorer.html","journey.html"].includes(page))return;
   import("./atlas-guide-links.mjs").then(({installArticleLinks})=>installArticleLinks(document,page)).catch(error=>console.warn("Optional guide references unavailable",error));
 })();
+
+/* AT-348: a visible task directory on every existing recovered article. */
+(() => {
+  if(typeof document==="undefined"||typeof document.querySelector!=="function")return;
+  const header=document.querySelector(".atlas-article-header .header-actions");
+  if(!header||header.querySelector('a[href="guide.html"]'))return;
+  const link=document.createElement("a");link.className="action";link.href="guide.html";link.textContent="Guide directory";header.prepend(link);
+})();

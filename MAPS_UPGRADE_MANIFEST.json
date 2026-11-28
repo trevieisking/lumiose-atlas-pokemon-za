@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 116,
-    "ledger_revision": 124,
-    "status": "p0_capture_first_dex_candidate_exact_head_validation_pending",
+    "revision": 117,
+    "ledger_revision": 125,
+    "status": "p0_capture_and_a7_editorial_candidate_exact_head_validation_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A3_02_ACCESS_CROSSLINKS.md",
-    "next_slice": "A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity.",
+    "latest_slice": "docs/qa/AT348_A7_01_EDITORIAL_FACT_AUDIT.md",
+    "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -484,7 +484,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 116,
+  "revision": 117,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9706,5 +9706,33 @@
     "workspace_release_allowed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity."
+  },
+  "at_348_a7_01_editorial_fact_audit": {
+    "id": "AT-348-A7-01-EDITORIAL-FACT-AUDIT",
+    "date": "2026-11-28",
+    "manifest_revision": 117,
+    "ledger_revision": 125,
+    "parent": "01857775fcd569f2a9bb9e3527cd7cd3f382177e",
+    "active_pr": 229,
+    "scope": "Task-led navigation and bounded factual review; all-page acceptance open",
+    "evidence": "docs/qa/AT348_A7_01_EDITORIAL_FACT_AUDIT.md",
+    "root_html_inventory": 28,
+    "editable_home_sections": 17,
+    "directory_links": 57,
+    "directory_categories": 8,
+    "mission_identity_pairs_checked": 126,
+    "mission_objective_sequences_checked": 3,
+    "mission_purpose_notes_added": 9,
+    "exact_head_validation": "pending",
+    "parent_workflows": {
+      "pages": "46144028702 success",
+      "articles": "46144028707 failed obsolete sector_map_directory assertion",
+      "explorer": "46144028681 failed same assertion; area and map browsers succeeded"
+    },
+    "original_routes_preserved": true,
+    "complete_fact_check": false,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace."
   }
 }

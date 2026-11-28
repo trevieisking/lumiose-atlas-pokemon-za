@@ -137,3 +137,13 @@ test("AT-276: all 68 original homepage shortcuts now point to verified live sect
     ["DLC source",dimension],["secrets source",secrets],["starters source",starters]])
     assert.doesNotMatch(markup,stale,name+" still contains a dead legacy shortcut");
 });
+
+
+test("AT-348: task directory reaches all public guide routes and all original view IDs",()=>{
+  const links=new Set(pageLinks.get("guide.html")||[]);
+  const files=new Set([...links].map(h=>h.split("#")[0]));
+  for(const name of pages.filter(n=>n!=="feedback-owner.html"&&n!=="guide.html"))assert.ok(files.has(name),"Missing guide directory route: "+name);
+  assert.ok(!files.has("feedback-owner.html"),"Do not advertise private owner inbox");
+  for(const name of ["home","walkthrough","sidequests","dimension","bosses","alphas","maps","items","legends","berries","starters","pokedex","essentials","secrets","rewards","battles","sources"])assert.ok(links.has("index.html#"+name),"Missing existing view: "+name);
+  assert.match(source,/href="guide\.html"/);assert.match(home,/href="guide\.html"/);
+});

@@ -275,12 +275,18 @@ for(const entry of tmAccess.records){
   assert.equal(item.name,entry.tm);assert.equal(item.pin,null);
   assert.equal(entry.original_progress_key,item.id);assert.equal(entry.verified_native_xy,null);
   assert.equal(entry.verified_access_geometry,false);assert.ok(entry.sources.length>=2);
-  const expected='data-tm-access="'+entry.id+'">Access guide (written-source cross-check; exact pin unverified): '+entry.note+'</span>';
+  const expected='data-tm-access="'+entry.id+'">Access guide (written-source cross-check; exact pin unverified): '+entry.note;
+  const fieldbook=read('collectible-fieldbook.html');
   for(const [html,marker,progress] of [[page,'data-record-ref="'+entry.id+'"','data-progress-item="'+entry.id+'"'],[itemPage,'id="item-'+entry.id+'"','data-atlas-pickup="'+entry.id+'"']]){
     let at=-1,found=0;
     while((at=html.indexOf(marker,at+1))!==-1){
       const end=html.indexOf("</li>",at);assert.ok(end>at);const row=html.slice(at,end);
-      assert.ok(row.includes(progress));assert.ok(row.includes(expected));
+      assert.ok(row.includes(progress));
+      const start=row.indexOf(expected);assert.ok(start>=0,'Original TM note changed '+entry.id);
+      const tail=row.slice(start+expected.length,row.indexOf('</span>',start)+7);
+      const photo=tail.match(/^ <a data-field-evidence="([a-z0-9-]+)" href="collectible-fieldbook\.html#([a-z0-9-]+)-photos">Photographs and field directions \(match under review\)<\/a><\/span>$/);
+      assert.ok(tail==='</span>'||photo,'Unexpected change to TM evidence '+entry.id);
+      if(photo){assert.equal(photo[1],photo[2]);assert.ok(fieldbook.includes('id="'+photo[2]+'-photos"'));}
       assert.ok(row.includes('<span>'+clean(item.hint)+'</span>'));
       found++;
     }
@@ -289,3 +295,6 @@ for(const entry of tmAccess.records){
 }
 assert.equal((page.match(/data-tm-access="/g)||[]).length,21);
 assert.equal((itemPage.match(/data-tm-access="/g)||[]).length,20);
+
+assert.equal((page.match(/data-field-evidence="/g)||[]).length,14,"Preserve all contextual TM photo links in sector directory");
+assert.equal((itemPage.match(/data-field-evidence="/g)||[]).length,13,"Preserve all contextual TM photo links in Item Atlas");
