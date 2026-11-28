@@ -293,3 +293,42 @@ test('real collectibles match displayed labels, accents and a bounded Wild Zone 
   assert.equal(ids('', 'item').length, 264);
   assert.equal(ids('', 'screw').length, 100);
 });
+
+// AT-348 A3-01: immutable field evidence is additive and never owns progress or pins.
+test('all 43 field groups and 211 exact original photos are retained without assigning map pins or checklist IDs',()=>{
+  const field=JSON.parse(read('docs/field-guides/collectible-photo-register.json'));
+  const review=JSON.parse(read('docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json'));
+  const page=read('collectible-fieldbook.html'),guide=read('docs/field-guides/collectible-locations.md');
+  assert.deepEqual(field.counts,{tm:17,item:18,screw:7,access:1,collectibleFinds:42,photos:211});
+  assert.equal(field.entries.length,43);
+  assert.equal(new Set(field.entries.map(e=>e.id)).size,43);
+  assert.equal((page.match(/<details class="field-find" id="/g)||[]).length,43);
+  assert.equal((page.match(/<img src="assets\/atlas\/(?:collectibles|access)\//g)||[]).length,211);
+  const paths=field.entries.flatMap(e=>e.photos.map(p=>p.path));
+  assert.equal(new Set(paths).size,211);
+  assert.deepEqual(Object.keys(review.photo_git_blobs).sort(),paths.slice().sort());
+  for(const e of field.entries){
+    assert.equal(e.atlasCoordinate,null);assert.equal(e.canonicalChecklistId,null);
+    assert.ok(page.includes('id="'+e.id+'"'),e.id);
+    for(const p of e.photos){
+      assert.ok(page.includes('src="'+p.path+'"')&&page.includes('href="'+p.path+'"'),p.path);
+      assert.ok(guide.includes(p.path),p.path);
+      const bytes=fs.readFileSync(new URL('../'+p.path,import.meta.url));
+      assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
+      const blob=crypto.createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex');
+      assert.equal(blob,review.photo_git_blobs[p.path],p.path+' exact source Git blob');
+    }
+  }
+  assert.match(page,/No collection progress is changed/);
+  assert.doesNotMatch(page,/<input\\b|data-(?:atlas-pickup|atlas-screw|pickup|screw)=/);
+  assert.equal(production.placements.length,0);
+  for(const file of ['items.html','atlas-explorer.html'])assert.ok(read(file).includes('href="collectible-fieldbook.html"'));
+  const written=JSON.parse(read('docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json')).records;
+  assert.equal(review.tm_candidates.length,13);assert.equal(review.unmatched_tm.length,4);
+  for(const c of review.tm_candidates){
+    const row=written.find(x=>x.id===c.original_checklist_candidate);
+    assert.equal(row.move,c.name);assert.equal(row.tm,c.tm);assert.equal(row.zone,c.zone);
+    assert.equal(c.canonical_assignment,false);
+    assert.equal(original.zones.flatMap(z=>z.items).find(x=>x.id===row.id).name,row.tm);
+  }
+});

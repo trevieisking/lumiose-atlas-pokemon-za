@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 113,
-  "ledger_revision": 121,
+  "manifest_revision": 114,
+  "ledger_revision": 122,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -28,7 +28,7 @@
     "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/docs/field-guides/collectible-locations.md#colorful-screw--vert-sector-4-courtyard-scaffold",
     "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/collectible-fieldbook.html#vert-4-colorful-screw-courtyard-scaffold",
     "local_validation": "Static validation and 14 focused collectible tests passed. All 211 registered photo paths exist. The five new WebP files match the originals byte for byte, and the new fieldbook entry links all five.",
-    "integration": "draft field intake; A3 review and integration pending",
+    "integration": "216 exact reviewed blobs transferred to single PR229 candidate; validation and access/canonical crosswalk pending",
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
@@ -239,9 +239,9 @@
     {
       "id": "A1",
       "title": "Photo restoration",
-      "status": "a1_01_a1_02_exact_ci_passed_a1_03_coverage_candidate_pending",
+      "status": "bounded_a1_01_a1_02_complete_a1_03_local_asset_and_gallery_gate_passed_manual_identity_remote_artwork_followup_open",
       "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open."
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open. Exact parent 0bc8f126f3252c204673de536155c6a72cd1fa4b passed all 3 workflows; 784 local assets/27 pages, expanded gallery browser checks and eight screenshot review complete; centered WZ17 reachable. Remaining manual source identity and external artwork availability follow-up A7; no repeated bounded repairs."
     },
     {
       "id": "A2",
@@ -253,9 +253,9 @@
     {
       "id": "A3",
       "title": "Maps and written access",
-      "status": "open",
+      "status": "fieldbook_216_exact_blobs_integrated_candidate_tests_pending_canonical_and_access_crosswalk_open",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required."
     },
     {
       "id": "A4",
@@ -283,7 +283,7 @@
       "title": "Full-guide factual and coverage QA",
       "status": "source_audit_recorded_factual_review_open",
       "source": "historical PR1; AT-346/347",
-      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open."
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects."
     },
     {
       "id": "A8",
@@ -296,7 +296,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "existing AT348 row revision112 verified; scoped update after exact readback",
+  "supabase_sync": "existing AT348 row revision113 verified; scoped sync after exact readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -369,7 +369,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified.",
+  "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification.",
   "ordered_slices": [
     "A1",
     "A3",
@@ -777,5 +777,75 @@
     "private_tracker": "existing row revision112; scoped sync after GitHub readback",
     "release_decision": "HOLD",
     "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
+  },
+  "a3_01_field_evidence_integration": {
+    "id": "AT-348-A3-01-FIELD-EVIDENCE-INTEGRATION",
+    "date": "2026-11-28",
+    "manifest_revision": 114,
+    "ledger_revision": 122,
+    "reviewed_parent": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "active_pr": 229,
+    "field_source_pr": 226,
+    "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_a1_03": {
+      "head": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+      "workflows": {
+        "explorer": 46131659661,
+        "article": 46131659714,
+        "pages": 46131659703
+      },
+      "all_success": true,
+      "article_attempt": 2,
+      "pages_root_html": 27,
+      "pages_local_assets": 784,
+      "external_urls_inventoried_not_network_verified": 108,
+      "explorer_artifact": 15258561482,
+      "artifact_sha256": "8462472e199488e85704cce22bc41c66963e1cb2f0a38a98179f4bcb028f2752",
+      "visual_review": "Eight saved images inspected: centered WZ17 overview/close-up at both sizes, ten-photo Looker gallery at both sizes, Hotel Z ladder at both sizes. Centered hit-test and screenshots confirm images fully reachable. No persistent navigation defect reproduced. All 20 pairs four surfaces, 21 lifts and 111 originals, 48 directory contexts and fallbacks passed on both widths. Remaining manual photo/source identity review and remote artwork availability are not certified."
+    },
+    "field_counts": {
+      "tm": 17,
+      "item": 18,
+      "screw": 7,
+      "access": 1,
+      "collectibleFinds": 42,
+      "photos": 211
+    },
+    "field_status_counts": {
+      "contributor_identified": 2,
+      "pickup_screenshot": 38,
+      "partial_pickup_text": 1,
+      "infrastructure_observed": 1,
+      "pickup_text_partly_obscured": 1
+    },
+    "transfer": {
+      "source_delta": 217,
+      "approved_exact_blobs": 216,
+      "photos": 211,
+      "other_files": 5,
+      "conflicts": 0,
+      "deletions": 0,
+      "excluded_historical_import_workflow": ".github/workflows/import-pr226-photographs.yml",
+      "existing_page_changes": "items.html and atlas-explorer.html differ only by one additive link each; all other transferred files newly added"
+    },
+    "crosswalk": {
+      "candidates": 13,
+      "not_matched_tm_names": [
+        "Dragon Pulse",
+        "Flip Turn",
+        "Roar",
+        "Headbutt"
+      ],
+      "canonical_ids_assigned": 0,
+      "calibrated_coordinates_assigned": 0,
+      "record": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json"
+    },
+    "scope": "Transfer exact source blobs into single integration candidate and add read-only regression tests; no new markers, progress keys, map geometry, backend changes or extra import workflow. Preserve field evidence categories and uncertainty.",
+    "github_validation": "new_exact_head_pending",
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification."
   }
 }

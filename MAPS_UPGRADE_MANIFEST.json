@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 113,
-    "ledger_revision": 121,
-    "status": "a1_01_a1_02_exact_ci_passed_a1_03_coverage_candidate_pending",
+    "revision": 114,
+    "ledger_revision": 122,
+    "status": "a1_bounded_local_asset_and_gallery_gate_passed_a3_fieldbook_integrated_candidate_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "read_AT348_existing_row_revision112; scoped_sync_after_exact_readback",
+    "tracker_sync": "existing row revision113 checked; scoped update after exact readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A1_03_GUIDE_IMAGE_COVERAGE.md",
-    "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified.",
+    "latest_slice": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_INTEGRATION.md",
+    "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -134,65 +134,74 @@
       "result": "success"
     },
     "latest_review": {
-      "id": "AT-348-A1-03-GUIDE-IMAGE-COVERAGE",
+      "id": "AT-348-A3-01-FIELD-EVIDENCE-INTEGRATION",
       "date": "2026-11-28",
-      "manifest_revision": 113,
-      "ledger_revision": 121,
-      "active_pr": 229,
-      "reviewed_parent": "94901437e6fa63e72efee544f7660d99db0567ba",
+      "manifest_revision": 114,
+      "ledger_revision": 122,
+      "reviewed_parent": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
       "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
-      "field_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+      "active_pr": 229,
+      "field_source_pr": 226,
+      "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
       "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
-      "prior_exact_ci": {
-        "head": "94901437e6fa63e72efee544f7660d99db0567ba",
-        "runs": [
-          46129447853,
-          46129447862,
-          46129447876
-        ],
-        "all_success": true
-      },
-      "previous_A1_01_A1_02_status": "gallery and all three original links implemented, prior screenshot evidence reviewed, exact-head Explorer/articles/actual Pages build checks passed",
-      "owner_release_gate": {
-        "owner_instruction_date": "2026-11-28",
-        "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
-        "workspace_release_allowed": false
-      },
-      "inspection": {
-        "repository_tree_paths": 2000,
-        "root_html_pages": 27,
-        "photo_data": {
-          "holovators": 21,
-          "original_lift_photos": 111,
-          "wild_zones": 20,
-          "wild_zone_preview_images": 40,
-          "sectors": 48,
-          "sector_context_originals": 10
+      "prior_a1_03": {
+        "head": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+        "workflows": {
+          "explorer": 46131659661,
+          "article": 46131659714,
+          "pages": 46131659703
         },
-        "confirmed_gap": "existing browser tests sampled five homepage zones, a subset of static map/directory zones, selected Holovator galleries and five context sectors; prior actual Pages check only eight HTML files and three restored originals",
-        "sticky_header": "prior screenshot overlap is not proof of persistent runtime defect; added normal centered scrolling/hit-testing and screenshot evidence; no CSS or navigation change"
+        "all_success": true,
+        "article_attempt": 2,
+        "pages_root_html": 27,
+        "pages_local_assets": 784,
+        "external_urls_inventoried_not_network_verified": 108,
+        "explorer_artifact": 15258561482,
+        "artifact_sha256": "8462472e199488e85704cce22bc41c66963e1cb2f0a38a98179f4bcb028f2752",
+        "visual_review": "Eight saved images inspected: centered WZ17 overview/close-up at both sizes, ten-photo Looker gallery at both sizes, Hotel Z ladder at both sizes. Centered hit-test and screenshots confirm images fully reachable. No persistent navigation defect reproduced. All 20 pairs four surfaces, 21 lifts and 111 originals, 48 directory contexts and fallbacks passed on both widths. Remaining manual photo/source identity review and remote artwork availability are not certified."
       },
-      "changed_tests": [
-        "tests/wild_zone_fieldbook_browser.mjs",
-        "tests/atlas_explorer_browser.mjs",
-        "tests/atlas_sector_context_browser.mjs",
-        "tests/verify_pages_archive_exclusion.py"
-      ],
-      "candidate_coverage": {
-        "zone_pairs_each_surface_each_viewport": 20,
-        "map_surfaces": 4,
-        "viewport_types": 2,
-        "all_lift_gallery_images_each_viewport": 111,
-        "all_sector_directory_context_and_fallback_each_viewport": 48,
-        "actual_built_root_html_pages": "all current root HTML; >=27",
-        "actual_built_images": "static local img/image anchors plus all dynamic map gallery folders, byte-for-byte; external URLs only inventoried"
+      "field_counts": {
+        "tm": 17,
+        "item": 18,
+        "screw": 7,
+        "access": 1,
+        "collectibleFinds": 42,
+        "photos": 211
       },
-      "limitations": "No new runtime code or assets; no comprehensive visual identity check for every photo yet, no external artwork network check, no physical-device claim, no persisted Workspace inspection. New exact-head validation pending.",
-      "github_validation": "new_head_pending",
-      "workspace_publication": "blocked_by_owner_github_first_gate",
-      "private_tracker": "existing row revision112; scoped sync after GitHub readback",
+      "field_status_counts": {
+        "contributor_identified": 2,
+        "pickup_screenshot": 38,
+        "partial_pickup_text": 1,
+        "infrastructure_observed": 1,
+        "pickup_text_partly_obscured": 1
+      },
+      "transfer": {
+        "source_delta": 217,
+        "approved_exact_blobs": 216,
+        "photos": 211,
+        "other_files": 5,
+        "conflicts": 0,
+        "deletions": 0,
+        "excluded_historical_import_workflow": ".github/workflows/import-pr226-photographs.yml",
+        "existing_page_changes": "items.html and atlas-explorer.html differ only by one additive link each; all other transferred files newly added"
+      },
+      "crosswalk": {
+        "candidates": 13,
+        "not_matched_tm_names": [
+          "Dragon Pulse",
+          "Flip Turn",
+          "Roar",
+          "Headbutt"
+        ],
+        "canonical_ids_assigned": 0,
+        "calibrated_coordinates_assigned": 0,
+        "record": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json"
+      },
+      "scope": "Transfer exact source blobs into single integration candidate and add read-only regression tests; no new markers, progress keys, map geometry, backend changes or extra import workflow. Preserve field evidence categories and uncertainty.",
+      "github_validation": "new_exact_head_pending",
+      "workspace_release_allowed": false,
       "release_decision": "HOLD",
-      "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
+      "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification."
     },
     "owner_github_first_gate": {
       "owner_instruction_date": "2026-11-28",
@@ -491,7 +500,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 113,
+  "revision": 114,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9552,5 +9561,75 @@
     "private_tracker": "existing row revision112; scoped sync after GitHub readback",
     "release_decision": "HOLD",
     "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
+  },
+  "at_348_a3_01_field_evidence_integration": {
+    "id": "AT-348-A3-01-FIELD-EVIDENCE-INTEGRATION",
+    "date": "2026-11-28",
+    "manifest_revision": 114,
+    "ledger_revision": 122,
+    "reviewed_parent": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "active_pr": 229,
+    "field_source_pr": 226,
+    "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_a1_03": {
+      "head": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+      "workflows": {
+        "explorer": 46131659661,
+        "article": 46131659714,
+        "pages": 46131659703
+      },
+      "all_success": true,
+      "article_attempt": 2,
+      "pages_root_html": 27,
+      "pages_local_assets": 784,
+      "external_urls_inventoried_not_network_verified": 108,
+      "explorer_artifact": 15258561482,
+      "artifact_sha256": "8462472e199488e85704cce22bc41c66963e1cb2f0a38a98179f4bcb028f2752",
+      "visual_review": "Eight saved images inspected: centered WZ17 overview/close-up at both sizes, ten-photo Looker gallery at both sizes, Hotel Z ladder at both sizes. Centered hit-test and screenshots confirm images fully reachable. No persistent navigation defect reproduced. All 20 pairs four surfaces, 21 lifts and 111 originals, 48 directory contexts and fallbacks passed on both widths. Remaining manual photo/source identity review and remote artwork availability are not certified."
+    },
+    "field_counts": {
+      "tm": 17,
+      "item": 18,
+      "screw": 7,
+      "access": 1,
+      "collectibleFinds": 42,
+      "photos": 211
+    },
+    "field_status_counts": {
+      "contributor_identified": 2,
+      "pickup_screenshot": 38,
+      "partial_pickup_text": 1,
+      "infrastructure_observed": 1,
+      "pickup_text_partly_obscured": 1
+    },
+    "transfer": {
+      "source_delta": 217,
+      "approved_exact_blobs": 216,
+      "photos": 211,
+      "other_files": 5,
+      "conflicts": 0,
+      "deletions": 0,
+      "excluded_historical_import_workflow": ".github/workflows/import-pr226-photographs.yml",
+      "existing_page_changes": "items.html and atlas-explorer.html differ only by one additive link each; all other transferred files newly added"
+    },
+    "crosswalk": {
+      "candidates": 13,
+      "not_matched_tm_names": [
+        "Dragon Pulse",
+        "Flip Turn",
+        "Roar",
+        "Headbutt"
+      ],
+      "canonical_ids_assigned": 0,
+      "calibrated_coordinates_assigned": 0,
+      "record": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json"
+    },
+    "scope": "Transfer exact source blobs into single integration candidate and add read-only regression tests; no new markers, progress keys, map geometry, backend changes or extra import workflow. Preserve field evidence categories and uncertainty.",
+    "github_validation": "new_exact_head_pending",
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification."
   }
 }
