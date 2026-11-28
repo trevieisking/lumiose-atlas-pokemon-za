@@ -1,5 +1,49 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+## Permanent owner instructions — 28 November 2026 (Manifest 120 / Joint Ledger 128)
+
+**Binding acceptance standard: tell the player exactly what to do.** The guide must be self-contained, actionable and detailed, rather than sending the player elsewhere or leaving them to infer missing steps. The existing verified guide is the foundation. Fill omissions, correct demonstrable errors, and retain working features. A populated page, a species name, a link to a source, or a broad location alone is not completion.
+
+### 1. Project objective
+Develop Lumiose Atlas into a complete, accurate, professional interactive companion guide for Pokémon Legends: Z-A and Mega Dimension DLC. Provide everything players need to complete the game without searching other websites for missing instructions. Prioritise accuracy, completeness, usability, reliability and preservation.
+
+### 2. Mandatory project management
+At the start of every development task, check the Master Plan, Master Manifest, Joint GitHub/Workspace Manifest, private Supabase development ledger, existing branches/PRs and current release status of both sites. At the end, update all applicable records with completed work, discoveries, outstanding requirements, exact commit SHAs, test results, deployment status and next task. Synchronise and read back the records; preserve historical evidence; never mark unverified work complete.
+
+### 3. Guide accuracy and completeness — highest priority
+Audit the whole guide page by page. Research, fact-check, correct, expand and polish every page with reliable sources, official game information and verified player evidence. Explain what to do, where to go, how to get there, prerequisites, actions in order and rewards. Name the starting landmark, route, floor/roof, access mechanism, NPC or menu where applicable. Describe how to meet each prerequisite, rather than merely naming it. Give substantial features dedicated pages where appropriate; organise logically, avoid duplication and preserve correct content. Do not invent facts, coordinates, conditions or requirements. Record unresolved details as open research gaps.
+
+### 4. Pokédex requirements — highest priority
+For every obtainable species and applicable form in the Lumiose, Hyperspace and Alpha Pokédexes, document each verified acquisition route individually: all districts, Wild Zones, rooftops, interiors and habitats; daytime/nighttime and specific times; weather; levels and spawn/respawn conditions; mission, story and progression gates; step-by-step directions and Holovator, ladder, scaffolding and traversal requirements; fixed, chance and rotating encounters; Alpha and Shiny availability/restrictions; evolution methods and requirements; alternate forms; gifts, trades, fossils and special encounters; Hyperspace types, danger ranks, unlocks and applicable donut requirements; types, statistics, moves, weaknesses and applicable mechanics; verified photos/map connections; Pokémon HOME compatibility. Include how to trigger or obtain the encounter, not simply its name. Explicitly distinguish no special requirement, not applicable and unverified. Keep all three dexes and the map consistent. A species entry is not complete merely because it exists.
+
+### 5. Complete game coverage
+Audit and expand main story, side missions, DLC walkthroughs, all dexes, interactive maps, districts/Wild Zones, items/collectibles/TMs/Colorful Screws, Mega Evolution/Mega Stones, Hyperspace/donuts, clothing shops/salons/cafés/restaurants, Pokémon Centers and city services, battle/training/evolution, gifts/trades/challenges/achievements, titles, post-game, HOME, player progression and completion tracking. Identify missing features in the plans/manifests. Provide detailed descriptions, ordered instructions, requirements, costs and rewards where applicable. Give players actionable directions and methods, not vague summaries.
+
+### 6. Interactive Map 2.0
+Use existing images, verified coordinates, calibrated grid, photographs and location data. Implement, preserve and validate mobile pinch-to-zoom, dragging and two-finger rotation; desktop zoom/pan/rotation; north-up compass; accurate boundaries; interactive grid references/subdivisions; searchable markers/layers/filters; interactive Holovators/ladders/scaffolding; rooftop access instructions; verified photos and written directions; Pokémon/item/collectible locations; and guide-to-map connections. Distinguish permanent, random and rotating encounters. Never permanently pin random Hyperspace distortions or fabricate coordinates.
+
+### 7. Photographs and location evidence
+Preserve original photos and verified evidence. Identify each supplied item/Pokémon/location; record verified coordinates and grid references; preserve and organise originals in GitHub; add detailed directions and access requirements; connect photos to guide entries and map markers; update plans/manifests. Prefer pickup-confirmation evidence where available. Never substitute unrelated or generated images. Video and YouTube features remain paused unless explicitly authorised.
+
+### 8. Website design and presentation
+Use clearly labelled, accessible button-style navigation instead of exposed URLs or plain navigation links. Keep source references accessible without cluttering the guide. Improve typography, spacing, alignment, organisation, consistent Pokémon terminology/icons, expandable photos, working search/sorting/filters and mobile/desktop layouts. Prevent overlaps and broken layouts; keep pages visually consistent and easy to navigate.
+
+### 9. GitHub development
+Existing repository: https://github.com/trevieisking/lumiose-atlas-pokemon-za. GitHub is the primary development/testing environment. Audit before coding, establish actual causes and correct solutions, use a non-main branch, reuse existing systems/components/data, consolidate related work into as few PRs as safely possible, avoid temporary workarounds and preserve functioning features. Validate the exact candidate commit before merging and retain rollback. Reuse active integration PR #229 and separate field evidence PR #226; no duplicate PR.
+
+### 10. Workspace and live deployment
+Preserve the original Workspace website, project and URL: https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site. Sequence: audit/research; update plans/manifests; implement in GitHub; validate PR; test mobile/desktop; merge validated changes; verify GitHub deployment; prepare one consolidated Workspace prompt; update existing Workspace site; verify live website; synchronise all plans/manifests/ledgers. GitHub publication is not Workspace publication; record each separately and verify parity. Finish GitHub before spending Workspace credits. No replacement site, duplicate project or new paid service. Existing release gates remain binding.
+
+### 11. Preservation requirements
+Protect all maps/photos/markers/coordinates, calibrated grid/navigation, guide pages/verified information, Pokémon/item data, player accounts/saved progress/completion tracking, Supabase connections/data, search/sort/filters, existing URLs and feedback. The feedback form is complete; revisit only for a new defect. Never break or remove working features to implement another.
+
+### 12. Testing and validation
+Verify exact-head automated tests/GitHub workflows; mobile/desktop layouts; touch/mouse interactions; navigation/search/filters; photos/paths; map accuracy/markers; Pokédex accuracy/encounter requirements; player progress/Supabase; browser errors/regressions; and GitHub/Workspace parity. Distinguish emulated mobile from physical-device tests. For guide acceptance, check whether a player can actually follow the instructions without guessing, including every applicable route and prerequisite. Track open research gaps and hold releases when required evidence is missing or validation fails. Never claim successful testing, completion or publication without evidence.
+
+### 13. Development authority and continuity
+Continue independently according to the Master Plan from the last verified checkpoint. Make safe technical decisions, record new requirements, do not restart completed work or unnecessarily consume credits or money. At each task end report work, validation, blockers, remaining requirements and next safe step; update all project records. The objective is a complete, trustworthy, detailed and professionally presented guide to Pokémon Legends: Z-A and Mega Dimension.
+
+
 ## AT-348 A2-02 — 28 November 2026 | manifest 119 / joint ledger 127
 
 Existing draft PR #229: early Wild Zones 1–6 source-qualified capture enrichment. Retain existing correct content; add missing detail, not blanket rewrites. 39 ordinary + 11 fixed Alpha existing records enriched; 38 additional chance Alpha rows, six prior chance Alpha rows retained. Separate source-qualified condition packet; shared Pokédex and map projection; no new coordinates or distortion pins; preserve original area evidence, photos, routes, progress and connections. Conflicting or unverified weather, time, flower forms and locations remain qualified. See `docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md` and the 46-surface page register. Prior head 07894fc47ccee47bdfd59a07e297e2c355b3fd99: articles and Pages passed; Explorer still running at review. New exact-head checks and visual review pending. Next: Wild Zones 7–20, city/interior encounters, form and alternative acquisition, direct Alpha/Hyperspace surfaces, and remaining page-by-page fact review. HOLD — GitHub first; Workspace remains v40 last recorded, no import/publish/credits until full GitHub completion and live verification. Private tracker synchronization follows exact-head readback.

@@ -1,8 +1,8 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 119,
-    "ledger_revision": 127,
+    "revision": 120,
+    "ledger_revision": 128,
     "status": "early_zone_capture_conditions_candidate_full_guide_claim_review_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "pending exact-head readback and scoped update",
+    "tracker_sync": "permanent owner policy scoped update and readback pending; prior release evidence unchanged",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -450,7 +450,7 @@
       "atlas_internal.feature_checklist",
       "atlas_internal.report_resolution_queue"
     ],
-    "rule": "Read the consolidated handoff and current main/active exact PR heads before development. Historical append-only checkpoints do not override current policy or independently verified evidence. Preserve both editions; no active videos/YouTube. Synchronize relevant planning records without rewriting player data or historical source proofs. AT-325 G0–G5 precede the final Workspace prompt; AT-297 governs original-Site adaptation and publication. Current active AT348 checkpoint 105/113 governs prompt-start and stage-end synchronization; preserve historical release evidence. Read both plans and joint records at each start, update both at every stage end and read back. Reuse PR229 and separate field intake PR226. Workspace publishes only the final approved same-Site package.",
+    "rule": "Read the consolidated handoff and current main/active exact PR heads before development. Historical append-only checkpoints do not override current policy or independently verified evidence. Preserve both editions; no active videos/YouTube. Synchronize relevant planning records without rewriting player data or historical source proofs. AT-325 G0–G5 precede the final Workspace prompt; AT-297 governs original-Site adaptation and publication. Current active AT348 checkpoint 105/113 governs prompt-start and stage-end synchronization; preserve historical release evidence. Read both plans and joint records at each start, update both at every stage end and read back. Reuse PR229 and separate field intake PR226. Workspace publishes only the final approved same-Site package. Permanent owner player-guidance acceptance standard in Master Plan and Final Workspace Plan (120/128) is binding.",
     "owner_only_query": "select item_id, purpose, video_url, manifest_revision, github_status, github_stage, github_revision, workspace_status, workspace_stage from atlas_internal.feature_checklist order by item_id;",
     "feedback_protocol": "docs/qa/ATLAS_FEEDBACK_RESOLUTION_TRACKER.md",
     "release_gate": "exact-head CI and actual desktop/mobile visual QA; record live deployment before marking GitHub verified",
@@ -462,7 +462,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 119,
+  "revision": 120,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9784,5 +9784,22 @@
     "release_decision": "HOLD",
     "workspace_changed": false,
     "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification."
+  },
+  "permanent_owner_player_guidance_policy": {
+    "date": "2026-11-28",
+    "manifest_revision": 120,
+    "ledger_revision": 128,
+    "priority": "P0",
+    "status": "owner_authorized_binding_planning_policy_implementation_and_acceptance_open",
+    "master_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "workspace_plan": "FINAL_WORKSPACE_PLAN.md",
+    "tracker": "atlas_internal.feature_checklist / AT-348-GUIDE-COMPLETION",
+    "requirement": "Each guide entry tells players exactly what to do, where, how to get there, all applicable conditions and prerequisites and outcomes/rewards; no guessing or external source link substituting for instructions.",
+    "scope": "All 13 permanent instructions; all pages and all verified acquisition routes across the three dexes; preserve verified content, map/photographs, player state and existing services.",
+    "release_decision": "HOLD",
+    "runtime_changed": false,
+    "workspace_changed": false,
+    "previous_head": "212a8f83563d2092ed4ad3105b75ed30435ba34e",
+    "active_pr": 229
   }
 }
