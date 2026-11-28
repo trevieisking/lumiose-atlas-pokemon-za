@@ -1,8 +1,8 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 136,
-    "ledger_revision": 144,
+    "revision": 137,
+    "ledger_revision": 145,
     "status": "a7_03_pokemon_france_source_intake_full_guide_scope_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "Pending guarded Supabase closeout after commit readback",
+    "tracker_sync": "Pending guarded Supabase closeout after exact commit readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,7 +51,7 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A7_03_POKEMON_FRANCE_SOURCE_AUDIT.md",
+    "latest_slice": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
     "next_slice": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
@@ -612,7 +612,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 136,
+  "revision": 137,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -10574,5 +10574,19 @@
       46172507929
     ],
     "next": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace."
+  },
+  "at_348_a7_04_nintendo_life_source_review": {
+    "id": "AT-348-A7-04-NINTENDO-LIFE-SOURCE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 137,
+    "ledger_revision": 145,
+    "reviewed_parent": "8be4fb18b3f9669bc2a6872ad0e0b7c4a6f4f593",
+    "source": "https://www.nintendolife.com/guides/pokemon-legends-z-a-walkthrough-all-wild-zones-tips-and-tricks",
+    "evidence": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
+    "review_scope": "hub and targeted article samples, terms; full comparison pending",
+    "image_policy": "reference only; no unauthorized republication",
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "release_decision": "HOLD"
   }
 }
