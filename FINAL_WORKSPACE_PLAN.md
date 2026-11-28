@@ -1,5 +1,10 @@
 # Pokémon Atlas final completion plan
 
+## AT-348 A7-05 — Game8 supplemental source assessment (Manifest 138 / Joint Ledger 146)
+
+28 November 2026. [Game8 source assessment](docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md). Owner supplied English hub (HTTP 403 in research tool); Japanese counterpart and targeted articles accessible. Add research leads to existing A2/A3/A4/A5/A7: WZ18 conditions, Holovator mission unlocks, ladder and Screw verification, makeup options, DLC and mission details. WZ18 fixed Alpha day/night table conflicts with narrative; verify independently. Map pin data not exposed; no coordinates inferred. Use original English directions and owner evidence, no unauthorized image reuse. Documentation only, no runtime or live changes. Existing PR229/HOLD and photo PR226 unchanged in purpose. Private tracker closeout follows exact readback. Existing capture-first priority remains.
+
+
 ## AT-348 A7-04 — Nintendo Life supplemental source assessment (Manifest 137 / Joint Ledger 145)
 
 28 November 2026. Owner supplied Nintendo Life's English guide hub. [Bounded review](docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md): all 20 Wild Zone guides, normal and DLC dex/evolution guides, selected missions/capture guides and screenshots. Main dex excludes Alpha location data, DLC includes unconfirmed cells and source coverage is not exhaustive. Use as cross-check for A2/A7 including Zones 18–20, never as sole authority. Publisher prohibits unauthorized republication; use screenshots as reference, retain owner evidence and original written directions. No runtime, map pins, assets, player progress, main merge or Workspace changes. PR226 remains open, no new delta. Existing next slice and HOLD gates unchanged. Private tracker closeout follows exact readback.

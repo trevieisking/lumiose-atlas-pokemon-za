@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 137,
-    "ledger_revision": 145,
-    "status": "a7_03_pokemon_france_source_intake_full_guide_scope_open",
+    "revision": 138,
+    "ledger_revision": 146,
+    "status": "a7_05_game8_source_assessment_full_guide_scope_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -51,7 +51,7 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
+    "latest_slice": "docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md",
     "next_slice": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
@@ -612,7 +612,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 137,
+  "revision": 138,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -10585,6 +10585,21 @@
     "evidence": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
     "review_scope": "hub and targeted article samples, terms; full comparison pending",
     "image_policy": "reference only; no unauthorized republication",
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "release_decision": "HOLD"
+  },
+  "at_348_a7_05_game8_source_review": {
+    "id": "AT-348-A7-05-GAME8-SOURCE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 138,
+    "ledger_revision": 146,
+    "reviewed_parent": "3d4c11e5f34c8f5d4932ccaabd19c89f8b7841a8",
+    "source": "https://game8.co/games/Pokemon-Legends-Z-A",
+    "accessible_alternate": "https://game8.jp/pokemon-legends-z-a",
+    "english_access": "HTTP 403; body not reviewed",
+    "evidence": "docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md",
+    "scope": "Japanese hub, city map, ladders, Holovator activation, Screw and side-mission indexes, makeup, WZ18 targeted sample",
     "full_audit_complete": false,
     "runtime_changed": false,
     "release_decision": "HOLD"

@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 137,
-  "ledger_revision": 145,
+  "manifest_revision": 138,
+  "ledger_revision": 146,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -1665,6 +1665,21 @@
     "evidence": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
     "review_scope": "hub and targeted article samples, terms; full comparison pending",
     "image_policy": "reference only; no unauthorized republication",
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "release_decision": "HOLD"
+  },
+  "a7_05_game8_source_review": {
+    "id": "AT-348-A7-05-GAME8-SOURCE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 138,
+    "ledger_revision": 146,
+    "reviewed_parent": "3d4c11e5f34c8f5d4932ccaabd19c89f8b7841a8",
+    "source": "https://game8.co/games/Pokemon-Legends-Z-A",
+    "accessible_alternate": "https://game8.jp/pokemon-legends-z-a",
+    "english_access": "HTTP 403; body not reviewed",
+    "evidence": "docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md",
+    "scope": "Japanese hub, city map, ladders, Holovator activation, Screw and side-mission indexes, makeup, WZ18 targeted sample",
     "full_audit_complete": false,
     "runtime_changed": false,
     "release_decision": "HOLD"
