@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 130,
-  "ledger_revision": 138,
+  "manifest_revision": 131,
+  "ledger_revision": 139,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -32,7 +32,7 @@
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
-    "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred",
+    "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
     "prior_review": {
       "pr": 226,
       "head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
@@ -60,6 +60,17 @@
       "canonical_checklist_id": null,
       "related_access_lead": "AR-V05-01",
       "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred"
+    },
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+    "pending_intake": {
+      "finds": 8,
+      "photos": 39,
+      "range": [
+        43,
+        50
+      ],
+      "status": "reported_not_committed",
+      "source_comment": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226#issuecomment-7242705271"
     }
   },
   "incoming": {
@@ -256,7 +267,7 @@
       "title": "Maps and written access",
       "status": "fieldbook_core_checks_passed_27_contextual_links_and_6_access_comparisons_candidate_pending",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates."
     },
     {
       "id": "A4",
@@ -1407,5 +1418,46 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "Verify exact-head article, Explorer, Pages and independent mobile/desktop QA; continue A2 P0 Wild Zones 17–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5 and A7; A6 complete the supported two-bucket backup preview/merge/recovery and verified-only numbered pins. Keep #226 separate; GitHub first, HOLD Workspace."
+  },
+  "a3_03_field_photo_usage": {
+    "id": "AT-348-A3-03-PERMANENT-FIELD-EVIDENCE-USAGE",
+    "date": "2026-11-28",
+    "manifest_revision": 131,
+    "ledger_revision": 139,
+    "reviewed_parent": "ad093451d609b230881115723814fe91c2cc3624",
+    "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "active_pr": 229,
+    "source_pr": 226,
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+    "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
+    "counts": {
+      "committed_finds": 42,
+      "access_surveys": 1,
+      "original_photos_committed_and_copied": 211,
+      "contextual_links": 27,
+      "groups": {
+        "contextual_guide_links": {
+          "records": 13,
+          "photos": 63
+        },
+        "access_evidence_comparison": {
+          "records": 6,
+          "photos": 29
+        },
+        "fieldbook_only_additional_guide_integration_pending": {
+          "records": 24,
+          "photos": 119
+        }
+      },
+      "pending_finds": 8,
+      "pending_photos": 39,
+      "reported_combined_finds": 50,
+      "reported_combined_photos": 250,
+      "verified_native_pins": 0
+    },
+    "release_decision": "HOLD",
+    "workspace_changed": false,
+    "source_branch_changed": false,
+    "exact_head_ci": "pending"
   }
 }
