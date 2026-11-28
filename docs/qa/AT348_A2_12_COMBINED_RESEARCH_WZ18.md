@@ -9,3 +9,5 @@ Sources: https://www.serebii.net/pokearth/lumiosecity/wildzone18.shtml ; https:/
 
 ## Validation
 Parent d60f040488e9fd56c6c7b3bebfe304dd374fce52. Isolated exact source model: 68 areas, zero issues; six added encounters, eight exact level/direction/weather supplements, chance/fixed/disputed classification assertions passed; all unrelated encounters and geometry unchanged. Temporary absolute-URL adapter and ESM syntax wrapper in isolated harness only. Existing tests extended; full Node/browser CI and visual verification pending. PR226 open unchanged (250 originals); no main or Workspace publication. HOLD. Continue WZ19–20 and remaining capture-first coverage.
+
+Closeout correction: preserve the existing structured last_intake_check photo metadata and all historical fields, counts and verification receipt; record the new no-delta intake note separately. No photo records or assets changed.

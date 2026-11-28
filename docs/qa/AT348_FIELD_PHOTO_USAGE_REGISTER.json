@@ -2381,7 +2381,19 @@
     "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
     "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
   },
-  "last_intake_check": "28 November 2026 A2-12: source PR226 open unchanged, no new committed delta, 250 integrated originals retained; no photo changes.",
+  "last_intake_check": {
+    "committed_finds": 50,
+    "access_surveys": 1,
+    "committed_photos": 250,
+    "new_committed_photos_not_copied": 0,
+    "reported_pending_finds": 0,
+    "reported_pending_photos": 0,
+    "source_original_blob_matches": 39,
+    "candidate_readback": "verified",
+    "matching_guide_photo_blobs": 250,
+    "verified_job": 141060145760,
+    "source_head_rechecked": true
+  },
   "last_intake_check_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
   "last_intake_check_guide_head": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
   "previous_pending_intake": [
@@ -2482,5 +2494,6 @@
       "release_status": "not_released"
     }
   ],
-  "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
+  "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue.",
+  "last_intake_check_note": "28 November 2026 A2-12: source PR226 open unchanged, no new committed delta, 250 integrated originals retained; no photo changes."
 }
