@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 135,
-  "ledger_revision": 143,
+  "manifest_revision": 136,
+  "ledger_revision": 144,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -340,7 +340,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "GitHub checkpoint; independent Supabase readback not performed",
+  "supabase_sync": "Pending guarded Supabase closeout after commit readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -413,7 +413,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Verify exact-head CI and phone/desktop QA; continue A2 P0 Wild Zones 18–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5/A7 and A6 backup/progress safeguards; retain permanent photo intake #226 and transfer new reviewed evidence as available, without gating on pending intake. GitHub first; HOLD Workspace until guide release gates pass.",
+  "next_slice": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1630,5 +1630,29 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "Verify exact-head CI and phone/desktop QA; continue A2 P0 Wild Zones 18–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5/A7 and A6 backup/progress safeguards; retain permanent photo intake #226 and transfer new reviewed evidence as available, without gating on pending intake. GitHub first; HOLD Workspace until guide release gates pass."
+  },
+  "a7_03_pokemon_france_source_audit": {
+    "id": "AT-348-A7-03-POKEMON-FRANCE-AUDIT",
+    "date": "2026-11-28",
+    "manifest_revision": 136,
+    "ledger_revision": 144,
+    "reviewed_parent": "1102700dcdf7526344f83dcc45e4a9b4aba83ad6",
+    "evidence": "docs/qa/AT348_A7_03_POKEMON_FRANCE_SOURCE_AUDIT.md",
+    "source_index": "https://www.pokemon-france.com/guides/legendes-pokemon-z-a/",
+    "article_indexed": 35,
+    "substantive_excerpt_reviewed": 25,
+    "navigation_only": 5,
+    "pending_body": 5,
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "workspace_publication_claimed": false,
+    "decision": "HOLD",
+    "parent_workflows": [
+      46172507944,
+      46172507932,
+      46172507942,
+      46172507929
+    ],
+    "next": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace."
   }
 }
