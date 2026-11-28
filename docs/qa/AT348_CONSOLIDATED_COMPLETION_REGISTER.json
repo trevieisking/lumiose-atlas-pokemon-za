@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 132,
-  "ledger_revision": 140,
+  "manifest_revision": 133,
+  "ledger_revision": 141,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -13,22 +13,22 @@
   "workspace_v41_verified": false,
   "field_collection": {
     "pr": 226,
-    "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-    "previous_head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
+    "head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "previous_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
     "counts": {
-      "tm": 17,
-      "item": 18,
-      "screw": 7,
+      "tm": 21,
+      "item": 20,
+      "screw": 9,
       "access": 1,
-      "collectibleFinds": 42,
-      "photos": 211
+      "collectibleFinds": 50,
+      "photos": 250
     },
-    "latest_find": "Colorful Screw, find 42, on a short platform inside the Vert Sector 4 courtyard near Café Classe",
-    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/docs/field-guides/collectible-photo-register.json",
-    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/docs/field-guides/collectible-locations.md#colorful-screw--vert-sector-4-courtyard-scaffold",
-    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/collectible-fieldbook.html#vert-4-colorful-screw-courtyard-scaffold",
-    "local_validation": "Static validation and 14 focused collectible tests passed. All 211 registered photo paths exist. The five new WebP files match the originals byte for byte, and the new fieldbook entry links all five.",
-    "integration": "216 source blobs transferred at prior head; photo hashes, Pages build and representative fieldbook browser checks passed; new additive crosslinks pending new-head validation",
+    "latest_find": "Endure, find 50, Jaune rooftop garden north of Wild Zone 8",
+    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-photo-register.json",
+    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-locations.md",
+    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/collectible-fieldbook.html",
+    "local_validation": "39 source Git blob identities matched original ZIP; no coordinate or checklist approval",
+    "integration": "39 exact source Git blobs and 8 fieldbook records added; candidate readback/CI pending",
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
@@ -63,14 +63,10 @@
     },
     "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
     "pending_intake": {
-      "finds": 8,
-      "photos": 39,
-      "range": [
-        43,
-        50
-      ],
-      "status": "reported_not_committed",
-      "source_comment": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226#issuecomment-7242705271"
+      "finds": 0,
+      "photos": 0,
+      "status": "imported_and_organised",
+      "next_find": 51
     },
     "mandatory_intake_cycle": {
       "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
@@ -92,16 +88,18 @@
         "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
       ],
       "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
-      "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-      "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+      "last_checked_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "last_checked_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
       "last_check": {
-        "committed_finds": 42,
+        "committed_finds": 50,
         "access_surveys": 1,
-        "committed_photos": 211,
+        "committed_photos": 250,
         "matching_guide_photo_blobs": 211,
+        "new_source_photo_blobs_pinned_in_candidate": 39,
         "new_committed_photos_not_copied": 0,
-        "reported_pending_finds": 8,
-        "reported_pending_photos": 39
+        "reported_pending_finds": 0,
+        "reported_pending_photos": 0,
+        "candidate_readback": "pending"
       },
       "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
     }
@@ -1492,5 +1490,43 @@
     "workspace_changed": false,
     "source_branch_changed": false,
     "exact_head_ci": "pending"
+  },
+  "a3_04_field_batch": {
+    "id": "AT-348-A3-04-FIELD-BATCH-43-50",
+    "date": "2026-11-28",
+    "manifest_revision": 133,
+    "ledger_revision": 141,
+    "source_pr": 226,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+    "reviewed_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 39,
+    "archive_sha256": "68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579",
+    "counts": {
+      "tm": 21,
+      "item": 20,
+      "screw": 9,
+      "access": 1,
+      "collectibleFinds": 50,
+      "photos": 250
+    },
+    "added_finds": [
+      43,
+      50
+    ],
+    "added_photos": 39,
+    "mission_context": [
+      47,
+      48
+    ],
+    "fieldbook_groups": 51,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 51
   }
 }

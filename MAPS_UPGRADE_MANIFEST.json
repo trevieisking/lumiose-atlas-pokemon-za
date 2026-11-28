@@ -1,8 +1,8 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 132,
-    "ledger_revision": 140,
+    "revision": 133,
+    "ledger_revision": 141,
     "status": "a6_01_progress_write_preservation_candidate_full_guide_scope_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
@@ -54,6 +54,58 @@
     "latest_slice": "docs/qa/AT348_A6_01_PROGRESS_PRESERVATION.md",
     "next_slice": "Verify exact-head article, Explorer, Pages and independent mobile/desktop QA; continue A2 P0 Wild Zones 17–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5 and A7; A6 complete the supported two-bucket backup preview/merge/recovery and verified-only numbered pins. Keep #226 separate; GitHub first, HOLD Workspace.",
     "field_intake_checkpoint": {
+      "id": "AT-348-A3-04-FIELD-BATCH-43-50",
+      "date": "2026-11-28",
+      "manifest_revision": 133,
+      "ledger_revision": 141,
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+      "reviewed_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+      "active_pr": 229,
+      "source_pr_remains_open": true,
+      "source_photo_hash_matches": 39,
+      "archive_sha256": "68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579",
+      "counts": {
+        "tm": 21,
+        "item": 20,
+        "screw": 9,
+        "access": 1,
+        "collectibleFinds": 50,
+        "photos": 250
+      },
+      "added_finds": [
+        43,
+        50
+      ],
+      "added_photos": 39,
+      "mission_context": [
+        47,
+        48
+      ],
+      "fieldbook_groups": 51,
+      "additional_canonical_ids": 0,
+      "additional_pins": 0,
+      "exact_candidate_ci": "pending",
+      "workspace_changed": false,
+      "release_decision": "HOLD",
+      "next_field_find": 51
+    },
+    "workspace_site_readback": {
+      "version": 40,
+      "live_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+      "publication_of_this_checkpoint": false
+    },
+    "prior_candidate_validation": {
+      "head": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
+      "article_workflow": 46072181242,
+      "article_result": "success",
+      "explorer_workflow": 46072181253,
+      "explorer_result": "failure",
+      "failing_job": 140751485123,
+      "failure": "Shared-area browser test expected reduced WZ15 PNG; actual link is archived original JPG."
+    },
+    "previous_field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
       "previous_head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
@@ -74,47 +126,6 @@
       "calibrated_coordinates": false,
       "canonical_checklist_id": null,
       "related_access_lead": "AR-V04-05"
-    },
-    "workspace_site_readback": {
-      "version": 40,
-      "live_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
-      "publication_of_this_checkpoint": false
-    },
-    "prior_candidate_validation": {
-      "head": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
-      "article_workflow": 46072181242,
-      "article_result": "success",
-      "explorer_workflow": 46072181253,
-      "explorer_result": "failure",
-      "failing_job": 140751485123,
-      "failure": "Shared-area browser test expected reduced WZ15 PNG; actual link is archived original JPG."
-    },
-    "previous_field_intake_checkpoint": {
-      "pr": 226,
-      "head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
-      "previous_head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
-      "counts": {
-        "tm": 17,
-        "item": 18,
-        "screw": 6,
-        "access": 1,
-        "collectibleFinds": 41,
-        "photos": 206
-      },
-      "latest_find": "Colorful Screw, find 41, on the upper scaffold northwest of Hotel Z",
-      "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-photo-register.json",
-      "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-locations.md#colorful-screw--scaffold-northwest-of-hotel-z",
-      "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/collectible-fieldbook.html#hotel-z-colorful-screw-scaffold",
-      "local_validation": "Static validation and 14 focused collectible tests passed. All 206 registered photograph paths exist, and the five new WebP originals match byte for byte and open from the fieldbook.",
-      "workflow_runs": [
-        46078482384,
-        46078482398
-      ],
-      "workflow_status_at_checkpoint": "CI started for the exact field-evidence head",
-      "integration": "draft field intake; A3 review and integration pending",
-      "calibrated_coordinates": false,
-      "canonical_checklist_id": null,
-      "related_access_lead": "AR-V05-01"
     },
     "browser_assertion_checkpoint": {
       "reviewed_parent": "4e7c90049ecb5c9b81937ed82143399f3933257c",
@@ -254,16 +265,18 @@
         "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
       ],
       "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
-      "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-      "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+      "last_checked_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "last_checked_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
       "last_check": {
-        "committed_finds": 42,
+        "committed_finds": 50,
         "access_surveys": 1,
-        "committed_photos": 211,
+        "committed_photos": 250,
         "matching_guide_photo_blobs": 211,
+        "new_source_photo_blobs_pinned_in_candidate": 39,
         "new_committed_photos_not_copied": 0,
-        "reported_pending_finds": 8,
-        "reported_pending_photos": 39
+        "reported_pending_finds": 0,
+        "reported_pending_photos": 0,
+        "candidate_readback": "pending"
       },
       "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
     }
@@ -559,7 +572,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 132,
+  "revision": 133,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -10305,17 +10318,57 @@
       "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
     ],
     "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
-    "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-    "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+    "last_checked_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "last_checked_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
     "last_check": {
-      "committed_finds": 42,
+      "committed_finds": 50,
       "access_surveys": 1,
-      "committed_photos": 211,
+      "committed_photos": 250,
       "matching_guide_photo_blobs": 211,
+      "new_source_photo_blobs_pinned_in_candidate": 39,
       "new_committed_photos_not_copied": 0,
-      "reported_pending_finds": 8,
-      "reported_pending_photos": 39
+      "reported_pending_finds": 0,
+      "reported_pending_photos": 0,
+      "candidate_readback": "pending"
     },
     "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
+  },
+  "at_348_a3_04_field_batch": {
+    "id": "AT-348-A3-04-FIELD-BATCH-43-50",
+    "date": "2026-11-28",
+    "manifest_revision": 133,
+    "ledger_revision": 141,
+    "source_pr": 226,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+    "reviewed_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 39,
+    "archive_sha256": "68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579",
+    "counts": {
+      "tm": 21,
+      "item": 20,
+      "screw": 9,
+      "access": 1,
+      "collectibleFinds": 50,
+      "photos": 250
+    },
+    "added_finds": [
+      43,
+      50
+    ],
+    "added_photos": 39,
+    "mission_context": [
+      47,
+      48
+    ],
+    "fieldbook_groups": 51,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 51
   }
 }

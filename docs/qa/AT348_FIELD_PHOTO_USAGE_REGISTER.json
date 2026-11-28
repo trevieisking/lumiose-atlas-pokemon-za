@@ -1,37 +1,37 @@
 {
   "schema_version": 1,
   "date": "2026-11-28",
-  "reviewed_guide_head": "ad093451d609b230881115723814fe91c2cc3624",
-  "reviewed_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+  "reviewed_guide_head": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+  "reviewed_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
   "source_pr": 226,
   "integration_pr": 229,
   "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
   "counts": {
-    "committed_finds": 42,
+    "committed_finds": 50,
     "access_surveys": 1,
-    "original_photos_committed_and_copied": 211,
-    "contextual_links": 27,
+    "original_photos_committed_and_copied": 250,
+    "contextual_links": 33,
     "groups": {
       "contextual_guide_links": {
-        "records": 13,
-        "photos": 63
+        "records": 15,
+        "photos": 72
       },
       "access_evidence_comparison": {
         "records": 6,
         "photos": 29
       },
       "fieldbook_only_additional_guide_integration_pending": {
-        "records": 24,
-        "photos": 119
+        "records": 30,
+        "photos": 149
       }
     },
-    "pending_finds": 8,
-    "pending_photos": 39,
+    "pending_finds": 0,
+    "pending_photos": 0,
     "reported_combined_finds": 50,
     "reported_combined_photos": 250,
     "verified_native_pins": 0
   },
-  "limitations": "Exact source and candidate register/tree blob parity checked in inspection; pending photos are recorded in source PR comments, not independently re-opened or uploaded in this turn. Fieldbook presence and candidate links do not certify pickup identity, all route conditions, map coordinates or live publication.",
+  "limitations": "39 new source Git blob identities matched the original ZIP; candidate uses these exact blob IDs. Candidate readback and exact-head CI pending. Remaining contextual use, canonical identity, coordinates and access verification open.",
   "entries": [
     {
       "field_find": 1,
@@ -1918,9 +1918,481 @@
       "atlas_coordinate": null,
       "verified_permanent_pin": false,
       "release_status": "candidate_only"
+    },
+    {
+      "field_find": 43,
+      "field_id": "wild-zone-14-calcium-electrical-substation",
+      "name": "Calcium",
+      "category": "item",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030033.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/pickup-behind-boulder.webp",
+          "sha256": "9bd750f7daeca49e01a886cf13d290cc6db9cfe275544c6413bc51bffe67f503",
+          "git_blob": "5426a9be0e854c7c0c9227a8f6c5def1ea2dc241"
+        },
+        {
+          "original_filename": "1000030034.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-wide.webp",
+          "sha256": "add4b14b0c1d4651915f5acb3e1a525e9577bf00b6a1120be4c9a0281bb84bac",
+          "git_blob": "9564c77547d6055ee18a2460f4ed59b14ceba662"
+        },
+        {
+          "original_filename": "1000030035.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-neighbourhood.webp",
+          "sha256": "f0ec554c6f0f03395f1ca249288791cc7928e5ab8bf85a8aa5be542147c1ab8b",
+          "git_blob": "4f2f264b9235e08f25eaebbe2bab40578540c22b"
+        },
+        {
+          "original_filename": "1000030036.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-close.webp",
+          "sha256": "58e7b18955bc3c176c8b6f8beb41261202b3f55cc25d95beb725aaf48c989011",
+          "git_blob": "f102c7136e460c8bde8f90541d54147f0c3cc75c"
+        },
+        {
+          "original_filename": "1000030038.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/pickup-confirmation.webp",
+          "sha256": "f0d30711dcd98f44d59ddf672078d05cb50e5e551ce4a522a10ee565922164bc",
+          "git_blob": "964565ac75060637f480c6f2293ea7afdf8bf7b5"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#wild-zone-14-calcium-electrical-substation-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 44,
+      "field_id": "wild-zone-14-discharge-south-edge",
+      "name": "Discharge",
+      "category": "tm",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030045.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-discharge-south-edge/pickup-by-utility-building.webp",
+          "sha256": "204d1a4a0bffe4e13e3451c14e65e50d5d17573e22477974c19743f36a185502",
+          "git_blob": "d9c58a4cf761dcb4bdb8aea179002963a64e23d7"
+        },
+        {
+          "original_filename": "1000030046.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-wide.webp",
+          "sha256": "f9ad4d1304695a24702f63eca8dfad774047b1578242069862128f3a2c6196f5",
+          "git_blob": "41f1be45049b63bae1b1f2607621cc28f6b7fd77"
+        },
+        {
+          "original_filename": "1000030047.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-neighbourhood.webp",
+          "sha256": "099232ffb550d4ddc708f93af201ffd138f29adb500688bb60f830d3ddc8544c",
+          "git_blob": "dfbe88a4033b89f86ae9fd7e8bd84e9a6215e53e"
+        },
+        {
+          "original_filename": "1000030048.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-close.webp",
+          "sha256": "4b189c1b48591636dd20d7936e77718e5e3adf61b10bfdedb0729e3e7cd15492",
+          "git_blob": "d1ce87f8bc5e773d9fea74fe41c807dcb7558a5f"
+        },
+        {
+          "original_filename": "1000030049.jpg",
+          "path": "assets/atlas/collectibles/wild-zone-14-discharge-south-edge/pickup-confirmation.webp",
+          "sha256": "4dba0c1f8b3ee5e660d522ee84d4fa31bb2d8298a93a31215947dc647a80ea26",
+          "git_blob": "dd605e8c2574d7771f54b0fbae30934ce4ff2822"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#wild-zone-14-discharge-south-edge-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 45,
+      "field_id": "magenta-6-colorful-screw-lower-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030056.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/pickup-scaffold.webp",
+          "sha256": "1d70af460ea32a0fbab671282bd5936a6709a3fa8a744d4badab70d87f1f31f3",
+          "git_blob": "14dde0fb73f3526a84eb60ef9770bd498cb2a5a0"
+        },
+        {
+          "original_filename": "1000030057.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-wide.webp",
+          "sha256": "877ae744d6005b3eb787e6382999c986e0b9fae839e644f1b046fa07f4967f4c",
+          "git_blob": "9f81748da0470285186ad97c99eb6b58782e6d9d"
+        },
+        {
+          "original_filename": "1000030058.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-neighbourhood.webp",
+          "sha256": "9faa4b51ed5cebfb5414184a6dfa6c3806f70d0b5bd121281d96a290b03c560b",
+          "git_blob": "fa849e99d2d50fd5dd744a786fca4aa286cd1aa5"
+        },
+        {
+          "original_filename": "1000030059.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-close.webp",
+          "sha256": "5e37912da0ac3056588544357dab39ae303acd1bc7593c295fdce23c5d24cb76",
+          "git_blob": "1e3910d57838e47fa21ab424547a7a49ad2deb14"
+        },
+        {
+          "original_filename": "1000030060.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/pickup-confirmation.webp",
+          "sha256": "6e8f95591b7dd99eba4236076438be9f595865a7a3782371f112d8af4b88f48e",
+          "git_blob": "e50077f401c0f2e89a76692a86aebeb500203242"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#magenta-6-colorful-screw-lower-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 46,
+      "field_id": "magenta-6-colorful-screw-upper-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030066.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/pickup-upper-platform.webp",
+          "sha256": "3cbdeb67add33380e095e502ea3b8aeebc82ec359efa9a1196d8b59fa37e4595",
+          "git_blob": "41bf3baec048f62fd5adeaa11cf7b608c0bbc8a0"
+        },
+        {
+          "original_filename": "1000030067.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-close.webp",
+          "sha256": "77851cfb579aa2fbc0baff89f69bbd2db5978c2c2ba94268d8c2afc3094c4b69",
+          "git_blob": "4a968557e010cd28d38ddb11e533b2155b678a28"
+        },
+        {
+          "original_filename": "1000030068.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-wide.webp",
+          "sha256": "eb68f7a58584df8e1a30c9a92b81e7d6032cf407491255e15b8f7424855c00bc",
+          "git_blob": "46324b14e2627d361773ea8c53d72a9c8d910635"
+        },
+        {
+          "original_filename": "1000030069.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-neighbourhood.webp",
+          "sha256": "d1cefb1ed5a1cc6a4a17979b345d6a0a2498b14aa41a4a5869da5d7d70fa8cab",
+          "git_blob": "685d31f5ffb047ec2b0405605c080b4eaebcffe1"
+        },
+        {
+          "original_filename": "1000030070.jpg",
+          "path": "assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/pickup-confirmation.webp",
+          "sha256": "109d429bace0e8fb51d7f06f8304394e9e5b81dbd1c602aab6b7ba749319067c",
+          "git_blob": "8fc78e2a515691603ecc48d741d4ddca39aaaa3e"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#magenta-6-colorful-screw-upper-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 47,
+      "field_id": "bleu-8-old-building-rare-candy",
+      "name": "Rare Candy",
+      "category": "item",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030086.jpg",
+          "path": "assets/atlas/collectibles/bleu-8-old-building-rare-candy/pickup-warehouse.webp",
+          "sha256": "64b3baef4360f255ee06d935b2e4a8668f57a65764b688ca724fa00e6fc15c9c",
+          "git_blob": "d3173a1ca55b75fc6e3a5c2c6bc0111310a552b4"
+        },
+        {
+          "original_filename": "1000030087.jpg",
+          "path": "assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-wide.webp",
+          "sha256": "78a35608ff0b637719fabc87719f701b08af20a5bd8c49e743eec836c4f153d4",
+          "git_blob": "c8fb5009ed0826eab37865cd9c4472d73b6e7bff"
+        },
+        {
+          "original_filename": "1000030088.jpg",
+          "path": "assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-neighbourhood.webp",
+          "sha256": "ec665b19d24a4a963ee08b5ebdb3406d0ca7fce3d4347375beccd0223c8f89a4",
+          "git_blob": "a9675411a4b212ff4a44cac52ad9a55ee73f6bc7"
+        },
+        {
+          "original_filename": "1000030089.jpg",
+          "path": "assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-close.webp",
+          "sha256": "11cdac001b93393e2a01ab1188ea960373bd6530b9462b9f8d7ca5c44ab7d43f",
+          "git_blob": "3355cc1d9df722e8039b6dfe0c099a35f2514acd"
+        },
+        {
+          "original_filename": "1000030090.jpg",
+          "path": "assets/atlas/collectibles/bleu-8-old-building-rare-candy/pickup-confirmation.webp",
+          "sha256": "b312f3c210064c6359e404b543e03e487445007be81c4379694cf187661dc08b",
+          "git_blob": "df41c67d3353021d57f53d243f1b323b24c7e269"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#bleu-8-old-building-rare-candy-photos",
+      "guide_usage": "contextual_mission_links_candidate",
+      "destinations": [
+        "walkthrough.html#mission-20",
+        "journey.html#journey-mission-20",
+        "index.html#walkthrough:mission-20"
+      ],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 48,
+      "field_id": "sewers-canal-access-taunt",
+      "name": "Taunt",
+      "category": "tm",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 4,
+      "photos": [
+        {
+          "original_filename": "1000030095.jpg",
+          "path": "assets/atlas/collectibles/sewers-canal-access-taunt/pickup-by-electrical-switches.webp",
+          "sha256": "34daad25818059c5ea83db988457cc18054e93f3f6fa456012132caa5c33d41d",
+          "git_blob": "63bd5af42871fd3e214f5c1c34bf454c97a457ce"
+        },
+        {
+          "original_filename": "1000030096.jpg",
+          "path": "assets/atlas/collectibles/sewers-canal-access-taunt/map-underground-overview.webp",
+          "sha256": "6cd221bb8702c5a00ff1d3ef84d59135f57cdb97e6467c821b1b5eca0d7ff02d",
+          "git_blob": "f864210f177a75fcd83bc1d415e75c5a423e579f"
+        },
+        {
+          "original_filename": "1000030097.jpg",
+          "path": "assets/atlas/collectibles/sewers-canal-access-taunt/map-room-close.webp",
+          "sha256": "d1c4314b4287b2116c1455dd76ea03ef2d452cb1c68adf955a58219922ab40a1",
+          "git_blob": "b86e70829425b4cd9ce7a3a6575b9486afa3086d"
+        },
+        {
+          "original_filename": "1000030098.jpg",
+          "path": "assets/atlas/collectibles/sewers-canal-access-taunt/pickup-confirmation.webp",
+          "sha256": "f8c8f95912373c42094b8fb470f737e05ef77a637b39bb5ac23fdf11965f2fed",
+          "git_blob": "32b7061ac50d876e19f9045efc14fa0bd28e7112"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#sewers-canal-access-taunt-photos",
+      "guide_usage": "contextual_mission_links_candidate",
+      "destinations": [
+        "walkthrough.html#mission-20",
+        "journey.html#journey-mission-20",
+        "index.html#walkthrough:mission-20"
+      ],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 49,
+      "field_id": "racine-construction-iron-defense-rooftop",
+      "name": "Iron Defense",
+      "category": "tm",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030104.jpg",
+          "path": "assets/atlas/collectibles/racine-construction-iron-defense-rooftop/pickup-rooftop.webp",
+          "sha256": "3e4777bcb057bcaf9c043713cb9f0981b05abe8720e8829c5e239759f88b2606",
+          "git_blob": "08eb040d8f21dacf958bdccc3850a71eff4effc9"
+        },
+        {
+          "original_filename": "1000030105.jpg",
+          "path": "assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-wide.webp",
+          "sha256": "dd94331cb731c40da6852e8429769bd9a24a96a9dab82a711aa5bb9f18c33165",
+          "git_blob": "a4952c2ffd138106178ad63929112db777946d05"
+        },
+        {
+          "original_filename": "1000030106.jpg",
+          "path": "assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-neighbourhood.webp",
+          "sha256": "de586065d7d9b4a55494a9fbf6a757d1eb230d0137a1743fc0a92a29302aa2e2",
+          "git_blob": "0c64205cea635b74822bca2ffa8c79aea1f0b270"
+        },
+        {
+          "original_filename": "1000030107.jpg",
+          "path": "assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-close.webp",
+          "sha256": "18c15a695df2db89aa4bbbb8af133e969b41776eb9c538c9127ba2031e61358d",
+          "git_blob": "1652d625457fd97b3eccf12e22f002a9b6db4214"
+        },
+        {
+          "original_filename": "1000030108.jpg",
+          "path": "assets/atlas/collectibles/racine-construction-iron-defense-rooftop/pickup-confirmation.webp",
+          "sha256": "55fdd07f2b0279feecb69bf93cdc9dc16f329f9f61180eac16db5d6bafdfa6b3",
+          "git_blob": "26e26575a4ada901db9b936591440b167350ec93"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#racine-construction-iron-defense-rooftop-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 50,
+      "field_id": "jaune-5-endure-rooftop-garden",
+      "name": "Endure",
+      "category": "tm",
+      "source_pr": 226,
+      "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030114.jpg",
+          "path": "assets/atlas/collectibles/jaune-5-endure-rooftop-garden/pickup-rooftop-garden.webp",
+          "sha256": "88185f133f6936bc3d567068f787c458902597b9bd9d093b2e40c2f9231227ce",
+          "git_blob": "b91da3a3832db067261aae3b5d72dfaa547533f9"
+        },
+        {
+          "original_filename": "1000030115.jpg",
+          "path": "assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-wide.webp",
+          "sha256": "e1d3133228daa22c36a9c9533328d221137ce397b0c22a376331dc53b0111cc6",
+          "git_blob": "8770b0b9c23ebc72313625d50620d9b824791538"
+        },
+        {
+          "original_filename": "1000030116.jpg",
+          "path": "assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-neighbourhood.webp",
+          "sha256": "f7fb6c7b22ea9134cb06ba5dd8f64e0295f348bc1c203b9db51ed40417d86563",
+          "git_blob": "752ec9af624e705a92416d0f3553e7c4f07a2cc0"
+        },
+        {
+          "original_filename": "1000030117.jpg",
+          "path": "assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-close.webp",
+          "sha256": "47ef6f1f569276c9c327069393429f9cdce566a537ca9719d4e064d792b699df",
+          "git_blob": "6a547c789c7836701363806335ca340b83fd2135"
+        },
+        {
+          "original_filename": "1000030118.jpg",
+          "path": "assets/atlas/collectibles/jaune-5-endure-rooftop-garden/pickup-confirmation.webp",
+          "sha256": "790dc5b4f1873702a024a5d96379d90df90c2e8e38ac1c9cd0961bd78717fedd",
+          "git_blob": "8fad04b728824d5e95215afbb77bf8c555566eae"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "fieldbook": "collectible-fieldbook.html#jaune-5-endure-rooftop-garden-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
     }
   ],
-  "pending_intake": [
+  "pending_intake": [],
+  "mandatory_intake_cycle": {
+    "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
+    "owner_instruction_date": "2026-11-28",
+    "source_pr": 226,
+    "source_branch": "docs/atlas-item-location-field-guide",
+    "current_integration_pr": 229,
+    "source_pr_permanently_open": true,
+    "check_frequency": "At the start and end of EVERY Atlas development task, and immediately before any release candidate is frozen. Also check whenever the owner reports new photographs. These checks are part of active development turns; no unattended monitoring is claimed.",
+    "preflight": [
+      "Read the latest source PR head, complete changed-file/tree listing, photo register and recent intake comments.",
+      "Compare exact source paths and Git blob identities against the active consolidated guide candidate and per-find usage register; distinguish new files, modified files, duplicates and reported but uncommitted intake.",
+      "For each new validated original, copy byte-identical source blobs and applicable evidence notes into the current consolidated guide PR. Do not merge or close the source PR, remove originals, overwrite newer guide content or create a new intake PR.",
+      "Integrate supported descriptions, directions and evidence links into relevant guide pages; record unresolved identity, route and coordinate questions separately."
+    ],
+    "closeout": [
+      "Re-read source PR head and compare again for newly arrived evidence; record any new delta that cannot safely be integrated yet.",
+      "Verify copied photo paths, source blob identities, guide destinations and evidence confidence; update per-find usage register, Master Plan, Workspace Plan, joint manifest and ledger with source head, integrated/pending counts, test results and next action.",
+      "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
+    ],
+    "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
+    "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+    "last_check": {
+      "committed_finds": 42,
+      "access_surveys": 1,
+      "committed_photos": 211,
+      "matching_guide_photo_blobs": 211,
+      "new_committed_photos_not_copied": 0,
+      "reported_pending_finds": 8,
+      "reported_pending_photos": 39
+    },
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
+  },
+  "last_intake_check": {
+    "committed_finds": 50,
+    "access_surveys": 1,
+    "committed_photos": 250,
+    "new_committed_photos_not_copied": 0,
+    "reported_pending_finds": 0,
+    "reported_pending_photos": 0,
+    "source_original_blob_matches": 39,
+    "candidate_readback": "pending"
+  },
+  "last_intake_check_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+  "last_intake_check_guide_head": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+  "previous_pending_intake": [
     {
       "field_find": 43,
       "name": "Calcium",
@@ -2017,49 +2489,5 @@
       "verified_permanent_pin": false,
       "release_status": "not_released"
     }
-  ],
-  "mandatory_intake_cycle": {
-    "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
-    "owner_instruction_date": "2026-11-28",
-    "source_pr": 226,
-    "source_branch": "docs/atlas-item-location-field-guide",
-    "current_integration_pr": 229,
-    "source_pr_permanently_open": true,
-    "check_frequency": "At the start and end of EVERY Atlas development task, and immediately before any release candidate is frozen. Also check whenever the owner reports new photographs. These checks are part of active development turns; no unattended monitoring is claimed.",
-    "preflight": [
-      "Read the latest source PR head, complete changed-file/tree listing, photo register and recent intake comments.",
-      "Compare exact source paths and Git blob identities against the active consolidated guide candidate and per-find usage register; distinguish new files, modified files, duplicates and reported but uncommitted intake.",
-      "For each new validated original, copy byte-identical source blobs and applicable evidence notes into the current consolidated guide PR. Do not merge or close the source PR, remove originals, overwrite newer guide content or create a new intake PR.",
-      "Integrate supported descriptions, directions and evidence links into relevant guide pages; record unresolved identity, route and coordinate questions separately."
-    ],
-    "closeout": [
-      "Re-read source PR head and compare again for newly arrived evidence; record any new delta that cannot safely be integrated yet.",
-      "Verify copied photo paths, source blob identities, guide destinations and evidence confidence; update per-find usage register, Master Plan, Workspace Plan, joint manifest and ledger with source head, integrated/pending counts, test results and next action.",
-      "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
-    ],
-    "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
-    "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-    "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
-    "last_check": {
-      "committed_finds": 42,
-      "access_surveys": 1,
-      "committed_photos": 211,
-      "matching_guide_photo_blobs": 211,
-      "new_committed_photos_not_copied": 0,
-      "reported_pending_finds": 8,
-      "reported_pending_photos": 39
-    },
-    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
-  },
-  "last_intake_check": {
-    "committed_finds": 42,
-    "access_surveys": 1,
-    "committed_photos": 211,
-    "matching_guide_photo_blobs": 211,
-    "new_committed_photos_not_copied": 0,
-    "reported_pending_finds": 8,
-    "reported_pending_photos": 39
-  },
-  "last_intake_check_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-  "last_intake_check_guide_head": "a5270e1b397799771c1a807a00e0576b1708cb19"
+  ]
 }

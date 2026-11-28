@@ -1,5 +1,10 @@
 # AT-346 — Shared pending Workspace change inventory (NOT an executable prompt)
 
+## AT-348 A3-04 — verified field intake 43–50 (Manifest 133 / Joint Ledger 141)
+
+28 November 2026. Owner ZIP import `42234663eb7ebca5ec79d5983a7f88a1266d634a`; organised source PR226 head `ffc46e3c69f7756dffecf17e4368eef4c53f4faa`. All 39 new photo Git blob IDs match the original archive byte-for-byte; source PR remains open and draft permanently, more photographs expected. This additive candidate preserves parent `1f076a41eed4836a444eb7523fe4031e957bda3d`, copies 39 original blobs plus intake register, adds eight fieldbook records and updates the guide, usage register and full photo-hash regression. Totals 50 finds (21 TMs, 20 items, nine Screws), one separate access survey, 250 original photos. Mission 20 across all three walkthrough surfaces now tells players to collect Rare Candy in the warehouse before leaving (later item persistence unverified) and Taunt in the sewer's northwestern room. No guessed pin, canonical checklist ID, progress or Supabase application changes. Additional access/identity and contextual use remain open. Exact candidate readback and CI pending; HOLD, Workspace v40 last recorded, no live publication. Next field find 51; continue prior development next slice without restarting.
+
+
 ## Mandatory permanent image-intake cycle — owner instruction (Manifest 132 / Joint Ledger 140)
 
 28 November 2026. This is a required preflight and closeout for **every Atlas development task**, not an optional future task.

@@ -687,9 +687,9 @@ try {
       await ready(page);
       await page.locator('a[href="collectible-fieldbook.html"]').click();
       await page.waitForURL(base+"/collectible-fieldbook.html");
-      assert.equal(await page.locator("details.field-find").count(),43);
-      assert.equal(await page.locator(".field-gallery img").count(),211);
-      for(const id of ["wild-zone-3-aerial-ace-rouge-plaza-rooftop","vert-7-dive-ball-rooftop","vert-4-colorful-screw-courtyard-scaffold","bleu-6-western-scaffold"]){
+      assert.equal(await page.locator("details.field-find").count(),51);
+      assert.equal(await page.locator(".field-gallery img").count(),250);
+      for(const id of ["wild-zone-3-aerial-ace-rouge-plaza-rooftop","vert-7-dive-ball-rooftop","vert-4-colorful-screw-courtyard-scaffold","bleu-6-western-scaffold","sewers-canal-access-taunt","jaune-5-endure-rooftop-garden"]){
         const row=photoRegister.entries.find(x=>x.id===id),entry=page.locator("#"+id);
         await entry.locator(":scope > summary").click();
         const imgs=entry.locator(".field-gallery img");assert.equal(await imgs.count(),row.photos.length);
@@ -709,8 +709,8 @@ try {
       assert.equal(await page.locator("[data-atlas-pickup]").count(),264);
       assert.equal(await page.locator("[data-atlas-screw]").count(),100);
       await page.locator('a[href="collectible-fieldbook.html"]').click();await page.waitForURL(base+"/collectible-fieldbook.html");
-      assert.equal(await page.locator("details.field-find").count(),43);
-      results["fieldbook_"+device]={groups:43,photos:211,representative_galleries_decoded:4,progress_unchanged:true};
+      assert.equal(await page.locator("details.field-find").count(),51);
+      results["fieldbook_"+device]={groups:51,photos:250,representative_galleries_decoded:6,progress_unchanged:true};
     }finally{await context.close();}
   }
 
