@@ -1,0 +1,91 @@
+name: Import verified PR 226 photographs
+on:
+  push:
+    branches:
+      - docs/atlas-item-location-field-guide
+    paths:
+      - pr-226-pending-68-photographs.zip
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atlas-pr226-photo-import
+  cancel-in-progress: false
+
+jobs:
+  import-photographs:
+    if: github.ref == 'refs/heads/docs/atlas-item-location-field-guide' && github.repository == 'trevieisking/lumiose-atlas-pokemon-za'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and extract original photographs without overwrites
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import hashlib, json, stat, zipfile
+
+          archive = Path('pr-226-pending-68-photographs.zip')
+          expected = 'b15d262831751b8167e60ae139a1b43878d23fef83824896eddcc3b20fe29d86'
+          if not archive.is_file() or hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
+              raise SystemExit('Archive missing or SHA-256 mismatch')
+          with zipfile.ZipFile(archive) as z:
+              entries = z.infolist()
+              if len(entries) != 69 or len({i.filename for i in entries}) != 69 or sum(i.file_size for i in entries) != 8166591 or z.testzip() is not None:
+                  raise SystemExit('Archive inventory mismatch')
+              register = 'docs/field-guides/intake/2026-11-28-finds-51-64.json'
+              manifest = json.loads(z.read(register))
+              if manifest['sourcePR'] != 226 or [e['fieldFind'] for e in manifest['entries']] != list(range(51, 65)):
+                  raise SystemExit('Unexpected intake register')
+              photos = [p for e in manifest['entries'] for p in e['photos']]
+              expected_paths = {p['path']: p for p in photos}
+              if len(photos) != 68 or len(expected_paths) != 68 or set(z.namelist()) != set(expected_paths) | {register}:
+                  raise SystemExit('Photo inventory mismatch')
+              pending = []
+              for i in entries:
+                  p = PurePosixPath(i.filename)
+                  if (p.is_absolute() or '..' in p.parts or str(p) != i.filename or '\\' in i.filename or (i.filename != register and (len(p.parts) != 5 or p.parts[:3] != ('assets','atlas','collectibles') or p.suffix != '.webp')) or i.is_dir() or stat.S_ISLNK(i.external_attr >> 16)):
+                      raise SystemExit('Unsafe archive member: ' + i.filename)
+                  target = Path(*p.parts)
+                  data = z.read(i)
+                  if i.filename != register:
+                      photo = expected_paths[i.filename]
+                      if data[:4] != b'RIFF' or data[8:12] != b'WEBP' or len(data) != photo['bytes'] or hashlib.sha256(data).hexdigest() != photo['sha256']:
+                          raise SystemExit('Photo bytes mismatch: ' + i.filename)
+                  if any(q.is_symlink() for q in [target, *target.parents]):
+                      raise SystemExit('Symlink in destination: ' + i.filename)
+                  if target.exists():
+                      if not target.is_file() or target.read_bytes() != data:
+                          raise SystemExit('Refusing to overwrite: ' + i.filename)
+                  else:
+                      pending.append((target, data))
+              for target, data in pending:
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  with target.open('xb') as out:
+                      out.write(data)
+              for i in entries:
+                  if Path(i.filename).read_bytes() != z.read(i):
+                      raise SystemExit('Post-extraction verification failed: ' + i.filename)
+          print(f'All 68 original photos and intake register verified; {len(pending)} new files; no existing file overwritten.')
+          PY
+      - name: Commit only verified photographs and intake register to the draft PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 - <<'PY'
+          import subprocess, zipfile
+          archive = 'pr-226-pending-68-photographs.zip'
+          with zipfile.ZipFile(archive) as z:
+              names = z.namelist()
+          subprocess.run(['git', 'add', '--', *names], check=True)
+          subprocess.run(['git', 'rm', '--', archive], check=True)
+          changed = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z']).decode().split('\0')
+          if not set(filter(None, changed)).issubset(set(names) | {archive}):
+              raise SystemExit('Unexpected staged paths')
+          PY
+          git commit -m "Import 68 verified Atlas field photographs and location register"
+          git push origin HEAD:refs/heads/docs/atlas-item-location-field-guide
