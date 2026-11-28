@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 151,
-    "ledger_revision": 159,
-    "status": "a2_22_alternative_capture_routes_candidate_full_scope_open",
+    "revision": 152,
+    "ledger_revision": 160,
+    "status": "incremental_workspace_policy_first_written_handoff_ready_full_guide_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -26,7 +26,7 @@
     },
     "field_intake_pr": 226,
     "previous_historical_heads_preserved": 24,
-    "release_decision": "HOLD",
+    "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A2_22_ALTERNATIVE_CAPTURE_ROUTES.md",
-    "next_slice": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review.",
+    "latest_slice": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "next_slice": "Reconcile first 31 written city/alternate capture records in existing Workspace with independent scoped safety checks; continue remaining city routes, Hyperspace acquisition/evolution/forms, and full-guide development in PR229 without waiting for unrelated batches or future photographs. No extra spend.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
       "date": "2026-11-28",
@@ -215,8 +215,11 @@
     },
     "owner_github_first_gate": {
       "owner_instruction_date": "2026-11-28",
-      "rule": "GitHub first: complete or explicitly account for written and functional guide requirements A2–A8, validate exact candidate and live GitHub Pages, obtain owner review, then update existing Workspace with normal preview, rollback and live proof. A1 is ongoing, urgent and non-blocking; do not wait for complete photographic coverage or a cleared intake queue. No paid services.",
-      "workspace_release_allowed": false
+      "rule": "GitHub first per scoped batch: validate exact source and factual evidence. Functional/shared-system changes require live GitHub release and owner review. Written-only checked facts may enter independent Workspace comparison and preview from a pinned exact candidate. Reconfirm original source, rollback, compatibility, tests, publication and live verification per batch. No whole-guide completion or future-photo prerequisite; no paid services.",
+      "workspace_release_allowed": "conditional_per_independently_accepted_batch",
+      "workspace_release_verified_this_slice": false,
+      "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md"
     },
     "priority": "A2_P0_and_A7_release_critical",
     "page_audit_register": "docs/qa/AT348_A7_02_PAGE_REGISTER.json",
@@ -327,7 +330,7 @@
       "date": "2026-11-28",
       "paid_services_allowed": false,
       "additional_spending_allowed": false,
-      "priority": "Complete all written guide information first, accurately and with every game feature accounted for; preserve existing functioning systems.",
+      "priority": "Accurate written information first in manageable batches; preserve all working systems and continue comprehensive guide coverage independently.",
       "evidence_states": [
         "verified",
         "source_supported",
@@ -336,14 +339,15 @@
         "not_applicable"
       ],
       "required_sequence": [
-        "Complete written coverage and record unresolved items explicitly",
-        "Make and test the existing GitHub site",
-        "Obtain owner review of working GitHub site",
-        "Prepare one final existing Workspace handoff only after GitHub acceptance"
+        "Select and fact-check bounded batch, retain uncertainties",
+        "Validate exact GitHub candidate; live GitHub proof and owner review for functional changes",
+        "Independently reconcile and preview selected compatible changes in existing Workspace",
+        "Publish verified accepted batch and verify actual live release; record separate evidence",
+        "Continue other written and functional guide work in parallel"
       ],
-      "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
+      "workspace_presentation": "Existing Workspace may adapt compatible presentation; preserve correct existing facts, stable IDs, data, progress, URLs and working behavior. No full branch import, paid services, or unverified publication.",
       "photographs": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
-      "release_decision": "HOLD",
+      "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
       "owner_review_pending": true,
       "a1": "ongoing_parallel_urgent_on_arrival_non_blocking"
     },
@@ -408,6 +412,108 @@
       "release_decision": "HOLD",
       "next_field_find": 65,
       "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
+    },
+    "incremental_workspace_release_policy": {
+      "id": "AT-348-INCREMENTAL-WORKSPACE-152",
+      "date": "2026-11-28",
+      "manifest_revision": 152,
+      "ledger_revision": 160,
+      "owner_instruction": "Regularly update the existing Workspace with working checked updates and correct new information.",
+      "supersedes": "Previous whole-guide-completion-before-any-Workspace-update and single-final-handoff rules for AT-348; historical receipts retained.",
+      "scope": "Independently checked, compatible batches; continue whole-guide A2–A8 in parallel.",
+      "whole_guide_completion_required_for_each_release": false,
+      "future_photo_coverage_required": false,
+      "paid_services_allowed": false,
+      "additional_spending_allowed": false,
+      "github_exact_checks_required": true,
+      "github_live_release_required_for_functional_changes": true,
+      "owner_review_required_for_functional_changes": true,
+      "written_only_checked_candidate_may_enter_independent_workspace_preview": true,
+      "workspace_live_publication_requires_source_rollback_compatibility_preview_and_independent_verification": true,
+      "full_branch_import_allowed": false,
+      "automatic_sync_allowed": false,
+      "main_merge_in_this_slice": false,
+      "workspace_publication_in_this_slice": false,
+      "source_photo_pr": 226,
+      "source_photo_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "retained_originals": 318,
+      "active_development_pr": 229,
+      "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+      "first_batch": {
+        "id": "AT-348-WORKSPACE-BATCH-01",
+        "type": "written_only",
+        "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+        "source_pr": 229,
+        "source_path": "src/sections/pokedex.html",
+        "lumiose_ids": [
+          10,
+          12,
+          13,
+          15,
+          21,
+          22,
+          23,
+          32,
+          33,
+          38,
+          49,
+          50,
+          51,
+          53,
+          55,
+          62,
+          77,
+          79,
+          81,
+          87,
+          96,
+          98,
+          100,
+          135,
+          145,
+          146,
+          165,
+          166,
+          180,
+          181,
+          206
+        ],
+        "records": 31,
+        "exact_source_ci": [
+          {
+            "id": 46188321769,
+            "name": "Validate Atlas header feedback button",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 46188321772,
+            "name": "Validate photo-only GitHub Pages output",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 46188321775,
+            "name": "Validate recovered Atlas article pages",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 46188321771,
+            "name": "Validate rotatable Lumiose Atlas Explorer",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "source_live_github": false,
+        "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+        "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+        "workspace_last_recorded": "v40",
+        "workspace_live_readback": false,
+        "owner_editor_access_verified": false,
+        "unresolved_claims_preserved": true,
+        "full_branch_import": false
+      }
     }
   },
   "at_348_workspace_photo_recovery": {
@@ -516,7 +622,83 @@
     "complete_encounter_audit": false,
     "original_workspace_publication_verified": false,
     "supabase_modified_by_this_slice": false,
-    "public_video_content": false
+    "public_video_content": false,
+    "incremental_batch": {
+      "id": "AT-348-WORKSPACE-BATCH-01",
+      "type": "written_only",
+      "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+      "source_pr": 229,
+      "source_path": "src/sections/pokedex.html",
+      "lumiose_ids": [
+        10,
+        12,
+        13,
+        15,
+        21,
+        22,
+        23,
+        32,
+        33,
+        38,
+        49,
+        50,
+        51,
+        53,
+        55,
+        62,
+        77,
+        79,
+        81,
+        87,
+        96,
+        98,
+        100,
+        135,
+        145,
+        146,
+        165,
+        166,
+        180,
+        181,
+        206
+      ],
+      "records": 31,
+      "exact_source_ci": [
+        {
+          "id": 46188321769,
+          "name": "Validate Atlas header feedback button",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321772,
+          "name": "Validate photo-only GitHub Pages output",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321775,
+          "name": "Validate recovered Atlas article pages",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321771,
+          "name": "Validate rotatable Lumiose Atlas Explorer",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "source_live_github": false,
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+      "workspace_last_recorded": "v40",
+      "workspace_live_readback": false,
+      "owner_editor_access_verified": false,
+      "unresolved_claims_preserved": true,
+      "full_branch_import": false
+    },
+    "policy": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md"
   },
   "at_346_dossier_intake": {
     "id": "AT-346-DOSSIER-INTAKE",
@@ -701,7 +883,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 151,
+  "revision": 152,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -11499,5 +11681,107 @@
     "paid_services": false,
     "release_decision": "HOLD",
     "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
+  },
+  "at_348_incremental_workspace_release_policy": {
+    "id": "AT-348-INCREMENTAL-WORKSPACE-152",
+    "date": "2026-11-28",
+    "manifest_revision": 152,
+    "ledger_revision": 160,
+    "owner_instruction": "Regularly update the existing Workspace with working checked updates and correct new information.",
+    "supersedes": "Previous whole-guide-completion-before-any-Workspace-update and single-final-handoff rules for AT-348; historical receipts retained.",
+    "scope": "Independently checked, compatible batches; continue whole-guide A2–A8 in parallel.",
+    "whole_guide_completion_required_for_each_release": false,
+    "future_photo_coverage_required": false,
+    "paid_services_allowed": false,
+    "additional_spending_allowed": false,
+    "github_exact_checks_required": true,
+    "github_live_release_required_for_functional_changes": true,
+    "owner_review_required_for_functional_changes": true,
+    "written_only_checked_candidate_may_enter_independent_workspace_preview": true,
+    "workspace_live_publication_requires_source_rollback_compatibility_preview_and_independent_verification": true,
+    "full_branch_import_allowed": false,
+    "automatic_sync_allowed": false,
+    "main_merge_in_this_slice": false,
+    "workspace_publication_in_this_slice": false,
+    "source_photo_pr": 226,
+    "source_photo_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "retained_originals": 318,
+    "active_development_pr": 229,
+    "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "first_batch": {
+      "id": "AT-348-WORKSPACE-BATCH-01",
+      "type": "written_only",
+      "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+      "source_pr": 229,
+      "source_path": "src/sections/pokedex.html",
+      "lumiose_ids": [
+        10,
+        12,
+        13,
+        15,
+        21,
+        22,
+        23,
+        32,
+        33,
+        38,
+        49,
+        50,
+        51,
+        53,
+        55,
+        62,
+        77,
+        79,
+        81,
+        87,
+        96,
+        98,
+        100,
+        135,
+        145,
+        146,
+        165,
+        166,
+        180,
+        181,
+        206
+      ],
+      "records": 31,
+      "exact_source_ci": [
+        {
+          "id": 46188321769,
+          "name": "Validate Atlas header feedback button",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321772,
+          "name": "Validate photo-only GitHub Pages output",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321775,
+          "name": "Validate recovered Atlas article pages",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321771,
+          "name": "Validate rotatable Lumiose Atlas Explorer",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "source_live_github": false,
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+      "workspace_last_recorded": "v40",
+      "workspace_live_readback": false,
+      "owner_editor_access_verified": false,
+      "unresolved_claims_preserved": true,
+      "full_branch_import": false
+    }
   }
 }

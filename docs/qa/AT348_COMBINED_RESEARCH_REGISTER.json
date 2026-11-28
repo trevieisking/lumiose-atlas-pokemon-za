@@ -2,9 +2,9 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 151,
-  "ledger_revision": 159,
-  "reviewed_parent": "2b4db4d493127a7c7847d078eab9f2c15cd58c33",
+  "manifest_revision": 152,
+  "ledger_revision": 160,
+  "reviewed_parent": "956f569ba0e7c7b4801dfa19286b891241ce872b",
   "pr": 229,
   "photo_pr": 226,
   "source_library": [
@@ -267,6 +267,107 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
+    "id": "AT-348-INCREMENTAL-WORKSPACE-152",
+    "date": "2026-11-28",
+    "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "first_batch": {
+      "id": "AT-348-WORKSPACE-BATCH-01",
+      "type": "written_only",
+      "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+      "source_pr": 229,
+      "source_path": "src/sections/pokedex.html",
+      "lumiose_ids": [
+        10,
+        12,
+        13,
+        15,
+        21,
+        22,
+        23,
+        32,
+        33,
+        38,
+        49,
+        50,
+        51,
+        53,
+        55,
+        62,
+        77,
+        79,
+        81,
+        87,
+        96,
+        98,
+        100,
+        135,
+        145,
+        146,
+        165,
+        166,
+        180,
+        181,
+        206
+      ],
+      "records": 31,
+      "exact_source_ci": [
+        {
+          "id": 46188321769,
+          "name": "Validate Atlas header feedback button",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321772,
+          "name": "Validate photo-only GitHub Pages output",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321775,
+          "name": "Validate recovered Atlas article pages",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321771,
+          "name": "Validate rotatable Lumiose Atlas Explorer",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "source_live_github": false,
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+      "workspace_last_recorded": "v40",
+      "workspace_live_readback": false,
+      "owner_editor_access_verified": false,
+      "unresolved_claims_preserved": true,
+      "full_branch_import": false
+    },
+    "documentation_only": true,
+    "workspace_publication": false
+  },
+  "open_disputes": [
+    "WZ18 fixed Alpha time/weather table vs narrative",
+    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
+    "Gastly lead remains unclassified",
+    "WZ18 exact earliest Rank B transition",
+    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
+    "English Game8 body inaccessible",
+    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
+    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
+    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
+    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
+    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification.",
+    "A2-18: Ralts ordinary day/night route differs from sunny-day chance Alpha observations; Dratini daytime route not universal; Riolu Jaune District unspecified sector; exact secondary city routes, weather, levels, unlocks and odds remain partly unresolved.",
+    "A2-19: monkey daytime recommendation versus Pansear night observation; additional Panpour Jaune 11, Pansear Jaune 8/Street and Dedenne Bleu 8/Jaune 9 leads require cross-source review; no new precise pins.",
+    "A2-21: Bunnelby scripted met location differs from mission start; Rouge 8 ordinary availability disputed. Magikarp Wild Zone 11 appears in species lists but detailed zone lists omit it; Vert 6 additional sector-table lead."
+  ],
+  "full_audit_complete": false,
+  "release_decision": "HOLD",
+  "next": "Reconcile first 31 written city/alternate capture records in existing Workspace with independent scoped safety checks; continue remaining city routes, Hyperspace acquisition/evolution/forms, and full-guide development in PR229 without waiting for unrelated batches or future photographs. No extra spend.",
+  "previous_slice": {
     "id": "AT-348-A2-22",
     "date": "2026-11-28",
     "manifest_revision": 151,
@@ -333,92 +434,6 @@
     "release_decision": "HOLD",
     "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
   },
-  "open_disputes": [
-    "WZ18 fixed Alpha time/weather table vs narrative",
-    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
-    "Gastly lead remains unclassified",
-    "WZ18 exact earliest Rank B transition",
-    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
-    "English Game8 body inaccessible",
-    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
-    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
-    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
-    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
-    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification.",
-    "A2-18: Ralts ordinary day/night route differs from sunny-day chance Alpha observations; Dratini daytime route not universal; Riolu Jaune District unspecified sector; exact secondary city routes, weather, levels, unlocks and odds remain partly unresolved.",
-    "A2-19: monkey daytime recommendation versus Pansear night observation; additional Panpour Jaune 11, Pansear Jaune 8/Street and Dedenne Bleu 8/Jaune 9 leads require cross-source review; no new precise pins.",
-    "A2-21: Bunnelby scripted met location differs from mission start; Rouge 8 ordinary availability disputed. Magikarp Wild Zone 11 appears in species lists but detailed zone lists omit it; Vert 6 additional sector-table lead."
-  ],
-  "full_audit_complete": false,
-  "release_decision": "HOLD",
-  "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review.",
-  "previous_slice": {
-    "id": "AT-348-A2-21-CITY-CANAL-MISSION-ROUTES",
-    "date": "2026-11-28",
-    "manifest_revision": 150,
-    "ledger_revision": 158,
-    "reviewed_parent": "95598d8b6c9aecad92c0e1ca353c97a72abf2159",
-    "report": "docs/qa/AT348_A2_21_CITY_CANAL_AND_MISSION_ROUTES.md",
-    "active_pr": 229,
-    "new_city_notes": [
-      13,
-      15,
-      32
-    ],
-    "city_notes_total": 28,
-    "local_links_verified": 30,
-    "prior_ci": [
-      {
-        "id": 46187597058,
-        "name": "Validate rotatable Lumiose Atlas Explorer",
-        "status": "in_progress",
-        "conclusion": null
-      },
-      {
-        "id": 46187597066,
-        "name": "Validate Atlas header feedback button",
-        "status": "completed",
-        "conclusion": "success"
-      },
-      {
-        "id": 46187597075,
-        "name": "Validate recovered Atlas article pages",
-        "status": "completed",
-        "conclusion": "success"
-      },
-      {
-        "id": 46187597060,
-        "name": "Validate photo-only GitHub Pages output",
-        "status": "completed",
-        "conclusion": "success"
-      }
-    ],
-    "retained": {
-      "base_species_ids": 232,
-      "level_evolution_routes": 84,
-      "special_acquisition_notes": 67,
-      "condition_supplements": 249,
-      "chance_alpha_records": 146,
-      "integrated_originals": 318
-    },
-    "source_limit": "Official general mechanics plus secondary species, mission and sector records. Bunnelby mission start versus met location distinguished; Magikarp Zone 11 and Vert 6 discrepancies remain leads; no invented spawns or pins.",
-    "validation": {
-      "source_roundtrip_exact": true,
-      "homepage_baseline_git_blob_exact": true,
-      "homepage_roundtrip_exact": true,
-      "local_anchor_check": true,
-      "regression_assertions_added": true,
-      "exact_head_ci": "pending",
-      "independent_visual": "pending"
-    },
-    "photo_pr": 226,
-    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
-    "new_committed_photo_delta": 0,
-    "workspace_changed": false,
-    "paid_services": false,
-    "release_decision": "HOLD",
-    "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
-  },
   "official_source_policy": {
     "date": "2026-11-28",
     "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
@@ -435,7 +450,7 @@
     "date": "2026-11-28",
     "paid_services_allowed": false,
     "additional_spending_allowed": false,
-    "priority": "Complete all written guide information first, accurately and with every game feature accounted for; preserve existing functioning systems.",
+    "priority": "Accurate written information first in manageable batches; preserve all working systems and continue comprehensive guide coverage independently.",
     "evidence_states": [
       "verified",
       "source_supported",
@@ -444,15 +459,17 @@
       "not_applicable"
     ],
     "required_sequence": [
-      "Complete written coverage and record unresolved items explicitly",
-      "Make and test the existing GitHub site",
-      "Obtain owner review of working GitHub site",
-      "Prepare one final existing Workspace handoff only after GitHub acceptance"
+      "Select and fact-check bounded batch, retain uncertainties",
+      "Validate exact GitHub candidate; live GitHub proof and owner review for functional changes",
+      "Independently reconcile and preview selected compatible changes in existing Workspace",
+      "Publish verified accepted batch and verify actual live release; record separate evidence",
+      "Continue other written and functional guide work in parallel"
     ],
-    "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
+    "workspace_presentation": "Existing Workspace may adapt compatible presentation; preserve correct existing facts, stable IDs, data, progress, URLs and working behavior. No full branch import, paid services, or unverified publication.",
     "photographs": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
-    "release_decision": "HOLD",
-    "owner_review_pending": true
+    "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
+    "owner_review_pending": true,
+    "a1": "ongoing_parallel_urgent_on_arrival_non_blocking"
   },
   "a1_permanent_photo_policy": {
     "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
@@ -717,5 +734,107 @@
     "paid_services": false,
     "release_decision": "HOLD",
     "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
+  },
+  "incremental_workspace_release_policy": {
+    "id": "AT-348-INCREMENTAL-WORKSPACE-152",
+    "date": "2026-11-28",
+    "manifest_revision": 152,
+    "ledger_revision": 160,
+    "owner_instruction": "Regularly update the existing Workspace with working checked updates and correct new information.",
+    "supersedes": "Previous whole-guide-completion-before-any-Workspace-update and single-final-handoff rules for AT-348; historical receipts retained.",
+    "scope": "Independently checked, compatible batches; continue whole-guide A2–A8 in parallel.",
+    "whole_guide_completion_required_for_each_release": false,
+    "future_photo_coverage_required": false,
+    "paid_services_allowed": false,
+    "additional_spending_allowed": false,
+    "github_exact_checks_required": true,
+    "github_live_release_required_for_functional_changes": true,
+    "owner_review_required_for_functional_changes": true,
+    "written_only_checked_candidate_may_enter_independent_workspace_preview": true,
+    "workspace_live_publication_requires_source_rollback_compatibility_preview_and_independent_verification": true,
+    "full_branch_import_allowed": false,
+    "automatic_sync_allowed": false,
+    "main_merge_in_this_slice": false,
+    "workspace_publication_in_this_slice": false,
+    "source_photo_pr": 226,
+    "source_photo_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "retained_originals": 318,
+    "active_development_pr": 229,
+    "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "first_batch": {
+      "id": "AT-348-WORKSPACE-BATCH-01",
+      "type": "written_only",
+      "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+      "source_pr": 229,
+      "source_path": "src/sections/pokedex.html",
+      "lumiose_ids": [
+        10,
+        12,
+        13,
+        15,
+        21,
+        22,
+        23,
+        32,
+        33,
+        38,
+        49,
+        50,
+        51,
+        53,
+        55,
+        62,
+        77,
+        79,
+        81,
+        87,
+        96,
+        98,
+        100,
+        135,
+        145,
+        146,
+        165,
+        166,
+        180,
+        181,
+        206
+      ],
+      "records": 31,
+      "exact_source_ci": [
+        {
+          "id": 46188321769,
+          "name": "Validate Atlas header feedback button",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321772,
+          "name": "Validate photo-only GitHub Pages output",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321775,
+          "name": "Validate recovered Atlas article pages",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321771,
+          "name": "Validate rotatable Lumiose Atlas Explorer",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "source_live_github": false,
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+      "workspace_last_recorded": "v40",
+      "workspace_live_readback": false,
+      "owner_editor_access_verified": false,
+      "unresolved_claims_preserved": true,
+      "full_branch_import": false
+    }
   }
 }
