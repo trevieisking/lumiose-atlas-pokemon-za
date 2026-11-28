@@ -1,13 +1,13 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 148,
-  "ledger_revision": 156,
+  "manifest_revision": 149,
+  "ledger_revision": 157,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
   "active_pr": 229,
-  "previous_checkpoint": "24309a55e8e0183dab148c796e40363c6a085ea5",
+  "previous_checkpoint": "1482de4f13b67c024f622d6161d20edee39629c6",
   "resume_prompt": "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
   "workspace_last_recorded_live": "v40",
   "workspace_v41_verified": false,
@@ -292,9 +292,9 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_18_capture_candidate_158_condition_supplements_124_chance_alpha_rows_full_research_open",
+      "status": "p0_25_written_city_routes_249_condition_supplements_146_chance_alpha_rows_full_research_open",
       "source": "AT-346 / #220",
-      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending.",
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending. A2-20 adds five city notes and retains all prior encounter records; exact CI and independent visuals pending.",
       "priority": "P0"
     },
     {
@@ -416,7 +416,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Continue remaining written city encounter routes and individual conditions; then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace, zero paid services.",
+  "next_slice": "Continue remaining written city encounter routes and individual conditions, then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace; zero paid services.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -2351,5 +2351,73 @@
     "release_decision": "HOLD",
     "next_field_find": 65,
     "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
+  },
+  "a2_20_city_rooftop_routes": {
+    "id": "AT-348-A2-20-CITY-ROOFTOP-ROUTES",
+    "date": "2026-11-28",
+    "manifest_revision": 149,
+    "ledger_revision": 157,
+    "reviewed_parent": "1482de4f13b67c024f622d6161d20edee39629c6",
+    "report": "docs/qa/AT348_A2_20_CITY_ROOFTOP_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      10,
+      21,
+      22,
+      55,
+      62
+    ],
+    "city_notes_total": 25,
+    "local_links_verified": 27,
+    "prior_ci": [
+      {
+        "id": 46187228422,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187228419,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228414,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228438,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Secondary source area-level records and written routes; Bleu 2 Pidgey uncorroborated; time/weather/slot/approach/odds explicitly qualified. No new pins or assumed Alpha status.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining written city encounter routes and individual conditions, then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace; zero paid services."
   }
 }

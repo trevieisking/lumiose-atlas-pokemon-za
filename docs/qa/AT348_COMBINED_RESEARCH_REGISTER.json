@@ -2,9 +2,9 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 148,
-  "ledger_revision": 156,
-  "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
+  "manifest_revision": 149,
+  "ledger_revision": 157,
+  "reviewed_parent": "1482de4f13b67c024f622d6161d20edee39629c6",
   "pr": 229,
   "photo_pr": 226,
   "source_library": [
@@ -86,6 +86,12 @@
       "url": "https://rotomlabs.net/locations/legends-z-a/bleu-district",
       "role": "Published district and separated normal/Alpha level rows",
       "status": "Indexed excerpts accessible; direct district page cache misses. A2-19 receipt includes individual source URLs and limitations."
+    },
+    {
+      "id": "a2-20-rooftop-receipts",
+      "url": "https://www.gamerguides.com/pokemon-legends-z-a/database/pokedex/pokemon/abra",
+      "role": "Species-specific rooftop routes cross-checked with Bulbapedia and RotomLabs",
+      "status": "Five city cards; precise slots and conditions qualified; source links in docs/qa/AT348_A2_20_CITY_ROOFTOP_ROUTES.md"
     }
   ],
   "previous_source_reviews": [
@@ -261,17 +267,43 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
-    "new_city_notes": 7,
-    "city_notes_total": 20,
+    "new_city_notes": 5,
+    "city_notes_total": 25,
     "city_level_refinements": 5,
-    "local_links_checked": 48,
+    "local_links_checked": 27,
     "ordinary_level_routes": 84,
     "prior_acquisition_notes": 67,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
-    "prior_ci": "all_four_passed",
+    "prior_ci": [
+      {
+        "id": 46187228422,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187228419,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228414,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228438,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
     "full_ci": "pending",
-    "visual": "pending"
+    "visual": "pending",
+    "report": "docs/qa/AT348_A2_20_CITY_ROOFTOP_ROUTES.md"
   },
   "open_disputes": [
     "WZ18 fixed Alpha time/weather table vs narrative",
@@ -290,37 +322,19 @@
   ],
   "full_audit_complete": false,
   "release_decision": "HOLD",
-  "next": "Continue remaining written city encounter routes and individual conditions; then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace, zero paid services.",
+  "next": "Continue remaining written city encounter routes and individual conditions, then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace; zero paid services.",
   "previous_slice": {
-    "a1_policy_only": true,
-    "parallel_intake": true,
-    "prior_head_ci": [
-      {
-        "id": 46181968020,
-        "name": "Validate photo-only GitHub Pages output",
-        "status": "completed",
-        "conclusion": "success"
-      },
-      {
-        "id": 46181967996,
-        "name": "Validate rotatable Lumiose Atlas Explorer",
-        "status": "in_progress",
-        "conclusion": null
-      },
-      {
-        "id": 46181967992,
-        "name": "Validate Atlas header feedback button",
-        "status": "completed",
-        "conclusion": "success"
-      },
-      {
-        "id": 46181967986,
-        "name": "Validate recovered Atlas article pages",
-        "status": "completed",
-        "conclusion": "success"
-      }
-    ],
-    "full_guide_fact_verified": false
+    "new_city_notes": 7,
+    "city_notes_total": 20,
+    "city_level_refinements": 5,
+    "local_links_checked": 48,
+    "ordinary_level_routes": 84,
+    "prior_acquisition_notes": 67,
+    "total_condition_supplements": 249,
+    "total_chance_alpha_rows": 146,
+    "prior_ci": "all_four_passed",
+    "full_ci": "pending",
+    "visual": "pending"
   },
   "official_source_policy": {
     "date": "2026-11-28",
@@ -418,5 +432,73 @@
     "release_decision": "HOLD",
     "next_field_find": 65,
     "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
+  },
+  "a2_20_city_rooftop_routes": {
+    "id": "AT-348-A2-20-CITY-ROOFTOP-ROUTES",
+    "date": "2026-11-28",
+    "manifest_revision": 149,
+    "ledger_revision": 157,
+    "reviewed_parent": "1482de4f13b67c024f622d6161d20edee39629c6",
+    "report": "docs/qa/AT348_A2_20_CITY_ROOFTOP_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      10,
+      21,
+      22,
+      55,
+      62
+    ],
+    "city_notes_total": 25,
+    "local_links_verified": 27,
+    "prior_ci": [
+      {
+        "id": 46187228422,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187228419,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228414,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228438,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Secondary source area-level records and written routes; Bleu 2 Pidgey uncorroborated; time/weather/slot/approach/odds explicitly qualified. No new pins or assumed Alpha status.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining written city encounter routes and individual conditions, then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace; zero paid services."
   }
 }
