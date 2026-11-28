@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 145,
-    "ledger_revision": 153,
-    "status": "a2_18_written_city_capture_candidate_full_scope_open",
+    "revision": 146,
+    "ledger_revision": 154,
+    "status": "a1_parallel_photo_policy_written_development_continues",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "Pending guarded Supabase closeout after exact commit readback",
+    "tracker_sync": "Pending guarded private checklist sync after exact commit readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A2_18_WRITTEN_CITY_CAPTURE.md",
-    "next_slice": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity.",
+    "latest_slice": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "next_slice": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
       "date": "2026-11-28",
@@ -215,7 +215,7 @@
     },
     "owner_github_first_gate": {
       "owner_instruction_date": "2026-11-28",
-      "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+      "rule": "GitHub first: complete or explicitly account for written and functional guide requirements A2–A8, validate exact candidate and live GitHub Pages, obtain owner review, then update existing Workspace with normal preview, rollback and live proof. A1 is ongoing, urgent and non-blocking; do not wait for complete photographic coverage or a cleared intake queue. No paid services.",
       "workspace_release_allowed": false
     },
     "priority": "A2_P0_and_A7_release_critical",
@@ -317,9 +317,11 @@
         "candidate_readback": "verified on exact 95949c12 collectible regression"
       },
       "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
-      "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
+      "validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "release_dependency": false
     },
-    "photo_intake_validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue.",
+    "photo_intake_validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
     "combined_research_register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json",
     "written_first_zero_cost_policy": {
       "date": "2026-11-28",
@@ -340,9 +342,35 @@
         "Prepare one final existing Workspace handoff only after GitHub acceptance"
       ],
       "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
-      "photographs": "Add newly available images independently in PR226 and integrate as validated batches; absent future images are not release blockers. Preserve existing integrated photo integrity.",
+      "photographs": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
       "release_decision": "HOLD",
-      "owner_review_pending": true
+      "owner_review_pending": true,
+      "a1": "ongoing_parallel_urgent_on_arrival_non_blocking"
+    },
+    "a1_permanent_photo_policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
     }
   },
   "at_348_workspace_photo_recovery": {
@@ -636,7 +664,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 145,
+  "revision": 146,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -1520,7 +1548,8 @@
     "confirmed_item_pins": "Every plotted exact item with source ID, exact location, altitude and verified access",
     "mobile_accessibility": "Android/desktop zoom, reset, accessible controls, readable legends and same 25-link menu",
     "evidence_scope": "Unknown entries stay explicitly unverified; issue #28 remains open until its full completeness gate",
-    "written_access_routes": "Review 48 sectors and 20 Wild Zones for useful destination approaches; evidence-backed directions with stable landmarks, prerequisites and clear unknowns. No exhaustive structure count, exact ladder/scaffold endpoint XY or new individual access-structure pins required."
+    "written_access_routes": "Review 48 sectors and 20 Wild Zones for useful destination approaches; evidence-backed directions with stable landmarks, prerequisites and clear unknowns. No exhaustive structure count, exact ladder/scaffold endpoint XY or new individual access-structure pins required.",
+    "photo_programme": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent."
   },
   "last_evidence_intake_at": "2026-11-26",
   "research_intakes": [
@@ -11061,5 +11090,74 @@
     "full_source_audit_complete": false,
     "release_decision": "HOLD",
     "next": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity."
+  },
+  "at_348_a1_permanent_photo_policy": {
+    "id": "AT-348-A1-POLICY-146",
+    "date": "2026-11-28",
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "reviewed_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_photo_pr_open": true,
+    "prior_head_ci": [
+      {
+        "id": 46181968020,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967996,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46181967992,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967986,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "recorded_committed_originals": 250,
+    "policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+    },
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "documentation_only": true,
+    "runtime_files_changed": false,
+    "photo_assets_changed": false,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "hold_reason": "Outstanding written guide coverage, functional/visual validation and owner GitHub site review; not photograph intake or incomplete image coverage.",
+    "next": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend."
   }
 }

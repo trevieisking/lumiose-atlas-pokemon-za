@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 145,
-  "ledger_revision": 153,
+  "manifest_revision": 146,
+  "ledger_revision": 154,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -281,10 +281,13 @@
     },
     {
       "id": "A1",
-      "title": "Photo restoration",
-      "status": "bounded_a1_01_a1_02_complete_a1_03_local_asset_and_gallery_gate_passed_manual_identity_remote_artwork_followup_open",
-      "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open. Exact parent 0bc8f126f3252c204673de536155c6a72cd1fa4b passed all 3 workflows; 784 local assets/27 pages, expanded gallery browser checks and eight screenshot review complete; centered WZ17 reachable. Remaining manual source identity and external artwork availability follow-up A7; no repeated bounded repairs."
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "source": "Permanent PR226; docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+      "acceptance": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "priority": "urgent_on_arrival_parallel",
+      "release_gate": false,
+      "dependency_for_other_slices": false
     },
     {
       "id": "A2",
@@ -299,7 +302,7 @@
       "title": "Maps and written access",
       "status": "fieldbook_core_checks_passed_27_contextual_links_and_6_access_comparisons_candidate_pending",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates. Mandatory beginning/end-of-task and pre-release PR226 delta inspection and additive transfer; retain source PR and originals, track used and pending evidence every cycle. Pending photo intake in permanent PR226 is non-blocking by itself; retain exact integrated asset and reference integrity checks."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates. Mandatory beginning/end-of-task and pre-release PR226 delta inspection and additive transfer; retain source PR and originals, track used and pending evidence every cycle. Pending photo intake in permanent PR226 is non-blocking by itself; retain exact integrated asset and reference integrity checks. Owner policy 146/154: A1 and incomplete future photo coverage, optional image-source matching and pending photo queue are not release dependencies. Validate incorporated assets only; retain actual functionality and factual gates."
     },
     {
       "id": "A4",
@@ -327,20 +330,20 @@
       "title": "Full-guide factual and coverage QA",
       "status": "46_surface_register_concurrent_directory_preserved_targeted_facts_reconciled_full_claim_review_open",
       "source": "historical PR1; AT-346/347",
-      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks. Seventeen source-backed side mission updates reconciled in both standalone and generated guide; full 46-surface verification remains open."
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks. Seventeen source-backed side mission updates reconciled in both standalone and generated guide; full 46-surface verification remains open. Owner policy 146/154: A1 and incomplete future photo coverage, optional image-source matching and pending photo queue are not release dependencies. Validate incorporated assets only; retain actual functionality and factual gates."
     },
     {
       "id": "A8",
       "title": "Exact final validation and single Workspace handoff",
       "status": "open",
       "source": "AT-325/297, #229",
-      "acceptance": "Run exact-head required workflows, local static/build and unit tests, real browser phone/desktop visual/touch checks, asset and storage preservation, release tree check and verified Pages. Reconfirm current Workspace draft and v40 baseline, use recovery prompt as resume pointer, one source-pinned compatible release only after GitHub gates; backup and independent same-Site validation/live readback. Keep rollback. Owner 28 November: no Workspace import/preview/publish or executable handoff until all planned GitHub work is validated and verified live on GitHub Pages."
+      "acceptance": "Run exact-head required workflows, local static/build and unit tests, real browser phone/desktop visual/touch checks, asset and storage preservation, release tree check and verified Pages. Reconfirm current Workspace draft and v40 baseline, use recovery prompt as resume pointer, one source-pinned compatible release only after GitHub gates; backup and independent same-Site validation/live readback. Keep rollback. Owner 28 November: no Workspace import/preview/publish or executable handoff until all planned GitHub work is validated and verified live on GitHub Pages. Owner policy 146/154: A1 and incomplete future photo coverage, optional image-source matching and pending photo queue are not release dependencies. Validate incorporated assets only; retain actual functionality and factual gates."
     }
   ],
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "Pending guarded Supabase closeout after exact commit readback",
+  "supabase_sync": "Pending guarded private checklist sync after exact commit readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -413,11 +416,10 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity.",
+  "next_slice": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend.",
   "ordered_slices": [
     "A2",
     "A7",
-    "A1",
     "A3",
     "A4",
     "A5",
@@ -758,7 +760,7 @@
   },
   "owner_github_first_gate": {
     "owner_instruction_date": "2026-11-28",
-    "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+    "rule": "GitHub first: complete or explicitly account for written and functional guide requirements A2–A8, validate exact candidate and live GitHub Pages, obtain owner review, then update existing Workspace with normal preview, rollback and live proof. A1 is ongoing, urgent and non-blocking; do not wait for complete photographic coverage or a cleared intake queue. No paid services.",
     "workspace_release_allowed": false
   },
   "a1_03_guide_image_coverage": {
@@ -2064,9 +2066,10 @@
       "Prepare one final existing Workspace handoff only after GitHub acceptance"
     ],
     "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
-    "photographs": "Add newly available images independently in PR226 and integrate as validated batches; absent future images are not release blockers. Preserve existing integrated photo integrity.",
+    "photographs": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
     "release_decision": "HOLD",
-    "owner_review_pending": true
+    "owner_review_pending": true,
+    "a1": "ongoing_parallel_urgent_on_arrival_non_blocking"
   },
   "a2_18_written_city_capture": {
     "id": "AT-348-A2-18-WRITTEN-CITY-CAPTURE",
@@ -2141,5 +2144,111 @@
     "full_source_audit_complete": false,
     "release_decision": "HOLD",
     "next": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity."
-  }
+  },
+  "a1_previous_bounded_acceptance": {
+    "preserved_at_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "id": "A1",
+    "title": "Photo restoration",
+    "status": "bounded_a1_01_a1_02_complete_a1_03_local_asset_and_gallery_gate_passed_manual_identity_remote_artwork_followup_open",
+    "source": "AT-348 / #228",
+    "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open. Exact parent 0bc8f126f3252c204673de536155c6a72cd1fa4b passed all 3 workflows; 784 local assets/27 pages, expanded gallery browser checks and eight screenshot review complete; centered WZ17 reachable. Remaining manual source identity and external artwork availability follow-up A7; no repeated bounded repairs."
+  },
+  "parallel_slices": [
+    "A1"
+  ],
+  "a1_permanent_photo_policy": {
+    "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+    "owner_instruction_date": "2026-11-28",
+    "title": "Permanent photographic evidence intake and gallery maintenance",
+    "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+    "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+    "source_pr": 226,
+    "source_pr_permanently_open": true,
+    "active_integration_pr": 229,
+    "requires_finite_completion": false,
+    "blocks_other_development": false,
+    "blocks_github_release_due_to_incomplete_photo_coverage": false,
+    "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+    "require_empty_queue": false,
+    "sequence": [
+      "Register received originals and preserve bytes, filenames, provenance and location evidence",
+      "Check duplicates, exact source and destination, and compatible guide context",
+      "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+      "Verify incorporated assets and links and record usage and pending evidence",
+      "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+    ],
+    "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+    "no_paid_services": true,
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+  },
+  "a1_policy_checkpoint": {
+    "id": "AT-348-A1-POLICY-146",
+    "date": "2026-11-28",
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "reviewed_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_photo_pr_open": true,
+    "prior_head_ci": [
+      {
+        "id": 46181968020,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967996,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46181967992,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967986,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "recorded_committed_originals": 250,
+    "policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+    },
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "documentation_only": true,
+    "runtime_files_changed": false,
+    "photo_assets_changed": false,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "hold_reason": "Outstanding written guide coverage, functional/visual validation and owner GitHub site review; not photograph intake or incomplete image coverage.",
+    "next": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend."
+  },
+  "photo_intake_validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent."
 }

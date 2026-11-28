@@ -767,5 +767,36 @@
     "status": "bounded_written_route_candidate",
     "full_page_factual_review_completed": false,
     "remaining": "Every existing surface requires whole-guide factual acceptance; source supported and unknown fields distinguished. Photos remain independent."
+  },
+  "a1_permanent_photo_policy": {
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+    },
+    "scope": "Photo coverage not a requirement for full written page review; current integrated images still subject to scoped regression validation."
   }
 }

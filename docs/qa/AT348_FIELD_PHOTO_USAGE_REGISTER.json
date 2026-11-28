@@ -2379,7 +2379,9 @@
       "reported_pending_photos": 39
     },
     "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
-    "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
+    "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue.",
+    "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+    "release_dependency": false
   },
   "last_intake_check": {
     "committed_finds": 50,
@@ -2494,6 +2496,38 @@
       "release_status": "not_released"
     }
   ],
-  "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue.",
-  "last_intake_check_note": "28 November 2026 A2-16: PR226 remains open at ffc46e3c69f7756dffecf17e4368eef4c53f4faa. No new committed delta; 250 previously verified originals retained. Owner continues field evidence; no photo files touched."
+  "validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+  "last_intake_check_note": "28 November 2026 A2-16: PR226 remains open at ffc46e3c69f7756dffecf17e4368eef4c53f4faa. No new committed delta; 250 previously verified originals retained. Owner continues field evidence; no photo files touched.",
+  "a1_permanent_photo_policy": {
+    "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+    "owner_instruction_date": "2026-11-28",
+    "title": "Permanent photographic evidence intake and gallery maintenance",
+    "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+    "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+    "source_pr": 226,
+    "source_pr_permanently_open": true,
+    "active_integration_pr": 229,
+    "requires_finite_completion": false,
+    "blocks_other_development": false,
+    "blocks_github_release_due_to_incomplete_photo_coverage": false,
+    "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+    "require_empty_queue": false,
+    "sequence": [
+      "Register received originals and preserve bytes, filenames, provenance and location evidence",
+      "Check duplicates, exact source and destination, and compatible guide context",
+      "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+      "Verify incorporated assets and links and record usage and pending evidence",
+      "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+    ],
+    "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+    "no_paid_services": true,
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+  },
+  "last_policy_checkpoint": {
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "guide_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "scope": "Policy-only; prior recorded integrated 250 photos preserved; source PR unchanged. Pending owner intake remains separate; no new photo count or hash verification claimed."
+  }
 }
