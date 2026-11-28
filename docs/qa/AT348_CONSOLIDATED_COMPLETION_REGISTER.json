@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 124,
-  "ledger_revision": 132,
+  "manifest_revision": 125,
+  "ledger_revision": 133,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,7 +246,7 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_11_capture_candidate_95_condition_supplements_full_research_open",
+      "status": "p0_zone_01_12_capture_candidate_105_condition_supplements_full_research_open",
       "source": "AT-346 / #220",
       "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open.",
       "priority": "P0"
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0: verify new-head checks and mobile/desktop catch guidance; continue Zone 12 through Zone 20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: complete the 46-page actionable guide review. HOLD Workspace until full validation and independent live GitHub verification.",
+  "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 13–20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1187,5 +1187,38 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: verify new-head checks and mobile/desktop catch guidance; continue Zone 12 through Zone 20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: complete the 46-page actionable guide review. HOLD Workspace until full validation and independent live GitHub verification."
+  },
+  "a2_07_zone_12_capture_research": {
+    "id": "AT-348-A2-07-ZONE-12-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 125,
+    "ledger_revision": 133,
+    "reviewed_parent": "82baf77602efb2ba5c6cf3ea248bf6c31ae87e4a",
+    "active_pr": 229,
+    "zones": [
+      12
+    ],
+    "existing_ordinary_rows_enriched": 8,
+    "existing_fixed_alpha_rows_enriched": 2,
+    "new_chance_alpha_rows": 8,
+    "cumulative_conditions": 105,
+    "cumulative_chance_alpha_packet_rows": 85,
+    "report": "docs/qa/AT348_A2_07_ZONE_12_CAPTURE_RESEARCH.md",
+    "open_claims": [
+      "Ordinary Avalugg remains a source lead; no chance Alpha added.",
+      "Vanillite level range differs by source; precise rooftop access unverified."
+    ],
+    "parent_ci": {
+      "article": "46156429964:success",
+      "pages": "46156429947:success",
+      "explorer": "46156429934:in_progress_at_inspection"
+    },
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 13–20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment."
   }
 }

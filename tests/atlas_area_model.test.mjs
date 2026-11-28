@@ -228,7 +228,7 @@ test('AT-346 chance Alpha packet preserves six prior rows and adds 71 zone 1–1
   const snapshot=JSON.stringify(input),after=buildAreaModel(input);
   assert.equal(JSON.stringify(input),snapshot);
   assert.equal(after.areas.length,68);assert.deepEqual(after.issues,[]);
-  assert.equal(after.encounters.length,before.encounters.length+77);
+  assert.equal(after.encounters.length,before.encounters.length+85);
   assert.deepEqual(after.encounters.filter(row=>row.encounterClass!=='random_alpha'),before.encounters);
   assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
   const lookup=speciesId=>selectAreaResults(after,{speciesId,encounterClass:'random_alpha'});
@@ -246,7 +246,7 @@ test('AT-346 chance Alpha packet preserves six prior rows and adds 71 zone 1–1
   assert.equal(buildAreaModel({atlas,rosters:wildZoneRecords,evidence:null,alphaEvidence}).encounters.length,272);
   const broken=clone(alphaEvidence);broken.areas[0].encounters[0].sources=[];
   const rejected=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production,alphaEvidence:broken});
-  assert.equal(rejected.encounters.length,before.encounters.length+76);
+  assert.equal(rejected.encounters.length,before.encounters.length+84);
   assert.equal(selectAreaResults(rejected,{speciesId:'dratini',encounterClass:'random_alpha'}).areas.length,0);
   assert.ok(rejected.issues.some(x=>x.includes('Rejected unsupported chance Alpha')));
 });
@@ -258,13 +258,13 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   const input=freeze({atlas:clone(atlas),rosters:clone(wildZoneRecords),evidence:clone(production),alphaEvidence:clone(alphaEvidence),conditionEvidence:clone(conditionEvidence)});
   const snapshot=JSON.stringify(input),after=buildAreaModel(input);
   assert.equal(JSON.stringify(input),snapshot);assert.deepEqual(after.issues,[]);
-  assert.equal(conditionEvidence.records.length,95);
-  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='ordinary').length,73);
-  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='fixed_alpha').length,22);
+  assert.equal(conditionEvidence.records.length,105);
+  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='ordinary').length,81);
+  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='fixed_alpha').length,24);
   assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
   assert.deepEqual(after.encounters.map(({condition,sources,...rest})=>rest),before.encounters.map(({condition,sources,...rest})=>rest));
   const byId=new Map(after.encounters.map(r=>[r.id,r])),old=new Map(before.encounters.map(r=>[r.id,r])),ids=new Set(conditionEvidence.records.map(r=>r.id));
-  assert.equal(ids.size,95);
+  assert.equal(ids.size,105);
   for(const entry of conditionEvidence.records){const row=byId.get(entry.id);assert.ok(row,entry.id);assert.equal(row.condition.level,entry.condition.level);assert.equal(row.condition.directions,entry.condition.directions);assert.match(row.condition.weather,/No special weather restriction reported/);assert.ok(row.sources.length>old.get(entry.id).sources.length);}
   assert.deepEqual(after.encounters.filter(r=>!ids.has(r.id)),before.encounters.filter(r=>!ids.has(r.id)));
   assert.match(byId.get('g3-evidence-wz-02-staryu-ordinary').condition.time,/night/i);
@@ -317,6 +317,15 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   assert.equal(selectAreaResults(after,{speciesId:'xerneas',areaId:'wz-11',encounterClass:'ordinary'}).encounters.length,0);
   assert.match(read('maps.html'),/item-11-9.*Mission 40 route to Lv\. 75 Xerneas/);
   assert.match(read('legendaries.html'),/Zone 11’s northern entrance.*knock it out, it returns/);
+  const wz12=after.encounters.filter(r=>r.areaId==='wz-12');
+  assert.equal(wz12.filter(r=>r.encounterClass==='random_alpha').length,8);
+  assert.match(byId.get('g3-evidence-wz-12-delibird-ordinary').condition.directions,/south entrance.*west and north gate/);
+  assert.match(byId.get('g3-evidence-wz-12-machop-ordinary').condition.directions,/battle court/);
+  assert.equal(byId.get('wz-12:fixed_alpha:1').condition.level,'54–56');
+  assert.match(byId.get('wz-12:fixed_alpha:1').condition.directions,/icicle.*ice bridge/);
+  assert.equal(selectAreaResults(after,{speciesId:'avalugg',areaId:'wz-12',encounterClass:'random_alpha'}).encounters.length,0);
+  assert.match(byId.get('g3-evidence-wz-12-vanillite-ordinary').condition.notes.join(' '),/Bulbapedia lists 35/);
+  assert.match(selectAreaResults(after,{speciesId:'bergmite',areaId:'wz-12',encounterClass:'random_alpha'}).encounters[0].condition.notes.join(' '),/42–43/);
   const bad=clone(conditionEvidence);bad.records=[{...bad.records[0],species:'Other species'},{...bad.records[1],condition:{coordinates:[1,2]}}];
   const rejected=buildAreaModel({...input,conditionEvidence:bad});assert.deepEqual(rejected.encounters,before.encounters);assert.equal(rejected.issues.length,2);
   const mismatch=buildAreaModel({...input,conditionEvidence:{...conditionEvidence,mapSha256:'wrong'}});assert.deepEqual(mismatch,before);

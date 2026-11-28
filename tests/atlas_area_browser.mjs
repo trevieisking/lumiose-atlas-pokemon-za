@@ -701,6 +701,11 @@ try{
     const slowbroRoute=page.locator('[data-area-encounter-id="wz-11:fixed_alpha:0"]');
     assert.match(await slowbroRoute.textContent(),/Level: 42–44/);
     assert.match(await slowbroRoute.textContent(),/thorn barrier.*TM063/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-12&species=avalugg&encounter=fixed_alpha",{waitUntil:"load"});await panel();
+    const avaluggRoute=page.locator('[data-area-encounter-id="wz-12:fixed_alpha:1"]');
+    assert.match(await avaluggRoute.textContent(),/Level: 54–56/);
+    assert.match(await avaluggRoute.textContent(),/icicle.*ice bridge/);
+
 
 
 
