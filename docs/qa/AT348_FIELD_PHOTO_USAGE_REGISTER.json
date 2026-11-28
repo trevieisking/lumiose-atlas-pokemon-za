@@ -2378,7 +2378,8 @@
       "reported_pending_finds": 8,
       "reported_pending_photos": 39
     },
-    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+    "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
   },
   "last_intake_check": {
     "committed_finds": 50,
@@ -2390,10 +2391,11 @@
     "source_original_blob_matches": 39,
     "candidate_readback": "verified",
     "matching_guide_photo_blobs": 250,
-    "verified_job": 141060145760
+    "verified_job": 141060145760,
+    "source_head_rechecked": true
   },
   "last_intake_check_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
-  "last_intake_check_guide_head": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
+  "last_intake_check_guide_head": "04733e652c2affa78d7aaab3e10b7da90e16175e",
   "previous_pending_intake": [
     {
       "field_find": 43,
@@ -2491,5 +2493,6 @@
       "verified_permanent_pin": false,
       "release_status": "not_released"
     }
-  ]
+  ],
+  "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
 }
