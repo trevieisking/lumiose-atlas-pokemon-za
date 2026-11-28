@@ -4,7 +4,7 @@ on:
     branches:
       - docs/atlas-item-location-field-guide
     paths:
-      - pr-226-pending-172-photographs.zip
+      - pr-226-pending-39-photographs.zip
 
 permissions:
   contents: write
@@ -25,25 +25,35 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path, PurePosixPath
-          import hashlib, stat, zipfile
+          import hashlib, json, stat, zipfile
 
-          archive = Path('pr-226-pending-172-photographs.zip')
-          expected = '32f974c0bf39941f71e1ba4ae530e5a232e87fe963e341c030c9993b68c19c66'
+          archive = Path('pr-226-pending-39-photographs.zip')
+          expected = '68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579'
           if not archive.is_file() or hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
               raise SystemExit('Archive missing or SHA-256 mismatch')
           with zipfile.ZipFile(archive) as z:
               entries = z.infolist()
-              if len(entries) != 172 or len({i.filename for i in entries}) != 172 or sum(i.file_size for i in entries) != 22503224 or z.testzip() is not None:
+              if len(entries) != 40 or len({i.filename for i in entries}) != 40 or sum(i.file_size for i in entries) != 4605203 or z.testzip() is not None:
                   raise SystemExit('Archive inventory mismatch')
+              register = 'docs/field-guides/intake/2026-11-28-finds-43-50.json'
+              manifest = json.loads(z.read(register))
+              if manifest['sourcePR'] != 226 or [e['fieldFind'] for e in manifest['entries']] != list(range(43, 51)):
+                  raise SystemExit('Unexpected intake register')
+              photos = [p for e in manifest['entries'] for p in e['photos']]
+              expected_paths = {p['path']: p for p in photos}
+              if len(photos) != 39 or len(expected_paths) != 39 or set(z.namelist()) != set(expected_paths) | {register}:
+                  raise SystemExit('Photo inventory mismatch')
               pending = []
               for i in entries:
                   p = PurePosixPath(i.filename)
-                  if (p.is_absolute() or '..' in p.parts or str(p) != i.filename or '\\' in i.filename or len(p.parts) != 5 or p.parts[:3] not in {('assets','atlas','collectibles'),('assets','atlas','access')} or p.suffix != '.webp' or i.is_dir() or stat.S_ISLNK(i.external_attr >> 16)):
+                  if (p.is_absolute() or '..' in p.parts or str(p) != i.filename or '\\' in i.filename or (i.filename != register and (len(p.parts) != 5 or p.parts[:3] != ('assets','atlas','collectibles') or p.suffix != '.webp')) or i.is_dir() or stat.S_ISLNK(i.external_attr >> 16)):
                       raise SystemExit('Unsafe archive member: ' + i.filename)
                   target = Path(*p.parts)
                   data = z.read(i)
-                  if data[:4] != b'RIFF' or data[8:12] != b'WEBP':
-                      raise SystemExit('Not a WebP: ' + i.filename)
+                  if i.filename != register:
+                      photo = expected_paths[i.filename]
+                      if data[:4] != b'RIFF' or data[8:12] != b'WEBP' or len(data) != photo['bytes'] or hashlib.sha256(data).hexdigest() != photo['sha256']:
+                          raise SystemExit('Photo bytes mismatch: ' + i.filename)
                   if any(q.is_symlink() for q in [target, *target.parents]):
                       raise SystemExit('Symlink in destination: ' + i.filename)
                   if target.exists():
@@ -58,9 +68,9 @@ jobs:
               for i in entries:
                   if Path(i.filename).read_bytes() != z.read(i):
                       raise SystemExit('Post-extraction verification failed: ' + i.filename)
-          print(f'All 172 original photos verified; {len(pending)} new files; no existing file overwritten.')
+          print(f'All 39 original photos and intake register verified; {len(pending)} new files; no existing file overwritten.')
           PY
-      - name: Commit only verified assets to the draft PR branch
+      - name: Commit only verified photographs and intake register to the draft PR branch
         shell: bash
         run: |
           set -euo pipefail
@@ -68,7 +78,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python3 - <<'PY'
           import subprocess, zipfile
-          archive = 'pr-226-pending-172-photographs.zip'
+          archive = 'pr-226-pending-39-photographs.zip'
           with zipfile.ZipFile(archive) as z:
               names = z.namelist()
           subprocess.run(['git', 'add', '--', *names], check=True)
@@ -77,5 +87,5 @@ jobs:
           if not set(filter(None, changed)).issubset(set(names) | {archive}):
               raise SystemExit('Unexpected staged paths')
           PY
-          git commit -m "Import 172 verified Atlas field photographs"
+          git commit -m "Import 39 verified Atlas field photographs and location register"
           git push origin HEAD:refs/heads/docs/atlas-item-location-field-guide
