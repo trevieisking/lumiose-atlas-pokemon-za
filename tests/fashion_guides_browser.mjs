@@ -4,6 +4,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import {spawn} from "node:child_process";
+import {request} from "node:http";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 const prefix="/lumiose-atlas-pokemon-za/";
@@ -15,9 +16,21 @@ fs.mkdirSync(output,{recursive:true});
 fs.symlinkSync(process.cwd(),path.join(root,"lumiose-atlas-pokemon-za"),"dir");
 const server=spawn("python3",["-m","http.server","18767","--bind","127.0.0.1","--directory",root],{stdio:"ignore"});
 let browser;
+// Readiness uses a bodyless, non-pooled HEAD probe instead of an unconsumed
+// fetch GET response. Node 22 Undici Parser.finish crashed here repeatedly.
+// The subsequent Playwright page loads and assertions are unchanged.
+function serverReady(url){
+ return new Promise(resolve=>{
+  const req=request(url,{method:"HEAD",agent:false},res=>{
+   const ok=res.statusCode>=200&&res.statusCode<300;
+   res.on("error",()=>resolve(false));res.on("end",()=>resolve(ok));res.resume();
+  });
+  req.setTimeout(1000,()=>req.destroy());req.on("error",()=>resolve(false));req.end();
+ });
+}
 try {
  let ready=false;
- for(let i=0;i<40;i++){try{if((await fetch(base+"shops.html")).ok){ready=true;break;}}catch{}await pause(150);}
+ for(let i=0;i<40;i++){if(await serverReady(base+"shops.html")){ready=true;break;}await pause(150);}
  assert.ok(ready,"Local guide server unavailable");
  browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
  for(const [kind,width,height] of [["phone",393,852],["desktop",1440,900]]){

@@ -1,5 +1,10 @@
 # Original ChatGPT Workspace Site — access and parity handoff
 
+## AT-348 — Incremental checked Workspace releases (Manifest 152 / Joint Ledger 160)
+
+**CURRENT OWNER POLICY — supersedes conflicting older whole-guide release instructions.** [Incremental release policy](docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md) · [First bounded Workspace update](docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md). Owner instruction, 28 November 2026: update the existing Workspace regularly with working, checked improvements and correct new information. This supersedes the previous whole-guide-completion-before-any-Workspace-update and single-final-handoff requirements for AT-348. Continue A2–A8 in parallel; release bounded compatible batches after their own exact GitHub validation, factual review, Workspace source/rollback/compatibility checks, mobile/desktop preview, publication and independent live readback. Runtime or shared-system changes require exact GitHub release/live evidence and owner review before adoption; written-only information can be selected from an exact checked GitHub candidate for independent Workspace preview, with no wholesale branch import or assumption of live GitHub publication. Keep PR229 as the integrated development candidate and PR226 permanently open. Do not delay an otherwise accepted batch for unrelated remaining guide research or pending photographs; do not weaken gates within the selected batch. No additional spending, new site, storage reset, unverified claims, or automatic sync. First bounded handoff: 31 city/alternate capture records at 956f569ba0e7c7b4801dfa19286b891241ce872b; all four workflows passed (46188321769, 46188321771, 46188321772, 46188321775). This is a checked source for comparison, not proof of independent Workspace compatibility or publication. Existing original Site last recorded v40; no editor access or new publication verified in this session. Main and photo source 04347376a33d71c11dff232bc3e959952fcda9bc unchanged. A1 urgent and non-blocking.
+
+
 <!-- ATLAS_CROSS_GRID_CURRENT_97_105 -->
 ## Released cross grid and source archive (Manifest 97 / Ledger 105)
 

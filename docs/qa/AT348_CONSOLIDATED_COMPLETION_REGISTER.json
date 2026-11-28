@@ -1,0 +1,2663 @@
+{
+  "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
+  "schema_version": 1,
+  "manifest_revision": 152,
+  "ledger_revision": 160,
+  "scope": "one active non-item guide completion candidate; staged, not release approval",
+  "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+  "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
+  "active_pr": 229,
+  "previous_checkpoint": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+  "resume_prompt": "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
+  "workspace_last_recorded_live": "v40",
+  "workspace_v41_verified": false,
+  "field_collection": {
+    "pr": 226,
+    "head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "previous_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "counts": {
+      "tm": 22,
+      "item": 20,
+      "screw": 22,
+      "access": 1,
+      "collectibleFinds": 64,
+      "photos": 318
+    },
+    "latest_find": "Colorful Screw #64, South Boulevard ladder scaffold between Racine Construction and Restaurant Le Nah",
+    "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/docs/field-guides/collectible-photo-register.json",
+    "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/docs/field-guides/collectible-locations.md",
+    "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/04347376a33d71c11dff232bc3e959952fcda9bc/collectible-fieldbook.html",
+    "local_validation": "68 new source blob identities verified in PR229; all 318 registered paths present; 250 earlier source and guide blobs retained; exact CI pending",
+    "integration": "Verified source-to-guide transfer 06d81703c2158d2ef14d73a88c5582f5f3705f35; exact CI and contextual review pending",
+    "calibrated_coordinates": false,
+    "canonical_checklist_id": null,
+    "related_access_lead": "AR-V04-05",
+    "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
+    "prior_review": {
+      "pr": 226,
+      "head": "d9337c6d79bb1d221b854b45ea5914e76b736bd5",
+      "previous_head": "c1ef6d1b6ad9b3c87198b15a137a766e6605628e",
+      "counts": {
+        "tm": 17,
+        "item": 18,
+        "screw": 6,
+        "access": 1,
+        "collectibleFinds": 41,
+        "photos": 206
+      },
+      "latest_find": "Colorful Screw, find 41, on the upper scaffold northwest of Hotel Z",
+      "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-photo-register.json",
+      "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/docs/field-guides/collectible-locations.md#colorful-screw--scaffold-northwest-of-hotel-z",
+      "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/d9337c6d79bb1d221b854b45ea5914e76b736bd5/collectible-fieldbook.html#hotel-z-colorful-screw-scaffold",
+      "local_validation": "Static validation and 14 focused collectible tests passed. All 206 registered photograph paths exist, and the five new WebP originals match byte for byte and open from the fieldbook.",
+      "workflow_runs": [
+        46078482384,
+        46078482398
+      ],
+      "workflow_status_at_checkpoint": "Both workflows passed on the exact photo head.",
+      "integration": "draft field intake; A3 review and integration pending",
+      "calibrated_coordinates": false,
+      "canonical_checklist_id": null,
+      "related_access_lead": "AR-V05-01",
+      "policy": "ongoing field intake; upload and organisation verified on reviewed draft head, integrate only compatible validated field package into PR229; no duplicate PR, coordinates or canonical IDs inferred"
+    },
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+    "pending_intake": {
+      "finds": 0,
+      "photos": 0,
+      "status": "imported_and_organised",
+      "next_find": 65
+    },
+    "mandatory_intake_cycle": {
+      "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
+      "owner_instruction_date": "2026-11-28",
+      "source_pr": 226,
+      "source_branch": "docs/atlas-item-location-field-guide",
+      "current_integration_pr": 229,
+      "source_pr_permanently_open": true,
+      "check_frequency": "At the start and end of EVERY Atlas development task, and immediately before any release candidate is frozen. Also check whenever the owner reports new photographs. These checks are part of active development turns; no unattended monitoring is claimed.",
+      "preflight": [
+        "Read the latest source PR head, complete changed-file/tree listing, photo register and recent intake comments.",
+        "Compare exact source paths and Git blob identities against the active consolidated guide candidate and per-find usage register; distinguish new files, modified files, duplicates and reported but uncommitted intake.",
+        "For each new validated original, copy byte-identical source blobs and applicable evidence notes into the current consolidated guide PR. Do not merge or close the source PR, remove originals, overwrite newer guide content or create a new intake PR.",
+        "Integrate supported descriptions, directions and evidence links into relevant guide pages; record unresolved identity, route and coordinate questions separately."
+      ],
+      "closeout": [
+        "Re-read source PR head and compare again for newly arrived evidence; record any new delta that cannot safely be integrated yet.",
+        "Verify copied photo paths, source blob identities, guide destinations and evidence confidence; update per-find usage register, Master Plan, Workspace Plan, joint manifest and ledger with source head, integrated/pending counts, test results and next action.",
+        "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
+      ],
+      "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
+      "last_checked_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+      "last_checked_guide_parent": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
+      "last_check": {
+        "committed_finds": 50,
+        "access_surveys": 1,
+        "committed_photos": 250,
+        "matching_guide_photo_blobs": 250,
+        "new_committed_photos_not_copied": 0,
+        "reported_pending_finds": 0,
+        "reported_pending_photos": 0,
+        "candidate_readback": "verified on exact 95949c12 collectible regression"
+      },
+      "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+      "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
+    },
+    "validation_boundary": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue."
+  },
+  "incoming": {
+    "pr": 227,
+    "head": "4c68ff1bec5534190872b9227894bc6eed017170",
+    "tree": "6d181a1a56d1c3bc7d2bf5a72f55e3ef90b08152",
+    "prior_workflows": [
+      46027544829,
+      46027544803
+    ],
+    "files": [
+      "boss-guide-data.js",
+      "boss-guide.html",
+      "game-content-data.json",
+      "game-content.css",
+      "game-content.html",
+      "index.html",
+      "side-missions.html",
+      "src/sections/sidequests.html",
+      "tests/game_content.test.mjs",
+      "tests/side_missions_index.test.mjs",
+      "docs/qa/at347-content-coverage/CHALLENGE_FOLLOW_UP_2026-11-27.md"
+    ],
+    "disposition": "exact non-overlapping file transfer into PR229; not promoted; PR227 preserved as source, no separate release",
+    "integrated_head_tests": "success_on_reviewed_parent_only",
+    "reviewed_integrated_head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+    "integrated_workflows": [
+      46034741717,
+      46034741732
+    ]
+  },
+  "historical_head_check": {
+    "count": 24,
+    "all_exact_heads_unchanged": true,
+    "prior_review": "docs/qa/at342-independent-live-review-2026-11-26/open-pr-consolidation-review.json",
+    "groups": {
+      "included_in_substance": [
+        203,
+        198,
+        197,
+        196,
+        195,
+        189,
+        187,
+        177,
+        172,
+        156,
+        3
+      ],
+      "superseded": [
+        97,
+        76,
+        59,
+        37
+      ],
+      "research_or_receipt": [
+        186,
+        184,
+        171,
+        166,
+        149,
+        2,
+        1
+      ],
+      "adaptation_pending": [
+        4,
+        5
+      ]
+    },
+    "heads": [
+      {
+        "pr": 203,
+        "head": "6a203e143dba392fa137db31bfcfd5264d6c7ff0"
+      },
+      {
+        "pr": 198,
+        "head": "98a0a5f3e9c2b960769265bc2db015c2dbd2dc02"
+      },
+      {
+        "pr": 197,
+        "head": "68c01ebac29730351dc1375126dfae4674fdacc0"
+      },
+      {
+        "pr": 196,
+        "head": "bc5b10fcf8a69ff8ec45d5ac5d6ff5dd0276838e"
+      },
+      {
+        "pr": 195,
+        "head": "bbdc011ba425519821ad5fde8cd92a19e42265ce"
+      },
+      {
+        "pr": 189,
+        "head": "11c6e2f5877d1880237dfa2471d5d053f5533ca0"
+      },
+      {
+        "pr": 187,
+        "head": "4686bfddf5ec9a0fe44148f1344a78556af4ca2c"
+      },
+      {
+        "pr": 186,
+        "head": "8831be90c915efc237894fdc8a2423d8f5056bb9"
+      },
+      {
+        "pr": 184,
+        "head": "cbda3bc87ae54ac420f6b4dbd2e43d1cbc04cee1"
+      },
+      {
+        "pr": 177,
+        "head": "e9cdcb5230bbe61c55a18eb8e7d30e7137c9e212"
+      },
+      {
+        "pr": 172,
+        "head": "c2d739942eef7c34b08a67475df2252b4d3ededb"
+      },
+      {
+        "pr": 171,
+        "head": "4b0b0d70c2bb1bfe7d8917e061467cb7040ce61d"
+      },
+      {
+        "pr": 166,
+        "head": "a9a78e46e86ce56b4e08257ed017ef5d2d05fb04"
+      },
+      {
+        "pr": 156,
+        "head": "a9e906cdce710a67ca960e363a087160cd08dc5d"
+      },
+      {
+        "pr": 149,
+        "head": "e826d100f0eb540f73e58274273a0d1c3c5cecb7"
+      },
+      {
+        "pr": 97,
+        "head": "be9d047c8de15a8f52946b129e4040c06f14c8a1"
+      },
+      {
+        "pr": 76,
+        "head": "268b72125e644d68eb03c4c53a1f8d98b7372808"
+      },
+      {
+        "pr": 59,
+        "head": "a15077d9513de2655b8c8485d37678723d60c77e"
+      },
+      {
+        "pr": 37,
+        "head": "97131c29969a80ed03a6e6684b05a8b914e137b7"
+      },
+      {
+        "pr": 5,
+        "head": "c7db966c6a8955801f4ca6beb2c4fc15c837880a"
+      },
+      {
+        "pr": 4,
+        "head": "263f7faa3ddf8588cc73dae97577087d7a92df93"
+      },
+      {
+        "pr": 3,
+        "head": "4d65520593a438b03b96c5e3621989f76c4d8d4f"
+      },
+      {
+        "pr": 2,
+        "head": "d4e1ae32613cf4b49347f1412634bfdd22741163"
+      },
+      {
+        "pr": 1,
+        "head": "b3d868db17afc87c5c94830f257ac2988be262e2"
+      }
+    ]
+  },
+  "slices": [
+    {
+      "id": "A0",
+      "title": "Single candidate and interrupted-session recovery",
+      "status": "in_progress",
+      "source": "PR229; #228; AT348_WORKSPACE_RESUME_PROMPT.md",
+      "acceptance": "Retain existing Work draft; record source/checkpoints; do not restart or claim publication. Mandatory preflight and stage-end two-site synchronization recorded; persisted Workspace draft still requires readback."
+    },
+    {
+      "id": "A1",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "source": "Permanent PR226; docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+      "acceptance": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "priority": "urgent_on_arrival_parallel",
+      "release_gate": false,
+      "dependency_for_other_slices": false
+    },
+    {
+      "id": "A2",
+      "title": "Pokédex encounter and form coverage",
+      "status": "p0_31_written_city_routes_249_condition_supplements_146_chance_alpha_rows_full_research_open",
+      "source": "AT-346 / #220",
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending. A2-20 adds five city notes and retains all prior encounter records; exact CI and independent visuals pending. A2-21 adds three city notes and preserves earlier routes; new exact CI and visuals pending. A2-22 enriches three alternate acquisition cards; new exact CI and visual review pending.",
+      "priority": "P0"
+    },
+    {
+      "id": "A3",
+      "title": "Maps and written access",
+      "status": "fieldbook_core_checks_passed_27_contextual_links_and_6_access_comparisons_candidate_pending",
+      "source": "AT-299/300/321/322/323/324/327/331",
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates. Mandatory beginning/end-of-task and pre-release PR226 delta inspection and additive transfer; retain source PR and originals, track used and pending evidence every cycle. Pending photo intake in permanent PR226 is non-blocking by itself; retain exact integrated asset and reference integrity checks. Owner policy 146/154: A1 and incomplete future photo coverage, optional image-source matching and pending photo queue are not release dependencies. Validate incorporated assets only; retain actual functionality and factual gates."
+    },
+    {
+      "id": "A4",
+      "title": "Fashion, beauty, treasure",
+      "status": "pr227_fashion_shop_delta_candidate_remaining_catalogue_review_open",
+      "source": "AT-330",
+      "acceptance": "Complete boutique inventories/prices/unlocks, available hairstyle/colour/contact swatches, treasure sale values and budgets. Preserve calculators and type chart. Latest PR227 source delta integrated (Manifest129/Ledger137), exact new-head CI pending."
+    },
+    {
+      "id": "A5",
+      "title": "City Life services and challenges",
+      "status": "pr227_later_delta_integrated_candidate_remaining_fact_review_open",
+      "source": "AT-347 / #225; PR227",
+      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues. Both integrated workflows passed at reviewed parent 7df9ba0d86377153f0ef77c7882efd9dc32b9c7e only; new head requires validation. Six later source commits ending 153c6ad8f4841c927b4391739f766bf6f958137c reconciled, 14 source blobs and one regenerated section. Full City Life audit and exact new-head tests pending."
+    },
+    {
+      "id": "A6",
+      "title": "Unified completion and progress safeguards",
+      "status": "a6_01_homepage_progress_preservation_candidate_backup_and_numbering_open",
+      "source": "AT-347-COMPLETE-001; historical PR4/5",
+      "acceptance": "Build additive interactive completion view around stable existing IDs and progress keys. Review current same-origin storage and old #4 numbered verified pin/#5 backup candidates; adapt only applicable pieces, preview/merge imports, preserve unknown keys and rollback. No fabricated pins or destructive resets. Item-photo intake excluded from this implementation. A6-01: homepage bounded single-tick writes and explicit known-mission reset preserve unknown data; malformed or unavailable storage is not overwritten; storage/pageshow refresh. Full regression and visual acceptance pending; HOME registration remains in its separate existing key. No placement approval; backup/restore pending."
+    },
+    {
+      "id": "A7",
+      "title": "Full-guide factual and coverage QA",
+      "status": "46_surface_register_concurrent_directory_preserved_targeted_facts_reconciled_full_claim_review_open",
+      "source": "historical PR1; AT-346/347",
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks. Seventeen source-backed side mission updates reconciled in both standalone and generated guide; full 46-surface verification remains open. Owner policy 146/154: A1 and incomplete future photo coverage, optional image-source matching and pending photo queue are not release dependencies. Validate incorporated assets only; retain actual functionality and factual gates."
+    },
+    {
+      "id": "A8",
+      "title": "Exact final validation and single Workspace handoff",
+      "status": "incremental_policy_active_batch_01_checked_source_workspace_comparison_pending",
+      "source": "AT-325/297, #229",
+      "acceptance": "Release independently checked and compatible batches under AT-348 incremental policy. Exact GitHub checks and factual review; live GitHub and owner review for functional changes. Existing Workspace source, backup/rollback, compatibility, mobile/desktop preview, publish and independently verify live per batch. Unrelated incomplete A2–A8 coverage and pending future A1 photographs are not release prerequisites. Full-guide completion remains tracked. No automatic full-branch import or paid services."
+    }
+  ],
+  "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
+  "preserve_all_originals_and_progress": true,
+  "no_workspace_credits": true,
+  "supabase_sync": "Pending guarded Supabase closeout after exact commit readback",
+  "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
+  "development_cycle": {
+    "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
+    "date": "2026-11-27",
+    "revision": 105,
+    "ledger_revision": 113,
+    "status": "audit_recorded_development_cycle_bound_runtime_repairs_open",
+    "active_pr": 229,
+    "reviewed_parent": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "cycle": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
+    "audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
+    "master_plans": [
+      "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+      "FINAL_WORKSPACE_PLAN.md"
+    ],
+    "joint_manifest": "MAPS_UPGRADE_MANIFEST.json",
+    "dual_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md",
+    "field_intake": {
+      "pr": 226,
+      "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
+      "counts": {
+        "tm": 16,
+        "item": 18,
+        "screw": 5,
+        "access": 1,
+        "collectibleFinds": 39,
+        "photos": 196
+      },
+      "workflow_runs": [
+        46064540604,
+        46064540487
+      ],
+      "status": "uploaded_and_organised_draft_not_integrated",
+      "calibrated_coordinates": false
+    },
+    "reviewed_integration": {
+      "head": "7df9ba0d86377153f0ef77c7882efd9dc32b9c7e",
+      "workflow_runs": [
+        46034741717,
+        46034741732
+      ],
+      "status": "both_success_on_reviewed_parent_only"
+    },
+    "audit_scope": {
+      "standalone_sources": 26,
+      "homepage_source_sections": 17,
+      "tree_paths": 1987,
+      "missing_static_local_file_targets": 0,
+      "generated_homepage_direct_read": false,
+      "exhaustive_factual_verification": false,
+      "new_browser_qa": false
+    },
+    "next_slice": "A1-01 confirmed rouge5-looker gallery cap; then A1-02 exact Wild Zone full-resolution mappings",
+    "ordered_slices": [
+      "A1",
+      "A3",
+      "A2",
+      "A7",
+      "A4",
+      "A5",
+      "A6",
+      "A8"
+    ],
+    "release_decision": "HOLD",
+    "workspace_last_recorded_live": "v40",
+    "workspace_live_verified_this_cycle": false,
+    "workspace_prompt_status": "continuation_inventory_only_no_new_release",
+    "private_tracker_sync": "pending_separate_readback",
+    "runtime_changed": false,
+    "new_prs": 0
+  },
+  "next_slice": "Reconcile first 31 written city/alternate capture records in existing Workspace with independent scoped safety checks; continue remaining city routes, Hyperspace acquisition/evolution/forms, and full-guide development in PR229 without waiting for unrelated batches or future photographs. No extra spend.",
+  "ordered_slices": [
+    "A2",
+    "A7",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A8"
+  ],
+  "a1_01_gallery_repair": {
+    "id": "AT-348-A1-01-HOLOVATOR-GALLERY",
+    "revision": 106,
+    "ledger_revision": 114,
+    "date": "2026-11-27",
+    "active_pr": 229,
+    "reviewed_parent": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "parent_workflows": [
+      46066107365,
+      46066107372
+    ],
+    "scope": "Remove arbitrary 8-photo rendering cap and obsolete overflow note; add existing test-suite regression for ten-photo owner gallery on desktop and phone",
+    "affected_runtime": [
+      "atlas-explorer.js"
+    ],
+    "test_paths": [
+      "tests/atlas_explorer.test.mjs",
+      "tests/atlas_explorer_browser.mjs"
+    ],
+    "evidence": "docs/qa/AT348_A1_01_HOLOVATOR_GALLERY_REPAIR.md",
+    "registered_photos": 10,
+    "previously_rendered_max": 8,
+    "existing_owner_photo_inventory": 111,
+    "photo_data_or_binary_changed": false,
+    "coordinates_or_progress_changed": false,
+    "github_implementation": "candidate_written_exact_head_readback_and_ci_required",
+    "github_validation": "pending_exact_head",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_existing_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker_sync": "pending_separate_readback",
+    "next_slice": "A1-01 exact-head tests and gallery QA, then A1-02 identify three Wild Zone originals by verified provenance; no guessed mappings",
+    "release_decision": "HOLD",
+    "new_prs": 0
+  },
+  "a1_02_original_links": {
+    "id": "AT-348-A1-02-WILD-ZONE-ORIGINAL-LINKS",
+    "revision": 107,
+    "ledger_revision": 115,
+    "date": "2026-11-27",
+    "active_pr": 229,
+    "reviewed_parent": "fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "prior_gallery_workflows": [
+      46066870386,
+      46066870511
+    ],
+    "prior_gallery_validation": "exact_head_unit_and_emulated_phone_desktop_browser_success; independent screenshot review outstanding",
+    "evidence": "docs/qa/AT348_A1_02_WILD_ZONE_ORIGINAL_LINKS.md",
+    "archive_integrity": {
+      "all_eight_local_sha256_and_git_blob_sha_match": true,
+      "originals": [
+        {
+          "file": "20261125_165929.jpg",
+          "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+          "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+          "bytes": 1647674
+        },
+        {
+          "file": "20261125_170158.jpg",
+          "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+          "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+          "bytes": 1420507
+        },
+        {
+          "file": "20261125_170238.jpg",
+          "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+          "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+          "bytes": 1564974
+        },
+        {
+          "file": "20261125_213707.jpg",
+          "sha256": "60ce7cb5ed4cac9e38ee5cb92cc2a346ab3ec4bef25c3cf8c0b11a6678e6a7b6",
+          "blob": "e96685431560ef0dc4d0c0f596a0ba763a103518",
+          "bytes": 2102179
+        },
+        {
+          "file": "20261125_213809.jpg",
+          "sha256": "d78e3643af7fb447cbff6ec4096f797fc0c9692e17b5c405c0e952220767fa55",
+          "blob": "77c353f200250bc6314ec26e65e58c3f856548a7",
+          "bytes": 1924588
+        },
+        {
+          "file": "20261125_213830.jpg",
+          "sha256": "50879abc45b6ce969efba79009546cfa99344057eb2cfb0fee8b02bb2a2a5e3e",
+          "blob": "a5922c1ac0ec26095a603cbf0abbfffa60f11986",
+          "bytes": 2230899
+        },
+        {
+          "file": "20261126_104041.jpg",
+          "sha256": "a4f196979545f8a82d188b3912a0b2dd5fed6339970a2aebacea0a48b44bf71f",
+          "blob": "c086cf37fa1dcca5c3bb0cc0af30dd74c6864766",
+          "bytes": 1711073
+        },
+        {
+          "file": "20261126_104048.jpg",
+          "sha256": "47bd5952180f9ec407a3c35921dec8f6cb360a1e66ed2bdb12c1ede271845cc8",
+          "blob": "6475e2fc2850ba6edcadd5dc907b32714782e178",
+          "bytes": 1854391
+        }
+      ]
+    },
+    "verified_visual_matches": [
+      {
+        "zone": 15,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+        "preview_blob": "3803bcd51c15900e138d7263b82a48eff283ce99",
+        "filename": "20261125_165929.jpg",
+        "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+        "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+        "bytes": 1647674,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+        "preview_blob": "c4709da5da42a3fc195de49c59903e9fd1aec1f8",
+        "filename": "20261125_170158.jpg",
+        "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+        "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+        "bytes": 1420507,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+      }
+    ],
+    "unresolved_comparison": {
+      "zone": 17,
+      "kind": "closeup",
+      "filename": "20261125_170238.jpg",
+      "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+      "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+      "status": "original_zone_and_detail_confirmed_exact_preview_comparison_blocked"
+    },
+    "scope": "Change two full-size hrefs only across shared fieldbook and both static mirrors; keep all 40 PNG previews, all records and map/progress data; reuse exact original archive blobs under runtime asset paths; no new uploaded images",
+    "new_runtime_asset_paths": [
+      "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg",
+      "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+    ],
+    "github_validation": "pending_exact_new_head",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_existing_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker_sync": "read_existing_AT348_row_revision104; scoped update after GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "A1-02: verify the exact reduced WZ17 close-up against 20261125_170238.jpg; review A1-01 and A1-02 saved phone/desktop screenshots and exact new-head tests; then A1-03 whole-guide imagery and A3 access evidence.",
+    "new_prs": 0
+  },
+  "workspace_site_readback": {
+    "version": 40,
+    "live_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
+    "publication_of_this_checkpoint": false
+  },
+  "prior_candidate_validation": {
+    "head": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
+    "article_workflow": 46072181242,
+    "article_result": "success",
+    "explorer_workflow": 46072181253,
+    "explorer_result": "failure",
+    "failing_job": 140751485123,
+    "failure": "Shared-area browser test expected reduced WZ15 PNG; actual link is archived original JPG."
+  },
+  "browser_assertion_checkpoint": {
+    "reviewed_parent": "4e7c90049ecb5c9b81937ed82143399f3933257c",
+    "manifest_revision": 110,
+    "ledger_revision": 118,
+    "prior_failed_job": 140751485123,
+    "changed_test": "tests/atlas_area_browser.mjs",
+    "status": "assertion_reconciled_exact_head_ci_pending",
+    "next": "Review exact-head CI; verify WZ17 close-up exact frame and phone/desktop screenshots; then A1-03 and A3",
+    "private_tracker_sync": "pending_separate_readback",
+    "release_decision": "HOLD"
+  },
+  "reviewed_a1_02_ci": {
+    "head": "24309a55e8e0183dab148c796e40363c6a085ea5",
+    "article_workflow": 46078879451,
+    "explorer_workflow": 46078879457,
+    "result": "success"
+  },
+  "a1_02_final_original_visual_review": {
+    "id": "AT-348-A1-02-FINAL-ORIGINAL-AND-VISUAL-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 112,
+    "ledger_revision": 120,
+    "active_pr": 229,
+    "reviewed_parent": "6f2d238b68782e02f7152440715895661e732c47",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "field_intake": {
+      "pr": 226,
+      "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+      "counts": {
+        "tm": 17,
+        "item": 18,
+        "screw": 7,
+        "access": 1,
+        "collectibleFinds": 42,
+        "photos": 211
+      },
+      "workflows": [
+        46079865251,
+        46079865248
+      ],
+      "conclusion": "success_on_exact_head_not_integrated"
+    },
+    "source_pr227": {
+      "head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+      "workflows": [
+        46072694188,
+        46072694200
+      ],
+      "conclusion": "success_on_exact_head_source_only_review_later_deltas_before_integration"
+    },
+    "prior_exact_ci": {
+      "head": "6f2d238b68782e02f7152440715895661e732c47",
+      "explorer": {
+        "run": 46080093716,
+        "conclusion": "success"
+      },
+      "articles": {
+        "run": 46080093688,
+        "first_attempt": "failure_node_undici_parser_before_fashion_browser_assertions",
+        "retry_attempt": 2,
+        "conclusion": "success"
+      }
+    },
+    "visual_review": {
+      "artifact_id": 15236257476,
+      "artifact_sha256": "c3c0e7e060a9d6dbca3016885f1cf4c7723268f0ff9564de215a873bab1e8ee4",
+      "source_run": 46080093716,
+      "head": "6f2d238b68782e02f7152440715895661e732c47",
+      "gallery": {
+        "desktop": "atlas-explorer/at348-looker-ten-photos-desktop.png",
+        "desktop_sha256": "8bd666e8734c450943e1ce077c0fcf0650da551b44e586c4de0d3679487465e3",
+        "phone": "atlas-explorer/at348-looker-ten-photos-phone.png",
+        "phone_sha256": "5c0f47e35914c5240957c4eb4d9793503bb76815fff21816b33bb10c8220f8f2",
+        "all_ten_images_and_captions_visible": true
+      },
+      "zone_photo_screenshots": {
+        "reviewed": 16,
+        "zones": [
+          15,
+          17
+        ],
+        "surfaces": [
+          "main",
+          "map",
+          "sector",
+          "explorer"
+        ],
+        "devices": [
+          "phone",
+          "desktop"
+        ],
+        "finding": "Both thumbnails visible and correct identities; main WZ17 desktop screenshot top has sticky navigation overlay at captured scroll position; investigate scroll/heading in A1-03, not established persistent image loss."
+      },
+      "exact_frame_reference": {
+        "path": "atlas-explorer/at321-map-wz17-desktop-photos.png",
+        "sha256": "d2647a212db2ed32dde749d2d1dfe14d433ab580a43e5aafebc8bd12ca8fc2cb",
+        "method": "visual comparison of exact-head browser-rendered thumbnail with byte-verified supplied original, not direct PNG binary download"
+      }
+    },
+    "verified_visual_matches": [
+      {
+        "zone": 15,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+        "preview_blob": "3803bcd51c15900e138d7263b82a48eff283ce99",
+        "filename": "20261125_165929.jpg",
+        "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+        "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+        "bytes": 1647674,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+        "preview_blob": "c4709da5da42a3fc195de49c59903e9fd1aec1f8",
+        "filename": "20261125_170158.jpg",
+        "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+        "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+        "bytes": 1420507,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "closeup",
+        "filename": "20261125_170238.jpg",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+        "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+        "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+        "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+        "bytes": 1564974,
+        "width": 4000,
+        "height": 2252,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+      }
+    ],
+    "new_runtime_asset": {
+      "zone": 17,
+      "kind": "closeup",
+      "filename": "20261125_170238.jpg",
+      "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+      "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+      "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "bytes": 1564974,
+      "width": 4000,
+      "height": 2252,
+      "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+    },
+    "scope": "One additional full-size href mapping, two static mirrors, independent original hash test and actual Jekyll asset preservation test. Unchanged 40 preview images, all data, geometry, progress, feedback and prior originals.",
+    "github_validation": "new_head_pending",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_persisted_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker": "existing AT348 row verified at 111; scoped update after exact GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs."
+  },
+  "owner_github_first_gate": {
+    "owner_instruction_date": "2026-11-28",
+    "rule": "GitHub first per scoped batch: validate exact source and factual evidence. Functional/shared-system changes require live GitHub release and owner review. Written-only checked facts may enter independent Workspace comparison and preview from a pinned exact candidate. Reconfirm original source, rollback, compatibility, tests, publication and live verification per batch. No whole-guide completion or future-photo prerequisite; no paid services.",
+    "workspace_release_allowed": "conditional_per_independently_accepted_batch",
+    "workspace_release_verified_this_slice": false,
+    "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md"
+  },
+  "a1_03_guide_image_coverage": {
+    "id": "AT-348-A1-03-GUIDE-IMAGE-COVERAGE",
+    "date": "2026-11-28",
+    "manifest_revision": 113,
+    "ledger_revision": 121,
+    "active_pr": 229,
+    "reviewed_parent": "94901437e6fa63e72efee544f7660d99db0567ba",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "field_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_exact_ci": {
+      "head": "94901437e6fa63e72efee544f7660d99db0567ba",
+      "runs": [
+        46129447853,
+        46129447862,
+        46129447876
+      ],
+      "all_success": true
+    },
+    "previous_A1_01_A1_02_status": "gallery and all three original links implemented, prior screenshot evidence reviewed, exact-head Explorer/articles/actual Pages build checks passed",
+    "owner_release_gate": {
+      "owner_instruction_date": "2026-11-28",
+      "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+      "workspace_release_allowed": false
+    },
+    "inspection": {
+      "repository_tree_paths": 2000,
+      "root_html_pages": 27,
+      "photo_data": {
+        "holovators": 21,
+        "original_lift_photos": 111,
+        "wild_zones": 20,
+        "wild_zone_preview_images": 40,
+        "sectors": 48,
+        "sector_context_originals": 10
+      },
+      "confirmed_gap": "existing browser tests sampled five homepage zones, a subset of static map/directory zones, selected Holovator galleries and five context sectors; prior actual Pages check only eight HTML files and three restored originals",
+      "sticky_header": "prior screenshot overlap is not proof of persistent runtime defect; added normal centered scrolling/hit-testing and screenshot evidence; no CSS or navigation change"
+    },
+    "changed_tests": [
+      "tests/wild_zone_fieldbook_browser.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      "tests/atlas_sector_context_browser.mjs",
+      "tests/verify_pages_archive_exclusion.py"
+    ],
+    "candidate_coverage": {
+      "zone_pairs_each_surface_each_viewport": 20,
+      "map_surfaces": 4,
+      "viewport_types": 2,
+      "all_lift_gallery_images_each_viewport": 111,
+      "all_sector_directory_context_and_fallback_each_viewport": 48,
+      "actual_built_root_html_pages": "all current root HTML; >=27",
+      "actual_built_images": "static local img/image anchors plus all dynamic map gallery folders, byte-for-byte; external URLs only inventoried"
+    },
+    "limitations": "No new runtime code or assets; no comprehensive visual identity check for every photo yet, no external artwork network check, no physical-device claim, no persisted Workspace inspection. New exact-head validation pending.",
+    "github_validation": "new_head_pending",
+    "workspace_publication": "blocked_by_owner_github_first_gate",
+    "private_tracker": "existing row revision112; scoped sync after GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
+  },
+  "a3_01_field_evidence_integration": {
+    "id": "AT-348-A3-01-FIELD-EVIDENCE-INTEGRATION",
+    "date": "2026-11-28",
+    "manifest_revision": 114,
+    "ledger_revision": 122,
+    "reviewed_parent": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "active_pr": 229,
+    "field_source_pr": 226,
+    "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_a1_03": {
+      "head": "0bc8f126f3252c204673de536155c6a72cd1fa4b",
+      "workflows": {
+        "explorer": 46131659661,
+        "article": 46131659714,
+        "pages": 46131659703
+      },
+      "all_success": true,
+      "article_attempt": 2,
+      "pages_root_html": 27,
+      "pages_local_assets": 784,
+      "external_urls_inventoried_not_network_verified": 108,
+      "explorer_artifact": 15258561482,
+      "artifact_sha256": "8462472e199488e85704cce22bc41c66963e1cb2f0a38a98179f4bcb028f2752",
+      "visual_review": "Eight saved images inspected: centered WZ17 overview/close-up at both sizes, ten-photo Looker gallery at both sizes, Hotel Z ladder at both sizes. Centered hit-test and screenshots confirm images fully reachable. No persistent navigation defect reproduced. All 20 pairs four surfaces, 21 lifts and 111 originals, 48 directory contexts and fallbacks passed on both widths. Remaining manual photo/source identity review and remote artwork availability are not certified."
+    },
+    "field_counts": {
+      "tm": 17,
+      "item": 18,
+      "screw": 7,
+      "access": 1,
+      "collectibleFinds": 42,
+      "photos": 211
+    },
+    "field_status_counts": {
+      "contributor_identified": 2,
+      "pickup_screenshot": 38,
+      "partial_pickup_text": 1,
+      "infrastructure_observed": 1,
+      "pickup_text_partly_obscured": 1
+    },
+    "transfer": {
+      "source_delta": 217,
+      "approved_exact_blobs": 216,
+      "photos": 211,
+      "other_files": 5,
+      "conflicts": 0,
+      "deletions": 0,
+      "excluded_historical_import_workflow": ".github/workflows/import-pr226-photographs.yml",
+      "existing_page_changes": "items.html and atlas-explorer.html differ only by one additive link each; all other transferred files newly added"
+    },
+    "crosswalk": {
+      "candidates": 13,
+      "not_matched_tm_names": [
+        "Dragon Pulse",
+        "Flip Turn",
+        "Roar",
+        "Headbutt"
+      ],
+      "canonical_ids_assigned": 0,
+      "calibrated_coordinates_assigned": 0,
+      "record": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json"
+    },
+    "scope": "Transfer exact source blobs into single integration candidate and add read-only regression tests; no new markers, progress keys, map geometry, backend changes or extra import workflow. Preserve field evidence categories and uncertainty.",
+    "github_validation": "new_exact_head_pending",
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification."
+  },
+  "a3_02_access_crosslinks": {
+    "id": "AT-348-A3-02-ACCESS-CROSSLINKS",
+    "date": "2026-11-28",
+    "manifest_revision": 115,
+    "ledger_revision": 123,
+    "reviewed_parent": "49959f57e5d8bf634aa58813fe4f985febc8518a",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "active_pr": 229,
+    "source_pr226_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "prior_checks": {
+      "pages": {
+        "run": 46132390522,
+        "conclusion": "success",
+        "html_pages": 28,
+        "local_assets": 995,
+        "external_urls": 108
+      },
+      "explorer": {
+        "run": 46132390586,
+        "unit": "success",
+        "areas_browser": "success",
+        "map_and_fieldbook_browser_steps": "success",
+        "wild_zone_final_step": "in_progress_at_review"
+      },
+      "article": {
+        "run": 46132390524,
+        "unit": "success",
+        "fashion": "failed Node 22.23.5 Undici Parser.finish startup assertion; recurred on previous heads"
+      }
+    },
+    "fieldbook": {
+      "groups": 43,
+      "photos": 211,
+      "source_hash_checks": "passed",
+      "representative_browser_tests": "passed",
+      "links": {
+        "items.html": 13,
+        "sector-maps.html": 14
+      },
+      "deep_link_targets": 43
+    },
+    "route_comparisons": {
+      "file": "docs/qa/AT348_A3_02_ACCESS_ROUTE_COMPARISONS.json",
+      "count": 6,
+      "canonical_ids_assigned": 0,
+      "pins_added": 0
+    },
+    "test_stability": "Replace unconsumed GET fetch readiness probe only in recurring failing fashion suite with node:http HEAD, agent:false, drain and 1s timeout. Root cause hypothesis is test transport startup path, not guide application; confirm on new head. No skipped or weakened assertions.",
+    "new_head_validation": "pending",
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Review exact-head test results and new deep-link screenshots; verify whether the isolated HTTP HEAD readiness fix prevents the recurring fashion startup crash. Continue remaining A3 registration and identity/route gaps and A2 Pokédex source review without reopening A1 bounded repairs. Keep unresolved coordinates/pins explicitly unverified; no Workspace activity until full GitHub Pages live validation."
+  },
+  "a2_01_capture_first_dex": {
+    "id": "AT-348-A2-01-CAPTURE-FIRST-DEX",
+    "date": "2026-11-28",
+    "manifest_revision": 116,
+    "ledger_revision": 124,
+    "priority": "P0",
+    "parent": "bd8253f8c87c6ffcec7635fa24544a5e40e6876a",
+    "active_pr": 229,
+    "tracking_issue": 220,
+    "evidence": "docs/qa/AT348_A2_01_CAPTURE_FIRST_DEX.md",
+    "scope": "Project recorded and related claims into all 232 Lumiose cards, expose explicit condition gaps and direct area links; six source-attributed weather tips and explicit map conditions.",
+    "preserved": {
+      "lumiose": 232,
+      "hyperspace": 132,
+      "portal_bands": 202,
+      "alpha_index": 364,
+      "area_geometry": 68,
+      "original_area_claims": 748,
+      "chance_alpha_claims": 6,
+      "progress": true,
+      "photos": true
+    },
+    "prior_checks": {
+      "pages": "46132879747 success",
+      "articles": "46132879712 failure at sector_map_directory.test.mjs:283",
+      "explorer": "46132879718 failure at sector_map_directory.test.mjs:283",
+      "fashion_browser": "success",
+      "area_browser": "success"
+    },
+    "implementation": "draft_candidate",
+    "validation": "pending_exact_head_and_visual_review",
+    "complete_encounter_coverage": false,
+    "new_pins": 0,
+    "workspace_changed": false,
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity."
+  },
+  "a7_01_editorial_fact_audit": {
+    "id": "AT-348-A7-01-EDITORIAL-FACT-AUDIT",
+    "date": "2026-11-28",
+    "manifest_revision": 117,
+    "ledger_revision": 125,
+    "parent": "01857775fcd569f2a9bb9e3527cd7cd3f382177e",
+    "active_pr": 229,
+    "scope": "Task-led navigation and bounded factual review; all-page acceptance open",
+    "evidence": "docs/qa/AT348_A7_01_EDITORIAL_FACT_AUDIT.md",
+    "root_html_inventory": 28,
+    "editable_home_sections": 17,
+    "directory_links": 57,
+    "directory_categories": 8,
+    "mission_identity_pairs_checked": 126,
+    "mission_objective_sequences_checked": 3,
+    "mission_purpose_notes_added": 9,
+    "exact_head_validation": "pending",
+    "parent_workflows": {
+      "pages": "46144028702 success",
+      "articles": "46144028707 failed obsolete sector_map_directory assertion",
+      "explorer": "46144028681 failed same assertion; area and map browsers succeeded"
+    },
+    "original_routes_preserved": true,
+    "complete_fact_check": false,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace."
+  },
+  "a7_02_reconciled_fact_review": {
+    "id": "AT-348-A7-02-RECONCILED-PLAYER-GUIDE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 118,
+    "ledger_revision": 126,
+    "priority": "A2_P0_A7_release_critical",
+    "reviewed_parent": "0fea3ef8b656f34652d7eb5d79d1a508711ebff5",
+    "active_pr": 229,
+    "evidence": "docs/qa/AT348_A7_02_RECONCILED_FACT_REVIEW.md",
+    "audit": "docs/qa/AT348_A7_02_PAGE_REGISTER.json",
+    "inventory": {
+      "root_html": 29,
+      "editable_sections": 17,
+      "surfaces": 46,
+      "fully_fact_checked_pages_claimed": 0
+    },
+    "directory": {
+      "path": "guide.html",
+      "groups": 8,
+      "destinations": 57,
+      "decision": "preserve concurrent A7-01; no duplicate"
+    },
+    "fact_checks": [
+      "42 mission title identities",
+      "M39 first reward match legendary branch in all three story surfaces",
+      "official Season X dates, eligibility and reward tiers",
+      "official Shiny Xerneas and future Yveltal dates",
+      "general weather source check"
+    ],
+    "previous_parent_checks": {
+      "pages": "46144848616 success",
+      "articles": "46144848592 success",
+      "explorer": "46144848604 in progress at review"
+    },
+    "new_head_validation": "pending",
+    "full_page_fact_verification": false,
+    "workspace_changed": false,
+    "progress_changed": false,
+    "new_pins": 0,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 capture research first: independently verify species/form capture and per-route time, weather, level, elevation, directions, unlock, respawn and alternatives; synchronize Alpha/Hyperspace and map facts. A7 release-critical: verify exact new-head directory and M1–3/M39/rewards updates, then execute every claim review in the 46-surface register, enrich walkthrough directions and descriptions, reconcile duplicates and give overcrowded activities clear destinations while retaining existing links and player progress. Complete full GitHub verification before any Workspace action."
+  },
+  "a2_02_early_zone_capture_research": {
+    "id": "AT-348-A2-02-EARLY-ZONE-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 119,
+    "ledger_revision": 127,
+    "reviewed_parent": "07894fc47ccee47bdfd59a07e297e2c355b3fd99",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md",
+    "zones": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "existing_ordinary_records_enriched": 39,
+    "existing_fixed_alpha_records_enriched": 11,
+    "new_chance_alpha_records": 38,
+    "prior_chance_alpha_records_retained": 6,
+    "condition_packet": "atlas-area-condition-evidence.json",
+    "existing_area_evidence_preserved": true,
+    "coordinates_added": 0,
+    "exact_head_ci": "pending",
+    "visual_qa": "pending",
+    "full_guide_fact_verified": false,
+    "release_decision": "HOLD",
+    "workspace_changed": false,
+    "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification."
+  },
+  "permanent_owner_player_guidance_policy": {
+    "date": "2026-11-28",
+    "manifest_revision": 120,
+    "ledger_revision": 128,
+    "priority": "P0",
+    "status": "owner_authorized_binding_planning_policy_implementation_and_acceptance_open",
+    "master_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
+    "workspace_plan": "FINAL_WORKSPACE_PLAN.md",
+    "tracker": "atlas_internal.feature_checklist / AT-348-GUIDE-COMPLETION",
+    "requirement": "Each guide entry tells players exactly what to do, where, how to get there, all applicable conditions and prerequisites and outcomes/rewards; no guessing or external source link substituting for instructions.",
+    "scope": "All 13 permanent instructions; all pages and all verified acquisition routes across the three dexes; preserve verified content, map/photographs, player state and existing services.",
+    "release_decision": "HOLD",
+    "runtime_changed": false,
+    "workspace_changed": false,
+    "previous_head": "212a8f83563d2092ed4ad3105b75ed30435ba34e",
+    "active_pr": 229
+  },
+  "a2_03_zone_07_08_capture_research": {
+    "id": "AT-348-A2-03-ZONE-07-08-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 121,
+    "ledger_revision": 129,
+    "reviewed_parent": "a5b4dae05841928ffb2de3ca4ce9fad9d7bed4a0",
+    "active_pr": 229,
+    "zones": [
+      7,
+      8
+    ],
+    "existing_ordinary_rows_enriched": 15,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 14,
+    "cumulative_conditions": 68,
+    "cumulative_chance_alpha_packet_rows": 58,
+    "report": "docs/qa/AT348_A2_03_ZONE_07_08_CAPTURE_RESEARCH.md",
+    "disputes": [
+      "Wild Zone 7 Gastly remains disputed and receives no chance Alpha addition.",
+      "Wild Zone 8 fixed Camerupt timing and additional progression gate unresolved."
+    ],
+    "parent_ci": [
+      46147184368,
+      46147184376,
+      46147184412
+    ],
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "a2_04_zone_09_capture_research": {
+    "id": "AT-348-A2-04-ZONE-09-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 122,
+    "ledger_revision": 130,
+    "reviewed_parent": "6a88d2ff328a3e35c10373a5d3b00e5e953f36fe",
+    "active_pr": 229,
+    "zones": [
+      9
+    ],
+    "existing_ordinary_rows_enriched": 6,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 77,
+    "cumulative_chance_alpha_packet_rows": 64,
+    "report": "docs/qa/AT348_A2_04_ZONE_09_CAPTURE_RESEARCH.md",
+    "mission_only_map_link": "Wild Zone 9 Lv. 70 Alpha Pangoro during Main Mission 40; no new encounter identity or pin.",
+    "parent_ci": [
+      46150466424,
+      46150466439,
+      46150466443
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live."
+  },
+  "a2_05_zone_10_capture_research": {
+    "id": "AT-348-A2-05-ZONE-10-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 123,
+    "ledger_revision": 131,
+    "reviewed_parent": "882638086398a03920a2e7cac7720e164710b2ee",
+    "active_pr": 229,
+    "zones": [
+      10
+    ],
+    "existing_ordinary_rows_enriched": 7,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 7,
+    "prior_unlock_condition_rows_corrected": 27,
+    "prior_chance_alpha_unlocks_corrected": 20,
+    "cumulative_conditions": 87,
+    "cumulative_chance_alpha_packet_rows": 71,
+    "report": "docs/qa/AT348_A2_05_ZONE_10_CAPTURE_RESEARCH.md",
+    "disputes": [
+      "Ordinary Sharpedo slot and distinct location remain unresolved against survey and local guides; fixed Alpha and evolution alternatives explained.",
+      "Exact Espace Vide ladder-to-roof connections remain unverified."
+    ],
+    "parent_ci": [
+      46152024204,
+      46152024131,
+      46152024167
+    ],
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify new exact-head CI and review mobile/desktop capture presentation; continue Wild Zone 11, then Zones 12–20, city/interior encounters, forms, alternative acquisition and Alpha/Hyperspace. A7: continue the 46-surface page audit under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "a2_06_zone_11_capture_research": {
+    "id": "AT-348-A2-06-ZONE-11-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 124,
+    "ledger_revision": 132,
+    "reviewed_parent": "6f3f86e654613739c45048365e21a5ad04439099",
+    "active_pr": 229,
+    "zones": [
+      11
+    ],
+    "existing_ordinary_rows_enriched": 6,
+    "existing_fixed_alpha_rows_enriched": 2,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 95,
+    "cumulative_chance_alpha_packet_rows": 77,
+    "report": "docs/qa/AT348_A2_06_ZONE_11_CAPTURE_RESEARCH.md",
+    "story_route": "Mission 40 Xerneas: northern approach from Wild Zone 6 and retry after defeat, preserving its mission-only class.",
+    "parent_ci": [
+      46153215026,
+      46153215035,
+      46153215023
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify new-head checks and mobile/desktop catch guidance; continue Zone 12 through Zone 20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: complete the 46-page actionable guide review. HOLD Workspace until full validation and independent live GitHub verification."
+  },
+  "a2_07_zone_12_capture_research": {
+    "id": "AT-348-A2-07-ZONE-12-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 125,
+    "ledger_revision": 133,
+    "reviewed_parent": "82baf77602efb2ba5c6cf3ea248bf6c31ae87e4a",
+    "active_pr": 229,
+    "zones": [
+      12
+    ],
+    "existing_ordinary_rows_enriched": 8,
+    "existing_fixed_alpha_rows_enriched": 2,
+    "new_chance_alpha_rows": 8,
+    "cumulative_conditions": 105,
+    "cumulative_chance_alpha_packet_rows": 85,
+    "report": "docs/qa/AT348_A2_07_ZONE_12_CAPTURE_RESEARCH.md",
+    "open_claims": [
+      "Ordinary Avalugg remains a source lead; no chance Alpha added.",
+      "Vanillite level range differs by source; precise rooftop access unverified."
+    ],
+    "parent_ci": {
+      "article": "46156429964:success",
+      "pages": "46156429947:success",
+      "explorer": "46156429934:in_progress_at_inspection"
+    },
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 13–20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "a2_08_zones_13_14_capture_research": {
+    "id": "AT-348-A2-08-ZONES-13-14-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 126,
+    "ledger_revision": 134,
+    "reviewed_parent": "5e1f8fec290553ff38703204e5581f4355789a1a",
+    "active_pr": 229,
+    "zones": [
+      13,
+      14
+    ],
+    "existing_ordinary_rows_enriched": 13,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 13,
+    "cumulative_conditions": 121,
+    "cumulative_chance_alpha_packet_rows": 98,
+    "report": "docs/qa/AT348_A2_08_ZONES_13_14_CAPTURE_RESEARCH.md",
+    "open_claims": [
+      "Exact Aron and Drilbur level-band-to-spawn-slot location mapping unverified.",
+      "Helioptile full weather-icon field verification incomplete; clear daylight is conservative guidance.",
+      "Onix and Emolga nighttime sightings do not establish a night-only restriction.",
+      "Individual respawn intervals and exact spawn coordinates unverified."
+    ],
+    "parent_ci": [
+      46157079144,
+      46157079095,
+      46157079124
+    ],
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zone 15 through 20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "a2_09_zone_15_capture_research": {
+    "id": "AT-348-A2-09-ZONE-15-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 127,
+    "ledger_revision": 135,
+    "reviewed_parent": "debeb8db2ef05918433b5c9d0618544e42ab151b",
+    "active_pr": 229,
+    "zones": [
+      15
+    ],
+    "existing_ordinary_rows_enriched": 7,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 131,
+    "cumulative_chance_alpha_packet_rows": 104,
+    "report": "docs/qa/AT348_A2_09_ZONE_15_CAPTURE_RESEARCH.md",
+    "parent_ci": [
+      46157802042,
+      46157802120,
+      46157802031
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live."
+  },
+  "a2_10_zone_16_capture_research": {
+    "id": "AT-348-A2-10-ZONE-16-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 128,
+    "ledger_revision": 136,
+    "reviewed_parent": "2bbaec24caac82a75bcce0ad4d0717a976bcaf83",
+    "active_pr": 229,
+    "zones": [
+      16
+    ],
+    "existing_ordinary_rows_enriched": 9,
+    "existing_fixed_alpha_rows_enriched": 1,
+    "new_chance_alpha_rows": 8,
+    "cumulative_conditions": 141,
+    "cumulative_chance_alpha_packet_rows": 112,
+    "report": "docs/qa/AT348_A2_10_ZONE_16_CAPTURE_RESEARCH.md",
+    "parent_ci_success": [
+      46161871268,
+      46161871204
+    ],
+    "parent_browser_failure": 46161871208,
+    "browser_wait_repair": "Jaune Sector 5 asynchronous contextual-crop attachment readiness; image and uniqueness checks retained.",
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live."
+  },
+  "a4_a5_pr227_consolidation": {
+    "id": "AT-348-A4-A5-PR227-CONSOLIDATION",
+    "date": "2026-11-28",
+    "manifest_revision": 129,
+    "ledger_revision": 137,
+    "active_pr": 229,
+    "reviewed_parent": "bb9fbb259725bacb636f4523e13eb3eedba42c67",
+    "source_pr": 227,
+    "source_initial_head": "4c68ff1bec5534190872b9227894bc6eed017170",
+    "source_reviewed_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "source_ci_success": [
+      46072694188,
+      46072694200
+    ],
+    "parent_ci_success": [
+      46167351285,
+      46167351292,
+      46167351328
+    ],
+    "source_files": 15,
+    "exact_nonoverlapping_blob_transfers": 14,
+    "generated_homepage_section_replacement": 1,
+    "updated_side_mission_ids": [
+      25,
+      29,
+      51,
+      60,
+      73,
+      94,
+      151,
+      152,
+      153,
+      154,
+      155,
+      176,
+      181,
+      182,
+      183,
+      184,
+      185
+    ],
+    "preserved_progress_keys": true,
+    "coordinates_added": 0,
+    "photo_assets_changed": 0,
+    "report": "docs/qa/AT348_A4_A5_PR227_CONSOLIDATION.md",
+    "field_intake_pr": 226,
+    "field_intake_policy": "Keep separate open for original photographs; integrate reviewed compatible batches only",
+    "historical_pr_policy": "All applicable non-photo work belongs in PR229; preserve source evidence and newer changes; no wholesale stale-branch replay, independent promotion or premature closure.",
+    "new_head_ci": "pending",
+    "independent_visual_qa": "pending",
+    "full_guide_fact_verified": false,
+    "workspace_changed": false,
+    "supabase_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify new exact-head CI and independent phone/desktop previews; continue A2 P0 Wild Zones 17–20, city/interiors, forms, alternatives, Alpha and Hyperspace; A4/A5 remaining factual coverage; A7 all 46 surfaces; A6 safe adaptations of #4/#5. GitHub first; no Workspace import or publication."
+  },
+  "owner_single_integration_policy": {
+    "active_pr": 229,
+    "field_intake_pr": 226,
+    "rule": "All applicable non-photo work belongs in PR229; preserve source evidence and newer changes; no wholesale stale-branch replay, independent promotion or premature closure.",
+    "field_intake": "Keep separate open for original photographs; integrate reviewed compatible batches only"
+  },
+  "a6_01_progress_preservation": {
+    "id": "AT-348-A6-01-PROGRESS-PRESERVATION",
+    "date": "2026-11-28",
+    "manifest_revision": 130,
+    "ledger_revision": 138,
+    "reviewed_parent": "a041b839b94ac97d404cfd0ab518221f3e79a83d",
+    "active_pr": 229,
+    "source_prs": [
+      4,
+      5
+    ],
+    "report": "docs/qa/AT348_A6_01_PROGRESS_PRESERVATION.md",
+    "scope": "homepage checklist write isolation and refresh only",
+    "changed_runtime": [
+      "app.js"
+    ],
+    "regression": "tests/items_checkoff.test.mjs",
+    "isolated_assertions": 77,
+    "parent_article_workflow": 46168786799,
+    "parent_pages_workflow": 46168786789,
+    "parent_explorer_workflow": 46168786805,
+    "parent_explorer_status": "in progress at preflight",
+    "exact_head_ci": "pending",
+    "visual_qa": "pending",
+    "backup_complete": false,
+    "placements_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify exact-head article, Explorer, Pages and independent mobile/desktop QA; continue A2 P0 Wild Zones 17–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5 and A7; A6 complete the supported two-bucket backup preview/merge/recovery and verified-only numbered pins. Keep #226 separate; GitHub first, HOLD Workspace."
+  },
+  "a3_03_field_photo_usage": {
+    "id": "AT-348-A3-03-PERMANENT-FIELD-EVIDENCE-USAGE",
+    "date": "2026-11-28",
+    "manifest_revision": 131,
+    "ledger_revision": 139,
+    "reviewed_parent": "ad093451d609b230881115723814fe91c2cc3624",
+    "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "active_pr": 229,
+    "source_pr": 226,
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json",
+    "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
+    "counts": {
+      "committed_finds": 42,
+      "access_surveys": 1,
+      "original_photos_committed_and_copied": 211,
+      "contextual_links": 27,
+      "groups": {
+        "contextual_guide_links": {
+          "records": 13,
+          "photos": 63
+        },
+        "access_evidence_comparison": {
+          "records": 6,
+          "photos": 29
+        },
+        "fieldbook_only_additional_guide_integration_pending": {
+          "records": 24,
+          "photos": 119
+        }
+      },
+      "pending_finds": 8,
+      "pending_photos": 39,
+      "reported_combined_finds": 50,
+      "reported_combined_photos": 250,
+      "verified_native_pins": 0
+    },
+    "release_decision": "HOLD",
+    "workspace_changed": false,
+    "source_branch_changed": false,
+    "exact_head_ci": "pending"
+  },
+  "a3_04_field_batch": {
+    "id": "AT-348-A3-04-FIELD-BATCH-43-50",
+    "date": "2026-11-28",
+    "manifest_revision": 133,
+    "ledger_revision": 141,
+    "source_pr": 226,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+    "reviewed_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 39,
+    "archive_sha256": "68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579",
+    "counts": {
+      "tm": 21,
+      "item": 20,
+      "screw": 9,
+      "access": 1,
+      "collectibleFinds": 50,
+      "photos": 250
+    },
+    "added_finds": [
+      43,
+      50
+    ],
+    "added_photos": 39,
+    "mission_context": [
+      47,
+      48
+    ],
+    "fieldbook_groups": 51,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 51
+  },
+  "a3_04_homepage_parity": {
+    "id": "AT-348-A3-04-HOMEPAGE-PARITY",
+    "date": "2026-11-28",
+    "manifest_revision": 134,
+    "ledger_revision": 142,
+    "reviewed_candidate": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
+    "source_pr": 226,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+    "source_remains_open": true,
+    "source_original_matches": 39,
+    "candidate_photo_hashes_verified": 250,
+    "field_groups": 51,
+    "collectible_finds": 50,
+    "verified_prior_tests": {
+      "explorer_unit_job": 141060145760,
+      "collectible_tests_passed": 17,
+      "sitewide_links": {
+        "pages": 29,
+        "links": 5036,
+        "cross_page": 2859,
+        "home_deep_links": 354
+      },
+      "pages_run": 46171315958,
+      "pages_result": "success",
+      "feedback_run": 46171315939,
+      "feedback_result": "success",
+      "article_run": 46171316017,
+      "article_result": "failure_generated_homepage_not_rebuilt",
+      "explorer_run": 46171316027,
+      "explorer_unit_result": "failure_generated_homepage_not_rebuilt"
+    },
+    "repair": "Replace exact prior walkthrough section once in generated index with current source section; reversible comparison proves no other homepage content changed; 42 mission cards and 203 side mission progress IDs preserved.",
+    "next_candidate_ci": "pending",
+    "additional_pins": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 51
+  },
+  "a2_11_zone_17_capture_research": {
+    "id": "AT-348-A2-11-ZONE-17-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 135,
+    "ledger_revision": 143,
+    "reviewed_parent": "04733e652c2affa78d7aaab3e10b7da90e16175e",
+    "active_pr": 229,
+    "zones": [
+      17
+    ],
+    "existing_ordinary_rows_enriched": 6,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 150,
+    "cumulative_chance_alpha_packet_rows": 118,
+    "report": "docs/qa/AT348_A2_11_ZONE_17_CAPTURE_RESEARCH.md",
+    "local_model_check": {
+      "areas": 68,
+      "issues": 0,
+      "zone17_assertions": 13,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "environment": "isolated JavaScript model with an absolute-URL adapter; real Node/browser CI still required"
+    },
+    "parent_ci": [
+      {
+        "id": 46171668937,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46171668935,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46171668928,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46171669010,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "photo_policy": "Permanent photograph intake is independent of guide readiness: PR #226 stays open. Photographs still only in #226, not yet uploaded, or awaiting review/transfer are PENDING EVIDENCE, not failed guide assets or release blockers merely because they are absent from the active guide PR. Integrate validated originals when appropriate, as an additive batch. Test the exact integrated candidate register and referenced assets only; an already integrated/referenced photograph missing, corrupted, mismatched or broken remains a genuine validation failure. Never waive existing integrity, link, visual, progress, or factual gates; no requirement to empty the ongoing photo intake queue.",
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "integrated_photos": 250,
+    "source_photo_pending": 0,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify exact-head CI and phone/desktop QA; continue A2 P0 Wild Zones 18–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5/A7 and A6 backup/progress safeguards; retain permanent photo intake #226 and transfer new reviewed evidence as available, without gating on pending intake. GitHub first; HOLD Workspace until guide release gates pass."
+  },
+  "a7_03_pokemon_france_source_audit": {
+    "id": "AT-348-A7-03-POKEMON-FRANCE-AUDIT",
+    "date": "2026-11-28",
+    "manifest_revision": 136,
+    "ledger_revision": 144,
+    "reviewed_parent": "1102700dcdf7526344f83dcc45e4a9b4aba83ad6",
+    "evidence": "docs/qa/AT348_A7_03_POKEMON_FRANCE_SOURCE_AUDIT.md",
+    "source_index": "https://www.pokemon-france.com/guides/legendes-pokemon-z-a/",
+    "article_indexed": 35,
+    "substantive_excerpt_reviewed": 25,
+    "navigation_only": 5,
+    "pending_body": 5,
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "workspace_publication_claimed": false,
+    "decision": "HOLD",
+    "parent_workflows": [
+      46172507944,
+      46172507932,
+      46172507942,
+      46172507929
+    ],
+    "next": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace."
+  },
+  "a7_04_nintendo_life_source_review": {
+    "id": "AT-348-A7-04-NINTENDO-LIFE-SOURCE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 137,
+    "ledger_revision": 145,
+    "reviewed_parent": "8be4fb18b3f9669bc2a6872ad0e0b7c4a6f4f593",
+    "source": "https://www.nintendolife.com/guides/pokemon-legends-z-a-walkthrough-all-wild-zones-tips-and-tricks",
+    "evidence": "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
+    "review_scope": "hub and targeted article samples, terms; full comparison pending",
+    "image_policy": "reference only; no unauthorized republication",
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "release_decision": "HOLD"
+  },
+  "a7_05_game8_source_review": {
+    "id": "AT-348-A7-05-GAME8-SOURCE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 138,
+    "ledger_revision": 146,
+    "reviewed_parent": "3d4c11e5f34c8f5d4932ccaabd19c89f8b7841a8",
+    "source": "https://game8.co/games/Pokemon-Legends-Z-A",
+    "accessible_alternate": "https://game8.jp/pokemon-legends-z-a",
+    "english_access": "HTTP 403; body not reviewed",
+    "evidence": "docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md",
+    "scope": "Japanese hub, city map, ladders, Holovator activation, Screw and side-mission indexes, makeup, WZ18 targeted sample",
+    "full_audit_complete": false,
+    "runtime_changed": false,
+    "release_decision": "HOLD"
+  },
+  "a2_12_combined_research_wz18": {
+    "id": "AT-348-A2-12-COMBINED-RESEARCH-WZ18",
+    "date": "2026-11-28",
+    "manifest_revision": 139,
+    "ledger_revision": 147,
+    "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
+    "report": "docs/qa/AT348_A2_12_COMBINED_RESEARCH_WZ18.md",
+    "register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json",
+    "supplements": 8,
+    "chance_alpha_rows": 6,
+    "cumulative_conditions": 158,
+    "cumulative_chance_alpha_rows": 124,
+    "local_model": {
+      "areas": 68,
+      "issues": 0,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "adapter": "isolated URL/ESM wrapper only"
+    },
+    "runtime_data_changed": true,
+    "workspace_changed": false,
+    "source_full_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes."
+  },
+  "combined_research_register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json",
+  "a2_13_zones_19_20_capture_research": {
+    "id": "AT-348-A2-13-ZONES-19-20",
+    "date": "2026-11-28",
+    "manifest_revision": 140,
+    "ledger_revision": 148,
+    "reviewed_parent": "8d9c913f841932021a03b4913cb45be48e452248",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_13_ZONES_19_20_CAPTURE_RESEARCH.md",
+    "zones": [
+      19,
+      20
+    ],
+    "ordinary_supplements": 22,
+    "fixed_alpha_supplements": 2,
+    "chance_alpha_rows": 22,
+    "cumulative_conditions": 182,
+    "cumulative_chance_alpha_rows": 146,
+    "rotating_alpha_species_preserved": 67,
+    "isolated_model": {
+      "areas": 68,
+      "issues": 0,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "adapter": "isolated ESM wrapper and absolute-URL adapter; full Node/browser CI pending"
+    },
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_delta": 0,
+    "new_pins": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Continue capture-first city/interior encounters, forms, alternate acquisition and Hyperspace; enrich rotating pool individual levels/forms without changing classes. Continue remaining A3–A8 and independent visual gates."
+  },
+  "a2_14_rotating_city_labs_donuts": {
+    "id": "AT-348-A2-14-ROTATING-CITY-LABS-DONUTS",
+    "date": "2026-11-28",
+    "manifest_revision": 141,
+    "ledger_revision": 149,
+    "reviewed_parent": "a027d688094dcf760776a43700c9d27d083c0d4f",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_14_ROTATING_CITY_LABS_DONUTS.md",
+    "rotating_condition_supplements": 67,
+    "cumulative_condition_supplements": 249,
+    "cumulative_chance_alpha_rows": 146,
+    "city_fixed_targets_reviewed": 19,
+    "city_fixed_count_includes_labs_and_five_flabebe_forms": true,
+    "lab_ordinary_species_reviewed": 12,
+    "donut_penalty_surfaces": [
+      "src/sections/berries.html",
+      "src/sections/dimension.html",
+      "index.html",
+      "hyperspace-maps.html",
+      "mega-dimension.html"
+    ],
+    "isolated_model": {
+      "areas": 68,
+      "encounters": 1166,
+      "issues": 0,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "adapter": "isolated ESM wrapper and absolute-URL adapter"
+    },
+    "generated_homepage": "exact reversible replacement of two authored source sections",
+    "prior_head_ci": [
+      {
+        "id": 46176050432,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176050435,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46176050428,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176050462,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "prior_head_ci_passed": false,
+    "exact_candidate_ci": "pending",
+    "visual": "pending",
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_delta": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Continue verified city ordinary/chance and fixed sector routes, Canal Access and Old Building interior encounters, all alternate acquisitions/forms and evolution methods, remaining Hyperspace-specific encounter rules and full page-by-page A3–A8 QA. No live release before exact validation."
+  },
+  "a2_15_official_source_interior_guide": {
+    "id": "AT-348-A2-15-OFFICIAL-SOURCE-INTERIOR-GUIDE",
+    "date": "2026-11-28",
+    "manifest_revision": 142,
+    "ledger_revision": 150,
+    "reviewed_parent": "9d9be9148fe4817ce17d14c3e75e832b44286225",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_15_OFFICIAL_SOURCE_INTERIOR_GUIDE.md",
+    "source_policy": {
+      "date": "2026-11-28",
+      "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
+      "primary": [
+        "https://legends.pokemon.com/en-gb/",
+        "https://www.pokemon.com/uk/",
+        "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html",
+        "https://home.pokemon.com/en-gb/move/"
+      ],
+      "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
+      "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
+    },
+    "software_baseline": "2.0.2, 19 March 2026 UK (Nintendo Support read 28 November 2026)",
+    "prior_ci": [
+      {
+        "id": 46176473894,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176473788,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 46176473792,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46176473789,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "prior_failure": {
+      "run_id": 46176473788,
+      "job_id": 141076216056,
+      "path": "tests/alphas_recovered.test.mjs:18",
+      "cause": "Standalone Gourgeist (Medium Variety) label differed from unchanged homepage source/old comparator",
+      "resolution": "Correct exact source label and extend existing comparator to the source-supported form; all 20 lists, 38 fixed and 67 rotating rows compared locally"
+    },
+    "interior_pokedex_species": 24,
+    "interior_route_links": 30,
+    "interior_groups": [
+      "Main sewers",
+      "Canal Access",
+      "Old Building",
+      "Lysandre Labs B1F"
+    ],
+    "main_sewer_ordinary_species": 11,
+    "canal_repeatable_species": 4,
+    "canal_klefki": "disputed repeatability; retain source-reported level as qualified claim",
+    "old_building_mission_encounters": 3,
+    "lab_ordinary_species": 12,
+    "official_patch_surfaces": [
+      "src/sections/essentials.html",
+      "src/sections/sidequests.html",
+      "side-missions.html",
+      "shops.html",
+      "home-connection.html"
+    ],
+    "candidate_validation": {
+      "alpha_source_parity": 20,
+      "fixed_alpha_rows": 38,
+      "rotating_alpha_rows": 67,
+      "base_dex_cards": 232,
+      "home_cards": 364,
+      "mission_cards": 42,
+      "side_mission_controls": 203,
+      "homepage_source_sections": 5,
+      "homepage_roundtrip_exact": true,
+      "new_test_assertions": "Added to existing article test; full Node and browser CI pending"
+    },
+    "condition_supplements_retained": 249,
+    "chance_alpha_rows_retained": 146,
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_delta": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Check exact-head CI and independently review phone/desktop. Continue A2 capture-first verified city sector encounters, alternative evolution/gift/trade/form acquisition and remaining Hyperspace detail, then full A3–A8. Use official sources first, secondary guides for omitted game data and owner photos for verified positions. No release before full GitHub gate."
+  },
+  "official_source_policy": {
+    "date": "2026-11-28",
+    "owner_instruction": "Official sources first. Owner continues independent PR226 item/TM/Colorful Screw photography; assistant researches and implements written guide in PR229. Preserve all originals and existing progress.",
+    "primary": [
+      "https://legends.pokemon.com/en-gb/",
+      "https://www.pokemon.com/uk/",
+      "https://www.nintendo.com/en-gb/Support/Purchases-Subscriptions/Games/How-to-Update-Pokemon-Legends-Z-A-2938482.html",
+      "https://home.pokemon.com/en-gb/move/"
+    ],
+    "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
+    "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
+  },
+  "a2_16_evolution_and_acquisition": {
+    "id": "AT-348-A2-16-EVOLUTION-AND-ACQUISITION",
+    "date": "2026-11-28",
+    "manifest_revision": 143,
+    "ledger_revision": 151,
+    "reviewed_parent": "d2349cc529e3fdcef7e26061311d0a7f5131edc4",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_16_EVOLUTION_AND_ACQUISITION.md",
+    "prior_head_ci": [
+      {
+        "id": 46177331753,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46177331687,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46177331728,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46177331692,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "prior_head_all_four_passed": true,
+    "base_dex_species_enriched": 64,
+    "acquisition_notes": 67,
+    "special_evolution_methods": {
+      "total": 43,
+      "stone": 20,
+      "trade": 10,
+      "friendship": 8,
+      "other": 5
+    },
+    "additional_acquisition_rows": 24,
+    "shared_player_guide": "src/sections/essentials.html#evolution-guide",
+    "candidate_validation": {
+      "base_dex_cards": 232,
+      "main_mission_cards": 42,
+      "side_mission_controls": 203,
+      "homepage_source_sections": 2,
+      "homepage_roundtrip_exact": true,
+      "local_quest_shop_story_anchors_checked": true,
+      "prior_ids_and_buttons_preserved": true,
+      "new_assertions": "existing Alpha article test extended; exact full CI pending"
+    },
+    "condition_supplements_retained": 249,
+    "chance_alpha_rows_retained": 146,
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_photo_head_unchanged": true,
+    "photo_imported_this_slice": false,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Check exact-head CI and independently review mobile/desktop. Continue base-dex ordinary level evolution alternatives and verified city sector/rooftop routes, then Hyperspace evolution/form and acquisition coverage and A3–A8. Preserve existing conditions, capture records, photo intake and player state; official sources first, no release until validation."
+  },
+  "a2_17_level_evolution_routes": {
+    "id": "AT-348-A2-17-LEVEL-EVOLUTION-ROUTES",
+    "date": "2026-11-28",
+    "manifest_revision": 144,
+    "ledger_revision": 152,
+    "reviewed_parent": "b9b7d6355b338206810dc0d8c10121cd9440576d",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_17_LEVEL_EVOLUTION_ROUTES.md",
+    "prior_head_ci": [
+      {
+        "id": 46178895047,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46178895120,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46178895021,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46178895213,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "ordinary_level_routes": 84,
+    "new_or_expanded_notes": 82,
+    "existing_form_notes_annotated": 2,
+    "new_predecessor_buttons": 54,
+    "retained_predecessor_buttons": 30,
+    "prior_acquisition_notes": 67,
+    "condition_supplements_retained": 249,
+    "chance_alpha_rows_retained": 146,
+    "validation": {
+      "base_dex_ids": 232,
+      "existing_link_targets_preserved": true,
+      "homepage_roundtrip_exact": true,
+      "source_roundtrip_exact": true,
+      "new_regression_assertions": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "integrated_photos": 250,
+    "photo_delta": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Check exact-head CI and independently review mobile/desktop; continue verified city sector and rooftop ordinary/chance encounters, remaining alternative forms and Hyperspace acquisition/conditions, then A3–A8. Preserve every existing map, ID, photo, capture record and player state. No live release until full GitHub gates pass."
+  },
+  "written_first_zero_cost_policy": {
+    "date": "2026-11-28",
+    "paid_services_allowed": false,
+    "additional_spending_allowed": false,
+    "priority": "Accurate written information first in manageable batches; preserve all working systems and continue comprehensive guide coverage independently.",
+    "evidence_states": [
+      "verified",
+      "source_supported",
+      "disputed",
+      "unresolved",
+      "not_applicable"
+    ],
+    "required_sequence": [
+      "Select and fact-check bounded batch, retain uncertainties",
+      "Validate exact GitHub candidate; live GitHub proof and owner review for functional changes",
+      "Independently reconcile and preview selected compatible changes in existing Workspace",
+      "Publish verified accepted batch and verify actual live release; record separate evidence",
+      "Continue other written and functional guide work in parallel"
+    ],
+    "workspace_presentation": "Existing Workspace may adapt compatible presentation; preserve correct existing facts, stable IDs, data, progress, URLs and working behavior. No full branch import, paid services, or unverified publication.",
+    "photographs": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+    "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
+    "owner_review_pending": true,
+    "a1": "ongoing_parallel_urgent_on_arrival_non_blocking"
+  },
+  "a2_18_written_city_capture": {
+    "id": "AT-348-A2-18-WRITTEN-CITY-CAPTURE",
+    "date": "2026-11-28",
+    "manifest_revision": 145,
+    "ledger_revision": 153,
+    "reviewed_parent": "4a14f5ef4df688f23a84278e25a8c22f91620920",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_18_WRITTEN_CITY_CAPTURE.md",
+    "prior_head_ci": [
+      {
+        "id": 46180941977,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46180941979,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46180941949,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46180941961,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "written_city_species": [
+      12,
+      23,
+      87,
+      96,
+      98,
+      100,
+      135,
+      145,
+      146,
+      165,
+      166,
+      181,
+      206
+    ],
+    "city_notes": 13,
+    "local_links_checked": 53,
+    "prior_level_routes": 84,
+    "prior_acquisition_notes": 67,
+    "condition_supplements_retained": 249,
+    "chance_alpha_rows_retained": 146,
+    "validation": {
+      "base_dex_ids": 232,
+      "homepage_roundtrip_exact": true,
+      "source_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "new_regression_assertions": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "integrated_photos": 250,
+    "photo_delta": 0,
+    "workspace_changed": false,
+    "new_coordinates": 0,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity."
+  },
+  "a1_previous_bounded_acceptance": {
+    "preserved_at_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "id": "A1",
+    "title": "Photo restoration",
+    "status": "bounded_a1_01_a1_02_complete_a1_03_local_asset_and_gallery_gate_passed_manual_identity_remote_artwork_followup_open",
+    "source": "AT-348 / #228",
+    "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open. Exact parent 0bc8f126f3252c204673de536155c6a72cd1fa4b passed all 3 workflows; 784 local assets/27 pages, expanded gallery browser checks and eight screenshot review complete; centered WZ17 reachable. Remaining manual source identity and external artwork availability follow-up A7; no repeated bounded repairs."
+  },
+  "parallel_slices": [
+    "A1"
+  ],
+  "a1_permanent_photo_policy": {
+    "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+    "owner_instruction_date": "2026-11-28",
+    "title": "Permanent photographic evidence intake and gallery maintenance",
+    "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+    "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+    "source_pr": 226,
+    "source_pr_permanently_open": true,
+    "active_integration_pr": 229,
+    "requires_finite_completion": false,
+    "blocks_other_development": false,
+    "blocks_github_release_due_to_incomplete_photo_coverage": false,
+    "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+    "require_empty_queue": false,
+    "sequence": [
+      "Register received originals and preserve bytes, filenames, provenance and location evidence",
+      "Check duplicates, exact source and destination, and compatible guide context",
+      "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+      "Verify incorporated assets and links and record usage and pending evidence",
+      "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+    ],
+    "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+    "no_paid_services": true,
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+  },
+  "a1_policy_checkpoint": {
+    "id": "AT-348-A1-POLICY-146",
+    "date": "2026-11-28",
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "reviewed_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_photo_pr_open": true,
+    "prior_head_ci": [
+      {
+        "id": 46181968020,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967996,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46181967992,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46181967986,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "recorded_committed_originals": 250,
+    "policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+    },
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "documentation_only": true,
+    "runtime_files_changed": false,
+    "photo_assets_changed": false,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "hold_reason": "Outstanding written guide coverage, functional/visual validation and owner GitHub site review; not photograph intake or incomplete image coverage.",
+    "next": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend."
+  },
+  "photo_intake_validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+  "a2_19_city_level_colour_audit": {
+    "id": "AT-348-A2-19-CITY-LEVEL-COLOUR-AUDIT",
+    "date": "2026-11-28",
+    "manifest_revision": 147,
+    "ledger_revision": 155,
+    "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
+    "report": "docs/qa/AT348_A2_19_CITY_LEVEL_COLOUR_AUDIT.md",
+    "prior_ci": {
+      "all_four_passed": true,
+      "runs": [
+        46182593574,
+        46182593588,
+        46182593600,
+        46182593570
+      ]
+    },
+    "active_pr": 229,
+    "new_city_notes": [
+      38,
+      49,
+      51,
+      77,
+      79,
+      81,
+      180
+    ],
+    "refined_city_level_notes": [
+      23,
+      87,
+      96,
+      98,
+      100
+    ],
+    "city_notes_total": 20,
+    "local_links_verified": 48,
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 250
+    },
+    "source_limit": "RotomLabs district page direct fetch cache misses; bounded indexed search evidence; unknown time/weather/precise slot and per-slot probability retained. Day-only monkey claim not established; Pansear night observation retained.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "previous_qualification_reconciled": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_head_checked_preflight": true,
+    "new_committed_photo_delta": 0,
+    "photo_rehash_this_slice": false,
+    "new_coordinates": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining written city encounter routes and individual conditions; then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace, zero paid services."
+  },
+  "a1_field_batch_51_64": {
+    "id": "AT-348-A1-FIELD-BATCH-51-64",
+    "date": "2026-11-28",
+    "manifest_revision": 148,
+    "ledger_revision": 156,
+    "source_pr": 226,
+    "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "source_import_commit": "32e79392492b6d26cfce25ecc466fcd6d102377f",
+    "reviewed_guide_parent": "d17dae9df12bbbbf487878ddff11f5eaeb6c7eb8",
+    "guide_transfer_commit": "06d81703c2158d2ef14d73a88c5582f5f3705f35",
+    "active_pr": 229,
+    "source_pr_remains_open": true,
+    "source_photo_hash_matches": 68,
+    "retained_prior_blob_matches": 250,
+    "archive_sha256": "b15d262831751b8167e60ae139a1b43878d23fef83824896eddcc3b20fe29d86",
+    "counts": {
+      "tm": 22,
+      "item": 20,
+      "screw": 22,
+      "access": 1,
+      "collectibleFinds": 64,
+      "photos": 318
+    },
+    "added_finds": [
+      51,
+      64
+    ],
+    "added_photos": 68,
+    "fieldbook_groups": 65,
+    "additional_canonical_ids": 0,
+    "additional_pins": 0,
+    "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 65,
+    "report": "docs/qa/AT348_A1_FIELD_BATCH_51_64.md"
+  },
+  "a2_20_city_rooftop_routes": {
+    "id": "AT-348-A2-20-CITY-ROOFTOP-ROUTES",
+    "date": "2026-11-28",
+    "manifest_revision": 149,
+    "ledger_revision": 157,
+    "reviewed_parent": "1482de4f13b67c024f622d6161d20edee39629c6",
+    "report": "docs/qa/AT348_A2_20_CITY_ROOFTOP_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      10,
+      21,
+      22,
+      55,
+      62
+    ],
+    "city_notes_total": 25,
+    "local_links_verified": 27,
+    "prior_ci": [
+      {
+        "id": 46187228422,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187228419,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228414,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187228438,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Secondary source area-level records and written routes; Bleu 2 Pidgey uncorroborated; time/weather/slot/approach/odds explicitly qualified. No new pins or assumed Alpha status.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining written city encounter routes and individual conditions, then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace; zero paid services."
+  },
+  "at_348_a2_21_city_canal_mission_routes": {
+    "id": "AT-348-A2-21-CITY-CANAL-MISSION-ROUTES",
+    "date": "2026-11-28",
+    "manifest_revision": 150,
+    "ledger_revision": 158,
+    "reviewed_parent": "95598d8b6c9aecad92c0e1ca353c97a72abf2159",
+    "report": "docs/qa/AT348_A2_21_CITY_CANAL_AND_MISSION_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      13,
+      15,
+      32
+    ],
+    "city_notes_total": 28,
+    "local_links_verified": 30,
+    "prior_ci": [
+      {
+        "id": 46187597058,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187597066,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187597075,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187597060,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Official general mechanics plus secondary species, mission and sector records. Bunnelby mission start versus met location distinguished; Magikarp Zone 11 and Vert 6 discrepancies remain leads; no invented spawns or pins.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_baseline_git_blob_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
+  },
+  "at_348_a2_22_alternative_capture_routes": {
+    "id": "AT-348-A2-22",
+    "date": "2026-11-28",
+    "manifest_revision": 151,
+    "ledger_revision": 159,
+    "reviewed_parent": "2b4db4d493127a7c7847d078eab9f2c15cd58c33",
+    "report": "docs/qa/AT348_A2_22_ALTERNATIVE_CAPTURE_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      33,
+      50,
+      53
+    ],
+    "city_notes_total": 31,
+    "local_links_verified": 9,
+    "prior_ci": [
+      {
+        "id": 46187979160,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187979057,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187979055,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187979049,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Secondary species/mission/zone sources; distinguish ordinary, chance Alpha, fixed Alpha and one-time encounters; unverified weather, odds and exact city access retained explicitly.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_original_section_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
+  },
+  "incremental_workspace_release_policy": {
+    "id": "AT-348-INCREMENTAL-WORKSPACE-152",
+    "date": "2026-11-28",
+    "manifest_revision": 152,
+    "ledger_revision": 160,
+    "owner_instruction": "Regularly update the existing Workspace with working checked updates and correct new information.",
+    "supersedes": "Previous whole-guide-completion-before-any-Workspace-update and single-final-handoff rules for AT-348; historical receipts retained.",
+    "scope": "Independently checked, compatible batches; continue whole-guide A2–A8 in parallel.",
+    "whole_guide_completion_required_for_each_release": false,
+    "future_photo_coverage_required": false,
+    "paid_services_allowed": false,
+    "additional_spending_allowed": false,
+    "github_exact_checks_required": true,
+    "github_live_release_required_for_functional_changes": true,
+    "owner_review_required_for_functional_changes": true,
+    "written_only_checked_candidate_may_enter_independent_workspace_preview": true,
+    "workspace_live_publication_requires_source_rollback_compatibility_preview_and_independent_verification": true,
+    "full_branch_import_allowed": false,
+    "automatic_sync_allowed": false,
+    "main_merge_in_this_slice": false,
+    "workspace_publication_in_this_slice": false,
+    "source_photo_pr": 226,
+    "source_photo_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "retained_originals": 318,
+    "active_development_pr": 229,
+    "report": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
+    "first_batch": {
+      "id": "AT-348-WORKSPACE-BATCH-01",
+      "type": "written_only",
+      "source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+      "source_pr": 229,
+      "source_path": "src/sections/pokedex.html",
+      "lumiose_ids": [
+        10,
+        12,
+        13,
+        15,
+        21,
+        22,
+        23,
+        32,
+        33,
+        38,
+        49,
+        50,
+        51,
+        53,
+        55,
+        62,
+        77,
+        79,
+        81,
+        87,
+        96,
+        98,
+        100,
+        135,
+        145,
+        146,
+        165,
+        166,
+        180,
+        181,
+        206
+      ],
+      "records": 31,
+      "exact_source_ci": [
+        {
+          "id": 46188321769,
+          "name": "Validate Atlas header feedback button",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321772,
+          "name": "Validate photo-only GitHub Pages output",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321775,
+          "name": "Validate recovered Atlas article pages",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 46188321771,
+          "name": "Validate rotatable Lumiose Atlas Explorer",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "source_live_github": false,
+      "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
+      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
+      "workspace_last_recorded": "v40",
+      "workspace_live_readback": false,
+      "owner_editor_access_verified": false,
+      "unresolved_claims_preserved": true,
+      "full_branch_import": false
+    }
+  }
+}

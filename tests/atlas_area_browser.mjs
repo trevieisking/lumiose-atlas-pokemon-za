@@ -7,7 +7,7 @@ import {spawn} from "node:child_process";
 import {setTimeout as pause} from "node:timers/promises";
 import {chromium} from "playwright";
 import {AREA_MAP} from "../atlas-area-model.mjs";
-import {wildZoneRecord} from "../wild-zone-fieldbook.mjs";
+import {wildZoneRecord,wildZoneFullPhotoPath} from "../wild-zone-fieldbook.mjs";
 
 const base="http://127.0.0.1:18769",output="test-artifacts/atlas-areas";
 const key="lumiose-atlas-reconstruction-v1";
@@ -504,7 +504,9 @@ try{
       for(const [index,photo] of zone.photos.entries()){
         const img=photos.locator("img").nth(index);
         assert.equal(await img.getAttribute("src"),photo.path);
-        assert.equal(await img.locator("..").getAttribute("href"),photo.path,"Full-size original photograph remains accessible");
+        const full=wildZoneFullPhotoPath(photo.path);
+        assert.equal(await img.locator("..").getAttribute("href"),full,"Full-size original photograph remains accessible");
+        if(full!==photo.path){const dimensions=await page.evaluate(async url=>{const original=new Image();original.src=url;await original.decode();return [original.naturalWidth,original.naturalHeight];},full);assert.deepEqual(dimensions,[4000,2252],"Restored owner original decodes at full resolution");}
         await img.scrollIntoViewIfNeeded();await img.evaluate(node=>node.decode());
         assert.equal(await img.evaluate(node=>node.naturalWidth),photo.width,"Original photograph decodes at its recorded width");
       }
@@ -659,6 +661,64 @@ try{
     await page.locator('[data-atlas-habitat-link="pidgey"]').waitFor({state:"attached"});
     assert.equal(await page.locator('[data-atlas-habitat-link="pidgey"]').getAttribute("href"),"atlas-explorer.html?species=pidgey");
     assert.ok(await page.locator("#dexGrid .dex-card").count()>=232,"Existing Pokédex entries preserved");
+    assert.equal(await page.locator('#dexGrid [data-dex-capture-guide]').count(),232,'All Lumiose cards have explicit capture coverage');
+    assert.equal(await page.locator('#dexGrid [data-dex-region="Hyperspace"] [data-dex-capture-guide]').count(),0,'Do not import city habitats into portal encounters');
+    const goomy=page.locator('[data-dex-capture-guide="goomy"]');
+    assert.match(await goomy.textContent(),/Outdoor encounters require rain/);
+    assert.match(await goomy.textContent(),/southern Lumiose Sewers/i);
+    assert.match(await goomy.locator('[data-dex-conditions]').first().textContent(),/Time: .*Weather: .*Elevation: .*Unlock: /);
+    assert.ok(await goomy.locator('a[href*="area=vert-sector-9"][href*="species=goomy"]').count()>0);
+    assert.ok(await goomy.locator('[data-dex-research-claims] [data-dex-encounter-evidence="source_lead"]').count()>0);
+    const pumpRows=page.locator('[data-dex-capture-guide="pumpkaboo"] [data-dex-encounter-class="random_alpha"]');
+    assert.equal(await pumpRows.count(),4);
+    assert.match((await pumpRows.allTextContents()).join(" "),/Medium Variety.*Time: Day/s);
+    assert.match((await pumpRows.allTextContents()).join(" "),/Jumbo Variety.*Time: Night/s);
+    assert.match(await page.locator('[data-dex-capture-guide="goodra"]').textContent(),/evolve Sliggoo at level 50 or higher while it is raining/);
+
+    const zone10Tynamo=page.locator('[data-dex-capture-guide="tynamo"] [data-dex-encounter-id="g3-evidence-wz-10-tynamo-ordinary"]');
+    assert.match(await zone10Tynamo.textContent(),/Level: 31–32/);
+    assert.match(await zone10Tynamo.textContent(),/eastern\/back gate/);
+    const earlyStaryu=page.locator('[data-dex-capture-guide="staryu"]');
+    const normalStaryu=earlyStaryu.locator('[data-dex-encounter-id="g3-evidence-wz-02-staryu-ordinary"]');
+    assert.match(await normalStaryu.textContent(),/Time: night/i);
+    assert.match(await normalStaryu.textContent(),/Level: 5–7/);
+    assert.match(await normalStaryu.textContent(),/southeastern island/);
+    assert.match(await earlyStaryu.locator('[data-dex-encounter-id="wz-02:fixed_alpha:1"]').textContent(),/Level: 30–32/);
+    assert.match(await earlyStaryu.locator('[data-dex-encounter-id="at346-random-alpha-wz-02-staryu"]').textContent(),/chance Alpha Lv. 17–19/);
+    await unchanged();
+    await page.goto(base+"/atlas-explorer.html?area=wz-02&species=staryu&encounter=ordinary",{waitUntil:"load"});await panel();
+    assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/Level: 5–7/);
+    assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/southeastern island/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-08&species=gible&encounter=ordinary",{waitUntil:"load"});await panel();
+    const gibleRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-08-gible-ordinary"]');
+    assert.match(await gibleRoute.textContent(),/Level: 24–25/);
+    assert.match(await gibleRoute.textContent(),/blue fin/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-10&species=tynamo&encounter=ordinary",{waitUntil:"load"});await panel();
+    const tynamoRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-10-tynamo-ordinary"]');
+    assert.match(await tynamoRoute.textContent(),/Level: 31–32/);
+    assert.match(await tynamoRoute.textContent(),/eastern\/back gate/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-11&species=slowbro&encounter=fixed_alpha",{waitUntil:"load"});await panel();
+    const slowbroRoute=page.locator('[data-area-encounter-id="wz-11:fixed_alpha:0"]');
+    assert.match(await slowbroRoute.textContent(),/Level: 42–44/);
+    assert.match(await slowbroRoute.textContent(),/thorn barrier.*TM063/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-12&species=avalugg&encounter=fixed_alpha",{waitUntil:"load"});await panel();
+    const avaluggRoute=page.locator('[data-area-encounter-id="wz-12:fixed_alpha:1"]');
+    assert.match(await avaluggRoute.textContent(),/Level: 54–56/);
+    assert.match(await avaluggRoute.textContent(),/icicle.*ice bridge/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-13&species=scyther&encounter=ordinary",{waitUntil:"load"});await panel();
+    const scytherRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-13-scyther-ordinary"]');
+    assert.match(await scytherRoute.textContent(),/Level: 37–39/);
+    assert.match(await scytherRoute.textContent(),/thorn barrier/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-14&species=helioptile&encounter=ordinary",{waitUntil:"load"});await panel();
+    const helioptileRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-14-helioptile-ordinary"]');
+    assert.match(await helioptileRoute.textContent(),/Level: 37–38/);
+    assert.match(await helioptileRoute.textContent(),/clear skies/);
+    assert.match(await helioptileRoute.textContent(),/clear daylight/);
+
+
+
+
+
     await unchanged();
 
     // Reviewed chance Alpha rows are independent of the original fixed and

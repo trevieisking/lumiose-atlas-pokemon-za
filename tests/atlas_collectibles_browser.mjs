@@ -676,6 +676,44 @@ try {
     results.registerFailurePreservesOriginalMap = true;
   } finally { await unavailableContext.close(); }
 
+  // AT-348 A3-01: open actual field evidence from the map and inspect real photos.
+  const photoRegister=JSON.parse(fs.readFileSync("docs/field-guides/collectible-photo-register.json","utf8"));
+  for(const [device,width,height] of [["phone",393,852],["desktop",1440,900]]){
+    const context=await browser.newContext({viewport:{width,height},isMobile:device==="phone",hasTouch:device==="phone"});
+    await installProgressProbe(context);
+    await context.route("**/*",route=>route.request().url().startsWith(base+"/")?route.continue():route.abort());
+    const page=await context.newPage(),errors=[];page.on("pageerror",e=>errors.push(String(e)));
+    try{
+      await ready(page);
+      await page.locator('a[href="collectible-fieldbook.html"]').click();
+      await page.waitForURL(base+"/collectible-fieldbook.html");
+      assert.equal(await page.locator("details.field-find").count(),65);
+      assert.equal(await page.locator(".field-gallery img").count(),318);
+      for(const id of ["wild-zone-3-aerial-ace-rouge-plaza-rooftop","vert-7-dive-ball-rooftop","vert-4-colorful-screw-courtyard-scaffold","bleu-6-western-scaffold","sewers-canal-access-taunt","jaune-5-endure-rooftop-garden","jaune-canalside-future-sight-npc","jaune-11-cafe-bataille-colorful-screw-umbrella-glide"]){
+        const row=photoRegister.entries.find(x=>x.id===id),entry=page.locator("#"+id);
+        await entry.locator(":scope > summary").click();
+        const imgs=entry.locator(".field-gallery img");assert.equal(await imgs.count(),row.photos.length);
+        for(const [i,photo] of row.photos.entries()){
+          const img=imgs.nth(i);assert.equal(await img.getAttribute("src"),photo.path);
+          assert.equal(await img.locator("..").getAttribute("href"),photo.path);
+          await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
+          assert.ok(await img.evaluate(el=>el.naturalWidth>0&&el.naturalHeight>0),photo.path);
+        }
+        assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+        await entry.locator(".field-gallery").screenshot({path:output+"/at348-fieldbook-"+device+"-"+id+".png"});
+        await entry.locator(":scope > summary").click();
+      }
+      await assertProgressUntouched(page,initialRaw,"Fieldbook "+device);
+      assert.deepEqual(errors,[]);
+      await page.locator('a[href="items.html"]').first().click();await page.waitForURL(base+"/items.html");
+      assert.equal(await page.locator("[data-atlas-pickup]").count(),264);
+      assert.equal(await page.locator("[data-atlas-screw]").count(),100);
+      await page.locator('a[href="collectible-fieldbook.html"]').click();await page.waitForURL(base+"/collectible-fieldbook.html");
+      assert.equal(await page.locator("details.field-find").count(),65);
+      results["fieldbook_"+device]={groups:65,photos:318,representative_galleries_decoded:8,progress_unchanged:true};
+    }finally{await context.close();}
+  }
+
   fs.writeFileSync(output + "/at338-browser-proof.json", JSON.stringify(results, null, 2) + "\n");
   console.log("AT-338 compact collectible browser proof passed: production zero pins; 364 test-only points; desktop + phone; read-only progress.");
 } finally {

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {spawn} from 'node:child_process';
 import {setTimeout as pause} from 'node:timers/promises';
 import {chromium} from 'playwright';
-import {sectorContextFor} from '../atlas-sector-context.mjs';
+import {sectorContextFor,SECTOR_CONTEXT_VIEWS} from '../atlas-sector-context.mjs';
 
 const port=18778,base='http://127.0.0.1:'+port,output='test-artifacts/atlas-sector-context';
 const sample=['jaune-sector-2','vert-sector-4','bleu-sector-5','magenta-sector-8','rouge-sector-6'];
@@ -72,6 +72,34 @@ try{
     assert.ok(await card.locator('.sector-context-detail .sector-source-map').count(),'The pre-existing 310px Jaune 2 crop is preserved');
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)<=1);
     await card.locator('.sector-context-photo').screenshot({path:output+'/'+device+'-jaune-sector-2-directory.png'});
+    // A1-03: audit each sector card, including shared-photo framing and preserved
+    // close-up fallback. Reuse the existing directory, not 48 full page reloads.
+    const ids=Object.keys(SECTOR_CONTEXT_VIEWS);
+    assert.equal(ids.length,48);
+    for(const id of ids){
+      const row=page.locator('#sector-'+id),details=row.locator('details.sector-clues');
+      if(!await details.evaluate(el=>el.open))await details.locator(':scope > summary').click();
+      const image=row.locator('.sector-context-image'),record=sectorContextFor(id);
+      await image.waitFor({state:'attached'});
+      assert.equal(await image.getAttribute('src'),record.path,id+' directory source');
+      assert.equal(await row.locator('.sector-context-photo a').getAttribute('href'),record.path,id+' full-size link');
+      await image.scrollIntoViewIfNeeded();
+      const dimensions=await image.evaluate(async el=>{await el.decode();return [el.naturalWidth,el.naturalHeight];});
+      assert.deepEqual(dimensions,[record.width,record.height],id+' directory source dimensions');
+      const frame=await row.locator('.sector-context-window').evaluate(el=>{const r=el.getBoundingClientRect();return [r.width,r.height];});
+      assert.ok(frame[0]>0&&frame[1]>0,id+' nonempty visible context frame');
+      const preserved=row.locator('details.sector-context-detail');
+      assert.equal(await preserved.count(),1,id+' preserved close-up disclosure');
+      const fallback=preserved.locator('.sector-source-map img');
+      assert.equal(await fallback.getAttribute('src'),record.fallback,id+' original crop retained');
+      if(!await preserved.evaluate(el=>el.open))await preserved.locator(':scope > summary').click();
+      await fallback.scrollIntoViewIfNeeded();
+      await fallback.evaluate(el=>el.decode());
+      assert.ok(await fallback.evaluate(el=>el.naturalWidth>0&&el.naturalHeight>0),id+' fallback decodes');
+      await preserved.locator(':scope > summary').click();
+      await details.locator(':scope > summary').click();
+    }
+    assert.equal(await page.evaluate(()=>localStorage.getItem('lumiose-atlas-reconstruction-v1')),saved,'All sector photo inspections preserve original progress');
     await page.goto(base+'/atlas-explorer.html?area=wz-01',{waitUntil:'domcontentloaded'});
     await page.locator('[data-area-detail] .aa-photo-links .aa-photo').first().waitFor({state:'attached'});
     assert.equal(await page.locator('.aa-context-image').count(),0,'Wild Zone galleries are not replaced by sector context');

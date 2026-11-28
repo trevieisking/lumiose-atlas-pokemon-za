@@ -873,6 +873,13 @@ export const wildZoneRecords = [
 function escapeHtml(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
 export function wildZoneRecord(n){const number=Number(n);return Number.isInteger(number)&&number>=1&&number<=20?wildZoneRecords[number-1]:null;}
 export function zoneSearchText(n){const z=wildZoneRecord(n);return z?[z.area,z.district,...z.species,...z.rotatingAlphas].join(" "):"";}
+// AT-348: exact visually matched 4000×2252 owner originals; previews stay unchanged.
+const fullPhotoPaths=Object.freeze({
+  "assets/atlas/wild-zones/wild-zone-15-overview.png": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg",
+  "assets/atlas/wild-zones/wild-zone-17-overview.png": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg",
+  "assets/atlas/wild-zones/wild-zone-17-closeup.png": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+});
+export function wildZoneFullPhotoPath(previewPath){return Object.hasOwn(fullPhotoPaths,previewPath)?fullPhotoPaths[previewPath]:previewPath;}
 export function wildZoneFieldbookMarkup(n){
  const z=wildZoneRecord(n);if(!z)return "";
  const label="Wild Zone "+String(z.number).padStart(2,"0");
@@ -881,7 +888,7 @@ export function wildZoneFieldbookMarkup(n){
  const habitat=name=>'<a href="'+e(areaLink({speciesId:speciesKey(name)}))+'" data-atlas-species="'+e(speciesKey(name))+'" aria-label="'+e('Explore recorded habitats for '+name)+'">'+e(name)+'</a>';
  const photos=z.photos.map(p=>{
    const heading=p.kind==="overview"?"Area overview & Pokémon encounter card":"Detailed area close-up";
-   return '<figure><a href="'+e(p.path)+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+e(label+" — "+heading)+' at full resolution"><img src="'+e(p.path)+'" alt="'+e(label+" — "+heading+", "+z.area)+'" width="'+p.width+'" height="'+p.height+'" loading="lazy" decoding="async"></a><figcaption><strong>'+heading+'</strong><span>Tap or click to view full size ↗</span></figcaption></figure>';
+   return '<figure><a href="'+e(wildZoneFullPhotoPath(p.path))+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+e(label+" — "+heading)+' at full resolution"><img src="'+e(p.path)+'" alt="'+e(label+" — "+heading+", "+z.area)+'" width="'+p.width+'" height="'+p.height+'" loading="lazy" decoding="async"></a><figcaption><strong>'+heading+'</strong><span>Tap or click to view full size ↗</span></figcaption></figure>';
  }).join("");
  const names=z.species.map(s=>'<li>'+habitat(s)+'</li>').join("");
  const fixed=z.fixedAlphas.map(a=>'<li><strong>'+habitat(a.name)+'</strong><span>'+e(a.condition)+'</span></li>').join("");

@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "id": "AT-348-A7-02-RECONCILED-PAGE-REGISTER",
+  "date": "2026-11-28",
+  "manifest_revision": 119,
+  "ledger_revision": 127,
+  "main": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+  "reviewed_parent": "0fea3ef8b656f34652d7eb5d79d1a508711ebff5",
+  "active_pr": 229,
+  "field_pr": 226,
+  "scope": "Inventory every existing HTML page and editable main section; inspect purpose/navigation/headings and source claims in targeted slices; this is not exhaustive independent factual verification.",
+  "counts": {
+    "root_html_before": 28,
+    "standalone_pages": 27,
+    "editable_sections": 17,
+    "public_standalone_pages": 26,
+    "owner_only_pages": 1,
+    "root_html_candidate": 29,
+    "directory_groups": 8,
+    "directory_destinations": 57,
+    "full_page_factual_review_completed": 0,
+    "existing_surfaces_current": 46
+  },
+  "pages": [
+    {
+      "path": "alphas.html",
+      "source_blob": "e06e0f610368f4fc978303f23377e9b01935954e",
+      "kind": "standalone",
+      "primary_purpose": "Alpha Pokédex and fieldbook",
+      "review_scope": "All forms and direct/indirect methods; 115 further indexing entries from prior bounded receipt; conditions and map parity.",
+      "slice": "A2",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "e06e0f610368f4fc978303f23377e9b01935954e",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "atlas-explorer.html",
+      "source_blob": "ffe3026d59d216e3f45a1c537bb65ec245b91650",
+      "kind": "standalone",
+      "primary_purpose": "Interactive city map",
+      "review_scope": "Every named habitat, access/height and photo mapping; preserve validated coordinate system.",
+      "slice": "A2/A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "ffe3026d59d216e3f45a1c537bb65ec245b91650",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "battles.html",
+      "source_blob": "7b6bdf2637239b7a1e12dcdc6b733b711defd9c8",
+      "kind": "standalone",
+      "primary_purpose": "Ranked Battles",
+      "review_scope": "Season X date, eligibility, Mega Stones and end-season Mega Shards checked against current official notice; remaining individual claims open.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "7b6bdf2637239b7a1e12dcdc6b733b711defd9c8"
+    },
+    {
+      "path": "boss-guide.html",
+      "source_blob": "e2f7a9e6d9c66d138a9b3a998fdbe08ec6c40daa",
+      "kind": "standalone",
+      "primary_purpose": "Full Rogue Mega plans",
+      "review_scope": "Audit individual opponents, moves, type weaknesses, unlocks and strategies.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "e2f7a9e6d9c66d138a9b3a998fdbe08ec6c40daa"
+    },
+    {
+      "path": "clothing-guide.html",
+      "source_blob": "a78f46f37506eacfeee37a66dbbab024dbed680f",
+      "kind": "standalone",
+      "primary_purpose": "Fashion",
+      "review_scope": "Check inventories, prices, conditions and boutiques, separate DLC clothes.",
+      "slice": "A4",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "a78f46f37506eacfeee37a66dbbab024dbed680f"
+    },
+    {
+      "path": "collectible-fieldbook.html",
+      "source_blob": "b37d15fc21085433b8e3331863fdabf026c1c952",
+      "kind": "standalone",
+      "primary_purpose": "Photographic collectibles",
+      "review_scope": "Match photographed evidence with canonical item/TM/Screw records, no guessed pins.",
+      "slice": "A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "b37d15fc21085433b8e3331863fdabf026c1c952"
+    },
+    {
+      "path": "coverage.html",
+      "source_blob": "a895fd925bc0c8fc0f9369a26da40fc85c7f30f9",
+      "kind": "standalone",
+      "primary_purpose": "Coverage and known gaps",
+      "review_scope": "Update historical claims only against current evidence; distinguish deployed edition.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "a895fd925bc0c8fc0f9369a26da40fc85c7f30f9"
+    },
+    {
+      "path": "feedback-owner.html",
+      "source_blob": "d2981312f9e87fb4a1b9ae9133323036fc197d6e",
+      "kind": "standalone",
+      "primary_purpose": "Private owner inbox",
+      "review_scope": "Access boundary only, excluded from public directory; do not reopen completed feedback development.",
+      "slice": "Protected",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "protected_out_of_game_content_review",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "d2981312f9e87fb4a1b9ae9133323036fc197d6e"
+    },
+    {
+      "path": "feedback.html",
+      "source_blob": "094de9536762200e93f56354a163db7351419051",
+      "kind": "standalone",
+      "primary_purpose": "Player feedback",
+      "review_scope": "Preserve existing route and form; no feedback redevelopment.",
+      "slice": "Protected",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "protected_out_of_game_content_review",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "094de9536762200e93f56354a163db7351419051"
+    },
+    {
+      "path": "game-content.html",
+      "source_blob": "c2a6e76dce887b89de1d5d759b9d86d46d8dd8a8",
+      "kind": "standalone",
+      "primary_purpose": "City Life and activities",
+      "review_scope": "11 sections; cafés, restaurants, services, training, titles, multiplayer/music, photo, challenges, world and acquisition/completion; verify each and assess splitting only after shared-source and progress audit.",
+      "slice": "A5/A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "c2a6e76dce887b89de1d5d759b9d86d46d8dd8a8"
+    },
+    {
+      "path": "hair-beauty-guide.html",
+      "source_blob": "eb86d90783ff0b3a486db49046ec76177ca94fba",
+      "kind": "standalone",
+      "primary_purpose": "Hair and beauty",
+      "review_scope": "All salon/style unlocks, colours, Furfrou and source accuracy.",
+      "slice": "A4",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "eb86d90783ff0b3a486db49046ec76177ca94fba"
+    },
+    {
+      "path": "home-connection.html",
+      "source_blob": "4bb2ca406bb1d73531b94989d84e64bb74dddac0",
+      "kind": "standalone",
+      "primary_purpose": "HOME transfer and completion",
+      "review_scope": "Verify official transfer eligibility and gifts, roster IDs and completion requirements.",
+      "slice": "A2/A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "4bb2ca406bb1d73531b94989d84e64bb74dddac0"
+    },
+    {
+      "path": "hyperspace-maps.html",
+      "source_blob": "9f02194cece8c032e17a2e1be891fbbf4a0317de",
+      "kind": "standalone",
+      "primary_purpose": "Hyperspace maps",
+      "review_scope": "Verify all generated layouts, access, time and conditions; no fixed random distortion pins.",
+      "slice": "A2/A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "9f02194cece8c032e17a2e1be891fbbf4a0317de"
+    },
+    {
+      "path": "index.html",
+      "source_blob": "055b65ad6450052381f280b6a9e89919f4ffe382",
+      "kind": "generated_home",
+      "primary_purpose": "Overview and interactive guide shell",
+      "review_scope": "Navigation, 17-section consistency, source and generated home parity; no full factual completion.",
+      "slice": "A7/A2",
+      "source_inventory": "generated from inspected main sections; concurrent template/home changes preserved",
+      "fact_status": "generated_from_17_inspected_sections_not_independent_claim_review",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "a6c1191dff5dc104851727ac22166139b0eb91fa",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "items.html",
+      "source_blob": "a6743b8afbd97673a0eda10deb70441f527d3088",
+      "kind": "standalone",
+      "primary_purpose": "Item and Screw catalogue",
+      "review_scope": "Verify recorded 264 items and 100 screws, exact access, numbering and field evidence.",
+      "slice": "A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "a6743b8afbd97673a0eda10deb70441f527d3088"
+    },
+    {
+      "path": "journey.html",
+      "source_blob": "b6876b8de6c38418a2b0fa52cb870eb2b36055b0",
+      "kind": "standalone",
+      "primary_purpose": "Detailed route by chapter",
+      "review_scope": "Story titles/prerequisites cross-check; M39 first reward-match clarification; all other steps still require review.",
+      "slice": "A7",
+      "source_inventory": "prior source inspected; concurrent scoped A7-01 changes reviewed; full claims open",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "b6bf495172459c7a2547c970488e496975bca0c1"
+    },
+    {
+      "path": "legendaries.html",
+      "source_blob": "5b046dc15a96ced124e1db31a14f571d683ec04e",
+      "kind": "standalone",
+      "primary_purpose": "Legendary and mythical encounters",
+      "review_scope": "Every mission, rank, preparation, capture and event status; distinguish actual catch and gifts.",
+      "slice": "A2/A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "5b046dc15a96ced124e1db31a14f571d683ec04e"
+    },
+    {
+      "path": "mable-research.html",
+      "source_blob": "7fdb0ec687345e2d92ea61356a60e095e4b3c0a1",
+      "kind": "standalone",
+      "primary_purpose": "Research and rewards",
+      "review_scope": "Check all level rewards and unlocks against source.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "7fdb0ec687345e2d92ea61356a60e095e4b3c0a1"
+    },
+    {
+      "path": "maps.html",
+      "source_blob": "96c1a6864868577b46acf14d73fb0d1ac7d2cb38",
+      "kind": "standalone",
+      "primary_purpose": "City and Wild Zone maps",
+      "review_scope": "Per-area rosters, coordinates and access; same data as Pokédex.",
+      "slice": "A2/A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "96c1a6864868577b46acf14d73fb0d1ac7d2cb38",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "mega-dimension.html",
+      "source_blob": "8d8f71a4f00c50bae6d7e970dd426cc688006ca8",
+      "kind": "standalone",
+      "primary_purpose": "DLC mission guide",
+      "review_scope": "Verify all 14 missions, prerequisite chain, portal timers and route links.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "8d8f71a4f00c50bae6d7e970dd426cc688006ca8"
+    },
+    {
+      "path": "rewards.html",
+      "source_blob": "6cd5bf089f7e1c65caaa7a5409e4017efa4b07e1",
+      "kind": "standalone",
+      "primary_purpose": "Mystery Gifts and rewards",
+      "review_scope": "Xerneas password/end date confirmed; announced Yveltal start added, no invented code; other gifts remain open.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "6cd5bf089f7e1c65caaa7a5409e4017efa4b07e1"
+    },
+    {
+      "path": "royale-guide.html",
+      "source_blob": "66de44d55e60d7e17f2844aebba9e7885b7f5ae5",
+      "kind": "standalone",
+      "primary_purpose": "Story promotion battles",
+      "review_scope": "Check each opponent, quiz, team, levels, ticket and unlock.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "66de44d55e60d7e17f2844aebba9e7885b7f5ae5"
+    },
+    {
+      "path": "sector-maps.html",
+      "source_blob": "309ca3be26e884ca0e14624b65d3a24b782302d0",
+      "kind": "standalone",
+      "primary_purpose": "48 sectors and 20 Wild Zones",
+      "review_scope": "Per-zone habitat and location sources, directions and evidence, no invented pins.",
+      "slice": "A2/A3",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "309ca3be26e884ca0e14624b65d3a24b782302d0",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "shiny-hunting.html",
+      "source_blob": "7cc768ed92f34ab9078930165f1ca55f7d07749a",
+      "kind": "standalone",
+      "primary_purpose": "Shiny hunting",
+      "review_scope": "Verify base and DLC odds, rolls, resets, persistence and calculator assumptions.",
+      "slice": "A2/A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "7cc768ed92f34ab9078930165f1ca55f7d07749a"
+    },
+    {
+      "path": "shops.html",
+      "source_blob": "ec8c679394ac063bf7394730ccf27e0cb6a26d6c",
+      "kind": "standalone",
+      "primary_purpose": "Shops and economy",
+      "review_scope": "Check full seller/price/reward catalogue, shards, Screw rewards and budgets.",
+      "slice": "A4",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "ec8c679394ac063bf7394730ccf27e0cb6a26d6c"
+    },
+    {
+      "path": "side-missions.html",
+      "source_blob": "1b400091dcb713b02c2ba2cbca23a2929d748971",
+      "kind": "standalone",
+      "primary_purpose": "203 side and EX requests",
+      "review_scope": "Audit each ID, unlock, NPC location, solution and rewards; preserve progress.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "1b400091dcb713b02c2ba2cbca23a2929d748971"
+    },
+    {
+      "path": "type-chart.html",
+      "source_blob": "68a6c59c9705038bbc6fa63524c79ac9e12d8968",
+      "kind": "standalone",
+      "primary_purpose": "Type chart and calculator",
+      "review_scope": "Check all 324 base matchups, dual type multipliers and special exceptions.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "68a6c59c9705038bbc6fa63524c79ac9e12d8968"
+    },
+    {
+      "path": "walkthrough.html",
+      "source_blob": "85565f0a058ec8e97274177ad32b2920d4c9de7c",
+      "kind": "standalone",
+      "primary_purpose": "Story mission finder",
+      "review_scope": "42 titles reconciled with Serebii, M39 branch clarification, remaining full step audit open.",
+      "slice": "A7",
+      "source_inventory": "prior source inspected; concurrent scoped A7-01 changes reviewed; full claims open",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "3ab4ca6a5097914327c6f59e5b411955a62e9d8e"
+    },
+    {
+      "path": "src/sections/alphas.html",
+      "source_blob": "703c675162b27799333830eab4834fb3745ff4db",
+      "kind": "main_section",
+      "primary_purpose": "alphas",
+      "review_scope": "All forms and direct/indirect methods; 115 further indexing entries from prior bounded receipt; conditions and map parity.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "703c675162b27799333830eab4834fb3745ff4db"
+    },
+    {
+      "path": "src/sections/battles.html",
+      "source_blob": "b3dde8c75a5ee2ac3ca2bf20a8661a8e1cf2faf9",
+      "kind": "main_section",
+      "primary_purpose": "battles",
+      "review_scope": "Season X date, eligibility, Mega Stones and end-season Mega Shards checked against current official notice; remaining individual claims open.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "b3dde8c75a5ee2ac3ca2bf20a8661a8e1cf2faf9"
+    },
+    {
+      "path": "src/sections/berries.html",
+      "source_blob": "57ec3c82d3eaa43424a56bb03605693c70f87529",
+      "kind": "main_section",
+      "primary_purpose": "berries",
+      "review_scope": "Audit all berry properties, ingredient availability and donut calculation.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "57ec3c82d3eaa43424a56bb03605693c70f87529"
+    },
+    {
+      "path": "src/sections/bosses.html",
+      "source_blob": "651b45f8a90e199718691c0f36a944b39982a11f",
+      "kind": "main_section",
+      "primary_purpose": "bosses",
+      "review_scope": "Audit individual opponents, moves, type weaknesses, unlocks and strategies.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "651b45f8a90e199718691c0f36a944b39982a11f"
+    },
+    {
+      "path": "src/sections/dimension.html",
+      "source_blob": "59c75bcae2fbe282d45ca2fdb93cabad9b00b0b7",
+      "kind": "main_section",
+      "primary_purpose": "dimension",
+      "review_scope": "Verify all 14 missions, prerequisite chain, portal timers and route links.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "59c75bcae2fbe282d45ca2fdb93cabad9b00b0b7"
+    },
+    {
+      "path": "src/sections/essentials.html",
+      "source_blob": "318e1aa34622f6cdea72b2dc28b1867f150d860e",
+      "kind": "main_section",
+      "primary_purpose": "essentials",
+      "review_scope": "Fact-check controls, time, progression, health, capture and training guidance.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "318e1aa34622f6cdea72b2dc28b1867f150d860e"
+    },
+    {
+      "path": "src/sections/home.html",
+      "source_blob": "f82f0fc941f65b395e695cf518268bfc5a64c79f",
+      "kind": "main_section",
+      "primary_purpose": "home",
+      "review_scope": "Navigation, 17-section consistency, source and generated home parity; no full factual completion.",
+      "slice": "A7",
+      "source_inventory": "prior source inspected; concurrent scoped A7-01 changes reviewed; full claims open",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "06690f68581640a9b32aa4dfb0086524e4e6b4f8"
+    },
+    {
+      "path": "src/sections/items.html",
+      "source_blob": "159efbdc6a16b4e211e03c2aa43b311d0dde2995",
+      "kind": "main_section",
+      "primary_purpose": "items",
+      "review_scope": "Verify recorded 264 items and 100 screws, exact access, numbering and field evidence.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "159efbdc6a16b4e211e03c2aa43b311d0dde2995"
+    },
+    {
+      "path": "src/sections/legends.html",
+      "source_blob": "d635166182e9f4b09c7c8e3776ea4d9f901a5869",
+      "kind": "main_section",
+      "primary_purpose": "legends",
+      "review_scope": "Every mission, rank, preparation, capture and event status; distinguish actual catch and gifts.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "d635166182e9f4b09c7c8e3776ea4d9f901a5869"
+    },
+    {
+      "path": "src/sections/maps.html",
+      "source_blob": "d0ddf15005f4043b338c03add0f0bffc1026fdec",
+      "kind": "main_section",
+      "primary_purpose": "maps",
+      "review_scope": "Per-area rosters, coordinates and access; same data as Pokédex.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "d0ddf15005f4043b338c03add0f0bffc1026fdec"
+    },
+    {
+      "path": "src/sections/pokedex.html",
+      "source_blob": "c12739f3e5290f9506d36500a15f130e5aaab7dd",
+      "kind": "main_section",
+      "primary_purpose": "pokedex",
+      "review_scope": "Top priority: 364 roster entries, every supported form/acquisition, locations/time/weather, floors, directions, levels, prerequisites and map links.",
+      "slice": "A2",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "c12739f3e5290f9506d36500a15f130e5aaab7dd",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
+    },
+    {
+      "path": "src/sections/rewards.html",
+      "source_blob": "300e2089d5888221b90041e8fee4f9bb547b798b",
+      "kind": "main_section",
+      "primary_purpose": "rewards",
+      "review_scope": "Xerneas password/end date confirmed; announced Yveltal start added, no invented code; other gifts remain open.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "300e2089d5888221b90041e8fee4f9bb547b798b"
+    },
+    {
+      "path": "src/sections/secrets.html",
+      "source_blob": "32d25e6bdd8f12ab7db369218092ef37ab6be0f0",
+      "kind": "main_section",
+      "primary_purpose": "secrets",
+      "review_scope": "Verify each hidden activity/requirement, move unique source facts to proper destinations via links only.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "32d25e6bdd8f12ab7db369218092ef37ab6be0f0"
+    },
+    {
+      "path": "src/sections/sidequests.html",
+      "source_blob": "33ee3123d333544744009f6c00970cd6dcb2177b",
+      "kind": "main_section",
+      "primary_purpose": "sidequests",
+      "review_scope": "Audit each ID, unlock, NPC location, solution and rewards; preserve progress.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "33ee3123d333544744009f6c00970cd6dcb2177b"
+    },
+    {
+      "path": "src/sections/sources.html",
+      "source_blob": "488e8c7521a6035a2bfa5b8291a519a4b0cde72d",
+      "kind": "main_section",
+      "primary_purpose": "sources",
+      "review_scope": "Update dated provenance and independent citations.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "488e8c7521a6035a2bfa5b8291a519a4b0cde72d"
+    },
+    {
+      "path": "src/sections/starters.html",
+      "source_blob": "1a20aed984c52a1015d00209dd593671d7ab6675",
+      "kind": "main_section",
+      "primary_purpose": "starters",
+      "review_scope": "Verify all three starter stats, evolutions and acquisition.",
+      "slice": "A7",
+      "source_inventory": "inspected exact unchanged source",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "1a20aed984c52a1015d00209dd593671d7ab6675"
+    },
+    {
+      "path": "src/sections/walkthrough.html",
+      "source_blob": "d18e66d6d57ba03a9d2f6808ada97f3e47bb7d4b",
+      "kind": "main_section",
+      "primary_purpose": "walkthrough",
+      "review_scope": "42 titles reconciled with Serebii, M39 branch clarification, remaining full step audit open.",
+      "slice": "A7",
+      "source_inventory": "prior source inspected; concurrent scoped A7-01 changes reviewed; full claims open",
+      "fact_status": "claim_review_open",
+      "publication": "not_approved_by_this_audit",
+      "current_parent_blob": "7805875c1de966d5720b924916a2db683812f13c"
+    },
+    {
+      "path": "guide.html",
+      "current_parent_blob": "3e011cc9dc27f64efb91ee4c356c0742f82cbc81",
+      "kind": "standalone",
+      "primary_purpose": "Existing task-based guide directory",
+      "review_scope": "Eight groups, 57 links; preserve current guide and test actual accessibility and navigation.",
+      "slice": "A7",
+      "source_inventory": "inspected concurrent exact head",
+      "fact_status": "not a full factual review",
+      "publication": "candidate"
+    }
+  ],
+  "directory": {
+    "path": "guide.html",
+    "status": "existing_concurrent_candidate_preserved",
+    "groups": [
+      "Adventure",
+      "Find and catch Pokémon",
+      "Interactive maps",
+      "Items and collectibles",
+      "Battles and training",
+      "Lumiose city life",
+      "Completion and rewards",
+      "Start here and help"
+    ],
+    "policy": "Preserve existing grouped directory, no duplicate. Prior A7-01 added headers and home access; capture-first remains P0."
+  },
+  "fact_checks": [
+    {
+      "topic": "Main mission numbering and titles",
+      "surfaces": [
+        "src/sections/walkthrough.html"
+      ],
+      "result": "All 42 existing title identities match Serebii, allowing punctuation/apostrophe variation. Does not verify all objectives.",
+      "sources": [
+        "https://www.serebii.net/legendsz-a/mainmissions.shtml"
+      ]
+    },
+    {
+      "topic": "Mission 39 legendary progression",
+      "surfaces": [
+        "src/sections/walkthrough.html",
+        "walkthrough.html",
+        "journey.html",
+        "index.html"
+      ],
+      "result": "Add first reward-match reception and Lida/Hotel Z branch to Missions 40 and 41; preserve 15-match Floette objective. Sources agree first reward match unlocks legendary story separately.",
+      "sources": [
+        "https://www.thonky.com/pokemon-legends-z-a/main-mission-39-the-infinite-z-a-royale",
+        "https://www.thonky.com/pokemon-legends-z-a/post-game",
+        "https://www.dexerto.com/wikis/pokemon-legends-z-a/all-main-story-missions-in-pokemon-legends-z-a-full-walkthrough/"
+      ]
+    },
+    {
+      "topic": "Current Ranked Battles Season X",
+      "surfaces": [
+        "battles.html",
+        "src/sections/battles.html"
+      ],
+      "result": "Official Season X notice supports 13 Nov 06:00 UTC–11 Dec 01:59 UTC, eligible IDs in detailed standalone, seven rank Y–S stones and 300/200/100/50 Mega Shards. Keep current content; detailed reward checks remain open.",
+      "sources": [
+        "https://plza-news.pokemon-home.com/en/page/53.html"
+      ]
+    },
+    {
+      "topic": "Mystery Gift timing",
+      "surfaces": [
+        "src/sections/rewards.html",
+        "rewards.html",
+        "index.html"
+      ],
+      "result": "Official UK Pokémon notice confirms CELEBRATE30TH until 7 Jan 2027 and announced Shiny Yveltal from 10 Dec 2026. Add upcoming notice, do not invent distribution password or say available yet.",
+      "sources": [
+        "https://www.pokemon.com/uk/news/get-shiny-xerneas-in-pokemon-legends-z-a-via-mystery-gift"
+      ]
+    },
+    {
+      "topic": "Weather guidance",
+      "surfaces": [
+        "atlas-area-surfaces.mjs",
+        "game-content.html"
+      ],
+      "result": "Serebii weather effects corroborate Goomy/Sliggoo rain, Riolu/Helioptile intense sun and Skarmory rain exclusion; PowerPyx reports two rainy Goomy spots; indoor sewer route remains attributed and unverified in-game. Full per-route time/weather research open.",
+      "sources": [
+        "https://www.serebii.net/legendsz-a/weather.shtml",
+        "https://www.powerpyx.com/pokemon-legends-z-a-goomy-location/",
+        "https://allthings.how/find-goomy-in-pokemon-legends-z-a-sewer-route-and-rainy-spawn/"
+      ]
+    }
+  ],
+  "parent_ci": {
+    "pages": {
+      "run": 46144848616,
+      "status": "success"
+    },
+    "articles": {
+      "run": 46144848592,
+      "status": "success"
+    },
+    "explorer": {
+      "run": 46144848604,
+      "status": "in_progress_at_review"
+    },
+    "new_head_validation": "pending"
+  },
+  "decision": "HOLD",
+  "workspace_changed": false,
+  "full_guide_fact_verified": false,
+  "source_inventory_baseline": "01857775fcd569f2a9bb9e3527cd7cd3f382177e",
+  "reconciliation": "Concurrent A7-01 candidate was committed to PR229 while independently preparing this slice. Retain its guide.html, M1–3 purpose notes, homepage capture-first change, shared headers, TM test repair and other tests. Never replay stale tree or create duplicate directory. Reapply only non-overlapping factual correction to exact current source.",
+  "a2_02_early_zone_capture_research": {
+    "id": "AT-348-A2-02-EARLY-ZONE-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 119,
+    "ledger_revision": 127,
+    "reviewed_parent": "07894fc47ccee47bdfd59a07e297e2c355b3fd99",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md",
+    "zones": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "existing_ordinary_records_enriched": 39,
+    "existing_fixed_alpha_records_enriched": 11,
+    "new_chance_alpha_records": 38,
+    "prior_chance_alpha_records_retained": 6,
+    "condition_packet": "atlas-area-condition-evidence.json",
+    "existing_area_evidence_preserved": true,
+    "coordinates_added": 0,
+    "exact_head_ci": "pending",
+    "visual_qa": "pending",
+    "full_guide_fact_verified": false,
+    "release_decision": "HOLD",
+    "workspace_changed": false,
+    "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification."
+  },
+  "a2_18_written_first": {
+    "manifest_revision": 145,
+    "ledger_revision": 153,
+    "reviewed_parent": "4a14f5ef4df688f23a84278e25a8c22f91620920",
+    "report": "docs/qa/AT348_A2_18_WRITTEN_CITY_CAPTURE.md",
+    "policy": {
+      "date": "2026-11-28",
+      "paid_services_allowed": false,
+      "additional_spending_allowed": false,
+      "priority": "Complete all written guide information first, accurately and with every game feature accounted for; preserve existing functioning systems.",
+      "evidence_states": [
+        "verified",
+        "source_supported",
+        "disputed",
+        "unresolved",
+        "not_applicable"
+      ],
+      "required_sequence": [
+        "Complete written coverage and record unresolved items explicitly",
+        "Make and test the existing GitHub site",
+        "Obtain owner review of working GitHub site",
+        "Prepare one final existing Workspace handoff only after GitHub acceptance"
+      ],
+      "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
+      "photographs": "Add newly available images independently in PR226 and integrate as validated batches; absent future images are not release blockers. Preserve existing integrated photo integrity.",
+      "release_decision": "HOLD",
+      "owner_review_pending": true
+    },
+    "affected_surfaces": [
+      "src/sections/pokedex.html",
+      "index.html"
+    ],
+    "status": "bounded_written_route_candidate",
+    "full_page_factual_review_completed": false,
+    "remaining": "Every existing surface requires whole-guide factual acceptance; source supported and unknown fields distinguished. Photos remain independent."
+  },
+  "a1_permanent_photo_policy": {
+    "manifest_revision": 146,
+    "ledger_revision": 154,
+    "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md",
+    "policy": {
+      "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
+      "owner_instruction_date": "2026-11-28",
+      "title": "Permanent photographic evidence intake and gallery maintenance",
+      "status": "ongoing_parallel_urgent_on_arrival_non_blocking",
+      "priority": "urgent on arrival at next active opportunity; no unattended work claimed",
+      "source_pr": 226,
+      "source_pr_permanently_open": true,
+      "active_integration_pr": 229,
+      "requires_finite_completion": false,
+      "blocks_other_development": false,
+      "blocks_github_release_due_to_incomplete_photo_coverage": false,
+      "blocks_workspace_update_due_to_incomplete_photo_coverage": false,
+      "require_empty_queue": false,
+      "sequence": [
+        "Register received originals and preserve bytes, filenames, provenance and location evidence",
+        "Check duplicates, exact source and destination, and compatible guide context",
+        "Promptly add validated originals and relevant written directions to existing galleries, pages and maps; no invented pins",
+        "Verify incorporated assets and links and record usage and pending evidence",
+        "Continue written and functional guide development in parallel; defer unready optional photo batches without delaying release"
+      ],
+      "release_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
+      "no_paid_services": true,
+      "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
+    },
+    "scope": "Photo coverage not a requirement for full written page review; current integrated images still subject to scoped regression validation."
+  },
+  "a2_19_city_level_colour_audit": {
+    "manifest_revision": 147,
+    "ledger_revision": 155,
+    "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
+    "report": "docs/qa/AT348_A2_19_CITY_LEVEL_COLOUR_AUDIT.md",
+    "affected_surfaces": [
+      "src/sections/pokedex.html",
+      "index.html"
+    ],
+    "status": "bounded_12_card_audit_candidate",
+    "full_page_factual_review_completed": false
+  }
+}

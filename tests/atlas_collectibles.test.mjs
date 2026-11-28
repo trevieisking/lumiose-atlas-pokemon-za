@@ -293,3 +293,70 @@ test('real collectibles match displayed labels, accents and a bounded Wild Zone 
   assert.equal(ids('', 'item').length, 264);
   assert.equal(ids('', 'screw').length, 100);
 });
+
+// AT-348 A3-01: immutable field evidence is additive and never owns progress or pins.
+test('all 65 field groups and 318 exact original photos are retained without assigning map pins or checklist IDs',()=>{
+  const field=JSON.parse(read('docs/field-guides/collectible-photo-register.json'));
+  const review=JSON.parse(read('docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json'));
+  const page=read('collectible-fieldbook.html'),guide=read('docs/field-guides/collectible-locations.md');
+  assert.deepEqual(field.counts,{tm:22,item:20,screw:22,access:1,collectibleFinds:64,photos:318});
+  assert.equal(field.entries.length,65);
+  assert.equal(new Set(field.entries.map(e=>e.id)).size,65);
+  assert.equal((page.match(/<details class="field-find" id="/g)||[]).length,65);
+  assert.equal((page.match(/<img src="assets\/atlas\/(?:collectibles|access)\//g)||[]).length,318);
+  const paths=field.entries.flatMap(e=>e.photos.map(p=>p.path));
+  assert.equal(new Set(paths).size,318);
+  assert.deepEqual(Object.keys(review.photo_git_blobs).sort(),paths.slice().sort());
+  for(const e of field.entries){
+    assert.equal(e.atlasCoordinate,null);assert.equal(e.canonicalChecklistId,null);
+    assert.ok(page.includes('id="'+e.id+'"'),e.id);
+    for(const p of e.photos){
+      assert.ok(page.includes('src="'+p.path+'"')&&page.includes('href="'+p.path+'"'),p.path);
+      assert.ok(guide.includes(p.path),p.path);
+      const bytes=fs.readFileSync(new URL('../'+p.path,import.meta.url));
+      assert.equal(bytes.subarray(0,4).toString(),'RIFF');assert.equal(bytes.subarray(8,12).toString(),'WEBP');
+      const blob=crypto.createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex');
+      assert.equal(blob,review.photo_git_blobs[p.path],p.path+' exact source Git blob');
+    }
+  }
+  assert.match(page,/No collection progress is changed/);
+  assert.doesNotMatch(page,/<input\\b|data-(?:atlas-pickup|atlas-screw|pickup|screw)=/);
+  assert.equal(production.placements.length,0);
+  for(const file of ['items.html','atlas-explorer.html'])assert.ok(read(file).includes('href="collectible-fieldbook.html"'));
+  const written=JSON.parse(read('docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json')).records;
+  assert.equal(review.tm_candidates.length,13);assert.equal(review.unmatched_tm.length,4);
+  for(const c of review.tm_candidates){
+    const row=written.find(x=>x.id===c.original_checklist_candidate);
+    assert.equal(row.move,c.name);assert.equal(row.tm,c.tm);assert.equal(row.zone,c.zone);
+    assert.equal(c.canonical_assignment,false);
+    assert.equal(original.zones.flatMap(z=>z.items).find(x=>x.id===row.id).name,row.tm);
+  }
+});
+
+// A3-02: guide links expose evidence independently of original checklist state.
+test('fieldbook deep links preserve original TM access notes and keep access comparisons non-authoritative',()=>{
+ const review=JSON.parse(read('docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json'));
+ const routeReview=JSON.parse(read('docs/qa/AT348_A3_02_ACCESS_ROUTE_COMPARISONS.json'));
+ const field=JSON.parse(read('docs/field-guides/collectible-photo-register.json'));
+ const access=JSON.parse(read('MAPS_ACCESS_ROUTE_SURVEY.json')).leads;
+ const html=read('collectible-fieldbook.html');
+ for(const row of field.entries)assert.ok(html.includes('id="'+row.id+'-photos"'),row.id);
+ for(const file of ['items.html','sector-maps.html']){
+   const source=read(file);let links=0;
+   for(const row of review.tm_candidates){
+     const notes=[...source.matchAll(new RegExp('<span data-tm-access="'+row.original_checklist_candidate+'">([^]*?)</span>','g'))];
+     const expected=file==='sector-maps.html'&&row.original_checklist_candidate==='5-7'?2:1;
+     assert.equal(notes.length,expected);
+     for(const note of notes){assert.match(note[1],/exact pin unverified/);assert.ok(note[1].includes('href="collectible-fieldbook.html#'+row.field_id+'-photos"'));links++;}
+   }
+   assert.equal(links,file==='items.html'?13:14);
+ }
+ assert.equal(routeReview.comparisons.length,6);
+ for(const r of routeReview.comparisons){
+   assert.ok(field.entries.some(e=>e.id===r.field_id));
+   const leads=r.existing_access_leads.map(id=>access.find(a=>a.id===id));assert.ok(leads.every(Boolean));
+   assert.ok(r.candidate_original_screw_ids.every(id=>leads.some(a=>a.candidate_original_screw_ids.includes(id))));
+   assert.equal(r.canonical_screw_id,null);assert.equal(r.canonical_checklist_id,null);assert.equal(r.native_xy,null);assert.equal(r.route_geometry_approved,false);assert.equal(r.publish_pin,false);
+ }
+ assert.equal(production.placements.length,0);
+});

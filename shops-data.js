@@ -1,4 +1,4 @@
-// Catalog transcribed from the owner's six-page Lumiose Shops & Mega Shards PDF (21 Nov 2026). Published sources disagree on Poké Ball and Sharpedonite; PDF values retained and flagged. Premier Ball ₽200 was independently confirmed by the player. New 10-item café drink group derives from player screenshots and price report; its location is NOT established. Missing PDF prices are null. Shards, Screws and Pokédollars are NOT interchangeable.
+// Catalog transcribed from the owner's six-page Lumiose Shops & Mega Shards PDF (21 Nov 2026). Legends: Z-A Center stock supports the PDF’s ₽100 Poké Ball. The Quasartico shop table and regional guides support 180 Mega Shards for Sharpedonite; the PDF and some tables list 240. Premier Ball ₽200 was independently confirmed by the player. The 10-item Nouveau Café menu derives from player screenshots and price report; the photographed branch is not identified. Missing PDF prices are null. Shards, Screws and Pokédollars are NOT interchangeable.
 window.ATLAS_SHOPS = [
   {
     "id": "centers",
@@ -6,7 +6,7 @@ window.ATLAS_SHOPS = [
     "location": "Across Lumiose City",
     "currency": "money",
     "unlock": "Stock increases through the story",
-    "detail": "Restock basic Balls, medicines and training vitamins.",
+    "detail": "Restock basic Balls, medicines and training vitamins. Buy 10 standard Poké Balls together for ₽1,000 and get one Premier Ball at no extra cost.",
     "items": [
       {
         "name": "Poké Ball",
@@ -521,11 +521,11 @@ window.ATLAS_SHOPS = [
   },
   {
     "id": "cafe-drinks",
-    "name": "Café truck · drinks menu (player verified)",
-    "location": "Lumiose City café truck · exact street and truck number unverified",
+    "name": "Nouveau Café · shared drinks menu",
+    "location": "Vert Street, Bleu Sector 5 and Magenta Sector 3 · photographed branch unverified",
     "currency": "money",
-    "unlock": "Seen in player's in-game screenshots; access requirements not established",
-    "detail": "Coffee, tea and other drinks in the exact three-menu order photographed by the player. Names and order come from screenshots; prices were confirmed directly by the player. This truck has not been verified as Nouveau Café Truck No. 3.",
+    "unlock": "Player-verified shared menu; individual access requirements not established",
+    "detail": "Coffee, tea and other drinks in the exact three-menu order photographed by the player. Names and order come from screenshots; prices were confirmed directly by the player. The menu matches all three Nouveau Café trucks; the photographed branch is unverified.",
     "source": "Owner-supplied in-game menu photographs and first-hand prices, 21 November 2026",
     "items": [
       {
@@ -704,7 +704,7 @@ window.ATLAS_SHOPS = [
       },
       {
         "name": "Sharpedonite",
-        "price": 240
+        "price": 180
       },
       {
         "name": "Skarmorite",

@@ -32,12 +32,41 @@
   }
 
   let state = {check:{},sideCheck:{},legendCheck:{},pickup:{},screw:{}};
-  try {
-    const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
-    if (saved && typeof saved === 'object') {
-      for (const kind of checkedKinds) if (saved[kind] && typeof saved[kind] === 'object') state[kind] = saved[kind];
+  const isRecord = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+  function readProgressRecord() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      const saved = raw === null ? {} : JSON.parse(raw);
+      if (!isRecord(saved) || checkedKinds.some(kind =>
+        Object.hasOwn(saved,kind) && !isRecord(saved[kind]))) return null;
+      return saved;
+    } catch (_) { return null; }
+  }
+  function adoptProgress(saved) {
+    for (const kind of checkedKinds) state[kind] = Object.hasOwn(saved,kind) ? {...saved[kind]} : {};
+  }
+  const initialProgress = readProgressRecord();
+  if (initialProgress !== null) adoptProgress(initialProgress);
+  function writeProgress(kind, patch, removeIds=[]) {
+    // Read the latest record, not a stale snapshot held by this page.
+    const latest = readProgressRecord();
+    if (latest !== null) adoptProgress(latest);
+    const bucket = {...state[kind],...patch};
+    for (const id of removeIds) delete bucket[id];
+    state[kind] = bucket;
+    if (latest !== null) {
+      try {
+        localStorage.setItem(KEY, JSON.stringify({...latest,[kind]:bucket}));
+        return true;
+      } catch (_) { /* Keep this tab usable without replacing the saved record. */ }
     }
-  } catch (_) { /* Private browsing or blocked storage: controls still work in this tab. */ }
+    announce('Progress changed in this tab only. Saved progress could not be updated.');
+    return false;
+  }
+  function refreshProgressFromStorage() {
+    const latest = readProgressRecord();
+    if (latest !== null) { adoptProgress(latest); restoreProgress(); }
+  }
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const write = () => { try {localStorage.setItem(KEY, JSON.stringify(state));} catch (_) {} };
@@ -528,7 +557,7 @@
     if(load){loadRecipe(load.dataset.loadRecipe);return;}
     const clear=e.target.closest('#donutClear');if(clear){$$('#donutSlots select').forEach(el=>el.value='');updateDonutPreview();return;}
     const reset=e.target.closest('#clearProgress');
-    if(reset){if(confirm('Reset all 42 mission checkboxes in this local reconstruction?')){state.check={};write();restoreProgress();}return;}
+    if(reset){if(confirm('Reset all 42 mission checkboxes in this local reconstruction?')){writeProgress('check',{},$$('input[type="checkbox"][data-check]').map(input=>getId(input.getAttribute('data-check'))));restoreProgress();}return;}
     const dexSource=e.target.closest('[data-dex-source]');
     if(dexSource){$$('[data-dex-source]').forEach(el=>el.classList.toggle('active',el===dexSource));updateDexFilter();return;}
     const review=e.target.closest('[data-atlas-review]');
@@ -550,10 +579,8 @@
     if(target.matches('input[type="checkbox"]')){
       const attrs={check:'data-check',sideCheck:'data-side-check',legendCheck:'data-legend-check',pickup:'data-pickup',screw:'data-screw'};
       for(const [kind,attr] of Object.entries(attrs))if(target.hasAttribute(attr)){
-        const val=getId(target.getAttribute(attr));state[kind][val]=target.checked;write();
-        target.closest('.mission')?.classList.toggle('done',target.checked);
-        target.closest('.side-quest')?.classList.toggle('done',target.checked);
-        updateProgress();break;
+        const val=getId(target.getAttribute(attr));writeProgress(kind,{[val]:target.checked});
+        restoreProgress();break;
       }
     }
     if(target.id==='dexSort')sortDex();
@@ -572,6 +599,8 @@
   }
   restoreProgress();
   updateMissionFilter();updateSideFilter();updateBossFilter();updateAlphaFilter();updateLegendFilter();updateItemFilter();updateBerryFilter();updateDexFilter();updateRecipes();updateScrewFilter();
+  window.addEventListener('storage',event=>{if(event.key===KEY||event.key===null)refreshProgressFromStorage();});
+  window.addEventListener('pageshow',refreshProgressFromStorage);
   window.addEventListener('hashchange',renderRoute);
   renderRoute();
   import('./atlas-area-surfaces.mjs').then(async({installAreaSurface,installDexHabitatLinks})=>{

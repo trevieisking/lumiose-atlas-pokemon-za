@@ -112,3 +112,12 @@ assert.match(elements.missionIndexProgress.textContent,/could not be read/);
 assert.equal(writes,0,"Never overwrite a saved mission, report or future progress field");
 assert.equal(reads,2,"The index only reads on initial load and focus; filtering and deep links never need extra storage access");
 console.log("PASS: 42 source-exact mission steps/tips/maps, 25-link menu, working links/images, read-only shared progress, search/filter/hash and mobile UI.");
+
+// AT-348: source-reviewed mission identity, order and introductory purpose notes.
+const expectedTitles=["Get Your Travel Bag Back","Escape from the Battle Zone","A New Life in Lumiose City","Battling in the Z-A Royale","The City in the Shadow of Prism Tower","Reaching Rank X","Reaching Rank W","Reaching Rank V","Chase That Mysterious Pokémon","The Secrets of Mega Evolution","A Rogue Mega Slowbro","A Rogue Mega Camerupt","A Rogue Mega Victreebel","Reaching Rank E","A Job for Team MZ","A Rogue Mega Beedrill","A Rogue Mega Hawlucha","A Rogue Mega Banette","Reaching Rank D","A Request from the Rust Syndicate","A Rogue Mega Mawile","A Rogue Mega Barbaracle","A Rogue Mega Ampharos","Reaching Rank C","A Showdown on the Battle Court","An Invitation from the SBC","A Rogue Mega Froslass","A Rogue Mega Altaria","A Rogue Mega Venusaur","Reaching Rank B","A Summons from Vinnie","A Rogue Mega Dragonite","A Rogue Mega Tyranitar","A Rogue Mega Starmie","Reaching Rank A","Prism Tower's Dark Turn","Operation Protect Lumiose","The Future of Lumiose City","The Infinite Z-A Royale","The One That Gives","The One That Takes","To Keep the World in Balance"];
+const normalTitle=s=>s.replace(/[’‘]/g,"'").replace(/[!.]$/,"").trim();
+assert.deepEqual(titlePairs.map(([n,title])=>[n,normalTitle(title)]),expectedTitles.map((title,i)=>[i+1,title]));
+const journey=read("journey.html");
+const jTitles=[...journey.matchAll(/<article[^>]*id="journey-mission-(\d+)"[^>]*>[\s\S]*?<h3>([\s\S]*?)<\/h3>/g)].map(m=>[Number(m[1]),normalTitle(m[2])]);
+assert.deepEqual(jTitles,expectedTitles.map((title,i)=>[i+1,title]));
+for(let n=1;n<=3;n++){const pattern=new RegExp('<p class="mission-purpose" data-mission-purpose="'+n+'">([^<]+)</p>');const a=original.match(pattern),b=html.match(pattern),c=journey.match(pattern);assert.ok(a&&b&&c);assert.equal(a[1],b[1]);assert.equal(a[1],c[1]);}

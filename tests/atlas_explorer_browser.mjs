@@ -24,6 +24,7 @@ try{
       for(const route of ["items.html","sector-maps.html"]){
         await probe.goto(base+"/"+route,{waitUntil:"load"});
         const tmRows=JSON.parse(fs.readFileSync("docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json","utf8")).records;
+        const fieldMatches=JSON.parse(fs.readFileSync("docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json","utf8")).tm_candidates;
         for(const {id} of tmRows){
           const notes=probe.locator('[data-tm-access="'+id+'"]');
           assert.equal(await notes.count(),route==="sector-maps.html"&&id==="5-7"?2:1);
@@ -32,6 +33,10 @@ try{
             await note.scrollIntoViewIfNeeded();
             assert.ok(await note.isVisible(),route+" "+id);
             assert.match(await note.textContent(),/exact pin unverified/);
+            const field=fieldMatches.find(row=>row.original_checklist_candidate===id);
+            const photoLink=note.locator("a[data-field-evidence]");
+            assert.equal(await photoLink.count(),field?1:0);
+            if(field)assert.equal(await photoLink.getAttribute("href"),"collectible-fieldbook.html#"+field.field_id+"-photos");
             const bounds=await note.evaluate(el=>({right:el.getBoundingClientRect().right,left:el.getBoundingClientRect().left,width:document.documentElement.clientWidth}));
             assert.ok(bounds.left>=-1&&bounds.right<=bounds.width+1,route+" "+id+" "+JSON.stringify(bounds));
             if(id==="18-7"){
@@ -43,6 +48,17 @@ try{
           }
         }
       }
+      // Native fragment targeting a descendant reveals the closed details.
+      const fieldId="wild-zone-3-aerial-ace-rouge-plaza-rooftop";
+      const link=probe.locator('a[data-field-evidence="'+fieldId+'"]');
+      await link.scrollIntoViewIfNeeded();await link.click();
+      await probe.waitForURL("**/collectible-fieldbook.html#"+fieldId+"-photos");
+      const entry=probe.locator("#"+fieldId);
+      assert.equal(await entry.evaluate(el=>el.open),true,"Deep link opens the photographic directions");
+      assert.match(await entry.textContent(),/Alpha Litleo/);
+      const image=entry.locator("img").first();await image.scrollIntoViewIfNeeded();await image.evaluate(el=>el.decode());
+      assert.ok(await image.evaluate(el=>el.naturalWidth>0));
+      await entry.locator(".field-gallery").screenshot({path:output+"/at348-aerial-ace-linked-"+spec.name+".png"});
     }finally{await probe.close();}
   }
   // Fail early with actual uncontained element bounds on the sector directory.
@@ -1099,6 +1115,8 @@ try{
   const at310Directory=await phoneContext.newPage();
   await at310Directory.goto(base+"/sector-maps.html#sector-jaune-sector-5",{waitUntil:"load"});
   const at310Legacy=at310Directory.locator("#sector-jaune-sector-5 details.sector-context-detail");
+  // The contextual crop is attached by an asynchronous dynamic import.
+  await at310Legacy.waitFor({state:"attached"});
   assert.equal(await at310Legacy.count(),1);
   await at310Legacy.locator("summary").click();
   assert.equal(await at310Legacy.evaluate(el=>el.open),true);
@@ -1484,6 +1502,62 @@ try{
     assert.match(await page.locator("#aeSelected").textContent(),/exact rooftop landing.*unverified/);
     await gallery.screenshot({path:output+"/hotel-z-ladder-gallery-"+kind+".png"});
   }
+
+  // AT-348 A1-01: do not silently truncate the ten-photo Looker Bureau survey.
+  const ownerLifts=JSON.parse(fs.readFileSync("atlas-explorer-data.json","utf8")).holovators;
+  assert.equal(ownerLifts.length,21);
+  assert.equal(new Set(ownerLifts.flatMap(h=>h.photos.map(p=>p.path))).size,111);
+  const looker=ownerLifts.find(h=>h.id==="rouge5-looker");
+  assert.equal(looker.photos.length,10,"The original ten registered photographs must remain intact");
+  for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
+    await page.goto(base+"/atlas-explorer.html?place=rouge5-looker",{waitUntil:"load"});
+    const gallery=page.locator("#aeSelected .ae-photo-grid");
+    await gallery.waitFor({state:"visible"});
+    assert.equal(await gallery.locator("figure").count(),10,
+      "All ten owner photographs must be rendered, including the two previously hidden originals");
+    assert.match(await page.locator("#aeSelected").textContent(),/10 genuine owner photographs on GitHub/);
+    for(const [i,photo] of looker.photos.entries()){
+      const figure=gallery.locator("figure").nth(i);
+      const img=figure.locator("img");
+      await img.scrollIntoViewIfNeeded();
+      assert.equal(await img.getAttribute("src"),photo.path);
+      assert.equal(await figure.locator("a").getAttribute("href"),photo.path);
+      assert.equal(await figure.locator("a").getAttribute("target"),"_blank");
+      assert.equal(await img.getAttribute("loading"),"lazy");
+      assert.ok((await img.getAttribute("alt")).length>0);
+      await page.waitForFunction(expected=>Array.from(document.querySelectorAll("#aeSelected .ae-photo-grid img")).some(img=>img.getAttribute("src")===expected&&img.complete&&img.naturalWidth>0&&img.naturalHeight>0),photo.path,{timeout:20000});
+    }
+    assert.match(await gallery.locator("figure").nth(8).textContent(),/wide city map revisit/i);
+    assert.match(await gallery.locator("figure").nth(9).textContent(),/rooftop arrival revisit/i);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Complete gallery fits "+kind);
+    await gallery.screenshot({path:output+"/at348-looker-ten-photos-"+kind+".png"});
+  }
+  // A1-03: every remaining lift gallery must render its own complete inventory.
+  // Use the established deep-link flow without touching map pins or storage.
+  for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
+    let decoded=looker.photos.length;
+    for(const item of ownerLifts.filter(h=>h.id!==looker.id)){
+      await page.goto(base+"/atlas-explorer.html?place="+encodeURIComponent(item.id),{waitUntil:"load"});
+      const gallery=page.locator("#aeSelected .ae-photo-grid");
+      await gallery.waitFor({state:"visible"});
+      const figures=gallery.locator("figure");
+      assert.equal(await figures.count(),item.photos.length,kind+" "+item.id+" gallery count");
+      for(const [index,photo] of item.photos.entries()){
+        const figure=figures.nth(index),img=figure.locator("img");
+        assert.equal(await img.getAttribute("src"),photo.path,kind+" "+item.id+" preview identity");
+        assert.equal(await figure.locator("a").getAttribute("href"),photo.path,kind+" "+item.id+" full-size identity");
+        assert.ok((await img.getAttribute("alt")||"").length>0);
+        await img.scrollIntoViewIfNeeded();
+        await img.evaluate(node=>node.decode());
+        assert.ok(await img.evaluate(node=>node.naturalWidth>0&&node.naturalHeight>0),photo.path+" decodes");
+        decoded++;
+      }
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Gallery fits "+kind+" "+item.id);
+    }
+    assert.equal(decoded,111,"Every registered owner Holovator photo decodes on "+kind);
+  }
+  assert.equal(errors.length,0,"AT-348 gallery desktop JS errors: "+errors.join(" | "));
+  assert.equal(mobileErrors.length,0,"AT-348 gallery phone JS errors: "+mobileErrors.join(" | "));
   await phoneContext.close();await desktopContext.close();
   console.log("ATLAS_BROWSER_SMOKE_OK source map, 20 zones, 48 sectors, 21 lifts, 111 owner JPGs, native desktop/touch gestures, all 21 added images loaded in Cyclone, Wild Zone 6, #61 and Café Classe south galleries, no made-up pins, original routes retained");
 }finally{

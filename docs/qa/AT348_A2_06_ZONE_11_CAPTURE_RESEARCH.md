@@ -1,0 +1,9 @@
+# AT-348 A2-06 — Wild Zone 11 catch routes and Xerneas
+
+Draft #229, parent `6f3f86e654613739c45048365e21a5ad04439099`. Parent CI passed (46153215026, 46153215035, 46153215023). Six ordinary and two existing fixed Alpha rows enriched; six distinct chance Alpha rows. No new map geometry, pin, source image, or story-encounter identity.
+
+- [Pokéarth encounter bands](https://www.serebii.net/pokearth/lumiosecity/wildzone11.shtml), [published timing and story table](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11), [GameWith field photographs](https://gamewith.jp/pokemon-za/524524), [Nintendo Life route observations](https://www.nintendolife.com/guides/pokemon-legends-z-a-wild-zone-11-guide-all-pokemon-and-alphas), [VGC field notes](https://www.videogameschronicle.com/guide/pokemon-legends-z-a-wild-zone-11/).
+- Day and night reported for the ordinary roster. Gyarados at night is a search tip, not a restriction. A [day-only Alpha table](https://pokemongohub.net/post/guide/all-wild-zones-pokemon-legends-z-a/) differs from the day/night listings, so try daytime first. The Clawitzer spawner has an unresolved story check; [this field sighting](https://www.powerpyx.com/pokemon-legends-z-a-clawitzer-location/) supports availability after the zone opens, not all story states. No specific weather test or exact respawn interval.
+- The Slowbro section links the existing TM063 page without changing its evidence status. [Mission route](https://www.thonky.com/pokemon-legends-z-a/main-mission-40-the-one-that-gives) and [Xerneas capture/retry](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_11#During_Main_Mission_40) distinguish the required repeatable Lv. 75 Xerneas encounter from the three one-off mission Alphas.
+
+HOLD release pending complete audit, candidate CI and desktop/mobile verification. No Workspace changes.

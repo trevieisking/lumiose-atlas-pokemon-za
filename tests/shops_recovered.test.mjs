@@ -12,7 +12,7 @@ assert.equal(shops.find(s=>s.id==="quasartico").items.length,40);
 const cafe=shops.find(s=>s.id==="cafe-drinks");
 assert.ok(cafe,"The player-confirmed café must be a distinct listing");
 assert.equal(cafe.currency,"money");
-assert.match(cafe.location,/unverified/i,"Do not infer a café location from screenshots");
+assert.match(cafe.location,/Vert Street, Bleu Sector 5 and Magenta Sector 3.*photographed branch unverified/i,"Keep the shared branches distinct from the unknown photographed location");
 assert.equal(cafe.items.length,10);
 const expectedDrinks=[
  ["Coffee","Ember Roast",250],["Coffee","Flamethrower Roast",250],
@@ -25,7 +25,8 @@ assert.deepEqual(cafe.items.map(item=>[item.menu,item.name,item.price]),expected
 const cafeHtml=html.match(/<article class="shop-card shop-card-player" id="shop-cafe-drinks"[\s\S]*?<\/article>/)?.[0];
 assert.ok(cafeHtml,"The player café must appear as a static, searchable shop card");
 assert.match(cafeHtml,/1\. Coffee menu[\s\S]*2\. Tea menu[\s\S]*3\. Something else/);
-assert.match(cafeHtml,/location and truck number not yet confirmed/i);
+assert.match(cafeHtml,/photographed truck number not yet confirmed/i);
+assert.match(cafeHtml,/Nouveau Café · shared drinks menu/);
 for(const [,name,price] of expectedDrinks){
  const exactMarkup='<span class="shop-item-name">'+name+'</span><strong class="shop-item-price">₽'+price+'</strong>';
  assert.ok(cafeHtml.includes(exactMarkup),"Static café price mismatch for "+name);
@@ -40,18 +41,22 @@ for(const [id,name,price] of [
 ["boutique","Premier Ball",200],["boutique","Luxury Ball",3000],
 ["stones","Old Amber",30000],["stones","Medichamite",30000],
 ["quasartico","Exp. Candy S",8],["quasartico","Lucarionite",240],
-["quasartico","Sharpedonite",240],["quasartico","Metagrossite",360],
+["quasartico","Sharpedonite",180],["quasartico","Metagrossite",360],
 ["dlc-shards","Douse Drive",540],["dlc-shards","Shock Drive",540],
 ["dlc-shards","Burn Drive",540],["dlc-shards","Chill Drive",540],
 ["held-left","Metal Coat",4980],["held-right","Life Orb",4980],["bread","Canari Bread",1300]
 ]){
  const shop=shops.find(s=>s.id===id);
- assert.equal(shop?.items?.find(x=>x.name===name)?.price,price,"Incorrect PDF price for "+name+" at "+id);
+ assert.equal(shop?.items?.find(x=>x.name===name)?.price,price,"Incorrect catalog price for "+name+" at "+id);
 }
 for(const name of ["Racine Construction","Quasartico Inc.","Mega Dimension","Poké Ball Boutique","Stone Emporium","Nouveau Café Truck No. 3","Sitrus Berry","Lum Berry","Colorful Screws","Magearna","Genesect","77 screws","100 Colorful Screws","2,160","999 Shards"])assert.ok(html.includes(name),"Missing PDF concept "+name);
 assert.equal((html.match(/data-shop-card(?:\s|>)/g)||[]).length,18);
 assert.equal((html.match(/data-shop-item(?:\s|>)/g)||[]).length,200);
-assert.equal((html.match(/class="store-verify"/g)||[]).length,2);
+assert.doesNotMatch(html,/class="store-verify"/);
+assert.match(html,/shop-item-name">Sharpedonite<\/span><strong class="shop-item-price">180 Mega Shards/);
+assert.match(html,/shop-item-name">Poké Ball<\/span><strong class="shop-item-price">₽100/);
+assert.match(shops.find(x=>x.id==="centers").detail,/10 standard Poké Balls together for ₽1,000/);
+assert.match(html,/href="game-content\.html#service-lost-poke-ball-collectors"/);
 const nav=html.match(/<nav class="atlas-article-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
 const base=source.match(/<nav id="sideNav">([\s\S]*?)<\/nav>/)?.[1];
 assert.ok(nav&&base);

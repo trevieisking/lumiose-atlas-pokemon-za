@@ -1,0 +1,21 @@
+# AT-348 A2-05 — Wild Zone 10 actionable capture research
+
+28 November 2026. Candidate PR #229, parent 882638086398a03920a2e7cac7720e164710b2ee. Parent exact-head CI: 46152024204 (Pages), 46152024131 (articles), 46152024167 (Explorer), all success. Manifest 123 / joint ledger 131. New-head tests and visual review required.
+
+## Capture additions
+
+Seven existing ordinary records (Slowpoke, Bellsprout, Carvanha, Staryu, Tynamo, Watchog, Arbok) and three fixed Alpha records (Sharpedo, Watchog, Arbok) receive exact-record condition supplements. Seven chance Alpha rows describe ordinary-slot level bands, area routes and survey gating. The fixed Alpha Sharpedo is separate from an unresolved ordinary slot. Shared Pokédex/map projection is unchanged. No new marker coordinates. All original source evidence, photos, map geometry and progress IDs remain unchanged.
+
+## Fact correction across Zones 7–10
+
+The previous Zone 7–9 text incorrectly placed Vinnie's Rank F promotion before the start of Main Mission 10. [Thonky's ordered mission walkthrough](https://www.thonky.com/pokemon-legends-z-a/main-mission-10-the-secrets-of-mega-evolution) places the new zones after the early Absol tutorial battle and before Vinnie's promotion. [Serebii unlock table](https://www.serebii.net/legendsz-a/wildzones.shtml) confirms Main Mission 10. Correct 27 existing condition rows and 20 existing chance Alpha unlock texts without changing IDs or other evidence. Rank F is not a prerequisite to this early unlock. The more exact trigger within the tutorial is not independently field-tested.
+
+## Independent source comparison and remaining gaps
+
+- [Serebii Pokéarth Zone 10](https://www.serebii.net/pokearth/lumiosecity/wildzone10.shtml), [Bulbapedia Zone 10](https://bulbapedia.bulbagarden.net/wiki/Wild_Zone_10): ordinary and fixed level bands. Both list an ordinary Sharpedo at 30–32; Serebii also lists an ordinary-slot Alpha chance. The owner survey and [VGC](https://www.videogameschronicle.com/guide/pokemon-legends-z-a-wild-zone-10/), [Nintendo Life](https://www.nintendolife.com/guides/pokemon-legends-z-a-wild-zone-10-guide-all-pokemon-and-alphas) and [GO Hub](https://pokemongohub.net/post/guide/all-wild-zones-pokemon-legends-z-a/) list seven survey species and treat Sharpedo as fixed Alpha. Preserve the ordinary source lead, and explain this difference in the confirmed fixed Alpha's notes; do not add a duplicate chance claim until the independent ordinary slot location/identity is resolved. For reliable registration use the fixed Alpha or [level 30 Carvanha evolution](https://bulbapedia.bulbagarden.net/wiki/Carvanha).
+- VGC, Nintendo Life and GO Hub corroborate ground/roof/canal search areas. Staryu is reported at the eastern water edge/benches rather than the Zone 2 night island. Fixed Alpha Arbok is described as central or high western rooftop. The [Night Slash rooftop route](https://raiderking.com/pokemon-legends-z-a-all-tms-locations/) describes the Espace Vide ladder; [TM location cross-check](https://altissimo1.github.io/Supplementary-Series/Legends/Legends-Z-A/moves.html) supports the central roof, not every connecting ladder/turn. Ladder is a published access lead, not owner-measured marker; exact route turns remain unverified.
+- [Alpha rules](https://www.serebii.net/legendsz-a/alphapokemon.shtml), [Side Mission 001](https://www.serebii.net/legendsz-a/sidemissions/abigol%27bunnelby.shtml), [time skip](https://www.serebii.net/legendsz-a/daynightcycle.shtml), [weather](https://www.serebii.net/legendsz-a/weather.shtml). No universal weather guarantee or exact individual respawn interval is claimed. Day and night reported in this zone, not global species availability. All new routes are original summaries of sources; no field validation or invented coordinates.
+
+## Validation and gate
+
+Add count/identity, ordinary-vs-fixed/uncertain, unlock-order and Gible-preservation tests; extend browser checks for Tynamo in both Pokédex and map at phone and desktop sizes. Tests authored; exact-head execution and visual review pending. No application logic or player-state changes. No new PR, no Workspace credits or import. HOLD until remaining guide scope, CI and live verification are complete. Next Wild Zone 11.
