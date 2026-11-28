@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 120,
-  "ledger_revision": 128,
+  "manifest_revision": 121,
+  "ledger_revision": 129,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,7 +246,7 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_early_zone_capture_conditions_candidate_50_existing_plus_38_chance_alpha_full_research_open",
+      "status": "p0_zone_01_08_capture_candidate_68_condition_supplements_full_research_open",
       "source": "AT-346 / #220",
       "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open.",
       "priority": "P0"
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification.",
+  "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1056,5 +1056,39 @@
     "workspace_changed": false,
     "previous_head": "212a8f83563d2092ed4ad3105b75ed30435ba34e",
     "active_pr": 229
+  },
+  "a2_03_zone_07_08_capture_research": {
+    "id": "AT-348-A2-03-ZONE-07-08-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 121,
+    "ledger_revision": 129,
+    "reviewed_parent": "a5b4dae05841928ffb2de3ca4ce9fad9d7bed4a0",
+    "active_pr": 229,
+    "zones": [
+      7,
+      8
+    ],
+    "existing_ordinary_rows_enriched": 15,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 14,
+    "cumulative_conditions": 68,
+    "cumulative_chance_alpha_packet_rows": 58,
+    "report": "docs/qa/AT348_A2_03_ZONE_07_08_CAPTURE_RESEARCH.md",
+    "disputes": [
+      "Wild Zone 7 Gastly remains disputed and receives no chance Alpha addition.",
+      "Wild Zone 8 fixed Camerupt timing and additional progression gate unresolved."
+    ],
+    "parent_ci": [
+      46147184368,
+      46147184376,
+      46147184412
+    ],
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
   }
 }

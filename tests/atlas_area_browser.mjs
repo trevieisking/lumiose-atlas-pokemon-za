@@ -686,6 +686,11 @@ try{
     await page.goto(base+"/atlas-explorer.html?area=wz-02&species=staryu&encounter=ordinary",{waitUntil:"load"});await panel();
     assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/Level: 5–7/);
     assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/southeastern island/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-08&species=gible&encounter=ordinary",{waitUntil:"load"});await panel();
+    const gibleRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-08-gible-ordinary"]');
+    assert.match(await gibleRoute.textContent(),/Level: 24–25/);
+    assert.match(await gibleRoute.textContent(),/blue fin/);
+
     await unchanged();
 
     // Reviewed chance Alpha rows are independent of the original fixed and
