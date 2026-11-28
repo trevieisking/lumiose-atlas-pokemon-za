@@ -24,6 +24,7 @@ try{
       for(const route of ["items.html","sector-maps.html"]){
         await probe.goto(base+"/"+route,{waitUntil:"load"});
         const tmRows=JSON.parse(fs.readFileSync("docs/qa/ATLAS_TM_ACCESS_RESEARCH_2026-11-26.json","utf8")).records;
+        const fieldMatches=JSON.parse(fs.readFileSync("docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json","utf8")).tm_candidates;
         for(const {id} of tmRows){
           const notes=probe.locator('[data-tm-access="'+id+'"]');
           assert.equal(await notes.count(),route==="sector-maps.html"&&id==="5-7"?2:1);
@@ -32,6 +33,10 @@ try{
             await note.scrollIntoViewIfNeeded();
             assert.ok(await note.isVisible(),route+" "+id);
             assert.match(await note.textContent(),/exact pin unverified/);
+            const field=fieldMatches.find(row=>row.original_checklist_candidate===id);
+            const photoLink=note.locator("a[data-field-evidence]");
+            assert.equal(await photoLink.count(),field?1:0);
+            if(field)assert.equal(await photoLink.getAttribute("href"),"collectible-fieldbook.html#"+field.field_id+"-photos");
             const bounds=await note.evaluate(el=>({right:el.getBoundingClientRect().right,left:el.getBoundingClientRect().left,width:document.documentElement.clientWidth}));
             assert.ok(bounds.left>=-1&&bounds.right<=bounds.width+1,route+" "+id+" "+JSON.stringify(bounds));
             if(id==="18-7"){
@@ -43,6 +48,17 @@ try{
           }
         }
       }
+      // Native fragment targeting a descendant reveals the closed details.
+      const fieldId="wild-zone-3-aerial-ace-rouge-plaza-rooftop";
+      const link=probe.locator('a[data-field-evidence="'+fieldId+'"]');
+      await link.scrollIntoViewIfNeeded();await link.click();
+      await probe.waitForURL("**/collectible-fieldbook.html#"+fieldId+"-photos");
+      const entry=probe.locator("#"+fieldId);
+      assert.equal(await entry.evaluate(el=>el.open),true,"Deep link opens the photographic directions");
+      assert.match(await entry.textContent(),/Alpha Litleo/);
+      const image=entry.locator("img").first();await image.scrollIntoViewIfNeeded();await image.evaluate(el=>el.decode());
+      assert.ok(await image.evaluate(el=>el.naturalWidth>0));
+      await entry.locator(".field-gallery").screenshot({path:output+"/at348-aerial-ace-linked-"+spec.name+".png"});
     }finally{await probe.close();}
   }
   // Fail early with actual uncontained element bounds on the sector directory.

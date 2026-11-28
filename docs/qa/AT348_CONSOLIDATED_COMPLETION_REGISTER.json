@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 114,
-  "ledger_revision": 122,
+  "manifest_revision": 115,
+  "ledger_revision": 123,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -28,7 +28,7 @@
     "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/docs/field-guides/collectible-locations.md#colorful-screw--vert-sector-4-courtyard-scaffold",
     "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/cd24fc4f6a047ae819af025cfe08fc70391bfb5a/collectible-fieldbook.html#vert-4-colorful-screw-courtyard-scaffold",
     "local_validation": "Static validation and 14 focused collectible tests passed. All 211 registered photo paths exist. The five new WebP files match the originals byte for byte, and the new fieldbook entry links all five.",
-    "integration": "216 exact reviewed blobs transferred to single PR229 candidate; validation and access/canonical crosswalk pending",
+    "integration": "216 source blobs transferred at prior head; photo hashes, Pages build and representative fieldbook browser checks passed; new additive crosslinks pending new-head validation",
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
@@ -253,9 +253,9 @@
     {
       "id": "A3",
       "title": "Maps and written access",
-      "status": "fieldbook_216_exact_blobs_integrated_candidate_tests_pending_canonical_and_access_crosswalk_open",
+      "status": "fieldbook_core_checks_passed_27_contextual_links_and_6_access_comparisons_candidate_pending",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending."
     },
     {
       "id": "A4",
@@ -296,7 +296,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "existing AT348 row revision113 verified; scoped sync after exact readback",
+  "supabase_sync": "existing AT348 row revision114 verified; scoped sync after exact readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -369,7 +369,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification.",
+  "next_slice": "Review exact-head test results and new deep-link screenshots; verify whether the isolated HTTP HEAD readiness fix prevents the recurring fashion startup crash. Continue remaining A3 registration and identity/route gaps and A2 Pokédex source review without reopening A1 bounded repairs. Keep unresolved coordinates/pins explicitly unverified; no Workspace activity until full GitHub Pages live validation.",
   "ordered_slices": [
     "A1",
     "A3",
@@ -847,5 +847,58 @@
     "workspace_release_allowed": false,
     "release_decision": "HOLD",
     "next_slice": "Review exact new-head Explorer, article and Pages output checks, including fieldbook link/render and exact 211-photo byte preservation. Review A3 candidate TM crosswalk, other item/Screw identity and access route/coordinate evidence; continue A2, A7, A4/A5, A6 and A8. External artwork availability and remaining manual image/source identity audit are separate open tasks; no repeated A1-01/A1-02 repair. No Workspace action before complete GitHub live verification."
+  },
+  "a3_02_access_crosslinks": {
+    "id": "AT-348-A3-02-ACCESS-CROSSLINKS",
+    "date": "2026-11-28",
+    "manifest_revision": 115,
+    "ledger_revision": 123,
+    "reviewed_parent": "49959f57e5d8bf634aa58813fe4f985febc8518a",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "active_pr": 229,
+    "source_pr226_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "prior_checks": {
+      "pages": {
+        "run": 46132390522,
+        "conclusion": "success",
+        "html_pages": 28,
+        "local_assets": 995,
+        "external_urls": 108
+      },
+      "explorer": {
+        "run": 46132390586,
+        "unit": "success",
+        "areas_browser": "success",
+        "map_and_fieldbook_browser_steps": "success",
+        "wild_zone_final_step": "in_progress_at_review"
+      },
+      "article": {
+        "run": 46132390524,
+        "unit": "success",
+        "fashion": "failed Node 22.23.5 Undici Parser.finish startup assertion; recurred on previous heads"
+      }
+    },
+    "fieldbook": {
+      "groups": 43,
+      "photos": 211,
+      "source_hash_checks": "passed",
+      "representative_browser_tests": "passed",
+      "links": {
+        "items.html": 13,
+        "sector-maps.html": 14
+      },
+      "deep_link_targets": 43
+    },
+    "route_comparisons": {
+      "file": "docs/qa/AT348_A3_02_ACCESS_ROUTE_COMPARISONS.json",
+      "count": 6,
+      "canonical_ids_assigned": 0,
+      "pins_added": 0
+    },
+    "test_stability": "Replace unconsumed GET fetch readiness probe only in recurring failing fashion suite with node:http HEAD, agent:false, drain and 1s timeout. Root cause hypothesis is test transport startup path, not guide application; confirm on new head. No skipped or weakened assertions.",
+    "new_head_validation": "pending",
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Review exact-head test results and new deep-link screenshots; verify whether the isolated HTTP HEAD readiness fix prevents the recurring fashion startup crash. Continue remaining A3 registration and identity/route gaps and A2 Pokédex source review without reopening A1 bounded repairs. Keep unresolved coordinates/pins explicitly unverified; no Workspace activity until full GitHub Pages live validation."
   }
 }

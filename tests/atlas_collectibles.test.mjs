@@ -332,3 +332,31 @@ test('all 43 field groups and 211 exact original photos are retained without ass
     assert.equal(original.zones.flatMap(z=>z.items).find(x=>x.id===row.id).name,row.tm);
   }
 });
+
+// A3-02: guide links expose evidence independently of original checklist state.
+test('fieldbook deep links preserve original TM access notes and keep access comparisons non-authoritative',()=>{
+ const review=JSON.parse(read('docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json'));
+ const routeReview=JSON.parse(read('docs/qa/AT348_A3_02_ACCESS_ROUTE_COMPARISONS.json'));
+ const field=JSON.parse(read('docs/field-guides/collectible-photo-register.json'));
+ const access=JSON.parse(read('MAPS_ACCESS_ROUTE_SURVEY.json')).leads;
+ const html=read('collectible-fieldbook.html');
+ for(const row of field.entries)assert.ok(html.includes('id="'+row.id+'-photos"'),row.id);
+ for(const file of ['items.html','sector-maps.html']){
+   const source=read(file);let links=0;
+   for(const row of review.tm_candidates){
+     const notes=[...source.matchAll(new RegExp('<span data-tm-access="'+row.original_checklist_candidate+'">([^]*?)</span>','g'))];
+     const expected=file==='sector-maps.html'&&row.original_checklist_candidate==='5-7'?2:1;
+     assert.equal(notes.length,expected);
+     for(const note of notes){assert.match(note[1],/exact pin unverified/);assert.ok(note[1].includes('href="collectible-fieldbook.html#'+row.field_id+'-photos"'));links++;}
+   }
+   assert.equal(links,file==='items.html'?13:14);
+ }
+ assert.equal(routeReview.comparisons.length,6);
+ for(const r of routeReview.comparisons){
+   assert.ok(field.entries.some(e=>e.id===r.field_id));
+   const leads=r.existing_access_leads.map(id=>access.find(a=>a.id===id));assert.ok(leads.every(Boolean));
+   assert.ok(r.candidate_original_screw_ids.every(id=>leads.some(a=>a.candidate_original_screw_ids.includes(id))));
+   assert.equal(r.canonical_screw_id,null);assert.equal(r.canonical_checklist_id,null);assert.equal(r.native_xy,null);assert.equal(r.route_geometry_approved,false);assert.equal(r.publish_pin,false);
+ }
+ assert.equal(production.placements.length,0);
+});

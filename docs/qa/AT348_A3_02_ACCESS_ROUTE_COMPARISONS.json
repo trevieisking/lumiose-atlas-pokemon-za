@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "source_head": "49959f57e5d8bf634aa58813fe4f985febc8518a",
+  "field_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+  "field_register": "docs/field-guides/collectible-photo-register.json",
+  "access_register": "MAPS_ACCESS_ROUTE_SURVEY.json",
+  "tm_crosswalk": "docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json",
+  "policy": "Candidate comparisons only. No canonical IDs, exact point, floor, entrance/exit, complete geometry or new permanent marker assigned. The photographed locations do not establish physical match to a numbered checklist.",
+  "comparisons": [
+    {
+      "field_id": "bleu-6-western-scaffold",
+      "existing_access_leads": [
+        "AR-B06-01"
+      ],
+      "candidate_original_screw_ids": [
+        62,
+        63
+      ],
+      "basis": "Western building scaffold and ladder/ramp observations near Bleu Plaza; existing paired-course research lead. Visible purple beam does not establish identity or count.",
+      "status": "candidate_infrastructure_corroboration",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    },
+    {
+      "field_id": "vert-4-colorful-screw-courtyard-scaffold",
+      "existing_access_leads": [
+        "AR-V04-05"
+      ],
+      "candidate_original_screw_ids": [
+        6,
+        7
+      ],
+      "basis": "Enclosed courtyard northeast of Cafe Classe, confirmed Screw on short platform; cannot assign lower versus upper original checklist record.",
+      "status": "candidate_course_match",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    },
+    {
+      "field_id": "hotel-z-colorful-screw-scaffold",
+      "existing_access_leads": [
+        "AR-V05-01"
+      ],
+      "candidate_original_screw_ids": [
+        1,
+        5
+      ],
+      "basis": "Park northwest of Hotel Z and elevated scaffold; original #1 landmark is strongest comparison, not a confirmed physical match.",
+      "preferred_candidate": 1,
+      "status": "candidate_course_match",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    },
+    {
+      "field_id": "vert-7-racine-construction-colorful-screw-scaffold",
+      "existing_access_leads": [
+        "AR-V07-03"
+      ],
+      "candidate_original_screw_ids": [
+        18
+      ],
+      "basis": "Roadside scaffold southwest of Racine Construction in Vert 7; distinguish indoor lobby and north-side courses.",
+      "status": "candidate_course_match",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    },
+    {
+      "field_id": "vert-1-colorful-screw-scaffold",
+      "existing_access_leads": [
+        "AR-V01-02",
+        "AR-V01-03"
+      ],
+      "candidate_original_screw_ids": [
+        10,
+        11,
+        13
+      ],
+      "basis": "Prism Tower-facing facade and elevated scaffold; route descriptions overlap but continuity/physical identity unknown.",
+      "status": "candidate_neighbourhood_comparison",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    },
+    {
+      "field_id": "vert-5-headbutt-coulant-waterway",
+      "existing_access_leads": [
+        "AR-V05-04"
+      ],
+      "candidate_original_screw_ids": [],
+      "tm": "TM001",
+      "basis": "Field pickup confirms Headbutt behind two rocks at the canal-side walkway south of Vert Plaza. Existing access lead independently identifies TM001 and Rock Smash; no original 264-row TM001 checklist record.",
+      "status": "corroborated_written_route_no_canonical_progress_key",
+      "canonical_screw_id": null,
+      "canonical_checklist_id": null,
+      "native_xy": null,
+      "route_geometry_approved": false,
+      "publish_pin": false
+    }
+  ]
+}
