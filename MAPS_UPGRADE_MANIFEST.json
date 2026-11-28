@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 152,
-    "ledger_revision": 160,
-    "status": "incremental_workspace_policy_first_written_handoff_ready_full_guide_open",
+    "revision": 153,
+    "ledger_revision": 161,
+    "status": "workspace_v41_first_incremental_batch_live_verified_full_guide_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -27,8 +27,8 @@
     "field_intake_pr": 226,
     "previous_historical_heads_preserved": 24,
     "release_decision": "HOLD_FULL_GUIDE_INTEGRATION; CONDITIONAL_SCOPED_WORKSPACE_BATCHES",
-    "workspace_last_recorded_live": "v40",
-    "workspace_publication_claimed": false,
+    "workspace_last_recorded_live": "v41",
+    "workspace_publication_claimed": true,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
     "tracker_sync": "guarded_closeout_pending",
     "field_intake_review": {
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md",
-    "next_slice": "Reconcile first 31 written city/alternate capture records in existing Workspace with independent scoped safety checks; continue remaining city routes, Hyperspace acquisition/evolution/forms, and full-guide development in PR229 without waiting for unrelated batches or future photographs. No extra spend.",
+    "latest_slice": "docs/qa/AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md",
+    "next_slice": "Identify the next checked written Hyperspace capture, evolution and form batch. Continue remaining Lumiose and Alpha research, and independent PR226 photo intake.",
     "field_intake_checkpoint": {
       "id": "AT-348-A3-04-FIELD-BATCH-43-50",
       "date": "2026-11-28",
@@ -131,9 +131,13 @@
       }
     },
     "workspace_site_readback": {
-      "version": 40,
+      "version": 41,
       "live_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site",
-      "publication_of_this_checkpoint": false
+      "publication_of_this_checkpoint": true,
+      "source_sha": "586d20bde90c36220ab38beb75031dee1e6b99ff",
+      "deployment_id": "appgdep_6b0b4454b400819184c395232bc1f2ec",
+      "rollback_version": 40,
+      "evidence": "docs/qa/AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md"
     },
     "prior_candidate_validation": {
       "head": "f4609b9733b685b1a5e9fa7b5a2cfe80a1506e9e",
@@ -507,13 +511,103 @@
         ],
         "source_live_github": false,
         "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
-        "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
-        "workspace_last_recorded": "v40",
-        "workspace_live_readback": false,
-        "owner_editor_access_verified": false,
+        "workspace_status": "published_live_verified",
+        "workspace_last_recorded": "v41",
+        "workspace_live_readback": true,
+        "owner_editor_access_verified": true,
         "unresolved_claims_preserved": true,
-        "full_branch_import": false
+        "full_branch_import": false,
+        "release_receipt": "docs/qa/AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md"
       }
+    },
+    "workspace_batch_01_release": {
+      "id": "AT-348-WORKSPACE-BATCH-01-RELEASE",
+      "date": "2026-11-28",
+      "manifest_revision": 153,
+      "ledger_revision": 161,
+      "status": "workspace_v41_published_live_verified",
+      "workspace": {
+        "version": 41,
+        "version_id": "appgprj_6afda588d5948191b4143e40a1f9c291~appgver_3ae55592ba6c8191b4f02e119f7d9e30",
+        "source_sha": "586d20bde90c36220ab38beb75031dee1e6b99ff",
+        "deployment_id": "appgdep_6b0b4454b400819184c395232bc1f2ec",
+        "verified_url": "https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/#pokedex",
+        "published_at": "2026-11-28T21:15:15.526771+00:00",
+        "rollback_version": 40,
+        "rollback_version_id": "appgprj_6afda588d5948191b4143e40a1f9c291~appgver_1b17368d1b088191bb8f45e381a4b48e",
+        "rollback_source_sha": "f0fd141bdb5a6a3a533ed03bfe5667ed166d0535"
+      },
+      "github": {
+        "pr": 229,
+        "reviewed_source_sha": "956f569ba0e7c7b4801dfa19286b891241ce872b",
+        "policy_checkpoint": "f0a7966b2956bc8c3ff3b483b2bb2a36faadce1e",
+        "source_path": "src/sections/pokedex.html",
+        "workflows": [
+          46188321769,
+          46188321771,
+          46188321772,
+          46188321775
+        ],
+        "source_live_on_github_pages": false
+      },
+      "scope": {
+        "updated": [
+          10,
+          12,
+          13,
+          15,
+          21,
+          22,
+          23,
+          32,
+          33,
+          38,
+          49,
+          50,
+          51,
+          53,
+          55,
+          62,
+          77,
+          79,
+          81,
+          87,
+          96,
+          98,
+          100,
+          135,
+          145,
+          146,
+          165,
+          166,
+          180,
+          181,
+          206
+        ],
+        "already_current": [],
+        "held": [],
+        "existing_correct_entries_retained": true,
+        "related_wild_zone_conditions": 27,
+        "link_instances_checked": 214,
+        "changed_site_files": [
+          "dist/app.js",
+          "dist/dex-capture-guides.mjs",
+          "dist/styles.css"
+        ],
+        "additional_cost_gbp": 0
+      },
+      "validation": {
+        "workspace_automated": "6/6",
+        "browser_preview_widths_px": [
+          1348,
+          375
+        ],
+        "browser": "Chromium, phone-width emulation and desktop",
+        "assets_packaged_and_compared": 1215,
+        "live_readback": true,
+        "archive_hash": "sha256:dd8c2a075a7adc8e12b644fbf3910b688c888e57825d1b6fb004683e8a029651"
+      },
+      "report": "docs/qa/AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md"
     }
   },
   "at_348_workspace_photo_recovery": {
@@ -620,7 +714,7 @@
     "hair_salons": 5,
     "next_at346_scope": "docs/qa/at346-dex-audit/ROSTER_AND_MYTHICAL_ROUTES_2026-11-27.md",
     "complete_encounter_audit": false,
-    "original_workspace_publication_verified": false,
+    "original_workspace_publication_verified": true,
     "supabase_modified_by_this_slice": false,
     "public_video_content": false,
     "incremental_batch": {
@@ -691,12 +785,13 @@
       ],
       "source_live_github": false,
       "handoff": "docs/qa/AT348_WORKSPACE_BATCH_01_CITY_CAPTURE.md",
-      "workspace_status": "checked_source_handoff_prepared_not_adapted_or_published",
-      "workspace_last_recorded": "v40",
-      "workspace_live_readback": false,
-      "owner_editor_access_verified": false,
+      "workspace_status": "published_live_verified",
+      "workspace_last_recorded": "v41",
+      "workspace_live_readback": true,
+      "owner_editor_access_verified": true,
       "unresolved_claims_preserved": true,
-      "full_branch_import": false
+      "full_branch_import": false,
+      "release_receipt": "docs/qa/AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md"
     },
     "policy": "docs/qa/AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md"
   },
@@ -883,11 +978,11 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 152,
+  "revision": 153,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
-  "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
-  "current_phase": "AT-342 finite Interactive Map2.0 release verified on GitHub: G0–G5 complete with exact CI, merge, Pages and live proof; A0 release-pinned prompt ready. Independent original Workspace A1–A7 and broader guide/depth/city-Alpha inventory remain open.",
+  "status": "workspace_v41_first_incremental_batch_live_verified_full_guide_open",
+  "current_phase": "AT-348 incremental batch 01 live verified in the original Workspace at v41. Continue the remaining city and Hyperspace capture, forms and evolution research in PR229. Maintain ongoing photo intake in PR226.",
   "canonical_plan": "MAPS_SECTOR_UPGRADE_MASTER_PLAN.md",
   "tracking_issue": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/issues/28",
   "cross_site_ledger": "ATLAS_DUAL_SITE_FIX_LEDGER.md#AT-238",

@@ -1,5 +1,9 @@
 # Workspace incremental batch 01 — 31 Lumiose city/alternate capture records
 
+## AT-348 — Workspace batch 01 live (Manifest 153 / Joint Ledger 161)
+
+Workspace v41 is published and independently verified on the [original Pokédex](https://lumiose-atlas-za-trev.chatterfriendsstreambandit.chatgpt.site/#pokedex). [Release receipt](AT348_WORKSPACE_BATCH_01_RELEASE_RECEIPT.md) · [checked GitHub content](https://github.com/trevieisking/lumiose-atlas-pokemon-za/commit/956f569ba0e7c7b4801dfa19286b891241ce872b). The update adds 31 Lumiose capture guides and 27 accompanying Wild Zone condition records. All 31 species matched their existing Workspace dex IDs. The guides retain published limits and disputed conditions. Preview checks covered 1,348 px desktop and 375 px phone widths in Chromium. Live readback found all 31 guides, both regional Pokédexes, working map and mission destinations, feedback, and 364 HOME controls. v40 is the rollback. PR #229 continues guide development and PR #226 remains open for photo intake.
+
 **Purpose:** Transfer only the already checked written information from GitHub, not a whole-site replacement. This is a scoped Workspace adaptation prompt, not permission to bypass the original-Site safety gates or evidence of publication. Approved incremental policy: [AT348 incremental Workspace releases](AT348_INCREMENTAL_WORKSPACE_RELEASE_POLICY.md).
 
 ## Instructions for the existing Workspace project
