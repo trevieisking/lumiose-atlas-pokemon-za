@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 111,
-  "ledger_revision": 119,
+  "manifest_revision": 112,
+  "ledger_revision": 120,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -239,9 +239,9 @@
     {
       "id": "A1",
       "title": "Photo restoration",
-      "status": "gallery_automated_pass_two_original_link_repairs_candidate_exact_new_head_pending",
+      "status": "all_three_full_resolution_links_implemented_prior_visual_review_complete_new_head_tests_pending",
       "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open."
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open."
     },
     {
       "id": "A2",
@@ -296,7 +296,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "pending_separate_readback",
+  "supabase_sync": "existing AT348 row verified at 111; scoped update after exact readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -369,7 +369,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Verify WZ17 close-up exact frame and review saved phone/desktop screenshots; then A1-03 and A3.",
+  "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs.",
   "ordered_slices": [
     "A1",
     "A3",
@@ -567,5 +567,149 @@
     "article_workflow": 46078879451,
     "explorer_workflow": 46078879457,
     "result": "success"
+  },
+  "a1_02_final_original_visual_review": {
+    "id": "AT-348-A1-02-FINAL-ORIGINAL-AND-VISUAL-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 112,
+    "ledger_revision": 120,
+    "active_pr": 229,
+    "reviewed_parent": "6f2d238b68782e02f7152440715895661e732c47",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "field_intake": {
+      "pr": 226,
+      "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+      "counts": {
+        "tm": 17,
+        "item": 18,
+        "screw": 7,
+        "access": 1,
+        "collectibleFinds": 42,
+        "photos": 211
+      },
+      "workflows": [
+        46079865251,
+        46079865248
+      ],
+      "conclusion": "success_on_exact_head_not_integrated"
+    },
+    "source_pr227": {
+      "head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+      "workflows": [
+        46072694188,
+        46072694200
+      ],
+      "conclusion": "success_on_exact_head_source_only_review_later_deltas_before_integration"
+    },
+    "prior_exact_ci": {
+      "head": "6f2d238b68782e02f7152440715895661e732c47",
+      "explorer": {
+        "run": 46080093716,
+        "conclusion": "success"
+      },
+      "articles": {
+        "run": 46080093688,
+        "first_attempt": "failure_node_undici_parser_before_fashion_browser_assertions",
+        "retry_attempt": 2,
+        "conclusion": "success"
+      }
+    },
+    "visual_review": {
+      "artifact_id": 15236257476,
+      "artifact_sha256": "c3c0e7e060a9d6dbca3016885f1cf4c7723268f0ff9564de215a873bab1e8ee4",
+      "source_run": 46080093716,
+      "head": "6f2d238b68782e02f7152440715895661e732c47",
+      "gallery": {
+        "desktop": "atlas-explorer/at348-looker-ten-photos-desktop.png",
+        "desktop_sha256": "8bd666e8734c450943e1ce077c0fcf0650da551b44e586c4de0d3679487465e3",
+        "phone": "atlas-explorer/at348-looker-ten-photos-phone.png",
+        "phone_sha256": "5c0f47e35914c5240957c4eb4d9793503bb76815fff21816b33bb10c8220f8f2",
+        "all_ten_images_and_captions_visible": true
+      },
+      "zone_photo_screenshots": {
+        "reviewed": 16,
+        "zones": [
+          15,
+          17
+        ],
+        "surfaces": [
+          "main",
+          "map",
+          "sector",
+          "explorer"
+        ],
+        "devices": [
+          "phone",
+          "desktop"
+        ],
+        "finding": "Both thumbnails visible and correct identities; main WZ17 desktop screenshot top has sticky navigation overlay at captured scroll position; investigate scroll/heading in A1-03, not established persistent image loss."
+      },
+      "exact_frame_reference": {
+        "path": "atlas-explorer/at321-map-wz17-desktop-photos.png",
+        "sha256": "d2647a212db2ed32dde749d2d1dfe14d433ab580a43e5aafebc8bd12ca8fc2cb",
+        "method": "visual comparison of exact-head browser-rendered thumbnail with byte-verified supplied original, not direct PNG binary download"
+      }
+    },
+    "verified_visual_matches": [
+      {
+        "zone": 15,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
+        "preview_blob": "3803bcd51c15900e138d7263b82a48eff283ce99",
+        "filename": "20261125_165929.jpg",
+        "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
+        "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
+        "bytes": 1647674,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "overview",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
+        "preview_blob": "c4709da5da42a3fc195de49c59903e9fd1aec1f8",
+        "filename": "20261125_170158.jpg",
+        "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
+        "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
+        "bytes": 1420507,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+      },
+      {
+        "zone": 17,
+        "kind": "closeup",
+        "filename": "20261125_170238.jpg",
+        "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+        "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+        "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+        "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+        "bytes": 1564974,
+        "width": 4000,
+        "height": 2252,
+        "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+      }
+    ],
+    "new_runtime_asset": {
+      "zone": 17,
+      "kind": "closeup",
+      "filename": "20261125_170238.jpg",
+      "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+      "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
+      "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
+      "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+      "bytes": 1564974,
+      "width": 4000,
+      "height": 2252,
+      "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+    },
+    "scope": "One additional full-size href mapping, two static mirrors, independent original hash test and actual Jekyll asset preservation test. Unchanged 40 preview images, all data, geometry, progress, feedback and prior originals.",
+    "github_validation": "new_head_pending",
+    "github_publication": "not_released",
+    "workspace_implementation": "pending_reconcile_persisted_draft",
+    "workspace_preview": "pending",
+    "workspace_publication": "not_verified",
+    "workspace_last_recorded_live": "v40",
+    "workspace_rollback": "v39",
+    "private_tracker": "existing AT348 row verified at 111; scoped update after exact GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs."
   }
 }

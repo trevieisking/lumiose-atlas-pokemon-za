@@ -876,7 +876,8 @@ export function zoneSearchText(n){const z=wildZoneRecord(n);return z?[z.area,z.d
 // AT-348: exact visually matched 4000×2252 owner originals; previews stay unchanged.
 const fullPhotoPaths=Object.freeze({
   "assets/atlas/wild-zones/wild-zone-15-overview.png": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg",
-  "assets/atlas/wild-zones/wild-zone-17-overview.png": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
+  "assets/atlas/wild-zones/wild-zone-17-overview.png": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg",
+  "assets/atlas/wild-zones/wild-zone-17-closeup.png": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
 });
 export function wildZoneFullPhotoPath(previewPath){return Object.hasOwn(fullPhotoPaths,previewPath)?fullPhotoPaths[previewPath]:previewPath;}
 export function wildZoneFieldbookMarkup(n){

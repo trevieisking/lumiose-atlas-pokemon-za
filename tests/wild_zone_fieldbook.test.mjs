@@ -78,11 +78,20 @@ test("AT-348 verified full-size links preserve exact preview records and origina
     "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
     "filename": "20261125_170158.jpg",
     "bytes": 1420507
+  },
+  {
+    "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
+    "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg",
+    "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
+    "filename": "20261125_170238.jpg",
+    "bytes": 1564974
   }
 ];
  const originals=JSON.parse(read("docs/qa/at344-sector-source-survey/source-inventory.json")).entries;
  const expected=new Map(matches.map(m=>[m.preview,m.full]));
  for(const z of wildZoneRecords){const markup=wildZoneFieldbookMarkup(z.number);for(const p of z.photos){const full=expected.get(p.path)||p.path;assert.equal(wildZoneFullPhotoPath(p.path),full);assert.ok(markup.includes('href="'+full+'"'));assert.ok(markup.includes('src="'+p.path+'"'));}}
  for(const m of matches){const archived=originals.find(o=>o.original_filename===m.filename);assert.equal(archived.sha256,m.sha256);const b=bytes(m.full);assert.equal(b.length,m.bytes);assert.equal(b.subarray(0,3).toString("hex"),"ffd8ff");assert.equal(createHash("sha256").update(b).digest("hex"),m.sha256);assert.deepEqual(b,bytes(archived.repository_path));}
- assert.equal(wildZoneFullPhotoPath("assets/atlas/wild-zones/wild-zone-17-closeup.png"),"assets/atlas/wild-zones/wild-zone-17-closeup.png");
+ assert.equal(matches.length,3);
+ assert.equal(wildZoneFullPhotoPath("assets/atlas/wild-zones/wild-zone-17-closeup.png"),"assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg");
+ assert.equal(wildZoneFullPhotoPath("assets/atlas/wild-zones/wild-zone-15-closeup.png"),"assets/atlas/wild-zones/wild-zone-15-closeup.png");
 });
