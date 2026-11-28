@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "id": "AT-348-COMBINED-RESEARCH-REGISTER",
+  "date": "2026-11-28",
+  "manifest_revision": 139,
+  "ledger_revision": 147,
+  "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
+  "pr": 229,
+  "photo_pr": 226,
+  "source_library": [
+    {
+      "id": "atlas",
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229",
+      "role": "Canonical guide and existing stable IDs",
+      "status": "Validated subsets; full factual QA open"
+    },
+    {
+      "id": "owner",
+      "url": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226",
+      "role": "Primary location, pickup and access evidence",
+      "status": "50 finds, one survey and 250 integrated originals; ongoing intake"
+    },
+    {
+      "id": "serebii",
+      "url": "https://www.serebii.net/legendsz-a/",
+      "role": "Encounter levels, conditions, Alpha and Hyperspace mechanics",
+      "status": "Targeted checks, not exhaustive"
+    },
+    {
+      "id": "bulbapedia",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Legends:_Z-A",
+      "role": "Story, forms, capture, gift and evolution",
+      "status": "Targeted checks"
+    },
+    {
+      "id": "pokemon-france",
+      "url": "https://www.pokemon-france.com/guides/legendes-pokemon-z-a/",
+      "role": "Story, missions, bosses, DLC and items",
+      "status": "35 indexed; 25 substantive excerpts, 5 navigation-only, 5 body-pending"
+    },
+    {
+      "id": "nintendo-life",
+      "url": "https://www.nintendolife.com/guides/pokemon-legends-z-a-walkthrough-all-wild-zones-tips-and-tricks",
+      "role": "Route and visual comparison, difficult catches",
+      "status": "Hub and targeted samples; no unauthorized image reuse"
+    },
+    {
+      "id": "game8",
+      "url": "https://game8.co/games/Pokemon-Legends-Z-A",
+      "role": "Access, collectibles, missions and customisation",
+      "status": "English HTTP 403; Japanese counterpart targeted review",
+      "alternate": "https://game8.jp/pokemon-legends-z-a"
+    },
+    {
+      "id": "official",
+      "url": "https://legends.pokemon.com/",
+      "role": "Official terminology, features, version and distribution verification",
+      "status": "Recheck release-sensitive claims"
+    },
+    {
+      "id": "other",
+      "url": "https://www.powerpyx.com/pokemon-legends-z-a-guide/",
+      "role": "Targeted independent route checks",
+      "status": "Specific Fennekin route checked; not whole guide"
+    }
+  ],
+  "previous_source_reviews": [
+    "docs/qa/AT348_A7_03_POKEMON_FRANCE_SOURCE_AUDIT.md",
+    "docs/qa/AT348_A7_04_NINTENDO_LIFE_SOURCE_REVIEW.md",
+    "docs/qa/AT348_A7_05_GAME8_SOURCE_REVIEW.md"
+  ],
+  "coverage_tracks": [
+    {
+      "slice": "A2",
+      "priority": "P0",
+      "scope": "All 232 Lumiose, 132 Hyperspace and 364 Alpha catalogue entries; forms and acquisition routes",
+      "destinations": "index.html#pokedex; alphas.html; existing area evidence packets",
+      "sourceIds": [
+        "serebii",
+        "bulbapedia",
+        "nintendo-life",
+        "game8",
+        "pokemon-france",
+        "owner"
+      ],
+      "status": "WZ18 candidate; WZ19–20, city, interiors, forms and DLC open"
+    },
+    {
+      "slice": "A3",
+      "priority": "P0",
+      "scope": "48 sectors/20 zones; items, 100 Screws, TMs, lifts, ladders and heights",
+      "destinations": "atlas-explorer-data.json; sector-maps.html; maps.html; items.html; fieldbook",
+      "sourceIds": [
+        "owner",
+        "game8",
+        "serebii",
+        "nintendo-life",
+        "pokemon-france"
+      ],
+      "status": "250 photos integrated; stable ID/position matching still open"
+    },
+    {
+      "slice": "A7",
+      "priority": "P1",
+      "scope": "42 main, 14 DLC, 203 side missions; ordered objectives, bosses and rewards",
+      "destinations": "walkthrough.html; journey.html; side-missions.html; mega-dimension.html; boss-guide.html; royale-guide.html",
+      "sourceIds": [
+        "pokemon-france",
+        "bulbapedia",
+        "game8",
+        "nintendo-life",
+        "owner"
+      ],
+      "status": "Preserve working MM19; verify every remaining claim"
+    },
+    {
+      "slice": "A2/A7",
+      "priority": "P1",
+      "scope": "Capture, shiny, Alpha, weather, stats, moves, evolution, battle and rank",
+      "destinations": "index.html#pokedex; shiny-hunting.html; alphas.html; type-chart.html; index.html#essentials",
+      "sourceIds": [
+        "serebii",
+        "bulbapedia",
+        "official",
+        "nintendo-life",
+        "game8"
+      ],
+      "status": "Donut rank factor independently corroborated; integrate relevant surfaces"
+    },
+    {
+      "slice": "A2/A7",
+      "priority": "P1",
+      "scope": "DLC portal pools, tiers, donuts, berries, legendary routes and unlocks",
+      "destinations": "hyperspace-maps.html; mega-dimension.html; legendaries.html; index.html#berries; index.html#dimension",
+      "sourceIds": [
+        "serebii",
+        "bulbapedia",
+        "pokemon-france",
+        "game8",
+        "nintendo-life"
+      ],
+      "status": "No fixed random portals"
+    },
+    {
+      "slice": "A4",
+      "priority": "P1",
+      "scope": "Economy, items, Mega Stones, shops, clothing, salon and makeup",
+      "destinations": "shops.html; items.html; fashion/beauty",
+      "sourceIds": [
+        "game8",
+        "pokemon-france",
+        "serebii",
+        "owner"
+      ],
+      "status": "Compare existing 41 boutiques, 5 salons; verify individual prices and unlocks"
+    },
+    {
+      "slice": "A5",
+      "priority": "P1",
+      "scope": "Cafés, restaurants, services, challenges, music, titles, photo and training",
+      "destinations": "City Life; mable-research.html; boss-guide.html; index.html#essentials",
+      "sourceIds": [
+        "serebii",
+        "game8",
+        "bulbapedia",
+        "pokemon-france",
+        "owner"
+      ],
+      "status": "Remaining unlocks, repeatability and rewards"
+    },
+    {
+      "slice": "A7",
+      "priority": "P1",
+      "scope": "HOME, gifts, trades, online, ranked and distributions",
+      "destinations": "home-connection.html; rewards.html; battles.html; legendaries.html",
+      "sourceIds": [
+        "official",
+        "serebii",
+        "bulbapedia",
+        "game8",
+        "nintendo-life"
+      ],
+      "status": "Verify current event dates/version"
+    },
+    {
+      "slice": "A1/A6/A8",
+      "priority": "P1",
+      "scope": "Photo identity, accessibility, navigation, safe completion/backup and validation",
+      "destinations": "Existing directory and progress code; all existing routes",
+      "sourceIds": [
+        "atlas",
+        "owner"
+      ],
+      "status": "Exact CI, browser QA, deployment and independent Workspace gate"
+    }
+  ],
+  "acceptance": {
+    "rule": "Every verified fact must land in its existing canonical record/page; a source URL or card count is not completion.",
+    "fields": [
+      "stable ID",
+      "source URL and claim",
+      "game version/locale",
+      "location/acquisition",
+      "time/weather/level",
+      "unlock",
+      "floor/access/ordered directions",
+      "spawn class/chance",
+      "reward/evolution",
+      "uncertainty",
+      "guide/map destinations",
+      "original evidence/rights",
+      "review/test result"
+    ],
+    "states": [
+      "unreviewed",
+      "source_lead",
+      "corroborated",
+      "disputed",
+      "owner_verified",
+      "not_applicable",
+      "not_obtainable",
+      "implemented_pending_validation",
+      "validated"
+    ],
+    "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
+  },
+  "current_slice": {
+    "zones": [
+      18
+    ],
+    "supplements_added": 8,
+    "chance_alpha_added": 6,
+    "total_condition_supplements": 158,
+    "total_chance_alpha_rows": 124,
+    "geometry_unchanged": true,
+    "unrelated_encounters_unchanged": true,
+    "isolated_model_areas": 68,
+    "isolated_model_issues": 0,
+    "full_ci": "pending",
+    "visual": "pending"
+  },
+  "open_disputes": [
+    "WZ18 fixed Alpha time/weather table vs narrative",
+    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
+    "Gastly lead remains unclassified",
+    "WZ18 exact earliest Rank B transition",
+    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
+    "DLC donut factor 0.9x one star below, 0.3x two or more below; needs canonical implementation",
+    "English Game8 body inaccessible"
+  ],
+  "full_audit_complete": false,
+  "release_decision": "HOLD",
+  "next": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes."
+}

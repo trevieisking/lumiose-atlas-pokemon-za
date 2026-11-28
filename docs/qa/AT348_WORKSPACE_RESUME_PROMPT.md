@@ -1,5 +1,10 @@
 # AT-348 — Resume interrupted Workspace photograph repair (do not restart)
 
+## AT-348 A2-12 — Combined source research and Wild Zone 18 candidate (Manifest 139 / Joint Ledger 147)
+
+28 November 2026. Owner requests one combined research foundation followed by actual guide completion. [Combined register](AT348_COMBINED_RESEARCH_REGISTER.json) and [WZ18 candidate evidence](AT348_A2_12_COMBINED_RESEARCH_WZ18.md) bind existing Atlas, owner gameplay, Pokémon-France, Nintendo Life, Game8, Serebii, Bulbapedia and official references to existing pages and completion slices. Sufficient source foundation to continue, not proof of every detail. Shared data adds six ordinary and two existing fixed Alpha condition supplements and six chance Alpha rows (158/124 cumulative); Fennekin gift, rooftop time gates and ground routes; retain Game8 time/weather and Noivern level discrepancies and disputed Gastly. Isolated production model 68 areas, zero issues; unchanged geometry and unrelated encounters, exact CI and visual gates pending. No new pins/progress/images; source PR226 remains open, no main or Workspace publication. Continue WZ19–20, city/interiors/forms/Hyperspace and remaining A3–A8; targeted source checks rather than disconnected source-only planning. Supabase closeout after exact readback; HOLD.
+
+
 ## AT-348 A7-05 — Game8 supplemental source assessment (Manifest 138 / Joint Ledger 146)
 
 28 November 2026. [Game8 source assessment](AT348_A7_05_GAME8_SOURCE_REVIEW.md). Owner supplied English hub (HTTP 403 in research tool); Japanese counterpart and targeted articles accessible. Add research leads to existing A2/A3/A4/A5/A7: WZ18 conditions, Holovator mission unlocks, ladder and Screw verification, makeup options, DLC and mission details. WZ18 fixed Alpha day/night table conflicts with narrative; verify independently. Map pin data not exposed; no coordinates inferred. Use original English directions and owner evidence, no unauthorized image reuse. Documentation only, no runtime or live changes. Existing PR229/HOLD and photo PR226 unchanged in purpose. Private tracker closeout follows exact readback. Existing capture-first priority remains.

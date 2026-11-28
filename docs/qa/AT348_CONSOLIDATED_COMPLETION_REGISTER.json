@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 138,
-  "ledger_revision": 146,
+  "manifest_revision": 139,
+  "ledger_revision": 147,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -289,9 +289,9 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_17_capture_candidate_150_condition_supplements_118_chance_alpha_rows_full_research_open",
+      "status": "p0_zone_01_18_capture_candidate_158_condition_supplements_124_chance_alpha_rows_full_research_open",
       "source": "AT-346 / #220",
-      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required.",
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending.",
       "priority": "P0"
     },
     {
@@ -413,7 +413,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Continue A2 P0 Wild Zones 18–20 with Pokémon-France as a supplemental source, then city/interiors/forms/Alpha/Hyperspace; check the source audit leads, obtain missing article bodies and independently verify claims, maintain A4/A5/A6/A7/A8 and all photo/QA gates. GitHub first; HOLD Workspace.",
+  "next_slice": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1683,5 +1683,31 @@
     "full_audit_complete": false,
     "runtime_changed": false,
     "release_decision": "HOLD"
-  }
+  },
+  "a2_12_combined_research_wz18": {
+    "id": "AT-348-A2-12-COMBINED-RESEARCH-WZ18",
+    "date": "2026-11-28",
+    "manifest_revision": 139,
+    "ledger_revision": 147,
+    "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
+    "report": "docs/qa/AT348_A2_12_COMBINED_RESEARCH_WZ18.md",
+    "register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json",
+    "supplements": 8,
+    "chance_alpha_rows": 6,
+    "cumulative_conditions": 158,
+    "cumulative_chance_alpha_rows": 124,
+    "local_model": {
+      "areas": 68,
+      "issues": 0,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "adapter": "isolated URL/ESM wrapper only"
+    },
+    "runtime_data_changed": true,
+    "workspace_changed": false,
+    "source_full_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes."
+  },
+  "combined_research_register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json"
 }
