@@ -1,13 +1,13 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 150,
-  "ledger_revision": 158,
+  "manifest_revision": 151,
+  "ledger_revision": 159,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
   "active_pr": 229,
-  "previous_checkpoint": "95598d8b6c9aecad92c0e1ca353c97a72abf2159",
+  "previous_checkpoint": "2b4db4d493127a7c7847d078eab9f2c15cd58c33",
   "resume_prompt": "docs/qa/AT348_WORKSPACE_RESUME_PROMPT.md",
   "workspace_last_recorded_live": "v40",
   "workspace_v41_verified": false,
@@ -292,9 +292,9 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_28_written_city_routes_249_condition_supplements_146_chance_alpha_rows_full_research_open",
+      "status": "p0_31_written_city_routes_249_condition_supplements_146_chance_alpha_rows_full_research_open",
       "source": "AT-346 / #220",
-      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending. A2-20 adds five city notes and retains all prior encounter records; exact CI and independent visuals pending. A2-21 adds three city notes and preserves earlier routes; new exact CI and visuals pending.",
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open. A2-11 adds the six ordinary, three preserved fixed and six chance Alpha Zone 17 records; unresolved extra claims remain excluded; exact-head CI and independent visual review required. A2-12: eight WZ18 supplements and six chance rows, combined source register; exact CI and independent visual QA pending. A2-20 adds five city notes and retains all prior encounter records; exact CI and independent visuals pending. A2-21 adds three city notes and preserves earlier routes; new exact CI and visuals pending. A2-22 enriches three alternate acquisition cards; new exact CI and visual review pending.",
       "priority": "P0"
     },
     {
@@ -2473,6 +2473,73 @@
     "validation": {
       "source_roundtrip_exact": true,
       "homepage_baseline_git_blob_exact": true,
+      "homepage_roundtrip_exact": true,
+      "local_anchor_check": true,
+      "regression_assertions_added": true,
+      "exact_head_ci": "pending",
+      "independent_visual": "pending"
+    },
+    "photo_pr": 226,
+    "photo_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+    "new_committed_photo_delta": 0,
+    "workspace_changed": false,
+    "paid_services": false,
+    "release_decision": "HOLD",
+    "next": "Continue remaining city capture routes, then Hyperspace acquisition/evolution/forms and full guide factual/functional QA. A1 is parallel and non-blocking; no paid services or Workspace changes before verified GitHub release and owner review."
+  },
+  "at_348_a2_22_alternative_capture_routes": {
+    "id": "AT-348-A2-22",
+    "date": "2026-11-28",
+    "manifest_revision": 151,
+    "ledger_revision": 159,
+    "reviewed_parent": "2b4db4d493127a7c7847d078eab9f2c15cd58c33",
+    "report": "docs/qa/AT348_A2_22_ALTERNATIVE_CAPTURE_ROUTES.md",
+    "active_pr": 229,
+    "new_city_notes": [
+      33,
+      50,
+      53
+    ],
+    "city_notes_total": 31,
+    "local_links_verified": 9,
+    "prior_ci": [
+      {
+        "id": 46187979160,
+        "name": "Validate rotatable Lumiose Atlas Explorer",
+        "status": "in_progress",
+        "conclusion": null
+      },
+      {
+        "id": 46187979057,
+        "name": "Validate Atlas header feedback button",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187979055,
+        "name": "Validate recovered Atlas article pages",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 46187979049,
+        "name": "Validate photo-only GitHub Pages output",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "retained": {
+      "base_species_ids": 232,
+      "level_evolution_routes": 84,
+      "special_acquisition_notes": 67,
+      "condition_supplements": 249,
+      "chance_alpha_records": 146,
+      "integrated_originals": 318
+    },
+    "source_limit": "Secondary species/mission/zone sources; distinguish ordinary, chance Alpha, fixed Alpha and one-time encounters; unverified weather, odds and exact city access retained explicitly.",
+    "validation": {
+      "source_roundtrip_exact": true,
+      "homepage_original_section_exact": true,
       "homepage_roundtrip_exact": true,
       "local_anchor_check": true,
       "regression_assertions_added": true,
