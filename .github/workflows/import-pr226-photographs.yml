@@ -4,7 +4,7 @@ on:
     branches:
       - docs/atlas-item-location-field-guide
     paths:
-      - pr-226-pending-39-photographs.zip
+      - pr-226-pending-68-photographs.zip
 
 permissions:
   contents: write
@@ -27,21 +27,21 @@ jobs:
           from pathlib import Path, PurePosixPath
           import hashlib, json, stat, zipfile
 
-          archive = Path('pr-226-pending-39-photographs.zip')
-          expected = '68fbb936d7904b8538ae004b87312286e67e6fb830801471a9a016df8b8e7579'
+          archive = Path('pr-226-pending-68-photographs.zip')
+          expected = 'b15d262831751b8167e60ae139a1b43878d23fef83824896eddcc3b20fe29d86'
           if not archive.is_file() or hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
               raise SystemExit('Archive missing or SHA-256 mismatch')
           with zipfile.ZipFile(archive) as z:
               entries = z.infolist()
-              if len(entries) != 40 or len({i.filename for i in entries}) != 40 or sum(i.file_size for i in entries) != 4605203 or z.testzip() is not None:
+              if len(entries) != 69 or len({i.filename for i in entries}) != 69 or sum(i.file_size for i in entries) != 8166591 or z.testzip() is not None:
                   raise SystemExit('Archive inventory mismatch')
-              register = 'docs/field-guides/intake/2026-11-28-finds-43-50.json'
+              register = 'docs/field-guides/intake/2026-11-28-finds-51-64.json'
               manifest = json.loads(z.read(register))
-              if manifest['sourcePR'] != 226 or [e['fieldFind'] for e in manifest['entries']] != list(range(43, 51)):
+              if manifest['sourcePR'] != 226 or [e['fieldFind'] for e in manifest['entries']] != list(range(51, 65)):
                   raise SystemExit('Unexpected intake register')
               photos = [p for e in manifest['entries'] for p in e['photos']]
               expected_paths = {p['path']: p for p in photos}
-              if len(photos) != 39 or len(expected_paths) != 39 or set(z.namelist()) != set(expected_paths) | {register}:
+              if len(photos) != 68 or len(expected_paths) != 68 or set(z.namelist()) != set(expected_paths) | {register}:
                   raise SystemExit('Photo inventory mismatch')
               pending = []
               for i in entries:
@@ -68,7 +68,7 @@ jobs:
               for i in entries:
                   if Path(i.filename).read_bytes() != z.read(i):
                       raise SystemExit('Post-extraction verification failed: ' + i.filename)
-          print(f'All 39 original photos and intake register verified; {len(pending)} new files; no existing file overwritten.')
+          print(f'All 68 original photos and intake register verified; {len(pending)} new files; no existing file overwritten.')
           PY
       - name: Commit only verified photographs and intake register to the draft PR branch
         shell: bash
@@ -78,7 +78,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python3 - <<'PY'
           import subprocess, zipfile
-          archive = 'pr-226-pending-39-photographs.zip'
+          archive = 'pr-226-pending-68-photographs.zip'
           with zipfile.ZipFile(archive) as z:
               names = z.namelist()
           subprocess.run(['git', 'add', '--', *names], check=True)
@@ -87,5 +87,5 @@ jobs:
           if not set(filter(None, changed)).issubset(set(names) | {archive}):
               raise SystemExit('Unexpected staged paths')
           PY
-          git commit -m "Import 39 verified Atlas field photographs and location register"
+          git commit -m "Import 68 verified Atlas field photographs and location register"
           git push origin HEAD:refs/heads/docs/atlas-item-location-field-guide
