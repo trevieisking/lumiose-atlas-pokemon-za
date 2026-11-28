@@ -2017,5 +2017,49 @@
       "verified_permanent_pin": false,
       "release_status": "not_released"
     }
-  ]
+  ],
+  "mandatory_intake_cycle": {
+    "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
+    "owner_instruction_date": "2026-11-28",
+    "source_pr": 226,
+    "source_branch": "docs/atlas-item-location-field-guide",
+    "current_integration_pr": 229,
+    "source_pr_permanently_open": true,
+    "check_frequency": "At the start and end of EVERY Atlas development task, and immediately before any release candidate is frozen. Also check whenever the owner reports new photographs. These checks are part of active development turns; no unattended monitoring is claimed.",
+    "preflight": [
+      "Read the latest source PR head, complete changed-file/tree listing, photo register and recent intake comments.",
+      "Compare exact source paths and Git blob identities against the active consolidated guide candidate and per-find usage register; distinguish new files, modified files, duplicates and reported but uncommitted intake.",
+      "For each new validated original, copy byte-identical source blobs and applicable evidence notes into the current consolidated guide PR. Do not merge or close the source PR, remove originals, overwrite newer guide content or create a new intake PR.",
+      "Integrate supported descriptions, directions and evidence links into relevant guide pages; record unresolved identity, route and coordinate questions separately."
+    ],
+    "closeout": [
+      "Re-read source PR head and compare again for newly arrived evidence; record any new delta that cannot safely be integrated yet.",
+      "Verify copied photo paths, source blob identities, guide destinations and evidence confidence; update per-find usage register, Master Plan, Workspace Plan, joint manifest and ledger with source head, integrated/pending counts, test results and next action.",
+      "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
+    ],
+    "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
+    "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+    "last_check": {
+      "committed_finds": 42,
+      "access_surveys": 1,
+      "committed_photos": 211,
+      "matching_guide_photo_blobs": 211,
+      "new_committed_photos_not_copied": 0,
+      "reported_pending_finds": 8,
+      "reported_pending_photos": 39
+    },
+    "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
+  },
+  "last_intake_check": {
+    "committed_finds": 42,
+    "access_surveys": 1,
+    "committed_photos": 211,
+    "matching_guide_photo_blobs": 211,
+    "new_committed_photos_not_copied": 0,
+    "reported_pending_finds": 8,
+    "reported_pending_photos": 39
+  },
+  "last_intake_check_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+  "last_intake_check_guide_head": "a5270e1b397799771c1a807a00e0576b1708cb19"
 }

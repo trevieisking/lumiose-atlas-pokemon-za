@@ -1,5 +1,21 @@
 # Lumiose Atlas — Sector & Wild Zone Mapping Upgrade Master Plan
 
+## Mandatory permanent image-intake cycle — owner instruction (Manifest 132 / Joint Ledger 140)
+
+28 November 2026. This is a required preflight and closeout for **every Atlas development task**, not an optional future task.
+
+1. At the beginning of each task, check open photo PR #226 (including the exact head, complete file changes, original photograph register and recent intake comments). Compare against the current consolidated guide PR #229 and the usage register. Check again before freezing any release.
+
+2. For every new committed and validated photograph, copy the original bytes and relevant evidence notes into the active consolidated guide PR. Integrate the evidence into the appropriate guide pages, preserving existing work, exact provenance, original filenames and confidence. Do not merge or close #226 or remove used images from it. Do not create duplicate progress IDs, fabricate locations or overwrite newer guide content.
+
+3. At the end of each task, recheck #226 for additional uploads. Verify transferred bytes and record each used, copied-but-not-yet-used, upload-pending and validation-pending item with source head, guide destination, tests and next action. Update the Master Plan, Workspace Plan, joint manifest, joint ledger and usage register.
+
+4. Keep #226 open after each integration and release so the owner can keep adding photographs. Once #229 eventually merges, transfer later evidence into the then-active sole consolidated guide PR. Check whenever the owner reports a new upload as well. No unattended or background monitoring is claimed.
+
+Latest check: source head `cd24fc4f6a047ae819af025cfe08fc70391bfb5a`; guide parent `a5270e1b397799771c1a807a00e0576b1708cb19`. All 211 registered original photographs (42 finds plus one access survey) match byte-for-byte in the guide candidate. Zero new committed photos await copying at this checkpoint. Eight reported finds (39 photographs) still await upload; do not treat comments as uploaded files. No source branch, live site, map geometry, player data or database changes. Retain all existing release gates and outstanding work.
+
+[Per-find usage register](docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json).
+
 ## AT-348 A3-03 — Permanent owner photograph intake and usage register (Manifest 131 / Joint Ledger 139)
 
 28 November 2026. Owner clarifies that PR #226 is a permanent, additive firsthand gameplay photograph collection: keep it open after evidence is copied or published; do not remove used originals. PR #229 remains the sole guide integration candidate. At reviewed guide head `ad093451d609b230881115723814fe91c2cc3624` and source head `cd24fc4f6a047ae819af025cfe08fc70391bfb5a`, all 211 committed photo blobs match byte-for-byte, covering 42 collectible finds plus one access survey. Of these, 13 records (63 photographs) have 27 contextual guide links; six records (29 photographs) have access comparisons; 24 records (119 photographs) are in the fieldbook but await further guide integration. Source PR comments record finds 43–50 (39 photographs) as upload pending, bringing reported intake to 50 finds plus one survey / 250 photographs. Track each original's filename, field ID, source head, destination, use status, evidence confidence, canonical identity, coordinate approval and release status independently. Copying or linking evidence does not certify an exact pin. No original deletion, source PR closure, new PR, map changes, player data writes or live publication. No upload of the pending files in this documentation-only checkpoint. Retain all outstanding A2–A8 work and GitHub-first release gate. [Per-find usage register](docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json).

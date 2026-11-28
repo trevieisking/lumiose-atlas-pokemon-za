@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 131,
-  "ledger_revision": 139,
+  "manifest_revision": 132,
+  "ledger_revision": 140,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -71,6 +71,39 @@
       ],
       "status": "reported_not_committed",
       "source_comment": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/226#issuecomment-7242705271"
+    },
+    "mandatory_intake_cycle": {
+      "id": "AT-348-PERMANENT-IMAGE-INTAKE-CYCLE",
+      "owner_instruction_date": "2026-11-28",
+      "source_pr": 226,
+      "source_branch": "docs/atlas-item-location-field-guide",
+      "current_integration_pr": 229,
+      "source_pr_permanently_open": true,
+      "check_frequency": "At the start and end of EVERY Atlas development task, and immediately before any release candidate is frozen. Also check whenever the owner reports new photographs. These checks are part of active development turns; no unattended monitoring is claimed.",
+      "preflight": [
+        "Read the latest source PR head, complete changed-file/tree listing, photo register and recent intake comments.",
+        "Compare exact source paths and Git blob identities against the active consolidated guide candidate and per-find usage register; distinguish new files, modified files, duplicates and reported but uncommitted intake.",
+        "For each new validated original, copy byte-identical source blobs and applicable evidence notes into the current consolidated guide PR. Do not merge or close the source PR, remove originals, overwrite newer guide content or create a new intake PR.",
+        "Integrate supported descriptions, directions and evidence links into relevant guide pages; record unresolved identity, route and coordinate questions separately."
+      ],
+      "closeout": [
+        "Re-read source PR head and compare again for newly arrived evidence; record any new delta that cannot safely be integrated yet.",
+        "Verify copied photo paths, source blob identities, guide destinations and evidence confidence; update per-find usage register, Master Plan, Workspace Plan, joint manifest and ledger with source head, integrated/pending counts, test results and next action.",
+        "Keep source PR #226 open after every copy, release and later integration cycle. If #229 is eventually merged, use the then-active sole consolidated guide PR for later additions; never close the evidence intake as part of a release."
+      ],
+      "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
+      "last_checked_source_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+      "last_checked_guide_parent": "a5270e1b397799771c1a807a00e0576b1708cb19",
+      "last_check": {
+        "committed_finds": 42,
+        "access_surveys": 1,
+        "committed_photos": 211,
+        "matching_guide_photo_blobs": 211,
+        "new_committed_photos_not_copied": 0,
+        "reported_pending_finds": 8,
+        "reported_pending_photos": 39
+      },
+      "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
     }
   },
   "incoming": {
@@ -267,7 +300,7 @@
       "title": "Maps and written access",
       "status": "fieldbook_core_checks_passed_27_contextual_links_and_6_access_comparisons_candidate_pending",
       "source": "AT-299/300/321/322/323/324/327/331",
-      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates."
+      "acceptance": "Retain 48 sector and 20 zone selection views; finish missing evidence-supported access/roof/ladder/scaffold/lift directions, boundaries only where validated. No guessed coordinate or floor claims. Cross-reference 39 field finds and one separate access survey from reviewed #226 package; canonical item/Screw matching, elevations, access, registration and confidence; retain firsthand Aerial Ace, Dragon Pulse, Flip Turn and Roar directions. 42 finds/211 photos/1 access survey transferred without conflicts or new progress IDs. 13 TM comparison candidates, 4 not in existing written TM register. Coordinate, route and canonical assignment pending. New exact-head CI required. Parent 49959f57e5d8bf634aa58813fe4f985febc8518a fieldbook byte/build/representative browser checks passed. 27 photo links to 13 existing TM rows and six bounded route comparisons added; no canonical assignments, native points or geometry. New head checks pending. Permanent owner-evidence PR226 remains open; all originals retained after use. See docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json for exact source-to-guide statuses, destinations, reported pending intake and coordinate gates. Mandatory beginning/end-of-task and pre-release PR226 delta inspection and additive transfer; retain source PR and originals, track used and pending evidence every cycle."
     },
     {
       "id": "A4",
