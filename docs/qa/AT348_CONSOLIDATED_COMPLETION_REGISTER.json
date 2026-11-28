@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 117,
-  "ledger_revision": 125,
+  "manifest_revision": 118,
+  "ledger_revision": 126,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -282,9 +282,9 @@
     {
       "id": "A7",
       "title": "Full-guide factual and coverage QA",
-      "status": "directory_candidate_mission_identity_check_done_full_fact_review_open",
+      "status": "46_surface_register_concurrent_directory_preserved_targeted_facts_reconciled_full_claim_review_open",
       "source": "historical PR1; AT-346/347",
-      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed."
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks."
     },
     {
       "id": "A8",
@@ -370,12 +370,12 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace.",
+  "next_slice": "A2 P0 capture research first: independently verify species/form capture and per-route time, weather, level, elevation, directions, unlock, respawn and alternatives; synchronize Alpha/Hyperspace and map facts. A7 release-critical: verify exact new-head directory and M1–3/M39/rewards updates, then execute every claim review in the 46-surface register, enrich walkthrough directions and descriptions, reconcile duplicates and give overcrowded activities clear destinations while retaining existing links and player progress. Complete full GitHub verification before any Workspace action.",
   "ordered_slices": [
     "A2",
+    "A7",
     "A1",
     "A3",
-    "A7",
     "A4",
     "A5",
     "A6",
@@ -967,5 +967,47 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace."
+  },
+  "a7_02_reconciled_fact_review": {
+    "id": "AT-348-A7-02-RECONCILED-PLAYER-GUIDE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 118,
+    "ledger_revision": 126,
+    "priority": "A2_P0_A7_release_critical",
+    "reviewed_parent": "0fea3ef8b656f34652d7eb5d79d1a508711ebff5",
+    "active_pr": 229,
+    "evidence": "docs/qa/AT348_A7_02_RECONCILED_FACT_REVIEW.md",
+    "audit": "docs/qa/AT348_A7_02_PAGE_REGISTER.json",
+    "inventory": {
+      "root_html": 29,
+      "editable_sections": 17,
+      "surfaces": 46,
+      "fully_fact_checked_pages_claimed": 0
+    },
+    "directory": {
+      "path": "guide.html",
+      "groups": 8,
+      "destinations": 57,
+      "decision": "preserve concurrent A7-01; no duplicate"
+    },
+    "fact_checks": [
+      "42 mission title identities",
+      "M39 first reward match legendary branch in all three story surfaces",
+      "official Season X dates, eligibility and reward tiers",
+      "official Shiny Xerneas and future Yveltal dates",
+      "general weather source check"
+    ],
+    "previous_parent_checks": {
+      "pages": "46144848616 success",
+      "articles": "46144848592 success",
+      "explorer": "46144848604 in progress at review"
+    },
+    "new_head_validation": "pending",
+    "full_page_fact_verification": false,
+    "workspace_changed": false,
+    "progress_changed": false,
+    "new_pins": 0,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 capture research first: independently verify species/form capture and per-route time, weather, level, elevation, directions, unlock, respawn and alternatives; synchronize Alpha/Hyperspace and map facts. A7 release-critical: verify exact new-head directory and M1–3/M39/rewards updates, then execute every claim review in the 46-surface register, enrich walkthrough directions and descriptions, reconcile duplicates and give overcrowded activities clear destinations while retaining existing links and player progress. Complete full GitHub verification before any Workspace action."
   }
 }

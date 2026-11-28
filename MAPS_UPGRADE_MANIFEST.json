@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 117,
-    "ledger_revision": 125,
-    "status": "p0_capture_and_a7_editorial_candidate_exact_head_validation_pending",
+    "revision": 118,
+    "ledger_revision": 126,
+    "status": "single_directory_preserved_reconciled_targeted_factual_corrections_full_claim_audit_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -52,7 +52,7 @@
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
     "latest_slice": "docs/qa/AT348_A7_01_EDITORIAL_FACT_AUDIT.md",
-    "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace.",
+    "next_slice": "A2 P0 capture research first: independently verify species/form capture and per-route time, weather, level, elevation, directions, unlock, respawn and alternatives; synchronize Alpha/Hyperspace and map facts. A7 release-critical: verify exact new-head directory and M1–3/M39/rewards updates, then execute every claim review in the 46-surface register, enrich walkthrough directions and descriptions, reconcile duplicates and give overcrowded activities clear destinations while retaining existing links and player progress. Complete full GitHub verification before any Workspace action.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -191,7 +191,8 @@
       "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
       "workspace_release_allowed": false
     },
-    "priority": "A2_P0"
+    "priority": "A2_P0_and_A7_release_critical",
+    "page_audit_register": "docs/qa/AT348_A7_02_PAGE_REGISTER.json"
   },
   "at_348_workspace_photo_recovery": {
     "id": "AT-348-PHOTO-AUDIT-RECOVERY",
@@ -484,7 +485,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 117,
+  "revision": 118,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9734,5 +9735,47 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0 capture research remains first; concurrently validate A7 directory and exact-head regressions, then check every guide claim and mission sequence with current sources, map/access prerequisites and rewards. Improve information architecture only with stable links and progress preserved. Full GitHub validation before Workspace."
+  },
+  "at_348_a7_02_reconciled_fact_review": {
+    "id": "AT-348-A7-02-RECONCILED-PLAYER-GUIDE-REVIEW",
+    "date": "2026-11-28",
+    "manifest_revision": 118,
+    "ledger_revision": 126,
+    "priority": "A2_P0_A7_release_critical",
+    "reviewed_parent": "0fea3ef8b656f34652d7eb5d79d1a508711ebff5",
+    "active_pr": 229,
+    "evidence": "docs/qa/AT348_A7_02_RECONCILED_FACT_REVIEW.md",
+    "audit": "docs/qa/AT348_A7_02_PAGE_REGISTER.json",
+    "inventory": {
+      "root_html": 29,
+      "editable_sections": 17,
+      "surfaces": 46,
+      "fully_fact_checked_pages_claimed": 0
+    },
+    "directory": {
+      "path": "guide.html",
+      "groups": 8,
+      "destinations": 57,
+      "decision": "preserve concurrent A7-01; no duplicate"
+    },
+    "fact_checks": [
+      "42 mission title identities",
+      "M39 first reward match legendary branch in all three story surfaces",
+      "official Season X dates, eligibility and reward tiers",
+      "official Shiny Xerneas and future Yveltal dates",
+      "general weather source check"
+    ],
+    "previous_parent_checks": {
+      "pages": "46144848616 success",
+      "articles": "46144848592 success",
+      "explorer": "46144848604 in progress at review"
+    },
+    "new_head_validation": "pending",
+    "full_page_fact_verification": false,
+    "workspace_changed": false,
+    "progress_changed": false,
+    "new_pins": 0,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 capture research first: independently verify species/form capture and per-route time, weather, level, elevation, directions, unlock, respawn and alternatives; synchronize Alpha/Hyperspace and map facts. A7 release-critical: verify exact new-head directory and M1–3/M39/rewards updates, then execute every claim review in the 46-surface register, enrich walkthrough directions and descriptions, reconcile duplicates and give overcrowded activities clear destinations while retaining existing links and player progress. Complete full GitHub verification before any Workspace action."
   }
 }
