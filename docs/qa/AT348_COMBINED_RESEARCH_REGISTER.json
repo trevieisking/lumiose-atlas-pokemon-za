@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 142,
-  "ledger_revision": 150,
+  "manifest_revision": 143,
+  "ledger_revision": 151,
   "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
   "pr": 229,
   "photo_pr": 226,
@@ -42,7 +42,7 @@
       "id": "nintendo-life",
       "url": "https://www.nintendolife.com/guides/pokemon-legends-z-a-walkthrough-all-wild-zones-tips-and-tricks",
       "role": "Route and visual comparison, difficult catches",
-      "status": "Hub and targeted Beldum capture article directly reopened; secondary, no image reuse."
+      "status": "Lumiose Pokédex and friendship guides reviewed for special evolution conditions; earlier hub/Beldum receipt retained. No third-party images reused."
     },
     {
       "id": "game8",
@@ -55,7 +55,7 @@
       "id": "official",
       "url": "https://legends.pokemon.com/",
       "role": "Official terminology, features, version and distribution verification",
-      "status": "Official UK gameplay, DLC, update history and HOME/Champions connectivity directly reviewed 28 November 2026. Current offer pages individually recheck; specific capture tables secondary."
+      "status": "Official gameplay and Nintendo Support Link Trade procedure checked; Nintendo UK update and HOME receipts retained. Individual evolution requirements and NPC details are secondary source game facts."
     },
     {
       "id": "other",
@@ -83,7 +83,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "All 20 targeted zones and rotating candidate supplements; fixed district guide plus 24 linked base-dex interior species. City sector details, gifts/trades/evolution, forms, remaining DLC and independent QA open."
+      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species and 64 base-dex cards enriched with special evolution and acquisition routes. Ordinary level alternatives, remaining city and Hyperspace, forms and full QA open."
     },
     {
       "slice": "A3",
@@ -225,12 +225,13 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
-    "interior_species": 24,
-    "interior_route_links": 30,
-    "official_patch_baseline": "2.0.2",
+    "base_dex_species": 64,
+    "acquisition_notes": 67,
+    "special_evolution_methods": 43,
+    "additional_acquisitions": 24,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
-    "alpha_source_parity": 20,
+    "prior_ci": "all_four_passed",
     "full_ci": "pending",
     "visual": "pending"
   },
@@ -248,18 +249,14 @@
   ],
   "full_audit_complete": false,
   "release_decision": "HOLD",
-  "next": "Check exact-head CI and independently review phone/desktop. Continue A2 capture-first verified city sector encounters, alternative evolution/gift/trade/form acquisition and remaining Hyperspace detail, then full A3–A8. Use official sources first, secondary guides for omitted game data and owner photos for verified positions. No release before full GitHub gate.",
+  "next": "Check exact-head CI and independently review mobile/desktop. Continue base-dex ordinary level evolution alternatives and verified city sector/rooftop routes, then Hyperspace evolution/form and acquisition coverage and A3–A8. Preserve existing conditions, capture records, photo intake and player state; official sources first, no release until validation.",
   "previous_slice": {
-    "rotating_pool_supplements": 67,
+    "interior_species": 24,
+    "interior_route_links": 30,
+    "official_patch_baseline": "2.0.2",
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
-    "city_and_lab_fixed_targets_reviewed": 19,
-    "lab_ordinary_species_reviewed": 12,
-    "donut_modifier_integrated": true,
-    "geometry_unchanged": true,
-    "unrelated_encounters_unchanged": true,
-    "isolated_model_areas": 68,
-    "isolated_model_issues": 0,
+    "alpha_source_parity": 20,
     "full_ci": "pending",
     "visual": "pending"
   },
