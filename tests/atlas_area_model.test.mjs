@@ -258,13 +258,14 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   const input=freeze({atlas:clone(atlas),rosters:clone(wildZoneRecords),evidence:clone(production),alphaEvidence:clone(alphaEvidence),conditionEvidence:clone(conditionEvidence)});
   const snapshot=JSON.stringify(input),after=buildAreaModel(input);
   assert.equal(JSON.stringify(input),snapshot);assert.deepEqual(after.issues,[]);
-  assert.equal(conditionEvidence.records.length,182);
+  assert.equal(conditionEvidence.records.length,249);
   assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='ordinary').length,144);
   assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='fixed_alpha').length,38);
+  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='rotating_alpha').length,67);
   assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
   assert.deepEqual(after.encounters.map(({condition,sources,...rest})=>rest),before.encounters.map(({condition,sources,...rest})=>rest));
   const byId=new Map(after.encounters.map(r=>[r.id,r])),old=new Map(before.encounters.map(r=>[r.id,r])),ids=new Set(conditionEvidence.records.map(r=>r.id));
-  assert.equal(ids.size,182);
+  assert.equal(ids.size,249);
   for(const entry of conditionEvidence.records){const row=byId.get(entry.id);assert.ok(row,entry.id);assert.equal(row.condition.level,entry.condition.level);assert.equal(row.condition.directions,entry.condition.directions);if(entry.id==='g3-evidence-wz-14-helioptile-ordinary')assert.equal(row.condition.weather,'clear skies (source-corroborated)');else if(entry.id==='g3-evidence-wz-17-skarmory-ordinary')assert.match(row.condition.weather,/not rain/);else assert.match(row.condition.weather,/No special weather restriction reported/);assert.ok(row.sources.length>old.get(entry.id).sources.length);}
   assert.deepEqual(after.encounters.filter(r=>!ids.has(r.id)),before.encounters.filter(r=>!ids.has(r.id)));
   assert.match(byId.get('g3-evidence-wz-02-staryu-ordinary').condition.time,/night/i);
@@ -404,6 +405,13 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   assert.equal(byId.get('g3-evidence-wz-20-scrafty-ordinary').condition.level,'54–56');
   assert.match(selectAreaResults(after,{speciesId:'scrafty',areaId:'wz-20',encounterClass:'random_alpha'}).encounters[0].condition.notes.join(' '),/63–65/);
   assert.ok(wz20.some(r=>r.speciesId==='zygarde'&&r.encounterClass==='mission'));
+  const rotating=wz20.filter(r=>r.encounterClass==='rotating_alpha');
+  assert.ok(rotating.every(r=>['63–64','64–65'].includes(r.condition.level)&&/central area/.test(r.condition.floor)&&/not a guaranteed spawn/.test(r.condition.directions)));
+  for(const [species,form] of [['Vivillon','Meadow Pattern'],['Florges','Red Flower'],['Gourgeist','Medium Variety']])assert.ok(rotating.find(r=>r.species===species).condition.notes.some(n=>n.includes(form)));
+  assert.equal(rotating.find(r=>r.species==='Alakazam').condition.level,'64–65');
+  assert.equal(rotating.find(r=>r.species==='Raichu').condition.level,'63–64');
+  const invalidRotating=clone(conditionEvidence);invalidRotating.records=[{...invalidRotating.records.find(r=>r.encounterClass==='rotating_alpha'),id:'wz-19:rotating_alpha:0',areaId:'wz-19'}];
+  assert.equal(buildAreaModel({...input,conditionEvidence:invalidRotating}).issues.length,1);
   const bad=clone(conditionEvidence);bad.records=[{...bad.records[0],species:'Other species'},{...bad.records[1],condition:{coordinates:[1,2]}}];
   const rejected=buildAreaModel({...input,conditionEvidence:bad});assert.deepEqual(rejected.encounters,before.encounters);assert.equal(rejected.issues.length,2);
   const mismatch=buildAreaModel({...input,conditionEvidence:{...conditionEvidence,mapSha256:'wrong'}});assert.deepEqual(mismatch,before);

@@ -185,7 +185,7 @@ export function buildAreaModel({atlas,rosters,evidence,alphaEvidence,conditionEv
         const target=object(entry)?byId.get(entry.id):null;
         const claims=Array.isArray(entry?.sources)?entry.sources.map(s=>({href:safeAreaSourceHref(s?.url||s?.path),claim:s?.claim})):[];
         if(!target||counts.get(entry.id)!==1||target.areaId!==entry.areaId||target.species!==entry.species||target.encounterClass!==entry.encounterClass||target.form!==entry.form||
-          !['ordinary','fixed_alpha'].includes(target.encounterClass)||!isRecordedHabitat(target)||!object(entry.condition)||claims.length<2||!claims.every(s=>s.href&&string(s.claim))||
+          !['ordinary','fixed_alpha','rotating_alpha'].includes(target.encounterClass)||target.encounterClass==='rotating_alpha'&&target.areaId!=='wz-20'||!isRecordedHabitat(target)||!object(entry.condition)||claims.length<2||!claims.every(s=>s.href&&string(s.claim))||
           Object.keys(entry.condition).some(k=>!['time','weather','floor','unlock','level','directions','respawn'].includes(k))||
           Object.values(entry.condition).some(v=>v!==null&&!string(v,500))){
           issues.push("Rejected unsupported encounter condition supplement");continue;
