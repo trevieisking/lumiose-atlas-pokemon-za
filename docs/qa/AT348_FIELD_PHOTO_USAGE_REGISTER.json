@@ -2,14 +2,14 @@
   "schema_version": 1,
   "date": "2026-11-28",
   "reviewed_guide_head": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
-  "reviewed_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+  "reviewed_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
   "source_pr": 226,
   "integration_pr": 229,
   "policy": "PR #226 stays open as permanent additive owner gameplay photographic evidence intake, even after its original files are copied to #229 and after releases. Never remove, replace or close originals because they were used. Preserve original bytes, source head, filename, field ID, evidence confidence and provenance. Independently track upload, source-to-guide copy, actual use (destination/anchor and revision), checklist identity, coordinate/access approval and release status. Pending, fieldbook-only, contextual and verified-map statuses are distinct. Reuse evidence in every relevant guide section without creating duplicate progress IDs or unsupported pins.",
   "counts": {
-    "committed_finds": 50,
+    "committed_finds": 64,
     "access_surveys": 1,
-    "original_photos_committed_and_copied": 250,
+    "original_photos_committed_and_copied": 318,
     "contextual_links": 33,
     "groups": {
       "contextual_guide_links": {
@@ -21,17 +21,17 @@
         "photos": 29
       },
       "fieldbook_only_additional_guide_integration_pending": {
-        "records": 30,
-        "photos": 149
+        "records": 44,
+        "photos": 217
       }
     },
     "pending_finds": 0,
     "pending_photos": 0,
-    "reported_combined_finds": 50,
-    "reported_combined_photos": 250,
+    "reported_combined_finds": 64,
+    "reported_combined_photos": 318,
     "verified_native_pins": 0
   },
-  "limitations": "39 new source blobs matched owner ZIP; exact 95949c12 collectible regression confirmed all 250 candidate original blob hashes. New homepage parity correction pending exact-head checks. Further contextual use and coordinate/access identity remain open.",
+  "limitations": "318 original blobs accounted for; canonical IDs, calibrated pins, access requirements and contextual crosslinks for new finds remain open. Exact new-head CI/visual review pending.",
   "entries": [
     {
       "field_find": 1,
@@ -2344,6 +2344,736 @@
       "atlas_coordinate": null,
       "verified_permanent_pin": false,
       "release_status": "candidate_only"
+    },
+    {
+      "field_find": 51,
+      "field_id": "magenta-7-colorful-screw-rooftop",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030194.jpg",
+          "path": "assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/pickup-rooftop.webp",
+          "sha256": "e0b2c27273bfc432277f5a31583694606893e204a6c9b104c28601cc7965960a",
+          "git_blob": "02620fec048e68a134f01f397a4c17c5f2f82415"
+        },
+        {
+          "original_filename": "1000030195.jpg",
+          "path": "assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-wide.webp",
+          "sha256": "4f1ce40cbaafb7f8ea9ef0a72d8e42385419c4419b1ecde1f7789712d886cdbe",
+          "git_blob": "edc64e628fd7dffb1345e13c10b854572f7b4705"
+        },
+        {
+          "original_filename": "1000030196.jpg",
+          "path": "assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-neighbourhood.webp",
+          "sha256": "a9f84ad8e062d4825d3ae60962601650fa524518856b387f9b8ede6742094ee9",
+          "git_blob": "e6af6f1e9ac804ca315de7f6d13a4a0e60a8a518"
+        },
+        {
+          "original_filename": "1000030197.jpg",
+          "path": "assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-close.webp",
+          "sha256": "4b606988f014da8abd24d605a1e8a889f325bdf315675a3df792c7fe3e5be83e",
+          "git_blob": "7f8da1a88a54b25dcfdcd876710d828c0de3f95f"
+        },
+        {
+          "original_filename": "1000030198.jpg",
+          "path": "assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/pickup-confirmation.webp",
+          "sha256": "aeeb436e56197af14fbefe78963146c048404092e65cbca77313af1ab4e4ba28",
+          "git_blob": "2535f2373fab990ad8b94f389b59fd90f3b90379"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#magenta-7-colorful-screw-rooftop-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 52,
+      "field_id": "rouge-north-boulevard-colorful-screw-high-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030208.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/shared-scaffold-approach.webp",
+          "sha256": "a2f557bbd05297332bed456f30142a2700a4e08d7cc2ac99349ad238f2e55253",
+          "git_blob": "a0eab4b1166fe892fc2d97e14a186c188303054e"
+        },
+        {
+          "original_filename": "1000030209.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-wide.webp",
+          "sha256": "4ea7b50f71a780715265d416b9316c6297393de58967ab3bde428546f63d6259",
+          "git_blob": "24eef47704f82078db0938ac90a14c0ac89d0f55"
+        },
+        {
+          "original_filename": "1000030210.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-neighbourhood.webp",
+          "sha256": "529bd5f6d4b4374203f10e22ea52f28196b7a6c16cec6077368e460d022dbcb9",
+          "git_blob": "a5dfc7c24190022b5661fe5c5364a331797ce9e7"
+        },
+        {
+          "original_filename": "1000030211.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-close.webp",
+          "sha256": "a91ef82e58d1802e78d9330a7c048eaedd63f625d633dd02dc1b5d2e14462d46",
+          "git_blob": "595057804abb9893d74c0cdfef15f756d88a125f"
+        },
+        {
+          "original_filename": "1000030212.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/pickup-confirmation.webp",
+          "sha256": "1b0effeb27778546a151188ceb4d99a1fe52c533add95ac35f9cfdb185c9316a",
+          "git_blob": "2ab7d9e7b1b68fa173ddfe39f196237c9c29f555"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#rouge-north-boulevard-colorful-screw-high-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 53,
+      "field_id": "rouge-north-boulevard-colorful-screw-beam-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 4,
+      "photos": [
+        {
+          "original_filename": "1000030213.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-wide.webp",
+          "sha256": "51f8af89f8d615072f769c1d1220cfae12dcf2a44801ccc7d9ac61b9149d9480",
+          "git_blob": "a51061514d7f06f6ce6a549a0c425986c84f5312"
+        },
+        {
+          "original_filename": "1000030214.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-neighbourhood.webp",
+          "sha256": "869ff82fcb9d5e71a9836227b945855878c0d66f9ec87933804030359dc097e9",
+          "git_blob": "328cf1f8cfc4627bedd4804d032ae78786788ce1"
+        },
+        {
+          "original_filename": "1000030215.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-close.webp",
+          "sha256": "b6fe99d36d762de6c2001e619702c66aed492ba47bf8c7208f766f92ef17e8c7",
+          "git_blob": "c6d0c40e7018a921049461445c8f93e5bd76b8d6"
+        },
+        {
+          "original_filename": "1000030216.jpg",
+          "path": "assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/pickup-confirmation.webp",
+          "sha256": "7c18c6739477456199bf332619bd4d593bd47483d30f5cb676114651f3b82c54",
+          "git_blob": "5a8a6d355eab4af513c489db3dc35546d1ba5a6a"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#rouge-north-boulevard-colorful-screw-beam-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 54,
+      "field_id": "rouge-4-colorful-screw-shopping-arcade-skylight",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030222.jpg",
+          "path": "assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/pickup-skylight.webp",
+          "sha256": "bba2d52d4096d6cb5925f5dd7a6c4997aaeced5d6b549ac70a4797ae580d3974",
+          "git_blob": "bd0aee2205840eab4cd9c2807afd5a9a17133bfa"
+        },
+        {
+          "original_filename": "1000030223.jpg",
+          "path": "assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-wide.webp",
+          "sha256": "4ed77cfd0b09b9f7daf141a29f49fc794ed18df511abf8ebb6222558f6d1e4bc",
+          "git_blob": "78fb664f7b28b7a493bfc7037e3634366d67f3cd"
+        },
+        {
+          "original_filename": "1000030224.jpg",
+          "path": "assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-neighbourhood.webp",
+          "sha256": "05a0b45205a05a70f444e035362466f217bd85004eb468466fbaae28da381e9d",
+          "git_blob": "af8d417b1e85bb41c8e79025693693c237ae1db9"
+        },
+        {
+          "original_filename": "1000030225.jpg",
+          "path": "assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-close.webp",
+          "sha256": "1a772545fb7ff94907fa004eb57056dff01db89839df54b691744769768d0ec6",
+          "git_blob": "468bf4699ab04731690623e436a1ff9b44582241"
+        },
+        {
+          "original_filename": "1000030226.jpg",
+          "path": "assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/pickup-confirmation.webp",
+          "sha256": "683a9a9b15666e8d48a6585b180417f8a368bb9fb3ed48faf88c3271e2618197",
+          "git_blob": "03b7545d30a7c518afdb9ba93d6ed7b5075aa438"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#rouge-4-colorful-screw-shopping-arcade-skylight-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 55,
+      "field_id": "magenta-9-cafe-triste-colorful-screw-upper-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000030236.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/shared-scaffold-approach.webp",
+          "sha256": "a91c3cddbe9aa3c70ca2a7d725ac4e3688e9dd1b0b447a62098802bd97fd12df",
+          "git_blob": "168112272956311730a4eefdbd09117dc592c26b"
+        },
+        {
+          "original_filename": "1000030237.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-wide.webp",
+          "sha256": "546ac2d0f7e8fe1ca4b25be28f567a0aafad1d23efd7a0b1d3d3802ec46d8c49",
+          "git_blob": "bd0f06a3b206cf5b72116d542cc3499d30f53794"
+        },
+        {
+          "original_filename": "1000030238.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-neighbourhood.webp",
+          "sha256": "29f9fdda288f2d7b9eccc28308ddadde1d62c4aec9ecde7c661b65fe96ba0b52",
+          "git_blob": "1fda8dddab6dd437ac575fa95be215db3054666e"
+        },
+        {
+          "original_filename": "1000030239.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-close.webp",
+          "sha256": "75a98a3805d4014f2ac53c9923a127139641feced3fe34b12094efa1ff5fe702",
+          "git_blob": "06631811859c094c77fbbaabe43d13db7870e8ed"
+        },
+        {
+          "original_filename": "1000030240.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/pickup-confirmation.webp",
+          "sha256": "c85a8daad7599f5b8d303c3ef8d6b4bdd5294d5fee69781f6ae094d8c309de5a",
+          "git_blob": "fe0809f048f12877b0be9b56005ba12464ef1002"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#magenta-9-cafe-triste-colorful-screw-upper-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 56,
+      "field_id": "magenta-9-cafe-triste-colorful-screw-street-end-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 4,
+      "photos": [
+        {
+          "original_filename": "1000030241.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-wide.webp",
+          "sha256": "143180808ac6b0f395c55fbbc79fe74f9ec25d3874beda07a3cbddb21f63740d",
+          "git_blob": "a5102ba2e32c7a84eb776eebbab3ff56d865a7e4"
+        },
+        {
+          "original_filename": "1000030242.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-neighbourhood.webp",
+          "sha256": "873489e3f348dbd6cc5a173abcbb7b6079e68cedb6e29ef68facfbb81c5c0a55",
+          "git_blob": "4d6588c91216fdcd0a84634afe4f961552c50c30"
+        },
+        {
+          "original_filename": "1000030243.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-close.webp",
+          "sha256": "11af53e06ab8e98dfa13c5998d90704f4480fb9238b415c2ad1dccd9f877e56c",
+          "git_blob": "1f8ebe1d4e07e4b8b20bee0588c672e51a588f1e"
+        },
+        {
+          "original_filename": "1000030244.jpg",
+          "path": "assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/pickup-confirmation.webp",
+          "sha256": "134fd9382a3a10da321988cb2f5196438a94530aeced132c5183c69a7bce66d9",
+          "git_blob": "4a424834ea6d410d4b3ba029c7c8bd42f9bb8d3b"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#magenta-9-cafe-triste-colorful-screw-street-end-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 57,
+      "field_id": "jaune-canalside-future-sight-npc",
+      "name": "Future Sight",
+      "category": "tm",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033208.jpg",
+          "path": "assets/atlas/collectibles/jaune-canalside-future-sight-npc/npc-reward.webp",
+          "sha256": "10a7130e7cf0436896dd34f02374050d498bde3394f502da8ffd3d383d1e21b5",
+          "git_blob": "f1769c118a9d5cab70c95145bbe27fa578770371"
+        },
+        {
+          "original_filename": "1000033209.jpg",
+          "path": "assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-wide.webp",
+          "sha256": "94446597ad6ab633f24a5f3813844e696cc82d0b0e4fb4f06c848b9161c52daa",
+          "git_blob": "15765e8d6ef9e186220fdbb10eef59f660c043ec"
+        },
+        {
+          "original_filename": "1000033210.jpg",
+          "path": "assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-neighbourhood.webp",
+          "sha256": "1aa3afedc60c653839a72528d60dfc001046b6705bd8568620c235694577b36f",
+          "git_blob": "bc4e4c7a96aefccd0a3668d35ee54c3703edbf9d"
+        },
+        {
+          "original_filename": "1000033211.jpg",
+          "path": "assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-close.webp",
+          "sha256": "f7256b41ec4d0973520eebb58022ac7d5dd5953095856a227a57d218588f7f7c",
+          "git_blob": "dc9d22ca624dd160886e973d86804c4d0ca20929"
+        },
+        {
+          "original_filename": "1000033212.jpg",
+          "path": "assets/atlas/collectibles/jaune-canalside-future-sight-npc/npc-landmark.webp",
+          "sha256": "2e9ad908e08a68790e0f265312c4005e42e4f4f05b4e1517fa0caabadf73dd29",
+          "git_blob": "8a6bba6ea767b40c186c0e4726224ce4d0ef5d81"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-canalside-future-sight-npc-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "npc_dialogue_owner_report",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 58,
+      "field_id": "jaune-6-justice-dojo-colorful-screw-lower-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033213.jpg",
+          "path": "assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/approach.webp",
+          "sha256": "eabba5c9b3bedb4029d260aacfec5b2f0f5cda364956efb9dcb70d6bff0ae883",
+          "git_blob": "3e9165ebfcf4201a23b78f46139a23984df9bf5d"
+        },
+        {
+          "original_filename": "1000033218.jpg",
+          "path": "assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-wide.webp",
+          "sha256": "b3052f0a3026aef9fa5980fd84f6d46a68d12401d5f047b094e879b5292b0859",
+          "git_blob": "0ba1e4eb78d0387b7b33f609ae166e9e5b7ab663"
+        },
+        {
+          "original_filename": "1000033219.jpg",
+          "path": "assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-neighbourhood.webp",
+          "sha256": "5fa93152a573e1f2da4deeb1109574f0ce6d02cb42030cddc25d67a4de891301",
+          "git_blob": "2791ae4d51179d2e8a0d4140cd83963a4fd77647"
+        },
+        {
+          "original_filename": "1000033220.jpg",
+          "path": "assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-close.webp",
+          "sha256": "1cb60b6a1ac6e7e8665e94254f7e6a1c9aeaed7504d8f15ed92eac11caba7495",
+          "git_blob": "2bcd8e440c395a08e2b00082a2cb6bc8f7492b3d"
+        },
+        {
+          "original_filename": "1000033221.jpg",
+          "path": "assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/pickup-confirmation.webp",
+          "sha256": "a5b1fa89e19e43fd10eb33c729e18e027678d3926c7b1a7ee12c50932991d23c",
+          "git_blob": "c872534b4fbcc9ab959e4b86675c6b99ba6869c2"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-6-justice-dojo-colorful-screw-lower-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 59,
+      "field_id": "jaune-9-colorful-screw-upper-sign-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033224.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/approach.webp",
+          "sha256": "b5055f1b77b2edd1144afd42c1ae64729ad6f98b0ce136becfaa9eab9bc4b1e8",
+          "git_blob": "feebfdaf834b69c61344f4bab68dad2a26af9c0a"
+        },
+        {
+          "original_filename": "1000033225.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-wide.webp",
+          "sha256": "0bc4fb8d58ba4f58b3284fc09dd6835e1ccd8f6b5ddd94ebfc228c0d1827d15b",
+          "git_blob": "0f59e1382017b73535bfb7c86e9d3d013b1e44e9"
+        },
+        {
+          "original_filename": "1000033226.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-neighbourhood.webp",
+          "sha256": "0d993ed946d4bd6ac03d0693d50eba0d293839b10479cb5e4a4b089adf8f1760",
+          "git_blob": "5f02e1a81b4878d6138685d645001141f7408aaa"
+        },
+        {
+          "original_filename": "1000033227.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-close.webp",
+          "sha256": "b420b4b7fbb0666ca890c7929fd94518964735d85420bc1b37a4fe46f5fd0c41",
+          "git_blob": "8cbc16039b5b534fc16cfc7566b38879090e1746"
+        },
+        {
+          "original_filename": "1000033228.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/pickup-confirmation.webp",
+          "sha256": "dfe6253bf064975f57593a066cfd2a1d04e607478af1dd3ab675dfe8009c8e6a",
+          "git_blob": "6acacbc2aafa85e619be3c0fa57ea71d046d62cd"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-9-colorful-screw-upper-sign-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 60,
+      "field_id": "jaune-9-colorful-screw-arched-window-balcony",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033229.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/approach.webp",
+          "sha256": "633f3060ae40c76af4f395ac41dc7a5216a708044748465e1afc4dc3ef16a0f6",
+          "git_blob": "377a364058edaaa54681a1ccef2f14c44078ad69"
+        },
+        {
+          "original_filename": "1000033230.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-wide.webp",
+          "sha256": "73bbac64da6ac13fde06ba3ec4e1316b27493f4469c4a9f912949df15e0248a5",
+          "git_blob": "bda0621274845ae9bb2b5a81f89403edcb36d392"
+        },
+        {
+          "original_filename": "1000033231.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-neighbourhood.webp",
+          "sha256": "7cfba443415e08793b841b0c52b987387601b317ef5a80fd2273dff4a5531771",
+          "git_blob": "28af7f39142afdfe477e34d411dd4664d5883e0f"
+        },
+        {
+          "original_filename": "1000033232.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-close.webp",
+          "sha256": "d59338a759fb3d165559b071f17b625029895b8b53918cb4b9a35c792e02baf5",
+          "git_blob": "68b0ddd825013a699987f880348be930a7dddb37"
+        },
+        {
+          "original_filename": "1000033233.jpg",
+          "path": "assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/pickup-confirmation.webp",
+          "sha256": "d7211400ac9bc3296b2715987ad9ba2d193cd4503ec0a7e5f15afc73f2aa6f2b",
+          "git_blob": "be8876cc4af02b6f67671e59ba35377cef29650c"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-9-colorful-screw-arched-window-balcony-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 61,
+      "field_id": "jaune-11-cafe-bataille-colorful-screw-rooftop-garden",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033234.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/approach.webp",
+          "sha256": "3abe50c12c4983382ba6a647323c7c8b0cc73822eed9de05e2008c30e9beda5a",
+          "git_blob": "8267f3f2f2810b2f1af2cf9b136ab0a9fae23864"
+        },
+        {
+          "original_filename": "1000033235.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-wide.webp",
+          "sha256": "1cfd2747c8229efa4d77207d525dd74182e55c212d7270b81a8027f477887dca",
+          "git_blob": "1a8d2c4de811ea91a99f268ed2d235a0e86f2d99"
+        },
+        {
+          "original_filename": "1000033236.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-neighbourhood.webp",
+          "sha256": "7c39aec3b5cf7ebd0c5ddae4579ef8179f685139e0015ccd2ef0579f3cd6d43b",
+          "git_blob": "d5ce3d323dc8ca6b7a360a7e38fe6fb9344f3b2f"
+        },
+        {
+          "original_filename": "1000033237.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-close.webp",
+          "sha256": "6a573bfa9da2f94fa02d8f215300d3b09f649a0feacf0ad897f0b185f36dc67d",
+          "git_blob": "817e3628f93be9b52e0a5df4d1a6e2b90c40950f"
+        },
+        {
+          "original_filename": "1000033238.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/pickup-confirmation.webp",
+          "sha256": "0893d46e728219e0a64ed5950aac6ec1d4da7ec39357c72c3d24d5546b1b795f",
+          "git_blob": "6ed5632ba567b5ca65c01a73635e323b54c3b8d9"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-11-cafe-bataille-colorful-screw-rooftop-garden-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 62,
+      "field_id": "jaune-11-cafe-bataille-colorful-screw-umbrella-glide",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033239.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/approach.webp",
+          "sha256": "8d15169ab174e230c86da8bb07a207504469d134547c594199a302dada2f20df",
+          "git_blob": "c93ac8dd98495621b45823d7d9ca4a84bad15486"
+        },
+        {
+          "original_filename": "1000033240.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-wide.webp",
+          "sha256": "fadee0a9317df1ff8d3c5720636e13dee4a8eb86f02b758ab24a7b930273a606",
+          "git_blob": "6e39ca0f85bcf9e0750f53c860421b42d0b6ab72"
+        },
+        {
+          "original_filename": "1000033241.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-neighbourhood.webp",
+          "sha256": "3bea4fe60f55c34cd6de3e30cd8cd9d3f476875e996e9a9291815d7af086093b",
+          "git_blob": "1b1a4d9538ed804c875293bddb44f0db8b85d752"
+        },
+        {
+          "original_filename": "1000033242.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-close.webp",
+          "sha256": "5482d96efa8d3c4eb417c3d89a8c28b84771efd914447b7ee7ccf01291b5acd3",
+          "git_blob": "7269d9ccb0da85bdd394711467d6a170efacd175"
+        },
+        {
+          "original_filename": "1000033243.jpg",
+          "path": "assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/pickup-confirmation.webp",
+          "sha256": "3595b83ed51c678ef506d179f6008522310b7fce3ea7aab1d3683e244f516675",
+          "git_blob": "01ea6fad54fa7a9e010ec2258b52e6382deb4ecb"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#jaune-11-cafe-bataille-colorful-screw-umbrella-glide-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 63,
+      "field_id": "rouge-8-hibernal-avenue-colorful-screw-corner-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033244.jpg",
+          "path": "assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/approach.webp",
+          "sha256": "67dbd52c93a152fe545e92656877f6f50741b7920e5cdd7b49b419fc4b228feb",
+          "git_blob": "7c28d4a8c649c94111bd93c8d06a1e93cc09a360"
+        },
+        {
+          "original_filename": "1000033245.jpg",
+          "path": "assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-wide.webp",
+          "sha256": "a96ecf29d887ecf83ef9da5ffb0300840962571b096384fd8202532a0f124adc",
+          "git_blob": "51f0d794c1d89e8db3d91ef38366df02abd2e1f7"
+        },
+        {
+          "original_filename": "1000033246.jpg",
+          "path": "assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-neighbourhood.webp",
+          "sha256": "522ddac9c8cc0791a98336548618ebe4935e16409d57a42ff69b431adced8677",
+          "git_blob": "73c84ff63fbe74fe363323cfc3cbed3e7512a84a"
+        },
+        {
+          "original_filename": "1000033247.jpg",
+          "path": "assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-close.webp",
+          "sha256": "561e161a45ce22dbc42180bb2c1581ce9f473d65c42dcfab0e54170cd6283221",
+          "git_blob": "08dc56cd8e46e1bfc61b57415f1cc038f85c7f9b"
+        },
+        {
+          "original_filename": "1000033248.jpg",
+          "path": "assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/pickup-confirmation.webp",
+          "sha256": "c994a48f6e1654a03437679c995b9ac39569b898969321caa1f4f0a49e7e90d1",
+          "git_blob": "a450fa381822a8f8dad6aea3889d85f77f2f2257"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#rouge-8-hibernal-avenue-colorful-screw-corner-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
+    },
+    {
+      "field_find": 64,
+      "field_id": "vert-south-boulevard-racine-colorful-screw-ladder-scaffold",
+      "name": "Colorful Screw",
+      "category": "screw",
+      "source_pr": 226,
+      "source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+      "photo_count": 5,
+      "photos": [
+        {
+          "original_filename": "1000033250.jpg",
+          "path": "assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/approach.webp",
+          "sha256": "cb1e1177ef616ac8b8e250c2a94923378daa0081010c68980b0fae95a83106fa",
+          "git_blob": "8635a9513dee851abca0357de0cc1f327ce19793"
+        },
+        {
+          "original_filename": "1000033251.jpg",
+          "path": "assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-wide.webp",
+          "sha256": "a45b0bf726cfaccafa9fa5c3b2d923b0391072b8cd9e32a16eeb4da8ca55f3bd",
+          "git_blob": "ef5a3fe13016a56169bfb4098dd3869eeedba73a"
+        },
+        {
+          "original_filename": "1000033252.jpg",
+          "path": "assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-neighbourhood.webp",
+          "sha256": "36f66609373cf1da28a9822cc4d8e03feb472f1130f6f1007073546e18bd71cb",
+          "git_blob": "1bbddf4fb8f1d02bff84fd0852b8bb7fe3032aeb"
+        },
+        {
+          "original_filename": "1000033253.jpg",
+          "path": "assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-close.webp",
+          "sha256": "90b99c171a1af4ae3bbd5dd1dd2c0cd72bea13cbce914c8f24fa29dd0a1a3501",
+          "git_blob": "e96dcc220496692906b773de329be15d8fac8107"
+        },
+        {
+          "original_filename": "1000033254.jpg",
+          "path": "assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/pickup-confirmation.webp",
+          "sha256": "01adbcea558f5225b8e1912684900c969639dfc230301872909a284880d91602",
+          "git_blob": "af271128766604e419d51630956c15a853a5ad4a"
+        }
+      ],
+      "source_status": "committed_and_preserved",
+      "copy_status": "original_git_blobs_verified_and_staged_for_candidate",
+      "fieldbook": "collectible-fieldbook.html#vert-south-boulevard-racine-colorful-screw-ladder-scaffold-photos",
+      "guide_usage": "fieldbook_only_additional_guide_integration_pending",
+      "destinations": [],
+      "tm_candidate": null,
+      "access_comparison": [],
+      "evidence_status": "pickup_screenshot",
+      "canonical_checklist_id": null,
+      "atlas_coordinate": null,
+      "verified_permanent_pin": false,
+      "release_status": "candidate_only"
     }
   ],
   "pending_intake": [],
@@ -2384,20 +3114,19 @@
     "release_dependency": false
   },
   "last_intake_check": {
-    "committed_finds": 50,
+    "committed_finds": 64,
     "access_surveys": 1,
-    "committed_photos": 250,
+    "committed_photos": 318,
     "new_committed_photos_not_copied": 0,
     "reported_pending_finds": 0,
     "reported_pending_photos": 0,
-    "source_original_blob_matches": 39,
-    "candidate_readback": "verified",
-    "matching_guide_photo_blobs": 250,
-    "verified_job": 141060145760,
+    "source_original_blob_matches": 68,
+    "retained_previous_blob_matches": 250,
+    "candidate_readback": "pending_exact_commit_readback",
     "source_head_rechecked": true
   },
-  "last_intake_check_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
-  "last_intake_check_guide_head": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
+  "last_intake_check_source_head": "04347376a33d71c11dff232bc3e959952fcda9bc",
+  "last_intake_check_guide_head": "d17dae9df12bbbbf487878ddff11f5eaeb6c7eb8",
   "previous_pending_intake": [
     {
       "field_find": 43,
@@ -2497,7 +3226,7 @@
     }
   ],
   "validation_boundary": "Never wait for future, unuploaded, staged, pending, unreviewed or incomplete photographs. Check only incorporated/referenced assets for real integrity, link, accessibility, identity or rendering regressions. Fix or safely isolate an actual regression without deleting original evidence or weakening functioning features. A2–A8, GitHub accuracy/testing/owner review and existing Workspace acceptance gates remain independent.",
-  "last_intake_check_note": "28 November 2026 A2-16: PR226 remains open at ffc46e3c69f7756dffecf17e4368eef4c53f4faa. No new committed delta; 250 previously verified originals retained. Owner continues field evidence; no photo files touched.",
+  "last_intake_check_note": "51–64 source verified; 68 new and 250 existing blob identities checked, candidate changes staged; exact-head CI and further contextual use pending.",
   "a1_permanent_photo_policy": {
     "id": "AT-348-A1-PERMANENT-PHOTO-PROGRAMME",
     "owner_instruction_date": "2026-11-28",

@@ -295,17 +295,17 @@ test('real collectibles match displayed labels, accents and a bounded Wild Zone 
 });
 
 // AT-348 A3-01: immutable field evidence is additive and never owns progress or pins.
-test('all 51 field groups and 250 exact original photos are retained without assigning map pins or checklist IDs',()=>{
+test('all 65 field groups and 318 exact original photos are retained without assigning map pins or checklist IDs',()=>{
   const field=JSON.parse(read('docs/field-guides/collectible-photo-register.json'));
   const review=JSON.parse(read('docs/qa/AT348_A3_01_FIELD_EVIDENCE_CROSSWALK.json'));
   const page=read('collectible-fieldbook.html'),guide=read('docs/field-guides/collectible-locations.md');
-  assert.deepEqual(field.counts,{tm:21,item:20,screw:9,access:1,collectibleFinds:50,photos:250});
-  assert.equal(field.entries.length,51);
-  assert.equal(new Set(field.entries.map(e=>e.id)).size,51);
-  assert.equal((page.match(/<details class="field-find" id="/g)||[]).length,51);
-  assert.equal((page.match(/<img src="assets\/atlas\/(?:collectibles|access)\//g)||[]).length,250);
+  assert.deepEqual(field.counts,{tm:22,item:20,screw:22,access:1,collectibleFinds:64,photos:318});
+  assert.equal(field.entries.length,65);
+  assert.equal(new Set(field.entries.map(e=>e.id)).size,65);
+  assert.equal((page.match(/<details class="field-find" id="/g)||[]).length,65);
+  assert.equal((page.match(/<img src="assets\/atlas\/(?:collectibles|access)\//g)||[]).length,318);
   const paths=field.entries.flatMap(e=>e.photos.map(p=>p.path));
-  assert.equal(new Set(paths).size,250);
+  assert.equal(new Set(paths).size,318);
   assert.deepEqual(Object.keys(review.photo_git_blobs).sort(),paths.slice().sort());
   for(const e of field.entries){
     assert.equal(e.atlasCoordinate,null);assert.equal(e.canonicalChecklistId,null);
