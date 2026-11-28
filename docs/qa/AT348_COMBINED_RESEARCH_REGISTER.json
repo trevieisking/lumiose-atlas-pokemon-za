@@ -2,9 +2,9 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 146,
-  "ledger_revision": 154,
-  "reviewed_parent": "48f76fceeeeafd1ab864ea71b992b902775b7cf9",
+  "manifest_revision": 147,
+  "ledger_revision": 155,
+  "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
   "pr": 229,
   "photo_pr": 226,
   "source_library": [
@@ -80,6 +80,12 @@
       "url": "https://www.powerpyx.com/pokemon-legends-z-a-full-pokedex-all-pokemon-locations/",
       "role": "Targeted city rooftop, courtyard and market routes",
       "status": "13 written card routes with sector lists and explicit gaps in A2-18 report; no coordinate verification"
+    },
+    {
+      "id": "rotomlabs-city-sector-audit",
+      "url": "https://rotomlabs.net/locations/legends-z-a/bleu-district",
+      "role": "Published district and separated normal/Alpha level rows",
+      "status": "Indexed excerpts accessible; direct district page cache misses. A2-19 receipt includes individual source URLs and limitations."
     }
   ],
   "previous_source_reviews": [
@@ -101,7 +107,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species, 67 alternative/special notes, 84 ordinary level routes and 13 written city capture cards enriched. Remaining city species, individual conditions, Hyperspace, forms and whole-guide factual/visual QA open."
+      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species, 67 alternative/special notes, 84 ordinary level routes and 20 written city cards (five cross-checked level refinements). Remaining city, Hyperspace, forms and whole-guide factual/visual QA open."
     },
     {
       "slice": "A3",
@@ -255,6 +261,37 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
+    "new_city_notes": 7,
+    "city_notes_total": 20,
+    "city_level_refinements": 5,
+    "local_links_checked": 48,
+    "ordinary_level_routes": 84,
+    "prior_acquisition_notes": 67,
+    "total_condition_supplements": 249,
+    "total_chance_alpha_rows": 146,
+    "prior_ci": "all_four_passed",
+    "full_ci": "pending",
+    "visual": "pending"
+  },
+  "open_disputes": [
+    "WZ18 fixed Alpha time/weather table vs narrative",
+    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
+    "Gastly lead remains unclassified",
+    "WZ18 exact earliest Rank B transition",
+    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
+    "English Game8 body inaccessible",
+    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
+    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
+    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
+    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
+    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification.",
+    "A2-18: Ralts ordinary day/night route differs from sunny-day chance Alpha observations; Dratini daytime route not universal; Riolu Jaune District unspecified sector; exact secondary city routes, weather, levels, unlocks and odds remain partly unresolved.",
+    "A2-19: monkey daytime recommendation versus Pansear night observation; additional Panpour Jaune 11, Pansear Jaune 8/Street and Dedenne Bleu 8/Jaune 9 leads require cross-source review; no new precise pins."
+  ],
+  "full_audit_complete": false,
+  "release_decision": "HOLD",
+  "next": "Continue remaining written city encounter routes and individual conditions; then Hyperspace acquisition/evolution/forms and whole-guide factual/functional audit. Preserve all existing assets and progress. A1 is urgent parallel photo intake, not a release dependency. GitHub validation and owner review before Workspace, zero paid services.",
+  "previous_slice": {
     "a1_policy_only": true,
     "parallel_intake": true,
     "prior_head_ci": [
@@ -284,34 +321,6 @@
       }
     ],
     "full_guide_fact_verified": false
-  },
-  "open_disputes": [
-    "WZ18 fixed Alpha time/weather table vs narrative",
-    "Noivern chance Alpha Lv58–59 Serebii vs Lv56–57 Pokémon-France",
-    "Gastly lead remains unclassified",
-    "WZ18 exact earliest Rank B transition",
-    "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
-    "English Game8 body inaccessible",
-    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
-    "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
-    "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
-    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
-    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification.",
-    "A2-18: Ralts ordinary day/night route differs from sunny-day chance Alpha observations; Dratini daytime route not universal; Riolu Jaune District unspecified sector; exact secondary city routes, weather, levels, unlocks and odds remain partly unresolved."
-  ],
-  "full_audit_complete": false,
-  "release_decision": "HOLD",
-  "next": "Continue remaining written city routes, Hyperspace acquisition/evolution/forms and whole-guide factual review under A2–A8; record uncertain requirements, test existing GitHub site and obtain owner review before Workspace handoff. A1 remains parallel and urgent on arrival; do not wait for photographs or gallery completion to continue or release. No additional spend.",
-  "previous_slice": {
-    "city_capture_notes": 13,
-    "local_links": 53,
-    "ordinary_level_routes": 84,
-    "prior_acquisition_notes": 67,
-    "total_condition_supplements": 249,
-    "total_chance_alpha_rows": 146,
-    "prior_ci": "all_four_passed",
-    "full_ci": "pending",
-    "visual": "pending"
   },
   "official_source_policy": {
     "date": "2026-11-28",

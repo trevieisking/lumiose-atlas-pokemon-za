@@ -798,5 +798,17 @@
       "report": "docs/qa/AT348_A1_PERMANENT_PHOTO_POLICY.md"
     },
     "scope": "Photo coverage not a requirement for full written page review; current integrated images still subject to scoped regression validation."
+  },
+  "a2_19_city_level_colour_audit": {
+    "manifest_revision": 147,
+    "ledger_revision": 155,
+    "reviewed_parent": "019e52976670a5080059854a2d1f85836981ab34",
+    "report": "docs/qa/AT348_A2_19_CITY_LEVEL_COLOUR_AUDIT.md",
+    "affected_surfaces": [
+      "src/sections/pokedex.html",
+      "index.html"
+    ],
+    "status": "bounded_12_card_audit_candidate",
+    "full_page_factual_review_completed": false
   }
 }
