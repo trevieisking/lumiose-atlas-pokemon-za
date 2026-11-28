@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 115,
-  "ledger_revision": 123,
+  "manifest_revision": 116,
+  "ledger_revision": 124,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,9 +246,10 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "open",
+      "status": "p0_capture_first_projection_candidate_full_encounter_research_open",
       "source": "AT-346 / #220",
-      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins."
+      "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified.",
+      "priority": "P0"
     },
     {
       "id": "A3",
@@ -369,11 +370,11 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Review exact-head test results and new deep-link screenshots; verify whether the isolated HTTP HEAD readiness fix prevents the recurring fashion startup crash. Continue remaining A3 registration and identity/route gaps and A2 Pokédex source review without reopening A1 bounded repairs. Keep unresolved coordinates/pins explicitly unverified; no Workspace activity until full GitHub Pages live validation.",
+  "next_slice": "A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity.",
   "ordered_slices": [
+    "A2",
     "A1",
     "A3",
-    "A2",
     "A7",
     "A4",
     "A5",
@@ -900,5 +901,43 @@
     "workspace_release_allowed": false,
     "release_decision": "HOLD",
     "next_slice": "Review exact-head test results and new deep-link screenshots; verify whether the isolated HTTP HEAD readiness fix prevents the recurring fashion startup crash. Continue remaining A3 registration and identity/route gaps and A2 Pokédex source review without reopening A1 bounded repairs. Keep unresolved coordinates/pins explicitly unverified; no Workspace activity until full GitHub Pages live validation."
+  },
+  "a2_01_capture_first_dex": {
+    "id": "AT-348-A2-01-CAPTURE-FIRST-DEX",
+    "date": "2026-11-28",
+    "manifest_revision": 116,
+    "ledger_revision": 124,
+    "priority": "P0",
+    "parent": "bd8253f8c87c6ffcec7635fa24544a5e40e6876a",
+    "active_pr": 229,
+    "tracking_issue": 220,
+    "evidence": "docs/qa/AT348_A2_01_CAPTURE_FIRST_DEX.md",
+    "scope": "Project recorded and related claims into all 232 Lumiose cards, expose explicit condition gaps and direct area links; six source-attributed weather tips and explicit map conditions.",
+    "preserved": {
+      "lumiose": 232,
+      "hyperspace": 132,
+      "portal_bands": 202,
+      "alpha_index": 364,
+      "area_geometry": 68,
+      "original_area_claims": 748,
+      "chance_alpha_claims": 6,
+      "progress": true,
+      "photos": true
+    },
+    "prior_checks": {
+      "pages": "46132879747 success",
+      "articles": "46132879712 failure at sector_map_directory.test.mjs:283",
+      "explorer": "46132879718 failure at sector_map_directory.test.mjs:283",
+      "fashion_browser": "success",
+      "area_browser": "success"
+    },
+    "implementation": "draft_candidate",
+    "validation": "pending_exact_head_and_visual_review",
+    "complete_encounter_coverage": false,
+    "new_pins": 0,
+    "workspace_changed": false,
+    "workspace_release_allowed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity."
   }
 }

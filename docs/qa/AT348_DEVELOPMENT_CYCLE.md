@@ -1,5 +1,10 @@
 # AT-348 — Mandatory two-site development cycle
 
+## AT-348 A2-01 — Capture-first Pokédex (116 / 124)
+
+**28 November 2026 — Manifest 116 / Ledger 124. P0 owner-reported capture-guide defect.** A2-01 projects existing shared habitat records into the Lumiose cards with named area map links, explicit time/weather/elevation/unlock values, encounter class, form, source notes and separately labelled unconfirmed leads. Adds source-attributed weather guidance for six species. No new permanent pins or existing map, progress, roster, portal band or photo changes. Existing source register has 748 claims plus six chance Alpha records; it is not an exhaustive census. Parent Pages passed; two parent workflows failed at sector_map_directory.test.mjs:283. Candidate exact-head CI and phone/desktop QA pending. HOLD. See [A2-01 evidence](AT348_A2_01_CAPTURE_FIRST_DEX.md). A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity.
+
+
 ## Owner clarification — GitHub first (28 November 2026)
 
 GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory. This takes precedence over earlier continuation language. Plans and inventory must still be synchronized each stage; no executable Workspace prompt is issued early.

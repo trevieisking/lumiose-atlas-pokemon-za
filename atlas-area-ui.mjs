@@ -90,7 +90,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
     const species=make('button','aa-species-link',row.species+(row.form?' · '+row.form:''));species.type='button';species.dataset.speciesId=row.speciesId;species.setAttribute('aria-label','Show recorded habitats for '+row.species);species.addEventListener('click',()=>selectSpecies(row.speciesId,{focus:true}));
     item.append(species,make('span','aa-record-type',labels[row.encounterClass]+' · '+(evidenceLabels[row.evidenceStatus]||row.evidenceStatus)));
     const location=make('p','aa-encounter-location','Area: '+(byId.get(row.areaId)?.name||row.areaId));location.dataset.encounterArea=row.areaId;item.append(location);
-    const condition=[...Object.entries(row.condition).filter(([k,v])=>k!=='notes'&&v).map(([k,v])=>k[0].toUpperCase()+k.slice(1)+': '+v),...row.condition.notes];
+    const condition=[...['time','weather','floor','unlock'].map(k=>k[0].toUpperCase()+k.slice(1)+': '+(row.condition[k]||'Not verified')),...row.condition.notes];
     item.append(make('p','',condition.length?condition.join(' · '):'Time, weather, floor and unlock conditions are not fully recorded.'));
     for(const note of row.notes)item.append(make('p','aa-evidence-note',note));showSources(row,item);return item;
   }

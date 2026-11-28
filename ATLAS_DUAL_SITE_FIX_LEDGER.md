@@ -1,5 +1,10 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## AT-348 A2-01 — Capture-first Pokédex and maps (Manifest 116 / Ledger 124)
+
+**28 November 2026 — Manifest 116 / Ledger 124 — owner-reported P0 capture-guide defect.** AT-346 / issue #220 remains incomplete. At PR229 parent `bd8253f8c87c6ffcec7635fa24544a5e40e6876a`, 232 Lumiose cards contained short acquisition notes/zone buttons, with detailed shared area evidence only on a separate habitat search. A2-01 candidate projects recorded encounters and separated non-habitat/research claims into the existing Lumiose cards: named-area map links, form, encounter class, explicit time/weather/elevation/unlock (Not verified when absent), source notes and attributable weather guidance for six species. Shared map panels expose each missing condition. Preserve the 132 Hyperspace entries/202 capture bands, 364 Alpha index, existing 748-claim register plus six chance-Alpha rows, all 68 reviewed area outlines, photographs and progress. This is a display correction plus bounded new weather guidance, not an exhaustive encounter census. Parent Pages 46132879747 passed; articles 46132879712 and Explorer 46132879718 failed the same sector_map_directory.test.mjs:283 assertion; fashion and area browser jobs passed. Exact-head CI and phone/desktop review pending. HOLD: no new PR, main merge or Workspace action. [Scope and acceptance](https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/docs/at348-workspace-resume-checkpoint/docs/qa/AT348_A2_01_CAPTURE_FIRST_DEX.md). **Next:** A2 first: validate candidate, reconcile all species/forms and each route's time, weather, level, elevation/access, prerequisites, respawn and sources, extend Hyperspace and Alpha capture details, and resolve inherited test failure. All prior work stays open until its gates pass. Workspace last, after full GitHub live verification.
+
+
 <!-- AT348_A3_02_115_123 -->
 ## AT-348 A3-02 — Access crosslinks and recurring test startup failure (Manifest 115 / Ledger 123)
 

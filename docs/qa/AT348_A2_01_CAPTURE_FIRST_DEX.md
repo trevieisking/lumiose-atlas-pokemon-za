@@ -1,0 +1,13 @@
+# AT-348 A2-01 — Capture-first Pokédex
+
+**28 November 2026 — Manifest 116 / Ledger 124. P0 owner-reported capture-guide defect.** A2-01 projects existing shared habitat records into the Lumiose cards with named area map links, explicit time/weather/elevation/unlock values, encounter class, form, source notes and separately labelled unconfirmed leads. Adds source-attributed weather guidance for six species. No new permanent pins or existing map, progress, roster, portal band or photo changes. Existing source register has 748 claims plus six chance Alpha records; it is not an exhaustive census. Parent Pages passed; two parent workflows failed at sector_map_directory.test.mjs:283. Candidate exact-head CI and phone/desktop QA pending. HOLD. See this receipt. A2 P0 first: validate capture-first projection at exact PR229 head, then reconcile every species/form and all ordinary/fixed/chance/rotating Alpha and alternate capture routes with time, weather, level, elevation, directions, unlocks, respawn and citations; extend Hyperspace and Alpha details and cross-check maps. Resolve inherited sector directory assertion. Full GitHub live validation before any Workspace activity.
+
+## Evidence and limits
+
+Exact parent bd8253f8c87c6ffcec7635fa24544a5e40e6876a. The pinned existing `atlas-area-evidence.json` blob `adb7608fa9c2643106f9085a2abc972c52830a2b` has 748 claims with 162 species labels: 40 non-null time, eight weather, 56 floor, 32 unlock. Six chance Alpha rows are loaded separately. These are source-row counts, not a capture completeness metric. Project existing data without changing claims, geometry or coordinates. Additional weather guidance is explicitly qualified; indoor route details and route-specific weather applicability remain unverified.
+
+Sources: https://www.serebii.net/legendsz-a/weather.shtml ; https://www.powerpyx.com/pokemon-legends-z-a-goomy-location/ ; https://allthings.how/find-goomy-in-pokemon-legends-z-a-sewer-route-and-rainy-spawn/ ; https://www.nintendolife.com/guides/pokemon-legends-z-a-pokedex-all-lumiose-pokemon-locations-and-evolutions ; https://www.powerpyx.com/pokemon-legends-z-a-sliggoo-location/ .
+
+## Acceptance
+
+Test all 232 Lumiose panels, Goomy weather and named-area links, separated research leads, four Pumpkaboo chance Alpha forms and day/night, Goodra evolution and unchanged Hyperspace cards at both viewport widths. Review screenshots and actual UI. Existing source and progress unchanged. New head tests not yet run. No claim of full species/location research or live release. Original Workspace v40 retained, prior rollback v39; no executable Workspace prompt before complete GitHub live verification.

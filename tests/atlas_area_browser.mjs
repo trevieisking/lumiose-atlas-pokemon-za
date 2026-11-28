@@ -661,6 +661,20 @@ try{
     await page.locator('[data-atlas-habitat-link="pidgey"]').waitFor({state:"attached"});
     assert.equal(await page.locator('[data-atlas-habitat-link="pidgey"]').getAttribute("href"),"atlas-explorer.html?species=pidgey");
     assert.ok(await page.locator("#dexGrid .dex-card").count()>=232,"Existing Pokédex entries preserved");
+    assert.equal(await page.locator('#dexGrid [data-dex-capture-guide]').count(),232,'All Lumiose cards have explicit capture coverage');
+    assert.equal(await page.locator('#dexGrid [data-dex-region="Hyperspace"] [data-dex-capture-guide]').count(),0,'Do not import city habitats into portal encounters');
+    const goomy=page.locator('[data-dex-capture-guide="goomy"]');
+    assert.match(await goomy.textContent(),/Outdoor encounters require rain/);
+    assert.match(await goomy.textContent(),/southern Lumiose Sewers/i);
+    assert.match(await goomy.locator('[data-dex-conditions]').first().textContent(),/Time: .*Weather: .*Elevation: .*Unlock: /);
+    assert.ok(await goomy.locator('a[href*="area=vert-sector-9"][href*="species=goomy"]').count()>0);
+    assert.ok(await goomy.locator('[data-dex-research-claims] [data-dex-encounter-evidence="source_lead"]').count()>0);
+    const pumpRows=page.locator('[data-dex-capture-guide="pumpkaboo"] [data-dex-encounter-class="random_alpha"]');
+    assert.equal(await pumpRows.count(),4);
+    assert.match((await pumpRows.allTextContents()).join(" "),/Medium Variety.*Time: Day/s);
+    assert.match((await pumpRows.allTextContents()).join(" "),/Jumbo Variety.*Time: Night/s);
+    assert.match(await page.locator('[data-dex-capture-guide="goodra"]').textContent(),/evolve Sliggoo at level 50 or higher while it is raining/);
+
     await unchanged();
 
     // Reviewed chance Alpha rows are independent of the original fixed and
