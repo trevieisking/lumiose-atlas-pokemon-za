@@ -697,6 +697,11 @@ try{
     const tynamoRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-10-tynamo-ordinary"]');
     assert.match(await tynamoRoute.textContent(),/Level: 31–32/);
     assert.match(await tynamoRoute.textContent(),/eastern\/back gate/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-11&species=slowbro&encounter=fixed_alpha",{waitUntil:"load"});await panel();
+    const slowbroRoute=page.locator('[data-area-encounter-id="wz-11:fixed_alpha:0"]');
+    assert.match(await slowbroRoute.textContent(),/Level: 42–44/);
+    assert.match(await slowbroRoute.textContent(),/thorn barrier.*TM063/);
+
 
 
     await unchanged();

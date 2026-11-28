@@ -1,5 +1,12 @@
 # AT-346 — Shared pending Workspace change inventory (NOT an executable prompt)
 
+## AT-348 A2-06 — Wild Zone 11 catch routes and Xerneas (Manifest 124 / Joint Ledger 132)
+
+28 November 2026. Existing [draft PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229); parent `6f3f86e654613739c45048365e21a5ad04439099` passed all three workflows (46153215026, 46153215035, 46153215023). Eight condition rows and six chance Alpha rows added; shoreline and canal cues preserve the two photos. The existing Psychic TM is a landmark, not a new photo attribution. Map and mission guides now give the northern entrance and retry rule for Xerneas. [Source evidence and limits](../AT348_A2_06_ZONE_11_CAPTURE_RESEARCH.md). Local build, static validation and 194 tests passed. New-head CI and phone/desktop readback pending. Tracker updates record GitHub staging only; neither live site changed. A2 P0: verify new-head checks and mobile/desktop catch guidance; continue Zone 12 through Zone 20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: complete the 46-page actionable guide review. HOLD Workspace until full validation and independent live GitHub verification.
+
+**Also pending in draft:** Manifest 123 / Joint Ledger 131 includes Zone 10 and the early Mission 10 unlock correction across Zones 7–10; [see the prior evidence](../AT348_A2_05_ZONE_10_CAPTURE_RESEARCH.md).
+
+
 ## AT-348 A2-04 — Wild Zone 9 actionable catch routes (Manifest 122 / Joint Ledger 130)
 
 28 November 2026. [Draft PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229), parent `6a88d2ff328a3e35c10373a5d3b00e5e953f36fe`: all three exact-head workflows succeeded (46150466424, 46150466439, 46150466443). Nine existing condition rows enriched and six chance Alphas added. The map links the one-time Mission 40 Pangoro without giving it a spawn pin. See [the evidence and limits](../AT348_A2_04_ZONE_09_CAPTURE_RESEARCH.md). Local build and 194 unit tests passed. GitHub candidate CI and desktop/mobile checks remain pending; private tracker readback is separate. No change to either live site, photos, saved progress, or transport. A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live.

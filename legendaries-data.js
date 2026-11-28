@@ -39,7 +39,7 @@ window.ATLAS_LEGENDARY_SOURCE = {
       "steps": [
         "Finish the main story and speak with Mable after the credits.",
         "Clear the anomalous Alpha encounters in Wild Zones 3, 5 and 9.",
-        "Enter Wild Zone 11 to begin Xerneas’s encounter."
+        "Report back to Mable, then start at Wild Zone 6 and head south to Zone 11’s northern entrance. Follow the story marker on the Jaune side of the Saison Canal and catch Lv. 75 Xerneas. If you knock it out, it returns for another attempt."
       ],
       "links": [
         [
