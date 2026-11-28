@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 122,
-  "ledger_revision": 130,
+  "manifest_revision": 123,
+  "ledger_revision": 131,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,7 +246,7 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_09_capture_candidate_77_condition_supplements_full_research_open",
+      "status": "p0_zone_01_10_capture_candidate_87_condition_supplements_full_research_open",
       "source": "AT-346 / #220",
       "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open.",
       "priority": "P0"
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live.",
+  "next_slice": "A2 P0: verify new exact-head CI and review mobile/desktop capture presentation; continue Wild Zone 11, then Zones 12–20, city/interior encounters, forms, alternative acquisition and Alpha/Hyperspace. A7: continue the 46-surface page audit under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1121,5 +1121,40 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live."
+  },
+  "a2_05_zone_10_capture_research": {
+    "id": "AT-348-A2-05-ZONE-10-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 123,
+    "ledger_revision": 131,
+    "reviewed_parent": "882638086398a03920a2e7cac7720e164710b2ee",
+    "active_pr": 229,
+    "zones": [
+      10
+    ],
+    "existing_ordinary_rows_enriched": 7,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 7,
+    "prior_unlock_condition_rows_corrected": 27,
+    "prior_chance_alpha_unlocks_corrected": 20,
+    "cumulative_conditions": 87,
+    "cumulative_chance_alpha_packet_rows": 71,
+    "report": "docs/qa/AT348_A2_05_ZONE_10_CAPTURE_RESEARCH.md",
+    "disputes": [
+      "Ordinary Sharpedo slot and distinct location remain unresolved against survey and local guides; fixed Alpha and evolution alternatives explained.",
+      "Exact Espace Vide ladder-to-roof connections remain unverified."
+    ],
+    "parent_ci": [
+      46152024204,
+      46152024131,
+      46152024167
+    ],
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify new exact-head CI and review mobile/desktop capture presentation; continue Wild Zone 11, then Zones 12–20, city/interior encounters, forms, alternative acquisition and Alpha/Hyperspace. A7: continue the 46-surface page audit under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
   }
 }

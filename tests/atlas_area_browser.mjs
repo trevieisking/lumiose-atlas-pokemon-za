@@ -675,6 +675,9 @@ try{
     assert.match((await pumpRows.allTextContents()).join(" "),/Jumbo Variety.*Time: Night/s);
     assert.match(await page.locator('[data-dex-capture-guide="goodra"]').textContent(),/evolve Sliggoo at level 50 or higher while it is raining/);
 
+    const zone10Tynamo=page.locator('[data-dex-capture-guide="tynamo"] [data-dex-encounter-id="g3-evidence-wz-10-tynamo-ordinary"]');
+    assert.match(await zone10Tynamo.textContent(),/Level: 31–32/);
+    assert.match(await zone10Tynamo.textContent(),/eastern\/back gate/);
     const earlyStaryu=page.locator('[data-dex-capture-guide="staryu"]');
     const normalStaryu=earlyStaryu.locator('[data-dex-encounter-id="g3-evidence-wz-02-staryu-ordinary"]');
     assert.match(await normalStaryu.textContent(),/Time: night/i);
@@ -690,6 +693,11 @@ try{
     const gibleRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-08-gible-ordinary"]');
     assert.match(await gibleRoute.textContent(),/Level: 24–25/);
     assert.match(await gibleRoute.textContent(),/blue fin/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-10&species=tynamo&encounter=ordinary",{waitUntil:"load"});await panel();
+    const tynamoRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-10-tynamo-ordinary"]');
+    assert.match(await tynamoRoute.textContent(),/Level: 31–32/);
+    assert.match(await tynamoRoute.textContent(),/eastern\/back gate/);
+
 
     await unchanged();
 
