@@ -1115,6 +1115,8 @@ try{
   const at310Directory=await phoneContext.newPage();
   await at310Directory.goto(base+"/sector-maps.html#sector-jaune-sector-5",{waitUntil:"load"});
   const at310Legacy=at310Directory.locator("#sector-jaune-sector-5 details.sector-context-detail");
+  // The contextual crop is attached by an asynchronous dynamic import.
+  await at310Legacy.waitFor({state:"attached"});
   assert.equal(await at310Legacy.count(),1);
   await at310Legacy.locator("summary").click();
   assert.equal(await at310Legacy.evaluate(el=>el.open),true);

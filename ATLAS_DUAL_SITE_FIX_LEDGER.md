@@ -1,5 +1,10 @@
 # Lumiose Atlas — two-site fix and parity ledger
 
+## AT-348 A2-10 — Wild Zone 16 conditions (Manifest 128 / Joint Ledger 136)
+
+28 November 2026. Draft #229, parent `2bbaec24caac82a75bcce0ad4d0717a976bcaf83`. Ten existing encounter conditions and eight new chance Alpha rows add a fountain day/night route, separate Florges colours, Froakie’s gift alternative and the fixed Ampharos route. The parent’s Explorer job failed at a Jaune 5 crop readiness check; the test now waits for asynchronous attachment without relaxing its photo assertions. Parent article/Pages passed. [Evidence and limits](docs/qa/AT348_A2_10_ZONE_16_CAPTURE_RESEARCH.md). Offline validation and 194 local tests passed. Exact-head CI/physical device readback pending; no publication. Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live.
+
+
 ## AT-348 A2-09 — Wild Zone 15 catch routes (Manifest 127 / Joint Ledger 135)
 
 28 November 2026. Draft #229, parent `debeb8db2ef05918433b5c9d0618544e42ab151b` passed all three exact-head checks (46157802042, 46157802120, 46157802031). Seven ordinary and three fixed Alpha rows gain conditions, and six chance Alpha rows are added. The map and Alpha Fieldbook explain the earlier Bleu Sector 7 Larvitar survey option versus the separate local Holovator route. Preserved four Pumpkaboo chance sizes and fixed Gourgeist gate. [Evidence](docs/qa/AT348_A2_09_ZONE_15_CAPTURE_RESEARCH.md). Offline validation and 194 local tests passed; new CI and phone/desktop verification pending. No publication. A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live.

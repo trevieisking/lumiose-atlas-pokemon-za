@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 127,
-  "ledger_revision": 135,
+  "manifest_revision": 128,
+  "ledger_revision": 136,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,7 +246,7 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_15_capture_candidate_131_condition_supplements_full_research_open",
+      "status": "p0_zone_01_16_capture_candidate_141_condition_supplements_full_research_open",
       "source": "AT-346 / #220",
       "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open.",
       "priority": "P0"
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live.",
+  "next_slice": "Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1285,5 +1285,35 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live."
+  },
+  "a2_10_zone_16_capture_research": {
+    "id": "AT-348-A2-10-ZONE-16-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 128,
+    "ledger_revision": 136,
+    "reviewed_parent": "2bbaec24caac82a75bcce0ad4d0717a976bcaf83",
+    "active_pr": 229,
+    "zones": [
+      16
+    ],
+    "existing_ordinary_rows_enriched": 9,
+    "existing_fixed_alpha_rows_enriched": 1,
+    "new_chance_alpha_rows": 8,
+    "cumulative_conditions": 141,
+    "cumulative_chance_alpha_packet_rows": 112,
+    "report": "docs/qa/AT348_A2_10_ZONE_16_CAPTURE_RESEARCH.md",
+    "parent_ci_success": [
+      46161871268,
+      46161871204
+    ],
+    "parent_browser_failure": 46161871208,
+    "browser_wait_repair": "Jaune Sector 5 asynchronous contextual-crop attachment readiness; image and uniqueness checks retained.",
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live."
   }
 }
