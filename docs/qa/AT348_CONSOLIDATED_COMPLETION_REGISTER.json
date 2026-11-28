@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 133,
-  "ledger_revision": 141,
+  "manifest_revision": 134,
+  "ledger_revision": 142,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -27,8 +27,8 @@
     "photo_register": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-photo-register.json",
     "guide": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/docs/field-guides/collectible-locations.md",
     "fieldbook": "https://github.com/trevieisking/lumiose-atlas-pokemon-za/blob/ffc46e3c69f7756dffecf17e4368eef4c53f4faa/collectible-fieldbook.html",
-    "local_validation": "39 source Git blob identities matched original ZIP; no coordinate or checklist approval",
-    "integration": "39 exact source Git blobs and 8 fieldbook records added; candidate readback/CI pending",
+    "local_validation": "17 collectible tests passed; all 250 original hashes, 51 gallery groups and no pin/checklist assignment verified; sitewide link graph passed; generated homepage parity failed and corrected in next candidate",
+    "integration": "All 250 original Git blobs verified on exact 95949c12; 8 new fieldbook records and Mission 20 contextual links; homepage parity correction candidate pending CI",
     "calibrated_coordinates": false,
     "canonical_checklist_id": null,
     "related_access_lead": "AR-V04-05",
@@ -89,17 +89,16 @@
       ],
       "safety": "Preserve every source original and filename; no guessed coordinates or checklist IDs; no live changes before standard validation gates. A reported upload is not a verified GitHub file. A used image remains in #226.",
       "last_checked_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
-      "last_checked_guide_parent": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+      "last_checked_guide_parent": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
       "last_check": {
         "committed_finds": 50,
         "access_surveys": 1,
         "committed_photos": 250,
-        "matching_guide_photo_blobs": 211,
-        "new_source_photo_blobs_pinned_in_candidate": 39,
+        "matching_guide_photo_blobs": 250,
         "new_committed_photos_not_copied": 0,
         "reported_pending_finds": 0,
         "reported_pending_photos": 0,
-        "candidate_readback": "pending"
+        "candidate_readback": "verified on exact 95949c12 collectible regression"
       },
       "usage_register": "docs/qa/AT348_FIELD_PHOTO_USAGE_REGISTER.json"
     }
@@ -339,7 +338,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "pending scoped readback; GitHub candidate evidence only",
+  "supabase_sync": "scoped Supabase closeout required after guarded branch commit",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -1525,6 +1524,45 @@
     "additional_canonical_ids": 0,
     "additional_pins": 0,
     "exact_candidate_ci": "pending",
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_field_find": 51
+  },
+  "a3_04_homepage_parity": {
+    "id": "AT-348-A3-04-HOMEPAGE-PARITY",
+    "date": "2026-11-28",
+    "manifest_revision": 134,
+    "ledger_revision": 142,
+    "reviewed_candidate": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
+    "source_pr": 226,
+    "source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "source_import_commit": "42234663eb7ebca5ec79d5983a7f88a1266d634a",
+    "source_remains_open": true,
+    "source_original_matches": 39,
+    "candidate_photo_hashes_verified": 250,
+    "field_groups": 51,
+    "collectible_finds": 50,
+    "verified_prior_tests": {
+      "explorer_unit_job": 141060145760,
+      "collectible_tests_passed": 17,
+      "sitewide_links": {
+        "pages": 29,
+        "links": 5036,
+        "cross_page": 2859,
+        "home_deep_links": 354
+      },
+      "pages_run": 46171315958,
+      "pages_result": "success",
+      "feedback_run": 46171315939,
+      "feedback_result": "success",
+      "article_run": 46171316017,
+      "article_result": "failure_generated_homepage_not_rebuilt",
+      "explorer_run": 46171316027,
+      "explorer_unit_result": "failure_generated_homepage_not_rebuilt"
+    },
+    "repair": "Replace exact prior walkthrough section once in generated index with current source section; reversible comparison proves no other homepage content changed; 42 mission cards and 203 side mission progress IDs preserved.",
+    "next_candidate_ci": "pending",
+    "additional_pins": 0,
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_field_find": 51

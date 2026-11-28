@@ -1,5 +1,10 @@
 # AT-348 — One remaining-guide completion pull request
 
+## AT-348 A3-04 — photo import verification and homepage parity (Manifest 134 / Joint Ledger 142)
+
+28 November 2026. Recovered completed integration `95949c12a99b7fd0a1b4ab722e0d64332417f54e` after interrupted chat. Source PR #226 `ffc46e3c69f7756dffecf17e4368eef4c53f4faa` remains OPEN/DRAFT permanently, with more owner photos expected. All 39 new originals matched the ZIP and the exact candidate collectible regression (job 141060145760) passed all 17 tests, including all 250 photo Git hashes, 51 groups, preserved checklists and zero new pins. Sitewide link graph passed: 29 pages, 5,036 links, 2,859 cross-page links, 354 homepage deep links. Pages 46171315958 and feedback 46171315939 passed; articles 46171316017 and Explorer unit job failed generated-homepage parity because Mission 20 source was changed but index.html was not rebuilt. Repair replaces exactly one byte-identical prior walkthrough section in the existing index with the current source section; reversing that replacement recovers the prior index exactly. Preserves 42 mission cards, 203 side mission progress controls, all other sections and assets. New candidate CI pending, HOLD. No Workspace action, no new coordinates or canonical IDs; next photo find 51. Continue existing A2/A6 and other completion slices after exact-head validation. Supabase closeout after guarded commit.
+
+
 ## Mandatory permanent image-intake cycle — owner instruction (Manifest 132 / Joint Ledger 140)
 
 28 November 2026. This is a required preflight and closeout for **every Atlas development task**, not an optional future task.

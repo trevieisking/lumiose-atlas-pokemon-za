@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-28",
-  "reviewed_guide_head": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+  "reviewed_guide_head": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
   "reviewed_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
   "source_pr": 226,
   "integration_pr": 229,
@@ -31,7 +31,7 @@
     "reported_combined_photos": 250,
     "verified_native_pins": 0
   },
-  "limitations": "39 new source Git blob identities matched the original ZIP; candidate uses these exact blob IDs. Candidate readback and exact-head CI pending. Remaining contextual use, canonical identity, coordinates and access verification open.",
+  "limitations": "39 new source blobs matched owner ZIP; exact 95949c12 collectible regression confirmed all 250 candidate original blob hashes. New homepage parity correction pending exact-head checks. Further contextual use and coordinate/access identity remain open.",
   "entries": [
     {
       "field_find": 1,
@@ -1960,7 +1960,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#wild-zone-14-calcium-electrical-substation-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2013,7 +2013,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#wild-zone-14-discharge-south-edge-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2066,7 +2066,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#magenta-6-colorful-screw-lower-scaffold-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2119,7 +2119,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#magenta-6-colorful-screw-upper-scaffold-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2172,7 +2172,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#bleu-8-old-building-rare-candy-photos",
       "guide_usage": "contextual_mission_links_candidate",
       "destinations": [
@@ -2223,7 +2223,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#sewers-canal-access-taunt-photos",
       "guide_usage": "contextual_mission_links_candidate",
       "destinations": [
@@ -2280,7 +2280,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#racine-construction-iron-defense-rooftop-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2333,7 +2333,7 @@
         }
       ],
       "source_status": "committed_and_preserved",
-      "copy_status": "source_blob_pinned_in_candidate_commit_readback_pending",
+      "copy_status": "all_original_photo_git_blobs_match_reviewed_guide_head",
       "fieldbook": "collectible-fieldbook.html#jaune-5-endure-rooftop-garden-photos",
       "guide_usage": "fieldbook_only_additional_guide_integration_pending",
       "destinations": [],
@@ -2388,10 +2388,12 @@
     "reported_pending_finds": 0,
     "reported_pending_photos": 0,
     "source_original_blob_matches": 39,
-    "candidate_readback": "pending"
+    "candidate_readback": "verified",
+    "matching_guide_photo_blobs": 250,
+    "verified_job": 141060145760
   },
   "last_intake_check_source_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
-  "last_intake_check_guide_head": "1f076a41eed4836a444eb7523fe4031e957bda3d",
+  "last_intake_check_guide_head": "95949c12a99b7fd0a1b4ab722e0d64332417f54e",
   "previous_pending_intake": [
     {
       "field_find": 43,
