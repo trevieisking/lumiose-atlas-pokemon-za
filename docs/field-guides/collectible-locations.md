@@ -2,7 +2,7 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
-**Photo archive:** 211 original photographs across 42 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 211 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+**Photo archive:** 250 original photographs across 50 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 250 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
 
 [Open the organised photograph fieldbook](../../collectible-fieldbook.html).
 
@@ -972,3 +972,134 @@ The photos confirm the pickup platform. The route onto it, exact Atlas coordinat
 | [Neighbourhood map](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/map-neighbourhood.webp) | Vert Sector 4 between Café Classe and Vert Plaza | `1000030008.jpg` | `map-neighbourhood.webp` |
 | [Close map](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/map-close.webp) | Player inside the enclosed Vert Sector 4 courtyard northeast of Café Classe | `1000030009.jpg` | `map-close.webp` |
 | [Collection confirmation](../../assets/atlas/collectibles/vert-4-colorful-screw-courtyard-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 on the patterned scaffold platform beside two pink crystal clusters | `1000030010.jpg` | `pickup-confirmation.webp` |
+
+### 28 November batch — original import 42234663eb7ebca5ec79d5983a7f88a1266d634a
+
+All 39 new image Git blobs matched the original ZIP. The source PR remains open for further finds.
+
+## Calcium — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal
+
+Collectible find 43. The final photograph confirms Calcium ×1.
+
+At the northeast corner of the substation beside the canal, locate the narrow recess between the stone perimeter wall and black utility structure. The pickup is beyond a boulder, against the back wall.
+
+Elevation: Ground level. The exact move used to clear the boulder and whether zone entry is required are not established by the photographs. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup behind boulder](../../assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/pickup-behind-boulder.webp) | Pickup behind boulder — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal | `1000030033.jpg` | `pickup-behind-boulder.webp` |
+| [Map wide](../../assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-wide.webp) | Map wide — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal | `1000030034.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-neighbourhood.webp) | Map neighbourhood — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal | `1000030035.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/map-close.webp) | Map close — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal | `1000030036.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/wild-zone-14-calcium-electrical-substation/pickup-confirmation.webp) | Calcium ×1 pickup confirmation — Wild Zone 14, Electrical Substation, northeast corner beside Saison Canal | `1000030038.jpg` | `pickup-confirmation.webp` |
+
+## Discharge — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6
+
+Collectible find 44. The final photograph confirms Discharge ×1.
+
+Find the southern end of the Electrical Substation, facing Magenta Sector 6. Look beside the blue utility structure; the golden pickup is at the far end of the narrow passage along the brick perimeter wall.
+
+Elevation: Ground level. No exact entrance or additional prerequisite established. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup by utility building](../../assets/atlas/collectibles/wild-zone-14-discharge-south-edge/pickup-by-utility-building.webp) | Pickup by utility building — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6 | `1000030045.jpg` | `pickup-by-utility-building.webp` |
+| [Map wide](../../assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-wide.webp) | Map wide — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6 | `1000030046.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-neighbourhood.webp) | Map neighbourhood — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6 | `1000030047.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/wild-zone-14-discharge-south-edge/map-close.webp) | Map close — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6 | `1000030048.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/wild-zone-14-discharge-south-edge/pickup-confirmation.webp) | Discharge ×1 pickup confirmation — Wild Zone 14, southern tip near South Boulevard and Magenta Sector 6 | `1000030049.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6
+
+Collectible find 45. The final photograph confirms Colorful Screw ×1.
+
+Locate the two scaffold towers near the small triangular block at the northern entrance to Wild Zone 9. Look for the purple beam on the covered platform of the shorter tower. A yellow ladder is visible.
+
+Elevation: Raised covered scaffold platform. The exact climbing sequence is unverified. Separate from the higher platform pickup in find 46. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup scaffold](../../assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/pickup-scaffold.webp) | Pickup scaffold — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6 | `1000030056.jpg` | `pickup-scaffold.webp` |
+| [Map wide](../../assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-wide.webp) | Map wide — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6 | `1000030057.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-neighbourhood.webp) | Map neighbourhood — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6 | `1000030058.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/map-close.webp) | Map close — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6 | `1000030059.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/magenta-6-colorful-screw-lower-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 pickup confirmation — Between Wild Zones 14 and 9, east of South Boulevard, west of Magenta Sector 6 | `1000030060.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Same scaffold complex as find 45, between Wild Zones 14 and 9
+
+Collectible find 46. The final photograph confirms Colorful Screw ×1.
+
+From the scaffold complex, cross the paired metal beams towards the upper platform by the blue sign and sloped arrow-marked panel. Collect the purple beam beside the sign.
+
+Elevation: Upper scaffold platform at roof edge. The initial approach to the beams is not shown. A red pickup below is visible but unidentified and not counted. The owner confirms this screw is next to find 45. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup upper platform](../../assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/pickup-upper-platform.webp) | Pickup upper platform — Same scaffold complex as find 45, between Wild Zones 14 and 9 | `1000030066.jpg` | `pickup-upper-platform.webp` |
+| [Map close](../../assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-close.webp) | Map close — Same scaffold complex as find 45, between Wild Zones 14 and 9 | `1000030067.jpg` | `map-close.webp` |
+| [Map wide](../../assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-wide.webp) | Map wide — Same scaffold complex as find 45, between Wild Zones 14 and 9 | `1000030068.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/map-neighbourhood.webp) | Map neighbourhood — Same scaffold complex as find 45, between Wild Zones 14 and 9 | `1000030069.jpg` | `map-neighbourhood.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/magenta-6-colorful-screw-upper-scaffold/pickup-confirmation.webp) | Colorful Screw ×1 pickup confirmation — Same scaffold complex as find 45, between Wild Zones 14 and 9 | `1000030070.jpg` | `pickup-confirmation.webp` |
+
+## Rare Candy — Old Building, Bleu Sector 8, east of Cafe Soleil
+
+Collectible find 47. The final photograph confirms Rare Candy ×1.
+
+During A Request from the Rust Syndicate (Main Mission 20), deal with the troublesome ghost Pokemon in the warehouse. Before leaving, collect the Rare Candy between the shelves and stacked boxes, beside the green chair at the rear.
+
+Elevation: Warehouse interior. Collect during the mission as a precaution. Later access during Side Mission 118 is reported, but whether an uncollected candy remains available then is unverified. Add collect-now warning to walkthrough and item guide, and cross-reference the ghost encounter. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup warehouse](../../assets/atlas/collectibles/bleu-8-old-building-rare-candy/pickup-warehouse.webp) | Pickup warehouse — Old Building, Bleu Sector 8, east of Cafe Soleil | `1000030086.jpg` | `pickup-warehouse.webp` |
+| [Map wide](../../assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-wide.webp) | Map wide — Old Building, Bleu Sector 8, east of Cafe Soleil | `1000030087.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-neighbourhood.webp) | Map neighbourhood — Old Building, Bleu Sector 8, east of Cafe Soleil | `1000030088.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/bleu-8-old-building-rare-candy/map-close.webp) | Map close — Old Building, Bleu Sector 8, east of Cafe Soleil | `1000030089.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/bleu-8-old-building-rare-candy/pickup-confirmation.webp) | Rare Candy ×1 pickup confirmation — Old Building, Bleu Sector 8, east of Cafe Soleil | `1000030090.jpg` | `pickup-confirmation.webp` |
+
+## Taunt — Lumiose Sewers, Canal Access, northwestern chamber
+
+Collectible find 48. The final photograph confirms Taunt ×1.
+
+During A Request from the Rust Syndicate, locate the large chamber at the upper left of the interior map. Enter from its eastern staircase, cross to the western wall and collect the golden beam beneath the electrical switches and pipes in the brick arch.
+
+Elevation: Underground interior. Use the blue player arrow, not the red map cursor in the overview. Magenta Sector 8 entrance and later access were recorded as source-supported in prior intake; not established by these interior photographs. Do not assign a surface pin. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup by electrical switches](../../assets/atlas/collectibles/sewers-canal-access-taunt/pickup-by-electrical-switches.webp) | Pickup by electrical switches — Lumiose Sewers, Canal Access, northwestern chamber | `1000030095.jpg` | `pickup-by-electrical-switches.webp` |
+| [Map underground overview](../../assets/atlas/collectibles/sewers-canal-access-taunt/map-underground-overview.webp) | Map underground overview — Lumiose Sewers, Canal Access, northwestern chamber | `1000030096.jpg` | `map-underground-overview.webp` |
+| [Map room close](../../assets/atlas/collectibles/sewers-canal-access-taunt/map-room-close.webp) | Map room close — Lumiose Sewers, Canal Access, northwestern chamber | `1000030097.jpg` | `map-room-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/sewers-canal-access-taunt/pickup-confirmation.webp) | Taunt ×1 pickup confirmation — Lumiose Sewers, Canal Access, northwestern chamber | `1000030098.jpg` | `pickup-confirmation.webp` |
+
+## Iron Defense — Racine Construction rooftop, beside Vert Sector 7
+
+Collectible find 49. The final photograph confirms Iron Defense ×1.
+
+On the green rooftop parapet above the Racine Construction travel marker, look for the golden pickup beside the wall overlooking a grass-centered courtyard with blue cars.
+
+Elevation: Rooftop edge. Earlier source-supported route: ladder on isolated building northeast in Vert Sector 6, then Roto-Glide. Exact ladder position and glide route not shown in the photos. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup rooftop](../../assets/atlas/collectibles/racine-construction-iron-defense-rooftop/pickup-rooftop.webp) | Pickup rooftop — Racine Construction rooftop, beside Vert Sector 7 | `1000030104.jpg` | `pickup-rooftop.webp` |
+| [Map wide](../../assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-wide.webp) | Map wide — Racine Construction rooftop, beside Vert Sector 7 | `1000030105.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-neighbourhood.webp) | Map neighbourhood — Racine Construction rooftop, beside Vert Sector 7 | `1000030106.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/racine-construction-iron-defense-rooftop/map-close.webp) | Map close — Racine Construction rooftop, beside Vert Sector 7 | `1000030107.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/racine-construction-iron-defense-rooftop/pickup-confirmation.webp) | Iron Defense ×1 pickup confirmation — Racine Construction rooftop, beside Vert Sector 7 | `1000030108.jpg` | `pickup-confirmation.webp` |
+
+## Endure — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary
+
+Collectible find 50. The final photograph confirms Endure ×1.
+
+Find the planted rooftop at the eastern end of the building immediately north of Jaune Plaza. Collect the golden beam among the bushes beside purple crystals and blue railings.
+
+Elevation: Rooftop garden. Earlier source-supported route: Holovator near Sector 4 Pokemon Center, web bridge, Rock Smash rocks to the west, continue to garden. Sector 4 vs 5 naming differs between sources. Route not directly photographed. Exact Atlas coordinate and original checklist identity remain unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup rooftop garden](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/pickup-rooftop-garden.webp) | Pickup rooftop garden — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030114.jpg` | `pickup-rooftop-garden.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-wide.webp) | Map wide — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030115.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-neighbourhood.webp) | Map neighbourhood — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030116.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-close.webp) | Map close — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030117.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/pickup-confirmation.webp) | Endure ×1 pickup confirmation — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030118.jpg` | `pickup-confirmation.webp` |
