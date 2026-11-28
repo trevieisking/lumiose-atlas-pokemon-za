@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 121,
-  "ledger_revision": 129,
+  "manifest_revision": 122,
+  "ledger_revision": 130,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -246,7 +246,7 @@
     {
       "id": "A2",
       "title": "Pokédex encounter and form coverage",
-      "status": "p0_zone_01_08_capture_candidate_68_condition_supplements_full_research_open",
+      "status": "p0_zone_01_09_capture_candidate_77_condition_supplements_full_research_open",
       "source": "AT-346 / #220",
       "acceptance": "Retain 232+132 roster, 202 capture bands and 364 HOME IDs; resolve the 115 unindexed Alpha species with source-qualified availability, alternative encounters, regional forms, conditions, evolution/learnset/stat gaps, and verified habitat links. No permanent random distortion pins. Owner 28 Nov: every confirmed location, route-specific time/weather/level/elevation/access/unlock/respawn, encounter class, alternate acquisition and map links; explicitly mark unknowns; no completion until source and map consistency verified. A2-02: first six Wild Zones, 39 ordinary and 11 fixed Alpha records enriched; 38 additional chance Alpha records; all remaining areas/forms and standalone Alpha/Hyperspace review remain open.",
       "priority": "P0"
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment.",
+  "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1090,5 +1090,36 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "a2_04_zone_09_capture_research": {
+    "id": "AT-348-A2-04-ZONE-09-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 122,
+    "ledger_revision": 130,
+    "reviewed_parent": "6a88d2ff328a3e35c10373a5d3b00e5e953f36fe",
+    "active_pr": 229,
+    "zones": [
+      9
+    ],
+    "existing_ordinary_rows_enriched": 6,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 77,
+    "cumulative_chance_alpha_packet_rows": 64,
+    "report": "docs/qa/AT348_A2_04_ZONE_09_CAPTURE_RESEARCH.md",
+    "mission_only_map_link": "Wild Zone 9 Lv. 70 Alpha Pangoro during Main Mission 40; no new encounter identity or pin.",
+    "parent_ci": [
+      46150466424,
+      46150466439,
+      46150466443
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live."
   }
 }

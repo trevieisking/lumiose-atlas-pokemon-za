@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 121,
-    "ledger_revision": 129,
-    "status": "zone_07_08_capture_conditions_candidate_full_guide_research_open",
+    "revision": 122,
+    "ledger_revision": 130,
+    "status": "zone_09_capture_conditions_candidate_full_guide_research_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "scoped private tracker update and readback pending",
+    "tracker_sync": "scoped GitHub-stage tracker update and readback after branch verification",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A2_03_ZONE_07_08_CAPTURE_RESEARCH.md",
-    "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment.",
+    "latest_slice": "docs/qa/AT348_A2_04_ZONE_09_CAPTURE_RESEARCH.md",
+    "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -462,7 +462,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 121,
+  "revision": 122,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9835,5 +9835,36 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: review exact new-head CI and mobile/desktop capture presentation; continue Wild Zones 9–10, then 11–20, city/interior encounters, forms, alternative acquisition, and Alpha/Hyperspace. A7: continue all 46 surfaces under the permanent actionable player-guidance standard. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "at_348_a2_04_zone_09_capture_research": {
+    "id": "AT-348-A2-04-ZONE-09-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 122,
+    "ledger_revision": 130,
+    "reviewed_parent": "6a88d2ff328a3e35c10373a5d3b00e5e953f36fe",
+    "active_pr": 229,
+    "zones": [
+      9
+    ],
+    "existing_ordinary_rows_enriched": 6,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 77,
+    "cumulative_chance_alpha_packet_rows": 64,
+    "report": "docs/qa/AT348_A2_04_ZONE_09_CAPTURE_RESEARCH.md",
+    "mission_only_map_link": "Wild Zone 9 Lv. 70 Alpha Pangoro during Main Mission 40; no new encounter identity or pin.",
+    "parent_ci": [
+      46150466424,
+      46150466439,
+      46150466443
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "original_area_evidence_unchanged": true,
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify exact-head CI and desktop/mobile capture presentation; continue Zone 10, then Zones 11–20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-page actionable-guide audit and preserve existing correct facts. HOLD Workspace until the validated GitHub release is independently verified live."
   }
 }
