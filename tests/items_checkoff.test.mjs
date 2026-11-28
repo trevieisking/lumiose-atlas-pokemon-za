@@ -17,7 +17,7 @@ assert.equal(mainScrewIds.length,100);
 assert.deepEqual(atlasItemIds,mainItemIds,"Each tick must use its exact original item ID in source order");
 assert.deepEqual(atlasScrewIds,mainScrewIds,"Each tick must use its exact original Screw ID in source order");
 assert.match(mainJs,/const KEY = 'lumiose-atlas-reconstruction-v1'/);
-assert.match(mainJs,/state\[kind\]\[val\]=target.checked/);
+assert.match(mainJs,/writeProgress\(kind,\{\[val\]:target\.checked\}\)/);
 assert.match(js,/const PROGRESS_KEY="lumiose-atlas-reconstruction-v1"/);
 assert.doesNotMatch(js,/localStorage\.clear|localStorage\.removeItem|\bfetch\s*\(|XMLHttpRequest|sessionStorage/);
 assert.equal((html.match(/class="atlas-collect-toggle"/g)||[]).length,364);
@@ -150,3 +150,69 @@ assert.match(blocked.ids.atlasCollectSaveStatus.textContent,/could not be read o
 blocked.screwChecks[0].checked=true;blocked.screwChecks[0].events.change();
 assert.equal(blocked.writes(),0);
 console.log("PASS: 364 exact shared checkboxes, retained walkthrough/sidequest data, live counts, device reload/cross-tab and storage-failure protection.");
+
+/* AT-348 A6: execute the exact bounded homepage persistence functions;
+ * existing browser tests cover the full page. */
+const mainStart=mainJs.indexOf("  let state = {check:");
+const mainEnd=mainJs.indexOf("  const $ = ",mainStart);
+assert.ok(mainStart>=0&&mainEnd>mainStart);
+const mainStorageSource=mainJs.slice(mainStart,mainEnd);
+function homepageStorageHarness(initial){
+  let raw=initial===null?null:typeof initial==="string"?initial:JSON.stringify(initial);
+  let writes=0,refreshes=0,deniedRead=false,deniedWrite=false,notices=[];
+  const ctx={
+    localStorage:{
+      getItem(key){assert.equal(key,"lumiose-atlas-reconstruction-v1");if(deniedRead)throw Error("blocked");return raw;},
+      setItem(key,value){assert.equal(key,"lumiose-atlas-reconstruction-v1");if(deniedWrite)throw Error("blocked");raw=value;writes++;}
+    },
+    announce(message){notices.push(message);},
+    restoreProgress(){refreshes++;}
+  };
+  runInNewContext("const KEY='lumiose-atlas-reconstruction-v1'; const checkedKinds=['check','sideCheck','legendCheck','pickup','screw'];\n"+mainStorageSource+"\nthis.api={writeProgress,refreshProgressFromStorage,state};",ctx);
+  return {api:ctx.api,raw:()=>raw,writes:()=>writes,refreshes:()=>refreshes,notices,
+    external(value){raw=typeof value==="string"?value:JSON.stringify(value);},
+    blockRead(){deniedRead=true;},blockWrite(){deniedWrite=true;}};
+}
+const mainHarness=homepageStorageHarness({check:{"mission-1":true,"future-mission":true},pickup:{"1-0":true},future:{flags:[1,2]}});
+assert.equal(mainHarness.writes(),0);
+mainHarness.external({check:{"mission-1":false,"future-mission":true},pickup:{"1-0":true,"2-0":true},future:{flags:[1,2,3]},sideCheck:{"quest-2":true}});
+assert.equal(mainHarness.api.writeProgress("screw",{"2":true}),true);
+assert.deepEqual(JSON.parse(mainHarness.raw()),{check:{"mission-1":false,"future-mission":true},pickup:{"1-0":true,"2-0":true},future:{flags:[1,2,3]},sideCheck:{"quest-2":true},screw:{"2":true}});
+assert.equal(mainHarness.api.state.pickup["2-0"],true);
+assert.equal(mainHarness.api.writeProgress("pickup",{"1-0":false}),true);
+assert.equal(JSON.parse(mainHarness.raw()).pickup["1-0"],false);
+assert.equal(JSON.parse(mainHarness.raw()).pickup["2-0"],true);
+assert.equal(mainHarness.api.writeProgress("check",{},["mission-1"]),true);
+assert.deepEqual(JSON.parse(mainHarness.raw()).check,{"future-mission":true});
+assert.equal(JSON.parse(mainHarness.raw()).sideCheck["quest-2"],true);
+mainHarness.external({check:{"mission-3":true},future:{keep:true}});
+const writesBeforeRefresh=mainHarness.writes();
+mainHarness.api.refreshProgressFromStorage();
+assert.equal(mainHarness.api.state.check["mission-3"],true);
+assert.equal(mainHarness.api.state.screw["2"],undefined);
+assert.equal(mainHarness.refreshes(),1);
+assert.equal(mainHarness.writes(),writesBeforeRefresh);
+for(const broken of ["{bad json","[]","null",'{"pickup":[]}', '{"screw":false}']){
+  const brokenHarness=homepageStorageHarness(broken);
+  assert.equal(brokenHarness.api.writeProgress("check",{"mission-1":true}),false);
+  assert.equal(brokenHarness.raw(),broken);
+  assert.equal(brokenHarness.writes(),0);
+  assert.equal(brokenHarness.api.state.check["mission-1"],true);
+  assert.match(brokenHarness.notices[0],/this tab only/);
+}
+const blockedRead=homepageStorageHarness({check:{"mission-2":true}});
+blockedRead.blockRead();
+assert.equal(blockedRead.api.writeProgress("check",{"mission-1":true}),false);
+assert.deepEqual(JSON.parse(blockedRead.raw()),{check:{"mission-2":true}});
+const blockedWrite=homepageStorageHarness({check:{"mission-2":true}});
+blockedWrite.blockWrite();
+assert.equal(blockedWrite.api.writeProgress("check",{"mission-1":true}),false);
+assert.equal(blockedWrite.api.state.check["mission-1"],true);
+assert.deepEqual(JSON.parse(blockedWrite.raw()),{check:{"mission-2":true}});
+const emptyMain=homepageStorageHarness(null);
+assert.equal(emptyMain.api.writeProgress("legendCheck",{"legend-1":true}),true);
+assert.deepEqual(JSON.parse(emptyMain.raw()),{legendCheck:{"legend-1":true}});
+assert.match(mainJs,/window\.addEventListener\('storage',event=>\{if\(event\.key===KEY\|\|event\.key===null\)refreshProgressFromStorage\(\)/);
+assert.match(mainJs,/window\.addEventListener\('pageshow',refreshProgressFromStorage\)/);
+assert.match(mainJs,/writeProgress\(kind,\{\[val\]:target\.checked\}\);\s*restoreProgress\(\)/);
+assert.match(mainJs,/writeProgress\('check',\{\},\$\$\('input\[type="checkbox"\]\[data-check\]'\)/);

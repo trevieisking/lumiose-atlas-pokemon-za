@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 129,
-  "ledger_revision": 137,
+  "manifest_revision": 130,
+  "ledger_revision": 138,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -275,9 +275,9 @@
     {
       "id": "A6",
       "title": "Unified completion and progress safeguards",
-      "status": "open",
+      "status": "a6_01_homepage_progress_preservation_candidate_backup_and_numbering_open",
       "source": "AT-347-COMPLETE-001; historical PR4/5",
-      "acceptance": "Build additive interactive completion view around stable existing IDs and progress keys. Review current same-origin storage and old #4 numbered verified pin/#5 backup candidates; adapt only applicable pieces, preview/merge imports, preserve unknown keys and rollback. No fabricated pins or destructive resets. Item-photo intake excluded from this implementation."
+      "acceptance": "Build additive interactive completion view around stable existing IDs and progress keys. Review current same-origin storage and old #4 numbered verified pin/#5 backup candidates; adapt only applicable pieces, preview/merge imports, preserve unknown keys and rollback. No fabricated pins or destructive resets. Item-photo intake excluded from this implementation. A6-01: homepage bounded single-tick writes and explicit known-mission reset preserve unknown data; malformed or unavailable storage is not overwritten; storage/pageshow refresh. Full regression and visual acceptance pending; HOME registration remains in its separate existing key. No placement approval; backup/restore pending."
     },
     {
       "id": "A7",
@@ -297,7 +297,7 @@
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "pending exact-head readback and scoped update",
+  "supabase_sync": "pending scoped readback; GitHub candidate evidence only",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -370,7 +370,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live.",
+  "next_slice": "Verify exact-head article, Explorer, Pages and independent mobile/desktop QA; continue A2 P0 Wild Zones 17–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5 and A7; A6 complete the supported two-bucket backup preview/merge/recovery and verified-only numbered pins. Keep #226 separate; GitHub first, HOLD Workspace.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1377,5 +1377,35 @@
     "field_intake_pr": 226,
     "rule": "All applicable non-photo work belongs in PR229; preserve source evidence and newer changes; no wholesale stale-branch replay, independent promotion or premature closure.",
     "field_intake": "Keep separate open for original photographs; integrate reviewed compatible batches only"
+  },
+  "a6_01_progress_preservation": {
+    "id": "AT-348-A6-01-PROGRESS-PRESERVATION",
+    "date": "2026-11-28",
+    "manifest_revision": 130,
+    "ledger_revision": 138,
+    "reviewed_parent": "a041b839b94ac97d404cfd0ab518221f3e79a83d",
+    "active_pr": 229,
+    "source_prs": [
+      4,
+      5
+    ],
+    "report": "docs/qa/AT348_A6_01_PROGRESS_PRESERVATION.md",
+    "scope": "homepage checklist write isolation and refresh only",
+    "changed_runtime": [
+      "app.js"
+    ],
+    "regression": "tests/items_checkoff.test.mjs",
+    "isolated_assertions": 77,
+    "parent_article_workflow": 46168786799,
+    "parent_pages_workflow": 46168786789,
+    "parent_explorer_workflow": 46168786805,
+    "parent_explorer_status": "in progress at preflight",
+    "exact_head_ci": "pending",
+    "visual_qa": "pending",
+    "backup_complete": false,
+    "placements_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify exact-head article, Explorer, Pages and independent mobile/desktop QA; continue A2 P0 Wild Zones 17–20 and city/interiors/forms/Alpha/Hyperspace, A4/A5 and A7; A6 complete the supported two-bucket backup preview/merge/recovery and verified-only numbered pins. Keep #226 separate; GitHub first, HOLD Workspace."
   }
 }
