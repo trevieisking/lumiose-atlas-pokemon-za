@@ -2,7 +2,7 @@
 
 Field guide to item pickups and Colorful Screws photographed in Pokémon Legends: Z-A. Each find has its own entry with the in-game location, a landmark to look for, and the photographs used to identify it.
 
-**Photo archive:** 250 original photographs across 50 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 250 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
+**Photo archive:** 318 original photographs across 64 collectible finds and one infrastructure survey. The 172-photo import was verified by GitHub Actions run 46063820562 and committed as f28dbc8659031435f4968a3a36cfcbd7a15ee95b. The archive register records all 318 photo paths. The field-find numbering is independent of original checklist numbers. No exact Atlas placement is approved here.
 
 [Open the organised photograph fieldbook](../../collectible-fieldbook.html).
 
@@ -1103,3 +1103,230 @@ Elevation: Rooftop garden. Earlier source-supported route: Holovator near Sector
 | [Map neighbourhood](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-neighbourhood.webp) | Map neighbourhood — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030116.jpg` | `map-neighbourhood.webp` |
 | [Map close](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/map-close.webp) | Map close — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030117.jpg` | `map-close.webp` |
 | [Pickup confirmation](../../assets/atlas/collectibles/jaune-5-endure-rooftop-garden/pickup-confirmation.webp) | Endure ×1 pickup confirmation — Rooftop garden directly north of Jaune Plaza (Wild Zone 8), Sector 4/5 boundary | `1000030118.jpg` | `pickup-confirmation.webp` |
+
+
+## 28 November — field finds 51–64
+
+Imported 68 unchanged original WebP photographs in GitHub commit `32e79392492b6d26cfce25ecc466fcd6d102377f`. Find numbers remain independent of canonical checklist IDs; no new calibrated pins are approved.
+
+## Colorful Screw — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers
+
+Collectible find 51. Pickup notification confirms Colorful Screw ×1.
+
+Find the brown sloped roof at the junction with Magenta Sector 8, overlooking the octagonal flowerbed and streetlamp. Collect the purple pickup on the roof.
+
+Elevation: Rooftop. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Initial ascent not photographed; red pickup across the street not counted.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup rooftop](../../assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/pickup-rooftop.webp) | Pickup rooftop — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers | `1000030194.jpg` | `pickup-rooftop.webp` |
+| [Map wide](../../assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-wide.webp) | Map wide — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers | `1000030195.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-neighbourhood.webp) | Map neighbourhood — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers | `1000030196.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/map-close.webp) | Map close — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers | `1000030197.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/magenta-7-colorful-screw-rooftop/pickup-confirmation.webp) | Pickup confirmation — Magenta Sector 7 northwest corner rooftop, facing Magenta Sector 8, north of Lumiose Sewers | `1000030198.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique
+
+Collectible find 52. Pickup notification confirms Colorful Screw ×1.
+
+Follow North Boulevard west from Wild Zone 13 to the scaffold with cyan edges, ramps, steps, blue signs and red banners. Find the higher platform between cyan-tipped cones. Separate pickup from #53.
+
+Elevation: Higher scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact climbing sequence, access requirements and pickup position relative to beams unverified; map views include approach position.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Shared scaffold approach](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/shared-scaffold-approach.webp) | Shared scaffold approach — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030208.jpg` | `shared-scaffold-approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-wide.webp) | Map wide — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030209.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-neighbourhood.webp) | Map neighbourhood — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030210.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/map-close.webp) | Map close — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030211.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-high-scaffold/pickup-confirmation.webp) | Pickup confirmation — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030212.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique
+
+Collectible find 53. Pickup notification confirms Colorful Screw ×1.
+
+At the same scaffold as #52, navigate to the narrow metal beam beside a stepped platform. Collect the separate screw.
+
+Elevation: Adjacent narrow scaffold beam. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact climbing sequence, access requirements and pickup position relative to beams unverified; map views include approach position.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Map wide](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-wide.webp) | Map wide — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030213.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-neighbourhood.webp) | Map neighbourhood — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030214.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/map-close.webp) | Map close — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030215.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/rouge-north-boulevard-colorful-screw-beam-scaffold/pickup-confirmation.webp) | Pickup confirmation — North Boulevard west of Wild Zone 13, north of Rouge Sectors 3/4 and Poké Ball Boutique | `1000030216.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Rouge Sector 4 shopping arcade northwest of Rouge Plaza
+
+Collectible find 54. Pickup notification confirms Colorful Screw ×1.
+
+Reach the shopping arcade roof and look for the screw on the metal strip of the long glass skylight beside the raised stone wall.
+
+Elevation: Rooftop skylight. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Initial ascent unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Pickup skylight](../../assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/pickup-skylight.webp) | Pickup skylight — Rouge Sector 4 shopping arcade northwest of Rouge Plaza | `1000030222.jpg` | `pickup-skylight.webp` |
+| [Map wide](../../assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-wide.webp) | Map wide — Rouge Sector 4 shopping arcade northwest of Rouge Plaza | `1000030223.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-neighbourhood.webp) | Map neighbourhood — Rouge Sector 4 shopping arcade northwest of Rouge Plaza | `1000030224.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/map-close.webp) | Map close — Rouge Sector 4 shopping arcade northwest of Rouge Plaza | `1000030225.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/rouge-4-colorful-screw-shopping-arcade-skylight/pickup-confirmation.webp) | Pickup confirmation — Rouge Sector 4 shopping arcade northwest of Rouge Plaza | `1000030226.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — North Boulevard immediately north of Cafe Triste, Magenta Sector 9
+
+Collectible find 55. Pickup notification confirms Colorful Screw ×1.
+
+Locate the large linked scaffold complex north of Cafe Triste. Collect the screw on the high platform against the blue-window facade. Separate from #56.
+
+Elevation: Upper scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact climbing sequence, access requirements and pickup position relative to beams unverified; map views include approach position.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Shared scaffold approach](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/shared-scaffold-approach.webp) | Shared scaffold approach — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030236.jpg` | `shared-scaffold-approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-wide.webp) | Map wide — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030237.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-neighbourhood.webp) | Map neighbourhood — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030238.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/map-close.webp) | Map close — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030239.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-upper-scaffold/pickup-confirmation.webp) | Pickup confirmation — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030240.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — North Boulevard immediately north of Cafe Triste, Magenta Sector 9
+
+Collectible find 56. Pickup notification confirms Colorful Screw ×1.
+
+At the same complex as #55, follow the platforms toward the modern building facade, streetlamp and purple banner; collect the separate screw.
+
+Elevation: Adjoining scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact climbing sequence, access requirements and pickup position relative to beams unverified; map views include approach position.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Map wide](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-wide.webp) | Map wide — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030241.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-neighbourhood.webp) | Map neighbourhood — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030242.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/map-close.webp) | Map close — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030243.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/magenta-9-cafe-triste-colorful-screw-street-end-scaffold/pickup-confirmation.webp) | Pickup confirmation — North Boulevard immediately north of Cafe Triste, Magenta Sector 9 | `1000030244.jpg` | `pickup-confirmation.webp` |
+
+## TM060 Future Sight — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11
+
+Collectible find 57. Owner-confirmed NPC gift; photograph shows the Future Sight TM dialogue.
+
+From Justice Dojo follow Saison Canalside east toward Wild Zone 11. Speak to the blonde woman wearing glasses, dark double-breasted coat and blue scarf by the railing and benches, not the seated man. Owner reports receiving TM060 Future Sight.
+
+Elevation: Upper pedestrian overlook. NPC gift reported by owner and TM dialogue photographed. Story prerequisites, time/weather and calibrated pin unverified. No evidence Lucario or the seated man is required.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Npc reward](../../assets/atlas/collectibles/jaune-canalside-future-sight-npc/npc-reward.webp) | Npc reward — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11 | `1000033208.jpg` | `npc-reward.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-wide.webp) | Map wide — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11 | `1000033209.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-neighbourhood.webp) | Map neighbourhood — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11 | `1000033210.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-canalside-future-sight-npc/map-close.webp) | Map close — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11 | `1000033211.jpg` | `map-close.webp` |
+| [Npc landmark](../../assets/atlas/collectibles/jaune-canalside-future-sight-npc/npc-landmark.webp) | Npc landmark — Upper Saison Canalside overlook south of Jaune Sector 6, east of Justice Dojo, northwest of Wild Zone 11 | `1000033212.jpg` | `npc-landmark.webp` |
+
+## Colorful Screw — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza
+
+Collectible find 58. Pickup notification confirms Colorful Screw ×1.
+
+Locate the scaffold beside the yellow post box near the canal-side raised pavement. The purple beam is on the intermediate platform behind the blue sign.
+
+Elevation: Intermediate scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact traversal unverified; nearby red items not identified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/approach.webp) | Approach — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza | `1000033213.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-wide.webp) | Map wide — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza | `1000033218.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-neighbourhood.webp) | Map neighbourhood — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza | `1000033219.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/map-close.webp) | Map close — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza | `1000033220.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-6-justice-dojo-colorful-screw-lower-scaffold/pickup-confirmation.webp) | Pickup confirmation — Jaune Sector 6 east of Justice Dojo and south of Jaune Plaza | `1000033221.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Jaune Sector 9 east of Jaune Plaza, near ornate central building
+
+Collectible find 59. Pickup notification confirms Colorful Screw ×1.
+
+Navigate the elevated blue-edged scaffold platforms to the highest sign platform with a purple beam and blue/yellow sign. A ladder is visible on the adjacent roof; exact starting access unverified.
+
+Elevation: Upper scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Cross-reference nearby #60; red item not counted.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/approach.webp) | Approach — Jaune Sector 9 east of Jaune Plaza, near ornate central building | `1000033224.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-wide.webp) | Map wide — Jaune Sector 9 east of Jaune Plaza, near ornate central building | `1000033225.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-neighbourhood.webp) | Map neighbourhood — Jaune Sector 9 east of Jaune Plaza, near ornate central building | `1000033226.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/map-close.webp) | Map close — Jaune Sector 9 east of Jaune Plaza, near ornate central building | `1000033227.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-9-colorful-screw-upper-sign-scaffold/pickup-confirmation.webp) | Pickup confirmation — Jaune Sector 9 east of Jaune Plaza, near ornate central building | `1000033228.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Jaune Sector 9 ornate building near #59 scaffold
+
+Collectible find 60. Pickup notification confirms Colorful Screw ×1.
+
+From the nearby scaffold/roof network, hop and glide to the narrow raised balcony beside the large arched window and short stone staircase. Owner reports difficult hop-and-glide access.
+
+Elevation: Raised balcony beside arched window. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Exact starting points and jump sequence unverified; distinct from #59.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/approach.webp) | Approach — Jaune Sector 9 ornate building near #59 scaffold | `1000033229.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-wide.webp) | Map wide — Jaune Sector 9 ornate building near #59 scaffold | `1000033230.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-neighbourhood.webp) | Map neighbourhood — Jaune Sector 9 ornate building near #59 scaffold | `1000033231.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/map-close.webp) | Map close — Jaune Sector 9 ornate building near #59 scaffold | `1000033232.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-9-colorful-screw-arched-window-balcony/pickup-confirmation.webp) | Pickup confirmation — Jaune Sector 9 ornate building near #59 scaffold | `1000033233.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6
+
+Collectible find 61. Pickup notification confirms Colorful Screw ×1.
+
+Find the landscaped roof with pink Mega Shard crystals and topiary. Collect the screw between tall conical and round shrubs near the roof edge.
+
+Elevation: Rooftop garden. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Night observed; street-to-roof ascent unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/approach.webp) | Approach — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6 | `1000033234.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-wide.webp) | Map wide — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6 | `1000033235.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-neighbourhood.webp) | Map neighbourhood — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6 | `1000033236.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/map-close.webp) | Map close — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6 | `1000033237.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-rooftop-garden/pickup-confirmation.webp) | Pickup confirmation — Jaune Sector 11 rooftop garden northwest of Cafe Bataille, north of Wild Zone 6 | `1000033238.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Jaune Sector 11 north of Cafe Bataille
+
+Collectible find 62. Pickup notification confirms Colorful Screw ×1.
+
+On the raised terrace identify the small double-door structure with flat green-grey roof beside a tree and planters. Climb onto the terrace umbrella and glide from its top to the corner of the small roof. Owner-confirmed glide route.
+
+Elevation: Small flat rooftop on raised terrace. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Initial street-to-terrace access unverified; separate from #61.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/approach.webp) | Approach — Jaune Sector 11 north of Cafe Bataille | `1000033239.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-wide.webp) | Map wide — Jaune Sector 11 north of Cafe Bataille | `1000033240.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-neighbourhood.webp) | Map neighbourhood — Jaune Sector 11 north of Cafe Bataille | `1000033241.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/map-close.webp) | Map close — Jaune Sector 11 north of Cafe Bataille | `1000033242.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/jaune-11-cafe-bataille-colorful-screw-umbrella-glide/pickup-confirmation.webp) | Pickup confirmation — Jaune Sector 11 north of Cafe Bataille | `1000033243.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15
+
+Collectible find 63. Pickup notification confirms Colorful Screw ×1.
+
+Find the blue-edged scaffolding at the building corner on Hibernal Avenue. Follow the visible ramp and stepped platforms toward the purple beam.
+
+Elevation: Upper scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Suggested route; exact traversal and access requirements unverified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/approach.webp) | Approach — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15 | `1000033244.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-wide.webp) | Map wide — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15 | `1000033245.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-neighbourhood.webp) | Map neighbourhood — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15 | `1000033246.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/map-close.webp) | Map close — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15 | `1000033247.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/rouge-8-hibernal-avenue-colorful-screw-corner-scaffold/pickup-confirmation.webp) | Pickup confirmation — Rouge Sector 8 corner on Hibernal Avenue north of Cafe Kizuna and southwest of Cafe Ultimo/Wild Zone 15 | `1000033248.jpg` | `pickup-confirmation.webp` |
+
+## Colorful Screw — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah
+
+Collectible find 64. Pickup notification confirms Colorful Screw ×1.
+
+From Racine Construction follow South Boulevard toward Restaurant Le Nah. Find the tall blue-edged scaffolding and yellow-marked ladder; climb and navigate toward the purple beam beside the windows.
+
+Elevation: Elevated scaffold platform. Calibrated Atlas coordinate and canonical screw ID unverified. No time/weather restriction established. Suggested route; exact traversal and access prerequisites unverified. Red item not identified.
+
+| Photo | What to look for | Original filename | Destination filename |
+| --- | --- | --- | --- |
+| [Approach](../../assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/approach.webp) | Approach — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah | `1000033250.jpg` | `approach.webp` |
+| [Map wide](../../assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-wide.webp) | Map wide — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah | `1000033251.jpg` | `map-wide.webp` |
+| [Map neighbourhood](../../assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-neighbourhood.webp) | Map neighbourhood — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah | `1000033252.jpg` | `map-neighbourhood.webp` |
+| [Map close](../../assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/map-close.webp) | Map close — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah | `1000033253.jpg` | `map-close.webp` |
+| [Pickup confirmation](../../assets/atlas/collectibles/vert-south-boulevard-racine-colorful-screw-ladder-scaffold/pickup-confirmation.webp) | Pickup confirmation — Outer side of South Boulevard northeast of Racine Construction and southwest of Restaurant Le Nah | `1000033254.jpg` | `pickup-confirmation.webp` |
