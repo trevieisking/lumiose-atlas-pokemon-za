@@ -1,5 +1,10 @@
 # AT-346 — Shared pending Workspace change inventory (NOT an executable prompt)
 
+## AT-348 A2-09 — Wild Zone 15 catch routes (Manifest 127 / Joint Ledger 135)
+
+28 November 2026. Draft #229, parent `debeb8db2ef05918433b5c9d0618544e42ab151b` passed all three exact-head checks (46157802042, 46157802120, 46157802031). Seven ordinary and three fixed Alpha rows gain conditions, and six chance Alpha rows are added. The map and Alpha Fieldbook explain the earlier Bleu Sector 7 Larvitar survey option versus the separate local Holovator route. Preserved four Pumpkaboo chance sizes and fixed Gourgeist gate. [Evidence](../AT348_A2_09_ZONE_15_CAPTURE_RESEARCH.md). Offline validation and 194 local tests passed; new CI and phone/desktop verification pending. No publication. A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live.
+
+
 ## AT-348 A2-06 — Wild Zone 11 catch routes and Xerneas (Manifest 124 / Joint Ledger 132)
 
 28 November 2026. Existing [draft PR #229](https://github.com/trevieisking/lumiose-atlas-pokemon-za/pull/229); parent `6f3f86e654613739c45048365e21a5ad04439099` passed all three workflows (46153215026, 46153215035, 46153215023). Eight condition rows and six chance Alpha rows added; shoreline and canal cues preserve the two photos. The existing Psychic TM is a landmark, not a new photo attribution. Map and mission guides now give the northern entrance and retry rule for Xerneas. [Source evidence and limits](../AT348_A2_06_ZONE_11_CAPTURE_RESEARCH.md). Local build, static validation and 194 tests passed. New-head CI and phone/desktop readback pending. Tracker updates record GitHub staging only; neither live site changed. A2 P0: verify new-head checks and mobile/desktop catch guidance; continue Zone 12 through Zone 20, city/interiors, forms, alternative acquisition, Alpha and Hyperspace. A7: complete the 46-page actionable guide review. HOLD Workspace until full validation and independent live GitHub verification.

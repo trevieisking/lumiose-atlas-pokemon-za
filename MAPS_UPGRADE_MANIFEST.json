@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 126,
-    "ledger_revision": 134,
-    "status": "zones_13_14_capture_conditions_candidate_full_guide_research_open",
+    "revision": 127,
+    "ledger_revision": 135,
+    "status": "zone_15_catch_and_survey_routes_candidate_full_guide_research_open",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "scoped private tracker update and readback pending",
+    "tracker_sync": "scoped GitHub-stage tracker update and readback after branch verification",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A2_08_ZONES_13_14_CAPTURE_RESEARCH.md",
-    "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zone 15 through 20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment.",
+    "latest_slice": "docs/qa/AT348_A2_09_ZONE_15_CAPTURE_RESEARCH.md",
+    "next_slice": "A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -462,7 +462,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 126,
+  "revision": 127,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -10001,5 +10001,34 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "A2 P0: verify exact new-head CI and mobile/desktop capture presentation; continue Wild Zone 15 through 20, city/interior encounters, forms, alternative acquisition, Alpha and Hyperspace. A7: continue the 46-surface actionable player-guidance audit. HOLD Workspace until full GitHub validation and verified live deployment."
+  },
+  "at_348_a2_09_zone_15_capture_research": {
+    "id": "AT-348-A2-09-ZONE-15-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 127,
+    "ledger_revision": 135,
+    "reviewed_parent": "debeb8db2ef05918433b5c9d0618544e42ab151b",
+    "active_pr": 229,
+    "zones": [
+      15
+    ],
+    "existing_ordinary_rows_enriched": 7,
+    "existing_fixed_alpha_rows_enriched": 3,
+    "new_chance_alpha_rows": 6,
+    "cumulative_conditions": 131,
+    "cumulative_chance_alpha_packet_rows": 104,
+    "report": "docs/qa/AT348_A2_09_ZONE_15_CAPTURE_RESEARCH.md",
+    "parent_ci": [
+      46157802042,
+      46157802120,
+      46157802031
+    ],
+    "local_unit_tests": 194,
+    "new_head_ci": "pending",
+    "visual_qa": "pending",
+    "coordinates_added": 0,
+    "workspace_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "A2 P0: verify current CI and phone/desktop views; continue Zones 16–20, city/interiors, forms, alternatives, Alpha and Hyperspace. A7: continue the 46-page actionable guide review. No original Workspace work until GitHub is fully tested and independently verified live."
   }
 }
