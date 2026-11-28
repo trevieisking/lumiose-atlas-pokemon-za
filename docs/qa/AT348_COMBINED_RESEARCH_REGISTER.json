@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 139,
-  "ledger_revision": 147,
+  "manifest_revision": 140,
+  "ledger_revision": 148,
   "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
   "pr": 229,
   "photo_pr": 226,
@@ -83,7 +83,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "WZ18 candidate; WZ19–20, city, interiors, forms and DLC open"
+      "status": "Targeted Wild Zone 1–20 passes staged; city/interiors, alternate routes/forms, rotating individual details, DLC and full QA open."
     },
     {
       "slice": "A3",
@@ -226,12 +226,14 @@
   },
   "current_slice": {
     "zones": [
-      18
+      19,
+      20
     ],
-    "supplements_added": 8,
-    "chance_alpha_added": 6,
-    "total_condition_supplements": 158,
-    "total_chance_alpha_rows": 124,
+    "supplements_added": 24,
+    "chance_alpha_added": 22,
+    "total_condition_supplements": 182,
+    "total_chance_alpha_rows": 146,
+    "rotating_alpha_pool_preserved": 67,
     "geometry_unchanged": true,
     "unrelated_encounters_unchanged": true,
     "isolated_model_areas": 68,
@@ -246,9 +248,26 @@
     "WZ18 exact earliest Rank B transition",
     "WZ20 rotating two-slot Alpha pool, not permanent fixed species",
     "DLC donut factor 0.9x one star below, 0.3x two or more below; needs canonical implementation",
-    "English Game8 body inaccessible"
+    "English Game8 body inaccessible",
+    "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
+    "WZ20 rotating pool individual form/level projection remains open; MM38/39 transition source-corroborated, not field observed."
   ],
   "full_audit_complete": false,
   "release_decision": "HOLD",
-  "next": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes."
+  "next": "Continue capture-first city/interior encounters, forms, alternate acquisition and Hyperspace; enrich rotating pool individual levels/forms without changing classes. Continue remaining A3–A8 and independent visual gates.",
+  "previous_slice": {
+    "zones": [
+      18
+    ],
+    "supplements_added": 8,
+    "chance_alpha_added": 6,
+    "total_condition_supplements": 158,
+    "total_chance_alpha_rows": 124,
+    "geometry_unchanged": true,
+    "unrelated_encounters_unchanged": true,
+    "isolated_model_areas": 68,
+    "isolated_model_issues": 0,
+    "full_ci": "pending",
+    "visual": "pending"
+  }
 }

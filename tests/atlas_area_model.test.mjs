@@ -228,7 +228,7 @@ test('AT-346 chance Alpha packet preserves six prior rows and adds 118 zone 1–
   const snapshot=JSON.stringify(input),after=buildAreaModel(input);
   assert.equal(JSON.stringify(input),snapshot);
   assert.equal(after.areas.length,68);assert.deepEqual(after.issues,[]);
-  assert.equal(after.encounters.length,before.encounters.length+124);
+  assert.equal(after.encounters.length,before.encounters.length+146);
   assert.deepEqual(after.encounters.filter(row=>row.encounterClass!=='random_alpha'),before.encounters);
   assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
   const lookup=speciesId=>selectAreaResults(after,{speciesId,encounterClass:'random_alpha'});
@@ -246,7 +246,7 @@ test('AT-346 chance Alpha packet preserves six prior rows and adds 118 zone 1–
   assert.equal(buildAreaModel({atlas,rosters:wildZoneRecords,evidence:null,alphaEvidence}).encounters.length,272);
   const broken=clone(alphaEvidence);broken.areas[0].encounters[0].sources=[];
   const rejected=buildAreaModel({atlas,rosters:wildZoneRecords,evidence:production,alphaEvidence:broken});
-  assert.equal(rejected.encounters.length,before.encounters.length+123);
+  assert.equal(rejected.encounters.length,before.encounters.length+145);
   assert.equal(selectAreaResults(rejected,{speciesId:'dratini',encounterClass:'random_alpha'}).areas.length,0);
   assert.ok(rejected.issues.some(x=>x.includes('Rejected unsupported chance Alpha')));
 });
@@ -258,13 +258,13 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   const input=freeze({atlas:clone(atlas),rosters:clone(wildZoneRecords),evidence:clone(production),alphaEvidence:clone(alphaEvidence),conditionEvidence:clone(conditionEvidence)});
   const snapshot=JSON.stringify(input),after=buildAreaModel(input);
   assert.equal(JSON.stringify(input),snapshot);assert.deepEqual(after.issues,[]);
-  assert.equal(conditionEvidence.records.length,158);
-  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='ordinary').length,122);
-  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='fixed_alpha').length,36);
+  assert.equal(conditionEvidence.records.length,182);
+  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='ordinary').length,144);
+  assert.equal(conditionEvidence.records.filter(r=>r.encounterClass==='fixed_alpha').length,38);
   assert.deepEqual(after.areas.map(({encounters,...rest})=>rest),before.areas.map(({encounters,...rest})=>rest));
   assert.deepEqual(after.encounters.map(({condition,sources,...rest})=>rest),before.encounters.map(({condition,sources,...rest})=>rest));
   const byId=new Map(after.encounters.map(r=>[r.id,r])),old=new Map(before.encounters.map(r=>[r.id,r])),ids=new Set(conditionEvidence.records.map(r=>r.id));
-  assert.equal(ids.size,158);
+  assert.equal(ids.size,182);
   for(const entry of conditionEvidence.records){const row=byId.get(entry.id);assert.ok(row,entry.id);assert.equal(row.condition.level,entry.condition.level);assert.equal(row.condition.directions,entry.condition.directions);if(entry.id==='g3-evidence-wz-14-helioptile-ordinary')assert.equal(row.condition.weather,'clear skies (source-corroborated)');else if(entry.id==='g3-evidence-wz-17-skarmory-ordinary')assert.match(row.condition.weather,/not rain/);else assert.match(row.condition.weather,/No special weather restriction reported/);assert.ok(row.sources.length>old.get(entry.id).sources.length);}
   assert.deepEqual(after.encounters.filter(r=>!ids.has(r.id)),before.encounters.filter(r=>!ids.has(r.id)));
   assert.match(byId.get('g3-evidence-wz-02-staryu-ordinary').condition.time,/night/i);
@@ -389,6 +389,21 @@ test('AT-348 early-zone supplements preserve exact IDs, geometry, classes and st
   assert.match(selectAreaResults(after,{speciesId:'noivern',areaId:'wz-18',encounterClass:'random_alpha'}).encounters[0].condition.notes.join(' '),/58–59.*56–57/);
   assert.equal(byId.get('g3-evidence-wz-18-gastly-unclassified-lead').evidenceStatus,'disputed');
   assert.equal(wz18.filter(r=>['gastly','lopunny','salamence'].includes(r.speciesId)&&r.encounterClass==='random_alpha').length,0);
+  const wz19=after.encounters.filter(r=>r.areaId==='wz-19'),wz20=after.encounters.filter(r=>r.areaId==='wz-20');
+  assert.equal(wz19.filter(r=>r.encounterClass==='random_alpha').length,7);
+  assert.equal(wz19.filter(r=>r.encounterClass==='fixed_alpha').length,2);
+  assert.match(byId.get('g3-evidence-wz-19-eevee-ordinary').condition.directions,/east side.*hedges/);
+  assert.match(byId.get('g3-evidence-wz-19-cleffa-ordinary').condition.time,/night/i);
+  assert.match(byId.get('g3-evidence-wz-19-drampa-ordinary').condition.notes.join(' '),/morning.*cutoff/i);
+  assert.equal(byId.get('wz-19:fixed_alpha:0').species,'Clefairy');
+  assert.equal(byId.get('wz-19:fixed_alpha:1').condition.level,'58–61');
+  assert.equal(wz20.filter(r=>r.encounterClass==='random_alpha').length,15);
+  assert.equal(wz20.filter(r=>r.encounterClass==='rotating_alpha').length,67);
+  assert.equal(wz20.filter(r=>r.encounterClass==='fixed_alpha').length,0);
+  assert.match(byId.get('g3-evidence-wz-20-bulbasaur-ordinary').condition.directions,/grass/i);
+  assert.equal(byId.get('g3-evidence-wz-20-scrafty-ordinary').condition.level,'54–56');
+  assert.match(selectAreaResults(after,{speciesId:'scrafty',areaId:'wz-20',encounterClass:'random_alpha'}).encounters[0].condition.notes.join(' '),/63–65/);
+  assert.ok(wz20.some(r=>r.speciesId==='zygarde'&&r.encounterClass==='mission'));
   const bad=clone(conditionEvidence);bad.records=[{...bad.records[0],species:'Other species'},{...bad.records[1],condition:{coordinates:[1,2]}}];
   const rejected=buildAreaModel({...input,conditionEvidence:bad});assert.deepEqual(rejected.encounters,before.encounters);assert.equal(rejected.issues.length,2);
   const mismatch=buildAreaModel({...input,conditionEvidence:{...conditionEvidence,mapSha256:'wrong'}});assert.deepEqual(mismatch,before);

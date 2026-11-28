@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 139,
-  "ledger_revision": 147,
+  "manifest_revision": 140,
+  "ledger_revision": 148,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -413,7 +413,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes.",
+  "next_slice": "Continue capture-first city/interior encounters, forms, alternate acquisition and Hyperspace; enrich rotating pool individual levels/forms without changing classes. Continue remaining A3–A8 and independent visual gates.",
   "ordered_slices": [
     "A2",
     "A7",
@@ -1709,5 +1709,39 @@
     "release_decision": "HOLD",
     "next": "Continue actual guide implementation: WZ19–20, city/interiors/forms and Hyperspace, then remaining A3–A8 coverage; targeted source checks rather than new disconnected broad research passes."
   },
-  "combined_research_register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json"
+  "combined_research_register": "docs/qa/AT348_COMBINED_RESEARCH_REGISTER.json",
+  "a2_13_zones_19_20_capture_research": {
+    "id": "AT-348-A2-13-ZONES-19-20",
+    "date": "2026-11-28",
+    "manifest_revision": 140,
+    "ledger_revision": 148,
+    "reviewed_parent": "8d9c913f841932021a03b4913cb45be48e452248",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_13_ZONES_19_20_CAPTURE_RESEARCH.md",
+    "zones": [
+      19,
+      20
+    ],
+    "ordinary_supplements": 22,
+    "fixed_alpha_supplements": 2,
+    "chance_alpha_rows": 22,
+    "cumulative_conditions": 182,
+    "cumulative_chance_alpha_rows": 146,
+    "rotating_alpha_species_preserved": 67,
+    "isolated_model": {
+      "areas": 68,
+      "issues": 0,
+      "geometry_unchanged": true,
+      "unrelated_encounters_unchanged": true,
+      "adapter": "isolated ESM wrapper and absolute-URL adapter; full Node/browser CI pending"
+    },
+    "source_photo_pr": 226,
+    "source_photo_head": "ffc46e3c69f7756dffecf17e4368eef4c53f4faa",
+    "photo_delta": 0,
+    "new_pins": 0,
+    "workspace_changed": false,
+    "full_source_audit_complete": false,
+    "release_decision": "HOLD",
+    "next": "Continue capture-first city/interior encounters, forms, alternate acquisition and Hyperspace; enrich rotating pool individual levels/forms without changing classes. Continue remaining A3–A8 and independent visual gates."
+  }
 }
