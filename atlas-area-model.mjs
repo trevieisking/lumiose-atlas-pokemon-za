@@ -28,7 +28,7 @@ export function speciesKey(name){return fold(name).replace(/♀/g," female ").re
 export function safeAreaSourceHref(value){
   if(!string(value,2000))return null;
   if(/^(?:docs\/|assets\/atlas\/|MAPS_|[a-z][a-z0-9-]*\.(?:html|mjs))/.test(value)&&!value.includes("..")&&!/[\\<>\s]/.test(value)&&!value.includes(":"))return value;
-  try{const u=new URL(value);const allowed=new Set(["www.serebii.net","serebii.net","bulbapedia.bulbagarden.net","archives.bulbagarden.net","www.bisafans.de","bisafans.de","game8.co","game8.jp","gamewith.jp","wiki.52poke.com","altissimo1.github.io","pente.koro-pokemon.com","www.gamerguides.com","gamerguides.com","pokemaps.net","rotomlabs.net","www.powerpyx.com","www.thonky.com"]);return u.protocol==="https:"&&!u.username&&!u.password&&allowed.has(u.hostname)?u.href:null;}catch{return null;}
+  try{const u=new URL(value);const allowed=new Set(["www.serebii.net","serebii.net","bulbapedia.bulbagarden.net","archives.bulbagarden.net","www.bisafans.de","bisafans.de","game8.co","game8.jp","gamewith.jp","wiki.52poke.com","altissimo1.github.io","pente.koro-pokemon.com","www.gamerguides.com","gamerguides.com","pokemaps.net","rotomlabs.net","www.powerpyx.com","www.thonky.com","www.videogameschronicle.com","pokemongohub.net"]);return u.protocol==="https:"&&!u.username&&!u.password&&allowed.has(u.hostname)?u.href:null;}catch{return null;}
 }
 
 function orientation(a,b,c){return (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);}
@@ -99,7 +99,7 @@ export function isRecordedHabitat(row){return WILD.has(row?.encounterClass)&&row
 
 /** Build a fresh immutable model. Baseline rosters and source objects are never
  * edited; additional claims retain their class and evidence status. */
-export function buildAreaModel({atlas,rosters,evidence,alphaEvidence}={}){
+export function buildAreaModel({atlas,rosters,evidence,alphaEvidence,conditionEvidence}={}){
   try{
     if(!Array.isArray(atlas?.sectors)||atlas.sectors.length!==48||!Array.isArray(atlas.zones)||atlas.zones.length!==20||!Array.isArray(rosters)||rosters.length!==20)throw Error("incomplete_area_catalog");
     const ids=new Set(),issues=[],areas=[];
@@ -174,6 +174,30 @@ export function buildAreaModel({atlas,rosters,evidence,alphaEvidence}={}){
       const geometries=geometryRows.filter(row=>row?.area_id===area.id);
       area.geometry=geometries.length>1?fail("duplicate_boundary_evidence"):evaluateAreaGeometry(area,geometries[0],mapContext||null);
       areas.push(area);
+    }
+    // Supplement exact existing encounters only; never infer geometry or membership.
+    const conditionAvailable=evidenceAvailable&&object(mapContext)&&Object.keys(AREA_MAP).every(k=>mapContext[k]===AREA_MAP[k])&&object(conditionEvidence)&&conditionEvidence.schemaVersion===1&&conditionEvidence.mapSha256===AREA_MAP.sha256&&Array.isArray(conditionEvidence.records);
+    if(conditionAvailable){
+      const byId=new Map(areas.flatMap(a=>a.encounters).map(row=>[row.id,row]));
+      const counts=new Map();
+      for(const entry of conditionEvidence.records)if(object(entry)&&string(entry.id,200))counts.set(entry.id,(counts.get(entry.id)||0)+1);
+      for(const entry of conditionEvidence.records){
+        const target=object(entry)?byId.get(entry.id):null;
+        const claims=Array.isArray(entry?.sources)?entry.sources.map(s=>({href:safeAreaSourceHref(s?.url||s?.path),claim:s?.claim})):[];
+        if(!target||counts.get(entry.id)!==1||target.areaId!==entry.areaId||target.species!==entry.species||target.encounterClass!==entry.encounterClass||target.form!==entry.form||
+          !['ordinary','fixed_alpha'].includes(target.encounterClass)||!isRecordedHabitat(target)||!object(entry.condition)||claims.length<2||!claims.every(s=>s.href&&string(s.claim))||
+          Object.keys(entry.condition).some(k=>!['time','weather','floor','unlock','level','directions','respawn'].includes(k))||
+          Object.values(entry.condition).some(v=>v!==null&&!string(v,500))){
+          issues.push("Rejected unsupported encounter condition supplement");continue;
+        }
+        for(const [key,value] of Object.entries(entry.condition)){
+          if(!value)continue;
+          if(!target.condition[key])target.condition[key]=value;
+          else if(target.condition[key]!==value)target.condition.notes.push("Additional source guidance for "+key+": "+value);
+        }
+        target.condition.notes.push(...noteList(entry.notes));
+        target.sources.push(...claims.filter(s=>!target.sources.some(t=>t.href===s.href&&t.claim===s.claim)));
+      }
     }
     const encounters=areas.flatMap(a=>a.encounters),bySpecies=new Map();
     for(const row of encounters){if(!bySpecies.has(row.speciesId))bySpecies.set(row.speciesId,{id:row.speciesId,name:row.species,areaIds:[]});const species=bySpecies.get(row.speciesId);if(isRecordedHabitat(row)&&!species.areaIds.includes(row.areaId))species.areaIds.push(row.areaId);}

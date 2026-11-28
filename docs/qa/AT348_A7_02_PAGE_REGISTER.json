@@ -2,8 +2,8 @@
   "schema_version": 1,
   "id": "AT-348-A7-02-RECONCILED-PAGE-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 118,
-  "ledger_revision": 126,
+  "manifest_revision": 119,
+  "ledger_revision": 127,
   "main": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "reviewed_parent": "0fea3ef8b656f34652d7eb5d79d1a508711ebff5",
   "active_pr": 229,
@@ -32,7 +32,12 @@
       "source_inventory": "inspected exact unchanged source",
       "fact_status": "claim_review_open",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "e06e0f610368f4fc978303f23377e9b01935954e"
+      "current_parent_blob": "e06e0f610368f4fc978303f23377e9b01935954e",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "atlas-explorer.html",
@@ -44,7 +49,12 @@
       "source_inventory": "inspected exact unchanged source",
       "fact_status": "claim_review_open",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "ffe3026d59d216e3f45a1c537bb65ec245b91650"
+      "current_parent_blob": "ffe3026d59d216e3f45a1c537bb65ec245b91650",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "battles.html",
@@ -188,7 +198,12 @@
       "source_inventory": "generated from inspected main sections; concurrent template/home changes preserved",
       "fact_status": "generated_from_17_inspected_sections_not_independent_claim_review",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "a6c1191dff5dc104851727ac22166139b0eb91fa"
+      "current_parent_blob": "a6c1191dff5dc104851727ac22166139b0eb91fa",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "items.html",
@@ -248,7 +263,12 @@
       "source_inventory": "inspected exact unchanged source",
       "fact_status": "claim_review_open",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "96c1a6864868577b46acf14d73fb0d1ac7d2cb38"
+      "current_parent_blob": "96c1a6864868577b46acf14d73fb0d1ac7d2cb38",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "mega-dimension.html",
@@ -296,7 +316,12 @@
       "source_inventory": "inspected exact unchanged source",
       "fact_status": "claim_review_open",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "309ca3be26e884ca0e14624b65d3a24b782302d0"
+      "current_parent_blob": "309ca3be26e884ca0e14624b65d3a24b782302d0",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "shiny-hunting.html",
@@ -488,7 +513,12 @@
       "source_inventory": "inspected exact unchanged source",
       "fact_status": "claim_review_open",
       "publication": "not_approved_by_this_audit",
-      "current_parent_blob": "c12739f3e5290f9506d36500a15f130e5aaab7dd"
+      "current_parent_blob": "c12739f3e5290f9506d36500a15f130e5aaab7dd",
+      "a2_02_review": {
+        "status": "bounded_candidate_only",
+        "note": "Shared encounter details extended for zones 1–6; verify page-specific rendering and remaining facts. Standalone Alpha index and Hyperspace not yet completed.",
+        "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md"
+      }
     },
     {
       "path": "src/sections/rewards.html",
@@ -671,5 +701,35 @@
   "workspace_changed": false,
   "full_guide_fact_verified": false,
   "source_inventory_baseline": "01857775fcd569f2a9bb9e3527cd7cd3f382177e",
-  "reconciliation": "Concurrent A7-01 candidate was committed to PR229 while independently preparing this slice. Retain its guide.html, M1–3 purpose notes, homepage capture-first change, shared headers, TM test repair and other tests. Never replay stale tree or create duplicate directory. Reapply only non-overlapping factual correction to exact current source."
+  "reconciliation": "Concurrent A7-01 candidate was committed to PR229 while independently preparing this slice. Retain its guide.html, M1–3 purpose notes, homepage capture-first change, shared headers, TM test repair and other tests. Never replay stale tree or create duplicate directory. Reapply only non-overlapping factual correction to exact current source.",
+  "a2_02_early_zone_capture_research": {
+    "id": "AT-348-A2-02-EARLY-ZONE-CAPTURE-RESEARCH",
+    "date": "2026-11-28",
+    "manifest_revision": 119,
+    "ledger_revision": 127,
+    "reviewed_parent": "07894fc47ccee47bdfd59a07e297e2c355b3fd99",
+    "active_pr": 229,
+    "report": "docs/qa/AT348_A2_02_EARLY_ZONE_CAPTURE_RESEARCH.md",
+    "zones": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "existing_ordinary_records_enriched": 39,
+    "existing_fixed_alpha_records_enriched": 11,
+    "new_chance_alpha_records": 38,
+    "prior_chance_alpha_records_retained": 6,
+    "condition_packet": "atlas-area-condition-evidence.json",
+    "existing_area_evidence_preserved": true,
+    "coordinates_added": 0,
+    "exact_head_ci": "pending",
+    "visual_qa": "pending",
+    "full_guide_fact_verified": false,
+    "release_decision": "HOLD",
+    "workspace_changed": false,
+    "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification."
+  }
 }

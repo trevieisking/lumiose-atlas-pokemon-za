@@ -56,6 +56,9 @@ function renderCaptureRow(doc,row,areas){
   const conditions=node(doc,"p");conditions.dataset.dexConditions="";
   conditions.textContent=[["Time","time"],["Weather","weather"],["Elevation","floor"],["Unlock","unlock"]].map(([label,key])=>label+": "+(row.condition[key]||"Not verified")).join(" · ");
   item.append(conditions);
+  for(const [label,key] of [["Level","level"],["Directions","directions"],["Refresh encounters","respawn"]]){
+    if(row.condition[key])item.append(node(doc,"p",label+": "+row.condition[key]));
+  }
   for(const note of [...row.condition.notes,...row.notes])item.append(node(doc,"p",note));
   const usable=row.sources.filter(source=>source.href);
   if(usable.length){

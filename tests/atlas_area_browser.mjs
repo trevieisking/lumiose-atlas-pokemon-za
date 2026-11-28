@@ -675,6 +675,17 @@ try{
     assert.match((await pumpRows.allTextContents()).join(" "),/Jumbo Variety.*Time: Night/s);
     assert.match(await page.locator('[data-dex-capture-guide="goodra"]').textContent(),/evolve Sliggoo at level 50 or higher while it is raining/);
 
+    const earlyStaryu=page.locator('[data-dex-capture-guide="staryu"]');
+    const normalStaryu=earlyStaryu.locator('[data-dex-encounter-id="g3-evidence-wz-02-staryu-ordinary"]');
+    assert.match(await normalStaryu.textContent(),/Time: night/i);
+    assert.match(await normalStaryu.textContent(),/Level: 5–7/);
+    assert.match(await normalStaryu.textContent(),/southeastern island/);
+    assert.match(await earlyStaryu.locator('[data-dex-encounter-id="wz-02:fixed_alpha:1"]').textContent(),/Level: 30–32/);
+    assert.match(await earlyStaryu.locator('[data-dex-encounter-id="at346-random-alpha-wz-02-staryu"]').textContent(),/chance Alpha Lv. 17–19/);
+    await unchanged();
+    await page.goto(base+"/atlas-explorer.html?area=wz-02&species=staryu&encounter=ordinary",{waitUntil:"load"});await panel();
+    assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/Level: 5–7/);
+    assert.match(await page.locator('[data-area-encounter-id="g3-evidence-wz-02-staryu-ordinary"]').textContent(),/southeastern island/);
     await unchanged();
 
     // Reviewed chance Alpha rows are independent of the original fixed and

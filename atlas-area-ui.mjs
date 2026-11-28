@@ -9,9 +9,10 @@ export function loadAreaModel(){
     fetch('atlas-explorer-data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Area directory unavailable');return r.json();}),
     import('./wild-zone-fieldbook.mjs'),
     fetch('atlas-area-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
-    fetch('atlas-area-alpha-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
-  ]).then(([atlas,{wildZoneRecords},evidence,alphaEvidence])=>{
-    const model=buildAreaModel({atlas,rosters:wildZoneRecords,evidence,alphaEvidence});
+    fetch('atlas-area-alpha-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
+    fetch('atlas-area-condition-evidence.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)
+  ]).then(([atlas,{wildZoneRecords},evidence,alphaEvidence,conditionEvidence])=>{
+    const model=buildAreaModel({atlas,rosters:wildZoneRecords,evidence,alphaEvidence,conditionEvidence});
     if(model.areas.length!==68)throw Error('Original area directory is incomplete');return model;
   }).catch(error=>{loading=null;throw error;});
   return loading;
@@ -90,7 +91,7 @@ export async function installAreaInteractions({host,model,onSelection=()=>{},onA
     const species=make('button','aa-species-link',row.species+(row.form?' · '+row.form:''));species.type='button';species.dataset.speciesId=row.speciesId;species.setAttribute('aria-label','Show recorded habitats for '+row.species);species.addEventListener('click',()=>selectSpecies(row.speciesId,{focus:true}));
     item.append(species,make('span','aa-record-type',labels[row.encounterClass]+' · '+(evidenceLabels[row.evidenceStatus]||row.evidenceStatus)));
     const location=make('p','aa-encounter-location','Area: '+(byId.get(row.areaId)?.name||row.areaId));location.dataset.encounterArea=row.areaId;item.append(location);
-    const condition=[...['time','weather','floor','unlock'].map(k=>k[0].toUpperCase()+k.slice(1)+': '+(row.condition[k]||'Not verified')),...row.condition.notes];
+    const condition=[...['time','weather','floor','unlock'].map(k=>k[0].toUpperCase()+k.slice(1)+': '+(row.condition[k]||'Not verified')),...['level','directions','respawn'].filter(k=>row.condition[k]).map(k=>k[0].toUpperCase()+k.slice(1)+': '+row.condition[k]),...row.condition.notes];
     item.append(make('p','',condition.length?condition.join(' · '):'Time, weather, floor and unlock conditions are not fully recorded.'));
     for(const note of row.notes)item.append(make('p','aa-evidence-note',note));showSources(row,item);return item;
   }
