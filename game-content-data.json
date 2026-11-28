@@ -857,6 +857,8 @@
   "restaurants": [
     {
       "id": "restaurant-le-nah",
+      "first_clear_reward": "₽300, TM085 Substitute, Protein ×2 and Iron ×2",
+      "repeat_tip": "The lowest entry fee for a course with three Trainer wins.",
       "name": "Restaurant Le Nah",
       "mission": 29,
       "rounds": "3 courses",
@@ -870,6 +872,8 @@
     },
     {
       "id": "restaurant-le-yeah",
+      "first_clear_reward": "₽1,000, TM094 Whirlwind, Calcium ×3 and Zinc ×3",
+      "repeat_tip": "Selling the 30 Tiny Mushrooms returns ₽7,500 of the fee before battle winnings.",
       "name": "Restaurant Le Yeah",
       "mission": 60,
       "rounds": "5 courses",
@@ -883,6 +887,8 @@
     },
     {
       "id": "restaurant-sushi",
+      "first_clear_reward": "₽1,500, and 10 each of Qualot, Grepa and Kelpsy Berries",
+      "repeat_tip": "Sell two Big Nuggets for ₽40,000 total: ₽10,000 net after entry, plus the Seed of Mastery.",
       "name": "Sushi High Roller",
       "mission": 73,
       "rounds": "5 courses; three opposing Pokémon at once",
@@ -897,6 +903,8 @@
     },
     {
       "id": "restaurant-le-wow",
+      "first_clear_reward": "₽2,000, TM045 Knock Off, HP Up ×5 and Carbos ×5",
+      "repeat_tip": "Sell ten Pearl Strings for ₽100,000 total to recover the entry fee. Net cash then equals the battle winnings: ₽26,400 without a bonus, or ₽39,600 with a fully upgraded Gold Canari Plush.",
       "name": "Restaurant Le Wow",
       "mission": 94,
       "rounds": "10 courses",
@@ -918,7 +926,7 @@
       "id": "service-lost-poke-ball-collectors",
       "name": "Lost Poké Ball collectors",
       "location": "Outside the nine regular Pokémon Centers",
-      "description": "Speak to the volunteer to collect eligible balls that missed a target. Free; failed captures are different. Excess above bag capacity is held for later.",
+      "description": "Look for the orange speech bubble. The volunteer returns clean misses free, in the same ball type you threw. Balls that hit but failed to catch the Pokémon are not returned. Excess above bag capacity is held for later. If you still need supplies, buy 10 standard Poké Balls together for ₽1,000 and get one Premier Ball at no extra cost.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -936,7 +944,7 @@
       "id": "service-ev-removal",
       "name": "EV removal",
       "location": "Rust Syndicate reception, Bleu District",
-      "description": "Spend five Mega Shards to reset one Pokémon's effort values at reception. Available after Main Mission 20, according to published service guides.",
+      "description": "Spend five Mega Shards to reset one Pokémon's effort values at reception. The story takes you to the office in Main Mission 20. If the reset is not available on that visit, return after completing Main Mission 25.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -945,7 +953,7 @@
       "id": "service-hyper-training",
       "name": "Hyper Training",
       "location": "Justice Dojo",
-      "description": "At the Justice Dojo, use one Bottle Cap for a stat or a Gold Bottle Cap for all stats on a level-50-or-higher Pokémon. This changes effective stats, not original IVs. A published service guide places the unlock after Main Mission 37; check availability then.",
+      "description": "After completing Main Mission 19 (Reaching Rank D), speak to the attendant on the right inside Justice Dojo. Bring a Lv. 50 or higher Pokémon. A Bottle Cap treats one stat as IV 31; a Gold Bottle Cap does this for all six. The Pokémon’s original IVs do not change.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -953,8 +961,8 @@
     {
       "id": "service-iv-judge",
       "name": "IV Judge",
-      "location": "Pokémon Center after the story; then Boxes",
-      "description": "After the story, visit a Pokémon Center to unlock the Judge; press the right stick in Boxes. Individual IVs: 31 Best, 30 Fantastic, 26–29 Very Good, 16–25 Pretty Good, 1–15 Decent, 0 No Good. IV total 151–186: Amazing stats; 121–150: Great stats; 91–120: Good stats; 0–90: OK stats.",
+      "location": "Boxes after the main-story credits",
+      "description": "After the credits at the end of Main Mission 37, open Boxes, highlight a Pokémon and press the right stick. If Judge is still missing, visit a Pokémon Center and try Boxes again. This is separate from Hyper Training. Individual IVs: 31 Best, 30 Fantastic, 26–29 Very Good, 16–25 Pretty Good, 1–15 Decent, 0 No Good. IV total 151–186: Amazing stats; 121–150: Great stats; 91–120: Good stats; 0–90: OK stats.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"
@@ -963,7 +971,7 @@
       "id": "service-plus-move-mastery",
       "name": "Plus Move mastery",
       "location": "Josée, Justice Dojo",
-      "description": "After defeating Josée in Main Mission 19, visit her at Justice Dojo. Use a Seed of Mastery to master an eligible move, including eligible TM moves; the service menu shows which moves can be mastered.",
+      "description": "After defeating Josée in Main Mission 19, speak to her at Justice Dojo. Moves a Pokémon learns by levelling can master naturally. For a move it learns only by TM, use a Seed of Mastery for permanent mastery. When locked on and you have enough Mega Power, press + to select a mastered Plus Move. While Mega Evolved, all moves are already treated as Plus Moves.",
       "source": "services",
       "coordinate": null,
       "coordinate_status": "field_verification_pending"

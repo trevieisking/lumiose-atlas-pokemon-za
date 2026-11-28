@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 128,
-  "ledger_revision": 136,
+  "manifest_revision": 129,
+  "ledger_revision": 137,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -261,16 +261,16 @@
     {
       "id": "A4",
       "title": "Fashion, beauty, treasure",
-      "status": "open",
+      "status": "pr227_fashion_shop_delta_candidate_remaining_catalogue_review_open",
       "source": "AT-330",
-      "acceptance": "Complete boutique inventories/prices/unlocks, available hairstyle/colour/contact swatches, treasure sale values and budgets. Preserve calculators and type chart."
+      "acceptance": "Complete boutique inventories/prices/unlocks, available hairstyle/colour/contact swatches, treasure sale values and budgets. Preserve calculators and type chart. Latest PR227 source delta integrated (Manifest129/Ledger137), exact new-head CI pending."
     },
     {
       "id": "A5",
       "title": "City Life services and challenges",
-      "status": "candidate_partial",
+      "status": "pr227_later_delta_integrated_candidate_remaining_fact_review_open",
       "source": "AT-347 / #225; PR227",
-      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues. Both integrated workflows passed at reviewed parent 7df9ba0d86377153f0ef77c7882efd9dc32b9c7e only; new head requires validation."
+      "acceptance": "PR227 exact non-overlapping blobs incorporated into PR229: researched 27-fight Rush order, SM173 and SM144 corrections and Photo Mode controls. Prior PR227 map/article workflows passed; integrated head requires new tests. Continue unresolved menu/entrance/service conditions, per-track unlocks, repeat payouts, title criteria, training and optional mechanics. Do not re-add already present catalogues. Both integrated workflows passed at reviewed parent 7df9ba0d86377153f0ef77c7882efd9dc32b9c7e only; new head requires validation. Six later source commits ending 153c6ad8f4841c927b4391739f766bf6f958137c reconciled, 14 source blobs and one regenerated section. Full City Life audit and exact new-head tests pending."
     },
     {
       "id": "A6",
@@ -284,7 +284,7 @@
       "title": "Full-guide factual and coverage QA",
       "status": "46_surface_register_concurrent_directory_preserved_targeted_facts_reconciled_full_claim_review_open",
       "source": "historical PR1; AT-346/347",
-      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks."
+      "acceptance": "Recheck story/side missions, DLC, forms, all guide pages, old omissions and links against verified current sources; record remaining gaps rather than invent. Keep deferred video/YouTube and hosting/DNS excluded. Source audit of 26 standalone pages and 17 editable homepage sections recorded, no missing static file targets; full factual and visible QA remains open. A1-03 follow-up: 108 external artwork URLs inventoried, not network checked, and remaining manual image/crop/source identity checks open. Do not reopen A1-01/A1-02 absent new defects. Owner 28 Nov: prioritise polishing and fact-checking existing pages; route directory across 57 existing destinations, mission identities 126/126 and three objective sequences checked, no full factual acceptance until every page is reviewed. Reconciled 118/126: preserve single existing guide.html; independently review the current 46-surface register docs/qa/AT348_A7_02_PAGE_REGISTER.json. No completion based on page counts or partial fact checks. Seventeen source-backed side mission updates reconciled in both standalone and generated guide; full 46-surface verification remains open."
     },
     {
       "id": "A8",
@@ -1315,5 +1315,67 @@
     "workspace_changed": false,
     "release_decision": "HOLD",
     "next_slice": "Verify new CI and phone/desktop map and catch views, then continue Zones 17–20, city/interiors, forms, alternate acquisition, Alpha and Hyperspace. Continue the 46-page factual guide audit. HOLD Workspace until the complete GitHub candidate is tested and independently verified live."
+  },
+  "a4_a5_pr227_consolidation": {
+    "id": "AT-348-A4-A5-PR227-CONSOLIDATION",
+    "date": "2026-11-28",
+    "manifest_revision": 129,
+    "ledger_revision": 137,
+    "active_pr": 229,
+    "reviewed_parent": "bb9fbb259725bacb636f4523e13eb3eedba42c67",
+    "source_pr": 227,
+    "source_initial_head": "4c68ff1bec5534190872b9227894bc6eed017170",
+    "source_reviewed_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "source_ci_success": [
+      46072694188,
+      46072694200
+    ],
+    "parent_ci_success": [
+      46167351285,
+      46167351292,
+      46167351328
+    ],
+    "source_files": 15,
+    "exact_nonoverlapping_blob_transfers": 14,
+    "generated_homepage_section_replacement": 1,
+    "updated_side_mission_ids": [
+      25,
+      29,
+      51,
+      60,
+      73,
+      94,
+      151,
+      152,
+      153,
+      154,
+      155,
+      176,
+      181,
+      182,
+      183,
+      184,
+      185
+    ],
+    "preserved_progress_keys": true,
+    "coordinates_added": 0,
+    "photo_assets_changed": 0,
+    "report": "docs/qa/AT348_A4_A5_PR227_CONSOLIDATION.md",
+    "field_intake_pr": 226,
+    "field_intake_policy": "Keep separate open for original photographs; integrate reviewed compatible batches only",
+    "historical_pr_policy": "All applicable non-photo work belongs in PR229; preserve source evidence and newer changes; no wholesale stale-branch replay, independent promotion or premature closure.",
+    "new_head_ci": "pending",
+    "independent_visual_qa": "pending",
+    "full_guide_fact_verified": false,
+    "workspace_changed": false,
+    "supabase_changed": false,
+    "release_decision": "HOLD",
+    "next_slice": "Verify new exact-head CI and independent phone/desktop previews; continue A2 P0 Wild Zones 17–20, city/interiors, forms, alternatives, Alpha and Hyperspace; A4/A5 remaining factual coverage; A7 all 46 surfaces; A6 safe adaptations of #4/#5. GitHub first; no Workspace import or publication."
+  },
+  "owner_single_integration_policy": {
+    "active_pr": 229,
+    "field_intake_pr": 226,
+    "rule": "All applicable non-photo work belongs in PR229; preserve source evidence and newer changes; no wholesale stale-branch replay, independent promotion or premature closure.",
+    "field_intake": "Keep separate open for original photographs; integrate reviewed compatible batches only"
   }
 }
