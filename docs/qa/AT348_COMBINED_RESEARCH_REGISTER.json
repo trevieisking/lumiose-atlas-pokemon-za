@@ -2,9 +2,9 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 143,
-  "ledger_revision": 151,
-  "reviewed_parent": "d60f040488e9fd56c6c7b3bebfe304dd374fce52",
+  "manifest_revision": 144,
+  "ledger_revision": 152,
+  "reviewed_parent": "b9b7d6355b338206810dc0d8c10121cd9440576d",
   "pr": 229,
   "photo_pr": 226,
   "source_library": [
@@ -62,6 +62,18 @@
       "url": "https://www.powerpyx.com/pokemon-legends-z-a-guide/",
       "role": "Targeted independent route checks",
       "status": "Specific Fennekin route checked; not whole guide"
+    },
+    {
+      "id": "thonky-level-table",
+      "url": "https://www.thonky.com/pokemon-legends-z-a/list-of-pokemon-locations",
+      "role": "Ordinary level evolution comparison only",
+      "status": "Targeted comparison; unrelated trade/Linking Cord errors excluded"
+    },
+    {
+      "id": "level-crosschecks",
+      "url": "https://www.powerpyx.com/pokemon-legends-z-a-talonflame-location/",
+      "role": "Game-specific disputed level verification",
+      "status": "Talonflame, Pidgeot, Slowbro, Manectric, Lampent, Kadabra, Metagross receipts in A2-17"
     }
   ],
   "previous_source_reviews": [
@@ -83,7 +95,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species and 64 base-dex cards enriched with special evolution and acquisition routes. Ordinary level alternatives, remaining city and Hyperspace, forms and full QA open."
+      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species, prior 67 alternative/special notes and 84 ordinary level routes enriched; remaining city, Hyperspace, forms and whole-guide factual/visual QA open."
     },
     {
       "slice": "A3",
@@ -225,10 +237,11 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
-    "base_dex_species": 64,
-    "acquisition_notes": 67,
-    "special_evolution_methods": 43,
-    "additional_acquisitions": 24,
+    "ordinary_level_routes": 84,
+    "new_or_expanded_notes": 82,
+    "existing_form_notes_annotated": 2,
+    "new_predecessor_buttons": 54,
+    "prior_acquisition_notes": 67,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
     "prior_ci": "all_four_passed",
@@ -245,18 +258,20 @@
     "WZ19 exact Drampa and fixed Furfrou hour cutoff; Game8 derivative Clefable label contradicts Clefairy; Pokémon-France inverted Drampa Alpha band.",
     "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
     "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
-    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open."
+    "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
+    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification."
   ],
   "full_audit_complete": false,
   "release_decision": "HOLD",
-  "next": "Check exact-head CI and independently review mobile/desktop. Continue base-dex ordinary level evolution alternatives and verified city sector/rooftop routes, then Hyperspace evolution/form and acquisition coverage and A3–A8. Preserve existing conditions, capture records, photo intake and player state; official sources first, no release until validation.",
+  "next": "Check exact-head CI and independently review mobile/desktop; continue verified city sector and rooftop ordinary/chance encounters, remaining alternative forms and Hyperspace acquisition/conditions, then A3–A8. Preserve every existing map, ID, photo, capture record and player state. No live release until full GitHub gates pass.",
   "previous_slice": {
-    "interior_species": 24,
-    "interior_route_links": 30,
-    "official_patch_baseline": "2.0.2",
+    "base_dex_species": 64,
+    "acquisition_notes": 67,
+    "special_evolution_methods": 43,
+    "additional_acquisitions": 24,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
-    "alpha_source_parity": 20,
+    "prior_ci": "all_four_passed",
     "full_ci": "pending",
     "visual": "pending"
   },
