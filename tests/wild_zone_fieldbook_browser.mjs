@@ -39,7 +39,18 @@ try{
      if(shot){await panel.locator(".wz-photo-pair").screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-photos.png"});await panel.screenshot({path:output+"/at321-"+screen+"-wz"+n+"-"+kind+"-roster.png"});}
    }
    await page.goto(base+"/index.html#maps",{waitUntil:"load"});
-   for(const n of [1,6,15,17,20]){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",n!==6);}
+   // A1-03: exercise every zone on the original home map, not just five samples.
+   for(const {number:n} of wildZoneRecords){await page.locator('#mapZones [data-select-zone="'+n+'"]').click();await check(n,"main",[1,15,17,20].includes(n));}
+   // The saved WZ17 screenshot previously intersected the sticky header. Prove
+   // that normal centered scrolling exposes the actual images and their links.
+   await page.locator('#mapZones [data-select-zone="17"]').click();
+   await check(17,"main");
+   for(const [index,img] of (await page.locator('[data-wz-fieldbook="17"]:visible .wz-photo-pair img').all()).entries()){
+     await img.evaluate(async el=>{el.scrollIntoView({block:"center",inline:"nearest",behavior:"instant"});await el.decode();await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
+     const visibility=await img.evaluate(el=>{const r=el.getBoundingClientRect();const points=[[r.left+r.width/2,r.top+Math.min(8,r.height/4)],[r.left+r.width/2,r.top+r.height/2],[r.left+r.width/2,r.bottom-Math.min(8,r.height/4)]];return {top:r.top,bottom:r.bottom,viewport:innerHeight,uncovered:points.every(([x,y])=>{const hit=document.elementFromPoint(x,y);return hit===el||el.contains(hit);})};});
+     assert.ok(visibility.top>=0&&visibility.bottom<=visibility.viewport+1&&visibility.uncovered,"Centered WZ17 image must be fully reachable, not hidden by sticky navigation: "+kind+" "+JSON.stringify(visibility));
+     await img.screenshot({path:output+"/at348-wz17-main-unobscured-"+kind+"-"+index+".png"});
+   }
    // AT-326: share links track the selection without resetting filters on a click.
    await page.goto(base+"/maps.html?source=atlas#wild-zone-1",{waitUntil:"load"});await check(1,"map",true);
    await page.locator('[data-area-panel]').waitFor({state:"attached"});
@@ -98,11 +109,18 @@ try{
    await page.goto(base+"/atlas-explorer.html?place="+explorerZoneId(1),{waitUntil:"networkidle"});await check(1,"explorer",true);
    await page.locator('#aeFilters button[data-kind="zone"]').click();
    for(let n=2;n<=20;n++){await page.locator('#aeResults [data-record-id="'+explorerZoneId(n)+'"]').click();await check(n,"explorer",[15,17,20].includes(n));}
-   for(const n of [15,17]){
-     await page.goto(base+"/maps.html#wild-zone-"+n,{waitUntil:"load"});await check(n,"map",true);
-     await page.goto(base+"/sector-maps.html#wildzone-"+n,{waitUntil:"load"});await check(n,"sector",true);
+   // A1-03: the two static mirrors must also render/decode all 20 photo pairs.
+   await page.goto(base+"/maps.html#wild-zone-1",{waitUntil:"load"});
+   await check(1,"map");
+   for(const {number:n} of wildZoneRecords.slice(1)){
+     await page.locator('#zone-directory [data-map-zone-button="'+n+'"]').click();
+     await check(n,"map",[15,17].includes(n));
+   }
+   for(const {number:n} of wildZoneRecords){
+     await page.goto(base+"/sector-maps.html#wildzone-"+n,{waitUntil:"load"});
+     await check(n,"sector",[15,17].includes(n));
    }
    assert.deepEqual(errors,[]);await page.close();
  }
- console.log("PASS AT-321: 20 Explorer selections, original PNG pairs, full-size links, 15/67 Zone 20 lists, standalone/map directory/main views on desktop and phone.");
+ console.log("PASS AT-348 A1-03: all 20 Wild Zone pairs on each of four map surfaces at phone and desktop widths; exact preview/full-size destinations and decoded originals, centered WZ17 image reachability, original encounter lists and history.");
 }finally{if(browser)await browser.close();server.kill("SIGTERM");}

@@ -1486,8 +1486,10 @@ try{
   }
 
   // AT-348 A1-01: do not silently truncate the ten-photo Looker Bureau survey.
-  const looker=JSON.parse(fs.readFileSync("atlas-explorer-data.json","utf8"))
-    .holovators.find(h=>h.id==="rouge5-looker");
+  const ownerLifts=JSON.parse(fs.readFileSync("atlas-explorer-data.json","utf8")).holovators;
+  assert.equal(ownerLifts.length,21);
+  assert.equal(new Set(ownerLifts.flatMap(h=>h.photos.map(p=>p.path))).size,111);
+  const looker=ownerLifts.find(h=>h.id==="rouge5-looker");
   assert.equal(looker.photos.length,10,"The original ten registered photographs must remain intact");
   for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
     await page.goto(base+"/atlas-explorer.html?place=rouge5-looker",{waitUntil:"load"});
@@ -1511,6 +1513,30 @@ try{
     assert.match(await gallery.locator("figure").nth(9).textContent(),/rooftop arrival revisit/i);
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Complete gallery fits "+kind);
     await gallery.screenshot({path:output+"/at348-looker-ten-photos-"+kind+".png"});
+  }
+  // A1-03: every remaining lift gallery must render its own complete inventory.
+  // Use the established deep-link flow without touching map pins or storage.
+  for(const [kind,page] of [["phone",phone],["desktop",desktop]]){
+    let decoded=looker.photos.length;
+    for(const item of ownerLifts.filter(h=>h.id!==looker.id)){
+      await page.goto(base+"/atlas-explorer.html?place="+encodeURIComponent(item.id),{waitUntil:"load"});
+      const gallery=page.locator("#aeSelected .ae-photo-grid");
+      await gallery.waitFor({state:"visible"});
+      const figures=gallery.locator("figure");
+      assert.equal(await figures.count(),item.photos.length,kind+" "+item.id+" gallery count");
+      for(const [index,photo] of item.photos.entries()){
+        const figure=figures.nth(index),img=figure.locator("img");
+        assert.equal(await img.getAttribute("src"),photo.path,kind+" "+item.id+" preview identity");
+        assert.equal(await figure.locator("a").getAttribute("href"),photo.path,kind+" "+item.id+" full-size identity");
+        assert.ok((await img.getAttribute("alt")||"").length>0);
+        await img.scrollIntoViewIfNeeded();
+        await img.evaluate(node=>node.decode());
+        assert.ok(await img.evaluate(node=>node.naturalWidth>0&&node.naturalHeight>0),photo.path+" decodes");
+        decoded++;
+      }
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"Gallery fits "+kind+" "+item.id);
+    }
+    assert.equal(decoded,111,"Every registered owner Holovator photo decodes on "+kind);
   }
   assert.equal(errors.length,0,"AT-348 gallery desktop JS errors: "+errors.join(" | "));
   assert.equal(mobileErrors.length,0,"AT-348 gallery phone JS errors: "+mobileErrors.join(" | "));

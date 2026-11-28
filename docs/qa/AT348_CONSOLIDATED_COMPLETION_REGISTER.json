@@ -1,8 +1,8 @@
 {
   "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
   "schema_version": 1,
-  "manifest_revision": 112,
-  "ledger_revision": 120,
+  "manifest_revision": 113,
+  "ledger_revision": 121,
   "scope": "one active non-item guide completion candidate; staged, not release approval",
   "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
   "base_tree": "b8f7cdfadfb2f792220f7bc0d8487a66aed0e8f1",
@@ -239,9 +239,9 @@
     {
       "id": "A1",
       "title": "Photo restoration",
-      "status": "all_three_full_resolution_links_implemented_prior_visual_review_complete_new_head_tests_pending",
+      "status": "a1_01_a1_02_exact_ci_passed_a1_03_coverage_candidate_pending",
       "source": "AT-348 / #228",
-      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open."
+      "acceptance": "Inspect current source and published asset boundaries; identify exact three Wild Zone originals and two gallery-hidden Holovator entries, remove unjustified cap only where confirmed; verify all eight hashes, visible image links, gallery on phone/desktop, no image deletion or guessed mapping. Confirmed rouge5-looker ten-photo array truncated by item.photos.slice(0,8); test all ten visible links and preserve originals. A1-01 repair candidate adds ten-photo desktop/phone regression; A1-02 mappings remain open. Exact A1-01 CI passed at fc5142b6ad7e7bca4ad3483df8cfeec37fc3ea17 (46066870386/46066870511); independent screenshot review open. A1-02 two visually matched originals linked, third exact preview comparison blocked. All eight archived originals hash matched. Candidate CI and actual Pages output checks remain open. 28 Nov: exact parent Explorer pass and article retry pass; ten-photo gallery and 16 WZ15/17 image-pair screenshots reviewed; third WZ17 exact frame confirmed via rendered preview. All three original links implemented, new-head CI, actual Pages output and A1-03 whole-guide imagery open. Exact parent 94901437e6fa63e72efee544f7660d99db0567ba passed all three workflows; expanded A1-03 browser/build inventory tests implemented, new-head validation and manual whole-guide review remain open."
     },
     {
       "id": "A2",
@@ -290,13 +290,13 @@
       "title": "Exact final validation and single Workspace handoff",
       "status": "open",
       "source": "AT-325/297, #229",
-      "acceptance": "Run exact-head required workflows, local static/build and unit tests, real browser phone/desktop visual/touch checks, asset and storage preservation, release tree check and verified Pages. Reconfirm current Workspace draft and v40 baseline, use recovery prompt as resume pointer, one source-pinned compatible release only after GitHub gates; backup and independent same-Site validation/live readback. Keep rollback."
+      "acceptance": "Run exact-head required workflows, local static/build and unit tests, real browser phone/desktop visual/touch checks, asset and storage preservation, release tree check and verified Pages. Reconfirm current Workspace draft and v40 baseline, use recovery prompt as resume pointer, one source-pinned compatible release only after GitHub gates; backup and independent same-Site validation/live readback. Keep rollback. Owner 28 November: no Workspace import/preview/publish or executable handoff until all planned GitHub work is validated and verified live on GitHub Pages."
     }
   ],
   "release_decision": "HOLD",
   "preserve_all_originals_and_progress": true,
   "no_workspace_credits": true,
-  "supabase_sync": "existing AT348 row verified at 111; scoped update after exact readback",
+  "supabase_sync": "existing AT348 row revision112 verified; scoped update after exact readback",
   "previous_planning_checkpoint": "ba4bb222b6c644ddf15a542c918942e5e5c1fe6c",
   "development_cycle": {
     "id": "AT-348-WHOLE-GUIDE-AUDIT-CYCLE",
@@ -369,7 +369,7 @@
     "runtime_changed": false,
     "new_prs": 0
   },
-  "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs.",
+  "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified.",
   "ordered_slices": [
     "A1",
     "A3",
@@ -711,5 +711,71 @@
     "private_tracker": "existing AT348 row verified at 111; scoped update after exact GitHub readback",
     "release_decision": "HOLD",
     "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs."
+  },
+  "owner_github_first_gate": {
+    "owner_instruction_date": "2026-11-28",
+    "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+    "workspace_release_allowed": false
+  },
+  "a1_03_guide_image_coverage": {
+    "id": "AT-348-A1-03-GUIDE-IMAGE-COVERAGE",
+    "date": "2026-11-28",
+    "manifest_revision": 113,
+    "ledger_revision": 121,
+    "active_pr": 229,
+    "reviewed_parent": "94901437e6fa63e72efee544f7660d99db0567ba",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "field_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_exact_ci": {
+      "head": "94901437e6fa63e72efee544f7660d99db0567ba",
+      "runs": [
+        46129447853,
+        46129447862,
+        46129447876
+      ],
+      "all_success": true
+    },
+    "previous_A1_01_A1_02_status": "gallery and all three original links implemented, prior screenshot evidence reviewed, exact-head Explorer/articles/actual Pages build checks passed",
+    "owner_release_gate": {
+      "owner_instruction_date": "2026-11-28",
+      "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+      "workspace_release_allowed": false
+    },
+    "inspection": {
+      "repository_tree_paths": 2000,
+      "root_html_pages": 27,
+      "photo_data": {
+        "holovators": 21,
+        "original_lift_photos": 111,
+        "wild_zones": 20,
+        "wild_zone_preview_images": 40,
+        "sectors": 48,
+        "sector_context_originals": 10
+      },
+      "confirmed_gap": "existing browser tests sampled five homepage zones, a subset of static map/directory zones, selected Holovator galleries and five context sectors; prior actual Pages check only eight HTML files and three restored originals",
+      "sticky_header": "prior screenshot overlap is not proof of persistent runtime defect; added normal centered scrolling/hit-testing and screenshot evidence; no CSS or navigation change"
+    },
+    "changed_tests": [
+      "tests/wild_zone_fieldbook_browser.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      "tests/atlas_sector_context_browser.mjs",
+      "tests/verify_pages_archive_exclusion.py"
+    ],
+    "candidate_coverage": {
+      "zone_pairs_each_surface_each_viewport": 20,
+      "map_surfaces": 4,
+      "viewport_types": 2,
+      "all_lift_gallery_images_each_viewport": 111,
+      "all_sector_directory_context_and_fallback_each_viewport": 48,
+      "actual_built_root_html_pages": "all current root HTML; >=27",
+      "actual_built_images": "static local img/image anchors plus all dynamic map gallery folders, byte-for-byte; external URLs only inventoried"
+    },
+    "limitations": "No new runtime code or assets; no comprehensive visual identity check for every photo yet, no external artwork network check, no physical-device claim, no persisted Workspace inspection. New exact-head validation pending.",
+    "github_validation": "new_head_pending",
+    "workspace_publication": "blocked_by_owner_github_first_gate",
+    "private_tracker": "existing row revision112; scoped sync after GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
   }
 }

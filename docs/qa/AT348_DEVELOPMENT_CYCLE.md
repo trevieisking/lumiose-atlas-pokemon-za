@@ -1,5 +1,9 @@
 # AT-348 — Mandatory two-site development cycle
 
+## Owner clarification — GitHub first (28 November 2026)
+
+GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory. This takes precedence over earlier continuation language. Plans and inventory must still be synchronized each stage; no executable Workspace prompt is issued early.
+
 Owner instruction, 27 November 2026. Applies to every Atlas development prompt, including ChatGPT/GitHub and Workspace. Manifest 105 / ledger 113 establish the rule; future slices advance together. This is a planning and synchronization contract, not permission to publish an unvalidated draft.
 
 ## Start of every development prompt

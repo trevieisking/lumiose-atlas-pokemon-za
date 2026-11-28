@@ -3,6 +3,8 @@ from pathlib import Path
 import re
 import hashlib
 import sys
+from html.parser import HTMLParser
+from urllib.parse import urlsplit, unquote
 
 dist = Path(sys.argv[1])
 # The live guide contents must be copied unchanged by the hosting config.
@@ -29,6 +31,52 @@ for rel, filename, expected_hash in originals:
     assert Path(rel).read_bytes() == original, rel
     assert (dist / rel).is_file(), rel
     assert (dist / rel).read_bytes() == original, rel
+
+# A1-03: verify actual hosted images on every root player-facing HTML surface.
+# External artwork is inventoried, not fetched or conflated with owner photos.
+image_suffixes = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".avif", ".ico"}
+class GuideImages(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.references = []
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "img" and attrs.get("src"):
+            self.references.append(attrs["src"])
+        if tag == "a" and attrs.get("href") and Path(urlsplit(attrs["href"]).path).suffix.lower() in image_suffixes:
+            self.references.append(attrs["href"])
+
+source_pages = sorted(Path(".").glob("*.html"))
+assert len(source_pages) >= 27, "Existing player guide pages must remain present"
+local_images, external_images = set(), set()
+for page in source_pages:
+    built = dist / page
+    assert built.is_file() and built.read_bytes() == page.read_bytes(), page
+    scan = GuideImages()
+    scan.feed(built.read_text(encoding="utf-8"))
+    for raw in scan.references:
+        parsed = urlsplit(raw)
+        if parsed.scheme or parsed.netloc:
+            external_images.add(raw)
+            continue
+        rel = Path(unquote(parsed.path))
+        assert not rel.is_absolute() and ".." not in rel.parts, (page, raw)
+        assert rel.is_file(), (page, raw, "missing source image")
+        local_images.add(rel)
+
+# The shared modules choose these gallery images dynamically. Check the entire
+# runtime inventory as well as the static HTML references, preserving duplicates
+# that are deliberate wider views, source fallbacks or separate capture roles.
+for folder in ("wild-zones", "holovators", "sector-context", "sector-streets", "ladders"):
+    root = Path("assets/atlas") / folder
+    assert root.is_dir(), root
+    local_images.update(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in image_suffixes)
+for rel in sorted(local_images):
+    built = dist / rel
+    assert built.is_file(), (rel, "missing from actual Pages output")
+    assert built.read_bytes() == rel.read_bytes(), (rel, "changed by Pages build")
+assert len(local_images) >= 200, "Photo/image inventory coverage unexpectedly fell"
+print(f"A1-03: {len(source_pages)} guide HTML pages; {len(local_images)} local image assets present byte-for-byte; {len(external_images)} external image URLs inventoried (not network-verified).")
 
 rules = Path("_config.yml").read_text().splitlines()
 excluded = [m[1] for line in rules if (m := re.fullmatch(r"  - '(.+\.md)'", line))]

@@ -1,9 +1,9 @@
 {
   "at_348_consolidated_guide_completion": {
     "id": "AT-348-CONSOLIDATED-GUIDE-COMPLETION",
-    "revision": 112,
-    "ledger_revision": 120,
-    "status": "three_original_links_candidate_prior_visual_review_complete_new_head_validation_pending",
+    "revision": 113,
+    "ledger_revision": 121,
+    "status": "a1_01_a1_02_exact_ci_passed_a1_03_coverage_candidate_pending",
     "active_pr": 229,
     "base_sha": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
     "previous_recovery_checkpoint": "428b517cfb31e88b00553182d2e34b263ba82659",
@@ -30,7 +30,7 @@
     "workspace_last_recorded_live": "v40",
     "workspace_publication_claimed": false,
     "tracker_id": "AT-348-GUIDE-COMPLETION",
-    "tracker_sync": "read_AT348_existing_row_revision111; scoped_sync_after_exact_readback",
+    "tracker_sync": "read_AT348_existing_row_revision112; scoped_sync_after_exact_readback",
     "field_intake_review": {
       "pr": 226,
       "reviewed_head": "d0033600d3f3414aaf9b3abcc2d7d7606bdd4bab",
@@ -51,8 +51,8 @@
     },
     "current_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md",
     "whole_guide_audit": "docs/qa/AT348_WHOLE_GUIDE_AUDIT_2026-11-27.md",
-    "latest_slice": "docs/qa/AT348_A1_02_FINAL_ORIGINAL_AND_VISUAL_REVIEW.md",
-    "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs.",
+    "latest_slice": "docs/qa/AT348_A1_03_GUIDE_IMAGE_COVERAGE.md",
+    "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified.",
     "field_intake_checkpoint": {
       "pr": 226,
       "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
@@ -134,148 +134,70 @@
       "result": "success"
     },
     "latest_review": {
-      "id": "AT-348-A1-02-FINAL-ORIGINAL-AND-VISUAL-REVIEW",
+      "id": "AT-348-A1-03-GUIDE-IMAGE-COVERAGE",
       "date": "2026-11-28",
-      "manifest_revision": 112,
-      "ledger_revision": 120,
+      "manifest_revision": 113,
+      "ledger_revision": 121,
       "active_pr": 229,
-      "reviewed_parent": "6f2d238b68782e02f7152440715895661e732c47",
+      "reviewed_parent": "94901437e6fa63e72efee544f7660d99db0567ba",
       "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
-      "field_intake": {
-        "pr": 226,
-        "head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
-        "counts": {
-          "tm": 17,
-          "item": 18,
-          "screw": 7,
-          "access": 1,
-          "collectibleFinds": 42,
-          "photos": 211
-        },
-        "workflows": [
-          46079865251,
-          46079865248
-        ],
-        "conclusion": "success_on_exact_head_not_integrated"
-      },
-      "source_pr227": {
-        "head": "153c6ad8f4841c927b4391739f766bf6f958137c",
-        "workflows": [
-          46072694188,
-          46072694200
-        ],
-        "conclusion": "success_on_exact_head_source_only_review_later_deltas_before_integration"
-      },
+      "field_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+      "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
       "prior_exact_ci": {
-        "head": "6f2d238b68782e02f7152440715895661e732c47",
-        "explorer": {
-          "run": 46080093716,
-          "conclusion": "success"
-        },
-        "articles": {
-          "run": 46080093688,
-          "first_attempt": "failure_node_undici_parser_before_fashion_browser_assertions",
-          "retry_attempt": 2,
-          "conclusion": "success"
-        }
+        "head": "94901437e6fa63e72efee544f7660d99db0567ba",
+        "runs": [
+          46129447853,
+          46129447862,
+          46129447876
+        ],
+        "all_success": true
       },
-      "visual_review": {
-        "artifact_id": 15236257476,
-        "artifact_sha256": "c3c0e7e060a9d6dbca3016885f1cf4c7723268f0ff9564de215a873bab1e8ee4",
-        "source_run": 46080093716,
-        "head": "6f2d238b68782e02f7152440715895661e732c47",
-        "gallery": {
-          "desktop": "atlas-explorer/at348-looker-ten-photos-desktop.png",
-          "desktop_sha256": "8bd666e8734c450943e1ce077c0fcf0650da551b44e586c4de0d3679487465e3",
-          "phone": "atlas-explorer/at348-looker-ten-photos-phone.png",
-          "phone_sha256": "5c0f47e35914c5240957c4eb4d9793503bb76815fff21816b33bb10c8220f8f2",
-          "all_ten_images_and_captions_visible": true
-        },
-        "zone_photo_screenshots": {
-          "reviewed": 16,
-          "zones": [
-            15,
-            17
-          ],
-          "surfaces": [
-            "main",
-            "map",
-            "sector",
-            "explorer"
-          ],
-          "devices": [
-            "phone",
-            "desktop"
-          ],
-          "finding": "Both thumbnails visible and correct identities; main WZ17 desktop screenshot top has sticky navigation overlay at captured scroll position; investigate scroll/heading in A1-03, not established persistent image loss."
-        },
-        "exact_frame_reference": {
-          "path": "atlas-explorer/at321-map-wz17-desktop-photos.png",
-          "sha256": "d2647a212db2ed32dde749d2d1dfe14d433ab580a43e5aafebc8bd12ca8fc2cb",
-          "method": "visual comparison of exact-head browser-rendered thumbnail with byte-verified supplied original, not direct PNG binary download"
-        }
+      "previous_A1_01_A1_02_status": "gallery and all three original links implemented, prior screenshot evidence reviewed, exact-head Explorer/articles/actual Pages build checks passed",
+      "owner_release_gate": {
+        "owner_instruction_date": "2026-11-28",
+        "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+        "workspace_release_allowed": false
       },
-      "verified_visual_matches": [
-        {
-          "zone": 15,
-          "kind": "overview",
-          "preview": "assets/atlas/wild-zones/wild-zone-15-overview.png",
-          "preview_blob": "3803bcd51c15900e138d7263b82a48eff283ce99",
-          "filename": "20261125_165929.jpg",
-          "blob": "361156f621d5377c9f6a115d17c7a435de668c43",
-          "sha256": "7d86a7863b52cf9fa45c223655f524e0fcf9917a72260034a8fde3804ca2891a",
-          "bytes": 1647674,
-          "full": "assets/atlas/wild-zones/originals/wild-zone-15-overview.jpg"
+      "inspection": {
+        "repository_tree_paths": 2000,
+        "root_html_pages": 27,
+        "photo_data": {
+          "holovators": 21,
+          "original_lift_photos": 111,
+          "wild_zones": 20,
+          "wild_zone_preview_images": 40,
+          "sectors": 48,
+          "sector_context_originals": 10
         },
-        {
-          "zone": 17,
-          "kind": "overview",
-          "preview": "assets/atlas/wild-zones/wild-zone-17-overview.png",
-          "preview_blob": "c4709da5da42a3fc195de49c59903e9fd1aec1f8",
-          "filename": "20261125_170158.jpg",
-          "blob": "0e722fac8c6919e297d95b398659b73de2493c46",
-          "sha256": "f6c2cf3ed37d362dfc54890c3730614b35f4a709b378e8eeffcc3e47363b9ee5",
-          "bytes": 1420507,
-          "full": "assets/atlas/wild-zones/originals/wild-zone-17-overview.jpg"
-        },
-        {
-          "zone": 17,
-          "kind": "closeup",
-          "filename": "20261125_170238.jpg",
-          "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
-          "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
-          "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
-          "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
-          "bytes": 1564974,
-          "width": 4000,
-          "height": 2252,
-          "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
-        }
+        "confirmed_gap": "existing browser tests sampled five homepage zones, a subset of static map/directory zones, selected Holovator galleries and five context sectors; prior actual Pages check only eight HTML files and three restored originals",
+        "sticky_header": "prior screenshot overlap is not proof of persistent runtime defect; added normal centered scrolling/hit-testing and screenshot evidence; no CSS or navigation change"
+      },
+      "changed_tests": [
+        "tests/wild_zone_fieldbook_browser.mjs",
+        "tests/atlas_explorer_browser.mjs",
+        "tests/atlas_sector_context_browser.mjs",
+        "tests/verify_pages_archive_exclusion.py"
       ],
-      "new_runtime_asset": {
-        "zone": 17,
-        "kind": "closeup",
-        "filename": "20261125_170238.jpg",
-        "preview": "assets/atlas/wild-zones/wild-zone-17-closeup.png",
-        "preview_blob": "d83a6e0a3cd164ecef9bd33c96d9c29d0453811e",
-        "blob": "54cfbb0b3127ca09bfdc9c3e2360c961af4a3392",
-        "sha256": "57a4746a3896f8f4abf664486aa79f740d884e2cfe8bc73608f57d1085e38617",
-        "bytes": 1564974,
-        "width": 4000,
-        "height": 2252,
-        "full": "assets/atlas/wild-zones/originals/wild-zone-17-closeup.jpg"
+      "candidate_coverage": {
+        "zone_pairs_each_surface_each_viewport": 20,
+        "map_surfaces": 4,
+        "viewport_types": 2,
+        "all_lift_gallery_images_each_viewport": 111,
+        "all_sector_directory_context_and_fallback_each_viewport": 48,
+        "actual_built_root_html_pages": "all current root HTML; >=27",
+        "actual_built_images": "static local img/image anchors plus all dynamic map gallery folders, byte-for-byte; external URLs only inventoried"
       },
-      "scope": "One additional full-size href mapping, two static mirrors, independent original hash test and actual Jekyll asset preservation test. Unchanged 40 preview images, all data, geometry, progress, feedback and prior originals.",
+      "limitations": "No new runtime code or assets; no comprehensive visual identity check for every photo yet, no external artwork network check, no physical-device claim, no persisted Workspace inspection. New exact-head validation pending.",
       "github_validation": "new_head_pending",
-      "github_publication": "not_released",
-      "workspace_implementation": "pending_reconcile_persisted_draft",
-      "workspace_preview": "pending",
-      "workspace_publication": "not_verified",
-      "workspace_last_recorded_live": "v40",
-      "workspace_rollback": "v39",
-      "private_tracker": "existing AT348 row verified at 111; scoped update after exact GitHub readback",
+      "workspace_publication": "blocked_by_owner_github_first_gate",
+      "private_tracker": "existing row revision112; scoped sync after GitHub readback",
       "release_decision": "HOLD",
-      "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs."
+      "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
+    },
+    "owner_github_first_gate": {
+      "owner_instruction_date": "2026-11-28",
+      "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+      "workspace_release_allowed": false
     }
   },
   "at_348_workspace_photo_recovery": {
@@ -569,7 +491,7 @@
     "active_development_checkpoint": "docs/qa/AT348_DEVELOPMENT_CYCLE.md"
   },
   "id": "ATLAS-MAPS-2026-11-21-V1",
-  "revision": 112,
+  "revision": 113,
   "title": "Lumiose Atlas 48-sector and 20-Wild-Zone map system upgrade",
   "created_at": "2026-11-21",
   "status": "github_merged_deployed_live_verified_original_Workspace_upgrade_pending",
@@ -9569,5 +9491,66 @@
     "private_tracker": "existing AT348 row verified at 111; scoped update after exact GitHub readback",
     "release_decision": "HOLD",
     "next_slice": "Validate exact new head (Explorer, article and actual Jekyll Pages archive/output workflow), then A1-03 whole-guide image audit including homepage sticky-header screenshot overlap check, followed by A3 field/access integration. No unverified coordinates or canonical checklist IDs."
+  },
+  "at_348_a1_03_guide_image_coverage": {
+    "id": "AT-348-A1-03-GUIDE-IMAGE-COVERAGE",
+    "date": "2026-11-28",
+    "manifest_revision": 113,
+    "ledger_revision": 121,
+    "active_pr": 229,
+    "reviewed_parent": "94901437e6fa63e72efee544f7660d99db0567ba",
+    "main_baseline": "bdfce92bfa7324517d0a1e2f8db7eec84983eefb",
+    "field_head": "cd24fc4f6a047ae819af025cfe08fc70391bfb5a",
+    "source_pr227_head": "153c6ad8f4841c927b4391739f766bf6f958137c",
+    "prior_exact_ci": {
+      "head": "94901437e6fa63e72efee544f7660d99db0567ba",
+      "runs": [
+        46129447853,
+        46129447862,
+        46129447876
+      ],
+      "all_success": true
+    },
+    "previous_A1_01_A1_02_status": "gallery and all three original links implemented, prior screenshot evidence reviewed, exact-head Explorer/articles/actual Pages build checks passed",
+    "owner_release_gate": {
+      "owner_instruction_date": "2026-11-28",
+      "rule": "GitHub first, Workspace last. Complete and validate the full planned consolidated guide, merge only after reviewed exact-head gates, independently verify GitHub Pages live, then prepare one immutable-source Workspace release prompt. Before that: no Workspace import, preview, publish, new Site, credits or executable release prompt; only maintain pending planning inventory.",
+      "workspace_release_allowed": false
+    },
+    "inspection": {
+      "repository_tree_paths": 2000,
+      "root_html_pages": 27,
+      "photo_data": {
+        "holovators": 21,
+        "original_lift_photos": 111,
+        "wild_zones": 20,
+        "wild_zone_preview_images": 40,
+        "sectors": 48,
+        "sector_context_originals": 10
+      },
+      "confirmed_gap": "existing browser tests sampled five homepage zones, a subset of static map/directory zones, selected Holovator galleries and five context sectors; prior actual Pages check only eight HTML files and three restored originals",
+      "sticky_header": "prior screenshot overlap is not proof of persistent runtime defect; added normal centered scrolling/hit-testing and screenshot evidence; no CSS or navigation change"
+    },
+    "changed_tests": [
+      "tests/wild_zone_fieldbook_browser.mjs",
+      "tests/atlas_explorer_browser.mjs",
+      "tests/atlas_sector_context_browser.mjs",
+      "tests/verify_pages_archive_exclusion.py"
+    ],
+    "candidate_coverage": {
+      "zone_pairs_each_surface_each_viewport": 20,
+      "map_surfaces": 4,
+      "viewport_types": 2,
+      "all_lift_gallery_images_each_viewport": 111,
+      "all_sector_directory_context_and_fallback_each_viewport": 48,
+      "actual_built_root_html_pages": "all current root HTML; >=27",
+      "actual_built_images": "static local img/image anchors plus all dynamic map gallery folders, byte-for-byte; external URLs only inventoried"
+    },
+    "limitations": "No new runtime code or assets; no comprehensive visual identity check for every photo yet, no external artwork network check, no physical-device claim, no persisted Workspace inspection. New exact-head validation pending.",
+    "github_validation": "new_head_pending",
+    "workspace_publication": "blocked_by_owner_github_first_gate",
+    "private_tracker": "existing row revision112; scoped sync after GitHub readback",
+    "release_decision": "HOLD",
+    "next_slice": "Review exact new-head Explorer, article and Pages build checks. Inspect gallery/centered WZ17 screenshots and any failed image targets; if clear, proceed to A3 reviewed PR226 fieldbook and access integration, while preserving unverified canonical IDs and map coordinates. Continue remaining A2/A7/A4/A5/A6/A8 work; no Workspace action until full GitHub release verified."
   }
 }
