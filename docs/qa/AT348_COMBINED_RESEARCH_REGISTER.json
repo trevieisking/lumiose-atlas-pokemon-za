@@ -2,9 +2,9 @@
   "schema_version": 1,
   "id": "AT-348-COMBINED-RESEARCH-REGISTER",
   "date": "2026-11-28",
-  "manifest_revision": 144,
-  "ledger_revision": 152,
-  "reviewed_parent": "b9b7d6355b338206810dc0d8c10121cd9440576d",
+  "manifest_revision": 145,
+  "ledger_revision": 153,
+  "reviewed_parent": "4a14f5ef4df688f23a84278e25a8c22f91620920",
   "pr": 229,
   "photo_pr": 226,
   "source_library": [
@@ -74,6 +74,12 @@
       "url": "https://www.powerpyx.com/pokemon-legends-z-a-talonflame-location/",
       "role": "Game-specific disputed level verification",
       "status": "Talonflame, Pidgeot, Slowbro, Manectric, Lampent, Kadabra, Metagross receipts in A2-17"
+    },
+    {
+      "id": "city-route-receipts",
+      "url": "https://www.powerpyx.com/pokemon-legends-z-a-full-pokedex-all-pokemon-locations/",
+      "role": "Targeted city rooftop, courtyard and market routes",
+      "status": "13 written card routes with sector lists and explicit gaps in A2-18 report; no coordinate verification"
     }
   ],
   "previous_source_reviews": [
@@ -95,7 +101,7 @@
         "pokemon-france",
         "owner"
       ],
-      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species, prior 67 alternative/special notes and 84 ordinary level routes enriched; remaining city, Hyperspace, forms and whole-guide factual/visual QA open."
+      "status": "All 20 targeted zones, 67 rotating candidates, fixed city/lab guide, 24 interior species, 67 alternative/special notes, 84 ordinary level routes and 13 written city capture cards enriched. Remaining city species, individual conditions, Hyperspace, forms and whole-guide factual/visual QA open."
     },
     {
       "slice": "A3",
@@ -237,10 +243,9 @@
     "source_policy": "Use primary game observations and official material for scope/version; cross-check claims. Original prose and owned/licensed images; preserve stable IDs and existing working systems."
   },
   "current_slice": {
+    "city_capture_notes": 13,
+    "local_links": 53,
     "ordinary_level_routes": 84,
-    "new_or_expanded_notes": 82,
-    "existing_form_notes_annotated": 2,
-    "new_predecessor_buttons": 54,
     "prior_acquisition_notes": 67,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
@@ -259,16 +264,18 @@
     "WZ20 rotating levels and three source-reported form notes integrated; preserve existing form-neutral stable IDs. MM38/39 transition source-corroborated, not field observed.",
     "City exact fixed slots, ladders, weather and individual routes remain partly unverified. Lab revisit conditions, individual room placement and indoor time/weather unknown.",
     "Canal Access Klefki appears in Serebii's normal spawn table but Bulbapedia describes a story encounter; exact repeatability unverified. Other individual indoor room placement, time/weather and repeat-spawn rules remain open.",
-    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification."
+    "A2-17: conflicting external level/predecessor table entries resolved using game-specific sources; no claim of new city or Hyperspace spawn verification.",
+    "A2-18: Ralts ordinary day/night route differs from sunny-day chance Alpha observations; Dratini daytime route not universal; Riolu Jaune District unspecified sector; exact secondary city routes, weather, levels, unlocks and odds remain partly unresolved."
   ],
   "full_audit_complete": false,
   "release_decision": "HOLD",
-  "next": "Check exact-head CI and independently review mobile/desktop; continue verified city sector and rooftop ordinary/chance encounters, remaining alternative forms and Hyperspace acquisition/conditions, then A3–A8. Preserve every existing map, ID, photo, capture record and player state. No live release until full GitHub gates pass.",
+  "next": "Complete remaining written city routes and conditions, Hyperspace acquisition/evolution/forms and the whole-guide page-by-page factual register; account for unknown/disputed details without guesses. Test the existing GitHub implementation and obtain owner review of the working GitHub site before any Workspace handoff. Existing Workspace may adapt presentation and functionality while preserving content, data and behavior. No paid services or additional spend. Future photographs are independent additive evidence, not a release blocker; preserve integrated image integrity.",
   "previous_slice": {
-    "base_dex_species": 64,
-    "acquisition_notes": 67,
-    "special_evolution_methods": 43,
-    "additional_acquisitions": 24,
+    "ordinary_level_routes": 84,
+    "new_or_expanded_notes": 82,
+    "existing_form_notes_annotated": 2,
+    "new_predecessor_buttons": 54,
+    "prior_acquisition_notes": 67,
     "total_condition_supplements": 249,
     "total_chance_alpha_rows": 146,
     "prior_ci": "all_four_passed",
@@ -286,5 +293,28 @@
     ],
     "secondary": "Nintendo Life, Serebii, Bulbapedia, Pokémon-France and Game8 are supplemental guides, not official sources. Use original prose, source-specific qualification and direct in-game evidence; no unlicensed images, guessed pins or undocumented field conditions.",
     "access_limits": "Nintendo Life hub and Beldum page accessible; Game8 English HTTP 403; Pokémon-France hub cache miss on this turn. Keep previous reviewed source receipts; do not claim a fresh full audit."
+  },
+  "written_first_zero_cost_policy": {
+    "date": "2026-11-28",
+    "paid_services_allowed": false,
+    "additional_spending_allowed": false,
+    "priority": "Complete all written guide information first, accurately and with every game feature accounted for; preserve existing functioning systems.",
+    "evidence_states": [
+      "verified",
+      "source_supported",
+      "disputed",
+      "unresolved",
+      "not_applicable"
+    ],
+    "required_sequence": [
+      "Complete written coverage and record unresolved items explicitly",
+      "Make and test the existing GitHub site",
+      "Obtain owner review of working GitHub site",
+      "Prepare one final existing Workspace handoff only after GitHub acceptance"
+    ],
+    "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
+    "photographs": "Add newly available images independently in PR226 and integrate as validated batches; absent future images are not release blockers. Preserve existing integrated photo integrity.",
+    "release_decision": "HOLD",
+    "owner_review_pending": true
   }
 }

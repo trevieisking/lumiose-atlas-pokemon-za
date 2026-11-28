@@ -731,5 +731,41 @@
     "release_decision": "HOLD",
     "workspace_changed": false,
     "next_slice": "A2 P0: review exact-head CI and inspect desktop/mobile capture cards; continue Wild Zones 7–20, city/interior encounters, forms, alternate acquisition, Alpha index and Hyperspace, with route-specific evidence and no invented pins. A7: continue all 46 existing surfaces, filling omissions without rewriting verified facts. Preserve photos, routes, progress and the single directory. GitHub first; Workspace only after full completion, exact-head validation and live verification."
+  },
+  "a2_18_written_first": {
+    "manifest_revision": 145,
+    "ledger_revision": 153,
+    "reviewed_parent": "4a14f5ef4df688f23a84278e25a8c22f91620920",
+    "report": "docs/qa/AT348_A2_18_WRITTEN_CITY_CAPTURE.md",
+    "policy": {
+      "date": "2026-11-28",
+      "paid_services_allowed": false,
+      "additional_spending_allowed": false,
+      "priority": "Complete all written guide information first, accurately and with every game feature accounted for; preserve existing functioning systems.",
+      "evidence_states": [
+        "verified",
+        "source_supported",
+        "disputed",
+        "unresolved",
+        "not_applicable"
+      ],
+      "required_sequence": [
+        "Complete written coverage and record unresolved items explicitly",
+        "Make and test the existing GitHub site",
+        "Obtain owner review of working GitHub site",
+        "Prepare one final existing Workspace handoff only after GitHub acceptance"
+      ],
+      "workspace_presentation": "Existing Workspace may choose compatible presentation and functionality; preserve factual content, IDs, data, URLs and working behavior; no premature publication or paid services.",
+      "photographs": "Add newly available images independently in PR226 and integrate as validated batches; absent future images are not release blockers. Preserve existing integrated photo integrity.",
+      "release_decision": "HOLD",
+      "owner_review_pending": true
+    },
+    "affected_surfaces": [
+      "src/sections/pokedex.html",
+      "index.html"
+    ],
+    "status": "bounded_written_route_candidate",
+    "full_page_factual_review_completed": false,
+    "remaining": "Every existing surface requires whole-guide factual acceptance; source supported and unknown fields distinguished. Photos remain independent."
   }
 }
