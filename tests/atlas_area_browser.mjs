@@ -705,6 +705,16 @@ try{
     const avaluggRoute=page.locator('[data-area-encounter-id="wz-12:fixed_alpha:1"]');
     assert.match(await avaluggRoute.textContent(),/Level: 54–56/);
     assert.match(await avaluggRoute.textContent(),/icicle.*ice bridge/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-13&species=scyther&encounter=ordinary",{waitUntil:"load"});await panel();
+    const scytherRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-13-scyther-ordinary"]');
+    assert.match(await scytherRoute.textContent(),/Level: 37–39/);
+    assert.match(await scytherRoute.textContent(),/thorn barrier/);
+    await page.goto(base+"/atlas-explorer.html?area=wz-14&species=helioptile&encounter=ordinary",{waitUntil:"load"});await panel();
+    const helioptileRoute=page.locator('[data-area-encounter-id="g3-evidence-wz-14-helioptile-ordinary"]');
+    assert.match(await helioptileRoute.textContent(),/Level: 37–38/);
+    assert.match(await helioptileRoute.textContent(),/clear skies/);
+    assert.match(await helioptileRoute.textContent(),/clear daylight/);
+
 
 
 
